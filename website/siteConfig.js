@@ -23,16 +23,16 @@ const users = [
 const siteConfig = {
   title: 'Doc Center' /* title for your website */,
   tagline: 'Documentation for 4D Developers',
-  url: 'https://arnaud4d.github.io' /* your website url */,
+  url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
-  baseUrl: '/doc/' /* base url for your project */,
+  baseUrl: '/docs/' /* base url for your project */,
 // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'doc',
-  organizationName: 'arnaud4D',
+  projectName: 'docs',
+  organizationName: '4D',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
