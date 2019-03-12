@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Arrays · Doc Center</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;An &lt;strong&gt;array&lt;/strong&gt; is an ordered series of &lt;strong&gt;variables&lt;/strong&gt; of the same type. Each variable is called an &lt;strong&gt;element&lt;/strong&gt; of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special &lt;a href=&quot;using-the-element-zero-of-an-array&quot;&gt;element zero&lt;/a&gt;. Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Arrays · Doc Center"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;An &lt;strong&gt;array&lt;/strong&gt; is an ordered series of &lt;strong&gt;variables&lt;/strong&gt; of the same type. Each variable is called an &lt;strong&gt;element&lt;/strong&gt; of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special &lt;a href=&quot;using-the-element-zero-of-an-array&quot;&gt;element zero&lt;/a&gt;. Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/doc/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Doc Center"/><h2 class="headerTitleWithLogo">Doc Center</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="http://doc.4d.com/" target="_self">doc.4d.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/doc1.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/variables.html">Variables</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/identifiers.html">Identifiers</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Arrays</h1></header><article><div><span><p>An <strong>array</strong> is an ordered series of <strong>variables</strong> of the same type. Each variable is called an <strong>element</strong> of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special <a href="using-the-element-zero-of-an-array">element zero</a>. Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.</p>
+<blockquote>
+<p>In most cases, it is recommended to use <strong>collections</strong> instead of <strong>arrays</strong>. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the <a href="/docs/docs/Concepts/collection.html">Collection</a> section.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="creating-arrays"></a><a href="#creating-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Arrays</h2>
+<p>You create an array with one of the array declaration commands from the &quot;Array&quot; theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the <a href="#two-dimensional-arrays">two dimensional arrays</a> section.</p>
+<p>The following line of code creates (declares) an Integer array of 10 elements:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;10)
+</code></pre>
+<p>Then, the following code resizes that same array to 20 elements:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;20)
+</code></pre>
+<p>Then, the following code resizes that same array to no elements:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;0)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="assigning-values-in-arrays"></a><a href="#assigning-values-in-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning values in arrays</h2>
+<p>You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
+ atNames{1}:="<span class="hljs-string">Richard</span>"
+ atNames{2}:="<span class="hljs-string">Sarah</span>"
+ atNames{3}:="<span class="hljs-string">Sam</span>"
+ atNames{4}:="<span class="hljs-string">Jane</span>"
+ atNames{5}:="<span class="hljs-string">John</span>"
+ <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;5)
+    <span class="hljs-command">ALERT</span>("<span class="hljs-string">The element #</span>"+<span class="hljs-command">String</span>(<span class="hljs-locale">$vlElem</span>)+"<span class="hljs-string"> is equal to: </span>"+atNames{<span class="hljs-locale">$vlElem</span>})
+ <span class="hljs-keyword">End for</span>
+</code></pre>
+<p>Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (<code>For...End for</code>, <code>Repeat...Until</code> or <code>While...End while</code>), compact pieces of code can address all or part of the elements in an array.</p>
+<p><strong>Important:</strong> Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.</p>
+<h3><a class="anchor" aria-hidden="true" id="assigning-an-array-to-another-array"></a><a href="#assigning-an-array-to-another-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning an array to another array</h3>
+<p>Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use <code>COPY ARRAY</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="using-the-element-zero-of-an-array"></a><a href="#using-the-element-zero-of-an-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the element zero of an array</h2>
+<p>An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.</p>
+<p>Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">` atNames scrollable area object method
+</span> <span class="hljs-keyword">Case of</span>
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
+  <span class="hljs-comment">` Initialize the array (as shown further above)
+</span>       <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
+  <span class="hljs-comment">` ...
+</span>  <span class="hljs-comment">` Initialize the element zero with the number
+</span>  <span class="hljs-comment">` of the current selected element in its string form
+</span>  <span class="hljs-comment">` Here you start with no selected element
+</span>       atNames{0}:="<span class="hljs-string">0</span>"
+ 
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Unload</span>)
+  <span class="hljs-comment">` We no longer need the array
+</span>       <span class="hljs-command">CLEAR VARIABLE</span>(atNames)
+ 
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Clicked</span>)
+       <span class="hljs-keyword">If</span>(atNames#0)
+          <span class="hljs-keyword">If</span>(atNames#<span class="hljs-command">Num</span>(atNames{0}))
+             vtInfo:="<span class="hljs-string">You clicked on: </span>"+atNames{atNames}+"<span class="hljs-string"> and it was not selected before.</span>"
+             atNames{0}:=<span class="hljs-command">String</span>(atNames)
+          <span class="hljs-keyword">End if</span>
+       <span class="hljs-keyword">End if</span>
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Double Clicked</span>)
+       <span class="hljs-keyword">If</span>(atNames#0)
+          <span class="hljs-command">ALERT</span>("<span class="hljs-string">You double clicked on: </span>"+atNames{atNames}
+       <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End case</span>
+</code></pre>
+<p>(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.</p>
+<h2><a class="anchor" aria-hidden="true" id="two-dimensional-arrays"></a><a href="#two-dimensional-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Two-dimensional Arrays</h2>
+<p>Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atTopics;100;50) <span class="hljs-comment">` Creates a text array composed of 100 rows of 50 columns
+</span></code></pre>
+<p>Two-dimensional arrays are essentially language objects; you can neither display nor print them.</p>
+<p>In the previous example:</p>
+<ul>
+<li>atTopics is a two-dimensional array</li>
+<li>atTopics{8}{5} is the 5th element (5th column...) of the 8th row</li>
+<li>atTopics{20} is the 20th row and is itself a one-dimensional array</li>
+<li>(atTopics) returns 100, which is the number of rows</li>
+<li>(atTopics{17}) returns 50, which the number of columns for the 17th row</li>
+</ul>
+<p>In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlLastTable</span>;<span class="hljs-locale">$vlLastField</span>)
+ <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlFieldNumber</span>)
+  <span class="hljs-comment">` Create as many rows (empty and without columns) as there are tables
+</span> <span class="hljs-locale">$vlLastTable</span>:=<span class="hljs-command">Get last table number</span>
+ <span class="hljs-command">ARRAY POINTER</span>(&lt;&gt;apFields;<span class="hljs-locale">$vlLastTable</span>;0) <span class="hljs-comment">`2D array with X rows and zero columns
+</span>  <span class="hljs-comment">` For each table
+</span> <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlTable</span>;1;<span class="hljs-locale">$vlLastTable</span>)
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Is table number valid</span>(<span class="hljs-locale">$vlTable</span>))
+       <span class="hljs-locale">$vlLastField</span>:=<span class="hljs-command">Get last field number</span>(<span class="hljs-locale">$vlTable</span>)
+  <span class="hljs-comment">` Give value of elements
+</span>       <span class="hljs-locale">$vlColumnNumber</span>:=0
+       <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlField</span>;1;<span class="hljs-locale">$vlLastField</span>)
+          <span class="hljs-keyword">If</span>(<span class="hljs-command">Is field number valid</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>))
+             <span class="hljs-locale">$vlColumnNumber</span>:=<span class="hljs-locale">$vlColumnNumber</span>+1
+  <span class="hljs-comment">`Insert a column in a row of the table underway
+</span>             <span class="hljs-command">INSERT IN ARRAY</span>(&lt;&gt;apFields{$vlTable};<span class="hljs-locale">$vlColumnNumber</span>;1)
+  <span class="hljs-comment">`Assign the "cell" with the pointer
+</span>             &lt;&gt;apFields{$vlTable}{$vlColumnNumber}:=<span class="hljs-command">Field</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>)
+          <span class="hljs-keyword">End if</span>
+       <span class="hljs-keyword">End for</span>
+    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End for</span>
+</code></pre>
+<p>Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">` Get the pointers to the fields for the table currently displayed at the screen:
+</span> <span class="hljs-command">COPY ARRAY</span>(◊apFields{Table(<span class="hljs-command">Current form table</span>)};<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>)
+  <span class="hljs-comment">` Initialize Boolean and Date fields
+</span> <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;<span class="hljs-command">Size of array</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>))
+    <span class="hljs-keyword">Case of</span>
+       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is date</span>)
+          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">Current date</span>
+       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is Boolean</span>)
+          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">True</span>
+    <span class="hljs-keyword">End case</span>
+ <span class="hljs-keyword">End for</span>
+</code></pre>
+<p><strong>Note:</strong> As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.</p>
+<h2><a class="anchor" aria-hidden="true" id="arrays-and-memory"></a><a href="#arrays-and-memory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays and Memory</h2>
+<p>Unlike the data you store on disk using tables and records, an array is always held in memory in its entirety.</p>
+<p>For example, if all US zip codes were entered in the [Zip Codes] table, it would contain about 100,000 records. In addition, that table would include several fields: the zip code itself and the corresponding city, county, and state. If you select only the zip codes from California, the 4D database engine creates the corresponding selection of records within the [Zip Codes] table, and then loads the records only when they are needed (i.e., when they are displayed or printed). In order words, you work with an ordered series of values (of the same type for each field) that is partially loaded from the disk into the memory by the database engine of 4D.</p>
+<p>Doing the same thing with arrays would be prohibitive for the following reasons:</p>
+<ul>
+<li>In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.</li>
+<li>Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.</li>
+<li>Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.</li>
+</ul>
+<p><strong>Conclusion:</strong> Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.</p>
+<p>However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:</p>
+<table>
+<thead>
+<tr><th>Array Type</th><th>Formula for determining Memory Usage in Bytes</th></tr>
+</thead>
+<tbody>
+<tr><td>Boolean</td><td>(31+number of elements)\8</td></tr>
+<tr><td>Date</td><td>(1+number of elements) * 6</td></tr>
+<tr><td>String</td><td>(1+number of elements) * (Sum of the size of each text)</td></tr>
+<tr><td>Integer</td><td>(1+number of elements) * 2</td></tr>
+<tr><td>Long Integer</td><td>(1+number of elements) * 4</td></tr>
+<tr><td>Picture</td><td>(1+number of elements) * 4 + Sum of the size of each picture</td></tr>
+<tr><td>Pointer</td><td>(1+number of elements) * 16</td></tr>
+<tr><td>Real</td><td>(1+number of elements) * 8</td></tr>
+<tr><td>Text</td><td>(1+number of elements) * (Sum of the size of each text)</td></tr>
+<tr><td>Two-dimensional</td><td>(1+number of elements) * 12 + Sum of the size of each array</td></tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The size of a text in memory is calculated using this formula: ((Length + 1) * 2)</li>
+<li>A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/Concepts/variables.html"><span class="arrow-prev">← </span><span>Variables</span></a><a class="docs-next button" href="/docs/docs/Concepts/methods.html"><span>Methods</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-arrays">Creating Arrays</a></li><li><a href="#assigning-values-in-arrays">Assigning values in arrays</a><ul class="toc-headings"><li><a href="#assigning-an-array-to-another-array">Assigning an array to another array</a></li></ul></li><li><a href="#using-the-element-zero-of-an-array">Using the element zero of an array</a></li><li><a href="#two-dimensional-arrays">Two-dimensional Arrays</a></li><li><a href="#arrays-and-memory">Arrays and Memory</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Doc Center" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '093230ccbc91f19f9a4f78bf3a92791c',
+                indexName: 'arnaud4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

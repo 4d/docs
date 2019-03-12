@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>A Quick Tour · Doc Center</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Using the 4D language, printing the traditional &amp;quot;Hello, world!&amp;quot; message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="A Quick Tour · Doc Center"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;Using the 4D language, printing the traditional &amp;quot;Hello, world!&amp;quot; message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/doc/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Doc Center"/><h2 class="headerTitleWithLogo">Doc Center</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="http://doc.4d.com/" target="_self">doc.4d.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/doc1.html">About the 4D Language</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/identifiers.html">Identifiers</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">A Quick Tour</h1></header><article><div><span><p>Using the 4D language, printing the traditional &quot;Hello, world!&quot; message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>("<span class="hljs-string">Hello, World!</span>")
+</code></pre>
+<p>This code will display a platform-standard alert dialog box with the &quot;Hello, World!&quot; message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:</p>
+<p><img src="/docs/docs/assets/en/helloworld.png" alt="alt-text"></p>
+<p>Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!</p>
+<h2><a class="anchor" aria-hidden="true" id="assigning-values"></a><a href="#assigning-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning Values</h2>
+<p>Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyNumber</span>:=3 <span class="hljs-comment">//assigns 3 to MyNumber variable  
+</span>[Products]Size:=<span class="hljs-locale">$MyNumber</span> <span class="hljs-comment">//assigns MyNumber variable to [Products]Size field
+</span>arrDays{2}:="<span class="hljs-string">Tuesday</span>" <span class="hljs-comment">//assigns "Tuesday" string to the 2nd arrDays element
+</span>MyVar:=<span class="hljs-command">Length</span>("<span class="hljs-string">Acme</span>") <span class="hljs-comment">//assigns the result of the function (4) to MyVar
+</span><span class="hljs-locale">$myDate</span>:=!2018/01/21! <span class="hljs-comment">//assigns a date literal
+</span><span class="hljs-locale">$myHour</span>:=?08:12:55? <span class="hljs-comment">//assigns a time literal
+</span></code></pre>
+<p>You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.</p>
+<p><strong>Important:</strong> Do NOT confuse the assignment operator := with the equality comparison operator =. A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.</p>
+<h2><a class="anchor" aria-hidden="true" id="variables"></a><a href="#variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<p>The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a <code>C_XXX</code> command. For example, to create a variable of the date type, you can write:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_DATE</span>(MyDate) <span class="hljs-comment">//Date type for MyDate variable
+</span></code></pre>
+<p>Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:</p>
+<pre><code class="hljs css language-code4d">MyOtherDate:=<span class="hljs-command">Current date</span>+30
+</code></pre>
+<p>The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with <code>C_XXX</code> cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.</p>
+<h2><a class="anchor" aria-hidden="true" id="commands"></a><a href="#commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commands</h2>
+<p>4D commands are built-in methods to perform an action. All 4D commands, such as <code>CREATE RECORD</code>, or <code>ALERT</code>, are described in the <em>4D Language Reference</em> manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">COPY DOCUMENT</span>("<span class="hljs-string">folder1\\name1</span>";"<span class="hljs-string">folder2\\</span>" ; "<span class="hljs-string">new</span>")
+</code></pre>
+<p>Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$c</span>:=<span class="hljs-command">New collection</span>(1;2;3;4;5)
+<span class="hljs-locale">$nc</span>:=<span class="hljs-locale">$c</span><span class="hljs-method">.slice(<span class="hljs-normal">0</span><span class="hljs-normal">;</span><span class="hljs-normal">3</span>)</span> <span class="hljs-comment">//$nc=[1,2,3]  
+</span>
+<span class="hljs-locale">$lastEmployee</span>:=<span class="hljs-locale">$employee</span><span class="hljs-method">.last()</span>
+</code></pre>
+<p>You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.</p>
+<p>There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the <a href="https://github.com/miyako/4d-plugin-pdf-pages">4d-plugin-pdf-pages</a> on macOS:</p>
+<pre><code class="hljs css language-code4d">PDF REMOVE PAGE(path;page)
+</code></pre>
+<p>4D SVG is an example of a utility component extending the capabilities of your application:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//drawing a picture
+</span>svgRef:=<span class="hljs-plugin">SVG_New</span>
+objectRef:=<span class="hljs-plugin">SVG_New_arc</span>(svgRef;100;100;90;90;180)
+</code></pre>
+<p>4D SVG is included in 4D.</p>
+<h2><a class="anchor" aria-hidden="true" id="constants"></a><a href="#constants" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constants</h2>
+<p>4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, <code>Read Mode</code> is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.</p>
+<pre><code class="hljs css language-code4d">vRef:=<span class="hljs-command">Open document</span>("<span class="hljs-string">PassFile</span>";"<span class="hljs-string">TEXT</span>";<span class="hljs-constant">Read Mode</span>) <span class="hljs-comment">// open doc in read only mode
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methods"></a><a href="#methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<p>4D provides a large number of built-in methods (or commands) but also lets you can create your own <strong>project methods</strong>. Project methods are user-defined methods that contain commands, operators, and other parts of the language.
+Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.</p>
+<p>A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.</p>
+<p>For example, the following line is a statement that will display a confirmation dialog box:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">CONFIRM</span>("<span class="hljs-string">Do you really want to close this account?</span>";"<span class="hljs-string">Yes</span>";"<span class="hljs-string">No</span>")
+</code></pre>
+<p>A method also contains tests and loops that control the flow of the execution. 4D methods support <code>If...Else...End if</code> and <code>Case of...Else...End case</code> branching structures as well as looping structures: <code>While...End while</code>, <code>Repeat...Until</code>, <code>For...End for</code>, and <code>For each...End for each</code>:</p>
+<p>The following example goes through all the characters of the text vtSomeText:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlChar</span>;1;<span class="hljs-command">Length</span>(vtSomeText))
+    <span class="hljs-comment">//Do something with the character if it is a TAB
+</span>    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(vtSomeText[[<span class="hljs-locale">$vlChar</span>]])=<span class="hljs-constant">Tab</span>)
+        <span class="hljs-comment">//...
+</span>    <span class="hljs-keyword">End if</span>
+<span class="hljs-keyword">End for</span>
+</code></pre>
+<p>A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$myText</span>:="<span class="hljs-string">hello</span>"
+<span class="hljs-locale">$myText</span>:=Do_Something(<span class="hljs-locale">$myText</span>) <span class="hljs-comment">//Call the Do_Something method
+</span><span class="hljs-command">ALERT</span>(<span class="hljs-locale">$myText</span>) <span class="hljs-comment">//"HELLO"
+</span> 
+  <span class="hljs-comment">//Here the code of the method Do_Something
+</span><span class="hljs-param">$0</span>:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$1</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="data-types"></a><a href="#data-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Types</h2>
+<p>In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).</p>
+<p>Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.</p>
+<p>However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.</p>
+<p>There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:</p>
+<pre><code class="hljs css language-code4d">[Products]Part Number:=<span class="hljs-command">String</span>(Number)+"<span class="hljs-string">abc</span>"
+</code></pre>
+<p>If <em>Number</em> is 17, then <em>[Products]Part Number</em> will get the string “17abc”.</p>
+<p>The data types are fully defined in the section <a href="/docs/docs/Concepts/data-types.html">Data Types</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="objects-and-collections"></a><a href="#objects-and-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects and collections</h2>
+<p>You can handle 4D language objects and collections using the object notation to get or to set their values. For example:</p>
+<pre><code class="hljs css language-code4d">employee<span class="hljs-property">.name</span>:="<span class="hljs-string">Smith</span>"
+</code></pre>
+<p>You can also use a string within square brackets, for example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$vName</span>:=employee["<span class="hljs-string">name</span>"]
+</code></pre>
+<p>Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$vAge</span>:=employee<span class="hljs-property">.children</span>[2]<span class="hljs-property">.age</span>
+</code></pre>
+<p>Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:</p>
+<pre><code class="hljs"><span class="hljs-locale">$f</span>:=<span class="hljs-command">New object</span>
+<span class="hljs-locale">$f</span><span class="hljs-property">.message</span>:=<span class="hljs-command">New formula</span>(<span class="hljs-command">ALERT</span>("<span class="hljs-string">Hello world!</span>"))
+<span class="hljs-locale">$f</span><span class="hljs-method">.message()</span> <span class="hljs-comment">//displays "Hello world!"
+</span></code></pre>
+<p>To access a collection element, you have to pass the element number embedded in square brackets:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_COLLECTION</span>(myColl)
+myColl:=<span class="hljs-command">New collection</span>("<span class="hljs-string">A</span>";"<span class="hljs-string">B</span>";1;2;<span class="hljs-command">Current time</span>)
+myColl[3]  <span class="hljs-comment">//access to 4th element of the collection
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="operators"></a><a href="#operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operators</h2>
+<p>When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:</p>
+<table>
+<thead>
+<tr><th>Operator</th><th>Operation</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>+</td><td>Addition</td><td>1 + 2 results in 3</td></tr>
+<tr><td>–</td><td>Subtraction</td><td>3 – 2 results in 1</td></tr>
+<tr><td>*</td><td>Multiplication</td><td>2 * 3 results in 6</td></tr>
+<tr><td>/</td><td>Division</td><td>6 / 2 results in 3</td></tr>
+</tbody>
+</table>
+<p>Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.</p>
+<p>The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:</p>
+<table>
+<thead>
+<tr><th>Data Type</th><th>Operation</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>Number</td><td>Addition</td><td>1 + 2 adds the numbers and results in 3</td></tr>
+<tr><td>String</td><td>Concatenation</td><td>“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”</td></tr>
+<tr><td>Date and Number</td><td>Date addition</td><td>!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989</td></tr>
+</tbody>
+</table>
+<p>The operators are fully defined in the chapter Operators and its subsections.</p>
+<h2><a class="anchor" aria-hidden="true" id="expressions"></a><a href="#expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions</h2>
+<p>Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.</p>
+<p>Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.</p>
+<p>Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:</p>
+<ul>
+<li>Formula editor (apply formula, query with formula, order by formula)</li>
+<li>The <code>EXECUTE FORMULA</code> command</li>
+<li>The Property list, where an expression can be used as a data source for most of widgets</li>
+<li>Debugger where the value of expressions can be checked</li>
+<li>Quick Report editor as a formula for a column</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="expression-types"></a><a href="#expression-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expression types</h3>
+<p>You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.</p>
+<table>
+<thead>
+<tr><th>Expression</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>“Hello”</td><td>String</td><td>The word Hello is a string constant, indicated by the double quotation marks.</td></tr>
+<tr><td>“Hello ” + “there”</td><td>String</td><td>Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.</td></tr>
+<tr><td>“Mr. ” + [People]Name</td><td>String</td><td>Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”.</td></tr>
+<tr><td>Uppercase(&quot;smith&quot;)</td><td>String</td><td>This expression uses <code>Uppercase</code>, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.</td></tr>
+<tr><td>4</td><td>Number</td><td>This is a number constant, 4.</td></tr>
+<tr><td>4 * 2</td><td>Number</td><td>Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.</td></tr>
+<tr><td>myButton</td><td>Number</td><td>This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.</td></tr>
+<tr><td>!1997-01-25!</td><td>Date</td><td>This is a date constant for the date 1/25/97 (January 25, 1997).</td></tr>
+<tr><td>Current date+ 30</td><td>Date</td><td>This is a date expression that uses the <code>Current date</code> command to get today’s date. It adds 30 days to today’s date and returns the new date.</td></tr>
+<tr><td>?8:05:30?</td><td>Time</td><td>This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.</td></tr>
+<tr><td>?2:03:04? + ?1:02:03?</td><td>Time</td><td>This expression adds two times together and returns the time 3:05:07.</td></tr>
+<tr><td>True</td><td>Boolean</td><td>This command returns the Boolean value TRUE.</td></tr>
+<tr><td>10 # 20</td><td>Boolean</td><td>This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.</td></tr>
+<tr><td>“ABC” = “XYZ”</td><td>Boolean</td><td>This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.</td></tr>
+<tr><td>My Picture + 50</td><td>Picture</td><td>This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.</td></tr>
+<tr><td>-&gt;[People]Name</td><td>Pointer</td><td>This expression returns a pointer to the field called [People]Name.</td></tr>
+<tr><td>Table (1)</td><td>Pointer</td><td>This is a command that returns a pointer to the first table.</td></tr>
+<tr><td>JSON Parse (MyString)</td><td>Object</td><td>This is a command that returns MyString as an object (if proper format)</td></tr>
+<tr><td>JSON Parse (MyJSONArray)</td><td>Collection</td><td>This is a command that returns MyJSONArray as a collection (if proper format)</td></tr>
+<tr><td>Form.pageNumber</td><td>Object property</td><td>An object property is an expression that can be of any supported type</td></tr>
+<tr><td>Col[5]</td><td>Collection element</td><td>A collection element is an expression that can be of any supported type</td></tr>
+<tr><td>$entitySel[0]</td><td>Entity</td><td>A element of an ORDA entity selection is an expression of the entity type. This kind of expression is <strong>non-assignable</strong></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="assignable-vs-non-assignable-expressions"></a><a href="#assignable-vs-non-assignable-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assignable vs non-assignable expressions</h3>
+<p>An expression can simply be a literal constant, such as the number 4 or the string &quot;Hello&quot;, or a variable like <code>$myButton</code>. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are <strong>non-assignable</strong>, which means that you cannot assign a value to them.
+In 4D, expressions can be <strong>assignable</strong>. An expression is assignable when it can be used on the right side of an assignation. For example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//$myVar variable is assignable, you can write:  
+</span><span class="hljs-locale">$myVar</span>:="<span class="hljs-string">Hello</span>" <span class="hljs-comment">//assign "Hello" to myVar
+</span><span class="hljs-comment">//Form.pageNumber is assignable, you can write:  
+</span><span class="hljs-command">Form</span><span class="hljs-property">.pageNumber</span>:=10 <span class="hljs-comment">//assign 10 to Form.pageNumber
+</span><span class="hljs-comment">//Form.pageTotal-Form.pageNumber is not assignable:
+</span><span class="hljs-command">Form</span><span class="hljs-property">.pageTotal-</span> <span class="hljs-command">Form</span><span class="hljs-property">.pageNumber</span>:=10 <span class="hljs-comment">//error, non-assignable
+</span></code></pre>
+<p>In general, expressions that use an operator are non-assignable. For example, <code>[Person]FirstName&quot; &quot;+[Person]LastName</code> is not assignable.</p>
+<h2><a class="anchor" aria-hidden="true" id="pointers"></a><a href="#pointers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers</h2>
+<p>The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.</p>
+<p>A pointer to an element is created by adding a &quot;-&gt;&quot; symbol before the element name, and can be dereferenced by adding the &quot;-&gt;&quot; symbol after the pointer name.</p>
+<pre><code class="hljs css language-code4d">MyVar:="<span class="hljs-string">Hello</span>"
+MyPointer:=-&gt;MyVar
+<span class="hljs-command">ALERT</span>(MyPointer-&gt;)
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/Concepts/doc1.html"><span class="arrow-prev">← </span><span>About the 4D Language</span></a><a class="docs-next button" href="/docs/docs/Concepts/data-types.html"><span>Data types overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#assigning-values">Assigning Values</a></li><li><a href="#variables">Variables</a></li><li><a href="#commands">Commands</a></li><li><a href="#constants">Constants</a></li><li><a href="#methods">Methods</a></li><li><a href="#data-types">Data Types</a></li><li><a href="#objects-and-collections">Objects and collections</a></li><li><a href="#operators">Operators</a></li><li><a href="#expressions">Expressions</a><ul class="toc-headings"><li><a href="#expression-types">Expression types</a></li><li><a href="#assignable-vs-non-assignable-expressions">Assignable vs non-assignable expressions</a></li></ul></li><li><a href="#pointers">Pointers</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Doc Center" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '093230ccbc91f19f9a4f78bf3a92791c',
+                indexName: 'arnaud4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

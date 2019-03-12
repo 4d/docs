@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Data types overview · Doc Center</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In 4D, data are handled according to their type in two places: database fields and the 4D language.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Data types overview · Doc Center"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;In 4D, data are handled according to their type in two places: database fields and the 4D language.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/doc/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Doc Center"/><h2 class="headerTitleWithLogo">Doc Center</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="http://doc.4d.com/" target="_self">doc.4d.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/doc1.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/identifiers.html">Identifiers</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Data types overview</h1></header><article><div><span><p>In 4D, data are handled according to their type in two places: database fields and the 4D language.</p>
+<p>Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:</p>
+<table>
+<thead>
+<tr><th>Data Types</th><th>Database support(*)</th><th>Language support</th><th>Variable declaration</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/docs/docs/Concepts/string.html">Alphanumeric</a></td><td>Yes</td><td>Converted to text</td><td>-</td></tr>
+<tr><td><a href="/docs/docs/Concepts/string.html">Text</a></td><td>Yes</td><td>Yes</td><td><code>C_TEXT</code>, <code>ARRAY TEXT</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/date.html">Date</a></td><td>Yes</td><td>Yes</td><td><code>C_DATE</code>, <code>ARRAY DATE</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/time.html">Time</a></td><td>Yes</td><td>Yes</td><td><code>C_TIME</code>, <code>ARRAY TIME</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/boolean.html">Boolean</a></td><td>Yes</td><td>Yes</td><td><code>C_BOOLEAN</code>, <code>ARRAY BOOLEAN</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/number.html">Integer</a></td><td>Yes</td><td>Converted to longint</td><td><code>ARRAY INTEGER</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/number.html">Longint</a></td><td>Yes</td><td>Yes</td><td><code>C_LONGINT</code>, <code>ARRAY LONGINT</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/number.html">Longint 64 bits</a></td><td>Yes (SQL)</td><td>Converted to real</td><td>-</td></tr>
+<tr><td><a href="/docs/docs/Concepts/number.html">Real</a></td><td>Yes</td><td>Yes</td><td><code>C_REAL</code>, <code>ARRAY REAL</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/null-undefined.html">Undefined</a></td><td>-</td><td>Yes</td><td>-</td></tr>
+<tr><td><a href="/docs/docs/Concepts/null-undefined.html">Null</a></td><td>-</td><td>Yes</td><td>-</td></tr>
+<tr><td><a href="/docs/docs/Concepts/pointer.html">Pointer</a></td><td>-</td><td>Yes</td><td><code>C_POINTER</code>, <code>ARRAY POINTER</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/picture.html">Picture</a></td><td>Yes</td><td>Yes</td><td><code>C_PICTURE</code>, <code>ARRAY PICTURE</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/blob.html">BLOB</a></td><td>Yes</td><td>Yes</td><td><code>C_BLOB</code>, <code>ARRAY BLOB</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/object.html">Object</a></td><td>Yes</td><td>Yes</td><td><code>C_OBJECT</code>, <code>ARRAY OBJECT</code></td></tr>
+<tr><td><a href="/docs/docs/Concepts/collection.html">Collection</a></td><td>-</td><td>Yes</td><td><code>C_COLLECTION</code></td></tr>
+</tbody>
+</table>
+<p>(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description.</p>
+<h2><a class="anchor" aria-hidden="true" id="default-values"></a><a href="#default-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default values</h2>
+<p>When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.</p>
+<p>The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:</p>
+<ul>
+<li>Process and interprocess variables are always set &quot;to zero&quot; (which means, depending on the case, &quot;0&quot;, an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)</li>
+<li>Local variables are set:
+<ul>
+<li>in interpreted mode: to zero</li>
+<li>in compiled mode, depending on the <strong>Initialize local variables</strong> option of the Database settings:
+<ul>
+<li>&quot;to zero&quot;: to zero (see above),</li>
+<li>&quot;to a random value&quot;: 0x72677267 for numbers and times, always True for Booleans, the same as &quot;to zero&quot; for the others,</li>
+<li>&quot;no&quot;: no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables.
+<strong>Note:</strong> 4D recommends to use &quot;to zero&quot;.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The following table illustrates these default values:</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Interprocess/Process (interpreted/compiled), Local (interpreted/compiled &quot;to zero&quot;)</th><th>Local compiled &quot;random&quot;</th><th>Local compiled &quot;no&quot;</th></tr>
+</thead>
+<tbody>
+<tr><td>Booleen</td><td>False</td><td>True</td><td>True (varies)</td></tr>
+<tr><td>Date</td><td>00-00-00</td><td>00-00-00</td><td>00-00-00</td></tr>
+<tr><td>Longint</td><td>0</td><td>1919382119</td><td>909540880 (varies)</td></tr>
+<tr><td>Time</td><td>00:00:00</td><td>533161:41:59</td><td>249345:34:24 (varies)</td></tr>
+<tr><td>Picture</td><td>picture size=0</td><td>picture size=0</td><td>picture size=0</td></tr>
+<tr><td>Real</td><td>0</td><td>1.250753659382e+243</td><td>1.972748538022e-217 (varies)</td></tr>
+<tr><td>Pointer</td><td>Nil=true</td><td>Nil=true</td><td>Nil=true</td></tr>
+<tr><td>Text</td><td>&quot;&quot;</td><td>&quot;&quot;</td><td>&quot;&quot;</td></tr>
+<tr><td>Blob</td><td>Blob size=0</td><td>Blob size=0</td><td>Blob size=0</td></tr>
+<tr><td>Object</td><td>null</td><td>null</td><td>null</td></tr>
+<tr><td>Collection</td><td>null</td><td>null</td><td>null</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="converting-data-types"></a><a href="#converting-data-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Converting data types</h2>
+<p>The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: &quot;abc&quot;+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.</p>
+<p>The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:</p>
+<table>
+<thead>
+<tr><th>Data Type to Convert</th><th>to String</th><th>to Number</th><th>to Date</th><th>to Time</th><th>to Boolean</th></tr>
+</thead>
+<tbody>
+<tr><td>String (1)</td><td></td><td>Num</td><td>Date</td><td>Time</td><td>Bool</td></tr>
+<tr><td>Number (2)</td><td>String</td><td></td><td></td><td></td><td>Bool</td></tr>
+<tr><td>Date</td><td>String</td><td></td><td></td><td></td><td>Bool</td></tr>
+<tr><td>Time</td><td>String</td><td></td><td></td><td></td><td>Bool</td></tr>
+<tr><td>Boolean</td><td></td><td>Num</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+<p>(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the <code>JSON Parse</code> command.
+(2) Time values can be treated as numbers.</p>
+<p><strong>Note:</strong> In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/Concepts/quick-tour.html"><span class="arrow-prev">← </span><span>A Quick Tour</span></a><a class="docs-next button" href="/docs/docs/Concepts/blob.html"><span>BLOB</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#default-values">Default values</a></li><li><a href="#converting-data-types">Converting data types</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Doc Center" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '093230ccbc91f19f9a4f78bf3a92791c',
+                indexName: 'arnaud4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

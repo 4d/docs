@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>String · Doc Center</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;String is a generic term that stands for:&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="String · Doc Center"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;String is a generic term that stands for:&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/doc/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Doc Center"/><h2 class="headerTitleWithLogo">Doc Center</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="http://doc.4d.com/" target="_self">doc.4d.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/doc1.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/pointer.html">Pointer</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/Concepts/identifiers.html">Identifiers</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">String</h1></header><article><div><span><p>String is a generic term that stands for:</p>
+<ul>
+<li>Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.</li>
+<li>Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="string-literals"></a><a href="#string-literals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String literals</h2>
+<p>A string literal is enclosed in double, straight quotation marks (&quot;...&quot;). Here are some examples of string literals:</p>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">Add Records</span>"
+"<span class="hljs-string">No records found.</span>"
+"<span class="hljs-string">Invoice</span>"
+</code></pre>
+<p>An empty string is specified by two quotation marks with nothing between them (&quot;&quot;).</p>
+<h3><a class="anchor" aria-hidden="true" id="escape-sequences"></a><a href="#escape-sequences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Escape sequences</h3>
+<p>The following escape sequences can be used within strings:</p>
+<table>
+<thead>
+<tr><th>Escape sequence</th><th>Character replaced</th></tr>
+</thead>
+<tbody>
+<tr><td>\n</td><td>LF (Line feed)</td></tr>
+<tr><td>\t</td><td>HT (Tab)</td></tr>
+<tr><td>\r</td><td>CR (Carriage return)</td></tr>
+<tr><td>\\</td><td>\ (Backslash)</td></tr>
+<tr><td>\&quot;</td><td>&quot; (Quotation marks)</td></tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. &quot;C:\\MyDocuments\\New.txt&quot;).</p>
+<h2><a class="anchor" aria-hidden="true" id="string-operators"></a><a href="#string-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String operators</h2>
+<table>
+<thead>
+<tr><th>Operation</th><th>Syntax</th><th>Returns</th><th>Expression</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>Concatenation</td><td>String + String</td><td>String</td><td>&quot;abc&quot; + &quot;def&quot;</td><td>&quot;abcdef&quot;</td></tr>
+<tr><td>Repetition</td><td>String * Number</td><td>String</td><td>&quot;ab&quot; * 3</td><td>&quot;ababab&quot;</td></tr>
+<tr><td>Equality</td><td>String = String</td><td>Boolean</td><td>&quot;abc&quot; = &quot;abc&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abc&quot; = &quot;abd&quot;</td><td>False</td></tr>
+<tr><td>Inequality</td><td>String # String</td><td>Boolean</td><td>&quot;abc&quot; # &quot;abd&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abc&quot; # &quot;abc&quot;</td><td>False</td></tr>
+<tr><td>Greater than</td><td>String &gt; String</td><td>Boolean</td><td>&quot;abd&quot; &gt; &quot;abc&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abc&quot; &gt; &quot;abc&quot;</td><td>False</td></tr>
+<tr><td>Less than</td><td>String &lt; String</td><td>Boolean</td><td>&quot;abc&quot; &lt; &quot;abd&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abc&quot; &lt; &quot;abc&quot;</td><td>False</td></tr>
+<tr><td>Greater than or equal to</td><td>String &gt;= String</td><td>Boolean</td><td>&quot;abd&quot; &gt;= &quot;abc&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abc&quot; &gt;= &quot;abd&quot;</td><td>False</td></tr>
+<tr><td>Less than or equal to</td><td>String &lt;= String</td><td>Boolean</td><td>&quot;abc&quot; &lt;= &quot;abd&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;abd&quot; &lt;= &quot;abc&quot;</td><td>False</td></tr>
+<tr><td>Contains keyword</td><td>String % String</td><td>Boolean</td><td>&quot;Alpha Bravo&quot; % &quot;Bravo&quot;</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>&quot;Alpha Bravo&quot; % &quot;ravo&quot;</td><td>False</td></tr>
+<tr><td></td><td>Picture % String</td><td>Boolean</td><td>Picture_expr % &quot;Mer&quot;</td><td>True (*)</td></tr>
+</tbody>
+</table>
+<p>(*) If the keyword &quot;Mer&quot; is associated with the picture stored in the picture expression (field or variable).</p>
+<h2><a class="anchor" aria-hidden="true" id="string-comparisons"></a><a href="#string-comparisons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String comparisons</h2>
+<ul>
+<li>Strings are compared on a character-by-character basis (except in the case of searching by <a href="/docs/docs/Concepts/string.html#keywords">keywords</a>, see below).</li>
+<li>When strings are compared, the case of the characters is ignored; thus, &quot;a&quot;=&quot;A&quot; returns <code>TRUE</code>. To test if the case of two characters is different, compare their character codes. For example, the following expression returns <code>FALSE</code>:</li>
+</ul>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">Character</span> <span class="hljs-command">code</span>("<span class="hljs-string">A</span>")=<span class="hljs-command">Character</span> <span class="hljs-command">code</span>("<span class="hljs-string">a</span>") <span class="hljs-comment">// because 65 is not equal to 97
+</span></code></pre>
+<ul>
+<li>When strings are compared, diacritical characters are taken into account. For example, the following expressions return <code>TRUE</code>:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">n</span>"="<span class="hljs-string">ñ</span>"
+     "<span class="hljs-string">n</span>"="<span class="hljs-string">Ñ</span>"
+     "<span class="hljs-string">A</span>"="<span class="hljs-string">å</span>"
+      <span class="hljs-comment">// and so on
+</span></code></pre>
+<p><strong>Note:</strong> String comparison takes into account specificities of the language <strong>defined for the 4D data file</strong> (which is not always the same as the language defined for the system).</p>
+<h3><a class="anchor" aria-hidden="true" id="wilcard-character"></a><a href="#wilcard-character" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wilcard character (@)</h3>
+<p>The 4D language supports <strong>@</strong> as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is <code>TRUE</code>:</p>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abc@</span>"
+</code></pre>
+<p>The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is <code>FALSE</code>, because the @ is considered only as a one character in the first operand:</p>
+<pre><code class="hljs css language-code4d">    "<span class="hljs-string">abc@</span>"="<span class="hljs-string">abcdefghij</span>"
+</code></pre>
+<p>The wildcard means &quot;one or more characters or nothing&quot;. The following expressions are <code>TRUE</code>:</p>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abcdefghij@</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcdefghij</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abcd@efghij</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcdefghij@</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcde@fghij@</span>"
+</code></pre>
+<p>On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return <code>FALSE</code>. The following expression is <code>FALSE</code>:</p>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abc@@fg</span>"
+</code></pre>
+<p>When the comparison operator is or contains a &lt; or &gt; symbol, only comparison with a single wildcard located at the end of the operand is supported:</p>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">abcd</span>"&lt;="<span class="hljs-string">abc@</span>" <span class="hljs-comment">// Valid comparison
+</span>     "<span class="hljs-string">abcd</span>"&lt;="<span class="hljs-string">abc@ef</span>" <span class="hljs-comment">//Not a valid comparison
+</span></code></pre>
+<p>If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the <code>Character code(At sign)</code> instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always <code>TRUE</code>:</p>
+<pre><code class="hljs css language-code4d">(<span class="hljs-locale">$vsValue</span>[[<span class="hljs-command">Length</span>(<span class="hljs-locale">$vsValue</span>)]]="<span class="hljs-string">@</span>")
+</code></pre>
+<p>The following expression will be evaluated correctly:</p>
+<pre><code class="hljs css language-code4d">(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(<span class="hljs-locale">$vsValue</span>[[<span class="hljs-command">Length</span>(<span class="hljs-locale">$vsValue</span>)]])#64)  
+</code></pre>
+<p><strong>Note:</strong> A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.</p>
+<h3><a class="anchor" aria-hidden="true" id="keywords"></a><a href="#keywords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keywords</h3>
+<p>Unlike other string comparisons, searching by keywords looks for &quot;words&quot; in &quot;texts&quot;: words are considered both individually and as a whole. The <strong>%</strong> operator always returns <code>False</code> if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.</p>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">Bravo</span>" <span class="hljs-comment">// Returns True
+</span>     "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">vo</span>" <span class="hljs-comment">// Returns False
+</span>     "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">Alpha Bravo</span>" <span class="hljs-comment">// Returns False
+</span>     "<span class="hljs-string">Alpha,Bravo,Charlie</span>"%"<span class="hljs-string">Alpha</span>" <span class="hljs-comment">// Returns True
+</span>     "<span class="hljs-string">Software and Computers</span>"%"<span class="hljs-string">comput@</span>" <span class="hljs-comment">// Returns True
+</span></code></pre>
+<blockquote>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>4D uses the ICU library for comparing strings (using &lt;&gt;=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: <a href="http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries">http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries</a>.</li>
+<li>In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="character-reference-symbols"></a><a href="#character-reference-symbols" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Character Reference Symbols</h2>
+<p>The character reference symbols: [[...]]</p>
+<p>These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.</p>
+<p>If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">If</span>(vsName#"<span class="hljs-string"></span>")
+    vsName[[1]]:=<span class="hljs-command">Uppercase</span>(vsName[[1]])
+<span class="hljs-keyword">End if</span>
+</code></pre>
+<p>Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//The following example tests if the last character of vtText is an At sign "@"
+</span> <span class="hljs-keyword">If</span>(vtText#"<span class="hljs-string"></span>")
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(<span class="hljs-command">Substring</span>(vtText;<span class="hljs-command">Length</span>(vtText);1))=<span class="hljs-constant">At sign</span>)
+  <span class="hljs-comment">//...
+</span>    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
+ 
+  <span class="hljs-comment">//Using the character reference syntax, you would write in a simpler manner:
+</span> <span class="hljs-keyword">If</span>(vtText#"<span class="hljs-string"></span>")
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(vtText[[<span class="hljs-command">Length</span>(vtText)]])=<span class="hljs-constant">At sign</span>)
+  <span class="hljs-comment">// ...
+</span>    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="advanced-note-about-invalid-character-reference"></a><a href="#advanced-note-about-invalid-character-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced note about invalid character reference</h3>
+<p>When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.</p>
+<ul>
+<li>Failing to do so, in interpreted mode, does not cause a syntax error.</li>
+<li>Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.</li>
+<li>Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:</li>
+</ul>
+<pre><code class="hljs">//Very bad <span class="hljs-keyword">and</span> nasty thing to <span class="hljs-keyword">do</span>, boo!
+ vsAnyText:=<span class="hljs-string">""</span>
+ vsAnyText<span class="hljs-string">[[1]]</span>:=<span class="hljs-string">"A"</span>
+</code></pre>
+<p>will trigger the Runtime Error shown here:</p>
+<p><img src="/docs/docs/assets/en/Syntax_Error.en.png" alt="alt-text"></p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">//Capitalize_text project method
+</span>  <span class="hljs-comment">//Capitalize_text ( Text ) -&gt; Text
+</span>  <span class="hljs-comment">//Capitalize_text ( Source text ) -&gt; Capitalized text
+</span> 
+ <span class="hljs-param">$0</span>:=<span class="hljs-param">$1</span>
+ <span class="hljs-locale">$vlLen</span>:=<span class="hljs-command">Length</span>(<span class="hljs-param">$0</span>)
+ <span class="hljs-keyword">If</span>(<span class="hljs-locale">$vlLe</span>n&gt;0)
+    <span class="hljs-param">$0</span>[[1]]:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$0</span>[[1]])
+    <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlChar</span>;1;<span class="hljs-locale">$vlLen</span>-1)
+       <span class="hljs-keyword">If</span>(<span class="hljs-command">Position</span>(<span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>]];"<span class="hljs-string"> !&amp;()-{}:;&lt;&gt;?/,.=+*</span>")&gt;0)
+          <span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>+1]]:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>+1]])
+       <span class="hljs-keyword">End if</span>
+    <span class="hljs-keyword">End for</span>
+ <span class="hljs-keyword">End if</span>
+</code></pre>
+<p>For example, the line:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>(Capitalize_text("<span class="hljs-string">hello, my name is jane doe and i'm running for president!</span>"))
+</code></pre>
+<p>displays the alert shown here:</p>
+<p><img src="/docs/docs/assets/en/Jane_doe.en.png" alt="alt-text"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/Concepts/pointer.html"><span class="arrow-prev">← </span><span>Pointer</span></a><a class="docs-next button" href="/docs/docs/Concepts/time.html"><span>Time</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#string-literals">String literals</a><ul class="toc-headings"><li><a href="#escape-sequences">Escape sequences</a></li></ul></li><li><a href="#string-operators">String operators</a></li><li><a href="#string-comparisons">String comparisons</a><ul class="toc-headings"><li><a href="#wilcard-character">Wilcard character (@)</a></li><li><a href="#keywords">Keywords</a></li></ul></li><li><a href="#character-reference-symbols">Character Reference Symbols</a><ul class="toc-headings"><li><a href="#advanced-note-about-invalid-character-reference">Advanced note about invalid character reference</a></li><li><a href="#example">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Doc Center" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '093230ccbc91f19f9a4f78bf3a92791c',
+                indexName: 'arnaud4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
