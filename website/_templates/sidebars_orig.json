@@ -1,0 +1,12 @@
+{
+  "docs": {
+    "4D Language Fundamentals": ["Concepts/doc1","Concepts/quick-tour","Concepts/variables","Concepts/arrays",
+	"Concepts/control-flow","Concepts/methods","Concepts/parameters","Concepts/error-handling","Concepts/interpreted-compiled",
+	"Concepts/components","Concepts/plug-ins","Concepts/identifiers"],
+	"Data Types": ["Concepts/data-types"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
+ 
