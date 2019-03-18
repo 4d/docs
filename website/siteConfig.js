@@ -51,8 +51,8 @@ const siteConfig = {
   users,
 
   algolia: {
-    apiKey: '093230ccbc91f19f9a4f78bf3a92791c',
-    indexName: 'arnaud4d',
+    apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+    indexName: '4d',
     algoliaOptions: {}, // Optional, if provided by Algolia
 	lineheight: '30px'
   },
@@ -100,7 +100,7 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js',
   'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-  '/doc/js/code-blocks-buttons.js'],
+  '/docs/js/code-blocks-buttons.js'],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
