@@ -79,7 +79,7 @@ class HomeSplash extends React.Component {
         <Logo img_src="" />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection>"A new 4D documentation web site to explain 4D concepts and new technologies."
+          <PromoSection>concepts / new technologies / previews
           </PromoSection>
         </div>
       </SplashContainer>
