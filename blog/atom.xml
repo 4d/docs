@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://4d.github.io/docs/blog</id>
-    <title>Doc Center Blog</title>
+    <title>Doc Center II Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://4d.github.io/docs/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Doc Center news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest Doc Center II news and events.</subtitle>
     <logo>https://4d.github.io/docs/img/4DlogoK.gif</logo>
     <rights>Copyright © 2019 4D SAS</rights>
     <entry>
