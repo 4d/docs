@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Doc Center' /* title for your website */,
+  title: 'Doc Center II' /* title for your website */,
   tagline: 'Documentation for 4D Developers',
   url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
