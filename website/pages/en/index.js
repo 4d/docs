@@ -79,7 +79,7 @@ class HomeSplash extends React.Component {
         <Logo img_src="" />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection>concepts / new technologies / previews
+          <PromoSection><i>...more to come...</i>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -157,18 +157,38 @@ const TryOut = props => (
 );
 
 const Description = props => (
-  <Block background="white" layout="twoColumn">
+  <Block background="light" layout="twoColumn">
     {[
       {
         content: '[4D Language Concepts](docs/Concepts/doc1.html)',
-		//<br>[Project Mode](docs/Project/overview.html)',
-        //image: imgUrl('4dlogo.png'),
+		//<br>[4D Project Development (BETA)](docs/Project/overview.html)',
+       image: imgUrl('manuals.png'),
 		imageAlign: 'left',
         title: 'Manuals',
-      },
+      }
+
 
     ]}
   </Block>
+
+);
+
+
+const Classic = props => (
+  <Block background="white" layout="twoColumn">
+    {[
+     {
+        content: '[doc.4d.com](https://doc.4d.com/)',
+        image: imgUrl('Classic.png'),
+		imageAlign: 'left',
+        title: 'Classic Documentation',
+      },
+
+
+
+    ]}
+  </Block>
+
 );
 
 const Showcase = props => {
@@ -211,15 +231,16 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Description />
+		  <Classic />
         </div>
       </div>
     );
   }
 }
 
-  //	<Features />
-  //        <FeatureCallout />
-  //   <LearnHow />
+//<Features />
+ //<FeatureCallout />
+   //<LearnHow />
   // <TryOut />
   //<Showcase language={language} />
 
