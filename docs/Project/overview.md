@@ -7,7 +7,7 @@ Developing a 4D application can be done in two different modes:
 
 - **binary mode**: all design elements (methods, forms, structure...) are gathered in a single, compact binary file, the ".4db" file. This mode was the only available mode until 4D v18.
 - **project mode**: all design elements are stored in separate, text-based, human-readable files. 
-- 
+
 The project mode provides an alternative way to develop in 4D using a text-based rather than binary-based mode. The 4D project mode combines the power of the 4D development platform with the versatility of lightweight, distributed work. 
 
 Fully functional 4D applications are created from end-to-end via multiple files within a single 4D Project. These files contain everything from the structure of an application, to its code, and even the application’s settings and user preferences.

@@ -20,8 +20,6 @@
       },
 	"Concepts/error-handling","Concepts/interpreted-compiled",
 	"Concepts/components","Concepts/plug-ins","Concepts/identifiers"
-	],
-	"4D Developer's Guide":
-	["In progress"]
+	]
   }
 }
