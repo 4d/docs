@@ -179,7 +179,7 @@ const Classic = props => (
     {[
      {
         content: '[doc.4d.com](https://doc.4d.com/)',
-        image: imgUrl('Classic.png'),
+        image: imgUrl('classic.png'),
 		imageAlign: 'left',
         title: 'Classic Documentation',
       },
