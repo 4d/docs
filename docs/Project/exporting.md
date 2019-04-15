@@ -1,6 +1,6 @@
 ---
 id: exporting
-title: Exporting to 4D project 
+title: Export to 4D project 
 ---
 
 You can convert an existing 4D database (.4db file) into a 4D project. Since the export only creates a new version of the existing database, original files are never touched. Thus, you can convert your database as many times as you need.
@@ -28,12 +28,13 @@ To convert a database to a project:
 If the conversion was successful and no blocking errors encountered, the following dialog box is diplayed:
 ![](../assets/en/exportProj2.png)
 
-- **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommenced in any case since the conversion process could have modified some parts of the application (see XXX).
+- **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommenced in any case since the conversion process could have modified some parts of the application (see [Check the conversion](#check-the-conversion)).
+
 - **Open project**: restarts the 4D application and loads the converted project. 
 
 ### About the data file
 
-The data file is left untouched by the
+The data file is left untouched by the conversion. Only development elements are converted. You can open the data file with the .4db structure file after a conversion. 
 
 ## Resulting project
 
@@ -43,26 +44,27 @@ During the conversion process, a new "Project" folder is created at the same lev
 
 When you open the "<name>.4DProject" file with your 4D application, the project uses the same resources folder and web folder as the existing "<name>.4db" file, which makes it easier to test your project.
 
-You can still open the "<name>.4db" database, do some modifications if required (see [Compatibility issues]), then export again, and test. You can repeat this operation until you are satisfied with the conversion.
+You can still open the "<name>.4db" database, do some modifications if required (see [Check the conversion]), then export again, and test. You can repeat this operation until you are satisfied with the conversion.
 
-## Check your conversion
+## Check the conversion
 
-No need to worry about converting your database. The conversion does not change your structure (.4db) and your data (.4dd). A log file is created during the conversion. Messages are classified into three categories: info, warning and error.
-For example, if you have images in the pictures library, 4D exports them to the resources folder of your database. In the log file, you have the correspondence between the ID of the picture and the name of the file:
-{
-   "message": "Exporting picture id:1, name:logo.png, types:.png to <...>:Resources:Images:library:logo.png",
-   "severity": "info"
-}
-Or for instance, some errors require your intervention. Some old form objects are no longer supported, such as highlight buttons. In this case, you must convert the button yourself to a 3D button.
-{
-   "table": 3,
-   "tableName": "Name",
-   "form": "Form",
-   "object": "button",
-   "message": "Highlight buttons are unsupported. Please convert them to 3D buttons.",
-   "severity": "error"
-}
-We’ve got you covered. 4D informs you of everything it does. All you have to do is reading what’s written for a better understanding if something went wrong during the conversion, or for just useful information to help you carry on.
+A log file is created by default during the conversion to reference all issues that required an action from the converter. The log file is in JSON format. In the file, messages are classified in three categories ("severity" property), for example:
+
+```codejs
+	{
+	   "message": "Exporting picture id:1, name:logo.png, types:.png to <...>:Resources:Images:library:logo.png",
+	   "severity": "info"
+	}
+```
+
+- **info**: describes a necessary action executed automatically by the converter and that will not have any impact on the application interface or features. For example, if you have images in the pictures library, 4D exports them to the **resources** folder of the database (see example above).
+
+- **warning**: describes a necessary action executed automatically by the converter that could lead to differences in the application's features or interface, but without preventing the database to run. Warnings usually require that you control the impact of the conversion on your code. For example, warnings are returned when unsupported compatibility settings, such as "Unicode mode" or "Radio buttons grouped by name" are automatically switched. 
+
+- **error**: describes an issue that requires your intervention to be fixed. It can prevent the database to run properly. For example, some old form objects are no longer supported, such as highlight buttons. In this case, you must convert yourself the button to a 3D button in the .4db file before relaunching the consersion. 
+
+
+When an adaptation is required in the .4db database, just modify the code or the form accordingly and export the structure again, until you are statisfied with the result. 
 
 
 ## Compatibility issues
