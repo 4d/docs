@@ -160,11 +160,12 @@ const Description = props => (
   <Block background="light" layout="twoColumn">
     {[
       {
-        content: '[4D Language Concepts](docs/Concepts/doc1.html)',
-		//<br>[4D Project Development (BETA)](docs/Project/overview.html)',
+        content: '[4D Language Concepts](docs/Concepts/doc1.html)', 
+		//<br>4D Projects (BETA)'
+		//(docs/Project/overview.html)'
        image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-        title: 'Manuals',
+        title: 'Reference Guides',
       }
 
 
@@ -179,9 +180,9 @@ const Classic = props => (
     {[
      {
         content: '[doc.4d.com](https://doc.4d.com/)',
-        image: imgUrl('Classic.png'),
+        image: imgUrl('classic.png'),
 		imageAlign: 'left',
-        title: 'Classic Documentation',
+        title: 'Doc Center',
       },
 
 
