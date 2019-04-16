@@ -47,5 +47,6 @@
 <url> <loc>https://4d.github.io/docs/docs/Project/comparing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://4d.github.io/docs/docs/Project/comparing.html" /> </url>
 <url> <loc>https://4d.github.io/docs/docs/Project/deploying.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://4d.github.io/docs/docs/Project/deploying.html" /> </url>
 <url> <loc>https://4d.github.io/docs/docs/Project/developing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://4d.github.io/docs/docs/Project/developing.html" /> </url>
+<url> <loc>https://4d.github.io/docs/docs/Project/exporting.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://4d.github.io/docs/docs/Project/exporting.html" /> </url>
 <url> <loc>https://4d.github.io/docs/docs/Project/getStarted.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://4d.github.io/docs/docs/Project/getStarted.html" /> </url>
 </urlset>
