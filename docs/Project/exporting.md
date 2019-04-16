@@ -21,10 +21,11 @@ To convert a database to a project:
 
 1. Open the database to convert.
 2. Select **File > Export > Structure to project**.  
+![](../assets/en/exportProj.png)
 **Notes:**   
 - This command is only available if the database is open in classic (binary) mode.
 - You can also use the **Export structure file** language command.
-![](../assets/en/exportProj.png)
+
 If the conversion was successful and no blocking errors encountered, the following dialog box is diplayed:
 ![](../assets/en/exportProj2.png)
 
@@ -44,7 +45,7 @@ During the conversion process, a new "Project" folder is created at the same lev
 
 When you open the "<name>.4DProject" file with your 4D application, the project uses the same resources folder and web folder as the existing "<name>.4db" file, which makes it easier to test your project.
 
-You can still open the "<name>.4db" database, do some modifications if required (see [Check the conversion]), then export again, and test. You can repeat this operation until you are satisfied with the conversion.
+You can still open the "<name>.4db" database, do some modifications if required (see below), then export again, and test. You can repeat this operation until you are satisfied with the conversion.
 
 ## Check the conversion
 
@@ -64,11 +65,23 @@ A log file is created by default during the conversion to reference all issues t
 - **error**: describes an issue that requires your intervention to be fixed. It can prevent the database to run properly. For example, some old form objects are no longer supported, such as highlight buttons. In this case, you must convert yourself the button to a 3D button in the .4db file before relaunching the consersion. 
 
 
-When an adaptation is required in the .4db database, just modify the code or the form accordingly and export the structure again, until you are statisfied with the result. 
+When edits are required in the .4db database, just modify the code or the form accordingly and export the structure again, until you are satisfied with the result. 
 
 
 ## Compatibility issues
 
+In 4D projects, we have removed the support of obsolete features in order to focus on new, modern implementations. In particular:
+
+- The picture library no longer exists. During conversion, 4D exports all your images to the **resources** folder of the database.
+- Legacy style sheets are not converted.
+- Groups and users are not converted.
+- Form objects and form object properties have been updated (they now use the same grammar as for Dynamic forms). Deprecated parts are not supported (see [Legacy form objects and properties on Doc Center](https://doc.4d.com/4Dv17R4/4D/17-R4/Deprecated-or-removed-features-in-v17-product-range.200-4075256.en.html#4020272))'. In fact, we use the same grammar used for Dynamic forms.
+- Compatibility settings are reset as for a new database. Check the Conversion log to verify the status of compatibility settings for your database. 
+
+
 ## And after?
-### Copy, merge, 
-### Rollback
+
+Once your are satisfied with your converted database and want to start working with your project, you can clean up your working directory:
+
+1. Remove your ".4db" and ".4dindy" files from the application folder (you can move them to a backup directory for example).
+2. On macOS, remove the ".4dbase" folder extension during the whole development phase. Since you work with 

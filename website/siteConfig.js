@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Documentation' /* title for your website */,
-  tagline: 'for 4D Developers',
+  tagline: 'Essential Guides for 4D Developers',
   url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   baseUrl: '/docs/' /* base url for your project */,
@@ -41,7 +41,7 @@ const siteConfig = {
   headerLinks: [
     //{doc: 'Concepts/doc1', label: '4D Language Concepts'},
     //{doc: 'doc4', label: 'page4'},
-	{href: 'https://4d.com/', label: '4d.com'},
+	{href: 'https://developer.4d.com/', label:'Developer Center'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
     //{blog: false, label: 'Blog'},
