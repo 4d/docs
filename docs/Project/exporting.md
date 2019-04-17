@@ -75,11 +75,12 @@ In 4D projects, we have removed the support of .4db features that were deprecate
 - The picture library no longer exists. During conversion, 4D exports all your images to the **resources** folder of the database.
 - Legacy style sheets are not converted.
 - Groups and users are not converted.
+- Explorer comments are not converted.
 - Form objects and form object properties have been updated (they now use the same grammar as for Dynamic forms). Deprecated parts are not supported (see [Legacy form objects and properties on Doc Center](https://doc.4d.com/4Dv17R4/4D/17-R4/Deprecated-or-removed-features-in-v17-product-range.200-4075256.en.html#4020272))'. In fact, we use the same grammar used for Dynamic forms.
 - Compatibility settings are reset as for a new database. See the Conversion log file to verify the status of compatibility settings for your database. 
 
 
-## And after?
+## And now?
 
 Once your are satisfied with your converted database and want to start working with your project, you can clean up your working directory:
 
