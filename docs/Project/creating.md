@@ -9,7 +9,7 @@ New 4D projects can only be created from **4D Developer** (see [Developing a pro
 
 
 
-**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes. For deployment, 4D projects are provided as .4DZ files (zipped files). For more information, please refer to [Deploying a project](deployment.md). 
+**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes. For deployment, 4D projects are provided as .4DZ files (zipped files). For more information, please refer to [Deploying a project](deploying.md). 
 
 ## Creating the project files
 
