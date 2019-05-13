@@ -7,7 +7,7 @@ You can convert an existing 4D database (.4db file) into a 4D project. Since the
 
 Keep in mind that the export is a one-way operation:
 
-- once a 4D database has been exported as a project, both versions become independant. 
+- once a 4D database has been exported as a project, both versions become independent. 
 - a 4D project cannot be exported to a .4db file
 
 

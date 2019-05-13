@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-A 4D project is a 4D database application where all the development part is stored into multiple text-based, human-readable files. These files contain everything from the structure of an application, to its code, and even the application’s forms, settings or user preferences.
+A 4D project is a 4D database application where all the development part is stored into multiple text-based, human-readable files. These files contain everything from the structure of an application to its code, and even the application’s forms, settings or user preferences.
 
 ## Creation
 
@@ -17,7 +17,7 @@ To create a 4D database project, you have two possibilities:
 
 A project is a specific database configuration. When you [create a database project](creating.md), you select the "project mode" and it will not be possible to switch to the "binary mode" for this database (which is the only mode available until 4D v17 R5). 
 
-On the other hand, you can export a "binary mode" database to a project mode" database (see [Exporting from a 4D Database](exporting.md)) but therefore both databases become independant.
+On the other hand, you can export a "binary mode" database to a "project mode" database (see [Exporting from a 4D Database](exporting.md)) but therefore both databases become independent.
 
 
 ## Project files
