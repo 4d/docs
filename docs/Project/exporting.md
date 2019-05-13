@@ -29,7 +29,7 @@ To convert a database to a project:
 If the conversion was successful and no blocking errors encountered, the following dialog box is diplayed:
 ![](../assets/en/exportProj2.png)
 
-- **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommenced in any case since the conversion process could have modified some parts of the application (see [Check the conversion](#check-the-conversion)).
+- **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommended in any case since the conversion process could have modified some parts of the application (see [Check the conversion](#check-the-conversion)).
 
 - **Open project**: restarts the 4D application and loads the converted project. 
 
