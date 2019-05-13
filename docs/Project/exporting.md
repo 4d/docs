@@ -1,6 +1,6 @@
 ---
 id: exporting
-title: Export to 4D project 
+title: Exporting from a 4D database 
 ---
 
 You can convert an existing 4D database (.4db file) into a 4D project. Since the export only creates a new version of the existing database, original files are never touched. Thus, you can convert your database as many times as you need.
@@ -70,14 +70,15 @@ When edits are required in the .4db database, just modify the code or the form a
 
 ## Compatibility issues
 
-In 4D projects, we have removed the support of .4db features that were deprecated in order to focus on new, modern implementations. In particular:
+During the conversion, some legacy 4D technologies are converted to more modern implementations, and some others are temporarily disregarded.
+ 
+In particular:
 
 - The picture library no longer exists. During conversion, 4D exports all your images to the **resources** folder of the database.
-- Legacy style sheets are not converted.
-- Groups and users are not converted.
-- Explorer comments are not converted.
-- Form objects and form object properties have been updated (they now use the same grammar as for Dynamic forms). Deprecated parts are not supported (see [Legacy form objects and properties on Doc Center](https://doc.4d.com/4Dv17R4/4D/17-R4/Deprecated-or-removed-features-in-v17-product-range.200-4075256.en.html#4020272))'. In fact, we use the same grammar used for Dynamic forms.
+- Form objects and form object properties have been updated (they now use the same grammar as for Dynamic forms). Deprecated parts are not supported. In fact, we use the same grammar used for Dynamic forms.
 - Compatibility settings are reset as for a new database. See the Conversion log file to verify the status of compatibility settings for your database. 
+
+For a detailed list of compatibility issues, please refer to [Legacy technologies on Doc Center](https://doc.4d.com/4Dv17R4/4D/17-R4/Deprecated-or-removed-features-in-v17-product-range.200-4075256.en.html#4020272).
 
 
 ## And now?

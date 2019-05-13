@@ -21,6 +21,7 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled",
 	"Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
-	"4D Projects (BETA)":["Project/overview","Project/architecture","Project/exporting"]
+	"4D Projects (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
+	"Project/deploying"]
   }
 }

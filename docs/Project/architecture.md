@@ -8,7 +8,7 @@ A 4D project is made of several folders and files, stored into a single parent d
 ![](../assets/en/project1.png)
 
 
-## Project
+## Project folder
 
 The Project folder typically contains the following hierarchy:
 
@@ -25,10 +25,15 @@ The Project folder typically contains the following hierarchy:
 
 ### *databaseName*.4DProject file
 
-Project file, used to designate the project. You can drop this file to the 4D application to launch the project.  
+Project development file, used to designate and launch the project. This file can be opened by:
+
+- 4D Developer
+- 4D Server (read-only, see XXX)
+
+**Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing pupose
 
 
-### Sources
+### Sources folder
 
 Contents|Description|Format
 --------|-------|----
@@ -40,19 +45,19 @@ tips.json|Defined tips|json
 lists.json|Defined lists|json
 filters.json|Defined filters|json  
 
-#### DatabaseMethods
+#### DatabaseMethods folder
 
 Contents|Description|Format
 --------|-------|----
 *databaseMethodName*.4dm|Database methods defined in the database. One file per database method|text
 
-#### Methods
+#### Methods folder
 
 Contents|Description|Format
 --------|-------|----
 *methodName*.4dm|Project methods defined in the database. One file per method|text
 
-#### Forms
+#### Forms folder
 
 Contents|Description|Format
 --------|-------|----
@@ -61,7 +66,7 @@ Contents|Description|Format
 *formName*/Images/*pictureName*|Project form static picture|picture
 *formName*/ObjectMethods/*objectName*.4dm|Object methods. One file per object method|text
 
-#### TableForms
+#### TableForms folder
 
 Contents|Description|Format
 --------|-------|----
@@ -74,7 +79,7 @@ Contents|Description|Format
 *n*/Output/*formName*/method.4dm|Output table form method|text
 *n*/Output/*formName*/ObjectMethods/*objectName*.4dm|Output form object methods. One file per object method|text
 
-#### Triggers
+#### Triggers folder
 
 Contents|Description|Format
 --------|-------|----
@@ -83,7 +88,7 @@ table_*n*.4dm|Trigger methods defined in the database. One trigger file per tabl
 **Note:**
 The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
 
-### BuildSettings
+### BuildSettings folder
 
 The BuildSettings folder is created automatically when using the application builder dialog box or the ```BUILD APPLICATION``` command. It contains:
 
@@ -103,12 +108,12 @@ The Trash folder contains methods and forms that were deleted from the project (
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organisation is identical to the [Sources](#sources) folder. 
 
 
-### DerivedData
+### DerivedData folder
 
 The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can just ignore this folder. 
 
 
-## Resources
+## Resources folder
 
 The Resources folder contains any custom database resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures.
 In the context of use in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
@@ -121,7 +126,7 @@ Images/Library/*item*|Pictures from the picture library as separate files(*). Na
 (*) only if the project was created from a .4db database (see [Exporting a database](exporting.md)).
 
 
-## Data
+## Data folder
 
 The data folder contains the data file and all files il relations to the data.
 
@@ -134,7 +139,7 @@ data.match|(internal) UUID matching table number|xml
 (*) When the project is created from a .4db database, the data file is left untouched. Thus, it can be named differently and be located to another location (see [Exporting a database](exporting.md)).
 
 
-## Logs
+## Logs folder
 
 The Logs folder contains all log files used by the project. Log files are timestamped. Log files include, in particular:
 
@@ -147,15 +152,16 @@ The Logs folder contains all log files used by the project. Log files are timest
 - 4D Server requests (generated on client machines and on the server).
 
 
-## userPreferences.*userName*
+## userPreferences.*userName* folder
 
-This folder contains configuration files specific to the database:
+This folder contains user configuration files. You can just ignore this folder. It contains for example:
 
 Contents|Description|Format
 --------|-------|----
-methodPreferences.json|Method editor preferences|json
+methodPreferences.json|User method editor preferences|json
 methodWindowPositions.json|Current user window positions for methods|json
 formWindowPositions.json|Current user window positions for forms|json
+workspace.json||json
 preferencesv15.4DPreferences|User preferences|json
 
 
