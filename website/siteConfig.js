@@ -70,8 +70,10 @@ const siteConfig = {
     //primaryColor: '#2E8555',
     //secondaryColor: '#205C3B',
 	//primaryColor: '#696969', gris
-    primaryColor: '#004289',
+  
+	primaryColor: '#004289',
 	secondaryColor: '#696969',
+
   },
 
   /* custom fonts for website */
