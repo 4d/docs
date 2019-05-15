@@ -87,3 +87,9 @@ Once your are satisfied with your converted database and want to start working o
 
 1. Remove your .4db and .4dindy files from the application folder (e.g., move them to a backup directory).
 2. On macOS, remove the .4dbase folder extension during the entire development phase. Since you are going to work with text files and put them under a source control tool, you will need to have direct access to them. 
+
+If you want the data file to be open automatically after the project is moved to other machines, you can make it compliant with the [project architecture](architecture.md):
+
+1. Rename your data file "data.4dd".
+2. Create a folder named "Data" and move the *data.4dd* file within that folder
+2. Store the *Data* folder at the same level as the Project folder.
