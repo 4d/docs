@@ -3,7 +3,7 @@ id: arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
+An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
 
 > In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
 
@@ -60,19 +60,19 @@ An array always has an element zero. While element zero is not shown when an arr
 Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
 
 ```code4d
-  ` atNames scrollable area object method
+  // atNames scrollable area object method
  Case of
     :(Form event=On Load)
-  ` Initialize the array (as shown further above)
+  // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
-  ` ...
-  ` Initialize the element zero with the number
-  ` of the current selected element in its string form
-  ` Here you start with no selected element
+  // ...
+  // Initialize the element zero with the number
+  // of the current selected element in its string form
+  // Here you start with no selected element
        atNames{0}:="0"
 
     :(Form event=On Unload)
-  ` We no longer need the array
+  // We no longer need the array
        CLEAR VARIABLE(atNames)
 
     :(Form event=On Clicked)
@@ -96,7 +96,7 @@ Here is another example: you want to execute an action only when you click on an
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```code4d
- ARRAY TEXT(atTopics;100;50) ` Creates a text array composed of 100 rows of 50 columns
+ ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Two-dimensional arrays are essentially language objects; you can neither display nor print them.
@@ -114,21 +114,21 @@ In the following example, a pointer to each field of each table in the database 
 ```code4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  ` Create as many rows (empty and without columns) as there are tables
+  // Create as many rows (empty and without columns) as there are tables
  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) `2D array with X rows and zero columns
-  ` For each table
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
+  // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Get last field number($vlTable)
-  ` Give value of elements
+  // Give value of elements
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  `Insert a column in a row of the table underway
+  //Insert a column in a row of the table underway
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  `Assign the "cell" with the pointer
+  //Assign the "cell" with the pointer
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -139,9 +139,9 @@ In the following example, a pointer to each field of each table in the database 
 Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:
 
 ```code4d
-  ` Get the pointers to the fields for the table currently displayed at the screen:
+  // Get the pointers to the fields for the table currently displayed at the screen:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  ` Initialize Boolean and Date fields
+  // Initialize Boolean and Date fields
  For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
@@ -170,18 +170,20 @@ Doing the same thing with arrays would be prohibitive for the following reasons:
 
 However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:
 
-| Array Type      | Formula for determining Memory Usage in Bytes                |
-| --------------- | ------------------------------------------------------------ |
-| Boolean         | (31+number of elements)\8                                   |
-| Date            | (1+number of elements) * 6                                   |
-| String          | (1+number of elements) * (Sum of the size of each text)      |
-| Integer         | (1+number of elements) * 2                                   |
-| Long Integer    | (1+number of elements) * 4                                   |
-| Picture         | (1+number of elements) * 4 + Sum of the size of each picture |
-| Pointer         | (1+number of elements) * 16                                  |
-| Real            | (1+number of elements) * 8                                   |
-| Text            | (1+number of elements) * (Sum of the size of each text)      |
-| Two-dimensional | (1+number of elements) * 12 + Sum of the size of each array  |
+| Array Type      | Formula for determining Memory Usage in Bytes                        |
+| --------------- | -------------------------------------------------------------------- |
+| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
+| Boolean         | (31+number of elements)\8                                           |
+| Date            | (1+number of elements) * 6                                           |
+| Integer         | (1+number of elements) * 2                                           |
+| Long Integer    | (1+number of elements) * 4                                           |
+| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
+| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
+| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
+| Real            | (1+number of elements) * 8                                           |
+| Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
+| Time            | (1+number of elements) * 4                                           |
+| Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
 
 **Notes:**
 
