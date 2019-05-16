@@ -1,7 +1,7 @@
 {
   "docs": {
     "4D Language Concepts": 
-	["Concepts/doc1","Concepts/quick-tour",
+	["Concepts/about","Concepts/quick-tour",
       {
         "type": "subcategory",
         "label": "Data Types",
