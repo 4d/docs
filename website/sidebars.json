@@ -28,7 +28,7 @@
         "type": "subcategory",
         "label": "Catalog",
         "ids": [
-          "FormObjects/button","FormObjects/toolbarButton"]}
+          "FormObjects/Buttons/buttonOverview","FormObjects/Buttons/toolbarButton"]}
   ]
 }
 }

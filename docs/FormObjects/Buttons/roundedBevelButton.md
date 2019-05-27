@@ -3,19 +3,47 @@ id: roundedBevel button
 title: Rounded Bevel
 ---
 
-**Overview**
+### Description
 
- - In macOS, a “Rounded bevel” button is similar to a “Bevel” button except that its highlights are rounded.
- - In Windows, this button style is identical to the “Bevel” style.
+
+The Rounded Bevel button style is nearly identical to the [Bevel Button](bevelButton.md) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular Button](regularButton.md) style (*i.e.*, a rectangle with a descriptive label) with the [Toolbar Button](toolbarButton.md) style's pop-up menu property option. 
+
+By default, the Rounded Bevel button style has a light gray background with a label in the center: 
+
+![alt-text](assets/en/regularButton.en.png)
+
+
+The appearance of the Rounded Bevel button style can be different when the cursor hovers over it depending on the OS:
+
+ - *Windows* - the button is identical to the Bevel button style.<br> 
+![alt-text](assets/en/toolbarButtonHover_Windows.en.png) <br>
+When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. <br>
+![alt-text](assets/en/toolbarButtonHover_Windows_popup.en.png)
+
+
+ - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.<p>**ADD PICTURE**
+  <br> 
+
  
 
-ADD PICTURE
+#### Selecting the style
+
+The Rounded Bevel button's style property can be set via:
+
+* **Property List:** Select *Rounded Bevel* from the **Button Style** drop-down list in the **Text and Picture** section.  <br>![alt-text](assets/en/roundedBevelButton_propertyList.en.png)
+
+
+* **Code:** Define the property using JSON: <br>Example: ```{"style":"roundedBevel"} ```<br>
+See the [Dynamic Forms](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) page for more information.
+
 <p>
  
 <hr>
 <hr>
  **Properties**
  
+A button's appearance, location, and behavior can be altered by modifying its properties. The Rounded Bevel button style supports the following properties:  
+
 [Bold](boldProperty.md)<br>
 [Bottom](bottomProperty.md)<br>
 [Button Style](buttonStyleProperty.md)<br>
@@ -26,7 +54,7 @@ ADD PICTURE
 [Horizontal Sizing](horizontalSizingProperty.md)<br>
 [Italic](italicProperty.md)<br>
 [Left](leftProperty.md)<br>
-|Not rendered|boolean|  |TRUE/FALSE| <br>
+[Not rendered](notRenderedProperty.md) <br> 
 [Number of States](numberOfStatesProperty.md)<br>
 [Object Name](objectNameProperty.md)<br>
 [Picture Pathname](picturePathnameProperty.md)<br>
