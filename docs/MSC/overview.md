@@ -40,4 +40,4 @@ Certain MSC functions are not available depending on the MSC opening mode:
 
 - Backup function is only available when the database is open (the MSC must have been opened in standard mode).
 - Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the database is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see XXXEncrypt page). Otherwise, encrypted data is not visible. 
+- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible. 
