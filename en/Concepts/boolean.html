@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Boolean · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;A boolean field, variable or expression can be either TRUE or FALSE.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Boolean · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;A boolean field, variable or expression can be either TRUE or FALSE.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Projects (BETA)<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/exporting.html">Exporting from a 4D database</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/deploying.html">Deploying a project</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Boolean</h1></header><article><div><span><p>A boolean field, variable or expression can be either TRUE or FALSE.</p>
+<h2><a class="anchor" aria-hidden="true" id="boolean-functions"></a><a href="#boolean-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean functions</h2>
+<p>4D provides the Boolean functions <code>True</code>, <code>False</code>, and <code>Not</code> in the dedicated <strong>Boolean</strong> theme. For more information, see the descriptions of these commands</p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">If</span>(myButton=1) <span class="hljs-comment">` If the button was clicked
+</span>    myBoolean:=<span class="hljs-command">True</span> <span class="hljs-comment">` myBoolean is set to True
+</span> <span class="hljs-keyword">Else</span> <span class="hljs-comment">` If the button was not clicked,
+</span>    myBoolean:=<span class="hljs-command">False</span> <span class="hljs-comment">` myBoolean is set to False
+</span> <span class="hljs-keyword">End if</span>
+</code></pre>
+<p>The previous example can be simplified into one line.</p>
+<pre><code class="hljs css language-code4d">myBoolean:=(myButton=1)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="logical-operators"></a><a href="#logical-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logical operators</h2>
+<p>4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:</p>
+<table>
+<thead>
+<tr><th>Operation</th><th>Syntax</th><th>Returns</th><th>Expression</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>AND</td><td>Boolean &amp; Boolean</td><td>Boolean</td><td>(&quot;A&quot; = &quot;A&quot;) &amp; (15 # 3)</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>(&quot;A&quot; = &quot;B&quot;) &amp; (15 # 3)</td><td>False</td></tr>
+<tr><td></td><td></td><td></td><td>(&quot;A&quot; = &quot;B&quot;) &amp; (15 = 3)</td><td>False</td></tr>
+<tr><td>OR</td><td>Boolean  | Boolean</td><td>Boolean</td><td>(&quot;A&quot; = &quot;A&quot;) | (15 # 3)</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>(&quot;A&quot; = &quot;B&quot;) |  (15 # 3)</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>(&quot;A&quot; = &quot;B&quot;) |  (15 = 3)</td><td>False</td></tr>
+</tbody>
+</table>
+<p>The following is the truth table for the AND logical operator:</p>
+<table>
+<thead>
+<tr><th>Expr1</th><th>Expr2</th><th>Expr1 &amp; Expr2</th></tr>
+</thead>
+<tbody>
+<tr><td>True</td><td>True</td><td>True</td></tr>
+<tr><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>False</td><td>True</td><td>False</td></tr>
+<tr><td>False</td><td>False</td><td>False</td></tr>
+</tbody>
+</table>
+<p>The following is the truth table for the OR logical operator:</p>
+<table>
+<thead>
+<tr><th>Expr1</th><th>Expr2</th><th>Expr1 | Expr2</th></tr>
+</thead>
+<tbody>
+<tr><td>True</td><td>True</td><td>True</td></tr>
+<tr><td>True</td><td>False</td><td>True</td></tr>
+<tr><td>False</td><td>True</td><td>True</td></tr>
+<tr><td>False</td><td>False</td><td>False</td></tr>
+</tbody>
+</table>
+<p><strong>Tip:</strong> If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:</p>
+<pre><code class="hljs css language-code4d"> (Expr1|Expr2) &amp; <span class="hljs-command">Not</span>(Expr1 &amp; Expr2)  
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/Concepts/blob.html"><span class="arrow-prev">← </span><span>BLOB</span></a><a class="docs-next button" href="/docs/en/Concepts/collection.html"><span>Collection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#boolean-functions">Boolean functions</a><ul class="toc-headings"><li><a href="#example">Example</a></li></ul></li><li><a href="#logical-operators">Logical operators</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

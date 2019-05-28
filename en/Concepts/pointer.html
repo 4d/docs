@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Pointer · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Pointer · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>4D Language Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Projects (BETA)<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/exporting.html">Exporting from a 4D database</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/deploying.html">Deploying a project</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Pointer</h1></header><article><div><span><p>A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.</p>
+<p>Pointers provide an advanced way (in programming) to refer to data. When you use the language, you access various objects—in particular, tables, fields, variables, objects, and arrays—by simply using their names. However, it is often useful to refer to these elements and access them without knowing their names. This is what pointers let you do.</p>
+<p>The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.</p>
+<p>Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. In both cases, the pointer references numeric data that could be used in a calculation.</p>
+<p>You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:</p>
+<table>
+<thead>
+<tr><th>Type</th><th>To Reference</th><th>To Use</th><th>To Assign</th></tr>
+</thead>
+<tbody>
+<tr><td>Table</td><td>vpTable:=-&gt;[Table]</td><td>DEFAULT TABLE(vpTable-&gt;)</td><td>n/a</td></tr>
+<tr><td>Field</td><td>vpField:=-&gt;[Table]Field</td><td>ALERT(vpField-&gt;)</td><td>vpField-&gt;:=&quot;John&quot;</td></tr>
+<tr><td>Variable</td><td>vpVar:=-&gt;Variable</td><td>ALERT(vpVar-&gt;)</td><td>vpVar-&gt;:=&quot;John&quot;</td></tr>
+<tr><td>Array</td><td>vpArr:=-&gt;Array</td><td>SORT ARRAY(vpArr-&gt;;&gt;)</td><td>COPY ARRAY (Arr;vpArr-&gt;)</td></tr>
+<tr><td>Array element</td><td>vpElem:=-&gt;Array{1}</td><td>ALERT (vpElem-&gt;)</td><td>vpElem-&gt;:=&quot;John&quot;</td></tr>
+<tr><td>Object</td><td>vpObj:=-&gt;myObject</td><td>ALERT (vpObj-&gt;myProp)</td><td>vpObj-&gt;myProp:=&quot;John&quot;</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="using-a-pointer-basic-example"></a><a href="#using-a-pointer-basic-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a pointer: Basic example</h2>
+<p>It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyVar</span>:="<span class="hljs-string">Hello</span>"
+</code></pre>
+<p>$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_POINTER</span>(<span class="hljs-locale">$MyPointer</span>)  
+<span class="hljs-locale">$MyPointer</span>:=-&gt;<span class="hljs-locale">$MyVar</span>
+</code></pre>
+<p>The -&gt; symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.</p>
+<p>$MyPointer is now a variable that contains a pointer to $MyVar. $MyPointer does not contain “Hello”, which is the value in $MyVar, but you can use $MyPointer to get this value. The following expression returns the value in $MyVar:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyPointer</span>-&gt;
+</code></pre>
+<p>In this case, it returns the string “Hello”. The -&gt; symbol, when it follows a pointer, references the object pointed to. This is called dereferencing.</p>
+<p>It is important to understand that you can use a pointer followed by the -&gt; symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-&gt; anywhere that you could use the original $MyVar variable. For example, the following line displays an alert box with the word Hello in it:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>(<span class="hljs-locale">$MyPointer</span>-&gt;)
+</code></pre>
+<p>You can also use $MyPointer to change the data in $MyVar. For example, the following statement stores the string &quot;Goodbye&quot; in the variable $MyVar:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyPointer</span>-&gt;:="<span class="hljs-string">Goodbye</span>"
+</code></pre>
+<p>If you examine the two uses of the expression $MyPointer-&gt;, you will see that it acts just as if you had used $MyVar instead. In summary, the following two lines perform the same action—both display an alert box containing the current value in the variable $MyVar:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>(<span class="hljs-locale">$MyPointer</span>-&gt;)
+<span class="hljs-command">ALERT</span>(<span class="hljs-locale">$MyVar</span>)
+</code></pre>
+<p>The following two lines perform the same action— both assign the string &quot;Goodbye&quot; to $MyVar:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyPointer</span>-&gt;:="<span class="hljs-string">Goodbye</span>"
+<span class="hljs-locale">$MyVar</span>:="<span class="hljs-string">Goodbye</span>"
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="pointer-operators"></a><a href="#pointer-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointer operators</h2>
+<p>With:</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">` vPtrA and vPtrB point to the same object
+</span> vPtrA:=-&gt;anObject
+ vPtrB:=-&gt;anObject
+  <span class="hljs-comment">` vPtrC points to another object
+</span> vPtrC:=-&gt;anotherObject
+</code></pre>
+<table>
+<thead>
+<tr><th>Operation</th><th>Syntax</th><th>Returns</th><th>Expression</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>Equality</td><td>Pointer = Pointer</td><td>Boolean</td><td>vPtrA = vPtrB</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>vPtrA = vPtrC</td><td>False</td></tr>
+<tr><td>Inequality</td><td>Pointer # Pointer</td><td>Boolean</td><td>vPtrA # vPtrC</td><td>True</td></tr>
+<tr><td></td><td></td><td></td><td>vPtrA # vPtrB</td><td>False</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="main-usages"></a><a href="#main-usages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Main usages</h2>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-tables"></a><a href="#pointers-to-tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to tables</h3>
+<p>Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$TablePtr</span>:=-&gt;[anyTable]
+</code></pre>
+<p>You can also get a pointer to a table by using the <code>Table</code> command:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$TablePtr</span>:=<span class="hljs-constant">Table</span>(20)
+</code></pre>
+<p>You can use the dereferenced pointer in commands, like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">DEFAULT TABLE</span>(<span class="hljs-locale">$TablePtr</span>-&gt;)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-fields"></a><a href="#pointers-to-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to fields</h3>
+<p>Anywhere that the language expects to see a field, you can use a dereferenced pointer to reference the field. You create a pointer to a field by using a line like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$FieldPtr</span>:=-&gt;[aTable]ThisField
+</code></pre>
+<p>You can also get a pointer to a field by using the <code>Field</code> command, for example:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$FieldPtr</span>:=<span class="hljs-command">Field</span>(1;2)
+</code></pre>
+<p>You can use the dereferenced pointer in commands, like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">OBJECT SET FONT</span>(<span class="hljs-locale">$FieldPtr</span>-&gt;;"<span class="hljs-string">Arial</span>")
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-local-variables"></a><a href="#pointers-to-local-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to local variables</h3>
+<p>When you use pointers to process or local variables, you must be sure that the variable pointed to is already set when the pointer is used. Keep in mind that local variables are deleted when the method that created them has completed its execution and process variables are deleted at the end of the process that created them. When a pointer calls a variable that no longer exists, this causes a syntax error in interpreted mode (variable not defined) but it can generate a more serious error in compiled mode.</p>
+<p>Pointers to local variables allow you to save process variables in many cases. Pointers to local variables can only be used within the same process. In the debugger, when you display a pointer to a local variable that has been declared in another method, the original method name is indicated in parentheses, after the pointer. For example, if you write in Method1:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$MyVar</span>:="<span class="hljs-string">Hello world</span>"
+ Method2(-&gt;<span class="hljs-locale">$MyVar</span>)
+</code></pre>
+<p>In Method2, the debugger will display $1 as follows:</p>
+<table>
+<thead>
+<tr><th>$1</th><th>-&gt;$MyVar (Method1)</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>The value of $1 will be:</p>
+<table>
+<thead>
+<tr><th>$MyVar (Method1)</th><th>&quot;Hello world&quot;</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-array-elements"></a><a href="#pointers-to-array-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to array elements</h3>
+<p>You can create a pointer to an array element. For example, the following lines create an array and assign a pointer to the first array element to a variable called $ElemPtr:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY REAL</span>(<span class="hljs-locale">$anArray</span>;10) <span class="hljs-comment">//Create an array
+</span><span class="hljs-locale">$ElemPtr</span>:=-&gt;<span class="hljs-locale">$anArray</span>{1} <span class="hljs-comment">//Create a pointer to the array element
+</span></code></pre>
+<p>You could use the dereferenced pointer to assign a value to the element, like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$ElemPtr</span>-&gt;:=8
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-arrays"></a><a href="#pointers-to-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to arrays</h3>
+<p>You can create a pointer to an array. For example, the following lines create an array and assign a pointer to the array to a variable called $ArrPtr:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY REAL</span>(<span class="hljs-locale">$anArray</span>;10) <span class="hljs-comment">//Create an array
+</span><span class="hljs-locale">$ArrPtr</span>:=-&gt;<span class="hljs-locale">$anArray</span> <span class="hljs-comment">//Create a pointer to the array
+</span></code></pre>
+<p>It is important to understand that the pointer points to the array; it does not point to an element of the array. For example, you can use the dereferenced pointer from the preceding lines like this:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">SORT ARRAY</span>(<span class="hljs-locale">$ArrPtr</span>-&gt;;&gt;) <span class="hljs-comment">//Sort the array
+</span></code></pre>
+<p>If you need to refer to the fourth element in the array by using the pointer, you do this:</p>
+<pre><code class="hljs css language-code4d"> ArrPtr-&gt;{4}:=84
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pointers-as-parameters-to-methods"></a><a href="#pointers-as-parameters-to-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers as parameters to methods</h3>
+<p>You can pass a pointer as a parameter to a method. Inside the method, you can modify the object referenced by the pointer. For example, the following method, <code>takeTwo</code>, takes two parameters that are pointers. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">//takeTwo project method
+</span>  <span class="hljs-comment">//$1 – Pointer to a string field or variable. Change this to uppercase.
+</span>  <span class="hljs-comment">//$2 – Pointer to a string field or variable. Change this to lowercase.
+</span> <span class="hljs-param">$1</span>-&gt;:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$1</span>-&gt;)
+ <span class="hljs-param">$2</span>-&gt;:=<span class="hljs-command">Lowercase</span>(<span class="hljs-param">$2</span>-&gt;)
+</code></pre>
+<p>The following line uses the <code>takeTwo</code> method to change a field to uppercase characters and to change a variable to lowercase characters:</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">takeTwo</span><span class="hljs-params">(-&gt;[myTable]myField;-&gt;<span class="hljs-variable">$MyVar</span>)</span></span>
+</code></pre>
+<p>If the field [myTable]myField contained the string &quot;jones&quot;, it would be changed to the string &quot;JONES&quot;. If the variable $MyVar contained the string &quot;HELLO&quot;, it would be changed to the string &quot;hello&quot;.</p>
+<p>In the takeTwo method, and in fact, whenever you use pointers, it is important that the data type of the object being referenced is correct. In the previous example, the pointers must point to something that contains a string or text.</p>
+<h3><a class="anchor" aria-hidden="true" id="pointers-to-pointers"></a><a href="#pointers-to-pointers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to pointers</h3>
+<p>If you really like to complicate things, you can use pointers to reference other pointers. Consider this example:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$MyVar</span>:="<span class="hljs-string">Hello</span>"
+ <span class="hljs-locale">$PointerOne</span>:=-&gt;<span class="hljs-locale">$MyVar</span>
+ <span class="hljs-locale">$PointerTwo</span>:=-&gt;<span class="hljs-locale">$PointerOne</span>
+ (<span class="hljs-locale">$PointerTwo</span>-&gt;)-&gt;:="<span class="hljs-string">Goodbye</span>"
+ <span class="hljs-command">ALERT</span>((<span class="hljs-locale">$PointerTwo</span>-&gt;)-&gt;)
+</code></pre>
+<p>It displays an alert box with the word “Goodbye” in it.</p>
+<p>Here is an explanation of each line of the example:</p>
+<ul>
+<li>$MyVar:=&quot;Hello&quot;
+--&gt; This line puts the string &quot;Hello&quot; into the variable $MyVar.</li>
+<li>$PointerOne:=-&gt;$MyVar
+--&gt; $PointerOne now contains a pointer to $MyVar.</li>
+<li>$PointerTwo:=-&gt;$PointerOne
+--&gt; $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.</li>
+<li>($PointerTwo-&gt;)-&gt;:=&quot;Goodbye&quot;
+--&gt; $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. So in this case, $MyVar is assigned &quot;Goodbye&quot;.</li>
+<li>ALERT (($PointerTwo-&gt;)-&gt;)
+--&gt; Same thing: $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. So in this case, the alert box displays the contents of $MyVar.</li>
+</ul>
+<p>The following line puts &quot;Hello&quot; into $MyVar:</p>
+<pre><code class="hljs css language-code4d">(<span class="hljs-locale">$PointerTwo</span>-&gt;)-&gt;:="<span class="hljs-string">Hello</span>"
+</code></pre>
+<p>The following line gets &quot;Hello&quot; from $MyVar and puts it into $NewVar:</p>
+<pre><code class="hljs"><span class="hljs-variable">$NewVar</span><span class="hljs-symbol">:</span>=(<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;
+</code></pre>
+<p><strong>Important:</strong> Multiple dereferencing requires parentheses.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/Concepts/picture.html"><span class="arrow-prev">← </span><span>Picture</span></a><a class="docs-next button" href="/docs/en/Concepts/string.html"><span>String</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#using-a-pointer-basic-example">Using a pointer: Basic example</a></li><li><a href="#pointer-operators">Pointer operators</a></li><li><a href="#main-usages">Main usages</a><ul class="toc-headings"><li><a href="#pointers-to-tables">Pointers to tables</a></li><li><a href="#pointers-to-fields">Pointers to fields</a></li><li><a href="#pointers-to-local-variables">Pointers to local variables</a></li><li><a href="#pointers-to-array-elements">Pointers to array elements</a></li><li><a href="#pointers-to-arrays">Pointers to arrays</a></li><li><a href="#pointers-as-parameters-to-methods">Pointers as parameters to methods</a></li><li><a href="#pointers-to-pointers">Pointers to pointers</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
