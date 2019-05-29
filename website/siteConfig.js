@@ -39,7 +39,7 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   docsUrl:'',
-  
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     //{doc: 'Concepts/doc1', label: '4D Language Concepts'},
