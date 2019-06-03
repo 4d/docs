@@ -23,7 +23,7 @@
 	],
 	"4D Projects (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
-	"4D Form Objects (BETA)":
+	"4D Form Objects":
 	[{
         "type": "subcategory",
         "label": "Catalog",
