@@ -2,11 +2,19 @@
 id: property_italic
 title: Property: Italic
 ---
-### Description
+
 
 Sets the selected text to slant slightly to the right.
 
-**EXAMPLE**
+You can set this property via the Property List or via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
+
+
+>**Example**<p>
+This is normal text.<br>
+*This is text in italics.*
+
+
+<hr>
 
 
 ### JSON Grammar
@@ -15,20 +23,14 @@ Sets the selected text to slant slightly to the right.
 |:---:|:---:|---|
 |fontStyle|string |"normal", "italic"|
 
+<hr>
+
 ### Objects Supported
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Help](../Buttons/button_overview.md#help)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 
 
 
 

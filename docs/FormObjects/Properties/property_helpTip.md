@@ -3,11 +3,12 @@ id: property_helpTip
 title: Property: Help Tip
 ---
 
-### Description
 
 This property allows displaying help messages associated with fields and active objects in your forms.
 <p> 
-**Note:** Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
+
+> **Note** <br>
+Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
 
 ![](../../assets/en/property_helpTip.png)  
 
@@ -20,7 +21,8 @@ The message you select or enter will appear as a help tip for the field or objec
 
 To delete the association of a help tip with the selected object, choose **None** in the Property List.
 
-**Note:** In macOS, displaying help tips is not supported in pop-up type windows.
+> **Note** <br>
+In macOS, displaying help tips is not supported in pop-up type windows.
 
 You can also associate help messages with form objects in two other ways:
 
@@ -33,6 +35,7 @@ When different tips are associated with the same object in several locations, th
 2. form editor level
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
+<hr>
 
 ### JSON Grammar
 
@@ -40,22 +43,14 @@ When different tips are associated with the same object in several locations, th
 |:---:|:---:|---|
 |tooltip|text | additional information  to help a user|
 
-
+<hr>
 
 ### Objects Supported
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Help](../Buttons/button_overview.md#help)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 
 
 
 

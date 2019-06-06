@@ -2,29 +2,27 @@
 id: property_underline
 title: Property: Underline
 ---
-### Description
+
 
 Sets the selected text to have a line running beneath it.
 
+>**Example**<p>
+>This is normal text.<br>
+>This is <span style="text-decoration:underline">underlined</span> text.
 
+<hr>
 
 ### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
-|textDecoration|string|"normal", "underline"|
+|:---|:---:|:---|
+|textDecoration|string|<li>"normal"<li>"underline"|
+
+<hr>
 
 ### Objects Supported
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Help](../Buttons/button_overview.md#help)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 

@@ -3,11 +3,10 @@ id: property_backgroundPathname
 title: Property: Background pathname
 ---
 
-### Description
 
-Sets the picture that will be drawn in the background of the button.
+This property allows you to set the picture that will be drawn in the background of the button. As with icons, you can indicate whether the picture comes from a variable, picture library, resource file or disk file.  
 
-
+<hr>
 
 
 ### JSON Grammar
@@ -16,11 +15,13 @@ Sets the picture that will be drawn in the background of the button.
 |:---|:---:|:---:|
 |customBackgroundPicture |picture |absolute or relative path. Must be used in conjunction with the style property with the "custom" option.|
 
+<hr>
+
 ### Objects Supported
 
-|Type|Title|
+|Category|Link| 
 |---|---|
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Button|[Custom button](../Buttons/button_overview.md#custom)| 
 
 
 

@@ -77,15 +77,6 @@ The Regular button style is a standard system button (*i.e.*, a rectangle with a
 
 By default, the Regular button style has a light gray background with a label in the center. When the cursor hovers over the Regular button style, the border and background color change to demonstrate that it has the focus. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)|[Default Button](../Properties/property_defaultButton)|
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)| |
 
 ### Toolbar
 
@@ -99,15 +90,6 @@ The appearance of the Toolbar button style can be different when the cursor hove
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
 
 
 ### Bevel
@@ -120,16 +102,6 @@ By default, the Bevel button style has a light gray background with a label in t
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
  
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu) 
-
 
 ### Rounded Bevel
 
@@ -142,15 +114,6 @@ The appearance of the Rounded Bevel button style can be different when the curso
 
  - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
  
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
 
 ### OS X Gradient
 
@@ -163,16 +126,6 @@ The appearance of the OS X Gradient button style can be different when the curso
 
  - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
  
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
-
 
 ### OS X Textured
 
@@ -191,15 +144,6 @@ The appearance of the OS X Textured button style can also be different when the 
 
  - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.<p>
  
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
 
 ### Office XP
 
@@ -211,15 +155,6 @@ The colors (highlight and background) of a button with the Office XP button styl
 
  - *macOS* - its background is always displayed.
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
 
 ### Help 
 
@@ -227,52 +162,51 @@ The Help button style can be used to display a standard help button of the syste
  
 By default, the Help button style is displayed as a question mark within a circle.
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)| |[Object Name](../Properties/property_objectName)| |
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)| | |[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)| |
 
 ### Circle
 
 In macOS, a button with the “Circle” style appears as a round system button. Two set styles are available for the circle, which depend on the size of the button in the form. In Windows, this button style is identical to the “None” style (the circle in the background is not taken into account).
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-| |[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)| |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|
-|[Height](../Properties/property_height)| |[Horizontal Sizing](../Properties/property_horizontalSizing)| |[Italic](../Properties/property_italic)|
-|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|
-|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|
-|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)| |[Vertical Sizing](../Properties/property_verticalSizing)|
-|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
 
 ### Custom
 
 This button style accepts a custom background picture and allows managing various additional parameters (icon and margin offset). 
 
-|Supported Properties | ||||
-|---|---|---|---|---|
-|[Background pathname](../Properties/property_backgroundPathname)|[Bold](../Properties/property_bold)|[Bottom](../Properties/property_bottom)|[Button Style](../Properties/property_buttonStyle)|   |
-|[Droppable](../Properties/property_droppable)|[Focusable](../Properties/property_focusable)|[Font](../Properties/property_font)|[Font Color](../Properties/property_fontColor)|[Help Tip](../Properties/property_helpTip)|[Height](../Properties/property_height)
-|Horizontal Margin|[Horizontal Sizing](../Properties/property_horizontalSizing)|[Icon Offset](../Properties/property_iconOffset)|[Italic](../Properties/property_italic)|[Left](../Properties/left)|[Not rendered](../Properties/notRendered)|[Number of States](../Properties/property_numberOfStates)
-|[Object Name](../Properties/property_objectName)|[Picture pathname](../Properties/property_picturePathname)|[Right](../Properties/property_right)|[Shortcut](../Properties/property_shortcut)|[Title](../Properties/property_title)
-|[Title/Picture Position](../Properties/property_titlePicturePosition)|[Top](../Properties/property_top)|[Type](../Properties/property_type)|[Underline](../Properties/property_underline)|[Variable or Expression](../Properties/property_variableOrExpression)
-|Vertical Margin|[Vertical Sizing](../Properties/property_verticalSizing)|[Visibility](../Properties/property_visibility)| [Width](../Properties/property_width)|[With pop-up menu](../Properties/property_withPopupMenu)
+## Supported Properties
 
 
- 
-
-
-
-
-
-
-
-
-
-
+|Property|Description / JSON grammar|Objects Supported |
+|---|---|---|
+|[Background pathname](../Properties/property_backgroundPathname)|Sets the picture that will be drawn in the background<p><hr><p>JSON: customBackgroundPicture<p>Possible Values:<ul><li>Absolute path</li><li>relative path</li></ul>|[Custom button](#custom)
+|[Bold](../Properties/property_bold)|Sets the selected text to appear darker and heavier<p><hr><p>JSON: fontWeight<p>Possible Values:<ul><li>"normal"</li><li>"bold"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Bottom](../Properties/property_bottom)|Position of the object on the bottom of the form (centered)<p><hr><p>JSON: bottom<p>Possible Values:<ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Button Style](../Properties/property_buttonStyle)|Defines the the style of the button<p><hr><p>JSON: style<p>Possible Values:<p><ul><li>"regular"</li><li> "toolbar"</li><li>"bevel"</li><li>"roundedBevel"</li><li>"gradientBevel"</li><li>"texturedBevel"</li><li>"office"</li><li>"help"</li><li>"circular"</li><li>"disclosure"</li><li>"roundedDisclosure"</li><li>"custom"</li>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Default Button](../Properties/property_defaultButton)|Modifies a button's appearance in order to indicate the recommended choice to the user<p><hr><p>JSON: defaultButton<p><p>Possible values: <ul><li>"true"</li><li>"false"</li></ul>|[Regular button](#regular)|
+|[Droppable](../Properties/property_droppable)|Controls whether the user can drag the object and whether the object itself can receive data that the user drags onto it<p><hr><p>JSON: dragging, dropping<p><p>Possible values:<ul><li>"none"</li><li> "custom"</li><li>"automatic"</li></ul> |<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Focusable](../Properties/property_focusable)|Enables an object to have the focus<p><hr><p>JSON: focusable<p><p>Possible values:<ul><li>"true"</li><li>"false"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Font](../Properties/property_font)|Name of font used in the object<p><hr><p>JSON: fontFamily<p><p>Possible values:<ul><li>CSS font family name</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Font Color](../Properties/property_fontColor)|Font color used in the object<p><hr><p>JSON: stroke<p><p>Possible values: <ul><li>any css color value</li><li>"transparent"</li><li>"automatic"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Height](../Properties/property_height)|Designates an object's vertical size<p><hr><p>JSON: height<p><p>Possible values: <ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Help Tip](../Properties/property_helpTip)|Allows displaying help messages associated with fields and active objects in forms<p><hr><p>JSON: tooltip<p><p>Possible values:<ul><li>Additional information in text form</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Horizontal Margin](../Properties/property_horizontalMargin)| <p><hr><p>JSON: rightMargin <p>Possible values: <ul><li>minimum: 0</li></ul><p>|[Custom button](#custom)|
+|[Horizontal Sizing](../Properties/property_horizontalSizing)|Specifies if the horizontal size of the object should be moved or resized when a user resizes the form<p><hr><p>JSON: sizingX<p><p>Possible values:<ul><li>"move"</li><li>"grow"</li><li>"fixed"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Icon Offset](../Properties/property_iconOffset)|Sets a custom offset value in pixels<p><hr><p>JSON: customOffset<p><p>Possible values:<ul><li>minimum: 0</li></ul>|[Custom button](#custom)|
+|[Italic](../Properties/property_italic)|Sets the selected text to slant slightly to the right<p><hr><p>JSON: fontStyle<p><p>Possible values:<ul><li>"normal"</li><li>"italic"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Left](../Properties/property_left)|Positions an object on the left<p><hr><p>JSON: left<p><p>Possible values:<ul><li>minimum:0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Not rendered](../Properties/property_notRendered)|The object is not drawn on the form<p><hr><p>JSON: display <p><p>Possible values:<ul><li>"true</li><li>"false"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table> 
+|[Number of States](../Properties/property_numberOfStates)|Sets the exact number of states present in the object's picture<p><hr><p>JSON: iconFrames<p><p>Possible values:<ul><li>minimum:1</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Circle button](#circle)</td><td>[Custom button](#custom)</td></tr></table>|
+|[Object Name](../Properties/property_objectName)|The name of the form object. (optional for the form)<p><hr><p>JSON: name<p><p>Possible values:<ul><li>Any name which does not belong to an already existing object</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Picture pathname](../Properties/property_picturePathname)|The name, number, or the pathname of the picture<p><hr><p>JSON: icon<p><p>Possible values:<ul><li>absolute path</li><li>relative path</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Circle button](#circle)</td><td>[Custom button](#custom)</td></tr></table>|
+|[Right](../Properties/property_right)|Positions an object on the right<p><hr><p>JSON: right<p><p>Possible values: <ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Shortcut](../Properties/property_shortcut)|Defines the settings for a special meaning key<p><hr><p>JSON: shortcutAccel, shortcutAlt, shortcutCommand, shortcutControl<p><p>Possible values:<ul><li>"true"</li><li>"false"</li></ul> <p><hr><p>JSON: shortcutKey<p><p>Possible values: <ul><li>"[F1]" -> "[F15]"</li><li>"[Return]" </li><li> "[Enter]"</li><li> "[Backspace]" </li><li>"[Tab]"</li><li> "[Esc]"</li><li> "[Del]"</li><li> "[Home]"</li><li> "[End]"</li><li> "[Help]"</li><li> "[Page up]"</li><li> "[Page down]" </li><li>"[left arrow]"</li><li> "[right arrow]"</li><li> "[up arrow]"</li><li> "[down arrow]"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Title](../Properties/property_title)|The title of the form object<p><hr><p>JSON: text<p>Possible values: <ul><li>any text</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Circle button](#circle)</td><td>[Custom button](#custom)</td></tr></table>|
+|[Title/Picture Position](../Properties/property_titlePicturePosition)|Allows modifying the relative location of the button title in relation to an associated icon<p><hr><p>JSON: bottom<br>left<br>middle<br>right<br>top<p><p>Possible values: <ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Circle button](#circle)</td><td>[Custom button](#custom)</td></tr></table>|
+|[Top](../Properties/property_top)|Positions an object on the top of the form<p><hr><p>JSON: top<p><p>Possible values: <ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Type](../Properties/property_type)|Mandatory setting. Designates the type of the form object<p><hr><p>JSON: type<p><p>Possible values: <ul><li>"text"</li><li> "rectangle"</li><li>"groupBox"</li><li>"tab"</li><li>"line"</li><li>"button"</li><li> "checkbox"</li><li> "radio"</li><li>"dropdown"</li><li>"combo"</li><li>"webArea"</li><li>"write"</li><li>"subform"</li><li>"plugin"</li><li>"splitter"</li><li> "buttonGrid"</li><li>"progress"</li><li>"ruler"</li><li>"spinner"</li><li>"stepper"</li><li>"list"</li><li>"pictureButton"</li><li>"picturePopup"</li><li>"listbox"</li><li>"input"</li><li>"view"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Underline](../Properties/property_underline)|Sets the selected text to have a line running beneath it<p><hr><p>JSON: textDecoration<p><p>Possible values:<ul><li>"normal"</li><li>"underline"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Variable or Expression](../Properties/property_variableOrExpression)|Specifies the source of the data<p><hr><p>JSON: dataSource<p><p>Possible values:<ul><li>A 4D variable</li><li>A field name</li><li>An arbitrary complex language expression</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Vertical Margin](../Properties/property_verticalMargin)| <p><hr><p>JSON: bottomMargin <p>Possible values: <ul><li>minimum: 0</li></ul><p>|[Custom button](#custom)|
+|[Vertical Sizing](../Properties/property_verticalSizing)|Specifies if the vertical size of the object should be moved or resized when a user resizes the form<p><hr><p>JSON: sizingY<p><p>Possible values:<ul><li>"move"</li><li>"grow"</li><li>"fixed"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Visibility](../Properties/property_visibility)|Allows hiding the object in the Application environment<p><hr><p>JSON: visibility<p><p>Possible values:<ul><li>"visible"</li><li>"hidden"</li><li>"selectedRows"</li><li>"unselectedRows"</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[Width](../Properties/property_width)|Designates an objects horizontal size<p><hr><p>JSON: width<p><p>Possible values: <ul><li>minimum: 0</li></ul>|<table><tr><td>[Regular button](#regular)</td><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td></tr><tr><td>[Rounded Bevel button](#Rounded-bevel)</td><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td></tr><tr><td>[Office XP button](#office-XP)</td><td>[Help button](#help)</td><td>[Circle button](#circle)</td></tr><tr><td>[Custom button](#custom)</td></tr></table>|
+|[With pop-up menu](../Properties/property_withPopupMenu)|Indicates the presence of an attached pop-up menu<p><hr><p>JSON: popupPlacement <p><p>Possible values:<ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul>|<table><tr><td>[Toolbar button](#toolbar)</td><td>[Bevel button](#bevel)</td><td>[Rounded Bevel button](#Rounded-bevel)</td></tr><tr><td>[OS X Gradient button](#os-x-gradient)</td><td>[OS X Textured button](#os-x-textured)</td><td>[Office XP button](#office-XP)</td></tr><tr><td>[Circle button](#circle)</td></tr></table>|

@@ -2,11 +2,13 @@
 id: property_iconOffset
 title: Property: Icon Offset
 ---
-### Description
 
-This property allows setting a custom offset value in pixels, which will be used when the button is clicked: the title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This function allows applying a customized 3D effect when the button is clicked.
 
-**EXAMPLE**
+This property allows setting a custom offset value in pixels, which will be used when the button is clicked
+
+The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
+
+<hr>
 
 
 ### JSON Grammar
@@ -15,11 +17,13 @@ This property allows setting a custom offset value in pixels, which will be used
 |:---:|:---:|---|
 |customOffset|integer |minimum: 0|
 
+<hr>
+
 ### Objects Supported
 
-|Type|Title|
+|Category|Link| 
 |---|---|
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Button|[Custom button](../Buttons/button_overview.md#custom)| 
 
 
 

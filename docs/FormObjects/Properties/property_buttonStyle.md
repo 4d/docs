@@ -3,9 +3,8 @@ id: property_buttonStyle
 title: Property: Button Style
 ---
 
-Defines the the style of the button
+This property allows setting the general appearance of the button. The style also plays a part in the availability of certain options. 
 
-**EXAMPLE**
 
 <p>
 <hr>
@@ -15,7 +14,7 @@ Defines the the style of the button
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|style|text | "regular", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
+|style|text | <li>"regular", <li>"toolbar", <li>"bevel", <li>"roundedBevel", <li>"gradientBevel", <li>"texturedBevel", <li>"office", <li>"help", <li>"circular", <li>"disclosure", <li>"roundedDisclosure", <li>"custom"|
 
 <p>
 <hr>
@@ -23,18 +22,11 @@ Defines the the style of the button
 
 **Objects Supported**
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Help](../Buttons/button_overview.md#help)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 
+
 
 
 

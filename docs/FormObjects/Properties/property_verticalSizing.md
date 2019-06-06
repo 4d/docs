@@ -2,9 +2,21 @@
 id: property_verticalSizing
 title: Property: Vertical Sizing
 ---
-### Description
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form.
 
-Specifies if the vertical size of the object should be moved or resized when a user resizes the form.
+You can enable automatic resizing or repositioning in the Property List. There are three options which you can assign :
+
+|Option|	Result|
+|---|---|
+|Grow|The same percentage is applied to the object’s height when the user resizes the width of the window, 
+|Move|The object is moved the same amount up or down as the height increase when the user resizes the width of the window, 
+|Fixed|The object remains stationary when the form is resized
+
+>**Note** <br>
+This property works in conjunction with the [Horizontal Sizing](property_horizontalSizing) property.
+
+
+<hr>
 
 
 
@@ -12,20 +24,14 @@ Specifies if the vertical size of the object should be moved or resized when a u
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
-|sizingY|string|"move","grow","fixed"|
+|sizingY|string|<li>"grow"<li>"move"<li>"fixed"|
+
+<hr>
 
 ### Objects Supported
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Help](../Buttons/button_overview.md#help)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 
 

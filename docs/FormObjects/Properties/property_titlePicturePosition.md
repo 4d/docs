@@ -3,34 +3,37 @@ id: property_titlePicturePosition
 title: Property: Title / Picture Position
 ---
 
-### Description
-
-Allows modifying the relative location of the button title in relation to an associated icon. Has no effect when the button contains only a title (no associated picture) or a picture (no title).
 
 
+This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a 3D button contains a title and a picture, the text is placed below the picture . 
+
+Here are the results using the various options for this property:
+
+|Option|Description|Example|
+|---|---|---|
+|**Left**|The text is placed to the left of the icon. The contents of the button are aligned to the right.|![](../../assets/en/property_titlePosition_left.en.png)|
+|**Top**|The text is placed above the icon. The contents of the button are centered.| ![](../../assets/en/property_titlePosition_top.png)   |
+|**Right**|The text is placed to the right of the icon. The contents of the button are aligned to the left.|![](../../assets/en/property_titlePosition_right.png) |
+|**Bottom**|The text is placed below the icon. The contents of the button are centered.|![](../../assets/en/property_titlePosition_bottom.png) |
+|**Centered**|The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon.|![](../../assets/en/property_titlePosition_centered.png) |
+
+<hr>
 
 ### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
-|bottom|integer|minimum: 0|
 |left|integer|minimum: 0|
-|middle|integer|minimum: 0|
-|right|integer|minimum: 0|
 |top|integer|minimum: 0|
+|right|integer|minimum: 0|
+|bottom|integer|minimum: 0|
+|middle|integer|minimum: 0|
+
+<hr>
 
 ### Objects Supported
 
-|Type|Title|
-|---|---|
-|Button|[Regular](../Buttons/button_overview.md#regular) <br>
-|Button|[Toolbar](../Buttons/button_overview.md#toolbar)<br>
-|Button|[Bevel](../Buttons/button_overview.md#bevel)<br>
-|Button|[Rounded Bevel](../Buttons/button_overview.md#Rounded-bevel)<br> 
-|Button|[OS X Gradient](../Buttons/button_overview.md#os-x-gradient)<br> 
-|Button|[OS X Textured](../Buttons/button_overview.md#os-x-textured)<br> 
-|Button|[Office XP](../Buttons/button_overview.md#office-XP)<br> 
-|Button|[Circle](../Buttons/button_overview.md#circle)<br> 
-|Button|[Custom](../Buttons/button_overview.md#custom)<br> 
-
-
+|Category|Link| | | | | 
+|---|---|---|---|---|---|
+|Button|[Regular button](../Buttons/button_overview.md#regular)|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Help button](../Buttons/button_overview.md#help)|[Circle button](../Buttons/button_overview.md#circle)|[Custom button](../Buttons/button_overview.md#custom)| 
