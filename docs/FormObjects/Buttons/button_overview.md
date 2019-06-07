@@ -8,12 +8,9 @@ A button is an active object that can be added to a form and assigned an action 
 
 The actions assigned to the buttons can originate from predefined [standard actions](#standard-actions) or from custom [object methods](#object-methods). Examples of typical actions include letting the user accept, cancel, or delete records, move between records, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc. 
 
-Buttons are not *one-size-fits-all* kinds of objects. Several varieties are available to fulfill a wide range of uses, from toolbar integration, to offering help tips, to simply responding to a question. Not only are there multiple styles of buttons, their appearance also varies and they can be tailored to better suit your needs by modifying the shape, color, font, label, etc. or adding pictures or icons.
-
-<p>
 
 ## Using buttons
-<p>
+
 Using buttons is fairly straightforward. You simply add a button to a form and assign an action to it.
 
 Adding a button to a form can be done via:
@@ -55,18 +52,17 @@ Button styles control the button's general appearance as well as the availabilit
 
 Many button objects are structurally identical; the only difference is the processing of their associated variables. See the page for the specific button style you want to use for more information about its available properties. 4D provides buttons in the following predefined styles: 
 
-| Style| Summary Description | Property List | JSON |
+| Style name (Property List)| Summary Description| JSON |
 |---|---|---|---|
-|[Regular](#regular)|Standard system button <p><p>![](../../assets/en/button_regular.en.png) |Select *Regular* from the *Button Style* drop-down list|{"style":"regular"}|
-|[Toolbar](#toolbar)|Button with pop-up menu for integration in a toolbar<p><p>![](../../assets/en/button_toolbar.en.png)|Select *Toolbar* from the *Button Style* drop-down list|{"style":"toolbar"}|
-|[Bevel](#bevel)|Combines the appearance of the [Regular button](#regular) style with the [Toolbar button](#toolbar-button) button style's functionality.<p><p>![](../../assets/en/button_bevel.en.png) |Select *Bevel* from the *Button Style* drop-down list|{"style":"bevel"}|
-|[Rounded Bevel](#Rounded-bevel)|Nearly identical to the [Bevel button](#bevel) style except, depending on the OS, the corners of the button may be rounded.<p><p>![](../../assets/en/button_roundedbevel.en.png)|Select *Rounded Bevel* from the *Button Style* drop-down list |{"style":"roundedBevel"}|
-|[OS X Gradient](#os-x-gradient)|Nearly identical to the [Bevel Button](#bevel) style except, depending on the OS, it may have a two-toned appearance.<p><p>![](../../assets/en/button_osxgradient.en.png)|Select *OS X Gradient* from the *Button Style* drop-down list |{"style":"gradientBevel"}|
-|[OS X Textured](#os-x-textured)|Nearly identical to the [Bevel Button](#bevel) style except, depending on the OS, it may have a different appearance.<p><p>![](../../assets/en/button_osxtextured.en.png)|Select *OS X Textured* from the *Button Style* drop-down list|{"style":"texturedBevel"}|
-|[Office XP](#office-XP)|Combines the appearance of the [Regular button](#regular) style with the [Toolbar button](#toolbar-button) button style's functionality.<p><p>![](../../assets/en/button_officexp.en.png)|Select *Office XP* from the *Button Style* drop-down list|{"style":"office"}|
-|[Help](#help)|Standard system help button<p><p>![](../../assets/en/button_help.en.png)|Select *Help* from the *Button Style* drop-down list|{"style":"help"}|
-|[Circle](#circle)|Round system button<p><p>![](../../assets/en/button_circle.en.png)|Select *Circle* from the *Button Style* drop-down list|{"style":"circular"}|
-|[Custom](#custom)|Accepts a custom background picture and additional parameters<p><p>![](../../assets/en/button_custom.en.png)|Select *Custom* from the *Button Style* drop-down list|{"style":"custom"}|
+|[Regular](#regular)|Standard system button <p><p>![](../../assets/en/button_regular.en.png) |{"style":"regular"}|
+|[Toolbar](#toolbar)|Button with pop-up menu for integration in a toolbar<p><p>![](../../assets/en/button_toolbar.en.png)|Combines the appearance of the [Regular button](#regular) style with the [Toolbar button](#toolbar-button) button style's functionality.<p><p>![](../../assets/en/button_bevel.en.png)|{"style":"bevel"}|
+|[Rounded Bevel](#Rounded-bevel)|Nearly identical to the [Bevel button](#bevel) style except, depending on the OS, the corners of the button may be rounded.<p><p>![](../../assets/en/button_roundedbevel.en.png)|{"style":"roundedBevel"}|
+|[OS X Gradient](#os-x-gradient)|Nearly identical to the [Bevel Button](#bevel) style except, depending on the OS, it may have a two-toned appearance.<p><p>![](../../assets/en/button_osxgradient.en.png)|{"style":"gradientBevel"}|
+|[OS X Textured](#os-x-textured)|Nearly identical to the [Bevel Button](#bevel) style except, depending on the OS, it may have a different appearance.<p><p>![](../../assets/en/button_osxtextured.en.png)|{"style":"texturedBevel"}|
+|[Office XP](#office-XP)|Combines the appearance of the [Regular button](#regular) style with the [Toolbar button](#toolbar-button) button style's functionality.![](../../assets/en/button_officexp.en.png)|{"style":"office"}|
+|[Help](#help)|Standard system help button![](../../assets/en/button_help.en.png)|{"style":"help"}|
+|[Circle](#circle)|Round system button<p><p>![](../../assets/en/button_circle.en.png)|{"style":"circular"}|
+|[Custom](#custom)|Accepts a custom background picture and additional parameters<p><p>![](../../assets/en/button_custom.en.png)|{"style":"custom"}|
 
 
 
