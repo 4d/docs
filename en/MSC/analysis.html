@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Activity analysis Page · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Activity analysis Page · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>MSC</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Projects (BETA)<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/exporting.html">Exporting from a 4D database</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/deploying.html">Deploying a project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/information.html">Information Page</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/repair.html">Repair Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/encrypt.html">Encrypt Page</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Activity analysis Page</h1></header><article><div><span><p>The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.</p>
+<blockquote>
+<p>It is also possible to rollback the operations carried out on the data of the database. For more information, refer to XXXRollback page.</p>
+</blockquote>
+<p><img src="/docs/assets/en/MSC_analysis.png" alt=""></p>
+<p>Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.</p>
+<p>This information allows you to identify the source and context of each operation:</p>
+<ul>
+<li><p><strong>Operation</strong>: Sequence number of operation in the log file.</p></li>
+<li><p><strong>Action</strong>: Type of operation performed on the data. This column can contain one of the following operations:</p>
+<ul>
+<li>Opening of Data File: Opening of a data file.</li>
+<li>Closing of Data File: Closing of an open data file.</li>
+<li>Creation of a Context: Creation of a process that specifies an execution context.</li>
+<li>Closing of a Context: Closing of process.</li>
+<li>Addition: Creation and storage of a record.</li>
+<li>Adding a BLOB: Storage of a BLOB in a BLOB field.</li>
+<li>Deletion: Deletion of a record.</li>
+<li>Modification: Modification of a record.</li>
+<li>Start of Transaction: Transaction started.</li>
+<li>Validation of Transaction: Transaction validated.</li>
+<li>Cancellation of Transaction: Transaction cancelled.</li>
+</ul></li>
+<li><p><strong>Table</strong>: Table to which the added/deleted/modified record or BLOB belongs.</p></li>
+<li><p><strong>Primary Key/BLOB</strong>: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.</p></li>
+<li><p><strong>Process</strong>: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.</p></li>
+<li><p><strong>Size</strong>: Size (in bytes) of data processed by the operation.</p></li>
+<li><p><strong>Date and Hour</strong>: Date and hour when the operation was performed.</p></li>
+<li><p><strong>User</strong>: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.</p></li>
+<li><p><strong>Values</strong>: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.<br>
+<em><strong>Note:</strong> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.</em></p></li>
+<li><p><strong>Records</strong>: Record number.</p></li>
+</ul>
+<p>Click on <strong>Analyze</strong> to update the contents of the current log file of the selected database (named by default dataname.journal). The Browse button can be used to select and open another log file for the database. The <strong>Export...</strong> button can be used to export the contents of the file as text.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/MSC/information.html"><span class="arrow-prev">← </span><span>Information Page</span></a><a class="docs-next button" href="/docs/en/MSC/verify.html"><span>Verify Page</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

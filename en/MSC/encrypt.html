@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Encrypt Page · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;You can use this page to encrypt or &lt;em&gt;decrypt&lt;/em&gt; (i.e. remove encryption from) the data file, according to the &lt;strong&gt;Encryptable&lt;/strong&gt; attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the &amp;quot;Encrypting data&amp;quot; section.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Encrypt Page · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;p&gt;You can use this page to encrypt or &lt;em&gt;decrypt&lt;/em&gt; (i.e. remove encryption from) the data file, according to the &lt;strong&gt;Encryptable&lt;/strong&gt; attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the &amp;quot;Encrypting data&amp;quot; section.&lt;/p&gt;
+"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>MSC</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Projects (BETA)<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/exporting.html">Exporting from a 4D database</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/deploying.html">Deploying a project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/information.html">Information Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/repair.html">Repair Page</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/MSC/encrypt.html">Encrypt Page</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Encrypt Page</h1></header><article><div><span><p>You can use this page to encrypt or <em>decrypt</em> (i.e. remove encryption from) the data file, according to the <strong>Encryptable</strong> attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the &quot;Encrypting data&quot; section.</p>
+<p>A new folder is created each time you perform an encryption/decryption operation. It is named &quot;Replaced Files (Encrypting) <em>yyyy-mm-dd hh-mm-ss</em>&gt; or &quot;Replaced Files (Decrypting) <em>yyyy-mm-dd hh-mm-ss</em>&quot;.</p>
+<blockquote>
+<p>Encryption is only available in <a href="/docs/en/MSC/overview.html#display-in-maintenance-mode">maintenance mode</a>. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode</p>
+</blockquote>
+<p><strong>Warning:</strong></p>
+<ul>
+<li>Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that a database encryption operation always includes a compacting step.</li>
+<li>Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="encrypting-data-for-the-first-time"></a><a href="#encrypting-data-for-the-first-time" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encrypting data for the first time</h2>
+<p>Encrypting your data for the first time using the MSC requires the following steps:</p>
+<ol>
+<li>In the Structure editor, check the <strong>Encryptable</strong> attribute for each table whose data you want to encrypt. See the &quot;Table properties&quot; section.</li>
+<li>Open the Encrypt page of the MSC.
+If you open the page without setting any tables as <strong>Encryptable</strong>, the following message is displayed in the page:
+<img src="/docs/assets/en/MSC_encrypt1.png" alt="">
+Otherwise, the following message is displayed:
+<img src="/docs/assets/en/MSC_encrypt2.png" alt="">
+This means that the <strong>Encryptable</strong> status for at least one table has been modified and the data file still has not been encrypted.
+**Note: **The same message is displayed when the <strong>Encryptable</strong> status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</li>
+<li>Click on the Encrypt picture button.<br>
+<img src="/docs/assets/en/MSC_encrypt3.png" alt="">  <br>
+You will be prompted to enter a passphrase for your data file:
+<img src="/docs/assets/en/MSC_encrypt4.png" alt="">
+The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as &quot;We all came out to Montreux&quot; or &quot;My 1st Great Passphrase!!&quot;
+The security level indicator can help you evaluate the strength of your passphrase:
+<img src="/docs/assets/en/MSC_encrypt5.png" alt="">
+(deep green is the highest level)</li>
+<li>Enter to confirm your secured passphrase.</li>
+</ol>
+<p>The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.</p>
+<p>4D offers to save the encryption key (see <a href="#saving-the-encryption-key">Saving the encryption key</a> below). You can do it at this moment or later. You can also open the encryption log file.</p>
+<p>If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.</p>
+<p><strong>Warning:</strong> During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to &quot;encryptable&quot; tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a &quot;Replaced Files (Encrypting)&quot; folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.</p>
+<h2><a class="anchor" aria-hidden="true" id="encryption-maintenance-operations"></a><a href="#encryption-maintenance-operations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encryption maintenance operations</h2>
+<p>When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios.
+<img src="/docs/assets/en/MSC_encrypt6.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="providing-the-current-data-encryption-key"></a><a href="#providing-the-current-data-encryption-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing the current data encryption key</h3>
+<p>For security reasons, all encryption maintenance operations require that the current data encryption key be provided.</p>
+<ul>
+<li>If the data encryption key is already loaded in the 4D keychain(*), it is automatically reused by 4D.</li>
+<li>If the data encryption key is not found, you must provide it. The following dialog is displayed:
+<img src="/docs/assets/en/MSC_encrypt7.png" alt=""></li>
+</ul>
+<p>At this step, you have two options:</p>
+<ul>
+<li>enter the current passphrase(**) and click <strong>OK</strong>.
+OR</li>
+<li>connect a device such as a USB key and click the <strong>Scan devices</strong> button.
+(<em>) The 4D keychain stores all valid data encrpytion keys entered during the application session.
+(</em>*) The current passphrase is the passphrase used to generate the current encryption key.</li>
+</ul>
+<p>In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.</p>
+<h3><a class="anchor" aria-hidden="true" id="re-encrypt-data-with-the-current-encryption-key"></a><a href="#re-encrypt-data-with-the-current-encryption-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Re-encrypt data with the current encryption key</h3>
+<p>This operation is useful when the <strong>Encryptable</strong> attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.</p>
+<ol>
+<li>Click on <strong>Re-encrypt data with the current encryption key</strong>.</li>
+<li>Enter the current data encryption key.</li>
+</ol>
+<p>The data file is properly re-encrypted with the current key and a confirmation message is displayed:
+<img src="/docs/assets/en/MSC_encrypt8.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="change-your-passphrase-and-re-encrypt-data"></a><a href="#change-your-passphrase-and-re-encrypt-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change your passphrase and re-encrypt data</h3>
+<p>This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).</p>
+<ol>
+<li>Click on <strong>Change your passphrase and re-encrypt data</strong>.</li>
+<li>Enter the current data encryption key.</li>
+<li>Enter the new passphrase (for added security, you are prompted to enter it twice):
+<img src="/docs/assets/en/MSC_encrypt9.png" alt="">
+The data file is encrypted with the new key and the confirmation message is displayed.
+<img src="/docs/assets/en/MSC_encrypt8.png" alt=""></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="decrypt-all-data"></a><a href="#decrypt-all-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decrypt all data</h3>
+<p>This operation removes all encryption from the data file. If you no longer want to have your data encrypted:</p>
+<ol>
+<li>Click on <strong>Decrypt all data</strong>.</li>
+<li>Enter the current data encryption key (see Providing the current data encryption key).</li>
+</ol>
+<p>The data file is fully decrypted and a confirmation message is displayed:
+<img src="/docs/assets/en/MSC_encrypt10.png" alt=""></p>
+<blockquote>
+<p>Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all <strong>Encryptable</strong> attributes at the database structure level.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="saving-the-encryption-key"></a><a href="#saving-the-encryption-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving the encryption key</h2>
+<p>4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.</p>
+<p>You can save the encryption key each time a new passphrase has been provided:</p>
+<ul>
+<li>when the database is encrypted for the first time,</li>
+<li>when the database is re-encrypted with a new passphrase.</li>
+<li></li>
+</ul>
+<p>Successive encryption keys can be stored on the same device.</p>
+<h2><a class="anchor" aria-hidden="true" id="log-file"></a><a href="#log-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Log file</h2>
+<p>After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named &quot;<em>DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml</em>&quot; or &quot;<em>DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml</em>&quot;.</p>
+<p>An Open log file button is displayed on the MSC page each time a new log file has been generated.</p>
+<p>The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/MSC/repair.html"><span class="arrow-prev">← </span><span>Repair Page</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#encrypting-data-for-the-first-time">Encrypting data for the first time</a></li><li><a href="#encryption-maintenance-operations">Encryption maintenance operations</a><ul class="toc-headings"><li><a href="#providing-the-current-data-encryption-key">Providing the current data encryption key</a></li><li><a href="#re-encrypt-data-with-the-current-encryption-key">Re-encrypt data with the current encryption key</a></li><li><a href="#change-your-passphrase-and-re-encrypt-data">Change your passphrase and re-encrypt data</a></li><li><a href="#decrypt-all-data">Decrypt all data</a></li></ul></li><li><a href="#saving-the-encryption-key">Saving the encryption key</a></li><li><a href="#log-file">Log file</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
