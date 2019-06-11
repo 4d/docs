@@ -21,8 +21,7 @@ When working on a project in 4D Developer, you can use built-in 4D editors to cr
 The 4D Developer framework includes a file access manager to control concurrent access:
 
 - if an open file which is read-only at the OS level, a locked icon is displayed in the editor:   
-![](assets/en/lockicon.png)  
-
+![](assets/en/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:
 ![](assets/en/projectReload.png)  
 	- **Yes**: discard editor changes and reload

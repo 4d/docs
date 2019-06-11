@@ -36,7 +36,7 @@ When you click on the **Open log file** button, 4D displays the most recent log 
 
 The **Table list** button displays a detailed page that can be used to view and select the actual records and indexes to be checked: 
 
-![](assets/en/MSC_Verify.png)
+![](assets/en/MSC/MSC_Verify.png)
 
 
 Specifying the items to be verified lets you save time during the verification procedure. 
@@ -47,11 +47,11 @@ For each row of the table, the "Action" column indicates the operations to be ca
 
 The "Status" column displays the verification status of each item using symbols:
 
-|![](assets/en/MSC_OK.png)|Verification carried out with no problem|  
+|![](assets/en/MSC/MSC_OK.png)|Verification carried out with no problem|  
 |---|---|
-|![](assets/en/MSC_KO2.png)|Verification carried out, problems encountered
-|![](assets/en/MSC_KO3.png)|Verification partially carried out|
-|![](assets/en/MSC_KO.png)|Verification not carried out|
+|![](assets/en/MSC/MSC_KO2.png)|Verification carried out, problems encountered
+|![](assets/en/MSC/MSC_KO3.png)|Verification partially carried out|
+|![](assets/en/MSC/MSC_KO.png)|Verification not carried out|
 
 Click on **Verify** to begin the verification or on **Standard** to go back to the standard page. 
 

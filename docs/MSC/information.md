@@ -13,7 +13,7 @@ This page indicates the name, version and location of the application as well as
 The central part of the window indicates the name and location of the database project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the database user when passwords have been activated (or Designer if this is not the case).
 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
-![](assets/en/MSC_popup.png)
+![](assets/en/MSC/MSC_popup.png)
 If you select a menu item (disk or folder), it is displayed in a new system window.
 The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
 
@@ -26,7 +26,7 @@ The location of the "Licenses" folder can vary depending on the version of your 
 
 This page provides an overview of the tables in your database:
 
-![](assets/en/MSC_Tables.png)
+![](assets/en/MSC/MSC_Tables.png)
 
 >Information on this page is available in both standard and maintenance modes.
 
@@ -53,10 +53,10 @@ The **Data** page provides information about the available and used storage spac
 
 The information is provided in graph form:
 
-![](assets/en/MSC_Data.png)
+![](assets/en/MSC/MSC_Data.png)
 
->This page does not take into account any data that may be stored outside of the data file (see XXX"External storage").
+>This page does not take into account any data that may be stored outside of the data file (see "External storage").
 
-Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](assets/en/MSC_infowarn.png)
+Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the XXXCompact page: 	![](assets/en/MSC_compactwarn.png)
+A warning icon is also displayed on the button of the XXXCompact page: 	![](assets/en/MSC/MSC_compactwarn.png)

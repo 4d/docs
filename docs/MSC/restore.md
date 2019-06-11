@@ -8,7 +8,7 @@ sidebar_label: Restore Page
 
 You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
 
-![](assets/en/MSC_restore.png)
+![](assets/en/MSC/MSC_restore.png)
 
 > 4D automatic recovery systems restore databases and include data log file when necessary. 
 

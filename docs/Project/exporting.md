@@ -21,13 +21,13 @@ To convert a database to a project:
 
 1. Open the database to convert.
 2. Select **File > Export > Structure to project**.  
-![](../assets/en/exportProj.png)
+![](./assets/en/Project/exportProj.png)
 **Notes:**   
 - This command is only available if a binary database is open -- it is disabled in project databases.
 - You can also use the **Export structure file** language command.
 
 If the conversion is successful and no blocking errors are encountered, the following dialog box is diplayed:
-![](../assets/en/exportProj2.png)
+![](assets/en/Project/exportProj2.png)
 
 - **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommended since the conversion process could have modified some parts of the application (see [Check the conversion](#check-the-conversion)).
 
@@ -41,7 +41,7 @@ The data file is left untouched by the conversion. Only development elements are
 
 During the conversion, a new "Project" folder is created at the same level as your .4db structure file. It contains all of your application development as text files: forms, structure, methods, triggers, menus, tips, lists. It also contains a .4DProject file, which is your converted 4D project main file:
 
-![](../assets/en/exportProj3.png)
+![](assets/en/Project/exportProj3.png)
 
 When you open the .4DProject file with your 4D application, the project uses the same resources folder and web folder as the existing .4db file, which makes it easier to test your project.
 

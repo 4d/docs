@@ -22,7 +22,8 @@ The “Information” area summarizes the data concerning the fragmentation of t
 
 To directly begin the compacting of the data file, click on the compacting button in the MSC window.
 
-![](assets/en/MSC_compact.png) 
+![](assets/en/MSC/MSC_compact.png) 
+
 
 >Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file. 
 

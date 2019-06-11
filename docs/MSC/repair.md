@@ -29,7 +29,7 @@ By default, the original data file will be duplicated before the repair operatio
 Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
 
 When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. If so, you can open the database immediately. 
-![](assets/en/MSC_RepairOK.png)
+![](assets/en/MSC/MSC_RepairOK.png)
 
 ## Recover by record headers
 Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
@@ -41,7 +41,7 @@ Use this low-level repair option only when the data file is severely damaged and
 
 When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
 
-![](assets/en/mscrepair2.png)
+![](assets/en/MSC/mscrepair2.png)
 
 >If all the records and all the tables have been assigned, only the main area is displayed. 
 
@@ -60,7 +60,7 @@ The "Records found in the data file" area includes two tables summarizing the in
 If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. 
 To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
 
-![](assets/en/mscrepair3.png)
+![](assets/en/MSC/mscrepair3.png)
 
 Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. 
 The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. 
