@@ -21,7 +21,7 @@ To convert a database to a project:
 
 1. Open the database to convert.
 2. Select **File > Export > Structure to project**.  
-![](./assets/en/Project/exportProj.png)
+![](assets/en/Project/exportProj.png)
 **Notes:**   
 - This command is only available if a binary database is open -- it is disabled in project databases.
 - You can also use the **Export structure file** language command.
