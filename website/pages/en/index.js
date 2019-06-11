@@ -19,7 +19,8 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  // return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  return siteConfig.baseUrl + '' + (language ? language + '/' : '') + doc;
 }
 
 function pageUrl(page, language) {
@@ -88,7 +89,7 @@ class HomeSplash extends React.Component {
 }
 //<Logo img_src={imgUrl('4dlogo.png')} />
 //<Button href="#try">Overview</Button>
-//<Button href={docUrl('doc1.html', language)}>Classic</Button>
+//Button href={docUrl('doc1.html', language)}>Classic</Button>
 //<Button href={docUrl('doc2.html', language)}>ORDA</Button>
 			
 const Block = props => (
@@ -160,8 +161,10 @@ const Description = props => (
   <Block background="light" layout="twoColumn">
     {[
       {
-        content: '[4D Language Concepts](docs/Concepts/doc1.html)<br>[4D Projects (BETA)](docs/Project/overview.html)',
-       image: imgUrl('manuals.png'),
+
+	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)',
+
+	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',
         title: 'Reference Guides',
       }

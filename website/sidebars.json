@@ -1,13 +1,13 @@
 {
   "docs": {
-    "4D Language Concepts": 
-	["Concepts/doc1","Concepts/quick-tour",
+    "4D Language Concepts":
+	["Concepts/about","Concepts/quick-tour",
       {
         "type": "subcategory",
         "label": "Data Types",
         "ids": [
           "Concepts/data-types","Concepts/blob","Concepts/boolean","Concepts/collection","Concepts/date","Concepts/null-undefined",
-		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time"		    
+		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time"
         ]
       },
 	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared",
@@ -15,7 +15,7 @@
         "type": "subcategory",
         "label": "Control Flow",
         "ids": [
-          "Concepts/control-flow","Concepts/branching","Concepts/looping"	  
+          "Concepts/control-flow","Concepts/branching","Concepts/looping"
         ]
       },
 	"Concepts/error-handling","Concepts/interpreted-compiled",

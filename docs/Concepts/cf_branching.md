@@ -126,13 +126,13 @@ This example tests a numeric variable and displays an alert box with a word in i
 
 ```code4d
  Case of
-    :(vResult=1) ` Test if the number is 1
-       ALERT("One.") ` If it is 1, display an alert
-    :(vResult=2) ` Test if the number is 2
-       ALERT("Two.") ` If it is 2, display an alert
-    :(vResult=3) ` Test if the number is 3
-       ALERT("Three.") ` If it is 3, display an alert
-    Else ` If it is not 1, 2, or 3, display an alert
+    :(vResult=1) //Test if the number is 1
+       ALERT("One.") //If it is 1, display an alert
+    :(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    :(vResult=3) //Test if the number is 3
+       ALERT("Three.") //If it is 3, display an alert
+    Else //If it is not 1, 2, or 3, display an alert
        ALERT("It was not one, two, or three.")
  End case
 ```
@@ -140,15 +140,15 @@ This example tests a numeric variable and displays an alert box with a word in i
 For comparison, here is the `If...Else...End if` version of the same method:
 
 ```code4d
- If(vResult=1) ` Test if the number is 1
-    ALERT("One.") ` If it is 1, display an alert
+ If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) ` Test if the number is 2
-       ALERT("Two.") ` If it is 2, display an alert
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
     Else
-       If(vResult=3) ` Test if the number is 3
-          ALERT("Three.") ` If it is 3, display an alert
-       Else ` If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
           ALERT("It was not one, two, or three.")
        End if
     End if
@@ -162,9 +162,9 @@ Consequently, when you want to implement hierarchical tests, you should make sur
 ```code4d
  Case of
     :(vResult=1)
-       ... `statement(s)
-    :((vResult=1) & (vCondition#2)) `this case will never be detected
-       ... `statement(s)
+       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //this case will never be detected
+       ... //statement(s)
  End case
 ```
 
@@ -172,10 +172,10 @@ In the code above, the presence of the second condition is not detected since th
 
 ```code4d
  Case of
-    :((vResult=1) & (vCondition#2)) `this case will be detected first
-       ... `statement(s)
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
     :(vResult=1)
-       ... `statement(s)
+       ... //statement(s)
  End case
 ```
 

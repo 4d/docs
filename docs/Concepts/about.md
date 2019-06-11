@@ -1,5 +1,5 @@
 ---
-id: doc1
+id: about
 title: About the 4D Language
 sidebar_label: About the 4D Language
 ---
