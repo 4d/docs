@@ -23,6 +23,7 @@
 	],
 	"4D Projects (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
+		"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"4D Form Objects":
 	[{
         "type": "subcategory",
@@ -33,10 +34,19 @@
 		  "FormObjects/buttonGridOverview"]
 		},{
         "type": "subcategory",
-        "label": "Properties",
-        "ids": ["FormObjects/propertyMatrix"]
+        "label": "Active Object Properties",
+        "ids": ["FormObjects/propertiesObject", 
+			"FormObjects/propertiesTextAndPicture",
+			"FormObjects/propertiesCoordinatesAndSizing",
+			"FormObjects/propertiesResizingOptions",
+			"FormObjects/propertiesEntry",
+			"FormObjects/propertiesDisplay",
+			"FormObjects/propertiesAppearance",
+			"FormObjects/propertiesText",
+			"FormObjects/propertiesHelp",
+			"FormObjects/propertiesAction"
+			]
 		}
-	],
-	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"]
+	]	
 }
 }
