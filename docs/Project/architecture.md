@@ -5,7 +5,7 @@ title: Architecture of a 4D project
 
 A 4D project is made of several folders and files, stored within a single parent database folder. For example:
 
-![](../assets/en/project1.png)
+![](assets/en/Project/project1.png)
 
 
 ## Project folder

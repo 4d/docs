@@ -6,7 +6,7 @@ sidebar_label: Backup Page
 
 You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
 
-![](assets/en/msc_Backup.png)
+![](assets/en/MSC/msc_Backup.png)
 
 This page consists of the following three areas:
 

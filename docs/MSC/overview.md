@@ -19,9 +19,9 @@ You can open the MSC in maintenance mode from two locations:
 
 - **From the standard database opening dialog box**
 The standard Open database dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button:
-![](assets/en/MSC_standardOpen.png)
+![](assets/en/MSC/MSC_standardOpen.png)
 - **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (database not open)  
-![](assets/en/mscicon.png)   
+![](assets/en/MSC/mscicon.png)   
  When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. The database will not be opened by 4D.
 
 ## Display in standard mode
@@ -29,7 +29,7 @@ The standard Open database dialog includes the **Maintenance Security Center** o
 In standard mode, a database is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window: 
 
 - Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
-![](assets/en/mscicon.png)   
+![](assets/en/MSC/mscicon.png)   
 - Use the “msc” standard action that it is possible to associated with a menu command or a form object (see "Standard actions" section). 
 
 - Use the ```OPEN SECURITY CENTER``` language command.

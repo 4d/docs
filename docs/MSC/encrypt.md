@@ -20,18 +20,18 @@ Encrypting your data for the first time using the MSC requires the following ste
 1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section. 
 1. Open the Encrypt page of the MSC.
 If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
-![](assets/en/MSC_encrypt1.png)
+![](assets/en/MSC/MSC_encrypt1.png)
 Otherwise, the following message is displayed:
-![](assets/en/MSC_encrypt2.png)
+![](assets/en/MSC/MSC_encrypt2.png)
 This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
 **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
 1. Click on the Encrypt picture button.  
-![](assets/en/MSC_encrypt3.png)  
+![](assets/en/MSC/MSC_encrypt3.png)  
 You will be prompted to enter a passphrase for your data file:
-![](assets/en/MSC_encrypt4.png)
+![](assets/en/MSC/MSC_encrypt4.png)
 The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!"
 The security level indicator can help you evaluate the strength of your passphrase:
-![](assets/en/MSC_encrypt5.png)
+![](assets/en/MSC/MSC_encrypt5.png)
 (deep green is the highest level)
 1. Enter to confirm your secured passphrase. 
 
@@ -45,7 +45,7 @@ If the encryption process is successful, the Encrypt page displays Encryption ma
 
 ## Encryption maintenance operations 
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios.
-![](assets/en/MSC_encrypt6.png)
+![](assets/en/MSC/MSC_encrypt6.png)
 
 
 ### Providing the current data encryption key  
@@ -53,7 +53,7 @@ For security reasons, all encryption maintenance operations require that the cur
 
 - If the data encryption key is already loaded in the 4D keychain(*), it is automatically reused by 4D.
 - If the data encryption key is not found, you must provide it. The following dialog is displayed:
-![](assets/en/MSC_encrypt7.png)
+![](assets/en/MSC/MSC_encrypt7.png)
 
 At this step, you have two options:
 - enter the current passphrase(**) and click **OK**.
@@ -72,7 +72,7 @@ This operation is useful when the **Encryptable** attribute has been modified fo
 1. Enter the current data encryption key.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed:
-![](assets/en/MSC_encrypt8.png)
+![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Change your passphrase and re-encrypt data
 This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
@@ -80,9 +80,9 @@ This operation is useful when you need to change the current encryption data key
 1. Click on **Change your passphrase and re-encrypt data**.
 2. Enter the current data encryption key.
 1. Enter the new passphrase (for added security, you are prompted to enter it twice):
-![](assets/en/MSC_encrypt9.png)
+![](assets/en/MSC/MSC_encrypt9.png)
 The data file is encrypted with the new key and the confirmation message is displayed. 
-![](assets/en/MSC_encrypt8.png)
+![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Decrypt all data 
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
@@ -91,7 +91,7 @@ This operation removes all encryption from the data file. If you no longer want 
 1. Enter the current data encryption key (see Providing the current data encryption key).
 
 The data file is fully decrypted and a confirmation message is displayed:
-![](assets/en/MSC_encrypt10.png)
+![](assets/en/MSC/MSC_encrypt10.png)
 >Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
 
 ## Saving the encryption key

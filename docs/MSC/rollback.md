@@ -8,7 +8,7 @@ You use the Rollback page to access the rollback function among the operations c
 
 This function is only available when the database functions with a data log file.
 
-![](assets/en/MSC_rollback1.png)
+![](assets/en/MSC/MSC_rollback1.png)
 
 > If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the **Values** column and a dialog requesting the passphrase or the data key is displayed if you click the **Rollback** button. 
 
@@ -16,7 +16,7 @@ The contents and functioning of the list of operations are the same as for the [
 
 To perform a rollback among the operations, select the row after which all operations must be cancelled. The operation of the selected row will be the last kept. If, for example, you wish to cancel a deletion, select the operation located just before it. The deletion operation, as well as all subsequent operations, will be cancelled. 
 
-![](assets/en/MSC_rollback2.png)
+![](assets/en/MSC/MSC_rollback2.png)
 
 Next click on the **Rollback** button. 4D asks you to confirm the operation. If you click **OK**, the data is then restored to the exact state it was in at the moment of the selected action. 
 

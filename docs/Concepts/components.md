@@ -44,7 +44,7 @@ On the other hand, by default these project methods will not be visible, nor can
 
 **Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In certain cases, you may need to allow a component to access the project methods of your host database. To do this, you must explicitly designate the project methods of the host database that you want to make accessible to the components.  
 
-![](assets/en/pict516563.en.png)
+![](assets/en/Concepts/pict516563.en.png)
 
 ## Passing variables  
 
