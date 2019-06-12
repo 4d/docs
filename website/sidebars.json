@@ -31,7 +31,9 @@
         "ids": [
           "FormObjects/buttonOverview",
 		  "FormObjects/pictureButtonOverview",
-		  "FormObjects/buttonGridOverview"]
+		  "FormObjects/buttonGridOverview",
+		  "FormObjects/radiobuttonOverview"
+		  ]
 		},{
         "type": "subcategory",
         "label": "Active Object Properties",
