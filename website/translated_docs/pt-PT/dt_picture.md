@@ -33,7 +33,7 @@ The form returned for each format will depend on the way the Codec is recorded a
 
 A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon. The icon is automatically used wherever the picture is meant to be displayed:
 
-![](assets/en/missingpict.en.png)
+![](assets/en/Concepts/missingpict.en.png)
 
 This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for instance, for PDF pictures on Windows, or for old pictures based on PICT.
 
@@ -59,9 +59,9 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 In the following examples, all of the pictures are shown using the display format **On Background**.
 
-Here is the picture circle: ![](../assets/en/Circle.en.png)
+Here is the picture circle: ![](assets/en/Concepts/Concepts/Circle.en.png)
 
-Here is the picture rectangle: ![](../assets/en/rectangle.en.png)
+Here is the picture rectangle: ![](assets/en/Concepts/Concepts/rectangle.en.png)
 
 In the following examples, each expression is followed by its graphical representation.
 
@@ -72,7 +72,7 @@ Horizontal concatenation
  rectangle+circle ` Place the circle to the right of the rectangle
 ```
 
-![](../assets/en/concatHor.en.png) ![](../assets/en/concatHor2.en.png)
+![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
 Vertical concatenation
 
@@ -81,7 +81,7 @@ Vertical concatenation
  rectangle/circle ` Place the circle under the rectangle
 ```
 
-![](../assets/en/concatVer.en.png) ![](../assets/en/concatVer2.en.png)
+![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
 Exclusive superimposition
 
@@ -89,7 +89,7 @@ Exclusive superimposition
 Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 ```
 
-![](../assets/en/superimpoExc.fr.png)
+![](assets/en/Concepts/superimpoExc.fr.png)
 
 Inclusive superimposition
 
@@ -97,7 +97,7 @@ Inclusive superimposition
 Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
 ```
 
-![](../assets/en/superimpoInc.fr.png)
+![](assets/en/Concepts/superimpoInc.fr.png)
 
 Horizontal move
 
@@ -106,7 +106,7 @@ rectangle+50 ` Move the rectangle 50 pixels to the right
 rectangle-50 ` Move the rectangle 50 pixels to the left
 ```
 
-![](../assets/en/hormove.en.png)
+![](assets/en/Concepts/hormove.en.png)
 
 Vertical move
 
@@ -115,7 +115,7 @@ rectangle/50 ` Move the rectangle down by 50 pixels
 rectangle/-20 ` Move the rectangle up by 20 pixels
 ```
 
-![](../assets/en/vertmove.en.png)![](../assets/en/vertmove2.en.png)
+![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
 
 Resize
 
@@ -124,7 +124,7 @@ rectangle*1.5 ` The rectangle becomes 50% bigger
 rectangle*0.5 ` The rectangle becomes 50% smaller
 ```
 
-![](../assets/en/resize.en.png)![](../assets/en/resisze2.en.png)
+![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
 
 Horizontal scaling
 
@@ -133,7 +133,7 @@ circle*+3 ` The circle becomes 3 times wider
 circle*+0.25 ` The circle's width becomes a quarter of what it was
 ```
 
-![](../assets/en/Horscaling.en.png)![](../assets/en/Horscaling2.en.png)
+![](assets/en/Concepts/Horscaling.en.png)![](assets/en/Concepts/Horscaling2.en.png)
 
 Vertical scaling
 
@@ -142,4 +142,4 @@ circle*/2 ` The circle becomes twice as tall
 circle*/0.25 ` The circle's height becomes a quarter of what it was
 ```
 
-![](../assets/en/vertscaling.en.png)![](../assets/en/veticalscaling2.en.png)
+![](assets/en/Concepts/vertscaling.en.png)![](assets/en/Concepts/veticalscaling2.en.png)
