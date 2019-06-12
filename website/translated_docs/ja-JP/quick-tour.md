@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
 
-![alt-text](assets/en/helloworld.png)
+![alt-text](assets/en/Concepts/helloworld.png)
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
 
