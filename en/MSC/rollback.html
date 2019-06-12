@@ -52,13 +52,13 @@
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Rollback Page</h1></header><article><div><span><p>You use the Rollback page to access the rollback function among the operations carried out on the data file. It resembles an undo function applied over several levels. It is particularly useful when a record has been deleted by mistake in a database.</p>
 <p>This function is only available when the database functions with a data log file.</p>
-<p><img src="/docs/assets/en/MSC_rollback1.png" alt=""></p>
+<p><img src="/docs/assets/en/MSC/MSC_rollback1.png" alt=""></p>
 <blockquote>
 <p>If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the <strong>Values</strong> column and a dialog requesting the passphrase or the data key is displayed if you click the <strong>Rollback</strong> button.</p>
 </blockquote>
 <p>The contents and functioning of the list of operations are the same as for the <a href="/docs/en/MSC/analysis.html">Activity analysis</a> window.</p>
 <p>To perform a rollback among the operations, select the row after which all operations must be cancelled. The operation of the selected row will be the last kept. If, for example, you wish to cancel a deletion, select the operation located just before it. The deletion operation, as well as all subsequent operations, will be cancelled.</p>
-<p><img src="/docs/assets/en/MSC_rollback2.png" alt=""></p>
+<p><img src="/docs/assets/en/MSC/MSC_rollback2.png" alt=""></p>
 <p>Next click on the <strong>Rollback</strong> button. 4D asks you to confirm the operation. If you click <strong>OK</strong>, the data is then restored to the exact state it was in at the moment of the selected action.</p>
 <p>You use the menu found at the bottom of the window to select a data log file to be used when you apply the rollback function to a database restored from an archive file. In this case, you must specify the data log file corresponding to the archive.</p>
 <p>Here is how the rollback function works: when the user clicks the <strong>Rollback</strong> button, 4D shuts the current database and restores the last backup of the database data. The restored database is then opened and 4D integrates the operations of the data log file up through to the selected operation. If the database has not yet been saved, 4D starts with a blank data file.</p>

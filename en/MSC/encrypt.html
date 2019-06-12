@@ -66,18 +66,18 @@
 <li>In the Structure editor, check the <strong>Encryptable</strong> attribute for each table whose data you want to encrypt. See the &quot;Table properties&quot; section.</li>
 <li>Open the Encrypt page of the MSC.
 If you open the page without setting any tables as <strong>Encryptable</strong>, the following message is displayed in the page:
-<img src="/docs/assets/en/MSC_encrypt1.png" alt="">
+<img src="/docs/assets/en/MSC/MSC_encrypt1.png" alt="">
 Otherwise, the following message is displayed:
-<img src="/docs/assets/en/MSC_encrypt2.png" alt="">
+<img src="/docs/assets/en/MSC/MSC_encrypt2.png" alt="">
 This means that the <strong>Encryptable</strong> status for at least one table has been modified and the data file still has not been encrypted.
 **Note: **The same message is displayed when the <strong>Encryptable</strong> status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</li>
 <li>Click on the Encrypt picture button.<br>
-<img src="/docs/assets/en/MSC_encrypt3.png" alt="">  <br>
+<img src="/docs/assets/en/MSC/MSC_encrypt3.png" alt="">  <br>
 You will be prompted to enter a passphrase for your data file:
-<img src="/docs/assets/en/MSC_encrypt4.png" alt="">
+<img src="/docs/assets/en/MSC/MSC_encrypt4.png" alt="">
 The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as &quot;We all came out to Montreux&quot; or &quot;My 1st Great Passphrase!!&quot;
 The security level indicator can help you evaluate the strength of your passphrase:
-<img src="/docs/assets/en/MSC_encrypt5.png" alt="">
+<img src="/docs/assets/en/MSC/MSC_encrypt5.png" alt="">
 (deep green is the highest level)</li>
 <li>Enter to confirm your secured passphrase.</li>
 </ol>
@@ -87,13 +87,13 @@ The security level indicator can help you evaluate the strength of your passphra
 <p><strong>Warning:</strong> During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to &quot;encryptable&quot; tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a &quot;Replaced Files (Encrypting)&quot; folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.</p>
 <h2><a class="anchor" aria-hidden="true" id="encryption-maintenance-operations"></a><a href="#encryption-maintenance-operations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encryption maintenance operations</h2>
 <p>When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios.
-<img src="/docs/assets/en/MSC_encrypt6.png" alt=""></p>
+<img src="/docs/assets/en/MSC/MSC_encrypt6.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="providing-the-current-data-encryption-key"></a><a href="#providing-the-current-data-encryption-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing the current data encryption key</h3>
 <p>For security reasons, all encryption maintenance operations require that the current data encryption key be provided.</p>
 <ul>
 <li>If the data encryption key is already loaded in the 4D keychain(*), it is automatically reused by 4D.</li>
 <li>If the data encryption key is not found, you must provide it. The following dialog is displayed:
-<img src="/docs/assets/en/MSC_encrypt7.png" alt=""></li>
+<img src="/docs/assets/en/MSC/MSC_encrypt7.png" alt=""></li>
 </ul>
 <p>At this step, you have two options:</p>
 <ul>
@@ -111,16 +111,16 @@ OR</li>
 <li>Enter the current data encryption key.</li>
 </ol>
 <p>The data file is properly re-encrypted with the current key and a confirmation message is displayed:
-<img src="/docs/assets/en/MSC_encrypt8.png" alt=""></p>
+<img src="/docs/assets/en/MSC/MSC_encrypt8.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="change-your-passphrase-and-re-encrypt-data"></a><a href="#change-your-passphrase-and-re-encrypt-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change your passphrase and re-encrypt data</h3>
 <p>This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).</p>
 <ol>
 <li>Click on <strong>Change your passphrase and re-encrypt data</strong>.</li>
 <li>Enter the current data encryption key.</li>
 <li>Enter the new passphrase (for added security, you are prompted to enter it twice):
-<img src="/docs/assets/en/MSC_encrypt9.png" alt="">
+<img src="/docs/assets/en/MSC/MSC_encrypt9.png" alt="">
 The data file is encrypted with the new key and the confirmation message is displayed.
-<img src="/docs/assets/en/MSC_encrypt8.png" alt=""></li>
+<img src="/docs/assets/en/MSC/MSC_encrypt8.png" alt=""></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="decrypt-all-data"></a><a href="#decrypt-all-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decrypt all data</h3>
 <p>This operation removes all encryption from the data file. If you no longer want to have your data encrypted:</p>
@@ -129,7 +129,7 @@ The data file is encrypted with the new key and the confirmation message is disp
 <li>Enter the current data encryption key (see Providing the current data encryption key).</li>
 </ol>
 <p>The data file is fully decrypted and a confirmation message is displayed:
-<img src="/docs/assets/en/MSC_encrypt10.png" alt=""></p>
+<img src="/docs/assets/en/MSC/MSC_encrypt10.png" alt=""></p>
 <blockquote>
 <p>Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all <strong>Encryptable</strong> attributes at the database structure level.</p>
 </blockquote>

@@ -63,7 +63,7 @@
 <ol>
 <li>Open the database to convert.</li>
 <li>Select <strong>File &gt; Export &gt; Structure to project</strong>.<br>
-<img src="../assets/en/exportProj.png" alt="">
+<img src="/docs/assets/en/Project/exportProj.png" alt="">
 <strong>Notes:</strong></li>
 </ol>
 <ul>
@@ -71,7 +71,7 @@
 <li>You can also use the <strong>Export structure file</strong> language command.</li>
 </ul>
 <p>If the conversion is successful and no blocking errors are encountered, the following dialog box is diplayed:
-<img src="../assets/en/exportProj2.png" alt=""></p>
+<img src="/docs/assets/en/Project/exportProj2.png" alt=""></p>
 <ul>
 <li><p><strong>Reveal log</strong>: highlights the conversion log file on your disk. Reading this file is highly recommended since the conversion process could have modified some parts of the application (see <a href="#check-the-conversion">Check the conversion</a>).</p></li>
 <li><p><strong>Open project</strong>: restarts the 4D application and loads the converted project.</p></li>
@@ -80,7 +80,7 @@
 <p>The data file is left untouched by the conversion. Only development elements are converted. You can still open the data file with the .4db structure file after a conversion.</p>
 <h2><a class="anchor" aria-hidden="true" id="resulting-project"></a><a href="#resulting-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resulting project</h2>
 <p>During the conversion, a new &quot;Project&quot; folder is created at the same level as your .4db structure file. It contains all of your application development as text files: forms, structure, methods, triggers, menus, tips, lists. It also contains a .4DProject file, which is your converted 4D project main file:</p>
-<p><img src="../assets/en/exportProj3.png" alt=""></p>
+<p><img src="/docs/assets/en/Project/exportProj3.png" alt=""></p>
 <p>When you open the .4DProject file with your 4D application, the project uses the same resources folder and web folder as the existing .4db file, which makes it easier to test your project.</p>
 <p>You can still open the .4db database, perform modifications if required (see below), then export it again, and test it. You can repeat this operation until you are satisfied with the conversion.</p>
 <h2><a class="anchor" aria-hidden="true" id="check-the-conversion"></a><a href="#check-the-conversion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check the conversion</h2>
