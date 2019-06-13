@@ -1,24 +1,24 @@
 ---
 id: about
-title: About the 4D Language
-sidebar_label: About the 4D Language
+title: À propos du Langage 4D
+sidebar_label: À propos du Langage 4D
 ---
 
-The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for database applications on desktop computers. You can use the 4D language for many different tasks—from performing simple calculations to creating complex custom user interfaces. For example, you can:
+Le langage intégré 4D, qui comprend plus de 1300 commandes, fait de 4D un outil de développement puissant. Le langage de 4D peut être utilisé pour de multiples types de tâches, allant de la réalisation de calculs simples à la création d’interfaces utilisateur personnalisées complexes. Vous pouvez par exemple :
 
-- Programmatically access any of the record management editors (order by, query, and so on),
-- Create and print complex reports and labels with the information from the database,
-- Communicate with other devices,
-- Send emails, 
-- Manage documents and web pages,
-- Import and export data between 4D databases and other applications,
-- Incorporate procedures written in other languages into the 4D programming language.
+- Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches...),
+- Créer et imprimer des états et des étiquettes complexes avec les données de la base,
+- Communiquer avec d’autres systèmes d’information,
+- Envoyer des e-mails, 
+- Gérer des documents et des pages web,
+- Importer et exporter des données entre des bases 4D et d’autres applications,
+- Incorporer des procédures écrites dans d’autres langages que celui de 4D.
 
-The flexibility and power of the 4D programming language make it the ideal tool for all levels of users and developers to accomplish a complete range of information management tasks. Novice users can quickly perform calculations. Experienced users without programming experience can customize their databases. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their databases, including file transfer, communications, monitoring. Developers with programming experience in other languages can add their own commands to the 4D language.
+La flexibilité et la puissance du langage de 4D en font l’outil idéal pour toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent rapidement effectuer des calculs. Les utilisateurs expérimentés peuvent personnaliser leurs bases sans devoir connaître la programmation. Les développeurs plus expérimentés peuvent utiliser la puissance du langage de 4D pour ajouter à leurs bases de données des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Les développeurs maîtrisant la programmation dans d’autres langages peuvent ajouter leurs propres routines au langage de 4D.
 
-## What is a Language?
+## Qu'est-ce qu'un langage ?
 
-The 4D language is not very different from the spoken language we use every day. It is a form of communication used to express ideas, inform, and instruct. Like a spoken language, 4D has its own vocabulary, grammar, and syntax; you use it to tell 4D how to manage your database and data.
+Le langage 4D n'est pas très différent de la langue parlée au quotidien. C'est une forme de communication qui permet d'échanger des idées et des informations. Comme toute langue parlée, 4D possède un vocabulaire, une grammaire et une syntaxe qui lui sont propres et dont vous pouvez vous servir pour informer 4D de votre façon de gérer votre base et vos données.
 
 You do not need to know everything in the language in order to work effectively with 4D. In order to speak, you do not need to know the entire English language; in fact, you can have a small vocabulary and still be quite eloquent. The 4D language is much the same—you only need to know a small part of the language to become productive, and you can learn the rest as the need arises.
 
