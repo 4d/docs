@@ -1,6 +1,6 @@
 ---
 id: arrays
-title: Arrays
+title: Tableaux
 ---
 
 An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
