@@ -3,34 +3,34 @@ id: branching
 title: Branching structures
 ---
 
-## If...Else...End if
+## Si...Sinon...Fin de si
 
-The formal syntax of the `If...Else...End if` control flow structure is:
+La syntaxe de la structure conditionnelle `Si...Sinon...Fin de si` est la suivante :
 
 ```code4d
- If(Boolean_Expression)
-    statement(s)
- Else
-    statement(s)
- End if
+ Si(Expression_booléenne)
+    instruction(s)
+ Sinon
+    instruction(s)
+ Fin de si
 ```
 
-Note that the `Else` part is optional; you can write:
+A noter que l'élément `Sinon` est optionnel, vous pouvez écrire :
 
 ```code4d
- If(Boolean_Expression)
-    statement(s)
- End if
+ Si(Expression_booléenne)
+    instruction(s)
+ Fin de si
 ```
 
-The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. When the Boolean expression is TRUE, the statements immediately following the test are executed. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
+La structure `Si...Sinon...Fin de si` permet à votre méthode de choisir dans une alternative, en fonction du résultat, VRAI ou FAUX, d’un test (une expression booléenne). Si l’expression booléenne est VRAIE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FAUSSE, les instructions suivant la ligne Sinon sont exécutées. Le `Sinon` est optionnel ; lorsqu’il est omis, c’est la première ligne d’instructions suivant le `Fin de si` (s’il y en a une) qui est exécutée.
 
-Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
+A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
 ```code4d
- If(MethodA & MethodB)
+ Si(MéthodeA & MéthodeB)
     ...
- End if
+ Fin de si
 ```
 
 he expression is TRUE only if both methods are TRUE. However, even if *MethodA* returns FALSE, 4D will still evaluate *MethodB*, which is a useless waste of time. In this case, it is more interesting to use a structure like:
@@ -96,7 +96,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
  End case
 ```
 
-Note that the `Else` part is optional; you can write:
+A noter que l'élément `Sinon` est optionnel, vous pouvez écrire :
 
 ```code4d
  Case of
