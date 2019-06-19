@@ -8,33 +8,34 @@ title:Text and Picture Properties
 This property allows setting the general appearance of the button. The style also plays a part in the availability of certain options. 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |style|text | <li>"regular", <li>"toolbar", <li>"bevel", <li>"roundedBevel", <li>"gradientBevel", <li>"texturedBevel", <li>"office", <li>"help", <li>"circular", <li>"disclosure", <li>"roundedDisclosure", <li>"custom"|
 
 
-### Objects Supported
+#### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
+|Category|Link| 
+|---|---|
+|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
 <hr>
+
 ## Picture pathname
 
 A picture of a button can come from four different sources: Variable, Picture Library, Resource File or File. You can enter the name (if the picture is a variable or comes from the picture library), the number (if the picture comes from the picture library or a resource file) or the pathname (if the picture comes from a picture file) of the picture. In the case of a pathname, it must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)).
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |icon|picture |<li>absolute path <li>relative path|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -52,7 +53,7 @@ Each state is represented by a different picture. In the source picture, the sta
 ![](assets/en/property_numberOfStates.png)
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
@@ -60,7 +61,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -74,14 +75,14 @@ Each state is represented by a different picture. In the source picture, the sta
 This property allows you to set the picture that will be drawn in the background of the button. As with icons, you can indicate whether the picture comes from a variable, picture library, resource file or disk file.  
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
 |customBackgroundPicture |picture |absolute or relative path. Must be used in conjunction with the style property with the "custom" option.|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| 
 |---|---|
@@ -95,14 +96,14 @@ This property allows setting a custom offset value in pixels, which will be used
 
 The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |customOffset|integer |minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| 
 |---|---|
@@ -121,18 +122,17 @@ This parameter is useful, for example, when the background picture contains bord
 |Without margin|![](assets/en/FormObjects/property_horizontalMargin1.png)|
 |With 13-pixel margin|![](assets/en/FormObjects/property_horizontalMargin2.png)|
 
->**Note**<br>
 >This property works in conjunction with the **Vertical Margin** property.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |rightMargin|integer |minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| 
 |---|---|
@@ -152,18 +152,17 @@ This parameter is useful, for example, when the background picture contains bord
 |Without margin|![](assets/en/FormObjects/property_horizontalMargin1.png)|
 |With 13-pixel margin|![](assets/en/FormObjects/property_horizontalMargin2.png)|
 
->**Note**<br>
 >This property works in conjunction with the **Horizontal Margin** property.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |bottomMargin|integer |minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| 
 |---|---|
@@ -186,7 +185,7 @@ Here are the results using the various options for this property:
 |**Centered**|The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon.|![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
@@ -197,9 +196,61 @@ Here are the results using the various options for this property:
 |middle|integer|minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
 |Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
 ||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
+
+
+<hr>
+
+## With pop-up menu
+---
+This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+
+![](../../assets/en/property_popup.png)
+
+The appearance and location of this symbol depends on the button style and the current platform. 
+
+>The “With Pop-up Menu” property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using form events and the **Dynamic pop up menu** and **Pop up menu** commands 
+
+### Linked and Separated
+
+To attach a pop-up menu symbol to a 3D button, there are two display options available: 
+
+|Linked|Separated|
+|:---:|:---:|
+|  ![](assets/en/FormObjects/property_popup_linked.png) |  ![](assets/en/FormObjects/property_popup_separated.png)|
+
+>The real availability of a “separated” mode depends on the style of the button and the platform. 
+
+Each option specifies the relation between the button and the attached pop-up menu:
+
+<li>When the pop-up menu is separated, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
+<li>When the pop-up menu is linked, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
+
+These options also influence the handling of form events by the button (for more information on this, refer to the [4D Language Reference](https://doc.4d.com/4Dv17R5/4D/17-R5/4D-Language-Reference.100-4127072.en.html) manual).
+
+
+### Managing the pop-up menu
+
+It is important to note that the “With Pop-up Menu” property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using form events and the **[Dynamic pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-pop-up-menu.301-4128300.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|---|---|
+|popupPlacement |string |<li>"None"<li> Linked"<li> "Separated" |
+
+<hr>
+
+#### Objects Supported
+
+|Category|Link| | | |  
+|---|---|---|---|---|
+|Button|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
+||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Circle button](../Buttons/button_overview.md#circle)|| 

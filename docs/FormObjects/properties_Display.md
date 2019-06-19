@@ -14,14 +14,14 @@ Invisible button objects are designed to be placed on top of graphic objects. Th
 A list box row may be invisible when a form is loaded and visible after certain condition(s) are met. 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|---|
 |visibility|string|<li>"visible"<li>"hidden"<li> "selectedRows"<li> "unselectedRows"|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -36,13 +36,13 @@ A list box row may be invisible when a form is loaded and visible after certain 
 The object is not drawn on the form.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
 |display| boolean|<li>"true" <li>"false"
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|

@@ -16,7 +16,7 @@ When a button is selected, you can scroll through its variants using the **Shift
 You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|---|
@@ -24,14 +24,14 @@ You can click twice on the button so that it remains selected even after you hav
 
 
 
-### Objects Supported
+#### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
-
+|Category|Link| 
+|---|---|
+|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) -[Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
+|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button Grid|[Button Grid](buttonGrid_overview.md)|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
 <hr>
 
@@ -39,8 +39,7 @@ You can click twice on the button so that it remains selected even after you hav
 
 Each active form object is associated with an object name. Each object name must be unique.
 
->**Note**<br> 
-Object names are limited to a size of 255 bytes.
+>Object names are limited to a size of 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
@@ -49,7 +48,7 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
@@ -57,13 +56,14 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 
 
 
-### Objects Supported
+#### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link| 
+|---|---|
+|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
+|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button Grid|[Button Grid](buttonGrid_overview.md)|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
 <hr>
 
@@ -71,8 +71,7 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times but each object name must be unique.
 
->**Note**<br> 
-Object names are limited to a size of 255 bytes and for variable names the size is limited to 31 bytes.
+>Object names are limited to a size of 255 bytes and for variable names the size is limited to 31 bytes.
 
 When using 4D’s language, you can refer to an active form object by either its variable name or object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
@@ -92,13 +91,12 @@ Variables can be enterable or non-enterable and can receive data of the Alpha, T
 You can also enter an expression directly in the “Variable or Expression” area of the Property List for the object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Naturally in this case it is not possible to manage the value of the variable by programming. 
 
 
->**Note**<br> 
-If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
+>If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|---|---|
@@ -106,15 +104,65 @@ If the value entered corresponds to both a variable name and a method name, 4D c
 
 
 
-### Objects Supported
+#### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
+|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button Grid|[Button Grid](buttonGrid_overview.md)|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
 <hr>
+
+## Expression Type
+
+Indicates the expression / variable type.
+
+
+![](assets/en/FormObjects/property_expressionType.png)
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|---|---|
+|dataSourceTypeHint |string  |<li>"integer"<li>"boolean" |
+
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+
+
+<hr>
+
+
+## Radio Group
+
+Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|---|---|
+| radioGroup|string  |Radio group name|
+
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+
+
+<hr>
+
 
 ## Title
 
@@ -133,7 +181,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
@@ -141,10 +189,9 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 <hr>
 
-### Objects Supported
+#### Objects Supported
 
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| |
+|Category|Link| 
+|---|---|
+|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)|

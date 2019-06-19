@@ -11,11 +11,11 @@ The default button property modifies a button's appearance in order to indicate 
 |:---:|:---:|
 |The default button has a blue outline. <p> ![](assets/en/FormObjects/property_defaultButtonWindows.en.png)|The default buttons are blue.<p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
 
->**Note** <br>There can only be one default button per form page.
+>There can only be one default button per form page.
 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
@@ -23,7 +23,7 @@ defaultButton|boolean|<li>"true"<li>"false |
 
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| 
 |---|---|

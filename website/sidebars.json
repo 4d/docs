@@ -32,19 +32,23 @@
           "FormObjects/buttonOverview",
 		  "FormObjects/pictureButtonOverview",
 		  "FormObjects/buttonGridOverview",
-		  "FormObjects/radiobuttonOverview"
+		  "FormObjects/radiobuttonOverview",
+		  "FormObjects/checkboxOverview"
 		  ]
 		},{
         "type": "subcategory",
         "label": "Active Object Properties",
         "ids": ["FormObjects/propertiesObject", 
 			"FormObjects/propertiesTextAndPicture",
+			"FormObjects/propertiesCrop",
+			"FormObjects/propertiesAnimation",
 			"FormObjects/propertiesCoordinatesAndSizing",
 			"FormObjects/propertiesResizingOptions",
 			"FormObjects/propertiesEntry",
 			"FormObjects/propertiesDisplay",
 			"FormObjects/propertiesAppearance",
 			"FormObjects/propertiesText",
+			"FormObjects/propertiesBackgroundAndBorder",
 			"FormObjects/propertiesHelp",
 			"FormObjects/propertiesAction"
 			]

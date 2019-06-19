@@ -8,8 +8,7 @@ title:Help Properties
 This property allows displaying help messages associated with fields and active objects in your forms.
 <p> 
 
-> **Note** <br>
-Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
+>Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
 
 ![](assets/en/FormObjects/property_helpTip.png)  
 
@@ -22,8 +21,7 @@ The message you select or enter will appear as a help tip for the field or objec
 
 To delete the association of a help tip with the selected object, choose **None** in the Property List.
 
-> **Note** <br>
-In macOS, displaying help tips is not supported in pop-up type windows.
+>In macOS, displaying help tips is not supported in pop-up type windows.
 
 You can also associate help messages with form objects in two other ways:
 
@@ -38,14 +36,14 @@ When different tips are associated with the same object in several locations, th
 
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |tooltip|text | additional information  to help a user|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|

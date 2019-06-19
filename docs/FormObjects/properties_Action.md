@@ -13,7 +13,7 @@ These properties control whether the user can drag the object and whether the ob
 
 If you want to enable drag and/or drop for a particular object, you need to enable the corresponding property. In this case, any drag or drop operation performed on the object when the form is executed triggers its corresponding form event. You then must manage the drag-and-drop action using a method. For more information, refer to Drag and Drop in the 4D Language Reference manual.
 
->**Note** <br>The Droppable property can be assigned to non-enterable objects. This way the develop can program the desired response to an object being dropped on a non-enterable field or variable.
+>The Droppable property can be assigned to non-enterable objects. This way the develop can program the desired response to an object being dropped on a non-enterable field or variable.
 
 To drag and drop an object to another object, you must select the Draggable property for that object in the Property List window. In a drag-and-drop operation, the object that you drag is the source object.
 
@@ -27,7 +27,6 @@ You can also manage dragging and dropping onto the application, outside of any f
 
 You can easily create a drag-and-drop user interface, because 4D allows you to use any type of active object (field or variable) as source or destination objects. For example, you can drag and drop a button.
 
->**Notes**<br>
 >To drag a text or a button labeled "draggable," you must first press the Alt (Windows) or Option (macOS) keys.<p>
 By default, in the case of picture fields and variables, the picture and its reference are both dragged. If you only want to drag the reference of the variable or field, first hold down the Alt (Windows) or Option (macOS) key. <p>
 When the “Draggable” and “Movable Rows” properties are both set for a List box object, the “Movable Rows” property takes priority when a row is moved. Dragging is not possible in this case.
@@ -50,7 +49,7 @@ To enable automatic drag and drop, you must select the corresponding properties 
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv17R5/4D/17-R5/Drag-and-Drop.300-4127813.en.html) in the 4D Language Reference manual.
 
->**Note**<br> In the case of automatic drag and drop between two 4D areas, the data are moved, in other words, they are removed from the source area. If you want to copy the data, hold down the **Ctrl** (Windows) or **Option** (macOS) key during the action (the Option key must be clicked after you start to drag the item(s)).
+>In the case of automatic drag and drop between two 4D areas, the data are moved, in other words, they are removed from the source area. If you want to copy the data, hold down the **Ctrl** (Windows) or **Option** (macOS) key during the action (the Option key must be clicked after you start to drag the item(s)).
 
 Automatic drag and drop can be configured separately for each form object via the following Property List options:
 
@@ -67,7 +66,7 @@ In databases converted from previous versions of 4D, this possibility may lead t
 When this option is check, the drop of external objects into 4D forms is refused. Note however that the insertion of external objects remains possible in objects having the Automatic Drop option, when the application can interpret the dropped data (text or picture).
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
@@ -75,7 +74,7 @@ When this option is check, the drop of external objects into 4D forms is refused
 |dropping|text | <li>"none", <li>"custom", <li>"automatic" (excluding list, list box)|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|

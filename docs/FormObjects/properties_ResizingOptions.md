@@ -15,18 +15,17 @@ You can enable automatic resizing or repositioning in the Property List. There a
 |Move|The object is moved the same amount left or right as the width increase when the user resizes the width of the window, 
 |Fixed|The object remains stationary when the form is resized
 
->**Note** <br>
-This property works in conjunction with the **Vertical Sizing** property.
+>This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |sizingX|string |<li>"grow"<li>"move"<li>"fixed"|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -46,20 +45,20 @@ You can enable automatic resizing or repositioning in the Property List. There a
 |---|---|
 |Grow|The same percentage is applied to the object’s height when the user resizes the width of the window, 
 |Move|The object is moved the same amount up or down as the height increase when the user resizes the width of the window, 
+
 |Fixed|The object remains stationary when the form is resized
 
->**Note** <br>
-This property works in conjunction with the [Horizontal Sizing](property_horizontalSizing) property.
+>This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
 |sizingY|string|<li>"grow"<li>"move"<li>"fixed"|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|

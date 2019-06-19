@@ -8,14 +8,14 @@ title:Coordinates & Sizing Properties
 Positions an object on the left of the form.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |left|integer |minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -30,7 +30,7 @@ Positions an object on the left of the form.
 Positions an object on the top of the form.  
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
@@ -38,7 +38,7 @@ Positions an object on the top of the form.
 
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -52,13 +52,13 @@ Positions an object on the top of the form.
 
 Positions an object on the right of the form.
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |right|integer |minimum: 0|
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -72,14 +72,14 @@ Positions an object on the right of the form.
 
 Positions the object on the bottom of the form (centered). 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|:---:|---|
 |bottom|integer | minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -104,17 +104,17 @@ You can change the width of an object by:
 
 To learn more about setting the size of an object, see the [Setting object display properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-object-display-properties.300-4163736.en.html) page.
 
->**Note**<br>
 >Some objects may have a predefined height that cannot be altered.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |width|integer |minimum: 0|
 
-### Objects Supported
+
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -139,18 +139,17 @@ You can change the height of an object by:
 
 To learn more about setting the size of an object, see the [Setting object display properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-object-display-properties.300-4163736.en.html) page.
 
->**Note**<br>
 >Some objects may have a predefined height that cannot be altered.
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |height|integer |minimum: 0|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|

@@ -21,14 +21,14 @@ When the **Focusable** property is selected for a non-enterable object, the user
 #### Hide focus rectangle  
 During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the **Tab** key or a single click). You can hide this rectangle by checking the **Hide focus rectangle** option. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|:---:|---|
 |focusable|boolean | TRUE / FALSE|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
@@ -52,13 +52,12 @@ To start over again, click **Clear**. When you have finished, click **OK**.
 
 The Property List displays the keyboard shortcut that was assigned to the object. If you want to change the shortcut later, simply open the Shortcuts dialog box and type the key combination you want to use.
 
->**Note**<br> 
-You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+>You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html).
 
 
-### JSON Grammar
+#### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---|
@@ -69,7 +68,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |shortcutKey	|string	|<li>"[F1]" -> "[F15]"<li>"[Return]"<li> "[Enter]"<li> "[Backspace]" <li>"[Tab]"<li> "[Esc]"<li> "[Del]"<li> "[Home]"<li> "[End]"<li> "[Help]"<li> "[Page up]"<li> "[Page down]" <li>"[left arrow]"<li> "[right arrow]"<li> "[up arrow]"<li> "[down arrow]"|
 
 
-### Objects Supported
+#### Objects Supported
 
 |Category|Link| | | | | 
 |---|---|---|---|---|---|
