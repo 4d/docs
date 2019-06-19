@@ -1,6 +1,6 @@
 ---
 id: branching
-title: Branching structures
+title: Structures conditionnelles
 ---
 
 ## Si...Sinon...Fin de si
@@ -33,194 +33,210 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  Fin de si
 ```
 
-he expression is TRUE only if both methods are TRUE. However, even if *MethodA* returns FALSE, 4D will still evaluate *MethodB*, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+L'expression n'est VRAIE que si les deux méthodes sont VRAIES. Or, même si *MéthodeA* retourne FAUX, 4D évaluera quand même *MéthodeB*, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```code4d
- If(MethodA)
-    If(MethodB)
+ Si(MéthodeA)
+    Si(MéthodeB)
        ...
-    End if
- End if
+    Fin de si
+ Fin de si
 ```
 
-The result is similar and *MethodB* is evaluated only if necessary.
+Le résultat est équivalent et *MéthodeB* n'est évaluée que si nécessaire.
 
-### Example
+### Exemple
 
 ```code4d
-  // Ask the user to enter a name
- $Find:=Request(Type a name)
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("You did not enter a name.")
- End if 
+  // Demander à l'utilisateur de saisir un nom
+ $Rech:=Demander(Saisissez un nom)
+ Si(OK=1)
+    CHERCHER([Personnes];[Personnes]Nom=$Rech)
+ Sinon
+    ALERTE("Vous n'avez pas saisi de nom.")
+ Fin de si 
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```code4d
- If(Boolean_Expression)
- Else
-    statement(s)
- End if
+ Si(Expression_booléenne)
+ Sinon
+    instruction(s)
+ Fin de si
 ```
 
-or:
+ou :
 
 ```code4d
- If(Boolean_Expression)
-    statement(s)
- Else
- End if
+ Si(Expression_booléenne)
+    instruction(s)
+ Sinon
+ Fin de si
 ```
 
-## Case of...Else...End case
+## Au cas ou...Sinon...Fin de cas
 
-The formal syntax of the `Case of...Else...End case` control flow structure is:
+La syntaxe de la structure conditionnelle `Au cas ou...Sinon...Fin de cas` est la suivante :
 
 ```code4d
- Case of
-    :(Boolean_Expression)
-       statement(s)
-    :(Boolean_Expression)
-       statement(s)
+ Au cas ou
+    :(Expression_booléenne)
+       instruction(s)
+    :(Expression_booléenne)
+       instruction(s)
        .
        .
        .
+ 
+    :(Expression_booléenne)
+       instruction(s)
+    Sinon
+       instruction(s)
+ Fin de cas.
+       .
+       .
 
-    :(Boolean_Expression)
-       statement(s)
-    Else
-       statement(s)
- End case
+    :(Expression_booléenne)
+       instruction(s)
+    Sinon
+       instruction(s)
+ Fin de cas
 ```
 
 A noter que l'élément `Sinon` est optionnel, vous pouvez écrire :
 
 ```code4d
- Case of
-    :(Boolean_Expression)
-       statement(s)
-    :(Boolean_Expression)
-       statement(s)
+ Au cas ou
+    :(Expression_booléenne)
+       instruction(s)
+    :(Expression_booléenne)
+       instruction(s)
        .
        .
        .
+ 
+    :(Expression_booléenne)
+       instruction(s)
+    Sinon
+       instruction(s)
+ Fin de cas.
+       .
+       .
 
-    :(Boolean_Expression)
-       statement(s)
- End case
+    :(Expression_booléenne)
+       instruction(s)
+ Fin de cas
 ```
 
-As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+Tout comme la structure `Si...Sinon...Fin de si`, la structure `Au cas ou...Sinon...Fin de cas` permet également à votre méthode de choisir parmi plusieurs séquences d’instructions. A la différence de la structure `Si...Sinon...Fin de si`, la structure `Au cas ou...Sinon...Fin de cas` peut tester un nombre illimité d’expressions booléennes et exécuter la séquence d’instructions correspondant à la valeur VRAI.
 
-Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
+Chaque expression booléenne débute par le caractère deux points (`:`). La combinaison de deux points et d’une expression booléenne est appelée un cas. Par exemple, la ligne suivante est un cas :
 
 ```code4d
-:(bValidate=1)
+:(bValider=1)
 ```
 
-Only the statements following the first TRUE case (and up to the next case) will be executed. If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
+Seules les instructions suivant le premier cas VRAI (et ce, jusqu’au cas suivant) seront exécutées. Si aucun des cas n’est VRAI, aucune instruction n’est exécutée (s'il n'y a pas d'élément `Sinon`).
 
-You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the `Else` will be executed.
+Vous pouvez placer une instruction Sinon après le dernier cas. Si tous les cas sont FAUX, les instructions suivant le `Sinon` seront exécutées.
 
-### Example
+### Exemple
 
-This example tests a numeric variable and displays an alert box with a word in it:
+Cet exemple teste une variable numérique et affiche une boîte de dialogue d’alerte comportant un simple mot :
 
 ```code4d
- Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
- End case
+ Au cas ou
+    :(vRésult=1) // Teste si le numéro est 1
+       ALERTE("Un.") // Si c’est 1, afficher une alerte
+    :(vRésult=2) // Teste si le numéro est 2
+       ALERTE("Deux.") // Si c’est 2, afficher une alerte
+    :(vRésult=3) // Teste si le numéro est 3
+       ALERTE("Trois.") // Si c’est 3, afficher une alerte
+    Sinon // Si ce n’est ni 1 ni 2 ni 3, afficher une alerte
+       ALERTE("Ce n’est ni un, ni deux, ni trois.")
+ Fin de cas
 ```
 
-For comparison, here is the `If...Else...End if` version of the same method:
+A titre de comparaison, voici la version avec `Si...Sinon...Fin de si` de la même méthode :
 
 ```code4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
- Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if
+ Si(vRésult=1) // Teste si le numéro est 1
+    ALERTE("Un.") // Si c’est 1, afficher une alerte
+ Sinon
+    Si(vRésult=2) // Test si le numéro est 2
+       ALERTE("Deux.") // Si c’est 2, afficher une alerte
+    Sinon
+       Si(vRésult=3) // Teste si le numéro est 3
+          ALERTE("Trois.") // Si c’est 3, afficher une alerte
+       Sinon // Si ce n’est ni 1, 2 ni 3, afficher l’alerte
+          ALERTE("Ce n’est ni un, ni deux, ni trois.")
+       Fin de si
+    Fin de si
+ Fin de si
 ```
 
-Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.
+Rappelez-vous qu’avec une structure de type `Au cas ou...Sinon...Fin de cas`, seul le premier cas VRAI rencontré est exécuté. Même si d’autres cas sont VRAIS, seules les instructions suivant le premier cas VRAI seront prises en compte.
 
-Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
+Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vRésult=1) et le cas complexe (vRésult=1) & (vDemande#2) et que vous structurez la méthode de la manière suivante : 
 
 ```code4d
- Case of
-    :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
- End case
+ Au cas ou
+    :(vRésult=1)
+       ... //instruction(s)
+    :((vRésult=1) & (vDemande#2)) //Les instructions suivant ce cas ne seront jamais exécutées
+       ... //instruction(s)
+ Fin de cas
 ```
 
-In the code above, the presence of the second condition is not detected since the test "vResult=1" branches off the code before any further testing. For the code to operate properly, you can write it as follows:
+... les instructions associées au cas complexe ne seront jamais exécutées. En effet, pour que ce cas soit VRAI, ses deux conditions booléennes doivent l’être. Or, la première condition est celle du cas simple situé précédemment. Lorsqu'elle est VRAIE, le cas simple est exécuté et 4D sort de la structure conditionnelle, sans évaluer le cas complexe. Pour que ce type de méthode fonctionne, vous devez écrire :
 
 ```code4d
- Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ... //statement(s)
- End case
+ Au cas ou
+    :(vRésult=1) & (vDemande#2) `<-- Les cas complexes doivent toujours être placés en premier
+       ... //Instruction(s)
+    :(vRésult=1)
+       ... //instruction(s)
+ Fin de cas
 ```
 
-Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
+
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```code4d
- Case of
-    :(Boolean_Expression)
-    :(Boolean_Expression)
+ Au cas ou
+    :(Expression_booléenne)
+    :(Expression_booléenne)
       ...
 
-    :(Boolean_Expression)
-       statement(s)
-    Else
-       statement(s)
- End case
+    :(Expression_booléenne)
+       instruction(s)
+    Sinon
+       instruction(s)
+ Fin de cas
 ```
 
-or:
+ou :
 
 ```code4d
- Case of
-    :(Boolean_Expression)
-    :(Boolean_Expression)
-       statement(s)
+ Au cas ou
+    :(Expression_booléenne)
+    :(Expression_booléenne)
+       instruction(s)
        ...
 
-    :(Boolean_Expression)
-       statement(s)
-    Else
- End case
+    :(Expression_booléenne)
+       instruction(s)
+    Sinon
+ Fin de cas
 ```
 
-or:
+ou :
 
 ```code4d
- Case of
-    Else
-       statement(s)
- End case
+ Au cas ou
+    Sinon
+       instruction(s)
+ Fin de cas
 ```
