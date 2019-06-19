@@ -78,7 +78,7 @@ In particular:
 - Form objects and form object properties have been updated (they now use the same grammar as dynamic forms). Deprecated parts are not supported. 
 - Compatibility settings are reset as for a new database. See the Conversion log file to verify the status of compatibility settings for your database. 
 
-For a detailed list of compatibility issues, please refer to [Legacy technologies on Doc Center](https://doc.4d.com/4Dv17R4/4D/17-R4/Deprecated-or-removed-features-in-v17-product-range.200-4075256.en.html#4020272).
+For a detailed list of compatibility issues, please refer to [Legacy technologies on Doc Center](https://doc.4d.com/4Dv17R5/4D/17-R5/Deprecated-or-removed-features-in-v17-product-range.200-4245348.en.html#4020272).
 
 
 ## And now?
