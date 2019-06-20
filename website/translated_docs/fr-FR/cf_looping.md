@@ -312,66 +312,66 @@ La collection doit contenir uniquement des éléments du même type. Dans le cas
 
 A chaque itération de la boucle, la variable *Elément_courant* reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the *Current_Item* variable is of the object type or collection type (i.e. if *Expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
-- The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
+- Si la variable *Elément_courant* est de type objet ou collection (i.e. si *Expression* est une collection d'objets ou une collection de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections sont passés par référence). Si la variable est de type scalaire, sa modification ne sera pas répercutée sur l'élément de la collection.
+- La variable *Elément_courant* doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable *Elément_courant* ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
 #### Exemple
 
-You want to compute some statistics for a collection of numbers:
+Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
 ```code4d
  C_COLLECTION($nums)
- $nums:=New collection(10;5001;6665;33;1;42;7850)
- C_LONGINT($item;$vEven;$vOdd;$vUnder;$vOver)
- For each($item;$nums)
-    If($item%2=0)
-       $vEven:=$vEven+1
-    Else
-       $vOdd:=$vOdd+1
-    End if
-    Case of
+ $nums:=Creer collection(10;5001;6665;33;1;42;7850)
+ C_ENTIER LONG($item;$vEven;$vOdd;$vUnder;$vOver)
+ Pour chaque($item;$nums)
+    Si($item%2=0)
+       $vEven:=$vEven+1 //nombres pairs
+    Sinon
+       $vOdd:=$vOdd+1 //nombres impairs
+    Fin de si
+    Au cas ou
        :($item<5000)
-          $vUnder:=$vUnder+1
+          $vUnder:=$vUnder+1 //nombres < 5000
        :($item>6000)
-          $vOver:=$vOver+1
-    End case
- End for each
+          $vOver:=$vOver+1 //nombres > 6000
+    Fin de cas
+ Fin de chaque
   //$vEven=3, $vOdd=4
   //$vUnder=4,$vOver=2
 ```
 
-### Boucle sur entity selections
+### Boucle sur des entity selections
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+Lorsque `Pour chaque...Fin de chaque` est utilisée avec une *Expression* de type *Entity selection*, le paramètre *Elément_courant* contient l'entity en cours de traitement.
 
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre *Elément_courant* reçoit automatiquement l'entity qui est en cours de traitement.
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**Note :** Si l'entity selection contient une entity qui a été supprimée entre-temps par un autre process, elle est automatiquement ignorée durant la boucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
+N'oubliez pas que toute modification effectuée sur l'entity en cours de traitement doit être explicitement sauvegardée (si nécessaire) à l'aide de la méthode `entity.save( )`.
 
 #### Exemple
 
-You want to raise the salary of all British employees in an entity selection:
+Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
 
 ```code4d
- C_OBJECT(emp)
- For each(emp;ds.Employees.query("country='UK'"))
+ C_OBJET(emp)
+ Pour chaque(emp;ds.Employees.query("country='UK'"))
     emp.salary:=emp.salary*1,03
     emp.save()
- End for each
+ Fin de chaque
 ```
 
-### Loop through object properties
+### Boucles sur des propriétés d'objets
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Lorsque `Pour chaque...Fin de chaque` est utilisée avec une *Expression* de type Objet, le paramètre *Elément_courant* est une variable texte qui reçoit automatiquement le nom de la propriété en cours de traitement.
 
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
 #### Exemple
 
-You want to switch the names to uppercase in the following object:
+Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
 
 ```code4d
 {
@@ -381,14 +381,14 @@ You want to switch the names to uppercase in the following object:
 }
 ```
 
-You can write:
+Vous pouvez écrire :
 
 ```code4d
- For each(property;vObject)
-    If(Value type(vObject[property])=Is text)
-       vObject[property]:=Uppercase(vObject[property])
-    End if
- End for each
+ Pour chaque(property;vObject)
+    Si(Type valeur(vObject[property])=Est un texte)
+       vObject[property]:=Majusc(vObject[property])
+    Fin de si
+ Fin de chaque
 ```
 
     {
@@ -398,63 +398,63 @@ You can write:
     }
     
 
-### begin / end parameters
+### Paramètres début / fin
 
-You can define bounds to the iteration using the optional begin and end parameters.
+Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**Note :** Les paramètres *début* et *fin* sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).
 
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
+- Dans le paramètre *début*, passez la position de l'élément de *Expression* auquel démarrer l'itération (*début* est inclus).
+- Dans le paramètre *fin*, vous pouvez passer la position de l'élément de *Expression* auquel stopper l'itération (*fin* est exclus). 
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
+Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expression*, les éléments sont itérés depuis *début* jusqu'au dernier inclus. Si les paramètres *début* et *fin* sont des valeurs positives, ils représentent des positions d'éléments dans *Expression*. Si *début* est une valeur négative, elle est recalculée comme `début:=début+Taille expression` (elle est considérée comme un décalage à partir de la fin de *Expression*). Si la valeur calculée est négative, *début* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
 
-For example:
+Par exemple:
 
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
+- une collection contient 10 éléments (numérotés de 0 à 9)
+- début=-4 -> début=-4+10=6 -> l'itération démarre au 6e élément (numéro 5)
+- fin=-2 -> fin=-2+10=8 -> l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément. 
 
 #### Exemple
 
 ```code4d
  C_COLLECTION($col;$col2)
- $col:=New collection("a";"b";"c";"d";"e")
- $col2:=New collection(1;2;3)
- C_TEXT($item)
- For each($item;$col;0;3)
+ $col:=Creer collection("a";"b";"c";"d";"e")
+ $col2:=Creer collection(1;2;3)
+ C_TEXTE($item)
+ Pour chaque($item;$col;0;3)
     $col2.push($item)
- End for each
+ Fin de chaque
   //$col2=[1,2,3,"a","b","c"]
- For each($item;$col;-2;-1)
+ Pour chaque($item;$col;-2;-1)
     $col2.push($item)
- End for each
+ Fin de chaque
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 
-### Until and While conditions
+### Conditions Until et While
 
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` or a `While(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to True.
+Vous pouvez contrôler l'exécution de `Pour chaque...Fin de chaque` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. Lorsqu'une instruction `Jusque(condition)` ou `Tant que(condition)` est associée à la boucle, l'itération stoppe dès que la condition est évaluée à Vrai.
 
-You can pass either keyword depending on your needs:
+Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- La condition `Jusque` est testée à la fin de chaque itération, donc si *Expression* n'est ni vide ni Null, la boucle sera exécutée au moins une fois.
+- La condition `Tant que` est testée au début de chaque itération, donc en fonction du résultat de la condition, la boucle peut ne pas être exécutée du tout.
 
 #### Exemple
 
 ```code4d
- $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
-
+ $colNum:=Creer collection(1;2;3;4;5;6;7;8;9;10)
+ 
  $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
+ Pour chaque($num;$colNum)Tant que($total<30) //testé au début
     $total:=$total+$num
- End for each
- ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
-
+ Fin de chaque
+ ALERTE(Chaine($total)) //$total = 36 (1+2+3+4+5+6+7+8)
+ 
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ Pour chaque($num;$colNum)Jusque($total>30) //testé à la fin
     $total:=$total+$num
- End for each
- ALERT(String($total)) //$total = 1001 (1000+1)
+ Fin de chaque
+ ALERTE(Chaine($total)) //$total = 1001 (1000+1)
 ```
