@@ -1,38 +1,38 @@
 ---
 id: components
-title: Components
+title: Compsants
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different databases. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D databases.
+Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes bases. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des bases 4D.
 
-Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+La création et l’installation des composants 4D s’effectuent directement depuis 4D. Schématiquement, les composants sont gérés comme des [plug-ins](Concepts/plug-ins.md). Les principes sont les suivants :
 
-- A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
-- To install a component in a database, you simply need to copy it into the "Components" folder of the database, placed next to the structure file or next to the 4D executable application.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
-- You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands. 
+- Un composant est un simple fichier de structure (compilé ou non compilé) d’architecture standard ou sous forme de package (cf. paragraphe Extension .4dbase).
+- Pour installer un composant dans une base, il suffit de le copier dans le dossier “Components” de la base, placé à côté du fichier de structure ou à côté de l'application 4D exécutable.
+- Un composant peut appeler la plupart des éléments 4D : des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, des images issues de la bibliothèque, etc. Il ne peut pas appeler des méthodes base et des triggers.
+- Il n’est pas possible d’exploiter des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL. 
 
-## Definitions
+## Définitions
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+Les mécanismes de gestion des composants dans 4D nécessitent la mise en oeuvre des concepts et de la terminologie suivants :
 
-- **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. A matrix database forms a single component. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
-- **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases. 
+- **Base matrice :** base de données 4D utilisée pour développer le composant. La base matrice est une base standard, sans attribut spécifique. Une base matrice constitue un seul composant. La base matrice est destinée à être copiée, compilée ou non, dans le dossier Components de l'application 4D ou de la base devant utiliser le composant (la base hôte).
+- **Base hôte :** base dans laquelle est installé et utilisé un composant.
+- **Composant :** base matrice, compilée ou non, copiée dans le dossier Components de l'application 4D ou de la base hôte et dont le contenu est utilisé dans les bases hôtes. 
 
-It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
+Il est à noter qu’une base peut donc être à la fois “matrice” et “hôte”, c’est-à-dire qu’une base matrice peut elle-même utiliser un ou plusieurs composants. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
 
-### Protection of components: compilation
+### Protection des composants : la compilation
 
-By default, all the project methods of a matrix database installed as a component are potentially visible from the host database. In particular:
+Par défaut, toutes les méthodes projet d’une base matrice installée comme composant sont virtuellement visibles depuis la base hôte. En particulier :
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host database. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
-- The other project methods of the matrix database do not appear in the Explorer but they too can be viewed in the debugger of the host database. 
+- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.
+- Les autres méthodes projet de la base matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur de la base hôte. 
 
-To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). When a compiled matrix database is installed as a component:
+Pour protéger efficacement les méthodes projet d’un composant, il vous suffit simplement de compiler la base matrice et de la fournir sous forme de fichier .4dc (base compilée ne contenant pas le code interprété). Lorsqu’une base matrice compilée est installée comme composant :
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
-- The other project methods of the matrix database will never appear. 
+- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
+- Les autres méthodes projet de la base matrice n’apparaissent jamais. 
 
 ## Sharing of project methods
 
@@ -150,41 +150,41 @@ The following commands are not compatible for use within a component because the
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notes :**
 
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
 - Obviously, SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used in the framework of components. 
 
-## Error handling
+## Gestion des erreurs
 
-An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running database. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host database is not called, and vice versa.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `APPELER SUR ERREUR` s'applique à la base en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur de la base hôte n'est pas appelée, et inversement.
 
-## Use of forms
+## Utilisation de formulaires
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix database can be used by the component. 
-- A component can call table forms of the host database. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant. 
+- Un composant peut faire appel à des formulaires table de la base hôte. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 
 - You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. This is described in Sharing of forms.
 
-## Use of tables and fields
+## Utilisation de tables et de champs
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix database. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. An external database is a 4D database that is independent from the main 4D database, but that you can work with from the main 4D database. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
+Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D de la base matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. Une base externe est une base 4D indépendante de la base 4D principale, mais qui est manipulée depuis la base 4D principale. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
-### Example
+### Exemple
 
-The following code is included in a component and performs three basic actions with an external database:
+Le code suivant est inclus dans un composant et effectue trois actions élémentaires avec une base de données externe :
 
-- creates the external database if it does not already exist,
-- adds data to the external database,
-- reads data from the external database.
+- création de la base de données externe si elle n'existe pas déjà,
+- ajout de données dans la base de données externe,
+- lecture de données depuis la base de données externe.
 
-Creating the external database:
+Création de la base de données externe :
 
 ```code4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
- Begin SQL
+<>MyDatabase:=Dossier 4D+"\MyDB" // (Windows) stocker les données dans un répertoire autorisé
+ Debut SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
         CREATE TABLE IF NOT EXISTS KEEPIT
@@ -195,70 +195,70 @@ Creating the external database:
         code TEXT,
         sort_order INT32
         );
-
+ 
         CREATE UNIQUE INDEX id_index ON KEEPIT (ID);
-
+ 
         USE DATABASE SQL_INTERNAL;
-
- End SQL
+ 
+ Fin SQL
 ```
 
-Writing in the external database:
+Ecriture dans la base de données externe :
 
 ```code4d
- $Ptr_1:=$2 // retrieves data from the host database through pointers
+ $Ptr_1:=$2 // récupération des données de la base hôte via des pointeurs
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
- Begin SQL
-
+ Debut SQL
+ 
         USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
         INSERT INTO KEEPIT
         (ID, kind, name, code, sort_order)
         VALUES
         (:[$Ptr_1], :[$Ptr_2], :[$Ptr_3], :[$Ptr_4], :[$Ptr_5]);
-
+ 
         USE DATABASE SQL_INTERNAL;
-
- End SQL
+ 
+ Fin SQL
 ```
 
-Reading from an external database:
+Lecture dans une base de données externe :
 
 ```code4d
- $Ptr_1:=$2 // accesses data of the host database through pointers
+ $Ptr_1:=$2 // accès aux données de la base hôte via des pointeurs
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
-
- Begin SQL
-
+ 
+ Debut SQL
+ 
     USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
     SELECT ALL ID, kind, name, code, sort_order
     FROM KEEPIT
     INTO :$Ptr_1, :$Ptr_2, :$Ptr_3, :$Ptr_4, :$Ptr_5;
-
+ 
     USE DATABASE SQL_INTERNAL;
-
- End SQL
+ 
+ Fin SQL
 ```
 
-## Use of resources
+## Utilisation de ressources
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+Les composants peuvent utiliser des ressources. Conformément aux principes de gestion des ressources, les fichiers de ressources des composants doivent être placés dans un dossier Resources, situé à côté du fichier .4db ou .4dc du composant. Si le composant est d’architecture .4dbase (architecture conseillée), le dossier Resources doit être placé à l’intérieur de ce dossier.
 
-Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
+Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+Dans une base hôte contenant un ou plusieurs composant(s), chaque composant ainsi que la base hôte dispose de sa propre “chaîne de ressources”. Les ressources sont cloisonnées entre les différentes bases : il n’est pas possible d’accéder aux ressources du composant A depuis le composant B ou la base hôte.
 
-## On-line help for components
+## Aide en ligne des composants
 
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
+Un mécanisme spécifique a été mis en place afin de permettre aux développeurs d’ajouter des aides en ligne à leurs composants. Le principe est semblable à celui proposé pour les bases de données 4D :
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file.
+- L’aide du composant doit être fournie sous le forme d’un fichier suffixé .htm, .html ou (Windows uniquement) .chm,
+- Le fichier d’aide doit être placé à côté du fichier de structure du composant et porter le même nom que le fichier de structure,
+- L’aide est alors automatiquement chargée dans le menu Aide de l’application avec le libellé “Aide de...” suivi du nom du fichier d’aide.
