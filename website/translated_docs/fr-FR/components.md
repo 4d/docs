@@ -1,6 +1,6 @@
 ---
 id: components
-title: Compsants
+title: Composants
 ---
 
 Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes bases. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des bases 4D.
@@ -34,126 +34,125 @@ Pour protéger efficacement les méthodes projet d’un composant, il vous suffi
 - Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet de la base matrice n’apparaissent jamais. 
 
-## Sharing of project methods
+## Partage des méthodes projet
 
-All the project methods of a matrix database are by definition included in the component (the database is the component), which means that they can be called and executed by the component.
+Toutes les méthodes projet d’une base matrice sont par définition incluses dans le composant (la base est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host database. In the matrix database, you must explicitly designate the methods that you want to share with the host database. These project methods can be called in the code of the host database (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par la base hôte. Vous devez explicitement désigner dans la base matrice les méthodes que vous souhaitez partager avec la base hôte. Ces méthodes projet peuvent être appelées dans le code la base hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de la base hôte). Ces méthodes constituent les **points d’entrée** dans le composant.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In certain cases, you may need to allow a component to access the project methods of your host database. To do this, you must explicitly designate the project methods of the host database that you want to make accessible to the components.
+**Note :** A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant à la base hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre base hôte. Pour cela, vous devez explicitement désigner les méthodes projet de la base hôte que vous souhaitez rendre accessibles aux composants.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-## Passing variables
+## Passage de variables
 
-The local, process and interprocess variables are not shared between components and host databases. The only way to access component variables from the host database and vice versa is using pointers.
+Les composants et les bases hôtes ne partagent pas de variables locales, process ou interprocess. Le seul moyen d’accéder aux variables du composant depuis la base hôte et inversement est d’utiliser des pointeurs.
 
-Example using an array:
-
-```code4d
-//In the host database:
-     ARRAY INTEGER(MyArray;10)
-     AMethod(->MyArray)
-
-//In the component, the AMethod project method contains:
-     APPEND TO ARRAY($1->;2)
-```
-
-Examples using variables:
+Exemple utilisant un tableau :
 
 ```code4d
- C_TEXT(myvariable)
- component_method1(->myvariable)
- C_POINTER($p)
- $p:=component_method2(...)
+//Dans la base hôte :
+      TABLEAU ENTIER(MonTab;10)
+      UneMéthode(->MonTab)
+//Dans le composant, la méthode projet UneMéthode contient : 
+     AJOUTER A TABLEAU($1->;2)
 ```
 
-When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:
+Exemples utilisant des variables :
 
-- The `Get pointer` command will not return a pointer to a variable of the host database if it is called from a component and vice versa.
+```code4d
+ C_TEXTE(mavariable)
+ methode1_du_composant(->mavariable)
+ C_POINTEUR($p)
+ $p:=methode2_du_composant(...)
+```
 
-- The component architecture allows the coexistence, within the same interpreted database, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled database). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host database.
+L’utilisation de pointeurs pour faire communiquer les composants et la base hôte nécessite de prendre en compte les spécificités suivantes :
+
+- La commande `Pointeur vers` ne retournera pas un pointeur vers une variable de la base hôte si elle est appelée depuis un composant et inversement.
+
+- L’architecture des composants autorise la coexistence, au sein d’une même base interprétée, de composants interprétés et compilés (à l’inverse, seuls des composants compilés peuvent être utilisés dans une base compilée). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans la même base hôte.
     
-    - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
-    - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error. 
+    - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
+    - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution. 
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- La comparaison de pointeurs via la commande `RESOUDRE POINTEUR` est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différente dans un composant et la base hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```code4d
-     RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
-     RESOLVE POINTER(myptr2;vVarName2;vtablenum2;vfieldnum2)
-     If(vVarName1=vVarName2)
-      //This test returns True even though the variables are different
+     RESOUDRE POINTEUR(monptr1;vNomVar1;vnumtable1;vnumchamp1)
+      RESOUDRE POINTEUR(monptr2;vNomVar2;vnumtable2;vnumchamp2)
+      Si(vNomVar1=vNomVar2)
+       //Ce test retourne Vrai alors que les variables sont différentes
 ```
 
-In this case, it is necessary to use the comparison of pointers:
+Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ```code4d
-     If(myptr1=myptr2) //This test returns False
+     Si(monptr1=monptr2) //Ce test retourne Faux
 ```
 
-## Access to tables of the host database
+## Accès aux tables de la base hôte
 
-Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:
+Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent à la base hôte et au composant de communiquer dans ce cas. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
 ```code4d
-// calling a component method
-methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
+// appeler une méthode composant
+methCreateRec(->[PERSONNES];->[PERSONNES]Nom;"Julie Andrews")
 ```
 
-Within the component, the code of the `methCreateRec` method:
+Dans le composant, le code de la méthode `methCreateRec` :
 
 ```code4d
-C_POINTER($1) //Pointer on a table in host database
-C_POINTER($2) //Pointer on a field in host database
-C_TEXT($3) // Value to insert
+C_POINTEUR($1) //Pointeur vers une table de la base hôte
+C_POINTEUR($2) //Pointeur vers un champ de la base hôte
+C_TEXTE($3) // Valeur à insérer
 
 $tablepointer:=$1
 $fieldpointer:=$2
-CREATE RECORD($tablepointer->)
+CREER ENREGISTREMENT($tablepointer->)
 
 $fieldpointer->:=$3
-SAVE RECORD($tablepointer->)
+STOCKER ENREGISTREMENT($tablepointer->)
 ```
 
-## Scope of language commands
+## Portée des commandes du langage
 
-Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
+Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host database (a component does not have its own users and groups).
+Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTER METHODE` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes de la base hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the database. When these commands are called from a component, they are applied to the host database.
+Les commandes `FIXER PARAMETRE BASE` et `Lire parametre base` constituent aussi une exception à ce principe : leur portée est globale à la base. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent à la base hôte.
 
-Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
+Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Fichier structure` et `Dossier 4D` lorsqu’elles sont utilisées dans le cadre des composants.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
+La commande `LISTE COMPOSANTS` permet de connaître la liste des composants chargés par la base hôte.
 
-### Unusable commands
+### Commandes non utilisables
 
-The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cadre d’un composant car elles modifient le fichier de structure — ouvert en lecture. Leur exécution dans un composant provoque l’erreur -10511, “La commande NomCommande ne peut pas être appelée depuis un composant” :
 
-- `ON EVENT CALL`
-- `Method called on event`
-- `SET PICTURE TO LIBRARY|`
-- `REMOVE PICTURE FROM LIBRARY`
-- `SAVE LIST`
-- `ARRAY TO LIST`
-- `EDIT FORM`
-- `CREATE USER FORM`
-- `DELETE USER FORM`
-- `CHANGE PASSWORD`
-- `EDIT ACCESS`
-- `Set group properties`
-- `Set user properties`
-- `DELETE USER`
-- `CHANGE LICENSES`
-- `BLOB TO USERS`
-- `SET PLUGIN ACCESS`
+- `APPELER SUR EVENEMENT`
+- `Methode appelee sur evenement`
+- `ECRIRE IMAGE DANS BIBLIOTHEQUE`
+- `SUPPRIMER IMAGE DANS BIBLIOTHEQUE`
+- `STOCKER LISTE`
+- `TABLEAU VERS LISTE`
+- `MODIFIER FORMULAIRE`
+- `CREER FORMULAIRE UTILISATEUR`
+- `SUPPRIMER FORMULAIRE UTILISATEUR`
+- `CHANGER MOT DE PASSE`
+- `CHANGER PRIVILEGES`
+- `Ecrire proprietes groupe`
+- `Ecrire proprietes utilisateur`
+- `SUPPRIMER UTILISATEUR`
+- `CHANGER LICENCES`
+- `BLOB VERS UTILISATEURS`
+- `ECRIRE ACCES PLUGIN`
 
 **Notes :**
 
-- The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- Obviously, SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used in the framework of components. 
+- La commande `Table du formulaire courant` retourne `Nil` lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.
+- Les commandes SQL de définition de données (`CREATE TABLE`, `DROP TABLE`, etc.) ne peuvent pas être utilisées dans le cadre des composants. 
 
 ## Gestion des erreurs
 
@@ -162,11 +161,11 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 ## Utilisation de formulaires
 
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant. 
-- Un composant peut faire appel à des formulaires table de la base hôte. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
+**Note :** Si un composant utilise la commande `AJOUTER ENREGISTREMENT`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. This is described in Sharing of forms.
+- Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants. Ce point est détaillé dans le paragraphe Partage des formulaires.
 
 ## Utilisation de tables et de champs
 
