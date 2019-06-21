@@ -1,20 +1,20 @@
 ---
 id: data-types
-title: Data types overview
+title: Types de données
 ---
 
 In 4D, data are handled according to their type in two places: database fields and the 4D language.
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-| Data Types                                 | Database support(*) | Language support     | Variable declaration         |
+| Types de données                           | Database support(*) | Language support     | Variable declaration         |
 | ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
 | [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
 | [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
 | [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
 | [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
 | [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `ARRAY INTEGER`              |
+| [Entier long](Concepts/dt_number.md)       | Yes                 | Converted to longint | `ARRAY INTEGER`              |
 | [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
 | [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
@@ -58,20 +58,20 @@ The following table illustrates these default values:
 | Object     | null                                                                                | null                    | null                         |
 | Collection | null                                                                                | null                    | null                         |
 
-## Converting data types
+## Convertir les types de données
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+Le langage de 4D comporte des fonctions et des opérateurs vous permettant de convertir des types de données en d’autres types, dans la mesure où de telles conversions ont un sens. 4D assure la vérification des types de données. Ainsi, vous ne pouvez pas écrire : "abc"+0.5+!25/12/96!-?00:30:45?, car cette opération génère une erreur de syntaxe. 
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+Le tableau ci-dessous liste les types de données pouvant être convertis, le type dans lequel ils peuvent être convertis, ainsi que les fonctions 4D à utiliser :
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Time    | Bool       |
-| Number (2)           | String    |           |         |         | Bool       |
-| Date                 | String    |           |         |         | Bool       |
-| Time                 | String    |           |         |         | Bool       |
-| Boolean              |           | Num       |         |         |            |
+| Types à convertir | en Chaîne | en Numérique | en Date | en Heure | en Booléen |
+| ----------------- | --------- | ------------ | ------- | -------- | ---------- |
+| Chaîne (1)        |           | Num          | Date    | Heure    | Bool       |
+| Numérique (2)     | Chaine    |              |         |          | Bool       |
+| Date              | Chaine    |              |         |          | Bool       |
+| Heure             | Chaine    |              |         |          | Bool       |
+| Booléen           |           | Num          |         |          |            |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command. (2) Time values can be treated as numbers.
+(1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`. (2) Les valeurs de type Heure peuvent être utilisées en tant que numériques.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Note :** Ce tableau ne traite pas les conversions de données plus complexes obtenues à l'aide d'une combinaison d'opérateurs et d'autres commandes.
