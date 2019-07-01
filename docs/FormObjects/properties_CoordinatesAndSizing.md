@@ -17,11 +17,9 @@ Positions an object on the left of the form.
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -40,11 +38,9 @@ Positions an object on the top of the form.
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -60,11 +56,9 @@ Positions an object on the right of the form.
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -81,11 +75,9 @@ Positions the object on the bottom of the form (centered).
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -116,12 +108,9 @@ To learn more about setting the size of an object, see the [Setting object displ
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
-
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 <hr>
 
 
@@ -151,10 +140,8 @@ To learn more about setting the size of an object, see the [Setting object displ
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
-||[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 

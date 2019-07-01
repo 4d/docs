@@ -12,21 +12,21 @@ This property allows setting the general appearance of the button. The style als
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|style|text | <li>"regular", <li>"toolbar", <li>"bevel", <li>"roundedBevel", <li>"gradientBevel", <li>"texturedBevel", <li>"office", <li>"help", <li>"circular", <li>"disclosure", <li>"roundedDisclosure", <li>"custom"|
+|style|text | <li>"regular"<li> "flat"<li>"toolbar" <li>"bevel" <li>"roundedBevel" <li>"gradientBevel" <li>"texturedBevel" <li>"office" <li>"help" <li>"circular" <li>"disclosure" <li>"roundedDisclosure" <li>"custom"|
 
 
 #### Objects Supported
 
 |Category|Link| 
 |---|---|
-|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
+|Button|[Regular](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
 |Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
 <hr>
 
 ## Picture pathname
 
-A picture of a button can come from four different sources: Variable, Picture Library, Resource File or File. You can enter the name (if the picture is a variable or comes from the picture library), the number (if the picture comes from the picture library or a resource file) or the pathname (if the picture comes from a picture file) of the picture. In the case of a pathname, it must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)).
+A picture of a button can come from four different sources: Variable, Resource File or File. You can enter the name (if the picture is a variable), the number (if the picture comes from a resource file) or the pathname (if the picture comes from a picture file) of the picture. In the case of a pathname, it must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)).
 
 #### JSON Grammar
 
@@ -37,10 +37,9 @@ A picture of a button can come from four different sources: Variable, Picture Li
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)|[Picture button](pictureButton_overview.md)|
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) - [Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -63,10 +62,9 @@ Each state is represented by a different picture. In the source picture, the sta
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
 
 <hr>
 
@@ -86,7 +84,7 @@ This property allows you to set the picture that will be drawn in the background
 
 |Category|Link| 
 |---|---|
-|Button|[Custom button](button_overview.md#custom)| 
+|Button|[Custom](button_overview.md#custom)| 
 
 <hr>
 
@@ -107,7 +105,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 |Category|Link| 
 |---|---|
-|Button|[Custom button](button_overview.md#custom)| 
+|Button|[Custom](button_overview.md#custom)| 
 
 <hr>
 
@@ -136,7 +134,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 |Category|Link| 
 |---|---|
-|Button|[Custom button](button_overview.md#custom)| 
+|Button|[Custom](button_overview.md#custom)| 
 
 <hr>
 
@@ -166,7 +164,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 |Category|Link| 
 |---|---|
-|Button|[Custom button](../Buttons/button_overview.md#custom)| 
+|Button|[Custom](button_overview.md#custom)| 
 
 <hr>
 
@@ -198,10 +196,9 @@ Here are the results using the various options for this property:
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
 
 
 <hr>
@@ -250,7 +247,6 @@ It is important to note that the “With Pop-up Menu” property only manages th
 
 #### Objects Supported
 
-|Category|Link| | | |  
-|---|---|---|---|---|
-|Button|[Toolbar button](../Buttons/button_overview.md#toolbar)|[Bevel button](../Buttons/button_overview.md#bevel)|[Rounded Bevel button](../Buttons/button_overview.md#Rounded-bevel)|[OS X Gradient button](../Buttons/button_overview.md#os-x-gradient)|
-||[OS X Textured button](../Buttons/button_overview.md#os-x-textured)|[Office XP button](../Buttons/button_overview.md#office-XP)|[Circle button](../Buttons/button_overview.md#circle)|| 
+|Category|Link| 
+|---|---|
+|Button|[Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle)| 

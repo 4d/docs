@@ -27,4 +27,4 @@ defaultButton|boolean|<li>"true"<li>"false |
 
 |Category|Link| 
 |---|---|
-|Button|[Regular button](button_overview.md#regular)|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular)|

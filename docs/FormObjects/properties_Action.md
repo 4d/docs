@@ -3,9 +3,12 @@ id: propertiesAction
 title:Action Properties
 ---
 
+## Standard action
+Standard actions are actions for active objects that have been predefined by 4D. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+
 ## Droppable
 
-Several properties are available in the "Action" theme of the Property List to configure the support of drag-and-drop in forms. The number and action of these properties depends on the type of object to which they are applied.
+Several properties are available to configure the support of drag-and-drop in forms. The number and action of these properties depends on the type of object to which they are applied.
 
 ### Draggable and Droppable
 
@@ -76,10 +79,9 @@ When this option is check, the drop of external objects into 4D forms is refused
 
 #### Objects Supported
 
-|Category|Link| | | | | 
-|---|---|---|---|---|---|
-|Button|[Regular button](button_overview.md#regular)|[Toolbar button](button_overview.md#toolbar)|[Bevel button](button_overview.md#bevel)|[Rounded Bevel button](button_overview.md#Rounded-bevel)|[OS X Gradient button](button_overview.md#os-x-gradient)|
-||[OS X Textured button](button_overview.md#os-x-textured)|[Office XP button](button_overview.md#office-XP)|[Help button](button_overview.md#help)|[Circle button](button_overview.md#circle)|[Custom button](button_overview.md#custom)| 
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
 
 
 

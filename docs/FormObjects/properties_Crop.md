@@ -18,7 +18,7 @@ Sets the number of rows in a thumbnail table.
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
 
 
@@ -41,7 +41,7 @@ Sets the number of columns in a thumbnail table.
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
 
 

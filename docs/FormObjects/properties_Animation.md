@@ -18,7 +18,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 
 <hr>
@@ -40,7 +40,7 @@ Pictures are displayed in a continuous loop.
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -61,7 +61,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -82,7 +82,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 
 <hr>
@@ -104,7 +104,7 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 <hr>
 
@@ -125,7 +125,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 
 

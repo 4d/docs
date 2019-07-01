@@ -19,7 +19,7 @@ Allows setting a standard style for the object border.
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Picture Button|[Picture](pictureButton_overview.md)|
 
 
 

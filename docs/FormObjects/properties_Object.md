@@ -28,8 +28,8 @@ You can click twice on the button so that it remains selected even after you hav
 
 |Category|Link| 
 |---|---|
-|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) -[Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) -[Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
+|Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
 |Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
@@ -60,8 +60,8 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 
 |Category|Link| 
 |---|---|
-|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
+|Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
 |Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
@@ -108,8 +108,8 @@ You can also enter an expression directly in the “Variable or Expression” ar
 
 |Category|Link|
 |---|---|
-|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Help button](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)| 
-|Picture Button|[Picture button](pictureButton_overview.md)|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
+|Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
 |Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 
@@ -129,28 +129,6 @@ Indicates the expression / variable type.
 |Name|Data Type|Possible Values|
 |:---|---|---|
 |dataSourceTypeHint |string  |<li>"integer"<li>"boolean" |
-
-
-
-#### Objects Supported
-
-|Category|Link|
-|---|---|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
-
-
-<hr>
-
-
-## Radio Group
-
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|:---|---|---|
-| radioGroup|string  |Radio group name|
 
 
 
@@ -194,4 +172,28 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 |Category|Link| 
 |---|---|
-|Button|[Regular button](button_overview.md#regular) - [Toolbar button](button_overview.md#toolbar) - [Bevel button](button_overview.md#bevel) - [Rounded Bevel button](button_overview.md#Rounded-bevel) - [OS X Gradient button](button_overview.md#os-x-gradient) - [OS X Textured button](button_overview.md#os-x-textured) - [Office XP button](button_overview.md#office-XP) - [Circle button](button_overview.md#circle) - [Custom button](button_overview.md#custom)|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
+
+<hr>
+
+
+## Radio Group
+
+Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|---|---|
+| radioGroup|string  |Radio group name|
+
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+
+
+
