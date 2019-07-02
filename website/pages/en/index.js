@@ -162,7 +162,7 @@ const Description = props => (
     {[
       {
 
-	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)',
+	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)<br>[Form Objects](FormObjects/buttonOverview.html)',
 
 	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',

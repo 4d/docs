@@ -23,12 +23,37 @@
 	],
 	"4D Projects (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
+		"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"4D Form Objects":
 	[{
         "type": "subcategory",
         "label": "Catalog",
         "ids": [
-          "FormObjects/Buttons/buttonOverview","FormObjects/Buttons/toolbarButton"]}
-  ]
-}
+          "FormObjects/buttonOverview",
+		  "FormObjects/pictureButtonOverview",
+		  "FormObjects/buttonGridOverview",
+		  "FormObjects/radiobuttonOverview",
+		  "FormObjects/checkboxOverview",
+		  "FormObjects/popupMenuDropdownListOverview"
+		  ]
+		},{
+        "type": "subcategory",
+        "label": "Active Object Properties",
+        "ids": ["FormObjects/propertiesObject",
+			"FormObjects/propertiesDataSource",
+			"FormObjects/propertiesTextAndPicture",
+			"FormObjects/propertiesCrop",
+			"FormObjects/propertiesAnimation",
+			"FormObjects/propertiesCoordinatesAndSizing",
+			"FormObjects/propertiesResizingOptions",
+			"FormObjects/propertiesEntry",
+			"FormObjects/propertiesDisplay",
+			"FormObjects/propertiesAppearance",
+			"FormObjects/propertiesText",
+			"FormObjects/propertiesBackgroundAndBorder",
+			"FormObjects/propertiesHelp",
+			"FormObjects/propertiesAction"
+			]
+		}
+	]
 }
