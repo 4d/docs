@@ -33,12 +33,14 @@
 		  "FormObjects/pictureButtonOverview",
 		  "FormObjects/buttonGridOverview",
 		  "FormObjects/radiobuttonOverview",
-		  "FormObjects/checkboxOverview"
+		  "FormObjects/checkboxOverview",
+		  "FormObjects/popupMenuDropdownListOverview"
 		  ]
 		},{
         "type": "subcategory",
         "label": "Active Object Properties",
         "ids": ["FormObjects/propertiesObject", 
+			"FormObjects/propertiesDataSource",
 			"FormObjects/propertiesTextAndPicture",
 			"FormObjects/propertiesCrop",
 			"FormObjects/propertiesAnimation",

@@ -49,34 +49,34 @@ Only actions that can represent a true/false status ("checkable" actions) are su
 
 |Supported actions|	Usage condition (if any)|
 |---|---|
-|`avoidPageBreakInsideEnabled`|	4D Write Pro areas only|
-|`fontItalic`	||
-|`fontBold`	||
-|`fontLinethrough`	||
-|`fontSubscript`	|4D Write Pro areas only|
-|`fontSuperscript`	|4D Write Pro areas only|
-|`fontUnderline`	||
-|`font/showDialog`	|Mac only|
-|`htmlWYSIWIGEnabled`	|4D Write Pro areas only|
-|`section/differentFirstPage`	|4D Write Pro areas only|
-|`section/differentLeftRightPages`	|4D Write Pro areas only|
-|`spell/autoCorrectionEnabled`	||
-|`spell/autoDashSubstitutionsEnabled`	|Mac only|
-|`spell/autoLanguageEnabled`	|Mac only|
-|`spell/autoQuoteSubstitutionsEnabled`	|Mac only|
-|`spell/autoSubstitutionsEnabled`	||
-|`spell/enabled`	||
-|`spell/grammarEnabled`	|Mac only|
-|`spell/showDialog`	|Mac only|
-|`spell/visibleSubstitutions`	||
-|`visibleBackground`	|4D Write Pro areas only|
-|`visibleFooters`	|4D Write Pro areas only|
-|`visibleHeaders`	|4D Write Pro areas only|
-|`visibleHiddenChars`	|4D Write Pro areas only|
-|`visibleHorizontalRuler`	|4D Write Pro areas only|
-|`visiblePageFrames`	|4D Write Pro areas only|
-|`visibleReferences`	||
-|`widowAndOrphanControlEnabled`	|4D Write Pro areas only|
+|avoidPageBreakInsideEnabled|	4D Write Pro areas only|
+|fontItalic	||
+|fontBold	||
+|fontLinethrough	||
+|fontSubscript	|4D Write Pro areas only|
+|fontSuperscript	|4D Write Pro areas only|
+|fontUnderline	||
+|font/showDialog	|Mac only|
+|htmlWYSIWIGEnabled	|4D Write Pro areas only|
+|section/differentFirstPage	|4D Write Pro areas only|
+|section/differentLeftRightPages	|4D Write Pro areas only|
+|spell/autoCorrectionEnabled	||
+|spell/autoDashSubstitutionsEnabled	|Mac only|
+|spell/autoLanguageEnabled	|Mac only|
+|spell/autoQuoteSubstitutionsEnabled	|Mac only|
+|spell/autoSubstitutionsEnabled	||
+|spell/enabled	||
+|spell/grammarEnabled	|Mac only|
+|spell/showDialog	|Mac only|
+|spell/visibleSubstitutions	||
+|visibleBackground	|4D Write Pro areas only|
+|visibleFooters	|4D Write Pro areas only|
+|visibleHeaders	|4D Write Pro areas only|
+|visibleHiddenChars	|4D Write Pro areas only|
+|visibleHorizontalRuler	|4D Write Pro areas only|
+|visiblePageFrames	|4D Write Pro areas only|
+|visibleReferences	||
+|widowAndOrphanControlEnabled	|4D Write Pro areas only|
 
 For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
