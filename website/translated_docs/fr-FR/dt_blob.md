@@ -7,13 +7,13 @@ title: BLOB
 - A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
 - Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
-## Parameter passing, Pointers and function results
+## Passage des paramètres, pointeurs et résultats de fonctions
 
-4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
+Les BLOBs dans 4D peuvent être passés comme paramètres aux commandes 4D ou aux routines des plug-ins qui attendent un paramètre de type BLOB. Les BLOBs peuvent également être passés aux méthodes que vous créez ou être retournés comme résultats de fonctions.
 
-To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.
+Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un pointeur vers le BLOB et passer le pointeur comme paramètre.
 
-**Examples:**
+**Voici quelques exemples :**
 
 ```code4d
   ` Declare a variable of type BLOB
@@ -35,7 +35,7 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 You can assign BLOBs to each other.
 
-**Example:**
+**Exemple :**
 
 ```code4d
   ` Declare two variables of type BLOB
@@ -50,7 +50,7 @@ However, no operator can be applied to BLOBs.
 
 ## Addressing BLOB contents
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Exemple :
 
 ```code4d
   ` Declare a variable of type BLOB
