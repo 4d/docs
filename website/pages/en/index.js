@@ -162,7 +162,7 @@ const Description = props => (
     {[
       {
 
-	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)',
+	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)<br><br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
 	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',
