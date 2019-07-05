@@ -1,29 +1,29 @@
 ---
 id: object
-title: Object
+title: Objet
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
+Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets "natifs" 4D est basée sur le principe classique des paires "propriété/valeur" (aussi appelées "attribut/valeur). La syntaxe de ces objets s’inspire du JSON :
 
-- A property name is always a text, for example "Name".
+- Un nom de propriété est toujours un texte, par exemple "Nom".
 
-- A property value can be of the following type:
+- Une valeur de propriété peut être du type suivant :
     
-    - number (Real, Integer, etc.)
-    - text
-    - null
-    - Boolean
-    - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
-    - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
-    - collection
+    - Nombre (réel, entier long, etc.)
+    - Texte
+    - Null
+    - Booléen
+    - Pointeur (stocké tel quel, évalué à l’aide de la commande `JSON Stringify` ou lors d’une copie),
+    - Date (type date ou chaîne au format date ISO)
+    - Objet (les objets peuvent être imbriqués sur plusieurs niveaux)
+    - Image(*)
+    - Collection
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(*)Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[objet Image]".
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
 Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
 
@@ -31,11 +31,11 @@ Each property value accessed through the object notation is considered an expres
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization
+## Initialisation
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
-Example:
+Exemple :
 
 ```code4d
  C_OBJECT($obVar) //creation of an object type 4D variable
@@ -47,7 +47,7 @@ Example:
 You can create two types of objects:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
 
 ## Syntax basics
 
@@ -59,7 +59,7 @@ With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+Exemple :
 
 ```code4d
      employee.name:="Smith"
@@ -67,7 +67,7 @@ Example:
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+Voici quelques exemples :
 
 ```code4d
      $vName:=employee["name"]
@@ -85,7 +85,7 @@ Since an object property value can be an object or a collection, object notation
 
 Object notation is available on any language element that can contains or returns an object, i.e:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Voici quelques exemples :
 
 ```code4d
      $age:=$myObjVar.employee.age //variable
@@ -95,13 +95,13 @@ Object notation is available on any language element that can contains or return
      $val:=$myCollection[3].subvalue //collection element
 ```
 
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. Exemple :
 
 ```code4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. Exemple :
 
 ```code4d
       // MyMethod1
@@ -132,7 +132,7 @@ Using object notation with pointers is very similar to using object notation dir
     
     > pointerOnObject->["propertyName"]
 
-Example:
+Exemple :
 
 ```code4d
  C_OBJECT(vObj)
@@ -215,7 +215,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Assigning an undefined value to a non existing object property does nothing.
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. Par exemple:
 
 ```code4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
@@ -235,7 +235,7 @@ Token member names (i.e., object property names accessed using the object notati
 - Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
-## Examples
+## Exemples
 
 Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
 
