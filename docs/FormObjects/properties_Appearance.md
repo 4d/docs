@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title:Appearance Properties
+title:Appearance 
 ---
 
 ## Default Button

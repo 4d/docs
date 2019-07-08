@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title:Object Properties
+title:Object 
 ---
 
 ## Type
@@ -31,7 +31,11 @@ You can click twice on the button so that it remains selected even after you hav
 |Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) -[Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
 |Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
+|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+|Combo Box|[Combo Box](comboBox_overview.md)|
+|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
 <hr>
 
@@ -63,7 +67,11 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 |Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
 |Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
+|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+|Combo Box|[Combo Box](comboBox_overview.md)|
+|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
 <hr>
 
@@ -111,7 +119,11 @@ You can also enter an expression directly in the “Variable or Expression” ar
 |Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
 |Picture Button|[Picture](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
+|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+|Combo Box|[Combo Box](comboBox_overview.md)|
+|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
 <hr>
 
@@ -136,7 +148,10 @@ Indicates the expression / variable type.
 
 |Category|Link|
 |---|---|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
+|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+|Combo Box|[Combo Box](comboBox_overview.md)|
 
 
 <hr>
@@ -149,6 +164,7 @@ This property allows inserting a label on the button. The font and the style of 
 You can force a carriage return in the label by using the \ character (backslash). 
 
 ![](assets/en/FormObjects/property_title.png)
+
 
 
 To insert a \ in the label, enter \\. 
@@ -173,6 +189,8 @@ For database translation purposes, you can enter an XLIFF reference in the title
 |Category|Link| 
 |---|---|
 |Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
 
 <hr>
 
@@ -193,7 +211,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 |Category|Link|
 |---|---|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
+|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
 
 
 

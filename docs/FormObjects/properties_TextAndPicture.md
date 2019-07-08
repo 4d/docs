@@ -1,6 +1,6 @@
 ---
 id: propertiesTextAndPicture
-title:Text and Picture Properties
+title:Text and Picture 
 ---
 
 ## Button Style

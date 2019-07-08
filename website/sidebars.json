@@ -25,28 +25,35 @@
 	"Project/deploying"],
 		"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"4D Form Objects":
-	[{
+	["FormObjects/formObjectsOverview",
+	{
         "type": "subcategory",
-        "label": "Catalog",
+        "label": "Object List",
         "ids": [
           "FormObjects/buttonOverview",
 		  "FormObjects/pictureButtonOverview",
 		  "FormObjects/buttonGridOverview",
 		  "FormObjects/radiobuttonOverview",
 		  "FormObjects/checkboxOverview",
-		  "FormObjects/popupMenuDropdownListOverview"
+		  "FormObjects/popupMenuDropdownListOverview",
+		  "FormObjects/comboBoxOverview",
+		  "FormObjects/picturePopupMenuOverview",
+		  "FormObjects/indicatorsOverview"
 		  ]
 		},{
         "type": "subcategory",
-        "label": "Active Object Properties",
+        "label": "Properties",
         "ids": ["FormObjects/propertiesObject", 
+			"FormObjects/propertiesPicture",
 			"FormObjects/propertiesDataSource",
 			"FormObjects/propertiesTextAndPicture",
 			"FormObjects/propertiesCrop",
 			"FormObjects/propertiesAnimation",
+			"FormObjects/propertiesScale",
 			"FormObjects/propertiesCoordinatesAndSizing",
 			"FormObjects/propertiesResizingOptions",
 			"FormObjects/propertiesEntry",
+			"FormObjects/propertiesRangeOfValues",
 			"FormObjects/propertiesDisplay",
 			"FormObjects/propertiesAppearance",
 			"FormObjects/propertiesText",

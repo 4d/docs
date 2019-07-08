@@ -1,6 +1,6 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Background and Border Properties
+title: Background and Border
 ---
 
 ## Border Line Style
@@ -19,7 +19,9 @@ Allows setting a standard style for the object border.
 
 |Category|Link| 
 |---|---|
-|Picture Button|[Picture](pictureButton_overview.md)|
+|Picture Button|[Picture Button](pictureButton_overview.md)|
+|Button Grid|[Button Grid](buttonGrid_overview.md) |
+|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
 
 

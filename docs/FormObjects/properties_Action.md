@@ -1,10 +1,31 @@
 ---
 id: propertiesAction
-title:Action Properties
+title:Action 
 ---
 
 ## Standard action
-Standard actions are actions for active objects that have been predefined by 4D. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+Typical activities to be performed by active objects have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|action|string |The name of a valid standard action.|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
+|Picture Button|[Picture Button](pictureButton_overview.md)|
+|Button Grid|[Button Grid](buttonGrid_overview.md)|
+|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
+|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+
+<hr>
 
 ## Droppable
 
@@ -57,6 +78,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv17R5/4D/17-
 Automatic drag and drop can be configured separately for each form object via the following Property List options:
 
 * **Automatic Drag** (Text type objects only)<br> When this option is checked, the automatic drag mode is activated for the object. In this mode, the *On Begin Drag* form event is NOT generated.
+
 If you want to “force” the use of the standard drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (mac OS) key during the action. This option is not available for pictures.
 
 * **Automatic Drop**<br> This option is used to activate the automatic drop mode. In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The *On Drag Over* and *On Drop* form events are not generated in this case. On the other hand, the On After Edit (during a drop) and On Data Change (when the object loses the focus) events are generated. <p>
@@ -83,5 +105,23 @@ When this option is check, the drop of external objects into 4D forms is refused
 |---|---|
 |Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
 
+<hr>
+
+## Execute object method
+When this option is checked, the object method is executed with the `On Data Change` event at the same moment the user changes the value of the indicator. By default, the method is executed after the modification.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|action|string |The name of a valid standard action.|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Indicator|[Progress bar](indicators_overview.md#progress-bar) - [Barber shop](indicators_overview.md#barber-shop) - [Asynchronous progress bar](indicators_overview.md#asynchronous-progress-bar) - [Ruler](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)|
 
 
