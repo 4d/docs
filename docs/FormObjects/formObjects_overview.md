@@ -30,8 +30,7 @@ In some cases, you can specify the active object’s action by making selections
 These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
 
 
-
-### Plug-in Areas, Subforms, Areas
+### Other Objects
 
 #### Plug-in Areas
 
@@ -66,7 +65,7 @@ Web areas can display various types of web content(*) within your forms: HTML pa
 ![](assets/en/FormObjects/object_webArea.png)
 
 
-(*) The use of Web plug-ins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+>(*) The use of Web plug-ins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 The rendering engine of the web area will depend on the execution platform of the application and the selected rendering engine option (see [web area specific properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Web-areas.300-4163663.en.html#1280453)).
 
@@ -76,13 +75,13 @@ Several standard actions, numerous language commands as well as generic and spec
 
 This paragraph details the principles concerning the use and configuration of Web Area type objects in the Form editor. For more information about programmed management of these objects, refer to the [Web Area](https://doc.4d.com/4Dv17R5/4D/17-R5/Web-Area.201-4127095.en.html) commands in the [4D Language Reference](https://doc.4d.com/4Dv17R5/4D/17-R5/4D-Language-Reference.100-4127072.en.html).
 
-Also note that the use of Web areas is subject to several rules which are described in the [Notes about use of Web Areas](https://doc.4d.com/4Dv17R5/4D/17-R5/Programmed-management-of-Web-Areas.300-4127635.en.html#37137) section of the [4D Language Reference](https://doc.4d.com/4Dv17R5/4D/17-R5/4D-Language-Reference.100-4127072.en.html).
+Also note that the use of web areas is subject to several rules which are described in the [Notes about use of Web Areas](https://doc.4d.com/4Dv17R5/4D/17-R5/Programmed-management-of-Web-Areas.300-4127635.en.html#37137) section of the [4D Language Reference](https://doc.4d.com/4Dv17R5/4D/17-R5/4D-Language-Reference.100-4127072.en.html).
 
 #### 4D Write Pro
 
 4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D database. Using 4D Write Pro, you can write pre-formatted emails and/or letters containing images, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.
 
-The key features of the product are:
+The key features of 4D Write Pro are:
 
 *	4D Write compatibility: a 4D Write Pro object can open and convert legacy 4D Write documents while supporting most of their specific properties.
 *	Word processing: a 4D Write Pro object embedded in a form provides standard word-processing features, including text and style manipulation, image insertion, import and export, and much more.

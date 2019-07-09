@@ -39,7 +39,9 @@
 		  "FormObjects/popupMenuDropdownListOverview",
 		  "FormObjects/comboBoxOverview",
 		  "FormObjects/picturePopupMenuOverview",
-		  "FormObjects/indicatorsOverview"
+		  "FormObjects/indicatorsOverview",
+		  "FormObjects/shapesOverview",
+		  "FormObjects/splitterTabControlOverview"
 		  ]
 		},{
         "type": "subcategory",

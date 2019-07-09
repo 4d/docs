@@ -75,3 +75,34 @@ You can enable automatic resizing or repositioning in the Property List. There a
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
 |Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+
+
+<hr>
+
+## Pusher
+
+When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop. 
+
+Here is the result of a “pusher” splitter being moved:
+
+![](assets/en/FormObjects/splitter_pusher1.png)
+
+When this property is not applied to the splitter, the result is as follows:
+
+![](assets/en/FormObjects/splitter_pusher2.png)
+
+This property is checked by default for new databases.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|:---:|:---:|
+|splitterMode|string|<li>"resize"<li>"move"|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Splitter / Tab Control|[Splitter](splitterTabControlOverview#splitters)|

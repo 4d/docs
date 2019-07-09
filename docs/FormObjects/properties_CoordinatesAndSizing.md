@@ -188,3 +188,31 @@ To learn more about setting the size of an object, see the [Setting object displ
 |Combo Box|[Combo Box](comboBox_overview.md)|
 |Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
+<hr>
+
+
+## Corner Radius
+
+The Corner radius propriety is for objects of the rectangle type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+
+![](../assets/en/FormObjects/shape_rectangle.png)
+
+Minimum value is 0, in this case a standard non-rounded rectangle is drawn. 
+Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
+
+You can also set this property using the OBJECT Get corner radius and OBJECT SET CORNER RADIUS commands.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|borderRadius|integer |minimum: 0|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Shapes|[Rectangle](shapes_overview.md#rectangle) |
+
