@@ -40,22 +40,22 @@ A plug-in can be very simple, with just one routine performing a very small task
 - the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
 - The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
 
-## How to install a plug-in?
+## Comment installer un plug-in?
 
-You install plug-ins in the 4D environment by copying their files into the appropriate folder.
+L’installation des plug-ins et composants dans l’environnement 4D s’effectue par simple copie des fichiers des plug-ins ou des composants dans des dossiers appropriés.
 
-“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) contiennent à la fois les versions Windows et Mac Os des plug-ins 4D. Leur architecture interne spécifique permet notamment à 4D Server de charger la version adéquate en fonction de la plate-forme d’exécution du poste client. Pour installer un plug-in dans votre environnement, il vous suffit de placer le dossier ou progiciel “NomPlugin.bundle” concerné dans le dossier **PlugIns** souhaité.
 
-You can put the PlugIns folder in two different places:
+Vous pouvez placer les dossiers PlugIns et Components à deux endroits :
 
-- At the level of the 4D executable application, i.e.: 
-  - Under Windows: next to the .exe file
-  - Under macOS: at the first level of the Contents folder inside the application package.  
-    In this case, plug-ins are available in every database opened by this application. 
-- At the same level as the database structure file. In this case, plug-ins are only available in this particular database. 
+- Au niveau de l’application 4D exécutable, c'est-à-dire .: 
+  - Sous Windows : à côté du fichier .exe
+  - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.  
+    Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application. 
+- Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement. 
 
-The choice of location depends on how you want to use the plug-in.
+Le choix de l’emplacement dépend de votre mode d’utilisation du plug-in ou du composant.
 
-If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
+Si un même plug-in ou un même composant est placé aux deux endroits, 4D charge uniquement celui situé à côté de la structure. Dans le cas d’une application compilée et fusionnée avec 4D Volume Desktop, la présence de plusieurs instances d’un même plug-in ou d'un même composant empêchera l’ouverture de l’application.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+Les plug-ins et les composants sont chargés par 4D lors du lancement de l’application. Vous devez donc quitter votre application 4D avant d’effectuer vos copies de fichiers ou dossiers. Ouvrez ensuite votre base de données avec 4D. Si l’utilisation d'un plug-in nécessite une licence spécifique, le plug-in est chargé mais n’est pas actif.
