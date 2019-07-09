@@ -1,14 +1,14 @@
 ---
 id: string
-title: String
+title: Chaine
 ---
 
-String is a generic term that stands for:
+Chaîne est un terme générique utilisé pour :
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- Les variables ou champs de type Texte : un champ, une variable ou une expression de type Texte peut contenir de 0 à 2 Go de texte.
+- Les variables ou champs de type alphanumérique : un champ alphanumérique peut contenir de 0 à 255 caractères (la limite est fixée lors de la définition du champ).
 
-## String literals
+## Constantes littérales de type chaîne
 
 A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
 
@@ -30,27 +30,27 @@ The following escape sequences can be used within strings:
 
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
-## String operators
+## Opérateurs sur les chaînes
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+| Opération           | Syntaxe                   | Retourne | Expression              | Valeur   |
+| ------------------- | ------------------------- | -------- | ----------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne           | Chaîne   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne * Nombre           | Chaîne   | "ab" * 3                | "ababab" |
+| Egalité             | Chaîne = Chaîne           | Booléen  | "abc" = "abc"           | Vrai     |
+|                     |                           |          | "abc" = "abd"           | Faux     |
+| Inégalité           | Chaîne # Chaîne           | Booléen  | "abc" # "abd"           | Vrai     |
+|                     |                           |          | "abc" # "abc"           | Faux     |
+| Supérieur à         | Chaîne > Chaîne           | Booléen  | "abd" > "abc"           | Vrai     |
+|                     |                           |          | "abc" > "abc"           | Faux     |
+| Inférieur à         | Chaîne < Chaîne           | Booléen  | "abc" < "abd"           | Vrai     |
+|                     |                           |          | "abc" < "abc"           | Faux     |
+| Supérieur ou égal à | Chaîne >= Chaîne          | Booléen  | "abd" >= "abc"          | Vrai     |
+|                     |                           |          | "abc" >= "abd"          | Faux     |
+| Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | Vrai     |
+|                     |                           |          | "abd" <= "abc"<= "abc"  | Faux     |
+| Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
+|                     |                           |          | "Alpha Bravo" % "ravo"  | False    |
+|                     | Picture % String          | Boolean  | Picture_expr % "Mer"    | True (*) |
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -153,7 +153,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Par exemple:
 
 ```code4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -167,8 +167,8 @@ Otherwise, if the character reference symbols appear within an expression, they 
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
-    End if
- End if
+    Fin de si
+ Fin de si
 ```
 
 ### Advanced note about invalid character reference
@@ -188,7 +188,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### Exemple
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 
