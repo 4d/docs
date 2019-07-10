@@ -49,15 +49,15 @@ MyOtherDate:=Current date+30
 
 The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
 
-## Commands
+## Commandes
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Exemple :
 
 ```code4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. Par exemple:
 
 ```code4d
 $c:=New collection(1;2;3;4;5)
@@ -92,7 +92,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-## Methods
+## Méthodes
 
 4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
 
@@ -106,7 +106,7 @@ CONFIRM("Do you really want to close this account?";"Yes";"No")
 
 A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
 
-The following example goes through all the characters of the text vtSomeText:
+L'exemple suivant permet d'examiner chaque caractère du texte vtDuTexte :
 
 ```code4d
 For($vlChar;1;Length(vtSomeText))
@@ -117,7 +117,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+A project method can call another project method with or without parameters (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
 
 ```code4d
 $myText:="hello"
@@ -128,7 +128,7 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-## Data Types
+## Types de données
 
 In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
 
@@ -148,7 +148,7 @@ The data types are fully defined in the section [Data Types](Concepts/data-types
 
 ## Objects and collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
+You can handle 4D language objects and collections using the object notation to get or to set their values. Par exemple:
 
 ```code4d
 employee.name:="Smith"
@@ -160,7 +160,7 @@ You can also use a string within square brackets, for example:
 $vName:=employee["name"]
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
 
 ```code4d
 $vAge:=employee.children[2].age
@@ -185,20 +185,20 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-|  | Operator | Operation      | Example            |
-|  | -------- | -------------- | ------------------ |
-|  | +        | Addition       | 1 + 2 results in 3 |
-|  | –        | Subtraction    | 3 – 2 results in 1 |
-|  | *        | Multiplication | 2 * 3 results in 6 |
-|  | /        | Division       | 6 / 2 results in 3 |
+|  | Opérateur | Opération      | Exemple   |
+|  | --------- | -------------- | --------- |
+|  | +         | Addition       | 1 +2 = 3  |
+|  | –         | Soustraction   | 3 - 2 = 1 |
+|  | *         | Multiplication | 2 * 3 = 6 |
+|  | /         | Division       | 6 / 2 = 3 |
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type | Operation | Example                                 |
+| Data Type | Opération | Exemple                                 |
 | --------- | --------- | --------------------------------------- |
-| Number    | Addition  | 1 + 2 adds the numbers and results in 3 | String |Concatenation |“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there” Date and Number |Date addition |!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989| 
+| Nombre    | Addition  | 1 + 2 adds the numbers and results in 3 | String |Concatenation |“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there” Date and Number |Date addition |!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989| 
 
 The operators are fully defined in the chapter Operators and its subsections.
 
@@ -222,20 +222,20 @@ You refer to an expression by the data type it returns. There are several expres
 
 | Expression            | Type   | Description                                                                                                                                                                     |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”               | String | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”    | String | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name | String | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")    | String | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                     | Number | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                 | Number | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton              | Number | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           | !1997-01-25!| Date| This is a date constant for the date 1/25/97 (January 25, 1997).| |Current date+ 30| Date |This is a date expression that uses the 
+| “Hello”               | Chaine | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
+| “Hello ” + “there”    | Chaine | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
+| “Mr. ” + [People]Name | Chaine | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| Uppercase("smith")    | Chaine | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
+| 4                     | Nombre | This is a number constant, 4.                                                                                                                                                   |
+| 4 * 2                 | Nombre | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| myButton              | Nombre | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           | !1997-01-25!| Date| This is a date constant for the date 1/25/97 (January 25, 1997).| |Current date+ 30| Date |This is a date expression that uses the 
 
 `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.| |?8:05:30? |Time| This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.| |?2:03:04? + ?1:02:03? |Time |This expression adds two times together and returns the time 3:05:07.| |True| Boolean| This command returns the Boolean value TRUE.| |10 # 20|Boolean |This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.| |“ABC” = “XYZ” |Boolean |This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.| |My Picture + 50 |Picture |This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.| |->[People]Name |Pointer |This expression returns a pointer to the field called [People]Name.| |Table (1)| Pointer |This is a command that returns a pointer to the first table.| |JSON Parse (MyString)| Object| This is a command that returns MyString as an object (if proper format)| |JSON Parse (MyJSONArray) |Collection |This is a command that returns MyJSONArray as a collection (if proper format)| |Form.pageNumber|Object property|An object property is an expression that can be of any supported type |Col[5]|Collection element|A collection element is an expression that can be of any supported type|  
 |$entitySel[0]|Entity|A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**| 
 
 ### Assignable vs non-assignable expressions
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
+An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. Par exemple:
 
 ```code4d
 //$myVar variable is assignable, you can write:  
@@ -248,7 +248,7 @@ Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName" "+[Person]LastName` is not assignable.
 
-## Pointers
+## Pointeurs
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
 
