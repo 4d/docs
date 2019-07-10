@@ -1,6 +1,6 @@
 ---
 id: string
-title: Chaine
+title: Chaînes
 ---
 
 Chaîne est un terme générique utilisé pour :
@@ -10,25 +10,25 @@ Chaîne est un terme générique utilisé pour :
 
 ## Constantes littérales de type chaîne
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+Une constante littérale de type chaîne est incluse entre des guillemets droits ("…"). En voici quelques exemples :
 
 ```code4d
-"Add Records"
-"No records found."
-"Invoice"
+"Ajouter Enregistrements"
+"Aucun enregistrement trouvé."
+"Facture"
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+Une chaîne vide est spécifiée par la succession de deux guillemets ("").
 
-### Escape sequences
+### Séquences d’échappement
 
-The following escape sequences can be used within strings:
+Les séquences d’échappement suivantes peuvent être utilisées dans les chaînes :
 
-| Escape sequence | Character replaced |
-| --------------- | ------------------ |
-|                 |                    | \n|LF (Line feed)| \t|HT (Tab)| \r|CR (Carriage return)| \\\|\ (Backslash)| \\"|" (Quotation marks)| 
+| Séquence d’échappement | Caractère remplacé |
+| ---------------------- | ------------------ |
+|                        |                    | \n|LF (Retour ligne)| \t|HT (Tabulation)| \r|CR (Retour chariot)| \\\|\ (Barre oblique inversée)| \\"|" (Guillemets)| 
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
+**Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
@@ -49,46 +49,46 @@ The following escape sequences can be used within strings:
 | Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | Vrai     |
 |                     |                           |          | "abd" <= "abc"<= "abc"  | Faux     |
 | Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
-|                     |                           |          | "Alpha Bravo" % "ravo"  | False    |
-|                     | Picture % String          | Boolean  | Picture_expr % "Mer"    | True (*) |
+|                     |                           |          | "Alpha Bravo" % "ravo"  | Faux     |
+|                     | Image % Chaîne            | Booléen  | Expr_image % "Mer"      | Vrai (*) |
 
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
+(*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
-## String comparisons
+## Comparaisons de chaînes
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
+- Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par [mot-clé](dt_string.md#keywords), cf. ci-dessous).
+- Lors d'une comparaison de chaînes, 4D ne tient pas compte de la casse des caractères ; par exemple, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante retourne `FAUX` :
 
 ```code4d
-Character code("A")=Character code("a") // because 65 is not equal to 97
+Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+- Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
 
 ```code4d
      "n"="ñ"
      "n"="Ñ"
      "A"="å"
-      // and so on
+      // etc
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Note :** Les comparaisons de chaîne tiennent compte des spécificités du langage **défini pour le fichier de données 4D** (qui n'est pas toujours identique au langage défini pour le système).
 
-### Wilcard character (@)
+### Le joker (@)
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `VRAI` :
 
 ```code4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est évaluée à `FAUX` car le joker est alors considéré en tant que caractère :
 
 ```code4d
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
+Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont évaluées à `VRAI` :
 
 ```code4d
      "abcdefghij"="abcdefghij@"
@@ -98,123 +98,123 @@ The wildcard means "one or more characters or nothing". The following expression
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera évaluée à `FAUX`. L'expression suivante est à `FAUX` :
 
 ```code4d
 "abcdefghij"="abc@@fg"
 ```
 
-When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
+Lorsque l'opérateur de comparaison est ou contient un symbole < ou >, seule la comparaison avec un seul joker situé en fin d'opérande est prise en charge :
 
 ```code4d
-     "abcd"<="abc@" // Valid comparison
-     "abcd"<="abc@ef" //Not a valid comparison
+     "abcd"<="abc@" //Comparaison valide
+ "abcd"<="abc@ef" //Comparaison non valide
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
+Si vous souhaitez effectuer des comparaisons ou des recherches utilisant @ en tant que caractère (et non en tant que joker), vous devez utiliser l'instruction `Code de caractere(Arobase)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L’expression suivante (si $vaValeur n'est pas vide) retourne toujours `VRAI` :
 
 ```code4d
-($vsValue[[Length($vsValue)]]="@")
+($vaValeur[[Longueur($vaValeur)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+L'expression suivante sera correctement évaluée :
 
 ```code4d
-(Character code($vsValue[[Length($vsValue)]])#64)  
+(Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Note :** Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.
 
-### Keywords
+### Mots-clés
 
-Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
+A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L’opérateur **%** retournera toujours `Faux` si la recherche porte sur plusieurs mots ou une partie de mot (par exemple une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
 
 ```code4d
-     "Alpha Bravo Charlie"%"Bravo" // Returns True
-     "Alpha Bravo Charlie"%"vo" // Returns False
-     "Alpha Bravo Charlie"%"Alpha Bravo" // Returns False
-     "Alpha,Bravo,Charlie"%"Alpha" // Returns True
-     "Software and Computers"%"comput@" // Returns True
+     "Alpha Bravo Charlie"%"Bravo" ` Retourne Vrai
+ "Alpha Bravo Charlie"%"vo" ` Retourne Faux
+ "Alpha Bravo Charlie"%"Alpha Bravo" ` Retourne Faux
+ "Alpha,Bravo,Charlie"%"Alpha" ` Retourne Vrai
+ "Software and Computers"%"comput@" ` Retourne Vrai
 ```
 
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
 
-## Character Reference Symbols
+## Symboles d'indice de chaîne
 
-The character reference symbols: [[...]]
+Les symboles d'indice de chaîne sont les suivants : [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+Ces symboles sont utilisés pour désigner un caractère particulier dans une chaîne. Cette syntaxe vous permet de référencer un caractère dans un champ ou une variable de type Alpha ou Texte.
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+Lorsque les symboles d'indice de chaîne sont placés à gauche de l'opérateur d'affectation (:=), un caractère est affecté à la position référencée dans la chaîne. Par exemple, en postulant que la chaîne vsNom n'est pas une chaîne vide, le code suivant passe le premier caractère de la chaîne vsNom en majuscule :
 
 ```code4d
-If(vsName#"")
-    vsName[[1]]:=Uppercase(vsName[[1]])
-End if
+Si(vsNom#"")
+    vsNom[[1]]:=Majusc(vsNom[[1]])
+ Fin de si
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Par exemple:
+Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. En voici un exemple :
 
 ```code4d
-//The following example tests if the last character of vtText is an At sign "@"
- If(vtText#"")
-    If(Character code(Substring(vtText;Length(vtText);1))=At sign)
-  //...
-    End if
- End if
-
-  //Using the character reference syntax, you would write in a simpler manner:
- If(vtText#"")
-    If(Character code(vtText[[Length(vtText)]])=At sign)
+// L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"
+ Si(vtText#"")
+    Si(Code de caractere(Sous chaine(vtText;Longueur(vtText);1))=Arobase)
+  // ...
+    Fin de si
+ Fin de si
+ 
+  // En utilisant la syntaxe des caractères d'indice de chaîne, vous écririez plus simplement :
+ Si(vtText#"")
+    Si(Code de caractere(vtText[[Longueur(vtText)]]=Arobase)
   // ...
     Fin de si
  Fin de si
 ```
 
-### Advanced note about invalid character reference
+### Note avancée sur la référence à des caractères invalides
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsabilité de vous référer à des caractères existant dans la chaîne, de la même manière que pour les éléments d'un tableau. Si, par exemple, vous référencez le 20e caractère d'une chaîne, cette chaîne doit contenir au moins 20 caractères.
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- Ne pas respecter cette condition en mode interprété n'est pas signalé comme une erreur par 4D.
+- Ne pas respecter cette condition en mode compilé (sans options) peut entraîner une "corruption" de la mémoire, si, par exemple, vous écrivez un caractère au-delà de la fin d'une chaîne ou d'un texte.
+- Ne pas respecter cette condition en mode compilé est signalé lorsque le contrôle d'exécution est activé. Si, par exemple, vous exécutez le code suivant :
 
-    //Very bad and nasty thing to do, boo!
-     vsAnyText:=""
-     vsAnyText[[1]]:="A"
+    //Ne pas faire ça !
+     vsToutTexte:=""
+     vsToutTexte[[1]]:="A"
     
 
-will trigger the Runtime Error shown here:
+L'alerte suivante s'affichera en mode compilé :
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Exemple
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :
 
 ```code4d
-  //Capitalize_text project method
-  //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
-
+  // Méthode projet de passage en capitale
+  // PasserEnCap ( Texte ) -> Texte
+  // PasserEnCap ( Texte source ) -> Texte avec des lettres capitales
+ 
  $0:=$1
- $vlLen:=Length($0)
- If($vlLen>0)
-    $0[[1]]:=Uppercase($0[[1]])
-    For($vlChar;1;$vlLen-1)
-       If(Position($0[[$vlChar]];" !&()-{}:;<>?/,.=+*")>0)
-          $0[[$vlChar+1]]:=Uppercase($0[[$vlChar+1]])
-       End if
-    End for
- End if
+ $vlLen:=Longueur($0)
+ Si($vlLen>0)
+    $0[[1]]:=Majusc($0[[1]])
+    Boucle($vlChar;1;$vlLen-1)
+       Si(Position($0[[$vlChar]];" !&()-{}:;<>?/,.=+*")>0)
+          $0[[$vlChar+1]]:=Majusc($0[[$vlChar+1]])
+       Fin de si
+    Fin de boucle
+ Fin de si
 ```
 
-For example, the line:
+Une fois cette méthode placée dans la base, la ligne :
 
 ```code4d
-ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
+ALERTE(PasserEnCap("Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !"))
 ```
 
-displays the alert shown here:
+... affiche l'alerte suivante :
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)
