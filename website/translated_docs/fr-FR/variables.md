@@ -11,14 +11,14 @@ Variables are language objects; you can create and use variables that will never
 
 ## Créer des variables
 
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
+Vous pouvez créer des variables en les déclarant à l'aide de l'une des commandes des thèmes "Tableaux" ou "Compilateur".
 
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Note :**Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
-For example, if you want to define a text variable, you write:
+Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
 ```code4d
- C_TEXT(myText)
+ C_TEXTE(monTexte)
 ```
 
 **Note:** Also it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
@@ -105,7 +105,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+A process variable does not have a prefix before its name. Ce nom peut contenir jusqu’à 31 caractères.
 
 In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
 
