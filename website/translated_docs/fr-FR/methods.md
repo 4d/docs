@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods
+title: Méthodes
 ---
 
 
@@ -81,7 +81,7 @@ You can encapsulate your project methods in **formula** objects and call them fr
 
 The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. For example:
+To execute a method stored in an object property, use the **( )** operator after the property name. Par exemple:
 
 ```code4d
 //myAlert
@@ -120,7 +120,7 @@ $result:=$o.full_name("John";"Smith")
 // equivalent to $result:=fullName("param1";"param2")
 ```
 
-Combined with the `This`function, such object methods allow writing powerful generic code. For example:
+Combined with the `This`function, such object methods allow writing powerful generic code. Par exemple:
 
 ```code4d
 //fullName2 method
@@ -145,11 +145,11 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //returns the formula object in $o
 ```
 
-### Menu Methods
+### Méthodes de menu
 
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
+Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. Ce fonctionnement est l’un des principaux aspects de la personnalisation d’une base de données. C’est en créant des menus qui appellent des méthodes de menu que vous personnalisez votre base.
 
-Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
+Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
 
@@ -165,7 +165,7 @@ An **error catching method** is an interrupt-based project method. Each time an 
 
 ## Recursive Project Methods
 
-Project methods can call themselves. For example:
+Project methods can call themselves. Par exemple:
 
 - The method A may call the method B which may call A, so A will call B again and so on.
 - A method can call itself.
