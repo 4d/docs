@@ -18,62 +18,62 @@ A method is basically a piece of code that executes one or several actions. In t
 
 **Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
 
-## Calling Project Methods
+## Méthodes projet
 
-A project method can have one of the following roles, depending on how it is executed and used:
+Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :
 
-- Subroutine and function
+- Sous-routine et fonction
 - Method attached to object 
-- Menu method
-- Process method
-- Event or Error catching method
+- Méthode de menu
+- Méthode de gestion de process
+- Méthode de gestion d’événements et d'erreurs
 
-### Subroutines and functions
+### Sous-routines et fonctions
 
-A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
+Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
+Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes projets, ou à partir des [méthodes prédéfinies](#predefined-methods) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
-You use subroutines to:
+L'utilisation de sous-routines procure les avantages suivants :
 
-- Reduce repetitive coding
-- Clarify your methods
-- Facilitate changes to your methods
-- Modularize your code
+- Réduction du code répétitif,
+- Clarification des méthodes,
+- Modification plus facile des méthodes,
+- Création de code modulaire
 
-For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
-
-```code4d
-  // Look for a customer
- QUERY BY EXAMPLE([Customers])
-  // Select the input form
- FORM SET INPUT([Customers];"Data Entry")
-  // Modify the customer's record
- MODIFY RECORD([Customers])
-```
-
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your custom database where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
-
-If the previously described code was a method called `MODIFY CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
+Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :
 
 ```code4d
- MODIFY CUSTOMER
- PRINT SELECTION([Customers])
+  // Recherche d'un client
+ CHERCHER PAR EXEMPLE([Clients])
+  // Sélection du formulaire entrée
+ FORM FIXER ENTREE([Clients];"Saisie de données")
+  // Modification de l'enregistrement du client
+ MODIFIER ENREGISTREMENT([Clients])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
 
-If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
-
-Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account database:
+Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
 ```code4d
- FIND CLEARED CHECKS ` Find the cleared checks
- RECONCILE ACCOUNT ` Reconcile the account
- PRINT CHECK BOOK REPORT ` Print a checkbook report
+ MODIFIER CLIENT
+ IMPRIMER SELECTION([Clients])
 ```
 
-Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode `MODIFIER CLIENT`, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
+
+Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.
+
+Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :
+
+```code4d
+ CHERCHER CHEQUES EMIS // Rechercher les chèques émis
+ RAPPROCHER COMPTE // Rapprocher le compte
+ IMPRIMER RELEVE // Imprimer un relevé
+```
+
+Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.
 
 ### Methods attached to objects
 
@@ -151,94 +151,94 @@ Une méthode de menu est appelée lorsque la commande de menu personnalisé à l
 
 Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.
 
-Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
+L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre base.
 
-### Process Methods
+### Méthodes de gestion de process
 
-A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
+Une **méthode projet** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété *Démarrer un nouveau process* est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
 
-### Event and Error catching Methods
+### Méthodes de gestion d’événements et d'erreurs
 
-An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
+Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR EVENEMENT`.
 
-An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
+Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR ERREUR`.
 
-## Recursive Project Methods
+## Méthode projet récursives
 
-Project methods can call themselves. Par exemple:
+Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
-- The method A may call the method B which may call A, so A will call B again and so on.
-- A method can call itself.
+- Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.
+- Une méthode peut s'appeler elle-même.
 
-This is called recursion. The 4D language fully supports recursion.
+Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Examinons l'exemple suivant : vous disposez d'une table `[Amis et relations]` composée de l'ensemble de champs suivant (très simplifié) :
 
-- `[Friends and Relatives]Name`
-- `[Friends and Relatives]ChildrensName`
+- `[Amis et parents]Nom`
+- `[Amis et parents]Enfant'Nom`
 
-For this example, we assume the values in the fields are unique (there are no two persons with the same name). Given a name, you want to build the sentence “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'existe pas deux personnes avec le même nom). A partir d'un nom, vous voulez écrire la phrase “Un de mes amis, Pierre, qui est le rejeton de Paul qui est le rejeton de Martine qui est le rejeton de Robert qui est le rejeton de Gertrude, fait cela pour gagner sa vie !” :
 
-1. You can build the sentence in this way:
+1. Vous pouvez procéder de la manière suivante :
 
 ```code4d
- $vsName:=Request("Enter the name:";"John")
- If(OK=1)
-    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
-    If(Records in selection([Friends and Relatives])>0)
-       $vtTheWholeStory:="A friend of mine, "+$vsName
-       Repeat
-          QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$vsName)
-          $vlQueryResult:=Records in selection([Friends and Relatives])
-          If($vlQueryResult>0)
-             $vtTheWholeStory:=$vtTheWholeStory+" who is the child of "+[Friends and Relatives]Name
-             $vsName:=[Friends and Relatives]Name
-          End if
-       Until($vlQueryResult=0)
-       $vtTheWholeStory:=$vtTheWholeStory+", does this for a living!"
-       ALERT($vtTheWholeStory)
-    End if
- End if
+ $vsNom:=Demander("Saisissez le nom :";"Pierre")
+ Si(OK=1)
+    CHERCHER([Amis et parents];[Amis et parents]Nom=$vsNom)
+    Si(Enregistrements trouves([Amis et parents])>0)
+       $vtHistoireComplète:="Un de mes amis, "+$vsNom
+       Repeter
+          CHERCHER([Amis et parents];[Amis et parents]Enfant'Nom=$vsNom)
+          $vlResultRecherche:=Enregistrements trouves([Amis et parents])
+          Si($vlResultRecherche>0)
+             $vtHistoireComplète:=$vtHistoireComplète+" qui est le rejeton de "+[Amis et parents]Nom
+             $vsNom:=[Amis et parents]Nom
+          Fin de si
+       Jusque($vlResultRecherche=0)
+       $vtHistoireComplète:=$vtHistoireComplète+", fait cela pour gagner sa vie !"
+       ALERTE($vtHistoireComplète)
+    Fin de si
+ Fin de si
 ```
 
-2. You can also build it this way:
+2. Vous pouvez également procéder ainsi :
 
 ```code4d
- $vsName:=Request("Enter the name:";"John")
- If(OK=1)
-    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
-    If(Records in selection([Friends and Relatives])>0)
-       ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
-    End if
- End if
+ $vsNom:=Demander("Saisissez le nom :";"Pierre")
+ Si(OK=1)
+    CHERCHER([Amis et parents];[Amis et parents]Nom=$vsNom)
+    Si(Enregistrements trouves([Amis et parents])>0)
+       ALERTE("Un de mes amis, "+Généalogie de($vsNom)+", fait cela pour gagner sa vie !")
+    Fin de si
+ Fin de si
 ```
 
-with the recursive function `Genealogy of` listed here:
+en utilisant la fonction récursive `Généalogie de` suivante :
 
 ```code4d
-  ` Genealogy of project method
-  ` Genealogy of ( String ) -> Text
-  ` Genealogy of ( Name ) -> Part of sentence
-
+  // Méthode projet Généalogie de
+  // Généalogie de ( Chaîne ) -> Texte
+  // Généalogie de ( Nom ) -> Partie de la phrase
+ 
  $0:=$1
- QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
- If(Records in selection([Friends and Relatives])>0)
-    $0:=$0+" who is the child of "+Genealogy of([Friends and Relatives]Name)
- End if
+ CHERCHER([Amis et parents];[Amis et parents]Enfant'Nom=$1)
+ Si(Enregistrements trouves([Amis et parents])>0)
+    $0:=$0+" qui est le rejeton de "+Généalogie de([Amis et parents]Nom)
+ Fin de si
 ```
 
-Note the `Genealogy of` method which calls itself.
+Vous notez que la méthode `Généalogie de` s'appelle elle-même.
 
-The first way is an **iterative algorithm**. The second way is a **recursive algorithm**.
+La première manière de procéder utilise un **algorithme itératif**. La seconde manière utilise un **algorithme récursif**.
 
-When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
+Lorsque vous implémentez du code pour traiter des cas comme celui décrit ci-dessus, vous aurez toujours le choix entre écrire des méthodes utilisant des algorithmes itératifs ou récursifs. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
 
-Some typical uses of recursion in 4D are:
+Dans 4D, la récursivité est typiquement utilisée pour :
 
-- Treating records within tables that relate to each other in the same way as in the example.
-- Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
+- Traiter les enregistrements de tables liées les unes aux autres de la même manière que décrit dans l'exemple ci-dessus.
+- Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes `LISTE DES DOSSIERS` et `LISTE DES DOCUMENTS`. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
-**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
+**Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
 
 ## Specialized Methods
 
