@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Gestion des erreurs
 ---
 
 Error handling is the process of anticipating and responding to errors that might occur in your application. 4D provides a comprehensive support for catching and reporting errors at runtime, as well as for investigating their conditions.
@@ -16,7 +16,7 @@ Error handling meets two main needs:
 
 In 4D, all errors can be catched and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
+This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. Par exemple:
 
 ```code4d
 ON ERR CALL("IO_ERRORS") //Installs the error-handling method
@@ -61,7 +61,7 @@ Within the custom error method, you have access to several information that will
 
 - the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application. 
 
-#### Example
+#### Exemple
 
 Here is a simple error-handling system:
 
