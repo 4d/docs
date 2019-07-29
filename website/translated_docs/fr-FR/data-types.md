@@ -7,56 +7,56 @@ In 4D, data are handled according to their type in two places: database fields a
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-| Types de données                           | Database support(*) | Language support     | Variable declaration         |
-| ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Entier long](Concepts/dt_number.md)       | Yes                 | Converted to longint | `ARRAY INTEGER`              |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                            |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                            |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `C_POINTER`, `ARRAY POINTER` |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
+| Types de données                             | Database support(*) | Language support        | Déclaration de la variable             |
+| -------------------------------------------- | ------------------- | ----------------------- | -------------------------------------- |
+| [Alphanumeric](dt_string.md)                 | Oui                 | Converti en texte       | -                                      |
+| [Texte](Concepts/dt_string.md)               | Oui                 | Oui                     | `C_TEXTE`, `TABLEAU TEXTE`             |
+| [Date](Concepts/dt_date.md)                  | Oui                 | Oui                     | `C_DATE`, `DATE TEXTE`                 |
+| [Heure](Concepts/dt_time.md)                 | Oui                 | Oui                     | `C_HEURE`, `TABLEAU HEURE`             |
+| [Booléen](Concepts/dt_boolean.md)            | Oui                 | Oui                     | `C_BOOLEEN`, `TABLEAU BOOLEEN`         |
+| [Entier long](Concepts/dt_number.md)         | Oui                 | Converti en entier long | `TABLEAU ENTIER LONG`                  |
+| [Entier long](Concepts/dt_number.md)         | Oui                 | Oui                     | `C_ENTIER LONG`, `TABLEAU ENTIER LONG` |
+| [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)           | Converti en réel        | -                                      |
+| [Réel](Concepts/dt_number.md)                | Oui                 | Oui                     | `C_REEL`, `TABLEAU REEL`               |
+| [Indéfini](Concepts/dt_null_undefined.md)    | -                   | Oui                     | -                                      |
+| [Null](Concepts/dt_null_undefined.md)        | -                   | Oui                     | -                                      |
+| [Pointeur](Concepts/dt_pointer.md)           | -                   | Oui                     | `C_POINTEUR`, `TABLEAU POINTEUR`       |
+| [Image](Concepts/dt_picture.md)              | Oui                 | Oui                     | `C_IMAGE`, `TABLEAU IMAGE`             |
+| [BLOB](Concepts/dt_blob.md)                  | Oui                 | Oui                     | `C_BLOB`, `TABLEAU BLOB`               |
+| [Objet](Concepts/dt_object.md)               | Oui                 | Oui                     | `C_OBJET`, `TABLEAU OBJET`             |
+| [Collection](Concepts/dt_collection.md)      | -                   | Oui                     | `C_COLLECTION`                         |
 
 (*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description.
 
-## Default values
+## Valeurs par défaut
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+Au moment de leur typage via une directive de compilation, les variables reçoivent une valeur par défaut, qu'elles conserveront au cours de la session tant qu'elles n'auront pas été affectées.
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
+La valeur par défaut dépend du type et de la catégorie de la variable, du contexte d'exécution (interprété ou compilé), ainsi que, pour le mode compilé, des options de compilation définies dans la Page Compilateur des Propriétés de la base :
 
-- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set: 
-    - in interpreted mode: to zero
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings: 
-        - "to zero": to zero (see above),
-        - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
+- Les variables process et interprocess sont toujours positionnées "à zéro" (qui signifie selon les cas 0, chaîne vide, blob vide, pointeur nil, date 00-00-00…)
+- Les variables locales sont positionnées : 
+    - en mode interprété : à zéro
+    - en mode compilé, dépendant de l'option **Initialiser les variables locales** des Propriétés de la base : 
+        - à zéro lorsque "à zéro" est sélectionné,
+        - à une valeur arbitraire fixe lorsque "à une valeur aberrante" est sélectionné (0x72677267 pour les numériques et les heures, toujours vrai pour les booléens), équivalent de "à zéro" pour les autres,
+        - à "non" : pas d'initialisation, c'est-à-dire que tout ce qui est dans la RAM est utilisé pour les variables; c'est le cas des valeurs déjà utilisées pour les autres variables. **Note :** Il est recommandé d'utiliser "à zéro".
 
-The following table illustrates these default values:
+Le tableau suivant illustre ces valeurs par défaut :
 
-| Type       | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ---------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen    | False                                                                               | True                    | True (varies)                |
-| Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Time       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text       | ""                                                                                  | ""                      | ""                           |
-| Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Object     | null                                                                                | null                    | null                         |
-| Collection | null                                                                                | null                    | null                         |
+| Type        | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
+| ----------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
+| Booléen     | Faux                                                                           | Vrai                     | True (varie)                |
+| Date        | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
+| Entier long | 0                                                                              | 1919382119               | 909540880 (varie)           |
+| Heure       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
+| Image       | picture size=0                                                                 | picture size=0           | picture size=0              |
+| Réel        | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
+| Pointeur    | Nil=true                                                                       | Nil=true                 | Nil=true                    |
+| Texte       | ""                                                                             | ""                       | ""                          |
+| Blob        | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
+| Objet       | null                                                                           | null                     | null                        |
+| Collection  | null                                                                           | null                     | null                        |
 
 ## Convertir les types de données
 
