@@ -16,9 +16,9 @@ This code will display a platform-standard alert dialog box with the "Hello, Wor
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
 
-## Assigning Values
+## Assigner des valeurs
 
-Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
+Vous pouvez donner des valeurs aux variables, aux champs, aux éléments de tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle assigner une valeur (ou affecter une valeur) et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs ou aux éléments de tableaux.
 
 ```code4d
 $MyNumber:=3 //assigns 3 to MyNumber variable  
@@ -31,7 +31,7 @@ $myHour:=?08:12:55? //assigns a time literal
 
 You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
 
 ## Variables
 
@@ -41,13 +41,13 @@ The 4D language is strongly typed, although some flexibility is allowed in many 
 C_DATE(MyDate) //Date type for MyDate variable
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```code4d
-MyOtherDate:=Current date+30
+MaDate:=Date du jour+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+Le programme interprète la ligne comme “MaDate prend la valeur de la date courante plus 30 jours”. Cette ligne crée la variable et l'affecte (temporairement) au type de date et à un contenu. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
 
 ## Commandes
 
@@ -84,9 +84,9 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 4D SVG is included in 4D.
 
-## Constants
+## Constantes
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
+4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Par exemple, `XML DATA` est une constante (valeur 6). Par défaut, les constantes prédéfinies sont soulignées dans l'éditeur de méthodes 4D. Elles permettent d'écrire un code plus lisible.
 
 ```code4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
@@ -130,21 +130,21 @@ $0:=Uppercase($1)
 
 ## Types de données
 
-In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
+De nombreux types de données peuvent être manipulés via le langage de 4D. Il existe des types de données élémentaires (chaîne, numérique, date, heure, booléen, image, pointeur, tableau), ainsi que des types de données composites (BLOBs, objets, collections).
 
-Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.
+A noter que les données de type chaîne et numérique peuvent être associés à plus d’un type de champ. Lorsque des données sont placées dans un champ, le langage les convertit automatiquement dans le type du champ. Par exemple, si un champ de type entier est utilisé, les valeurs qu’il contient sont automatiquement traitées en tant que numériques. En d’autres termes, vous n’avez pas à vous préoccuper du mélange de champs de types semblables lorsque vous programmez avec 4D ; le langage le gère pour vous.
 
-However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
+Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélanger les types de données différents. Tout comme il est absurde de stocker la valeur “ABC” dans un champ de type Date, il est absurde de donner la valeur “ABC” à une variable utilisée pour des dates. Dans la plupart des cas, 4D est très tolérant et tentera d’utiliser de manière logique ce que vous faites. Par exemple, si vous additionnez un nombre x et une date, 4D déduira que vous voulez ajouter x jours à la date, mais si vous tentez d’ajouter une chaîne à une date, 4D vous préviendra que cette opération est impossible.
 
-There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
+Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données vers d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc". Vous pouvez écrire :
 
 ```code4d
-[Products]Part Number:=String(Number)+"abc"
+[Produits]Matricule:=Chaine(Numéro)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+Si *Numéro* vaut 17, *[Produits]Matricule* prendra la valeur “17abc”.
 
-The data types are fully defined in the section [Data Types](Concepts/data-types.md).
+Les types de données sont détaillés dans la section [Types de données](Concepts/data-types.md).
 
 ## Objects and collections
 
@@ -181,9 +181,9 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Operators
+## Opérateurs
 
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
+Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. Par exemple, 1 + 2 utilise l’opérateur d’addition (ou signe plus) pour faire la somme de deux nombres, et le résultat est 3. Le tableau ci-dessous présente quelques opérateurs courants :
 
 |  | Opérateur | Opération      | Exemple   |
 |  | --------- | -------------- | --------- |
@@ -192,46 +192,46 @@ When you use the language, it is rare that you will simply want a piece of data.
 |  | *         | Multiplication | 2 * 3 = 6 |
 |  | /         | Division       | 6 / 2 = 3 |
 
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
+Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
 
-The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
+Souvent, les mêmes symboles sont utilisés pour des opérations différentes, en fonction du type de données traitées. Par exemple, le signe (+) peut effectuer diverses opérations, comme le montre le tableau suivant :
 
-| Data Type | Opération | Exemple                                 |
-| --------- | --------- | --------------------------------------- |
-| Nombre    | Addition  | 1 + 2 adds the numbers and results in 3 | String |Concatenation |“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there” Date and Number |Date addition |!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989| 
+| Type de données | Opération | Exemple                                     |
+| --------------- | --------- | ------------------------------------------- |
+| Numérique       | Addition  | 1 + 2 ajoute les nombres, le résultat est 3 | Chaîne |Concaténation |“Bonjour ” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous” Date et Numérique |Addition de date |!1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1997, le résultat est la date 21 janvier 1997 
 
-The operators are fully defined in the chapter Operators and its subsections.
+Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
 
 ## Expressions
 
-Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
+Pour parler simplement, les expressions retournent une valeur. En fait, lorsque vous programmez avec 4D, vous utilisez tout le temps des expressions et vous avez tendance à les manipuler uniquement à travers la valeur qu’elles représentent. Les expressions sont aussi appelées formules.
 
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
+Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage de 4D a besoin de connaître la valeur d’une donnée.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
+Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endroits dans 4D où une expression peut être utilisée en tant que telle. Par exemple :
 
 - Formula editor (apply formula, query with formula, order by formula)
 - The `EXECUTE FORMULA` command
 - The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
-- Quick Report editor as a formula for a column
+- Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
+- Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
 
-### Expression types
+### Types d’expressions
 
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
+Vous vous référez à une expression par le biais du type de données qu’elle retourne. Il existe plusieurs types d’expressions : The following table gives examples of each type of expression.
 
-| Expression            | Type   | Description                                                                                                                                                                     |
-| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”               | Chaine | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”    | Chaine | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name | Chaine | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")    | Chaine | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                     | Nombre | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                 | Nombre | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton              | Nombre | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           | !1997-01-25!| Date| This is a date constant for the date 1/25/97 (January 25, 1997).| |Current date+ 30| Date |This is a date expression that uses the 
+| Expression            | Type      | Description                                                                                                                                                                   |
+| --------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Bonjour”             | Chaîne    | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                         |
+| “Bonjour ” + “à tous” | Chaîne    | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée. |
+| “M. ” + [Amis]Nom     | Chaîne    | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.        |
+| Majusc("dupont")      | Chaîne    | Cette expression utilise `Majusc`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                          |
+| 4                     | Numérique | C'est une constante numérique, 4.                                                                                                                                             |
+| 4 * 2                 | Numérique | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                             |
+| MonBouton             | Numérique | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                            | !1997-01-25!| Date| C'est une constante date pour la date 25/01/97 (25 janvier 1997).| |Date du jour+ 30| Date |C'est une expression de type Date qui utilise la commande 
 
-`Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.| |?8:05:30? |Time| This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.| |?2:03:04? + ?1:02:03? |Time |This expression adds two times together and returns the time 3:05:07.| |True| Boolean| This command returns the Boolean value TRUE.| |10 # 20|Boolean |This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.| |“ABC” = “XYZ” |Boolean |This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.| |My Picture + 50 |Picture |This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.| |->[People]Name |Pointer |This expression returns a pointer to the field called [People]Name.| |Table (1)| Pointer |This is a command that returns a pointer to the first table.| |JSON Parse (MyString)| Object| This is a command that returns MyString as an object (if proper format)| |JSON Parse (MyJSONArray) |Collection |This is a command that returns MyJSONArray as a collection (if proper format)| |Form.pageNumber|Object property|An object property is an expression that can be of any supported type |Col[5]|Collection element|A collection element is an expression that can be of any supported type|  
-|$entitySel[0]|Entity|A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**| 
+`Date du jour` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.| |?8:05:30? |Heure| C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.| |?2:03:04? + ?1:02:03? |Heure |Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.| |Vrai| Booléen| Cette commande retourne la valeur booléenne VRAI.| |10 # 20|Booléen |C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne VRAI.| |“ABC” = “XYZ” |Booléen |C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FAUX.| |MonImage + 50 |Image |Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.| |->[Amis]Nom |Pointeur |Cette expression retourne un pointeur vers lechamp [Amis]Nom.| |Table (1)| Pointeur |C'est une commande qui retourne un pointeur vers la première table.| |JSON Parse (MaChaine)| Objet| C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)| |JSON Parse (MonTabJSON) |Collection |C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)| |Form.pageNumber|Propriété objet|Une propriété objet est une expression qui peut être de tout type |Col[5]|Élément de collection|Un élément de collection est une expression qui peut être de tout type|  
+|$entitySel[0]|Entité|Un élément d'une sélection d'entité ORDA est une expression de type entity. Ce type d'expression n'est **pas affectable**| 
 
 ### Assignable vs non-assignable expressions
 
@@ -255,7 +255,7 @@ The 4D language provides an advanced implementation of pointers, that allow writ
 A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
 
 ```code4d
-MyVar:="Hello"
-MyPointer:=->MyVar
-ALERT(MyPointer->)
+MaVar:="Bonjour"
+MonPointeur->->MaVar
+ALERTE(MonPointeur->)
 ```
