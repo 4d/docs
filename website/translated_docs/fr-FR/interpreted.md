@@ -1,6 +1,6 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: Modes inteprété et compilé
 ---
 
 4D applications can work in **interpreted** or **compiled** mode:
@@ -8,28 +8,28 @@ title: Interpreted and Compiled modes
 - in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
 - in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code. 
 
-The advantages of the compilation are:
+Les avantages procurés par le compilateur sont les suivants :
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes. 
+- **Vitesse :** votre base de données s'exécute de 3 à 1000 fois plus vite.
+- **Vérification du code** : la cohérence interne du code de votre application de base de données est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
+- **Protection :** une fois votre base compilée, vous pouvez en supprimer le code interprété. Alors, la base compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
+- **Application indépendantes "double-cliquables" **: une base compilée peut également être transformée en application indépendante (sous Windows, des fichiers ".EXE") comportant sa propre icône.
+- **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif. 
 
 ## Differences between interpreted and compiled code
 
 Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible that the compiler.
 
-| Compiled                                                                                                                                                                               | Interpreted                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
-| All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |
-| You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
-| You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possible                                                                       |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
-| The `Undefined` function always returns False for variables. Variables are always defined.                                                                                             |                                                                                |
-| If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | It is always possible to interrupt 4D                                          |
+| Compiled                                                                                                                                                                                                                                 | Interpreted                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Vous ne devez pas avoir une méthode qui aurait le même nom qu’une variable.                                                                                                                                                              | No error is generated, but priority is given to the method                     |
+| All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                                                                              | Variables can be typed on-the-fly (not recommended)                            |
+| Vous ne pouvez pas modifier le type d'une variable ou d'un tableau.                                                                                                                                                                      | Changing the data type of a variable or an array is possible (not recommended) |
+| Vous ne pouvez pas convertir un tableau simple en tableau à deux dimensions, et vice-versa.                                                                                                                                              | Possible                                                                       |
+| Bien que le compilateur déduise le type des variables si nécessaire, il est conseillé de déclarer le type des variables à l'aide des directives de compilation lorsque le type de données est ambigu, en particulier dans un formulaire. |                                                                                |
+| La fonction `Indefinie` retournera toujours Faux. Les variables sont toujours définies.                                                                                                                                                  |                                                                                |
+| Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe.                                               | Preemptive process properties are ignored                                      |
+| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                                                                             | It is always possible to interrupt 4D                                          |
 
 ## Using Compiler Directives with the Interpreter
 
