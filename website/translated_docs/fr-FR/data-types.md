@@ -3,28 +3,28 @@ id: data-types
 title: Types de données
 ---
 
-In 4D, data are handled according to their type in two places: database fields and the 4D language.
+Dans 4D, les données sont gérées selon leur type à deux endroits : dans les champs de la base et dans le langage 4D.
 
-Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
+Bien qu'ils soient généralement équivalents, certains types de données de la base ne sont pas disponibles dans le langage et sont automatiquement convertis. A l'inverse, certains types de données sont gérés uniquement par le langage. Le tableau suivant liste tous les types de données disponibles, leur prise en charge et leur déclaration :
 
-| Types de données                             | Database support(*) | Language support        | Déclaration de la variable             |
-| -------------------------------------------- | ------------------- | ----------------------- | -------------------------------------- |
-| [Alphanumeric](dt_string.md)                 | Oui                 | Converti en texte       | -                                      |
-| [Texte](Concepts/dt_string.md)               | Oui                 | Oui                     | `C_TEXTE`, `TABLEAU TEXTE`             |
-| [Date](Concepts/dt_date.md)                  | Oui                 | Oui                     | `C_DATE`, `DATE TEXTE`                 |
-| [Heure](Concepts/dt_time.md)                 | Oui                 | Oui                     | `C_HEURE`, `TABLEAU HEURE`             |
-| [Booléen](Concepts/dt_boolean.md)            | Oui                 | Oui                     | `C_BOOLEEN`, `TABLEAU BOOLEEN`         |
-| [Entier long](Concepts/dt_number.md)         | Oui                 | Converti en entier long | `TABLEAU ENTIER LONG`                  |
-| [Entier long](Concepts/dt_number.md)         | Oui                 | Oui                     | `C_ENTIER LONG`, `TABLEAU ENTIER LONG` |
-| [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)           | Converti en réel        | -                                      |
-| [Réel](Concepts/dt_number.md)                | Oui                 | Oui                     | `C_REEL`, `TABLEAU REEL`               |
-| [Indéfini](Concepts/dt_null_undefined.md)    | -                   | Oui                     | -                                      |
-| [Null](Concepts/dt_null_undefined.md)        | -                   | Oui                     | -                                      |
-| [Pointeur](Concepts/dt_pointer.md)           | -                   | Oui                     | `C_POINTEUR`, `TABLEAU POINTEUR`       |
-| [Image](Concepts/dt_picture.md)              | Oui                 | Oui                     | `C_IMAGE`, `TABLEAU IMAGE`             |
-| [BLOB](Concepts/dt_blob.md)                  | Oui                 | Oui                     | `C_BLOB`, `TABLEAU BLOB`               |
-| [Objet](Concepts/dt_object.md)               | Oui                 | Oui                     | `C_OBJET`, `TABLEAU OBJET`             |
-| [Collection](Concepts/dt_collection.md)      | -                   | Oui                     | `C_COLLECTION`                         |
+| Types de données                             | Pris en charge par la base(*) | Pris en charge par le langage | Déclaration de la variable             |
+| -------------------------------------------- | ----------------------------- | ----------------------------- | -------------------------------------- |
+| [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                                      |
+| [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | `C_TEXTE`, `TABLEAU TEXTE`             |
+| [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `DATE TEXTE`                 |
+| [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_HEURE`, `TABLEAU HEURE`             |
+| [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEEN`, `TABLEAU BOOLEEN`         |
+| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `TABLEAU ENTIER LONG`                  |
+| [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_ENTIER LONG`, `TABLEAU ENTIER LONG` |
+| [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                                      |
+| [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REEL`, `TABLEAU REEL`               |
+| [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                                      |
+| [Null](Concepts/dt_null_undefined.md)        | -                             | Oui                           | -                                      |
+| [Pointeur](Concepts/dt_pointer.md)           | -                             | Oui                           | `C_POINTEUR`, `TABLEAU POINTEUR`       |
+| [Image](Concepts/dt_picture.md)              | Oui                           | Oui                           | `C_IMAGE`, `TABLEAU IMAGE`             |
+| [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `TABLEAU BLOB`               |
+| [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJET`, `TABLEAU OBJET`             |
+| [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`                         |
 
 (*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description.
 
