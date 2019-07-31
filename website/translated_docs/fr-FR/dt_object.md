@@ -23,9 +23,9 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 **Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 
-Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
 
-Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
+Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Lorsque la notation objet est activée dans votre base (voir ci-dessous), vous pouvez utiliser ces valeurs là où une expression 4D est attendue :
 
 - in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by or the Web Server, export files, 4D Write Pro documents...),
 - in the Expression areas of the Debugger and the Runtime explorer,
@@ -33,21 +33,21 @@ Each property value accessed through the object notation is considered an expres
 
 ## Initialisation
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+Les objets doivent être initialisés à l'aide, par exemple, de la commande `Creer objet`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
 
 Exemple :
 
 ```code4d
- C_OBJECT($obVar) //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ C_OBJET($obVar) //création d'une variable 4D de type objet.
+ $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
 ```
 
-### Regular or shared object
+### Objet standard ou partagé
 
-You can create two types of objects:
+Vous pouvez créer deux types d'objets :
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
+- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process. 
+- partagés, à l'aide de la commande `Creer objet partage`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Utiliser...Fin utiliser`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
 
 ## Principes de syntaxe
 
@@ -120,7 +120,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 ### Pointeurs
 
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
+**Note :** Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
 
 La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole "point" doit être omis.
 
