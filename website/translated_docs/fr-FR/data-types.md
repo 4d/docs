@@ -26,7 +26,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJET`, `TABLEAU OBJET`             |
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`                         |
 
-(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description.
+(*)A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. For more information, see the Object data type description.
 
 ## Valeurs par défaut
 
