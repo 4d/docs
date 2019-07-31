@@ -7,7 +7,7 @@ Fondamentalement, dans 4D, les données peuvent être stockées de deux manière
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
-Variables are language objects; you can create and use variables that will never appear on the screen. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
+Les variables sont des objets du langage; vous pouvez créer et utiliser des variables qui n’apparaîtront jamais à l'écran. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
 
 ## Créer des variables
 
@@ -33,15 +33,15 @@ Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par
  [MaTable]MonChamp:=MonTexte
 ```
 
-The following are some basic variable declarations:
+Voici quelques déclarations de variables simples :
 
 ```code4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
+ C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
+ C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
+ C_ENTIER LONG(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
+ C_OBJET($vObj) // La variable locale $vObj est déclarée comme variable de type Objet
+ C_COLLECTION($vCol) // La variable locale $vCol est déclarée comme variable de type Collection
+ TABLEAU ENTIER LONG(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
 ```
 
 ## Assigner des valeurs
@@ -67,7 +67,7 @@ Dans ce cas, *[Produits]Taille* vaudrait 3. Cet exemple est plutôt simple, mais
 Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :
 
 ```code4d
-atNames{1}:="Richard"
+atNoms{1}:="Richard"
 ```
 
 ## Variables locales, process et interprocess
@@ -99,7 +99,7 @@ Fréquemment, dans une base de données, des informations ponctuelles sont deman
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Note :** Paramètres $1, $2... passés à des méthodes sont des variables locales. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
 
 ### Variables process
 
@@ -121,7 +121,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 Les variables interprocess sont visibles dans toute la base et sont disponibles pour tous les process. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
 
 Le nom d’une variable interprocess débute toujours par le symbole (<>) — formé du symbole “inférieur à” suivi du symbole “supérieur à” — et peut comporter jusqu’à 31 caractères supplémentaires.
 
