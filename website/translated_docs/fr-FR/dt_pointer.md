@@ -3,9 +3,9 @@ id: pointer
 title: Pointeurs
 ---
 
-A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
+Les variables ou expressions de type Pointeur sont des références à d'autres variables (y compris des tableaux et des éléments de tableaux), à des tables, des champs ou des objets. Il n'existe pas de champ de type Pointeur.
 
-Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Pour appeler l’un d’entre eux, vous écrivez simplement son nom. However, it is often useful to refer to these elements and access them without knowing their names. 
+Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Pour appeler l’un d’entre eux, vous écrivez simplement son nom. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
 Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous dites à un ami “Allons-y avec ta voiture” au lieu de “Allons-y avec la voiture immatriculée 123 Abd 99”. Dans ce cas, vous faites référence à la voiture immatriculée 123 Abd 99 en utilisant l’expression “ta voiture”. Par analogie, l’expression “la voiture immatriculée 123 Abd 99” est le nom d’un objet, et “ta voiture” est un pointeur référençant (ou pointant vers) l’objet.
 
@@ -13,14 +13,14 @@ La capacité de se référer à quelque chose sans connaître son identité exac
 
 Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux. Le tableau suivant vous fournit un exemple de chaque type :
 
-| Type        | Référencement        | Référencement          | Affectation               |
-| ----------- | -------------------- | ---------------------- | ------------------------- |
-| Table       | vpTble:=->[Table]    | TABLE DEFAUT(vpTble->) | n/a                       |
-| Champ       | vpChp:=->[Table]Chp  | ALERTE(vpChp->)        | vpChp->:="Jean"           |
-| Variable    | vpVar:=->Variable    | ALERTE(vpVar->)        | vpVar->:="Jean"           |
-| Tableau     | vpT:=->Tableau       | TRIER TABLEAU(vpT->;>) | COPIER TABLEAU(Tab;vpT->) |
-| Elém. tabl. | vpElem:=->Tableau{1} | ALERTE(vpElem->)       | vpElem->:="Jean"          |
-| Objet       | vpObj:=->myObject    | ALERT (vpObj->myProp)  | vpObj->myProp:="John"     |
+| Type        | Référencement        | Référencement               | Affectation                |
+| ----------- | -------------------- | --------------------------- | -------------------------- |
+| Table       | vpTble:=->[Table]    | TABLE DEFAUT(vpTble->)      | n/a                        |
+| Champ       | vpChp:=->[Table]Chp  | ALERTE(vpChp->)             | vpChp->:="Jean"            |
+| Variable    | vpVar:=->Variable    | ALERTE(vpVar->)             | vpVar->:="Jean"            |
+| Tableau     | vpT:=->Tableau       | TRIER TABLEAU(vpT->;>)      | COPIER TABLEAU(Tab;vpT->)  |
+| Elém. tabl. | vpElem:=->Tableau{1} | ALERTE(vpElem->)            | vpElem->:="Jean"           |
+| Objet       | vpObj:=->monObjet    | ALERTE (vpObj->monAttribut) | vpObj->monAttribut:="John" |
 
 ## Utiliser des pointeurs : un exemple
 
@@ -78,17 +78,17 @@ $MaVar:="Au revoir"
 Avec :
 
 ```code4d
-  ` vPtrA and vPtrB point to the same object
- vPtrA:=->anObject
- vPtrB:=->anObject
-  ` vPtrC points to another object
- vPtrC:=->anotherObject
+  // vPtrA et vPtrB pointent sur le même objet
+ vPtrA:=->unObjet
+ vPtrB:=->unObjet
+  // vPtrC pointe sur un autre objet
+ vPtrC:=->autreObjet
 ```
 
 | Opération | Syntaxe             | Retourne | Expression    | Valeur |
 | --------- | ------------------- | -------- | ------------- | ------ |
 | Egalité   | Pointeur = Pointeur | Booléen  | vPtrA = vPtrB | Vrai   |
-|           |                     |          | vPtrA = vPtrC | Faux   |
+|           |                     |          | vPtrA = vPtrB | Faux   |
 | Inégalité | Pointeur # Pointeur | Booléen  | vPtrA # vPtrC | Vrai   |
 |           |                     |          | vPtrA # vPtrB | Faux   |
 
