@@ -3,7 +3,7 @@ id: picture
 title: Images
 ---
 
-Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
+Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D ou des commandes de plug-in.
 
 ## Formats natifs pris en charge
 
@@ -48,12 +48,12 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 **Notes :**
 
-- In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
-- The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
-- The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
-- Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+- A noter que pour que l'opérateur | puisse être utilisé, Image1 et Image2 doivent être strictement de la même dimension. Si les deux images sont de taille différente, l’opération Image1 | Image2 produit une image vide.
+- La commande `COMBINER IMAGES` permetd'effectuer des superpositions en conservant les caractéristiques de chaque image source dans l'image résultante.
+- Les opérateurs sur les images retournent des images vectorielles si les deux images sont elles aussi vectorielles (rappelez-vous qu'une image imprimée avec le format d'affichage Sur fond est imprimée en tant que bitmap).
+- Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande `TRANSFORMER IMAGES`.
+- Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images. 
+- 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. Les coordonnées sont retournées dans les **Variables système** *MouseX* et *MouseY*. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*. Vous pouvez lire la valeur des variables MouseX et MouseY dans le contexte des événements formulaire **Sur clic**, **Sur double clic**, **Sur relâchement bouton**, **Sur début survol** et **Sur survol**.
 
 ### Exemples
 
