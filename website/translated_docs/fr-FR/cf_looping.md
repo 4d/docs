@@ -300,9 +300,9 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
 - Par défaut, les *instructions* incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`Tant que`) ou à la fin de chaque itération (`Jusque`).
 - Les paramètres optionnels *début* et *fin* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords: 
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required. 
+- La boucle `Pour chaque...Fin de chaque` peut être utilisée sur une **collection partagée** ou un **objet partagé**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Utiliser...Fin utiliser`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Utiliser...Fin utiliser` : 
+    - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
+    - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise. 
 
 ### Boucles sur collections
 
