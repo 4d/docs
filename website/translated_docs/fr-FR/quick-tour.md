@@ -1,44 +1,44 @@
 ---
 id: quick-tour
-title: A Quick Tour
-sidebar_label: A Quick Tour
+title: Présentation
+sidebar_label: Présentation
 ---
 
-Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
+En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
 
 ```code4d
-ALERT("Hello, World!")
+ALERTE ("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
+Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. Pour exécuter le code, il vous suffit de cliquer sur le bouton d'exécution dans l'éditeur de méthode :
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
-Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
+Vous pouvez également associer ce code à un bouton de formulaire et exécuter le formulaire. Dans ce cas, en cliquant sur le bouton, vous afficherez la boîte de dialogue d'alerte. Dans tous les cas, vous venez d'exécuter votre première ligne de code 4D !
 
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables, aux champs, aux éléments de tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle assigner une valeur (ou affecter une valeur) et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs ou aux éléments de tableaux.
 
 ```code4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 //assigne 3 à la variable MyNumber
+[Products]Size:=$MyNumber //assigne la variable MyNumber au champ [Products]Size
+arrDays{2}:="Tuesday" //assigne la chaîne "Tuesday" au 2ème élément arrDays
+MyVar:=Length("Acme") //assigne le résultat de la fonction (4) à MyVar
+$myDate:=!2018/01/21! //assigne une date littérale
+$myHour:=?08:12:55? //assigne une heure littérale
 ```
 
-You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.
+Vous devez impérativement distinguer l'opérateur d'affectation := des autres opérateurs. Plutôt que de combiner des expressions dans une nouvelle expression, l'opérateur d'affectation copie la valeur de l'expression à droite de l'opérateur d'affectation dans la variable ou le champ situé à gauche de l'opérateur.
 
-**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). Un opérateur d'affectation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.
 
 ## Variables
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a `C_XXX` command. For example, to create a variable of the date type, you can write:
+Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide d'une commande `C_XXX`. Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```code4d
-C_DATE(MyDate) //Date type for MyDate variable
+C_DATE(MyDate) //Type date type pour la variable MyDate
 ```
 
 Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
@@ -47,28 +47,28 @@ Même si cela est généralement déconseillé, vous pouvez créer des variables
 MaDate:=Date du jour+30
 ```
 
-Le programme interprète la ligne comme “MaDate prend la valeur de la date courante plus 30 jours”. Cette ligne crée la variable et l'affecte (temporairement) au type de date et à un contenu. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+Le programme interprète la ligne comme “MaDate prend la valeur de la date courante plus 30 jours”. Cette ligne crée la variable et l'affecte (temporairement) au type de date et à un contenu. Une variable créée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis modifie le type de manière dynamique. Une variable typée avec `C_XXX` ne peut pas changer le type. En mode compilé, le type ne peut jamais être modifié, quelle que soit la manière dont la variable a été créée.
 
 ## Commandes
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Exemple :
+Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREER ENREGISTREMENT` ou `ALERTE`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
 
 ```code4d
-COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
+COPIER DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
 Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. Par exemple:
 
 ```code4d
-$c:=New collection(1;2;3;4;5)
+$c:=Creer collection(1;2;3;4;5)
 $nc:=$c.slice(0;3) //$nc=[1,2,3]  
 
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
+Vous pouvez utiliser des plug-ins ou des composants 4D qui ajoutent de nouvelles commandes à votre environnement de développement 4D.
 
-There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
+Il existe de nombreux plug-ins proposés par la communauté des utilisateurs de 4D ou des développeurs tiers. Par exemple, en utilisant les pages [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) sur macOS :
 
 ```code4d
 PDF REMOVE PAGE(path;page)
@@ -94,9 +94,9 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 ## Méthodes
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
+4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objets, les méthodes formulaires, les méthodes table (Triggers) et les méthodes base.
 
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
+Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
 
 For example, the following line is a statement that will display a confirmation dialog box:
 
@@ -146,18 +146,18 @@ Si *Numéro* vaut 17, *[Produits]Matricule* prendra la valeur “17abc”.
 
 Les types de données sont détaillés dans la section [Types de données](Concepts/data-types.md).
 
-## Objects and collections
+## Objets et collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. Par exemple:
+Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:
 
 ```code4d
 employee.name:="Smith"
 ```
 
-You can also use a string within square brackets, for example:
+Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :
 
 ```code4d
-$vName:=employee["name"]
+$vName:=employee["nom"]
 ```
 
 Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
@@ -166,19 +166,19 @@ Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une 
 $vAge:=employee.children[2].age
 ```
 
-Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
+A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-    $f:=New object
-    $f.message:=New formula(ALERT("Hello world!"))
-    $f.message() //displays "Hello world!"
+    $f:=Creer objet
+    $f.message:=Formule(ALERTE("Hello world!"))
+    $f.message() //affiche "Hello world!"
     
 
-To access a collection element, you have to pass the element number embedded in square brackets:
+Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :
 
 ```code4d
 C_COLLECTION(myColl)
-myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl:=Creer collection("A";"B";1;2;Heure courante)
+myColl[3]  //accède au 4ème élément de la collection
 ```
 
 ## Opérateurs
@@ -211,14 +211,14 @@ Les expressions peuvent être constituées de presque tous les éléments du lan
 Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endroits dans 4D où une expression peut être utilisée en tant que telle. Par exemple :
 
 - Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
+- La commande `EXECUTER FORMULE`
 - The Property list, where an expression can be used as a data source for most of widgets
 - Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
 - Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
 
 ### Types d’expressions
 
-Vous vous référez à une expression par le biais du type de données qu’elle retourne. Il existe plusieurs types d’expressions : The following table gives examples of each type of expression.
+Vous vous référez à une expression par le biais du type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
 
 | Expression            | Type      | Description                                                                                                                                                                   |
 | --------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -233,26 +233,26 @@ Vous vous référez à une expression par le biais du type de données qu’elle
 `Date du jour` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.| |?8:05:30? |Heure| C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.| |?2:03:04? + ?1:02:03? |Heure |Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.| |Vrai| Booléen| Cette commande retourne la valeur booléenne VRAI.| |10 # 20|Booléen |C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne VRAI.| |“ABC” = “XYZ” |Booléen |C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FAUX.| |MonImage + 50 |Image |Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.| |->[Amis]Nom |Pointeur |Cette expression retourne un pointeur vers lechamp [Amis]Nom.| |Table (1)| Pointeur |C'est une commande qui retourne un pointeur vers la première table.| |JSON Parse (MaChaine)| Objet| C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)| |JSON Parse (MonTabJSON) |Collection |C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)| |Form.pageNumber|Propriété objet|Une propriété objet est une expression qui peut être de tout type |Col[5]|Élément de collection|Un élément de collection est une expression qui peut être de tout type|  
 |$entitySel[0]|Entité|Un élément d'une sélection d'entité ORDA est une expression de type entity. Ce type d'expression n'est **pas affectable**| 
 
-### Assignable vs non-assignable expressions
+### Expressions assignables et non-assignables
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. Par exemple:
+Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
 
 ```code4d
-//$myVar variable is assignable, you can write:  
-$myVar:="Hello" //assign "Hello" to myVar
-//Form.pageNumber is assignable, you can write:  
-Form.pageNumber:=10 //assign 10 to Form.pageNumber
-//Form.pageTotal-Form.pageNumber is not assignable:
-Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
+//La variable $myVar est assignable, vous pouvez écrire :  
+$myVar:="Hello" //assigner "Hello" à myVar
+//Form.pageNumber est assignable, vous pouvez écrire :  
+Form.pageNumber:=10 //assigne 10 à Form.pageNumber
+//Form.pageTotal-Form.pageNumber n'est pas assignable :
+Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 ```
 
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName" "+[Person]LastName` is not assignable.
+En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
 
 ## Pointeurs
 
-The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
+Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous permettre d'écrire un code puissant et modulaire. Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux.
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+Un pointeur sur un élément est créé en ajoutant un symbole "->" avant le nom de l'élément, et peut être déréférencé en ajoutant le symbole "->" après le nom du pointeur.
 
 ```code4d
 MaVar:="Bonjour"
