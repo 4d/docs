@@ -40,11 +40,11 @@ Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des
 
 ```code4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
-//pass the !05/05/10! date as parameter to the SetCalendarDate  
-// in the context of a subform
+//passez la date !05/05/10! comme paramètre de SetCalendarDate
+// dans le contexte d'un sous-formulaire
 ```
 
-**Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+**Note :** Pour une bonne exécution du code, assurez-vous que tous les paramètres `$1`, `$2`... sont correctement déclarés dans les méthodes appelées (voir [Déclaration des paramètres](#declaring-parameters) ci-dessous).
 
 ## Fonctions
 
@@ -78,101 +78,101 @@ Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle pe
 
 ## Déclaration des paramètres
 
-Even if it not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méthodes appelées en [mode interprété](Concepts/interpreted.md), même si cela est facultatif.
 
-In the following example, the `OneMethodAmongOthers` project method declares three parameters:
-
-```code4d
-  // OneMethodAmongOthers Project Method
-  // OneMethodAmongOthers ( Real ; Date { ; Long } )
-  // OneMethodAmongOthers ( Amount ; Date { ; Ratio } )
-
- C_REAL($1) // 1st parameter is of type Real
- C_DATE($2) // 2nd parameter is of type Date
- C_LONGINT($3) // 3rd parameter is of type Long Integer
-```
-
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare trois paramètres :
 
 ```code4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
+  // Méthode projet OneMethodAmongOthers
+  // OneMethodAmongOthers ( Réel ; Date { ; Entier long} )
+  // OneMethodAmongOthers ( Amount ; Date { ; Pourcentage } )
 
- C_TEXT($0;$1)
- $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
+ C_REAL($1) // 1er paramètre de type Réel
+ C_DATE($2) // 2ème paramètre de type Date
+ C_LONGINT($3) // 3ème paramètre de type Entier long
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. Par exemple:
+Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
+
+```code4d
+  // Méthode projet ajoutCapitale
+  // ajoutCapitale ( Texte ) -> Texte
+  // ajoutCapitale( Chaîne source ) -> chaîne avec la première lettre capitale
+
+ C_TEXTE($0;$1)
+ $0:=Majusc(Sous chaine($1;1;1))+Minusc(Sous chaine($1;2))
+```
+
+L'utilisation de commandes telles que `Nouveau process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple:
 
 ```code4d
 C_TEXT($string)
-C_LONGINT($idProc;$int)
-C_OBJECT($obj)
+C_ENTIER LONG($idProc;$int)
+C_OBJET($obj)
 
-$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
+$idProc:=Nouveau process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+Ce code peut être exécuté en mode compilé, uniquement si "foo_method" déclare ses paramètres :
 
 ```code4d
 //foo_method
-C_TEXT($1)
-C_LONGINT($2)
-C_OBJECT($3)
+C_TEXTE($1)
+C_ENTIER Long($2)
+C_OBJET($3)
 ...
 ```
 
-**Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+**Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 
 ```code4d
- C_REAL(OneMethodAmongOthers;$1) 
+ C_REEL(OneMethodAmongOthers;$1) 
 ```
 
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
-- Database methods For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- Méthodes base Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. At the beginning of the database method, you must write (even if all parameters are not used):
 
 ```code4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
+// Sur connexion Web
+C_TEXTE($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Par exemple:
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 
 ```code4d
- C_LONGINT($0)
- If(Form event=On Drag Over)
+ C_ENTIER Long($0)
+Si(Evenement formulaire=Sur glisser)
     $0:=0
     ...
-    If($DataType=Is picture)
+    Si($TypeDonnées=Est une image)
        $0:=-1
-    End if
+    Fin de si
     ...
  Fin de si
 ```
 
-## Passing mode
+## Mode de passage
 
-Depending on their type, parameters are passed **by copy** or **by reference**:
+Selon leur type, les paramètres sont passés **par copie** ou **par référence**:
 
-- When a parameter is passed by copy, the local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method.
-- When a parameter is passed by reference, the local variables/parameters contain references that point to the actual source fields, variables, or expressions passed by the calling method; modifiying the value of the local parameter will modify the source value.
+- Lorsqu'un paramètre est passé par copie, les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée.
+- Lorsqu'un paramètre est passé par référence, les variables/paramètres locaux contiennent des références aux véritables champs, variables ou expressions sources passés par la méthode appelée; la modification de la valeur du paramètre local modifiera la valeur source.
 
-The following table shows how the different types of elements can be passed:
+Le tableau suivant affiche le passage des différents types d'éléments :
 
-| Type of parameter                                                      | How passed                             | Comment                                                               |
-| ---------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------- |
-| Field, variable or expression of a scalar type (number, text, date...) | by copy                                | Can be passed by reference through a pointer, see below               |
-| Field, variable or expression of type Object                           | by reference                           | See example below                                                     |
-| Variable or expression of type Collection                              | by reference                           |                                                                       |
-| Variable or expression of type Pointer                                 | by reference                           | See Passing Pointers to Methods                                       |
-| Tableau                                                                | Cannot be passed directly as parameter | Can be passed by reference through a pointer, see Arrays and Pointers |
-| Table                                                                  | Cannot be passed directly as parameter | Can be passed by reference through a pointer, see Pointers            |
+| Type de paramètre                                                             | Mode de passage                                    | Commentaire                                                                          |
+| ----------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Champ, variable ou expression de type scalaire (numérique, texte, date, etc.) | par copie                                          | Peut être passé par référence via un pointeur, voir ci-dessous                       |
+| Champ, variable ou expression de type Objet                                   | par référence                                      | Voir exemple ci-dessous                                                              |
+| Variable ou expression de type Collection                                     | par référence                                      |                                                                                      |
+| Variable ou expression de type Pointeur                                       | par référence                                      | Voir Passer des Pointeurs aux Méthodes                                               |
+| Tableau                                                                       | Ne peut pas être passé directement comme paramètre | Peut être passé par référence via un pointeur, voir Tableaux et Pointeurs ci-dessous |
+| Table                                                                         | Ne peut pas être passé directement comme paramètre | Peut être passé par référence via un pointeur, voir Pointeurs                        |
 
 ### Paramètres passés par copie
 
@@ -252,11 +252,11 @@ Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contien
 
 **4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple, voir Propriétés des méthodes projet), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
 
-## Named parameters
+## Paramètres nommés
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
+L'utilisation d'objets en tant que paramètres vous permet de gérer des **paramètres nommés**. Ce style de programmation est simple, souple et facile à lire.
 
-For example, using the `CreatePerson` method:
+Par exemple, si vous utilisez la méthode `CreatePerson` :
 
 ```code4d
   //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
@@ -266,60 +266,60 @@ For example, using the `CreatePerson` method:
  ALERTE(Chaine(OB Lire($person;"Age")))  
 ```
 
-In the `ChangeAge` method you can write:
+Dans la méthode `ChangeAge`, vous pouvez écrire :
 
 ```code4d
   //ChangeAge
- C_OBJECT($1;$para)
+ C_OBJET($1;$para)
  $para:=$1  
  $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
+ ALERTE($para.Nom+" a "+Chaine($para.Age)+" ans.")
 ```
 
-This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either: - check if all expected parameters are provided by comparing them to the `Null` value, or - preset parameter values, or - use them as empty values.
+C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez soit : - vérifier si tous les paramètres attendus sont renseignés en les comparant à la valeur `Null`, ou - présenter les valeurs des paramètres, ou - les utiliser comme valeurs vides.
 
-In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
+Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
 
 ```code4d
   //ChangeAge
- C_OBJECT($1;$para)
+ C_OBJET($1;$para)
  $para:=$1  
  $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ ALERTE(Chaine($para.Nom+" a "+Chaine($para.Age)+" ans.")
 ```
 
-Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
+Les deux paramètres sont alors optionnels. S'ils ne sont pas renseignés, le résultat sera "a 10 ans", mais aucune erreur ne sera générée.
 
-Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
+Enfin, les paramètres nommés permettent de maintenir et de reproduire des applications en toutes simplicité et sécurité. Imaginez que vous réalisez, par la suite, qu'ajouter 10 ans n'est pas toujours approprié. Vous aurez besoin d'un autre paramètre pour définir le nombre d'années à ajouter. Vous pouvez écrire :
 
 ```code4d
-$person:=New object("Name";"Smith";"Age";40;"toAdd";10)
+$person:=Creer objet("Nom";"Smith";"Age";40;"àAjouter";10)
 ChangeAge($person)
 
 //ChangeAge
-C_OBJECT($1;$para)
+C_OBJET($1;$para)
 $para:=$1  
-If ($para.toAdd=Null)
+Si ($para.toAdd=Null)
     $para.toAdd:=10
-End if
+Fin de si
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ALERTE(Chaine($para.Nom)+" a "+Chaine($para.Age)+" ans.")
 ```
 
-The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
+Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre code existant. Cela fonctionnera toujours dans l'ancienne version, mais le cas échéant, vous pouvez utiliser une autre valeur que 10 ans.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dans l'exemple ci-dessus, tous les paramètres sont optionnels et peuvent être donnés, dans n'importe quel ordre.
 
-## Optional parameters
+## Paramètres optionnels
 
-In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. You can call it in the following ways:
+Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERTE (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
 ```code4d
-ALERT("Are you sure?";"Yes I am") //2 parameters
-ALERT("Time is over") //1 parameter
+ALERTE("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
+ALERTE("Temps écoulé") //1 paramètre
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+Les méthodes projet 4D acceptent également des paramètres optionnels, en commençant par la droite. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
 
 > When optional parameters are needed in your methods, you might also consider using [Named parameters](#named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
@@ -357,50 +357,50 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 
 Les méthodes projets 4D acceptent un grand nombre de paramètres de même type, commençant par la droite. Ce principe est appelé **l'indirection des paramètres**. L'utilisation de la commande `Nombre de paramètres` vous permet d'adresser ces paramètres avec la boucle `Boucle...Fin de boucle` ainsi que la syntaxe de l'indirection des paramètres.
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+Dans l'exemple qui suit, la méthode projet `ENVOYER PAQUET` accepte le paramètre de temps suivi d'un nombre de variables des paramètres de texte :
 
 ```code4d
-  //SEND PACKETS Project Method
-  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
-  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
+  //Méthode projet ENVOYER PAQUET
+  //ENVOYER PAQUET ( Heure ; Texte { ; Texte2... ; TexteN } )
+  //ENVOYER PAQUET ( docRef ; Données { ; Données2... ; DonnéesN } )
 
- C_TIME($1)
- C_TEXT(${2})
- C_LONGINT($vlPacket)
+ C_HEURE($1)
+ C_TEXTE(${2})
+ C_ENTIER LONG($vlPacket)
 
- For($vlPacket;2;Count parameters)
-    SEND PACKET($1;${$vlPacket})
- End for
+ Boucle($vlPacket;2;Nombre de parametres)
+    ENVOYER PAQUET($1;${$vlPacket})
+ Fin de boucle
 ```
 
 Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste. A l’intérieur de la méthode, l’adressage par indirection se fait sous la forme : ${$i}, $i étant une variable numérique. ${$i} est appelé **paramètre générique**.
 
-Illustrons notre propos par un exemple : écrivons une fonction qui prend des valeurs, fait leur somme et renvoie cette somme formatée suivant un format qui peut varier avec les valeurs. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
+Illustrons notre propos par un exemple : écrivons une fonction qui prend des valeurs, fait leur somme et renvoie cette somme formatée suivant un format qui peut varier avec les valeurs. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères. 
 
-This function is called in the following manner:
+Un appel à cette fonction se fera de la façon suivante :
 
 ```code4d
- Result:=MySum("##0.00";125,2;33,5;24)
+ Résultat:=LaSomme("##0,00";125,2;33,5;24)
 
 ```
 
-In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
+La méthode appelante récupérera dans ce cas la chaîne : 182,70, somme des nombres passés, formatée suivant le format spécifié. Les paramètres de la fonction doivent être passés dans un ordre précis : le format d’abord et ensuite les valeurs, dont le nombre peut varier d’un appel à l’autre.
 
-Here is the function, named `MySum`:
+Examinons maintenant la fonction que nous appelons `LaSomme` :
 
 ```code4d
- $Sum:=0
- For($i;2;Count parameters)
-    $Sum:=$Sum+${$i}
- End for
- $0:=String($Sum;$1)
+ $Somme:=0
+ Boucle($i;2;Nombre de paramètres)
+    $Somme:=$Somme+${$i}
+ Fin de boucle
+ $0:=Chaine($Somme;$1)
 ```
 
-This function can now be called in various ways:
+Cette fonction pourra être appelée de diverses manières :
 
 ```code4d
- Result:=MySum("##0.00";125,2;33,5;24)
- Result:=MySum("000";1;18;4;23;17)
+ Résultat:=LaSomme("##0,00";125,2;33,5;24)
+ Résultat:=LaSomme("000";1;18;4;23;17)
 ```
 
 ### Déclaration des paramètres génériques
