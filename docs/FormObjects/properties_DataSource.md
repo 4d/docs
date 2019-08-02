@@ -1,4 +1,4 @@
----
+|choice---
 id: propertiesDataSource
 title: Data Source 
 ---
@@ -12,7 +12,7 @@ Allows setting a standard style for the object border.
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|choiceList|list |a list of choices|
+|choiceList|list |||
 
 
 #### Objects Supported

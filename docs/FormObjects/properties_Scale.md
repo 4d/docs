@@ -107,7 +107,7 @@ Displays/Hides the graduations next to the labels.
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |showGraduations|boolean |<li>"true"<li>"false"|
-
+gra
 
 #### Objects Supported
 

@@ -207,7 +207,7 @@ Here are the results using the various options for this property:
 ---
 This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
 
-![](../../assets/en/property_popup.png)
+![](assets/en/FormObjects/property_popup.png)
 
 The appearance and location of this symbol depends on the button style and the current platform. 
 

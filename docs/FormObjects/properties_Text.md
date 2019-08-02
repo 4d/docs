@@ -39,6 +39,7 @@ You can set this property via the Property List or you via the [**OBJECT SET FON
 |Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
 
 
 <hr>
@@ -69,6 +70,7 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 |Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
 
 
 <hr>
@@ -99,6 +101,7 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 |Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
 
 <hr>
 
@@ -125,6 +128,7 @@ Sets the selected text to have a line running beneath it.
 |Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
 
 
 <hr>
@@ -159,3 +163,46 @@ You can set this property via the Property List or via the [**OBJECT SET RGB COL
 |Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
 |Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
 |Combo Box|[Combo Box](comboBox_overview.md)|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
+
+
+<hr>
+
+## Horizontal Alignment
+
+Horizontal location of text within the area that contains it.
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|textAlign|string |<li>"automatic"<li>"right"<li>"center"<li>"justify"<li>"left"|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box)|
+
+<hr>
+
+## Orientation
+
+Modifies the orientation (rotation) of the text area.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|textAngle|string |<li>0<li>90<li>180<li>270|
+
+
+#### Objects Supported
+
+|Category|Link|
+|---|---|
+|Text and Group Box|[Text](textAndGroupBox_overview.md#text)|
