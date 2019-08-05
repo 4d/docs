@@ -98,6 +98,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |shortcutCommand	|boolean	|<li>"true" <li>"false"|
 |shortcutControl	|boolean	|<li>"true" <li>"false"|
 |shortcutKey	|string	|<li>"[F1]" -> "[F15]"<li>"[Return]"<li> "[Enter]"<li> "[Backspace]" <li>"[Tab]"<li> "[Esc]"<li> "[Del]"<li> "[Home]"<li> "[End]"<li> "[Help]"<li> "[Page up]"<li> "[Page down]" <li>"[left arrow]"<li> "[right arrow]"<li> "[up arrow]"<li> "[down arrow]"|
+|shortcutShift	|boolean	|<li>"true" <li>"false"|
 
 
 #### Objects Supported

@@ -44,6 +44,7 @@ This property controls the way numbers appear when displayed or printed.
 |Combo Box|[Combo Box](comboBox_overview.md)|
 
 <hr>
+
 ## Visibility
 
 This property allows hiding the object in the Application environment. 

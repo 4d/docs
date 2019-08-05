@@ -3,7 +3,7 @@ id: propertiesBackgroundAndBorder
 title: Background and Border
 ---
 
-## Border Line Style
+## Border Line Style / Dotted Line Type
 
 Allows setting a standard style for the object border.
 
@@ -22,6 +22,7 @@ Allows setting a standard style for the object border.
 |Picture Button|[Picture Button](pictureButton_overview.md)|
 |Button Grid|[Button Grid](buttonGrid_overview.md) |
 |Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+|Shapes|[Rectangle](shapes_overview.md#rectangle) |
 
 <hr>
 
@@ -54,7 +55,7 @@ Defines the background color of an object.
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-| |color |<li>any css value<li> "transparent"<li> "automatic"|
+|stroke |color |any css value, "transparent", "automatic"|
 
 
 #### Objects Supported
@@ -85,26 +86,7 @@ Designates the thickness of a line.
 |Shapes|[Rectangle](shapes_overview.md#rectangle) |
 
 
-<hr>
 
-## Dotted Line Type
-
-Allows setting a standard style for the object border.
-
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|:---:|:---:|---|
-| borderStyle|string |<li>"system"<li>"none"<li>"solid"<li>"dotted"<li>"raised"<li>"sunken"<li>"double"|
-
-
-#### Objects Supported
-
-|Category|Link| 
-|---|---|
-|Shapes|[Rectangle](shapes_overview.md#rectangle) |
 
 
 

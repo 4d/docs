@@ -42,7 +42,7 @@ When tab controls with a custom direction are displayed under Windows or with th
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|:---|:---:|---|
 labelsPlacement|boolean|<li>"top"<li>"bottom" |
 
 
