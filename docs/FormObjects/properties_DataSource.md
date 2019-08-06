@@ -12,7 +12,7 @@ Allows setting a standard style for the object border.
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|choiceList|list |||
+|choiceList|list |A list of possible values|
 
 
 #### Objects Supported

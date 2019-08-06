@@ -1,6 +1,6 @@
 ---
 id: subformOverview
-title: Subforms
+title: Subform
 ---
 
 ## Overview
@@ -78,3 +78,9 @@ For more information about adding these buttons and their associated standard ac
 4D widgets are page-type subforms endowed with specific functions. You can add them to your forms using the subform creation tool (see previous section) or using the integrated object library of 4D (see Using the preconfigured library).
 
 The use of widgets is described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+
+## Supported Properties
+
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Detail Form](properties_Subform.md#detail-form) - [Expression Type ](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - 
+[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - 
+[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

@@ -11,24 +11,15 @@ Positions an object on the left of the form.
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |left|integer |minimum: 0|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Hel Buttonp](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
 
 ## Top
 
@@ -38,25 +29,16 @@ Positions an object on the top of the form.
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|---|---|---|
 |Top |integer |minimum:0|
 
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) |
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
 
 ## Right
 
@@ -65,23 +47,14 @@ Positions an object on the right of the form.
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |right|integer |minimum: 0|
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
 
 ## Bottom
 
@@ -90,24 +63,15 @@ Positions the object on the bottom of the form (centered).
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|---|:---:|---|
+|---|---|---|
 |bottom|integer | minimum: 0|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) |
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
 
 ## Width
 
@@ -130,25 +94,16 @@ To learn more about setting the size of an object, see the [Setting object displ
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |width|integer |minimum: 0|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
 
-<hr>
 
 
 ## Height
@@ -171,24 +126,15 @@ To learn more about setting the size of an object, see the [Setting object displ
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |height|integer |minimum: 0|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
 
 
 ## Corner Radius
@@ -206,13 +152,11 @@ You can also set this property using the OBJECT Get corner radius and OBJECT SET
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |borderRadius|integer |minimum: 0|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Shapes|[Rectangle](shapes_overview.md#rectangle) |
+[Rectangle](shapes_overview.md#rectangle)
 

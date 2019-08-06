@@ -18,20 +18,13 @@ All active objects are enterable by default. If you want to make a field or an o
 
 |Name|Data Type|Possible Values|
 |---|:---:|---|
-|enterable|boolean |<li>"true"<li>"false"|
+|enterable|boolean |"true", "false"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
-|Check Box|[Collapse / Expand](checkbox_overview.md#collapse) - [Disclosure Button](checkbox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Indicator|[Progress Bar](indicators_overview.md#progress-bar)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Progress Bar](indicators_overview.md#progress-bar)
 
-<hr>
 
 ## Focusable
 
@@ -55,19 +48,13 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 |Name|Data Type|Possible Values|
 |---|:---:|---|
-|focusable|boolean | TRUE / FALSE|
+|focusable|boolean |"true", "false"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
-|Check Box|[Collapse / Expand](checkbox_overview.md#collapse) - [Disclosure Button](checkbox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) 
 
-<hr>
 
 
 ## Shortcut
@@ -93,24 +80,19 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---|
-|shortcutAccel	|boolean	|<li>"true" <li>"false"|
-|shortcutAlt	|boolean	|<li>"true" <li>"false"|
-|shortcutCommand	|boolean	|<li>"true" <li>"false"|
-|shortcutControl	|boolean	|<li>"true" <li>"false"|
-|shortcutKey	|string	|<li>"[F1]" -> "[F15]"<li>"[Return]"<li> "[Enter]"<li> "[Backspace]" <li>"[Tab]"<li> "[Esc]"<li> "[Del]"<li> "[Home]"<li> "[End]"<li> "[Help]"<li> "[Page up]"<li> "[Page down]" <li>"[left arrow]"<li> "[right arrow]"<li> "[up arrow]"<li> "[down arrow]"|
-|shortcutShift	|boolean	|<li>"true" <li>"false"|
+|shortcutAccel	|boolean	|"true", "false"|
+|shortcutAlt	|boolean	|"true", "false"|
+|shortcutCommand	|boolean	|"true", "false"|
+|shortcutControl	|boolean	|"true", "false"|
+|shortcutKey	|string	|"[F1]" -> "[F15]", "[Return]",  "[Enter]",  "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]",  "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|shortcutShift	|boolean	|"true", "false"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) |
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Radio Button|[Collapse / Expand](radio_overview.md#collapse) - [Disclosure Button](radio_overview.md#disclosure)|
-|Check Box|[Collapse / Expand](checkbox_overview.md#collapse) - [Disclosure Button](checkbox_overview.md#disclosure)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Radio Button](radio_overview.md#overivew) - [Check Box](checkbox_overview.md#overview) - [Disclosure Button](checkbox_overview.md#disclosure)
 
-<hr>
 
 ## Entry Filter
 
@@ -192,15 +174,13 @@ You can use display formats on input forms, output forms, and Quick reports. For
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---|
+|---|---|---|
 |entryFilter	|string	|text to narrow entries |
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Combo Box|[Combo Box](comboBox_overview.md)|
+[Combo Box](comboBox_overview.md)
 
 <hr>
 
@@ -232,16 +212,28 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---|
+|---|---|---|
 |placeholder	|string	|Text to be displayed (grayed out) when the value for [Data Source](properties_DataSource.md) is empty.|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Combo Box|[Combo Box](comboBox_overview.md)|
+[Combo Box](comboBox_overview.md)
+
+## Context Menu
+
+Allows the user access to a standard context menu in the area when the form is executed.
+
+The contents of the menu are set by the rendering engine of the platform.
+
+>It is possible to control access to the context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|contextMenu|string	|"automatic", "none"|
 
 
-
+#### Objects Supported
 

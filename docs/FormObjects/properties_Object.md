@@ -19,25 +19,28 @@ You can click twice on the button so that it remains selected even after you hav
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|---|
-|type|string|<li> "groupBox"<li> "button"<li>"checkbox"<li> "radio"<li> "buttonGrid"<li> "pictureButton"<li>"picturePopup"|
+|---|---|---|
+|type|string|"groupBox", "button","checkbox", "radio", "buttonGrid", "pictureButton", "picturePopup"|
 
 
 
 #### Objects Supported
 
-|Category|Link| 
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) -[Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) -[Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) -  [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
+## Plug-in Kind
+Describes the type of plug-in.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|pluginAreaKind|string|The type of plug-in.|
+
+
+#### Objects Supported
+[Plug-in Area](pluginArea_overview.md#overview)
+
 
 ## Object Name
 
@@ -55,25 +58,16 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |name|string |Any name which does not belong to an already existing object|
 
 
 
 #### Objects Supported
 
-|Category|Link| 
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) -  [Picture](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
+
 
 ## Variable or Expression
 
@@ -107,25 +101,17 @@ You can also enter an expression directly in the “Variable or Expression” ar
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|---|---|
-|dataSource|string, or string array for hierarchical listbox column|<li> 4D variable<li> field name<li> arbitrary complex language expression.|
+|---|---|---|
+|dataSource|string, or string array for hierarchical listbox column|4D variable, field name, or arbitrary complex language expression|
 
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle button](button_overview.md#circle) - [Custom](button_overview.md#custom)| 
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) 
 
-<hr>
+
 
 ## Expression Type
 
@@ -139,22 +125,16 @@ Indicates the expression / variable type.
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|---|---|
-|dataSourceTypeHint |string  |<li>"integer"<li>"boolean" |
+|---|---|---|
+|dataSourceTypeHint |string  |"integer", "boolean" |
 
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
+[Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) 
 
 
-<hr>
 
 
 ## Title
@@ -178,21 +158,14 @@ For database translation purposes, you can enter an XLIFF reference in the title
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|---|---|---|
 |text|string |any text |
 
-<hr>
 
 #### Objects Supported
 
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) 
 
-|Category|Link| 
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-
-<hr>
 
 
 ## Radio Group
@@ -202,16 +175,13 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|---|---|
+|---|---|---|
 | radioGroup|string  |Radio group name|
 
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-
+[Radio Button](radio_overview.md) 
 
 

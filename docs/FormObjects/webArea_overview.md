@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Web Areas
+title: Web Area
 ---
 
 ## Overview
@@ -34,3 +34,13 @@ Since the display of Web areas is managed by an external rendering engine, their
 *	Web areas are not supported in "scrollable" subforms (scrolling will not have the desired effect).
 *	The limits of the Web areas must not exceed those of the subforms that contain them (they must be entirely visible).
 *	Superimposing a Web area on top of or beneath other form objects is not supported.
+
+## Supported Properties
+
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url)
+[Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+
+
+
+
+

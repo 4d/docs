@@ -13,11 +13,13 @@ title: Reference List
 |[bottomMargin](properties_TextAndPicture.md#vertical-margin)|Vertical margin value (in pixels). |minimum: 0|
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
 |[columnCount](properties_Crop.md#columns)|Sets the number of columns.|minimum: 1|
+|[contextMenu](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|
 |[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Absolute or relative path. Must be used in conjunction with the style property with the "custom" option.| 
 |[customOffset](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
-|[dataSource](properties_Object.md#variable-or-expression)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
+|[dataSource](properties_Object.md#variable-or-expression) (objects)<br>[dataSource](properties_Subform.md#source) (subforms)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
 |[dataSourceTypeHint](properties_Object.md#expression-type)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|"true", "false"|
+|[detailForm](properties_Subform.md#detail-form)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[display](properties_Display.md#not-rendered)|The object is not drawn on the form.|"true", "false"|
 |[dragging](properties_Action.md#standard-action)|Enables dragging function. |"none", "custom", "automatic" (excluding list, list box) |
 |[dropping](properties_Action.md#standard-action)|Enables dropping function. |"none", "custom", "automatic" (excluding list, list box) |
@@ -39,15 +41,21 @@ title: Reference List
 |[loopBackToFirstFrame](properties_Animation.md#loop-back-to-first-frame)|Pictures are displayed in a continuous loop.|"true", "false"|
 |[middle](properties_TextAndPicture.md#title-picture-position)|integer|minimum: 0|
 |[max](properties_Scale.md#maximum)|The maximum allowed value. For numeric steppers, these properties represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value. |minimum:0 (for numeric data types)|
+|[method](properties_Action.md#method)|A project method name. |The name of an existing project method|
 |[min](properties_Scale.md#minimum)|The minimum allowed value. For numeric steppers, these properties represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.|minimum:0 (for numeric data types)|
 |[name](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[numberFormat](properties_Display.md#number-format)|Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)|
 |[placeholder](properties_Entry.md#placeholder)	|Text to be displayed (grayed out) when the value for dataSource is empty.|ext to be displayed (grayed out) when the data source value is empty.|
+|[pluginAreaKind](properties_Object.md#plug-in-kind)|Describes the type of plug-in. |The type of plug-in. |
 |[popupPlacement](properties_TextAndPicture.md#with-pop-up-menu) |Allows displaying a symbol that appears as a triangle in the button, which indicates that there is a pop-up menu attached. |"None", Linked", "Separated" |
+|[progressSource](properties_WebArea.md#progression)| A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.|minimum:0|
 |[radioGroup](properties_Object.md#radio-group)|Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.|	Radio group name|
 |[right](properties_CoordinatesAndSizing.md#right) (objects)<br>[right](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object on the right.|minimum: 0|
 |[rightMargin](properties_TextAndPicture.md#horizontal-margin)|Horizontal margin value (in pixels). |minimum: 0|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
+|[scrollbarHorizontal](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
+|[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
+|[selectionMode](properties_Action.md#multi-selectable)|	Allows the selection of multiple records/options.|	"multiple", "single", "none"
 |[shortcutAccel](properties_Entry.md#shortcut)|Specifies the system to use, Windows or Mac.|"true", "false"|
 |[shortcutAlt](properties_Entry.md#shortcut)|Designates the Alt key|"true", "false"|
 |[shortcutCommand](properties_Entry.md#shortcut)|Designates the Command key (macOS)|"true", "false"|
@@ -74,6 +82,8 @@ title: Reference List
 |[type](properties_Object.md#type)|Mandatory. Designates the data type of the form object.|"text", "rectangle", "groupBox", "tab", "line", "button", "checkbox", "radio", "dropdown", "combo", "webArea", "write", "subform", "plugin", "splitter", "buttonGrid", "progress", "ruler", "spinner", "stepper", "list", "pictureButton", "picturePopup", "listbox", "input", "view"|
 |[tooltip](properties_Help.md)|	Provide users with additional information about a field.|Additional information to help a user|
 |[top](properties_CoordinatesAndSizing.md#top) (objects)<br>[top](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object at the top (centered).|minimum: 0|
+|[urlSource](properties_WebArea.md#url)|Designates the the URL loaded or being loading by the associated Web area. |A URL.|
 |[useLastFrameAsDisabled](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|"true", "false"|
 |[visibility](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"|
+|[webEngine](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[width](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|

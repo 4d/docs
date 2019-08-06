@@ -57,6 +57,7 @@
         "label": "Properties",
         "ids": ["FormObjects/propertiesReference",
 			"FormObjects/propertiesObject", 
+			"FormObjects/propertiesSubform",
 			"FormObjects/propertiesPicture",
 			"FormObjects/propertiesDataSource",
 			"FormObjects/propertiesTextAndPicture",
@@ -72,7 +73,8 @@
 			"FormObjects/propertiesText",
 			"FormObjects/propertiesBackgroundAndBorder",
 			"FormObjects/propertiesHelp",
-			"FormObjects/propertiesAction"
+			"FormObjects/propertiesAction",
+			"FormObjects/propertiesWebArea"
 			]
 		}
 	]	

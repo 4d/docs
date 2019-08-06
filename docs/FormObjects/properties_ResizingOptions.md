@@ -21,24 +21,16 @@ You can enable automatic resizing or repositioning in the Property List. There a
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|sizingX|string |<li>"grow"<li>"move"<li>"fixed"|
+|---|---|---|
+|sizingX|string |"grow", "move", "fixed"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom) |
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
-<hr>
+
 
 ## Vertical Sizing
 
@@ -59,25 +51,16 @@ You can enable automatic resizing or repositioning in the Property List. There a
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|---|---|---|
 |sizingY|string|<li>"grow"<li>"move"<li>"fixed"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Radio Button|[Radio Button](radio_overview.md) - [Collapse / Expand](radio_overview.md#collapse) - [Disclosure](radio_overview.md#disclosure)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Combo Box|[Combo Box](comboBox_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkBox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
 
-<hr>
 
 ## Pusher
 
@@ -98,11 +81,9 @@ This property is checked by default for new databases.
 
 |Name|Data Type|Possible Values|
 |:---|:---:|:---:|
-|splitterMode|string|<li>"resize"<li>"move"|
+|splitterMode|string|"resize", "move"|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Splitter / Tab Control|[Splitter](splitterTabControlOverview#splitters)|
+[Splitter](splitterTabControlOverview#splitters)

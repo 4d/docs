@@ -10,22 +10,16 @@ Typical activities to be performed by active objects have been predefined by 4D 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |action|string |The name of a valid standard action.|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
-|Picture Button|[Picture Button](pictureButton_overview.md)|
-|Button Grid|[Button Grid](buttonGrid_overview.md)|
-|Check Box|[Check Box](checkBox_overview.md) - [Collapse / Expand](checkBox_overview.md#collapse) - [Disclosure](checkBox_overview.md#disclosure)|
-|Pop-up menu / Drop-down List|[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - 
+[Check Box](checkBox_overview.md) -  [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
-<hr>
+
 
 ## Droppable
 
@@ -94,18 +88,16 @@ When this option is check, the drop of external objects into 4D forms is refused
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|dragging|text | <li>"none", <li>"custom", <li>"automatic" (excluding list, list box)|
-|dropping|text | <li>"none", <li>"custom", <li>"automatic" (excluding list, list box)|
+|---|---|---|
+|dragging|text |"none", "custom", "automatic" (excluding list, list box)|
+|dropping|text |"none", "custom", "automatic" (excluding list, list box)|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
-<hr>
+
 
 ## Execute object method
 When this option is checked, the object method is executed with the `On Data Change` event at the same moment the user changes the value of the indicator. By default, the method is executed after the modification.
@@ -114,14 +106,39 @@ When this option is checked, the object method is executed with the `On Data Cha
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |action|string |The name of a valid standard action.|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Indicator|[Progress bar](indicators_overview.md#progress-bar) - [Barber shop](indicators_overview.md#barber-shop) - [Asynchronous progress bar](indicators_overview.md#asynchronous-progress-bar) - [Ruler](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)|
+[Progress bars](indicators_overview.md#progress-bar) - [Rulers](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)|
 
 
+## Method
+
+A project method name.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|method|text |The name of an existing project method|
+
+#### Objects Supported
+
+[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
+
+## Multi-selectable
+
+Allows the selection of multiple records/options.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|selectionMode|	text|	"multiple", "single", "none"
+
+#### Objects Supported
+
+[Hierarchical List](list_overview.md#overview)
