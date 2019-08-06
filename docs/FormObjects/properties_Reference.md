@@ -1,6 +1,6 @@
 ---
 id: propertiesReference
-title:Reference List
+title: Reference List
 ---
 
 |Property|Description|Possible Values|

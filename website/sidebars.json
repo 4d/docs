@@ -33,6 +33,8 @@
         "ids": ["FormObjects/objectsReference",
 		  "FormObjects/textAndGroupBoxOverview",
   		  "FormObjects/inputOverview",
+		  "FormObjects/listOverview",
+		  "FormObjects/listboxOverview",
 		  "FormObjects/comboBoxOverview",	
 		  "FormObjects/popupMenuDropdownListOverview",
 		  "FormObjects/picturePopupMenuOverview",		  
@@ -43,7 +45,12 @@
 		  "FormObjects/checkboxOverview",
 		  "FormObjects/indicatorsOverview",
 		  "FormObjects/shapesOverview",
-		  "FormObjects/splitterTabControlOverview"
+		  "FormObjects/splitterTabControlOverview",
+		  "FormObjects/pluginAreaOverview",
+		  "FormObjects/subformOverview",
+		  "FormObjects/webAreaOverview",
+		  "FormObjects/writeProAreaOverview",
+		  "FormObjects/viewProAreaOverview"
 		  ]
 		},{
         "type": "subcategory",
