@@ -153,7 +153,7 @@ The Logs folder contains all log files used by the project. Log files are and in
 
 ## userPreferences.*userName* folder
 
-This folder contains user configuration files. You can just ignore this folder. It contains for example:
+This folder contains files that memorize user configurations, e.g. break point positions. You can just ignore this folder. It contains for example:
 
 Contents|Description|Format
 --------|-------|----
@@ -161,6 +161,8 @@ methodPreferences.json|Current user method editor preferences|JSON
 methodWindowPositions.json|Current user window positions for methods|JSON
 formWindowPositions.json|Current user window positions for forms|JSON
 workspace.json|List of opened windows; on macOS, order of tab windows|JSON
-preferencesv15.4DPreferences|User preferences|JSON
+debuggerCatches.json|Caught calls to commands|JSON
+recentTables.json|Ordered list of tables|JSON
+preferencesv15.4DPreferences|User preferences|JSON  
 
 
