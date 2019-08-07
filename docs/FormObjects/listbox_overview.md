@@ -71,3 +71,90 @@ All these characteristics can be handled using the list box, column, header and 
 ## Printing list boxes 
  
 List boxes can be printed in forms in "preview" mode (printing a picture of the list box area) or in "advanced" mode (dynamic printing in variable size). For more information, refer to [Printing list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#250728) in the *4D Language Reference* manual.
+
+## Supported Properties
+
+### List box
+
+[Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)  -  [Background Color](properties_BackgroundAndBorder.md#background-color) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing) - [Data Souce](properties_Object.md#data-source) - [Display Headers](properties_Headers.md#display-headers) - [Display Footers](properties_Footers.md#display-footers) - [Draggable](properties_Action.md#droppable) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font_color) - [Height (list box)](properties_CoordinatesAndSizing.md#height) - [Height (headers)](properties_Headers.md#height) - [Height (footers)](properties_Footers.md#height) - [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) - [Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) -  [Method](properties_Action.md#method) - [Movable Rows](properties_Action.md#movable-rows) - [Number of Columns](properties_ListBox.md#number-of-columns) - [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns) - [Number of Static Columns](properties_ListBox.md#number-of-static-columns) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Control Array](properties_ListBox.md#row-control-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Height](properties_CoordinatesAndSizing.md#row-height) - [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array) - [Row Style Array](properties_Text.md#row-style-array) - 
+[Selection Mode](properties_ListBox.md#selection-mode) - [Single-Click Edit](properties_Entry.md#single-click-edit) - [Sortable](properties_Action.md#sortable) - [Standard action](properties_Action.md#standard-action) - 
+[Top](properties_CoordinatesAndSizing.md#top) - [Transparent](properties_BackgroundAndBorder.md#transparent)  - 
+[Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - 
+[Vertical Line Color](properties_Gridlines.md#vertical-line-color) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - 
+
+### List box column
+
+Object Name
+Variable or Expression
+Expression Type
+Default Values
+Choice List
+Width
+Automatic Row Height
+Minimum Width
+Maximum Width
+Resizable
+Enterable
+Entry Filter
+Required List
+Excluded List
+Alpha Format
+Invisible
+Wordwrap
+Truncate with ellipsis
+Background Color
+Alternate Background Color
+Row Background Color Array
+Font
+Bold
+Italic
+Underline
+Row Style Array
+Font Color
+Row Font Color Array
+Horizontal Alignment
+Vertical Alignment
+Multi-style
+Method
+
+
+### List box header
+
+Object Name
+Variable or Expression
+Title
+Pathname
+Icon Location
+Width
+Font
+Bold
+Italic
+Underline
+Font Color
+Horizontal Alignment
+Vertical Alignment
+Help Tip
+
+
+### List box footer
+
+Object Name
+Variable or Expression
+Expression Type
+Variable Calculation
+Width
+Alpha Format
+Wordwrap
+Truncate with ellipsis
+Background Color
+Font
+Bold
+Italic
+Underline
+Font Color
+Horizontal Alignment
+Vertical Alignment
+Help Tip
+
+
+

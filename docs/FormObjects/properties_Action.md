@@ -3,23 +3,6 @@ id: propertiesAction
 title:Action 
 ---
 
-## Standard action
-Typical activities to be performed by active objects have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|action|string |The name of a valid standard action.|
-
-
-#### Objects Supported
-
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - 
-[Check Box](checkBox_overview.md) -  [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
-
-
 
 ## Droppable
 
@@ -92,16 +75,19 @@ When this option is check, the drop of external objects into 4D forms is refused
 |dragging|text |"none", "custom", "automatic" (excluding list, list box)|
 |dropping|text |"none", "custom", "automatic" (excluding list, list box)|
 
-
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+
+
+
+
+
 
 
 
 ## Execute object method
 When this option is checked, the object method is executed with the `On Data Change` event at the same moment the user changes the value of the indicator. By default, the method is executed after the modification.
-
 
 #### JSON Grammar
 
@@ -109,10 +95,14 @@ When this option is checked, the object method is executed with the `On Data Cha
 |---|---|---|
 |action|string |The name of a valid standard action.|
 
-
 #### Objects Supported
 
 [Progress bars](indicators_overview.md#progress-bar) - [Rulers](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)|
+
+
+
+
+
 
 
 ## Method
@@ -127,7 +117,31 @@ A project method name.
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
+[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview)
+
+
+
+
+
+## Movable Rows
+
+Authorizes the movement of rows during execution.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|movableRows|boolean |"true", "false"|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
 
 ## Multi-selectable
 
@@ -142,3 +156,39 @@ Allows the selection of multiple records/options.
 #### Objects Supported
 
 [Hierarchical List](list_overview.md#overview)
+
+
+
+
+
+## Sortable
+
+Allows sorting column data by clicking the header.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|sortable| boolean|"true", "false"|
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Standard action
+Typical activities to be performed by active objects have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|action|string |The name of a valid standard action.|
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) -  [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [List Box](listbox_overview.md#overview)

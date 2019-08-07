@@ -11,14 +11,11 @@ A picture of a [Picture Button](pictureButton_overview.md) or [Picture Pop-up Me
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|icon|picture |<li>absolute path <li>relative path|
+|icon|picture |absolute path or relative path|
 
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Picture Button|[Picture](pictureButton_overview.md)|
-|Picture Pop-up Menu|[Picture Pop-up Menu](picturePopupMenu_overview.md)|
+[Picture](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)|
 
 

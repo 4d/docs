@@ -3,6 +3,24 @@ id: propertiesWebArea
 title: Web Area 
 ---
 
+## Progression
+
+A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|progressSource| string|minimum:0|
+
+#### Objects Supported 
+
+[Web Area](webArea_overview.md#overview)
+
+
+
+
+
 ## URL
 
 A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
@@ -23,7 +41,6 @@ If the URL variable does not contain a protocol (http, mailto, file, etc.), the 
 
 When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
-
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
@@ -36,20 +53,8 @@ When the Web area is not displayed in the form (when it is located on another pa
 
 
 
-## Progression
-
-A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 
 
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|progressSource| string|minimum:0|
-
-#### Objects Supported 
-
-[Web Area](webArea_overview.md#overview)
 
 
 ## Use embedded Web rendering engine
@@ -67,7 +72,6 @@ This means that you automatically benefit from the latest advances in Web render
 		*	`WA enable JavaScript`
 		*	`WA enable plugins`
 	*	When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) or one assignment to the URL variable associated to the area.
-
 
 #### JSON Grammar
 

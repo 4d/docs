@@ -57,9 +57,14 @@
         "label": "Properties",
         "ids": ["FormObjects/propertiesReference",
 			"FormObjects/propertiesObject", 
+			"FormObjects/propertiesListBox",
+			"FormObjects/propertiesHeaders",
+			"FormObjects/propertiesFooters",
+			"FormObjects/propertiesGridlines",
+			"FormObjects/propertiesHierarchy",
+			"FormObjects/propertiesDataSource",
 			"FormObjects/propertiesSubform",
 			"FormObjects/propertiesPicture",
-			"FormObjects/propertiesDataSource",
 			"FormObjects/propertiesTextAndPicture",
 			"FormObjects/propertiesCrop",
 			"FormObjects/propertiesAnimation",
@@ -76,7 +81,7 @@
 			"FormObjects/propertiesAction",
 			"FormObjects/propertiesWebArea"
 			]
-		}
+		} 
 	]	
 }
 }

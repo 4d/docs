@@ -3,6 +3,29 @@ id: propertiesEntry
 title:Entry 
 ---
 
+## Context Menu
+
+Allows the user access to a standard context menu in the area when the form is executed.
+
+The contents of the menu are set by the rendering engine of the platform.
+
+>It is possible to control access to the context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|contextMenu|string	|"automatic", "none"|
+
+#### Objects Supported
+
+
+
+
+
+
+
+
 ## Enterable
 
 The Enterable attribute indicates whether users can enter values into the object. 
@@ -17,81 +40,15 @@ All active objects are enterable by default. If you want to make a field or an o
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|---|:---:|---|
+|---|---|---|
 |enterable|boolean |"true", "false"|
 
-
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Progress Bar](indicators_overview.md#progress-bar)
-
-
-## Focusable
-
-This property can be set in the “Entry” theme of the Property List for active objects (whether enterable or not) as well as for non-enterable fields.
-
-When the **Focusable** property is selected for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the *Hide focus rectangle* option has also been selected.
-
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
-<p>
-<p>
-
-* ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
-
-
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
-
-#### Hide focus rectangle  
-During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the **Tab** key or a single click). You can hide this rectangle by checking the **Hide focus rectangle** option. Hiding the focus rectangle may be useful in the case of specific interfaces.
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|:---:|---|
-|focusable|boolean |"true", "false"|
-
-
-#### Objects Supported
-
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) 
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Progress Bar](indicators_overview.md#progress-bar) - [Hierarchical List](list_overview.md#overview)
 
 
 
-## Shortcut
-
-This property allows setting special meaning keys (keyboard shortcuts) for buttons and checkboxes. They allow the user to activate the button or select the check box using the keyboard instead of having to use the mouse. These can include the:<br> <ul><li>key to be used,</li> <li>operating system (Windos or macOS),</li> <li>keys per operating system</li></ul>
-
-You configure this option by clicking the [...] button in the Shortcuts property in the Property List.
-
-![](assets/en/FormObjects/property_shortcut.png)
-
-Type the keyboard shortcut. For example, if you want to use **Ctrl+H**, hold down the **Ctrl** key and press **H**. The letter H will then appear in the Associated Key area and the check box below the **Ctrl** key will be checked. You are not required to use modifier keys. You can use any key alone as the shortcut, although this is not recommended in most cases. If you like, you can manually modify the selection of modifier keys by selecting or deselecting any of the modifier key check boxes.
-
-To start over again, click **Clear**. When you have finished, click **OK**.
-
-The Property List displays the keyboard shortcut that was assigned to the object. If you want to change the shortcut later, simply open the Shortcuts dialog box and type the key combination you want to use.
-
->You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
-
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html).
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|:---|:---:|:---|
-|shortcutAccel	|boolean	|"true", "false"|
-|shortcutAlt	|boolean	|"true", "false"|
-|shortcutCommand	|boolean	|"true", "false"|
-|shortcutControl	|boolean	|"true", "false"|
-|shortcutKey	|string	|"[F1]" -> "[F15]", "[Return]",  "[Enter]",  "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]",  "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
-|shortcutShift	|boolean	|"true", "false"|
-
-
-#### Objects Supported
-
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
-[Radio Button](radio_overview.md#overivew) - [Check Box](checkbox_overview.md#overview) - [Disclosure Button](checkbox_overview.md#disclosure)
 
 
 ## Entry Filter
@@ -180,9 +137,48 @@ You can use display formats on input forms, output forms, and Quick reports. For
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview)
 
-<hr>
+
+
+
+
+
+
+
+## Focusable
+
+This property can be set in the “Entry” theme of the Property List for active objects (whether enterable or not) as well as for non-enterable fields.
+
+When the **Focusable** property is selected for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the *Hide focus rectangle* option has also been selected.
+
+* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
+<p>
+<p>
+
+* ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
+
+
+When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+
+#### Hide focus rectangle  
+During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the **Tab** key or a single click). You can hide this rectangle by checking the **Hide focus rectangle** option. Hiding the focus rectangle may be useful in the case of specific interfaces.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|focusable|boolean |"true", "false"|
+
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+
+
+
+
+
 
 ## Placeholder
 
@@ -215,25 +211,71 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 |---|---|---|
 |placeholder	|string	|Text to be displayed (grayed out) when the value for [Data Source](properties_DataSource.md) is empty.|
 
-
 #### Objects Supported
 
 [Combo Box](comboBox_overview.md)
 
-## Context Menu
 
-Allows the user access to a standard context menu in the area when the form is executed.
 
-The contents of the menu are set by the rendering engine of the platform.
 
->It is possible to control access to the context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+
+
+## Shortcut
+
+This property allows setting special meaning keys (keyboard shortcuts) for buttons and checkboxes. They allow the user to activate the button or select the check box using the keyboard instead of having to use the mouse. These can include the:<br> <ul><li>key to be used,</li> <li>operating system (Windos or macOS),</li> <li>keys per operating system</li></ul>
+
+You configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+
+![](assets/en/FormObjects/property_shortcut.png)
+
+Type the keyboard shortcut. For example, if you want to use **Ctrl+H**, hold down the **Ctrl** key and press **H**. The letter H will then appear in the Associated Key area and the check box below the **Ctrl** key will be checked. You are not required to use modifier keys. You can use any key alone as the shortcut, although this is not recommended in most cases. If you like, you can manually modify the selection of modifier keys by selecting or deselecting any of the modifier key check boxes.
+
+To start over again, click **Clear**. When you have finished, click **OK**.
+
+The Property List displays the keyboard shortcut that was assigned to the object. If you want to change the shortcut later, simply open the Shortcuts dialog box and type the key combination you want to use.
+
+>You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+
+To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html).
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|contextMenu|string	|"automatic", "none"|
-
+|shortcutAccel	|boolean	|"true", "false"|
+|shortcutAlt	|boolean	|"true", "false"|
+|shortcutCommand	|boolean	|"true", "false"|
+|shortcutControl	|boolean	|"true", "false"|
+|shortcutKey	|string	|"[F1]" -> "[F15]", "[Return]",  "[Enter]",  "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]",  "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|shortcutShift	|boolean	|"true", "false"|
 
 #### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
+[Radio Button](radio_overview.md#overivew) - [Check Box](checkbox_overview.md#overview) - [Disclosure Button](checkbox_overview.md#disclosure)
+
+
+
+
+
+
+
+## Single-Click Edit
+
+Enables direct passage to edit mode.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|singleClickEdit|boolean	|"true", "false"|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
 

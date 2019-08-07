@@ -4,7 +4,7 @@ title: Combo Boxes
 ---
 ## Overview
 
-A combo box is similar to a drop-down list, except that it accepts text entered from the keyboard and has two specific options. You initialize a combo box in exactly the same way as a drop-down list (see [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_Overview.md)).
+A combo box is similar to a drop-down list, except that it accepts text entered from the keyboard and has two specific options. You initialize a combo box in exactly the same way as a drop-down list (see [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview.md#overview)).
 
 If the user enters text into the combo box, it fills the 0th element of the array. In other respects, you treat a combo box as an enterable area that uses its array or a choice list as the set of default values.
 
