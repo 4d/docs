@@ -158,15 +158,19 @@ const TryOut = props => (
 );
 
 const Description = props => (
-  <Block background="light" layout="twoColumn">
+  <Block background="light" layout="threeColumn">
     {[
       {
 
-	   content: '[4D Language Concepts](Concepts/about.html)<br>[Projects in 4D (BETA)](Project/overview.html)<br>[Maintenance and Security Center](MSC/overview.html)<br>[Menus](Menus/overview.html)<br><br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
 	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-        title: 'Reference Guides',
+       
+      },{
+
+	   content: '[4D Language Concepts](Concepts/about.html)',
+
+        title: 'Getting Started',
       }
 
 
@@ -175,15 +179,37 @@ const Description = props => (
 
 );
 
+const Description2 = props => (
+  <Block background="white" layout="threeColumn">
+    {[
+ {
+
+	   image: imgUrl('manuals.png'),
+		imageAlign: 'left',
+      },
+	       {
+
+	     content: '[Projects in 4D (BETA)](Project/overview.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
+
+        title: 'Development',
+      }
+
+
+    ]}
+  </Block>
+
+);
 
 const Classic = props => (
-  <Block background="white" layout="twoColumn">
+  <Block background="light" layout="threeColumn">
     {[
      {
-        content: '[doc.4d.com](https://doc.4d.com/)',
-        image: imgUrl('classic.png'),
+        image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-        title: 'Doc Center',
+      },
+	  {
+        content: '[Maintenance and Security Center](MSC/overview.html)',
+        title: 'Administration',
       },
 
 
@@ -233,6 +259,7 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Description />
+		  <Description2 />
 		  <Classic />
         </div>
       </div>
