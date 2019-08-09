@@ -92,4 +92,4 @@ If you want the data file to be open automatically after the project is moved to
 
 1. Rename your data file "data.4dd".
 2. Create a folder named "Data" and move the *data.4dd* file within that folder
-2. Store the *Data* folder at the same level as the Project folder.
+3. Store the *Data* folder at the same level as the Project folder.

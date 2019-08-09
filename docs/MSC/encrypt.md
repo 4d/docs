@@ -18,14 +18,14 @@ A new folder is created each time you perform an encryption/decryption operation
 Encrypting your data for the first time using the MSC requires the following steps:
 
 1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section. 
-1. Open the Encrypt page of the MSC.
+2. Open the Encrypt page of the MSC.
 If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
 ![](assets/en/MSC/MSC_encrypt1.png)
 Otherwise, the following message is displayed:
 ![](assets/en/MSC/MSC_encrypt2.png)
 This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
 **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
-1. Click on the Encrypt picture button.  
+3. Click on the Encrypt picture button.  
 ![](assets/en/MSC/MSC_encrypt3.png)  
 You will be prompted to enter a passphrase for your data file:
 ![](assets/en/MSC/MSC_encrypt4.png)
@@ -33,7 +33,7 @@ The passphrase is used to generate the data encryption key. A passphrase is a mo
 The security level indicator can help you evaluate the strength of your passphrase:
 ![](assets/en/MSC/MSC_encrypt5.png)
 (deep green is the highest level)
-1. Enter to confirm your secured passphrase. 
+4. Enter to confirm your secured passphrase. 
 
 The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode. 
 
@@ -69,7 +69,7 @@ In all cases, if valid information is provided, 4D restarts in maintenance mode 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status. 
 
 1. Click on **Re-encrypt data with the current encryption key**.
-1. Enter the current data encryption key.
+2. Enter the current data encryption key.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed:
 ![](assets/en/MSC/MSC_encrypt8.png)
@@ -79,7 +79,7 @@ This operation is useful when you need to change the current encryption data key
 
 1. Click on **Change your passphrase and re-encrypt data**.
 2. Enter the current data encryption key.
-1. Enter the new passphrase (for added security, you are prompted to enter it twice):
+3. Enter the new passphrase (for added security, you are prompted to enter it twice):
 ![](assets/en/MSC/MSC_encrypt9.png)
 The data file is encrypted with the new key and the confirmation message is displayed. 
 ![](assets/en/MSC/MSC_encrypt8.png)
@@ -88,7 +88,7 @@ The data file is encrypted with the new key and the confirmation message is disp
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
 1. Click on **Decrypt all data**.
-1. Enter the current data encryption key (see Providing the current data encryption key).
+2. Enter the current data encryption key (see Providing the current data encryption key).
 
 The data file is fully decrypted and a confirmation message is displayed:
 ![](assets/en/MSC/MSC_encrypt10.png)

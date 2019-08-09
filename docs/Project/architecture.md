@@ -146,9 +146,21 @@ The Logs folder contains all log files used by the project. Log files are and in
 - web server requests,
 - data verification and repair,
 - structure verification and repair,
-- backup/restore activities journal,
+- backup/restore activities journal (*Backup Journal[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
+
+
+## Settings folder
+
+This folder contains **user settings files** used for database administration. File are added to the folder when necessary. 
+
+> If a data settings file exists in the data folder, it takes priority over user settings file. 
+
+Contents|Description|Format|
+----|----|---|
+directory.json|Description of 4D groups and users for the database, as well as their access rights|JSON|
+Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 
 
 ## userPreferences.*userName* folder

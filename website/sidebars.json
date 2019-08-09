@@ -25,6 +25,7 @@
 	"Project/deploying"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 
-	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]
+	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
+	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"]
   }
 }
