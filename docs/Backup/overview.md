@@ -11,7 +11,7 @@ Backups can be started manually or automatically at regular intervals without an
 
 Databases can be restored automatically when a damaged database is opened. 
 
-Also, the integrated backup module can take advantage of the journal file (database log file). This file keeps a record of all operations performed on the data and also ensures total security between two backups. In case of problems with a database in use, any operations missing in the data file are automatically reintegrated the next time the database is opened. You can view the journal file contents at any time.
+Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). This file keeps a record of all operations performed on the data and also ensures total security between two backups. In case of problems with a database in use, any operations missing in the data file are automatically reintegrated the next time the database is opened. You can view the journal file contents at any time.
 
 > You can also implement alternative solutions for replicating and synchronizing data in order to maintain identical versions of databases for backup purposes. These solutions can be based on the following mechanisms and technologies:  
 > - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)  

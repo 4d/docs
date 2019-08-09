@@ -22,7 +22,7 @@ As such, each operation performed by a user causes two simultaneous actions: the
 - Deleting of records,
 - Creating and closing of transactions. 
 
-For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page. 
+For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page of the MSC. 
 
 4D manages the log file. It takes into account all operations that affect the data file equally, regardless of any manipulations performed by a user, a 4D method, the SQL engine, plug-ins, or from a Web browser or a mobile applicaton.
 
@@ -51,16 +51,16 @@ The program displays a standard open/new file dialog box. By default, the log fi
 2. Keep the default name or rename it, and then select the file location.
 If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
 
-1. Click **Save**.
+3. Click **Save**.
 The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
-1. Validate the Database Settings dialog box.
+4. Validate the Database Settings dialog box.
 
 In order for you to be able to create a log file directly, the database must be in one of the following situations:
 
 - The data file is blank,
 - You just performed a backup of the database and no changes have yet been made to the data.
-- 
+
 In all other cases, when you validate the Database Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database. This precaution is indispensable because, in order to restore a database after any incidents, you will need a copy of the database into which the operations recorded in the log file will be integrated. 
 
 Without having to do anything else, all operations performed on the data are logged in this file and it will be used in the future when the database is opened. 
@@ -73,7 +73,7 @@ If you would like to stop logging operations to the current log file, simply des
 
 4D then displays an alert message to remind you that this action prevents you from taking advantage of the security that the log file provides:
 
-![](assets/en/Backup/backup05.png)
+![](assets/en/Backup/backup06.png)
 
 If you click **Stop**, the current log file is immediately closed (the Database Settings dialog box does not need to be validated afterwards). 
 
