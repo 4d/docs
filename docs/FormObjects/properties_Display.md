@@ -35,7 +35,8 @@ The field actually contains “proportion.” 4D accepts and stores the entire e
 
 #### Objects Supported
 
-[Pop-up Menu/Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Pop-up Menu/Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+
 
 
 
@@ -149,6 +150,9 @@ The Text type does not have specific display formats. Any existing custom format
 
 
 
+
+
+
 ## Invisible
 
 Allows hiding a column in the Application environment. 
@@ -169,6 +173,10 @@ In the Design environment, you can choose to display or hide the invisible colum
 
 
 
+
+
+
+
 ## Not rendered
 
 The object is not drawn on the form.
@@ -182,6 +190,7 @@ The object is not drawn on the form.
 #### Objects Supported
 
 [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Pop-up Menu/Drop-down List](popupMenuDropdownList_overview.md) 
+
 
 
 
@@ -454,6 +463,8 @@ In this case as well, the [Title](#title) property is also available so that the
 
 
 
+
+
 ## Time Format
 
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen. 
@@ -485,6 +496,8 @@ The table below shows the Time field display formats and gives examples:
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
+
+
 
 
 
@@ -541,7 +554,8 @@ This option is available for columns with any type of contents, except pictures 
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+
 
 
 
@@ -596,7 +610,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
 
 
