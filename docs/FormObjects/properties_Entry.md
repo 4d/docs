@@ -5,6 +5,8 @@ title:Entry
 
 ## Context Menu
 
+>Used with the [Multi-style](properties_Text.md#multi-style) property.
+
 Allows the user access to a standard context menu in the area when the form is executed.
 
 The contents of the menu are set by the rendering engine of the platform.
@@ -19,7 +21,7 @@ The contents of the menu are set by the rendering engine of the platform.
 
 #### Objects Supported
 
-
+[List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -34,6 +36,8 @@ A field from a related table may not be enterable if you deselected the Enterabl
 
 All active objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can deselect the Enterable check box for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
+When this property is disabled, any pop-up menus associated with a list box column via a list are disabled. 
+
 >* The contents of the Property List are contextual. When the Enterable attribute for a field or an object is deselected in the Property List, properties that are related to entry control (Mandatory, Tabable, Entry filter and so on) disappear from the list.
 * You can also set the Display only property for a field in the Structure editor (see [UNREGISTER CLIENT](https://doc.4d.com/4Dv17R5/4D/17-R5/UNREGISTER-CLIENT.301-4128079.en.html). In this case, the Enterable option does not appear in the Property List for this field (see below).
 
@@ -45,13 +49,15 @@ All active objects are enterable by default. If you want to make a field or an o
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Progress Bar](indicators_overview.md#progress-bar) - [Hierarchical List](list_overview.md#overview)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Progress Bar](indicators_overview.md#progress-bar) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 
 
 ## Entry Filter
+
+>This property is not accessible if the [Enterable](#enterable) property is not selected.
 
 An entry filter controls exactly what the user can type during data entry. Unlike the data entry controls discussed earlier in this section, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
 
@@ -137,7 +143,7 @@ You can use display formats on input forms, output forms, and Quick reports. For
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -263,6 +269,10 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 ## Single-Click Edit
 
 Enables direct passage to edit mode.
+
+When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+
+When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents. 
 
 #### JSON Grammar
 

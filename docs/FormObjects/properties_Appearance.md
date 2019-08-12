@@ -47,8 +47,14 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 
 ## Hide selection highlight
+`Selection type list boxes`
 
-This property is added for selection type list boxes only. It is used to specify hiding highlighted records in the list box.
+This property is used to disable the selection highlight in list boxes.
+
+When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to define their appearance programmatically. 
+
+>By default, this option is not enabled.
+
 
 #### JSON Grammar
 

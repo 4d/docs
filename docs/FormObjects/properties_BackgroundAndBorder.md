@@ -4,7 +4,7 @@ title: Background and Border
 ---
 
 ## Alternate Background Color
-Allows setting a different background color for odd-numbered rows/columns in a list box.
+Allows setting a different background color for odd-numbered rows/columns in a list box. By default, Automatic is selected: the column uses the alternate background color set at the list box level.
 
 #### JSON Grammar
 
@@ -20,7 +20,9 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ## Background Color / Fill Color
 
-Defines the background color of an object.
+Defines the background color of an object. 
+
+In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
 #### JSON Grammar
 
@@ -31,7 +33,33 @@ Defines the background color of an object.
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Rectangle](shapes_overview.md#rectangle) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+
+## Background Color Expression
+
+`Selection and collection type list boxes`
+
+The name of an expression or variable (array variables cannot be used) to apply a custom background color to each row of the list box.
+
+The expression or variable will be evaluated for each row displayed. You can use the Formula editor to specify an expression. To do this, click on the [...] button which appears when you select the area. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.  
+
+>With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|rowFillSource|string|The name of a an expression.|
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
 
 
 
@@ -58,7 +86,13 @@ Allows setting a standard style for the object border.
 
 ## Hide extra blank rows
 
-Deactivates the visibility of extra, empty rows.	
+Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+
+![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
+
+You can remove these empty rows by checking this option. The bottom of the list box object is then left blank:
+
+![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
 #### JSON Grammar
 
@@ -93,6 +127,7 @@ Designates the color of the object's lines.
 
 
 
+
 ## Line Width
 
 Designates the thickness of a line.
@@ -115,16 +150,20 @@ Designates the thickness of a line.
 
 ## Row Background Color Array
 
+`Array type list boxes`
+
 The name of an array or expression to apply a custom background color to each row of the list box.
+
+The name of a Longint array must be entered. Each element of this array corresponds to a cell of the column, so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level (see Inheritance), pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowFillSource|string|RGB color values|
+|rowFillSource|string|The name of a an array.|
 
 #### Objects Supported
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 

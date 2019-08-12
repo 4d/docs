@@ -71,6 +71,26 @@ This parameter is useful, for example, when the background picture contains bord
 
 
 
+
+## Icon Location
+
+Designates the placement of an icon in relation to the form object.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|:---:|:---:|
+|iconPlacement|string|"none", "left", "right"|
+
+#### Objects Supported
+
+[List Box Header](listbox_overview.md#list-box-headers)
+
+
+
+
+
+
 ## Icon Offset
 
 This property allows setting a custom offset value in pixels, which will be used when the button is clicked
@@ -126,7 +146,8 @@ A picture of a button can come from four different sources: Variable, Resource F
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
+
 
 
 

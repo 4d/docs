@@ -5,6 +5,26 @@ title:Resizing Options
 
 ## Column Auto-Resizing
 
+When this property is selected, list box columns are automatically resized along with the list box, within the limits of the minimum and maximum widths defined. 
+ 
+When this property is not selected, only the rightmost column of the list box is resized, even if its width exceeds the maximum value defined.
+
+### How column auto-resizing works  
+
+*	As the list box width increases, its columns are enlarged, one by one, starting from right to left, until each reaches its maximum width. **Note**: All columns with the Resizable property checked are resized. (This property is set individually for each column.)
+ 
+*	The same procedure applies when the list box width decreases, but in reverse order (*i.e.*, columns are resized starting from left to right). When each column has reached its minimum width, the horizontal scroll bar becomes active again.
+ 
+*	Columns are resized only when the horizontal scroll bar is not "active"; *i.e.*, all columns are fully visible in the list box at its current size. **Note**: If the horizontal scroll bar is hidden, this does not alter its state: a scroll bar may still be active, even though it is not visible.
+ 
+*	After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space.
+
+![](assets/en/FormObjects/property_columnAutoResizing.png)
+
+>*	If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
+>*	The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
+>*	The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
+>*	If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
 
 
 #### JSON Grammar
@@ -73,6 +93,25 @@ This property is checked by default for new databases.
 #### Objects Supported
 
 [Splitter](splitterTabControlOverview#splitters)
+
+
+
+
+
+## Resizable
+
+Designates if the size of an object can be modified by the user.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---|:---:|:---:|
+|resizable|boolean|"true", "false"|
+
+#### Objects Supported
+
+[List Box Column](listbox_overview.md#list-box-columns)
+
 
 
 

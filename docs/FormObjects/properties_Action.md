@@ -38,6 +38,8 @@ The following figure shows the Property List window with the Droppable and Dragg
 
 ![](assets/en/FormObjects/property_draggableDroppable_propertyList.png)
 
+>For list boxes: Only list box rows are concerned; it is not possible to drag and drop columns (however, it is still possible to move columns inside the same list box). 
+
 ### Automatic Drag and Drop
 
 Text objects (fields, variables, combo boxes and list boxes) as well as picture objects allow automatic drag and drop. Automatic drag and drop copies or moves text or pictures directly from one form area to another using simple point-and-click operations. It can be used in the same 4D area, between two 4D areas, or between 4D and another application (for example, WordPad®). 
@@ -107,7 +109,7 @@ When this option is checked, the object method is executed with the `On Data Cha
 
 ## Method
 
-A project method name.
+An object's method.
 
 #### JSON Grammar
 
@@ -117,15 +119,16 @@ A project method name.
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 
 
 ## Movable Rows
+`Array type list boxes`
 
-Authorizes the movement of rows during execution.
+Authorizes the movement of rows during execution. This option is checked by default. It is not available for selection type list boxes nor for list boxes in hierarchical mode ([Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) option selected). 
 
 #### JSON Grammar
 
@@ -163,7 +166,13 @@ Allows the selection of multiple records/options.
 
 ## Sortable
 
-Allows sorting column data by clicking the header.
+Allows sorting column data by clicking the header. This option is selected by default.  Picture type arrays (columns) cannot be sorted using this mechanism.
+ 
+In list boxes based on a selection of records, the standard sort function is available only:
+*	When the data source is *Current Selection*,
+*	With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+ 
+In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
 
 #### JSON Grammar
 
