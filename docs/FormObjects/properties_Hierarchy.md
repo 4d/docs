@@ -26,11 +26,15 @@ This principle is not applied when only one variable is specified in the hierarc
 >If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see [Hierarchical list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-list-boxes.300-4354816.en.html)), the unnecessary columns are automatically removed from the list box.
 
 
+
 #### JSON Grammar
+
+A 4D variable, field name, or an arbitrary complex language expression to specify the source of the data.
+
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| | | |
+|datasource|string, or string array for hierarchical list box column | A 4D variable, field name, or an arbitrary complex language expression.|
 
 #### Objects Supported
 

@@ -17,7 +17,7 @@ This property allows you to set the picture that will be drawn in the background
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom)| 
+[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -37,7 +37,7 @@ This property allows setting the general appearance of the button. The style als
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) 
+[Regular Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) -[Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -61,11 +61,11 @@ This parameter is useful, for example, when the background picture contains bord
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |rightMargin|integer |minimum: 0|
-
+|customBorderX|integer|For use with "custom" objects. minimum: 0
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom)
+[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -105,7 +105,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom)| 
+[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -127,7 +127,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -146,7 +146,7 @@ A picture of a button can come from four different sources: Variable, Resource F
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
 
 
 
@@ -180,7 +180,7 @@ Here are the results using the various options for this property:
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -204,10 +204,11 @@ This parameter is useful, for example, when the background picture contains bord
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
 |bottomMargin|integer |minimum: 0|
+|customBorderY|integer|For use with "custom" objects. minimum: 0|
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom)| 
+[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 

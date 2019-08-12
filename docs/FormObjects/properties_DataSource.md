@@ -143,7 +143,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| |  |A list of default values|
+|values |string  |A list of default values|
 
 #### Objects Supported
 

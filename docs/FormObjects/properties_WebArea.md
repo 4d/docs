@@ -11,7 +11,7 @@ A value between 0 and 100, representing the page load completion percentage in t
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|progressSource| string|minimum:0|
+|progressSource| string|minimum: 0|
 
 #### Objects Supported 
 

@@ -47,7 +47,7 @@ If you want a button to perform an action that's not available as a standard act
 
 Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. A great number of variations can be obtained by combining these properties / behaviors. 
 
-With the exeception of the available properties, many button objects are *structurally* identical. The difference is in the processing of their associated variables. 
+With the exception of the available properties, many button objects are *structurally* identical. The difference is in the processing of their associated variables. 
 
 4D provides buttons in the following predefined styles: 
 

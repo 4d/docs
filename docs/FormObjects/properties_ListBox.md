@@ -161,13 +161,14 @@ Number of columns that cannot be moved during execution.
 
 ## Row Control Array
 
+A 4D array defining the list box rows.
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| | ||
+|rowControlSource |string |Array|
 
 #### Objects Supported
 

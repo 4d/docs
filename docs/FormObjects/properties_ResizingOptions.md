@@ -31,7 +31,7 @@ When this property is not selected, only the rightmost column of the list box is
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| | | |
+|resizingMode|string | "rightToLeft", "legacy"|
 
 #### Objects Supported
 

@@ -16,12 +16,15 @@ title: Reference List
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
 |[columnCount](properties_Crop.md#columns) (picture button, button grid, picture pop-up) <br> [columnCount](properties_ListBox.md#number-of-columns) (list box)|Sets the number of columns.|minimum: 1|
 |[contextMenu](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|
+|[continuousExecution](properties_Action.md#execute-object-method)|Designates whether or not to run the method of an object while the user is tracking the control. |"true", "false"|
 |[controlType](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
 |[currentItemSource](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[currentItemPositionSource](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
 |[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Absolute or relative path. Must be used in conjunction with the style property with the "custom" option.| 
+|[customBorderX](properties_TextAndPicture.md#horizontal-margin)|Sets the size (in pixels) of the internal horizontal margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
+|[customBorderY](properties_TextAndPicture.md#vertical-margin)|Sets the size (in pixels) of the internal vertical margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customOffset](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
-|[dataSource](properties_Object.md#variable-or-expression) (objects)<br>[dataSource](properties_Subform.md#source) (subforms)<br>[dataSource](properties_Object.md#data-source) (list box) <br> [dataSource](properties_DataSource.md#expression) (list box column)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
+|[dataSource](properties_Object.md#variable-or-expression) (objects)<br>[dataSource](properties_Subform.md#source) (subforms)<br>[dataSource](properties_Object.md#data-source) (array list box) <br> [dataSource](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br> [dataSource](properties_DataSource.md#expression) (list box column) <br> [dataSource](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
 |[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|"true", "false"|
@@ -72,10 +75,12 @@ title: Reference List
 |[radioGroup](properties_Object.md#radio-group)|Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.|	Radio group name|
 |[requiredList](properties_RangeOfValues.md#required-list)|Allows setting a list where only certain values can be inserted. |A list of mandatory values.|
 |[resizable](properties_ResizingOptions.md#resizable)|Designates if the size of an object can be modified by the user.|"true", "false"|
+|[resizingMode](properties_ResizingOptions.md#column-auto-resizing)|Specifies if a list box column should be automatically resized | "rightToLeft", "legacy"|
 |[right](properties_CoordinatesAndSizing.md#right) (objects)<br>[right](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object on the right.|minimum: 0|
 |[rightMargin](properties_TextAndPicture.md#horizontal-margin)|Horizontal margin value (in pixels). |minimum: 0|
-|[rowFillSource](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br>[rowFillSource](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
+|[rowControlSource](properties_Listbox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
+|[rowFillSource](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br>[rowFillSource](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
 |[rowHeight](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default)|
 |[rowHeightAuto](properties_CoordinatesAndSizing.md#automatic-row-height)|boolean |"true", "false"|
 |[rowHeightAutoMax](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
@@ -122,6 +127,7 @@ title: Reference List
 |[top](properties_CoordinatesAndSizing.md#top) (objects)<br>[top](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object at the top (centered).|minimum: 0|
 |[urlSource](properties_WebArea.md#url)|Designates the the URL loaded or being loading by the associated Web area. |A URL.|
 |[useLastFrameAsDisabled](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|"true", "false"|
+|[values](properties_DataSource.md#default-values) |Default value to be entered in a field or enterable object. |A list of default values|
 |[variableCalculation](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[verticalAlign](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[verticalLineStroke](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|

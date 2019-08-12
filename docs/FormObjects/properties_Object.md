@@ -21,7 +21,7 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| |string|Name of a collection or entity selection.|
+|dataSource |string|Name of a collection or entity selection.|
 
 #### Objects Supported
 

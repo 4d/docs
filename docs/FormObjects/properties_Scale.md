@@ -5,15 +5,7 @@ title: Scale
 
 ## Barber shop
 
-
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|| ||
-
+This property is displayed when the progress indicator does not have a minimum or maximum scale defined.
 
 #### Objects Supported
 

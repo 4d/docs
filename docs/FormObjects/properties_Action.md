@@ -95,11 +95,11 @@ When this option is checked, the object method is executed with the `On Data Cha
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|action|string |The name of a valid standard action.|
+|continuousExecution|boolean |"true", "false"|
 
 #### Objects Supported
 
-[Progress bars](indicators_overview.md#progress-bar) - [Rulers](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)|
+[Progress bars](indicators_overview.md#progress-bar) - [Rulers](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)
 
 
 
@@ -119,7 +119,7 @@ An object's method.
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview)  - [Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 

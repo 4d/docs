@@ -107,5 +107,5 @@ The key features of 4D Write Pro are:
 
 In addition to adding objects to your forms, you can also modify their properties (*e.g.*, size, position, label, etc.). The properties available depend on the object. 
 
-There are specific properties covered in the descriptions for each type of object as well as basic generic properties such as data entry control or display formats that are described in the **Properties** chapter.
+There are specific properties covered in the descriptions for each type of object as well as basic generic properties such as data entry control or display formats that are described in the **Property Themes** chapter.
 

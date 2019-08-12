@@ -552,6 +552,7 @@ This option is available for columns with any type of contents, except pictures 
 |---|---|---|
 |truncateMode | string|"withEllipsis", "none" |
 
+
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
