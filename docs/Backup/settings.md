@@ -9,6 +9,8 @@ Backup settings are defined through three pages in the Database Settings dialog 
 - the files to include in every backup
 - the advanced features allowing to execute automatic tasks
 
+> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-folder).
+
 ## Scheduler
 
 You can automate the backup of databases opened with 4D or 4D Server (even when no client machines are connected). This involves setting a backup frequency (in hours, days, weeks or months); for each session, 4D automatically starts a backup using the current backup settings. 

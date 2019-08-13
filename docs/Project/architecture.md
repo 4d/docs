@@ -7,6 +7,8 @@ A 4D project is made of several folders and files, stored within a single parent
 
 ![](assets/en/Project/project1.png)
 
+> If your project has been converted from a binary database, additional folders may be present, such as a Preferences folder, containing configuration files. See "Converting databases to projects" on doc.4d.com.
+
 
 ## Project folder
 
@@ -19,7 +21,6 @@ The Project folder typically contains the following hierarchy:
 	+ Forms
 	+ TableForms
 	+ Triggers
-- BuildSettings
 - DerivedData
 
 
@@ -88,14 +89,6 @@ table_*n*.4dm|Trigger methods defined in the database. One trigger file per tabl
 **Note:**
 The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
 
-### BuildSettings folder
-
-The BuildSettings folder is created automatically when using the application builder dialog box or the ```BUILD APPLICATION``` command. It contains:
-
-Contents|Description|Format
---------|-------|----
-BuildApp.xml|Build settings file|XML
-
 
 ### Trash folder
 
@@ -159,7 +152,8 @@ This folder contains **user settings files** used for database administration. F
 
 Contents|Description|Format|
 ----|----|---|
-directory.json|Description of 4D groups and users for the database, as well as their access rights|JSON|
+directory.json|Description of 4D groups and users for the database, as well as their access rights|JSON|  
+BuildApp.4DSettings|Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command|XML
 Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 
 
