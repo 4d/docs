@@ -1,10 +1,8 @@
 ---
 id: propertiesAction
-title:Action Properties
+title:Action 
 ---
 
-## Standard action
-Standard actions are actions for active objects that have been predefined by 4D. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
 
 ## Droppable
 
@@ -40,6 +38,8 @@ The following figure shows the Property List window with the Droppable and Dragg
 
 ![](assets/en/FormObjects/property_draggableDroppable_propertyList.png)
 
+>For list boxes: Only list box rows are concerned; it is not possible to drag and drop columns (however, it is still possible to move columns inside the same list box). 
+
 ### Automatic Drag and Drop
 
 Text objects (fields, variables, combo boxes and list boxes) as well as picture objects allow automatic drag and drop. Automatic drag and drop copies or moves text or pictures directly from one form area to another using simple point-and-click operations. It can be used in the same 4D area, between two 4D areas, or between 4D and another application (for example, WordPad®). 
@@ -57,6 +57,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv17R5/4D/17-
 Automatic drag and drop can be configured separately for each form object via the following Property List options:
 
 * **Automatic Drag** (Text type objects only)<br> When this option is checked, the automatic drag mode is activated for the object. In this mode, the *On Begin Drag* form event is NOT generated.
+
 If you want to “force” the use of the standard drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (mac OS) key during the action. This option is not available for pictures.
 
 * **Automatic Drop**<br> This option is used to activate the automatic drop mode. In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The *On Drag Over* and *On Drop* form events are not generated in this case. On the other hand, the On After Edit (during a drop) and On Data Change (when the object loses the focus) events are generated. <p>
@@ -72,16 +73,131 @@ When this option is check, the drop of external objects into 4D forms is refused
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|dragging|text | <li>"none", <li>"custom", <li>"automatic" (excluding list, list box)|
-|dropping|text | <li>"none", <li>"custom", <li>"automatic" (excluding list, list box)|
-
+|---|---|---|
+|dragging|text |"none", "custom", "automatic" (excluding list, list box)|
+|dropping|text |"none", "custom", "automatic" (excluding list, list box)|
 
 #### Objects Supported
 
-|Category|Link|
-|---|---|
-|Button|[Regular](button_overview.md#regular) - [Flat](button_overview.md#regular) - [Toolbar](button_overview.md#toolbar) - [Bevel](button_overview.md#bevel) - [Rounded Bevel](button_overview.md#Rounded-bevel) - [OS X Gradient](button_overview.md#os-x-gradient) - [OS X Textured](button_overview.md#os-x-textured) - [Office XP](button_overview.md#office-XP) - [Help](button_overview.md#help) - [Circle](button_overview.md#circle) - [Custom](button_overview.md#custom)|
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
 
 
 
+
+
+
+
+
+## Execute object method
+When this option is checked, the object method is executed with the `On Data Change` event at the same moment the user changes the value of the indicator. By default, the method is executed after the modification.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|continuousExecution|boolean |"true", "false"|
+
+#### Objects Supported
+
+[Progress bars](indicators_overview.md#progress-bar) - [Rulers](indicators_overview.md#ruler) - [Numeric stepper](indicators_overview.md#numeric-stepper)
+
+
+
+
+
+
+
+## Method
+
+An object's method.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|method|text |The name of an existing project method|
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview)  - [Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+
+## Movable Rows
+`Array type list boxes`
+
+Authorizes the movement of rows during execution. This option is checked by default. It is not available for selection type list boxes nor for list boxes in hierarchical mode ([Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) option selected). 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|movableRows|boolean |"true", "false"|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Multi-selectable
+
+Allows the selection of multiple records/options.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|selectionMode|	text|	"multiple", "single", "none"
+
+#### Objects Supported
+
+[Hierarchical List](list_overview.md#overview)
+
+
+
+
+
+## Sortable
+
+Allows sorting column data by clicking the header. This option is selected by default.  Picture type arrays (columns) cannot be sorted using this mechanism.
+ 
+In list boxes based on a selection of records, the standard sort function is available only:
+*	When the data source is *Current Selection*,
+*	With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+ 
+In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|sortable| boolean|"true", "false"|
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Standard action
+Typical activities to be performed by active objects have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|action|string |The name of a valid standard action.|
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) -  [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [List Box](listbox_overview.md#overview)

@@ -1,0 +1,192 @@
+---
+id: propertiesListBox
+title: List Box
+---
+
+## Detail Form Name
+`Selection type list box`
+
+Specifies the form to use for modifying or displaying individual records of the list box.
+
+The specified form is displayed:
+
+*	when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
+*	when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|detailForm |string |Name (string) of table or project form OR a POSIX path (string) to a .json file describing the form OR an object describing the form |
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Double-click on row
+`Selection type list box`
+
+Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+
+*	**Do nothing** (default): Double-clicking a row does not trigger any automatic action.
+*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined for the list box (see the “Detail Form” bullet point below). The record is opened in read-write mode so it can be modified.
+*	**Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
+
+>Double-clicking an empty row is ignored. 
+ 
+Regardless of the action selected/chosen, the `On Double clicked` form event is generated. 
+ 
+For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|doubleClickInRowAction |string |"editSubrecord", "displaySubrecord"|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Highlight Set
+
+`Selection type list box`
+
+This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
+ 
+4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
+ 
+>*	The highlighted status of the list box rows and the highlighted status of the table records are completely independent. 
+*	If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+| highlightSet| string| Name of the set.|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+
+
+## Number of Columns
+
+Sets the number of columns. 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+| columnCount|integer |minimum: 1
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+## Locked columns and static columns  
+
+Locked columns and static columns are two separate and independent functionalities in list boxes:
+
+*	Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
+*	Static columns cannot be moved by drag and drop within the list box.
+
+>You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+
+These properties interact as follows:
+
+*	If you set columns that are only static, they cannot be moved.
+ 
+*	If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area. 
+
+![](assets/en/FormObjects/property_lockedStaticColumns1.png)
+
+*	If you set all of the columns in the locked area as static, you cannot move these columns within the locked area. 
+
+![](assets/en/FormObjects/property_lockedStaticColumns2.png)
+
+*	You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+
+### Number of Locked Columns
+
+Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|lockedColumnCount |integer |minimum: 0|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+### Number of Static Columns
+
+Number of columns that cannot be moved during execution.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|staticColumnCount | integer|minimum: 0|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+
+## Row Control Array
+
+A 4D array defining the list box rows.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|rowControlSource |string |Array|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
+
+
+## Selection Mode
+
+Designates the options for allowing users to select records.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+| selectionMode|string |"multiple", "single", "none"|
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)

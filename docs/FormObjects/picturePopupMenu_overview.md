@@ -1,0 +1,31 @@
+---
+id: picturePopupMenuOverview
+title: Picture Pop-up Menus
+---
+## Overview
+
+A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used to replace a picture button. The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. 
+The concept is the same as for [Button Grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
+
+To create a picture pop-up menu, you need to refer to a picture. The following example uses the picture that was defined for picture buttons (see [Picture Buttons](pictureButton_overview.md)). In this case, it allows you to select the interface language by selecting it from a picture pop-up menu. 
+
+Each language is represented by the corresponding flag:
+
+![](assets/en/FormObjects/picturePopupMenu_example.png)
+
+## Goto Page action 
+ 
+You can assign the `Goto Page` action to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
+
+For example, if the user selects the 3rd element, 4D will display the third page of the current form (if it exists). 
+If you want to manage the effect of a click yourself, select `No action`.
+
+For more information about standard actions, refer to [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
+
+## Programming  
+
+You can manage picture pop-up menus using methods. As with button grids, variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. If no element is selected, the value is 0. Elements are numbered, row by row, from left to right starting with the top row.
+
+
+## Supported Properties
+[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Columns](properties_Crop.md#columns) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows)- [Standard action](properties_Action.md#standard-action) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
