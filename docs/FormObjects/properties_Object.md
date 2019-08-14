@@ -36,7 +36,7 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 
 
-## Data Souce
+## Data Source
 
 Specifies the source of the data.
 
@@ -57,41 +57,27 @@ Specifies the source of the data.
 
 ## Expression Type
 
-A 4D expression (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the On Display Detail and On Data Change events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or temporary) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.
+Specify the data type for the expression or variable. Note that main purpose of this setting is to configure the themes and options available in the Property list so that they will correspond to the data type. It does not actually type the variable itself. In view of database compilation, you must use the commands of the Compiler theme.
 
-The following expression types are supported:
-*	String
-*	Numeric
-*	Date
-*	Picture
-*	Boolean
-*	For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.
+However, this property has a typing function in the following specific cases:
 
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing This. This is a dedicated 4D command that returns a reference to the currently processed element (see the This command description). For example, you can use This.<propertyPath> where and <propertyPath> is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. 
+- **Dynamic variables**: you can use this menu to declare the type of [dynamic variables](#dynamic-variables).
+- **[List Box Columns](listboxOverview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
+- **Picture variables**: you can use this menu to declare the variables before loading the form in interpreted mode.
 
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use This.value as expression. 
+> Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
+Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
-In any cases, you can define the expression using the 4D Formula Editor by clicking on the [...] button in the Property List. 
-If a non-assignable expression is used (e.g. [Person]FirstName+" "+[Person]LastName), the column is never enterable even if the Enterable option is checked.
-
-If a field, a variable, or an assignable expression (e.g. Person.lastName) is used, the column can be enterable or not depending on the Enterable option. 
-
-In Design mode, the data source type is displayed in the first row of the column. For example, [Table1]MyFld.
-If the defined expression is not correct, the column of the list box will display an error message in Application mode.
-
-![](assets/en/FormObjects/property_expressionType.png)
-
-For List Box Columns, this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSourceTypeHint |string  |"integer", "boolean" |
+|dataSourceTypeHint |string  |"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box Column](listbox_overview.md#overview)  - [List Box Header](listbox_overview.md#list-box-footers)
+[Input Area](inputOverview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Radio Button](radiobuttonOverview.md) - [Indicators](indicatorsOveriew.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box Column](listbox_overview.md#overview)  - [List Box Header](listbox_overview.md#list-box-footers) - [Tab Control](splitterTabControlOverview#tab-controls)
 
 
 
@@ -185,19 +171,15 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
  `MANDATORY SETTING`
 
-This property designates the type of the form object (active or inactive). For more information about form objects, see the [Form editor](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-editor.300-4163727.en.html) page.
+This property designates the type of the active or inactive form object. Object types are described in the [Objects](buttonOverview.md) section.
 
-To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the Shift key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
-
-When a button is selected, you can scroll through its variants using the **Shift+Selection** key shortcut. Help tips display the currently selected variant and the associated selection key of the object.
-
-You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
+In the Form editor, to select an object type, click the corresponding toolbar button and then trace the object in the form. After creating an object, you can modify its type using the Property List.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|type|string|"groupBox", "button","checkbox", "radio", "buttonGrid", "pictureButton", "picturePopup"|
+|type|string|"button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write"|
 
 
 #### Objects Supported
@@ -251,34 +233,59 @@ You can associate various automatic calculations with a footer area. The followi
 
 ## Variable or Expression
 
-This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times but each object name must be unique.
+This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times but each object name must be unique. When using 4D’s language, you can refer to an active form object by either its variable name or object name (for more information, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the *4D Language Reference* manual).
 
->Object names are limited to a size of 255 bytes and for variable names the size is limited to 31 bytes.
+>Object names are limited to a size of 255 bytes and for variable names the size is limited to 31 bytes. See [Identifiers](https://developer.4d.com/docs/en/Concepts/identifiers.html) section for more information about naming rules.
 
-When using 4D’s language, you can refer to an active form object by either its variable name or object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
-
-For more information about naming rules for form objects and variables, refer to [GET REGISTERED CLIENTS](https://doc.4d.com/4Dv17R5/4D/17-R5/GET-REGISTERED-CLIENTS.301-4128067.en.html) (the rules are the same) as well as to [Identifiers](https://doc.4d.com/4Dv17R5/4D/17-R5/Identifiers.300-4128320.en.html) in the 4D Language Reference manual.
-
-### Variables
-
-Variables associated with form objects can contain any type of expression that returns a value — and not only variable names. You can simply enter the expression directly in the “Variable or Expression” area of the Property List for the object.
+The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The variable associated with a progress indicator lets you read and change the current setting.
 
 Variables can be enterable or non-enterable and can receive data of the Alpha, Text, number, Date, Time and/or Picture type. 
 
-### Expressions
+### Using expressions
 
-You can also enter an expression directly in the “Variable or Expression” area of the Property List for the object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Naturally in this case it is not possible to manage the value of the variable by programming. 
-
+You can enter an expression in the “Variable or Expression” area of the Property List for the object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Naturally in this case it is not possible to manage the value of the variable by programming. 
 
 >If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
+
+### Dynamic variables
+
+You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
+
+When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed.
+In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
+
+- You can set the type using the [Expression type](#expression-type) property. 
+- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+
+```code4d
+ If(Form event=On Load)
+    C_TEXT($init)
+    $Ptr_object:=OBJECT Get pointer(Object named;"comments")
+    $init:=""
+    VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
+ End if
+```
+
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+
+```code4d
+  // assign the time 12:00:00 to the variable for the "tstart" object
+ $p :=OBJECT Get pointer(Object named;"tstart")
+ $p->:=?12:00:00?
+```
+ 
+There are two advantages with this mechanism:
+
+- On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
+- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource|string, or string array for hierarchical listbox column|4D variable, field name, or arbitrary complex language expression|
+|dataSource|string, or string array for hierarchical listbox column|4D variable, field name, or arbitrary complex language expression. Empty string for [dynamic variables](#dynamic-variables)|
 
 
 #### Objects Supported

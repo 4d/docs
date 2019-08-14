@@ -251,7 +251,7 @@ It is important to note that the “With Pop-up Menu” property only manages th
 
 |Name|Data Type|Possible Values|
 |:---|---|---|
-|popupPlacement |string |<li>"None"<li> Linked"<li> "Separated" |
+|popupPlacement |string |<li>"None"<li>"Linked"<li>"Separated" |
 
 
 #### Objects Supported

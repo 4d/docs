@@ -259,7 +259,7 @@ Positions an object on the top of the form.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|Top |integer |minimum: 0|
+|top |integer |minimum: 0|
 
 #### Objects Supported
 

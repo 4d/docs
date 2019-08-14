@@ -4,37 +4,34 @@ title: Check Box
 ---
 ## Overview
 
-A check box is a type of button used to enter or display binary (true-false) data. It is either selected or deselected. Check boxes are controlled by methods. Like all buttons, a check box is set to 0 when the form is first opened. The method associated with a it executes when the check box is selected.
+A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
 
-A check box displays text next to a small square. This text is set in the Title area of the [Objects](properties_Object.md#radio-group) theme in the Property List or with JSON. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)). 
+![](assets/en/FormObjects/checkbox.png)
+
+Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
+
+A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)). 
 
 
 ## Using check boxes
 
-When the user clicks the object, the box is checked. When checked, a check box has the value 1. When not checked, it has the value 0. 
+A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
 
-You can also associate a Boolean type variable with a check box. In this case, the variable is True when it's checked and False when it's not checked.
+- **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
+- **boolean:** if the box is checked, the variable has the value True. When not checked, it has the value False. 
 
-Any or all check boxes in a form can be checked or unchecked. 
-
-![](assets/en/FormObjects/checkbox.png)
-
-A group of check boxes allows the user to select multiple options. 
-
-Unlike a Boolean field that is formatted as a check box, the values of the check box variable are not stored automatically. A method is uses to manage the variable.
-
->Check boxes have the same behavior as standard buttons but their appearance is set by the properties of the standard button family. For more information, refer to [Buttons](buttonOverview).
+Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options. 
 
 
-## Three-States check box 
+### Three-States check box 
 
-Check box objects accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection. 
+Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection. 
 
 ![](assets/en/FormObjects/checkbox_3states.png)
 
-In order for a check box to take control of this third state, you must set the Three-States property in the [Display](properties_Display.md#three-states) theme of the Property List or via JSON.
+To enable this third state, you must select the [Three-States](properties_Display.md#three-states) property.
 
-This property is only available for check boxes ([Regular](button_overview.md#regular) and [Flat](button_overview.md#flat) button styles only) associated with numeric variables — check boxes for Boolean fields cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean field cannot be in an intermediary state). 
+This property is only available for [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) check boxes associated with numeric variables — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state). 
 
 The variable associated with the check box returns the value 2 when the check box is in the third state. 
 
@@ -43,7 +40,7 @@ The variable associated with the check box returns the value 2 when the check bo
 
 ## Using a standard action
 
-You can assign a standard action to a check box (using the [OBJECT SET ACTION](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-ACTION.301-4128268.en.html) command or the [Action](properties_Action.md#standard-action) theme of the Property List) to handle attributes of text areas. For example, if you select the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area. 
+You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area. 
 
 Only actions that can represent a true/false status ("checkable" actions) are supported by this object: 
 
@@ -80,9 +77,9 @@ Only actions that can represent a true/false status ("checkable" actions) are su
 
 For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
-## Button Styles
+## Check box styles
 
-Check box button styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors. 
+Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors. 
 
 With the exception of the available properties, many check box objects are *structurally* identical. The difference is in the processing of their associated variables. 
 
@@ -90,25 +87,23 @@ With the exception of the available properties, many check box objects are *stru
 
 ### Regular
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive label):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-By default, the Regular style has a light gray background with a label in the center. When the cursor hovers over the Regular button style, the border and background color change to demonstrate that it has the focus. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
-
 #### JSON Example:    
 
-```code4d
+```
 	"myCheckBox": {
-                "type": "checkbox",				//define the type of object
-                "style":"regular",				//define the style 
-                "text": "OK",					//text to appear 
-                "action": "Cancel", 			//action to be be performed 
-                "left": 60,						//left position on the form  
-                "top": 160,						//top position on the form 
-                "width": 100,			
-                "height": 20		
-                "dataSourceTypeHint":"boolean"	//define true/false choice	
+		"type": "checkbox",				//define the type of object
+		"style":"regular",				//define the style 
+		"text": "OK",					//text to appear 
+		"action": "Cancel", 			//action to be be performed 
+		"left": 60,						//left position on the form  
+		"top": 160,						//top position on the form 
+		"width": 100,			
+		"height": 20		
+		"dataSourceTypeHint":"boolean"	//define true/false choice	
                 }
 ``` 
 
@@ -118,27 +113,23 @@ By default, the Regular style has a light gray background with a label in the ce
 
 ### Flat
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. In addition to initiating code execution, the Flat button style mimics a mechanical button by the background quickly changing color when being clicked.
-
-The Flat button style's graphic nature is particularly useful for forms that will be printed.
-
 #### JSON Example:    
 
-```code4d
+```
 	"myCheckBox": {
-                "type": "checkbox",		//define the type of object
-                "style":"flat",			//define the style 
-                "text": "OK",			//text to appear 
-                "action": "Cancel", 	//action to be be performed 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			
-                "height": 20			
-                }
+			"type": "checkbox",		//define the type of object
+			"style":"flat",			//define the style 
+			"text": "OK",			//text to appear 
+			"action": "Cancel", 	//action to be be performed 
+			"left": 60,				//left position on the form  
+ 			"top": 160,				//top position on the form 
+ 			"width": 100,			
+			"height": 20			
+			}
 ``` 
 
 #### Supported Properties

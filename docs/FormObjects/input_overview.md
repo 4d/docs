@@ -20,6 +20,8 @@ You can also represent fields and variables in your forms in alternative forms, 
 
 *	You can display and enter data from database fields directly in columns of "selection" type List boxes  (see [Display of fields in list boxes](https://doc.4d.com/4Dv17R5/4D/17-R5/Display-of-fields-in-list-boxes.300-4163654.en.html)).
 *	You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
+*	You can represent a boolean field or variable as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+
 
 
 #### JSON Example:    

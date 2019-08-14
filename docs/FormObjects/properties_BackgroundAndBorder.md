@@ -108,9 +108,11 @@ You can remove these empty rows by checking this option. The bottom of the list 
 
 
 
-## Line Color
+## Font Color / Line Color
 
-Designates the color of the object's lines.
+For objects containing text (input, group box, list box header, etc.), designates the font color.
+
+For shape objects (rectangle, line, etc.), designates the color of the object's lines.
 
 #### JSON Grammar
 
@@ -120,10 +122,14 @@ Designates the color of the object's lines.
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) 
-
-
-
+[Group box](groupBox.md) 
+[Text](text.md)
+[Input](input_overview.md)
+[List box header](listbox_overview.md#header)
+[List box footer](listbox_overview.md#footer)
+[Rectangle](shapes_overview.md#rectangle)
+[Oval](shapes_overview.md#oval)
+[Line](shapes_overview.md#line)
 
 
 
