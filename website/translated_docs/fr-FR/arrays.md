@@ -14,19 +14,19 @@ Vous créez un tableau au moyen de l'une des commandes de déclaration du thème
 Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 
 ```code4d
- TABLEAU ENTIER(aiUnTableau;10)
+ ARRAY INTEGER(aiAnArray;10)
 ```
 
 Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :
 
 ```code4d
-TABLEAU ENTIER(aiUnTableau;20)
+ARRAY INTEGER(aiAnArray;20)
 ```
 
 Enfin, cette ligne de code redimensionne le même tableau à 0 élément :
 
 ```code4d
-TABLEAU ENTIER(aiUnTableau;0)
+ARRAY INTEGER(aiAnArray;0)
 ```
 
 ## Affecter des valeurs dans un tableau
@@ -34,24 +34,24 @@ TABLEAU ENTIER(aiUnTableau;0)
 Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. Ce nombre est appelé numéro de l'élément. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :
 
 ```code4d
- TABLEAU TEXTE(atNoms;5)
- atNoms{1}:="Richard"
- atNoms{2}:="Sarah"
- atNoms{3}:="Sam"
- atNoms{4}:="Jane"
- atNoms{5}:="John"
-Boucle($vlElem;1;5)
-    ALERTE("L'élément #"+Chaine($vlElem)+" est égal à: "+atNoms{$vlElem})
-Fin de boucle
+ ARRAY TEXT(atNames;5)
+ atNames{1}:="Richard"
+ atNames{2}:="Sarah"
+ atNames{3}:="Sam"
+ atNames{4}:="Jane"
+ atNames{5}:="John"
+ For($vlElem;1;5)
+    ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
+ End for
 ```
 
-Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (`Boucle...Fin de boucle`, `Repeter...Jusque` ou `Tant que...Fin tant que`), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.
+Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (`For...End for`, `Repeat...Until` or `While...End while`), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.
 
 **Important :** Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.
 
 ### Affecter un tableau à un autre
 
-Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction `COPIER TABLEAU`.
+Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction `COPY ARRAY`.
 
 ## Utiliser l'élément zéro d'un tableau
 
@@ -61,32 +61,32 @@ Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous
 
 ```code4d
   // Méthode objet zone de défilement atNoms
-  Au cas ou
-    :(Evenement formulaire=Sur chargement)
-   //Initialisons le tableau
-       TABLEAU TEXTE(atNoms;5)
+ Case of
+   :(Form event=On Load)
+   //Initialisons le tableau (comme indiqué ci-dessous)
+       ARRAY TEXT(atNames;5)
   // ...
   // Initialiser l'élément zéro avec le numéro
   // de l'élément courant sélectionné sous sa forme alphanumérique
   // Ici vous commencez sans élément sélectionné
-       atNoms{0}:="0"
+       atNames{0}:="0"
  
-    :(Evenement formulaire=Sur libération)
+    :(Form event=On Unload)
   // Nous n'avons plus besoin du tableau
-       EFFACER VARIABLE(atNoms)
+       CLEAR VARIABLE(atNames)
  
-    :(Evenement formulaire=Sur clic)
-       Si(atNoms#0)
-          Si(atNoms#Num(atNoms{0}))
-             vtInfo:="Vous avez cliqué sur : "+atNoms{atNoms}+" qui n'était pas précédemment sélectionné."
-             atNoms{0}:=Chaine(atNoms)
-          Fin de si
-       Fin de si
-    :(Evenement formulaire=Sur double clic)
-       Si(atNoms#0)
-          ALERTE("Vous avez double-cliqué sur : "+atNoms{atNoms})
-       Fin de si
- Fin de cas
+    :(Form event=On Clicked)
+       If(atNames#0)
+          If(atNames#Num(atNames{0}))
+             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
+             atNames{0}:=String(atNames)
+          End if
+       End if
+    :(Form event=On Double Clicked)
+       If(atNames#0)
+          ALERT("You double clicked on: "+atNames{atNames}
+       End if
+ End case
 ```
 
 (*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
@@ -96,7 +96,7 @@ Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
 ```code4d
- TABLEAU TEXTE(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
+ ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
 Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.
@@ -112,44 +112,44 @@ Dans l'exemple prédédent :
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
 ```code4d
- C_ENTIER LONG($vlDerniereTable;$vlDernierChamp)
- C_ENTIER LONG($vlNumeroChamp)
+ C_LONGINT($vlLastTable;$vlLastField)
+ C_LONGINT($vlFieldNumber)
   // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
- $vlDerniereTable:=Lire numero derniere table
- TABLEAU POINTEUR(<>apChamps;$vlDerniereTable;0) `Tableau 2D avec N lignes et zéro colonnes
+  $vlLastTable:=Get last table number
+ ARRAY POINTER(&lt;&gt;apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
   // Pour chaque table
- Boucle($vlTable;1;$vlDerniereTable)
-    Si(Est un numero de table valide($vlTable))
-       $vlDernierChamp:=Lire numero dernier champ($vlTable)
+ For($vlTable;1;$vlLastTable)
+    If(Is table number valid($vlTable))
+       $vlLastField:=Get last field number($vlTable)
   // Donner la valeur des éléments
-       $vlNumeroColonne:=0
-       Boucle($vlChamp;1;$vlDernierChamp)
-          Si(Est un numero de champ valide($vlTable;$vlChamp))
-             $vlNumeroColonne:=$vlNumeroColonne+1
+             $vlColumnNumber:=0
+       For($vlField;1;$vlLastField)
+          If(Is field number valid($vlTable;$vlField))
+             $vlColumnNumber:=$vlColumnNumber+1
   // Insérer une colonne dans la ligne de la table en cours
-             INSERER DANS TABLEAU(<>apChamps{$vlTable};$vlNumeroColonne;1)
+              INSERT IN ARRAY(&lt;&gt;apFields{$vlTable};$vlColumnNumber;1)
   // Affecter la "celulle" avec le pointeur
-             <>apChamps{$vlTable}{$vlNumeroColonne}:=Champ($vlTable;$vlChamp)
-          Fin de si
-       Fin de boucle
-    Fin de si
- Fin de boucle
+             <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
+          End if
+       End for
+    End if
+ End for
 ```
 
 Dans la mesure où le tableau à deux dimensions a été initialisé, vous pouvez obtenir ainsi les pointeurs vers les champs d'une table de votre choix :
 
 ```code4d
   // Obtenir les pointeurs vers les champs pour la table affichée à l'écran:
- COPIER TABLEAU(◊apChamps{Table(Table du formulaire courant)};$apMesChampsdeTravail)
+ COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
   // Initialiser les champs booléens et date
- Boucle($vlElem;1;Taille tableau($apMesChampsdeTravail))
-    Au cas ou
-       :(Type($apMesChampsdeTravail{$vlElem}->)=Is Date)
-          $apMesChampsdeTravail{$vlElem}->:=Date du jour
-       :(Type($apMesChampsdeTravail{$vlElem}->)=Is Boolean)
-          $apMesChampsdeTravail{$vlElem}->:=Vrai
-    Fin de cas
- Fin de boucle
+For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
+    Case of
+       :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
+          $apTheFieldsIamWorkingOn{$vlElem}->:=Current date
+       :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is Boolean)
+          $apTheFieldsIamWorkingOn{$vlElem}->:=True
+    End case
+ End for
 ```
 
 **Note :** Comme le montre cet exemple, les lignes des tableaux à deux dimensions peuvent être ou non de la même taille.
