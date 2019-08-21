@@ -13,14 +13,14 @@ La capacité de se référer à quelque chose sans connaître son identité exac
 
 Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux. Le tableau suivant vous fournit un exemple de chaque type :
 
-| Type        | Référencement        | Référencement               | Affectation                |
-| ----------- | -------------------- | --------------------------- | -------------------------- |
-| Table       | vpTble:=->[Table]    | TABLE DEFAUT(vpTble->)      | n/a                        |
-| Champ       | vpChp:=->[Table]Chp  | ALERTE(vpChp->)             | vpChp->:="Jean"            |
-| Variable    | vpVar:=->Variable    | ALERTE(vpVar->)             | vpVar->:="Jean"            |
-| Tableau     | vpT:=->Tableau       | TRIER TABLEAU(vpT->;>)      | COPIER TABLEAU(Tab;vpT->)  |
-| Elém. tabl. | vpElem:=->Tableau{1} | ALERTE(vpElem->)            | vpElem->:="Jean"           |
-| Objet       | vpObj:=->monObjet    | ALERTE (vpObj->monAttribut) | vpObj->monAttribut:="John" |
+| Type        | Référencement        | Référencement              | Affectation                |
+| ----------- | -------------------- | -------------------------- | -------------------------- |
+| Table       | vpTble:=->[Table]    | DEFAULT TABLE(vpTble->)    | n/a                        |
+| Champ       | vpChp:=->[Table]Chp  | ALERT(vpChp->)             | vpChp->:="Jean"            |
+| Variable    | vpVar:=->Variable    | ALERT(vpVar->)             | vpVar->:="Jean"            |
+| Tableau     | vpT:=->Tableau       | SORT ARRAY(vpT->;>)        | COPY ARRAY(Tab;vpT->)      |
+| Elém. tabl. | vpElem:=->Tableau{1} | ALERT(vpElem->)            | vpElem->:="Jean"           |
+| Objet       | vpObj:=->monObjet    | ALERT (vpObj->monAttribut) | vpObj->monAttribut:="John" |
 
 ## Utiliser des pointeurs : un exemple
 
@@ -33,7 +33,7 @@ MaVar:="Bonjour"
 MaVar est désormais une variable contenant la chaîne “Bonjour”. Nous pouvons alors créer un pointeur vers MaVar :
 
 ```code4d
-C_POINTEUR($MonPointeur)
+C_POINTER($MonPointeur)
 $MonPointeur:=->MaVar
 ```
 
@@ -62,8 +62,8 @@ $MonPointeur->:="Au revoir"
 Si vous examinez les deux utilisations de l’expression $MonPointeur-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MaVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :
 
 ```code4d
-ALERTE($MonPointeur->)
- ALERTE($MaVar)
+ALERT($MonPointeur->)
+ ALERT($MaVar)
 ```
 
 Les deux lignes suivantes effectuent la même opération ; elles assignent la chaîne "Au revoir" à $MaVar :
@@ -111,7 +111,7 @@ $TablePtr:=Table(20)
 Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :
 
 ```code4d
-TABLE PAR DEFAUT($TablePtr->)
+DEFAULT TABLE($TablePtr->)
 ```
 
 ### Utiliser des pointeurs vers des champs
@@ -131,7 +131,7 @@ $ChampPtr:=Champ(1;2)
 Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :
 
 ```code4d
-OBJET FIXER POLICE($ChampPtr->;"Arial")
+OBJECT SET FONT($FieldPtr->;"Arial")
 ```
 
 ### Utiliser des pointeurs vers des variables
@@ -162,7 +162,7 @@ La valeur de $1 sera :
 Vous pouvez créer un pointeur vers un élément de tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à une variable appelée $ElémPtr un pointeur vers le premier élément :
 
 ```code4d
-TABLEAU REEL($unTableau;10) // Créer un tableau
+ARRAY REAL($unTableau;10) // Créer un tableau
  $ElémPtr:=->$unTableau{1} // Créer un pointeur vers l’élément de tableau
 ```
 
@@ -177,14 +177,14 @@ $ElémPtr->:=8
 Vous pouvez créer un pointeur vers un tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à la variable nommée $TabPtr un pointeur vers le tableau :
 
 ```code4d
-TABLEAU REEL($unTableau;10) // Créer un tableau
+ARRAY REAL($unTableau;10) // Créer un tableau
 $TabPtr:=->$unTableau // Créer un pointeur vers le tableau
 ```
 
 Il est important de comprendre que ce pointeur pointe vers le tableau, et non vers un élément du tableau. Par exemple, vous pourriez utiliser le pointeur dépointé de la manière suivante :
 
 ```code4d
-TRIER TABLEAU(TabPtr->;>) // Tri du tableau
+SORT ARRAY(TabPtr->;>) // Tri du tableau
 ```
 
 Si vous devez vous référer au quatrième élément du tableau à l’aide du pointeur, vous pouvez écrire :
@@ -201,13 +201,13 @@ Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’in
   // Méthode projet Recoit Deux
   // $1 – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en majuscules.
   // $2 – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en minuscules.
- $1->:=Majusc($1->)
- $2->:=Minusc($2->)
+ $1->:=Uppercase($1->)
+ $2->:=Lowercase($2->)
 ```
 
 L'instruction suivante emploie la méthode `Recoit Deux` pour passer un champ en caractères majuscules et une variable en caractères minuscules :
 
-    rECOIT DEUX(->[MaTable]MonChamp;->$MaVar)
+    takeTwo(->[MaTable]MonChamp;->$MaVar)
     
 
 Si le champ, [MaTable]MonChamp, contenait la chaîne "dupont", celle-ci deviendrait "DUPONT". Si la variable $MaVar contenait la chaîne "BONJOUR", celle-ci deviendrait "bonjour".
@@ -223,7 +223,7 @@ Si vous aimez compliquer les choses à l'extrême (bien que cela ne soit pas né
 $PointeurUn:=->$MaVar
 $PointeurDeux:=->$PointeurUn
 ($PointeurDeux->)->:="Au revoir"
-ALERTE(($PointeurDeux->)->)
+ALERT(($PointeurDeux->)->)
 ```
 
 Cet exemple affiche une boîte de dialogue d’alerte contenant “Au revoir”.
