@@ -25,7 +25,7 @@ APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
 To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
 
 ```code4d
-APPELER SUR ERREUR("") //redonne le contrôle à 4D
+ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
 ### Portée et composants
@@ -39,9 +39,9 @@ The `Method called on error` command allows to know the name of the method insta
 ```code4d
  $methCurrent:=Method called on error
  ON ERR CALL("NewMethod")
-  //If the document cannot be opened, an error is generated
+  //Si le document ne peut pas être ouvert, une erreur est générée
  $ref:=Open document("MyDocument")
-  //Reinstallation of previous method
+  //Répéter la méthode précédente
  ON ERR CALL($methCurrent)
 
 ```
