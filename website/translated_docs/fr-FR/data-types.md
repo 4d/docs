@@ -7,26 +7,26 @@ Dans 4D, les données sont gérées selon leur type à deux endroits : dans les 
 
 Bien qu'ils soient généralement équivalents, certains types de données de la base ne sont pas disponibles dans le langage et sont automatiquement convertis. A l'inverse, certains types de données sont gérés uniquement par le langage. Le tableau suivant liste tous les types de données disponibles, leur prise en charge et leur déclaration :
 
-| Types de données                             | Pris en charge par la base(*) | Pris en charge par le langage | Déclaration de la variable             |
-| -------------------------------------------- | ----------------------------- | ----------------------------- | -------------------------------------- |
-| [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                                      |
-| [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | `C_TEXTE`, `TABLEAU TEXTE`             |
-| [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `DATE TEXTE`                 |
-| [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_HEURE`, `TABLEAU HEURE`             |
-| [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEEN`, `TABLEAU BOOLEEN`         |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `TABLEAU ENTIER LONG`                  |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_ENTIER LONG`, `TABLEAU ENTIER LONG` |
-| [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                                      |
-| [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REEL`, `TABLEAU REEL`               |
-| [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                                      |
-| [Null](Concepts/dt_null_undefined.md)        | -                             | Oui                           | -                                      |
-| [Pointeur](Concepts/dt_pointer.md)           | -                             | Oui                           | `C_POINTEUR`, `TABLEAU POINTEUR`       |
-| [Image](Concepts/dt_picture.md)              | Oui                           | Oui                           | `C_IMAGE`, `TABLEAU IMAGE`             |
-| [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `TABLEAU BLOB`               |
-| [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJET`, `TABLEAU OBJET`             |
-| [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`                         |
+| Types de données                             | Pris en charge par la base(*) | Pris en charge par le langage | Déclaration de la variable   |
+| -------------------------------------------- | ----------------------------- | ----------------------------- | ---------------------------- |
+| [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                            |
+| [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | `C_TEXT`, `ARRAY TEXT`       |
+| [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `ARRAY DATE`       |
+| [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_TIME`, `ARRAY TIME`       |
+| [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
+| [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_LONGINT`, `ARRAY LONGINT` |
+| [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                            |
+| [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REAL`, `ARRAY REAL`       |
+| [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                            |
+| [Null](Concepts/dt_null_undefined.md)        | -                             | Oui                           | -                            |
+| [Pointeur](Concepts/dt_pointer.md)           | -                             | Oui                           | `C_POINTER`, `ARRAY POINTER` |
+| [Image](Concepts/dt_picture.md)              | Oui                           | Oui                           | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `ARRAY BLOB`       |
+| [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
 
-(*)A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. For more information, see the Object data type description.
+(*)A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, consultez la description du type de données Objet.
 
 ## Valeurs par défaut
 
