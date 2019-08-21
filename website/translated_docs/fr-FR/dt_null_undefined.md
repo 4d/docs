@@ -22,17 +22,17 @@ Indéfinie n'est pas véritablement un type de données. Une variable dite "ind�
 Cet exemple compare les différents résultats de la commande `Indefinie` et de la commande `Null` appliquées aux propriétés d'objets, en fonction du contexte :
 
 ```code4d
-C_OBJET(vEmp)
- vEmp:=Creer objet
- vEmp.name:="Smith"
- vEmp.children:=Null
- 
- $undefined:=Indefinie(vEmp.name) // Faux
- $null:=(vEmp.name=Null) // Faux
- 
- $undefined:=Indefinie(vEmp.children) // Faux
- $null:=(vEmp.children=Null) // Vrai
- 
- $undefined:=Indefinie(vEmp.parent) // Vrai
- $null:=(vEmp.parent=Null) // Vrai
+C_OBJECT($vEmp)
+$vEmp:=New object
+$vEmp.name:="Smith"
+$vEmp.children:=Null
+
+$undefined:=Undefined($vEmp.name) // Faux
+$null:=($vEmp.name=Null) //Faux
+
+$undefined:=Undefined($vEmp.children) // Faux
+$null:=($vEmp.children=Null) //Vrai
+
+$undefined:=Undefined($vEmp.parent) // Vrai
+$null:=($vEmp.parent=Null) //Vrai
 ```
