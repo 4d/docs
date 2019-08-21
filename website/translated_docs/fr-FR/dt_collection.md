@@ -33,7 +33,7 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 
 ```code4d
  C_COLLECTION(myCol)
- myCol:=Creer collection("A";"B")
+ myCol:=New collection("A";"B")
  myCol[5]:="Z"
   //myCol[2]=null
   //myCol[3]=null
@@ -48,15 +48,15 @@ Exemple :
 
 ```code4d
  C_COLLECTION($colVar) //création d'une variable 4D de type collection.
- $colVar:=Creer collection //initialisation de la collection et assignation à la variable 4D
+ $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
 ```
 
 ### Collection standard ou collection partagée
 
 Vous pouvez créer deux types de collections :
 
-- standard (non partagées), à l'aide de la commande `Creer collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process. 
-- partagées, à l'aide de la commande `Creer collection partagee`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Utiliser...Fin utiliser`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
+- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process. 
+- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
 
 ## Méthodes de collection
 
@@ -76,7 +76,7 @@ Par exemple:
 Certaines méthodes retournent la collection d'origine après modification, de manière à ce que vous puissiez enchaîner les appels dans une même séquence :
 
 ```code4d
- $col:=Creer collection(5;20)
+ $col:=New collection(5;20)
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
