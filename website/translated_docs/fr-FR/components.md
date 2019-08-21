@@ -52,19 +52,20 @@ Exemple utilisant un tableau :
 
 ```code4d
 //Dans la base hôte :
-      TABLEAU ENTIER(MonTab;10)
-      UneMéthode(->MonTab)
+    ARRAY INTEGER(MyArray;10)
+     AMethod(->MyArray)
+
 //Dans le composant, la méthode projet UneMéthode contient : 
-     AJOUTER A TABLEAU($1->;2)
+     APPEND TO ARRAY($1->;2)
 ```
 
 Exemples utilisant des variables :
 
 ```code4d
- C_TEXTE(mavariable)
- methode1_du_composant(->mavariable)
- C_POINTEUR($p)
- $p:=methode2_du_composant(...)
+ C_TEXT(myvariable)
+ component_method1(->myvariable)
+ C_POINTER($p)
+ $p:=component_method2(...)
 ```
 
 L’utilisation de pointeurs pour faire communiquer les composants et la base hôte nécessite de prendre en compte les spécificités suivantes :
@@ -79,16 +80,16 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
 - La comparaison de pointeurs via la commande `RESOUDRE POINTEUR` est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différente dans un composant et la base hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```code4d
-     RESOUDRE POINTEUR(monptr1;vNomVar1;vnumtable1;vnumchamp1)
-      RESOUDRE POINTEUR(monptr2;vNomVar2;vnumtable2;vnumchamp2)
-      Si(vNomVar1=vNomVar2)
+     RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)
+      RESOLVE POINTER(monptr2;vNomVar2;vnumtable2;vnumchamp2)
+      If(vNomVar1=vNomVar2)
        //Ce test retourne Vrai alors que les variables sont différentes
 ```
 
 Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ```code4d
-     Si(monptr1=monptr2) //Ce test retourne Faux
+     If(monptr1=monptr2) //Ce test retourne Faux
 ```
 
 ## Accès aux tables de la base hôte
@@ -103,51 +104,51 @@ methCreateRec(->[PERSONNES];->[PERSONNES]Nom;"Julie Andrews")
 Dans le composant, le code de la méthode `methCreateRec` :
 
 ```code4d
-C_POINTEUR($1) //Pointeur vers une table de la base hôte
-C_POINTEUR($2) //Pointeur vers un champ de la base hôte
-C_TEXTE($3) // Valeur à insérer
+C_POINTER($1) //Pointeur vers une table de la base hôte
+C_POINTER($2) //Pointeur vers un champ de la base hôte
+C_TEXT($3) // Valeur à insérer
 
 $tablepointer:=$1
 $fieldpointer:=$2
-CREER ENREGISTREMENT($tablepointer->)
+CREATE RECORD($tablepointer->)
 
 $fieldpointer->:=$3
-STOCKER ENREGISTREMENT($tablepointer->)
+SAVE RECORD($tablepointer->)
 ```
 
 ## Portée des commandes du langage
 
 Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTER METHODE` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes de la base hôte (un composant n’a pas d’utilisateurs et groupes propres).
+Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTE METHOD` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes de la base hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-Les commandes `FIXER PARAMETRE BASE` et `Lire parametre base` constituent aussi une exception à ce principe : leur portée est globale à la base. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent à la base hôte.
+Les commandes `EXECUTE METHOD` et `Get database parameter` constituent aussi une exception à ce principe : leur portée est globale à la base. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent à la base hôte.
 
-Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Fichier structure` et `Dossier 4D` lorsqu’elles sont utilisées dans le cadre des composants.
+Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-La commande `LISTE COMPOSANTS` permet de connaître la liste des composants chargés par la base hôte.
+La commande `COMPONENT LIST` permet de connaître la liste des composants chargés par la base hôte.
 
 ### Commandes non utilisables
 
 Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cadre d’un composant car elles modifient le fichier de structure — ouvert en lecture. Leur exécution dans un composant provoque l’erreur -10511, “La commande NomCommande ne peut pas être appelée depuis un composant” :
 
-- `APPELER SUR EVENEMENT`
-- `Methode appelee sur evenement`
-- `ECRIRE IMAGE DANS BIBLIOTHEQUE`
-- `SUPPRIMER IMAGE DANS BIBLIOTHEQUE`
-- `STOCKER LISTE`
-- `TABLEAU VERS LISTE`
-- `MODIFIER FORMULAIRE`
-- `CREER FORMULAIRE UTILISATEUR`
-- `SUPPRIMER FORMULAIRE UTILISATEUR`
-- `CHANGER MOT DE PASSE`
-- `CHANGER PRIVILEGES`
-- `Ecrire proprietes groupe`
-- `Ecrire proprietes utilisateur`
-- `SUPPRIMER UTILISATEUR`
-- `CHANGER LICENCES`
-- `BLOB VERS UTILISATEURS`
-- `ECRIRE ACCES PLUGIN`
+- `ON EVENT CALL`
+- `Method called on event`
+- `SET PICTURE TO LIBRARY|`
+- `REMOVE PICTURE FROM LIBRARY`
+- `SAVE LIST`
+- `ARRAY TO LIST`
+- `EDIT FORM`
+- `CREATE USER FORM`
+- `DELETE USER FORM`
+- `CHANGE PASSWORD`
+- `EDIT ACCESS`
+- `Set group properties`
+- `Set user properties`
+- `DELETE USER`
+- `CHANGE LICENSES`
+- `BLOB TO USERS`
+- `SET PLUGIN ACCESS`
 
 **Notes :**
 
@@ -156,14 +157,14 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 ## Gestion des erreurs
 
-Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `APPELER SUR ERREUR` s'applique à la base en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur de la base hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à la base en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur de la base hôte n'est pas appelée, et inversement.
 
 ## Utilisation de formulaires
 
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant. 
 - Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
-**Note :** Si un composant utilise la commande `AJOUTER ENREGISTREMENT`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
+**Note :** Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
 - Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants. Ce point est détaillé dans le paragraphe Partage des formulaires.
 
@@ -182,8 +183,8 @@ Le code suivant est inclus dans un composant et effectue trois actions élément
 Création de la base de données externe :
 
 ```code4d
-<>MyDatabase:=Dossier 4D+"\MyDB" // (Windows) stocker les données dans un répertoire autorisé
- Debut SQL
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stocke les données dans un répertoire autorisé
+ Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
         CREATE TABLE IF NOT EXISTS KEEPIT
@@ -194,12 +195,12 @@ Création de la base de données externe :
         code TEXT,
         sort_order INT32
         );
- 
+
         CREATE UNIQUE INDEX id_index ON KEEPIT (ID);
- 
+
         USE DATABASE SQL_INTERNAL;
- 
- Fin SQL
+
+ End SQL
 ```
 
 Ecriture dans la base de données externe :
@@ -210,18 +211,18 @@ Ecriture dans la base de données externe :
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
- Debut SQL
- 
+ Begin SQL
+
         USE DATABASE DATAFILE :[<>MyDatabase];
- 
+
         INSERT INTO KEEPIT
         (ID, kind, name, code, sort_order)
         VALUES
         (:[$Ptr_1], :[$Ptr_2], :[$Ptr_3], :[$Ptr_4], :[$Ptr_5]);
- 
+
         USE DATABASE SQL_INTERNAL;
- 
- Fin SQL
+
+ End SQL
 ```
 
 Lecture dans une base de données externe :
