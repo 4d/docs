@@ -14,7 +14,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 - Les points (.) et les crochets ([ ]) sont interdits dans les noms de tables, champs, méthodes ou variables.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
 - Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.
-- Les noms réservés, c'est-à-dire les noms de commandes 4D (`Date`, `Heure`, etc), les mots-clés (Si, Boucle, etc.) et les constantes.
+- Les noms réservés, c'est-à-dire les noms de commandes 4D (`Date`, `Time`, etc), les mots-clés (If, For, etc.) et les constantes.
 - 4D ignore les espaces superflus.
 
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
@@ -37,9 +37,9 @@ Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de t
 Exemple :
 
 ```code4d
-TABLE PAR DEFAUT([Commandes])
- FORM FIXER ENTREE([Clients];"Entrée")
- AJOUTER ENREGISTREMENT([Lettres])
+DEFAULT TABLE([Commandes])
+FORM SET INPUT([Clients];"Entrée")
+ADD RECORD([Lettres])
 ```
 
 ## Champs
@@ -49,9 +49,9 @@ Vous désignez un champ en spécifiant d’abord la table à laquelle il apparti
 Exemple :
 
 ```code4d
-[Commandes]Total:=Somme([Ligne]Montant)
- CHERCHER([Clients];[Clients]Nom="Dupont")
- [Lettres]Texte:=Capitaliser texte([Lettres]Texte)
+[Commandes]Total:=Sum([Ligne]Montant)
+ QUERY([Clients];[Clients]Nom="Dupont")
+ [Lettres]Text:=Capitalize text([Lettres]Texte)
 ```
 
 ## Variables interprocess
@@ -63,9 +63,9 @@ Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, sy
 Exemple :
 
 ```code4d
-<>vlProcessID:=Numero du process courant
- <>vsKey:=Caractere(KeyCode)
- Si(<>vtNom#"")
+<>vlProcessID:=Current process
+ <>vsKey:=Char(KeyCode)
+If(<>vtNom#"")
 ```
 
 ## Variables process
@@ -75,8 +75,8 @@ Vous désignez une variable process en écrivant simplement son nom (qui ne doit
 Exemple :
 
 ```code4d
-vrGrandTotal:=Somme([Comptes]Montant)
- Si(bValider=1)
+vrGrandTotal:=Sum([Comptes]Montant)
+ If(bValider=1)
  vsNomCourant:=""
 ```
 
@@ -87,14 +87,14 @@ Vous désignez une variable locale en faisant précéder son nom du symbole doll
 Exemple :
 
 ```code4d
-Boucle($vlEnregistrement;1;100)
- Si($vsTempVar="No")
- $vsMaChaîne:="Bonjour à tous"
+For($vlRecord;1;100)
+If($vsTempVar="Non")
+$vsMyString:="Bonjour à tous"
 ```
 
 ## Tableaux
 
-Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple TABLEAU ENTIER LONG) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :
+Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :
 
 - Tableaux interprocess,
 - Tableaux process,
@@ -109,9 +109,9 @@ Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symb
 Exemple :
 
 ```code4d
-TABLEAU TEXTE(<>atSujets;Enregistrements dans table([Topics]))
- TRIER TABLEAU(<>asMotsClés;>)
- TABLEAU ENTIER(<>aiGrosTableau;10000)
+ARRAY TEXT(<>atSujets;Records in table([Topics]))
+SORT ARRAY(<>asMotsClés;>)
+ARRAY INTEGER(<>aiGrosTableau;10000)
 ```
 
 ### Tableaux process
@@ -121,9 +121,9 @@ Vous désignez un tableau process en écrivant simplement son nom (qui ne doit p
 Exemple :
 
 ```code4d
-TABLEAU TEXTE(atSujets;Enregistrements dans table([Topics]))
- TRIER TABLEAU(asMotsClés;>)
- TABLEAU ENTIER(aiGrosTableau;10000)
+ARRAY TEXT(atSujets;Records in table([Topics]))
+ SORT ARRAY(asMotsClés;>)
+ ARRAY INTEGER(aiGrosTableau;10000)
 ```
 
 ### Tableaux locaux
