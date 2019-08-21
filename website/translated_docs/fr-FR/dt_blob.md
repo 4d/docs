@@ -19,14 +19,14 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
   // Déclarer une variable de type BLOB
  C_BLOB(touteVarBLOB)
   // Le BLOB est passé comme paramètre à une commande 4D
- FIXER TAILLE BLOB(touteVarBLOB;1024*1024)
+ SET BLOB SIZE(touteVarBLOB;1024*1024)
   // Le BLOB est passé comme paramètre à une routine externe
  $CodeErr:=Faites_Quelque_chose_avec_ce_BLOB(touteVarBLOB)
   // Le BLOB est passé comme paramètre à une méthode qui retourne un BLOB
  C_BLOB(recupBlob)
  recupBlob:=Remplir_Blob(touteVarBLOB)
   // Un pointeur vers le BLOB est passé comme paramètre à une de vos méthodes
- REMPLIR BLOB AVEC DES ZEROS(->touteVarBLOB)
+ COMPUTE BLOB(->touteVarBLOB)
 ```
 
 **Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
@@ -41,12 +41,12 @@ Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple
   // Déclarer deux variables de type BLOB
  C_BLOB(vBlobA;vBlobB)
   // Fixer la taille du premier BLOB à 10Ko
- FIXER TAILLE BLOB(vBlobA;10*1024)
+ SET BLOB SIZE(vBlobA;10*1024)
   // Assigner le premier BLOB au second
  vBlobB:=vBlobA
 ```
 
-En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOBs.
+En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOB.
 
 ## Adresser le contenu d'un BLOB
 
@@ -56,7 +56,7 @@ Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accol
   // Déclarer une variable de type BLOB
  C_BLOB(vBlob)
   // Fixer la taille du BLOB à 256 octets
- FIXER TAILLE BLOB(vBlob;256)
+ SET BLOB SIZE(vBlob;256)
   // La boucle suivante initialise les 256 octets du BLOB à zéro
  Boucle(vOctet;0;Taille BLOB(vBlob)-1)
     vBlob{vOctet}:=0
