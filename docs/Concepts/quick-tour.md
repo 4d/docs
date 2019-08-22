@@ -264,7 +264,7 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName" "+[Person]LastName` is not assignable. 
+In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable. 
 
  
 ## Pointers
