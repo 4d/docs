@@ -60,9 +60,9 @@ L'ordre d'apparition des deux déclarations importe peu au compilateur, car il s
 Il n’est pas possible de retyper une variable. Il est, en revanche, tout à fait possible de faire pointer un pointeur successivement sur des variables de type différent. Par exemple, le code suivant s'applique aussi bien dans le mode interprété que dans le mode compilé :
 
 ```code4d
-C_POINTEUR($p)
-C_TEXTE($name)
-C_ENTIER LONG($age)
+C_POINTER($p)
+C_TEXT($name)
+C_LONGINT($age)
 
 $name:="Smith"
 $age:=50
@@ -81,10 +81,10 @@ Imaginez une fonction qui retourne la longueur (nombre de caractères) de valeur
   // Calc_Length (combien de caractères)
   // $1 = pointeur vers un type de variable flexible, numérique, text, heure, booléen
 
-C_POINTEUR($1)
-C_TEXTE($result)  
-C_ENTIER LONG($0)
-$result:=Chaine($1->)
+C_POINTER($1)
+C_TEXT($result)  
+C_LONGINT($0)
+$result:=String($1->)
 $0:=Length($result)
 ```
 
@@ -98,5 +98,5 @@ $var4:=True
 
 $vLength:=Calc_Length(->$var1)+Calc_Length(->$var2)+Calc_Length (->$var3)+Calc_Length(->$var4)
 
-ALERTE("Total length: "+Chaine($vLength))
+ALERT("Total length: "+Chaine($vLength))
 ```
