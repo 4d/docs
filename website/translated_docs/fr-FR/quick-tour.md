@@ -7,7 +7,7 @@ sidebar_label: Présentation
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
 
 ```code4d
-ALERTE ("Hello, World!")
+ALERT("Hello, World!")
 ```
 
 Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. Pour exécuter le code, il vous suffit de cliquer sur le bouton d'exécution dans l'éditeur de méthode :
@@ -44,7 +44,7 @@ C_DATE(MyDate) //Type date type pour la variable MyDate
 Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```code4d
-MaDate:=Date du jour+30
+MaDate:=Current date+30
 ```
 
 Le programme interprète la ligne comme “MaDate prend la valeur de la date courante plus 30 jours”. Cette ligne crée la variable et l'affecte (temporairement) au type de date et à un contenu. Une variable créée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis modifie le type de manière dynamique. Une variable typée avec `C_XXX` ne peut pas changer le type. En mode compilé, le type ne peut jamais être modifié, quelle que soit la manière dont la variable a été créée.
@@ -57,7 +57,7 @@ Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une a
 COPIER DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. Par exemple:
+Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées utilisées à l'aide de la notation en point. Par exemple:
 
 ```code4d
 $c:=Creer collection(1;2;3;4;5)
@@ -74,22 +74,22 @@ Il existe de nombreux plug-ins proposés par la communauté des utilisateurs de 
 PDF REMOVE PAGE(path;page)
 ```
 
-4D SVG is an example of a utility component extending the capabilities of your application:
+4D SVG est un exemple de composant utile qui multiplie les capacités de votre application :
 
 ```code4d
-//drawing a picture
+//faire un dessin
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
 
-4D SVG is included in 4D.
+4D SVG est inclus dans 4D.
 
 ## Constantes
 
 4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Par exemple, `XML DATA` est une constante (valeur 6). Par défaut, les constantes prédéfinies sont soulignées dans l'éditeur de méthodes 4D. Elles permettent d'écrire un code plus lisible.
 
 ```code4d
-vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
+vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
 ## Méthodes
@@ -98,33 +98,33 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
 
-For example, the following line is a statement that will display a confirmation dialog box:
+Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
 ```code4d
-CONFIRM("Do you really want to close this account?";"Yes";"No")
+CONFIRM("Souhaitez-vous vraiment clore ce compte ?";"Oui";"Non")
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+Une méthode contient également des testes et des boucles qui gèrent le flux d'exécution. Les méthodes 4D prennent en charge les structures `If...Else...End if` et `Case of...Else...End case` ainsi que les boucles : `While...End while`, `Repeat...Until`, `For...End for`, et `For each...End for each`:
 
-L'exemple suivant permet d'examiner chaque caractère du texte vtDuTexte :
+L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```code4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Faire quelque chose avec le caractère s'il s'agit d'une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```code4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
+  //Voici le code de la méthode Do_Something
 $0:=Uppercase($1)
 ```
 
@@ -139,7 +139,7 @@ Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélang
 Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données vers d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc". Vous pouvez écrire :
 
 ```code4d
-[Produits]Matricule:=Chaine(Numéro)+"abc"
+[Produits]Matricule:=String(Numéro)+"abc"
 ```
 
 Si *Numéro* vaut 17, *[Produits]Matricule* prendra la valeur “17abc”.
@@ -168,8 +168,8 @@ $vAge:=employee.children[2].age
 
 A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-    $f:=Creer objet
-    $f.message:=Formule(ALERTE("Hello world!"))
+    $f:=New object
+    $f.message:=New formula(ALERT("Hello world!"))
     $f.message() //affiche "Hello world!"
     
 
@@ -177,7 +177,7 @@ Pour accéder à un élément de collection, vous devez passer le numéro de l'�
 
 ```code4d
 C_COLLECTION(myColl)
-myColl:=Creer collection("A";"B";1;2;Heure courante)
+myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //accède au 4ème élément de la collection
 ```
 
@@ -210,9 +210,9 @@ Les expressions peuvent être constituées de presque tous les éléments du lan
 
 Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endroits dans 4D où une expression peut être utilisée en tant que telle. Par exemple :
 
-- Formula editor (apply formula, query with formula, order by formula)
-- La commande `EXECUTER FORMULE`
-- The Property list, where an expression can be used as a data source for most of widgets
+- Editeur de formule (apply formula, query with formula, order by formula)
+- La commande `EXECUTE FORMULA`
+- La liste de propriétés, où un expression peut être utilisée en tant que source de données pour la plupart des widgets
 - Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
 - Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
 
@@ -225,12 +225,12 @@ Vous vous référez à une expression par le biais du type de données qu’elle
 | “Bonjour”             | Chaîne    | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                         |
 | “Bonjour ” + “à tous” | Chaîne    | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée. |
 | “M. ” + [Amis]Nom     | Chaîne    | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.        |
-| Majusc("dupont")      | Chaîne    | Cette expression utilise `Majusc`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                          |
+| Uppercase("smith")    | Chaîne    | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                       |
 | 4                     | Numérique | C'est une constante numérique, 4.                                                                                                                                             |
 | 4 * 2                 | Numérique | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                             |
 | MonBouton             | Numérique | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                            | !1997-01-25!| Date| C'est une constante date pour la date 25/01/97 (25 janvier 1997).| |Date du jour+ 30| Date |C'est une expression de type Date qui utilise la commande 
 
-`Date du jour` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.| |?8:05:30? |Heure| C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.| |?2:03:04? + ?1:02:03? |Heure |Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.| |Vrai| Booléen| Cette commande retourne la valeur booléenne VRAI.| |10 # 20|Booléen |C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne VRAI.| |“ABC” = “XYZ” |Booléen |C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FAUX.| |MonImage + 50 |Image |Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.| |->[Amis]Nom |Pointeur |Cette expression retourne un pointeur vers lechamp [Amis]Nom.| |Table (1)| Pointeur |C'est une commande qui retourne un pointeur vers la première table.| |JSON Parse (MaChaine)| Objet| C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)| |JSON Parse (MonTabJSON) |Collection |C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)| |Form.pageNumber|Propriété objet|Une propriété objet est une expression qui peut être de tout type |Col[5]|Élément de collection|Un élément de collection est une expression qui peut être de tout type|  
+`Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.| |?8:05:30? |Time| C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.| |?2:03:04? + ?1:02:03? |Time |Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.| |Vrai| Booléen| Cette commande retourne la valeur booléenne VRAI.| |10 # 20|Booléen |C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.| |“ABC” = “XYZ” |Booléen |C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.| |MonImage + 50 |Image |Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.| |->[Amis]Nom |Pointeur |Cette expression retourne un pointeur vers lechamp [Amis]Nom.| |Table (1)| Pointeur |C'est une commande qui retourne un pointeur vers la première table.| |JSON Parse (MaChaine)| Objet| C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)| |JSON Parse (MonTabJSON) |Collection |C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)| |Form.pageNumber|Propriété objet|Une propriété objet est une expression qui peut être de tout type |Col[5]|Élément de collection|Un élément de collection est une expression qui peut être de tout type|  
 |$entitySel[0]|Entité|Un élément d'une sélection d'entité ORDA est une expression de type entity. Ce type d'expression n'est **pas affectable**| 
 
 ### Expressions assignables et non-assignables
@@ -257,5 +257,5 @@ Un pointeur sur un élément est créé en ajoutant un symbole "->" avant le nom
 ```code4d
 MaVar:="Bonjour"
 MonPointeur->->MaVar
-ALERTE(MonPointeur->)
+ALERT(MonPointeur->)
 ```
