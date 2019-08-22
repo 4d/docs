@@ -18,13 +18,13 @@ Vous pouvez créer des variables en les déclarant à l'aide de l'une des comman
 Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
 ```code4d
- C_TEXTE(monTexte)
+ C_TEXT(monTexte)
 ```
 
 **Note :**Vous pouvez également créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```code4d
- MaDate:=Date du jour+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
+ MaDate:=Current date+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
 ```
 
 Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par exemple, vous pouvez la stocker dans un champ du même type :
@@ -38,10 +38,10 @@ Voici quelques déclarations de variables simples :
 ```code4d
  C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
  C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
- C_ENTIER LONG(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
- C_OBJET($vObj) // La variable locale $vObj est déclarée comme variable de type Objet
+ C_C_LONGINT(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
+ C_OBJECT($vObj) // La variable locale $vObj est déclarée comme variable de type Objet
  C_COLLECTION($vCol) // La variable locale $vCol est déclarée comme variable de type Collection
- TABLEAU ENTIER LONG(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
+ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
 ```
 
 ## Assigner des valeurs
@@ -91,10 +91,10 @@ Lorsque vous développez une base comportant de nombreuses méthodes et variable
 Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. La commande Demander peut être appelée pour obtenir ces informations. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne. Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```code4d
- $vsID:=Demander("Saisissez votre numéro d'identification :")
- Si(OK=1)
-    CHERCHER([Personnes];[Personnes]ID=$vsID)
- Fin de si
+ $vsID:=Request("Saisissez votre numéro d'identification :")
+If(OK=1)
+    QUERY([Personnes];[Personnes]ID=$vsID)
+ End if
 ```
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
