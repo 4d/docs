@@ -133,9 +133,9 @@ Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($
 Exemple :
 
 ```code4d
-TABLEAU TEXTE($atSujets;Enregistrements dans table([Topics]))
- TRIER TABLEAU($asMotsClés;>)
- TABLEAU ENTIER($aiGrosTableau;10000)
+ARRAY TEXT($atSujets;Records in table([Topics]))
+SORT ARRAY($asMotsClés;>)
+ARRAY INTEGER($aiGrosTableau;10000)
 ```
 
 ### Eléments de tableaux
@@ -146,17 +146,17 @@ Exemple :
 
 ```code4d
     // Adresser un élément d'un tableau interprocess
- Si(<>asMotsClés{1}="Stop")
+If(<>asMotsClés{1}="Stop")
     <>atSujets{$vlElem}:=[Topics]Sujet
     $viValeurSuivante:=<>aiGrosTableau{Taille tableau(<>aiGrosTableau)}
  
   // Adresser un élément d'un tableau process
-    Si(asMotsClés{1}="Stop")
+    If(asMotsClés{1}="Stop")
        atSujets{$vlElem}:=[Topics]Sujet
        $viValeurSuivante:=aiGrosTableau{Taille tableau(aiGrosTableau)}
  
   // Adresser un élément d'un tableau local
-       Si($asMotsClés{1}="Stop")
+       If($asMotsClés{1}="Stop")
           $atSujets{$vlElem}:=[Topics]Sujet
           $viValeurSuivante:=$aiGrosTableau{Taille tableau($aiGrosTableau)}
 ```
@@ -168,18 +168,18 @@ Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une 
 Exemple :
 
 ```code4d
-    ` Adresser un élément d'un tableau interprocess à deux dimensions
- Si(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
+    // Adresser un élément d'un tableau interprocess à deux dimensions
+ If(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
     <>atSujets{10}{$vlElem}:=[Topics]Sujet
     $viValeurSuivante:=<>aiGrosTableau{$vlSet}{Taille tableau(<>aiGrosTableau{$vlSet})}
  
   // Adresser un élément d'un tableau process à deux dimensions
-    Si(asMotsClés{$vlLigneSuivante}{1}="Stop")
+    If(asMotsClés{$vlLigneSuivante}{1}="Stop")
        atSujets{10}{$vlElem}:=[Topics]Sujet
        $viValeurSuivante:=aiGrosTableau{$vlSet}{Taille tableau(aiGrosTableau{$vlSet})}
  
   // Adresser un élément d'un tableau interprocess à deux dimensions
-       Si($asMotsClés{$vlLigneSuivante}{1}="Stop")
+       If($asMotsClés{$vlLigneSuivante}{1}="Stop")
           $atSujets{10}{$vlElem}:=[Topics]Sujet
           $viValeurSuivante:=$aiGrosTableau{$vlSet}{Taille tableau($aiGrosTableau{$vlSet})}
 ```
@@ -204,9 +204,9 @@ Vous désignez un formulaire en utilisant une expression de type chaîne alphanu
 Exemple :
 
 ```code4d
-FORM FIXER ENTREE([Personnes];"Entrée")
- FORM FIXER SORTIE([Personnes];"Sortie")
- DIALOGUE([Stock];"Boîte de note"+Chaine($vlStage))
+FORM SET INPUT([Personnes];"Entrée")
+FORM SET OUTPUT([Personnes];"Sortie")
+ DIALOG([Stock];"Boîte de note"+String($vlStage))
 ```
 
 ## Objets de formulaires
@@ -216,7 +216,7 @@ Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, 
 Exemple :
 
 ```code4d
-OBJET FIXER POLICE(*;"Binfo";"Times")
+OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
 **Note :** Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
@@ -230,9 +230,9 @@ Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant s
 Exemple :
 
 ```code4d
-Si(Nouveau client)
- EFFACER VALEURS DUPLIQUEES
- APPLIQUER A SELECTION([Employés];AUGMENTER SALARIES)
+If(Nouveau client)
+DELETE DUPLICATED VALUES
+APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
 **Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
@@ -242,12 +242,12 @@ Si(Nouveau client)
 Exemple :
 
 ```code4d
-      // Cette commande attend une méthode (fonction) ou une formule
- CHERCHER PAR FORMULE([aTable];Recherche Spéciale)
+    // Cette commande attend une méthode (fonction) ou une formule
+ QUERY BY FORMULA([aTable];Recherche Spéciale)
   // Cette commande attend une méthode (procédure) ou une formule
- APPLIQUER A SELECTION([Employés];AUGMENTER SALARIES)
+ APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
   // Mais cette commande attend un nom de méthode
- APPELER SUR EVENEMENT("GERER EVENEMENTS")
+ON EVENT CALL("GERER EVENEMENTS")
 ```
 
 Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. De plus, plusieurs paramètres consécutifs (s'ils sont les derniers) peuvent être adressés à l'aide de la syntaxe ${n}où n, expression numérique, est le numéro du paramètre.
@@ -257,22 +257,22 @@ A l’intérieur d'une fonction, la variable locale $0 contient la valeur à ret
 Voici quelques exemples :
 
 ```code4d
-    // Dans ELIMINER ESPACES, $1 est pointeur sur le champ [Personnes]Nom
- ELIMINER ESPACES(->[Personnes]Nom)
+    // Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
+ DROP SPACES(->[Personnes]Nom)
  
   // Dans Créateur tableau :
   // - $1 est un numérique qui vaut 1
   // - $2 est un numérique qui vaut 5
   // - $3 est un texte ou un alpha qui vaut "Super"
   // - La valeur résultante est assignée à $0
- $vsRésultat:=Créateur tableau(1;5;"Super")
+ $vsRésultat:=Calc creator(1;5;"Super")
  
   // Dans Poubelle :
   // - Les trois paramètres sont de type Texte ou Alpha
   // - Vous pouvez y accéder par $1, $2 ou $3
   // - Vous pouvez y accéder en écrivant, par exemple, ${$vlParam} où $vlParam vaut 1, 2 ou 3
   // - La valeur résultante est assignée à $0
- vtClone:=Poubelle("est";"le";"il")
+ vtClone:=Dump("est";"le";"il")
 ```
 
 ## Commandes de plug-ins
@@ -316,17 +316,17 @@ Exemple :
 
 ```code4d
     // Ensembles interprocess
- UTILISER ENSEMBLE("<>Enregistrements supprimés")
- NOMMER ENSEMBLE([Clients];"<>Commandes clients")
- Si(Enregistrements dans ensemble("<>Sélection"+Chaine($i))>0)
+USE SET("<>Enregistrements supprimés")
+CREATE SET([Clients];"<>Commandes clients")
+ If(Records in set("<>Sélection"+Chaine($i))>0)
   // Ensembles process
-    UTILISER ENSEMBLE("Enregistrements supprimés")
-    NOMMER ENSEMBLE([Clients];"Commandes clients")
-    Si(Enregistrements dans ensemble("Sélection"+Chaine($i))>0)
+  USE SET("Enregistrements supprimés")
+  CREATE SET([Clients];"Commandes clients")
+   If(Records in set("Sélection"+Chaine($i))>0)
   // Ensembles client
-       UTILISER ENSEMBLE("$Enregistrements supprimés")
-       NOMMER ENSEMBLE([Clients];"$Commandes clients")
-       Si(Enregistrements dans ensemble("$Sélection"+Chaine($i))>0)
+    USE SET("$Enregistrements supprimés")
+  CREATE SET([Clients];"$Commandes clients")
+      If(Records in set("$Sélection"+Chaine($i))>0)
 ```
 
 ## Sélections temporaires
@@ -350,9 +350,9 @@ Exemple :
 
 ```code4d
     // Sélection temporaire interprocess
- UTILISER SELECTION([Clients];"<>ParCodePostal")
+ USE NAMED SELECTION([Clients];"<>ParCodePostal")
   // Sélection temporaire process
- UTILISER SELECTION([Clients];"ParCodePostal")
+ USE NAMED SELECTION([Clients];"ParCodePostal")
 ```
 
 ## Process
@@ -374,9 +374,9 @@ Exemple :
 
 ```code4d
     // Lancer le process global "Ajouter Clients"
- $vlProcessID:=Nouveau process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
+ $vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
   // Lancer le process local "$Suivre Souris"
- $vlProcessID:=Nouveau process("P_SUIVRE_SOURIS";16*1024;"$Suivre Souris")
+ $vlProcessID:=New process("P_SUIVRE_SOURIS";16*1024;"$Suivre Souris")
 ```
 
 ## Résumé des conventions d'écriture dans 4D
