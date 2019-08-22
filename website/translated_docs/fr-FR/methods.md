@@ -8,7 +8,7 @@ Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans 
 
 - **Les méthodes intégrées**, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :
     
-    - Les commandes et fonctions de 4D API, telles que `ALERTE` ou `Date du jour`. 
+    - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`. 
         - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
         - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
     
@@ -45,11 +45,11 @@ Imaginons par exemple que vous travaillez avec une base de clients. A mesure que
 
 ```code4d
   // Recherche d'un client
- CHERCHER PAR EXEMPLE([Clients])
+ QUERY BY EXAMPLE([Clients])
   // Sélection du formulaire entrée
- FORM FIXER ENTREE([Clients];"Saisie de données")
+ FORM SET INPUT([Clients];"Saisie de données")
   // Modification de l'enregistrement du client
- MODIFIER ENREGISTREMENT([Clients])
+ MODIFY RECORD([Clients])
 ```
 
 Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
@@ -57,8 +57,8 @@ Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque
 Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
 ```code4d
- MODIFIER CLIENT
- IMPRIMER SELECTION([Clients])
+ MODIFY CUSTOMER
+ PRINT SELECTION([Clients])
 ```
 
 Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode `MODIFIER CLIENT`, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
@@ -68,9 +68,9 @@ Si vous devez modifier votre mode de recherche des clients, comme dans notre exe
 Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :
 
 ```code4d
- CHERCHER CHEQUES EMIS // Rechercher les chèques émis
- RAPPROCHER COMPTE // Rapprocher le compte
- IMPRIMER RELEVE // Imprimer un relevé
+ FIND CLEARED CHECKS // Rechercher les chèques émis
+ RECONCILE ACCOUNT // Rapprocher le compte
+PRINT CHECK BOOK REPORT // Imprimer un relevé
 ```
 
 Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.
@@ -85,14 +85,14 @@ Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opé
 
 ```code4d
 //myAlert
-ALERTE("Hello world!")
+ALERT("Hello world!")
 ```
 
 `myAlert` peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :
 
 ```code4d
-C_OBJET($o)
-$o:=Creer objet("custom_Alert";Creer formule(myAlert))
+C_OBJECT($o)
+$o:=New object("custom_Alert";New formula(myAlert))
 $o.custom_Alert() //affiche "Hello world!"
 ```
 
@@ -106,15 +106,15 @@ Vous pouvez appeler votre formule en lui [passant des paramètres](Concepts/para
 
 ```code4d
 //méthode fullName
-C_TEXTE($0;$1;$2)
+C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
 
 Vous pouvez encapsuler `fullName` dans un objet :
 
 ```code4d
-C_OBJET($o)
-$o:=Creer objet("full_name";Creer formule(fullName))
+C_OBJECT($o)
+$o:=New object("full_name";New formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
 // équivalent à $result:=fullName("param1";"param2")
@@ -124,16 +124,16 @@ Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous pe
 
 ```code4d
 //méthode fullName2 
-C_TEXTE($0)
+C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
 
 La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :
 
 ```code4d
-C_OBJET($o)
-$o:=Creer objet("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Creer formule(fullName2) //ajouter la méthode  
+C_OBJECT($o)
+$o:=New object("firstName";"Jim";"lastName";"Wesson")
+$o.fullName:=New formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
@@ -182,35 +182,35 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 1. Vous pouvez procéder de la manière suivante :
 
 ```code4d
- $vsNom:=Demander("Saisissez le nom :";"Pierre")
+ $vsName:=Request("Saisissez le nom :";"Pierre")
  Si(OK=1)
-    CHERCHER([Amis et parents];[Amis et parents]Nom=$vsNom)
-    Si(Enregistrements trouves([Amis et parents])>0)
+    QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
+    If(Records in selection([Amis et parents])>0)
        $vtHistoireComplète:="Un de mes amis, "+$vsNom
-       Repeter
-          CHERCHER([Amis et parents];[Amis et parents]Enfant'Nom=$vsNom)
-          $vlResultRecherche:=Enregistrements trouves([Amis et parents])
-          Si($vlResultRecherche>0)
+       Repeat
+          QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$vsNom)
+          $vlResultRecherche:=Records in selection([Amis et parents])
+          If($vlResultRecherche>0)
              $vtHistoireComplète:=$vtHistoireComplète+" qui est le rejeton de "+[Amis et parents]Nom
              $vsNom:=[Amis et parents]Nom
-          Fin de si
-       Jusque($vlResultRecherche=0)
+          End if
+       Until($vlResultRecherche=0)
        $vtHistoireComplète:=$vtHistoireComplète+", fait cela pour gagner sa vie !"
-       ALERTE($vtHistoireComplète)
-    Fin de si
- Fin de si
+       ALERT($vtHistoireComplète)
+    End if
+ End if
 ```
 
 2. Vous pouvez également procéder ainsi :
 
 ```code4d
- $vsNom:=Demander("Saisissez le nom :";"Pierre")
- Si(OK=1)
-    CHERCHER([Amis et parents];[Amis et parents]Nom=$vsNom)
-    Si(Enregistrements trouves([Amis et parents])>0)
-       ALERTE("Un de mes amis, "+Généalogie de($vsNom)+", fait cela pour gagner sa vie !")
-    Fin de si
- Fin de si
+ $vsNom:=Request("Saisissez le nom :";"Pierre")
+  If(OK=1)
+    QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
+    If(Records in selection([Amis et parents])>0)
+       ALERT("Un de mes amis, "+Généalogie de($vsNom)+", fait cela pour gagner sa vie !")
+   End if
+ End if
 ```
 
 en utilisant la fonction récursive `Généalogie de` suivante :
@@ -221,10 +221,10 @@ en utilisant la fonction récursive `Généalogie de` suivante :
   // Généalogie de ( Nom ) -> Partie de la phrase
  
  $0:=$1
- CHERCHER([Amis et parents];[Amis et parents]Enfant'Nom=$1)
- Si(Enregistrements trouves([Amis et parents])>0)
+ QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$1)
+If(Enregistrements trouves([Amis et parents])>0)
     $0:=$0+" qui est le rejeton de "+Généalogie de([Amis et parents]Nom)
- Fin de si
+End if
 ```
 
 Vous notez que la méthode `Généalogie de` s'appelle elle-même.
