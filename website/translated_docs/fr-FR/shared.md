@@ -48,7 +48,7 @@ L'assignation d'objets/collections partagé(e) s à des propriétés ou élémen
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
-**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au manuel Mode Développement de 4D.
+**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.
 
 ### Lecture
 
