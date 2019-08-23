@@ -18,7 +18,7 @@ Les avantages procurés par le compilateur sont les suivants :
 
 ## Différences entre le code interprété et le code compilé
 
-Bien que l'application fonctionnera de la même manière en modes interprété et compilé, il est important de connaitre les différences que l'on peut rencontrer pendant la saisie du code qui sera compilé. L'interpréteur de 4D est généralement plus souple que le compilateur.
+Bien que l'application fonctionnera de la même manière en modes interprété et compilé, il est important de connaitre les différences que l'on peut rencontrer pendant la saisie du code qui sera compilé. The 4D interpreter is usually more flexible than the compiler.
 
 | Compilé                                                                                                                                                                                                                                  | Interprété                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
