@@ -78,7 +78,7 @@ Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle pe
 
 ## Déclaration des paramètres
 
-Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méthodes appelées en [mode interprété](Concepts/interpreted.md), même si cela est facultatif.
+Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
 
 Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare trois paramètres :
 
@@ -107,26 +107,26 @@ L'utilisation de commandes telles que `Nouveau process` avec les méthodes proce
 
 ```code4d
 C_TEXT($string)
-C_ENTIER LONG($idProc;$int)
-C_OBJET($obj)
+C_LONGINT($idProc;$int)
+C_OBJECT($obj)
 
-$idProc:=Nouveau process("foo_method";0;"foo_process";$string;$int;$obj)
+$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
 Ce code peut être exécuté en mode compilé, uniquement si "foo_method" déclare ses paramètres :
 
 ```code4d
 //foo_method
-C_TEXTE($1)
-C_ENTIER Long($2)
-C_OBJET($3)
+C_TEXT($1)
+C_LONGINT($2)
+C_OBJECT($3)
 ...
 ```
 
 **Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 
 ```code4d
- C_REEL(OneMethodAmongOthers;$1) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).
@@ -243,7 +243,7 @@ La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
 
 ```code4d
   //ChangeAge
- C_OBJEcT($1)
+ C_OBJECT($1)
 $1.Age:=$1.Age+10
  ALERT(String($1;Age))
 ```
