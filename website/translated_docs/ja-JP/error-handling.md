@@ -66,7 +66,7 @@ Within the custom error method, you have access to several information that will
 Here is a simple error-handling system:
 
 ```code4d
-//installing the error handling merthod
+//installing the error handling method
  ON ERR CALL("errorMethod")
  //... executing code
  ON ERR CALL("") //giving control back to 4D
@@ -75,7 +75,7 @@ Here is a simple error-handling system:
 ```code4d
 // errorMethod project method
  If(Error#1006) //this is not a user interruption
-    ALERT("The error "+String(Error)+" occurred. The code in question is: \""+Error formula+"\"")
+    ALERT("The error "+String(Error)+" occurred". The code in question is: \""+Error formula+"\"")
  End if
 ```
 
