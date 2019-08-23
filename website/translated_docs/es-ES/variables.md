@@ -21,7 +21,7 @@ For example, if you want to define a text variable, you write:
  C_TEXT(myText)
 ```
 
-**Note:** Also it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
+**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
 
 ```code4d
  MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
