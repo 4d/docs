@@ -78,7 +78,7 @@ The function result, `$0`, is a local variable within the subroutine. It can be 
 
 ## Declaring parameters
 
-Even if it not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
 
 In the following example, the `OneMethodAmongOthers` project method declares three parameters:
 
