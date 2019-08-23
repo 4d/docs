@@ -74,7 +74,7 @@ Il existe de nombreux plug-ins proposés par la communauté des utilisateurs de 
 PDF REMOVE PAGE(path;page)
 ```
 
-4D SVG est un exemple de composant utile qui multiplie les capacités de votre application :
+4D SVG est un exemple de composant utilitaire qui augmente les capacités de votre application :
 
 ```code4d
 //faire un dessin
@@ -246,7 +246,7 @@ Form.pageNumber:=10 //assigne 10 à Form.pageNumber
 Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 ```
 
-En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
+En général, les expressions qui utilisent un opérateur ne sont pas assignables. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
 ## Pointeurs
 
