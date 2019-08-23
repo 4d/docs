@@ -8,7 +8,7 @@ title: Structures répétitives (ou "boucles")
 La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
 
 ```code4d
- While(Boolean_Expression)
+ While(Expression_booléenne)
     instruction(s)
  End while
 ```
