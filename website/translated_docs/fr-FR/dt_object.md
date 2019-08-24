@@ -27,13 +27,13 @@ Pour gérer les variables, champs ou expressions de type objet, vous pouvez util
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Lorsque la notation objet est activée dans votre base (voir ci-dessous), vous pouvez utiliser ces valeurs là où une expression 4D est attendue :
 
-- Dans le code 4D, soit écrites dans les méthodes (éditeur de méthodes) soit externalisées (formules, fichiers d'étiquettes traités par le Serveur Windows, fichiers d'export, documents 4D Write Pro, etc.).
+- Dans le code 4D, soit écrites dans les méthodes (éditeur de méthodes) soit externalisées (formules, fichiers d'étiquettes traités par la commande PROCESS 4D TAGS ou le Serveur Web, fichiers d'export, documents 4D Write Pro, etc.).
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
-- in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
+- Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
 ## Initialisation
 
-Les objets doivent être initialisés à l'aide, par exemple, de la commande `Creer objet`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
+Les objets doivent être initialisés à l'aide, par exemple, de la commande `New object`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
 
 Exemple :
 
