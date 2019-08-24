@@ -35,7 +35,7 @@ Une heure nulle s’écrit ?00:00:00?
 
 ### Exemple 1
 
-Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Heure ou Heure courante.
+Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
 
 Vous pouvez combiner des expressions de type numérique et de type Heure à l'aide de la fonction OR. Par exemple:
 
