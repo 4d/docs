@@ -37,14 +37,7 @@ A null time is specified by ?00:00:00?
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands Time and Time string.
 
-You can combine expressions of the time and number types using the or functions. For example:
-
-```code4d
-  //The following line assigns to $vlSeconds the number of seconds that will be elapsed between midnight and one hour from now
- $vlSeconds:=Current time+3600
-  //The following line assigns to $vHSoon the time it will be in one hour
- $vhSoon:=Time(Current time+3600)
-```
+You can combine expressions of the time and number types using the ```code4d Time``` or ```code4d Current time``` functions.
 
 The second line could be written in a simpler way:
 
