@@ -37,7 +37,7 @@ A null time is specified by ?00:00:00?
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands Time and Time string.
 
-You can combine expressions of the time and number types using the ```code4d Time``` or ```code4d Current time``` functions.
+You can combine expressions of the time and number types using the `Time`or`Current time`functions.
 
 The second line could be written in a simpler way:
 
