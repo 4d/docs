@@ -37,19 +37,12 @@ Une heure nulle s’écrit ?00:00:00?
 
 Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
 
-Vous pouvez combiner des expressions de type numérique et de type Heure à l'aide de la fonction OR. Par exemple:
-
-```code4d
-  // La ligne suivante assigne à la variable $vlSecondes le nombre de secondes qui, dans une heure à partir de maintenant, se seront écoulées depuis minuit
- $vlSeconds:=Current time+3600
-  // La ligne suivante assigne à la variable $vhBientôt l'heure qu'il sera dans une heure
- $vhSoon:=Time(Current time+3600)
-```
+You can combine expressions of the time and number types using the ```code4d Time``` or ```code4d Current time``` functions.
 
 La seconde ligne peut également être écrite de la façon suivante :
 
 ```code4d
-  // La ligne suivante assigne à la variable $vhBientôt l'heure qu'il sera dans une heure
+  // The following line assigns to $vHSoon the time it will be in one hour
  $vhSoon:=Current time+?01:00:00?
 ```
 
@@ -58,8 +51,8 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```code4d
-$t1:=?23:00:00? // il est 23h
-     //on souhaite ajouter 2 heures 30
- $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? , il est bien 1h30 le lendemain
+$t1:=?23:00:00? // It is 23:00 p.m.
+  // We want to add 2 and a half hours
+$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
 ```
