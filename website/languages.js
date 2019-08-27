@@ -67,9 +67,9 @@ const languages = [
     tag: 'fi',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Français',
-    tag: 'fr',
+    tag: 'fr-FR',
   },
   {
     enabled: false,
