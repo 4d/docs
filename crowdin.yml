@@ -1,11 +1,5 @@
 files:
-  - source: /docs/Concepts/*.md
-    translation: /website/translated_docs/%locale%/%original_file_name%
+  - source: /docs/**/*.md
+    translation: /website/translated_docs/%locale%/**/%original_file_name%
   - source: /docs/assets/en/**/*.png
     translation: /docs/assets/%two_letters_code%/**/%original_file_name%
-  - source: /docs/Backup/*.md
-    translation: /website/translated_docs/%locale%/%original_file_name%
-  - source: /docs/MSC/*.md
-    translation: /website/translated_docs/%locale%/%original_file_name%
-  - source: /docs/Menus/*.md
-    translation: /website/translated_docs/%locale%/%original_file_name%
