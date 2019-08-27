@@ -7,17 +7,16 @@ title: Methods
 A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
-	- Commands and functions of the 4D API, such as `ALERT` or `Current date`.
-	 - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-	 - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
-	 
-	Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.  
- 
-- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). 
-The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
+    
+    - Commands and functions of the 4D API, such as `ALERT` or `Current date`. 
+        - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+        - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    
+    Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods). 
+- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
 
+**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
 
 ## Calling Project Methods
 
@@ -30,6 +29,7 @@ A project method can have one of the following roles, depending on how it is exe
 - Event or Error catching method
 
 ### Subroutines and functions
+
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
 
 When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
@@ -73,13 +73,13 @@ Using subroutines, you make your code modular. This simply means dividing your c
  PRINT CHECK BOOK REPORT ` Print a checkbook report
 ```
 
-Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible. 
+Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
 ### Methods attached to objects
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods. 
+The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
 To execute a method stored in an object property, use the **( )** operator after the property name. For example:
 
@@ -87,7 +87,9 @@ To execute a method stored in an object property, use the **( )** operator after
 //myAlert
 ALERT("Hello world!")
 ```
+
 Then `myAlert` can be encapsulated in any object and called:
+
 ```code4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";New formula(myAlert))
@@ -107,7 +109,9 @@ You can also [pass parameters](Concepts/parameters.md) to your formula when you 
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
+
 You can encapsulate `fullName` in an object:
+
 ```code4d
 C_OBJECT($o)
 $o:=New object("full_name";New formula(fullName))
@@ -115,6 +119,7 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
+
 Combined with the `This`function, such object methods allow writing powerful generic code. For example:
 
 ```code4d
@@ -122,6 +127,7 @@ Combined with the `This`function, such object methods allow writing powerful gen
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
+
 Then the method acts like a new, calculated attribute that can be added to other attributes:
 
 ```code4d
@@ -133,8 +139,6 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-
-
 Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
 ```code4d
@@ -142,18 +146,19 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database. 
+
+A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
 
-
-### Process Methods 
+### Process Methods
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
 ### Event and Error catching Methods
+
 An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
@@ -168,6 +173,7 @@ Project methods can call themselves. For example:
 This is called recursion. The 4D language fully supports recursion.
 
 Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
@@ -213,7 +219,7 @@ with the recursive function `Genealogy of` listed here:
   ` Genealogy of project method
   ` Genealogy of ( String ) -> Text
   ` Genealogy of ( Name ) -> Part of sentence
- 
+
  $0:=$1
  QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
  If(Records in selection([Friends and Relatives])>0)
@@ -234,14 +240,13 @@ Some typical uses of recursion in 4D are:
 
 **Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
 
-
 ## Specialized Methods
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 
-|Type|Calling context|Accepts parameters|Description|
-|----|-----|-----|----|
-|**Object (widget) method**|Automatic, when an event involves the object to which the method is attached|No|Property of a form object (also called widget)|
-|**Form method**|Automatic, when an event involves the form to which the method is attached|No|Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes.|
-|**Trigger** (aka *Table method*)|Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)|No|Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.|
-|**Database method**|Automatic, when a working session event occurs|Yes (predefined)|There are 16 database methods in 4D. See Database methods section|
+| Type                             | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
+| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
+| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See XXX section                                                                                                                 |
