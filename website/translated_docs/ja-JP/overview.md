@@ -1,20 +1,40 @@
 ---
 id: overview
 title: Overview
+sidebar_label: Overview
 ---
 
-4D includes a full database backup and restore module.
+The Maintenance and Security Center (MSC) window contains all the tools needed for verification, analysis, maintenance, backup, compacting, and encrypting of data files. The MSC window is available in all 4D applications: 4D single user, 4D Server or 4D Desktop.
 
-This module allows backing up a database currently in use without having to exit it. Each backup can include the project folder, the data file and any additional files or folders. These parameters are first set in the Database Settings.
+**Note:** The MSC window is not available from a 4D remote connection.
 
-Backups can be started manually or automatically at regular intervals without any user intervention. Specific language commands, as well as specific database methods, allow integrating backup functions into a customized interface.
+There are several ways to open the MSC window. The way it is accessed also determines the way the database is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the database is not opened by 4D, only its reference is provided to the MSC. In standard mode, the database is opened by 4D.
 
-Databases can be restored automatically when a damaged database is opened.
+## Display in maintenance mode
 
-Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). This file keeps a record of all operations performed on the data and also ensures total security between two backups. In case of problems with a database in use, any operations missing in the data file are automatically reintegrated the next time the database is opened. You can view the journal file contents at any time.
+In maintenance mode, only the MSC window is displayed (the database is not opened by the 4D application). This means that databases that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the database to be opened in maintenance mode (see [Feature availability](#feature-availability)).
 
-> You can also implement alternative solutions for replicating and synchronizing data in order to maintain identical versions of databases for backup purposes. These solutions can be based on the following mechanisms and technologies:  
-> - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)  
-> - Synchronization using SQL - Synchronization using HTTP (4DSYNC/ url)
-> 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+You can open the MSC in maintenance mode from two locations:
+
+- **From the standard database opening dialog box** The standard Open database dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
+- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (database not open)  
+    ![](assets/en/MSC/mscicon.png)  
+    When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. The database will not be opened by 4D.
+
+## Display in standard mode
+
+In standard mode, a database is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+
+- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+    ![](assets/en/MSC/mscicon.png) 
+- Use the “msc” standard action that it is possible to associated with a menu command or a form object (see "Standard actions" section).
+
+- Use the ```OPEN SECURITY CENTER``` language command.
+
+## Feature availability
+
+Certain MSC functions are not available depending on the MSC opening mode:
+
+- Backup function is only available when the database is open (the MSC must have been opened in standard mode).
+- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the database is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible.
