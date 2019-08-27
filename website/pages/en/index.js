@@ -6,7 +6,7 @@
  */
 
 const React = require('react');
-
+const translate = require('../../server/translate.js').translate;
 const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -19,11 +19,18 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  // return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+if (language == undefined) {
+    language = languageFix;
+  }
+  //return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
   return siteConfig.baseUrl + '' + (language ? language + '/' : '') + doc;
 }
 
 function pageUrl(page, language) {
+if (language == undefined) {
+    language = languageFix;
+  }
+
   return siteConfig.baseUrl + (language ? language + '/' : '') + page;
 }
 
@@ -80,7 +87,7 @@ class HomeSplash extends React.Component {
         <Logo img_src="" />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection><i>...more to come...</i>
+          <PromoSection><i><translate>...more to come...</translate></i>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -180,7 +187,7 @@ const Description = props => (
 );
 
 const Description2 = props => (
-  <Block background="white" layout="threeColumn">
+  <Block id="desc2" background="white" layout="threeColumn">
     {[
  {
 
@@ -219,10 +226,13 @@ const Classic = props => (
 
 );
 
+var languageFix = undefined; // keep globally the language to fix issue with prop not defined
+
+
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
-
+  languageFix = language;
     return (
       <div>
         <HomeSplash language={language} />
