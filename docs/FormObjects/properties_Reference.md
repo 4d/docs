@@ -18,8 +18,7 @@ title: JSON property list
 |[booleanFormat](properties_Display.md#boolean-format)|Specifies only two possible values.	|"true", "false"|
 |[borderRadius](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[borderStyle](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
-|[bottom](properties_CoordinatesAndSizing.md#bottom) (objects)<br>[bottom](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object at the bottom (centered).|minimum: 0|
-|[bottomMargin](properties_TextAndPicture.md#vertical-margin)|Vertical margin value (in pixels). |minimum: 0|
+|[bottom](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0|
 
 ## C
 
@@ -96,12 +95,19 @@ title: JSON property list
 |[iconFrames](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
 |[iconPlacement](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"|
 
+## K
+
+|Property|Description|Possible Values|
+|---|---|---|
+|[keyboardDialect](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"|
+
+
 ## L
 
 |Property|Description|Possible Values|
 |---|---|---|
 |[labelsPlacement](properties_Scale.md#label-location) (objects)<br>[labelsPlacement](properties_Appearance.md#tab-control-direction) (splitter / tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
-|[left](properties_CoordinatesAndSizing.md#left) (objects) <br>[left](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object on the left.|minimum: 0|
+|[left](properties_CoordinatesAndSizing.md#left)|Positions an object on the left.|minimum: 0|
 |[lockedColumnCount](properties_ListBox.md#number-of-locked-columns) |Number of columns that must stay permanently displayed in the left part of a list box. |minimum: 0|
 |[loopBackToFirstFrame](properties_Animation.md#loop-back-to-first-frame)|Pictures are displayed in a continuous loop.|"true", "false"|
 
@@ -117,6 +123,7 @@ title: JSON property list
 |[min](properties_Scale.md#minimum)|The minimum allowed value. For numeric steppers, these properties represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.|minimum: 0 (for numeric data types)|
 |[minWidth](properties_CoordinatesAndSizing.md#minimum-width)|Designates the smallest size allowed for list box columns. |minimum: 0|
 |[movableRows](properties_Action.md#movable-rows)|Authorizes the movement of rows during execution. |"true", "false"|
+|[multiline](properties_Entry.md#multiline)|Handles multiline contents. |"yes", "no", "automatic"|
 
 ## N
 
@@ -143,7 +150,7 @@ title: JSON property list
 |[requiredList](properties_RangeOfValues.md#required-list)|Allows setting a list where only certain values can be inserted. |A list of mandatory values.|
 |[resizable](properties_ResizingOptions.md#resizable)|Designates if the size of an object can be modified by the user.|"true", "false"|
 |[resizingMode](properties_ResizingOptions.md#column-auto-resizing)|Specifies if a list box column should be automatically resized | "rightToLeft", "legacy"|
-|[right](properties_CoordinatesAndSizing.md#right) (objects)<br>[right](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object on the right.|minimum: 0|
+|[right](properties_CoordinatesAndSizing.md#right)|Positions an object on the right.|minimum: 0|
 |[rightMargin](properties_TextAndPicture.md#horizontal-margin)|Horizontal margin value (in pixels). |minimum: 0|
 |[rowControlSource](properties_Listbox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
@@ -173,6 +180,7 @@ title: JSON property list
 |[showFooters](properties_Footers.md#display-headers)|Displays or hides column footers. |"true", "false"|
 |[showGraduations](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |"true", "false"|
 |[showHeaders](properties_Headers.md#display-headers)|Displays or hides column headers. |"true", "false"|
+|[showSelection](properties_Entry.md#selection-always-visible)|Keeps the selection visible within the object after it has lost the focus |"true", "false"|  
 |[singleClickEdit](properties_Entry.md#single-click-edit)|Enables direct passage to edit mode.|"true", "false"|
 |[sizingX](properties_ResizingOptions.md#horizontal-sizing)|Specifies if the horizontal size of an object should be moved or resized when a user resizes the form.|"grow", "move", "fixed"|
 |[sizingY](properties_ResizingOptions.md#horizontal-sizing)|Specifies if the vertical size of an object should be moved or resized when a user resizes the form.|"grow", "move", "fixed"|
@@ -182,10 +190,13 @@ title: JSON property list
 |[step](properties_Scale.md#step)| Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.|minimum: 1|
 |[stroke](properties_Text.md#font-color) (text)<br> [stroke](properties_BackgroundAndBorder.md#line-color) (lines)<br>[stroke](properties_BackgroundAndBorder.md#transparent) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
 |[strokeWidth](properties_BackgroundAndBorder.md#line-width) |Designates the thickness of a line.|An integer or 0 for smallest width on a printed form|
+|[style](properties_TextAndPicture.md#multi-style)|Enables the possibility of using specific styles in the selected area.|"true", "false"|
+|[styledText](properties_Text.md#style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
+
 |[switchBackWhenReleased](properties_Animation.md#switch-back-when-released)|Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released.|"true", "false"|
 |[switchContinuously](properties_Animation.md#switch-continuously-on-clicks)|Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation).|"true", "false"|
 |[switchWhenRollover](properties_Animation.md#switch-when-roll-over)|Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.|"true", "false"|
-|[style](properties_TextAndPicture.md#style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
+
 
 ## T
 
@@ -201,7 +212,7 @@ title: JSON property list
 |[truncateMode](properties_Display.md#trucate-with-ellipsis) | Controls the display of values when list box columns are too narrow to show their full contents.|"withEllipsis", "none" |
 |[type](properties_Object.md#type)|Mandatory. Designates the data type of the form object.|"text", "rectangle", "groupBox", "tab", "line", "button", "checkbox", "radio", "dropdown", "combo", "webArea", "write", "subform", "plugin", "splitter", "buttonGrid", "progress", "ruler", "spinner", "stepper", "list", "pictureButton", "picturePopup", "listbox", "input", "view"|
 |[tooltip](properties_Help.md)|	Provide users with additional information about a field.|Additional information to help a user|
-|[top](properties_CoordinatesAndSizing.md#top) (objects)<br>[top](properties_TextAndPicture.md#title-picture-position) (titles & pictures)|Positions an object at the top (centered).|minimum: 0|
+|[top](properties_CoordinatesAndSizing.md#top)|Positions an object at the top (centered).|minimum: 0|
 
 ## U
 

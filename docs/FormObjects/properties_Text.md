@@ -243,11 +243,11 @@ By default, this option is not enabled.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|| ||
+|styledText| boolean|"true", "false"|
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 

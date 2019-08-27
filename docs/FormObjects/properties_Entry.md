@@ -3,9 +3,29 @@ id: propertiesEntry
 title:Entry 
 ---
 
+## Auto Spellcheck
+
+4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as 4D Write Pro documents.
+
+The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|spellcheck|boolean |"true", "false"|
+
+
+#### Objects Supported
+
+[Input](input_overview.md)
+
+
+
 ## Context Menu
 
->Used with the [Multi-style](properties_Text.md#multi-style) property.
+>Ignored if the [Multi-style](properties_Text.md#multi-style) property is not enabled.  
 
 Allows the user access to a standard context menu in the area when the form is executed.
 
@@ -17,11 +37,11 @@ The contents of the menu are set by the rendering engine of the platform.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|contextMenu|string	|"automatic", "none"|
+|contextMenu|string	|"automatic" (used if missing), "none"|
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -184,6 +204,58 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 
 
+## Keyboard Layout
+
+This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
+
+By default, the object uses the current keyboard layout.
+
+> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|keyboardDialect|text |Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166|
+
+
+#### Objects Supported
+
+[Input](input_overview.md)
+
+
+
+
+## Multiline
+
+This property is available for [inputs](input_overview.md) objects containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+
+#### Automatic
+- In single-line inputs, words located at the end of lines are truncated and there are no line returns. 
+- In multiline inputs, 4D carries out automatic line returns:  
+![](assets/en/FormObjects/multilineAuto.png)
+
+#### No
+- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
+![](assets/en/FormObjects/multilineNo.png)
+
+#### Yes
+When this value is selected, the property is managed by the [Wordrap](propertiesDisplay.md#wordwrap) option.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|multiline|text |"yes", "no", "automatic" (default if not defined)|
+
+
+#### Objects Supported
+
+[Input](input_overview.md)
+
+
 
 
 ## Placeholder
@@ -221,6 +293,24 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 [Combo Box](comboBox_overview.md)
 
+
+
+
+## Selection always visible
+
+This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style]()).
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|showSelection|boolean |"true", "false"|
+
+
+#### Objects Supported
+
+[Input](input_overview.md)
 
 
 

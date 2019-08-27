@@ -5,8 +5,7 @@ title:Text and Picture
 
 ## Background pathname
 
-This property allows you to set the picture that will be drawn in the background of the button. As with icons, you can indicate whether the picture comes from a variable, picture library, resource file or disk file.  
-
+This property allows you to set the picture that will be drawn in the background of the object. As with icons, you can indicate whether the picture comes from a variable or disk file. If the object uses an icon with [different states](#number-of-states), the background picture will automically support the same number of states. 
 
 #### JSON Grammar
 
@@ -113,11 +112,18 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 ## Number of States
 
-This property sets the exact number of states present in the picture used as the icon for a button. In general, a button icon includes four states: active, clicked, mouse over and inactive. 
+This property sets the exact number of states present in the picture used as the icon for a button or a check box. In general, a button icon includes four states: active, clicked, mouse over and inactive. 
 
 Each state is represented by a different picture. In the source picture, the states must be stacked vertically: 
 
 ![](assets/en/property_numberOfStates.png)
+
+The following states are represented:
+1. button not clicked / check box unchecked (variable value=0)
+2. button clicked / check box checked (variable value=1)
+3. roll over
+4. disabled
+
 
 #### JSON Grammar
 
@@ -136,7 +142,9 @@ Each state is represented by a different picture. In the source picture, the sta
 
 ## Picture pathname
 
-A picture of a button can come from four different sources: Variable, Resource File or File. You can enter the name (if the picture is a variable), the number (if the picture comes from a resource file) or the pathname (if the picture comes from a picture file) of the picture. In the case of a pathname, it must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)).
+Pathname of the picture used as icon for the object. It must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)). You can use the /RESOURCES/ [filesystem](https://doc.4d.com/4Dv17R6/4D/17-R6/File-and-folder-object-pathnames.300-4312016.en.html). 
+
+When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states). 
 
 #### JSON Grammar
 

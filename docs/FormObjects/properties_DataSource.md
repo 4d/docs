@@ -5,7 +5,20 @@ title: Data Source
 
 ## Automatic Insertion
 
-Enables automatically adding a value to a list stored in memory when a user enters a value that is not found in the choice list associated with the object.
+When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
+- the [Choice List](properties_DataSource.md#choice-list) JSON property
+- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html) commands.
+- the form editor's Property List.
+
+For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+
+![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
+
+Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
+
+>If the list was created from a list defined in Design mode, the original list is not modified.
+
+When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
 
 #### JSON Grammar
 
@@ -15,7 +28,7 @@ Enables automatically adding a value to a list stored in memory when a user ente
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 

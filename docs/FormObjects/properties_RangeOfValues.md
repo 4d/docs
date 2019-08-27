@@ -5,7 +5,7 @@ title: Range of Values
 
 ## Excluded List
 
-Allows setting a list whose values cannot be entered in the column. If an excluded value is entered, it is not accepted and an error message is displayed.
+Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
 
 >If a specified list is hierarchical, only the items of the first level are taken into account.
 
@@ -17,7 +17,7 @@ Allows setting a list whose values cannot be entered in the column. If an exclud
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -39,7 +39,7 @@ Making a list required does not automatically display the list when the field is
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 

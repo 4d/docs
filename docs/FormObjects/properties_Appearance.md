@@ -30,7 +30,7 @@ defaultButton|boolean|"true", "false |
 
 ## Hide focus rectangle  
 
-During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by checking the Hide focus rectangle option. Hiding the focus rectangle may be useful in the case of specific interfaces.
+During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
 #### JSON Grammar
 
@@ -40,7 +40,7 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
 
 
 
@@ -72,7 +72,15 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 ## Horizontal Scroll Bar  
 
-A tool allowing the user to move the viewing area to the left or right.
+An interface tool allowing the user to move the viewing area to the left or right. 
+
+> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+
+Available values: 
+- Yes: The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). 
+- No: The scrollbar is never visible.
+- Automatic: The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width.
+
 
 #### JSON Grammar
 
@@ -82,7 +90,7 @@ A tool allowing the user to move the viewing area to the left or right.
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
 
 
 
@@ -110,7 +118,18 @@ labelsPlacement|boolean|"top", "bottom" |
 
 ## Vertical Scroll Bar  
 
-A tool allowing the user to move the viewing area up and down.
+An interface tool allowing the user to move the viewing area up and down.
+
+> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+
+Available values: 
+- Yes: The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). 
+- No: The scrollbar is never visible.
+- Automatic: The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame).
+
+
+> If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
+
 
 #### JSON Grammar
 
@@ -120,4 +139,4 @@ A tool allowing the user to move the viewing area up and down.
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)

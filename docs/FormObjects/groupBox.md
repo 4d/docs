@@ -3,7 +3,7 @@ id: groupBox
 title: Group Box
 ---
 
-A group box allows you to visually assemble multiple form objects:
+A group box is a static object that allows you to visually assemble multiple form objects:
 
 ![](assets/en/FormObjects/groupBox.png)
 
@@ -15,13 +15,13 @@ A group box allows you to visually assemble multiple form objects:
 
 ```
 	"myGroup": {
-                "type": "groupBox",		//define the type of object
-                "title": "Contact Info"	//define the object's title
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the object
-                "height": 20			//height of the object
-                }
+			"type": "groupBox",		//define the type of object
+			"title": "Employee Info"	//define the object's title
+			"left": 60,				//left position on the form  
+			"top": 160,				//top position on the form 
+			"width": 100,			//width of the object
+ 			"height": 20			//height of the object
+			}
 ```
 
 #### Supported Properties

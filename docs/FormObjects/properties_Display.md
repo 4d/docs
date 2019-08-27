@@ -44,27 +44,25 @@ The field actually contains “proportion.” 4D accepts and stores the entire e
 
 ## Boolean Format
 
-Boolean fields can contain one of two values: TRUE or FALSE. A Boolean field can be displayed as either a pair of radio buttons or as a check box. 
+Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expression is usually displayed as a pair of [radio buttons](radio_overview.md) or a [check box](checkbox_overview.md).
 
-You can specify the form and label(s) of a Boolean field in the field properties. If you want to display only the buttons or check boxes and not the field name, you can delete the field label in the form.
+In addition, a boolean expression can also be displayed as:
+- a text (in an [input object](input_overview.md))
+- a pop-up (only in [list box objects](input_listbox.md)
 
-Boolean formats can be displayed as:
-
-*	**Check Box**
-*	**Pop-up** - In a list box, when the Boolean Format is enabled as a pop-up, two additional properties become available:
-
-	*	Text when True - enter the text to be displayed when the value is "true"
-	*	Text when False - enter the text to be displayed when the value is "false"
+In this case, you can select the text to display for each value:
+- **Text when True** - the text to be displayed when the value is "true"
+- **Text when False** - the text to be displayed when the value is "false"
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|booleanFormat|string|"true", "false"|
+|booleanFormat|string|"*textWhenTrue*;*textWhenFalse*", e.g. "Assigned;Unassigned"|
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -111,7 +109,7 @@ The table below shows choices available:
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -179,7 +177,10 @@ In the Design environment, you can choose to display or hide the invisible colum
 
 ## Not rendered
 
-The object is not drawn on the form.
+When this property is enabled, the object is not drawn on the form, however it can still be activated. 
+
+In particular, this proprty allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
+
 
 #### JSON Grammar
 
@@ -426,7 +427,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -457,7 +458,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Objects Supported
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) 
 
 
 
@@ -495,7 +496,7 @@ The table below shows the Time field display formats and gives examples:
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -553,6 +554,7 @@ This option is available for columns with any type of contents, except pictures 
 |truncateMode | string|"withEllipsis", "none" |
 
 
+
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
@@ -564,24 +566,22 @@ This option is available for columns with any type of contents, except pictures 
 
 ## Visibility
 
-This property allows hiding the object in the Application environment. 
+This property allows hiding by default the object in the Application environment. 
 
-#### Buttons
-Invisible button objects are designed to be placed on top of graphic objects. They remain invisible and do not highlight when clicked. It is the resulting action, such as the display of a different page, which indicates that it has been activated. 
+You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context. 
 
-#### List box
-A list box row may be invisible when a form is loaded and visible after certain condition(s) are met. 
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|visibility|string|"visible", "hidden", "selectedRows", "unselectedRows"|
+|visibility|string|"visible", "hidden"|
 
 #### Objects Supported
 
 [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - 
-[Picture](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Picture](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box column](listbox_overview.md#overview) - [Input](input_overview.md)
 
 
 
@@ -589,6 +589,8 @@ A list box row may be invisible when a form is loaded and visible after certain 
 
 
 ## Wordwrap
+
+> Used with the [Multiline](propertiesEntry.md#multiline) property for [input](input_overview.md) objects. 
 
 Manages the display of contents when it exceeds the width of the object.
 
