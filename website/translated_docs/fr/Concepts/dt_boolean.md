@@ -36,9 +36,9 @@ monBooléen:=(monBouton=1)
 | AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)      | True   |
 |           |                   |          | ("A" = "B") & (15 # 3)      | False  |
 |           |                   |          | ("A" = "B") & (15 = 3)      | False  |
-| OR        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3) | Vrai   |
-|           |                   |          | ("A" = "B") &#124; (15 # 3) | Vrai   |
-|           |                   |          | ("A" = "B") &#124; (15 = 3) | Faux   |
+| OR        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3) | True   |
+|           |                   |          | ("A" = "B") &#124; (15 # 3) | True   |
+|           |                   |          | ("A" = "B") &#124; (15 = 3) | False  |
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
