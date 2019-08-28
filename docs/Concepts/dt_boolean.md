@@ -43,7 +43,7 @@ myBoolean:=(myButton=1)
 The following is the truth table for the AND logical operator:
 
 |Expr1	|Expr2	|Expr1 & Expr2|  
----|---|---|
+|---|---|---|
 |True	|True	|True|
 |True	|False	|False|
 |False	|True	|False|
