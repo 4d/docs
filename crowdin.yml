@@ -1,7 +1,7 @@
 files:
   - source: /docs/**/*.md
-    translation: /website/translated_docs/%locale%/**/%original_file_name%
+    translation: /website/translated_docs/%two_letters_code%/**/%original_file_name%
   - source: /docs/assets/en/**/*.png
     translation: /docs/assets/%two_letters_code%/**/%original_file_name%
   - source: /website/i18n/en.json
-    translation: /website/i18n/%locale%.json
+    translation: /website/i18n/%two_letters_code%.json
