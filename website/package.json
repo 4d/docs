@@ -1,5 +1,5 @@
 {  
-  "license": "CC BY 4.0",
+  "license": "CC-BY-4.0",
   "scripts": {
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
