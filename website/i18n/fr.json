@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Suivant",
     "previous": "Précédent",
-    "tagline": "Essential Guides for 4D Developers",
+    "tagline": "Guides fondamentaux pour les développeurs 4D",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -181,8 +181,8 @@
       "Developer Center": "Developer Center"
     },
     "categories": {
-      "4D Language Concepts": "4D Language Concepts",
-      "Projects in 4D (BETA)": "Projects in 4D (BETA)",
+      "4D Language Concepts": "Manuel Concepts du langage 4D",
+      "Projects in 4D (BETA)": "Projets 4D (BETA)",
       "MSC": "CSM",
       "Menus": "Menus",
       "Backup and Restore": "Backup and Restore"
