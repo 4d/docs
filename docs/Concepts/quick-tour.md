@@ -235,7 +235,7 @@ You refer to an expression by the data type it returns. There are several expres
 |4	|Number |	This is a number constant, 4.|
 |4 * 2|	Number|	Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.|
 |myButton	|Number|	This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.|
-!1997-01-25!|	Date|	This is a date constant for the date 1/25/97 (January 25, 1997).|
+|!1997-01-25!|	Date|	This is a date constant for the date 1/25/97 (January 25, 1997).|
 |Current date+ 30|	Date	|This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.|
 |?8:05:30?	|Time|	This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.|
 |?2:03:04? + ?1:02:03?	|Time	|This expression adds two times together and returns the time 3:05:07.|
