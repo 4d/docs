@@ -29,15 +29,35 @@ Une heure nulle s’écrit ?00:00:00?
 
 ## Opérateurs sur les heures
 
-| Opération | Syntaxe     | Retourne | Expression              | Valeur     |
-| --------- | ----------- | -------- | ----------------------- | ---------- |
-| Addition  | Time + Time | Time     | ?02:03:04? + ?01:02:03? | ?03:05:07? | Subtraction |Time – Time |Time |?02:03:04? – ?01:02:03? |?01:01:01?| Addition |Time + Number |Number |?02:03:04? + 65 |7449| Subtraction |Time – Number |Number |?02:03:04? – 65 |7319| Multiplication |Time * Number |Number |?02:03:04? * 2 |14768| Division |Time / Number |Number |?02:03:04? / 2 |3692| Longint division |Time \ Number |Number |?02:03:04? \ 2 |3692| Modulo |Time % Time |Time |?20:10:00? % ?04:20:00? |?02:50:00?| Modulo |Time % Number |Number |?02:03:04? % 2 |0| Equality |Time = Time |Boolean |?01:02:03? = ?01:02:03? |True| ||||!01-02-03? = ?01:02:04? |False| Inequality |Time # Time |Boolean |?01:02:03? # ?01:02:04? |True| ||||!01-02-03? # ?01:02:03? |False| Greater than |Time > Time |Boolean |?01:02:04? > ?01:02:03? |True| |||| ?01:02:03? > ?01:02:03? |False| Less than |Time < Time |Boolean |?01:02:03? < ?01:02:04? |True| |||| ?01:02:03? < ?01:02:03? |False| Greater than or equal to |Time >= Time |Boolean |?01:02:03? >=?01:02:03? |True| ||||!01-02-03? >=?01:02:04? |False| Less than or equal to |Time <= Time |Boolean |?01:02:03? <=?01:02:03?| True| ||||?01:02:04? <=?01:02:03? |False| 
+| Opération           | Syntaxe        | Retourne | Expression              | Valeur     |
+| ------------------- | -------------- | -------- | ----------------------- | ---------- |
+| Addition            | Time + Time    | Time     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Soustraction        | Time - Time    | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition            | Time + Number  | Nombre   | ?02:03:04? + 65         | 7449       |
+| Soustraction        | Time – Number  | Nombre   | ?02:03:04? – 65         | 7319       |
+| Multiplication      | Time * Number  | Nombre   | ?02:03:04? * 2          | 14768      |
+| Division            | Time / Number  | Nombre   | ?02:03:04? / 2          | 3692       |
+| Division entière    | Time \ Number | Nombre   | ?02:03:04? \ 2         | 3692       |
+| Modulo              | Time % Time    | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo              | Time % Number  | Nombre   | ?02:03:04? % 2          | 0          |
+| Egalité             | Time = Time    | Booléen  | ?01:02:03? = ?01:02:03? | True       |
+|                     |                |          | ?01:02:03? = ?01:02:04? | False      |
+| Inégalité           | Time # Time    | Booléen  | ?01:02:03? # ?01:02:04? | True       |
+|                     |                |          | ?01:02:03? # ?01:02:03? | False      |
+| Supérieur à         | Time > Time    | Booléen  | ?01:02:04? > ?01:02:03? | True       |
+|                     |                |          | ?01:02:03? > ?01:02:03? | False      |
+| Inférieur à         | Time < Time    | Booléen  | ?01:02:03? < ?01:02:04? | True       |
+|                     |                |          | ?01:02:03? < ?01:02:03? | False      |
+| Supérieur ou égal à | Time >= Time   | Booléen  | ?01:02:03? >=?01:02:03? | True       |
+|                     |                |          | ?01:02:03? >=?01:02:04? | False      |
+| Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | True       |
+|                     |                |          | ?01:02:04? <=?01:02:03? | False      |
 
 ### Exemple 1
 
 Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
 
-You can combine expressions of the time and number types using the `Time`or`Current time`functions.
+Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Time`ou`Current time`.
 
 La seconde ligne peut également être écrite de la façon suivante :
 

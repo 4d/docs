@@ -29,6 +29,20 @@ A null date is specified by *!00-00-00!*.
 
 ## Date operators
 
-| Operation       | Syntax      | Returns | Expression                  | Value |
-| --------------- | ----------- | ------- | --------------------------- | ----- |
-| Date difference | Date – Date | Number  | !2017-01-20! - !2017-01-01! | 19    | Day addition |Date + Number |Date |!2017-01-20! + 9 |!2017-01-29!| Day subtraction |Date – Number |Date |!2017-01-20! - 9 |!2017-01-11!| Equality |Date = Date |Boolean |!2017-01-01! =!2017-01-01! |True| || ||!2017-01-20! = !2017-01-01! |False| Inequality |Date # Date |Boolean |!2017-01-20! # !2017-01-01! |True| ||||!2017-01-20! # !2017-01-20! |False| Greater than |Date > Date |Boolean |!2017-01-20! > !2017-01-01! |True| ||||!2017-01-20! > !2017-01-20! |False| Less than |Date < Date |Boolean |!2017-01-01! < !2017-01-20! |True| ||||!2017-01-20! < !2017-01-20! |False| Greater than or equal to |Date >= Date |Boolean |!2017-01-20! >=!2017-01-01! |True| ||||!2017-01-01!>=!2017-01-20! |False| Less than or equal to |Date <= Date |Boolean |!2017-01-01!<=!2017-01-20!| True| |||| !2017-01-20!<=!2017-01-01!| False|
+| Operation                | Syntax        | Returns | Expression                  | Value        |
+| ------------------------ | ------------- | ------- | --------------------------- | ------------ |
+| Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
+| Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
+| Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
+| Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | True         |
+|                          |               |         | !2017-01-20! = !2017-01-01! | False        |
+| Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | True         |
+|                          |               |         | !2017-01-20! # !2017-01-20! | False        |
+| Greater than             | Date > Date   | Boolean | !2017-01-20! > !2017-01-01! | True         |
+|                          |               |         | !2017-01-20! > !2017-01-20! | False        |
+| Less than                | Date < Date   | Boolean | !2017-01-01! < !2017-01-20! | True         |
+|                          |               |         | !2017-01-20! < !2017-01-20! | False        |
+| Greater than or equal to | Date >= Date  | Boolean | !2017-01-20! >=!2017-01-01! | True         |
+|                          |               |         | !2017-01-01!>=!2017-01-20!  | False        |
+| Less than or equal to    | Date <= Date  | Boolean | !2017-01-01!<=!2017-01-20!  | True         |
+|                          |               |         | !2017-01-20!<=!2017-01-01!  | False        |

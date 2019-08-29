@@ -185,20 +185,22 @@ myColl[3]  //accède au 4ème élément de la collection
 
 Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. Par exemple, 1 + 2 utilise l’opérateur d’addition (ou signe plus) pour faire la somme de deux nombres, et le résultat est 3. Le tableau ci-dessous présente quelques opérateurs courants :
 
-|  | Opérateur | Opération      | Exemple   |
-|  | --------- | -------------- | --------- |
-|  | +         | Addition       | 1 +2 = 3  |
-|  | –         | Soustraction   | 3 - 2 = 1 |
-|  | *         | Multiplication | 2 * 3 = 6 |
-|  | /         | Division       | 6 / 2 = 3 |
+| Opérateur | Opération      | Exemple   |
+| --------- | -------------- | --------- |
+| +         | Addition       | 1 +2 = 3  |
+| –         | Soustraction   | 3 - 2 = 1 |
+| *         | Multiplication | 2 * 3 = 6 |
+| /         | Division       | 6 / 2 = 3 |
 
 Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
 
 Souvent, les mêmes symboles sont utilisés pour des opérations différentes, en fonction du type de données traitées. Par exemple, le signe (+) peut effectuer diverses opérations, comme le montre le tableau suivant :
 
-| Type de données | Opération | Exemple                                     |
-| --------------- | --------- | ------------------------------------------- |
-| Numérique       | Addition  | 1 + 2 ajoute les nombres, le résultat est 3 | Chaîne |Concaténation |“Bonjour ” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous” Date et Numérique |Addition de date |!1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1997, le résultat est la date 21 janvier 1997 
+| Type de données   | Opération        | Exemple                                                                                             |
+| ----------------- | ---------------- | --------------------------------------------------------------------------------------------------- |
+| Numérique         | Addition         | 1 + 2 ajoute les nombres, le résultat est 3                                                         |
+| Chaine            | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”      |
+| Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1997, le résultat est la date 21 janvier 1997 |
 
 Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
 
@@ -220,18 +222,30 @@ Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endro
 
 Vous vous référez à une expression par le biais du type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
 
-| Expression            | Type      | Description                                                                                                                                                                   |
-| --------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Bonjour”             | Chaîne    | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                         |
-| “Bonjour ” + “à tous” | Chaîne    | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée. |
-| “M. ” + [Amis]Nom     | Chaîne    | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.        |
-| Uppercase("smith")    | Chaîne    | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                       |
-| 4                     | Numérique | C'est une constante numérique, 4.                                                                                                                                             |
-| 4 * 2                 | Numérique | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                             |
-| MonBouton             | Numérique | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                            | !1997-01-25!| Date| C'est une constante date pour la date 25/01/97 (25 janvier 1997).| |Date du jour+ 30| Date |C'est une expression de type Date qui utilise la commande 
-
-`Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.| |?8:05:30? |Time| C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.| |?2:03:04? + ?1:02:03? |Time |Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.| |Vrai| Booléen| Cette commande retourne la valeur booléenne VRAI.| |10 # 20|Booléen |C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.| |“ABC” = “XYZ” |Booléen |C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.| |MonImage + 50 |Image |Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.| |->[Amis]Nom |Pointeur |Cette expression retourne un pointeur vers lechamp [Amis]Nom.| |Table (1)| Pointeur |C'est une commande qui retourne un pointeur vers la première table.| |JSON Parse (MaChaine)| Objet| C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)| |JSON Parse (MonTabJSON) |Collection |C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)| |Form.pageNumber|Propriété objet|Une propriété objet est une expression qui peut être de tout type |Col[5]|Élément de collection|Un élément de collection est une expression qui peut être de tout type|  
-|$entitySel[0]|Entité|Un élément d'une sélection d'entité ORDA est une expression de type entity. Ce type d'expression n'est **pas affectable**| 
+| Expression              | Type                  | Description                                                                                                                                                                          |
+| ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| “Bonjour”               | Chaîne                | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                                |
+| “Bonjour ” + “à tous”   | Chaîne                | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.        |
+| “M. ” + [Amis]Nom       | Chaîne                | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.               |
+| Uppercase("smith")      | Chaîne                | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                              |
+| 4                       | Numérique             | C'est une constante numérique, 4.                                                                                                                                                    |
+| 4 * 2                   | Numérique             | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                                    |
+| MonBouton               | Numérique             | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
+| !1997-01-25!            | Date                  | C'est une constante date pour la date 25/01/97 (25 janvier 1997).                                                                                                                    |
+| Current date+ 30        | Date                  | C'est une expression de type Date qui utilise la commande `Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date. |
+| ?8:05:30?               | Heure                 | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
+| ?2:03:04? + ?1:02:03?   | Heure                 | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
+| Vrai                    | Booléen               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
+| 10 # 20                 | Booléen               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
+| “ABC” = “XYZ”           | Booléen               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
+| MonImage + 50           | Image                 | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
+| ->[Amis]Nom             | Pointeur              | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
+| Table(1)                | Pointeur              | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
+| JSON Parse (MaChaine)   | Objet                 | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
+| JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
+| Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
+| Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
+| $entitySel[0]           | Entité                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas assignable**                                                            |
 
 ### Expressions assignables et non-assignables
 
@@ -246,7 +260,7 @@ Form.pageNumber:=10 //assigne 10 à Form.pageNumber
 Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 ```
 
-En général, les expressions qui utilisent un opérateur ne sont pas assignables. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
 
 ## Pointeurs
 

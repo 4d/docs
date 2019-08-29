@@ -185,20 +185,22 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-|  | Operator | Operation      | Example            |
-|  | -------- | -------------- | ------------------ |
-|  | +        | Addition       | 1 + 2 results in 3 |
-|  | –        | Subtraction    | 3 – 2 results in 1 |
-|  | *        | Multiplication | 2 * 3 results in 6 |
-|  | /        | Division       | 6 / 2 results in 3 |
+| Operator | Operation      | Example            |
+| -------- | -------------- | ------------------ |
+| +        | Addition       | 1 + 2 results in 3 |
+| –        | Subtraction    | 3 – 2 results in 1 |
+| *        | Multiplication | 2 * 3 results in 6 |
+| /        | Division       | 6 / 2 results in 3 |
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type | Operation | Example                                 |
-| --------- | --------- | --------------------------------------- |
-| Number    | Addition  | 1 + 2 adds the numbers and results in 3 | String |Concatenation |“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there” Date and Number |Date addition |!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989| 
+| Data Type       | Operation     | Example                                                                                              |
+| --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
+| String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
+| Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 The operators are fully defined in the chapter Operators and its subsections.
 
@@ -220,18 +222,30 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression            | Type   | Description                                                                                                                                                                     |
-| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”               | String | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”    | String | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name | String | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")    | String | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                     | Number | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                 | Number | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton              | Number | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           | !1997-01-25!| Date| This is a date constant for the date 1/25/97 (January 25, 1997).| |Current date+ 30| Date |This is a date expression that uses the 
-
-`Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.| |?8:05:30? |Time| This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.| |?2:03:04? + ?1:02:03? |Time |This expression adds two times together and returns the time 3:05:07.| |True| Boolean| This command returns the Boolean value TRUE.| |10 # 20|Boolean |This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.| |“ABC” = “XYZ” |Boolean |This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.| |My Picture + 50 |Picture |This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.| |->[People]Name |Pointer |This expression returns a pointer to the field called [People]Name.| |Table (1)| Pointer |This is a command that returns a pointer to the first table.| |JSON Parse (MyString)| Object| This is a command that returns MyString as an object (if proper format)| |JSON Parse (MyJSONArray) |Collection |This is a command that returns MyJSONArray as a collection (if proper format)| |Form.pageNumber|Object property|An object property is an expression that can be of any supported type |Col[5]|Collection element|A collection element is an expression that can be of any supported type|  
-|$entitySel[0]|Entity|A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**| 
+| Expression               | Type               | Description                                                                                                                                                                     |
+| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
+| “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
+| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
+| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
+| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
+| !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
+| Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
+| ?8:05:30?                | Time               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
+| ?2:03:04? + ?1:02:03?    | Time               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
+| True                     | Boolean            | This command returns the Boolean value TRUE.                                                                                                                                    |
+| 10 # 20                  | Boolean            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
+| “ABC” = “XYZ”            | Boolean            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
+| My Picture + 50          | Picture            | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
+| ->[People]Name           | Pointer            | This expression returns a pointer to the field called [People]Name.                                                                                                             |
+| Table (1)                | Pointer            | This is a command that returns a pointer to the first table.                                                                                                                    |
+| JSON Parse (MyString)    | Object             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
+| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
+| Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
+| Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
+| $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
 ### Assignable vs non-assignable expressions
 

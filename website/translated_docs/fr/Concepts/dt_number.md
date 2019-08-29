@@ -37,9 +37,27 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 
 ## Opérateurs sur les nombres
 
-| Opération | Syntaxe         | Retourne | Expression | Valeur |
-| --------- | --------------- | -------- | ---------- | ------ |
-| Addition  | Nombre + Nombre | Nombre   | 2 + 3      | 5      | Soustraction |Nombre – Nombre |Nombre |3 – 2 |1| Multiplication |Nombre * Nombre |Nombre |5 * 2 |10| Division |Nombre /Nombre |Nombre |5 / 2 |2.5| Division entière |Nombre \ Nombre |Nombre |5 \ 2 |2| Modulo |Nombre /Nombre |Nombre |5 % 2 |1| Exponentiation |Nombre ^ Nombre |Nombre |2 ^ 3| 8| Egalité |Nombre = Nombre|Booléen |10 = 10 |True| ||||10 = 11| False| Inégalité |Nombre # Nombre |Booléen |10 #11 |True| ||||10 # 10 |False| Supérieur à |Nombre > Nombre |Booléen |11 > 10 |True| ||||10 > 11 |False| Inférieur à |Nombre < Nombre |Booléen |10 < 11 |True| |||| 11 < 10 |False| Supérieur ou égal à |Nombre >= Nombre |Booléen |11 >= 10 |True| ||||10 >= 11 |False| Inférieur ou égal à |Nombre <= Number |Boolean |10 <= 11 |True| |||| 11 <= 10 |False| 
+| Opération           | Syntaxe          | Retourne | Expression | Valeur |
+| ------------------- | ---------------- | -------- | ---------- | ------ |
+| Addition            | Nombre + Nombre  | Nombre   | 2 + 3      | 5      |
+| Soustraction        | Nombre - Nombre  | Nombre   | 3 – 2      | 1      |
+| Multiplication      | Number * Number  | Nombre   | 5 * 2      | 10     |
+| Division            | Number /Number   | Nombre   | 5 / 2      | 2.5    |
+| Division entière    | Nombre \ Nombre | Nombre   | 5 \ 2     | 2      |
+| Modulo              | Nombre % Nombre  | Nombre   | 5 % 2      | 1      |
+| Exponentiation      | Nombre ^ Nombre  | Nombre   | 2 ^ 3      | 8      |
+| Egalité             | Nombre = Nombre  | Booléen  | 10 = 10    | True   |
+|                     |                  |          | 10 = 11    | False  |
+| Inégalité           | Nombre # Nombre  | Booléen  | 10 #11     | True   |
+|                     |                  |          | 10 # 10    | False  |
+| Supérieur à         | Nombre > Nombre  | Booléen  | 11 > 10    | True   |
+|                     |                  |          | 10 > 11    | False  |
+| Inférieur à         | Nombre < Nombre  | Booléen  | 10 < 11    | True   |
+|                     |                  |          | 11 < 10    | False  |
+| Supérieur ou égal à | Nombre >= Nombre | Booléen  | 11 >= 10   | True   |
+|                     |                  |          | 10 >= 11   | False  |
+| Inférieur ou égal à | Nombre <= Number | Booléen  | 10 <= 11   | True   |
+|                     |                  |          | 11 <= 10   | False  |
 
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
 
