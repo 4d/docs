@@ -189,7 +189,7 @@ myColl[3]  //access to 4th element of the collection
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
 |Operator|Operation|Example  
----|---|---|
+|---|---|---|
 |+|	Addition | 1 + 2 results in 3
 |–|	Subtraction | 3 – 2 results in 1
 |*|	Multiplication | 2 * 3 results in 6
