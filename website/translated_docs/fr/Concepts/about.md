@@ -4,9 +4,9 @@ title: À propos du Langage 4D
 sidebar_label: À propos du Langage 4D
 ---
 
-Le langage intégré 4D, qui comprend plus de 1300 commandes, fait de 4D un outil de développement puissant. Le langage de 4D peut être utilisé pour de multiples types de tâches, allant de la réalisation de calculs simples à la création d’interfaces utilisateur personnalisées complexes. Vous pouvez par exemple :
+Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est un outil de développement puissant. Ce langage de 4D peut être utilisé pour plusieurs types de tâches, allant de la réalisation de simples calculs à la création d’interfaces utilisateur personnalisées et complexes. Vous pouvez par exemple :
 
-- Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches...),
+- Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches, etc.),
 - Créer et imprimer des états et des étiquettes complexes avec les données de la base,
 - Communiquer avec d’autres systèmes d’information,
 - Envoyer des e-mails, 
@@ -14,7 +14,7 @@ Le langage intégré 4D, qui comprend plus de 1300 commandes, fait de 4D un outi
 - Importer et exporter des données entre des bases 4D et d’autres applications,
 - Incorporer des procédures écrites dans d’autres langages que celui de 4D.
 
-La flexibilité et la puissance du langage de 4D en font l’outil idéal pour toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent rapidement effectuer des calculs. Les utilisateurs expérimentés peuvent personnaliser leurs bases sans devoir connaître la programmation. Les développeurs plus expérimentés peuvent utiliser la puissance du langage de 4D pour ajouter à leurs bases de données des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Les développeurs maîtrisant la programmation dans d’autres langages peuvent ajouter leurs propres routines au langage de 4D.
+La flexibilité et la puissance du langage de 4D en font l’outil idéal pour toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent rapidement effectuer des calculs, les utilisateurs expérimentés peuvent personnaliser leurs bases sans devoir connaître la programmation et les développeurs plus expérimentés peuvent utiliser la puissance du langage de 4D pour ajouter à leurs bases de données des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Les développeurs maîtrisant la programmation dans d’autres langages peuvent ajouter leurs propres routines au langage de 4D.
 
 ## Qu'est-ce qu'un langage ?
 
@@ -24,7 +24,7 @@ Il n’est pas nécessaire de connaître entièrement le langage. Pour pouvoir v
 
 ## Pourquoi utiliser un langage ?
 
-A première vue, un langage de programmation dans 4D peut sembler inutile. En effet, 4D propose en mode Développement des outils puissants et entièrement paramétrables, permettant d’effectuer, sans programmation, une grande variété de tâches de gestion des données. Les opérations fondamentales telles que la saisie de données, les recherches, les tris et la création d’états sont effectuées facilement. De nombreuses autres possibilités sont aussi disponibles, telles que les filtres de validation des données, les aides à la saisie, la représentation graphique et la génération d’étiquettes.
+À première vue, un langage de programmation dans 4D peut sembler inutile. En effet, 4D propose en mode Développement des outils puissants et entièrement paramétrables, permettant d’effectuer, sans programmation, une grande variété de tâches de gestion des données. Les opérations fondamentales telles que la saisie de données, les recherches, les tris et la création d’états sont effectuées facilement. Il existe aussi de nombreuses autres possibilités, telles que les filtres de validation des données, les aides à la saisie, la représentation graphique et la génération d’étiquettes.
 
 Alors, pourquoi avons-nous besoin d'un langage 4D ? Voici quelques-uns de ses principaux rôles :
 
