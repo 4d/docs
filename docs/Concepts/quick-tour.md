@@ -200,10 +200,10 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
 |Data Type	|Operation|	Example  
-|---|---|---
+|---|---|---|
 |Number|	Addition	|1 + 2 adds the numbers and results in 3
-String	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
-Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
+|String	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
+|Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
 
 The operators are fully defined in the chapter Operators and its subsections.
 
