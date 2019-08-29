@@ -25,11 +25,11 @@ The following escape sequences can be used within strings:
 
 |Escape sequence|Character replaced|
 |---|----|
-\n|LF (Line feed)|
-\t|HT (Tab)|
-\r|CR (Carriage return)|
-\\\|\ (Backslash)|
-\\"|" (Quotation marks)|
+|\n|LF (Line feed)|
+|\t|HT (Tab)|
+|\r|CR (Carriage return)|
+|\\\|\ (Backslash)|
+|\\"|" (Quotation marks)|
 
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt"). 
 
