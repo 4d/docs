@@ -42,12 +42,12 @@ monBooléen:=(monBouton=1)
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
-|  | Expr1 | Expr2 | Expr1 & Expr2 |
-|  | ----- | ----- | ------------- |
-|  | True  | True  | True          |
-|  | True  | False | False         |
-|  | False | True  | False         |
-|  | False | False | False         |
+| Expr1 | Expr2 | Expr1 & Expr2 |
+| ----- | ----- | ------------- |
+| Vrai  | True  | True          |
+| Vrai  | Faux  | False         |
+| Faux  | Vrai  | Faux          |
+| Faux  | False | False         |
 
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 
