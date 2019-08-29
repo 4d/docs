@@ -293,9 +293,12 @@ La structure `For each...End for each` exécute le cycle d'instructions définie
 
 Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 
-|                      | Boucle sur collections                                  | Boucle sur entity selections | Boucle sur objets |
-| -------------------- | ------------------------------------------------------- | ---------------------------- | ----------------- |
-| Type Elément_courant | Variable du même type que les éléments de la collection | Entity                       | Variable texte    | Type Expression |Collection (avec éléments du même type) |Entity selection |Objet| |Nombre de boucles (par défaut) |Nombre d'éléments de la collection |Nombre d'entities dans la sélection |Nombre de propriétés d'objets| Prise en charge de Paramètres début / fin / |Oui |Oui |Non| 
+|                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
+| ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| Type Elément_courant                      | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
+| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Objet                         |
+| Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
+| Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
 
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
 - Par défaut, les *instructions* incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
