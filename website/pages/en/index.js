@@ -175,9 +175,9 @@ const Description = props => (
        
       },{
 
-	   content: '[4D Language Concepts](Concepts/about.html)',
+	   content: <translate>[Language Concepts](en/Concepts/about.html)</translate>,
 
-        title: 'Getting Started',
+        title: <translate>Getting Started</translate>,
       }
 
 
@@ -198,7 +198,7 @@ const Description2 = props => (
 
 	     content: '[Projects in 4D (BETA)](Project/overview.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
-        title: 'Development',
+        title: <translate>Development</translate>,
       }
 
 
@@ -216,8 +216,8 @@ const Classic = props => (
       },
 	  {
         content: '[Maintenance and Security Center](MSC/overview.html)<br>[Backup and Restore](Backup/overview.html)',
-        title: 'Administration',
-      },
+        title: <translate>Administration</translate>,
+      }
 
 
 

@@ -190,6 +190,10 @@
   },
   "pages-strings": {
     "...more to come...|no description given": "...more to come...",
+    "[Language Concepts](en/Concepts/about.html)|no description given": "[Language Concepts](en/Concepts/about.html)",
+    "Getting Started|no description given": "Getting Started",
+    "Development|no description given": "Development",
+    "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
