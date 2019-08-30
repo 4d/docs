@@ -18,8 +18,7 @@
           "Concepts/control-flow","Concepts/branching","Concepts/looping"	  
         ]
       },
-	"Concepts/error-handling","Concepts/interpreted-compiled",
-	"Concepts/components","Concepts/plug-ins","Concepts/identifiers"
+	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 	"Projects in 4D (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
