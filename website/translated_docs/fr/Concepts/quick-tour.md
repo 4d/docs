@@ -1,7 +1,7 @@
 ---
 id: quick-tour
-title: Présentation
-sidebar_label: Présentation
+title: Tour d'horizon
+sidebar_label: Tour d'horizon
 ---
 
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
