@@ -1,7 +1,6 @@
 ---
 id: about
 title: À propos du Langage 4D
-sidebar_label: À propos du Langage 4D
 ---
 
 Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est un outil de développement puissant. Ce langage de 4D peut être utilisé pour plusieurs types de tâches, allant de la réalisation de simples calculs à la création d’interfaces utilisateur personnalisées et complexes. Vous pouvez par exemple :

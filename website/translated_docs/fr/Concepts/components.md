@@ -134,7 +134,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 - `ON EVENT CALL`
 - `Method called on event`
-- `SET PICTURE TO LIBRARY|`
+- `SET PICTURE TO LIBRARY`
 - `REMOVE PICTURE FROM LIBRARY`
 - `SAVE LIST`
 - `ARRAY TO LIST`

@@ -39,17 +39,17 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ## Picture operators
 
-| Operation                 | Syntax             | Returns | Action                                                                                                                                                             |
-| ------------------------- | ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2      | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2      | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2      | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2 | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number   | Picture | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number   | Picture | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number   | Picture | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number  | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture */ Number  | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
+| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
+| ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
+| Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
+| Exclusive superimposition | Pict1 & Pict2          | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
+| Inclusive superimposition | Pict1 &#124; Pict2     | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal move           | Picture + Number       | Picture | Move Picture horizontally Number pixels                                                                                                                            |
+| Vertical move             | Picture / Number       | Picture | Move Picture vertically Number pixels                                                                                                                              |
+| Resizing                  | Picture * Number       | Picture | Resize Picture by Number ratio                                                                                                                                     |
+| Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
+| Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
 
 **Notes :**
 
@@ -73,8 +73,8 @@ In the following examples, each expression is followed by its graphical represen
 Horizontal concatenation
 
 ```code4d
- circle+rectangle ` Place the rectangle to the right of the circle
- rectangle+circle ` Place the circle to the right of the rectangle
+ circle+rectangle //Place the rectangle to the right of the circle
+ rectangle+circle //Place the circle to the right of the rectangle
 ```
 
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
@@ -82,8 +82,8 @@ Horizontal concatenation
 Vertical concatenation
 
 ```code4d
- circle/rectangle ` Place the rectangle under the circle
- rectangle/circle ` Place the circle under the rectangle
+ circle/rectangle //Place the rectangle under the circle
+ rectangle/circle //Place the circle under the rectangle
 ```
 
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
@@ -107,8 +107,8 @@ Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of
 Horizontal move
 
 ```code4d
-rectangle+50 ` Move the rectangle 50 pixels to the right
-rectangle-50 ` Move the rectangle 50 pixels to the left
+rectangle+50 //Move the rectangle 50 pixels to the right
+rectangle-50 //Move the rectangle 50 pixels to the left
 ```
 
 ![](assets/en/Concepts/hormove.en.png)
@@ -116,8 +116,8 @@ rectangle-50 ` Move the rectangle 50 pixels to the left
 Vertical move
 
 ```code4d
-rectangle/50 ` Move the rectangle down by 50 pixels
-rectangle/-20 ` Move the rectangle up by 20 pixels
+rectangle/50 //Move the rectangle down by 50 pixels
+rectangle/-20 //Move the rectangle up by 20 pixels
 ```
 
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
@@ -125,8 +125,8 @@ rectangle/-20 ` Move the rectangle up by 20 pixels
 Resize
 
 ```code4d
-rectangle*1.5 ` The rectangle becomes 50% bigger
-rectangle*0.5 ` The rectangle becomes 50% smaller
+rectangle*1.5 //The rectangle becomes 50% bigger
+rectangle*0.5 //The rectangle becomes 50% smaller
 ```
 
 ![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
@@ -134,8 +134,8 @@ rectangle*0.5 ` The rectangle becomes 50% smaller
 Horizontal scaling
 
 ```code4d
-circle*+3 ` The circle becomes 3 times wider
-circle*+0.25 ` The circle's width becomes a quarter of what it was
+circle*+3 //The circle becomes 3 times wider
+circle*+0.25 //The circle's width becomes a quarter of what it was
 ```
 
 ![](assets/en/Concepts/Horscaling.en.png)![](assets/en/Concepts/Horscaling2.en.png)
@@ -143,8 +143,8 @@ circle*+0.25 ` The circle's width becomes a quarter of what it was
 Vertical scaling
 
 ```code4d
-circle*/2 ` The circle becomes twice as tall
-circle*/0.25 ` The circle's height becomes a quarter of what it was
+circle*|2 //The circle becomes twice as tall
+circle*|0.25 //The circle's height becomes a quarter of what it was
 ```
 
 ![](assets/en/Concepts/vertscaling.en.png)![](assets/en/Concepts/veticalscaling2.en.png)

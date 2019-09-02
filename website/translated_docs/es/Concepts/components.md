@@ -134,7 +134,7 @@ The following commands are not compatible for use within a component because the
 
 - `ON EVENT CALL`
 - `Method called on event`
-- `SET PICTURE TO LIBRARY|`
+- `SET PICTURE TO LIBRARY`
 - `REMOVE PICTURE FROM LIBRARY`
 - `SAVE LIST`
 - `ARRAY TO LIST`

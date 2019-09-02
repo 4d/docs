@@ -21,8 +21,7 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "À propos du Langage 4D",
-        "sidebar_label": "À propos du Langage 4D"
+        "title": "À propos du Langage 4D"
       },
       "Concepts/arrays": {
         "title": "Tableaux"
@@ -94,8 +93,8 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "Présentation",
-        "sidebar_label": "Présentation"
+        "title": "Tour d'horizon",
+        "sidebar_label": "Tour d'horizon"
       },
       "Concepts/shared": {
         "title": "Objets et collections partagés"
@@ -189,7 +188,7 @@
     }
   },
   "pages-strings": {
-    "...more to come...|no description given": "...Et bien plus encore...",
+    "...more to come...|no description given": "...Plus de contenu à venir...",
     "[Language Concepts](en/Concepts/about.html)|no description given": "[Language Concepts](fr/Concepts/about.html)",
     "Getting Started|no description given": "Prise en main",
     "Development|no description given": "Développement",

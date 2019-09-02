@@ -1,7 +1,6 @@
 ---
 id: about
 title: About the 4D Language
-sidebar_label: About the 4D Language
 ---
 
 The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for database applications on desktop computers. You can use the 4D language for many different tasks—from performing simple calculations to creating complex custom user interfaces. For example, you can:

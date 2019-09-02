@@ -273,3 +273,53 @@ MyVar:="Hello"
 MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
+
+## Comments
+
+Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+
+There are two ways to create comments:
+
+- `//` for single line comments
+- `/*...*/` for inline or multiline commnents.
+
+Both styles of comments can be used simultaneously.
+
+#### Single line comments (//)
+
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+
+```code4d
+//This is a comment
+For($vCounter;1;100) //Starting loop
+  //comment
+  //comment
+  //comment
+ End for
+```
+
+#### Inline or multiline comments (/* */)
+
+Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+
+- **Inline comments** can be inserted anywhere in the code. Example:
+
+```code4d
+For /* inline comment */ ($vCounter;1;100)
+    ...
+End for
+```
+
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+
+```code4d
+For ($vCounter;1;100)
+/*
+comments  
+    /* 
+    other comments
+    */
+*/
+...
+End for
+```
