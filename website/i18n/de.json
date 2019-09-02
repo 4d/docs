@@ -21,8 +21,7 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "About the 4D Language",
-        "sidebar_label": "About the 4D Language"
+        "title": "About the 4D Language"
       },
       "Concepts/arrays": {
         "title": "Arrays"
