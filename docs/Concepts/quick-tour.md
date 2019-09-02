@@ -310,7 +310,7 @@ Surround contents with `/*` ... `*/` characters to create inline comments or mul
 - **Inline comments** can be inserted anywhere in the code. Example:
 
 ```code4d
-For /* inline comment **/ ($vCounter;1;100)
+For /* inline comment */ ($vCounter;1;100)
 	...
 End for
 ```
