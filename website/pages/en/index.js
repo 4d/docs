@@ -175,7 +175,7 @@ const Description = props => (
        
       },{
 
-	   content: <translate>[Language Concepts](en/Concepts/about.html)</translate>,
+	   content: <translate>[Language Concepts](Concepts/about.html)</translate>,
 
         title: <translate>Getting Started</translate>,
       }
