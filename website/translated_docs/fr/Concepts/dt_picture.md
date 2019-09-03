@@ -39,17 +39,17 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 ## Opérateurs sur les images
 
-| Opération                 | Syntaxe                | Retourne | Action                                                                                                                                                                   |
-| ------------------------- | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Concaténation horizontale | Image1 + Image2        | Image    | Place Image2 à la droite d'Image1                                                                                                                                        |
-| Concaténation verticale   | Image1 / Image2        | Image    | Place Image2 au-dessous d'Image1                                                                                                                                         |
-| Superposition exclusive   | Image1 & Image2        | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
-| Superposition inclusive   | Image1 | Image2        | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Déplacement horizontal    | Image + Nombre         | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
-| Déplacement vertical      | Image / Nombre         | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
-| Redimensionnement         | Image * Nombre         | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
-| Extension horizontale     | Image *+ Nombre        | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
-| Extension verticale       | Picture *&#124; Number | Image    | Resize Picture vertically by Number ratio                                                                                                                                |
+| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                   |
+| ------------------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Concaténation horizontale | Image1 + Image2 | Image    | Place Image2 à la droite d'Image1                                                                                                                                        |
+| Concaténation verticale   | Image1 / Image2 | Image    | Place Image2 au-dessous d'Image1                                                                                                                                         |
+| Superposition exclusive   | Image1 & Image2 | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
+| Superposition inclusive   | Image1 | Image2 | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Déplacement horizontal    | Image + Nombre  | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
+| Déplacement vertical      | Image / Nombre  | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
+| Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
+| Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
+| Extension verticale       | Image *| Nombre | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
 
 **Notes :**
 
@@ -73,8 +73,8 @@ Dans les exemples ci-dessous, chaque expression est suivie de sa représentation
 Concaténation horizontale
 
 ```code4d
- circle+rectangle //Place the rectangle to the right of the circle
- rectangle+circle //Place the circle to the right of the rectangle
+ cercle+rectangle // Place le rectangle à droite du cercle
+rectangle+cercle // Place le cercle à droite du rectangle
 ```
 
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
@@ -107,8 +107,8 @@ Pict3:=Pict1|Pict2 // Récupérer le masque résultant de la superposition de de
 Déplacement horizontal
 
 ```code4d
-rectangle+50 //Move the rectangle 50 pixels to the right
-rectangle-50 //Move the rectangle 50 pixels to the left
+rectangle+50 // Déplace le rectangle 50 pixels vers la droite
+rectangle-50 // Déplace le rectangle 50 pixels vers la gauche
 ```
 
 ![](assets/en/Concepts/hormove.en.png)
@@ -116,8 +116,8 @@ rectangle-50 //Move the rectangle 50 pixels to the left
 Déplacement vertical
 
 ```code4d
-rectangle/50 //Move the rectangle down by 50 pixels
-rectangle/-20 //Move the rectangle up by 20 pixels
+rectangle/50 // Déplace le rectangle 50 pixels vers le bas
+rectangle/-20 // Déplace le rectangle 20 pixels vers le haut
 ```
 
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
@@ -125,8 +125,8 @@ rectangle/-20 //Move the rectangle up by 20 pixels
 Redimensionnement
 
 ```code4d
-rectangle*1.5 //The rectangle becomes 50% bigger
-rectangle*0.5 //The rectangle becomes 50% smaller
+rectangle*1.5 // Augmente la taille du rectangle de 50%
+ rectangle*0.5 // Réduit la taille du rectangle de 50%
 ```
 
 ![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
@@ -134,8 +134,8 @@ rectangle*0.5 //The rectangle becomes 50% smaller
 Extension horizontale
 
 ```code4d
-circle*+3 //The circle becomes 3 times wider
-circle*+0.25 //The circle's width becomes a quarter of what it was
+cercle*+3 // Multiplie par 3 la largeur du cercle
+ cercle*+0,25 // La largeur du cercle est réduite à un quart de sa taille originale
 ```
 
 ![](assets/en/Concepts/Horscaling.en.png)![](assets/en/Concepts/Horscaling2.en.png)
@@ -143,8 +143,8 @@ circle*+0.25 //The circle's width becomes a quarter of what it was
 Extension verticale
 
 ```code4d
-circle*|2 //The circle becomes twice as tall
-circle*|0.25 //The circle's height becomes a quarter of what it was
+cercle*/2 // Double la hauteur du cercle
+ cercle*/0.25 // La hauteur du cercle est réduite à un quart de sa taille originale
 ```
 
 ![](assets/en/Concepts/vertscaling.en.png)![](assets/en/Concepts/veticalscaling2.en.png)
