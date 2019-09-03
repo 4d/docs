@@ -13,7 +13,7 @@ Cette page affiche le nom, la version et l’emplacement de l’application ains
 La partie centrale de la fenêtre affiche le nom et l’emplacement des fichiers de structure et de données ainsi que, le cas échéant, du fichier d'historique de la base. La partie inférieure de la fenêtre indique le nom du détenteur de la licence 4D, le type de licence, ainsi que le nom de l’utilisateur de la base lorsque les mots de passe sont activés — Super_Utilisateur dans le cas contraire.
 
 - **Affichage et sélection des chemins d’accès** : dans la page **Programme**, les chemins d’accès sont affichés sous forme de pop up menus contenant l’enchaînement des dossiers à partir du disque :   
-    ![](assets/en/MSC/MSC_popup.png) Si vous sélectionnez un élément du menu (disque ou dossier), il s’affiche dans une nouvelle fenêtre système. La commande **Copier le chemin** copie le chemin d’accès complet dans le Presse-papiers sous forme de texte, et en utilisant les séparateurs de la plate-forme courante.
+    ![](assets/fr/MSC/MSC_popup.png) Si vous sélectionnez un élément du menu (disque ou dossier), il s’affiche dans une nouvelle fenêtre système. La commande **Copier le chemin** copie le chemin d’accès complet dans le Presse-papiers sous forme de texte, et en utilisant les séparateurs de la plate-forme courante.
 
 - **Dossier “Licenses”** Le bouton **Dossier “Licenses”** permet d’afficher le contenu du dossier Licenses actif dans une nouvelle fenêtre système. Tous les fichiers de licence installés dans votre environnement 4D sont regroupés dans ce dossier, placé sur votre disque dur. Lorsqu’ils sont ouverts avec un navigateur Web, ces fichiers affichent des informations relatives aux licences qu’ils contiennent et à leurs caractéristiques. L’emplacement du dossier "Licenses" peut varier en fonction de la version ou de la langue de votre système d’exploitation. Pour plus d’informations sur l'emplacement de ce dossier, reportez-vous à la commande ```Get 4D folder.``` ***Note :** Vous pouvez également accéder à ce dossier depuis la boîte de dialogue “Mise à jour des licences” (accessible depuis le menu Aide).*
 
@@ -21,7 +21,7 @@ La partie centrale de la fenêtre affiche le nom et l’emplacement des fichiers
 
 Cette page propose une vue d'ensemble de la base :
 
-![](assets/en/MSC/MSC_Tables.png)
+![](assets/fr/MSC/MSC_Tables.png)
 
 > Les informations présentes dans cette page sont disponibles en mode standard et en mode maintenance.
 
@@ -44,10 +44,10 @@ La page **Données** fournit des informations sur l'espace de stockage libre et 
 
 Ces informations sont fournies sous forme de valeurs en octets et sont également représentées sous forme graphique :
 
-![](assets/en/MSC/MSC_Data.png)
+![](assets/fr/MSC/MSC_Data.png)
 
 > La page Données ne tient pas compte de la taille des données éventuellement stockées à l’extérieur du fichier de données (cf. section Stockage externe des données).
 
-Des fichiers trop fragmentés réduisent les performances du disque dur et donc de la base. Si le taux d’occupation est trop faible, 4D vous le signale par une icône d’avertissement (qui apparaît dans le bouton Informations et dans l’onglet du type de fichier correspondant) et indique qu’un compactage est requis :![](assets/en/MSC/MSC_infowarn.png)
+Des fichiers trop fragmentés réduisent les performances du disque dur et donc de la base. Si le taux d’occupation est trop faible, 4D vous le signale par une icône d’avertissement (qui apparaît dans le bouton Informations et dans l’onglet du type de fichier correspondant) et indique qu’un compactage est requis :![](assets/fr/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](assets/en/MSC/MSC_compactwarn.png)
+A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](assets/fr/MSC/MSC_compactwarn.png)
