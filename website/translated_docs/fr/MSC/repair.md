@@ -64,11 +64,11 @@ Si, du fait de l’endommagement de la table d’adresses, un ou plusieurs group
 
 Sélectionnez ensuite la table à attribuer dans le tableau des "Tables non attribuées" puis cliquez sur le bouton **Identifier table**. Vous pouvez également attribuer une table par glisser-déposer. Le groupe d’enregistrements est alors associé à la table, il sera récupéré dans cette table. Les noms des tables attribuées manuellement sont affichés en caractères noirs. Le bouton **Ignorer enregistrements** permet de supprimer l’association effectuée manuellement entre une table et un groupe d’enregistrements.
 
-## Open log file
+## Voir le compte rendu
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After repair is completed, 4D generates a log file in the Logs folder of the database. Ce fichier liste l’ensemble des opérations qui ont été menées. It is created in XML format and named: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *<NomBase>* est le nom du fichier de structure sans extension, par exemple "Factures",
+- *<aaaa-mm-jj hh-mm-ss>* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
