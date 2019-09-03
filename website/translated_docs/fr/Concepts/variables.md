@@ -21,7 +21,7 @@ Par exemple, si vous souhaitez définir une variable de type texte, il suffira d
  C_TEXT(monTexte)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
+**Note :**Vous pouvez également créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```code4d
  MaDate:=Current date+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
