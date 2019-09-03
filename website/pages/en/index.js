@@ -67,9 +67,10 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+   <small><translate>Essential Guides for 4D Developers</translate></small>
   </h2>
 );
+   // <small>{siteConfig.tagline}</small>
 
 const PromoSection = props => (
   <div className="section promoSection">
