@@ -45,49 +45,75 @@ Each part has its own name as well as specific properties. For example, the numb
 There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
 
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes). 
-- **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
-- **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection. 
+- **Selection** (**Current selection** or **Named selection**): each column is bound to a database field and represents its contents for the selection.
+- **Collection or Entity selection**: each column is bound to a collection or an entity selection object. 
 
->It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+>It is not possible to combine different list box types in the same list box object.
 
-
-### Managing list boxes
-
-You can completely configure a list box object through its properties, and you can also manage it dynamically through programming. 
-
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or `EDIT ITEM`, `Displayed line number` commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) page of the *4D Language reference* for more information. 
+## List box objects
 
 
 
-## Data entry and display
 
-### Array list boxes
+## Array type list boxes
 
-In an array list box, each column must be associated with a one-dimensional 4D array; all array types can be used, with the exception of pointer arrays. The number of rows is based on the number of array elements. 
+The number of rows is based on the number of array elements. Each column of the list box is associated with a 4D array. By default, 4D assigns the name “ColumnX” to each column variable, and thus to each associated array. You can change it in the column properties. With this type of list box, the values entered or displayed are managed using the 4D language. You can also associate a choice list with a column in order to control data entry (see List box column specific properties).
 
-By default, 4D assigns the name “ColumnX” to each column variable, and thus to each associated array. You can change it, as well as other column properties, in the [column properties](listbox_Overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command
-
->Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms. 
-
-With this type of list box, the values entered or displayed are managed using the 4D language. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
-The values of columns are managed using high-level List box commands (such as `LISTBOX INSERT ROWS` or `LISTBOX DELETE ROWS`) as well as array manipulation commands. For example, to initialize the contents of a column, you can use the following instruction:
-
-```code4d
-ARRAY TEXT(ColumnName;size)
-```
-
-You can also use a list:
-
-```LIST TO ARRAY("ListName";ColumnName)
-```
-
->**Warning**: When a list box contains several columns of different sizes, only the number of items of the smallest array (column) will be displayed. You should make sure that each array has the same number of elements as the others. Also, if a list box column is empty (this occurs when the associated array was not correctly declared or sized using the language), the list box displays nothing.
-
+You can display an array type list box either in standard mode or in hierarchical mode. List boxes displayed in hierarchical mode use specific mechanisms that are described below. 
 
 #### Supported Properties
 
 [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)  - [Background Color](properties_BackgroundAndBorder.md#background-color) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing) - [Data Souce](properties_Object.md#data-source) - [Display Headers](properties_Headers.md#display-headers) - [Display Footers](properties_Footers.md#display-footers) - [Draggable](properties_Action.md#droppable) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font_color) - [Height (list box)](properties_CoordinatesAndSizing.md#height) - [Height (headers)](properties_Headers.md#height) - [Height (footers)](properties_Footers.md#height) - [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) - [Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) -  [Method](properties_Action.md#method) - [Movable Rows](properties_Action.md#movable-rows) - [Number of Columns](properties_ListBox.md#number-of-columns) - [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns) - [Number of Static Columns](properties_ListBox.md#number-of-static-columns) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Control Array](properties_ListBox.md#row-control-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Height](properties_CoordinatesAndSizing.md#row-height) - [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array) - [Row Style Array](properties_Text.md#row-style-array) - [Selection Mode](properties_ListBox.md#selection-mode) - [Single-Click Edit](properties_Entry.md#single-click-edit) - [Sortable](properties_Action.md#sortable) - [Standard action](properties_Action.md#standard-action) - [Top](properties_CoordinatesAndSizing.md#top) - [Transparent](properties_BackgroundAndBorder.md#transparent) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Line Color](properties_Gridlines.md#vertical-line-color) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
+
+
+## Hierarchical list boxes
+
+A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
+
+Only array type list boxes can be hierarchical. 
+
+Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
+
+To specify a hierarchical list box, there are three different possibilities:
+
+*	Manually configure hierarchical elements using the Property list of the form editor.
+*	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
+*	Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the 4D Language Reference manual.
+
+
+### Defining the hierarchy
+
+
+You can enable and configure the hierarchical mode multiple ways:
+
+*	via the Property List
+*	via the context menu 
+*	via programming
+
+
+#### Create hierarchy  
+
+When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the Create hierarchy command is available in the context menu:
+
+![](assets/en/FormObjects/listbox_hierarchy1.png)
+
+When you choose this command, the following actions are carried out:
+
+*	The "Hierarchical list box" option is checked for the object in the Property List.
+*	The variables of the columns are used to specify the hierarchy. They replace any variables already specified.
+*	The columns selected no longer appear in the list box (except for the title of the first one).
+
+Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected (see illustration above), if you choose Create hierarchy in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+
+![](assets/en/FormObjects/listbox_hierarchy2.png)
+
+### Cancel hierarchy  
+
+When the first column is selected and already specified as hierarchical, you can use the Cancel hierarchy command. When you choose this command, the following actions are carried out:
+
+*	The "Hierarchical list box" option is deselected for the object,
+*	The hierarchical levels 2 to X are removed and transformed into columns added to the list box.
 
 
 
@@ -606,54 +632,3 @@ All these characteristics can be handled using the list box, column, header and 
 ## Printing list boxes 
  
 List boxes can be printed in forms in "preview" mode (printing a picture of the list box area) or in "advanced" mode (dynamic printing in variable size). For more information, refer to [Printing list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#250728) in the *4D Language Reference* manual.
-
-
-## Hierarchical list boxes
-
-A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
-
-Only array type list boxes can be hierarchical. 
-
-Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
-
-To specify a hierarchical list box, there are three different possibilities:
-
-*	Manually configure hierarchical elements using the Property list of the form editor.
-*	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-*	Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the 4D Language Reference manual.
-
-
-### Defining the hierarchy
-
-
-You can enable and configure the hierarchical mode multiple ways:
-
-*	via the Property List
-*	via the context menu 
-*	via programming
-
-
-#### Create hierarchy  
-
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the Create hierarchy command is available in the context menu:
-
-![](assets/en/FormObjects/listbox_hierarchy1.png)
-
-When you choose this command, the following actions are carried out:
-
-*	The "Hierarchical list box" option is checked for the object in the Property List.
-*	The variables of the columns are used to specify the hierarchy. They replace any variables already specified.
-*	The columns selected no longer appear in the list box (except for the title of the first one).
-
-Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected (see illustration above), if you choose Create hierarchy in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
-
-![](assets/en/FormObjects/listbox_hierarchy2.png)
-
-### Cancel hierarchy  
-
-When the first column is selected and already specified as hierarchical, you can use the Cancel hierarchy command. When you choose this command, the following actions are carried out:
-
-*	The "Hierarchical list box" option is deselected for the object,
-*	The hierarchical levels 2 to X are removed and transformed into columns added to the list box.
-
-
