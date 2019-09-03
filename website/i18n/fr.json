@@ -130,12 +130,12 @@
         "sidebar_label": "Compact Page"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "MSC/overview": {
         "title": "Aperçu",
