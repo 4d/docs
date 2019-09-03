@@ -188,8 +188,9 @@
     }
   },
   "pages-strings": {
+    "Essential Guides for 4D Developers|no description given": "Essential Guides for 4D Developers",
     "...more to come...|no description given": "...more to come...",
-    "[Language Concepts](en/Concepts/about.html)|no description given": "[Language Concepts](en/Concepts/about.html)",
+    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
     "Getting Started|no description given": "Getting Started",
     "Development|no description given": "Development",
     "Administration|no description given": "Administration",

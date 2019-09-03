@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Suivant",
     "previous": "Précédent",
-    "tagline": "Guides fondamentaux pour les développeurs 4D",
+    "tagline": "Guides essentiels du développeur 4D",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -188,8 +188,9 @@
     }
   },
   "pages-strings": {
-    "...more to come...|no description given": "...Plus de contenu à venir...",
-    "[Language Concepts](en/Concepts/about.html)|no description given": "[Language Concepts](fr/Concepts/about.html)",
+    "Essential Guides for 4D Developers|no description given": "Guides essentiels du développeur 4D",
+    "...more to come...|no description given": "...En cours de création...",
+    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
     "Getting Started|no description given": "Prise en main",
     "Development|no description given": "Développement",
     "Administration|no description given": "Administration",

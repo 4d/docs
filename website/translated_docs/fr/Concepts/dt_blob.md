@@ -33,7 +33,9 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
 
 ## Assignation
 
-Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant :
+Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant.
+
+** **
 
 ```code4d
   // Déclarer deux variables de type BLOB

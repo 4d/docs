@@ -81,8 +81,8 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
 
 ```code4d
      RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)
-     RESOLVE POINTER(monptr2;vNomVar2;vnumtable2;vnumchamp2)
-     If(vNomVar1=vNomVar2)
+      RESOLVE POINTER(monptr2;vNomVar2;vnumtable2;vnumchamp2)
+      If(vNomVar1=vNomVar2)
        //Ce test retourne Vrai alors que les variables sont différentes
 ```
 
@@ -118,7 +118,7 @@ SAVE RECORD($tablepointer->)
 
 ## Portée des commandes du langage
 
-Hormis les [commandes non utilisables](#commandes-non-utilisables), un composant peut utiliser toute commande du langage 4D.
+Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
 Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTE METHOD` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes de la base hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
