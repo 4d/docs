@@ -274,50 +274,50 @@ MonPointeur->->MaVar
 ALERT(MonPointeur->)
 ```
 
-## Comments
+## Commentaires
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Les commentaires sont des lignes d’instructions inactives. Ces lignes ne sont pas interprétées par le programme (4D n’applique aucun style spécifique à l’intérieur de la ligne de commentaire) et ne sont pas exécutées lorsque la méthode est appelée.
 
-There are two ways to create comments:
+Voici deux manières de créer des commentaires :
 
-- `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `//` pour créer une ligne de commentaire
+- `/*...*/` pour les blocs de commentaire en ligne et multi-lignes.
 
-Both styles of comments can be used simultaneously.
+Les deux styles de commentaires peuvent être utilisés simultanément.
 
-#### Single line comments (//)
+#### Ligne de commentaire (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemple :
+Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Exemple :
 
 ```code4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
- End for
+//Ceci est un commentaire 
+For($vCounter;1;100) //Début de la boucle
+  //commentaire
+  //commentaire
+  //commentaire
+ Fin de boucle
 ```
 
-#### Inline or multiline comments (/* */)
+#### Commentaires en ligne ou multi-lignes (/* */)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+Entourez le contenu avec les caractères `/*` ... Les caractères `*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Exemple :
+- Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Exemple :
 
 ```code4d
-For /* inline comment */ ($vCounter;1;100)
+Boucle /* ligne de commentaire */ ($vCounter;1;100)
     ...
-End for
+Fin de boucle
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Exemple :
+- Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
 
 ```code4d
 For ($vCounter;1;100)
 /*
-comments  
+commentaires  
     /* 
-    other comments
+    autres commentaires
     */
 */
 ...
