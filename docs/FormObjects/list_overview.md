@@ -12,14 +12,14 @@ Hierarchical lists are form objects that can be used to display data as lists wi
 Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
 
 
-## Data source management
+## Hierarchical list data source
 
-The contents of a hierarchical list form object can be initialized using one of the following ways:
+The contents of a hierarchical list form object can be initialized in one of the following ways:
 
-- Associate an existing design choice list as a [datasource property](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the Lists editor. 
+- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode. 
 - Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object. 
 
-In any cases, you manage hierarchical lists at runtime using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language. 
+In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language. 
 
 
 ## ListRef and object name
@@ -148,16 +148,12 @@ Basically, you need to deal with item reference numbers when you want direct acc
 
 ## Modifiable element
 
-You can control whether an item in a hierarchical list can be modified by the user. If an item in a hierarchical list is modifiable, the user can edit it by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item. If you populate a hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item. 
 
+- Whatever the hierarchical list data source, you can control the whole object with the [Enterable](properties_Entry.md#enterable) property. 
 
+- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
 
-Hierarchical lists can be created entirely by programming (via the `New list` or `Copy list` commands) or using lists defined in the List editor in Design mode (Load list command).
-
-The contents and appearance of hierarchical lists are managed by programming using the commands of the "Hierarchical Lists" theme. Certain specific appearance characteristics can also be set using the generic commands of the Object Properties theme (see below).
-
-
-You can also associate hierarchical list references with form object choice lists (sources, required values and excluded values) using the [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-LIST-BY-REFERENCE.301-4311390.en.html) or [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-LIST-BY-NAME.301-4311380.en.html) command.
 
 ## Supported Properties
 
