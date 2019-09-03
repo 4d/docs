@@ -66,16 +66,16 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 Voici un système de gestion des erreurs simple :
 
 ```code4d
-//installing the error handling method
+//installer la méthode de gestion des erreurs
  ON ERR CALL("errorMethod")
  //... exécuter le code
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
 ```code4d
-// errorMethod project method
- If(Error#1006) //this is not a user interruption
-    ALERT("The error "+String(Error)+" occurred". Le code en question est : \""+Error formula+"\"")
+// méthode projet errorMethod
+ If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
+    ALERT("L'erreur "+String(Error)+" s'est produite". Le code en question est : \""+Error formula+"\"")
  End if
 ```
 
