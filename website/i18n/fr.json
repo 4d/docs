@@ -118,16 +118,16 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "MSC/encrypt": {
         "title": "Page chiffrement",
