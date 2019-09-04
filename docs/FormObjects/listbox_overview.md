@@ -59,7 +59,7 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 
 
-## Data entry and display
+## List box objects
 
 ### Array list boxes
 
@@ -69,7 +69,7 @@ By default, 4D assigns the name “ColumnX” to each column variable, and thus 
 
 >Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms. 
 
-With this type of list box, the values entered or displayed are managed using the 4D language. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
+With array type list box, the values entered or displayed are managed using the 4D language. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
 The values of columns are managed using high-level List box commands (such as `LISTBOX INSERT ROWS` or `LISTBOX DELETE ROWS`) as well as array manipulation commands. For example, to initialize the contents of a column, you can use the following instruction:
 
 ```code4d
@@ -78,7 +78,8 @@ ARRAY TEXT(ColumnName;size)
 
 You can also use a list:
 
-```LIST TO ARRAY("ListName";ColumnName)
+```code4d
+LIST TO ARRAY("ListName";ColumnName)
 ```
 
 >**Warning**: When a list box contains several columns of different sizes, only the number of items of the smallest array (column) will be displayed. You should make sure that each array has the same number of elements as the others. Also, if a list box column is empty (this occurs when the associated array was not correctly declared or sized using the language), the list box displays nothing.
@@ -92,13 +93,96 @@ You can also use a list:
 
 
 
-## Selection type list boxes
+### Selection list boxes
 
-The number of rows is based on the **current selection** or on a **named selection**. Each column is associated with a field (for example [Employees]LastName) or a 4D expression. The expression can be based on one or more fields (for example, [Employees]FirstName+“ ”[Employees]LastName) or it may simply be a formula (for example String(Milliseconds)). The expression can also be a project method, a variable or an array item.   
+In this type of list box, each column can be associated with a field (for example `[Employees]LastName)` or an expression. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
 
-In the case of a list box based on the current selection, any modification done from the database side is automatically reflected in the list box, and vice versa. The current selection is therefore always the same in both places.  
+The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
+
+In the case of a list box based on the current selection of a table, any modification done from the database side is automatically reflected in the list box, and vice versa. The current selection is therefore always the same in both places.  
 
 ### Supported Properties
+
+Supported properties depend on the list box type.
+
+|Property|Array|Selection|Collection or Entity Selection|
+|---|----|---|---|  
+|[Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)||||  
+|[Background Color](properties_BackgroundAndBorder.md#background-color)||||
+|[Bold](properties_Text.md#bold)
+|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)||||
+|[Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)||||
+|[Bottom](properties_CoordinatesAndSizing.md#bottom)||||
+|[Collection or entity selection](properties_Object.md#collection-or-entity-selection)||||
+|[Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)||||
+|[Current item](properties_DataSource.md#current-item)||||
+|[Current item position](properties_DataSource.md#current-item-position)||||
+|[Data Souce](properties_Object.md#data-source)||||
+|[Detail Form Name](properties_ListBox.md#detail-form-name)||||
+|[Display Headers](properties_Headers.md#display-headers)||||
+|[Display Footers](properties_Footers.md#display-footers)||||
+|[Double-click on row](properties_ListBox.md#double-click-on-row)||||
+|[Draggable](properties_Action.md#droppable)||||
+|[Droppable](properties_Action.md#droppable)||||
+|[Focusable](properties_Entry.md#focusable)||||
+|[Font](properties_Text.md#font)||||
+|[Font Color](properties_Text.md#font_color)||||
+|[Font Color Expression](properties_Text.md#font-color-expression)||||
+|[Height (list box)](properties_CoordinatesAndSizing.md#height)||||
+|[Height (headers)](properties_Headers.md#height)||||
+|[Height (footers)](properties_Footers.md#height)||||
+|[Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)||||
+|[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle)||||
+|[Hide selection highlight](properties_Appearance.md#hide-selection-highlight)||||
+|[Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box)||||
+|[Highlight Set](properties_ListBox.md#highlight-set)||||
+|[Horizontal Alignment](properties_Text.md#horizontal-alignment)||||
+|[Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)||||
+|[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)||||
+|[Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)||||
+|[Italic](properties_Text.md#italic)||||
+|[Left](properties_CoordinatesAndSizing.md#left)||||
+|[Meta info expression](properties_Text.md#meta-info-expression)||||
+|[Method](properties_Action.md#method)||||
+|[Movable Rows](properties_Action.md#movable-rows)||||
+|[Number of Columns](properties_ListBox.md#number-of-columns)||||
+|[Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)||||
+|[Number of Static Columns](properties_ListBox.md#number-of-static-columns)||||
+|[Object Name](properties_Object.md#object-name)||||
+|[Right](properties_CoordinatesAndSizing.md#right)||||
+|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)||||
+|[Row Control Array](properties_ListBox.md#row-control-array)||||
+|[Row Font Color Array](properties_Text.md#row-font-color-array)||||
+|[Row Height](properties_CoordinatesAndSizing.md#row-height)||||
+|[Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)||||
+|[Row Style Array](properties_Text.md#row-style-array)||||
+|[Selected Items](properties_DataSource.md#selected-items)||||
+|[Selection Mode](properties_ListBox.md#selection-mode)||||
+|[Single-Click Edit](properties_Entry.md#single-click-edit)||||
+|[Sortable](properties_Action.md#sortable)||||
+|[Standard action](properties_Action.md#standard-action)||||
+|[Style Expression](properties_Text.md#style-expression)||||
+|[Top](properties_CoordinatesAndSizing.md#top)||||
+|[Transparent](properties_BackgroundAndBorder.md#transparent)||||
+|[Type](properties_Object.md#type)||||
+|[Underline](properties_Text.md#underline)||||
+|[Variable or Expression](properties_Object.md#variable-or-expression)||||
+|[Vertical Alignment](properties_Text.md#vertical-alignment)||||
+|[Vertical Line Color](properties_Gridlines.md#vertical-line-color)||||
+|[Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)||||
+|[Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)||||
+|[Visibility](properties_Display.md#visibility)||||
+|[Width](properties_CoordinatesAndSizing.md#width)||||
+
+
+
+
+
+
+
+
+
+********
 
 [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)  - [Background Color](properties_BackgroundAndBorder.md#background-color) - [Bold](properties_Text.md#bold) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - 
 [Collection or entity selection](properties_Object.md#collection-or-entity-selection) - [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing) - [Current item](properties_DataSource.md#current-item) - [Current item position](properties_DataSource.md#current-item-position) - [Data Souce](properties_Object.md#data-source) - [Detail Form Name](properties_ListBox.md#detail-form-name) - [Display Headers](properties_Headers.md#display-headers) - [Display Footers](properties_Footers.md#display-footers) - [Double-click on row](properties_ListBox.md#double-click-on-row) - [Draggable](properties_Action.md#droppable) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font_color) - [Font Color Expression](properties_Text.md#font-color-expression) - [Height (list box)](properties_CoordinatesAndSizing.md#height) - [Height (headers)](properties_Headers.md#height) - [Height (footers)](properties_Footers.md#height) - [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) - [Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) - [Highlight Set](properties_ListBox.md#highlight-set) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) -  [Meta info expression](properties_Text.md#meta-info-expression) - [Method](properties_Action.md#method) - [Movable Rows](properties_Action.md#movable-rows) - [Number of Columns](properties_ListBox.md#number-of-columns) - [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns) - [Number of Static Columns](properties_ListBox.md#number-of-static-columns) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Control Array](properties_ListBox.md#row-control-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Height](properties_CoordinatesAndSizing.md#row-height) - [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array) - [Row Style Array](properties_Text.md#row-style-array) - [Selected Items](properties_DataSource.md#selected-items) - [Selection Mode](properties_ListBox.md#selection-mode) - [Single-Click Edit](properties_Entry.md#single-click-edit) - [Sortable](properties_Action.md#sortable) - [Standard action](properties_Action.md#standard-action) - [Style Expression](properties_Text.md#style-expression) - [Top](properties_CoordinatesAndSizing.md#top) - [Transparent](properties_BackgroundAndBorder.md#transparent) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Line Color](properties_Gridlines.md#vertical-line-color) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
@@ -111,10 +195,18 @@ In the case of a list box based on the current selection, any modification done 
 
  
 
-## Collection or Entity selection type list boxes
-The number of rows is based on the number of collection elements or entities. In the column properties, each column is associated with a 4D expression that usually refers to a property path (see List box column specific properties). Collection elements or entities are returned by using the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command (for example, This.firstName to display the value of the "firstName" property/attribute for each element/entity).  
+### Collection or Entity selection list boxes
+In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection. 
 
-Collections and entity selections are very similar when used as list box sources. However, entity selection list boxes benefit from additional features related to user data entry (see [Managing entry](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#3815372)) since rows are directly connected to data from the datastore.  
+Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+
+When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
+
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+
+```code4d
+myCol:=myCol.push("new value") //display new value in list box
+```
 
 ### Supported Properties
 
