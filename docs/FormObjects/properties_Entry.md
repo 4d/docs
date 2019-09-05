@@ -25,13 +25,11 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 ## Context Menu
 
->Ignored if the [Multi-style](properties_Text.md#multi-style) property is not enabled.  
-
-Allows the user access to a standard context menu in the area when the form is executed.
+Allows the user access to a standard context menu in the object when the form is executed.
 
 The contents of the menu are set by the rendering engine of the platform.
 
->It is possible to control access to the context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+>It is possible to control access to the Web Area context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
 #### JSON Grammar
 
@@ -41,7 +39,7 @@ The contents of the menu are set by the rendering engine of the platform.
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Input](input_overview.md) - [Web Area](webArea_overview.md)
 
 
 

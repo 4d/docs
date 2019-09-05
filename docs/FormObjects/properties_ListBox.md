@@ -3,6 +3,24 @@ id: propertiesListBox
 title: List Box
 ---
 
+
+## Columns
+
+Collection of columns of the list box.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|columns |collection of column objects|Contains the properties for the list box columns |
+
+For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview)
+
+
 ## Detail Form Name
 `Selection type list box`
 

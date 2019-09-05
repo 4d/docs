@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title:Object 
+title:Objects 
 ---
 
 ## Collection or entity selection
@@ -38,15 +38,20 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 ## Data Source
 
-Specifies the source of the data.
+Specify the type of list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
+
+- **Arrays**: use array elements as the rows of the list box. This option is required when you want to be able to retrieve the result of an SQL query in a list box.
+- **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
+- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
+- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property. 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource|string, or string array for hierarchical listbox column|A 4D variable, field name, or an arbitrary complex language expression.|
+|listboxType|string|"array", "collection", "currentSelection", "namedSelection"|
 
 #### Objects Supported
 

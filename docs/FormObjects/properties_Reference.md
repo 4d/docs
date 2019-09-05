@@ -25,7 +25,8 @@ title: JSON property list
 |Property|Description|Possible Values|
 |---|---|---|
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
-|[columnCount](properties_Crop.md#columns) (picture button, button grid, picture pop-up) <br> [columnCount](properties_ListBox.md#number-of-columns) (list box)|Sets the number of columns.|minimum: 1|
+|[columnCount](properties_Crop.md#columns) (picture button, button grid, picture pop-up) <br> [columnCount](properties_ListBox.md#number-of-columns) (list box)|Sets the number of columns.|minimum: 1|  
+|[columns](properties_ListBox.md#columns)|A collection of list box columns|Collection of column objects with defined column properties
 |[contextMenu](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|
 |[continuousExecution](properties_Action.md#execute-object-method)|Designates whether or not to run the method of an object while the user is tracking the control. |"true", "false"|
 |[controlType](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
@@ -57,6 +58,8 @@ title: JSON property list
 |[enterable](properties_Entry.md#enterable)|Indicates whether users can enter values into the object.|"true", "false"|
 [entryFiler](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries |
 |[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.|
+|[events](XXX)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
+
 
 ## F
 
@@ -80,6 +83,7 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
+|[header](properties_Headers.md#header)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
 |[headerHeight](properties_Headers.md#height)|Used to set the row height |pattern ^(\\d+)(px&#124;em)?$ (positive decimal + px/em )|
 |[height](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
 |[hideExtraBlankRows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows.	|"true", "false"|

@@ -8,24 +8,15 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 ![](assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or type it and/or modify it in the combo box. The Format pop-up menu contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also select a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. You can access the editor by clicking on the [...] button to the right of the formats combo box.
-Any custom formats or filters that you have created are automatically added to the beginning of the alpha and number format lists, preceded by a vertical bar (|).
+You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. 
+Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as: RB-1762-1
+For example, consider a part number with a format such as: RB-1762-1. The alpha format would be: `##-####-#`. 
+When the user enters “RB17621,” the field displays: `RB-1762-1`. The field actually contains "RB17621".
 
-The alpha format would be: ##-####-#
-
-When the user enters “RB17621,” the field displays: RB-1762-1
-
-The field actually contains “RB17621.”
-
-If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is: (#######)
-
-and the user enters “proportion,” the field displays: (portion)
-
-The field actually contains “proportion.” 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is: `(#######)` and the user enters “proportion,” the field displays: `(portion)` The field actually contains “proportion.” 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
 #### JSON Grammar
 
@@ -40,15 +31,13 @@ The field actually contains “proportion.” 4D accepts and stores the entire e
 
 
 
-
-
 ## Boolean Format
 
 Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expression is usually displayed as a pair of [radio buttons](radio_overview.md) or a [check box](checkbox_overview.md).
 
 In addition, a boolean expression can also be displayed as:
 - a text (in an [input object](input_overview.md))
-- a pop-up (only in [list box objects](input_listbox.md)
+- a pop-up (only in [list box objects](input_listbox.md))
 
 In this case, you can select the text to display for each value:
 - **Text when True** - the text to be displayed when the value is "true"
@@ -59,6 +48,7 @@ In this case, you can select the text to display for each value:
 |Name|Data Type|Possible Values|
 |---|---|---|
 |booleanFormat|string|"*textWhenTrue*;*textWhenFalse*", e.g. "Assigned;Unassigned"|
+
 
 #### Objects Supported
 
@@ -83,20 +73,20 @@ The table below shows choices available:
 
 |Choice	|Example|
 |---|---|
-|System date short				|3/25/99					|
-|System date abbreviated *(1)*	|	Wed, Mar 25, 1999		|
-|System date long				|Wednesday, March 25, 1999	|
-|Internal date short special	|03/25/99 but 04/25/2032 *(2)*|
-|Internal date long				|March 25, 1999				|
-|Internal date abbreviated *(1)*|Mar 25, 1999				|
-|Internal date short			|03/25/1999					|
-|ISO Date Time *(3)*			|1999-03-25T00:00:00		|
+|System date short				|3/25/20					|
+|System date abbreviated *(1)*	|Wed, Mar 25, 2020		|
+|System date long				|Wednesday, March 25, 2020	|
+|Internal date short special	|03/25/20 but 04/25/2032 *(2)*|
+|Internal date long				|March 25, 2020	|
+|Internal date abbreviated *(1)*|Mar 25, 2020|
+|Internal date short			|03/25/2020	|
+|ISO Date Time *(3)*			|2020-03-25T00:00:00|
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats now display “jun” for June “jul” for July (instead of “jui” for both as previously). This particularity only applies to French versions of 4D. 
+*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D. 
 
 *(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
-*(3)* The ISO Date Time format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
+*(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
 
 >Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
@@ -135,6 +125,11 @@ The standard 4D formats that can be used are:
 
 The Text type does not have specific display formats. Any existing custom formats are also available.
 
+Boolean columns can be displayed as check boxes or pop-up menus: 
+
+- If you choose Check box, the [Title](#title) property must be defined. 
+- If you choose Pop-up, the [Text when True and Text when False](#boolean-text) properties must be defined.
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
@@ -144,8 +139,6 @@ The Text type does not have specific display formats. Any existing custom format
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
-
-
 
 
 
@@ -506,13 +499,13 @@ The table below shows the Time field display formats and gives examples:
 
 ## Title
 
-This property is available when the [Three-states Checkbox](#three-states) property is enabled so that the title of the check box can be entered.  
+This property is available when the [Boolean Format](#boolean-format) or the [Three-states Checkbox](#three-states) property is enabled for a boolean column, so that the title of the check box can be entered.  
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| | | |
+|controlTitle|string |Any custom label for the check box |
 
 #### Objects Supported
 

@@ -156,11 +156,11 @@ You can use a sequence number to create a unique number for each record in the t
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|values |string  |A list of default values|
+|values |collection |A collection of default values (strings)|
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column (array type only)](listbox_overview.md#list-box-columns)
 
 
 
@@ -219,6 +219,24 @@ If the defined expression is not correct, the column of the list box will displa
 
 
 
+## Master Table
+`Current selection list boxes`
+
+Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+ 
+All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form). 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|table| number|Table number|
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview)
+
+
+
 
 
 
@@ -243,3 +261,18 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 
 
+## Selection Name
+`Named selection list boxes`
+
+Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+
+> Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|namedSelection| string|Named selection name|
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview)
