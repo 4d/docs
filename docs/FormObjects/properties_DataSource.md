@@ -102,30 +102,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 ## Data Type
 
-`Selection and collection type list boxes`
-
-Used to define the type of expression or variable associated with a column. It is used to indicate the display format to apply.
-
-The available formats are:
-
-*	Text 
-*	Numeric
-*	Integer
-*	Date
-*	Time 
-*	Picture 
-*	Boolean
-*	Object
-
-If a field is entered in [Expression](#expression), the Data Type property is not available; the display format corresponding to the field type is used.
-
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|dataSourceTypeHint |string |"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
+Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objects Supported
 
@@ -169,21 +146,22 @@ You can use a sequence number to create a unique number for each record in the t
 
 ## Expression
 
+This description is specific to Selection and collection type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+
 A 4D expression to be associated with a column. You can enter:
 
-*	A simple variable (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
-*	A field using the standard [Table]Field syntax (selection type list box only), for example: [Employees]LastName. The following types of fields can be used:
+- A simple variable (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- A field using the standard [Table]Field syntax (selection type list box only), for example: `[Employees]LastName`. The following types of fields can be used:
 	*	String
 	*	Numeric
 	*	Date
 	*	Time
 	*	Picture
 	*	Boolean
+You can use fields from the Master Table or from other tables.
+*	A 4D expression (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.
 
-	You can use fields from the Master Table or from other tables.
-*	A 4D expression (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or temporary) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.
-
-	The following expression types are supported:
+The following expression types are supported:
 	*	String
 	*	Numeric
 	*	Date
@@ -191,18 +169,14 @@ A 4D expression to be associated with a column. You can enter:
 	*	Boolean
 	*	For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.
 
-	When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing **This**. **This** is a dedicated 4D command that returns a reference to the currently processed element (see the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command description). For example, you can use **This.\<propertyPath>** where and **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. 
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing **This**. `This` is a dedicated 4D command that returns a reference to the currently processed element (see the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command description). For example, you can use **This.\<propertyPath>** where and **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. 
 	
-	If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression. 
+If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression. 
 
-	In any cases, you can define the expression using the 4D Formula Editor by clicking on the [...] button in the Property List. 
+If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (*e.g. [Person]FirstName+" "+[Person]LastName*), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
 
-	If a non-assignable expression is used (*e.g.* *[Person]FirstName+" "+[Person]LastName*), the column is never enterable even if the **Enterable** option is checked.
+If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property. 
 
-	If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the **Enterable** option. 
-
-	In Design mode, the data source type is displayed in the first row of the column. For example, *[Table1]MyFld*.
-If the defined expression is not correct, the column of the list box will display an error message in Application mode.
 
 #### JSON Grammar
 

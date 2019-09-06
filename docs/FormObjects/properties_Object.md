@@ -62,15 +62,16 @@ Specify the type of list box.
 
 ## Expression Type
 
-Specify the data type for the expression or variable. Note that main purpose of this setting is to configure the themes and options available in the Property list so that they will correspond to the data type. It does not actually type the variable itself. In view of database compilation, you must use the commands of the Compiler theme.
+> This property is called **Data Type** for Selection and collection type list box columns. 
+
+
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
 
 However, this property has a typing function in the following specific cases:
 
-- **Dynamic variables**: you can use this menu to declare the type of [dynamic variables](#dynamic-variables).
+- **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
 - **[List Box Columns](listboxOverview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
-- **Picture variables**: you can use this menu to declare the variables before loading the form in interpreted mode.
-
-> Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
+- **Picture variables**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
 Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
@@ -78,7 +79,7 @@ Otherwise, the picture variable will not be displayed correctly (only in interpr
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSourceTypeHint |string  |"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
+|dataSourceTypeHint |string  |<li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"|
 
 #### Objects Supported
 
@@ -238,19 +239,23 @@ You can associate various automatic calculations with a footer area. The followi
 
 ## Variable or Expression
 
-This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times but each object name must be unique. When using 4D’s language, you can refer to an active form object by either its variable name or object name (for more information, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the *4D Language Reference* manual).
+> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns. 
 
->Object names are limited to a size of 255 bytes and for variable names the size is limited to 31 bytes. See [Identifiers](https://developer.4d.com/docs/en/Concepts/identifiers.html) section for more information about naming rules.
 
-The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The variable associated with a progress indicator lets you read and change the current setting.
+This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 
-Variables can be enterable or non-enterable and can receive data of the Alpha, Text, number, Date, Time and/or Picture type. 
+>Variable name size is limited to 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
-### Using expressions
+The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
 
-You can enter an expression in the “Variable or Expression” area of the Property List for the object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Naturally in this case it is not possible to manage the value of the variable by programming. 
+Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
+
+### Expressions
+
+You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 
 >If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
+
 
 
 ### Dynamic variables
@@ -284,6 +289,7 @@ There are two advantages with this mechanism:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+
 
 
 #### JSON Grammar

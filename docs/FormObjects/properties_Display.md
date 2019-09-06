@@ -107,34 +107,19 @@ The table below shows choices available:
 
 
 
-
-
-
 ## Display Type
 
-Used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). 
+Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes). 
 
-The standard 4D formats that can be used are: 
+Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined. 
 
-*	Alpha, 
-*	Numeric, 
-*	Date, 
-*	Time, 
-*	Picture and 
-*	Boolean. 
-
-The Text type does not have specific display formats. Any existing custom formats are also available.
-
-Boolean columns can be displayed as check boxes or pop-up menus: 
-
-- If you choose Check box, the [Title](#title) property must be defined. 
-- If you choose Pop-up, the [Text when True and Text when False](#boolean-text) properties must be defined.
+Boolean columns can also be displayed as pop-up menus. In this case, the [Text when True and Text when False](#boolean-format) properties must be defined.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|controlType|string|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
+|controlType|string|<li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup"|
 
 #### Objects Supported
 
@@ -368,7 +353,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit  
+### Scaled to fit 
 
 The Scaled to fit format causes 4D to resize the picture to fit the dimensions of the field area.
 
@@ -406,6 +391,8 @@ When a Picture field is in this format, the user can move the picture around the
 
 ### Replicated  
 
+`JSON grammar: "tiled"`
+
 When the area that contains a picture with the Replicated format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
@@ -416,7 +403,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|pictureFormat|string|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled" (pictures only), "proportionalTopLeft" (excluding pictures), "proportionalCenter"(excluding pictures)|
+|pictureFormat|string|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter")|
 
 #### Objects Supported
 
