@@ -21,7 +21,7 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "Über die 4D Programmiersprache"
       },
       "Concepts/arrays": {
         "title": "Arrays"
@@ -118,8 +118,8 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Seite Aktivität Analyse",
+        "sidebar_label": "Seite Aktivität Analyse"
       },
       "MSC/backup": {
         "title": "Backup Page",
