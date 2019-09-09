@@ -16,25 +16,25 @@ Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. die Datenbank wird nicht v
 
 Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
-- **From the standard database opening dialog box** The standard Open database dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
-- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (database not open)  
+- **Über den Standard-Öffnen Dialog** Der Standarddialog zum Öffnen der Datenbank enthält in der rechten unteren Ecke die Schaltfläche **Öffnen** mit einem PopUp-Menü, in dem Sie die Option **Maintenance Security Center** anklicken können. ![](assets/en/MSC/MSC_standardOpen.png)
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der Toolbar (Die Datenbank ist nicht geöffnet)  
     ![](assets/en/MSC/mscicon.png)  
-    When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. The database will not be opened by 4D.
+    Auf dem Bildschirm erscheint der Standard-Öffnen Dialog, in dem Sie die entsprechende Datenbank auswählen können. Dabei öffnet 4D nicht die Datenbank.
 
-## Display in standard mode
+## Anzeige im Standardmodus
 
-In standard mode, a database is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+Im Standardmodus wird eine Datenbank geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der 4D Toolbar:  
     ![](assets/en/MSC/mscicon.png) 
-- Use the “msc” standard action that it is possible to associated with a menu command or a form object (see "Standard actions" section).
+- Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können (siehe Abschnitt "Standard actions").
 
-- Use the ```OPEN SECURITY CENTER``` language command.
+- Über den 4D Befehl ```OPEN SECURITY CENTER``` .
 
-## Feature availability
+## Verfügbarkeit der Funktionen
 
-Certain MSC functions are not available depending on the MSC opening mode:
+Je nach dem Öffnen-Modus in MSC sind bestimmte MSC Funktionen nicht verfügbar:
 
-- Backup function is only available when the database is open (the MSC must have been opened in standard mode).
-- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the database is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible.
+- Die Backup-Funktion ist nur verfügbar, wenn die Datenbank geöffnet ist, d. h. MSC muss im Standardmodus geöffnet sein.
+- Datenkomprimierung, Zurückfahren, Wiederherstellen, Reparieren und Verschlüsselung sind nur bei nicht-geöffneten Datendateien verwendbar, d. h. MSC muss im Wartungsmodus geöffnet sein. Versuchen Sie, diese Funktionen bei im Standardmodus geöffneter Datenbank aufzurufen, erscheint ein Dialogfenster, um die Anwendung zu schließen und im Wartungsmodus erneut aufzurufen.
+- In verschlüsselten Datenbanken ist für den Zugriff auf verschlüsselte Daten oder die Datei .journal ein gültiger Schlüssel zum Entschlüsseln erforderlich (siehe unter [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible.
