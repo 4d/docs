@@ -1,30 +1,30 @@
 ---
 id: analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: Seite Aktivität Analyse
+sidebar_label: Seite Aktivität Analyse
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
+Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. Diese Funktion ist hilfreich, um die Verwendung der Datenbank zu analysieren oder die Operationen herauszufinden, die Fehler verursachen oder die Funktionsweise beeinträchtigen. Läuft die Anwendung im Client-/Server-Modus, können Sie auch die Operationen auf jedem Client-Rechner überprüfen.
 
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+> Sie können die in den Daten der Anwendung ausgeführten Operationen auch zurückfahren (rollback). Weitere Informationen dazu finden Sie auf der [Seite Zurückfahren](rollback.md).
 
 ![](assets/en/MSC/MSC_analysis.png)
 
-Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten liefern verschiedene Informationen zur Operation. Durch Anklicken der Kopfteile können Sie die Spalten beliebig umstellen.
 
-This information allows you to identify the source and context of each operation:
+Über diese Informationen können Sie die Quelle und den Kontext jeder Operation identifizieren:
 
-- **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. This column can contain one of the following operations:
+- **Operation**: Sequenznummer der Operation im Logbuch.
+- **Aktion**: Art der in den Daten ausgeführten Operation. Diese Spalte kann eine der nachfolgenden Operationen anzeigen:
     
-    - Opening of Data File: Opening of a data file.
-    - Closing of Data File: Closing of an open data file.
-    - Creation of a Context: Creation of a process that specifies an execution context.
-    - Closing of a Context: Closing of process.
-    - Addition: Creation and storage of a record.
-    - Adding a BLOB: Storage of a BLOB in a BLOB field.
-    - Deletion: Deletion of a record.
-    - Modification: Modification of a record.
+    - Öffnen der Datendatei: Datendatei öffnen
+    - Schließen der Datendatei: Eine geöffnete Datendatei wird geschlossen
+    - Erstellen eines Kontexts: Einen Prozess erstellen, der einen Ausführungskontext angibt
+    - Schließen eines Kontexts: Prozess schließen
+    - Hinzufügen: Einen Datensatz erstellen und speichern
+    - BLOB hinzufügen: Ein BLOB in einem BLOB Feld speichern
+    - Löschen: Datensatz gelöscht
+    - Ändern: Datensatz geändert
     - Start of Transaction: Transaction started.
     - Validation of Transaction: Transaction validated.
     - Cancellation of Transaction: Transaction cancelled.
