@@ -158,15 +158,15 @@ Designates the thickness of a line.
 
 `Array type list boxes`
 
-The name of an array or expression to apply a custom background color to each row of the list box.
+The name of an array to apply a custom background color to each row of the list box or column.
 
-The name of a Longint array must be entered. Each element of this array corresponds to a cell of the column, so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level (see Inheritance), pass the value -255 to the corresponding array element.
+The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowFillSource|string|The name of a an array.|
+|rowFillSource|string|The name of a longint array.|
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)

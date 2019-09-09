@@ -43,15 +43,15 @@ When this property is not selected, only the rightmost column of the list box is
 
 ## Horizontal Sizing
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form.
+This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command. 
 
-You can enable automatic resizing or repositioning in the Property List. There are three options which you can assign :
+Three options are available:
 
 |Option|	Result|
 |---|---|
 |Grow|The same percentage is applied to the object’s width when the user resizes the width of the window, 
 |Move|The object is moved the same amount left or right as the width increase when the user resizes the width of the window, 
-|Fixed|The object remains stationary when the form is resized
+|None|The object remains stationary when the form is resized
 
 >This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
@@ -119,16 +119,15 @@ Designates if the size of an object can be modified by the user.
 
 ## Vertical Sizing
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form.
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command. 
 
-You can enable automatic resizing or repositioning in the Property List. There are three options which you can assign :
+Three options are available:
 
 |Option|	Result|
 |---|---|
-|Grow|The same percentage is applied to the object’s height when the user resizes the width of the window, 
+|Grow|The same percentage is applied to the object's height when the user resizes the width of the window, 
 |Move|The object is moved the same amount up or down as the height increase when the user resizes the width of the window, 
-
-|Fixed|The object remains stationary when the form is resized
+|None|The object remains stationary when the form is resized
 
 >This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 

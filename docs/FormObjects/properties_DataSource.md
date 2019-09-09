@@ -213,6 +213,39 @@ All database tables can be used, regardless of whether the form is related to a 
 
 
 
+## Save as
+
+
+This property is available in the following conditions:
+
+- a [choice list](#choice-list) is associated with the object
+- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+
+This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
+
+- **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
+- **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the `APPEND TO LIST` or `SET LIST ITEM` commands, or in the lists editor.
+
+This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+
+Using this property requires compliance with the following principles:
+
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
+- Valid and unique references must be associated with list items.
+- If you use this property for a [pop-up menu](popupMenuDropdownList_Overview.md), it must be associated with a field.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|saveAs| string|"value", "reference"|
+
+#### Objects Supported
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Pop-up Menu/Drop-down List](popupMenuDropdownList_Overview.md)
+
+
+
 
 ## Selected Items
 `Collection or entity selection list boxes`

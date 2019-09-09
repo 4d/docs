@@ -71,16 +71,17 @@ Date formats control the way dates appear when displayed or printed. For data en
 
 The table below shows choices available:
 
-|Choice	|Example|
-|---|---|
-|System date short				|3/25/20					|
-|System date abbreviated *(1)*	|Wed, Mar 25, 2020		|
-|System date long				|Wednesday, March 25, 2020	|
-|Internal date short special	|03/25/20 but 04/25/2032 *(2)*|
-|Internal date long				|March 25, 2020	|
-|Internal date abbreviated *(1)*|Mar 25, 2020|
-|Internal date short			|03/25/2020	|
-|ISO Date Time *(3)*			|2020-03-25T00:00:00|
+|Format name|JSON String|Example (US system)|
+|---|---|---|
+|System date short|- (default)|03/25/20					|
+|System date abbreviated *(1)*|systemMedium|Wed, Mar 25, 2020		|
+|System date long|systemLong|Wednesday, March 25, 2020	|
+|RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT	| 
+|Short Century|shortCentury	|03/25/20 but 04/25/2032 *(2)*|
+|Internal date long|long		|March 25, 2020	|
+|Internal date abbreviated *(1)*|abbreviated|Mar 25, 2020|
+|Internal date short|short		|03/25/2020	|
+|ISO Date Time *(3)*|iso8601	|2020-03-25T00:00:00|
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D. 
 
@@ -124,29 +125,6 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
-
-
-
-
-
-## Invisible
-
-Allows hiding a column in the Application environment. 
-
-In the Design environment, you can choose to display or hide the invisible columns using the list box context menu (click on a column or column header):
-
-![](assets/en/FormObjects/listbox_columns.png)
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|display |boolean | "true", "false"|
-
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns)
-
 
 
 
@@ -454,19 +432,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-|Format			|	Comments|Example for 04:30:25|
-|---|---|---|
-|HH:MM:SS		| 			|04:30:25						|
-|HH:MM			|			|04:30							|
-|Hour Min Sec	|			|4 hours 30 minutes 25 seconds	|
-|Hour Min		|			|4 hours 30 minutes				|
-|HH:MM AM/PM	|			|4:30 a.m.						|
-|MM SS			|Time expressed as a duration from 00:00:00	|270:25|
-|Min Sec		|Time expressed as a duration from 00:00:00	|270 Minutes 25 Seconds|
-|ISO Date Time	|Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format|	0000-00-00T04:30:25|
-|System time short|	Standard time format defined in the system|04:30:25|
-|System time long abbreviated|Mac OS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format|	4•30•25 AM|
-|System time long|	Mac OS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format	|4:30:25 AM HNEC|
+|Format name|JSON string|	Comments|Example for 04:30:25|
+|---|---|---|---|
+|HH:MM:SS|hh_mm_ss| 			|04:30:25						|
+|HH:MM|hh_mm|			|04:30							|
+|Hour Min Sec|HH_MM_SS|			|4 hours 30 minutes 25 seconds	|
+|Hour Min|HH_MM|			|4 hours 30 minutes	|
+|HH:MM AM/PM|hh_mm_am|			|4:30 a.m.	|
+|MM SS|mm_ss			|Time expressed as a duration from 00:00:00	|270:25|
+|Min Sec|MM_SS|Time expressed as a duration from 00:00:00	|270 Minutes 25 Seconds|
+|ISO Date Time|iso8601|Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format|	0000-00-00T04:30:25|
+|System time short|- (default)|	Standard time format defined in the system|04:30:25|
+|System time long abbreviated|systemMedium |macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format|	4•30•25 AM|
+|System time long|systemLong|	macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format	|4:30:25 AM HNEC|
 
 #### JSON Grammar
 
@@ -509,23 +487,24 @@ Controls the display of values when list box columns are too narrow to show thei
 
 This option is available for columns with any type of contents, except pictures and objects.
 
-*	When the option is checked (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+*	When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
 	![](assets/en/FormObjects/property_truncate1.png)
 
-	>The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On OS X, the ellipsis is added in the middle of the text.
+>The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
-*	When the option is unchecked, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+*	When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
 	![](assets/en/FormObjects/property_truncate2.png)
 
-	The Truncate with ellipsis option is checked by default and can be specified with list boxes of the Array, Selection, or Collection type.
+The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
 	
 
->*	When applied to Text or String type columns, the Truncate with ellipsis option is available only if the Wordwrap option is not checked. When the Wordwrap option is checked, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis option is not available.
-*	The Truncate with ellipsis option can be applied to Boolean type columns; however, the result differs depending on the cell format:
-	*	For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-	*	For Check box type Boolean formats, labels are always clipped.
+> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+
+The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+- For Pop-up type Boolean formats, labels are truncated with an ellipsis,
+- For Check box type Boolean formats, labels are always clipped.
 
 #### JSON Grammar
 

@@ -280,15 +280,15 @@ Modifies the orientation (rotation) of the text area.
 ## Row Font Color Array
 `Array type list boxes`
 
-Allows setting a custom font color to each cell of the column. 
+Allows setting a custom font color to each row of the list box or cell of the column. 
  
-The name of a Longint array must be used. Each element of this array corresponds to a cell of the column, so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level (see [Inheritance](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#3077915)), pass the value -255 to the corresponding array element.
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowStrokeSource|string|Name of array or expression|
+|rowStrokeSource|string|The name of a longint array|
 
 #### Objects Supported
 
@@ -302,15 +302,16 @@ The name of a Longint array must be used. Each element of this array corresponds
 ## Row Style Array
 `Array type list boxes`
 
-Allows setting a custom font style to each cell of the column.
-For array type list boxes, you must enter the name of a Longint array. Each element of this array corresponds to a cell of the column, so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level (see  [Inheritance](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#3077915)), pass the value -255 to the corresponding array element.
+Allows setting a custom font style to each row of the list box or each cell of the column.
+
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowStyleSource|string|Name of array or expression.|
+|rowStyleSource|string|The name of a longint array.|
 
 #### Objects Supported
 
@@ -326,28 +327,29 @@ For array type list boxes, you must enter the name of a Longint array. Each elem
 
 `Selection and collection/entity selection type list boxes`
 
-Used to apply a custom character style to each row of the list box.
+Used to apply a custom character style to each row of the list box or each cell of the column.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the Formula editor to specify an expression. To do this, click on the [...] button which appears when you select the area. You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+
+Example:
+ 
+```code4d
+Choose([Companies]ID;Bold;Plain;Italic;Underline)
+```
+
 
 >This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
- 
-The following example uses a variable name: enter CompanyStyle in the Row Style area and, in the form method, write the following code:
- 
-````code4d
-CompanyStyle:=Choose([Companies]ID;Bold;Plain;Italic;Underline)
-````
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowStyleSource|string|Name of expression.|
+|rowStyleSource|string|Style expression to evaluate for each row/cell.|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) 
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 

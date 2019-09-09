@@ -109,13 +109,31 @@ When this option is checked, the object method is executed with the `On Data Cha
 
 ## Method
 
-An object's method.
+Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+
+Several types of method references are supported:
+
+- a standard object method file path, i.e. that uses the following pattern:  
+`ObjectMethods/objectName.4dm`  
+... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/*formName*/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+
+- a project method name: name of an existing project method without file extension, i.e.:
+`myMethod`
+In this case, 4D does not provide automatic support for object operations.
+
+- a custom method file path including the .4dm extension, e.g.:  
+`ObjectMethods/objectName.4dm`
+You can also use a filesystem:  
+`/RESOURCES/Buttons/bOK.4dm`
+In this case, 4D does not provide automatic support for object operations.
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|method|text |The name of an existing project method|
+|method|text |Object method standard or custom file path, or project method name|
+
 
 #### Objects Supported
 

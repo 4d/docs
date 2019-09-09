@@ -141,7 +141,7 @@ Positions an object on the left of the form.
 
 The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
 
->When resizing the form, if the ""Grow" [horizontal sizing](properties-ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+>When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### JSON Grammar
 
@@ -160,7 +160,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
 
->When resizing the form, if the ""Grow" [horizontal sizing](properties-ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+>When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 
 #### JSON Grammar
