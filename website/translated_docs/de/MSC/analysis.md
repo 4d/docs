@@ -25,18 +25,18 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
     - BLOB hinzufügen: Ein BLOB in einem BLOB Feld speichern
     - Löschen: Datensatz gelöscht
     - Ändern: Datensatz geändert
-    - Start of Transaction: Transaction started.
-    - Validation of Transaction: Transaction validated.
-    - Cancellation of Transaction: Transaction cancelled.
-- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
+    - Starten der Transaktion: Transaktion gestartet
+    - Bestätigen der Transaktion: Transaktion bestätigt
+    - Abbrechen der Transaktion: Transaktion annulliert
+- **Tabelle**: Tabelle, zu welcher der hinzugefügte/gelöschte/geänderte Datensatz bzw. das BLOB gehört
 
-- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
-- **Size**: Size (in bytes) of data processed by the operation.
-- **Date and Hour**: Date and hour when the operation was performed.
-- **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
-- **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
-    ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **Primärschlüssel/BLOB**: Inhalt des Primärschlüssels für jeden Datensatz (besteht der Primärschlüssel aus mehreren Feldern, sind die einzelnen Werte durch Strichpunkte voneinander getrennt) oder Sequenznummer des BLOB, welche an der Operation beteiligt ist.
+- **Prozess**: Interne Nummer des Prozesses, in dem die Operation ausgeführt wurde. Diese interne Nummer entspricht dem Kontext der Operation.
+- **Größe**: Größe (in Bytes) der Daten, die durch die Operation bearbeitet werden
+- **Datum und Uhrzeit**: Datum und Uhrzeit, zu der die Operation ausgeführt wurde.
+- **Anwender**: Name des Anwenders, der die Operation ausgeführt hat. Im Client-/Server-Modus erscheint der Name des client-seitigen Rechners; im Einzelplatz die ID des Anwenders. Sind keine 4D Kennwörter aktiviert, ist diese Spalte leer.
+- **Werte**: Werte der Felder für den Datensatz bei Hinzufügen oder Ändern. Die Werte werden durch “;” voneinander getrennt. Nur Werte in alphanumerischer Form erscheinen.  
+    ***Hinweis:** Ist die Anwendung verschlüsselt und wurde kein gültiger Verschlüsselungscode zum geöffneten Logbuch geliefert, werden verschlüsselte Werte in dieser Spalte nicht angezeigt.*
+- **Datensätze**: Datensatznummer
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). The Browse button can be used to select and open another log file for the database. The **Export...** button can be used to export the contents of the file as text.
+Klicken Sie am unteren Rand auf die Schaltfläche **Analysieren** um den Inhalt des aktuellen Logbuchs der ausgewählten Datenbank anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
