@@ -1,16 +1,16 @@
 ---
-id: compact
-title: Compact Page
-sidebar_label: Compact Page
+id: Seite Kompakt
+title: Seite Kompakt
+sidebar_label: Seite Kompakt
 ---
 
-You use this page to access the data file compacting functions.
+Auf dieser Seite können Sie die Funktionen zum Komprimieren der Datendatei verwenden.
 
-## Why compact your files?
+## Warum Dateien komprimieren?
 
-Compacting files meets two types of needs:
+Komprimieren der Dateien erfüllt zweie Anforderungen:
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
+- **Größe verringern und Dateien optimieren**: Die Dateien können nicht-verwendete Leerräume ("Löcher") enthalten. Beim Löschen von Datensätzen wird der zuvor belegte Platz in der Datei zum Leerraum. In der Regel verwendet 4D diese Leerräume soweit wie möglich erneut. Da jedoch die Datengröße unterschiedlich ist, entstehen durch sukzessives Löschen oder Ändern unweigerlich nicht-verwendbare Leerräume. Dasselbe passiert, wenn eine große Menge Daten gerade gelöscht wurde: die leeren Stellen bleiben in der Datei ohne Zuweisung. Das Verhältnis zwischen Größe der Datendatei und derzeit für die Daten genutztem Platz ist die Auslastungsrate der Daten. Eine zu geringe Rate ist zunächst Platzverschwendung, kann aber auch die Performance der Datenbank beeinträchtigen. Hier schafft Komprimieren Abhilfe, denn dadurch wird das Speichern der Daten neu organisiert und optimiert, d. h. die Löcher werden entfernt. Der Bereich “Information” fasst die Daten im Hinblick auf Fragmentierung zusammen und schlägt die auszuführenden Operationen vor. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
 
 - **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
 
