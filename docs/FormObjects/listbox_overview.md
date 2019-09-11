@@ -11,9 +11,9 @@ List boxes are complex active objects that allow displaying and entering data as
 
 A list box contains one or more columns whose contents are automatically synchronized. The number of columns is, in theory, unlimited (it depends on the machine resources). 
 
-### User interface
+#### Basic user features
 
-During execution, list boxes allow displaying and entering data as lists. To make a cell editable ([if entry is allowed for the column](XXX)), simply click twice on the value that it contains: 
+During execution, list boxes allow displaying and entering data as lists. To make a cell editable ([if entry is allowed for the column](#managing-entry)), simply click twice on the value that it contains: 
 
 ![](assets/en/FormObjects/listbox_edit.png)
 
@@ -26,7 +26,7 @@ It is also possible to resize each column, and the user can modify the order of 
 The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
 
 
-### List box parts
+#### List box parts
 
 A list box is composed of four distinct parts: 
 
@@ -39,8 +39,16 @@ A list box is composed of four distinct parts:
 
 Each part has its own name as well as specific properties. For example, the number of columns or the alternating color of each row is set in the list box object properties, the width of each column is set in the column properties, and the font of the header is set in the header properties.
 
+It is possible to add an object method to the list box object and/or to each column of the list box. Object methods are called in the following order:
 
-### List box types  
+1. Object method of each column
+2. Object method of the list box
+
+The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
+
+
+
+#### List box types  
 
 There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
 
@@ -51,7 +59,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 >It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
-### Managing list boxes
+#### Managing list boxes
 
 You can completely configure a list box object through its properties, and you can also manage it dynamically through programming. 
 
@@ -97,6 +105,7 @@ In the case of a list box based on the current selection of a table, any modific
 
 
 ### Collection or Entity selection list boxes
+
 In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection. 
 
 Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
@@ -145,7 +154,7 @@ Supported properties depend on the list box type.
 |[Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|X|X|X|
 |[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle)|X|X|X|
 |[Hide selection highlight](properties_Appearance.md#hide-selection-highlight)|X|X|X|
-|[Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box)|X|||
+|[Hierarchical List Box](properties_Object.md#hierarchical-list-box)|X|||
 |[Highlight Set](properties_ListBox.md#highlight-set)||X||
 |[Horizontal Alignment](properties_Text.md#horizontal-alignment)|X|X|X|
 |[Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)|X|X|X|
@@ -164,7 +173,7 @@ Supported properties depend on the list box type.
 |[Object Name](properties_Object.md#object-name)|X|X|X|
 |[Right](properties_CoordinatesAndSizing.md#right)|X|X|X|
 |[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|X|X||
-|[Row Control Array](properties_ListBox.md#row-control-array)|X|X||
+|[Row Control Array](properties_ListBox.md#row-control-array)|X|||
 |[Row Font Color Array](properties_Text.md#row-font-color-array)|X|X||
 |[Row Height](properties_CoordinatesAndSizing.md#row-height)|X|||
 |[Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)|X|||
@@ -212,137 +221,565 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ## List box headers
 
-To be able to access the header properties of a list box, you must enable the [Display Headers](properties_ListBox.md#display-headers) option of the list box.
+> To be able to access the header properties of a list box, you must enable the [Display Headers](properties_ListBox.md#display-headers) option of the list box.
 
-When headers are displayed, you can select a list box header in the Form editor by clicking it when the list box object is selected:
+When headers are displayed, you can select a header in the Form editor by clicking it when the list box object is selected:
 
 ![](assets/en/FormObjects/listbox_header.png)
 
-You can set standard text properties for each column header of the list box; in this case, these properties have priority over those of the column or of the list box itself.
+You can set standard text properties for each column header of the list box; in this case, these properties have priority over those of the column or of the list box itself. 
 
-In addition, you have access to the specific properties for headers.
+In addition, you have access to the specific properties for headers. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#sorting columns).
+ 
+![](assets/en/FormObjects/lbHeaderIcon.png)
+
+At runtime, events that occur in a header are generated in the [list box column object method](#object-methods).
 
 ### Header Specific Properties
 
-[Object Name](properties_Object.md#object-name) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Title](properties_Object.md#title) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Width](properties_CoordinatesAndSizing.md#width) - [Font](properties_Text.md#font) - [Bold](properties_Text.md#bold) - 
-[Italic](properties_Text.md#italic) - [Underline](properties_Text.md#underline) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Help Tip](properties_Help.md#help-tip) 
-
+[Bold](properties_Text.md#bold) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
+ 
 
 
 
 
 ## List box footers
 
+>To be able to access footer properties for a list box, you must enable the [Display Footers](properties_ListBox.md#display-footers) option.
+
 List boxes can contain non-enterable "footers" displaying additional information. For data shown in table form, footers are usually used to display calculations such as totals or averages.
 
->To be able to access footer properties for a list box, you must enable the Display Footers option.
-
-If footers are displayed, you can click to select one when the list box object is selected in the Form editor:
+When footers are displayed, you can click to select one when the list box object is selected in the Form editor:
 
 ![](assets/en/FormObjects/listbox_footers.png)
 
-For each List box column footer, you can set standard text properties: in this case, these properties take priority over those of the column or of the list box.
+For each List box column footer, you can set standard text properties: in this case, these properties take priority over those of the column or of the list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation). 
 
-You can also access specific properties for footers.
+At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
 
 ### Footer Specific Properties
 
 
-[Object Name](properties_Object.md#object-name) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Expression Type](properties_Object.md#expression-type) - [Variable Calculation](properties_Object.md#variable-calculation) - [Width](properties_CoordinatesAndSizing.md#width) - [Alpha Format](properties_Display.md#alpha-format) - [Wordwrap](properties_Display.md#wordwrap) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Font](properties_Text.md#font) - [Bold](properties_Text.md#bold) - [Italic](properties_Text.md#italic) - [Underline](properties_Text.md#underline) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Help Tip](properties_Help.md#help-tip)
+[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+
+
+## Managing entry  
+
+For a list box cell to be enterable, both of the following conditions must be met:
+
+- The cell’s column must have been set as [Enterable](properties_Entry.md#enterable) (otherwise, the cells of the column can never be enterable).
+- In the `On Before Data Entry` event, $0 does not return -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively. If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.
+
+Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.
+
+![](assets/en/FormObjects/listbox_entry.png)
+
+Here is the method of the *arrText* column:
+
+```code4d
+ Case of
+    :(Form event=On Before Data Entry) // a cell gets the focus
+       LISTBOX GET CELL POSITION(*;"lb";$col;$row)
+  // identification of cell
+       If(arrDate{$row}<Current date) // if date is earlier than today
+          $0:=-1 // cell is NOT enterable
+       Else
+  // otherwise, cell is enterable
+       End if
+ End case
+```
+
+The `On Before Data Entry` event is returned before `On Getting Focus`.
+
+In order to preserve data consistency for selection type and entity selection type list boxes, any modified record/entity is automatically saved as soon as the cell is validated, i.e.:
+
+- when the the cell is deactivated (user presses tab, clicks, etc.)
+- when the listbox is no longer focused,
+- when the form is no longer focused.
+
+The typical sequence of events generated during data entry or modification is as follows:
+
+|Action|Listbox type(s)|Sequence of events|
+|---|---|---|
+|A cell switches to edit mode (user action or a call to the `EDIT ITEM` command)|All|On Before Data Entry|
+||All|On Getting Focus|
+|Its value is modified|All|On Before Keystroke|
+||All|On After Keystroke|
+||All|On After Edit|
+|A user validates and leaves the cell|Selection list boxes|	Save|
+||Record selection list boxes|On saving an existing record trigger (if set)|
+||Selection list boxes|On Data Change(*)|
+||Entity selection list boxes|Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed|
+||All|On Losing Focus
+
+(*) With entity selection list boxes, in the On Data Change event:
+- the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
+- the `This` object contains the modified value.
+
+> Data entry in collection/entity selection type list boxes has a limitation when the expression evaluates to null. In this case, it is not possible to edit or remove the null value in the cell.
 
 
 
+## Managing selections  
 
+Selections are managed differently depending on whether the list box is based on an array, on a selection of records, or on a collection/entity selection:
 
+- **Selection list box**: Selections are managed by a set, which you can modify if necessary, called `$ListboxSetX` by default (where X starts at 0 and is incremented based on the number of list boxes in the form). This set is [defined in the properties](properties_ListBox.md#highlight-set) of the list box. It is automatically maintained by 4D: If the user selects one or more rows in the list box, the set is immediately updated. On the other hand, it is also possible to use the commands of the "Sets" theme in order to modify the selection of the list box via programming.
 
-## Using list boxes  
+- **Collection/Entity selection list box**: Selections are managed through dedicated list box properties: 
+	- [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
+	- [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
+	- [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
+	
+- **Array list box**: the `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
+The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns.
+Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box.
+On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines.
+For example, this method allows inverting the selection of the first row of the (array type) list box:
+```code4d
+ ARRAY BOOLEAN(tBListBox;10)
+  //tBListBox is the name of the list box variable in the form
+ If(tBListBox{1}=True)
+    tBListBox{1}:=False
+ Else
+    tBListBox{1}:=True
+ End if
+```
+If you have selected the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) property for a list box, you will need to make list box selections visible using available interface options. 
 
-During execution, list boxes allow displaying and entering data as lists.
+### Customizing appearance  
 
-To make a cell editable (if entry is allowed for the column), simply click twice on the value that it contains: 
+When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Since selections are still fully managed by 4D, this means:
 
-![](assets/en/FormObjects/listbox_edit.png)
+- For array type list boxes, you must parse the Boolean array variable associated with the list box to determine which rows are selected or not.
+- For selection type list boxes, you have to check whether the current record (row) belongs to the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box.
 
->For more information, refer to [Managing entry](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#3815372) in the 4D Language Reference  manual. 
+You can then define specific background colors, font colors and/or font styles by programming to customize the appearance of selected rows. This can be done using arrays or expressions, depending on the type of list box being displayed (see the following sections). 
 
-You can enter and display the text on several lines within a list box cell. To add a line return:
+> You can use the `lk inherited` constant to mimic the current appearance of the list box (e.g., font color, background color, font style, etc.). 
 
-*	*Windows* - press **Ctrl+Carriage** return
-*	*macOS* - press **Option+Carriage** return
+#### Selection list boxes  
 
-Note that the height of the rows is only resized automatically for array type list boxes if the `Automatic Row Height` option is selected. This option is ignored for selection and collection type list boxes.
+To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the following expressions specified in the list box properties:
 
-It is possible to sort column values by clicking on a header (standard sort). The sort is alphanumerical and alternately ascending/descending on multiple clicks. All columns are automatically synchronized.
+- [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)
+- [Font Color Expression](properties_Text.md#font-color-expression)
+- [Style Expression](properties_Text.md#style-expression)
 
->For more information, refer to [Managing sorts](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#2966721) in the 4D Language Reference  manual.
+> Keep in mind that expressions are automatically re-evaluated each time the:
+- list box selection changes.
+- list box gets or loses the focus.
+- form window containing the list box becomes, or ceases to be, the frontmost window.
 
-It is also possible to resize each column:
+> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
 
-![](assets/en/FormObjects/listbox_column_resize.png)
+#### Array list boxes  
+You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected. 
 
-The user can modify the order of columns and (array list boxes only) rows by moving them using the mouse, if this action is authorized:
+You can then define the appearance of selected rows using one or more of the following arrays specified in the Property List:
 
-![](assets/en/FormObjects/listbox_column_reorder.png)
+- [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)
+- [Row Font Color Array](properties_Text.md#row-font-color-array)
+- [Row Style Array](properties_Text.md#row-style-array)
 
-Finally, the user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or Command+click (macOS) for a non-adjacent selection.
+Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
+- `On Getting Focus` (list box property)
+- `On Losing Focus` (list box property)
+- `On Activate` (form property)
+- `On Deactivate` (form property)
+...depending on whether and how you want to visually represent changes of focus in selections.
 
-All these characteristics can be handled using the list box, column, header and footer properties. They are detailed in the following sections.
+##### Example  
 
->The specific characteristics of list boxes used in hierarchical mode are described in [Hierarchical list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-list-boxes.300-4354816.en.html).
+You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 
+![](assets/en/FormObjects/listbox_styles7.png)
 
-## Printing list boxes 
+For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array). In the object method of the list box, you can write:
+
+```code4d
+ Case of
+    :(Form event=On Selection Change)
+       $n:=Size of array(LB_Arrays)
+       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       For($i;1;$n)
+          If(LB_Arrays{$i}=True) // selected
+             _ListboxBackground{$i}:=0x0080C080 // green background
+          Else // not selected
+             _ListboxBackground{$i}:=lk inherited
+          End if
+       End for
+ End case
+```
+
+For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property. 
+
+For example, if the [Highlight Set](properties_ListBox.md#highlight-set) is named *$SampleSet* and the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) is the *UI_SetColor* method, you can write in the *UI_SetColor* method:
+
+```code4d
+ If(Is in set("$SampleSet"))
+    $color:=0x0080C080 // green background
+ Else
+    $color:=lk inherited
+ End if
  
-List boxes can be printed in forms in "preview" mode (printing a picture of the list box area) or in "advanced" mode (dynamic printing in variable size). For more information, refer to [Printing list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Managing-List-Box-Objects.300-4311115.en.html#250728) in the *4D Language Reference* manual.
+ $0:=$color
+```
+
+
+## Managing sorts
+
+By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.
+
+You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
+
+The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+
+> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
+
+The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
+
+- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
+![](assets/en/FormObjects/sorticon0.png)
+
+- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
+![](assets/en/FormObjects/sorticon1.png)
+
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
+![](assets/en/FormObjects/sorticon2.png)
+
+You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+
+> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+
+
+## Printing list boxes
+ 
+Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
+
+### Preview mode  
+
+Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
+
+### Advanced mode  
+
+In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object. 
+
+In this mode:
+
+- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
+- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc.
+These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. 
+- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
+
+
+## Managing styles and colors  
+There are several different ways to set background colors, font colors and font styles for list boxes:
+
+- at the level of the list box object properties,
+- at the level of the column properties,
+- using arrays or expressions for the list box and/or for each column,
+- at the level of the text of each cell (if multi-style text).
+
+Priority and inheritance principles are observed when the same property is set at more than one level.
+
+### Priority  
+
+|high priority|Cell (if multi-style text)|
+|---|---|
+||Column arrays/methods|
+||List box arrays/methods|
+||Column properties|
+||List box properties|
+|low priority|Meta Info expression (for collection or entity selection list boxes)|
+
+For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
+
+Given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
+
+```code4d
+ <>_BgndColors{$i}:=0x00FFD0B0 // orange
+ <>_BgndColors{$i}:=-255 // default value
+```
+![](assets/en/FormObjects/listbox_styles1.png)
+
+Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+
+```code4d
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_2{5}:=0x00FF8000
+ <>_BgndColorsCol_1{9}:=0x00FF8000
+ <>_BgndColorsCol_1{16}:=0x00FF8000
+```
+![](assets/en/FormObjects/listbox_styles2.png)
+
+You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+
+### Inheritance  
+
+For each attribute (style, color and background color), an inheritance is implemented when the default value is used:
+
+- for cell attributes: attribute values of rows
+- for row attributes: attribute values of columns
+- for column attributes: attribute values of the list box
+
+This way, if you want an object to inherit the attribute value from a higher level, you can use pass the lk inherited constant (default value) to the definition command or directly in the element of the corresponding style/color array.
+
+Given a list box containing a standard font style with alternating colors: 
+![](assets/en/FormObjects/listbox_styles3.png)
+
+You perform the following modifications:
+
+- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
+- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
+- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
+- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+
+![](assets/en/FormObjects/listbox_styles3.png)
+
+To restore the original appearance of the list box, you can:
+
+- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
+- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
+- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
+- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
+
+
+## Managing row display (array list boxes) 
+
+You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box.
+
+These settings can be handled by the [Row Control Array](properties_ListBox.md#row-control-array), which you can designate using the `LISTBOX SET ARRAY` command or through the form properties. 
+
+A row control array must be of the Longint type and include the same number of rows as the list box. Each element of the Row Control Array array defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+
+|Constant|Value|Comment|
+|---|---|---|
+|lk row is disabled	|2|The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled|
+|lk row is hidden|1|The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible|
+|lk row is not selectable|4|The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the "Single-Click Edit" option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable|
+
+To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+
+```code4d
+ aLControlArr{10}:=lk row is not selectable
+```
+
+![](assets/en/FormObjects/listbox_styles5.png)
+
+You can define several interface properties at once:
+
+```code4d
+ aLControlArr{8}:=lk row is not selectable+lk row is disabled
+```
+
+![](assets/en/FormObjects/listbox_styles6.png)
+
+Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+
+```code4d
+ aLControlArr{6}:=lk row is disabled+lk row is not selectable //sets row 6 as disabled AND not selectable
+ aLControlArr{6}:=lk row is disabled //sets row 6 as disabled but selectable again
+```
+
 
 
 ## Hierarchical list boxes
 
 A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
 
-Only array type list boxes can be hierarchical. 
+> Only [array type list boxes](#array-list-boxes) can be hierarchical. 
 
 Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
-
-To specify a hierarchical list box, there are three different possibilities:
-
-*	Manually configure hierarchical elements using the Property list of the form editor.
-*	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-*	Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the 4D Language Reference manual.
 
 
 ### Defining the hierarchy
 
+To specify a hierarchical list box, there are several possibilities:
 
-You can enable and configure the hierarchical mode multiple ways:
-
-*	via the Property List
-*	via the context menu 
-*	via programming
+*	Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
+*	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
+*	Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
 
 
-#### Create hierarchy  
+#### Hierarchical List Box property
 
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the Create hierarchy command is available in the context menu:
+This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_object.md#hierarchical-list-box), i.e. a collection.
+
+Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
+
+The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. For example: country. 
+The second variable is also always visible and enterable; it specifies the second hierarchical level. For example: regions. 
+Beginning with the third field, each variable depends on the one preceding it. For example: counties, cities, and so on. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.
+ 
+The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
+
+![](assets/en/FormObjects/property_hierarchicalListBox.png)
+
+This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped. 
+ 
+>If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see below), the unnecessary columns are automatically removed from the list box.
+
+
+#### Create hierarchy using the contextual menu
+
+When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
 
 ![](assets/en/FormObjects/listbox_hierarchy1.png)
 
-When you choose this command, the following actions are carried out:
+This command is a shortcut to define a hierarchy. When it is selected, the following actions are carried out:
 
-*	The "Hierarchical list box" option is checked for the object in the Property List.
+*	The **Hierarchical list box** option is checked for the object in the Property List.
 *	The variables of the columns are used to specify the hierarchy. They replace any variables already specified.
 *	The columns selected no longer appear in the list box (except for the title of the first one).
 
-Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected (see illustration above), if you choose Create hierarchy in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
 
 ![](assets/en/FormObjects/listbox_hierarchy2.png)
 
-### Cancel hierarchy  
+##### Cancel hierarchy  
+When the first column is selected and already specified as hierarchical, you can use the **Cancel hierarchy** command. When you choose this command, the following actions are carried out:
 
-When the first column is selected and already specified as hierarchical, you can use the Cancel hierarchy command. When you choose this command, the following actions are carried out:
-
-*	The "Hierarchical list box" option is deselected for the object,
+*	The **Hierarchical list box** option is deselected for the object,
 *	The hierarchical levels 2 to X are removed and transformed into columns added to the list box.
+
+
+### How it works
+
+When a form containing a hierarchical list box is opened for the first time, by default all the rows are expanded. 
+
+A break row and a hierarchical "node" are automatically added in the list box when values are repeated in the arrays. For example, imagine a list box containing four arrays specifying cities, each city being characterized by its country, its region, its name and its number of inhabitants: 
+
+![](assets/en/FormObjects/hierarch1.png)
+
+If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:
+
+![](assets/en/FormObjects/hierarch2.png)
+
+The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
+    >    A
+    >    B
+    >    A
+    >    C
+
+To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
+
+When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.
+
+#### Sorts in hierarchical list boxes
+  
+In a list box in hierarchical mode, a standard sort (carried out by clicking on the header of a list box column) is always constructed as follows:
+
+- In the first place, all the levels of the hierarchical column (first column) are automatically sorted by ascending order.
+- The sort is then carried out by ascending or descending order (according to the user action) on the values of the column that was clicked.
+- All the columns are synchronized.   
+- During subsequent sorts carried out on non-hierarchical columns of the list box, only the last level of the first column is sorted. It is possible to modify the sorting of this column by clicking on its header.
+
+Given for example the following list box, in which no specific sort is specified:
+
+![](assets/en/FormObjects/hierarch3.png)
+
+If you click on the "Population" header to sort the populations by ascending (or alternately descending) order, the data appear as follows:
+
+![](assets/en/FormObjects/hierarch4.png)
+
+As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
+
+
+#### Selections and positions in hierarchical list boxes
+
+A hierarchical list box displays a variable number of rows on screen according to the expanded/collapsed state of the hierarchical nodes. This does not however mean that the number of rows of the arrays vary. Only the display is modified, not the data. It is important to understand this principle because programmed management of hierarchical list boxes is always based on the data of the arrays, not on the displayed data. In particular, the break rows added automatically are not taken into account in the display options arrays (see below).
+
+Let’s look at the following arrays for example:
+
+![](assets/en/FormObjects/hierarch5.png)
+
+If these arrays are represented hierarchically, the row "Quimper" will not be displayed on the second row, but on the fourth, because of the two break rows that are added:
+
+![](assets/en/FormObjects/hierarch6.png)
+
+Regardless of how the data are displayed in the list box (hierarchically or not), if you want to change the row containing "Quimper" to bold, you must use the statement Style{2} = bold. Only the position of the row in the arrays is taken into account. 
+
+This principle is implemented for internal arrays that can be used to manage:
+
+- colors
+- background colors
+- styles
+- hidden rows
+- selections
+
+For example, if you want to select the row containing Rennes, you must pass:
+
+```code4d
+ ->MyListbox{3}:=True
+```
+
+Non-hierarchical representation:
+![](assets/en/FormObjects/hierarch7.png)
+Hierarchical representation:
+![](assets/en/FormObjects/hierarch8.png)
+
+> If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected. 
+
+As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
+
+*Non-hierarchical representation:*
+![](assets/en/FormObjects/hierarch9.png)
+
+*Hierarchical representation:*
+![](assets/en/FormObjects/hierarch10.png)
+
+When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
+
+#### Break rows  
+
+If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case: 
+
+![](assets/en/FormObjects/hierarch11.png)
+
+
+... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
+
+Break rows are not taken into account in the internal arrays used to manage the graphic appearance of list boxes (styles and colors). It is however possible to modify these characteristics for break rows via the graphic management commands for objects. You simply need to execute the appropriate commands on the arrays that constitute the hierarchy. 
+
+Given for example the following list box (the names of the associated arrays are specified in parentheses): 
+
+*Non-hierarchical representation:*
+![](assets/en/FormObjects/hierarch12.png)
+
+*Hierarchical representation:*
+![](assets/en/FormObjects/hierarch13.png)
+
+In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
+
+```code4d
+ OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
+ OBJECT SET FONT STYLE(T2;Bold)
+```
+
+>In this context, only the syntax using the array variable can function with the object property commands because the arrays do not have any associated object. 
+
+Result:
+
+![](assets/en/FormObjects/hierarch14.png)
+
+
+#### Optimized management of expand/collapse  
+
+You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events. 
+
+A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
+
+Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
+
+In this case, you must fill and empty arrays through the code. The principles to be implemented are:
+- When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
+![](assets/en/FormObjects/hierarch15.png)
+
+- When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
+![](assets/en/FormObjects/hierarch16.png)
+
+- When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
 
 
 
@@ -719,5 +1156,6 @@ Several events can be handled while using an object list box array:
 *	**On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
 
 >`On Alternative Click` is the new name of the `On Arrow Click` event that was available in previous versions of 4D. This event has been renamed in 4D v15 since its scope has been extended.
+
 
 

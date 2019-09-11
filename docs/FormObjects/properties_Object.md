@@ -42,7 +42,7 @@ Specify the type of list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**: use array elements as the rows of the list box. This option is required when you want to be able to retrieve the result of an SQL query in a list box.
+- **Arrays**(default): use array elements as the rows of the list box. 
 - **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
 - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
 - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property. 
@@ -202,26 +202,34 @@ In the Form editor, to select an object type, click the corresponding toolbar bu
 
 ## Variable Calculation
 
-This option sets the type of calculation to be done in the footer area. There are several types of calculations available as well as the Custom option:
+This property sets the type of calculation to be done in a column footer area. 
 
-*	**Minimum, Maximum, Sum, Count, Average, Standard deviation**(*), **Variance**(*) and **Sum squares**(*). These calculations are described below. When a calculation is selected, it is applied automatically to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+>The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
-	When an automatic calculation has been assigned to a footer areas, a "standard action" shield is then associated with it:
-![](assets/en/FormObjects/listbox_footers_variableCalculation.png)
-*	Custom: When you select this option, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
+There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-### Automatic calculations  
+|Calculation|Num|Text|Date|Time|Bool|Pict|footer var type|  
+|---|---|---|---|---|---|---|---|
+|Minimum|X||X|X|X||Same as column type|
+|Maximum|X||X|X|X||Same as column type|  
+|Sum|X||X||X||Same as column type|  
+|Count|X|X|X|X|X|X|Longint|  
+|Average|X|||X|||Real|    
+|Standard deviation(*)|X|||X|||Real|
+|Variance(*)|X|||X|||Real|
+|Sum squares(*)|X|||X|||Real|
+|Custom ("none")|X|X|X|X|X|X|Any|
 
-You can associate various automatic calculations with a footer area. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+(*)Only for array type list boxes.
 
-![](assets/en/FormObjects/listbox_footers_variableCalculation_auto.png)
+When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
-(*) Only for array type list boxes.
+When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 
->Automatic calculations are not supported with (you need to use custom calculations):
->
+>Automatic calculations are not supported with:
 >*	footers of columns based on formulas,
 >*	footers of Collection and Entity selection list boxes.
+You need to use custom calculations. 
 
 #### JSON Grammar
 
@@ -231,7 +239,7 @@ You can associate various automatic calculations with a footer area. The followi
 
 #### Objects Supported
 
-[List Box Header](listbox_overview.md#list-box-footers)
+[List Box Footer](listbox_overview.md#list-box-footers)
 
 
 
@@ -291,12 +299,36 @@ There are two advantages with this mechanism:
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
+### Hierarchical List Box
+
+Used to specify that the list box must be displayed in hierarchical form.
+
+Additional options (Variable 1 ... 10) are available when the *Hierarchical List Box* option is selected. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
+
+The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. For example: country.
+ 
+The second variable is also always visible and enterable; it specifies the second hierarchical level. For example: regions.
+ 
+Beginning with the third field, each variable depends on the one preceding it. For example: counties, cities, and so on. A maximum of ten hierarchical levels can be specified.
+ 
+If you remove a value, the whole hierarchy moves up a level.
+ 
+The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
+
+![](assets/en/FormObjects/property_hierarchicalListBox.png)
+
+This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped. 
+ 
+>If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see [Hierarchical list boxes](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-list-boxes.300-4354816.en.html)), the unnecessary columns are automatically removed from the list box.
+
+
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource|string, or string array for hierarchical listbox column|4D variable, field name, or arbitrary complex language expression. Empty string for [dynamic variables](#dynamic-variables)|
+|dataSource|string, or string array|4D variable, field name, or arbitrary complex language expression. Empty string for [dynamic variables](#dynamic-variables). String array (collection of arrays) for a hierarchical listbox column|
 
 
 #### Objects Supported
