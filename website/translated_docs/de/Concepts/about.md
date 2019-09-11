@@ -5,13 +5,13 @@ title: Über die 4D Programmiersprache
 
 Die in 4D integrierte Sprache mit mehr als 1300 Befehlen macht 4D zu einem leistungsstarken Entwicklungswerkzeug für Datenbankanwendungen auf Desktop-Computern. Sie können die 4D Sprache für ganz unterschiedliche Aufgaben verwenden - von der Durchführung einfacher Berechnungen bis hin zum Erstellen komplexer individueller Benutzeroberflächen. Sie können zum Beispiel:
 
-- den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
+- Den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
 - Komplexe Berichte und Etiketten mit den Informationen aus der Datenbank erstellen und drucken
 - Mit anderen Geräten kommunizieren
 - E-Mails senden 
 - Dokumente und Web Seiten verwalten
 - Daten zwischen 4D Datenbanken und anderen Applikationen importieren und exportieren
-- Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren
+- Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren.
 
 Die Flexibilität und Leistungsfähigkeit der 4D Programmiersprache macht sie zum idealen Werkzeug für Anwender und Entwickler auf unterschiedlichem Niveau, um eine ganze Reihe von Aufgaben im Informationsmanagement zu erfüllen. Anfänger können schnell Berechnungen durchführen. Erfahrene Benutzer ohne Programmierkenntnisse können ihre Datenbanken selbst anpassen. Erfahrene Entwickler können diese leistungsstarke Programmiersprache nutzen, um ihre Datenbanken mit anspruchsvollen Features und Funktionsweisen auszurüsten, einschließlich Dateiübertragung, Kommunikation und Überwachung. Entwickler mit Programmiererfahrung in anderen Sprachen können der 4D Sprache eigene Befehle hinzufügen.
 
@@ -23,7 +23,7 @@ Sie müssen nicht die komplette Sprache kennen, um effektiv mit 4D zu arbeiten. 
 
 ## Warum eine Sprache verwenden?
 
-Auf den ersten Blick mag es scheinen, dass es wenig Bedarf für eine Programmiersprache in 4D gibt. Die Designumgebung bietet flexible Tools, mit denen sich ohne Programmierung unzählige Vorgänge in der Datenverwaltung ausführen lassen. Grundlegende Operationen wie Daten eingeben, Berichte erstellen, Suchen und Sortieren lassen sich mühelos durchführen. Außerdem gibt es viele weitere Funktionalitäten, wie Bestätigen der Daten, Hilfe bei der Dateneingabe, Generieren von Diagrammen und Etiketten.
+Auf den ersten Blick mag es scheinen, dass es wenig Bedarf für eine Programmiersprache in 4D gibt. Die Designumgebung bietet flexible Tools, mit denen sich ohne Programmierung unzählige Vorgänge in der Datenverwaltung ausführen lassen. Grundlegende Operationen wie Daten eingeben, Berichte erstellen, Suchen und Sortieren lassen sich mühelos durchführen. Außerdem gibt es viele weitere Funktionalitäten, wie Bestätigen der Daten, Unterstützung bei der Dateneingabe, Generieren von Diagrammen und Etiketten.
 
 Wozu brauchen wir also eine 4D Sprache? Hier sind einige Anwendungsbereiche:
 
@@ -34,7 +34,7 @@ Wozu brauchen wir also eine 4D Sprache? Hier sind einige Anwendungsbereiche:
 - Anwendungen erstellen: Sie können leicht-bedienbare, kundenspezifische Datenbanken erstellen, die in der Anwendungsumgebung laufen.
 - Den in 4D integrierten Web Server weiter ausbauen: Dynamische Webseiten, die mit Ihren Daten gefüllt sind, erstellen und aktualisieren.
 
-Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Datenbank. 4D bietet leistungsstarke "generische" Editoren, mit der Sprache können Sie Ihre Datenbank jedoch in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
+Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Datenbank. 4D bietet leistungsstarke "generische" Editoren. Darüberhinaus können Sie mit der Sprache Ihre Datenbank in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
 
 ## Kontrolle über Ihre Daten
 
@@ -42,7 +42,7 @@ Mit der 4D Sprache können Sie die vollständige Kontrolle über Ihre Daten auf 
 
 Die Befehle der 4D Sprache bieten Zugriff auf die standardmäßigen Editoren zur Datenverwaltung. Verwenden Sie zum Beispiel den Befehl `QUERY`, erhalten Sie den Sucheditor (Er lässt sich auch in der Designumgebung über den Befehl Suchen im Menü Datensätze aufrufen). Mit den Programmierbefehl können Sie nach spezifischen Daten suchen. So findet die Anweisung `QUERY`([People];[People]Last Name="Smith") in Ihrer Datenbank alle Personen mit dem Nachnamen Smith.
 
-Die 4D Programmiersprache ist sehr leistungsstark—ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
+Die 4D Programmiersprache ist sehr leistungsstark — ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
 
 Die Sprache ist so konzipiert, dass Sie fast jede Aufgabe problemlos erfüllen können. Operationen wie einen Datensatz hinzufügen, Datensätze sortieren, nach Daten suchen, u. ä. werden mit einfachen und direkten Befehlen spezifiziert. Die Sprache kann aber genauso serielle Schnittstellen steuern, Dokumente auf der Festplatte lesen, ausgeklügelte Übertragungsprozesse kontrollieren u. v. m.
 
