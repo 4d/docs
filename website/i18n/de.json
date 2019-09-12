@@ -122,12 +122,12 @@
         "sidebar_label": "Seite Aktivität Analyse"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Seite Backup",
+        "sidebar_label": "Seite Backup"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Seite Kompakt",
+        "sidebar_label": "Seite Kompakt"
       },
       "MSC/encrypt": {
         "title": "Encrypt Page",
