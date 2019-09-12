@@ -179,14 +179,49 @@ Number of columns that cannot be moved during execution.
 
 ## Row Control Array
 
-A 4D array defining the list box rows.
+`Array type list box`
+
+A 4D array controlling the display of list box rows. 
+
+You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command. 
+
+The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the Row Control Array array defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+
+|Constant|Value|Comment|
+|---|---|---|
+|lk row is disabled	|2|The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled|
+|lk row is hidden|1|The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible|
+|lk row is not selectable|4|The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the "Single-Click Edit" option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable|
+
+To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+
+```code4d
+ aLControlArr{10}:=lk row is not selectable
+```
+
+![](assets/en/FormObjects/listbox_styles5.png)
+
+You can define several interface properties at once:
+
+```code4d
+ aLControlArr{8}:=lk row is not selectable+lk row is disabled
+```
+
+![](assets/en/FormObjects/listbox_styles6.png)
+
+Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+
+```code4d
+ aLControlArr{6}:=lk row is disabled+lk row is not selectable //sets row 6 as disabled AND not selectable
+ aLControlArr{6}:=lk row is disabled //sets row 6 as disabled but selectable again
+```
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowControlSource |string |Array|
+|rowControlSource |string |Row control array name|
 
 #### Objects Supported
 

@@ -11,7 +11,7 @@ List boxes are complex active objects that allow displaying and entering data as
 
 A list box contains one or more columns whose contents are automatically synchronized. The number of columns is, in theory, unlimited (it depends on the machine resources). 
 
-#### Basic user features
+### Basic user features
 
 During execution, list boxes allow displaying and entering data as lists. To make a cell editable ([if entry is allowed for the column](#managing-entry)), simply click twice on the value that it contains: 
 
@@ -19,14 +19,14 @@ During execution, list boxes allow displaying and entering data as lists. To mak
 
 Users can enter and display the text on several lines within a list box cell. To add a line break, press **Ctrl+Carriage return** on Windows or **Option+Carriage return** on macOS. 
 
-Booleans and pictures can be displayed in cells, as well as dates, times, or numbers. It is possible to sort column values by clicking on a header ([standard sort](XXX)). All columns are automatically synchronized.
+Booleans and pictures can be displayed in cells, as well as dates, times, or numbers. It is possible to sort column values by clicking on a header ([standard sort](#managing-sorts)). All columns are automatically synchronized.
 
-It is also possible to resize each column, and the user can modify the order of columns and rows by moving them using the mouse, [if this action is authorized](XXX). Note that list boxes can be used in [hierarchical mode]. 
+It is also possible to resize each column, and the user can modify the order of [columns](properties_ListBox.md#locked-columns-and-static-columns) and [rows](properties_Action.md#movable-rows) by moving them using the mouse, if this action is authorized. Note that list boxes can be used in [hierarchical mode](#hierarchical-list-boxes). 
 
 The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
 
 
-#### List box parts
+### List box parts
 
 A list box is composed of four distinct parts: 
 
@@ -48,7 +48,7 @@ The column object method gets events that occur in its [header](#list-box-header
 
 
 
-#### List box types  
+### List box types  
 
 There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
 
@@ -59,7 +59,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 >It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
-#### Managing list boxes
+### Managing list boxes
 
 You can completely configure a list box object through its properties, and you can also manage it dynamically through programming. 
 
@@ -172,9 +172,9 @@ Supported properties depend on the list box type.
 |[Number of Static Columns](properties_ListBox.md#number-of-static-columns)|X|X|X|
 |[Object Name](properties_Object.md#object-name)|X|X|X|
 |[Right](properties_CoordinatesAndSizing.md#right)|X|X|X|
-|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|X|X||
+|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|X|||
 |[Row Control Array](properties_ListBox.md#row-control-array)|X|||
-|[Row Font Color Array](properties_Text.md#row-font-color-array)|X|X||
+|[Row Font Color Array](properties_Text.md#row-font-color-array)|X|||
 |[Row Height](properties_CoordinatesAndSizing.md#row-height)|X|||
 |[Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)|X|||
 |[Row Style Array](properties_Text.md#row-style-array)|X|||
@@ -235,6 +235,8 @@ In addition, you have access to the specific properties for headers. Specificall
 
 At runtime, events that occur in a header are generated in the [list box column object method](#object-methods).
 
+When the `OBJECT SET VISIBLE` command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
+
 ### Header Specific Properties
 
 [Bold](properties_Text.md#bold) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
@@ -255,7 +257,9 @@ When footers are displayed, you can click to select one when the list box object
 
 For each List box column footer, you can set standard text properties: in this case, these properties take priority over those of the column or of the list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation). 
 
-At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
+At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods). 
+
+When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which *footer3* belongs and not simply this footer.
 
 ### Footer Specific Properties
 
@@ -331,7 +335,7 @@ Selections are managed differently depending on whether the list box is based on
 	- [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
 	- [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 	
-- **Array list box**: the `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
+- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
 The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns.
 Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box.
 On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines.
@@ -345,9 +349,11 @@ For example, this method allows inverting the selection of the first row of the 
     tBListBox{1}:=True
  End if
 ```
-If you have selected the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) property for a list box, you will need to make list box selections visible using available interface options. 
 
-### Customizing appearance  
+> The `OBJECT SET SCROLL POSITION` command scrolls the list box rows so that the first selected row or a specified row is displayed.
+
+
+### Customizing appearance of selected rows
 
 When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Since selections are still fully managed by 4D, this means:
 
@@ -360,27 +366,18 @@ You can then define specific background colors, font colors and/or font styles b
 
 #### Selection list boxes  
 
-To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the following expressions specified in the list box properties:
+To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions). 
 
-- [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)
-- [Font Color Expression](properties_Text.md#font-color-expression)
-- [Style Expression](properties_Text.md#style-expression)
-
-> Keep in mind that expressions are automatically re-evaluated each time the:
+Keep in mind that expressions are automatically re-evaluated each time the:
 - list box selection changes.
 - list box gets or loses the focus.
 - form window containing the list box becomes, or ceases to be, the frontmost window.
 
-> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
 
 #### Array list boxes  
 You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected. 
 
-You can then define the appearance of selected rows using one or more of the following arrays specified in the Property List:
-
-- [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)
-- [Row Font Color Array](properties_Text.md#row-font-color-array)
-- [Row Style Array](properties_Text.md#row-style-array)
+You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
 
 Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
 - `On Getting Focus` (list box property)
@@ -395,7 +392,13 @@ You have chosen to hide the system highlight and want to display list box select
 
 ![](assets/en/FormObjects/listbox_styles7.png)
 
-For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array). In the object method of the list box, you can write:
+For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:
+
+```
+	"rowFillSource": "_ListboxBackground",
+```
+
+In the object method of the list box, you can write:
 
 ```code4d
  Case of
@@ -414,7 +417,13 @@ For an array type list box, you need to update the [Row Background Color Array](
 
 For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property. 
 
-For example, if the [Highlight Set](properties_ListBox.md#highlight-set) is named *$SampleSet* and the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) is the *UI_SetColor* method, you can write in the *UI_SetColor* method:
+For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:
+
+```
+	"highlightSet": "$SampleSet",
+	"rowFillSource": "UI_SetColor",
+```
+You can write in the *UI_SetColor* method:
 
 ```code4d
  If(Is in set("$SampleSet"))
@@ -425,6 +434,8 @@ For example, if the [Highlight Set](properties_ListBox.md#highlight-set) is name
  
  $0:=$color
 ```
+
+> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
 
 
 ## Managing sorts
@@ -453,6 +464,71 @@ You can set the value of the variable (for example, Header2:=2) in order to “f
 > The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
+## Managing row colors, styles, and display
+
+There are several different ways to set background colors, font colors and font styles for list boxes:
+
+- at the level of the [list box object properties](#list-box-objects),
+- at the level of the [column properties](#list-box-columns),
+- using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
+- at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
+
+
+### Priority & inheritance
+
+Priority and inheritance principles are observed when the same property is set at more than one level.
+
+|Priority level|Setting location|
+|---|---|
+|high priority|Cell (if multi-style text)|
+||Column arrays/methods|
+||List box arrays/methods|
+||Column properties|
+||List box properties|
+|low priority|Meta Info expression (for collection or entity selection list boxes)|
+
+For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
+
+For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
+
+- for cell attributes: attribute values of rows
+- for row attributes: attribute values of columns
+- for column attributes: attribute values of the list box
+
+This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors: 
+![](assets/en/FormObjects/listbox_styles3.png)
+
+You perform the following modifications:
+
+- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
+- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
+- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
+- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+
+![](assets/en/FormObjects/listbox_styles3.png)
+
+To restore the original appearance of the list box, you can:
+
+- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
+- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
+- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
+- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
+
+
+### Using arrays and expressions
+
+Depending of the list box type, you can use different properties to customize row colors, styles and display:
+
+|Property|Array list box|Selection list box|Collection or Entity Selection list box|
+|---|----|---|---|
+|Background color|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
+|Font color|[Row Font Color Array](properties_Text.md#row-font-color-array)|[Font Color Expression](properties_Text.md#font-color-expression)|[Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
+Font style|[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
+Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
+
+
+
+
 ## Printing list boxes
  
 Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
@@ -473,114 +549,6 @@ These parameters also include the first row to be printed: if you call the `OBJE
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 
-## Managing styles and colors  
-There are several different ways to set background colors, font colors and font styles for list boxes:
-
-- at the level of the list box object properties,
-- at the level of the column properties,
-- using arrays or expressions for the list box and/or for each column,
-- at the level of the text of each cell (if multi-style text).
-
-Priority and inheritance principles are observed when the same property is set at more than one level.
-
-### Priority  
-
-|high priority|Cell (if multi-style text)|
-|---|---|
-||Column arrays/methods|
-||List box arrays/methods|
-||Column properties|
-||List box properties|
-|low priority|Meta Info expression (for collection or entity selection list boxes)|
-
-For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
-
-Given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
-
-```code4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
-```
-![](assets/en/FormObjects/listbox_styles1.png)
-
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
-
-```code4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
- <>_BgndColorsCol_2{5}:=0x00FF8000
- <>_BgndColorsCol_1{9}:=0x00FF8000
- <>_BgndColorsCol_1{16}:=0x00FF8000
-```
-![](assets/en/FormObjects/listbox_styles2.png)
-
-You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
-
-### Inheritance  
-
-For each attribute (style, color and background color), an inheritance is implemented when the default value is used:
-
-- for cell attributes: attribute values of rows
-- for row attributes: attribute values of columns
-- for column attributes: attribute values of the list box
-
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the lk inherited constant (default value) to the definition command or directly in the element of the corresponding style/color array.
-
-Given a list box containing a standard font style with alternating colors: 
-![](assets/en/FormObjects/listbox_styles3.png)
-
-You perform the following modifications:
-
-- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
-- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
-- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
-- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
-
-![](assets/en/FormObjects/listbox_styles3.png)
-
-To restore the original appearance of the list box, you can:
-
-- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
-- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
-- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
-- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
-
-
-## Managing row display (array list boxes) 
-
-You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box.
-
-These settings can be handled by the [Row Control Array](properties_ListBox.md#row-control-array), which you can designate using the `LISTBOX SET ARRAY` command or through the form properties. 
-
-A row control array must be of the Longint type and include the same number of rows as the list box. Each element of the Row Control Array array defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
-
-|Constant|Value|Comment|
-|---|---|---|
-|lk row is disabled	|2|The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled|
-|lk row is hidden|1|The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible|
-|lk row is not selectable|4|The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the "Single-Click Edit" option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable|
-
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
-
-```code4d
- aLControlArr{10}:=lk row is not selectable
-```
-
-![](assets/en/FormObjects/listbox_styles5.png)
-
-You can define several interface properties at once:
-
-```code4d
- aLControlArr{8}:=lk row is not selectable+lk row is disabled
-```
-
-![](assets/en/FormObjects/listbox_styles6.png)
-
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
-
-```code4d
- aLControlArr{6}:=lk row is disabled+lk row is not selectable //sets row 6 as disabled AND not selectable
- aLControlArr{6}:=lk row is disabled //sets row 6 as disabled but selectable again
-```
 
 
 
