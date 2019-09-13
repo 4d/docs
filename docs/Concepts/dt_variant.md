@@ -3,7 +3,7 @@ id: variant
 title: Variant
 ---
 
-Variant is a "meta" data type which allows encapsulating data of any valid regular type in a variable. Typically, this data type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.  
+Variant is a variable type which allows encapsulating data of any valid regular type in a variable. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.  
 
 A variant type variable can contain a value of the following data types:
 
@@ -23,7 +23,7 @@ A variant type variable can contain a value of the following data types:
 
 > Arrays cannot be stored in variant variables. 
 
-In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular data types, the variant variable content type is different from the variant variable type itself. For example:
+In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
 
 ```code4d
 C_VARIANT($variant)
@@ -60,4 +60,4 @@ Case of
 End case[#/code4D]
 ```
 
-> For performance reasons, when variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables instead of variant variables. 
+> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
