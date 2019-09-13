@@ -1,38 +1,38 @@
 ---
 id: encrypt
-title: Encrypt Page
-sidebar_label: Encrypt Page
+title: Seite Verschlüsseln
+sidebar_label: Seite Verschlüsseln
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section.
+Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln".
 
-A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
+Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. Er lautet "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> oder "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 
-> Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode
+> Verschlüsselung ist nur im [Wartungsmodus](overview.md#display-in-maintenance-mode) verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erscheint eine Meldung, dass die Anwendung geschlossen und im Wartungsmodus geöffnet wird.
 
-**Warning:**
+**Warnung:**
 
-- Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that a database encryption operation always includes a compacting step.
-- Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
+- Das Verschlüsseln einer Anwendung ist eine längere Operation. Währenddessen erscheint ein Ablaufbalken (den der Benutzer unterbrechen kann). Beachten Sie auch, dass beim Verschlüsselungsprozess immer eine Komprimierung durchgeführt wird.
+- Jeder Verschlüsselungsvorgang produziert eine Kopie der Datendatei, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
-## Encrypting data for the first time
+## Daten zum ersten Mal verschlüsseln
 
-Encrypting your data for the first time using the MSC requires the following steps:
+Beim ersten Verschlüsseln Ihrer Daten über das MSC sind folgende Schritte erforderlich:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section. 
-2. Open the Encrypt page of the MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
-3. Click on the Encrypt picture button.  
+1. Markieren Sie im Struktureditor über das Inspektorfenster für jede Tabelle, die verschlüsselbar sein soll, die Eigenschaft **Verschlüsselbar**. Weitere Informationen dazu finden Sie im Abschnitt "Tabelleneigenschaften". 
+2. Öffnen Sie die Seite Verschlüsseln des MSC. Haben Sie für keine Tabelle die Eigenschaft **Verschlüsselbar** gewählt, erscheint auf der Seite folgende Meldung: ![](assets/en/MSC/MSC_encrypt1.png) Andernfalls erscheint diese Meldung: ![](assets/en/MSC/MSC_encrypt2.png) Das bedeutet, dass der Status **Verschlüsselbar** für mindestens eine Tabelle geändert wurde und die Datendatei noch nicht verschlüsselt ist. **Hinweis: Sie erhalten die gleiche Meldung, wenn der Status Verschlüsselbar** in einer bereits verschlüsselten Datendatei geändert oder die Datendatei entschlüsselt wurde (siehe unten).
+3. Klicken Sie auf die Schaltfläche Verschlüsseln.  
     ![](assets/en/MSC/MSC_encrypt3.png)  
-    You will be prompted to enter a passphrase for your data file: ![](assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
-4. Enter to confirm your secured passphrase. 
+    Sie erhalten ein Dialogfenster zum Eingeben einer Passphrase für Ihre Datendatei: ![](assets/en/MSC/MSC_encrypt4.png) Die Passphrase dient zum Generieren des Verschlüsselungscode für die Daten. Eine Passphrase ist eine sicherere Version als ein Kennwort, da sie eine größere Anzahl Zeichen enthalten kann. Sie können beispielsweise einen kompletten Satz eingeben, wie "Wir kommen alle nach Massenhausen" oder "Meine 1. große Passphrase!!" Der Indikator für die Sicherheitsstufe zeigt an, wie hoch die eingegebene Passphrase bewertet wird: ![](assets/en/MSC/MSC_encrypt5.png) (komplett grün ist die höchste Stufe)
+4. Geben Sie zum Bestätigen Ihre gesicherte Passphrase ein. 
 
-The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
+Dann wird der Prozess zum Verschlüsseln gestartet. Wurde das MSC im Standardmodus geöffnet, wird die Anwendung geschlossen und erneut im Wartungsmodus geöffnet.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). You can do it at this moment or later. You can also open the encryption log file.
+4D bietet an, den Verschlüsselungscode zu sichern (siehe unten im Absatz [Verschlüsselungscode sichern](#verschlusselungscode-sichern)). Sie können das gleich oder später machen. Sie können auch das Logbuch zur Verschlüsselung öffnen.
 
-If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
+War der Prozess zum Verschlüsseln erfolgreich, zeigt die Seite Verschlüsseln Schaltflächen für Wartungsoperationen beim Verschlüsseln.
 
-**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
+**Warnung:** 4D erstellt beim Verschlüsseln eine neue leere Datendatei und füllt sie mit Daten aus der ursprünglichen Datendatei. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
 
 ## Encryption maintenance operations
 
