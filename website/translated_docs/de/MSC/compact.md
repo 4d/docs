@@ -8,7 +8,7 @@ Auf dieser Seite können Sie die Funktionen zum Komprimieren der Datendatei verw
 
 ## Warum Dateien komprimieren?
 
-Komprimieren der Dateien erfüllt zweie Anforderungen:
+Komprimieren der Dateien erfüllt zwei Anforderungen:
 
 - **Größe verringern und Dateien optimieren**: Die Dateien können nicht-verwendete Leerräume ("Löcher") enthalten. Beim Löschen von Datensätzen wird der zuvor belegte Platz in der Datei zum Leerraum. In der Regel verwendet 4D diese Leerräume soweit wie möglich erneut. Da jedoch die Datengröße unterschiedlich ist, entstehen durch sukzessives Löschen oder Ändern unweigerlich nicht-verwendbare Leerräume. Dasselbe passiert, wenn eine große Menge Daten gerade gelöscht wurde: die leeren Stellen bleiben in der Datei ohne Zuweisung. Das Verhältnis zwischen Größe der Datendatei und derzeit für die Daten genutztem Platz ist die Auslastungsrate der Daten. Eine zu geringe Rate ist zunächst Platzverschwendung, kann aber auch die Performance der Datenbank beeinträchtigen. Hier schafft Komprimieren Abhilfe, denn dadurch wird das Speichern der Daten neu organisiert und optimiert, d. h. die Löcher werden entfernt. Der Bereich “Information” fasst die Daten im Hinblick auf Fragmentierung zusammen und schlägt die auszuführenden Operationen vor. Die Registerkarte [Daten](information.md#data) auf der Seite “Information” des MSC gibt die Fragmentierung der aktuellen Datendatei an.
 
@@ -63,14 +63,14 @@ Ist diese Option markiert, schreibt 4D während der Komprimierung jeden Datensat
 
 > Ist diese Option gewählt, werden alle Indizes aktualisiert.
 
-### Compact address table
+### Komprimiere Adresstabelle
 
-(option only active when preceding option is checked)
+(Option nur aktiv, wenn die vorige Option markiert ist)
 
-This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
+Diese Option baut beim Komprimieren die Adresstabelle für die Datensätze komplett neu auf. Das optimiert die Größe der Adresstabelle und ist nur sinnvoll für Datenbanken, wo umfangreiches Datenvolumen erstellt und dann wieder gelöscht wurde. In anderen Fällen ist die Optimierung nicht signifikant.
 
-Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
+Beachten Sie, dass diese Option die Komprimierung beträchtlich verlangsamt und alle Mengen, die über den Befehl `SAVE SET` gesichert wurden, ungültig werden. Wir empfehlen außerdem dringend, in diesem Fall gesicherte Mengen zu löschen, da ihre Verwendung zur Auswahl nicht-korrekter Daten führen kann.
 
-> - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
-> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the database is launched.
-> - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
+> - Beim Komprimieren werden auch die Datensätze von Tabellen berücksichtigt, die im Papierkorb liegen. Gibt es dort eine große Anzahl Datensätze, kann das ein weiterer Faktor sein, der die Operation verlangsamt.
+> - Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). Es wird automatisch gesichert und beim nächsten Start der Anwendung muss ein neues Logbuch angelegt werden.
+> - Um zu sehen, ob die Adresstabelle komprimiert werden muss, gehen Sie auf die Seite [Information](information.md) des MSC und vergleichen die Gesamtanzahl der Datensätze mit der Größe der Adresstabelle.
