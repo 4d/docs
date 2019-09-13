@@ -184,31 +184,30 @@ ALERT([People]Name)
 
 The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
 
-There are two ways to make the method `DO SOMETHING` change the value of the field:
+There are two ways to make the method `DO_SOMETHING` change the value of the field:
 
 1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
 
 ```code4d
-  ` Here is some code from the method MY METHOD
-  ` ...
- DO SOMETHING(->[People]Last Name) ` Let's say [People]Last Name is equal to "williams"
+  //Here is some code from the method MY_METHOD
+ DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
  
-  ` Here the code of the method DO SOMETHING
+  //Here the code of the method DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
 
 Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
 
-2. Rather than having the method `DO SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
 
 ```code4d
-  ` Here is some code from the method MY METHOD
-  ` ...
- [People]Last Name:=DO SOMETHING([People]Last Name) ` Let's say [People]Last Name is equal to "williams"
- ALERT([People]Last Name)
-  ` Here the code of the method DO SOMETHING
+	//Here is some code from the method MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Name)
+
+	//Here the code of the method DO SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
@@ -220,7 +219,7 @@ This second technique of returning a value by a subroutine is called “using a 
 
 You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*). 
 
-In this case, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
 
