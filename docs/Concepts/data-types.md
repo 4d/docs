@@ -24,12 +24,13 @@ Although they are usually equivalent, some data types available at the database 
 |[Picture](Concepts/dt_picture.md)	|Yes	|Yes|`C_PICTURE`, `ARRAY PICTURE`
 |[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`C_BLOB`, `ARRAY BLOB`
 |[Object](Concepts/dt_object.md)	|Yes	|Yes|`C_OBJECT`, `ARRAY OBJECT`
-|[Collection](Concepts/dt_collection.md)	|-	|Yes|`C_COLLECTION`
+|[Collection](Concepts/dt_collection.md)	|-	|Yes|`C_COLLECTION`  
+|[Variant](Concepts/dt_variant.md)	|-	|Yes|`C_VARIANT`|
 
-(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description. 
+(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description. 
 
 
-## Default values 
+## Default values
 
 When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned. 
 
@@ -59,6 +60,7 @@ The following table illustrates these default values:
 |Blob|Blob size=0	|Blob size=0	|Blob size=0|
 |Object|null	|null	|null|
 |Collection|null	|null	|null|
+|Variant|undefined	|undefined	|undefined|
 
 
 ## Converting data types

@@ -7,7 +7,7 @@
         "label": "Data Types",
         "ids": [
           "Concepts/data-types","Concepts/blob","Concepts/boolean","Concepts/collection","Concepts/date","Concepts/null-undefined",
-		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time"		    
+		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time","Concepts/variant"		    
         ]
       },
 	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared",
