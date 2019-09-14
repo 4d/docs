@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Time"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Error handling"
       },
