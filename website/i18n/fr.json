@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Heure"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Gestion des erreurs"
       },
