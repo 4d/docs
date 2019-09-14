@@ -25,8 +25,9 @@ Although they are usually equivalent, some data types available at the database 
 | [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
 | [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
+| [Variant](Concepts/dt_variant.md)          | -                   | Yes                  | `C_VARIANT`                  |
 
-(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the Object data type description.
+(*)Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
 ## Default values
 
@@ -57,6 +58,7 @@ The following table illustrates these default values:
 | Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
 | Object     | null                                                                                | null                    | null                         |
 | Collection | null                                                                                | null                    | null                         |
+| Variant    | undefined                                                                           | undefined               | undefined                    |
 
 ## Converting data types
 
