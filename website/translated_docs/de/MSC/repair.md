@@ -6,7 +6,7 @@ sidebar_label: Repair Page
 
 This page is used to repair the data file when it has been damaged. Generally, you will only use these functions at the request of 4D, when anomalies have been detected while opening the database or following a [verification](verify.md).
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
+**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
 
 > Repairing is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode.
 > 
@@ -64,11 +64,11 @@ If several groups of records could not be assigned to tables due to a damaged ad
 
 Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
-## Open log file
+## Logbuch öffnen
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After repair is completed, 4D generates a log file in the Logs folder of the database. Hier können Sie alle ausgeführten Operationen ansehen. It is created in XML format and named: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
+- *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Klicken Sie auf die Schaltfläche **Logbuch öffnen**, zeigt 4D das neueste Logbuch im standardmäßigen Browser des Rechners.
