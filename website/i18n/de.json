@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Time"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Error handling"
       },
@@ -130,8 +133,8 @@
         "sidebar_label": "Seite Kompakt"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Seite Verschlüsseln",
+        "sidebar_label": "Seite Verschlüsseln"
       },
       "MSC/information": {
         "title": "Information Page",
