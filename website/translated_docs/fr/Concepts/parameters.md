@@ -20,7 +20,7 @@ Les paramètres sont passés de la même manière aux méthodes. Par exemple, si
 FAIRE QUELQUE CHOSE(AvecCeci;EtCela;CommeCeci)
 ```
 
-The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
+Les paramètres sont séparés par des points-virgules (;). Their value is evaluated at the moment of the call.
 
 Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est automatiquement copiée séquentiellement dans des variables locales numérotées : $1, $2, $3, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
@@ -87,9 +87,9 @@ The function result, `$0`, is a local variable within the subroutine. It can be 
 
 ## Déclaration des paramètres
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méthodes appelées en [mode interprété](Concepts/interpreted.md), même si cela est facultatif.
 
-In the following example, the `OneMethodAmongOthers` project method declares three parameters:
+Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare trois paramètres :
 
 ```code4d
   // Méthode projet OneMethodAmongOthers
@@ -101,7 +101,7 @@ In the following example, the `OneMethodAmongOthers` project method declares thr
  C_LONGINT($3) // 3ème paramètre de type Entier long
 ```
 
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
 
 ```code4d
   // Méthode projet ajoutCapitale
