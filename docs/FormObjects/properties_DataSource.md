@@ -36,17 +36,17 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 ## Choice List
 
-Allows setting a standard style for the object border.
+Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values. 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|choiceList|list |A list of possible values|
+|choiceList|list, collection|A list of possible values|
 
 #### Objects Supported
 
-[Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - 
+[Drop-down List](dropdownList_overview.md) - 
 [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 

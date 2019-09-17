@@ -67,8 +67,10 @@ title: JSON property list
 |---|---|---|
 |[fill](properties_BackgroundAndBorder.md#fill-color) (shapes, hierarchical list) <br> [fill](properties_BackgroundAndBorder.md#background-color) (list box)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|"true", "false"|
-|[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |
+|[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
+|[fontSize](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
 |[fontStyle](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"| 
+|[fontTheme](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
 |[fontWeight](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[footerHeight](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
 |[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0|

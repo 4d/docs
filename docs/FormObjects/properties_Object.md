@@ -31,11 +31,6 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 
 
-
-
-
-
-
 ## Data Source
 
 Specify the type of list box.
@@ -110,17 +105,19 @@ For more information about naming rules for form objects, refer to [GET REGISTER
 
 
 ## Plug-in Kind
-Describes the type of plug-in.
+
+Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in. 
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|pluginAreaKind|string|The type of plug-in.|
+|pluginAreaKind|string|Name of the plug-in external area (starts with a % character)|
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md#overview)
+[Plug-in Area](pluginArea_overview.md)
 
 
 

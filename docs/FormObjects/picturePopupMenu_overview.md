@@ -4,14 +4,19 @@ title: Picture Pop-up Menus
 ---
 ## Overview
 
-A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used instead of a [picture button](pictureButton_overview.md). The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. The concept is the same as for [Button Grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
+A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used instead of a [picture button](pictureButton_overview.md). The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. The concept is the same as for [button grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
 
 
 ## Using picture pop-up menus 
 
-To create a picture pop-up menu, you need to refer to a picture. The following example allows you to select the interface language by selecting it from a picture pop-up menu. Each language is represented by the corresponding flag:
+To create a picture pop-up menu, you need to [refer to a picture](properties_Picture.md#pathname). The following example allows you to select the interface language by selecting it from a picture pop-up menu. Each language is represented by the corresponding flag:
 
 ![](assets/en/FormObjects/picturePopupMenu_example.png)
+
+### Programming  
+
+You can manage picture pop-up menus using methods. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. If no element is selected, the value is 0. Elements are numbered, row by row, from left to right starting with the top row.
+
 
 ### Goto page 
  
@@ -21,9 +26,6 @@ For example, if the user selects the 3rd element, 4D will display the third page
 If you want to manage the effect of a click yourself, select `No action`.
 
 
-### Programming  
-
-You can manage picture pop-up menus using methods. As with button grids, variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. If no element is selected, the value is 0. Elements are numbered, row by row, from left to right starting with the top row.
 
 
 ## Supported Properties

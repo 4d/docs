@@ -148,6 +148,7 @@ Supported properties depend on the list box type.
 |[Font](properties_Text.md#font)|X|X|X|
 |[Font Color](properties_Text.md#font_color)|X|X|X|
 |[Font Color Expression](properties_Text.md#font-color-expression)||X|X|
+|[Font Size](properties_Text.md#font-size)|X|X|X|
 |[Height (list box)](properties_CoordinatesAndSizing.md#height)|X|X|X|
 |[Height (headers)](properties_Headers.md#height)|X|X|X|
 |[Height (footers)](properties_Footers.md#height)|X|X|X|
@@ -522,6 +523,7 @@ Depending of the list box type, you can use different properties to customize ro
 |Property|Array list box|Selection list box|Collection or Entity Selection list box|
 |---|----|---|---|
 |Background color|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
+
 |Font color|[Row Font Color Array](properties_Text.md#row-font-color-array)|[Font Color Expression](properties_Text.md#font-color-expression)|[Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
 Font style|[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
 Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|

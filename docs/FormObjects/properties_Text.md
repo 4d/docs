@@ -29,7 +29,47 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 
 ## Font
 
-This property specifies the name of font family used in the object. 
+This property allows you to specify either the **font theme** or the **font family** used in the object. 
+
+>**Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
+
+
+### Font Theme
+
+The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+
+- the platform,
+- the system language,
+- and the type of form object.
+
+With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another. 
+
+Three font themes are available:
+- **normal**: automatic style, applied by default to any new object created in the Form editor.
+- **main** and **additional** font themes are only supported by [text areas](textAndGroupBox_overview.md#text) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
+
+![](assets/en/FormObjects/fontThemes.png)
+
+> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|fontTheme|string |"normal", "main", "additional"|
+
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+
+
+
+
+
+### Font Family
 
 There are two types of font family names:
 
@@ -52,7 +92,7 @@ You can set this property via the Property List or you via the [**OBJECT SET FON
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
 
 
 
@@ -113,6 +153,22 @@ CompanyColor:=Choose([Companies]ID;Default background color;Default light shadow
 [List Box](listbox_overview.md#overview) 
 
 
+
+## Font Size
+
+> This property is only available when no [font theme](#font-theme) is selected. 
+
+Allows defining the object's font size in points. 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|fontSize|integer |Font size in points. Minimum value: 0|
+
+#### Objects Supported
+
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
 
 
 
