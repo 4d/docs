@@ -462,6 +462,6 @@ const constant = '4D Client database folder|4D Client SOAP license|4D Client Web
 '_o_Previous record action|_o_qr 4D Chart area|_o_qr font|_o_QT animation compressor|_o_QT compact video compressor|_o_QT graphics compressor|_o_QT photo compressor|'+
 '_o_QT raw compressor|_o_QT video compressor|_o_Quit action|_o_Real display precision|_o_Redo action|_o_Return to Design mode|_o_Select all action|_o_Shadow|'+
 '_o_Show clipboard action|_o_Spanish dictionary|_o_Test application action|_o_Undo action|_o_Use PICT resource|_o_Web conversion mode|_o_Web Log recording|'+
-'_o_Web process with context|_o_Windows 3.11, NT 3.51|_o_Windows 9x|_o_Windows node' 
+'_o_Web process with context|_o_Windows 3.11, NT 3.51|_o_Windows 9x|_o_Windows node|Is variant' 
       
 module.exports = constant;
