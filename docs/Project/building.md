@@ -77,7 +77,7 @@ On this tab, you can build a single-user (.exe) version of the application by ch
 
 This will build a stand-alone (double-clickable) application directly from your database project: <p>*\<destination>/Final Application/\<name>/\<name>.exe*. 
 
-Stand-alone versions of your 4D compiled database projects can be created directly in 4D using the [Build Application](https://livedoc.4d.com/4D-Language-Reference-18/4D-Environment/BUILD-APPLICATION.301-4505371.en.html) command. In macOS, this command handles the creation of software packages.
+Stand-alone versions of your 4D compiled database projects can be created directly in 4D using the [Build Application](https://livedoc.4d.com/4D-Language-Reference-18/4D-Environment/BUILD-APPLICATION.301-4505371.en.html) command. In macOS, this command handles the creation of software packages. You can also use this command to customize your application using specific XML keys (e.g., custom application icons, specifc data file path and default data folder, etc.). For more information, see [4D XML Keys BuildApplication](https://livedoc.4d.com/What-s-new/4D-XML-Keys-BuildApplication-18/Introduction.300-4670990.en.html).
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
@@ -172,9 +172,9 @@ If your stand-alone application is used as a Web server, the files and folders r
 
 *	Windows - When building a double-clickable application, 4D handles the customizing of its icon.
 
-	In order to do this, you must create an icon file (.ico extension), prior to building the application file, and place it next to the interpreted structure file.
+	In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the interpreted structure file.
 
-	Your icon file must have the same name as the interpreted structure file and include the .ico extension. 
+	Your icon file must have the same name as the interpreted structure file and include the *.ico* extension. 
 
 	4D automatically takes this file into account when building the double-clickable application.
 
@@ -237,6 +237,8 @@ Checking this option generates the client part of your application during the bu
 *	**Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform. 
 
 	For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
+	
+	You can automate the updating procedure via the [SET UPDATE FOLDER](https://livedoc.4d.com/4D-Language-Reference-18/4D-Environment/SET-UPDATE-FOLDER.301-4505379.en.html) and [RESTART 4D](https://livedoc.4d.com/4D-Language-Reference-18/4D-Environment/RESTART-4D.301-4505382.en.html) commands.
 
 
 #### Customizing 4D Server and/or 4D Client folders  
