@@ -33,15 +33,15 @@ Project development file, used to designate and launch the project. This file ca
 
 ### Sources folder
 
-| Contents            | Description                 | Format |
-| ------------------- | --------------------------- | ------ |
-| catalog.4DCatalog   | Table and field definitions | XML    |
-| folders.json        | Explorer folder definitions | JSON   |
-| menus.json          | Menu definitions            | JSON   |
-| settings.4DSettings | Database settings           | XML    |
-| tips.json           | Defined tips                | JSON   |
-| lists.json          | Defined lists               | JSON   |
-| filters.json        | Defined filters             | JSON   |
+| Contents            | Description                                                                                                                                                                           | Format |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog   | Table and field definitions                                                                                                                                                           | XML    |
+| folders.json        | Explorer folder definitions                                                                                                                                                           | JSON   |
+| menus.json          | Menu definitions                                                                                                                                                                      | JSON   |
+| settings.4DSettings | *Structure* database settings. If *user settings* are defined, they take priority over these settings. If *user settings for data* are defined, they take priority over user settings | XML    |
+| tips.json           | Defined tips                                                                                                                                                                          | JSON   |
+| lists.json          | Defined lists                                                                                                                                                                         | JSON   |
+| filters.json        | Defined filters                                                                                                                                                                       | JSON   |
 
 
 #### DatabaseMethods folder
@@ -130,6 +130,18 @@ The data folder contains the data file and all files relating to the data.
 
 (*) When the project is created from a .4db database, the data file is left untouched. Thus, it can be named differently and placed in another location (see [Exporting a database](exporting.md)).
 
+### Settings folder
+
+This folder contains **user settings files for data** used for database administration.
+
+> These settings take priority over **user settings files** and **structure settings** files.
+
+| Contents            | Description                                                                                                                                                                                                          | Format |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
+| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
+
+
 ## Logs folder
 
 The Logs folder contains all log files used by the project. Log files are and include, in particular:
@@ -146,7 +158,7 @@ The Logs folder contains all log files used by the project. Log files are and in
 
 This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
 
-> If a data settings file exists in the data folder, it takes priority over user settings file.
+> If a data settings file exists in a Settings folder in the data folder, it takes priority over user settings file.
 
 | Contents            | Description                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
