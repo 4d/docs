@@ -52,6 +52,7 @@ When an application is built, 4D generates a log file in the **Logs** folder. Th
 - Any errors that occurred.
 
 
+
 ## Application name and destination folder
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -71,14 +72,14 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 ### Build compiled structure
 
-Builds a database containing only compiled code in a 
+Builds a database containing only compiled code. 
 
-This feature creates a **.4DZ** file. A .4DZ file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4DZ files makes project packages easy to deploy.
+This feature creates a *.4dz* file within a *Compiled Database* folder. If you have named your application “MyProject”, 4D will create: 
 
-If you have named your application, “MyProject”, 4D will create a *Compiled Database* folder: 
-<p>*\<destination>/Compiled Database/\<database name>/\<name>.4DZ*. <p>
-This folder contains:
-	*	 *MyProject.4dz* file - This is essentially a zipped version of the project folder with a compiled code only. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer
+<p>*\<destination>/Compiled Database/\<database name>/\MyProject.4dz*. <p>
+
+> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
+
 
 #### Include related folders
 
