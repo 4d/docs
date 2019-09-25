@@ -14,9 +14,6 @@ The application builder allows you to:
 *	Build client-server applications with automatic updating of client and server parts.
 *	Save your build settings for future use (*Save settings* button).
 
-Building a project package creates .4DZ file. This file is essentially a zipped (packed) version of the project folder. The compact and optimized size makes project packages easy to deploy.
-
-
 
 
 ## Build application overview
@@ -40,7 +37,7 @@ Building can only be carried out once the database is compiled. If you select th
 
 ### Build application settings
 
-Each build application parameter is stored as an XML key in the application project file named "BuildApp.4DSettings" XML file, located in the Settings folder of the database.
+Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
@@ -74,9 +71,12 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 ### Build compiled structure
 
-Builds a database containing only compiled code. 
-	
-If you have named your application, “MyProject”, 4D will create a a *Compiled Database* folder: <p>*\<destination>/Compiled Database/\<database name>/\<name>.4DZ*. <p>
+Builds a database containing only compiled code in a 
+
+This feature creates a **.4DZ** file. A .4DZ file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4DZ files makes project packages easy to deploy.
+
+If you have named your application, “MyProject”, 4D will create a *Compiled Database* folder: 
+<p>*\<destination>/Compiled Database/\<database name>/\<name>.4DZ*. <p>
 This folder contains:
 	*	 *MyProject.4dz* file - This is essentially a zipped version of the project folder with a compiled code only. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer
 
