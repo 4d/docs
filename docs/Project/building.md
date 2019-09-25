@@ -26,11 +26,11 @@ Building a project package can be carried out using:
 - either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command, 
 - or the [Build Application window](#application-builder). 
 
-To display the Build Application window, select **Design** > **Build Application...** from the menu bar.
+To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
-The application building window includes several pages that can be accessed using tabs: 
+The Build Application dialog includes several pages that can be accessed using tabs: 
 
 ![](assets/en/Project/appbuilderProj.png)
 
@@ -91,9 +91,11 @@ Builds a compiled component from the structure.
 	
 A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation. 
 
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*. <p>The *MyComponent.4dbase* folder contains:
-	*	*MyComponent.4DZ* file
-	*	A *Resources* folder - any associated Resources are automatically copied into this folder. However, any other components and/or plugins are not copied (a component cannot use plug-ins or other components).
+If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*. 
+
+The *MyComponent.4dbase* folder contains:
+-	*MyComponent.4DZ* file
+-	A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
 
 ## Application page
@@ -108,9 +110,9 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 
 The following elements are required for the build:
 - 4D Volume Desktop (the 4D database engine),
-- an appropriate license 
+- an [appropriate license](#licenses) 
 
-On Windows, this feature creates an executable file (.exe). Onn macOS, it handles the creation of software packages.
+On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
@@ -179,11 +181,12 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 If your stand-alone application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
 
 *	*cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-*	default Web root folder,
-*logweb.txt* file (Web requests log).
+*	default Web root folder.
 
->	**Windows** - Items must be installed in the *Final Application\MyProject\Database* subfolder.<br> 
->	**macOS** - Items must be installed next to the *MyProject.app* software package.
+Items must be installed:  
+
+- **on Windows**: in the *Final Application\MyProject\Database* subfolder.
+- **on macOS**: next to the *MyProject.app* software package.
 
  
 
@@ -210,8 +213,9 @@ Also, the client/server application is customized and its handling simplified:
 - To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. 
 Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
-- A client/server application can be set so that the client portion [can be updated automatically over the network].
-- It is also possible to automate the update of the server part through the use of a sequence of language commands (see [Automatic updating of server or single-user applications]).
+- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
+- It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
+
 
 
 ### Build server application
@@ -261,8 +265,8 @@ The options of this area to set up the mechanism for updating the client parts o
 
 	For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
 	
-	You can automate the updating procedure via the [SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html) commands.
-
+	
+	
 #### Displaying update notification    
 
 The client application update notification is carried out automatically following the server application update.
@@ -324,16 +328,17 @@ When building a double-clickable application, 4D copies the contents of the 4D V
 
 If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
 
-*cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-Default Web root folder (WebFolder).
+- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+- Default Web root folder (WebFolder).
 
-*	**Windows**
-	*	**Server application** - Items must be installed in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-	*	**Client application** - Items must be installed in the *Client Server executable\ \<ApplicationName>Client* subfolder.
+Items must be installed: 
+*	**on Windows**
+	*	**Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
+	*	**Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 
-*	**macOS**
-	*	**Server application** - Items must be installed next to the *\<ApplicationName>Server* software package.
-	*	**Client application** - Items must be installed next to the *\<ApplicationName>Client* software package.
+*	**on macOS**
+	*	**Server application** - next to the *\<ApplicationName>Server* software package.
+	*	**Client application** - next to the *\<ApplicationName>Client* software package.
 
 
 
