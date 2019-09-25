@@ -208,7 +208,7 @@ Once built, a client/server application is composed of two customized parts: the
 Also, the client/server application is customized and its handling simplified:
 
 - To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the **IPAddress** XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](XXX)). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. 
+- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. 
 Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network].
 - It is also possible to automate the update of the server part through the use of a sequence of language commands (see [Automatic updating of server or single-user applications]).
@@ -448,7 +448,7 @@ Specifications concerning Gatekeeper evolve with each version of OS X. More spec
 
 	Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
 
-You can also set specific XML keys in the buildApp.settings file to designate each icon to use. The following keys are available:
+You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -538,66 +538,44 @@ When the default data file is detected at first launch, it is silently opened in
 
 ## Management of client connection(s)
 
-
 The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
 
-Starting with 4D v15 R4, these mechanisms have been modified in order to provide more control to the developer and more flexibility in case of connection error.
+### Connection scenario  
 
-Compatibility  
-The mechanisms available beginning with 4D v15 R4 described on this page are enabled only when the Use new architecture for application deployments option on the "Compatibility" page of the Database Settings dialog box is checked (see the Compatibility page section).
-
-New connection scenario  
 The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
 
-The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).
-OR
-If valid connection information is stored in the EnginedServer.4DLink file within the client application, the client application tries to connect to the specified server address.
-Compatibility note: When the compatibility option is not checked (see the Compatibility section), if a failure occurs at this stage, the standard "Server connection" dialog box is displayed directly.
-If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder (lastServer.xml file, see last step).
-If this fails, the client application displays a connection error dialog box.
-If the user clicks on the Select... button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
-If the user clicks on the Quit button, the client application quits.
-If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
-Storing the last server path  
-The last used and validated server path is automatically saved in a file named lastServer.xml in the application's user preferences folder. This folder is stored at the following location:
+- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
+	OR  
+	If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
+- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
+- If this fails, the client application displays a connection error dialog box.
+	- If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
+	- If the user clicks on the **Quit** button, the client application quits.
+- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
 
- userPrefs:=Get 4D folder(Active 4D Folder)
-Compatibility note: When this compatibility option is not checked (see the Compatibility section), the path is not saved.
+### Storing the last server path  
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the lastServer.xml path information.
+The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
 
-Notes:
+```code4d
+userPrefs:=Get 4D folder(Active 4D Folder)
+```
 
-When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is still recommended that the developer provide a host name at build time using the IPAddress key in the BuildApp.xml file. The new mechanism addresses cases of temporary unavailability.
-Pressing the Alt/Option key at startup to display the server selection dialog box is still supported in all cases.
-Availability of the server selection dialog box in case of error  
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached.
+This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
 
-In this case, the configuration depends on the Use new architecture for application deployments compatibility option (see the Compatibility section) as well as the value of the ServerSelectionAllowed XML key on the machine where the application was built. There are three possibilities:
-
-Display of an error message with no access possible to the server selection dialog box
-Default operation for databases created starting with 4D v15 R4.The application can only quit. This functioning is obtained with the following configuration:
-Use new architecture for application deployments option: checked
-ServerSelectionAllowed XML key: value False or key omitted
+> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability.  
+> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
 
 
-Display of an error message with access to the server selection dialog box possible
-The user can access the server selection window by clicking on the Select... button. This functioning is obtained with the following configuration:
-Use new architecture for application deployments option: checked
-ServerSelectionAllowed XML key: value True
- => 
+### Availability of the server selection dialog box in case of error 
 
-Direct display of server selection dialog box
-Default operation for converted databases. This is the functioning of previous versions of 4D. It is obtained with the following configuration:
-Use new architecture for application deployments option: unchecked
-ServerSelectionAllowed XML key: ignored
+You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
 
+- **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
+`ServerSelectionAllowed`: **False** or key omitted
+![](assets/en/Project/connect1.png)
 
-Note: For more information about the ServerSelectionAllowed XML key, refer to its description in the 4D XML Keys BuildApplication manual.
-
-
-
-
-
-
-
+- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
+`ServerSelectionAllowed`: **True**
+![](assets/en/Project/connect2.png) 
+![](assets/en/Project/connect3.png)
