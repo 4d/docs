@@ -35,5 +35,5 @@ You create a 4D database project by:
 
 Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool
 
-4D projects can be compiled and easily deployed as single-user or client-server applications via a single packed file (.4dz) containing all your project -- see [Deploying a project](deploying.md)
+4D projects can be compiled and easily deployed as single-user or client-server applications via a single packed file (.4dz) containing all your project -- see [Building a project package](building.md).
 
