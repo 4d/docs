@@ -51,17 +51,17 @@ When a database is encrypted (see above), the Encrypt page provides several encr
 ### Providing the current data encryption key  
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
-- If the data encryption key is already loaded in the 4D keychain(\*), it is automatically reused by 4D.
+- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
 - If the data encryption key is not found, you must provide it. The following dialog is displayed:
 ![](assets/en/MSC/MSC_encrypt7.png)
 
 At this step, you have two options:
-- enter the current passphrase(\**) and click **OK**.
+- enter the current passphrase(2) and click **OK**.
 OR
 - connect a device such as a USB key and click the **Scan devices** button.    
 
-(\*) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
-(\**) The current passphrase is the passphrase used to generate the current encryption key. 
+(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
+(2) The current passphrase is the passphrase used to generate the current encryption key. 
 
 In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
 
@@ -103,7 +103,7 @@ You can save the encryption key each time a new passphrase has been provided:
 
 - when the database is encrypted for the first time,
 - when the database is re-encrypted with a new passphrase.
-- 
+
 Successive encryption keys can be stored on the same device.
 
 ## Log file
