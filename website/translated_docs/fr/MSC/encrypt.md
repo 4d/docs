@@ -42,58 +42,62 @@ Lorsqu'une base est chiffrée (voir ci-dessus), la page Chiffrement propose plus
 
 Pour des raisons de sécurité, toutes les opérations de maintenance liées au chiffrement nécessitent la clé de chiffrement des données actuelle.
 
-- Si la clé de chiffrement des données est déjà chargée dans le trousseau 4D(*), elle est automatiquement réutilisée par 4D.
+- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
 - Si la clé de chiffrement des données n'est pas identifiée, vous devez la fournir. La boîte de dialogue suivante s'affiche : ![](assets/fr/MSC/MSC_encrypt7.png)
 
 À ce stade, deux options s'offrent à vous :
 
-- entrer la phrase secrète actuelle(**) et cliquer sur **OK**. OU
-- connecter un appareil tel qu'une clé USB et cliquer sur le bouton **Scanner les disques**. (*) Le trousseau 4D stocke toutes les clés de chiffrement des données valides qui ont été saisies au cours de la session d'application. (**) La phrase secrète actuelle correspond à la phrase secrète utilisée pour générer la clé de chiffrement actuelle. 
+- enter the current passphrase(2) and click **OK**. OU
+- connect a device such as a USB key and click the **Scan devices** button. 
 
-Dans tous les cas, si des informations valides sont fournies, 4D redémarre en mode maintenance (si ce n'est pas déjà le cas) et exécute l'opération.
+(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
+(2) The current passphrase is the passphrase used to generate the current encryption key.
+
+In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
 
 ### Re-chiffrer les données à l'aide de la clé de chiffrement actuelle
 
-Cette opération est utile lorsque l'attribut **Chiffrable** a été modifié pour une ou plusieurs tables contenant des données. Dans ce cas, afin d'éviter toute incohérence dans le fichier de données, 4D désactive l'accès en écriture aux enregistrements des tables dans l'application. Il est alors nécessaire de re-chiffrer les données pour restituer un statut de chiffrement valide.
+This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
 1. Cliquez sur **Re-chiffrer les données à l'aide de la clé actuelle**.
 2. Saisissez la clé de chiffrement des données actuelle.
 
-Le fichier de données est correctement re-chiffré à l'aide de la clé actuelle et un message de confirmation s'affiche : ![](assets/fr/MSC/MSC_encrypt8.png)
+The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](assets/fr/MSC/MSC_encrypt8.png)
 
 ### Changer votre phrase secrète et re-chiffrer les données
 
-Cette opération est utile en cas de modification de la clé de chiffrement des données actuelle. Par exemple, il se peut que vous la modifiiez pour vous conformer aux règles de sécurité (telles que la nécessité de modifier la phrase secrète tous les trois mois).
+This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
 
-1. Cliquez sur **Changer votre phrase secrète et re-chiffrere les données**.
+1. Cliquez sur **Changer votre phrase secrète et re-chiffrer les données**.
 2. Saisissez la clé de chiffrement des données actuelle.
 3. Saisissez la nouvelle phrase secrète (pour plus de sécurité, il vous est demandé de la saisir deux fois) : ![](assets/en/MSC/MSC_encrypt9.png) Le fichier de données est entièrement déchiffré et un message de confirmation s'affiche : ![](assets/fr/MSC/MSC_encrypt8.png)
 
 ### Enlever le chiffrement de toutes les données
 
-Cette opération supprime tout le chiffrement du fichier de données. Si vous ne souhaitez plus que vos données soient chiffrées :
+This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
 1. Cliquez sur **Enlever le chiffrement de toutes les données**.
 2. Saisissez la clé de chiffrement de données actuelle (voir Fournir la clé de chiffrement des données actuelle).
 
-Le fichier de données est entièrement déchiffré et un message de confirmation s'affiche : ![](assets/fr/MSC/MSC_encrypt10.png)
+The data file is fully decrypted and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt10.png)
 
 > Une fois que le fichier de données est déchiffré, le statut de chiffrement des tables ne correspond plus à leur attribut Chiffrable. Pour restituer un statut de mise en correspondance, vous devez décocher tous les attributs **Chiffrable** au niveau de la structure de la base.
 
 ## Sauvegarder la clé de chiffrement
 
-4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une base chiffrée, étant donné que l'utilisateur connecterait cet appareil uniquement pour fournir la clé avant d'ouvrir la base et accéder aux données chiffrées.
+4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
 
-Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phrase secrète est fournie :
+You can save the encryption key each time a new passphrase has been provided:
 
 - lorsque la base est chiffrée pour la première fois,
 - lorsque la base est re-chiffrée avec une nouvelle phrase secrète.
-- Les clés de chiffrement successives peuvent être sauvegardées sur le même appareil.
+
+Successive encryption keys can be stored on the same device.
 
 ## Fichier d'historique
 
-Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de la base. Il est créé au format XML et nommé "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss>.xml*".
+After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
-Chaque fois qu'un nouveau fichier d'historique est généré, un bouton Voir le compte rendu s'affiche dans la page CSM.
+An Open log file button is displayed on the MSC page each time a new log file has been generated.
 
-Le fichier d'historique liste toutes les opérations internes liées au processus de chiffrement/déchiffrement qui ont été exécutées, ainsi que les erreurs (le cas échéant).
+The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
