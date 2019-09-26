@@ -45,6 +45,7 @@ title: JSON property list
 |[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|"true", "false"|
+|[defaultValue](properties_RangesOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
 |[detailForm](properties_Subform.md#detail-form) (subform)<br>[detailForm](properties_ListBox.md#detail-form-name) (list box)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[display](properties_Display.md#not-rendered) (objects) <br>[display](properties_Display.md#invisible) (list box column)|The object is not drawn on the form.|"true", "false"|
 |[doubleClickInRowAction](properties_ListBox.md#double-click-on-row) |Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
@@ -112,6 +113,7 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
+|[labels](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
 |[labelsPlacement](properties_Scale.md#label-location) (objects)<br>[labelsPlacement](properties_Appearance.md#tab-control-direction) (splitter / tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
 |[left](properties_CoordinatesAndSizing.md#left)|Positions an object on the left.|minimum: 0|
 |[lockedColumnCount](properties_ListBox.md#number-of-locked-columns) |Number of columns that must stay permanently displayed in the left part of a list box. |minimum: 0|
@@ -230,7 +232,7 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
-|[values](properties_DataSource.md#default-values) |Default value to be entered in a field or enterable object. |A list of default values|
+|[values](properties_DataSource.md#default-list-values)|List of default values for an array listbox column|ex: "A","B","42"...|
 |[variableCalculation](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[verticalAlign](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[verticalLineStroke](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|

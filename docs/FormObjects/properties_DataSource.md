@@ -52,6 +52,20 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 
 
+## Choice List (static list)
+
+List of static values to use as labels for the tab control object. 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|labels|collection|A list of static values|
+
+#### Objects Supported
+
+[Tab Control](tabControl.md)
+
 
 
 ## Current item
@@ -115,30 +129,25 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 
 
-## Default values 
+## Default (list of) values
 
-You can assign a default value to be entered in a field or enterable object. The default value is entered when a new record is first displayed. You can change the value unless the field or entry area has been defined as non-enterable.
+List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
-The default value must be appropriate for the field type. 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
+You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
-|Stamp|	Meaning|
-|---|---|
-|#D|Current date|
-|#H	|Current time|
-|#N	|Sequence number|
+![](assets/en/FormObjects/defaultValues.png)
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph. 
+> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows. 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|values |collection |A collection of default values (strings)|
+|values |collection |A collection of default values (strings), ex: "a", "b", "c", "d"|
 
 #### Objects Supported
 
 [List Box Column (array type only)](listbox_overview.md#list-box-columns)
-
 
 
 
