@@ -32,65 +32,69 @@ Dann wird der Prozess zum Verschlüsseln gestartet. Wurde das MSC im Standardmod
 
 War der Prozess zum Verschlüsseln erfolgreich, zeigt die Seite Verschlüsseln Schaltflächen für Wartungsoperationen beim Verschlüsseln.
 
-**Warnung:** 4D erstellt beim Verschlüsseln eine neue leere Datendatei und füllt sie mit Daten aus der ursprünglichen Datendatei. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
+**Warnung:** 4D erstellt beim Verschlüsseln eine neue leere Datendatei und füllt sie mit Daten aus der ursprünglichen Datendatei. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). War die Operation erfolgreich, wird die ursprüngliche Datendatei in den Ordner "Replaced Files (Encrypting)" geschoben. Wollen Sie eine verschlüsselte Datendatei ausliefern, stellen Sie sicher, dass zuvor alle unverschlüsselten Datendateien aus dem Anwendungsordner verschoben/entfernt wurden.
 
-## Encryption maintenance operations
+## Wartungsoperationen beim Verschlüsseln
 
-When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
+Beim Verschlüsseln einer Anwendung (siehe oben) bietet die Seite Verschlüsseln verschiedene Möglichkeiten für standardmäßige Operationen. ![](assets/en/MSC/MSC_encrypt6.png)
 
-### Providing the current data encryption key
+### Den aktuellen Verschlüsselungscode für Daten liefern
 
-For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
+Aus Sicherheitsgründen wird bei allen Wartungsoperationen für Verschlüsselung der aktuelle Verschlüsselungscode der Daten angefordert.
 
-- If the data encryption key is already loaded in the 4D keychain(*), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](assets/en/MSC/MSC_encrypt7.png)
+- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
+- Wird kein Verschlüsselungscode für Daten gefunden, müssen Sie ihn liefern. Es erscheint folgendes Dialogfenster: ![](assets/en/MSC/MSC_encrypt7.png)
 
-At this step, you have two options:
+An dieser Stelle haben Sie zwei Möglichkeiten:
 
-- enter the current passphrase(**) and click **OK**. OR
-- connect a device such as a USB key and click the **Scan devices** button. (*) The 4D keychain stores all valid data encrpytion keys entered during the application session. (**) The current passphrase is the passphrase used to generate the current encryption key. 
+- enter the current passphrase(2) and click **OK**. ODER
+- connect a device such as a USB key and click the **Scan devices** button. 
+
+(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
+(2) The current passphrase is the passphrase used to generate the current encryption key.
 
 In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
 
-### Re-encrypt data with the current encryption key
+### Daten mit dem aktuellen Verschlüsselungscode erneut verschlüsseln
 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
-1. Click on **Re-encrypt data with the current encryption key**.
-2. Enter the current data encryption key.
+1. Markieren Sie die Option **Daten mit dem aktuellen Schlüssel wieder verschlüsseln**.
+2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Change your passphrase and re-encrypt data
+### Passphrase verändern und Daten erneut verschlüsseln
 
 This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
 
-1. Click on **Change your passphrase and re-encrypt data**.
-2. Enter the current data encryption key.
-3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](assets/en/MSC/MSC_encrypt8.png)
+1. Wählen Sie die Option **Ändern Sie Ihre Passphrase und verschlüsseln Sie die Daten erneut**.
+2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
+3. Geben Sie die neue Passphrase ein. Für zusätzliche Sicherheit werden Sie aufgefordert, diese ein zweites Mal einzugeben: ![](assets/en/MSC/MSC_encrypt9.png) Die Datendatei wird mit dem neuen Schlüssel verschlüsselt und es erscheint eine Meldung als Bestätigung. ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Decrypt all data
+### Alle Daten entschlüsseln
 
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
-1. Click on **Decrypt all data**.
-2. Enter the current data encryption key (see Providing the current data encryption key).
+1. Klicken Sie auf die Option **Alle Daten entschlüsseln**.
+2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein (siehe unter Den aktuellen Verschlüsselungscode für Daten liefern).
 
 The data file is fully decrypted and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt10.png)
 
-> Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
+> Ist die Datendatei entschlüsselt, passt der Verschlüsselungsstatus der Tabellen nicht mehr zur Eigenschaft Verschlüsselbar. Um den passenden Status wiederherzustellen, müssen Sie alle Eigenschaften **Verschlüsselbar** auf der Strukturebene der Anwendungen abwählen.
 
-## Saving the encryption key
+## Verschlüsselungscode sichern
 
 4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
 
 You can save the encryption key each time a new passphrase has been provided:
 
-- when the database is encrypted for the first time,
-- when the database is re-encrypted with a new passphrase.
-- Successive encryption keys can be stored on the same device.
+- wenn die Anwendung zum ersten Mal verschlüsselt wird
+- wenn die Anwendung mit einer neuen Passphrase erneut verschlüsselt wird.
 
-## Log file
+Successive encryption keys can be stored on the same device.
+
+## Logbuch
 
 After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
