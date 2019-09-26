@@ -39,4 +39,4 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
     ***Hinweis:** Ist die Anwendung verschlüsselt und wurde kein gültiger Verschlüsselungscode zum geöffneten Logbuch geliefert, werden verschlüsselte Werte in dieser Spalte nicht angezeigt.*
 - **Datensätze**: Datensatznummer
 
-Klicken Sie am unteren Rand auf die Schaltfläche **Analysieren** um den Inhalt des aktuellen Logbuchs der ausgewählten Datenbank anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
+Klicken Sie am unteren Rand auf die Schaltfläche **Analysieren**, um den Inhalt des aktuellen Logbuchs der ausgewählten Datenbank anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
