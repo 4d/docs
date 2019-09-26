@@ -160,14 +160,17 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "Project/compiling": {
+        "title": "Compiling a project"
+      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
+      "Project/building": {
+        "title": "Building a project package"
+      },
       "Project/creating": {
         "title": "Creating a 4D project"
-      },
-      "Project/deploying": {
-        "title": "Deploying a project"
       },
       "Project/developing": {
         "title": "Developing a project"
