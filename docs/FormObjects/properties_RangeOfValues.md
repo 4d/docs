@@ -7,7 +7,14 @@ title: Range of Values
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
-The default value can only be used if the [data source type](properties_Object#expression-type) is "text". 4D provides stamps for generating default string values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
+The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+- text/string
+- number/integer
+- date
+- time
+- boolean
+
+4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
 |Stamp|	Meaning|
 |---|---|
@@ -17,11 +24,13 @@ The default value can only be used if the [data source type](properties_Object#e
 
 You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph. 
 
+> Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values. 
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|defaultValue |string |Any string and/or a stamp: "#D", "#H", "#N"|
+|defaultValue |string, number, date, time, boolean|Any value and/or a stamp: "#D", "#H", "#N"|
 
 #### Objects Supported
 
