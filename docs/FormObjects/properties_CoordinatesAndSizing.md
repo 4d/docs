@@ -64,14 +64,14 @@ Positions the object on the bottom of the form (centered).
 
 ## Corner Radius
 
-The Corner radius propriety is for objects of the rectangle type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
 ![](assets/en/FormObjects/shape_rectangle.png)
 
 Minimum value is 0, in this case a standard non-rounded rectangle is drawn. 
 Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
-You can also set this property using the OBJECT Get corner radius and OBJECT SET CORNER RADIUS commands.
+You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-Get-corner-radius.301-4311357.en.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-CORNER-RADIUS.301-4311356.en.html) commands.
 
 #### JSON Grammar
 
