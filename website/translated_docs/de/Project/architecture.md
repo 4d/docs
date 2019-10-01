@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 ![](assets/en/Project/project1.png)
 
-> If your project has been converted from a binary database, additional folders may be present, such as a Preferences folder, containing configuration files. See "Converting databases to projects" on doc.4d.com.
+> If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on doc.4d.com.
 
 ## Project folder
 
@@ -21,6 +21,7 @@ The Project folder typically contains the following hierarchy:
     + TableForms
     + Triggers
 + DerivedData
++ Trash (if any)
 
 ### *databaseName*.4DProject file
 
@@ -119,7 +120,7 @@ The Resources folder contains any custom database resource files and folders. In
 
 ## Data folder
 
-The data folder contains the data file and all files relating to the data.
+The data folder contains the data file and all files and folders relating to the data.
 
 | Contents     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -142,17 +143,19 @@ This folder contains **user settings files for data** used for database administ
 | settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
 
 
-## Logs folder
+### Logs folder
 
-The Logs folder contains all log files used by the project. Log files are and include, in particular:
+The Logs folder contains all log files used by the project. Log files include, in particular:
 
 - database conversion,
 - web server requests,
 - data verification and repair,
 - structure verification and repair,
-- backup/restore activities journal (*Backup Journal[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
+- backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
+
+> When the data folder is read-only, the Logs folder is created in the user system preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command).
 
 ## Settings folder
 
