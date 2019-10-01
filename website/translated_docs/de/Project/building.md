@@ -396,9 +396,9 @@ The **Sign application** option of the 4D application builder lets you generate 
 
 #### About Notarization
 
-Application notarization is highly recommended by Apple starting with macOS 10.14.5 (Mojave) and 10.15 (Catalina), since non-notarized applications deployed through Internet are blocked by default.
+Application notarization is highly recommended by Apple as of macOS 10.14.5 (Mojave) and 10.15 (Catalina), since non-notarized applications deployed via the internet are blocked by default.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independant from 4D. Note also that it requires to install XCode.
+In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D. Note also that it requires installing XCode.
 
 For more information on the notarization, please refer to this page: [developer.apple.com/documentation/security/notarizing_your_app_before_distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution).
 
