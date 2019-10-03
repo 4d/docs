@@ -5,17 +5,17 @@ title: Object libraries
 
 ## Overview 
 
-You can use object librairies in your forms. An object library offers a collection of preconfigured objects or forms that can be used in your forms by simple or copy-paste or drag-and-drop.
+You can use object librairies in your forms. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
 4D proposes two kinds of object libraries:
 
-- a default, preconfigured object library, available in all your projects. 
+- a standard, preconfigured object library, available in all your projects. 
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 
-## Using the default object library
+## Using the standard object library
 
-The default object library is available from the Form editor: click on the last button of the toolbar:  
+The standard object library is available from the Form editor: click on the last button of the toolbar:  
 ![](assets/en/FormEditor/library1.png)
 
 The library is displayed in a separate window:
@@ -32,9 +32,9 @@ The window has the following main features:
 	- or drag and drop the object from the library
 The object is then added to the form. 
 
-This library is read-only. If you want to edit default objects or create your own libray of preconfigured objects or project forms, you need to create a custom object librairy (see below). 
+This library is read-only. If you want to edit default objects or create your own libray of preconfigured objects or project forms, you need to create a custom object library (see below). 
 
-All objects proposed in the default object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
 ## Creating and using custom object libraries
@@ -60,7 +60,11 @@ You can create as many libraries as desired per project. A library created and b
 
 A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database. 
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You must select a **.project** file. In fact, custom object libraries are standard 4D projects. However, only the following parts of the project are exposed as library:
+To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You can select the following file types:
+- **.4dproject**
+- **.4dz**
+
+In fact, custom object libraries are standard 4D projects. However, only the following parts of the project are exposed as library:
 
 - project forms
 - first form pages
