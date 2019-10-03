@@ -438,7 +438,7 @@ Application notarization is highly recommended by Apple as of macOS 10.14.5 (Moj
 
 In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D. Note also that it requires installing XCode.
 
-For more information on the notarization, please refer to the ["Customizing the Notarization Workflow"](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) page on the Apple developer website. 
+For more information on the notarization, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow). 
 
 ## Customizing application icons
 
