@@ -105,6 +105,9 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "FormEditor/objectLibrary": {
+        "title": "Object libraries"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -189,6 +192,7 @@
       "4D Language Concepts": "4D Language Concepts",
       "Projects in 4D (BETA)": "Projects in 4D (BETA)",
       "MSC": "MSC",
+      "Form Editor (in progress)": "Form Editor (in progress)",
       "Menus": "Menus",
       "Backup and Restore": "Backup and Restore"
     }
