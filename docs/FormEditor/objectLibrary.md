@@ -64,7 +64,7 @@ To open a custom object library, select **Open>Object Library...** command in th
 - **.4dproject**
 - **.4dz**
 
-In fact, custom object libraries are standard 4D projects. However, only the following parts of the project are exposed as library:
+In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
 
 - project forms
 - first form pages
@@ -72,7 +72,7 @@ In fact, custom object libraries are standard 4D projects. However, only the fol
 
 ### Building an object library
 
-Objects are placed in an object library using drag-and-drop or a cut-copy-paste operation. They can come from either a form or another object library (including the [default library](#using-the-default-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+Objects are placed in an object library using drag-and-drop or a cut-copy-paste operation. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
 
 > In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
 
@@ -92,7 +92,7 @@ You can place individual objects (including subforms) or sets of objects in an o
 
 An object library can contain up to 32,000 items.
 
-Objects are copied with all their properties, both graphic and functional. These properties are kept in full when the item is copied into a form or another library.
+Objects are copied with all their properties, both graphic and functional, including their methods. These properties are kept in full when the item is copied into a form or another library.
 
 #### Dependent objects  
 Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
