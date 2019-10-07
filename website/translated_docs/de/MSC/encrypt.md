@@ -48,16 +48,16 @@ Aus Sicherheitsgründen wird bei allen Wartungsoperationen für Verschlüsselung
 An dieser Stelle haben Sie zwei Möglichkeiten:
 
 - enter the current passphrase(2) and click **OK**. ODER
-- connect a device such as a USB key and click the **Scan devices** button. 
+- Sie schließen ein Gerät, z. B. einen USB Key an und klicken auf die Schaltfläche **Gerät scannen**. 
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
 (2) The current passphrase is the passphrase used to generate the current encryption key.
 
-In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
+Ist die Eingabe korrekt, startet 4D in allen Fällen erneut im Wartungsmodus (falls das noch nicht der Fall ist) und führt die Operation aus.
 
 ### Daten mit dem aktuellen Verschlüsselungscode erneut verschlüsseln
 
-This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
+Diese Operation ist hilfreich, wenn der Status **Verschlüsselbar** für eine oder mehrere Tabellen mit Daten geändert wurde. Zur Vermeidung von Inkonsistenzen in der Datendatei erlaubt 4D in solchen Fällen keinen Schreibzugriff auf die Datensätze dieser Tabellen in der Anwendung. Die Daten müssen dann erneut verschlüsselt werden, um wieder einen gültigen Verschlüsselungsstatus herzustellen.
 
 1. Markieren Sie die Option **Daten mit dem aktuellen Schlüssel wieder verschlüsseln**.
 2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
