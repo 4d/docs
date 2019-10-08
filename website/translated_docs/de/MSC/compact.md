@@ -18,7 +18,7 @@ Komprimieren der Dateien erfüllt zwei Anforderungen:
 
 ## Standard Komprimierung
 
-To directly begin the compacting of the data file, click on the compacting button in the MSC window.
+Um das Komprimieren direkt zu starten, klicken Sie im MSC-Fenster auf die Schaltfläche zum Komprimieren.
 
 ![](assets/en/MSC/MSC_compact.png)
 
