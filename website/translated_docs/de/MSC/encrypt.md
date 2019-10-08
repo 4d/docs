@@ -1,5 +1,5 @@
 ---
-id: encrypt
+id: Verschlüsseln
 title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
 ---
@@ -42,16 +42,16 @@ Beim Verschlüsseln einer Anwendung (siehe oben) bietet die Seite Verschlüsseln
 
 Aus Sicherheitsgründen wird bei allen Wartungsoperationen für Verschlüsselung der aktuelle Verschlüsselungscode der Daten angefordert.
 
-- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
+- Wurde der Verschlüsselungscode für Daten bereits in den 4D Schlüsselbund (1) geladen, verwendet 4D ihn automatisch wieder.
 - Wird kein Verschlüsselungscode für Daten gefunden, müssen Sie ihn liefern. Es erscheint folgendes Dialogfenster: ![](assets/en/MSC/MSC_encrypt7.png)
 
 An dieser Stelle haben Sie zwei Möglichkeiten:
 
-- enter the current passphrase(2) and click **OK**. ODER
+- Sie geben die aktuelle Passphrase(2) ein und klicken auf **OK**. ODER
 - Sie schließen ein Gerät, z. B. einen USB Key an und klicken auf die Schaltfläche **Gerät scannen**. 
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
-(2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) Der 4D Schlüsselbund speichert alle gültigen Verschlüsselungscodes für Daten, die während der Anwendungssitzung eingegeben wurden.  
+(2) Die aktuelle Passphrase ist die Passwort-Folge, die zum Generieren des aktuellen Verschlüsselungscodes verwendet wird.
 
 Ist die Eingabe korrekt, startet 4D in allen Fällen erneut im Wartungsmodus (falls das noch nicht der Fall ist) und führt die Operation aus.
 
@@ -62,11 +62,11 @@ Diese Operation ist hilfreich, wenn der Status **Verschlüsselbar** für eine od
 1. Markieren Sie die Option **Daten mit dem aktuellen Schlüssel wieder verschlüsseln**.
 2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
 
-The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt8.png)
+Die Datendatei wird erneut ordnungsgemäß mit dem aktuellen Schlüssel verschlüsselt und es erscheint eine Meldung als Bestätigung: ![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Passphrase verändern und Daten erneut verschlüsseln
 
-This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
+Diese Operation bietet sich an, wenn Sie Ihren aktuellen Verschlüsselungscode für Daten verändern müssen, um bestimmte Sicherheitsregeln einzuhalten (z. B. wenn ein Admin das Unternehmen verlassen hat).
 
 1. Wählen Sie die Option **Ändern Sie Ihre Passphrase und verschlüsseln Sie die Daten erneut**.
 2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
@@ -74,30 +74,30 @@ This operation is useful when you need to change the current encryption data key
 
 ### Alle Daten entschlüsseln
 
-This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
+Diese Operation entfernt jede Verschlüsselung aus der Datendatei. Sollen Ihre Daten nicht länger verschlüsselt sein:
 
 1. Klicken Sie auf die Option **Alle Daten entschlüsseln**.
 2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein (siehe unter Den aktuellen Verschlüsselungscode für Daten liefern).
 
-The data file is fully decrypted and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt10.png)
+Die Datendatei wird komplett entschlüsselt und es erscheint eine Meldung als Bestätigung: ![](assets/en/MSC/MSC_encrypt10.png)
 
 > Ist die Datendatei entschlüsselt, passt der Verschlüsselungsstatus der Tabellen nicht mehr zur Eigenschaft Verschlüsselbar. Um den passenden Status wiederherzustellen, müssen Sie alle Eigenschaften **Verschlüsselbar** auf der Strukturebene der Anwendungen abwählen.
 
 ## Verschlüsselungscode sichern
 
-4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
+In 4D können Sie den Verschlüsselungscode für Daten in einer spezifischen Datei speichern. Speichern Sie diese Datei auf einem externen Gerät, z. B. einem USB Key, vereinfacht das den Einsatz einer verschlüsselten Anwendung. Der Benutzer muss vor dem Öffnen der Anwendung lediglich das Gerät anschließen und kann dann auf verschlüsselte Daten zugreifen.
 
-You can save the encryption key each time a new passphrase has been provided:
+Sie können den Verschlüsselungscode jedes Mal sichern, wenn eine neue Passphrase angelegt wird:
 
 - wenn die Anwendung zum ersten Mal verschlüsselt wird
 - wenn die Anwendung mit einer neuen Passphrase erneut verschlüsselt wird.
 
-Successive encryption keys can be stored on the same device.
+Aufeinanderfolgende Verschlüsselungscodes lassen sich auf dem gleichen Gerät speichern.
 
 ## Logbuch
 
-After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+Ist das Komprimieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. im XML Format mit Namen "*Anwendungsname_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" oder "*Anwendungsname_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
-An Open log file button is displayed on the MSC page each time a new log file has been generated.
+Immer wenn ein neues Logbuch angelegt wurde, erscheint auf der Seite Verschlüsselt unten die Schaltfläche Logbuch anzeigen.
 
-The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
+Das Logbuch listet alle internen Operationen, die während dem Prozess Verschlüsseln/Entschlüsseln ausgeführt werden, sowie evtl. aufgetretene Fehler.
