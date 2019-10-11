@@ -34,15 +34,18 @@ Project development file, used to designate and launch the project. This file ca
 
 ### Sources folder
 
-| Contents            | Description                                                                                                                                                                           | Format |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog   | Table and field definitions                                                                                                                                                           | XML    |
-| folders.json        | Explorer folder definitions                                                                                                                                                           | JSON   |
-| menus.json          | Menu definitions                                                                                                                                                                      | JSON   |
-| settings.4DSettings | *Structure* database settings. If *user settings* are defined, they take priority over these settings. If *user settings for data* are defined, they take priority over user settings | XML    |
-| tips.json           | Defined tips                                                                                                                                                                          | JSON   |
-| lists.json          | Defined lists                                                                                                                                                                         | JSON   |
-| filters.json        | Defined filters                                                                                                                                                                       | JSON   |
+| Contents                | Description                                                                                                                                                                           | Format |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog       | Table and field definitions                                                                                                                                                           | XML    |
+| folders.json            | Explorer folder definitions                                                                                                                                                           | JSON   |
+| menus.json              | Menu definitions                                                                                                                                                                      | JSON   |
+| settings.4DSettings     | *Structure* database settings. If *user settings* are defined, they take priority over these settings. If *user settings for data* are defined, they take priority over user settings | XML    |
+| tips.json               | Defined tips                                                                                                                                                                          | JSON   |
+| lists.json              | Defined lists                                                                                                                                                                         | JSON   |
+| filters.json            | Defined filters                                                                                                                                                                       | JSON   |
+| styleSheets.css         | CSS style sheets                                                                                                                                                                      | JSON   |
+| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                 | JSON   |
+| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                             | JSON   |
 
 
 #### DatabaseMethods folder
