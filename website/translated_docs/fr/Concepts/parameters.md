@@ -20,7 +20,7 @@ Les paramètres sont passés de la même manière aux méthodes. Par exemple, si
 FAIRE QUELQUE CHOSE(AvecCeci;EtCela;CommeCeci)
 ```
 
-Les paramètres sont séparés par des points-virgules (;). Their value is evaluated at the moment of the call.
+Les paramètres sont séparés par des points-virgules (;). Leur valeur est calculée lorsqu'ils sont appelés.
 
 Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est automatiquement copiée séquentiellement dans des variables locales numérotées : $1, $2, $3, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
@@ -36,7 +36,7 @@ Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est 
 
 A l'intérieur de la sous-routine, vous pouvez utiliser les paramètres $1, $2... de la même manière que vous utilisez les autres variables locales. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des commandes consacrées, comme par exemple :
 
 ```code4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
@@ -57,33 +57,33 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ## Fonctions
 
-Data can be returned from methods. A method that returns a value is called a function.
+Les méthodes peuvent retourner des valeurs. Une méthode qui retourne une valeur est appelée une fonction.
 
-4D or 4D Plug-in commands that return a value are also called functions.
+Les commandes de 4D ou de plug-ins qui retournent une valeur sont également appelées fonctions.
 
-For example, the following line is a statement that uses the built-in function, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Par exemple, la ligne d’instruction suivante utilise une fonction intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur* : 
 
 ```code4d
-MaLongueur:=Longueur("Comment suis-je arrivé là ?")
+MaLongueur:=Length("Comment suis-je arrivé là ?")
 ```
 
-Any subroutine can return a value. The value to be returned is put into the local variable `$0`.
+Toute sous-routine peut retourner une valeur. La valeur à retourner est placée dans la variable locale `$0`.
 
-For example, the following function, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+Par exemple, la fonction suivante, appelée `Majuscules4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
 
 ```code4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 function:
+Voici un exemple qui utilise la fonction Majuscules4 :
 
 ```code4d
 NouvellePhrase:=Majuscules4("Bien joué.")
 ```
 
-In this example, the variable *NewPhrase* gets “THIS is good.”
+Dans ce cas, la variable *NouvellePhrase* prend la valeur “BIEN joué.”
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, in the previous `DO SOMETHING` example, `$0` was first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, dans le cas de la méthode `FAIRE QUELQUE CHOSE` utilisée précédemment, `$0` recevait d'abord la valeur de `$1`, puis était utilisée en tant que paramètre de la commande `ALERT`. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne sa valeur finale `$0` (sa valeur courante au moment où la sous-routine se termine) à la méthode appelée.
 
 ## Déclaration des paramètres
 
@@ -112,7 +112,7 @@ Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre
  $0:=Majusc(Sous chaine($1;1;1))+Minusc(Sous chaine($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. Par exemple:
+L'utilisation de commandes telles que `Nouveau process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple:
 
 ```code4d
 C_TEXT($string)
@@ -122,7 +122,7 @@ C_OBJECT($obj)
 $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+Ce code peut être exécuté en mode compilé, uniquement si "foo_method" déclare ses paramètres :
 
 ```code4d
 //foo_method
@@ -132,26 +132,26 @@ C_OBJECT($3)
 ...
 ```
 
-**Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+**Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 
 ```code4d
  C_REAL(OneMethodAmongOthers;$1) 
 ```
 
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
-- Database methods For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- Méthodes base Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```code4d
 // Sur connexion Web
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Par exemple:
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 
 ```code4d
  C_LONGINT($0)
@@ -167,7 +167,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Values or references
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. Par exemple:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
 
 ```code4d
     //Here is some code from the method MY_METHOD
@@ -179,11 +179,11 @@ ALERT([People]Name)
  ALERT($1)
 ```
 
-The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+La boîte de dialogue d'alerte affichée par `FAIRE QUELQUE CHOSE` contiendra "WILLIAM" et celle affichée par `MA METHODE` contiendra "william". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[Personnes]Nom` passé en paramètre par la méthode `MA METHODE`.
 
-There are two ways to make the method `DO_SOMETHING` change the value of the field:
+Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la valeur du champ, deux solutions s'offrent à vous :
 
-1. 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
+1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
 ```code4d
   //Here is some code from the method MY_METHOD
@@ -195,9 +195,9 @@ There are two ways to make the method `DO_SOMETHING` change the value of the fie
  ALERT($1->)
 ```
 
-Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
+Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ainsi, à l'intérieur de la méthode `FAIRE QUELQUE CHOSE`, $1 ne contient plus la valeur du champ mais un pointeur vers le champ. L'objet **référencé** par $1 ($1-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAM".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. 
+2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur. 
 
 ```code4d
     //Here is some code from the method MY METHOD
@@ -236,7 +236,7 @@ $1.Age:=$1.Age+10
  ALERT(String($1;Age))
 ```
 
-When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
+Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car le même objet est traité par les deux méthodes.
 
 **4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple, voir Propriétés des méthodes projet), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
 
