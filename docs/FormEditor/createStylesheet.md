@@ -14,7 +14,15 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet (if the object has a defined `Class` property). 
 
 
+4D accepts three, specific style sheet files:
 
+|Style Sheet|Platform|
+|---|---|
+|styleSheet.css|Default global style sheet for both macOS and Windows|
+|styleSheet_mac.css|For defining macOS only specific attribute styles|
+|styleSheet_windows.css|For defining Windows only specific attribute styles|
+
+These files are stored in the project's "/SOURCES" folder.
 
 
 
@@ -154,12 +162,33 @@ text[text|=Hello]
 ```
 
 
+### Attribute Mapping
+
+The attributes listed below are able to accept either the 4D name or the CSS name.
+
+|4D|CSS|
+|---|---|
+|borderStyle|border-style|
+|fill|background-color|
+|fontFamily|font-family|
+|fontSize|font-size|
+|fontStyle|font-style|
+|fontWeight|font-weight|
+|stroke|color|
+|textAlign|text-align|
+|textDecoration|text-decoration|
+|verticalAlign|vertical-align|
+
+
+>CSS attributes can only be used for values supported in CSS
 
 
 
-## Priority
 
 
+## Priority Order
+
+4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
 
 
 ### JSON vs Style Sheet
@@ -170,14 +199,14 @@ To override this behavior, the style value must be followed with an `!important`
 
 **Example 1:**
 
-|JSON form description|Style sheet|4D displays|
+|JSON form description|Style Sheet|4D displays|
 |---|---|---|
 |`"text": "Button",`|`text: Edit;`| `"Button"`|
 
 
 **Example 2:**
 
-|JSON form description|Style sheet|4D displays|
+|JSON form description|Style Sheet|4D displays|
 |---|---|---|
 |`"text": "Button",`|`text: Edit !important;`| `"Edit"`|
 
