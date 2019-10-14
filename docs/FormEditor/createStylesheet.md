@@ -13,14 +13,14 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *	Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet (if the object has a defined `Class` property). 
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar.
+
 
 
 
 
 ## Style Sheet Selectors
 
-As previously stated, style sheets for project databases generally conform to the grammar and syntax of CSS. The majority of form object attributes can be defined within a style sheet.
+While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar. The majority of form object attributes can be defined within a style sheet (not including object types, methods, events, and lists).
 
 Every style rule in a style sheet contains two parts: a selector and a declaration. A selector defines where to apply the style and the declaration defines the actual style to apply. 
 
@@ -194,7 +194,7 @@ At run time, 4D automatically prioritizes style sheets in the following order:
 |styleSheet_windows.css|Windows only|
 
 1.	The 4D form will first load the default CSS file in "/SOURCES". 
-2.	It will then load the CSS file in "/SOURCES" for the current platform.
+2.	It will then load the CSS file for the current platform in "/SOURCES" .
 3.	If it exists, it will then load a specific CSS file defined in the JSON form:
 
 	*	a file for both platforms:
