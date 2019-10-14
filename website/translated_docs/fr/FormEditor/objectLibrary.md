@@ -1,6 +1,6 @@
 ---
 id: objectLibrary
-title: Object libraries
+title: Bibliothèques d'objets
 ---
 
 ## Aperçu
