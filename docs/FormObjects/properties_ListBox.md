@@ -48,15 +48,15 @@ The specified form is displayed:
 
 
 ## Double-click on row
-`Selection type list box`
+`Selection type list box or List subform`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+Sets the action to be performed when a user double-clicks on a row in the list box or in a list subform. The available options are:
 
 *	**Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined for the list box (see the “Detail Form” bullet point below). The record is opened in read-write mode so it can be modified.
+*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name) or [for the list subform](propertiesSubform.md#detail-form). The record is opened in read-write mode so it can be modified.
 *	**Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
 
->Double-clicking an empty row is ignored. 
+>Double-clicking an empty row is ignored in list boxes. 
  
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated. 
  
@@ -70,7 +70,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md#overview) - [Subform](subform_overview.md)
 
 
 
@@ -232,14 +232,23 @@ Note that setting properties for an element overrides any other values for this 
 
 ## Selection Mode
 
-Designates the options for allowing users to select records.
+Designates the option for allowing users to select rows: 
+- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option (subforms) or the **Single-click edit** (list box) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
+- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
+- **Multiple**: Several rows can be selected simultaneously in this mode.   
+With subforms:
+	- the selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command. 
+	- Clicking on the record will select it, but it does not modify the current record. 
+	- A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the selected record is changed.
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| selectionMode|string |"multiple", "single", "none"|
+|selectionMode|string|"multiple", "single", "none"|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md#overview) - [Subform](subform_overview.md)
