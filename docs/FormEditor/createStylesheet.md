@@ -5,13 +5,13 @@ title: Style sheets
 
 ## Overview
 
-A style sheet groups together a combination of text attributes for form objects —  font type, size, style, color, and alignment. 
+A style sheet groups together a combination of attributes for form objects —  from text attributes to focusable attributes to nearly any available object attribute. 
 
 In addition to harmonizing an application's interface, style sheets provide three major advantages:
 
 *	Saves time during development: Each object has specific group of settings within a single operation.
 *	Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-*	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet (if the object has a defined `Class` property). 
+*	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
 
 
 4D accepts three, specific style sheet files:
