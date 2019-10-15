@@ -50,8 +50,8 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 - entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OU
 - connecter un appareil tel qu'une clé USB et cliquer sur le bouton **Scanner les disques**. 
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
-(2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) Le trousseau de 4D stocke toutes les clés de chiffrement de données valides saisies durant la session d'application session.  
+(2) Le mot de passe actuel correspond au mot de passe utilisé pour générer la clé de chiffrement actuelle.
 
 Dans tous les cas, si des informations valides sont fournies, 4D redémarre en mode maintenance (si ce n'est pas déjà le cas) et exécute l'opération.
 
