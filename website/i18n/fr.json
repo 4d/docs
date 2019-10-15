@@ -106,7 +106,7 @@
         "title": "Variables"
       },
       "FormEditor/objectLibrary": {
-        "title": "Object libraries"
+        "title": "Bibliothèques d'objets"
       },
       "Menus/bars": {
         "title": "Barres de menus"
@@ -164,7 +164,7 @@
         "sidebar_label": "Page Vérification"
       },
       "Project/compiling": {
-        "title": "Compiling a project"
+        "title": "Compiler un projet"
       },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
@@ -192,7 +192,7 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "Projects in 4D (BETA)": "Projets 4D (BETA)",
       "MSC": "CSM",
-      "Form Editor (in progress)": "Form Editor (in progress)",
+      "Form Editor (in progress)": "Editeur de formulaire (en cours)",
       "Menus": "Menus",
       "Backup and Restore": "Sauvegarde et restitution"
     }
