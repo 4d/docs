@@ -64,6 +64,7 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 #### Objects Supported
 
+
 [List Box](listbox_overview.md#overview)
 
 
@@ -110,7 +111,7 @@ labelsPlacement|boolean|"top", "bottom" |
 
 #### Objects Supported
 
-[Tab Control](splitterTabControlOverview#tab-controls)
+[Tab Control](tabControl.md)
 
 
 
