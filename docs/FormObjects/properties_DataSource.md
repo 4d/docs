@@ -60,7 +60,7 @@ List of static values to use as labels for the tab control object.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|labels|collection|A list of static values|
+|labels|list, collection|A list of values to fill the table control|
 
 #### Objects Supported
 

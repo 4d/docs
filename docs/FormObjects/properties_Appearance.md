@@ -65,6 +65,7 @@ When this option is enabled, the selection highlight is no longer visible for se
 #### Objects Supported
 
 
+
 [List Box](listbox_overview.md#overview)
 
 
@@ -99,9 +100,9 @@ Available values:
 
 ## Tab Control Direction
 
-You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS, when the platform interface is “System.” You can choose to place the tab controls on top (standard) or on the bottom.
+You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
 
-When tab controls with a custom direction are displayed under Windows or with the “Printing” platform appearance, they automatically return to the standard direction (top).
+When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
 
 #### JSON Grammar
 

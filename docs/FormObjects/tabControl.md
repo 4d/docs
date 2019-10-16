@@ -23,7 +23,7 @@ When you create a tab control, 4D manages the spacing and placement of the tabs.
 
 If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the left, to the right, or below (see the "Modifying Direction (Mac OS Only)" section below).
+Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
 
 ### JSON Example:    
@@ -40,17 +40,14 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 ``` 
 
 
-### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) [Tab Control Direction](properties_Appearance.md#tab-control-direction)- [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
-### Adding labels to a tab control  
+## Adding labels to a tab control  
 
 There are several ways to supply the labels for a tab control:
 
-*	You can create a list using the Lists editor and assign the list to the tab control as a choice list, as shown below:
+*	You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
+*	You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.  
 
-	If you like, you can associate a small icon with each list item using the Lists editor. For more information about this, refer to [Adding a small icon to an item](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-list-properties.300-4163454.en.html#3372534).
-*	You can create a *Text* array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.  
 ```code4d
  ARRAY TEXT(arrPages;3)
  arrPages{1}:="Name"
@@ -58,12 +55,12 @@ There are several ways to supply the labels for a tab control:
  arrPages{3}:="Notes"  
 ```
 
->You can also store the names of the pages in a hierarchical list and use the Load list command to load the values into the array.
+>You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
 
 
-### Managing tabs programmatically  
+## Managing tabs programmatically  
 
-#### FORM GOTO PAGE command
+### FORM GOTO PAGE command
 
 You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
 
@@ -86,12 +83,12 @@ Here is an example object method:
  End case
 ```
 
-#### Goto Page action
+### Goto Page action
   
-You can assign the `Goto Page` action to a tab control. When that action is selected, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected. 
+When you assign the `gotoPage` [standard action](properties_Action#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected. 
 
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists). 
-If you want to manage the effect of the selection of a button yourself, select `No action`.
 
-For more information about standard actions, refer to [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
 
+## Supported Properties
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
