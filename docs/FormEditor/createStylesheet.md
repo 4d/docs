@@ -5,7 +5,7 @@ title: Style sheets
 
 ## Overview
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to focusable attributes to nearly any available object attribute. 
+A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute. 
 
 In addition to harmonizing an application's interface, style sheets provide three major advantages:
 
@@ -24,16 +24,24 @@ In addition to harmonizing an application's interface, style sheets provide thre
 
 These files are stored in the project's "/SOURCES" folder.
 
+Every style rule in a style sheet contains two parts: a [selector](#style-sheet-selectors) and a [declaration](#style-sheet-declarations). 
+
+ 
+
 
 
 ## Style Sheet Selectors
 
+A selector defines where to apply the style and the declaration defines the actual style to apply.
+
 While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar. The majority of form object attributes can be defined within a style sheet (not including object types, methods, events, and lists).
 
-Every style rule in a style sheet contains two parts: a selector and a declaration. A selector defines where to apply the style and the declaration defines the actual style to apply. 
+
+## Style Sheet Declarations 
 
 Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
  
+The majority of form objects can be declared with their JSON name. For more information, see the **Dynamic Forms** page in the Design Reference.
 
 ### Object Type 
 
@@ -78,9 +86,13 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class 
 
-Corresponding to the CSS class selector, the class defines the style for all objects with the `.class` attribute. 
+Corresponding to the CSS class selector, the class defines the style for all form objects with the `class` attribute. It's used to define the CSS class:
 
-Specify the classes to use with a "." character followed by the name of the class, then in curly braces, declare the style(s) to apply. 
+```
+class: okButtons     		 
+```
+
+Then you can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply. 
 
 In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
 
