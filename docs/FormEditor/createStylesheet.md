@@ -13,6 +13,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *	Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
 
+## Style Sheet Files
 
 4D accepts three, specific style sheet files:
 
@@ -24,24 +25,43 @@ In addition to harmonizing an application's interface, style sheets provide thre
 
 These files are stored in the project's "/SOURCES" folder.
 
-Every style rule in a style sheet contains two parts: a [selector](#style-sheet-selectors) and a [declaration](#style-sheet-declarations). 
 
+## Style Sheet Architecture
+
+Every style rule in a style sheet contains two parts: 
  
+*	a *Declaration* - Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
 
+*	a *Selector* - A selector defines where to apply the style and the declaration defines the actual style to apply.<p>
+While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar. The majority of form object attributes can be defined within a style sheet.
+
+## Style Sheet Declarations
+
+Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+
+### Attribute Mapping
+
+The attributes listed below are able to accept either the 4D name or the CSS name.
+
+|4D|CSS|
+|---|---|
+|borderStyle|border-style|
+|fill|background-color|
+|fontFamily|font-family|
+|fontSize|font-size|
+|fontStyle|font-style|
+|fontWeight|font-weight|
+|stroke|color|
+|textAlign|text-align|
+|textDecoration|text-decoration|
+|verticalAlign|vertical-align|
+
+
+>CSS attributes can only be used for values supported in [CSS](https://www.w3schools.com/css/).
 
 
 ## Style Sheet Selectors
 
-A selector defines where to apply the style and the declaration defines the actual style to apply.
-
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar. The majority of form object attributes can be defined within a style sheet (not including object types, methods, events, and lists).
-
-
-## Style Sheet Declarations 
-
-Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
- 
-The majority of form objects can be declared with their JSON name. For more information, see the **Dynamic Forms** page in the Design Reference.
 
 ### Object Type 
 
@@ -174,25 +194,7 @@ text[text|=Hello]
 ```
 
 
-### Attribute Mapping
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
-
-|4D|CSS|
-|---|---|
-|borderStyle|border-style|
-|fill|background-color|
-|fontFamily|font-family|
-|fontSize|font-size|
-|fontStyle|font-style|
-|fontWeight|font-weight|
-|stroke|color|
-|textAlign|text-align|
-|textDecoration|text-decoration|
-|verticalAlign|vertical-align|
-
-
->CSS attributes can only be used for values supported in CSS
 
 
 
@@ -226,13 +228,8 @@ To override this behavior, the style value must be followed with an `!important`
 
 ### Multiple Style Sheets
 
-At run time, 4D automatically prioritizes style sheets in the following order: 
+At runtime, 4D automatically prioritizes style sheets in the following order: 
 
-|Style Sheet|Platform|
-|---|---|
-|styleSheet.css|Default global style sheet. Both macOS and Windows|
-|styleSheet_mac.css|macOS only|
-|styleSheet_windows.css|Windows only|
 
 1.	The 4D form will first load the default CSS file in "/SOURCES". 
 2.	It will then load the CSS file for the current platform in "/SOURCES" .
@@ -273,13 +270,13 @@ At run time, 4D automatically prioritizes style sheets in the following order:
 
 
 
-## Creating a style sheet
+## Creating / Editing a style sheet
 
 You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder. 
 
 The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets. 
 
-To create a style sheet:
+### Create a style sheet:
 
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
@@ -288,6 +285,14 @@ To create a style sheet:
 2.	Select the type of style sheet to create and click on the **Create** button: ![](assets/en/FormEditor/createButton.png)
 
 3.	A dialog will appear allowing you to choose the text editor to use. Select the editor of your preference. It will be set as the default editor and selected automatically for future editing.  
+
+### Edit a style sheet:
+
+1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+
+2.	Select the style sheet to edit and click on the **Edit** button: ![](assets/en/FormEditor/editButton.png)
+
+3.	The style sheet will open in your default text editor.
 
 >**Conversion**<br>
 >When converting an existing binary database to a project database, 4D saves any existing style sheets in .json files stored in the project's "/SOURCES" folder. They are saved as either macOS or Windows style sheet types. Applied style sheets are added as `class` attributes to form objects' JSON descriptions.
