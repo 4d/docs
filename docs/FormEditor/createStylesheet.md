@@ -270,13 +270,13 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 
 
-## Creating / Editing a style sheet
+## Creating and Editing Style Sheets
 
 You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder. 
 
 The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets. 
 
-### Create a style sheet:
+### Create a style sheet
 
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
@@ -286,7 +286,7 @@ The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create 
 
 3.	A dialog will appear allowing you to choose the text editor to use. Select the editor of your preference. It will be set as the default editor and selected automatically for future editing.  
 
-### Edit a style sheet:
+### Edit a style sheet
 
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
