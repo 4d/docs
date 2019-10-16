@@ -261,7 +261,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 > Filepaths can be relative or absolute.
 >*	Relative paths are resolved relative to the JSON form description file.
->*	Absolute path, only filesystems are accepted for security reasons. (*e.g.*, "/RESOURCES", "/DATA")
+>*	For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
 
 
