@@ -13,7 +13,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *	Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
 
-## Style Sheet Files
+### Style Sheet Files
 
 4D accepts three, specific style sheet files:
 
@@ -26,38 +26,15 @@ In addition to harmonizing an application's interface, style sheets provide thre
 These files are stored in the project's "/SOURCES" folder.
 
 
-## Style Sheet Architecture
+### Style Sheet Architecture
 
 Every style rule in a style sheet contains two parts: 
+
+*	a *Selector* - A selector defines where to apply the style and the declaration defines the actual style to apply.<p>
+While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow [CSS](https://www.w3schools.com/css/) syntax and grammar. The majority of form object attributes can be defined within a style sheet.
  
 *	a *Declaration* - Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
 
-*	a *Selector* - A selector defines where to apply the style and the declaration defines the actual style to apply.<p>
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS syntax and grammar. The majority of form object attributes can be defined within a style sheet.
-
-## Style Sheet Declarations
-
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
-
-### Attribute Mapping
-
-The attributes listed below are able to accept either the 4D name or the CSS name.
-
-|4D|CSS|
-|---|---|
-|borderStyle|border-style|
-|fill|background-color|
-|fontFamily|font-family|
-|fontSize|font-size|
-|fontStyle|font-style|
-|fontWeight|font-weight|
-|stroke|color|
-|textAlign|text-align|
-|textDecoration|text-decoration|
-|verticalAlign|vertical-align|
-
-
->CSS attributes can only be used for values supported in [CSS](https://www.w3schools.com/css/).
 
 
 ## Style Sheet Selectors
@@ -106,13 +83,9 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class 
 
-Corresponding to the CSS class selector, the class defines the style for all form objects with the `class` attribute. It's used to define the CSS class:
+Corresponding to the CSS class selector, the class defines the style for all form objects with the `class` attribute. 
 
-```
-class: okButtons     		 
-```
-
-Then you can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply. 
+You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply. 
 
 In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
 
@@ -133,6 +106,13 @@ text.center {
 }
 ```
 
+In the 4D form description, you associate a class name to an object using the `class` attribute:
+
+```
+class: "okButtons"     		 
+```
+
+ 
 ### All Objects 
 
 Corresponding to the CSS universal selector, the "*" character indicates that the following style will be applied to all objects on the form.
@@ -193,6 +173,30 @@ text[text|=Hello]
 }
 ```
 
+
+## Style Sheet Declarations
+
+Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+
+### Attribute Mapping
+
+The attributes listed below are able to accept either the 4D name or the CSS name.
+
+|4D|CSS|
+|---|---|
+|borderStyle|border-style|
+|fill|background-color|
+|fontFamily|font-family|
+|fontSize|font-size|
+|fontStyle|font-style|
+|fontWeight|font-weight|
+|stroke|color|
+|textAlign|text-align|
+|textDecoration|text-decoration|
+|verticalAlign|vertical-align|
+
+
+>4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
 
 
 
