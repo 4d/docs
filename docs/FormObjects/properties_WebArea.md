@@ -3,6 +3,29 @@ id: propertiesWebArea
 title: Web Area 
 ---
 
+
+## Access 4D methods
+
+You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all"). 
+
+> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+
+When this property is on, a [special JavaScript object](webArea_overview.md#using-the-$4d-object) named `$4d` is instantiated in the Web area, which you can use to manage calls to 4D project methods. 
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|methodsAccessibility|string|"none" (default), "all"|
+
+#### Objects Supported 
+
+[Web Area](webArea_overview.md#overview)
+
+
+
 ## Progression
 
 A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.

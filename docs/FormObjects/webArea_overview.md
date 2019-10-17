@@ -5,19 +5,123 @@ title: Web Area
 
 ## Overview
 
-The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc.
+The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+
+It is possible to create several Web areas in the same form. Note, however, that the insertion of Web areas is subject to [a few limitations](#locations-not-supported) and that the use of Web areas must follow [several rules](#web-areas-rules).
+
+Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv17R6/4D/17-R6/Web-Area.201-4310240.en.html) as well as generic and specific form events allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 
 >The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
-The rendering engine of the Web area will depend on the execution platform of the application and the selected rendering engine option.
 
-It is possible to create several Web areas in the same form. Note, however, that the insertion of Web areas is subject to a few limitations (see [Locations not supported](#locations-not-supported) below).
+## Specific properties
 
-Several standard actions, numerous language commands as well as generic and specific form events allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment. 
+### Associated variables
 
-This paragraph details the principles concerning the use and configuration of Web Area type objects in the Form editor. For more information about programmed management of these objects, refer to the [Web Area](https://doc.4d.com/4Dv17R6/4D/17-R6/Web-Area.201-4310240.en.html) commands in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+Two specific variables can be associated with each Web area: 
+- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the Web area
+- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the Web area. 
 
-Also note that the use of Web areas is subject to several rules which are described in the [Notes about use of Web areas](https://doc.4d.com/4Dv17R6/4D/17-R6/Programmed-management-of-Web-Areas.300-4310788.en.html#37137) section of the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+### Web rendering engine
+
+You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the Web area, depending on the specifics of your application.
+
+Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
+
+### Accessing 4D methods 
+When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area. 
+
+> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+
+### Using the $4d object
+
+The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+
+For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+
+```codeJS
+$4d.HelloWorld();
+```
+
+>JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+
+The syntax of calls to 4D methods is as follows:
+
+```codeJS
+$4d.4DMethodName(param1,paramN,function(result){})
+```
+- `param1...paramN`: You can pass as many parameters as you need to the 4D method.
+These parameters can be of any type supported by JavaScript (string, number, array, object).
+
+- `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. It receives the `result` parameter.
+
+- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+
+> By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding:
+`<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+
+#### Example 1  
+Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
+
+4D code of `today` method:
+
+```code4d
+ C_TEXT($0)
+ $0:=String(Current date;System date long)
+```
+
+In the Web area, the 4D method can be called with the following syntax:
+
+```js
+$4d.today()
+```
+
+The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the Web area.
+
+Here is the code of the HTML page:
+
+```html
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <script type="text/javascript">
+$4d.today(function(dollarZero)
+{
+    var curDate = dollarZero;
+    document.getElementById("mydiv").innerHTML=curDate;
+});
+</script>
+</head>
+<body>Today is: <div id="mydiv"></div>
+</body>
+</html>
+```
+
+#### Example 2  
+
+The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
+
+4D code of `calcSum` method:
+
+```code4d
+ C_REAL(${1}) // receives n REAL type parameters
+ C_REAL($0) // returns a Real
+ C_LONGINT($i;$n)
+ $n:=Count parameters
+ For($i;1;$n)
+    $0:=$0+${$i}
+ End for
+```
+
+The JavaScript code run in the Web area is:
+
+```js
+$4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
+    {
+        var result = dollarZero // result is 262.5
+    });
+```
+
 
 ## Standard actions  
 
@@ -35,9 +139,33 @@ Since the display of Web areas is managed by an external rendering engine, their
 *	The limits of the Web areas must not exceed those of the subforms that contain them (they must be entirely visible).
 *	Superimposing a Web area on top of or beneath other form objects is not supported.
 
+## Web area rules  
+User interface  
+When the form is executed, standard browser interface functions are available to the user in the Web area, which permit interaction with other form areas:
+
+Edit menu commands: When the Web area has the focus, the Edit menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
+Context menu: It is possible to use the standard context menu of the system with the Web area (see Context Menu). Display of the context menu can be controlled using the WA SET PREFERENCE command.
+Drag and drop: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties.
+For security reasons, changing the contents of a Web area by means of dragging and dropping a file or URL is not allowed by default beginning with 4D v14 R2. In this case, the mouse cursor displays a "forbidden" icon . You have to use the WA SET PREFERENCE command to explicitly allow the dropping of URLs or files in the area.
+Subforms  
+For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
+
+The subform must not be able to scroll
+The limits of the Web area must not exceed the size of the subform
+Web Area and Web server conflict (Windows)  
+Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
+
+Web plugins and Java applets  
+The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+
+Insertion of protocol (Mac OS)  
+The URLs handled by programming in Web areas under Mac OS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+
+
+
 ## Supported Properties
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url)
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - 
 [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
 

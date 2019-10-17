@@ -63,7 +63,7 @@ Three font themes are available:
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
 
 
 
@@ -292,8 +292,6 @@ This property enables the possibility of using specific styles in the selected a
 By default, this option is not enabled.
 
 
->Enables the [Context Menu](properties_Entry.md#context-menu) property.
-
 
 #### JSON Grammar
 
@@ -313,20 +311,31 @@ By default, this option is not enabled.
 
 
 
-
 ## Orientation
 
-Modifies the orientation (rotation) of the text area.
+Modifies the orientation (rotation) of the text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+
+|Orientation value|Result|
+|----|---|
+|0 (default)|![](assets/en/FormObjects/orientation1.png)|
+|90|![](assets/en/FormObjects/orientation2.png)|
+|180|![](assets/en/FormObjects/orientation3.png)|
+|270|![](assets/en/FormObjects/orientation4.png)|
+
+In addition to [static text areas](textAndGroupBox_overview.md#text), non-[enterable](properties_Entry.md#enterable) [input](input_overview.md) text objects can be rotated. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order. 
+
+
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textAngle|string |0, 90, 180, 270|
+|textAngle|number |0, 90, 180, 270|
 
 #### Objects Supported
 
-[Text Area](textAndGroupBox_overview.md#text)
+[Input](input_overview.md) (non-enterable) - [Text Area](textAndGroupBox_overview.md#text)
 
 
 

@@ -27,9 +27,16 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
-The contents of the menu are set by the rendering engine of the platform.
+For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record. 
 
->It is possible to control access to the Web Area context menu via the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
+- **Fonts...**: displays the font system dialog box
+- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
+- commands for supported style modifications: font, size, style, color and background color.
+When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+
+For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+
 
 #### JSON Grammar
 
@@ -276,6 +283,7 @@ You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, fo
 ```code4d
 :xliff:PH_Lastname
 ```
+
 
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text. 
 
