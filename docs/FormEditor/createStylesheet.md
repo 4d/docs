@@ -19,21 +19,22 @@ In addition to harmonizing an application's interface, style sheets provide thre
 
 |Style Sheet|Platform|
 |---|---|
-|styleSheet.css|Default global style sheet for both macOS and Windows|
-|styleSheet_mac.css|For defining macOS only specific attribute styles|
-|styleSheet_windows.css|For defining Windows only specific attribute styles|
+|styleSheets.css|Default global style sheet for both macOS and Windows|
+|styleSheets_mac.css|For defining macOS only specific attribute styles|
+|styleSheets_windows.css|For defining Windows only specific attribute styles|
 
 These files are stored in the project's "/SOURCES" folder.
 
 
 ### Style Sheet Architecture
 
+While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow [CSS](https://www.w3schools.com/css/) syntax and grammar.
+
 Every style rule in a style sheet contains two parts: 
 
-*	a *Selector* - A selector defines where to apply the style and the declaration defines the actual style to apply.<p>
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow [CSS](https://www.w3schools.com/css/) syntax and grammar. The majority of form object attributes can be defined within a style sheet.
+*	a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors. 
  
-*	a *Declaration* - Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
+*	a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
 
 
 
@@ -106,10 +107,10 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute:
+In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
 
 ```
-class: "okButtons"     		 
+class: "okButtons important"    		 
 ```
 
  
@@ -176,6 +177,13 @@ text[text|=Hello]
 
 ## Style Sheet Declarations
 
+The majority of form object attributes can be defined within a style sheet, except the following attributes:
+	- "method"
+	- "type"
+	- "class"
+	- "event"
+	- choiceList, excludedList, labels, list, requiredList (list type)
+	
 Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
 
 ### Attribute Mapping
@@ -234,9 +242,8 @@ To override this behavior, the style value must be followed with an `!important`
 
 At runtime, 4D automatically prioritizes style sheets in the following order: 
 
-
-1.	The 4D form will first load the default CSS file in "/SOURCES". 
-2.	It will then load the CSS file for the current platform in "/SOURCES" .
+1.	The 4D form will first load the default CSS file "/SOURCES/styleSheets.css". 
+2.	It will then load the CSS file for the current platform "/SOURCES/styleSheets\_mac.css" or "/SOURCES/styleSheets_windows.css".
 3.	If it exists, it will then load a specific CSS file defined in the JSON form:
 
 	*	a file for both platforms:
@@ -280,26 +287,10 @@ You can create style sheets using your preferred text editor and saving the file
 
 The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets. 
 
-### Create a style sheet
-
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
 	![](assets/en/FormEditor/stylesheets.png)
 	
-2.	Select the type of style sheet to create and click on the **Create** button: ![](assets/en/FormEditor/createButton.png)
+2.	Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
 
-3.	A dialog will appear allowing you to choose the text editor to use. Select the editor of your preference. It will be set as the default editor and selected automatically for future editing.  
-
-### Edit a style sheet
-
-1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
-
-2.	Select the style sheet to edit and click on the **Edit** button: ![](assets/en/FormEditor/editButton.png)
-
-3.	The style sheet will open in your default text editor.
-
->**Conversion**<br>
->When converting an existing binary database to a project database, 4D saves any existing style sheets in .json files stored in the project's "/SOURCES" folder. They are saved as either macOS or Windows style sheet types. Applied style sheets are added as `class` attributes to form objects' JSON descriptions.
->	
->For more information about converting binary databases to project databases, see **Converting databases to projects** in the Design Reference.
-		
+3. The style sheet will open in your default text editor.  
