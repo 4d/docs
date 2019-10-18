@@ -207,9 +207,24 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 >4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
 
 
+### Specific Attribute Values
 
+- For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
+```
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
+icon: url("edit.png"); /* relative path to the form file */
+```
 
+- For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+
+	- css color name: `fill: red;`
+	- hexa value: `fill: #FF0000;`
+	- the `rgb()` function: `fill:rgb(255,0,0)`
+
+- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
+	- a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
+	- a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
 
 ## Priority Order
@@ -242,8 +257,8 @@ To override this behavior, the style value must be followed with an `!important`
 
 At runtime, 4D automatically prioritizes style sheets in the following order: 
 
-1.	The 4D form will first load the default CSS file "/SOURCES/styleSheets.css". 
-2.	It will then load the CSS file for the current platform "/SOURCES/styleSheets\_mac.css" or "/SOURCES/styleSheets_windows.css".
+1.	The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`. 
+2.	It will then load the CSS file for the current platform `/SOURCES/styleSheets\_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3.	If it exists, it will then load a specific CSS file defined in the JSON form:
 
 	*	a file for both platforms:
@@ -281,7 +296,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 
 
-## Creating and Editing Style Sheets
+## Creating or Editing Style Sheets
 
 You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder. 
 
