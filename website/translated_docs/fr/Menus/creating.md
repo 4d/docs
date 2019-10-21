@@ -88,9 +88,9 @@ A l'exécution, si un menu rattaché est modifié par programmation, toute autre
 
 Un menu peut être attaché à une barre de menus ou à un autre menu.
 
-- To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-    ![](assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
+- Pour rattacher un menu à une barre de menus : faites un clic droit sur la barre de menus et sélectionnez **Attach a menu to the menu bar "nom de la barre"**, puis choisissez le menu à rattacher à la barre de menus : ![](assets/en/Menus/attach.png) Vous pouvez également sélectionner une barre de menus puis cliquez sur le bouton des options situé sous la liste.
+- Pour rattacher un menu à un autre menu : sélectionnez le menu dans la partie gauche puis faites un clic droit sur la ligne de menus et sélectionnez **Attach a menu to the menu bar "nom de la barre"**, puis choisissez le menu à utiliser comme sous-menu :   
+    ![](assets/en/Menus/attach2.png) Vous pouvez également sélectionner une ligne de menus puis cliquez sur le bouton des options situé sous la liste. Le menu que vous êtes en train de rattacher deviendra un sous-menu. Le titre de la ligne est maintenu (le nom initial du sous-menu est ignoré), mais il peut être modifié.
 
 #### Détacher des menus
 
@@ -100,4 +100,4 @@ Pour détacher un menu, cliquez avec le bouton droit dans la liste centrale sur 
 
 ### A l'aide du langage 4D
 
-Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.
+Etant donné qu'il n'y a pas de différence entre les menus et les barres de menus dans le langage de 4D, rattacher des menus ou des sous-menus se fait de la même manière : utilisez le paramètre *sous-menu* de la commande `APPEND MENU ITEM` pour rattacher un menu à une barre de menu ou à un autre menu.
