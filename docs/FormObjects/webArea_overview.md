@@ -7,9 +7,9 @@ title: Web Area
 
 The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-It is possible to create several Web areas in the same form. Note, however, that the insertion of Web areas is subject to [a few limitations](#locations-not-supported) and that the use of Web areas must follow [several rules](#web-areas-rules).
+It is possible to create several Web areas in the same form. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv17R6/4D/17-R6/Web-Area.201-4310240.en.html) as well as generic and specific form events allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
+Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv17R6/4D/17-R6/Web-Area.201-4310240.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 
 >The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
@@ -28,12 +28,12 @@ You can choose between [two rendering engines](properties_WebArea.md#use-embedde
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
 
-### Accessing 4D methods 
+### Access 4D methods 
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area. 
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
-### Using the $4d object
+### $4d object
 
 The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
@@ -127,39 +127,76 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 Four specific standard actions are available for managing Web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic Web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html). 
 
-## Events and language commands  
 
-Web areas can also be controlled using form events and specific language commands. These are described in the [Web Area](https://doc.4d.com/4Dv17R6/4D/17-R6/Web-Area.201-4310240.en.html) chapter of the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual. 
+## Form events  
 
-## Locations not supported  
+Specific form events are intended for programmed management of Web areas, more particularly concerning the activation of links:
 
-Since the display of Web areas is managed by an external rendering engine, their location within 4D forms is subject to limitations. When defining the location of Web areas, you need to consider the following constraints:
+- `On Begin URL Loading`
+- `On URL Resource Loading`
+- `On End URL Loading`
+- `On URL Loading Error`
+- `On URL Filtering`
+- `On Open External Link`
+- `On Window Opening Denied`
 
-*	Web areas are not supported in "scrollable" subforms (scrolling will not have the desired effect).
-*	The limits of the Web areas must not exceed those of the subforms that contain them (they must be entirely visible).
-*	Superimposing a Web area on top of or beneath other form objects is not supported.
+In addition, Web areas support the following generic form events:
+
+- `On Load`
+- `On Unload`
+- `On Getting Focus`
+- `On Losing Focus`
+
 
 ## Web area rules  
-User interface  
+
+### User interface
+
 When the form is executed, standard browser interface functions are available to the user in the Web area, which permit interaction with other form areas:
 
-Edit menu commands: When the Web area has the focus, the Edit menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-Context menu: It is possible to use the standard context menu of the system with the Web area (see Context Menu). Display of the context menu can be controlled using the WA SET PREFERENCE command.
-Drag and drop: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties.
-For security reasons, changing the contents of a Web area by means of dragging and dropping a file or URL is not allowed by default beginning with 4D v14 R2. In this case, the mouse cursor displays a "forbidden" icon . You have to use the WA SET PREFERENCE command to explicitly allow the dropping of URLs or files in the area.
-Subforms  
+- **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
+- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
+- **Drag and drop**: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties.
+For security reasons, changing the contents of a Web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the mouse cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the area.
+
+### Subforms
 For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
 
-The subform must not be able to scroll
-The limits of the Web area must not exceed the size of the subform
-Web Area and Web server conflict (Windows)  
+- The subform must not be able to scroll
+- The limits of the Web area must not exceed the size of the subform
+
+> Superimposing a Web area on top of or beneath other form objects is not supported.
+
+
+### Web Area and Web server conflict (Windows)  
 Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 
-Web plugins and Java applets  
+### Web plugins and Java applets  
 The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
-Insertion of protocol (Mac OS)  
-The URLs handled by programming in Web areas under Mac OS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+### Insertion of protocol (macOS)  
+The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+
+
+## Access to Web inspector  
+You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
+
+### Displaying the Web inspector  
+The following conditions must be met in order to view the Web inspector in a Web area:
+
+- You must [select the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
+- You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
+- You must expressly enable the use of the inspector in the area by means of the following statement:
+
+```code4d
+ WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
+```
+
+### Using the Web inspector  
+When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.   
+
+> The Web inspector is included in the embedded Web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the Web rendering engine.
+
 
 
 

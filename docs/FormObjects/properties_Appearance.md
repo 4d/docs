@@ -66,6 +66,7 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 
 
+
 [List Box](listbox_overview.md#overview)
 
 
@@ -97,6 +98,75 @@ Available values:
 
 
 
+## Show Formula Bar 
+
+When enabled, the formula bar is visible below the Toolbar interface. If not selected, the formula bar is hidden.
+
+> This property is available only for the [Toolbar](#user-interface) interface. 
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+userInterface|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D View Pro area](viewProArea_overview.md)
+
+
+
+## Show hidden characters 
+
+Displays/hides invisible characters
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showHiddenChars|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+
+## Show headers 
+
+Displays/hides the headers when [Page view mode] is set to "Page".
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showHeaders|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+
+## Show vertical ruler
+
+Displays/hides the vertical ruler when the document is in [Page mode]. 
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showVerticalRuler|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
 
 ## Tab Control Direction
 
@@ -113,6 +183,22 @@ labelsPlacement|boolean|"top", "bottom" |
 #### Objects Supported
 
 [Tab Control](tabControl.md)
+
+
+
+## User Interface
+
+You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D offers two optional interfaces to choose from, **Ribbon** and **Toolbar**. 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+userInterface|text|"none" (default), "ribbon", "toolbar" |
+
+#### Objects Supported
+
+[4D View Pro area](viewProArea_overview.md)
 
 
 
@@ -142,3 +228,4 @@ Available values:
 #### Objects Supported
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
+

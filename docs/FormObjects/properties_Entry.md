@@ -5,7 +5,7 @@ title:Entry
 
 ## Auto Spellcheck
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as 4D Write Pro documents.
+4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
@@ -19,7 +19,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 
 
