@@ -46,9 +46,9 @@ settings.4DSettings|*Structure* database settings. If *user settings* are define
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
-styleSheets.css|CSS style sheets|JSON
-styleSheets_mac.css|Mac css style sheets (from converted binary database)|JSON    
-styleSheets_windows.css|Windows css style sheets (from converted binary database)|JSON    
+styleSheets.css|CSS style sheets|CSS
+styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
+styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    
 
 
 #### DatabaseMethods folder
