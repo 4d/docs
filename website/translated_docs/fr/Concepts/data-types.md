@@ -7,7 +7,7 @@ Dans 4D, les données sont gérées selon leur type à deux endroits : dans les 
 
 Bien qu'ils soient généralement équivalents, certains types de données de la base ne sont pas disponibles dans le langage et sont automatiquement convertis. A l'inverse, certains types de données sont gérés uniquement par le langage. Le tableau suivant liste tous les types de données disponibles, leur prise en charge et leur déclaration :
 
-| Types de données                             | Pris en charge par la base(*) | Pris en charge par le langage | Déclaration de la variable   |
+| Types de données                             | Pris en charge par la base(1) | Pris en charge par le langage | Déclaration de la variable   |
 | -------------------------------------------- | ----------------------------- | ----------------------------- | ---------------------------- |
 | [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                            |
 | [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | `C_TEXT`, `ARRAY TEXT`       |
@@ -25,8 +25,11 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `ARRAY BLOB`       |
 | [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
+| [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `C_VARIANT`                  |
 
-(*)A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, consultez la description du type de données Objet.
+(1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
+
+(2) Le variant n'est pas un type de *données* un type de *variable* qui peut contenir une valeur de n'importe quel autre type.
 
 ## Valeurs par défaut
 
@@ -57,6 +60,7 @@ Le tableau suivant illustre ces valeurs par défaut :
 | Blob        | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
 | Objet       | null                                                                           | null                     | null                        |
 | Collection  | null                                                                           | null                     | null                        |
+| Variant     | indéfini                                                                       | indéfini                 | indéfini                    |
 
 ## Convertir les types de données
 
@@ -72,6 +76,8 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 | Heure             | Chaine    |              |         |          | Bool       |
 | Booléen           |           | Num          |         |          |            |
 
-(1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`. (2) Les valeurs de type Heure peuvent être utilisées en tant que numériques.
+(1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`.
+
+(2) Les valeurs de type Heure peuvent être utilisées en tant que numériques.
 
 **Note :** Ce tableau ne traite pas les conversions de données plus complexes obtenues à l'aide d'une combinaison d'opérateurs et d'autres commandes.

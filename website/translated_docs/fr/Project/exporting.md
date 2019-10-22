@@ -1,53 +1,53 @@
 ---
 id: exporting
-title: Exporting from a 4D database
+title: Exporter à partir d'une base 4D
 ---
 
-You can convert a 4D binary database (.4db file) into a 4D project. Because the export only creates a new version of the existing database, the original files are never touched. Thus, you can convert your database as many times as you need.
+Vous pouvez convertir une base de données binaire 4D (fichier .4db) en projet 4D. Etant donné que l'export crée uniquement une nouvelle version de la base de données existante, les fichiers d'origine ne sont jamais touchés. Ainsi, vous pouvez convertir votre base de données autant de fois que nécessaire.
 
-Keep in mind that an export is a one-way operation:
+A noter qu'un export est une opération à sens unique :
 
-- once a 4D database has been exported as a project, both versions become independent of each other. 
-- a 4D project cannot be exported to a .4db file
+- une fois qu'une base de données 4D a été exportée en tant que projet, les deux versions deviennent indépendantes l'une de l'autre. 
+- un projet 4D ne peut pas être exporté en un fichier .4db
 
-## Converting a database
+## Convertir une base de données
 
-When you convert an existing 4D database to a project, the .4db file is left untouched: a folder named "Project" is created next to your .4db file, and will contain all necessary files.
+Lorsque vous convertissez une base de données 4D existante en projet, le fichier .4db reste inchangé : un dossier nommé "Project" est créé à côté de votre fichier .4db et contient tous les fichiers nécessaires.
 
-**Note:** If a folder named "Project" already exists at the same level as your .4db file (for example if a conversion has been done already), it will be replaced by the conversion process.
+**Note :** Si un dossier nommé "Project" existe déjà au même niveau que votre fichier .4db (par exemple, si une conversion a déjà été effectuée), il sera remplacé par le processus de conversion.
 
-To convert a database to a project:
+Pour convertir une base de données en projet :
 
-1. Open the database to convert.
-2. Select **File > Export > Structure to project**.  
-    ![](assets/en/Project/exportProj.png) **Notes:** 
+1. Ouvrez la base de données à convertir.
+2. Sélectionnez **Fichier > Exporter > Structure vers projet**.  
+    ![](assets/en/Project/exportProj.png) **Notes :** 
 
-- This command is only available if a binary database is open -- it is disabled in project databases.
-- You can also use the **Export structure file** language command.
+- Cette commande est disponible uniquement si une base de données binaire est ouverte - elle est désactivée dans les bases projet.
+- Vous pouvez également utiliser la commande **Export structure file**.
 
-If the conversion is successful and no blocking errors are encountered, the following dialog box is diplayed: ![](assets/en/Project/exportProj2.png)
+Si la conversion aboutit et qu'aucune erreur de blocage n'est rencontrée, la boîte de dialogue suivante s'affiche : ![](assets/en/Project/exportProj2.png)
 
-- **Reveal log**: highlights the conversion log file on your disk. Reading this file is highly recommended since the conversion process could have modified some parts of the application (see [Check the conversion](#check-the-conversion)).
+- **Afficher log** : met en évidence le fichier journal de conversion sur votre disque. La lecture de ce fichier est vivement recommandée, car le processus de conversion pourrait avoir modifié certaines parties de l’application (voir [Vérifier la conversion](#check-the-conversion)).
 
-- **Open project**: restarts the 4D application and loads the converted project.
+- **Ouvrir projet** : redémarre l'application 4D et charge le projet converti.
 
-### About the data file
+### A propos du fichier de données
 
-The data file is left untouched by the conversion. Only development elements are converted. You can still open the data file with the .4db structure file after a conversion.
+Le fichier de données reste inchangé. Seuls les éléments de développement sont convertis. Vous pouvez toujours ouvrir le fichier de données avec le fichier de structure .4db après une conversion.
 
-## Resulting project
+## Projet résultant
 
-During the conversion, a new "Project" folder is created at the same level as your .4db structure file. It contains all of your application development as text files: forms, structure, methods, triggers, menus, tips, lists. It also contains a .4DProject file, which is your converted 4D project main file:
+Au cours de la conversion, un nouveau dossier "Project" est créé au même niveau que votre fichier de structure .4db. Il contient tous les développements de votre application sous forme de fichiers texte : formulaires, structure, méthodes, triggers, menus, aide, listes. Il contient également un fichier .4DProject, qui est le fichier principal de votre projet 4D converti :
 
 ![](assets/en/Project/exportProj3.png)
 
-When you open the .4DProject file with your 4D application, the project uses the same resources folder and web folder as the existing .4db file, which makes it easier to test your project.
+Lorsque vous ouvrez le fichier .4DProject avec votre application 4D, le projet utilise le même dossier de ressources et le même dossier Web que le fichier .4db existant, ce qui facilite le test du projet.
 
-You can still open the .4db database, perform modifications if required (see below), then export it again, and test it. You can repeat this operation until you are satisfied with the conversion.
+Vous pouvez toujours ouvrir la base de données .4db, apporter des modifications si nécessaire (voir ci-dessous), puis l'exporter à nouveau et la tester. Vous pouvez répéter cette opération jusqu'à ce que vous soyez satisfait de la conversion.
 
-## Check the conversion
+## Vérifier la conversion
 
-A log file in JSON format is created by default during the conversion process to reference all issues that required an action from the converter. In this file, messages are classified into three categories ("severity" property), for example:
+Un fichier journal au format JSON est créé par défaut pendant le processus de conversion pour référencer tous les problèmes ayant nécessité une action du convertisseur. Dans ce fichier, les messages sont classés en trois catégories (propriété "severity"), par exemple :
 
 ```codejs
     {
@@ -56,35 +56,35 @@ A log file in JSON format is created by default during the conversion process to
     }
 ```
 
-- **info**: describes a necessary action executed automatically by the converter that will not have an impact on the application interface or features. For example, if you have images in the pictures library, 4D exports them to the **Resources** folder of the database (see example above).
+- **info** : décrit une action nécessaire exécutée automatiquement par le convertisseur qui n'aura aucun impact sur l'interface ou les fonctionnalités de l'application. Par exemple, si vous bibliothèque d'images contient des images, 4D les exporte dans le dossier **Resources** de la base de données (voir exemple ci-dessus).
 
-- **warning**: describes a necessary action executed automatically by the converter that could lead to differences in the application's features or interface, but without preventing the database to run. Warnings usually require that you control the impact of the conversion on your code. For example, warnings are returned when unsupported compatibility settings, such as "Unicode mode" or "Radio buttons grouped by name" are automatically switched.
+- **avertissement** : décrit une action nécessaire exécutée automatiquement par le convertisseur et qui pourrait entraîner des différences dans les fonctionnalités ou l'interface de l'application, sans toutefois empêcher la base de données de s'exécuter. Les avertissements vous demandent généralement de contrôler l'impact de la conversion sur votre code. Par exemple, des avertissements sont renvoyés lorsque des paramètres de compatibilité non pris en charge, tels que "Mode Unicode" ou "Boutons radio regroupés par nom" sont automatiquement activés.
 
-- **error**: describes an issue that requires your intervention to be corrected. It can prevent the database from running properly. For example, some legacy form objects are no longer supported, such as highlight buttons. In this case, you must convert the button by yourself to a 3D button in the .4db file before relaunching the conversion operation.
+- **erreur **: décrit un problème nécessitant la correction de votre intervention. Cela peut empêcher la base de données de fonctionner correctement. Par exemple, certains objets formulaire hérités ne sont plus pris en charge, tels que les boutons inversés. Dans ce cas, vous devez convertir vous-même le bouton en un bouton 3D dans le fichier .4db avant de relancer la conversion.
 
-When edits are required in the .4db database, just modify the code or the form accordingly and export the structure again. Repeat as necessary until you are satisfied with the result.
+Lorsque des modifications sont requises dans la base de données .4db, modifiez simplement le code ou le formulaire en conséquence et exportez à nouveau la structure. Répétez l'opération autant de fois que nécessaire jusqu'à ce que vous soyez satisfait du résultat.
 
-## Compatibility issues
+## Problèmes de compatibilité
 
-During the conversion, some legacy 4D technologies are converted to more modern implementations, and some others are temporarily disregarded.
+Lors de la conversion, certaines technologies 4D héritées sont converties en implémentations plus modernes, tandis que d'autres sont temporairement ignorées.
 
 En particulier :
 
-- The picture library no longer exists. During conversion, 4D exports all of your images to the **Resources** folder of the database.
-- Form objects and form object properties have been updated (they now use the same grammar as dynamic forms). Deprecated parts are not supported. 
-- Compatibility settings are reset as for a new database. See the Conversion log file to verify the status of compatibility settings for your database. 
+- La bibliothèque d'images n'existe plus. Lors de la conversion, 4D exporte toutes vos images dans le dossier **Resources** de la base de données.
+- Les objets formulaire et les propriétés d'objet formulaire ont été mis à jour (ils utilisent désormais la même grammaire que les formulaires dynamiques). Les pièces obsolètes ne sont pas prises en charge. 
+- Les paramètres de compatibilité sont réinitialisés comme pour une nouvelle base de données. Consultez le fichier journal de conversion pour vérifier l'état des paramètres de compatibilité de votre base de données. 
 
-For a detailed list of compatibility issues, please refer to [Legacy technologies](https://doc.4d.com/4Dv17R5/4D/17-R5/Deprecated-or-removed-features-in-v17-product-range.200-4245348.en.html#4020272) section on Doc Center.
+Pour obtenir une liste détaillée des problèmes de compatibilité, veuillez vous reporter à la section [Anciennes technologies](https://doc.4d.com/4Dv17R5/4D/17-R5/Deprecated-or-removed-features-in-v17-product-range.200-4245348.en.html#4020272) du Doc Center.
 
-## And now?
+## Et maintenant?
 
-Once your are satisfied with your converted database and want to start working on your project, you can clean up your working directory:
+Une fois que vous êtes satisfait de votre base de données convertie et que vous souhaitez commencer à travailler sur votre projet, vous pouvez nettoyer votre répertoire de travail :
 
-1. Remove your .4db and .4dindy files from the application folder (e.g., move them to a backup directory).
-2. On macOS, remove the .4dbase folder extension during the entire development phase. Since you are going to work with text files and put them under a source control tool, you will need to have direct access to them. 
+1. Supprimez vos fichiers .4db et .4dindy du dossier de l’application (par exemple, déplacez-les dans un répertoire de sauvegarde).
+2. Sur macOS, supprimez l’extension de dossier .4dbase pendant toute la phase de développement. Puisque vous allez travailler avec des fichiers texte et que vous les placerez dans un outil de contrôle de version, vous aurez besoin d'un accès direct. 
 
-If you want the data file to be open automatically after the project is moved to other machines, you can make it compliant with the [project architecture](architecture.md):
+Si vous souhaitez que le fichier de données s'ouvre automatiquement une fois le projet déplacé vers d'autres machines, vous pouvez le rendre conforme à [l'architecture du projet](architecture.md) :
 
-1. Rename your data file "data.4dd".
-2. Create a folder named "Data" and move the *data.4dd* file within that folder
-3. Store the *Data* folder at the same level as the Project folder.
+1. Renommez votre fichier de données "data.4dd".
+2. Créez un dossier nommé "Data" et déplacez le fichier *data.4dd* dans ce dossier
+3. Stockez le dossier *Data* au même niveau que le dossier Project.

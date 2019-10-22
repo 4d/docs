@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Heure"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Gestion des erreurs"
       },
@@ -102,40 +105,43 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "FormEditor/objectLibrary": {
+        "title": "Bibliothèques d'objets"
+      },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "Barres de menus"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "Créer des menus et des barres de menus"
       },
       "Menus/overview": {
         "title": "Aperçu"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "Propriétés des menus"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Mode SDI sous Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "MSC/overview": {
         "title": "Aperçu",
@@ -157,20 +163,23 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "Project/compiling": {
+        "title": "Compiler un projet"
+      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
-      "Project/creating": {
-        "title": "Creating a 4D project"
+      "Project/building": {
+        "title": "Building a project package"
       },
-      "Project/deploying": {
-        "title": "Deploying a project"
+      "Project/creating": {
+        "title": "Créer un projet 4D"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "Développer un projet"
       },
       "Project/exporting": {
-        "title": "Exporting from a 4D database"
+        "title": "Exporter à partir d'une base 4D"
       },
       "Project/overview": {
         "title": "Aperçu"
@@ -183,6 +192,7 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "Projects in 4D (BETA)": "Projets 4D (BETA)",
       "MSC": "CSM",
+      "Form Editor (in progress)": "Editeur de formulaire (en cours)",
       "Menus": "Menus",
       "Backup and Restore": "Sauvegarde et restitution"
     }

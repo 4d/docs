@@ -20,7 +20,7 @@ Les paramètres sont passés de la même manière aux méthodes. Par exemple, si
 FAIRE QUELQUE CHOSE(AvecCeci;EtCela;CommeCeci)
 ```
 
-Les paramètres sont séparés par des points-virgules (;).
+Les paramètres sont séparés par des points-virgules (;). Leur valeur est calculée lorsqu'ils sont appelés.
 
 Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est automatiquement copiée séquentiellement dans des variables locales numérotées : $1, $2, $3, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
@@ -46,6 +46,15 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 
 **Note :** Pour une bonne exécution du code, assurez-vous que tous les paramètres `$1`, `$2`... sont correctement déclarés dans les méthodes appelées (voir [Déclaration des paramètres](#declaring-parameters) ci-dessous).
 
+### Supported expressions
+
+You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
+
+- tables
+- arrays
+
+Tables or array expressions can only be passed [as reference using a pointer](Concepts/pointer.md#pointers-as-parameters-to-methods).
+
 ## Fonctions
 
 Les méthodes peuvent retourner des valeurs. Une méthode qui retourne une valeur est appelée une fonction.
@@ -55,7 +64,7 @@ Les commandes de 4D ou de plug-ins qui retournent une valeur sont également app
 Par exemple, la ligne d’instruction suivante utilise une fonction intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur* : 
 
 ```code4d
-MaLongueur:=Longueur("Comment suis-je arrivé là ?")
+MaLongueur:=Length("Comment suis-je arrivé là ?")
 ```
 
 Toute sous-routine peut retourner une valeur. La valeur à retourner est placée dans la variable locale `$0`.
@@ -78,7 +87,7 @@ Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle pe
 
 ## Déclaration des paramètres
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méthodes appelées en [mode interprété](Concepts/interpreted.md), même si cela est facultatif.
 
 Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare trois paramètres :
 
@@ -156,38 +165,17 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Mode de passage
+## Values or references
 
-Selon leur type, les paramètres sont passés **par copie** ou **par référence**:
-
-- Lorsqu'un paramètre est passé par copie, les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée.
-- Lorsqu'un paramètre est passé par référence, les variables/paramètres locaux contiennent des références aux véritables champs, variables ou expressions sources passés par la méthode appelée; la modification de la valeur du paramètre local modifiera la valeur source.
-
-Le tableau suivant affiche le passage des différents types d'éléments :
-
-| Type de paramètre                                                             | Mode de passage                                    | Commentaire                                                                          |
-| ----------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Champ, variable ou expression de type scalaire (numérique, texte, date, etc.) | par copie                                          | Peut être passé par référence via un pointeur, voir ci-dessous                       |
-| Champ, variable ou expression de type Objet                                   | par référence                                      | Voir exemple ci-dessous                                                              |
-| Variable ou expression de type Collection                                     | par référence                                      |                                                                                      |
-| Variable ou expression de type Pointeur                                       | par référence                                      | Voir Passer des Pointeurs aux Méthodes                                               |
-| Tableau                                                                       | Ne peut pas être passé directement comme paramètre | Peut être passé par référence via un pointeur, voir Tableaux et Pointeurs ci-dessous |
-| Table                                                                         | Ne peut pas être passé directement comme paramètre | Peut être passé par référence via un pointeur, voir Pointeurs                        |
-
-### Paramètres passés par copie
-
-Lorsque vous utilisez des champs, variables ou expressions de type scalaire en tant que paramètres de méthodes projets, seules des copies des valeurs sont passées.
-
-Puisque `$1, $2...` sont des variables locales, elles ne sont définies qu’à l’intérieur de la sous-routine et sont effacées à la fin de son exécution. Pour cette raison, une sous-routine ne peut pas modifier, au niveau de la méthode appelante, la valeur réelle des champs ou des variables passé(e) s en paramètre. Par exemple :
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
 
 ```code4d
-  // Voici une partie de la méthode MA METHODE
-  // ...
- FAIRE QUELQUE CHOSE([Personnes]Nom) // Admettons que [Personnes]Nom est égal à "william"
- ALERT([Personnes]Nom)
- 
-  // Voici le code de la méthode FAIRE QUELQUE CHOSE
- $1:=Majusc($1)
+    //Here is some code from the method MY_METHOD
+DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ALERT([People]Name)
+
+    //Here is the code of the method DO_SOMETHING
+ $1:=Uppercase($1)
  ALERT($1)
 ```
 
@@ -195,15 +183,14 @@ La boîte de dialogue d'alerte affichée par `FAIRE QUELQUE CHOSE` contiendra "W
 
 Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la valeur du champ, deux solutions s'offrent à vous :
 
-1. 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
+1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
 ```code4d
-  // Voici une partie de la méthode MA METHODE
-  // ...
- FAIRE QUELQUE CHOSE(->[Personnes]Nom) // Admettons que [Personnes]Nom est égal à "william"
- ALERT([Personnes]Nom)
- 
-  // Voici le code de la méthode FAIRE QUELQUE CHOSE
+  //Here is some code from the method MY_METHOD
+ DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Last Name)
+
+  //Here the code of the method DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
@@ -213,21 +200,22 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
 2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur. 
 
 ```code4d
-  // Voici une partie de la méthode MA METHODE
-  // ...
- [Personnes]Nom:=FAIRE QUELQUE CHOSE([Personnes]Nom) // Admettons que [Personnes]Nom est égal à "william"
- ALERT([Personnes]Nom)
- 
-  // Voici le code de la méthode FAIRE QUELQUE CHOSE
+    //Here is some code from the method MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Name)
+
+    //Here the code of the method DO SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-Une sous-routine retournant une valeur est appelée une fonction. Ce point est traité dans les paragraphes suivants.
+This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Functions](#functions) paragraph.
 
-### Paramètres passés par référence
+### Particular cases: objects and collections
 
-Lorsque vous utilisez des variables, expressions ou champs de type objet ou collection en tant que *paramètres* de méthodes projet, ce sont des références vers les données sources qui sont passées. Dans ce cas, `$1, $2...` ne contiennent pas les valeurs mais des références. Toute modification de la valeur des paramètres `$1, $2...` à l'intérieur de la sous-routine sera propagée partout où l'objet ou la collection source est utilisée. C'est le même principe que pour les pointeurs, excepté le fait que les paramètres `$1, $2...` n'ont pas besoin d'être déréférencés à l'intérieur de la sous-routine.
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
+
+Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
@@ -248,7 +236,7 @@ $1.Age:=$1.Age+10
  ALERT(String($1;Age))
 ```
 
-Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car la même référence est traitée par les deux méthodes.
+Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car le même objet est traité par les deux méthodes.
 
 **4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple, voir Propriétés des méthodes projet), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
 
@@ -276,7 +264,11 @@ Dans la méthode `ChangeAge`, vous pouvez écrire :
  ALERT($para.Nom+" a "+String($para.Age)+" ans.")
 ```
 
-C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez soit : - vérifier si tous les paramètres attendus sont renseignés en les comparant à la valeur `Null`, ou - présenter les valeurs des paramètres, ou - les utiliser comme valeurs vides.
+C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). To handle missing parameters, you can either:
+
+- check if all expected parameters are provided by comparing them to the `Null` value, or
+- preset parameter values, or
+- use them as empty values.
 
 Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
 

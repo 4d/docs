@@ -116,7 +116,7 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
  C_LONGINT($vlFieldNumber)
   // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
   $vlLastTable:=Get last table number
- ARRAY POINTER(&lt;&gt;apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
   // Pour chaque table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
@@ -127,7 +127,7 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
   // Insérer une colonne dans la ligne de la table en cours
-              INSERT IN ARRAY(&lt;&gt;apFields{$vlTable};$vlColumnNumber;1)
+              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
   // Affecter la "celulle" avec le pointeur
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if

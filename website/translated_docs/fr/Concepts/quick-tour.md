@@ -54,7 +54,7 @@ Le programme interprète la ligne comme “MaDate prend la valeur de la date cou
 Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREER ENREGISTREMENT` ou `ALERTE`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
 
 ```code4d
-COPIER DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
+COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
 Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées utilisées à l'aide de la notation en point. Par exemple:

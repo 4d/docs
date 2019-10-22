@@ -12,7 +12,7 @@ Vous pouvez accéder à la fenêtre du CSM de plusieurs manières. Le mode d’a
 
 ## Accès au CSM en mode maintenance
 
-En mode maintenance, seule la fenêtre du CSM est affichée (la base n’est pas ouverte par l’application 4D). Ce principe permet notamment d’accéder à des bases trop endommagées pour pouvoir être ouvertes en mode standard par 4D. En outre, certaines opérations (compactage, réparation...) nécessitent que la base soit ouverte en mode maintenance (cf. [Disponibilité des fonctionnalités](#feature-availability)).
+En mode maintenance, seule la fenêtre du CSM est affichée (la base n’est pas ouverte par l’application 4D). Ce principe permet notamment d’accéder à des bases trop endommagées pour pouvoir être ouvertes en mode standard par 4D. En outre, certaines opérations (compactage, réparation...) nécessitent que la base soit ouverte en mode maintenance (cf. [FFFF](#disponibilite-des-fonctionnalites)).
 
 Vous pouvez ouvrir le CSM en mode maintenance depuis deux emplacements :
 
