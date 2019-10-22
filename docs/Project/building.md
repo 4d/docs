@@ -76,7 +76,7 @@ Builds a database containing only compiled code.
 
 This feature creates a *.4dz* file within a *Compiled Database* folder. If you have named your application “MyProject”, 4D will create: 
 
-*\<destination>/Compiled Database/\<database name>/\MyProject.4dz*
+*\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
 > A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
 

@@ -53,7 +53,7 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as paramet
 - tables
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/pointer.md#pointers-as-parameters-to-methods). 
+Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods). 
 
 
 ## Functions 

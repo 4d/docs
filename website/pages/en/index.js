@@ -197,7 +197,7 @@ const Description2 = props => (
       },
 	       {
 
-	     content: '[Projects in 4D (BETA)](Project/overview.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
+	     content: '[Project databases](Project/overview.html)<br>[Forms](FormEditor/objectLibrary.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
         title: <translate>Development</translate>,
       }
