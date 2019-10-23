@@ -105,6 +105,9 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "FormEditor/stylesheets": {
+        "title": "Style sheets"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
