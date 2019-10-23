@@ -37,7 +37,7 @@ The current log file is automatically saved with the current data file. This mec
 
 ## Creating the log file
 
-By default, any database created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named *data.journal* and is placed in the Date folder.
+By default, any database created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named *data.journal* and is placed in the Data folder.
 
 You can find out if your database uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Database Settings. If you deselected this option, or if you use a database without a log file and wish to set up a backup strategy with a log file, you will have to create one.
 
