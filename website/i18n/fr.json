@@ -105,6 +105,9 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "FormEditor/stylesheets": {
+        "title": "Style sheets"
+      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
@@ -167,10 +170,10 @@
         "title": "Compiler un projet"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Architecture d'un projet 4D"
       },
       "Project/building": {
-        "title": "Building a project package"
+        "title": "Générer un package projet"
       },
       "Project/creating": {
         "title": "Créer un projet 4D"
