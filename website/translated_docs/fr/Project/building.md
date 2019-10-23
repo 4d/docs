@@ -1,6 +1,6 @@
 ---
 id: building
-title: Building a project package
+title: Générer un package projet
 ---
 
 4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
