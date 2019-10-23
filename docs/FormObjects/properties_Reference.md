@@ -25,6 +25,7 @@ title: JSON property list
 |Property|Description|Possible Values|
 |---|---|---|
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
+|[class](properties_Object.md#class)|A list of space-separated words used as class selectors in css files.|A list of class names|
 |[columnCount](properties_Crop.md#columns) (picture button, button grid, picture pop-up) <br> [columnCount](properties_ListBox.md#number-of-columns) (list box)|Sets the number of columns.|minimum: 1|  
 |[columns](properties_ListBox.md#columns)|A collection of list box columns|Collection of column objects with defined column properties
 |[contextMenu](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|

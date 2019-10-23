@@ -31,17 +31,11 @@ Selecting one radio button in a group sets that button to 1 and all of the other
 The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
 
 
-## Supported properties
-
-All radio buttons share the same set of basic properties. Additional specific properties are available, depending on their [button style](#button-styles) (see below).
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
-
 
 
 ## Button Styles
 
-Radio button styles control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected. 
+Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected. 
 
 4D provides radio buttons in the following predefined styles: 
 
@@ -77,12 +71,6 @@ By default, the Toolbar style has a transparent background with a label in the c
  - *macOS* - the highlight of the button never appears. 
  
 
-#### Specific Properties
-
-Toolbar radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
-
 
 ### Bevel
 
@@ -95,13 +83,6 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
  - *macOS* - the highlight of the button never appears. 
  
 
-#### Specific Properties
-
-Bevel radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
-
-
 ### Rounded Bevel
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. 
@@ -110,12 +91,6 @@ The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style 
 
  - *macOS* - the corners of the button are rounded. 
   ![](assets/en/FormObjects/roundedBevel.png)
-
-#### Specific Properties
-
-Rounded bevel radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
 
 
 ### OS X Gradient
@@ -126,12 +101,6 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
  - *macOS* - the button is displayed as a two-tone system button. 
  
-
-#### Specific Properties
-
-OS X Gradient radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
 
 
 ### OS X Textured
@@ -146,12 +115,6 @@ By default, the OS X Textured style appears as:
  
   ![](assets/en/FormObjects/OSXTextured.png)
 
-#### Specific Properties
-
-OS X Textured radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
-
 
 
 ### Office XP
@@ -165,13 +128,6 @@ The colors (highlight and background) of a button with the Office XP style are b
   ![](assets/en/FormObjects/radio_xp.png)
 
  - *macOS* - its background is always displayed.
-
-
-#### Specific Properties
-
-Office XP radio button style supports the following additional properties:
-
-[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)
 
 
 
@@ -192,10 +148,27 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 ### Custom
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offsets. 
+The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin). 
 
-#### Specific Properties
 
-Custom radio button style supports the following additional properties:
+## Supported properties
 
-[Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+All radio buttons share the same set of basic properties:  
+
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+
+Additional specific properties can be available, depending on the [button style](#button-styles):
+
+|Button styles|Supported additional properties|
+|---|---|
+|[Regular](#regular)|-|
+|[Flat](#flat)|-|
+|[Toolbar](#toolbar)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[Bevel](#bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[Rounded Bevel](#rounded-bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[OS X Gradient](#os-x-gradient)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[OS X Textured](#os-x-textured)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[Office XP](#office-xp)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
+|[Collapse/Expand](#collapse-expand)|-|
+|[Disclosure Button](#disclosure-button)|-|
+|[Custom](#custom)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Background pathname](properties_TextAndPicture.md#backgroundPathname)|
