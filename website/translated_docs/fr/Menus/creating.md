@@ -74,7 +74,7 @@ Pour supprimer une barre de menus, un menu ou une ligne de menu, vous disposez d
 
 Utilisez la commandes `SUPPRIMER LIGNE DE MENU` pour supprimer une ligne de la barre de menus. Utilisez la commande `EFFACER MENU` pour ne pas charger le menu de la mémoire.
 
-## Rattacher les menus
+## Rattacher des menus
 
 Une fois que vous avez créé un menu, vous pouvez le rattacher à une ou plusieurs barres de menus ou à un ou plusieurs autres menus (sous-menus).
 
