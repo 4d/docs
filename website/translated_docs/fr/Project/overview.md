@@ -25,10 +25,10 @@ La flexibilité du développement d'un projet 4D est particulièrement démontr�
 
 ## Travailler avec des projets
 
-Vous créez un projet de base de données 4D via :
+Vous pouvez créer un projet de base de données 4D :
 
-- La création d'un nouveau projet vierge - voir [Créer un projet 4D](creating.md). 
-- L'export d’un développement 4D "binaire" existant en un projet - voir [Exporter à partir d’une base de données 4D](exporting.md). 
+- en créant un nouveau projet vierge - voir [Créer un projet 4D](creating.md). 
+- exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com). 
 
 Le développement du projet s'effectue localement, à l'aide de l'application 4D Developer - reportez-vous à la section [Développer un projet](developing.md). Les interactions de développement d'équipe sont gérées par un outil de contrôle de version
 
