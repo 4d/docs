@@ -46,7 +46,8 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Objects Supported
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md)
+[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+
 
 
 
@@ -74,7 +75,8 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Input](input_overview.md) - [Progress Bar](indicators_overview.md#progress-bar) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom)- [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Input](input_overview.md) - [Progress Bar](indicators_overview.md#progress-bar) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [4D Write Pro areas](writeProArea_overview.md)
+
 
 
 
@@ -204,7 +206,8 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) - [Check Box](checkbox_overview.md#overview) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D Write Pro areas](writeProArea_overview.md)
+
 
 
 
@@ -226,7 +229,7 @@ By default, the object uses the current keyboard layout.
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Input](input_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
 
 
@@ -304,7 +307,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ## Selection always visible
 
-This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style]()).
+This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
 
 #### JSON Grammar
@@ -316,7 +319,8 @@ This property keeps the selection visible within the object after it has lost th
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Input](input_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+
 
 
 

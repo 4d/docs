@@ -64,7 +64,7 @@ If you want to “force” the use of the standard drag while automatic drag is 
 In the case of data other than text or pictures (another 4D object, file, etc. ) or complex data being dropped, the application refers to the value of the Droppable option: if it is checked, the *On Drag Over* and *On Drop* form events are generated; otherwise, the drop is refused. This also depends on the value of the “Prevent drop of data not coming from 4D” option (see below).
 
 ### Prevent drop of data not coming from 4D (compatibility)  
-Beginning with version 11, 4D allows drag and drop of selections, objects and/or files external to 4D, like picture files for example. This possibility must be supported by the database code.
+4D allows drag and drop of selections, objects and/or files external to 4D, like picture files for example. This possibility must be supported by the database code.
 In databases converted from previous versions of 4D, this possibility may lead to malfunctioning if the existing code is not adapted accordingly. For this reason, an option in the Preferences can be used to disable this function: **Prevent drop of data not coming from 4D**. This option is found on the Application/Compatibility page. It is checked by default in converted databases.
 
 When this option is check, the drop of external objects into 4D forms is refused. Note however that the insertion of external objects remains possible in objects having the Automatic Drop option, when the application can interpret the dropped data (text or picture).
@@ -79,7 +79,8 @@ When this option is check, the drop of external objects into 4D forms is refused
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview)
+[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D Write Pro areas](writeProArea_overview.md)
+
 
 
 

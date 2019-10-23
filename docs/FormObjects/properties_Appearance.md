@@ -30,7 +30,7 @@ defaultButton|boolean|"true", "false |
 
 ## Hide focus rectangle  
 
-During execution, a field or any enterable object is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
+During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
 #### JSON Grammar
 
@@ -40,7 +40,7 @@ During execution, a field or any enterable object is outlined by a selection rec
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 
 
@@ -89,12 +89,62 @@ Available values:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|scrollbarHorizontal|boolean|"visible", "hidden", "automatic"|
+|scrollbarHorizontal|text|"visible", "hidden", "automatic"|
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+
+
+## Resolution
+
+Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+dpi|number|0=automatic, 72, 96 |
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+
+
+## Show background 
+
+Displays/hides both background images and background color.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showBackground|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+## Show footers 
+
+Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showFooters|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
 
 
 
@@ -116,6 +166,23 @@ userInterface|boolean|true (default), false|
 [4D View Pro area](viewProArea_overview.md)
 
 
+## Show headers 
+
+Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showHeaders|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+
 
 ## Show hidden characters 
 
@@ -134,16 +201,16 @@ showHiddenChars|boolean|true (default), false|
 
 
 
-## Show headers 
+## Show horizontal ruler
 
-Displays/hides the headers when [Page view mode] is set to "Page".
+Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode). 
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-showHeaders|boolean|true (default), false|
+showHorizontalRuler|boolean|true (default), false|
 
 #### Objects Supported
 
@@ -151,9 +218,72 @@ showHeaders|boolean|true (default), false|
 
 
 
+
+
+
+## Show HTML WYSYWIG 
+
+Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showHTMLWysiwyg|boolean|true, false (default)|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+## Show page frame 
+
+Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showPageFrames|boolean|true, false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+
+
+## Show references 
+
+Displays all 4D expressions inserted in the 4D Write document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+
+For example, you have inserted the current date along with a format, the date is displayed:
+ 
+![](assets/en/FormObjects/writePro1.png)
+ 
+With the Show references property on, the reference is displayed:
+
+![](assets/en/FormObjects/writeProExpr.png)
+ 
+> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showReferences|boolean|true, false (default)|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
 ## Show vertical ruler
 
-Displays/hides the vertical ruler when the document is in [Page mode]. 
+Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode). 
 
 
 #### JSON Grammar
@@ -223,9 +353,50 @@ Available values:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|scrollbarVertical|boolean|"visible", "hidden", "automatic"|
+|scrollbarVertical|text|"visible", "hidden", "automatic"|
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md)
+[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+
+
+
+## View mode
+
+Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+
+- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
+- **Draft**: draft mode with basic document properties
+- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+
+> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+layoutMode|text|"page", "draft", "embedded"|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+
+## Zoom
+
+Sets the zoom percentage for displaying 4D Write Pro area contents.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+zoom|number|minimum = 0 |
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
 
