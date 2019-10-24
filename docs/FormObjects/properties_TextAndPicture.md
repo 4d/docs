@@ -10,13 +10,13 @@ This property allows you to set the picture that will be drawn in the background
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|---|---|---|
 |customBackgroundPicture |picture |absolute or relative path. Must be used in conjunction with the style property with the "custom" option.|
 
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom) 
 
 
 
@@ -36,7 +36,7 @@ This property allows setting the general appearance of the button. The style als
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md#overview) -[Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) - [Radio Button](radio_overview.md#overview) -[Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -58,13 +58,12 @@ This parameter is useful, for example, when the background picture contains bord
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|rightMargin|integer |minimum: 0|
-|customBorderX|integer|For use with "custom" objects. minimum: 0
+|---|---|---|
+|customBorderX|number|For use with "custom" style. Minimum: 0
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom) 
 
 
 
@@ -78,7 +77,7 @@ Designates the placement of an icon in relation to the form object.
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
+|---|---|---|
 |iconPlacement|string|"none", "left", "right"|
 
 #### Objects Supported
@@ -99,12 +98,12 @@ The title of the button will be shifted to the right and toward the bottom for t
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|customOffset|integer |minimum: 0|
+|---|---|---|
+|customOffset|number |minimum: 0|
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom) 
 
 
 
@@ -128,12 +127,12 @@ The following states are represented:
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|iconFrames|integer |minimum: 1|
+|---|---|---|
+|iconFrames|number|minimum: 1|
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -149,12 +148,12 @@ When used as icon for active objects, the picture must be designed to support a 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |icon|picture |<li>absolute path <li>relative path|
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
 
 
 
@@ -164,7 +163,7 @@ When used as icon for active objects, the picture must be designed to support a 
 
 ## Title/Picture Position
 
-This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a 3D button contains a title and a picture, the text is placed below the picture . 
+This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture. 
 
 Here are the results using the various options for this property:
 
@@ -179,16 +178,12 @@ Here are the results using the various options for this property:
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---|:---:|:---:|
-|left|integer|minimum: 0|
-|top|integer|minimum: 0|
-|right|integer|minimum: 0|
-|bottom|integer|minimum: 0|
-|middle|integer|minimum: 0|
+|---|---|---|
+|textPlacement|string|"left", "right", "top", "bottom", "center"|
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
 
 
 
@@ -198,49 +193,42 @@ Here are the results using the various options for this property:
 
 This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
 
-This parameter is useful, for example, when the background picture contains borders: 
+This parameter is useful, for example, when the background picture contains borders. 
 
-|With / Without | Example |
-|---|---|
-|Without margin|![](assets/en/FormObjects/property_horizontalMargin1.png)|
-|With 13-pixel margin|![](assets/en/FormObjects/property_horizontalMargin2.png)|
-
->This property works in conjunction with the **Horizontal Margin** property.
+> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|bottomMargin|integer |minimum: 0|
-|customBorderY|integer|For use with "custom" objects. minimum: 0|
+|---|---|---|
+|customBorderY|integer|For use with "custom" style. Minimum: 0|
 
 #### Objects Supported
 
-[Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom) 
 
 
 
 
 
 ## With pop-up menu
----
+
 This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
 
 ![](assets/en/FormObjects/property_popup.png)
 
 The appearance and location of this symbol depends on the button style and the current platform. 
 
->The “With Pop-up Menu” property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using form events and the **Dynamic pop up menu** and **Pop up menu** commands 
 
 ### Linked and Separated
 
-To attach a pop-up menu symbol to a 3D button, there are two display options available: 
+To attach a pop-up menu symbol to a button, there are two display options available: 
 
 |Linked|Separated|
 |:---:|:---:|
 |  ![](assets/en/FormObjects/property_popup_linked.png) |  ![](assets/en/FormObjects/property_popup_separated.png)|
 
->The real availability of a “separated” mode depends on the style of the button and the platform. 
+>The real availability of a "separated" mode depends on the style of the button and the platform. 
 
 Each option specifies the relation between the button and the attached pop-up menu:
 
@@ -252,16 +240,16 @@ These options also influence the handling of form events by the button (for more
 
 ### Managing the pop-up menu
 
-It is important to note that the “With Pop-up Menu” property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using form events and the **[Dynamic pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-pop-up-menu.301-4128300.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-pop-up-menu.301-4128300.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |:---|---|---|
-|popupPlacement |string |<li>"None"<li>"Linked"<li>"Separated" |
+|popupPlacement |string |<li>"none"<li>"linked"<li>"separated" |
 
 
 #### Objects Supported
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

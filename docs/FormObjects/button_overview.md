@@ -30,7 +30,7 @@ The [variable](properties_Object.md#variable-or-expression) associated with a bu
 
 Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. A great number of variations can be obtained by combining these properties / behaviors. 
 
-With the exception of the available properties, many button objects are *structurally* identical. The difference is in the processing of their associated variables. 
+With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. The difference is in the processing of their associated variables. 
 
 4D provides buttons in the following predefined styles: 
 
@@ -60,10 +60,8 @@ By default, the Regular style has a light gray background with a label in the ce
 		}
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Default Button*](properties_Appearance.md#default-button) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
 
-*\*Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.*
+Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
 
 
 ### Flat
@@ -79,22 +77,20 @@ By default, the Flat style has a white background with a label in the center, ro
 ```code4d
 
 	"myButton": {
-                "type": "button",		//define the type of object
-                "style":"flat",			//define the style of the button
-                "defaultButton":"true"	//define button as the default choice
-                "text": "OK",			//text to appear on the button
-                "action": "Cancel", 	//action to be be performed 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the button
-                "height": 20			//height of the button
+                "type": "button",	
+                "style":"flat",	
+                "defaultButton":"true"	
+                "text": "OK",	
+                "action": "Cancel", 
+                "left": 60,			
+                "top": 160,			
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Default Button*](properties_Appearance.md#default-button) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
 
-*\*Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.*
+Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
 
 ### Toolbar
 
@@ -112,20 +108,17 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ```code4d
 	"myButton": {
-                "type": "button",				//define the type of object
-                "style":"toolbar",				//define the style of the button
-                "text": "OK",					//text to appear on the button
-                "popupPlacement":"separated"	//define a separated pop-up menu
-                "action": "Cancel", 			//action to be be performed 
-                "left": 60,						//left position on the form  
-                "top": 160,						//top position on the form 
-                "width": 100,					//width of the button
-                "height": 20					//height of the button
+                "type": "button",	
+                "style":"toolbar",	
+                "text": "OK",		
+                "popupPlacement":"separated"	
+                "action": "Cancel", 	
+                "left": 60,				
+                "top": 160,				
+                "width": 100,			
+                "height": 20		
                 }
 ``` 
-
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
 
 
 
@@ -145,20 +138,18 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 ```code4d
 	"myButton": {
-                "type": "button",			//define the type of object
-                "style":"bevel",			//define the style of the button
-                "text": "OK",				//text to appear on the button
-                "popupPlacement":"linked"	//define a linked pop-up menu
-                "action": "Cancel", 		//action to be be performed 
-                "left": 60,					//left position on the form  
-                "top": 160,					//top position on the form 
-                "width": 100,				//width of the button
-                "height": 20				//height of the button
+                "type": "button",
+                "style":"bevel",	
+                "text": "OK",		
+                "popupPlacement":"linked"	
+                "action": "Cancel", 
+                "left": 60,		
+                "top": 160,		
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font Size](properties_Text.md#font-size) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
  
 
 ### Rounded Bevel
@@ -177,20 +168,18 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 ```code4d
 	"myButton": {
-                "type": "button",		//define the type of object
-                "style":"roundedBevel",	//define the style of the button
-                "text": "OK",			//text to appear on the button
-                "popupPlacement":"none"	//without a pop-up menu
-                "action": "Cancel", 	//action to be be performed 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the button
-                "height": 20			//height of the button
+                "type": "button",
+                "style":"roundedBevel",	
+                "text": "OK",	
+                "popupPlacement":"none"	/
+                "action": "Cancel", 
+                "left": 60,			
+                "top": 160,	
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
  
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
  
 
 ### OS X Gradient
@@ -209,20 +198,18 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 ```code4d
 	"myButton": {
-                "type": "button",			//define the type of object
-                "style":"gradientBevel",	//define the style of the button
-                "text": "OK",				//text to appear on the button
-                "popupPlacement":"linked"	//with linked pop-up menu
-                "action": "Cancel", 		//action to be be performed 
-                "left": 60,					//left position on the form  
-                "top": 160,					//top position on the form 
-                "width": 100,				//width of the button
-                "height": 20				//height of the button
+                "type": "button",	
+                "style":"gradientBevel",
+                "text": "OK",	
+                "popupPlacement":"linked"
+                "action": "Cancel", 	
+                "left": 60,		
+                "top": 160,	
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
  
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
 
 ### OS X Textured
 
@@ -240,20 +227,19 @@ By default, the OS X Textured style appears as:
 
 ```code4d
 	"myButton": {
-                "type": "button",				//define the type of object
-                "style":"texturedBevel",		//define the style of the button
-                "text": "OK",					//text to appear on the button
-                "popupPlacement":"separated"	//with separated pop-up menu
-                "action": "Cancel", 			//action to be be performed 
-                "left": 60,						//left position on the form  
-                "top": 160,						//top position on the form 
-                "width": 100,					//width of the button
-                "height": 20					//height of the button
+                "type": "button",	
+                "style":"texturedBevel",	
+                "text": "OK",	
+                "popupPlacement":"separated"	
+                "action": "Cancel", 
+                "left": 60,			
+                "top": 160,		
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
  
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
+
 
 ### Office XP
 
@@ -271,20 +257,17 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ```code4d
 	"myButton": {
-                "type": "button",		//define the type of object
-                "style":"office",		//define the style of the button
-                "text": "OK",			//text to appear on the button
-                "popupPlacement":"none"	//without a pop-up menu
-                "action": "Cancel", 	//action to be be performed 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the button
-                "height": 20			//height of the button
+                "type": "button",	
+                "style":"office",
+                "text": "OK",
+                "popupPlacement":"none"	
+                "action": "Cancel", 
+                "left": 60,		
+                "top": 160,	
+                "width": 100,
+                "height": 20	
                 }
 ``` 
-
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
 
 
 
@@ -299,20 +282,18 @@ The Help button style can be used to display a standard system help button. By d
 
 ```code4d
 	"myButton": {
-                "type": "button",		//define the type of object
-                "style":"help",			//define the style of the button
-                "text": "OK",			//text to appear on the button
-                "dropping": "custom", 	//define custom drop behavior 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the button
-                "height": 20			//height of the button
+                "type": "button",
+                "style":"help",		
+                "text": "OK",	
+                "dropping": "custom", 
+                "left": 60,	
+                "top": 160,		
+                "width": 100,	
+                "height": 20	
                 }
 ``` 
 
-
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.  
 
 
 ### Circle
@@ -331,19 +312,17 @@ The Circle button style appears differently depending on the operating system:
 
 ```code4d
 	"myButton": {
-                "type": "button",		//define the type of object
-                "style":"circular",		//define the style of the button
-                "text": "OK",			//text to appear on the button
-                "dropping": "custom", 	//define custom drop behavior 
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
-                "width": 100,			//width of the button
-                "height": 20			//height of the button
+                "type": "button",	
+                "style":"circular",	
+                "text": "OK",	
+                "dropping": "custom", 
+                "left": 60,	
+                "top": 160,		
+                "width": 100,
+                "height": 20	
                 }
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)
 
 
 ### Custom
@@ -357,22 +336,18 @@ The Custom button style accepts a personalized background picture and allows man
 
 ```code4d
 	"myButton": {
-                "type": "button",	//define the type of object
-                "style":"custom",	//define the style of the button
-                "text": "",	//text to appear on the button
+                "type": "button",	
+                "style":"custom",	
+                "text": "",	
                 "customBackgroundPicture": "/RESOURCES/bkgnd.png",
                 "icon": "/RESOURCES/custom.png",  
                 "textPlacement": "center",
-                "left": 60,			//left position on the form  
-                "top": 160,			//top position on the form 
-                "width": 100,		//width of the button
-                "height": 20		//height of the button
+                "left": 60,	
+                "top": 160,		
+                "width": 100,	
+                "height": 20
                 }
 ``` 
-
-
-#### Supported Properties
-[Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
 
 
@@ -382,21 +357,20 @@ The Custom button style accepts a personalized background picture and allows man
 All buttons share the same set of basic properties:  
 
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) -  [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+
+> (1) Not supported by the [Help](#help) style.
 
 
-Additional specific properties can be available, depending on the [button style](#button-styles):
+Additional specific properties are available, depending on the [button style](#button-styles):
 
-|Button styles|Supported additional properties|
+
+|Additional properties|Supported by button styles|
 |---|---|
-|[Regular](#regular)|[Default Button](properties_Appearance.md#default-button)|
-|[Flat](#flat)|[Default Button](properties_Appearance.md#default-button)|
-|[Toolbar](#toolbar)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[Bevel](#bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[Rounded Bevel](#rounded-bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[OS X Gradient](#os-x-gradient)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[OS X Textured](#os-x-textured)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[Office XP](#office-xp)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[Help](#help)|-|
-|[Circle](#circle)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
-|[Custom](#custom)|[Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|
+|[Background pathname](properties_TextAndPicture.md#backgroundPathname)|[Custom](#custom)|
+|[Default Button](properties_Appearance.md#default-button)|[Flat](#flat) - [Regular](#regular)
+[Horizontal Margin](properties_TextAndPicture.md#horizontalMargin)|[Custom](#custom)|
+[Icon Offset](properties_TextAndPicture.md#icon-offset)|[Custom](#custom)|
+[Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|[Toolbar](#toolbar) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Circle](#circle) - [Custom](#custom)|
+[Vertical Margin](properties_TextAndPicture.md#verticalMargin)|[Custom](#custom)|
+[With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|[Toolbar](#toolbar) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) - [OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Circle](#circle) - [Custom](#custom)|

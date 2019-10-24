@@ -157,18 +157,14 @@ All radio buttons share the same set of basic properties:
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-Additional specific properties can be available, depending on the [button style](#button-styles):
+Additional specific properties are available depending on the [button style](#button-styles):
 
-|Button styles|Supported additional properties|
+|Additional properties|Supported by button styles|
 |---|---|
-|[Regular](#regular)|-|
-|[Flat](#flat)|-|
-|[Toolbar](#toolbar)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[Bevel](#bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[Rounded Bevel](#rounded-bevel)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[OS X Gradient](#os-x-gradient)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[OS X Textured](#os-x-textured)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[Office XP](#office-xp)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|
-|[Collapse/Expand](#collapse-expand)|-|
-|[Disclosure Button](#disclosure-button)|-|
-|[Custom](#custom)|[Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Background pathname](properties_TextAndPicture.md#backgroundPathname)|
+|[Background pathname](properties_TextAndPicture.md#backgroundPathname)|[Custom](#custom)|
+|[Horizontal Margin](properties_TextAndPicture.md#horizontalMargin)|[Custom](#custom)|
+|[Icon Offset](properties_TextAndPicture.md#icon-offset)|[Custom](#custom)|
+|[Number of States](properties_TextAndPicture.md#number-of-states)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+[Picture pathname](properties_TextAndPicture.md#picture-pathname)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+[Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+[Vertical Margin](properties_TextAndPicture.md#verticalMargin)|[Custom](#custom)|

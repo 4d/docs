@@ -50,8 +50,8 @@ title: JSON property list
 |[detailForm](properties_Subform.md#detail-form) (subform)<br>[detailForm](properties_ListBox.md#detail-form-name) (list box)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[display](properties_Display.md#not-rendered) (objects) <br>[display](properties_Display.md#invisible) (list box column)|The object is not drawn on the form.|"true", "false"|
 |[doubleClickInRowAction](properties_ListBox.md#double-click-on-row) |Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
-|[dragging](properties_Action.md#standard-action)|Enables dragging function. |"none", "custom", "automatic" (excluding list, list box) |
-|[dropping](properties_Action.md#standard-action)|Enables dropping function. |"none", "custom", "automatic" (excluding list, list box) |
+|[dragging](properties_Action.md#draggable)|Enables dragging function. |"none", "custom", "automatic" (excluding list, list box) |
+|[dropping](properties_Action.md#droppable)|Enables dropping function. |"none", "custom", "automatic" (excluding list, list box) |
 
 ## E
 

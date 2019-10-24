@@ -18,7 +18,7 @@ A check box displays text next to a small square. This text is set in the [Title
 A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
 
 - **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
-- **boolean:** if the box is checked, the variable has the value True. When not checked, it has the value False. 
+- **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`. 
 
 Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options. 
 
@@ -31,7 +31,7 @@ Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](
 
 To enable this third state, you must select the [Three-States](properties_Display.md#three-states) property.
 
-This property is only available for [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) check boxes associated with numeric variables — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state). 
+This property is only available for regular and flat check boxes associated with numeric [variables or expressions](properties_Object.md#variable-or-expression) — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state). 
 
 The variable associated with the check box returns the value 2 when the check box is in the third state. 
 
@@ -81,7 +81,7 @@ For detailed information on these actions, please refer to the [Standard actions
 
 Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors. 
 
-With the exception of the available properties, many check box objects are *structurally* identical. The difference is in the processing of their associated variables. 
+With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables. 
 
 4D provides check boxes in the following predefined styles: 
 
@@ -95,21 +95,19 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 ```
 	"myCheckBox": {
-		"type": "checkbox",				//define the type of object
-		"style":"regular",				//define the style 
-		"text": "Cancel",				//text to appear 
-		"action": "Cancel", 			//action to be performed 
-		"left": 60,						//left position on the form  
-		"top": 160,						//top position on the form 
+		"type": "checkbox",	
+		"style":"regular",
+		"text": "Cancel",	
+		"action": "Cancel", 	
+		"left": 60,			
+		"top": 160,		
 		"width": 100,			
 		"height": 20		
-		"dataSourceTypeHint":"boolean"	//define true/false choice	
-                }
+		"dataSourceTypeHint":"boolean"
+		}
 ``` 
 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Three-States](properties_Display.md#three-states) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ### Flat
 
@@ -121,19 +119,17 @@ The Flat check box style is a minimalist appearance. The Flat style's graphic na
 
 ```
 	"myCheckBox": {
-			"type": "checkbox",		//define the type of object
-			"style":"flat",			//define the style 
-			"text": "Cancel",		//text to appear 
-			"action": "cancel", 	//action to be performed 
-			"left": 60,				//left position on the form  
- 			"top": 160,				//top position on the form 
+			"type": "checkbox",	
+			"style":"flat",
+			"text": "Cancel",	
+			"action": "cancel", 
+			"left": 60,		
+ 			"top": 160,	
  			"width": 100,			
 			"height": 20			
 			}
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Three-States](properties_Display.md#three-states) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### Toolbar button
@@ -151,20 +147,18 @@ Example with states unchecked / checked / highlighted:
 
 ```
 	"myCheckBox": {
-                "type": "checkbox",	//define the type of object
-                "style":"toolbar",	//define the style 
-                "text": "Checkbox", //text to appear 
-				"icon": "/RESOURCES/File.png", //icon to use
-				"iconFrames": 4 	//number of states
-                "left": 60,			//left position on the form  
-                "top": 160,			//top position on the form 
+                "type": "checkbox",
+                "style":"toolbar",	
+                "text": "Checkbox",
+				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+                "left": 60,	
+                "top": 160,	
                 "width": 100,					
                 "height": 20					
                 }
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### Bevel
@@ -182,21 +176,18 @@ Example with states unchecked / checked / highlighted:
 
 ```
 	"myCheckBox": {
-                "type": "checkbox",	//define the type of object
-                "style":"bevel",	//define the style 
-                "text": "Checkbox",		//text to appear 
- 				"icon": "/RESOURCES/File.png", //icon to use
-				"iconFrames": 4 	//number of states
-              	"left": 60,			//left position on the form  
-                "top": 160,			//top position on the form 
+                "type": "checkbox",	
+                "style":"bevel",
+                "text": "Checkbox",	 
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+              	"left": 60,	
+                "top": 160,	
                 "width": 100,				
                 "height": 20				
                 }
 ``` 
 
-#### Supported Properties
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### Rounded Bevel
@@ -216,21 +207,18 @@ Example on macOS:
 
 ```code4d
 	"myCheckBox": {
-                "type": "checkbox",		//define the type of object
-                "style":"roundedBevel",	//define the style 
-                "text": "Checkbox",		//text to appear 
- 				"icon": "/RESOURCES/File.png", //icon to use
-				"iconFrames": 4 	//number of states
-                "left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
+                "type": "checkbox",	
+                "style":"roundedBevel",	 
+                "text": "Checkbox",	
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 
+                "left": 60,	
+                "top": 160,	
                 "width": 100,			
                 "height": 20			
                 }
 ``` 
  
-#### Supported Properties
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### OS X Gradient
@@ -248,22 +236,18 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 ```
 	"myCheckBox": {
-			"type": "checkbox",			//define the type of object
-			"style":"gradientBevel",	//define the style 
-			"text": "Checkbox",		//text to appear 
-			"icon": "/RESOURCES/File.png", //icon to use
-			"iconFrames": 4 			//number of states
-			"left": 60,					//left position on the form  
-			"top": 160,					//top position on the form 
+			"type": "checkbox",	
+			"style":"gradientBevel", 
+			"text": "Checkbox",	
+			"icon": "/RESOURCES/File.png",
+			"iconFrames": 4
+			"left": 60,		
+			"top": 160,		
 			"width": 100,				
 			"height": 20				
-                }
+           }
 ``` 
 
-
-#### Supported Properties
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 
@@ -285,20 +269,16 @@ By default, the OS X Textured style appears as:
 
 ```
 	"myCheckBox": {
-			"type": "checkbox",			//define the type of object
-			"style":"texturedBevel",	//define the style 
-			"text": "Checkbox",			//text to display 
-			"left": 60,					//left position on the form  
-			"top": 160,				//top position on the form 
+			"type": "checkbox",	
+			"style":"texturedBevel", 
+			"text": "Checkbox",	
+			"left": 60,	
+			"top": 160,	
 			"width": 100,					
 			"height": 20					
 			}
 ``` 
 
-
-#### Supported Properties
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 
@@ -320,22 +300,19 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ```
 	"myCheckBox": {
-                "type": "checkbox",	//define the type of object
-                "style":"office",	//define the style 
-                "text": "Checkbox",	//text to appear 
-                "action": "fontBold", //action to be performed 
- 				"icon": "/RESOURCES/File.png", //icon to use
-				"iconFrames": 4 			//number of states
-               "left": 60,			//left position on the form  
-                "top": 160,			//top position on the form 
+                "type": "checkbox",	
+                "style":"office",
+                "text": "Checkbox",	 
+                "action": "fontBold",
+ 				"icon": "/RESOURCES/File.png", 
+				"iconFrames": 4 	
+               "left": 60,	
+                "top": 160,		
                 "width": 100,			
                 "height": 20			
                 }
 ``` 
 
-#### Supported Properties
-
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### Collapse / Expand
@@ -355,18 +332,16 @@ This check box style can be used to add a standard collapse/expand icon. These b
 
 ```
 	"myCheckBox": {
-                "type": "checkbox",		//define the type of object
-                "style":"disclosure",	//define the style 
-				"method": "m_collapse"	//custom method
-				"left": 60,				//left position on the form  
-                "top": 160,				//top position on the form 
+                "type": "checkbox",	
+                "style":"disclosure",
+				"method": "m_collapse",
+				"left": 60,	
+                "top": 160,	
                 "width": 100,			
                 "height": 20			
                 }
 ``` 
 
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 ### Disclosure Button
@@ -386,18 +361,15 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
 
 ```
 	"myCheckBox": {
-                "type": "checkbox",			//define the type of object
-                "style":"roundedDisclosure",	//define the style 
-				"method": "m_disclose"		//custom method
-                "left": 60,					//left position on the form  
-                "top": 160,					//top position on the form 
+                "type": "checkbox",		
+                "style":"roundedDisclosure",	
+				"method": "m_disclose",
+                "left": 60,		
+                "top": 160,	
                 "width": 100,			
                 "height": 20			
                 }
 ``` 
-
-#### Supported Properties
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
 
 ### Custom
@@ -414,21 +386,42 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 ```
 	"myCheckbox": {
-		"type": "checkbox",	//define the type of object
-		"style":"custom",	//define the style 
-		"text": "OK",		//title to display   
-		"icon": "/RESOURCES/smiley.jpg", //custom icon
-		"iconFrame": 4, 	//number of states
-		"customBackgroundPicture": "/RESOURCES/paper.jpg", //custom background
-		"iconOffset": 5, 	//custom icon offset when clicked
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
+		"type": "checkbox",
+		"style":"custom",
+		"text": "OK", 
+		"icon": "/RESOURCES/smiley.jpg", 
+		"iconFrame": 4, 
+		"customBackgroundPicture": "/RESOURCES/paper.jpg", 
+		"iconOffset": 5, //custom icon offset when clicked
+		"left": 60,	
+		"top": 160,	
 		"width": 100,		
 		"height": 20,
-		"customBorderX": 20	, //set internal horizontal margin
-		"customBorderY": 5	  //set internal vertical margin
+		"customBorderX": 20,
+		"customBorderY": 5
 		}
 ``` 
 
-#### Supported Properties
-[Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Button Style](properties_TextAndPicture.md#button-style) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Number of States](properties_TextAndPicture.md#number-of-states) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+
+
+
+## Supported Properties
+
+All check boxes share the same set of basic properties:  
+
+
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+
+
+Additional specific properties are available, depending on the [button style](#button-styles):
+
+|Additional properties|Supported by button styles|
+|---|---|
+|[Background pathname](properties_TextAndPicture.md#backgroundPathname)|[Custom](#custom)|  
+[Horizontal Margin](properties_TextAndPicture.md#horizontalMargin)|[Custom](#custom)| 
+[Icon Offset](properties_TextAndPicture.md#icon-offset)|[Custom](#custom)|
+[Number of States](properties_TextAndPicture.md#number-of-states)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+|[Picture pathname](properties_TextAndPicture.md#picture-pathname)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+|[Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
+|[Three-States](properties_Display.md#three-states)|[Regular](#regular) - [Flat](#flat)|
+[Vertical Margin](properties_TextAndPicture.md#verticalMargin)|[Custom](#custom)|
