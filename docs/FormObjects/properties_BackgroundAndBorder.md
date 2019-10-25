@@ -4,13 +4,13 @@ title: Background and Border
 ---
 
 ## Alternate Background Color
-Allows setting a different background color for odd-numbered rows/columns in a list box. By default, Automatic is selected: the column uses the alternate background color set at the list box level.
+Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|alternateFill|color|any css value; "transparent"; "automatic"|
+|alternateFill|string|any css value; "transparent"; "automatic"|
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
@@ -29,13 +29,14 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|fill|color|any css value; "transparent"; "automatic"|
+|fill|string|any css value; "transparent"; "automatic"|
 
 #### Objects Supported
 
 [Rectangle](shapes_overview.md#rectangle) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
-
+#### See also
+[Transparent](#transparent)
 
 
 
@@ -43,9 +44,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 `Selection and collection type list boxes`
 
-The name of an expression or variable (array variables cannot be used) to apply a custom background color to each row of the list box.
-
-The expression or variable will be evaluated for each row displayed. You can use the Formula editor to specify an expression. To do this, click on the [...] button which appears when you select the area. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.  
+An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
 >With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -53,7 +52,7 @@ The expression or variable will be evaluated for each row displayed. You can use
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowFillSource|string|The name of a an expression.|
+|rowFillSource|string|An expression returning a RGB color value|
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -82,6 +81,22 @@ Allows setting a standard style for the object border.
 
 
 
+## Dotted Line Type
+
+Describes dotted line type as a sequence of black and white points. 
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|strokeDashArray|number array or string|Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point|
+
+#### Objects Supported
+
+[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+
+
+
 
 
 ## Hide extra blank rows
@@ -90,7 +105,7 @@ Controls the display of extra blank rows added at the bottom of a list box objec
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by checking this option. The bottom of the list box object is then left blank:
+You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -98,7 +113,7 @@ You can remove these empty rows by checking this option. The bottom of the list 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|hideExtraBlankRows|boolean|"true", "false"|
+|hideExtraBlankRows|boolean|true, false|
 
 #### Objects Supported
 
@@ -118,18 +133,12 @@ For shape objects (rectangle, line, etc.), designates the color of the object's 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|stroke |color |any css value, "transparent", "automatic"|
+|stroke |string |any css value, "transparent", "automatic"|
 
 #### Objects Supported
 
-[Group box](groupBox.md) 
-[Text](text.md)
-[Input](input_overview.md)
-[List box header](listbox_overview.md#header)
-[List box footer](listbox_overview.md#footer)
-[Rectangle](shapes_overview.md#rectangle)
-[Oval](shapes_overview.md#oval)
-[Line](shapes_overview.md#line)
+[Group box](groupBox.md) - [Text](text.md) - 
+[Input](input_overview.md) - [List box header](listbox_overview.md#header) - [List box footer](listbox_overview.md#footer) - [Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
 
 
 
@@ -142,11 +151,12 @@ Designates the thickness of a line.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| strokeWidth|integer |integer or 0 for smallest width on a printed form|
+|strokeWidth|number|0 for smallest width on a printed form, or any integer value < 20|
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) 
+[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+
 
 
 
@@ -199,13 +209,16 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 ## Transparent
 
-Font color used in the object.
+Sets the list box background to "Transparent". When set, any alternate background color or background color defined for the column is ignored. 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|stroke|color|any css value, "transparent", "automatic"|
+|fill|text|"transparent"|
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
+
+#### See also
+[Background Color / Fill Color](#background-color-fill-color)

@@ -31,6 +31,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 [Input](input_overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D Write Pro areas](writeProArea_overview.md)
 
+
 #### See also
 [Droppable](#droppable)
 
@@ -114,7 +115,7 @@ In this case, 4D does not provide automatic support for object operations.
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Check Box](checkbox_overview.md#overview)  - [Hierarchical List](list_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview) - 
 
 
 
@@ -123,13 +124,13 @@ In this case, 4D does not provide automatic support for object operations.
 ## Movable Rows
 `Array type list boxes`
 
-Authorizes the movement of rows during execution. This option is checked by default. It is not available for selection type list boxes nor for list boxes in hierarchical mode ([Hierarchical List Box](properties_Hierarchy.md#hierarchical-list-box) option selected). 
+Authorizes the movement of rows during execution. This option is selected by default. It is not available for selection type list boxes nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|movableRows|boolean |"true", "false"|
+|movableRows|boolean |true, false|
 
 #### Objects Supported
 
@@ -143,17 +144,17 @@ Authorizes the movement of rows during execution. This option is checked by defa
 
 ## Multi-selectable
 
-Allows the selection of multiple records/options.
+Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|selectionMode|	text|	"multiple", "single", "none"
+|selectionMode|	text|"multiple", "single", "none"
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview)
+[Hierarchical List](list_overview.md)
 
 
 
@@ -161,7 +162,7 @@ Allows the selection of multiple records/options.
 
 ## Sortable
 
-Allows sorting column data by clicking the header. This option is selected by default.  Picture type arrays (columns) cannot be sorted using this mechanism.
+Allows sorting column data by clicking the header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
  
 In list boxes based on a selection of records, the standard sort function is available only:
 *	When the data source is *Current Selection*,
@@ -173,10 +174,10 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|sortable| boolean|"true", "false"|
+|sortable|boolean|true, false|
 
 #### Objects Supported
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -197,4 +198,4 @@ You can assign both a standard action and a project method to an object. In this
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) -  [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [List Box](listbox_overview.md#overview)
+[Button](button_overview.md) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [List Box](listbox_overview.md) - [Tab control](tabControl.md)

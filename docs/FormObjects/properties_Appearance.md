@@ -17,7 +17,7 @@ The default button property modifies a button's appearance in order to indicate 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-defaultButton|boolean|"true", "false |
+defaultButton|boolean|true, false |
 
 #### Objects Supported
 
@@ -36,7 +36,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|hideFocusRing|boolean|"true", "false |
+|hideFocusRing|boolean|true, false|
 
 #### Objects Supported
 
@@ -60,12 +60,9 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|hideSystemHighlight|boolean|"true", "false"|
+|hideSystemHighlight|boolean|true, false|
 
 #### Objects Supported
-
-
-
 
 [List Box](listbox_overview.md#overview)
 
@@ -77,12 +74,16 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 An interface tool allowing the user to move the viewing area to the left or right. 
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+Available values:
 
-Available values: 
-- Yes: The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). 
-- No: The scrollbar is never visible.
-- Automatic: The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width.
+|Property List|JSON value|Description|
+|---|----|---|
+|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).| 
+|No|"hidden"|The scrollbar is never visible|
+|Automatic|"automatic"|The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width|
+
+
+> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
 
 #### JSON Grammar
@@ -95,6 +96,8 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### See also
+[Vertical scroll bar](#vertical-scroll-bar)
 
 
 ## Resolution
@@ -318,7 +321,7 @@ labelsPlacement|boolean|"top", "bottom" |
 
 ## User Interface
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D offers two optional interfaces to choose from, **Ribbon** and **Toolbar**. 
+You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**. 
 
 #### JSON Grammar
 
@@ -331,19 +334,24 @@ userInterface|text|"none" (default), "ribbon", "toolbar" |
 [4D View Pro area](viewProArea_overview.md)
 
 
+#### See also
 
+[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 
 ## Vertical Scroll Bar  
 
 An interface tool allowing the user to move the viewing area up and down.
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
-
 Available values: 
-- Yes: The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). 
-- No: The scrollbar is never visible.
-- Automatic: The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame).
+
+|Property List|JSON value|Description|
+|---|----|---|
+|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).| 
+|No|"hidden"|The scrollbar is never visible|
+|Automatic|"automatic"|The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)|
+
+> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
 
 > If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
@@ -359,6 +367,9 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### See also
+
+[Horizontal scroll bar](#horizontal-scroll-bar)
 
 
 ## View mode
