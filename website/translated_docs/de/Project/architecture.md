@@ -119,7 +119,7 @@ The Resources folder contains any custom database resource files and folders. In
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 
-(*) only if the project was created from a .4db database (see [Exporting a database](exporting.md)).
+(*) only if the project was exported from a .4db binary database.
 
 ## Data folder
 
@@ -132,7 +132,7 @@ The data folder contains the data file and all files and folders relating to the
 | data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
 
 
-(*) When the project is created from a .4db database, the data file is left untouched. Thus, it can be named differently and placed in another location (see [Exporting a database](exporting.md)).
+(*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
 ### Settings folder
 

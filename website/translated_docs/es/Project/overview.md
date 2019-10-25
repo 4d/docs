@@ -28,7 +28,7 @@ The flexibility of developing a 4D project is especially demonstrated when multi
 You create a 4D database project by:
 
 - creating a new, blank project -- see [Creating a 4D project](creating.md). 
-- exporting an existing 4D "binary" development to a project -- see [Export from a 4D database](exporting.md). 
+- exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com). 
 
 Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool
 
