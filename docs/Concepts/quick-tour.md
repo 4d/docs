@@ -189,7 +189,7 @@ myColl[3]  //access to 4th element of the collection
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
 |Operator|Operation|Example  
----|---|---|
+|---|---|---|
 |+|	Addition | 1 + 2 results in 3
 |–|	Subtraction | 3 – 2 results in 1
 |*|	Multiplication | 2 * 3 results in 6
@@ -200,10 +200,10 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
 |Data Type	|Operation|	Example  
-|---|---|---
+|---|---|---|
 |Number|	Addition	|1 + 2 adds the numbers and results in 3
-String	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
-Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
+|String	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
+|Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
 
 The operators are fully defined in the chapter Operators and its subsections.
 
@@ -235,7 +235,7 @@ You refer to an expression by the data type it returns. There are several expres
 |4	|Number |	This is a number constant, 4.|
 |4 * 2|	Number|	Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.|
 |myButton	|Number|	This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.|
-!1997-01-25!|	Date|	This is a date constant for the date 1/25/97 (January 25, 1997).|
+|!1997-01-25!|	Date|	This is a date constant for the date 1/25/97 (January 25, 1997).|
 |Current date+ 30|	Date	|This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.|
 |?8:05:30?	|Time|	This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.|
 |?2:03:04? + ?1:02:03?	|Time	|This expression adds two times together and returns the time 3:05:07.|
@@ -277,4 +277,54 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello"
 MyPointer:=->MyVar
 ALERT(MyPointer->)
+```
+
+## Comments
+
+Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
+
+There are two ways to create comments:
+
+- `//` for single line comments
+- `/*...*/` for inline or multiline commnents.
+
+Both styles of comments can be used simultaneously. 
+
+#### Single line comments (//)
+
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
+
+```code4d
+//This is a comment
+For($vCounter;1;100) //Starting loop
+  //comment
+  //comment
+  //comment
+ End for
+```
+
+#### Inline or multiline comments (/* */)
+
+Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+
+- **Inline comments** can be inserted anywhere in the code. Example:
+
+```code4d
+For /* inline comment */ ($vCounter;1;100)
+	...
+End for
+```
+
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+
+```code4d
+For ($vCounter;1;100)
+/*
+comments  
+	/* 
+	other comments
+	*/
+*/
+...
+End for
 ```

@@ -36,14 +36,14 @@ myBoolean:=(myButton=1)
 |AND|Boolean & Boolean	|Boolean	|("A" = "A") & (15 # 3)	|True|
 ||||("A" = "B") & (15 # 3)	|False|
 ||||("A" = "B") & (15 = 3)	|False|
-OR	|Boolean  &#124; Boolean	|Boolean	|("A" = "A") &#124; (15 # 3)	|True
+|OR	|Boolean  &#124; Boolean	|Boolean	|("A" = "A") &#124; (15 # 3)	|True|
 ||||("A" = "B") &#124;  (15 # 3)	|True|
 ||||("A" = "B") &#124;  (15 = 3)	|False|
 
 The following is the truth table for the AND logical operator:
 
 |Expr1	|Expr2	|Expr1 & Expr2|  
----|---|---|
+|---|---|---|
 |True	|True	|True|
 |True	|False	|False|
 |False	|True	|False|

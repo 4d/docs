@@ -17,7 +17,7 @@ The advantages of the compilation are:
 - **Preemptive mode**: only compiled code can be executed in preemptive processes. 
 
 ## Differences between interpreted and compiled code
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible that the compiler. 
+Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler. 
 
 |Compiled|Interpreted|
 |---|---|

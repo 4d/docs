@@ -136,7 +136,7 @@ The following commands are not compatible for use within a component because the
 
 - `ON EVENT CALL`
 - `Method called on event`
-- `SET PICTURE TO LIBRARY|`
+- `SET PICTURE TO LIBRARY`
 - `REMOVE PICTURE FROM LIBRARY`
 - `SAVE LIST`
 - `ARRAY TO LIST`
@@ -153,8 +153,9 @@ The following commands are not compatible for use within a component because the
 - `SET PLUGIN ACCESS`
 
 **Notes:**
+
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- Obviously, SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used in the framework of components. 
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component database. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
 
 ## Error handling
 

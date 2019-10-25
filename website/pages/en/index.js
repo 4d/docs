@@ -6,7 +6,7 @@
  */
 
 const React = require('react');
-
+const translate = require('../../server/translate.js').translate;
 const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -19,11 +19,18 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  // return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+if (language == undefined) {
+    language = languageFix;
+  }
+  //return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
   return siteConfig.baseUrl + '' + (language ? language + '/' : '') + doc;
 }
 
 function pageUrl(page, language) {
+if (language == undefined) {
+    language = languageFix;
+  }
+
   return siteConfig.baseUrl + (language ? language + '/' : '') + page;
 }
 
@@ -60,9 +67,10 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+   <small><translate>Essential Guides for 4D Developers</translate></small>
   </h2>
 );
+   // <small>{siteConfig.tagline}</small>
 
 const PromoSection = props => (
   <div className="section promoSection">
@@ -80,7 +88,7 @@ class HomeSplash extends React.Component {
         <Logo img_src="" />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection><i>...more to come...</i>
+          <PromoSection><i><translate>...more to come...</translate></i>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -158,15 +166,19 @@ const TryOut = props => (
 );
 
 const Description = props => (
-  <Block background="light" layout="twoColumn">
+  <Block background="light" layout="threeColumn">
     {[
       {
 
-	   content: '[4D Language Concepts](Concepts/about.html)<br>[4D Projects (BETA)](Project/overview.html)<br>[MSC](MSC/overview.html)',
 
 	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-        title: 'Reference Guides',
+       
+      },{
+
+	   content: <translate>[Language Concepts](Concepts/about.html)</translate>,
+
+        title: <translate>Getting Started</translate>,
       }
 
 
@@ -175,16 +187,38 @@ const Description = props => (
 
 );
 
+const Description2 = props => (
+  <Block id="desc2" background="white" layout="threeColumn">
+    {[
+ {
+
+	   image: imgUrl('manuals.png'),
+		imageAlign: 'left',
+      },
+	       {
+
+	     content: '[Project databases](Project/overview.html)<br>[Forms](FormEditor/objectLibrary.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
+
+        title: <translate>Development</translate>,
+      }
+
+
+    ]}
+  </Block>
+
+);
 
 const Classic = props => (
-  <Block background="white" layout="twoColumn">
+  <Block background="light" layout="threeColumn">
     {[
      {
-        content: '[doc.4d.com](https://doc.4d.com/)',
-        image: imgUrl('classic.png'),
+        image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-        title: 'Doc Center',
       },
+	  {
+        content: '[Maintenance and Security Center](MSC/overview.html)<br>[Backup and Restore](Backup/overview.html)',
+        title: <translate>Administration</translate>,
+      }
 
 
 
@@ -193,46 +227,19 @@ const Classic = props => (
 
 );
 
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
-
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div>
-    </div>
-  );
-};
+var languageFix = undefined; // keep globally the language to fix issue with prop not defined
 
 
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
-
+  languageFix = language;
     return (
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Description />
+		  <Description2 />
 		  <Classic />
         </div>
       </div>

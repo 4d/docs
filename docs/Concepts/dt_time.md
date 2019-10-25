@@ -32,39 +32,32 @@ A null time is specified by ?00:00:00?
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
 |Addition	|Time + Time	|Time	|?02:03:04? + ?01:02:03?	|?03:05:07?|
-Subtraction	|Time – Time	|Time	|?02:03:04? – ?01:02:03?	|?01:01:01?|
-Addition	|Time + Number	|Number	|?02:03:04? + 65	|7449|
-Subtraction	|Time – Number	|Number	|?02:03:04? – 65	|7319|
-Multiplication	|Time * Number	|Number	|?02:03:04? * 2	|14768|
-Division	|Time / Number	|Number	|?02:03:04? / 2	|3692|
-Longint division	|Time \ Number	|Number	|?02:03:04? \ 2	|3692|
-Modulo	|Time % Time	|Time	|?20:10:00? % ?04:20:00?	|?02:50:00?|
-Modulo	|Time % Number	|Number	|?02:03:04? % 2	|0|
-Equality	|Time = Time	|Boolean	|?01:02:03? = ?01:02:03?	|True|
+|Subtraction	|Time – Time	|Time	|?02:03:04? – ?01:02:03?	|?01:01:01?|
+|Addition	|Time + Number	|Number	|?02:03:04? + 65	|7449|
+|Subtraction	|Time – Number	|Number	|?02:03:04? – 65	|7319|
+|Multiplication	|Time * Number	|Number	|?02:03:04? * 2	|14768|
+|Division	|Time / Number	|Number	|?02:03:04? / 2	|3692|
+|Longint division	|Time \ Number	|Number	|?02:03:04? \ 2	|3692|
+|Modulo	|Time % Time	|Time	|?20:10:00? % ?04:20:00?	|?02:50:00?|
+|Modulo	|Time % Number	|Number	|?02:03:04? % 2	|0|
+|Equality	|Time = Time	|Boolean	|?01:02:03? = ?01:02:03?	|True|
 			||||?01:02:03? = ?01:02:04?	|False|
-Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
+|Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
 			||||?01:02:03? # ?01:02:03?	|False|
-Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
+|Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
 	||||		?01:02:03? > ?01:02:03?	|False|
-Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True|
+|Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True|
 		||||	?01:02:03? < ?01:02:03?	|False|
-Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
+|Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
 			||||?01:02:03? >=?01:02:04?	|False|
-Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
+|Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
 			||||?01:02:04? <=?01:02:03?	|False|
 
 ### Example 1 
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands Time and Time string.
 
-You can combine expressions of the time and number types using the or functions. For example:
-
-```code4d
-  //The following line assigns to $vlSeconds the number of seconds that will be elapsed between midnight and one hour from now
- $vlSeconds:=Current time+3600
-  //The following line assigns to $vHSoon the time it will be in one hour
- $vhSoon:=Time(Current time+3600)
-```
+You can combine expressions of the time and number types using the `Time`or`Current time`functions.
 
 The second line could be written in a simpler way:
 
