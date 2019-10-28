@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Méthodes · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Méthodes · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/methods.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Méthodes</h1></header><article><div><span><p>Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :</p>
+<ul>
+<li><p><strong>Les méthodes intégrées</strong>, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :</p>
+<ul>
+<li>Les commandes et fonctions de 4D API, telles que <code>ALERT</code> ou <code>Current date</code>.
+<ul>
+<li>Les méthodes associées à des collections ou à des objets natifs, telles que <code>collection.orderBy()</code> ou <code>entity.save()</code>.</li>
+<li>Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que <code>SVG_New_arc</code>.</li>
+</ul></li>
+</ul>
+<p>Les méthodes intégrées sont détaillées dans le manuel <em>4D Langage</em> ou dans les manuels consacrés aux plug-ins et aux composants.</p></li>
+<li><p>Les <strong>méthodes projets</strong>, dans lesquelles vous pouvez écrire votre propre code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Une méthode projet est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions). La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes d’instructions.</p></li>
+</ul>
+<p><strong>Note :</strong> 4D fournit également des méthodes spécifiques exécutées automatiquement en fonction de la base ou des événements formulaires. Voir <a href="#specialized-methods">Méthodes spécialisées</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="methodes-projet"></a><a href="#methodes-projet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes projet</h2>
+<p>Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :</p>
+<ul>
+<li>Sous-routine et fonction</li>
+<li>Méthode associée à un objet</li>
+<li>Méthode de menu</li>
+<li>Méthode de gestion de process</li>
+<li>Méthode de gestion d’événements et d'erreurs</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="sous-routines-et-fonctions"></a><a href="#sous-routines-et-fonctions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sous-routines et fonctions</h3>
+<p>Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.</p>
+<p>Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes projets, ou à partir des <a href="#predefined-methods">méthodes prédéfinies</a> de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.</p>
+<p>L'utilisation de sous-routines procure les avantages suivants :</p>
+<ul>
+<li>Réduction du code répétitif,</li>
+<li>Clarification des méthodes,</li>
+<li>Modification plus facile des méthodes,</li>
+<li>Création de code modulaire</li>
+</ul>
+<p>Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Recherche d'un client</span>
+ <span class="hljs-keyword">QUERY</span> <span class="hljs-keyword">BY</span> EXAMPLE([Clients])
+  <span class="hljs-comment">// Sélection du formulaire entrée</span>
+ <span class="hljs-keyword">FORM</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">INPUT</span>([Clients];<span class="hljs-string">"Saisie de données"</span>)
+  <span class="hljs-comment">// Modification de l'enregistrement du client</span>
+ MODIFY RECORD([Clients])
+</code></pre>
+<p>Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.</p>
+<p>Si le code ci-dessus était une méthode projet appelée <code>MODIFIER CLIENT</code>, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :</p>
+<pre><code class="hljs css language-code4d"> MODIFY<span class="hljs-built_in"> CUSTOMER
+</span> <span class="hljs-builtin-name">PRINT</span> SELECTION([Clients])
+</code></pre>
+<p>Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode <code>MODIFIER CLIENT</code>, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.</p>
+<p>Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.</p>
+<p>Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">FIND</span> CLEARED CHECKS <span class="hljs-comment">// Rechercher les chèques émis</span>
+ RECONCILE ACCOUNT <span class="hljs-comment">// Rapprocher le compte</span>
+<span class="hljs-keyword">PRINT</span> CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé</span>
+</code></pre>
+<p>Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.</p>
+<h3><a class="anchor" aria-hidden="true" id="methodes-associees-a-des-objets"></a><a href="#methodes-associees-a-des-objets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes associées à des objets</h3>
+<p>Vous pouvez encapsuler vos méthodes projets dans les objets <strong>formule</strong> et les appeler à partir de vos objets.</p>
+<p>Les commandes <code>Formule</code> ou <code>formule sur chaine</code> vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.</p>
+<p>Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur <strong>( )</strong> après un nom de la propriété, comme suit :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//myAlert</span>
+<span class="hljs-function"><span class="hljs-title">ALERT</span><span class="hljs-params">(<span class="hljs-string">"Hello world!"</span>)</span></span>
+</code></pre>
+<p><code>myAlert</code> peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :</p>
+<pre><code class="hljs css language-code4d">C_OBJECT($o)
+$o:=<span class="hljs-literal">New</span> object(<span class="hljs-string">"custom_Alert"</span>;<span class="hljs-literal">New</span> formula(myAlert))
+$o.custom_Alert() <span class="hljs-comment">//affiche "Hello world!"</span>
+</code></pre>
+<p>La syntaxe avec des crochets est également prise en charge :</p>
+<pre><code class="hljs css language-code4d">$o[<span class="hljs-string">"custom_Alert"</span>](<span class="hljs-link"></span>) //affiche "Hello world!"
+</code></pre>
+<p>Vous pouvez appeler votre formule en lui <a href="/docs/fr/Concepts/parameters.html">passant des paramètres</a> $1, $2, etc., tout comme pour les méthodes projet de 4D :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-regexp">//m</span>éthode fullName
+C_TEXT(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+<span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>+<span class="hljs-string">" "</span>+<span class="hljs-variable">$2</span>
+</code></pre>
+<p>Vous pouvez encapsuler <code>fullName</code> dans un objet :</p>
+<pre><code class="hljs css language-code4d">C_OBJECT(<span class="hljs-variable">$o</span>)
+<span class="hljs-variable">$o</span>:=New object(<span class="hljs-string">"full_name"</span>;New formula(fullName))
+<span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.full_name(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Smith"</span>) 
+<span class="hljs-regexp">//</span><span class="hljs-variable">$result</span> = <span class="hljs-string">"John Smith"</span>
+<span class="hljs-regexp">//</span> équivalent à <span class="hljs-variable">$result</span>:=fullName(<span class="hljs-string">"param1"</span>;<span class="hljs-string">"param2"</span>)
+</code></pre>
+<p>Lorsqu'elles sont associées à la fonction <code>This</code>, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//méthode fullName2 </span>
+<span class="hljs-function"><span class="hljs-title">C_TEXT</span><span class="hljs-params">($<span class="hljs-number">0</span>)</span></span>
+$<span class="hljs-number">0</span>:=This.firstName+<span class="hljs-string">" "</span>+This<span class="hljs-selector-class">.lastName</span>
+</code></pre>
+<p>La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :</p>
+<pre><code class="hljs css language-code4d">C_OBJECT($o)
+$o:=<span class="hljs-literal">New</span> object(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"Jim"</span>;<span class="hljs-string">"lastName"</span>;<span class="hljs-string">"Wesson"</span>)
+$o.fullName:=<span class="hljs-literal">New</span> formula(fullName2) <span class="hljs-comment">//add the method  </span>
+
+$result:=$o.fullName() 
+<span class="hljs-comment">//$result = "Jim Wesson"</span>
+</code></pre>
+<p>A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). En appelant uniquement une seule propriété, une nouvelle référence à la formule sera retournée (et ne sera pas exécutée) :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$o</span>:=<span class="hljs-variable">$f</span><span class="hljs-selector-class">.message</span> <span class="hljs-comment">//retourne l'objet formule en $o</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="methodes-de-menu"></a><a href="#methodes-de-menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes de menu</h3>
+<p>Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. Ce fonctionnement est l’un des principaux aspects de la personnalisation d’une base de données. C’est en créant des menus qui appellent des méthodes de menu que vous personnalisez votre base.</p>
+<p>Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande <code>AJOUTER ENREGISTREMENT</code> jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.</p>
+<p>L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre base.</p>
+<h3><a class="anchor" aria-hidden="true" id="methodes-de-gestion-de-process"></a><a href="#methodes-de-gestion-de-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes de gestion de process</h3>
+<p>Une <strong>méthode projet</strong> est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété <em>Démarrer un nouveau process</em> est sélectionnée, est aussi la méthode de gestion de process pour le process créé.</p>
+<h3><a class="anchor" aria-hidden="true" id="methodes-de-gestion-devenements-et-derreurs"></a><a href="#methodes-de-gestion-devenements-et-derreurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes de gestion d’événements et d'erreurs</h3>
+<p>Une <strong>méthode de gestion d’événements</strong> est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande <code>APPELER SUR EVENEMENT</code>.</p>
+<p>Une <strong>méthode de gestion d’erreurs</strong> est une méthode projet d'interruption. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande <code>APPELER SUR ERREUR</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="methode-projet-recursives"></a><a href="#methode-projet-recursives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthode projet récursives</h2>
+<p>Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :</p>
+<ul>
+<li>Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.</li>
+<li>Une méthode peut s'appeler elle-même.</li>
+</ul>
+<p>Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.</p>
+<p>Examinons l'exemple suivant : vous disposez d'une table <code>[Amis et relations]</code> composée de l'ensemble de champs suivant (très simplifié) :</p>
+<ul>
+<li><code>[Amis et parents]Nom</code></li>
+<li><code>[Amis et parents]Enfant'Nom</code></li>
+</ul>
+<p>Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'existe pas deux personnes avec le même nom). A partir d'un nom, vous voulez écrire la phrase “Un de mes amis, Pierre, qui est le rejeton de Paul qui est le rejeton de Martine qui est le rejeton de Robert qui est le rejeton de Gertrude, fait cela pour gagner sa vie !” :</p>
+<ol>
+<li>Vous pouvez procéder de la manière suivante :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vsName</span>:=Request(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)
+ Si(OK=1)
+    <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)
+    <span class="hljs-keyword">If</span>(Records <span class="hljs-keyword">in</span> selection([Amis et parents])&gt;0)
+       <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-string">"Un de mes amis, "</span>+<span class="hljs-variable">$vsNom</span>
+       <span class="hljs-keyword">Repeat</span>
+          <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$vsNom</span>)
+          <span class="hljs-variable">$vlResultRecherche</span>:=Records <span class="hljs-keyword">in</span> selection([Amis et parents])
+          <span class="hljs-keyword">If</span>(<span class="hljs-variable">$vlResultRecherche</span>&gt;0)
+             <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>+<span class="hljs-string">" qui est le rejeton de "</span>+[Amis et parents]Nom
+             <span class="hljs-variable">$vsNom</span>:=[Amis et parents]Nom
+          End <span class="hljs-keyword">if</span>
+       Until(<span class="hljs-variable">$vlResultRecherche</span>=0)
+       <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>
+       ALERT(<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>)
+    End <span class="hljs-keyword">if</span>
+ End <span class="hljs-keyword">if</span>
+</code></pre>
+<ol start="2">
+<li>Vous pouvez également procéder ainsi :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vsNom</span>:=Request(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)
+  <span class="hljs-keyword">If</span>(<span class="hljs-attribute">OK</span>=1)
+    QUERY([Amis et parents];[Amis et parents]<span class="hljs-attribute">Nom</span>=<span class="hljs-variable">$vsNom</span>)
+    <span class="hljs-keyword">If</span>(Records <span class="hljs-keyword">in</span> selection([Amis et parents])&gt;0)
+       ALERT(<span class="hljs-string">"Un de mes amis, "</span>+Généalogie de(<span class="hljs-variable">$vsNom</span>)+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>)
+   End <span class="hljs-keyword">if</span>
+ End <span class="hljs-keyword">if</span>
+</code></pre>
+<p>en utilisant la fonction récursive <code>Généalogie de</code> suivante :</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode projet Généalogie de</span>
+  <span class="hljs-comment">// Généalogie de ( Chaîne ) -&gt; Texte</span>
+  <span class="hljs-comment">// Généalogie de ( Nom ) -&gt; Partie de la phrase</span>
+ 
+ <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
+ <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$1</span>)
+<span class="hljs-keyword">If</span>(Enregistrements trouves([Amis et parents])&gt;0)
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" qui est le rejeton de "</span>+<span class="hljs-keyword">G</span>é<span class="hljs-keyword">n</span>éalogie <span class="hljs-keyword">de</span>([Amis et parents]Nom)
+End <span class="hljs-keyword">if</span>
+</code></pre>
+<p>Vous notez que la méthode <code>Généalogie de</code> s'appelle elle-même.</p>
+<p>La première manière de procéder utilise un <strong>algorithme itératif</strong>. La seconde manière utilise un <strong>algorithme récursif</strong>.</p>
+<p>Lorsque vous implémentez du code pour traiter des cas comme celui décrit ci-dessus, vous aurez toujours le choix entre écrire des méthodes utilisant des algorithmes itératifs ou récursifs. Typiquement, la récursivité fournit un code plus concis, plus facile à lire et à maintenir, mais elle est facultative.</p>
+<p>Dans 4D, la récursivité est typiquement utilisée pour :</p>
+<ul>
+<li>Traiter les enregistrements de tables liées les unes aux autres de la même manière que décrit dans l'exemple ci-dessus.</li>
+<li>Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes <code>LISTE DES DOSSIERS</code> et <code>LISTE DES DOCUMENTS</code>. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.</li>
+</ul>
+<p><strong>Important :</strong> Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode <code>Généalogie de</code> cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour &quot;empiler&quot; les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).</p>
+<h2><a class="anchor" aria-hidden="true" id="methodes-specialisees"></a><a href="#methodes-specialisees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes spécialisées</h2>
+<p>Outre les <strong>méthodes projets</strong>, 4D prend en charge plusieurs types de méthodes spécifiques, appelées automatiquement en fonction des événements :</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Contexte d'appel</th><th>Accepte les paramètres</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Méthode objet (widget)</strong></td><td>Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée</td><td>Non</td><td>Propriété d'un objet formulaire (également appelé widget)</td></tr>
+<tr><td><strong>Méthode formulaire</strong></td><td>Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée</td><td>Non</td><td>Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure.</td></tr>
+<tr><td><strong>Trigger</strong> (ou <em>méthode table</em>)</td><td>Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)</td><td>Non</td><td>Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.</td></tr>
+<tr><td><strong>Méthode base</strong></td><td>Automatique, lorsqu'un événement se produit sur la session de travail</td><td>Oui (prédéfini)</td><td>Il existe 16 méthodes base dans 4D. Voir la section Méthodes bases</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/arrays.html"><span class="arrow-prev">← </span><span>Tableaux</span></a><a class="docs-next button" href="/docs/fr/Concepts/parameters.html"><span>Paramètres</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methodes-projet">Méthodes projet</a><ul class="toc-headings"><li><a href="#sous-routines-et-fonctions">Sous-routines et fonctions</a></li><li><a href="#methodes-associees-a-des-objets">Méthodes associées à des objets</a></li><li><a href="#methodes-de-menu">Méthodes de menu</a></li><li><a href="#methodes-de-gestion-de-process">Méthodes de gestion de process</a></li><li><a href="#methodes-de-gestion-devenements-et-derreurs">Méthodes de gestion d’événements et d'erreurs</a></li></ul></li><li><a href="#methode-projet-recursives">Méthode projet récursives</a></li><li><a href="#methodes-specialisees">Méthodes spécialisées</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

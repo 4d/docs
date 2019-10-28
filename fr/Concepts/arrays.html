@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tableaux · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Un **tableau** est une série ordonnée de **variables** de même type. Chaque variable est appelée un **élément** du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un [élément zéro](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu&#x27;il existe quelques différences spécifiques."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Tableaux · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Un **tableau** est une série ordonnée de **variables** de même type. Chaque variable est appelée un **élément** du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un [élément zéro](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu&#x27;il existe quelques différences spécifiques."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/arrays.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Tableaux</h1></header><article><div><span><p>Un <strong>tableau</strong> est une série ordonnée de <strong>variables</strong> de même type. Chaque variable est appelée un <strong>élément</strong> du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un <a href="#using-the-element-zero-of-an-array">élément zéro</a>. Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu'il existe quelques différences spécifiques.</p>
+<blockquote>
+<p>Généralement, il est recommandé d'utiliser des <strong>collections</strong> plutôt que des <strong>tableaux</strong>. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section <a href="/docs/fr/Concepts/collection.html">Collection</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="creer-des-tableaux"></a><a href="#creer-des-tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Créer des tableaux</h2>
+<p>Vous créez un tableau au moyen de l'une des commandes de déclaration du thème &quot;Tableaux&quot;. Chaque commande de déclaration de tableau peut créer ou redimensionner des tableaux à une ou à deux dimensions. Pour plus d'informations sur les tableaux à deux dimensions, reportez-vous à la section <a href="#two-dimensional-arrays">Tableaux à deux dimensions</a>.</p>
+<p>Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">10</span>)</span>
+</code></pre>
+<p>Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">20</span>)</span>
+</code></pre>
+<p>Enfin, cette ligne de code redimensionne le même tableau à 0 élément :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">0</span>)</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="affecter-des-valeurs-dans-un-tableau"></a><a href="#affecter-des-valeurs-dans-un-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affecter des valeurs dans un tableau</h2>
+<p>Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. Ce nombre est appelé numéro de l'élément. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :</p>
+<pre><code class="hljs css language-code4d"> ARRAY TEXT(<span class="hljs-name">atNames</span><span class="hljs-comment">;5)</span>
+ atNames{<span class="hljs-number">1</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Richard"</span>
+ atNames{<span class="hljs-number">2</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Sarah"</span>
+ atNames{<span class="hljs-number">3</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Sam"</span>
+ atNames{<span class="hljs-number">4</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Jane"</span>
+ atNames{<span class="hljs-number">5</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"John"</span>
+ For($vlElem<span class="hljs-comment">;1;5)</span>
+    ALERT(<span class="hljs-string">"The element #"</span>+String($vlElem)+<span class="hljs-string">" is equal to: "</span>+atNames{$vlElem})
+ End for
+</code></pre>
+<p>Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (<code>For...End for</code>, <code>Repeat...Until</code> or <code>While...End while</code>), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.</p>
+<p><strong>Important :</strong> Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.</p>
+<h3><a class="anchor" aria-hidden="true" id="affecter-un-tableau-a-un-autre"></a><a href="#affecter-un-tableau-a-un-autre" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affecter un tableau à un autre</h3>
+<p>Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction <code>COPY ARRAY</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="utiliser-lelement-zero-dun-tableau"></a><a href="#utiliser-lelement-zero-dun-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser l'élément zéro d'un tableau</h2>
+<p>Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.</p>
+<p>Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous cliquez sur un élément autre que l'élément préalablement sélectionné. Pour cela, vous devez garder la trace de chaque élément sélectionné. Une façon de le faire est d'utiliser une variable process dans laquelle vous conservez le numéro de l'élément sélectionné. Une autre manière consiste à utiliser l'élément zéro du tableau :</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode objet zone de défilement atNoms</span>
+ <span class="hljs-keyword">Case</span> of
+   :(Form event=<span class="hljs-keyword">On</span> Load)
+   <span class="hljs-comment">//Initialisons le tableau (comme indiqué ci-dessous)</span>
+       ARRAY TEXT(atNames<span class="hljs-comment">;5)</span>
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-comment">// Initialiser l'élément zéro avec le numéro</span>
+  <span class="hljs-comment">// de l'élément courant sélectionné sous sa forme alphanumérique</span>
+  <span class="hljs-comment">// Ici vous commencez sans élément sélectionné</span>
+       atNames{<span class="hljs-number">0</span>}:=<span class="hljs-string">"0"</span>
+ 
+    :(Form event=<span class="hljs-keyword">On</span> Unload)
+  <span class="hljs-comment">// Nous n'avons plus besoin du tableau</span>
+       CLEAR VARIABLE(atNames)
+ 
+    :(Form event=<span class="hljs-keyword">On</span> Clicked)
+       <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#<span class="hljs-number">0</span>)</span>
+          <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#Num(atNames{<span class="hljs-number">0</span>}))</span>
+             vtInfo:=<span class="hljs-string">"You clicked on: "</span>+atNames{atNames}+<span class="hljs-string">" and it was not selected before."</span>
+             atNames{<span class="hljs-number">0</span>}:=String(atNames)
+          <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+    :(Form event=<span class="hljs-keyword">On</span> <span class="hljs-keyword">Double</span> Clicked)
+       <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#<span class="hljs-number">0</span>)</span>
+          ALERT(<span class="hljs-string">"You double clicked on: "</span>+atNames{atNames}
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">case</span>
+</code></pre>
+<p>(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.</p>
+<h2><a class="anchor" aria-hidden="true" id="tableaux-a-deux-dimensions"></a><a href="#tableaux-a-deux-dimensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux à deux dimensions</h2>
+<p>Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :</p>
+<pre><code class="hljs css language-code4d"> ARRAY TEXT(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// Créer un tableau texte composé de 100 lignes de 50 colonnes</span>
+</code></pre>
+<p>Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.</p>
+<p>Dans l'exemple prédédent :</p>
+<ul>
+<li>atTopics est un tableau à deux dimensions</li>
+<li>atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne</li>
+<li>atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension</li>
+<li>(atTopics) retourne 100, qui est le nombre de lignes</li>
+<li>(atTopics{17}) retourne 50, qui est le nombre de colonnes de la 17e ligne</li>
+</ul>
+<p>Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :</p>
+<pre><code class="hljs css language-code4d"> C_LONGINT(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
+ C_LONGINT(<span class="hljs-variable">$vlFieldNumber</span>)
+  <span class="hljs-comment">// Créer autant de lignes (vides et sans colonnes) qu'il y a de tables</span>
+  <span class="hljs-variable">$vlLastTable</span>:=Get last <span class="hljs-keyword">table</span> number
+ ARRAY POINTER(&lt;&gt;apFields;<span class="hljs-variable">$vlLastTable</span>;0) <span class="hljs-comment">//Tableau 2D avec N lignes et zéro colonnes</span>
+  <span class="hljs-comment">// Pour chaque table</span>
+ <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlTable</span>;1;<span class="hljs-variable">$vlLastTable</span>)
+    <span class="hljs-keyword">If</span>(Is <span class="hljs-keyword">table</span> number valid(<span class="hljs-variable">$vlTable</span>))
+       <span class="hljs-variable">$vlLastField</span>:=Get last field number(<span class="hljs-variable">$vlTable</span>)
+  <span class="hljs-comment">// Donner la valeur des éléments</span>
+             <span class="hljs-variable">$vlColumnNumber</span>:=0
+       <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlField</span>;1;<span class="hljs-variable">$vlLastField</span>)
+          <span class="hljs-keyword">If</span>(Is field number valid(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
+             <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+1
+  <span class="hljs-comment">// Insérer une colonne dans la ligne de la table en cours</span>
+              INSERT <span class="hljs-keyword">IN</span> ARRAY(&lt;&gt;apFields{<span class="hljs-variable">$vlTable}</span>;<span class="hljs-variable">$vlColumnNumber</span>;1)
+  <span class="hljs-comment">// Affecter la "celulle" avec le pointeur</span>
+             &lt;&gt;apFields{<span class="hljs-variable">$vlTable}</span>{<span class="hljs-variable">$vlColumnNumber}</span>:=Field(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)
+          End <span class="hljs-keyword">if</span>
+       End <span class="hljs-keyword">for</span>
+    End <span class="hljs-keyword">if</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<p>Dans la mesure où le tableau à deux dimensions a été initialisé, vous pouvez obtenir ainsi les pointeurs vers les champs d'une table de votre choix :</p>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Obtenir les pointeurs vers les champs pour la table affichée à l'écran:</span>
+ COPY <span class="hljs-built_in">ARRAY</span>(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
+  <span class="hljs-comment">// Initialiser les champs booléens et date</span>
+For($vlElem;<span class="hljs-number">1</span>;Size of <span class="hljs-built_in">array</span>($apTheFieldsIamWorkingOn))
+    <span class="hljs-keyword">Case</span> of
+       :(<span class="hljs-keyword">Type</span>($apTheFieldsIamWorkingOn{$vlElem}-&gt;)=Is <span class="hljs-built_in">date</span>)
+          $apTheFieldsIamWorkingOn{$vlElem}-&gt;:=Current <span class="hljs-built_in">date</span>
+       :(<span class="hljs-keyword">Type</span>($apTheFieldsIamWorkingOn{$vlElem}-&gt;)=Is <span class="hljs-built_in">Boolean</span>)
+          $apTheFieldsIamWorkingOn{$vlElem}-&gt;:=<span class="hljs-literal">True</span>
+    End <span class="hljs-keyword">case</span>
+ End for
+</code></pre>
+<p><strong>Note :</strong> Comme le montre cet exemple, les lignes des tableaux à deux dimensions peuvent être ou non de la même taille.</p>
+<h2><a class="anchor" aria-hidden="true" id="tableaux-et-memoire"></a><a href="#tableaux-et-memoire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux et mémoire</h2>
+<p>A la différence des données que vous stockez sur disque lorsque vous utilisez des tables ou des enregistrements, un tableau réside toujours en mémoire dans son intégralité.</p>
+<p>Par exemple, si tous les codes postaux américains étaient saisis dans une table [Codes Postaux], celle-ci contiendrait environ 100 000 enregistrements. De plus, cette table comporterait plusieurs champs : le code postal lui-même ainsi que la ville, le comté et l'état correspondants. Si vous ne sélectionnez que les codes postaux de Californie, 4D crée la sélection d'enregistrements correspondante à l'intérieur de la table [Codes Postaux], et ensuite ne charge les enregistrements que lorsque vous en avez besoin (par exemple, pour les afficher ou les imprimer). En d'autres termes, vous travaillez avec une série ordonnée de valeurs (du même type pour chaque champ) partiellement chargée du disque en mémoire.</p>
+<p>Procéder de la même manière avec les tableaux serait laborieux, pour les raisons suivantes :</p>
+<ul>
+<li>Pour maintenir les quatre types d'information (code postal, ville, comté, état), vous auriez besoin de quatre grands tableaux en mémoire.</li>
+<li>Comme un tableau réside en mémoire dans son intégralité, vous seriez obligé de garder tous les codes postaux en mémoire pendant toute la session de travail, même si les données n'étaient pas utilisées en permanence.</li>
+<li>Toujours parce qu'un tableau réside en mémoire dans son intégralité, les quatre tableaux devraient être chargés ou sauvegardés sur le disque à chaque fois que vous démarreriez ou quitteriez l'application, quand bien même les données ne seraient d'aucune utilité pour la session de travail.</li>
+</ul>
+<p><strong>Conclusion :</strong> Les tableaux ont pour rôle de manipuler une certaine quantité de données pendant une période brève. En contrepartie, comme ils résident en mémoire, ils sont d'une utilisation rapide et facile.</p>
+<p>Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux contenant des centaines ou des milliers d'éléments. Voici les formules à appliquer pour calculer la quantité de mémoire utilisée pour chaque type de tableau :</p>
+<table>
+<thead>
+<tr><th>Type de Tableau</th><th>Calcul de la quantité de mémoire en octets</th></tr>
+</thead>
+<tbody>
+<tr><td>Blob</td><td>(1+nombre d'éléments) * 12 + somme de la taille de chaque blob</td></tr>
+<tr><td>Booléen</td><td>(31+nombre d'éléments)/8</td></tr>
+<tr><td>Date</td><td>(1+nombre d'éléments) * 6</td></tr>
+<tr><td>Entier long</td><td>(1+nombre d'éléments) * 2</td></tr>
+<tr><td>Entier long</td><td>(1+nombre d'éléments) * 4</td></tr>
+<tr><td>Objet</td><td>(1+nombre d'éléments) * 8 + somme de la taille de chaque objet</td></tr>
+<tr><td>Image</td><td>(1+nombre d'éléments) * 8 + somme de la taille de chaque image</td></tr>
+<tr><td>Pointeur</td><td>(1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur</td></tr>
+<tr><td>Réel</td><td>(1+nombre d'éléments) * 8</td></tr>
+<tr><td>Texte</td><td>(1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2</td></tr>
+<tr><td>Heure</td><td>(1+nombre d'éléments) * 4</td></tr>
+<tr><td>Deux dimensions</td><td>(1+nombre d'éléments) * 16 + somme de la taille de chaque tableau</td></tr>
+</tbody>
+</table>
+<p><strong>Notes :</strong></p>
+<ul>
+<li>La taille d'un texte en mémoire se calcule par la formule ((Longueur + 1) * 2)</li>
+<li>Quelques octets supplémentaires sont requis pour le repérage de l'élément, le nombre d'éléments et le tableau lui-même.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/variables.html"><span class="arrow-prev">← </span><span>Variables</span></a><a class="docs-next button" href="/docs/fr/Concepts/methods.html"><span>Méthodes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creer-des-tableaux">Créer des tableaux</a></li><li><a href="#affecter-des-valeurs-dans-un-tableau">Affecter des valeurs dans un tableau</a><ul class="toc-headings"><li><a href="#affecter-un-tableau-a-un-autre">Affecter un tableau à un autre</a></li></ul></li><li><a href="#utiliser-lelement-zero-dun-tableau">Utiliser l'élément zéro d'un tableau</a></li><li><a href="#tableaux-a-deux-dimensions">Tableaux à deux dimensions</a></li><li><a href="#tableaux-et-memoire">Tableaux et mémoire</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

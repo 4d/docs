@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tour d&#x27;horizon · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="En utilisant le langage 4D, le traditionnel &quot;Hello, world!&quot; peut s&#x27;afficher à l&#x27;écran de plusieurs manières. Le plus simple est probablement d&#x27;écrire la ligne suivante dans une méthode de projet :"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Tour d&#x27;horizon · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="En utilisant le langage 4D, le traditionnel &quot;Hello, world!&quot; peut s&#x27;afficher à l&#x27;écran de plusieurs manières. Le plus simple est probablement d&#x27;écrire la ligne suivante dans une méthode de projet :"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/quick-tour.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Tour d&#x27;horizon</h1></header><article><div><span><p>En utilisant le langage 4D, le traditionnel &quot;Hello, world!&quot; peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">ALERT</span><span class="hljs-params">(<span class="hljs-string">"Hello, World!"</span>)</span></span>
+</code></pre>
+<p>Ce code affichera une boîte de dialogue d'alerte standard contenant le message &quot;Hello, World!&quot; et un bouton OK. Pour exécuter le code, il vous suffit de cliquer sur le bouton d'exécution dans l'éditeur de méthode :</p>
+<p><img src="/docs/assets/en/Concepts/helloworld.png" alt="alt-text"></p>
+<p>Vous pouvez également associer ce code à un bouton de formulaire et exécuter le formulaire. Dans ce cas, en cliquant sur le bouton, vous afficherez la boîte de dialogue d'alerte. Dans tous les cas, vous venez d'exécuter votre première ligne de code 4D !</p>
+<h2><a class="anchor" aria-hidden="true" id="assigner-des-valeurs"></a><a href="#assigner-des-valeurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigner des valeurs</h2>
+<p>Vous pouvez donner des valeurs aux variables, aux champs, aux éléments de tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle assigner une valeur (ou affecter une valeur) et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs ou aux éléments de tableaux.</p>
+<pre><code class="hljs css language-code4d">$MyNumber:=<span class="hljs-number">3</span> <span class="hljs-comment">//assigne 3 à la variable MyNumber</span>
+[Products]Size:=$MyNumber <span class="hljs-comment">//assigne la variable MyNumber au champ [Products]Size</span>
+arrDays{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Tuesday"</span> <span class="hljs-comment">//assigne la chaîne "Tuesday" au 2ème élément arrDays</span>
+MyVar:=Length(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigne le résultat de la fonction (4) à MyVar</span>
+$myDate:=!<span class="hljs-number">2018</span>/<span class="hljs-number">01</span>/<span class="hljs-number">21</span>! <span class="hljs-comment">//assigne une date littérale</span>
+$myHour:=?<span class="hljs-number">08</span>:<span class="hljs-number">12</span>:<span class="hljs-number">55</span>? <span class="hljs-comment">//assigne une heure littérale</span>
+</code></pre>
+<p>Vous devez impérativement distinguer l'opérateur d'affectation := des autres opérateurs. Plutôt que de combiner des expressions dans une nouvelle expression, l'opérateur d'affectation copie la valeur de l'expression à droite de l'opérateur d'affectation dans la variable ou le champ situé à gauche de l'opérateur.</p>
+<p><strong>Important :</strong> Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). Un opérateur d'affectation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.</p>
+<h2><a class="anchor" aria-hidden="true" id="variables"></a><a href="#variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<p>Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide d'une commande <code>C_XXX</code>. Par exemple, pour créer une variable du type date, vous pouvez écrire :</p>
+<pre><code class="hljs css language-code4d">C_DATE(MyDate) //<span class="hljs-keyword">Type</span> <span class="hljs-type">date </span><span class="hljs-keyword">type</span> <span class="hljs-type">pour </span>la variable MyDate
+</code></pre>
+<p>Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :</p>
+<pre><code class="hljs css language-code4d">MaDate:=Current date+30
+</code></pre>
+<p>Le programme interprète la ligne comme “MaDate prend la valeur de la date courante plus 30 jours”. Cette ligne crée la variable et l'affecte (temporairement) au type de date et à un contenu. Une variable créée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis modifie le type de manière dynamique. Une variable typée avec <code>C_XXX</code> ne peut pas changer le type. En mode compilé, le type ne peut jamais être modifié, quelle que soit la manière dont la variable a été créée.</p>
+<h2><a class="anchor" aria-hidden="true" id="commandes"></a><a href="#commandes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes</h2>
+<p>Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que <code>CREER ENREGISTREMENT</code> ou <code>ALERTE</code>, sont décrites dans le <em>Manuel Langage de 4D</em>, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">COPY</span><span class="bash"> DOCUMENT(<span class="hljs-string">"dossier1\\nom1"</span>;<span class="hljs-string">"dossier2\\"</span> ; <span class="hljs-string">"nouveau"</span>)</span>
+</code></pre>
+<p>Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées utilisées à l'aide de la notation en point. Par exemple:</p>
+<pre><code class="hljs css language-code4d">$c:=Creer collection(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
+$nc:=$c.slice(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[1,2,3]  </span>
+
+$lastEmployee:=$employee.last()
+</code></pre>
+<p>Vous pouvez utiliser des plug-ins ou des composants 4D qui ajoutent de nouvelles commandes à votre environnement de développement 4D.</p>
+<p>Il existe de nombreux plug-ins proposés par la communauté des utilisateurs de 4D ou des développeurs tiers. Par exemple, en utilisant les pages <a href="https://github.com/miyako/4d-plugin-pdf-pages">4d-plugin-pdf-pages</a> sur macOS :</p>
+<pre><code class="hljs css language-code4d">PDF REMOVE <span class="hljs-constructor">PAGE(<span class="hljs-params">path</span>;<span class="hljs-params">page</span>)</span>
+</code></pre>
+<p>4D SVG est un exemple de composant utilitaire qui augmente les capacités de votre application :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//faire un dessin</span>
+svgRef:=SVG_New
+objectRef:=SVG_New_arc(svgRef;<span class="hljs-number">100</span>;<span class="hljs-number">100</span>;<span class="hljs-number">90</span>;<span class="hljs-number">90</span>;<span class="hljs-number">180</span>)
+</code></pre>
+<p>4D SVG est inclus dans 4D.</p>
+<h2><a class="anchor" aria-hidden="true" id="constantes"></a><a href="#constantes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constantes</h2>
+<p>4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Par exemple, <code>XML DATA</code> est une constante (valeur 6). Par défaut, les constantes prédéfinies sont soulignées dans l'éditeur de méthodes 4D. Elles permettent d'écrire un code plus lisible.</p>
+<pre><code class="hljs css language-code4d">vRef:=<span class="hljs-keyword">Open</span> document(<span class="hljs-string">"PassFile"</span>;<span class="hljs-string">"TEXTE"</span>;<span class="hljs-keyword">Read</span> <span class="hljs-keyword">Mode</span>) // ouvrir le doc en mode lecture seule
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methodes"></a><a href="#methodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes</h2>
+<p>4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres <strong>méthodes de projet</strong>. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objets, les méthodes formulaires, les méthodes table (Triggers) et les méthodes base.</p>
+<p>Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.</p>
+<p>Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">CONFIRM</span><span class="hljs-params">(<span class="hljs-string">"Souhaitez-vous vraiment clore ce compte ?"</span>;<span class="hljs-string">"Oui"</span>;<span class="hljs-string">"Non"</span>)</span></span>
+</code></pre>
+<p>Une méthode contient également des testes et des boucles qui gèrent le flux d'exécution. Les méthodes 4D prennent en charge les structures <code>If...Else...End if</code> et <code>Case of...Else...End case</code> ainsi que les boucles : <code>While...End while</code>, <code>Repeat...Until</code>, <code>For...End for</code>, et <code>For each...End for each</code>:</p>
+<p>L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-constructor">For($<span class="hljs-params">vlChar</span>;1;Length(<span class="hljs-params">vtSomeText</span>)</span>)
+    <span class="hljs-comment">//Faire quelque chose avec le caractère s'il s'agit d'une tabulation</span>
+    <span class="hljs-constructor">If(Character <span class="hljs-params">code</span>(<span class="hljs-params">vtSomeText</span>[[$<span class="hljs-params">vlChar</span>]])</span>=Tab)
+        <span class="hljs-comment">//...</span>
+    End <span class="hljs-keyword">if</span>
+End for
+</code></pre>
+<p>Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-symbol">$my</span><span class="hljs-built_in">Text</span>:=<span class="hljs-string">"hello"</span>
+<span class="hljs-symbol">$my</span><span class="hljs-built_in">Text</span>:=Do_Something(<span class="hljs-symbol">$my</span><span class="hljs-built_in">Text</span>) <span class="hljs-comment">//Call the Do_Something method</span>
+ALERT(<span class="hljs-symbol">$my</span><span class="hljs-built_in">Text</span>) <span class="hljs-comment">//"HELLO"</span>
+
+  <span class="hljs-comment">//Voici le code de la méthode Do_Something</span>
+$<span class="hljs-number">0</span>:=Uppercase($<span class="hljs-number">1</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="types-de-donnees"></a><a href="#types-de-donnees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types de données</h2>
+<p>De nombreux types de données peuvent être manipulés via le langage de 4D. Il existe des types de données élémentaires (chaîne, numérique, date, heure, booléen, image, pointeur, tableau), ainsi que des types de données composites (BLOBs, objets, collections).</p>
+<p>A noter que les données de type chaîne et numérique peuvent être associés à plus d’un type de champ. Lorsque des données sont placées dans un champ, le langage les convertit automatiquement dans le type du champ. Par exemple, si un champ de type entier est utilisé, les valeurs qu’il contient sont automatiquement traitées en tant que numériques. En d’autres termes, vous n’avez pas à vous préoccuper du mélange de champs de types semblables lorsque vous programmez avec 4D ; le langage le gère pour vous.</p>
+<p>Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélanger les types de données différents. Tout comme il est absurde de stocker la valeur “ABC” dans un champ de type Date, il est absurde de donner la valeur “ABC” à une variable utilisée pour des dates. Dans la plupart des cas, 4D est très tolérant et tentera d’utiliser de manière logique ce que vous faites. Par exemple, si vous additionnez un nombre x et une date, 4D déduira que vous voulez ajouter x jours à la date, mais si vous tentez d’ajouter une chaîne à une date, 4D vous préviendra que cette opération est impossible.</p>
+<p>Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données vers d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que &quot;abc&quot;. Vous pouvez écrire :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-string">[Produits]</span>Matricule:=String(Numéro)+<span class="hljs-string">"abc"</span>
+</code></pre>
+<p>Si <em>Numéro</em> vaut 17, <em>[Produits]Matricule</em> prendra la valeur “17abc”.</p>
+<p>Les types de données sont détaillés dans la section <a href="/docs/fr/Concepts/data-types.html">Types de données</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="objets-et-collections"></a><a href="#objets-et-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets et collections</h2>
+<p>Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:</p>
+<pre><code class="hljs css language-code4d">employee<span class="hljs-selector-class">.name</span>:=<span class="hljs-string">"Smith"</span>
+</code></pre>
+<p>Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-symbol">$v</span>Name:=employee[<span class="hljs-string">"nom"</span>]
+</code></pre>
+<p>Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$vAge</span>:=employee<span class="hljs-selector-class">.children</span>[<span class="hljs-number">2</span>]<span class="hljs-selector-class">.age</span>
+</code></pre>
+<p>A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :</p>
+<pre><code class="hljs">$f:=New object
+$f.message:=New formula(ALERT(&quot;Hello world!&quot;))
+$f.message() //affiche &quot;Hello world!&quot;
+</code></pre>
+<p>Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">C_COLLECTION</span>(<span class="hljs-variable">myColl</span>)</span>
+<span class="hljs-variable">myColl</span>:=<span class="hljs-variable">New</span> <span class="hljs-function"><span class="hljs-title">collection</span>(<span class="hljs-string">"A"</span>;<span class="hljs-string">"B"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-variable">Current</span> <span class="hljs-variable">time</span>)</span>
+<span class="hljs-variable">myColl</span>[<span class="hljs-number">3</span>]  <span class="hljs-comment">//accède au 4ème élément de la collection</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="operateurs"></a><a href="#operateurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opérateurs</h2>
+<p>Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. Par exemple, 1 + 2 utilise l’opérateur d’addition (ou signe plus) pour faire la somme de deux nombres, et le résultat est 3. Le tableau ci-dessous présente quelques opérateurs courants :</p>
+<table>
+<thead>
+<tr><th>Opérateur</th><th>Opération</th><th>Exemple</th></tr>
+</thead>
+<tbody>
+<tr><td>+</td><td>Addition</td><td>1 +2 = 3</td></tr>
+<tr><td>–</td><td>Soustraction</td><td>3 - 2 = 1</td></tr>
+<tr><td>*</td><td>Multiplication</td><td>2 * 3 = 6</td></tr>
+<tr><td>/</td><td>Division</td><td>6 / 2 = 3</td></tr>
+</tbody>
+</table>
+<p>Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.</p>
+<p>Souvent, les mêmes symboles sont utilisés pour des opérations différentes, en fonction du type de données traitées. Par exemple, le signe (+) peut effectuer diverses opérations, comme le montre le tableau suivant :</p>
+<table>
+<thead>
+<tr><th>Type de données</th><th>Opération</th><th>Exemple</th></tr>
+</thead>
+<tbody>
+<tr><td>Numérique</td><td>Addition</td><td>1 + 2 ajoute les nombres, le résultat est 3</td></tr>
+<tr><td>Chaine</td><td>Concaténation</td><td>“Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”</td></tr>
+<tr><td>Date et Numérique</td><td>Addition de date</td><td>!1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1997, le résultat est la date 21 janvier 1997</td></tr>
+</tbody>
+</table>
+<p>Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.</p>
+<h2><a class="anchor" aria-hidden="true" id="expressions"></a><a href="#expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions</h2>
+<p>Pour parler simplement, les expressions retournent une valeur. En fait, lorsque vous programmez avec 4D, vous utilisez tout le temps des expressions et vous avez tendance à les manipuler uniquement à travers la valeur qu’elles représentent. Les expressions sont aussi appelées formules.</p>
+<p>Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage de 4D a besoin de connaître la valeur d’une donnée.</p>
+<p>Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endroits dans 4D où une expression peut être utilisée en tant que telle. Par exemple :</p>
+<ul>
+<li>Editeur de formule (apply formula, query with formula, order by formula)</li>
+<li>La commande <code>EXECUTE FORMULA</code></li>
+<li>La liste de propriétés, où un expression peut être utilisée en tant que source de données pour la plupart des widgets</li>
+<li>Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée</li>
+<li>Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="types-dexpressions"></a><a href="#types-dexpressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types d’expressions</h3>
+<p>Vous vous référez à une expression par le biais du type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.</p>
+<table>
+<thead>
+<tr><th>Expression</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>“Bonjour”</td><td>Chaîne</td><td>Le mot Bonjour est une constante chaîne, signalée par les guillemets.</td></tr>
+<tr><td>“Bonjour ” + “à tous”</td><td>Chaîne</td><td>Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.</td></tr>
+<tr><td>“M. ” + [Amis]Nom</td><td>Chaîne</td><td>Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.</td></tr>
+<tr><td>Uppercase(&quot;smith&quot;)</td><td>Chaîne</td><td>Cette expression utilise <code>Uppercase</code>, une commande du langage, pour convertir la chaîne &quot;dupont&quot; en majuscules. Elle retourne “DUPONT”.</td></tr>
+<tr><td>4</td><td>Numérique</td><td>C'est une constante numérique, 4.</td></tr>
+<tr><td>4 * 2</td><td>Numérique</td><td>Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.</td></tr>
+<tr><td>MonBouton</td><td>Numérique</td><td>C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.</td></tr>
+<tr><td>!1997-01-25!</td><td>Date</td><td>C'est une constante date pour la date 25/01/97 (25 janvier 1997).</td></tr>
+<tr><td>Current date+ 30</td><td>Date</td><td>C'est une expression de type Date qui utilise la commande <code>Current date</code> pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date.</td></tr>
+<tr><td>?8:05:30?</td><td>Heure</td><td>C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.</td></tr>
+<tr><td>?2:03:04? + ?1:02:03?</td><td>Heure</td><td>Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.</td></tr>
+<tr><td>Vrai</td><td>Booléen</td><td>Cette commande retourne la valeur booléenne TRUE.</td></tr>
+<tr><td>10 # 20</td><td>Booléen</td><td>C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.</td></tr>
+<tr><td>“ABC” = “XYZ”</td><td>Booléen</td><td>C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.</td></tr>
+<tr><td>MonImage + 50</td><td>Image</td><td>Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.</td></tr>
+<tr><td>-&gt;[Amis]Nom</td><td>Pointeur</td><td>Cette expression retourne un pointeur vers le champ [Amis]Nom.</td></tr>
+<tr><td>Table(1)</td><td>Pointeur</td><td>C'est une commande qui retourne un pointeur vers la première table.</td></tr>
+<tr><td>JSON Parse (MaChaine)</td><td>Objet</td><td>C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)</td></tr>
+<tr><td>JSON Parse (MonTabJSON)</td><td>Collection</td><td>C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)</td></tr>
+<tr><td>Form.pageNumber</td><td>Propriété objet</td><td>Une propriété objet est une expression qui peut être de tout type</td></tr>
+<tr><td>Col[5]</td><td>Élément de collection</td><td>Un élément de collection est une expression qui peut être de tout type</td></tr>
+<tr><td>$entitySel[0]</td><td>Entité</td><td>Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est <strong>pas assignable</strong></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="expressions-assignables-et-non-assignables"></a><a href="#expressions-assignables-et-non-assignables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions assignables et non-assignables</h3>
+<p>Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne &quot;Hello&quot;, ou une variable telle que <code>$myButton</code>. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont <strong>non-assignables</strong>, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être <strong>assignables</strong>. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//La variable $myVar est assignable, vous pouvez écrire :  </span>
+<span class="hljs-variable">$myVar</span>:=<span class="hljs-string">"Hello"</span> <span class="hljs-comment">//assigner "Hello" à myVar</span>
+<span class="hljs-comment">//Form.pageNumber est assignable, vous pouvez écrire :  </span>
+Form<span class="hljs-selector-class">.pageNumber</span>:=<span class="hljs-number">10</span> <span class="hljs-comment">//assigne 10 à Form.pageNumber</span>
+<span class="hljs-comment">//Form.pageTotal-Form.pageNumber n'est pas assignable :</span>
+Form<span class="hljs-selector-class">.pageTotal-</span> Form<span class="hljs-selector-class">.pageNumber</span>:=<span class="hljs-number">10</span> <span class="hljs-comment">//erreur, non assignable</span>
+</code></pre>
+<p>En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, <code>[Personne] Prénom &quot; &quot; +[Personne]Nom</code> n'est pas assignable.</p>
+<h2><a class="anchor" aria-hidden="true" id="pointeurs"></a><a href="#pointeurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointeurs</h2>
+<p>Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous permettre d'écrire un code puissant et modulaire. Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux.</p>
+<p>Un pointeur sur un élément est créé en ajoutant un symbole &quot;-&gt;&quot; avant le nom de l'élément, et peut être déréférencé en ajoutant le symbole &quot;-&gt;&quot; après le nom du pointeur.</p>
+<pre><code class="hljs css language-code4d">MaVar:=<span class="hljs-string">"Bonjour"</span>
+M<span class="hljs-function"><span class="hljs-title">onPointeur</span>-&gt;</span>-&gt;MaVar
+ALERT(M<span class="hljs-function"><span class="hljs-title">onPointeur</span>-&gt;</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="commentaires"></a><a href="#commentaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commentaires</h2>
+<p>Les commentaires sont des lignes d’instructions inactives. Ces lignes ne sont pas interprétées par le programme (4D n’applique aucun style spécifique à l’intérieur de la ligne de commentaire) et ne sont pas exécutées lorsque la méthode est appelée.</p>
+<p>Voici deux manières de créer des commentaires :</p>
+<ul>
+<li><code>//</code> pour créer une ligne de commentaire</li>
+<li><code>/*...*/</code> pour les blocs de commentaire en ligne et multi-lignes.</li>
+</ul>
+<p>Les deux styles de commentaires peuvent être utilisés simultanément.</p>
+<h4><a class="anchor" aria-hidden="true" id="ligne-de-commentaire"></a><a href="#ligne-de-commentaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ligne de commentaire (//)</h4>
+<p>Insérez les caractères <code>//</code> au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//Ceci est un commentaire </span>
+<span class="hljs-function"><span class="hljs-title">For</span><span class="hljs-params">(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)</span></span> <span class="hljs-comment">//Début de la boucle</span>
+  <span class="hljs-comment">//commentaire</span>
+  <span class="hljs-comment">//commentaire</span>
+  <span class="hljs-comment">//commentaire</span>
+ Fin de boucle
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="commentaires-en-ligne-ou-multi-lignes"></a><a href="#commentaires-en-ligne-ou-multi-lignes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commentaires en ligne ou multi-lignes (/* */)</h4>
+<p>Entourez le contenu avec les caractères <code>/*</code> ... Les caractères <code>*/</code> pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par <code>/*</code> et se terminent par <code>*/</code>.</p>
+<ul>
+<li>Les <strong>lignes de commentaires en ligne</strong> - peuvent être insérées n'importe où dans le code. Exemple :</li>
+</ul>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">Boucle </span><span class="hljs-comment">/* ligne de commentaire */</span> ($vCounter<span class="hljs-comment">;1;100)</span>
+    ...
+Fin de <span class="hljs-keyword">boucle
+</span></code></pre>
+<ul>
+<li>Les <strong>blocs de commentaires multi-lignes</strong> permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :</li>
+</ul>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span> (<span class="hljs-symbol">$</span>vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<span class="hljs-comment">/*
+commentaires  
+    /* 
+    autres commentaires
+    */</span>
+<span class="hljs-comment">*/</span>
+...
+End <span class="hljs-keyword">for</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/about.html"><span class="arrow-prev">← </span><span>À propos du Langage 4D</span></a><a class="docs-next button" href="/docs/fr/Concepts/data-types.html"><span>Types de données</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#assigner-des-valeurs">Assigner des valeurs</a></li><li><a href="#variables">Variables</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#constantes">Constantes</a></li><li><a href="#methodes">Méthodes</a></li><li><a href="#types-de-donnees">Types de données</a></li><li><a href="#objets-et-collections">Objets et collections</a></li><li><a href="#operateurs">Opérateurs</a></li><li><a href="#expressions">Expressions</a><ul class="toc-headings"><li><a href="#types-dexpressions">Types d’expressions</a></li><li><a href="#expressions-assignables-et-non-assignables">Expressions assignables et non-assignables</a></li></ul></li><li><a href="#pointeurs">Pointeurs</a></li><li><a href="#commentaires">Commentaires</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

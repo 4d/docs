@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Structures répétitives (ou &quot;boucles&quot;) · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## While...End while"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Structures répétitives (ou &quot;boucles&quot;) · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## While...End while"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/looping.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Control Flow</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Structures répétitives (ou &quot;boucles&quot;)</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="whileend-while"></a><a href="#whileend-while" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>While...End while</h2>
+<p>La syntaxe de la structure répétitive (ou boucle) <code>While...End while</code> est la suivante :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-function"><span class="hljs-title">While</span>(<span class="hljs-variable">Expression_bool</span>é<span class="hljs-variable">enne</span>)</span>
+    <span class="hljs-function"><span class="hljs-title">instruction</span>(<span class="hljs-variable">s</span>)</span>
+ <span class="hljs-variable">End</span> <span class="hljs-variable"><span class="hljs-keyword">while</span></span>
+</code></pre>
+<p>Une boucle <code>While...End while</code> exécute les instructions comprises entre <code>While</code> et <code>End while</code> aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.</p>
+<p>Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle <code>While...End while</code>. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.</p>
+<p>La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car <em>NeverStop</em> est toujours TRUE :</p>
+<pre><code class="hljs css language-code4d"> NeverStop:=<span class="hljs-literal">True</span>
+ <span class="hljs-keyword">While</span>(NeverStop)
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span>
+</code></pre>
+<p>Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. Pour plus d'informations sur ce point, reportez-vous à la section <a href="/docs/fr/Concepts/error-handling.html">Débogueur</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<pre><code class="hljs css language-code4d"> CONFIRM(<span class="hljs-string">"Add a new record?"</span>) // Est-ce que l<span class="hljs-symbol">'utilisateur</span> veut ajouter un enregistrement?
+ <span class="hljs-keyword">While</span>(OK=<span class="hljs-number">1</span>) // Tant que l<span class="hljs-symbol">'utilisateur</span> accepte
+    ADD <span class="hljs-keyword">RECORD</span>([aTable]) // Ajouter un nouvel enregistrement
+<span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span> // Une boucle <span class="hljs-keyword">While</span> se termine toujours par <span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span>
+</code></pre>
+<p>Dans cet exemple, la valeur de la variable système <code>OK</code> est définie par la commande <code>CONFIRM</code> avant que le programme n’entre dans la boucle. Si l’utilisateur clique sur le bouton <strong>OK</strong> dans la boîte de dialogue de confirmation, la variable <code>OK</code> prend la valeur 1 et la boucle est exécutée. Dans le cas contraire, la variable <code>OK</code> prend la valeur 0 et la boucle est ignorée. Une fois que le programme entre dans la boucle, la commande <code>ADD RECORD</code> permet de continuer à l’exécuter car elle met la variable système <code>OK</code> à 1 lorsque l’utilisateur sauvegarde l’enregistrement. Lorsque l’utilisateur annule (ne valide pas) le dernier enregistrement, la variable système <code>OK</code> prend la valeur 0 et la boucle s’arrête.</p>
+<h2><a class="anchor" aria-hidden="true" id="repeatuntil"></a><a href="#repeatuntil" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Repeat...Until</h2>
+<p>La syntaxe de la structure répétitive (ou boucle) <code>Repeat...Until</code> est la suivante :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">Repeat</span>
+    <span class="hljs-function"><span class="hljs-title">instruction</span>(<span class="hljs-variable">s</span>)</span>
+ <span class="hljs-function"><span class="hljs-title">Until</span>(<span class="hljs-variable">Boolean_Expression</span>)</span>
+</code></pre>
+<p>La boucle <code>Repeat...Until</code> est semblable à la boucle <a href="flow-control#whileend-while">While...End while</a>, à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle <code>While...End while</code> ne s’exécute pas du tout.</p>
+<p>L'autre particularité de la boucle <code>Repeat...Until</code> est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<p>Comparez l’exemple suivant avec celui de la boucle <code>While...End while</code>. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande <code>CONFIRM</code> pour initialiser la variable <code>OK</code>.</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">Repeat</span>
+    <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">RECORD</span>([aTable])
+ <span class="hljs-keyword">Until</span>(OK=<span class="hljs-number">0</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="forend-for"></a><a href="#forend-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For...End for</h2>
+<p>La syntaxe de la structure répétitive <code>For...End for</code> est la suivante :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-function"><span class="hljs-title">For</span>(<span class="hljs-variable">Counter_Variable</span>;<span class="hljs-variable">Start_Expression</span>;<span class="hljs-variable">End_Expression</span>{;<span class="hljs-variable">Increment_Expression</span>})</span>
+    <span class="hljs-function"><span class="hljs-title">instruction</span>(<span class="hljs-variable">s</span>)</span>
+ <span class="hljs-variable">End</span> <span class="hljs-variable">for</span>
+</code></pre>
+<p>La structure <code>For...End for</code> est une boucle contrôlée par un compteur :</p>
+<ul>
+<li>La variable compteur <em>Counter_Variable</em> est une variable numérique (Réel ou Entier long) initialisée par <code>For...End for</code> à la valeur spécifiée par <em>Start_Expression</em>.</li>
+<li>La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel <em>Increment_Expression</em> à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans <em>Increment_Expression</em>, la variable compteur est incrémentée par défaut de un (1).</li>
+<li>Lorsque le compteur atteint la valeur définie par <em>End_Expression</em>, la boucle s'arrête.</li>
+</ul>
+<p><strong>Important :</strong> Les expressions numériques <em>Start_Expression</em>, <em>End_Expression</em> et <em>Increment_Expression</em> sont évaluées une seule fois, au début de la boucle. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.</p>
+<p><strong>Astuce :</strong> En revanche, vous pouvez, si vous le souhaitez, modifier la valeur de la variable <em>Counter_Variable</em> depuis l'intérieur de la boucle et cela affectera l'exécution de la boucle.</p>
+<ul>
+<li>Généralement, <em>Start_Expression</em> est inférieure à <em>End_Expression</em>.</li>
+<li>Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.</li>
+<li>Si <em>Start_Expression</em> est supérieure à <em>End_Expression</em>, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une <em>Increment_Expression</em> négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="exemples-elementaires"></a><a href="#exemples-elementaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples élémentaires</h3>
+<ol>
+<li>La boucle suivante s'exécute 100 fois :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> For(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+  <span class="hljs-comment">//Faire quelque chose</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<ol start="2">
+<li>L'exemple suivant permet de traiter tous les éléments du tableau anArray :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span>($vlElem;<span class="hljs-number">1</span>;Size of <span class="hljs-keyword">array</span>(anArray))
+  <span class="hljs-comment">//Faire quelque chose avec l'élément</span>
+    anArray{$vlElem}:=...
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<ol start="3">
+<li>L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-constructor">For($<span class="hljs-params">vlChar</span>;1;Length(<span class="hljs-params">vtSomeText</span>)</span>)
+  <span class="hljs-comment">//Faire quelque chose avec le caractère si c'est une tabulation</span>
+    <span class="hljs-constructor">If(Character <span class="hljs-params">code</span>(<span class="hljs-params">vtSomeText</span>[[$<span class="hljs-params">vlChar</span>]])</span>=Tab)
+  <span class="hljs-comment">//...</span>
+    End <span class="hljs-keyword">if</span>
+ End for
+</code></pre>
+<ol start="4">
+<li>L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> FIRST <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+ <span class="hljs-constructor">For($<span class="hljs-params">vlRecord</span>;1;Records <span class="hljs-params">in</span> <span class="hljs-params">selection</span>([<span class="hljs-params">aTable</span>])</span>)
+  <span class="hljs-comment">//Faire quelque chose avec chaque enregistrement</span>
+    SEND <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+  <span class="hljs-comment">//...</span>
+  <span class="hljs-comment">// Passer à l'enregistrement suivant</span>
+    NEXT <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+ End for
+</code></pre>
+<p>La plupart des structures <code>For...End for</code> que vous écrirez dans vos bases ressembleront à celles présentées ci-dessus.</p>
+<h3><a class="anchor" aria-hidden="true" id="decrementer-la-variable-compteur"></a><a href="#decrementer-la-variable-compteur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Décrémenter la variable Compteur</h3>
+<p>Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, <em>Start_Expression</em> doit être supérieure à <em>End_Expression</em> et <em>Increment_Expression</em> doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :</p>
+<ol start="5">
+<li>La boucle suivante s'exécute 100 fois :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> For(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>)
+  <span class="hljs-comment">//Faire quelque chose</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<ol start="6">
+<li>L'exemple suivant permet de traiter tous les éléments du tableau anArray :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span>($vlElem;Size of <span class="hljs-keyword">array</span>(anArray);<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>)
+  <span class="hljs-comment">//Faire quelque chose avec l'élément</span>
+    anArray{$vlElem}:=...
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<ol start="7">
+<li>L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-constructor">For($<span class="hljs-params">vlChar</span>;Length(<span class="hljs-params">vtSomeText</span>)</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+  <span class="hljs-comment">//Faire quelque chose avec le caractère si c'est une tabulation</span>
+    <span class="hljs-constructor">If(Character <span class="hljs-params">code</span>(<span class="hljs-params">vtSomeText</span>[[$<span class="hljs-params">vlChar</span>]])</span>=Tab)
+  <span class="hljs-comment">//...</span>
+    End <span class="hljs-keyword">if</span>
+ End for
+</code></pre>
+<ol start="8">
+<li>L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> LAST <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+ <span class="hljs-constructor">For($<span class="hljs-params">vlRecord</span>;Records <span class="hljs-params">in</span> <span class="hljs-params">selection</span>([<span class="hljs-params">aTable</span>])</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+  <span class="hljs-comment">//Faire quelque chose avec chaque enregistrement</span>
+    SEND <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+  <span class="hljs-comment">//...</span>
+  <span class="hljs-comment">//Passer à l'enregistrement précédent</span>
+    PREVIOUS <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+ End for
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="incrementer-la-variable-compteur-de-plus-de-1"></a><a href="#incrementer-la-variable-compteur-de-plus-de-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incrementer la variable compteur de plus de 1</h3>
+<p>Si vous le souhaitez, vous pouvez passer dans <em>Increment_Expression</em> une valeur (positive ou négative) dont la valeur absolue est supérieure à un.</p>
+<ol start="9">
+<li>La boucle suivante ne traite que les éléments pairs du tableau anArray :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span>($vlElem;<span class="hljs-number">2</span>;Size of <span class="hljs-keyword">array</span>(anArray);<span class="hljs-number">2</span>)
+  <span class="hljs-comment">//Faire quelque chose avec l'élément 2,4...2n</span>
+    anArray{$vlElem}:=...
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="comparaison-des-structures-repetitives"></a><a href="#comparaison-des-structures-repetitives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparaison des structures répétitives</h3>
+<p>Revenons au premier exemple <code>For...End for</code>. La boucle suivante s'exécute 100 fois :</p>
+<pre><code class="hljs css language-code4d"> For(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+  <span class="hljs-comment">//Faire quelque chose</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<p>Il est intéressant d'examiner la manière dont les boucles <code>While...End while</code> et <code>Repeat...Until</code> effectuent la même action. Voici la boucle <code>While...End while</code> équivalente :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">$i</span> :=<span class="hljs-number">1</span> <span class="hljs-comment">// Initialisation du compteur</span>
+<span class="hljs-keyword">While</span> (<span class="hljs-built_in">$i</span>&lt;=<span class="hljs-number">100</span>) <span class="hljs-comment">// Boucle 100 fois</span>
+  <span class="hljs-comment">// Faire quelque chose</span>
+    <span class="hljs-built_in">$i</span> :=<span class="hljs-built_in">$i</span> +<span class="hljs-number">1</span> <span class="hljs-comment">// Il faut incrémenter le compteur</span>
+ End <span class="hljs-keyword">while</span>
+</code></pre>
+<p>Voici la boucle <code>Repeat...Until</code> équivalente :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$i</span> :=<span class="hljs-number">1</span> <span class="hljs-comment">// Initialisation du compteur</span>
+ Repeat
+  <span class="hljs-comment">// Faire quelque chose</span>
+    <span class="hljs-variable">$i</span> :=<span class="hljs-variable">$i</span> +<span class="hljs-number">1</span> <span class="hljs-comment">// Il faut incrémenter le compteur</span>
+<span class="hljs-function"><span class="hljs-title">Until</span><span class="hljs-params">(<span class="hljs-variable">$i</span>=<span class="hljs-number">100</span>)</span></span> <span class="hljs-comment">// Boucle 100 fois</span>
+</code></pre>
+<p><strong>Astuce :</strong> La boucle <code>For...End for</code> est généralement plus rapide que les boucles <code>While...End while</code> et <code>Repeat...Until</code> car 4D teste la condition en interne pour chaque cycle de la boucle et incrémente lui-même le compteur. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure <code>For...End for</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="optimiser-lexecution-de-forend-for"></a><a href="#optimiser-lexecution-de-forend-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optimiser l'exécution de For...End for</h3>
+<p>Vous pouvez utiliser comme compteur une variable interprocess, process ou locale, et lui attribuer le type Réel, Entier ou Entier long. Pour des boucles longues, et particulièrement en mode compilé, nous vous conseillons d'employer des variables locales de type Entier long.</p>
+<ol start="10">
+<li>Voici un exemple :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> C_LONGINT(<span class="hljs-built_in">$vlCounter</span>) <span class="hljs-comment">// Utilisons une variable locale de type Entier long</span>
+<span class="hljs-keyword">For</span>(<span class="hljs-built_in">$vlCounter</span><span class="hljs-comment">;1;10000)</span>
+  <span class="hljs-comment">// Faire quelque chose</span>
+  End <span class="hljs-keyword">for</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="structures-forend-emboitees"></a><a href="#structures-forend-emboitees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structures For...End emboîtées</h3>
+<p>Vous pouvez emboîter autant de structures répétitives que vous voulez (dans les limites du raisonnable). Cela s'applique aux structures de type <code>For...End for</code>. Il y a dans ce cas une erreur courante à éviter : assurez-vous d'utiliser une variable compteur différente par structure de boucle.</p>
+<p>Voici deux exemples :</p>
+<ol start="11">
+<li>L'exemple suivant permet de traiter tous les éléments d'un tableau à deux dimensions :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span>($vlElem;<span class="hljs-number">1</span>;Size of <span class="hljs-keyword">array</span>(anArray))
+  <span class="hljs-comment">//...</span>
+  <span class="hljs-comment">// Faire quelque chose avec la ligne</span>
+  <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">For</span>($vlSubElem;<span class="hljs-number">1</span>;Size of <span class="hljs-keyword">array</span>(anArray{$vlElem}))
+  <span class="hljs-comment">//Faire quelque chose avec l'élément</span>
+       anArray{$vlElem}{$vlSubElem}:=...
+    End <span class="hljs-keyword">for</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<ol start="12">
+<li>L'exemple suivant construit un tableau de pointeurs vers tous les champs de type Date présents dans la base :</li>
+</ol>
+<pre><code class="hljs css language-code4d"> ARRAY POINTER(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-number">0</span>)
+ <span class="hljs-variable">$vlElem:</span>=<span class="hljs-number">0</span>
+ <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;Get last table number)
+    <span class="hljs-keyword">If</span>(Is table number valid(<span class="hljs-variable">$vlTable</span>))
+       <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlField</span>;<span class="hljs-number">1</span>;Get last field number(<span class="hljs-variable">$vlTable</span>))
+          <span class="hljs-keyword">If</span>(Is field number valid(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
+             <span class="hljs-variable">$vpField:</span>=Field(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)
+             <span class="hljs-keyword">If</span>(Type(<span class="hljs-variable">$vpField</span>-&gt;)=Is date)
+                <span class="hljs-variable">$vlElem:</span>=<span class="hljs-variable">$vlElem</span>+<span class="hljs-number">1</span>
+                INSERT <span class="hljs-keyword">IN</span> ARRAY(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-variable">$vlElem</span>)
+                <span class="hljs-variable">$apDateFields</span>{<span class="hljs-variable">$vlElem</span>}:=<span class="hljs-variable">$vpField</span>
+             <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+          <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span>
+    <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="for-eachend-for-each"></a><a href="#for-eachend-for-each" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each...End for each</h2>
+<p>La syntaxe de la structure répétitive (ou boucle) <code>For each...End for each</code> est la suivante :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span>(Element_courant;Expression{;debut{;fin}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Expression_booléenne)}
+    instruction(s)
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+</code></pre>
+<p>La structure <code>For each...End for each</code> exécute le cycle d'instructions définies pour chaque <em>Elément_courant</em> de <em>Expression</em>. Le type de <em>Elément_courant</em> dépend du type de <em>Expression</em>. La boucle <code>For each...End for each</code> peut itérer parmi trois types d'<em>Expression</em> :</p>
+<ul>
+<li>collections : boucle sur chaque élément de la collection,</li>
+<li>entity selections : boucle sur chaque entity,</li>
+<li>objets : boucle sur chaque propriété d'objet.</li>
+</ul>
+<p>Le tableau suivant compare les trois types de <code>Pour chaque...Fin de chaque</code> :</p>
+<table>
+<thead>
+<tr><th></th><th>Boucle sur collections</th><th>Boucle sur entity selections</th><th>Boucle sur objets</th></tr>
+</thead>
+<tbody>
+<tr><td>Type Elément_courant</td><td>Variable du même type que les éléments de la collection</td><td>Entity</td><td>Variable texte</td></tr>
+<tr><td>Types d’expressions</td><td>Collection (avec des éléments du même type)</td><td>Entity selection</td><td>Objet</td></tr>
+<tr><td>Nombre de boucles (par défaut)</td><td>Nombre d'éléments de la collection</td><td>Nombre d'entités dans la sélection</td><td>Nombre de propriétés d'objets</td></tr>
+<tr><td>Prise en charge de Paramètres début / fin</td><td>Oui</td><td>Oui</td><td>Non</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.</li>
+<li>Par défaut, les <em>instructions</em> incluses sont exécutées pour chaque valeur de <em>Expression</em>. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (<code>While</code>) ou à la fin de chaque itération (<code>Until</code>).</li>
+<li>Les paramètres optionnels <em>début</em> et <em>fin</em> peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.</li>
+<li>La boucle <code>For each...End for each</code> peut être utilisée sur une <strong>collection partagée</strong> ou un <strong>objet partagé</strong>. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés <code>Use...End use</code>. Vous pouvez, si vous le souhaitez, appeler les mots-clés <code>Use...End use</code> :
+<ul>
+<li>avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien</li>
+<li>dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="boucles-sur-collections"></a><a href="#boucles-sur-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boucles sur collections</h3>
+<p>Lorsque <code>For each...End for each</code> est utilisée avec une <em>Expression</em> de type <em>Collection</em>, le paramètre <em>Elément_courant</em> est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.</p>
+<p>La collection doit contenir uniquement des éléments du même type. Dans le cas contraire, une erreur sera retournée dès que la première valeur de type différent sera assignée à la variable <em>Elément_courant</em>.</p>
+<p>A chaque itération de la boucle, la variable <em>Elément_courant</em> reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :</p>
+<ul>
+<li>Si la variable <em>Elément_courant</em> est de type objet ou collection (i.e. si <em>Expression</em> est une collection d'objets ou une collection de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections sont passés par référence). Si la variable est de type scalaire, sa modification ne sera pas répercutée sur l'élément de la collection.</li>
+<li>La variable <em>Elément_courant</em> doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.</li>
+<li>Si la collection contient des éléments de valeur <strong>Null</strong>, une erreur sera générée si le type de la variable <em>Elément_courant</em> ne prend pas en charge la valeur <strong>Null</strong> (comme par exemple les variables entier long).</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>Vous souhaitez calculer quelques statistiques sur une collection de nombres :</p>
+<pre><code class="hljs css language-code4d"> C_COLLECTION(<span class="hljs-variable">$nums</span>)
+ <span class="hljs-variable">$nums:</span>=New collection(<span class="hljs-number">10</span>;<span class="hljs-number">5001</span>;<span class="hljs-number">6665</span>;<span class="hljs-number">33</span>;<span class="hljs-number">1</span>;<span class="hljs-number">42</span>;<span class="hljs-number">7850</span>)
+ C_LONGINT(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$vEven</span>;<span class="hljs-variable">$vOdd</span>;<span class="hljs-variable">$vUnder</span>;<span class="hljs-variable">$vOver</span>)
+ <span class="hljs-keyword">For</span> each(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$nums</span>)
+    <span class="hljs-keyword">If</span>(<span class="hljs-variable">$item</span>%<span class="hljs-number">2</span>=<span class="hljs-number">0</span>)
+       <span class="hljs-variable">$vEven:</span>=<span class="hljs-variable">$vEven</span>+<span class="hljs-number">1</span>
+    <span class="hljs-keyword">Else</span>
+       <span class="hljs-variable">$vOdd:</span>=<span class="hljs-variable">$vOdd</span>+<span class="hljs-number">1</span>
+    <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+    Case of
+       :(<span class="hljs-variable">$item</span>&lt;<span class="hljs-number">5000</span>)
+          <span class="hljs-variable">$vUnder:</span>=<span class="hljs-variable">$vUnder</span>+<span class="hljs-number">1</span>
+       :(<span class="hljs-variable">$item</span>&gt;<span class="hljs-number">6000</span>)
+          <span class="hljs-variable">$vOver:</span>=<span class="hljs-variable">$vOver</span>+<span class="hljs-number">1</span>
+    <span class="hljs-keyword">End</span> case
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span> each
+  //<span class="hljs-variable">$vEven</span>=<span class="hljs-number">3</span>, <span class="hljs-variable">$vOdd</span>=<span class="hljs-number">4</span>
+  //<span class="hljs-variable">$vUnder</span>=<span class="hljs-number">4</span>,<span class="hljs-variable">$vOver</span>=<span class="hljs-number">2</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="boucle-sur-des-entity-selections"></a><a href="#boucle-sur-des-entity-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boucle sur des entity selections</h3>
+<p>Lorsque <code>For each...End for each</code> est utilisée avec une <em>Expression</em> de type <em>Entity selection</em>, le paramètre <em>Elément_courant</em> contient l'entity en cours de traitement.</p>
+<p>Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre <em>Elément_courant</em> reçoit automatiquement l'entity qui est en cours de traitement.</p>
+<p><strong>Note :</strong> Si l'entity selection contient une entity qui a été supprimée entre-temps par un autre process, elle est automatiquement ignorée durant la boucle.</p>
+<p>N'oubliez pas que toute modification effectuée sur l'entity en cours de traitement doit être explicitement sauvegardée (si nécessaire) à l'aide de la méthode <code>entity.save( )</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-3"></a><a href="#exemple-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :</p>
+<pre><code class="hljs css language-code4d"> C_OBJECT(emp)
+ <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span>(emp;ds.Employees.query("country='UK'"))
+    emp.salary:=emp.salary*<span class="hljs-number">1</span>,<span class="hljs-number">03</span>
+    emp.save()
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="boucles-sur-des-proprietes-dobjets"></a><a href="#boucles-sur-des-proprietes-dobjets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boucles sur des propriétés d'objets</h3>
+<p>Lorsque <code>For each...End for each</code> est utilisée avec une <em>Expression</em> de type Objet, le paramètre <em>Elément_courant</em> est une variable texte qui reçoit automatiquement le nom de la propriété en cours de traitement.</p>
+<p>Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :</p>
+<pre><code class="hljs css language-code4d">{
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"gregory"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"badikora"</span>,
+    <span class="hljs-attr">"age"</span>: <span class="hljs-number">20</span>
+}
+</code></pre>
+<p>Vous pouvez écrire :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span>(<span class="hljs-keyword">property</span>;vObject)
+    <span class="hljs-keyword">If</span>(Value <span class="hljs-keyword">type</span>(vObject[<span class="hljs-keyword">property</span>])=<span class="hljs-keyword">Is</span> text)
+       vObject[<span class="hljs-keyword">property</span>]:=Uppercase(vObject[<span class="hljs-keyword">property</span>])
+    <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+</code></pre>
+<pre><code class="hljs">{
+    &quot;firstname&quot;: &quot;GREGORY&quot;,
+    &quot;lastname&quot;: &quot;BADIKORA&quot;,
+    &quot;age&quot;: 20
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="parametres-debut-fin"></a><a href="#parametres-debut-fin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètres début / fin</h3>
+<p>Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.</p>
+<p><strong>Note :</strong> Les paramètres <em>début</em> et <em>fin</em> sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).</p>
+<ul>
+<li>Dans le paramètre <em>début</em>, passez la position de l'élément de <em>Expression</em> auquel démarrer l'itération (<em>début</em> est inclus).</li>
+<li>Dans le paramètre <em>fin</em>, vous pouvez passer la position de l'élément de <em>Expression</em> auquel stopper l'itération (<em>fin</em> est exclus).</li>
+</ul>
+<p>Si <em>fin</em> est omis ou si <em>fin</em> est plus grand que le nombre d'éléments de <em>Expression</em>, les éléments sont itérés depuis <em>début</em> jusqu'au dernier inclus. Si les paramètres <em>début</em> et <em>fin</em> sont des valeurs positives, ils représentent des positions d'éléments dans <em>Expression</em>. Si <em>begin</em> est une valeur négative, elle est recalculée comme <code>begin:=begin+Taille expression</code> (elle est considérée comme un décalage à partir de la fin de <em>Expression</em>). Si la valeur calculée est négative, <em>begin</em> prend la valeur 0. <strong>Note :</strong> Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si <em>fin</em> est une valeur négative, elle est recalculée comme <code>fin:=fin+Taille expression</code></p>
+<p>Par exemple:</p>
+<ul>
+<li>une collection contient 10 éléments (numérotés de 0 à 9)</li>
+<li>début=-4 -&gt; début=-4+10=6 -&gt; l'itération démarre au 6e élément (numéro 5)</li>
+<li>fin=-2 -&gt; fin=-2+10=8 -&gt; l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-5"></a><a href="#exemple-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-code4d"> C_COLLECTION($col;$col2)
+ $col:=New collection(<span class="hljs-string">"a"</span>;<span class="hljs-string">"b"</span>;<span class="hljs-string">"c"</span>;<span class="hljs-string">"d"</span>;<span class="hljs-string">"e"</span>)
+ $col2:=New collection(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>)
+ C_TEXT($item)
+ For <span class="hljs-keyword">each</span>($item;$col;<span class="hljs-number">0</span>;<span class="hljs-number">3</span>)
+    $col2.push($item)
+ End <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+  //$col2=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>,<span class="hljs-string">"c"</span>]
+ For <span class="hljs-keyword">each</span>($item;$col;-<span class="hljs-number">2</span>;-<span class="hljs-number">1</span>)
+    $col2.push($item)
+ End <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+  //$col2=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>,<span class="hljs-string">"c"</span>,<span class="hljs-string">"d"</span>]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="conditions-until-et-while"></a><a href="#conditions-until-et-while" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditions Until et While</h3>
+<p>Vous pouvez contrôler l'exécution de <code>For each...End for each</code> en ajoutant une condition <code>Jusque</code> ou <code>Tant que</code> à la boucle. Lorsqu'une instruction <code>Until(condition)</code> ou <code>While(condition)</code> est associée à la boucle, l'itération stoppe dès que la condition est évaluée à True.</p>
+<p>Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :</p>
+<ul>
+<li>La condition <code>Until</code> est testée à la fin de chaque itération, donc si <em>Expression</em> n'est ni vide ni Null, la boucle sera exécutée au moins une fois.</li>
+<li>La condition <code>While</code> est testée au début de chaque itération, donc en fonction du résultat de la condition, la boucle peut ne pas être exécutée du tout.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-6"></a><a href="#exemple-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$colNum</span>:=New collection(1;2;3;4;5;6;7;8;9;10)
+
+ <span class="hljs-variable">$total</span>:=0
+ <span class="hljs-keyword">For</span> each(<span class="hljs-variable">$num</span>;<span class="hljs-variable">$colNum</span>)<span class="hljs-keyword">While</span>(<span class="hljs-variable">$total</span>&lt;30) <span class="hljs-comment">//testé au début</span>
+    <span class="hljs-variable">$total</span>:=<span class="hljs-variable">$total</span>+<span class="hljs-variable">$num</span>
+ End <span class="hljs-keyword">for</span> each
+ ALERT(<span class="hljs-built_in">String</span>(<span class="hljs-variable">$total</span>)) <span class="hljs-comment">//$total = 36 (1+2+3+4+5+6+7+8)</span>
+
+ <span class="hljs-variable">$total</span>:=1000
+ <span class="hljs-keyword">For</span> each(<span class="hljs-variable">$num</span>;<span class="hljs-variable">$colNum</span>)Until(<span class="hljs-variable">$total</span>&gt;30) <span class="hljs-comment">//testé à la fin</span>
+    <span class="hljs-variable">$total</span>:=<span class="hljs-variable">$total</span>+<span class="hljs-variable">$num</span>
+ End <span class="hljs-keyword">for</span> each
+ ALERT(<span class="hljs-built_in">String</span>(<span class="hljs-variable">$total</span>)) <span class="hljs-comment">//$total = 1001 (1000+1)</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/branching.html"><span class="arrow-prev">← </span><span>Structures conditionnelles</span></a><a class="docs-next button" href="/docs/fr/Concepts/error-handling.html"><span>Gestion des erreurs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#whileend-while">While...End while</a><ul class="toc-headings"><li><a href="#exemple">Exemple</a></li></ul></li><li><a href="#repeatuntil">Repeat...Until</a><ul class="toc-headings"><li><a href="#exemple-1">Exemple</a></li></ul></li><li><a href="#forend-for">For...End for</a><ul class="toc-headings"><li><a href="#exemples-elementaires">Exemples élémentaires</a></li><li><a href="#decrementer-la-variable-compteur">Décrémenter la variable Compteur</a></li><li><a href="#incrementer-la-variable-compteur-de-plus-de-1">Incrementer la variable compteur de plus de 1</a></li><li><a href="#comparaison-des-structures-repetitives">Comparaison des structures répétitives</a></li><li><a href="#optimiser-lexecution-de-forend-for">Optimiser l'exécution de For...End for</a></li><li><a href="#structures-forend-emboitees">Structures For...End emboîtées</a></li></ul></li><li><a href="#for-eachend-for-each">For each...End for each</a><ul class="toc-headings"><li><a href="#boucles-sur-collections">Boucles sur collections</a></li><li><a href="#boucle-sur-des-entity-selections">Boucle sur des entity selections</a></li><li><a href="#boucles-sur-des-proprietes-dobjets">Boucles sur des propriétés d'objets</a></li><li><a href="#parametres-debut-fin">Paramètres début / fin</a></li><li><a href="#conditions-until-et-while">Conditions Until et While</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

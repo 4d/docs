@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Objets et collections partagés · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Aperçu"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Objets et collections partagés · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Aperçu"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/shared.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Objets et collections partagés</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="apercu"></a><a href="#apercu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aperçu</h2>
+<p><strong>Les objets partagés</strong> et <strong>les collections partagées</strong> sont des <a href="/docs/fr/Concepts/object.html">objets</a> et des <a href="/docs/fr/Concepts/collection.html">collections</a> spécifiques dont le contenu est partagé entre les process. Comparés aux <a href="/docs/fr/Concepts/variables.html#interprocess-variables">Variables interprocess</a>, les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les <strong>Process 4D préemptifs</strong> : il peuvent être passés en paramètres (par référence) aux commandes telles que <code>New process</code> ou <code>CALL WORKER</code>.</p>
+<p>Les objets partagés et les collections partagées peuvent être stockés dans des variables déclarées à l'aide des commandes standard <code>C_OBJECT</code> et <code>C_COLLECTION</code>, mais doivent être instanciées à l'aide de commandes spécifiques :</p>
+<ul>
+<li>pour créer un objet partagé, utilisez la commande <code>New shared object</code>,</li>
+<li>pour créer une collection partagée, utilisez la commande <code>New shared collection</code>.</li>
+</ul>
+<p><strong>Note :</strong> Des objets partagés et des collections partagées peuvent être définis comme propriétés d'objets/éléments de collections standard (non partagés).</p>
+<p>Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure <strong>Utiliser...Fin utiliser</strong>. La lecture d'une valeur d'objet/collection ne nécessite pas de structure <strong>Utiliser...Fin utiliser</strong>.</p>
+<p>Un catalogue unique et global, retourné par la commande <code>Storage</code>, est disponible à tout moment et depuis tout process de la base et de ses composants.</p>
+<h2><a class="anchor" aria-hidden="true" id="utilisation-des-objets-et-collections-partages"></a><a href="#utilisation-des-objets-et-collections-partages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilisation des objets et collections partagés</h2>
+<p>Une fois instanciés à l'aide des commandes <code>Creer objet partage</code> ou <code>Creer collection partagee</code>, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.</p>
+<h3><a class="anchor" aria-hidden="true" id="modification"></a><a href="#modification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modification</h3>
+<p>Les modifications suivantes peuvent être effectuées sur les objets partagés et les collections partagées :</p>
+<ul>
+<li>ajout ou suppression de propriétés d'objets,</li>
+<li>ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).</li>
+</ul>
+<p>Toute instruction de modification d'objet ou de collection partagé(e) doit être encadrée par les mots-clés <code>Use...End use</code>, sinon une erreur est générée.</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">$s</span>_obj:=<span class="hljs-keyword">New</span> shared object(<span class="hljs-string">"prop1"</span><span class="hljs-comment">;"alpha")</span>
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$s</span>_obj)
+    <span class="hljs-built_in">$s</span>_obj.prop1:=<span class="hljs-string">"omega"</span>
+End <span class="hljs-keyword">Use</span>
+</code></pre>
+<p>Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. <code>Use</code> verrouille les propriétés de l'objet/la collection pour les autres threads (process), alors que le <code>End use</code> utiliser final déverrouille tous les objets et collections. Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à <code>Use...End use</code> génère une erreur. Lorsqu'un process appelle <code>Use...End use</code> avec un objet/une collection partagé(e) qui est déjà &quot;utilisé(e)&quot; par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à <code>End use</code> (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures <code>Use...End use</code> doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.</p>
+<p>L'assignation d'objets/collections partagé(e) s à des propriétés ou éléments d'autres objets/collections partagé(e) s est autorisée et entraîne la création de <strong>groupes partagés</strong>. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :</p>
+<ul>
+<li>L'appel de <code>Use</code> avec un objet/une collection partagé(e) appartenant à un groupe provoquera le verrouillage des propriétés/éléments de tous les objets/collections du groupe.</li>
+<li>Un objet ou une collection partagé(e) peut appartenir à un seul groupe partagé. Une erreur est générée si vous tentez d'assigner un objet ou une collection appartenant déjà à un groupe à un groupe différent.</li>
+<li>Les objets/collections groupé(e) s ne peuvent plus être dégroupé(e) s. Une fois inclus dans un groupe partagé, un objet ou une collection partagé(e) est lié(e) définitivement au groupe pendant toute la durée de la session. Même si toutes les références de l'objet/la collection sont supprimé(e) s des objets/collections parent(e) s, ils resteront liés.</li>
+</ul>
+<p>Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.</p>
+<p><strong>Note :</strong> Les groupes partagés sont gérés via une propriété interne nommée <em>locking identifier</em>. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.</p>
+<h3><a class="anchor" aria-hidden="true" id="lecture"></a><a href="#lecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lecture</h3>
+<p>La lecture de propriétés ou d'éléments d'un objet ou d'une collection partagé(e) est possible sans appel de la structure <code>Use...End use</code>, même si l'objet ou la collection partagé(e) est &quot;utilisé(e)&quot; par un autre process.</p>
+<p>Cependant, lorsque plusieurs valeurs sont interdépendantes et doivent être lues simultanément, il est nécessaire d'encadrer l'accès en lecture par une structure <code>Use...End use</code> pour des raisons de cohérence.</p>
+<h3><a class="anchor" aria-hidden="true" id="duplication"></a><a href="#duplication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Duplication</h3>
+<p>Appeler <code>OB Copier</code> avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.</p>
+<h3><a class="anchor" aria-hidden="true" id="storage"></a><a href="#storage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Storage</h3>
+<p><strong>Storage</strong> est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est retourné par la commande <code>Storage</code>. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.</p>
+<p>A noter que, à la différence de objets partagés standard, l'objet <code>Storage</code> ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e) s en tant que propriétés. Cette exception permet à l'objet <strong>Storage</strong> d'être utilisé sans verrouiller les objets/collections partagé(e) s connecté(e) s.</p>
+<p>Pour plus d'informations, reportez-vous à la description de la commande <code>Storage</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="utiliserfin-utiliser"></a><a href="#utiliserfin-utiliser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser...Fin utiliser</h2>
+<p>La syntaxe de la structure <code>Use...End use</code> est la suivante :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">Use</span>(Shared_object_or_Shared_collection)
+    <span class="hljs-built_in">instruction</span>(s)
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">use</span>
+</code></pre>
+<p>La structure <code>Use...End use</code> définit une séquence d'instructions qui exécutera des tâches sur le paramètre <em>Objet_partagé_ou_Collection_partagée</em> sous la protection d'un sémaphore interne. <em>Objet_partagé_ou_Collection_partagée</em> peut être tout objet partagé ou collection partagée valide.</p>
+<p>Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les <strong>Process 4D préemptifs</strong>. Ils peuvent être passés par référence en paramètre d'un process à un autre. Pour plus de détails sur les objets partagés et les collections partagées, reportez-vous à la page <strong>Objets et collections partagés</strong>. Encadrer les modifications sur les objets partagés et les collections partagées à l'aide des mots-clés <code>Use...End use</code> est obligatoire pour empêcher les accès concurrents entre les process.</p>
+<ul>
+<li>Une fois que la ligne <strong>Use/Utiliser</strong> est exécutée avec succès, toutes les propriétés/éléments de <em>Objet_partagé_ou_Collection_partagée</em> sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne <code>End use/Fin</code> utiliser correspondante soit éxécutée.</li>
+<li>La séquence <em>d'instructions</em> peut alors effectuer toute modification dans les propriétés/éléments de Objet_partagé_ou_Collection_partagée sans risque d'accès concurrent.</li>
+<li>Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre <em>Objet_partagé_ou_Collection_partagée</em>, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).</li>
+<li>Si un autre process tente d'accéder à une propriété de <em>Objet_partagé_ou_Collection_partagée</em> ou une propriété connectée alors qu'une séquence <strong>Utiliser...Fin</strong> utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.</li>
+<li>La ligne <strong>End use/Fin</strong> utiliser déverrouille les propriétés de <em>Objet_partagé_ou_Collection_partagée</em> et tous les objets qui partagent le même locking identifier.</li>
+<li>Plusieurs structures <strong>Utiliser...Fin</strong> utiliser peuvent être imbriquées dans le code 4D. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté.</li>
+</ul>
+<p><strong>Note :</strong> Si une fonction membre d'une collection modifie une collection partagée, un <strong>Utiliser</strong> interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.</p>
+<h2><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h2>
+<p>Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventaire parmi différents produits et mettre à jour le même objet partagé. Le process principal instancie un objet partagé vide et ensuite lance les autres process, passant en paramètre l'objet partagé et les produits à comptabiliser :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">ARRAY</span> TEXT($_items;<span class="hljs-number">0</span>)
+ <span class="hljs-params">...</span> <span class="hljs-comment">//remplit le tableau avec les éléments à compter</span>
+ $nbItems:=Size of <span class="hljs-built_in">array</span>($_items)
+ C_OBJECT($inventory)
+ $inventory:=<span class="hljs-literal">New</span> shared object
+ Use($inventory)
+    $inventory.nbItems:=$nbItems
+ End use
+ 
+  <span class="hljs-comment">//Créer process</span>
+  For($i;<span class="hljs-number">1</span>;$nbItems)
+    $ps:=<span class="hljs-literal">New</span> process(<span class="hljs-string">"HowMany"</span>;<span class="hljs-number">0</span>;<span class="hljs-string">"HowMany_"</span>+$_items{$i};$_items{$i};$inventory)
+  <span class="hljs-comment">//$inventory object sent by reference</span>
+ End for
+</code></pre>
+<p>Dans la méthode &quot;HowMany&quot;, l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :</p>
+<pre><code class="hljs css language-code4d"> C_TEXT(<span class="hljs-variable">$1</span>)
+ C_TEXT(<span class="hljs-variable">$what</span>)
+ C_OBJECT(<span class="hljs-variable">$2</span>)
+ C_OBJECT(<span class="hljs-variable">$inventory</span>)
+ <span class="hljs-variable">$what</span>:=<span class="hljs-variable">$1</span> <span class="hljs-comment">//pour une meilleure lisibilité</span>
+ <span class="hljs-variable">$inventory</span>:=<span class="hljs-variable">$2</span>
+ 
+ <span class="hljs-variable">$count</span>:=CountMethod(<span class="hljs-variable">$what</span>) <span class="hljs-comment">//méthode de comptage des produits</span>
+ <span class="hljs-keyword">Use</span>(<span class="hljs-variable">$inventory</span>) <span class="hljs-comment">//Utiliser l'objet partagé</span>
+    <span class="hljs-variable">$inventory</span>[<span class="hljs-variable">$what</span>]:=<span class="hljs-variable">$count</span>  <span class="hljs-comment">//stockage des résultats pour cet article</span>
+End <span class="hljs-keyword">use</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h2>
+<p>Les exemples suivants illustrent les règles spécifiques à observer lorsque vous utilisez des groupes partagés :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">$ob</span>1:=<span class="hljs-keyword">New</span> shared object
+ <span class="hljs-built_in">$ob</span>2:=<span class="hljs-keyword">New</span> shared object
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$ob</span>1)
+    <span class="hljs-built_in">$ob</span>1.a:=<span class="hljs-built_in">$ob</span>2  <span class="hljs-comment">//un premier groupe est créé</span>
+  End <span class="hljs-keyword">use</span>
+
+ <span class="hljs-built_in">$ob</span>3:=<span class="hljs-keyword">New</span> shared object
+ <span class="hljs-built_in">$ob</span>4:=<span class="hljs-keyword">New</span> shared object
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$ob</span>3)
+    <span class="hljs-built_in">$ob</span>3.a:=<span class="hljs-built_in">$ob</span>4  <span class="hljs-comment">//un 2e groupe est créé</span>
+ End <span class="hljs-keyword">use</span>
+
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$ob</span>1) <span class="hljs-comment">//Utilisation d'un objet du groupe 1</span>
+    <span class="hljs-built_in">$ob</span>1.b:=<span class="hljs-built_in">$ob</span>4  <span class="hljs-comment">//ERREUR</span>
+  <span class="hljs-comment">//$ob4 appartient déjà à un autre groupe</span>
+  <span class="hljs-comment">//son assignation n'est pas permise</span>
+End <span class="hljs-keyword">use</span>
+
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$ob</span>3)
+    <span class="hljs-built_in">$ob</span>3.a:=Null <span class="hljs-comment">//on enlève la référence de $ob4 du groupe 2</span>
+ End <span class="hljs-keyword">use</span>
+
+ <span class="hljs-keyword">Use</span>(<span class="hljs-built_in">$ob</span>1) <span class="hljs-comment">//Utilisation d'un objet du groupe 1</span>
+    <span class="hljs-built_in">$ob</span>1.b:=<span class="hljs-built_in">$ob</span>4  <span class="hljs-comment">//ERREUR</span>
+  <span class="hljs-comment">//$ob4 appartient toujours au groupe 2</span>
+  <span class="hljs-comment">//son assignation n'est pas permise</span>
+ End <span class="hljs-keyword">use</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/parameters.html"><span class="arrow-prev">← </span><span>Paramètres</span></a><a class="docs-next button" href="/docs/fr/Concepts/control-flow.html"><span>Conditions et boucles</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#apercu">Aperçu</a></li><li><a href="#utilisation-des-objets-et-collections-partages">Utilisation des objets et collections partagés</a><ul class="toc-headings"><li><a href="#modification">Modification</a></li><li><a href="#lecture">Lecture</a></li><li><a href="#duplication">Duplication</a></li><li><a href="#storage">Storage</a></li></ul></li><li><a href="#utiliserfin-utiliser">Utiliser...Fin utiliser</a></li><li><a href="#exemple-1">Exemple 1</a></li><li><a href="#exemple-2">Exemple 2</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

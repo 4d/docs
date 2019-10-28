@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Style sheets · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Aperçu"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Style sheets · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Aperçu"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/FormEditor/stylesheets.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Forms</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Style sheets</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="apercu"></a><a href="#apercu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aperçu</h2>
+<p>A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.</p>
+<p>In addition to harmonizing an application's interface, style sheets provide three major advantages:</p>
+<ul>
+<li>Saves time during development: Each object has specific group of settings within a single operation.</li>
+<li>Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.</li>
+<li>Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="style-sheet-files"></a><a href="#style-sheet-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Sheet Files</h3>
+<p>4D accepts three, specific style sheet files:</p>
+<table>
+<thead>
+<tr><th>Style Sheet</th><th>Platform</th></tr>
+</thead>
+<tbody>
+<tr><td>styleSheets.css</td><td>Default global style sheet for both macOS and Windows</td></tr>
+<tr><td>styleSheets_mac.css</td><td>For defining macOS only specific attribute styles</td></tr>
+<tr><td>styleSheets_windows.css</td><td>For defining Windows only specific attribute styles</td></tr>
+</tbody>
+</table>
+<p>These files are stored in the project's &quot;/SOURCES&quot; folder.</p>
+<h3><a class="anchor" aria-hidden="true" id="style-sheet-architecture"></a><a href="#style-sheet-architecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Sheet Architecture</h3>
+<p>While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow <a href="https://www.w3schools.com/css/">CSS</a> syntax and grammar.</p>
+<p>Every style rule in a style sheet contains two parts:</p>
+<ul>
+<li><p>a <em>Selector</em> - A selector defines where to apply the style. 4D supports &quot;object type&quot;, &quot;object name&quot;, &quot;class&quot;, &quot;all objects&quot;, as well as &quot;attribute value&quot; selectors.</p></li>
+<li><p>a <em>Declaration</em> - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="style-sheet-selectors"></a><a href="#style-sheet-selectors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Sheet Selectors</h2>
+<h3><a class="anchor" aria-hidden="true" id="object-type"></a><a href="#object-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object Type</h3>
+<p>Corresponding to the CSS element selector, the object type defines the type of object to style.</p>
+<p>Specify the object, then in curly braces, declare the style(s) to apply.</p>
+<p>In the following example, all objects of the <em>button</em> type will display text in the Helvetica Neue font, with a size of 20 pixels:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<p>To apply the same style to multiple types of objects, specify the objects separated by a &quot;,&quot; then in curly braces, declare the style(s) to apply:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span>, <span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">stroke</span>: grey;
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="object-name"></a><a href="#object-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object Name</h3>
+<p>Corresponding to the CSS ID selector, the object name defines a specific object to style since the object's name is unique within the form.</p>
+<p>Designate the object with a &quot;#&quot; character before the object's name, then in curly braces, declare the style(s) to apply.</p>
+<p>In the following example, the text of the object with the name &quot;okButton&quot; will be displayed in Helvetica Neue font, with a size of 20 pixels:</p>
+<pre><code class="hljs"><span class="hljs-selector-id">#okButton</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="class"></a><a href="#class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class</h3>
+<p>Corresponding to the CSS class selector, the class defines the style for all form objects with the <code>class</code> attribute.</p>
+<p>You can specify the classes to use with a &quot;.&quot; character followed by the name of the class, and in curly braces, declare the style(s) to apply.</p>
+<p>In the following example, the text of all objects with the <code>okButtons</code> class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:</p>
+<pre><code class="hljs"><span class="hljs-selector-class">.okButtons</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+}
+</code></pre>
+<p>To designate that a style should be applied only to objects of a distinct type, specify the type followed by &quot;.&quot; and the name of the class, then in curly braces, declare the style(s) to apply.</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-class">.center</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">stroke</span>: red;
+}
+</code></pre>
+<p>In the 4D form description, you associate a class name to an object using the <code>class</code> attribute. This attribute contains one or several class names, separated by a space character:</p>
+<pre><code class="hljs"><span class="hljs-keyword">class</span>: "<span class="hljs-symbol">okButtons</span> <span class="hljs-symbol">important</span>"             
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="all-objects"></a><a href="#all-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All Objects</h3>
+<p>Corresponding to the CSS universal selector, the &quot;*&quot; character indicates that the following style will be applied to all objects on the form.</p>
+<p>Designate that a style should apply to all form objects with the &quot;*&quot; character, then in curly braces, declare the style(s) to apply.</p>
+<p>In the following example, all objects will have a gray fill:</p>
+<pre><code class="hljs">* {
+  <span class="hljs-attribute">fill</span>: gray;
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="specific-attribute"></a><a href="#specific-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specific Attribute</h3>
+<p>Corresponding to the CSS attribute selector, styles can be applied to all form objects with a specific attribute.</p>
+<p>Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.</p>
+<p>In the following example, all objects with the <code>borderStyle</code> attribute will have purple lines:</p>
+<pre><code class="hljs"><span class="hljs-selector-attr">[borderStyle]</span>
+{
+     <span class="hljs-attribute">stroke</span>: purple;
+}
+</code></pre>
+<p>To designate that a style should be applied to all objects that have a specific attribute and word, use the <code>[attribute~=&quot;value&quot;]</code> syntax:</p>
+<pre><code class="hljs"><span class="hljs-selector-attr">[text~=Hello]</span>
+{
+     <span class="hljs-attribute">stroke</span>: blue;
+}
+
+</code></pre>
+<p>To designate that a style should be applied to distinct object types with a specific attribute and value, use the <code>object type[attribute=&quot;value&quot;]</code> syntax:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text=Hello]</span>
+{
+     <span class="hljs-attribute">stroke</span>: blue;
+}
+</code></pre>
+<p>To designate that a style should be applied to certain object types with a specific attribute whose value begins with a specific value, use the <code>object type[attribute|=&quot;value&quot;]</code> syntax:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text|=Hello]</span>
+{
+     <span class="hljs-attribute">stroke</span>: yellow;
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="style-sheet-declarations"></a><a href="#style-sheet-declarations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Sheet Declarations</h2>
+<p>The majority of form object attributes can be defined within a style sheet, except the following attributes:
+- &quot;method&quot;
+- &quot;type&quot;
+- &quot;class&quot;
+- &quot;event&quot;
+- choiceList, excludedList, labels, list, requiredList (list type)</p>
+<p>Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the <strong>Dynamic Forms</strong> page in the Design Reference.</p>
+<h3><a class="anchor" aria-hidden="true" id="attribute-mapping"></a><a href="#attribute-mapping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attribute Mapping</h3>
+<p>The attributes listed below are able to accept either the 4D name or the CSS name.</p>
+<table>
+<thead>
+<tr><th>4D</th><th>CSS</th></tr>
+</thead>
+<tbody>
+<tr><td>borderStyle</td><td>border-style</td></tr>
+<tr><td>fill</td><td>background-color</td></tr>
+<tr><td>fontFamily</td><td>font-family</td></tr>
+<tr><td>fontSize</td><td>font-size</td></tr>
+<tr><td>fontStyle</td><td>font-style</td></tr>
+<tr><td>fontWeight</td><td>font-weight</td></tr>
+<tr><td>stroke</td><td>color</td></tr>
+<tr><td>textAlign</td><td>text-align</td></tr>
+<tr><td>textDecoration</td><td>text-decoration</td></tr>
+<tr><td>verticalAlign</td><td>vertical-align</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>4D-specific values (<em>e.g.</em>, &quot;sunken&quot;) are not supported when using CSS attribute names.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="specific-attribute-values"></a><a href="#specific-attribute-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specific Attribute Values</h3>
+<ul>
+<li>For <code>icon</code>, <code>picture</code>, and <code>customBackgroundPicture</code> attributes that support a path to an image, the syntax is:</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-attribute">icon</span>: url(<span class="hljs-string">"/RESOURCES/Images/Buttons/edit.png"</span>); <span class="hljs-comment">/* absolute path */</span>
+<span class="hljs-attribute">icon</span>: url(<span class="hljs-string">"edit.png"</span>); <span class="hljs-comment">/* relative path to the form file */</span>
+</code></pre>
+<ul>
+<li><p>For <code>fill</code>, <code>stroke</code> , <code>alternateFill</code> , <code>horizontalLineStroke</code> and <code>verticalLineStroke</code>, three syntaxes are supported:</p>
+<ul>
+<li>css color name: <code>fill: red;</code></li>
+<li>hexa value: <code>fill: #FF0000;</code></li>
+<li>the <code>rgb()</code> function: <code>fill:rgb(255,0,0)</code></li>
+</ul></li>
+<li><p>If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Par exemple:</p>
+<ul>
+<li>a xliff reference: <code>tooltip: &quot;:xliff:CommonMenuFile&quot;;</code></li>
+<li>a datasource with a field expression: <code>dataSource: &quot;[Table_1:1]ID:1&quot;;</code></li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="priority-order"></a><a href="#priority-order" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Priority Order</h2>
+<p>4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.</p>
+<h3><a class="anchor" aria-hidden="true" id="json-vs-style-sheet"></a><a href="#json-vs-style-sheet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON vs Style Sheet</h3>
+<p>If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.</p>
+<p>To override this behavior, the style value must be followed with an <code>!important</code> declaration.</p>
+<p><strong>Example 1:</strong></p>
+<table>
+<thead>
+<tr><th>JSON form description</th><th>Style Sheet</th><th>4D displays</th></tr>
+</thead>
+<tbody>
+<tr><td><code>&quot;text&quot;: &quot;Button&quot;,</code></td><td><code>text: Edit;</code></td><td><code>&quot;Button&quot;</code></td></tr>
+</tbody>
+</table>
+<p><strong>Example 2:</strong></p>
+<table>
+<thead>
+<tr><th>JSON form description</th><th>Style Sheet</th><th>4D displays</th></tr>
+</thead>
+<tbody>
+<tr><td><code>&quot;text&quot;: &quot;Button&quot;,</code></td><td><code>text: Edit !important;</code></td><td><code>&quot;Edit&quot;</code></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="multiple-style-sheets"></a><a href="#multiple-style-sheets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple Style Sheets</h3>
+<p>At runtime, 4D automatically prioritizes style sheets in the following order:</p>
+<ol>
+<li><p>The 4D form will first load the default CSS file <code>/SOURCES/styleSheets.css</code>.</p></li>
+<li><p>It will then load the CSS file for the current platform <code>/SOURCES/styleSheets\_mac.css</code> or <code>/SOURCES/styleSheets_windows.css</code>.</p></li>
+<li><p>If it exists, it will then load a specific CSS file defined in the JSON form:</p>
+<ul>
+<li>a file for both platforms:</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-string">"css"</span>: <span class="hljs-string">"&lt;path&gt;"</span> 
+</code></pre>
+<ul>
+<li>or a list of files for both platforms:</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-string">"css"</span>: [
+     <span class="hljs-string">"&lt;path1&gt;"</span>,
+     <span class="hljs-string">"&lt;path2&gt;"</span> 
+      ],
+</code></pre>
+<ul>
+<li>or a list of files per platform:</li>
+</ul>
+<pre><code class="hljs"> <span class="hljs-string">"css"</span>: [
+        {<span class="hljs-string">"path"</span>: <span class="hljs-string">"&lt;path&gt;"</span>, <span class="hljs-string">"media"</span>: <span class="hljs-string">"mac"</span>},
+        {<span class="hljs-string">"path"</span>: <span class="hljs-string">"&lt;path&gt;"</span>, <span class="hljs-string">"media"</span>: <span class="hljs-string">"windows"</span>},
+    ],
+</code></pre></li>
+</ol>
+<blockquote>
+<p>Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (<em>e.g.</em>, &quot;/RESOURCES&quot;, &quot;/DATA&quot;)</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="creating-or-editing-style-sheets"></a><a href="#creating-or-editing-style-sheets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating or Editing Style Sheets</h2>
+<p>You can create style sheets using your preferred text editor and saving the file with a &quot;.css&quot; extension in the project's &quot;/SOURCES&quot; folder.</p>
+<p>The 4D Tool Box provides a <strong>Style Sheets</strong> page as a shortcut option to create and edit one of three platform-specific named style sheets.</p>
+<ol>
+<li><p>Open the <strong>Style Sheets</strong> page by choosing the <strong>Tool Box &gt; Style Sheet</strong> from the Design menu or click on the <strong>Tool Box</strong> icon in the Form Editor toolbar.</p>
+<p><img src="/docs/assets/en/FormEditor/stylesheets.png" alt=""></p></li>
+<li><p>Select the type of style sheet to create and click on the <strong>Create</strong> or <strong>Edit</strong> button: <img src="/docs/assets/en/FormEditor/createButton.png" alt=""></p></li>
+<li><p>The style sheet will open in your default text editor.</p></li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/FormEditor/objectLibrary.html"><span class="arrow-prev">← </span><span>Bibliothèques d&#x27;objets</span></a><a class="docs-next button" href="/docs/fr/Menus/overview.html"><span>Aperçu</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#apercu">Aperçu</a><ul class="toc-headings"><li><a href="#style-sheet-files">Style Sheet Files</a></li><li><a href="#style-sheet-architecture">Style Sheet Architecture</a></li></ul></li><li><a href="#style-sheet-selectors">Style Sheet Selectors</a><ul class="toc-headings"><li><a href="#object-type">Object Type</a></li><li><a href="#object-name">Object Name</a></li><li><a href="#class">Class</a></li><li><a href="#all-objects">All Objects</a></li><li><a href="#specific-attribute">Specific Attribute</a></li></ul></li><li><a href="#style-sheet-declarations">Style Sheet Declarations</a><ul class="toc-headings"><li><a href="#attribute-mapping">Attribute Mapping</a></li><li><a href="#specific-attribute-values">Specific Attribute Values</a></li></ul></li><li><a href="#priority-order">Priority Order</a><ul class="toc-headings"><li><a href="#json-vs-style-sheet">JSON vs Style Sheet</a></li><li><a href="#multiple-style-sheets">Multiple Style Sheets</a></li></ul></li><li><a href="#creating-or-editing-style-sheets">Creating or Editing Style Sheets</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

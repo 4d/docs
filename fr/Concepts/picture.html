@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Image · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n&#x27;importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l&#x27;aide des commandes 4D ou des commandes de plug-in."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Image · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n&#x27;importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l&#x27;aide des commandes 4D ou des commandes de plug-in."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/picture.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Data Types</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Image</h1></header><article><div><span><p>Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D ou des commandes de plug-in.</p>
+<h2><a class="anchor" aria-hidden="true" id="formats-natifs-pris-en-charge"></a><a href="#formats-natifs-pris-en-charge" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formats natifs pris en charge</h2>
+<p>4D intègre une gestion native des images. Cela signifie que les images sont affichées et stockées dans leur format d’origine, sans interprétation dans 4D. Les spécificités des différents formats (ombrages, zones transparentes...) sont conservées en cas de copier-coller et affichées sans altération. Cette prise en charge native est valide pour toutes les images stockées dans 4D : images de la bibliothèque, images collées dans les formulaires en mode Développement, images collées dans les champs ou variables en mode Application, etc.</p>
+<p>4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.</p>
+<ul>
+<li>Sous Windows, 4D utilise WIC (Windows Imaging Component)</li>
+<li>Sous macOS, 4D utilise ImageIO.</li>
+</ul>
+<p>Les formats d'image les plus courants sont pris en charge par les deux plates-formes : jpeg, gif, png, tiff, bmp, etc. Sous macOS, le format pdf est également disponible pour l'encodage et le décodage.</p>
+<p>La liste complète des formats pris en charge varie en fonction du système d’exploitation et des codecs personnalisés installés sur les postes. Pour connaître les codecs disponibles, vous devez utiliser la commande <code>PICTURE CODE LIST</code>. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.</p>
+<p><strong>Note :</strong> WIC et ImageIO permettent l’utilisation de métadonnées dans les images. Deux commandes, <code>SET PICTURE METADATA</code> et <code>GET PICTURE METADATA</code>, vous permettent d'en bénéficier dans vos développements.</p>
+<h3><a class="anchor" aria-hidden="true" id="identifiants-de-codecs-dimages"></a><a href="#identifiants-de-codecs-dimages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identifiants de codecs d'images</h3>
+<p>Les formats d'images reconnus par 4D sont retournés par la commande <code>LISTE CODECS IMAGES</code> sous forme d'identifiants de codecs d'images. Ces identifiants peuvent être :</p>
+<ul>
+<li>une extension (par exemple “.gif”)</li>
+<li>Un type Mime (par exemple “image/jpg”)</li>
+</ul>
+<p>La forme utilisée pour chaque format dépend du mode de déclaration du codec au niveau du système d’exploitation. La plupart des commandes de gestion d'images de 4D attendent un identifiant de codec en paramètre. Il est donc impératif d'utiliser l'identifiant système retourné par la commande <code>PICTURE CODE LIST</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="format-dimage-non-disponible"></a><a href="#format-dimage-non-disponible" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Format d'image non disponible</h3>
+<p>Une icône spécifique est affichée pour les images stockées dans un format non disponible sur le poste. L'extension du format manquant est inscrite en bas de l'icône. L'icône est automatiquement utilisée partout où l'image doit être affichée :</p>
+<p><img src="/docs/assets/en/Concepts/missingpict.en.png" alt=""></p>
+<p>Cette icône indique que l'image ne peut être ni affichée ni manipulée localement -- mais elle peut être stockée sans altération pour être affichée sur une autre machine. C'est le cas, par exemple, pour les images PDF sous Windows ou les images au format PICT.</p>
+<h2><a class="anchor" aria-hidden="true" id="operateurs-sur-les-images"></a><a href="#operateurs-sur-les-images" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opérateurs sur les images</h2>
+<table>
+<thead>
+<tr><th>Opération</th><th>Syntaxe</th><th>Retourne</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>Concaténation horizontale</td><td>Image1 + Image2</td><td>Image</td><td>Place Image2 à la droite d'Image1</td></tr>
+<tr><td>Concaténation verticale</td><td>Image1 / Image2</td><td>Image</td><td>Place Image2 au-dessous d'Image1</td></tr>
+<tr><td>Superposition exclusive</td><td>Image1 &amp; Image2</td><td>Image</td><td>Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que <code>COMBINE PICTURES(pict3;pict1;Superposition;pict2)</code></td></tr>
+<tr><td>Superposition inclusive</td><td>Image1</td><td>Image2</td><td>Image</td><td>Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que <code>$equal:=Equal pictures(Pict1;Pict2;Pict3)</code></td></tr>
+<tr><td>Déplacement horizontal</td><td>Image + Nombre</td><td>Image</td><td>Déplace l'image horizontalement d'un nombre de pixels égal à Nombre</td></tr>
+<tr><td>Déplacement vertical</td><td>Image / Nombre</td><td>Image</td><td>Déplace l'image verticalement d'un nombre de pixels égal à Nombre</td></tr>
+<tr><td>Redimensionnement</td><td>Image * Nombre</td><td>Image</td><td>Redimensionne l'image au pourcentage Nombre</td></tr>
+<tr><td>Extension horizontale</td><td>Image *+ Nombre</td><td>Image</td><td>Redimensionne l'image horizontalement au pourcentage Nombre</td></tr>
+<tr><td>Extension verticale</td><td>Image *</td><td>Nombre</td><td>Image</td><td>Redimensionne l'image verticalement au pourcentage Nombre</td></tr>
+</tbody>
+</table>
+<p><strong>Notes :</strong></p>
+<ul>
+<li>A noter que pour que l'opérateur | puisse être utilisé, Image1 et Image2 doivent être strictement de la même dimension. Si les deux images sont de taille différente, l’opération Image1 | Image2 produit une image vide.</li>
+<li>La commande <code>COMBINE PICTURES</code> permet d'effectuer des superpositions en conservant les caractéristiques de chaque image source dans l'image résultante.</li>
+<li>Les opérateurs sur les images retournent des images vectorielles si les deux images sont elles aussi vectorielles (rappelez-vous qu'une image imprimée avec le format d'affichage Sur fond est imprimée en tant que bitmap).</li>
+<li>Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande <code>TRANSFORM PICTURE</code>.</li>
+<li>Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande <code>Images egales</code> pour comparer deux images.</li>
+<li>4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. Les coordonnées sont retournées dans les <strong>Variables système</strong> <em>MouseX</em> et <em>MouseY</em>. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans <em>MouseX</em> et <em>MouseY</em>. Vous pouvez lire la valeur des variables MouseX et MouseY dans le contexte des événements formulaire <strong>Sur clic</strong>, <strong>Sur double clic</strong>, <strong>Sur relâchement bouton</strong>, <strong>Sur début survol</strong> et <strong>Sur survol</strong>.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="exemples"></a><a href="#exemples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples</h3>
+<p>Toutes les images qui sont affichées utilisent le format d'affichage <strong>Image sur fond</strong>.</p>
+<p>Voici l'image cercle : <img src="/docs/assets/en/Concepts/Concepts/Circle.en.png" alt=""></p>
+<p>Voici l'image rectangle : <img src="/docs/assets/en/Concepts/Concepts/rectangle.en.png" alt=""></p>
+<p>Dans les exemples ci-dessous, chaque expression est suivie de sa représentation graphique.</p>
+<p>Concaténation horizontale</p>
+<pre><code class="hljs css language-code4d"> cercle+<span class="hljs-built_in">rectangle</span> // Place le <span class="hljs-built_in">rectangle</span> à droite du cercle
+<span class="hljs-built_in">rectangle</span>+cercle // Place le cercle à droite du <span class="hljs-built_in">rectangle</span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/concatHor.en.png" alt=""> <img src="/docs/assets/en/Concepts/concatHor2.en.png" alt=""></p>
+<p>Concaténation verticale</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">circle</span>/<span class="hljs-built_in">rectangle</span> <span class="hljs-comment">//Place the rectangle under the circle</span>
+ <span class="hljs-built_in">rectangle</span>/<span class="hljs-built_in">circle</span> <span class="hljs-comment">//Place the circle under the rectangle</span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/concatVer.en.png" alt=""> <img src="/docs/assets/en/Concepts/concatVer2.en.png" alt=""></p>
+<p>Superposition exclusive</p>
+<pre><code class="hljs css language-code4d">Pict3:=Pict1 <span class="hljs-meta">&amp; Pict2 <span class="hljs-comment">// Superposer Pict2 à Pict1</span></span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/superimpoExc.fr.png" alt=""></p>
+<p>Superposition inclusive</p>
+<pre><code class="hljs css language-code4d">Pict3:=Pict1|Pict2 // Récupérer <span class="hljs-keyword">le</span> masque résultant de <span class="hljs-keyword">la</span> superposition de deux images de <span class="hljs-keyword">m</span>ê<span class="hljs-keyword">me</span> taille
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/superimpoInc.fr.png" alt=""></p>
+<p>Déplacement horizontal</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-built_in">rectangle</span>+<span class="hljs-number">50</span> // Déplace le <span class="hljs-built_in">rectangle</span> <span class="hljs-number">50</span> pixels <span class="hljs-built_in">vers</span> la droite
+<span class="hljs-built_in">rectangle</span>-<span class="hljs-number">50</span> // Déplace le <span class="hljs-built_in">rectangle</span> <span class="hljs-number">50</span> pixels <span class="hljs-built_in">vers</span> la gauche
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/hormove.en.png" alt=""></p>
+<p>Déplacement vertical</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-built_in">rectangle</span>/<span class="hljs-number">50</span> // Déplace le <span class="hljs-built_in">rectangle</span> <span class="hljs-number">50</span> pixels <span class="hljs-built_in">vers</span> le bas
+<span class="hljs-built_in">rectangle</span>/-<span class="hljs-number">20</span> // Déplace le <span class="hljs-built_in">rectangle</span> <span class="hljs-number">20</span> pixels <span class="hljs-built_in">vers</span> le haut
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/vertmove.en.png" alt=""><img src="/docs/assets/en/Concepts/vertmove2.en.png" alt=""></p>
+<p>Redimensionnement</p>
+<pre><code class="hljs css language-code4d">rectangle*<span class="hljs-number">1.5</span> <span class="hljs-comment">// Augmente la taille du rectangle de 50%</span>
+ rectangle*<span class="hljs-number">0.5</span> <span class="hljs-comment">// Réduit la taille du rectangle de 50%</span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/resize.en.png" alt=""><img src="/docs/assets/en/Concepts/resisze2.en.png" alt=""></p>
+<p>Extension horizontale</p>
+<pre><code class="hljs css language-code4d">cercle*+<span class="hljs-number">3</span> <span class="hljs-comment">// Multiplie par 3 la largeur du cercle</span>
+ cercle*+<span class="hljs-number">0</span>,<span class="hljs-number">25</span> <span class="hljs-comment">// La largeur du cercle est réduite à un quart de sa taille originale</span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/Horscaling.en.png" alt=""><img src="/docs/assets/en/Concepts/Horscaling2.en.png" alt=""></p>
+<p>Extension verticale</p>
+<pre><code class="hljs css language-code4d">cercle*/<span class="hljs-number">2</span> <span class="hljs-comment">// Double la hauteur du cercle</span>
+ cercle*/<span class="hljs-number">0.25</span> <span class="hljs-comment">// La hauteur du cercle est réduite à un quart de sa taille originale</span>
+</code></pre>
+<p><img src="/docs/assets/en/Concepts/vertscaling.en.png" alt=""><img src="/docs/assets/en/Concepts/veticalscaling2.en.png" alt=""></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/object.html"><span class="arrow-prev">← </span><span>Objet</span></a><a class="docs-next button" href="/docs/fr/Concepts/pointer.html"><span>Pointeur</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#formats-natifs-pris-en-charge">Formats natifs pris en charge</a><ul class="toc-headings"><li><a href="#identifiants-de-codecs-dimages">Identifiants de codecs d'images</a></li><li><a href="#format-dimage-non-disponible">Format d'image non disponible</a></li></ul></li><li><a href="#operateurs-sur-les-images">Opérateurs sur les images</a><ul class="toc-headings"><li><a href="#exemples">Exemples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
