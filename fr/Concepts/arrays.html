@@ -73,25 +73,25 @@
 <h2><a class="anchor" aria-hidden="true" id="creer-des-tableaux"></a><a href="#creer-des-tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Créer des tableaux</h2>
 <p>Vous créez un tableau au moyen de l'une des commandes de déclaration du thème &quot;Tableaux&quot;. Chaque commande de déclaration de tableau peut créer ou redimensionner des tableaux à une ou à deux dimensions. Pour plus d'informations sur les tableaux à deux dimensions, reportez-vous à la section <a href="#two-dimensional-arrays">Tableaux à deux dimensions</a>.</p>
 <p>Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">10</span>)</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;10)
 </code></pre>
 <p>Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">20</span>)</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;20)
 </code></pre>
 <p>Enfin, cette ligne de code redimensionne le même tableau à 0 élément :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">ARRAY</span> <span class="hljs-function"><span class="hljs-title">INTEGER</span>(<span class="hljs-variable">aiAnArray</span>;<span class="hljs-number">0</span>)</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;0)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="affecter-des-valeurs-dans-un-tableau"></a><a href="#affecter-des-valeurs-dans-un-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affecter des valeurs dans un tableau</h2>
 <p>Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. Ce nombre est appelé numéro de l'élément. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :</p>
-<pre><code class="hljs css language-code4d"> ARRAY TEXT(<span class="hljs-name">atNames</span><span class="hljs-comment">;5)</span>
- atNames{<span class="hljs-number">1</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Richard"</span>
- atNames{<span class="hljs-number">2</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Sarah"</span>
- atNames{<span class="hljs-number">3</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Sam"</span>
- atNames{<span class="hljs-number">4</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"Jane"</span>
- atNames{<span class="hljs-number">5</span>}<span class="hljs-symbol">:=</span><span class="hljs-string">"John"</span>
- For($vlElem<span class="hljs-comment">;1;5)</span>
-    ALERT(<span class="hljs-string">"The element #"</span>+String($vlElem)+<span class="hljs-string">" is equal to: "</span>+atNames{$vlElem})
- End for
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
+ atNames{1}:="<span class="hljs-string">Richard</span>"
+ atNames{2}:="<span class="hljs-string">Sarah</span>"
+ atNames{3}:="<span class="hljs-string">Sam</span>"
+ atNames{4}:="<span class="hljs-string">Jane</span>"
+ atNames{5}:="<span class="hljs-string">John</span>"
+ <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;5)
+    <span class="hljs-command">ALERT</span>("<span class="hljs-string">The element #</span>"+<span class="hljs-command">String</span>(<span class="hljs-locale">$vlElem</span>)+"<span class="hljs-string"> is equal to: </span>"+atNames{<span class="hljs-locale">$vlElem</span>})
+ <span class="hljs-keyword">End for</span>
 </code></pre>
 <p>Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (<code>For...End for</code>, <code>Repeat...Until</code> or <code>While...End while</code>), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.</p>
 <p><strong>Important :</strong> Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.</p>
@@ -100,39 +100,39 @@
 <h2><a class="anchor" aria-hidden="true" id="utiliser-lelement-zero-dun-tableau"></a><a href="#utiliser-lelement-zero-dun-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser l'élément zéro d'un tableau</h2>
 <p>Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.</p>
 <p>Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous cliquez sur un élément autre que l'élément préalablement sélectionné. Pour cela, vous devez garder la trace de chaque élément sélectionné. Une façon de le faire est d'utiliser une variable process dans laquelle vous conservez le numéro de l'élément sélectionné. Une autre manière consiste à utiliser l'élément zéro du tableau :</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode objet zone de défilement atNoms</span>
- <span class="hljs-keyword">Case</span> of
-   :(Form event=<span class="hljs-keyword">On</span> Load)
-   <span class="hljs-comment">//Initialisons le tableau (comme indiqué ci-dessous)</span>
-       ARRAY TEXT(atNames<span class="hljs-comment">;5)</span>
-  <span class="hljs-comment">// ...</span>
-  <span class="hljs-comment">// Initialiser l'élément zéro avec le numéro</span>
-  <span class="hljs-comment">// de l'élément courant sélectionné sous sa forme alphanumérique</span>
-  <span class="hljs-comment">// Ici vous commencez sans élément sélectionné</span>
-       atNames{<span class="hljs-number">0</span>}:=<span class="hljs-string">"0"</span>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode objet zone de défilement atNoms
+</span> <span class="hljs-keyword">Case of</span>
+   :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
+   <span class="hljs-comment">//Initialisons le tableau (comme indiqué ci-dessous)
+</span>       <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
+  <span class="hljs-comment">// ...
+</span>  <span class="hljs-comment">// Initialiser l'élément zéro avec le numéro
+</span>  <span class="hljs-comment">// de l'élément courant sélectionné sous sa forme alphanumérique
+</span>  <span class="hljs-comment">// Ici vous commencez sans élément sélectionné
+</span>       atNames{0}:="<span class="hljs-string">0</span>"
  
-    :(Form event=<span class="hljs-keyword">On</span> Unload)
-  <span class="hljs-comment">// Nous n'avons plus besoin du tableau</span>
-       CLEAR VARIABLE(atNames)
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Unload</span>)
+  <span class="hljs-comment">// Nous n'avons plus besoin du tableau
+</span>       <span class="hljs-command">CLEAR VARIABLE</span>(atNames)
  
-    :(Form event=<span class="hljs-keyword">On</span> Clicked)
-       <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#<span class="hljs-number">0</span>)</span>
-          <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#Num(atNames{<span class="hljs-number">0</span>}))</span>
-             vtInfo:=<span class="hljs-string">"You clicked on: "</span>+atNames{atNames}+<span class="hljs-string">" and it was not selected before."</span>
-             atNames{<span class="hljs-number">0</span>}:=String(atNames)
-          <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
-       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
-    :(Form event=<span class="hljs-keyword">On</span> <span class="hljs-keyword">Double</span> Clicked)
-       <span class="hljs-keyword">If</span>(atNames<span class="hljs-meta">#<span class="hljs-number">0</span>)</span>
-          ALERT(<span class="hljs-string">"You double clicked on: "</span>+atNames{atNames}
-       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">case</span>
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Clicked</span>)
+       <span class="hljs-keyword">If</span>(atNames#0)
+          <span class="hljs-keyword">If</span>(atNames#<span class="hljs-command">Num</span>(atNames{0}))
+             vtInfo:="<span class="hljs-string">You clicked on: </span>"+atNames{atNames}+"<span class="hljs-string"> and it was not selected before.</span>"
+             atNames{0}:=<span class="hljs-command">String</span>(atNames)
+          <span class="hljs-keyword">End if</span>
+       <span class="hljs-keyword">End if</span>
+    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Double Clicked</span>)
+       <span class="hljs-keyword">If</span>(atNames#0)
+          <span class="hljs-command">ALERT</span>("<span class="hljs-string">You double clicked on: </span>"+atNames{atNames}
+       <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End case</span>
 </code></pre>
 <p>(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.</p>
 <h2><a class="anchor" aria-hidden="true" id="tableaux-a-deux-dimensions"></a><a href="#tableaux-a-deux-dimensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux à deux dimensions</h2>
 <p>Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :</p>
-<pre><code class="hljs css language-code4d"> ARRAY TEXT(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// Créer un tableau texte composé de 100 lignes de 50 colonnes</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atTopics;100;50) <span class="hljs-comment">// Créer un tableau texte composé de 100 lignes de 50 colonnes
+</span></code></pre>
 <p>Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.</p>
 <p>Dans l'exemple prédédent :</p>
 <ul>
@@ -143,41 +143,41 @@
 <li>(atTopics{17}) retourne 50, qui est le nombre de colonnes de la 17e ligne</li>
 </ul>
 <p>Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :</p>
-<pre><code class="hljs css language-code4d"> C_LONGINT(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
- C_LONGINT(<span class="hljs-variable">$vlFieldNumber</span>)
-  <span class="hljs-comment">// Créer autant de lignes (vides et sans colonnes) qu'il y a de tables</span>
-  <span class="hljs-variable">$vlLastTable</span>:=Get last <span class="hljs-keyword">table</span> number
- ARRAY POINTER(&lt;&gt;apFields;<span class="hljs-variable">$vlLastTable</span>;0) <span class="hljs-comment">//Tableau 2D avec N lignes et zéro colonnes</span>
-  <span class="hljs-comment">// Pour chaque table</span>
- <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlTable</span>;1;<span class="hljs-variable">$vlLastTable</span>)
-    <span class="hljs-keyword">If</span>(Is <span class="hljs-keyword">table</span> number valid(<span class="hljs-variable">$vlTable</span>))
-       <span class="hljs-variable">$vlLastField</span>:=Get last field number(<span class="hljs-variable">$vlTable</span>)
-  <span class="hljs-comment">// Donner la valeur des éléments</span>
-             <span class="hljs-variable">$vlColumnNumber</span>:=0
-       <span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlField</span>;1;<span class="hljs-variable">$vlLastField</span>)
-          <span class="hljs-keyword">If</span>(Is field number valid(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
-             <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+1
-  <span class="hljs-comment">// Insérer une colonne dans la ligne de la table en cours</span>
-              INSERT <span class="hljs-keyword">IN</span> ARRAY(&lt;&gt;apFields{<span class="hljs-variable">$vlTable}</span>;<span class="hljs-variable">$vlColumnNumber</span>;1)
-  <span class="hljs-comment">// Affecter la "celulle" avec le pointeur</span>
-             &lt;&gt;apFields{<span class="hljs-variable">$vlTable}</span>{<span class="hljs-variable">$vlColumnNumber}</span>:=Field(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)
-          End <span class="hljs-keyword">if</span>
-       End <span class="hljs-keyword">for</span>
-    End <span class="hljs-keyword">if</span>
- End <span class="hljs-keyword">for</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlLastTable</span>;<span class="hljs-locale">$vlLastField</span>)
+ <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlFieldNumber</span>)
+  <span class="hljs-comment">// Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
+</span>  <span class="hljs-locale">$vlLastTable</span>:=<span class="hljs-command">Get last table number</span>
+ <span class="hljs-command">ARRAY POINTER</span>(&lt;&gt;apFields;<span class="hljs-locale">$vlLastTable</span>;0) <span class="hljs-comment">//Tableau 2D avec N lignes et zéro colonnes
+</span>  <span class="hljs-comment">// Pour chaque table
+</span> <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlTable</span>;1;<span class="hljs-locale">$vlLastTable</span>)
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Is table number valid</span>(<span class="hljs-locale">$vlTable</span>))
+       <span class="hljs-locale">$vlLastField</span>:=<span class="hljs-command">Get last field number</span>(<span class="hljs-locale">$vlTable</span>)
+  <span class="hljs-comment">// Donner la valeur des éléments
+</span>             <span class="hljs-locale">$vlColumnNumber</span>:=0
+       <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlField</span>;1;<span class="hljs-locale">$vlLastField</span>)
+          <span class="hljs-keyword">If</span>(<span class="hljs-command">Is field number valid</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>))
+             <span class="hljs-locale">$vlColumnNumber</span>:=<span class="hljs-locale">$vlColumnNumber</span>+1
+  <span class="hljs-comment">// Insérer une colonne dans la ligne de la table en cours
+</span>              <span class="hljs-command">INSERT IN ARRAY</span>(&lt;&gt;apFields{$vlTable};<span class="hljs-locale">$vlColumnNumber</span>;1)
+  <span class="hljs-comment">// Affecter la "celulle" avec le pointeur
+</span>             &lt;&gt;apFields{$vlTable}{$vlColumnNumber}:=<span class="hljs-command">Field</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>)
+          <span class="hljs-keyword">End if</span>
+       <span class="hljs-keyword">End for</span>
+    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End for</span>
 </code></pre>
 <p>Dans la mesure où le tableau à deux dimensions a été initialisé, vous pouvez obtenir ainsi les pointeurs vers les champs d'une table de votre choix :</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Obtenir les pointeurs vers les champs pour la table affichée à l'écran:</span>
- COPY <span class="hljs-built_in">ARRAY</span>(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  <span class="hljs-comment">// Initialiser les champs booléens et date</span>
-For($vlElem;<span class="hljs-number">1</span>;Size of <span class="hljs-built_in">array</span>($apTheFieldsIamWorkingOn))
-    <span class="hljs-keyword">Case</span> of
-       :(<span class="hljs-keyword">Type</span>($apTheFieldsIamWorkingOn{$vlElem}-&gt;)=Is <span class="hljs-built_in">date</span>)
-          $apTheFieldsIamWorkingOn{$vlElem}-&gt;:=Current <span class="hljs-built_in">date</span>
-       :(<span class="hljs-keyword">Type</span>($apTheFieldsIamWorkingOn{$vlElem}-&gt;)=Is <span class="hljs-built_in">Boolean</span>)
-          $apTheFieldsIamWorkingOn{$vlElem}-&gt;:=<span class="hljs-literal">True</span>
-    End <span class="hljs-keyword">case</span>
- End for
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Obtenir les pointeurs vers les champs pour la table affichée à l'écran:
+</span> <span class="hljs-command">COPY ARRAY</span>(◊apFields{Table(<span class="hljs-command">Current form table</span>)};<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>)
+  <span class="hljs-comment">// Initialiser les champs booléens et date
+</span><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;<span class="hljs-command">Size of array</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>))
+    <span class="hljs-keyword">Case of</span>
+       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is date</span>)
+          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">Current date</span>
+       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is Boolean</span>)
+          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">True</span>
+    <span class="hljs-keyword">End case</span>
+ <span class="hljs-keyword">End for</span>
 </code></pre>
 <p><strong>Note :</strong> Comme le montre cet exemple, les lignes des tableaux à deux dimensions peuvent être ou non de la même taille.</p>
 <h2><a class="anchor" aria-hidden="true" id="tableaux-et-memoire"></a><a href="#tableaux-et-memoire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux et mémoire</h2>

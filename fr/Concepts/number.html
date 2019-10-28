@@ -77,15 +77,15 @@
 <p><strong>Note :</strong> Dans ce manuel de référence du langage 4D, quel que soit le type précis des données, les paramètres de type Réel, Entier et Entier long dans les descriptions des commandes sont appelés numériques, sauf spécification explicite.</p>
 <h2><a class="anchor" aria-hidden="true" id="constantes-litterales-numeriques"></a><a href="#constantes-litterales-numeriques" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constantes littérales numériques</h2>
 <p>Une constante littérale numérique s’écrit comme un nombre réel. Voici quelques exemples de constantes numériques :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-number">27</span>
-<span class="hljs-number">123.76</span>
-<span class="hljs-number">0.0076</span>
+<pre><code class="hljs css language-code4d">27
+123.76
+0.0076
 </code></pre>
 <p><strong>Note :</strong> Depuis 4D v15, le séparateur décimal est par défaut le point (.), quelle que soit la langue du système. Si vous avez coché l'option &quot;Utiliser langage français et paramètres régionaux système&quot; (cf. Page Méthodes), vous devez utiliser le séparateur défini dans votre système.</p>
 <p>Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-number">-27</span>
-<span class="hljs-number">-123.76</span>
-<span class="hljs-number">-0.0076</span>
+<pre><code class="hljs css language-code4d">-27
+-123.76
+-0.0076
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="operateurs-sur-les-nombres"></a><a href="#operateurs-sur-les-nombres" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opérateurs sur les nombres</h2>
 <table>
@@ -127,11 +127,11 @@
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="priorite"></a><a href="#priorite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Priorité</h3>
 <p>L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué. Par exemple :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-number">3</span>+<span class="hljs-number">4</span>*<span class="hljs-number">5</span>
+<pre><code class="hljs css language-code4d"> 3+4*5
 </code></pre>
 <p>retourne 35 car l'expression est évaluée comme 3 + 4, qui donne 7, multiplié par 5, ce qui donne 35.</p>
 <p>Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins. Par exemple :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-number">3</span>+(<span class="hljs-number">4</span>*<span class="hljs-number">5</span>)
+<pre><code class="hljs css language-code4d"> 3+(4*5)
 </code></pre>
 <p>retourne 23 car l'expression (4 * 5) est évaluée en premier lieu. Le résultat (20) est alors ajouté à 3, ce qui donne le résultat final 23.</p>
 <p>Des parenthèses peuvent être incluses dans d'autres parenthèses. Assurez-vous qu'il y ait une parenthèse fermante pour chaque parenthèse ouverte. Une parenthèse manquante ou placée à un mauvais endroit peut soit donner un résultat erroné, soit renvoyer une expression invalide. De plus, si vous avez l'intention de compiler vos applications, vous devez vous assurer d'une bonne utilisation des parenthèses. Le compilateur interprètera toute parenthèse manquante ou superflue comme une erreur de syntaxe.</p>

@@ -1,5 +1,381 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Documentation · Guides essentiels du développeur 4D</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Guides essentiels du développeur 4D"/><meta property="og:title" content="Documentation · Guides essentiels du développeur 4D"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Guides essentiels du développeur 4D"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><meta http-equiv="refresh" content="0; URL=/docs/fr/Concepts/identifiers.html"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body><script>
-                <!--
-                window.location.href = "/docs/fr/Concepts/identifiers.html";
-                // -->
-                </script></body></html>
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Identifiants · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Cette section détaille les règles d&#x27;écriture et de nommage appliquées aux divers identifiants utilisés dans le langage de 4D (variables, tableaux, objets, formulaires, etc.)."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Identifiants · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Cette section détaille les règles d&#x27;écriture et de nommage appliquées aux divers identifiants utilisés dans le langage de 4D (variables, tableaux, objets, formulaires, etc.)."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/identifiers.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Identifiants</h1></header><article><div><span><p>Cette section détaille les règles d'écriture et de nommage appliquées aux divers identifiants utilisés dans le langage de 4D (variables, tableaux, objets, formulaires, etc.).</p>
+<h2><a class="anchor" aria-hidden="true" id="regles-de-base"></a><a href="#regles-de-base" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Règles de base</h2>
+<p>Les règles suivantes s'appliquent à toutes les structures de 4D.</p>
+<ul>
+<li>Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar (&quot;$&quot;) (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).</li>
+<li>Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).</li>
+<li>Les points (.) et les crochets ([ ]) sont interdits dans les noms de tables, champs, méthodes ou variables.</li>
+<li>Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.</li>
+<li>Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.</li>
+<li>Les noms réservés, c'est-à-dire les noms de commandes 4D (<code>Date</code>, <code>Time</code>, etc), les mots-clés (If, For, etc.) et les constantes.</li>
+<li>4D ignore les espaces superflus.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="regles-supplementaires-pour-les-proprietes-dobjet-et-les-noms-orda"></a><a href="#regles-supplementaires-pour-les-proprietes-dobjet-et-les-noms-orda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Règles supplémentaires pour les propriétés d'objet et les noms ORDA</h3>
+<ul>
+<li>Les espaces sont interdits.</li>
+<li>Les points (.) et les crochets ([ ]) sont interdits.</li>
+<li>Les noms sont sensibles à la casse.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="regles-supplementaires-pour-sql"></a><a href="#regles-supplementaires-pour-sql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Règles supplémentaires pour SQL</h3>
+<ul>
+<li>Seuls les caractères _0123456789abcdefghijklmnopqrstuvwxyz sont acceptés</li>
+<li>Les noms ne doivent pas comporter de mot-clé SQL (commande, attribut, etc.).</li>
+</ul>
+<p><strong>Note :</strong> La zone &quot;SQL&quot; de l'inspecteur de l'éditeur de Structure signale automatiquement les caractères non autorisés dans un nom de table ou de champ.</p>
+<h2><a class="anchor" aria-hidden="true" id="tables"></a><a href="#tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tables</h2>
+<p>Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">DEFAULT TABLE</span>([Commandes])
+<span class="hljs-command">FORM SET INPUT</span>([Clients];"<span class="hljs-string">Entrée</span>")
+<span class="hljs-command">ADD RECORD</span>([Lettres])
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="champs"></a><a href="#champs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Champs</h2>
+<p>Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">[Commandes]Total:=<span class="hljs-command">Sum</span>([Ligne]Montant)
+ <span class="hljs-command">QUERY</span>([Clients];[Clients]Nom="<span class="hljs-string">Dupont</span>")
+ [Lettres]Text:=Capitalize text([Lettres]Texte)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="variables-interprocess"></a><a href="#variables-interprocess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables interprocess</h2>
+<p>Vous désignez une variable interprocess en faisant précéder son nom des symboles (&lt;&gt;), formés des caractères “inférieur à” suivi de “supérieur à”.</p>
+<p>Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole &lt;&gt; non compris.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">&lt;&gt;vlProcessID:=<span class="hljs-command">Current process</span>
+ &lt;&gt;vsKey:=<span class="hljs-command">Char</span>(KeyCode)
+<span class="hljs-keyword">If</span>(&lt;&gt;vtNom#"<span class="hljs-string"></span>")
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="variables-process"></a><a href="#variables-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables process</h2>
+<p>Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou &lt;&gt;). Ce nom peut contenir jusqu’à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">vrGrandTotal:=<span class="hljs-command">Sum</span>([Comptes]Montant)
+ <span class="hljs-keyword">If</span>(bValider=1)
+ vsNomCourant:="<span class="hljs-string"></span>"
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="variables-locales"></a><a href="#variables-locales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables locales</h2>
+<p>Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlRecord</span>;1;100)
+<span class="hljs-keyword">If</span>(<span class="hljs-locale">$vsTempVar</span>="<span class="hljs-string">Non</span>")
+<span class="hljs-locale">$vsMyString</span>:="<span class="hljs-string">Bonjour à tous</span>"
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="tableaux"></a><a href="#tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux</h2>
+<p>Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :</p>
+<ul>
+<li>Tableaux interprocess,</li>
+<li>Tableaux process,</li>
+<li>Tableaux locaux.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="tableaux-interprocess"></a><a href="#tableaux-interprocess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux interprocess</h3>
+<p>Le nom d’un tableau interprocess est précédé du symbole (&lt;&gt;), formé des caractères “inférieur à” suivi de “supérieur à”.</p>
+<p>Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symbole &lt;&gt; non compris.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(&lt;&gt;atSujets;<span class="hljs-command">Records in table</span>([Topics]))
+<span class="hljs-command">SORT ARRAY</span>(&lt;&gt;asMotsClés;&gt;)
+<span class="hljs-command">ARRAY INTEGER</span>(&lt;&gt;aiGrosTableau;10000)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tableaux-process"></a><a href="#tableaux-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux process</h3>
+<p>Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou &lt;&gt;). Ce nom peut contenir jusqu’à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(atSujets;<span class="hljs-command">Records in table</span>([Topics]))
+ <span class="hljs-command">SORT ARRAY</span>(asMotsClés;&gt;)
+ <span class="hljs-command">ARRAY INTEGER</span>(aiGrosTableau;10000)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tableaux-locaux"></a><a href="#tableaux-locaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux locaux</h3>
+<p>Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(<span class="hljs-locale">$atSujets</span>;<span class="hljs-command">Records in table</span>([Topics]))
+<span class="hljs-command">SORT ARRAY</span>(<span class="hljs-locale">$asMotsClés</span>;&gt;)
+<span class="hljs-command">ARRAY INTEGER</span>(<span class="hljs-locale">$aiGrosTableau</span>;10000)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="elements-de-tableaux"></a><a href="#elements-de-tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eléments de tableaux</h3>
+<p>Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess
+</span><span class="hljs-keyword">If</span>(&lt;&gt;asMotsClés{1}="<span class="hljs-string">Stop</span>")
+    &lt;&gt;atSujets{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+    <span class="hljs-locale">$viValeurSuivante</span>:=&lt;&gt;aiGrosTableau{Taille tableau(&lt;&gt;aiGrosTableau)}
+ 
+  <span class="hljs-comment">// Adresser un élément d'un tableau process
+</span>    <span class="hljs-keyword">If</span>(asMotsClés{1}="<span class="hljs-string">Stop</span>")
+       atSujets{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+       <span class="hljs-locale">$viValeurSuivante</span>:=aiGrosTableau{Taille tableau(aiGrosTableau)}
+ 
+  <span class="hljs-comment">// Adresser un élément d'un tableau local
+</span>       <span class="hljs-keyword">If</span>(<span class="hljs-locale">$asMotsClés</span>{1}="<span class="hljs-string">Stop</span>")
+          <span class="hljs-locale">$atSujets</span>{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+          <span class="hljs-locale">$viValeurSuivante</span>:=<span class="hljs-locale">$aiGrosTableau</span>{Taille tableau(<span class="hljs-locale">$aiGrosTableau</span>)}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="elements-de-tableaux-a-deux-dimensions"></a><a href="#elements-de-tableaux-a-deux-dimensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eléments de tableaux à deux dimensions</h3>
+<p>Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…}). L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions
+</span> <span class="hljs-keyword">If</span>(&lt;&gt;asMotsClés{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
+    &lt;&gt;atSujets{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+    <span class="hljs-locale">$viValeurSuivante</span>:=&lt;&gt;aiGrosTableau{$vlSet}{Taille tableau(&lt;&gt;aiGrosTableau{$vlSet})}
+ 
+  <span class="hljs-comment">// Adresser un élément d'un tableau process à deux dimensions
+</span>    <span class="hljs-keyword">If</span>(asMotsClés{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
+       atSujets{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+       <span class="hljs-locale">$viValeurSuivante</span>:=aiGrosTableau{$vlSet}{Taille tableau(aiGrosTableau{$vlSet})}
+ 
+  <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions
+</span>       <span class="hljs-keyword">If</span>(<span class="hljs-locale">$asMotsClés</span>{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
+          <span class="hljs-locale">$atSujets</span>{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
+          <span class="hljs-locale">$viValeurSuivante</span>:=<span class="hljs-locale">$aiGrosTableau</span>{<span class="hljs-locale">$vlSet</span>}{Taille tableau(<span class="hljs-locale">$aiGrosTableau</span>{<span class="hljs-locale">$vlSet</span>})}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="proprietes-attributs-dobjets"></a><a href="#proprietes-attributs-dobjets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (attributs) d'objets</h2>
+<p>Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez un attribut d'objet (aussi appelé propriété d'objet) en saisissant son nom précédé d'un point (.) à la suite du nom de l'objet (ou de l'attribut) qui le contient. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">monObjet<span class="hljs-property">.monAttribut</span>:="<span class="hljs-string">10</span>"
+ <span class="hljs-locale">$valeur</span>:=<span class="hljs-locale">$clientObj</span><span class="hljs-property">.data</span><span class="hljs-property">.address</span><span class="hljs-property">.city</span>
+</code></pre>
+<p><strong>Note :</strong> Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section <a href="/docs/fr/Concepts/object.html#object-property-identifiers">Identificateurs des propriétés d'objets</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="formulaires"></a><a href="#formulaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formulaires</h2>
+<p>Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">FORM SET INPUT</span>([Personnes];"<span class="hljs-string">Entrée</span>")
+<span class="hljs-command">FORM SET OUTPUT</span>([Personnes];"<span class="hljs-string">Sortie</span>")
+ <span class="hljs-command">DIALOG</span>([Stock];"<span class="hljs-string">Boîte de note</span>"+<span class="hljs-command">String</span>(<span class="hljs-locale">$vlStage</span>))
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="objets-de-formulaires"></a><a href="#objets-de-formulaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets de formulaires</h2>
+<p>Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, précédée du paramètre *. Un nom d'objet peut contenir jusqu'à 255 octets.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">OBJECT SET FONT</span>(*;"<span class="hljs-string">Binfo</span>";"<span class="hljs-string">Times</span>")
+</code></pre>
+<p><strong>Note :</strong> Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.</p>
+<h2><a class="anchor" aria-hidden="true" id="methodes"></a><a href="#methodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes</h2>
+<p>Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant son nom. Ce nom peut contenir jusqu’à 31 caractères.</p>
+<p><strong>Note :</strong> Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">If</span>(Nouveau client)
+<span class="hljs-plugin">DELETE</span> DUPLICATED VALUES
+<span class="hljs-command">APPLY TO SELECTION</span>([Employés];AUGMENTER SALARIES)
+</code></pre>
+<p><strong>Conseil :</strong> Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.</p>
+<p><strong>Note :</strong> Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que <code>APPELER SUR EVENEMENT</code>, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Cette commande attend une méthode (fonction) ou une formule
+</span> <span class="hljs-command">QUERY</span> BY FORMULA([aTable];Recherche Spéciale)
+  <span class="hljs-comment">// Cette commande attend une méthode (procédure) ou une formule
+</span> <span class="hljs-command">APPLY TO SELECTION</span>([Employés];AUGMENTER SALARIES)
+  <span class="hljs-comment">// Mais cette commande attend un nom de méthode
+</span><span class="hljs-command">ON EVENT CALL</span>("<span class="hljs-string">GERER EVENEMENTS</span>")
+</code></pre>
+<p>Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. De plus, plusieurs paramètres consécutifs (s'ils sont les derniers) peuvent être adressés à l'aide de la syntaxe ${n}où n, expression numérique, est le numéro du paramètre.</p>
+<p>A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.</p>
+<p>Voici quelques exemples :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
+</span> DROP <span class="hljs-plugin">SPACES</span>(-&gt;[Personnes]Nom)
+ 
+  <span class="hljs-comment">// Dans Créateur tableau :
+</span>  <span class="hljs-comment">// - $1 est un numérique qui vaut 1
+</span>  <span class="hljs-comment">// - $2 est un numérique qui vaut 5
+</span>  <span class="hljs-comment">// - $3 est un texte ou un alpha qui vaut "Super"
+</span>  <span class="hljs-comment">// - La valeur résultante est assignée à $0
+</span> <span class="hljs-locale">$vsRésultat</span>:=Calc creator(1;5;"<span class="hljs-string">Super</span>")
+ 
+  <span class="hljs-comment">// Dans Poubelle :
+</span>  <span class="hljs-comment">// - Les trois paramètres sont de type Texte ou Alpha
+</span>  <span class="hljs-comment">// - Vous pouvez y accéder par $1, $2 ou $3
+</span>  <span class="hljs-comment">// - Vous pouvez y accéder en écrivant, par exemple, ${$vlParam} où $vlParam vaut 1, 2 ou 3
+</span>  <span class="hljs-comment">// - La valeur résultante est assignée à $0
+</span> vtClone:=Dump("<span class="hljs-string">est</span>";"<span class="hljs-string">le</span>";"<span class="hljs-string">il</span>")
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="commandes-de-plug-ins"></a><a href="#commandes-de-plug-ins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes de plug-ins</h2>
+<p>Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$erreur</span>:=<span class="hljs-plugin">SMTP_From</span>(<span class="hljs-locale">$smtp_id</span>;"<span class="hljs-string">henry@gmail.com</span>")
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ensembles"></a><a href="#ensembles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ensembles</h2>
+<p>Dans 4D, il existe deux types d'ensembles qui se distinguent par leur portée :</p>
+<ul>
+<li>Ensembles interprocess</li>
+<li>Ensembles process</li>
+</ul>
+<p>On peut également distinguer un troisième type d'ensemble, spécifique à 4D Server :</p>
+<ul>
+<li>Ensembles clients</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="ensembles-interprocess"></a><a href="#ensembles-interprocess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ensembles interprocess</h3>
+<p>Un ensemble est déclaré interprocess lorsque son nom, qui est une expression de type chaîne alphanumérique, est précédé du symbole (&lt;&gt;), formé des caractères “inférieur à” suivi de “supérieur à”.</p>
+<p>Le nom d’un ensemble interprocess peut comporter jusqu’à 255 caractères, symbole &lt;&gt; non compris.</p>
+<h3><a class="anchor" aria-hidden="true" id="ensembles-process"></a><a href="#ensembles-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ensembles process</h3>
+<p>Vous déclarez un ensemble process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles &lt;&gt; ou $). Le nom d’un ensemble process peut comporter jusqu’à 255 caractères.</p>
+<h3><a class="anchor" aria-hidden="true" id="ensembles-clients"></a><a href="#ensembles-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ensembles clients</h3>
+<p>Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.</p>
+<p><strong>Note :</strong> Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Ensembles interprocess
+</span><span class="hljs-command">USE SET</span>("<span class="hljs-string">&lt;&gt;Enregistrements supprimés</span>")
+<span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">&lt;&gt;Commandes clients</span>")
+ <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">&lt;&gt;Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
+  <span class="hljs-comment">// Ensembles process
+</span>  <span class="hljs-command">USE SET</span>("<span class="hljs-string">Enregistrements supprimés</span>")
+  <span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">Commandes clients</span>")
+   <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
+  <span class="hljs-comment">// Ensembles client
+</span>    <span class="hljs-command">USE SET</span>("<span class="hljs-string">$Enregistrements supprimés</span>")
+  <span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">$Commandes clients</span>")
+      <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">$Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="selections-temporaires"></a><a href="#selections-temporaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélections temporaires</h2>
+<p>Dans 4D, il existe deux types de sélections temporaires, qui se distinguent par leur portée :</p>
+<ul>
+<li>Sélections temporaires interprocess</li>
+<li>Sélections temporaires process.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="selections-temporaires-interprocess"></a><a href="#selections-temporaires-interprocess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélections temporaires interprocess</h3>
+<p>Vous désignez une sélection temporaire interprocess en utilisant une expression de type chaîne débutant par le symbole (&lt;&gt;), formé des caractères “inférieur à” suivi de “supérieur à”.</p>
+<p>Le nom d'une sélection temporaire interprocess peut contenir jusqu’à 255 caractères, symbole &lt;&gt; non compris.</p>
+<h3><a class="anchor" aria-hidden="true" id="selections-temporaires-process"></a><a href="#selections-temporaires-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélections temporaires process</h3>
+<p>Vous déclarez une sélection temporaire process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles &lt;&gt; ou $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Sélection temporaire interprocess
+</span> <span class="hljs-command">USE NAMED SELECTION</span>([Clients];"<span class="hljs-string">&lt;&gt;ParCodePostal</span>")
+  <span class="hljs-comment">// Sélection temporaire process
+</span> <span class="hljs-command">USE NAMED SELECTION</span>([Clients];"<span class="hljs-string">ParCodePostal</span>")
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="process"></a><a href="#process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process</h2>
+<p>En mode mono-utilisateur, ou sur le poste client en mode client/serveur, il existe deux types de process :</p>
+<ul>
+<li>Process globaux</li>
+<li>Process locaux.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="process-globaux"></a><a href="#process-globaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process globaux</h3>
+<p>Vous déclarez un process global en passant une expression de type chaîne de caractères qui représente son nom (qui ne doit pas commencer par le symbole $). Le nom d’un process peut comporter jusqu’à 255 caractères.</p>
+<h3><a class="anchor" aria-hidden="true" id="process-locaux"></a><a href="#process-locaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process locaux</h3>
+<p>Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Lancer le process global "Ajouter Clients"
+</span> <span class="hljs-locale">$vlProcessID</span>:=<span class="hljs-command">New process</span>("<span class="hljs-string">P_AJOUT_CLIENTS</span>";48*1024;"<span class="hljs-string">Ajouter Clients</span>")
+  <span class="hljs-comment">// Lancer le process local "$Suivre Souris"
+</span> <span class="hljs-locale">$vlProcessID</span>:=<span class="hljs-command">New process</span>("<span class="hljs-string">P_SUIVRE_SOURIS</span>";16*1024;"<span class="hljs-string">$Suivre Souris</span>")
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="resume-des-conventions-decriture-dans-4d"></a><a href="#resume-des-conventions-decriture-dans-4d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résumé des conventions d'écriture dans 4D</h2>
+<p>Le tableau suivant résume les principes de nommage des identifiants dans les méthodes.</p>
+<table>
+<thead>
+<tr><th>Identifiant</th><th>Longueur max.</th><th>Exemple</th></tr>
+</thead>
+<tbody>
+<tr><td>Table</td><td>31</td><td>[Factures]</td></tr>
+<tr><td>Champ</td><td>31</td><td>[Employés]Nom</td></tr>
+<tr><td>Variable/Tableau interprocess</td><td>&lt;&gt; + 31</td><td>&lt;&gt;&lt;&gt;vlProcessSuivantID</td></tr>
+<tr><td>Variable/Tableau process</td><td>31</td><td>vsNomCourant</td></tr>
+<tr><td>Variable/Tableau local(e)</td><td>$ + 31</td><td>$vlCompteurLocal</td></tr>
+<tr><td>Propriétés d'objets</td><td>255</td><td>$o.monAttribut</td></tr>
+<tr><td>Formulaire</td><td>31</td><td>&quot;Formulaire Web perso&quot;</td></tr>
+<tr><td>Objet de formulaire</td><td>255</td><td>&quot;MonBouton&quot;</td></tr>
+<tr><td>Méthode</td><td>31</td><td>M_AJOUTER_CLIENTS</td></tr>
+<tr><td>Commande de plug-in</td><td>31</td><td>WR INSERER TEXTE</td></tr>
+<tr><td>Ensemble interprocess</td><td>&lt;&gt; + 255</td><td>&quot;&lt;&gt;Enregistrements à archiver&quot;</td></tr>
+<tr><td>Ensemble process</td><td>255</td><td>&quot;Enregistrements actuels&quot;</td></tr>
+<tr><td>Ensemble client</td><td>$ + 255</td><td>&quot;$Sujets précédents&quot;</td></tr>
+<tr><td>Sélection temporaire</td><td>255</td><td>&quot;Employés de A à Z&quot;</td></tr>
+<tr><td>Sélection temporaire interprocess</td><td>&lt;&gt; + 255</td><td>&quot;&lt;&gt;Employés de Z à A&quot;</td></tr>
+<tr><td>Process local</td><td>$ + 255</td><td>&quot;$SuivreEvénements&quot;</td></tr>
+<tr><td>Process global</td><td>255</td><td>&quot;<em>P_MODULE_FACTURES</em>&quot;</td></tr>
+<tr><td>Sémaphore</td><td>255</td><td>&quot;monsémaphore&quot;</td></tr>
+</tbody>
+</table>
+<p><strong>Note :</strong> En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.</p>
+<h2><a class="anchor" aria-hidden="true" id="resoudre-les-conflits-de-noms"></a><a href="#resoudre-les-conflits-de-noms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résoudre les conflits de noms</h2>
+<p>Veillez à utiliser des noms uniques pour les différents éléments de votre base. Si un identifiant d’un certain type a le même nom qu’un autre identifiant d’un autre type (par exemple, si un champ est baptisé Personnes et qu’une variable est également nommée Personnes), 4D utilise un système de priorité.</p>
+<p>4D identifie les noms utilisés dans les méthodes en fonction de l’ordre de priorité suivant :</p>
+<ol>
+<li>Champs</li>
+<li>Commandes</li>
+<li>Méthodes</li>
+<li>Commandes de plug-in</li>
+<li>Constantes prédéfinies</li>
+<li>Variables.</li>
+</ol>
+<p>Par exemple, 4D dispose d’une fonction interne appelée <code>Date</code>. Si vous appelez <em>Date</em> une de vos méthodes, 4D considérera <code>Date</code> comme étant la fonction interne et non votre méthode. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/plug-ins.html"><span class="arrow-prev">← </span><span>Plug-ins</span></a><a class="docs-next button" href="/docs/fr/Project/overview.html"><span>Aperçu</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#regles-de-base">Règles de base</a><ul class="toc-headings"><li><a href="#regles-supplementaires-pour-les-proprietes-dobjet-et-les-noms-orda">Règles supplémentaires pour les propriétés d'objet et les noms ORDA</a></li><li><a href="#regles-supplementaires-pour-sql">Règles supplémentaires pour SQL</a></li></ul></li><li><a href="#tables">Tables</a></li><li><a href="#champs">Champs</a></li><li><a href="#variables-interprocess">Variables interprocess</a></li><li><a href="#variables-process">Variables process</a></li><li><a href="#variables-locales">Variables locales</a></li><li><a href="#tableaux">Tableaux</a><ul class="toc-headings"><li><a href="#tableaux-interprocess">Tableaux interprocess</a></li><li><a href="#tableaux-process">Tableaux process</a></li><li><a href="#tableaux-locaux">Tableaux locaux</a></li><li><a href="#elements-de-tableaux">Eléments de tableaux</a></li><li><a href="#elements-de-tableaux-a-deux-dimensions">Eléments de tableaux à deux dimensions</a></li></ul></li><li><a href="#proprietes-attributs-dobjets">Propriétés (attributs) d'objets</a></li><li><a href="#formulaires">Formulaires</a></li><li><a href="#objets-de-formulaires">Objets de formulaires</a></li><li><a href="#methodes">Méthodes</a></li><li><a href="#commandes-de-plug-ins">Commandes de plug-ins</a></li><li><a href="#ensembles">Ensembles</a><ul class="toc-headings"><li><a href="#ensembles-interprocess">Ensembles interprocess</a></li><li><a href="#ensembles-process">Ensembles process</a></li><li><a href="#ensembles-clients">Ensembles clients</a></li></ul></li><li><a href="#selections-temporaires">Sélections temporaires</a><ul class="toc-headings"><li><a href="#selections-temporaires-interprocess">Sélections temporaires interprocess</a></li><li><a href="#selections-temporaires-process">Sélections temporaires process</a></li></ul></li><li><a href="#process">Process</a><ul class="toc-headings"><li><a href="#process-globaux">Process globaux</a></li><li><a href="#process-locaux">Process locaux</a></li></ul></li><li><a href="#resume-des-conventions-decriture-dans-4d">Résumé des conventions d'écriture dans 4D</a></li><li><a href="#resoudre-les-conflits-de-noms">Résoudre les conflits de noms</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

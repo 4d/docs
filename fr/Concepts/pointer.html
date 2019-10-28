@@ -86,38 +86,38 @@
 </table>
 <h2><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-un-exemple"></a><a href="#utiliser-des-pointeurs-un-exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs : un exemple</h2>
 <p>Il est plus facile d’expliquer l’utilisation des pointeurs au travers d’un exemple. Cet exemple vous montre comment accéder à une variable par l’intermédiaire d’un pointeur. Nous commençons par créer la variable :</p>
-<pre><code class="hljs css language-code4d">MaVar:=<span class="hljs-string">"Bonjour"</span>
+<pre><code class="hljs css language-code4d">MaVar:="<span class="hljs-string">Bonjour</span>"
 </code></pre>
 <p>MaVar est désormais une variable contenant la chaîne “Bonjour”. Nous pouvons alors créer un pointeur vers MaVar :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">C_POINTER</span><span class="hljs-params">(<span class="hljs-variable">$MonPointeur</span>)</span></span>
-<span class="hljs-variable">$MonPointeur</span>:=-&gt;MaVar
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_POINTER</span>(<span class="hljs-locale">$MonPointeur</span>)
+<span class="hljs-locale">$MonPointeur</span>:=-&gt;MaVar
 </code></pre>
 <p>Le symbole -&gt; signifie “pointer vers” (ce symbole est formé du caractère “tiret” (-) suivi du caractère “supérieur à”). Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MaVar. Ce pointeur est assigné à MonPointeur via l’opérateur d’assignation.</p>
 <p>$MonPointeur est désormais une variable qui contient un pointeur vers $MaVar. $MonPointeur ne contient pas “Bonjour”, la valeur de $MaVar, mais vous pouvez utiliser $MonPointeur pour obtenir cette valeur. L’expression suivante retourne la valeur de $MaVar :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$MonPointeur</span>-&gt;
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MonPointeur</span>-&gt;
 </code></pre>
 <p>Dans ce cas, la chaîne “Bonjour” est retournée. Lorsque le symbole -&gt; est placé derrière un pointeur, la valeur de l’objet vers lequel pointe le pointeur est récupérée. On dit alors qu’on dépointe le pointeur.</p>
 <p>Il est important de comprendre que vous pouvez utiliser un pointeur suivi du symbole -&gt; partout où vous auriez pu utiliser l’objet pointé lui-même. Vous pouvez placer l’expression $MonPointeur-&gt; partout où vous pourriez utiliser la variable originale $MaVar. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Bonjour :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">ALERTE</span><span class="hljs-params">(<span class="hljs-variable">$MonPointeur</span>-&gt;)</span></span>
+<pre><code class="hljs css language-code4d">ALERTE(<span class="hljs-locale">$MonPointeur</span>-&gt;)
 </code></pre>
 <p>Vous pouvez également utiliser $MonPointeur pour modifier la valeur de $MaVar. Par exemple, l’instruction suivante stocke la chaîne “Au revoir” dans la variable $MaVar :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$MonPointeur</span>-&gt;<span class="hljs-symbol">:</span>=<span class="hljs-string">"Au revoir"</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MonPointeur</span>-&gt;:="<span class="hljs-string">Au revoir</span>"
 </code></pre>
 <p>Si vous examinez les deux utilisations de l’expression $MonPointeur-&gt; ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MaVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">ALERT</span><span class="hljs-params">(<span class="hljs-variable">$MonPointeur</span>-&gt;)</span></span>
- ALERT(<span class="hljs-variable">$MaVar</span>)
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>(<span class="hljs-locale">$MonPointeur</span>-&gt;)
+ <span class="hljs-command">ALERT</span>(<span class="hljs-locale">$MaVar</span>)
 </code></pre>
 <p>Les deux lignes suivantes effectuent la même opération ; elles assignent la chaîne &quot;Au revoir&quot; à $MaVar :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$MonPointeur</span>-&gt;<span class="hljs-symbol">:</span>=<span class="hljs-string">"Au revoir"</span>
-<span class="hljs-variable">$MaVar</span><span class="hljs-symbol">:</span>=<span class="hljs-string">"Au revoir"</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MonPointeur</span>-&gt;:="<span class="hljs-string">Au revoir</span>"
+<span class="hljs-locale">$MaVar</span>:="<span class="hljs-string">Au revoir</span>"
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="operateurs-sur-les-pointeurs"></a><a href="#operateurs-sur-les-pointeurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opérateurs sur les pointeurs</h2>
 <p>Avec :</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// vPtrA et vPtrB pointent sur le même objet</span>
- <span class="hljs-function"><span class="hljs-title">vPtrA</span>:=-&gt;</span>unObjet
- <span class="hljs-function"><span class="hljs-title">vPtrB</span>:=-&gt;</span>unObjet
-  <span class="hljs-comment">// vPtrC pointe sur un autre objet</span>
- <span class="hljs-function"><span class="hljs-title">vPtrC</span>:=-&gt;</span>autreObjet
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// vPtrA et vPtrB pointent sur le même objet
+</span> vPtrA:=-&gt;unObjet
+ vPtrB:=-&gt;unObjet
+  <span class="hljs-comment">// vPtrC pointe sur un autre objet
+</span> vPtrC:=-&gt;autreObjet
 </code></pre>
 <table>
 <thead>
@@ -133,29 +133,29 @@
 <h2><a class="anchor" aria-hidden="true" id="principales-utilisations"></a><a href="#principales-utilisations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Principales utilisations</h2>
 <h3><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-vers-des-tables"></a><a href="#utiliser-des-pointeurs-vers-des-tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs vers des tables</h3>
 <p>Partout où le langage requiert un nom de table, vous pouvez utiliser un pointeur dépointé vers une table. Pour créer un pointeur vers une table, écrivez une instruction du type :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$TablePtr</span><span class="hljs-symbol">:</span>=-&gt;[touteTable]
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$TablePtr</span>:=-&gt;[touteTable]
 </code></pre>
 <p>Vous pouvez également récupérer un pointeur vers une table à l’aide de la fonction Table. Par exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-meta"><span class="hljs-meta-keyword">$TablePtr</span>:=Table(20)</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$TablePtr</span>:=<span class="hljs-constant">Table</span>(20)
 </code></pre>
 <p>Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">DEFAULT</span> TABLE($TablePtr-&gt;)
+<pre><code class="hljs css language-code4d"><span class="hljs-command">DEFAULT TABLE</span>(<span class="hljs-locale">$TablePtr</span>-&gt;)
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-vers-des-champs"></a><a href="#utiliser-des-pointeurs-vers-des-champs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs vers des champs</h3>
 <p>Partout où le langage requiert un nom de champ, vous pouvez utiliser un pointeur dépointé vers un champ. Pour créer un pointeur vers un champ, écrivez une ligne d'instruction du type :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$ChampPtr</span><span class="hljs-symbol">:</span>=-&gt;[uneTable]CeChamp
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$ChampPtr</span>:=-&gt;[uneTable]CeChamp
 </code></pre>
 <p>Vous pouvez également récupérer un pointeur vers un champ à l’aide de la fonction <code>Champ</code>. Par exemple :</p>
-<pre><code class="hljs css language-code4d">$ChampPtr:=Champ(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$ChampPtr</span>:=Champ(1;2)
 </code></pre>
 <p>Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :</p>
-<pre><code class="hljs css language-code4d">OBJECT <span class="hljs-builtin-name">SET</span> FONT(<span class="hljs-variable">$FieldPtr</span>-&gt;;<span class="hljs-string">"Arial"</span>)
+<pre><code class="hljs css language-code4d"><span class="hljs-command">OBJECT SET FONT</span>(<span class="hljs-locale">$FieldPtr</span>-&gt;;"<span class="hljs-string">Arial</span>")
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-vers-des-variables"></a><a href="#utiliser-des-pointeurs-vers-des-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs vers des variables</h3>
 <p>Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.</p>
 <p>Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans Méthode1 :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$MaVar</span><span class="hljs-symbol">:</span>=<span class="hljs-string">"Bonjour"</span>
- Méthode2(-&gt;<span class="hljs-variable">$MaVar</span>)
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$MaVar</span>:="<span class="hljs-string">Bonjour</span>"
+ Méthode2(-&gt;<span class="hljs-locale">$MaVar</span>)
 </code></pre>
 <p>Dans Méthode2, le débogueur affichera $1 de la façon suivante :</p>
 <table>
@@ -177,30 +177,30 @@
 </table>
 <h3><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-vers-des-elements-de-tableau"></a><a href="#utiliser-des-pointeurs-vers-des-elements-de-tableau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs vers des éléments de tableau</h3>
 <p>Vous pouvez créer un pointeur vers un élément de tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à une variable appelée $ElémPtr un pointeur vers le premier élément :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-built_in">ARRAY</span> REAL($unTableau;<span class="hljs-number">10</span>) <span class="hljs-comment">// Créer un tableau</span>
- $ElémPtr:=-&gt;$unTableau{<span class="hljs-number">1</span>} <span class="hljs-comment">// Créer un pointeur vers l’élément de tableau</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY REAL</span>(<span class="hljs-locale">$unTableau</span>;10) <span class="hljs-comment">// Créer un tableau
+</span> <span class="hljs-locale">$ElémPtr</span>:=-&gt;<span class="hljs-locale">$unTableau</span>{1} <span class="hljs-comment">// Créer un pointeur vers l’élément de tableau
+</span></code></pre>
 <p>Vous pouvez alors utiliser le pointeur dépointé pour assigner une valeur à l’élément, comme ceci :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$El</span>émPtr-&gt;<span class="hljs-symbol">:</span>=<span class="hljs-number">8</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$ElémPtr</span>-&gt;:=8
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="utiliser-des-pointeurs-vers-des-tableaux"></a><a href="#utiliser-des-pointeurs-vers-des-tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser des pointeurs vers des tableaux</h3>
 <p>Vous pouvez créer un pointeur vers un tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à la variable nommée $TabPtr un pointeur vers le tableau :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-built_in">ARRAY</span> REAL($unTableau;<span class="hljs-number">10</span>) <span class="hljs-comment">// Créer un tableau</span>
-$TabPtr:=-&gt;$unTableau <span class="hljs-comment">// Créer un pointeur vers le tableau</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY REAL</span>(<span class="hljs-locale">$unTableau</span>;10) <span class="hljs-comment">// Créer un tableau
+</span><span class="hljs-locale">$TabPtr</span>:=-&gt;<span class="hljs-locale">$unTableau</span> <span class="hljs-comment">// Créer un pointeur vers le tableau
+</span></code></pre>
 <p>Il est important de comprendre que ce pointeur pointe vers le tableau, et non vers un élément du tableau. Par exemple, vous pourriez utiliser le pointeur dépointé de la manière suivante :</p>
-<pre><code class="hljs css language-code4d">SORT ARRAY(T<span class="hljs-function"><span class="hljs-title">abPtr</span>-&gt;</span>;&gt;) <span class="hljs-comment">// Tri du tableau</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">SORT ARRAY</span>(<span class="hljs-constant">TabPtr-&gt;</span>;&gt;) <span class="hljs-comment">// Tri du tableau
+</span></code></pre>
 <p>Si vous devez vous référer au quatrième élément du tableau à l’aide du pointeur, vous pouvez écrire :</p>
-<pre><code class="hljs css language-code4d"> TabPtr-&gt;{<span class="hljs-number">4</span>}:=<span class="hljs-number">84</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-constant">TabPtr-&gt;{4}:=84</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="passer-des-pointeurs-aux-methodes"></a><a href="#passer-des-pointeurs-aux-methodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passer des pointeurs aux méthodes</h3>
 <p>Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, <code>Recoit Deux</code>, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.</p>
-<pre><code class="hljs css language-code4d">  // Méthode projet Recoit Deux
-  // <span class="hljs-variable">$1</span> – Pointeur vers un champ ou une <span class="hljs-keyword">variable</span> de type Chaî<span class="hljs-literal">ne</span>. Passe la chaî<span class="hljs-literal">ne</span> en majuscules.
-  // <span class="hljs-variable">$2</span> – Pointeur vers un champ ou une <span class="hljs-keyword">variable</span> de type Chaî<span class="hljs-literal">ne</span>. Passe la chaî<span class="hljs-literal">ne</span> en minuscules.
- <span class="hljs-variable">$1-</span>&gt;:=Uppercase(<span class="hljs-variable">$1-</span>&gt;)
- <span class="hljs-variable">$2-</span>&gt;:=Lowercase(<span class="hljs-variable">$2-</span>&gt;)
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode projet Recoit Deux
+</span>  <span class="hljs-comment">// $1 – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en majuscules.
+</span>  <span class="hljs-comment">// $2 – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en minuscules.
+</span> <span class="hljs-param">$1</span>-&gt;:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$1</span>-&gt;)
+ <span class="hljs-param">$2</span>-&gt;:=<span class="hljs-command">Lowercase</span>(<span class="hljs-param">$2</span>-&gt;)
 </code></pre>
 <p>L'instruction suivante emploie la méthode <code>Recoit Deux</code> pour passer un champ en caractères majuscules et une variable en caractères minuscules :</p>
 <pre><code class="hljs">takeTwo(-&gt;[MaTable]MonChamp;-&gt;$MaVar)
@@ -209,11 +209,11 @@ $TabPtr:=-&gt;$unTableau <span class="hljs-comment">// Créer un pointeur vers l
 <p>Dans la méthode Recoit Deux (et, en fait, à chaque fois que vous utilisez des pointeurs), il est important que les types de données des objets référencés soient corrects. Dans l’exemple précédent, les pointeurs doivent pointer vers des objets contenant une chaîne ou un texte.</p>
 <h3><a class="anchor" aria-hidden="true" id="pointeurs-vers-des-pointeurs"></a><a href="#pointeurs-vers-des-pointeurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointeurs vers des pointeurs</h3>
 <p>Si vous aimez compliquer les choses à l'extrême (bien que cela ne soit pas nécessaire dans 4D), vous pouvez utiliser des pointeurs pour référencer d'autres pointeurs. Examinons l’exemple suivant :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$MaVar</span><span class="hljs-symbol">:</span>=<span class="hljs-string">"Bonjour"</span>
-<span class="hljs-variable">$PointeurUn</span><span class="hljs-symbol">:</span>=-&gt;<span class="hljs-variable">$MaVar</span>
-<span class="hljs-variable">$PointeurDeux</span><span class="hljs-symbol">:</span>=-&gt;<span class="hljs-variable">$PointeurUn</span>
-(<span class="hljs-variable">$PointeurDeux</span>-&gt;)-&gt;<span class="hljs-symbol">:</span>=<span class="hljs-string">"Au revoir"</span>
-ALERT((<span class="hljs-variable">$PointeurDeux</span>-&gt;)-&gt;)
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$MaVar</span>:="<span class="hljs-string">Bonjour</span>"
+<span class="hljs-locale">$PointeurUn</span>:=-&gt;<span class="hljs-locale">$MaVar</span>
+<span class="hljs-locale">$PointeurDeux</span>:=-&gt;<span class="hljs-locale">$PointeurUn</span>
+(<span class="hljs-locale">$PointeurDeux</span>-&gt;)-&gt;:="<span class="hljs-string">Au revoir</span>"
+<span class="hljs-command">ALERT</span>((<span class="hljs-locale">$PointeurDeux</span>-&gt;)-&gt;)
 </code></pre>
 <p>Cet exemple affiche une boîte de dialogue d’alerte contenant “Au revoir”.</p>
 <p>Voici la description de chaque ligne de l’exemple :</p>
@@ -225,7 +225,7 @@ ALERT((<span class="hljs-variable">$PointeurDeux</span>-&gt;)-&gt;)
 <li>ALERTE (($PointeurDeux-&gt;)-&gt;) --&gt; C'est ici la même chose que précédemment : $PointeurDeux-&gt; référence le contenu de $PointeurUn, qui elle-même référence $MaVar. Par conséquent, ($PointeurDeux-&gt;)-&gt; référence le contenu de $MaVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MaVar.</li>
 </ul>
 <p>La ligne suivante place la valeur &quot;Bonjour&quot; dans $MaVar :</p>
-<pre><code class="hljs css language-code4d">(<span class="hljs-variable">$PointeurDeux</span>-&gt;)-&gt;<span class="hljs-symbol">:</span>=<span class="hljs-string">"Bonjour"</span>
+<pre><code class="hljs css language-code4d">(<span class="hljs-locale">$PointeurDeux</span>-&gt;)-&gt;:="<span class="hljs-string">Bonjour</span>"
 </code></pre>
 <p>La ligne suivante récupère &quot;Bonjour&quot; à partir de $MaVar et la place dans $NouvelleVar :</p>
 <pre><code class="hljs">$NouvelleVar:=($PointeurDeux-&gt;)-&gt;

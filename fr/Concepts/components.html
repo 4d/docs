@@ -1,5 +1,292 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Documentation · Guides essentiels du développeur 4D</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Guides essentiels du développeur 4D"/><meta property="og:title" content="Documentation · Guides essentiels du développeur 4D"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Guides essentiels du développeur 4D"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><meta http-equiv="refresh" content="0; URL=/docs/fr/Concepts/components.html"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body><script>
-                <!--
-                window.location.href = "/docs/fr/Concepts/components.html";
-                // -->
-                </script></body></html>
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Composants · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes bases. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des bases 4D."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Composants · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes bases. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des bases 4D."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/components.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts du langage 4D</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Composants</h1></header><article><div><span><p>Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes bases. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des bases 4D.</p>
+<p>La création et l’installation des composants 4D s’effectuent directement depuis 4D. Schématiquement, les composants sont gérés comme des <a href="/docs/fr/Concepts/plug-ins.html">plug-ins</a>. Les principes sont les suivants :</p>
+<ul>
+<li>Un composant est un simple fichier de structure (compilé ou non compilé) d’architecture standard ou sous forme de package (cf. paragraphe Extension .4dbase).</li>
+<li>Pour installer un composant dans une base, il suffit de le copier dans le dossier “Components” de la base, placé à côté du fichier de structure ou à côté de l'application 4D exécutable.</li>
+<li>Un composant peut appeler la plupart des éléments 4D : des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, des images issues de la bibliothèque, etc. Il ne peut pas appeler des méthodes base et des triggers.</li>
+<li>Il n’est pas possible d’exploiter des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="definitions"></a><a href="#definitions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Définitions</h2>
+<p>Les mécanismes de gestion des composants dans 4D nécessitent la mise en oeuvre des concepts et de la terminologie suivants :</p>
+<ul>
+<li><strong>Base matrice :</strong> base de données 4D utilisée pour développer le composant. La base matrice est une base standard, sans attribut spécifique. Une base matrice constitue un seul composant. La base matrice est destinée à être copiée, compilée ou non, dans le dossier Components de l'application 4D ou de la base devant utiliser le composant (la base hôte).</li>
+<li><strong>Base hôte :</strong> base dans laquelle est installé et utilisé un composant.</li>
+<li><strong>Composant :</strong> base matrice, compilée ou non, copiée dans le dossier Components de l'application 4D ou de la base hôte et dont le contenu est utilisé dans les bases hôtes.</li>
+</ul>
+<p>Il est à noter qu’une base peut donc être à la fois “matrice” et “hôte”, c’est-à-dire qu’une base matrice peut elle-même utiliser un ou plusieurs composants. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.</p>
+<h3><a class="anchor" aria-hidden="true" id="protection-des-composants-la-compilation"></a><a href="#protection-des-composants-la-compilation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Protection des composants : la compilation</h3>
+<p>Par défaut, toutes les méthodes projet d’une base matrice installée comme composant sont virtuellement visibles depuis la base hôte. En particulier :</p>
+<ul>
+<li>Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.</li>
+<li>Les autres méthodes projet de la base matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur de la base hôte.</li>
+</ul>
+<p>Pour protéger efficacement les méthodes projet d’un composant, il vous suffit simplement de compiler la base matrice et de la fournir sous forme de fichier .4dc (base compilée ne contenant pas le code interprété). Lorsqu’une base matrice compilée est installée comme composant :</p>
+<ul>
+<li>Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.</li>
+<li>Les autres méthodes projet de la base matrice n’apparaissent jamais.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="partage-des-methodes-projet"></a><a href="#partage-des-methodes-projet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Partage des méthodes projet</h2>
+<p>Toutes les méthodes projet d’une base matrice sont par définition incluses dans le composant (la base est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.</p>
+<p>En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par la base hôte. Vous devez explicitement désigner dans la base matrice les méthodes que vous souhaitez partager avec la base hôte. Ces méthodes projet peuvent être appelées dans le code la base hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de la base hôte). Ces méthodes constituent les <strong>points d’entrée</strong> dans le composant.</p>
+<p><strong>Note :</strong> A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant à la base hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre base hôte. Pour cela, vous devez explicitement désigner les méthodes projet de la base hôte que vous souhaitez rendre accessibles aux composants.</p>
+<p><img src="/docs/assets/en/Concepts/pict516563.en.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="passage-de-variables"></a><a href="#passage-de-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passage de variables</h2>
+<p>Les composants et les bases hôtes ne partagent pas de variables locales, process ou interprocess. Le seul moyen d’accéder aux variables du composant depuis la base hôte et inversement est d’utiliser des pointeurs.</p>
+<p>Exemple utilisant un tableau :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//Dans la base hôte :
+</span>    <span class="hljs-command">ARRAY INTEGER</span>(MyArray;10)
+     AMethod(-&gt;MyArray)
+
+<span class="hljs-comment">//Dans le composant, la méthode projet UneMéthode contient : 
+</span>     <span class="hljs-command">APPEND TO ARRAY</span>(<span class="hljs-param">$1</span>-&gt;;2)
+</code></pre>
+<p>Exemples utilisant des variables :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_TEXT</span>(myvariable)
+ component_method1(-&gt;myvariable)
+ <span class="hljs-command">C_POINTER</span>(<span class="hljs-locale">$p</span>)
+ <span class="hljs-locale">$p</span>:=component_method2(...)
+</code></pre>
+<p>L’utilisation de pointeurs pour faire communiquer les composants et la base hôte nécessite de prendre en compte les spécificités suivantes :</p>
+<ul>
+<li><p>La commande <code>Pointeur vers</code> ne retournera pas un pointeur vers une variable de la base hôte si elle est appelée depuis un composant et inversement.</p></li>
+<li><p>L’architecture des composants autorise la coexistence, au sein d’une même base interprétée, de composants interprétés et compilés (à l’inverse, seuls des composants compilés peuvent être utilisés dans une base compilée). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans la même base hôte.</p>
+<ul>
+<li>Si le composant C définit la variable <code>mavarC</code>, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur <code>-&gt;mavarC</code>.</li>
+<li>Si le composant I définit la variable <code>mavarI</code>, le composant C ne peut pas accéder à cette variable en utilisant le pointeur <code>-&gt;mavarI</code>. Cette syntaxe provoque une erreur d’exécution.</li>
+</ul></li>
+<li><p>La comparaison de pointeurs via la commande <code>RESOUDRE POINTEUR</code> est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différente dans un composant et la base hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs <code>monptr1</code> et <code>monptr2</code> pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :</p></li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">RESOLVE POINTER</span>(monptr1;vNomVar1;vnumtable1;vnumchamp1)
+      <span class="hljs-command">RESOLVE POINTER</span>(monptr2;vNomVar2;vnumtable2;vnumchamp2)
+      <span class="hljs-keyword">If</span>(vNomVar1=vNomVar2)
+       <span class="hljs-comment">//Ce test retourne Vrai alors que les variables sont différentes
+</span></code></pre>
+<p>Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :</p>
+<pre><code class="hljs css language-code4d">     <span class="hljs-keyword">If</span>(monptr1=monptr2) <span class="hljs-comment">//Ce test retourne Faux
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="acces-aux-tables-de-la-base-hote"></a><a href="#acces-aux-tables-de-la-base-hote" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accès aux tables de la base hôte</h2>
+<p>Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent à la base hôte et au composant de communiquer dans ce cas. Par exemple, voici une méthode pouvant être appelée depuis un composant :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">// appeler une méthode composant
+</span>methCreateRec(-&gt;[PERSONNES];-&gt;[PERSONNES]Nom;"<span class="hljs-string">Julie Andrews</span>")
+</code></pre>
+<p>Dans le composant, le code de la méthode <code>methCreateRec</code> :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_POINTER</span>(<span class="hljs-param">$1</span>) <span class="hljs-comment">//Pointeur vers une table de la base hôte
+</span><span class="hljs-command">C_POINTER</span>(<span class="hljs-param">$2</span>) <span class="hljs-comment">//Pointeur vers un champ de la base hôte
+</span><span class="hljs-command">C_TEXT</span>(<span class="hljs-param">$3</span>) <span class="hljs-comment">// Valeur à insérer
+</span>
+<span class="hljs-locale">$tablepointer</span>:=<span class="hljs-param">$1</span>
+<span class="hljs-locale">$fieldpointer</span>:=<span class="hljs-param">$2</span>
+<span class="hljs-command">CREATE RECORD</span>(<span class="hljs-locale">$tablepointer</span>-&gt;)
+
+<span class="hljs-locale">$fieldpointer</span>-&gt;:=<span class="hljs-param">$3</span>
+<span class="hljs-command">SAVE RECORD</span>(<span class="hljs-locale">$tablepointer</span>-&gt;)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="portee-des-commandes-du-langage"></a><a href="#portee-des-commandes-du-langage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Portée des commandes du langage</h2>
+<p>Hormis les <a href="#unusable-commands">Commandes non utilisables</a>, un composant peut utiliser toute commande du langage 4D.</p>
+<p>Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande <code>EXECUTE METHOD</code> qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes de la base hôte (un composant n’a pas d’utilisateurs et groupes propres).</p>
+<p>Les commandes <code>EXECUTE METHOD</code> et <code>Get database parameter</code> constituent aussi une exception à ce principe : leur portée est globale à la base. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent à la base hôte.</p>
+<p>Par ailleurs, des dispositions spécifiques sont définies pour les commandes <code>Structure file</code> et <code>Get 4D folder</code> lorsqu’elles sont utilisées dans le cadre des composants.</p>
+<p>La commande <code>COMPONENT LIST</code> permet de connaître la liste des composants chargés par la base hôte.</p>
+<h3><a class="anchor" aria-hidden="true" id="commandes-non-utilisables"></a><a href="#commandes-non-utilisables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes non utilisables</h3>
+<p>Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cadre d’un composant car elles modifient le fichier de structure — ouvert en lecture. Leur exécution dans un composant provoque l’erreur -10511, “La commande NomCommande ne peut pas être appelée depuis un composant” :</p>
+<ul>
+<li><code>ON EVENT CALL</code></li>
+<li><code>Method called on event</code></li>
+<li><code>SET PICTURE TO LIBRARY</code></li>
+<li><code>REMOVE PICTURE FROM LIBRARY</code></li>
+<li><code>SAVE LIST</code></li>
+<li><code>ARRAY TO LIST</code></li>
+<li><code>EDIT FORM</code></li>
+<li><code>CREATE USER FORM</code></li>
+<li><code>DELETE USER FORM</code></li>
+<li><code>CHANGE PASSWORD</code></li>
+<li><code>EDIT ACCESS</code></li>
+<li><code>Set group properties</code></li>
+<li><code>Set user properties</code></li>
+<li><code>DELETE USER</code></li>
+<li><code>CHANGE LICENSES</code></li>
+<li><code>BLOB TO USERS</code></li>
+<li><code>SET PLUGIN ACCESS</code></li>
+</ul>
+<p><strong>Notes :</strong></p>
+<ul>
+<li>La commande <code>Table du formulaire courant</code> retourne <code>Nil</code> lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.</li>
+<li>SQL data definition language commands (<code>CREATE TABLE</code>, <code>DROP TABLE</code>, etc.) cannot be used on the component database. However, they are supported with external databases (see <code>CREATE DATABASE</code> SQL command).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="gestion-des-erreurs"></a><a href="#gestion-des-erreurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestion des erreurs</h2>
+<p>Une <a href="/docs/fr/Concepts/error-handling.html">méthode de gestion d'erreurs</a> installée par la commande <code>ON ERR CALL</code> s'applique à la base en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur de la base hôte n'est pas appelée, et inversement.</p>
+<h2><a class="anchor" aria-hidden="true" id="utilisation-de-formulaires"></a><a href="#utilisation-de-formulaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilisation de formulaires</h2>
+<ul>
+<li>Seuls les &quot;formulaires projet&quot; (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant.</li>
+<li>Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.</li>
+</ul>
+<p><strong>Note :</strong> Si un composant utilise la commande <code>ADD RECORD</code>, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.</p>
+<ul>
+<li>Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants. Ce point est détaillé dans le paragraphe Partage des formulaires.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="utilisation-de-tables-et-de-champs"></a><a href="#utilisation-de-tables-et-de-champs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilisation de tables et de champs</h2>
+<p>Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D de la base matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. Une base externe est une base 4D indépendante de la base 4D principale, mais qui est manipulée depuis la base 4D principale. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL <code>CREATE DATABASE</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
+<p>Le code suivant est inclus dans un composant et effectue trois actions élémentaires avec une base de données externe :</p>
+<ul>
+<li>création de la base de données externe si elle n'existe pas déjà,</li>
+<li>ajout de données dans la base de données externe,</li>
+<li>lecture de données depuis la base de données externe.</li>
+</ul>
+<p>Création de la base de données externe :</p>
+<pre><code class="hljs css language-code4d">&lt;&gt;MyDatabase:=<span class="hljs-command">Get 4D folder</span>+"<span class="hljs-string">\MyDB</span>" <span class="hljs-comment">// (Windows) stocke les données dans un répertoire autorisé
+</span> <span class="hljs-command">Begin SQL</span>
+        CREATE DATABASE IF NOT EXISTS DATAFILE :[&lt;&gt;MyDatabase];
+        USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
+        <span class="hljs-plugin">CREATE TABLE</span> IF NOT EXISTS KEE<span class="hljs-plugin">PIT</span>
+        (
+        ID INT32 PRIMARY KEY,
+        kind VAR<span class="hljs-plugin">CHAR,</span>
+        name VAR<span class="hljs-plugin">CHAR,</span>
+        <span class="hljs-command">code</span> TEXT,
+        sort_order INT32
+        );
+
+        CREATE UNIQUE INDEX id_index ON KEE<span class="hljs-plugin">PIT</span> (ID);
+
+        USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
+
+ <span class="hljs-command">End SQL</span>
+</code></pre>
+<p>Ecriture dans la base de données externe :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$Ptr_1</span>:=<span class="hljs-param">$2</span> <span class="hljs-comment">// récupération des données de la base hôte via des pointeurs
+</span> <span class="hljs-locale">$Ptr_2</span>:=<span class="hljs-param">$3</span>
+ <span class="hljs-locale">$Ptr_3</span>:=<span class="hljs-param">$4</span>
+ <span class="hljs-locale">$Ptr_4</span>:=<span class="hljs-param">$5</span>
+ <span class="hljs-locale">$Ptr_5</span>:=<span class="hljs-param">$6</span>
+ <span class="hljs-command">Begin SQL</span>
+
+        USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
+
+        INSERT INTO KEE<span class="hljs-plugin">PIT</span>
+        (ID, kind, name, <span class="hljs-command">code</span>, sort_order)
+        VALUES
+        (:[<span class="hljs-locale">$Ptr_1</span>], :[<span class="hljs-locale">$Ptr_2</span>], :[<span class="hljs-locale">$Ptr_3</span>], :[<span class="hljs-locale">$Ptr_4</span>], :[<span class="hljs-locale">$Ptr_5</span>]);
+
+        USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
+
+ <span class="hljs-command">End SQL</span>
+</code></pre>
+<p>Lecture dans une base de données externe :</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$Ptr_1</span>:=<span class="hljs-param">$2</span> <span class="hljs-comment">// accès aux données de la base hôte via des pointeurs
+</span> <span class="hljs-locale">$Ptr_2</span>:=<span class="hljs-param">$3</span>
+ <span class="hljs-locale">$Ptr_3</span>:=<span class="hljs-param">$4</span>
+ <span class="hljs-locale">$Ptr_4</span>:=<span class="hljs-param">$5</span>
+ <span class="hljs-locale">$Ptr_5</span>:=<span class="hljs-param">$6</span>
+ 
+ Debut SQL
+ 
+    USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
+ 
+    <span class="hljs-plugin">SELECT</span> ALL ID, kind, name, <span class="hljs-command">code</span>, sort_order
+    FROM KEE<span class="hljs-plugin">PIT</span>
+    INTO :<span class="hljs-locale">$Ptr_1</span>, :<span class="hljs-locale">$Ptr_2</span>, :<span class="hljs-locale">$Ptr_3</span>, :<span class="hljs-locale">$Ptr_4</span>, :<span class="hljs-locale">$Ptr_5</span>;
+ 
+    USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
+ 
+ Fin SQL
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="utilisation-de-ressources"></a><a href="#utilisation-de-ressources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilisation de ressources</h2>
+<p>Les composants peuvent utiliser des ressources. Conformément aux principes de gestion des ressources, les fichiers de ressources des composants doivent être placés dans un dossier Resources, situé à côté du fichier .4db ou .4dc du composant. Si le composant est d’architecture .4dbase (architecture conseillée), le dossier Resources doit être placé à l’intérieur de ce dossier.</p>
+<p>Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.</p>
+<p>Dans une base hôte contenant un ou plusieurs composant(s), chaque composant ainsi que la base hôte dispose de sa propre “chaîne de ressources”. Les ressources sont cloisonnées entre les différentes bases : il n’est pas possible d’accéder aux ressources du composant A depuis le composant B ou la base hôte.</p>
+<h2><a class="anchor" aria-hidden="true" id="aide-en-ligne-des-composants"></a><a href="#aide-en-ligne-des-composants" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aide en ligne des composants</h2>
+<p>Un mécanisme spécifique a été mis en place afin de permettre aux développeurs d’ajouter des aides en ligne à leurs composants. Le principe est semblable à celui proposé pour les bases de données 4D :</p>
+<ul>
+<li>L’aide du composant doit être fournie sous le forme d’un fichier suffixé .htm, .html ou (Windows uniquement) .chm,</li>
+<li>Le fichier d’aide doit être placé à côté du fichier de structure du composant et porter le même nom que le fichier de structure,</li>
+<li>L’aide est alors automatiquement chargée dans le menu Aide de l’application avec le libellé “Aide de...” suivi du nom du fichier d’aide.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Concepts/interpreted-compiled.html"><span class="arrow-prev">← </span><span>Modes interprété et compilé</span></a><a class="docs-next button" href="/docs/fr/Concepts/plug-ins.html"><span>Plug-ins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#definitions">Définitions</a><ul class="toc-headings"><li><a href="#protection-des-composants-la-compilation">Protection des composants : la compilation</a></li></ul></li><li><a href="#partage-des-methodes-projet">Partage des méthodes projet</a></li><li><a href="#passage-de-variables">Passage de variables</a></li><li><a href="#acces-aux-tables-de-la-base-hote">Accès aux tables de la base hôte</a></li><li><a href="#portee-des-commandes-du-langage">Portée des commandes du langage</a><ul class="toc-headings"><li><a href="#commandes-non-utilisables">Commandes non utilisables</a></li></ul></li><li><a href="#gestion-des-erreurs">Gestion des erreurs</a></li><li><a href="#utilisation-de-formulaires">Utilisation de formulaires</a></li><li><a href="#utilisation-de-tables-et-de-champs">Utilisation de tables et de champs</a><ul class="toc-headings"><li><a href="#exemple">Exemple</a></li></ul></li><li><a href="#utilisation-de-ressources">Utilisation de ressources</a></li><li><a href="#aide-en-ligne-des-composants">Aide en ligne des composants</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

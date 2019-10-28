@@ -73,9 +73,9 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="constantes-litterales-de-type-chaine"></a><a href="#constantes-litterales-de-type-chaine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constantes littérales de type chaîne</h2>
 <p>Une constante littérale de type chaîne est incluse entre des guillemets droits (&quot;…&quot;). En voici quelques exemples :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-string">"Ajouter Enregistrements"</span>
-<span class="hljs-string">"Aucun enregistrement trouvé."</span>
-<span class="hljs-string">"Facture"</span>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">Ajouter Enregistrements</span>"
+"<span class="hljs-string">Aucun enregistrement trouvé.</span>"
+"<span class="hljs-string">Facture</span>"
 </code></pre>
 <p>Une chaîne vide est spécifiée par la succession de deux guillemets (&quot;&quot;).</p>
 <h3><a class="anchor" aria-hidden="true" id="sequences-dechappement"></a><a href="#sequences-dechappement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Séquences d’échappement</h3>
@@ -124,53 +124,53 @@
 <li>Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par <a href="/docs/fr/Concepts/string.html#keywords">mot-clé</a>, cf. ci-dessous).</li>
 <li>Lors d'une comparaison de chaînes, 4D ne tient pas compte de la casse des caractères ; par exemple, &quot;a&quot;=&quot;A&quot; retourne <code>VRAI</code>. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante retourne <code>FAUX</code> :</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-built_in">Code</span> de caractere(<span class="hljs-string">"A"</span>)=<span class="hljs-built_in">Code</span> de caractere(<span class="hljs-string">"a"</span>) // <span class="hljs-number">65</span> <span class="hljs-built_in">n</span>'est pas égal à <span class="hljs-number">97</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">Code de caractere("<span class="hljs-string">A</span>")=Code de caractere("<span class="hljs-string">a</span>") <span class="hljs-comment">// 65 n'est pas égal à 97
+</span></code></pre>
 <ul>
 <li>Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent <code>VRAI</code> :</li>
 </ul>
-<pre><code class="hljs css language-code4d">     <span class="hljs-string">"n"</span>=<span class="hljs-string">"ñ"</span>
-     <span class="hljs-string">"n"</span>=<span class="hljs-string">"Ñ"</span>
-     <span class="hljs-string">"A"</span>=<span class="hljs-string">"å"</span>
-      <span class="hljs-comment">// etc</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">n</span>"="<span class="hljs-string">ñ</span>"
+     "<span class="hljs-string">n</span>"="<span class="hljs-string">Ñ</span>"
+     "<span class="hljs-string">A</span>"="<span class="hljs-string">å</span>"
+      <span class="hljs-comment">// etc
+</span></code></pre>
 <p><strong>Note :</strong> Les comparaisons de chaîne tiennent compte des spécificités du langage <strong>défini pour le fichier de données 4D</strong> (qui n'est pas toujours identique au langage défini pour le système).</p>
 <h3><a class="anchor" aria-hidden="true" id="le-joker"></a><a href="#le-joker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Le joker (@)</h3>
 <p>Le langage 4D prend en charge <strong>@</strong> en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à <code>TRUE</code> :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-string">"abcdefghij"</span>=<span class="hljs-string">"abc@"</span>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abc@</span>"
 </code></pre>
 <p>Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est évaluée à <code>FAUX</code> car le joker est alors considéré en tant que caractère :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-string">"abc@"</span>=<span class="hljs-string">"abcdefghij"</span>
+<pre><code class="hljs css language-code4d">    "<span class="hljs-string">abc@</span>"="<span class="hljs-string">abcdefghij</span>"
 </code></pre>
 <p>Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont évaluées à <code>VRAI</code> :</p>
-<pre><code class="hljs css language-code4d">     <span class="hljs-string">"abcdefghij"</span>=<span class="hljs-string">"abcdefghij@"
-     "</span>abcdefghij<span class="hljs-string">"="</span>@abcdefghij<span class="hljs-string">"
-     "</span>abcdefghij<span class="hljs-string">"="</span>abcd@efghij<span class="hljs-string">"
-     "</span>abcdefghij<span class="hljs-string">"="</span>@abcdefghij@"
-     <span class="hljs-string">"abcdefghij"</span>=<span class="hljs-string">"@abcde@fghij@"
-</span></code></pre>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abcdefghij@</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcdefghij</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abcd@efghij</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcdefghij@</span>"
+     "<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">@abcde@fghij@</span>"
+</code></pre>
 <p>En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera évaluée à <code>FAUX</code>. L'expression suivante est à <code>FAUX</code> :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-string">"abcdefghij"</span>=<span class="hljs-string">"abc@@fg"</span>
+<pre><code class="hljs css language-code4d">"<span class="hljs-string">abcdefghij</span>"="<span class="hljs-string">abc@@fg</span>"
 </code></pre>
 <p>Lorsque l'opérateur de comparaison est ou contient un symbole &lt; ou &gt;, seule la comparaison avec un seul joker situé en fin d'opérande est prise en charge :</p>
-<pre><code class="hljs css language-code4d">     <span class="hljs-string">"abcd"</span>&lt;=<span class="hljs-string">"abc@"</span> <span class="hljs-comment">//Comparaison valide</span>
- <span class="hljs-string">"abcd"</span>&lt;=<span class="hljs-string">"abc@ef"</span> <span class="hljs-comment">//Comparaison non valide</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">abcd</span>"&lt;="<span class="hljs-string">abc@</span>" <span class="hljs-comment">//Comparaison valide
+</span> "<span class="hljs-string">abcd</span>"&lt;="<span class="hljs-string">abc@ef</span>" <span class="hljs-comment">//Comparaison non valide
+</span></code></pre>
 <p>Si vous souhaitez effectuer des comparaisons ou des recherches utilisant @ en tant que caractère (et non en tant que joker), vous devez utiliser l'instruction <code>Code de caractere(Arobase)</code>. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L’expression suivante (si $vaValeur n'est pas vide) retourne toujours <code>VRAI</code> :</p>
-<pre><code class="hljs css language-code4d">(<span class="hljs-name">$vaValeur</span>[[<span class="hljs-name">Longueur</span>(<span class="hljs-name">$vaValeur</span>)]]=<span class="hljs-string">"@"</span>)
+<pre><code class="hljs css language-code4d">(<span class="hljs-locale">$vaValeur</span>[[Longueur(<span class="hljs-locale">$vaValeur</span>)]]="<span class="hljs-string">@</span>")
 </code></pre>
 <p>L'expression suivante sera correctement évaluée :</p>
-<pre><code class="hljs css language-code4d">(<span class="hljs-name">Code</span> de caractere(<span class="hljs-name">$vaValeur</span>[[<span class="hljs-name">Longueur</span>(<span class="hljs-name">$vaValeur</span>)]])#<span class="hljs-number">64</span>)  
+<pre><code class="hljs css language-code4d">(Code de caractere(<span class="hljs-locale">$vaValeur</span>[[Longueur(<span class="hljs-locale">$vaValeur</span>)]])#64)  
 </code></pre>
 <p><strong>Note :</strong> Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.</p>
 <h3><a class="anchor" aria-hidden="true" id="mots-cles"></a><a href="#mots-cles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mots-clés</h3>
 <p>A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L’opérateur <strong>%</strong> retournera toujours <code>Faux</code> si la recherche porte sur plusieurs mots ou une partie de mot (par exemple une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.</p>
-<pre><code class="hljs css language-code4d">     <span class="hljs-string">"Alpha Bravo Charlie"</span><span class="hljs-meta">%</span><span class="hljs-string">"Bravo"</span> <span class="hljs-comment">// Retourne Vrai</span>
- <span class="hljs-string">"Alpha Bravo Charlie"</span><span class="hljs-meta">%</span><span class="hljs-string">"vo"</span> <span class="hljs-comment">// Retourne Faux</span>
- <span class="hljs-string">"Alpha Bravo Charlie"</span><span class="hljs-meta">%</span><span class="hljs-string">"Alpha Bravo"</span> <span class="hljs-comment">// Retourne Faux</span>
- <span class="hljs-string">"Alpha,Bravo,Charlie"</span><span class="hljs-meta">%</span><span class="hljs-string">"Alpha"</span> <span class="hljs-comment">// Retourne Vrai</span>
- <span class="hljs-string">"Software and Computers"</span><span class="hljs-meta">%</span><span class="hljs-string">"comput@"</span> <span class="hljs-comment">// Retourne Vrai</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">     "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">Bravo</span>" <span class="hljs-comment">// Retourne Vrai
+</span> "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">vo</span>" <span class="hljs-comment">// Retourne Faux
+</span> "<span class="hljs-string">Alpha Bravo Charlie</span>"%"<span class="hljs-string">Alpha Bravo</span>" <span class="hljs-comment">// Retourne Faux
+</span> "<span class="hljs-string">Alpha,Bravo,Charlie</span>"%"<span class="hljs-string">Alpha</span>" <span class="hljs-comment">// Retourne Vrai
+</span> "<span class="hljs-string">Software and Computers</span>"%"<span class="hljs-string">comput@</span>" <span class="hljs-comment">// Retourne Vrai
+</span></code></pre>
 <blockquote>
 <p><strong>Notes :</strong> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs &lt;&gt;=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse <a href="http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries">http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries</a>. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.</p>
 </blockquote>
@@ -178,24 +178,24 @@
 <p>Les symboles d'indice de chaîne sont les suivants : [[...]]</p>
 <p>Ces symboles sont utilisés pour désigner un caractère particulier dans une chaîne. Cette syntaxe vous permet de référencer un caractère dans un champ ou une variable de type Alpha ou Texte.</p>
 <p>Lorsque les symboles d'indice de chaîne sont placés à gauche de l'opérateur d'affectation (:=), un caractère est affecté à la position référencée dans la chaîne. Par exemple, en postulant que la chaîne vsNom n'est pas une chaîne vide, le code suivant passe le premier caractère de la chaîne vsNom en majuscule :</p>
-<pre><code class="hljs css language-code4d">If(vsNom#<span class="hljs-string">""</span>)
-    vsNom<span class="hljs-string">[[1]]</span>:=Uppercase(vsNom<span class="hljs-string">[[1]]</span>)
-End <span class="hljs-keyword">if</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">If</span>(vsNom#"<span class="hljs-string"></span>")
+    vsNom[[1]]:=<span class="hljs-command">Uppercase</span>(vsNom[[1]])
+<span class="hljs-keyword">End if</span>
 </code></pre>
 <p>Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. En voici un exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">//L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"</span>
- <span class="hljs-keyword">If</span>(vtText#<span class="hljs-string">""</span>)
-    <span class="hljs-keyword">If</span>(Character <span class="hljs-built_in">code</span>(<span class="hljs-built_in">Substring</span>(vtText;<span class="hljs-built_in">Length</span>(vtText);<span class="hljs-number">1</span>))=At sign)
-  <span class="hljs-comment">//...</span>
-    <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"
+</span> <span class="hljs-keyword">If</span>(vtText#"<span class="hljs-string"></span>")
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(<span class="hljs-command">Substring</span>(vtText;<span class="hljs-command">Length</span>(vtText);1))=<span class="hljs-constant">At sign</span>)
+  <span class="hljs-comment">//...
+</span>    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
 
-  <span class="hljs-comment">//En utilisant la syntaxe des caractères d'indice de chaîne, vous écririez plus simplement :</span>
- <span class="hljs-keyword">If</span>(vtText#<span class="hljs-string">""</span>)
-    <span class="hljs-keyword">If</span>(Character <span class="hljs-built_in">code</span>(vtText[[<span class="hljs-built_in">Length</span>(vtText)]])=At sign)
-  <span class="hljs-comment">// ...</span>
-    <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+  <span class="hljs-comment">//En utilisant la syntaxe des caractères d'indice de chaîne, vous écririez plus simplement :
+</span> <span class="hljs-keyword">If</span>(vtText#"<span class="hljs-string"></span>")
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(vtText[[<span class="hljs-command">Length</span>(vtText)]])=<span class="hljs-constant">At sign</span>)
+  <span class="hljs-comment">// ...
+</span>    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="note-avancee-sur-la-reference-a-des-caracteres-invalides"></a><a href="#note-avancee-sur-la-reference-a-des-caracteres-invalides" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Note avancée sur la référence à des caractères invalides</h3>
 <p>Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsabilité de vous référer à des caractères existant dans la chaîne, de la même manière que pour les éléments d'un tableau. Si, par exemple, vous référencez le 20e caractère d'une chaîne, cette chaîne doit contenir au moins 20 caractères.</p>
@@ -211,23 +211,23 @@ vsAnyText[[1]]:=&quot;A&quot;</p></li>
 <p><img src="/docs/assets/en/Concepts/Syntax_Error.en.png" alt="alt-text"></p>
 <h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
 <p>La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :</p>
-<pre><code class="hljs css language-code4d">  // Méthode projet de passage en capitale
-  // PasserEnCap ( Texte ) -&gt; Texte
-  // PasserEnCap ( Texte source ) -&gt; Texte avec des lettres capitales
- 
- $<span class="hljs-number">0</span>:=$<span class="hljs-number">1</span>
- $vlLen:=Length($<span class="hljs-number">0</span>)
- If($vlLen&gt;<span class="hljs-number">0</span>)
-    $<span class="hljs-number">0</span><span class="hljs-string">[[1]]</span>:=Uppercase($<span class="hljs-number">0</span><span class="hljs-string">[[1]]</span>)
-    For($vlChar;<span class="hljs-number">1</span>;$vlLen<span class="hljs-number">-1</span>)
-       If(Position($<span class="hljs-number">0</span><span class="hljs-string">[[$vlChar]]</span>;<span class="hljs-string">" !&amp;()-{}:;&lt;&gt;?/,.=+*"</span>)&gt;<span class="hljs-number">0</span>)
-          $<span class="hljs-number">0</span><span class="hljs-string">[[$vlChar+1]]</span>:=Uppercase($<span class="hljs-number">0</span><span class="hljs-string">[[$vlChar+1]]</span>)
-       End <span class="hljs-keyword">if</span>
-    End <span class="hljs-keyword">for</span>
- End <span class="hljs-keyword">if</span>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode projet de passage en capitale
+</span>  <span class="hljs-comment">// PasserEnCap ( Texte ) -&gt; Texte
+</span>  <span class="hljs-comment">// PasserEnCap ( Texte source ) -&gt; Texte avec des lettres capitales
+</span> 
+ <span class="hljs-param">$0</span>:=<span class="hljs-param">$1</span>
+ <span class="hljs-locale">$vlLen</span>:=<span class="hljs-command">Length</span>(<span class="hljs-param">$0</span>)
+ <span class="hljs-keyword">If</span>(<span class="hljs-locale">$vlLe</span>n&gt;0)
+    <span class="hljs-param">$0</span>[[1]]:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$0</span>[[1]])
+    <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlChar</span>;1;<span class="hljs-locale">$vlLen</span>-1)
+       <span class="hljs-keyword">If</span>(<span class="hljs-command">Position</span>(<span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>]];"<span class="hljs-string"> !&amp;()-{}:;&lt;&gt;?/,.=+*</span>")&gt;0)
+          <span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>+1]]:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$0</span>[[<span class="hljs-locale">$vlChar</span>+1]])
+       <span class="hljs-keyword">End if</span>
+    <span class="hljs-keyword">End for</span>
+ <span class="hljs-keyword">End if</span>
 </code></pre>
 <p>Une fois cette méthode placée dans la base, la ligne :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">ALERT</span>(<span class="hljs-title">Capitalize_text</span>(<span class="hljs-string">"Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !"</span>))</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>(Capitalize_text("<span class="hljs-string">Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !</span>"))
 </code></pre>
 <p>... affiche l'alerte suivante :</p>
 <p><img src="/docs/assets/en/Concepts/Jane_doe.en.png" alt="alt-text"></p>

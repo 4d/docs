@@ -1,5 +1,212 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Documentation · Guides essentiels du développeur 4D</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Guides essentiels du développeur 4D"/><meta property="og:title" content="Documentation · Guides essentiels du développeur 4D"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Guides essentiels du développeur 4D"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><meta http-equiv="refresh" content="0; URL=/docs/fr/Menus/properties.html"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body><script>
-                <!--
-                window.location.href = "/docs/fr/Menus/properties.html";
-                // -->
-                </script></body></html>
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Propriétés des menus · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Propriétés des menus · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Menus/properties.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Menus</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Forms<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Propriétés des menus</h1></header><article><div><span><p>You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.</p>
+<h2><a class="anchor" aria-hidden="true" id="title"></a><a href="#title" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Title</h2>
+<p>The <strong>Title</strong> property contains the label of a menu or menu item as it will be displayed on the application interface.</p>
+<p>In the Menu editor, you can directly enter the label as &quot;hard coded&quot;. Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:</p>
+<ul>
+<li>An XLIFF resource reference of the type :xliff:MyLabel. For more information about XLIFF references, refer to <em>XLIFF Architecture</em> section in <em>4D Design Reference</em>.</li>
+<li>An interprocess variable name followed by a number, for example: :&lt;&gt;vlang,3. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the &lt;&gt;vlang variable corresponds to the <em>id</em> attribute of the <em>group</em> element. The second value (3 in this example) designates the <em>id</em> attribute of the <em>trans-unit</em> element.</li>
+</ul>
+<p>Using the 4D language, you set the title property through the <em>itemText</em> parameter of the <code>APPEND MENU ITEM</code>, <code>INSERT MENU ITEM</code>, and <code>SET MENU ITEM</code> commands.</p>
+<h3><a class="anchor" aria-hidden="true" id="using-control-characters"></a><a href="#using-control-characters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using control characters</h3>
+<p>You can set some properties of the menu commands by using control characters (metacharacters) directly in the menu command labels. For instance, you can assign the keyboard shortcut Ctrl+G (Windows) or Command+G (macOS) for a menu command by placing the &quot;/G&quot; characters in the label of the menu item label.</p>
+<p>Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:</p>
+<table>
+<thead>
+<tr><th>Character</th><th>Description</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td>(</td><td>open parenthese</td><td>Disable item</td></tr>
+<tr><td>&lt;B</td><td>less than B</td><td>Bold font</td></tr>
+<tr><td>&lt;I</td><td>less than I</td><td>Italic font</td></tr>
+<tr><td>&lt;U</td><td>less than U</td><td>Underline font</td></tr>
+<tr><td>!+character</td><td>exclamation point+character</td><td>Add character as check mark (macOS); add check mark (Windows)</td></tr>
+<tr><td>/+character</td><td>slash+character</td><td>Add character as shortcut</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="parameter"></a><a href="#parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameter</h2>
+<p>You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the <code>SET MENU ITEM PARAMETER</code> command.</p>
+<p>Menu item parameters are useful with programmed management of menus, in particular when using the <code>Dynamic pop up menu</code>, <code>Get menu item parameter</code> and <code>Get selected menu item parameter</code> commands.</p>
+<h2><a class="anchor" aria-hidden="true" id="action"></a><a href="#action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Action</h2>
+<p>Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a <strong>Monthly Report</strong> menu command can call a project method that prepares a monthly report from a table containing financial data. The <strong>Cut</strong> menu command usually calls the <code>cut</code> standard action in order to move the selection to the clipboard and erase it from the window in the foreground.</p>
+<p>If you do not assign a method or a standard action to a menu command, choosing that menu command causes 4D to exit the Application environment and go to the Design environment. If only the Application environment is available, this means quitting to the Desktop.</p>
+<p>Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the 4D database (add record, select all, etc.).</p>
+<p>You can assign both a standard action and a project method to a menu command. In this case, the standard action is never executed; however, 4D uses this action to enable/disable the menu command according to the current context and to associate a specific operation with it according to the platform. When a menu command is deactivated, the associated project method cannot be executed.</p>
+<p>The choice between associating a standard action or a project method with a menu command depends on the type of result desired. In principle, it is preferable to choose a standard action whenever possible since they implement optimized mechanisms, more particularly activation/deactivation according to the context.</p>
+<h3><a class="anchor" aria-hidden="true" id="associating-a-project-method-or-a-standard-action"></a><a href="#associating-a-project-method-or-a-standard-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Associating a project method or a standard action</h3>
+<p>You can assign a project method and/or a standard action to a selected menu command in the Menu editor:</p>
+<ul>
+<li><strong>Method Name</strong>: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the &quot;Method Name&quot; combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Method editor.</li>
+<li><strong>Associated Standard Action</strong>: Choose or write the action you want to assign in the &quot;Associated Standard Action&quot; combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the <strong>Standard actions</strong> section in the <em>Design Reference</em>. <strong>Note for macOS:</strong> Under macOS, the custom menu commands associated with the <em>Quit</em> action are automatically placed in the application menu, in compliance with the platform interface standards.</li>
+</ul>
+<p>Using the 4D language, you can associate a project method using the <code>SET MENU ITEM METHOD</code> command, and a standard action using the <code>SET MENU ITEM PROPERTY</code> command.</p>
+<h3><a class="anchor" aria-hidden="true" id="start-a-new-process"></a><a href="#start-a-new-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start a new process</h3>
+<p>The <strong>Start a New Process</strong> option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the <em>property</em> parameter of the <code>SET MENU ITEM PROPERTY</code> command.</p>
+<p>When the <strong>Start a New Process</strong> option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The <strong>Start a New Process</strong> option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.</p>
+<p>In the Process list, 4D assigns the new process a default name using the format &quot;ML_ProcessNumber&quot;. The names of processes started from a menu are created by combining the prefix &quot;ML_&quot; with the process number.</p>
+<h3><a class="anchor" aria-hidden="true" id="execute-without-validating"></a><a href="#execute-without-validating" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execute without validating</h3>
+<p>The <strong>Execute without validating</strong> option is available for menu commands associated to standard actions in the Menu editor only.</p>
+<p>When this option is checked, 4D does not trigger the &quot;validation&quot; of the field where the cursor is located before executing the associated action. This option is mainly intended for <strong>Edit</strong> menu commands. By default, 4D processes and &quot;validates&quot; the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an <code>On Data Change</code> form event. This can disrupt the functioning of copy or paste type commands because when they are called, the <code>On Data Change</code> form event is generated unexpectedly. In this case, it is useful to check the <strong>Execute without validating</strong> option.</p>
+<h2><a class="anchor" aria-hidden="true" id="remote-access-privileges"></a><a href="#remote-access-privileges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remote access privileges</h2>
+<p>This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).</p>
+<h2><a class="anchor" aria-hidden="true" id="options"></a><a href="#options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Options</h2>
+<h3><a class="anchor" aria-hidden="true" id="separator-lines"></a><a href="#separator-lines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Separator lines</h3>
+<p>Groups of menu commands in a menu can be divided by a separator line. This convention is useful for grouping associated menu commands by function.</p>
+<p><img src="/docs/assets/en/Menus/separator.png" alt=""></p>
+<p>You add a separator line by creating a specific menu command.</p>
+<p>In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the <strong>Separator Line</strong> option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect. <strong>Note:</strong> Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.</p>
+<p>In the 4D language, you insert a separator line by entering <code>-</code> or <code>(-</code> as itemText for <code>APPEND MENU ITEM</code>, <code>INSERT MENU ITEM</code>, or <code>SET MENU ITEM</code> commands.</p>
+<h3><a class="anchor" aria-hidden="true" id="keyboard-shortcuts"></a><a href="#keyboard-shortcuts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keyboard shortcuts</h3>
+<p>You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, &quot;Ctrl+C&quot; (Windows) or &quot;Command+C&quot; (macOS) appears next to the <strong>Copy</strong> menu command in the <strong>Edit</strong> menu.</p>
+<p>You can also add the <strong>Shift</strong> key as well as the <strong>Alt</strong> key (Windows) or <strong>Option</strong> key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:</p>
+<ul>
+<li><p>Under Windows:</p>
+<ul>
+<li>Ctrl+character</li>
+<li>Ctrl+Shift+character</li>
+<li>Ctrl+Alt+character</li>
+<li>Ctrl+Shift+Alt+character</li>
+</ul></li>
+<li><p>Under macOS:</p>
+<ul>
+<li>Command+character</li>
+<li>Command+Shift+character</li>
+<li>Command+Option+character</li>
+<li>Command+Shift+Option+character</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>We recommend that you keep the default keyboard shortcuts that are associated with standard actions.</p>
+</blockquote>
+<p>You can use any alphanumeric keys as a keyboard shortcut, except for the keys reserved by standard menu commands that appear in the <strong>Edit</strong> and <strong>File</strong> menus, and the keys reserved for 4D menu commands.</p>
+<p>These reserved key combinations are listed in the following table:</p>
+<table>
+<thead>
+<tr><th>Key (Windows)</th><th>Key (macOS)</th><th>Opération</th></tr>
+</thead>
+<tbody>
+<tr><td>Ctrl+C</td><td>Command+C</td><td>Copy</td></tr>
+<tr><td>Ctrl+Q</td><td>Command+Q</td><td>Quit</td></tr>
+<tr><td>Ctrl+V</td><td>Command+V</td><td>Paste</td></tr>
+<tr><td>Ctrl+X</td><td>Command+X</td><td>Cut</td></tr>
+<tr><td>Ctrl+Z</td><td>Command+Z</td><td>Undo</td></tr>
+<tr><td>Ctrl+. (period)</td><td>Command+. (period)</td><td>Stop action</td></tr>
+</tbody>
+</table>
+<p>To assign a keyboard shortcut in the Menu editor:</p>
+<p>Select the menu item to which you want to assign a keyboard shortcut. Click on the [...] button to the right of the &quot;Shortcut&quot; entry area. The following window appears:</p>
+<p><img src="/docs/assets/en/Menus/Shortcut.png" alt=""></p>
+<p>Enter the character to use then (optional) click the <strong>Shift</strong> and/or <strong>Alt</strong> (<strong>Option</strong>) checkboxes according to the combination desired. You can also directly press the keys that make up the desired combination (do not press the <strong>Ctrl/Command</strong> key).</p>
+<blockquote>
+<p>You cannot deselect the Ctrl/Command key, which is mandatory for keyboard shortcuts for menus. To start over, click on <strong>Clear</strong>. Click <strong>OK</strong> to validate the changes. The shortcut defined is shown in the &quot;Shortcut&quot; entry area.</p>
+</blockquote>
+<p>To assign a keyboard shortcut using the 4D language, use the <code>SET ITEM SHORTCUT</code> command.</p>
+<blockquote>
+<p>An active object can also have a keyboard shortcut. If the <strong>Ctrl/Command</strong> key assignments conflict, the active object takes precedence.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="enabled-item"></a><a href="#enabled-item" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enabled item</h3>
+<p>In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the <strong>Enabled Item</strong> check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.</p>
+<p>Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with <code>ENABLE MENU ITEM</code> and <code>DISABLE MENU ITEM</code> commands.</p>
+<h3><a class="anchor" aria-hidden="true" id="check-mark"></a><a href="#check-mark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check mark</h3>
+<p>This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (<code>SET MENU ITEM MARK</code> and <code>Get menu item mark</code>).</p>
+<p>Check marks are generally used for continuous action menu items and indicate that the action is currently underway.</p>
+<h3><a class="anchor" aria-hidden="true" id="font-styles"></a><a href="#font-styles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font styles</h3>
+<p>4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the <code>SET MENU ITEM STYLE</code> language command.</p>
+<p>As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.</p>
+<blockquote>
+<p>You can also apply styles by inserting special characters in the menu title (see <a href="/docs/fr/Menus/properties.html#using-control-characters">Using control characters</a> above).</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="item-icon"></a><a href="#item-icon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Item icon</h3>
+<p>You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:</p>
+<p><img src="/docs/assets/en/Menus/iconMenu.png" alt=""></p>
+<p>To define the icon in the Menu editor, click on the &quot;Item icon&quot; area and select <strong>Open</strong> to open a picture from the disk. If you select a picture file that is not already stored in the database resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:</p>
+<p><img src="/docs/assets/en/Menus/iconpreview.png" alt=""></p>
+<p>To remove the icon from the item, choose the <strong>No Icon</strong> option from the &quot;Item Icon&quot; area.</p>
+<p>To define item icons using the 4D language, call the <code>SET MENU ITEM ICON</code> command.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/Menus/creating.html"><span class="arrow-prev">← </span><span>Créer des menus et des barres de menus</span></a><a class="docs-next button" href="/docs/fr/Menus/bars.html"><span>Barres de menus</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#title">Title</a><ul class="toc-headings"><li><a href="#using-control-characters">Using control characters</a></li></ul></li><li><a href="#parameter">Parameter</a></li><li><a href="#action">Action</a><ul class="toc-headings"><li><a href="#associating-a-project-method-or-a-standard-action">Associating a project method or a standard action</a></li><li><a href="#start-a-new-process">Start a new process</a></li><li><a href="#execute-without-validating">Execute without validating</a></li></ul></li><li><a href="#remote-access-privileges">Remote access privileges</a></li><li><a href="#options">Options</a><ul class="toc-headings"><li><a href="#separator-lines">Separator lines</a></li><li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li><li><a href="#enabled-item">Enabled item</a></li><li><a href="#check-mark">Check mark</a></li><li><a href="#font-styles">Font styles</a></li><li><a href="#item-icon">Item icon</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

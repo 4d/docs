@@ -124,49 +124,49 @@ The coordinates are returned in the <em>MouseX</em> and <em>MouseY</em> <strong>
 <img src="/docs/assets/en/Concepts/Concepts/rectangle.en.png" alt=""></p>
 <p>In the following examples, each expression is followed by its graphical representation.</p>
 <p>Horizontal concatenation</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">circle</span>+<span class="hljs-built_in">rectangle</span> <span class="hljs-comment">//Place the rectangle to the right of the circle</span>
- <span class="hljs-built_in">rectangle</span>+<span class="hljs-built_in">circle</span> <span class="hljs-comment">//Place the circle to the right of the rectangle</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"> circle+rectangle <span class="hljs-comment">//Place the rectangle to the right of the circle
+</span> rectangle+circle <span class="hljs-comment">//Place the circle to the right of the rectangle
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/concatHor.en.png" alt="">
 <img src="/docs/assets/en/Concepts/concatHor2.en.png" alt=""></p>
 <p>Vertical concatenation</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-built_in">circle</span>/<span class="hljs-built_in">rectangle</span> <span class="hljs-comment">//Place the rectangle under the circle</span>
- <span class="hljs-built_in">rectangle</span>/<span class="hljs-built_in">circle</span> <span class="hljs-comment">//Place the circle under the rectangle</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"> circle/rectangle <span class="hljs-comment">//Place the rectangle under the circle
+</span> rectangle/circle <span class="hljs-comment">//Place the circle under the rectangle
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/concatVer.en.png" alt="">
 <img src="/docs/assets/en/Concepts/concatVer2.en.png" alt=""></p>
 <p>Exclusive superimposition</p>
-<pre><code class="hljs css language-code4d">Pict3:=Pict1 <span class="hljs-meta">&amp; Pict2 <span class="hljs-comment">// Superimposes Pict2 on top of  Pict1</span></span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-constant">Pict3:=Pict1</span> &amp; <span class="hljs-constant">Pict2</span> <span class="hljs-comment">// Superimposes Pict2 on top of  Pict1
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/superimpoExc.fr.png" alt=""></p>
 <p>Inclusive superimposition</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-symbol">Pict3:</span>=Pict1|Pict2 <span class="hljs-comment">// Recovers resulting mask from superimposing two pictures of the same size</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-constant">Pict3:=Pict1|Pict2</span> <span class="hljs-comment">// Recovers resulting mask from superimposing two pictures of the same size
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/superimpoInc.fr.png" alt=""></p>
 <p>Horizontal move</p>
-<pre><code class="hljs css language-code4d">rectangle+<span class="hljs-number">50</span> <span class="hljs-comment">//Move the rectangle 50 pixels to the right</span>
-rectangle<span class="hljs-number">-50</span> <span class="hljs-comment">//Move the rectangle 50 pixels to the left</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">rectangle+50 <span class="hljs-comment">//Move the rectangle 50 pixels to the right
+</span>rectangle-50 <span class="hljs-comment">//Move the rectangle 50 pixels to the left
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/hormove.en.png" alt=""></p>
 <p>Vertical move</p>
-<pre><code class="hljs css language-code4d">rectangle/<span class="hljs-number">50</span> <span class="hljs-comment">//Move the rectangle down by 50 pixels</span>
-rectangle/<span class="hljs-number">-20</span> <span class="hljs-comment">//Move the rectangle up by 20 pixels</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">rectangle/50 <span class="hljs-comment">//Move the rectangle down by 50 pixels
+</span>rectangle/-20 <span class="hljs-comment">//Move the rectangle up by 20 pixels
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/vertmove.en.png" alt=""><img src="/docs/assets/en/Concepts/vertmove2.en.png" alt=""></p>
 <p>Resize</p>
-<pre><code class="hljs css language-code4d">rectangle*<span class="hljs-number">1.5</span> <span class="hljs-comment">//The rectangle becomes 50% bigger</span>
-rectangle*<span class="hljs-number">0.5</span> <span class="hljs-comment">//The rectangle becomes 50% smaller</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">rectangle*1.5 <span class="hljs-comment">//The rectangle becomes 50% bigger
+</span>rectangle*0.5 <span class="hljs-comment">//The rectangle becomes 50% smaller
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/resize.en.png" alt=""><img src="/docs/assets/en/Concepts/resisze2.en.png" alt=""></p>
 <p>Horizontal scaling</p>
-<pre><code class="hljs css language-code4d">circle*+<span class="hljs-number">3</span> <span class="hljs-comment">//The circle becomes 3 times wider</span>
-circle*+<span class="hljs-number">0.25</span> <span class="hljs-comment">//The circle's width becomes a quarter of what it was</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">circle*+3 <span class="hljs-comment">//The circle becomes 3 times wider
+</span>circle*+0.25 <span class="hljs-comment">//The circle's width becomes a quarter of what it was
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/Horscaling.en.png" alt=""><img src="/docs/assets/en/Concepts/Horscaling2.en.png" alt=""></p>
 <p>Vertical scaling</p>
-<pre><code class="hljs css language-code4d">circle*|<span class="hljs-number">2</span> <span class="hljs-comment">//The circle becomes twice as tall</span>
-circle*|<span class="hljs-number">0.25</span> <span class="hljs-comment">//The circle's height becomes a quarter of what it was</span>
-</code></pre>
+<pre><code class="hljs css language-code4d">circle*|2 <span class="hljs-comment">//The circle becomes twice as tall
+</span>circle*|0.25 <span class="hljs-comment">//The circle's height becomes a quarter of what it was
+</span></code></pre>
 <p><img src="/docs/assets/en/Concepts/vertscaling.en.png" alt=""><img src="/docs/assets/en/Concepts/veticalscaling2.en.png" alt=""></p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/Concepts/object.html"><span class="arrow-prev">← </span><span>Object</span></a><a class="docs-next button" href="/docs/en/Concepts/pointer.html"><span>Pointer</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#native-formats-supported">Native Formats Supported</a><ul class="toc-headings"><li><a href="#picture-codec-ids">Picture Codec IDs</a></li><li><a href="#unavailable-picture-format">Unavailable picture format</a></li></ul></li><li><a href="#picture-operators">Picture operators</a><ul class="toc-headings"><li><a href="#examples">Examples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

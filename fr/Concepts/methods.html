@@ -100,69 +100,69 @@
 <li>Création de code modulaire</li>
 </ul>
 <p>Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Recherche d'un client</span>
- <span class="hljs-keyword">QUERY</span> <span class="hljs-keyword">BY</span> EXAMPLE([Clients])
-  <span class="hljs-comment">// Sélection du formulaire entrée</span>
- <span class="hljs-keyword">FORM</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">INPUT</span>([Clients];<span class="hljs-string">"Saisie de données"</span>)
-  <span class="hljs-comment">// Modification de l'enregistrement du client</span>
- MODIFY RECORD([Clients])
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Recherche d'un client
+</span> <span class="hljs-command">QUERY</span> BY EXAMPLE([Clients])
+  <span class="hljs-comment">// Sélection du formulaire entrée
+</span> <span class="hljs-command">FORM SET INPUT</span>([Clients];"<span class="hljs-string">Saisie de données</span>")
+  <span class="hljs-comment">// Modification de l'enregistrement du client
+</span> <span class="hljs-command">MODIFY RECORD</span>([Clients])
 </code></pre>
 <p>Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.</p>
 <p>Si le code ci-dessus était une méthode projet appelée <code>MODIFIER CLIENT</code>, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :</p>
-<pre><code class="hljs css language-code4d"> MODIFY<span class="hljs-built_in"> CUSTOMER
-</span> <span class="hljs-builtin-name">PRINT</span> SELECTION([Clients])
+<pre><code class="hljs css language-code4d"> <span class="hljs-plugin">MODIFY</span> CUSTOMER
+ <span class="hljs-command">PRINT SELECTION</span>([Clients])
 </code></pre>
 <p>Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode <code>MODIFIER CLIENT</code>, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.</p>
 <p>Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.</p>
 <p>Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">FIND</span> CLEARED CHECKS <span class="hljs-comment">// Rechercher les chèques émis</span>
- RECONCILE ACCOUNT <span class="hljs-comment">// Rapprocher le compte</span>
-<span class="hljs-keyword">PRINT</span> CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"> FIND CLEARED CHECKS <span class="hljs-comment">// Rechercher les chèques émis
+</span> RECONCILE AC<span class="hljs-plugin">COUNT</span> <span class="hljs-comment">// Rapprocher le compte
+</span>PRINT CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé
+</span></code></pre>
 <p>Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.</p>
 <h3><a class="anchor" aria-hidden="true" id="methodes-associees-a-des-objets"></a><a href="#methodes-associees-a-des-objets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes associées à des objets</h3>
 <p>Vous pouvez encapsuler vos méthodes projets dans les objets <strong>formule</strong> et les appeler à partir de vos objets.</p>
 <p>Les commandes <code>Formule</code> ou <code>formule sur chaine</code> vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.</p>
 <p>Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur <strong>( )</strong> après un nom de la propriété, comme suit :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">//myAlert</span>
-<span class="hljs-function"><span class="hljs-title">ALERT</span><span class="hljs-params">(<span class="hljs-string">"Hello world!"</span>)</span></span>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//myAlert
+</span><span class="hljs-command">ALERT</span>("<span class="hljs-string">Hello world!</span>")
 </code></pre>
 <p><code>myAlert</code> peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :</p>
-<pre><code class="hljs css language-code4d">C_OBJECT($o)
-$o:=<span class="hljs-literal">New</span> object(<span class="hljs-string">"custom_Alert"</span>;<span class="hljs-literal">New</span> formula(myAlert))
-$o.custom_Alert() <span class="hljs-comment">//affiche "Hello world!"</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+<span class="hljs-locale">$o</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">custom_Alert</span>";<span class="hljs-command">New formula</span>(myAlert))
+<span class="hljs-locale">$o</span><span class="hljs-method">.custom_Alert()</span> <span class="hljs-comment">//affiche "Hello world!"
+</span></code></pre>
 <p>La syntaxe avec des crochets est également prise en charge :</p>
-<pre><code class="hljs css language-code4d">$o[<span class="hljs-string">"custom_Alert"</span>](<span class="hljs-link"></span>) //affiche "Hello world!"
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$o</span>["<span class="hljs-string">custom_Alert</span>"]() <span class="hljs-comment">//affiche "Hello world!"
+</span></code></pre>
 <p>Vous pouvez appeler votre formule en lui <a href="/docs/fr/Concepts/parameters.html">passant des paramètres</a> $1, $2, etc., tout comme pour les méthodes projet de 4D :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-regexp">//m</span>éthode fullName
-C_TEXT(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
-<span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>+<span class="hljs-string">" "</span>+<span class="hljs-variable">$2</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//méthode fullName
+</span><span class="hljs-command">C_TEXT</span>(<span class="hljs-param">$0</span>;<span class="hljs-param">$1</span>;<span class="hljs-param">$2</span>)
+<span class="hljs-param">$0</span>:=<span class="hljs-param">$1</span>+"<span class="hljs-string"> </span>"+<span class="hljs-param">$2</span>
 </code></pre>
 <p>Vous pouvez encapsuler <code>fullName</code> dans un objet :</p>
-<pre><code class="hljs css language-code4d">C_OBJECT(<span class="hljs-variable">$o</span>)
-<span class="hljs-variable">$o</span>:=New object(<span class="hljs-string">"full_name"</span>;New formula(fullName))
-<span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.full_name(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Smith"</span>) 
-<span class="hljs-regexp">//</span><span class="hljs-variable">$result</span> = <span class="hljs-string">"John Smith"</span>
-<span class="hljs-regexp">//</span> équivalent à <span class="hljs-variable">$result</span>:=fullName(<span class="hljs-string">"param1"</span>;<span class="hljs-string">"param2"</span>)
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+<span class="hljs-locale">$o</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">full_name</span>";<span class="hljs-command">New formula</span>(fullName))
+<span class="hljs-locale">$result</span>:=<span class="hljs-locale">$o</span><span class="hljs-method">.full_name(<span class="hljs-string">"John"</span><span class="hljs-normal">;</span><span class="hljs-string">"Smith"</span>)</span> 
+<span class="hljs-comment">//$result = "John Smith"
+</span><span class="hljs-comment">// équivalent à $result:=fullName("param1";"param2")
+</span></code></pre>
 <p>Lorsqu'elles sont associées à la fonction <code>This</code>, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">//méthode fullName2 </span>
-<span class="hljs-function"><span class="hljs-title">C_TEXT</span><span class="hljs-params">($<span class="hljs-number">0</span>)</span></span>
-$<span class="hljs-number">0</span>:=This.firstName+<span class="hljs-string">" "</span>+This<span class="hljs-selector-class">.lastName</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//méthode fullName2 
+</span><span class="hljs-command">C_TEXT</span>(<span class="hljs-param">$0</span>)
+<span class="hljs-param">$0</span>:=This<span class="hljs-property">.firstName</span>+"<span class="hljs-string"> </span>"+This<span class="hljs-property">.lastName</span>
 </code></pre>
 <p>La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :</p>
-<pre><code class="hljs css language-code4d">C_OBJECT($o)
-$o:=<span class="hljs-literal">New</span> object(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"Jim"</span>;<span class="hljs-string">"lastName"</span>;<span class="hljs-string">"Wesson"</span>)
-$o.fullName:=<span class="hljs-literal">New</span> formula(fullName2) <span class="hljs-comment">//add the method  </span>
-
-$result:=$o.fullName() 
-<span class="hljs-comment">//$result = "Jim Wesson"</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+<span class="hljs-locale">$o</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">firstName</span>";"<span class="hljs-string">Jim</span>";"<span class="hljs-string">lastName</span>";"<span class="hljs-string">Wesson</span>")
+<span class="hljs-locale">$o</span><span class="hljs-property">.fullName</span>:=<span class="hljs-command">New formula</span>(fullName2) <span class="hljs-comment">//add the method  
+</span>
+<span class="hljs-locale">$result</span>:=<span class="hljs-locale">$o</span><span class="hljs-method">.fullName()</span> 
+<span class="hljs-comment">//$result = "Jim Wesson"
+</span></code></pre>
 <p>A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). En appelant uniquement une seule propriété, une nouvelle référence à la formule sera retournée (et ne sera pas exécutée) :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-variable">$o</span>:=<span class="hljs-variable">$f</span><span class="hljs-selector-class">.message</span> <span class="hljs-comment">//retourne l'objet formule en $o</span>
-</code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-locale">$o</span>:=<span class="hljs-locale">$f</span><span class="hljs-property">.message</span> <span class="hljs-comment">//retourne l'objet formule en $o
+</span></code></pre>
 <h3><a class="anchor" aria-hidden="true" id="methodes-de-menu"></a><a href="#methodes-de-menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes de menu</h3>
 <p>Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. Ce fonctionnement est l’un des principaux aspects de la personnalisation d’une base de données. C’est en créant des menus qui appellent des méthodes de menu que vous personnalisez votre base.</p>
 <p>Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande <code>AJOUTER ENREGISTREMENT</code> jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.</p>
@@ -188,45 +188,45 @@ $result:=$o.fullName()
 <ol>
 <li>Vous pouvez procéder de la manière suivante :</li>
 </ol>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vsName</span>:=Request(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$vsName</span>:=<span class="hljs-command">Request</span>("<span class="hljs-string">Saisissez le nom :</span>";"<span class="hljs-string">Pierre</span>")
  Si(OK=1)
-    <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)
-    <span class="hljs-keyword">If</span>(Records <span class="hljs-keyword">in</span> selection([Amis et parents])&gt;0)
-       <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-string">"Un de mes amis, "</span>+<span class="hljs-variable">$vsNom</span>
+    <span class="hljs-command">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-locale">$vsNom</span>)
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in selection</span>([Amis et parents])&gt;0)
+       <span class="hljs-locale">$vtHistoireComplète</span>:="<span class="hljs-string">Un de mes amis, </span>"+<span class="hljs-locale">$vsNom</span>
        <span class="hljs-keyword">Repeat</span>
-          <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$vsNom</span>)
-          <span class="hljs-variable">$vlResultRecherche</span>:=Records <span class="hljs-keyword">in</span> selection([Amis et parents])
-          <span class="hljs-keyword">If</span>(<span class="hljs-variable">$vlResultRecherche</span>&gt;0)
-             <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>+<span class="hljs-string">" qui est le rejeton de "</span>+[Amis et parents]Nom
-             <span class="hljs-variable">$vsNom</span>:=[Amis et parents]Nom
-          End <span class="hljs-keyword">if</span>
-       Until(<span class="hljs-variable">$vlResultRecherche</span>=0)
-       <span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>:=<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>
-       ALERT(<span class="hljs-variable">$vtHistoireCompl</span>è<span class="hljs-keyword">te</span>)
-    End <span class="hljs-keyword">if</span>
- End <span class="hljs-keyword">if</span>
+          <span class="hljs-command">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-locale">$vsNom</span>)
+          <span class="hljs-locale">$vlResultRecherche</span>:=<span class="hljs-command">Records in selection</span>([Amis et parents])
+          <span class="hljs-keyword">If</span>(<span class="hljs-locale">$vlResultRecherch</span>e&gt;0)
+             <span class="hljs-locale">$vtHistoireComplète</span>:=<span class="hljs-locale">$vtHistoireComplète</span>+"<span class="hljs-string"> qui est le rejeton de </span>"+[Amis et parents]Nom
+             <span class="hljs-locale">$vsNom</span>:=[Amis et parents]Nom
+          <span class="hljs-keyword">End if</span>
+       <span class="hljs-keyword">Until</span>(<span class="hljs-locale">$vlResultRecherche</span>=0)
+       <span class="hljs-locale">$vtHistoireComplète</span>:=<span class="hljs-locale">$vtHistoireComplète</span>+"<span class="hljs-string">, fait cela pour gagner sa vie !</span>"
+       <span class="hljs-command">ALERT</span>(<span class="hljs-locale">$vtHistoireComplète</span>)
+    <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
 </code></pre>
 <ol start="2">
 <li>Vous pouvez également procéder ainsi :</li>
 </ol>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vsNom</span>:=Request(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)
-  <span class="hljs-keyword">If</span>(<span class="hljs-attribute">OK</span>=1)
-    QUERY([Amis et parents];[Amis et parents]<span class="hljs-attribute">Nom</span>=<span class="hljs-variable">$vsNom</span>)
-    <span class="hljs-keyword">If</span>(Records <span class="hljs-keyword">in</span> selection([Amis et parents])&gt;0)
-       ALERT(<span class="hljs-string">"Un de mes amis, "</span>+Généalogie de(<span class="hljs-variable">$vsNom</span>)+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>)
-   End <span class="hljs-keyword">if</span>
- End <span class="hljs-keyword">if</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$vsNom</span>:=<span class="hljs-command">Request</span>("<span class="hljs-string">Saisissez le nom :</span>";"<span class="hljs-string">Pierre</span>")
+  <span class="hljs-keyword">If</span>(OK=1)
+    <span class="hljs-command">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-locale">$vsNom</span>)
+    <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in selection</span>([Amis et parents])&gt;0)
+       <span class="hljs-command">ALERT</span>("<span class="hljs-string">Un de mes amis, </span>"+Généalogie de(<span class="hljs-locale">$vsNom</span>)+"<span class="hljs-string">, fait cela pour gagner sa vie !</span>")
+   <span class="hljs-keyword">End if</span>
+ <span class="hljs-keyword">End if</span>
 </code></pre>
 <p>en utilisant la fonction récursive <code>Généalogie de</code> suivante :</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode projet Généalogie de</span>
-  <span class="hljs-comment">// Généalogie de ( Chaîne ) -&gt; Texte</span>
-  <span class="hljs-comment">// Généalogie de ( Nom ) -&gt; Partie de la phrase</span>
- 
- <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
- <span class="hljs-keyword">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$1</span>)
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Méthode projet Généalogie de
+</span>  <span class="hljs-comment">// Généalogie de ( Chaîne ) -&gt; Texte
+</span>  <span class="hljs-comment">// Généalogie de ( Nom ) -&gt; Partie de la phrase
+</span> 
+ <span class="hljs-param">$0</span>:=<span class="hljs-param">$1</span>
+ <span class="hljs-command">QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-param">$1</span>)
 <span class="hljs-keyword">If</span>(Enregistrements trouves([Amis et parents])&gt;0)
-    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" qui est le rejeton de "</span>+<span class="hljs-keyword">G</span>é<span class="hljs-keyword">n</span>éalogie <span class="hljs-keyword">de</span>([Amis et parents]Nom)
-End <span class="hljs-keyword">if</span>
+    <span class="hljs-param">$0</span>:=<span class="hljs-param">$0</span>+"<span class="hljs-string"> qui est le rejeton de </span>"+Généalogie de([Amis et parents]Nom)
+<span class="hljs-keyword">End if</span>
 </code></pre>
 <p>Vous notez que la méthode <code>Généalogie de</code> s'appelle elle-même.</p>
 <p>La première manière de procéder utilise un <strong>algorithme itératif</strong>. La seconde manière utilise un <strong>algorithme récursif</strong>.</p>
