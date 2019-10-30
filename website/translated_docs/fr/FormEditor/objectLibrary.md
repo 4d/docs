@@ -5,23 +5,23 @@ title: Bibliothèques d'objets
 
 ## Aperçu
 
-Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
+Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibliothèque d'objets propose une collection d'objets préconfigurés pouvant être utilisés dans vos formulaires par simple copier-coller ou glisser-déposer.
 
-4D proposes two kinds of object libraries:
+4D propose deux types de bibliothèques d'objets :
 
-- a standard, preconfigured object library, available in all your projects.
-- custom object librairies, that you can use to store your favorite form objects or full project forms.
+- une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
+- des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
 
 
-## Using the standard object library
+## Utilisation de la bibliothèque d'objets standard
 
-The standard object library is available from the Form editor: click on the last button of the toolbar: ![](assets/en/FormEditor/library1.png)
+La bibliothèque d'objets standard est disponible dans l'éditeur de formulaire : cliquez sur le dernier bouton de la barre d'outils : ![](assets/en/FormEditor/library1.png)
 
-The library is displayed in a separate window:
+La bibliothèque est affichée dans une fenêtre séparée :
 
 ![](assets/en/FormEditor/library2.png)
 
-The window has the following main features:
+La fenêtre présente les caractéristiques principales suivantes :
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
