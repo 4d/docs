@@ -1,47 +1,47 @@
 ---
 id: stylesheets
-title: Style sheets
+title: Feuilles de style (style sheets)
 ---
 
-## Aperçu
+## Présentation
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
+Une feuille de style regroupe une combinaison d’attributs d'objets formulaire —  allant des attributs de texte à quasiment tous les attributs d'objet disponibles.
 
-In addition to harmonizing an application's interface, style sheets provide three major advantages:
+Outre l’harmonisation de l’interface de vos applications, l’usage de feuilles de style a trois avantages majeurs :
 
-*   Saves time during development: Each object has specific group of settings within a single operation.
-*   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-*   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
+*   Gain de temps en développement : pour chaque objet, vous définissez en une seule opération un ensemble de paramétrages.
+*   Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
+*   Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
 
-### Style Sheet Files
+### Fichiers feuilles de style
 
-4D accepts three, specific style sheet files:
+4D accepte trois fichiers feuilles de style spécifiques :
 
-| Style Sheet             | Platform                                              |
-| ----------------------- | ----------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles     |
-| styleSheets_windows.css | For defining Windows only specific attribute styles   |
+| Feuille de style        | Plateforme                                                              |
+| ----------------------- | ----------------------------------------------------------------------- |
+| styleSheets.css         | Feuille de style globale par défaut pour macOS et Windows               |
+| styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
+| styleSheets_windows.css | Pour définir des styles d'attributs spécifiques pour Windows uniquement |
 
-These files are stored in the project's "/SOURCES" folder.
-
-
-### Style Sheet Architecture
-
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow [CSS](https://www.w3schools.com/css/) syntax and grammar.
-
-Every style rule in a style sheet contains two parts:
-
-*   a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors.
-
-*   a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.
+Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
 
 
+### Architecture des feuilles de style
 
-## Style Sheet Selectors
+Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les feuilles de style des bases projet respectent généralement la syntaxe et la grammaire [CSS](https://www.w3schools.com/css/).
+
+Chaque règle de style d'une feuille de style contient deux parties :
+
+*   un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
+
+*   une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
 
 
-### Object Type
+
+## Sélecteurs de feuilles de style
+
+
+### Type d'objet
 
 Corresponding to the CSS element selector, the object type defines the type of object to style.
 
@@ -65,7 +65,7 @@ text, input {
 }
 ```
 
-### Object Name
+### Nom d'objet
 
 Corresponding to the CSS ID selector, the object name defines a specific object to style since the object's name is unique within the form.
 
@@ -114,7 +114,7 @@ class: "okButtons important"
 ```
 
 
-### All Objects
+### Tous les objets
 
 Corresponding to the CSS universal selector, the "*" character indicates that the following style will be applied to all objects on the form.
 
@@ -129,7 +129,7 @@ In the following example, all objects will have a gray fill:
 ```
 
 
-### Specific Attribute
+### Attributs spécifiques
 
 Corresponding to the CSS attribute selector, styles can be applied to all form objects with a specific attribute.
 
@@ -175,7 +175,7 @@ text[text|=Hello]
 ```
 
 
-## Style Sheet Declarations
+## Déclarations de feuilles de style
 
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
     - "method"
@@ -225,7 +225,7 @@ icon: url("edit.png"); /* relative path to the form file */
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
 
-## Priority Order
+## Ordre de priorité
 
 4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
 
@@ -238,34 +238,34 @@ To override this behavior, the style value must be followed with an `!important`
 
 **Example 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
+| JSON form description | Feuille de style | 4D displays |
+| --------------------- | ---------------- | ----------- |
+| `"text": "Button",`   | `text: Edit;`    | `"Button"`  |
 
 
 **Example 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
+| JSON form description | Feuille de style         | 4D displays |
 | --------------------- | ------------------------ | ----------- |
 | `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
 
 
 
-### Multiple Style Sheets
+### Feuilles de style multiples
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ordre suivant :
 
-1.  The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
-2.  It will then load the CSS file for the current platform `/SOURCES/styleSheets\_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3.  If it exists, it will then load a specific CSS file defined in the JSON form:
+1.  Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
+2.  Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets\_mac.css` ou `/SOURCES/styleSheets_windows.css`.
+3.  S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
 
-    *   a file for both platforms:
+    *   un fichier pour les deux plateformes :
 
     ```
     "css": "<path>" 
     ```
 
-    *   or a list of files for both platforms:
+    *   ou une liste de fichiers pour les deux plateformes :
 
     ```
     "css": [
@@ -274,7 +274,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
           ],
     ```
 
-    *   or a list of files per platform:
+    *   ou une liste de fichiers par plateforme :
 
     ```
      "css": [
@@ -283,7 +283,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
         ],
     ```
 
-> Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
 
 
@@ -292,16 +292,16 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 
 
-## Creating or Editing Style Sheets
+## Création ou modification d'une feuille de style
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.
 
-1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1.  Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
 
     ![](assets/en/FormEditor/stylesheets.png)
 
-2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2.  Choisissez le type de feuille de style que vous souhaitez créer et cliquez sur le bouton **Créer** ou **Editer** : ![](assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.  
+3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.  
