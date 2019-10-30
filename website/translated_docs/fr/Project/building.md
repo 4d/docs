@@ -399,25 +399,25 @@ L'option **Signer l'application** du Générateur d’application de 4D permet d
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notarisées déployées via Internet sont bloquées par défaut.
 
-Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D. Note also that it requires installing Xcode.
+Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D. A Noter également que cela nécessite l'installation de Xcode.
 
-For more information on the notarization, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+Pour plus d'informations sur la notarisation, veuillez vous reporter à [cette page sur le site Web du développeur Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Customizing application icons
+## Personnaliser les icônes de l'application
 
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+4D associe une icône par défaut à des applications autonomes, clientes et serveur; mais vous pouvez également personnaliser l'icône pour chaque application.
 
-* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
+* **macOs** - Lors de la construction d'une application exécutable, 4D gère la personnalisation des icônes. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
     
-    > Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+    > Apple, Inc. fournit un outil spécifique de création de fichiers d'icônes *icns* (pour plus d'informations, consultez la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
     
-    Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
+    Votre fichier d'icône doit avoir le même nom que le fichier de projet et inclure l'extension *.icns*. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable (le fichier *.icns* est renommé *NomApplication.icns * et copié dans le dossier Resources; l'entrée *CFBundleFileIcon* du fichier *info.plist* est mise à jour). 
 
-* **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the project folder.
+* **Windows** - Lors de la création d'une application exécutable, 4D gère la personnalisation de son icône. Pour ce faire, vous devez créer un fichier d’icône (extension *.ico*) avant de créer le fichier d’application et le placer à côté du dossier du projet.
     
-    Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
+    Votre fichier d'icône doit porter le même nom que le fichier de projet et inclure l'extension *.ico *. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. Les clés suivantes sont disponibles :
+Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
