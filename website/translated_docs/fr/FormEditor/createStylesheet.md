@@ -43,11 +43,11 @@ Chaque règle de style d'une feuille de style contient deux parties :
 
 ### Type d'objet
 
-Corresponding to the CSS element selector, the object type defines the type of object to style.
+Le type d'objet définit le type d'objet à styler et correspond au sélecteur d'élément CSS.
 
-Specify the object, then in curly braces, declare the style(s) to apply.
+Spécifiez l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
+Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -56,7 +56,7 @@ button {
 }
 ```
 
-To apply the same style to multiple types of objects, specify the objects separated by a "," then in curly braces, declare the style(s) to apply:
+Pour appliquer le même style à plusieurs types d’objets, spécifiez les objets séparés par un "," puis, entre accolades, déclarez le(s) style(s) à appliquer :
 
 ```
 text, input {
@@ -67,11 +67,11 @@ text, input {
 
 ### Nom d'objet
 
-Corresponding to the CSS ID selector, the object name defines a specific object to style since the object's name is unique within the form.
+Tout en correspondant au sélection d'identifiant CSS, le nom d'objet définit un objet spécifique à styler puisque le nom de l'objet est unique dans le formulaire.
 
-Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
+Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels :
 
 ```
 #okButton {
@@ -84,11 +84,11 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class
 
-Corresponding to the CSS class selector, the class defines the style for all form objects with the `class` attribute.
+Correspondant au sélecteur CSS class, la classe définit le style de tous les objets formulaire avec l'attribut `classe`.
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
+Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
 
-In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
+Dans l'exemple suivant, le texte de tous les objets de la classe `okButtons` sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels, alignée au centre :
 
 ```
 .okButtons {
@@ -98,7 +98,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 }
 ```
 
-To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
+Pour indiquer qu'un style doit être appliqué uniquement à des objets de type différent, spécifiez le type suivi de "." et du nom de la classe, puis déclarez entre accolades le(s) style(s) à appliquer.
 
 ```
 text.center {
@@ -107,7 +107,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
+Dans la description du formulaire 4D, vous associez un nom de classe à un objet à l'aide de l'attribut `class`. Cet attribut contient un ou plusieurs noms de "class", séparés par un espace :
 
 ```
 class: "okButtons important"             
@@ -116,11 +116,11 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Corresponding to the CSS universal selector, the "*" character indicates that the following style will be applied to all objects on the form.
+Correspondant au sélecteur CSS universel, le caractère "*" indique que le style suivant sera appliqué à tous les objets du formulaire.
 
-Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
+Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
-In the following example, all objects will have a gray fill:
+Dans l'exemple suivant, tous les objets auront un fond gris :
 
 ```
 * {
@@ -131,11 +131,11 @@ In the following example, all objects will have a gray fill:
 
 ### Attributs spécifiques
 
-Corresponding to the CSS attribute selector, styles can be applied to all form objects with a specific attribute.
+Correspondant au sélecteur d'attribut CSS, les styles peuvent être appliqués à tous les objets de formulaire avec un attribut spécifique.
 
-Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
+Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-In the following example, all objects with the `borderStyle` attribute will have purple lines:
+Dans l'exemple suivant, tous les objets avec l'attribut `borderStyle` auront des lignes violettes :
 
 ```
 [borderStyle]
@@ -144,7 +144,7 @@ In the following example, all objects with the `borderStyle` attribute will have
 }
 ```
 
-To designate that a style should be applied to all objects that have a specific attribute and word, use the `[attribute~="value"]` syntax:
+Pour indiquer qu'un style doit être appliqué à tous les objets ayant un attribut et un mot spécifiques, utilisez la syntaxe `[attribute~="value"]` :
 
 ```
 [text~=Hello]
@@ -154,7 +154,7 @@ To designate that a style should be applied to all objects that have a specific 
 
 ```
 
-To designate that a style should be applied to distinct object types with a specific attribute and value, use the `object type[attribute="value"]` syntax:
+Pour indiquer qu'un style doit être appliqué à des types d'objet distincts avec un attribut et une valeur spécifiques, utilisez la syntaxe `object type[attribute="value"]` :
 
 
 ```
@@ -165,7 +165,7 @@ text[text=Hello]
 ```
 
 
-To designate that a style should be applied to certain object types with a specific attribute whose value begins with a specific value, use the `object type[attribute|="value"]` syntax:
+Pour indiquer qu'un style doit être appliqué à certains types d'objet avec un attribut spécifique dont la valeur commence par une valeur spécifique, utilisez la syntaxe `object type[attribute|="value"]` :
 
 ```
 text[text|=Hello]
@@ -177,24 +177,24 @@ text[text|=Hello]
 
 ## Déclarations de feuilles de style
 
-The majority of form object attributes can be defined within a style sheet, except the following attributes:
+La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
     - "method"
     - "type"
+    - "type"
     - "class"
-    - "event"
-    - choiceList, excludedList, labels, list, requiredList (list type)
+    - choiceList, excludedList, labels, list, requiredList (type liste)
 
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page **Formulaires dynamiques** dans le manuel du mode Développement.
 
-### Attribute Mapping
+### Mappage d'attributs
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
+Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
 | 4D             | CSS              |
 | -------------- | ---------------- |
 | borderStyle    | border-style     |
-| fill           | background-color |
-| fontFamily     | font-family      |
+| border-style   | background-color |
+| fontFamily     | fontFamily       |
 | fontSize       | font-size        |
 | fontStyle      | font-style       |
 | fontWeight     | font-weight      |
@@ -202,52 +202,52 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 | textAlign      | text-align       |
 | textDecoration | text-decoration  |
 | verticalAlign  | vertical-align   |
-> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+> Les valeurs spécifiques à 4D (*ex :* "enfoncées") ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 
-### Specific Attribute Values
+### Valeurs d'attributs spécifiques
 
-- For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
+- Pour les attributs `icon`, `picture`, et `customBackgroundPicture` qui prennent en charge un chemin vers une image, la syntaxe est la suivante :
 
 ```
-icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
-icon: url("edit.png"); /* relative path to the form file */
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* chemin absolu */
+icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 ```
 
-- For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+- Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-    - css color name: `fill: red;`
-    - hexa value: `fill: #FF0000;`
-    - the `rgb()` function: `fill:rgb(255,0,0)`
+    - nom de la couleur css : `fill: red;`
+    - valeur valeur hexadécimale : `fill: #FF0000;`
+    - fonction `rgb()` : `fill:rgb(255,0,0)`
 
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Par exemple:
-    - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
-    - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
+- Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
+    - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
+    - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 
 
 ## Ordre de priorité
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+Les projets 4D hiérarchisent les définitions de style en conflit, d'abord par la définition du formulaire, puis par les feuilles de style.
 
 
-### JSON vs Style Sheet
+### JSON vs Feuille de style
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+Si un attribut est défini dans la description du formulaire JSON et dans une feuille de style, 4D utilisera la valeur du fichier JSON.
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `! Important`.
 
-**Example 1:**
+**Exemple 1 :**
 
-| JSON form description | Feuille de style | 4D displays |
-| --------------------- | ---------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;`    | `"Button"`  |
+| Description du formulaire JSON | Feuille de style | 4D affiche |
+| ------------------------------ | ---------------- | ---------- |
+| `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
 
-**Example 2:**
+**Exemple 2 :**
 
-| JSON form description | Feuille de style         | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| Description du formulaire JSON | Feuille de style         | 4D affiche |
+| ------------------------------ | ------------------------ | ---------- |
+| `"text": "Button",`            | `text: Edit !important;` | `"Edit"`   |
 
 
 
@@ -283,7 +283,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
         ],
     ```
 
-> Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 
 
