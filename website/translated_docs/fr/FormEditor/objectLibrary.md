@@ -23,15 +23,15 @@ La bibliothèque est affichée dans une fenêtre séparée :
 
 La fenêtre présente les caractéristiques principales suivantes :
 
-- Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either:
-    - right-click on an object and select **Copy** in the contextual menu
-    - or drag and drop the object from the library The object is then added to the form.
+- Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
+- Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** : ![](assets/en/FormEditor/library3.png)
+- Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
+    - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
+    - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire.
 
-This library is read-only. If you want to edit default objects or create your own libray of preconfigured objects or project forms, you need to create a custom object library (see below).
+Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+Tous les objets proposés dans la bibliothèque d'objets standard sont décrits dans [cette section sur doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
