@@ -46,14 +46,14 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 
 **Note :** Pour une bonne exécution du code, assurez-vous que tous les paramètres `$1`, `$2`... sont correctement déclarés dans les méthodes appelées (voir [Déclaration des paramètres](#declaring-parameters) ci-dessous).
 
-### Supported expressions
+### Expressions prises en charge
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
+Vous pouvez utiliser n'importe quelle [expression](Concepts/quick-tour.md#expression-types) comme paramètre, à l'exception des :
 
 - tables
-- arrays
+- tableaux
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Les expressions de tables ou de tableaux peuvent être passées uniquement [comme une référence utilisant un pointeur](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 ## Fonctions
 
@@ -165,16 +165,16 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Values or references
+## Valeurs ou références
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2, etc... de la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
 
 ```code4d
-    //Here is some code from the method MY_METHOD
+    //Voici du code extrait de la méthode MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
 
-    //Here is the code of the method DO_SOMETHING
+    //Voici du code extrait de la méthode  DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
@@ -186,11 +186,11 @@ Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la vale
 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
 ```code4d
-  //Here is some code from the method MY_METHOD
+  //Voici du code extrait de la méthode  MY_METHOD
  DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
 
-  //Here the code of the method DO_SOMETHING
+  //Voici du code extrait de la méthode  DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
@@ -200,22 +200,22 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
 2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur. 
 
 ```code4d
-    //Here is some code from the method MY METHOD
+    //Voici du code extrait de la méthode MY METHOD
  [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Name)
 
-    //Here the code of the method DO SOMETHING
+    //Voici du code extrait de la méthode DO SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Functions](#functions) paragraph.
+Cette seconde technique consistant à renvoyer une valeur par une sous-routine est intitulée "utiliser une fonction". Cette procédure est décrite dans le paragraphe [Fonctions](#functions).
 
-### Particular cases: objects and collections
+### Cas particuliers : objets et collections
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
+Veillez à ce que les types de données d'Objet et Collection ne puissent être gérés que via une référence (c'est-à-dire un* pointeur* interne).
 
-Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), à l'exception des paramètres `$1, $2 ...` n'ont pas besoin d'être déréférencés dans la sous-routine.
 
 Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
@@ -264,11 +264,11 @@ Dans la méthode `ChangeAge`, vous pouvez écrire :
  ALERT($para.Nom+" a "+String($para.Age)+" ans.")
 ```
 
-C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). To handle missing parameters, you can either:
+C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez :
 
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
+- vérifier si tous les paramètres attendus sont fournis en les comparant à la valeur `Null`, ou
+- prédéfinir les valeurs des paramètres, ou
+- les utiliser sous forme de valeurs vides.
 
 Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
 
