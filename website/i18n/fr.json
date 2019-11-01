@@ -6,19 +6,19 @@
     "tagline": "Guides essentiels du développeur 4D",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Sauvegarde"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "Fichier d'historique (.journal)"
       },
       "Backup/overview": {
         "title": "Aperçu"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "Restitution"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "Paramètres de sauvegarde"
       },
       "Concepts/about": {
         "title": "À propos du Langage 4D"
