@@ -13,10 +13,27 @@ Any custom formats or filters that you have created are automatically available,
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as: RB-1762-1. The alpha format would be: `##-####-#`. 
-When the user enters “RB17621,” the field displays: `RB-1762-1`. The field actually contains "RB17621".
+For example, consider a part number with a format such as "RB-1762-1". 
+	
+The alpha format would be:
 
-If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is: `(#######)` and the user enters “proportion,” the field displays: `(portion)` The field actually contains “proportion.” 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+	##-####-#
+	
+When the user enters "RB17621," the field displays:
+
+	RB-1762-1
+	
+The field actually contains "RB17621".
+
+If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is: 
+
+	(#######) 
+	
+and the user enters "proportion", the field displays:
+
+	(portion) 
+	
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
 #### JSON Grammar
 
@@ -47,7 +64,7 @@ In this case, you can select the text to display for each value:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|booleanFormat|string|"*textWhenTrue*;*textWhenFalse*", e.g. "Assigned;Unassigned"|
+|booleanFormat|string|"\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned"|
 
 
 #### Objects Supported
@@ -100,11 +117,7 @@ The table below shows choices available:
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
-
-
-
-
+[Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Pop-up Menu/Drop-down List](dropdownList_overview.md) 
 
 
 
@@ -135,14 +148,14 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated. 
 
-In particular, this proprty allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
+In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|display| boolean|"true", "false"|
+|display| boolean|true, false|
 
 #### Objects Supported
 
@@ -166,6 +179,16 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display. 
 
+|Placeholder	|Effect for leading or trailing zero|
+|---|---|
+|#	|Displays nothing|
+|0|	Displays 0|
+|^|	Displays a space (1)|
+|*|	Displays an asterisk|
+
+(1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
+
+
 For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
@@ -176,45 +199,31 @@ Each placeholder character has a different effect on the display of leading or t
 
 Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
 
-The table below explains the effect of each placeholder on leading and trailing zeros:
-
-|Placeholder	|Effect for leading or trailing zero|
-|---|---|
-|#	|Displays nothing|
-|0|	Displays 0|
-|^|	Displays a space (1)|
-|*|	Displays an asterisk|
-
-(1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
 ### Separator characters  
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #. 
 
->**Compatibility**
->
-*	In versions of 4D prior to v11, numeric display formats do not take the regional parameters of the system into account. In >converted databases, a compatibility option lets you control this functioning (see the [Compatibility page](https://doc.4d.com/4Dv17R6/4D/17-R6/Compatibility-page.300-4354644.en.html)).
->	
-*	In Windows, starting with version 14, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: 
->	
-	*	in a Real type field, using this key will insert the decimal separator defined in the system,
-	*	in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+>On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: 
+>	*	in a Real type field, using this key will insert the decimal separator defined in the system,
+>	*	in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
-### Decimal points and other display characters  
 
-You can use one decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+### Decimal points and other display characters 
+
+You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
 You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format: 
 
-$##0
+	$##0
 
 a dollar sign always appears because it is placed before the placeholders.
 
 If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
 
-\###.##0
+	###.##0
 
-a comma appears only if the user enters at least four digits.
+the point appears only if the user enters at least four digits.
 
 Spaces are treated as characters in number display formats.
 
@@ -222,33 +231,33 @@ Spaces are treated as characters in number display formats.
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
-Positive;Negative;Zero
+	Positive;Negative;Zero
 
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
 
->The third part (zero) is not interpreted and does not accept replacement characters. If you enter ###;###;# the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
+>The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
-$###,##0.00;($###,##0.00);
+	$###,##0.00;($###,##0.00);
 
 Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
 
-$###,##0.00;($###,##0.00)
+	$###,##0.00;($###,##0.00)
 
 In this case, the display for zero would be $0.00.
 
 ### Scientific notation  
 
-If you want to display numbers in scientific notation, use the ampersand (&) followed by a number to specify the number of digits you want to display. For example, the format:
+If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
 
-&3
+	&3
 
 would display 759.62 as:
 
-7.60e+2
+	7.60e+2
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
@@ -256,26 +265,26 @@ The scientific notation format is the only format that will automatically round 
 
 You can display a number in hexadecimal using the following display formats:
 
-*	&x: This format displays hexadecimal numbers using the “0xFFFF” format.
-*	&$: This format displays hexadecimal numbers using the “$FFFF” format.
+*	`&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+*	`&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
 ### XML notation  
 
-The &xml format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
+The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
 
 ### Displaying a number as a time  
 
-You can display a number as a time (with a time format) by using “&/” followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu. 
+You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu. 
 
 For example, the format:
 
-&/5
+	&/5
 
 corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
 
-6:56 AM
+	6:56 AM
 
-#### Examples
+### Examples
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
@@ -317,7 +326,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Objects Supported
 
-[Pop-up Menu/Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Drop-down List](dropdownList_overview.md) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md)
 
 
 
@@ -327,51 +336,57 @@ The following table shows how different formats affect the display of numbers. T
 
 ## Picture Format
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format. Picture formats available in the Picture Format list of the Property List (“Display” theme). 
+Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
 ### Scaled to fit 
 
-The Scaled to fit format causes 4D to resize the picture to fit the dimensions of the field area.
+`JSON grammar: "scaled"`
+
+The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
 ### Truncated (centered and non-centered)  
 
-The Truncated (centered) format causes 4D to center the picture in the field and crop any portion that does not fit within the field area. 4D crops equally from each edge and from the top and bottom. 
+`JSON grammar: "truncatedCenter" / "truncated"`
 
-The Truncated (non-centered) format causes 4D to place the upper-left corner of the picture in the upper-left corner of the field and crop any portion that does not fit within the field area. 4D crops from the right and bottom. 
+The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom. 
 
->When the picture format is Truncated (non-centered), it is possible to add scroll bars to the field or variable area. 
+The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom. 
+
+>When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area. 
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
 ### Scaled to fit (proportional) and Scaled to fit centered (proportional)  
 
-When you use Scaled to fit (proportional), the picture is reduced proportionally on all sides to fit the area created for the picture. The Scaled to fit centered (proportional) option does the same, but centers the picture in the picture area.
+`JSON grammar: "proportionalTopLeft" / "proportionalCenter"`
+
+When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
 If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.
 
-If you have applied the Scaled to fit centered (proportional) format, the picture is also centered in the field area:
+If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
 ### On Background  
 
-On Background makes the picture transparent. Any objects placed behind the graphic such as fields or variables are visible through the graphic.
+**On Background** makes the picture transparent. Any objects placed behind the graphic such as fields or variables are visible through the graphic.
 
 ![](assets/en/FormObjects/property_pictureFormat_OnBackground.png)
 
->If you are printing pictures with the On Background format, they will be printed as bitmaps.
+>If you are printing pictures with the **On Background** format, they will be printed as bitmaps.
 
-When a Picture field is in this format, the user can move the picture around the inside of the Picture field by dragging it. 4D remembers the object’s position on the background. The figure below shows a form that includes a picture with the On Background format.
+When a Picture field is in this format, the user can move the picture around the inside of the Picture field by dragging it. 4D remembers the object’s position on the background. The figure below shows a form that includes a picture with the **On Background** format.
 
 ### Replicated  
 
 `JSON grammar: "tiled"`
 
-When the area that contains a picture with the Replicated format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
@@ -385,7 +400,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 

@@ -32,6 +32,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 [Input](input_overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D Write Pro areas](writeProArea_overview.md)
 
 
+
 #### See also
 [Droppable](#droppable)
 
@@ -124,7 +125,7 @@ In this case, 4D does not provide automatic support for object operations.
 ## Movable Rows
 `Array type list boxes`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for selection type list boxes nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
+Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
 
 #### JSON Grammar
 
@@ -162,7 +163,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Sortable
 
-Allows sorting column data by clicking the header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
  
 In list boxes based on a selection of records, the standard sort function is available only:
 *	When the data source is *Current Selection*,
@@ -186,9 +187,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 
 ## Standard action
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the Design Reference.
+Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object deactivated, the associated project method cannot be executed. 
+You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
 
 #### JSON Grammar
 

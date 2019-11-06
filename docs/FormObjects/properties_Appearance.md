@@ -51,9 +51,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 This property is used to disable the selection highlight in list boxes.
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to define their appearance programmatically. 
+When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows). 
 
->By default, this option is not enabled.
+By default, this option is not enabled.
 
 
 #### JSON Grammar
@@ -153,7 +153,7 @@ showFooters|boolean|true (default), false|
 
 ## Show Formula Bar 
 
-When enabled, the formula bar is visible below the Toolbar interface. If not selected, the formula bar is hidden.
+When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
 
 > This property is available only for the [Toolbar](#user-interface) interface. 
 
@@ -260,7 +260,7 @@ showPageFrames|boolean|true, false|
 
 ## Show references 
 
-Displays all 4D expressions inserted in the 4D Write document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
 
 For example, you have inserted the current date along with a format, the date is displayed:
  

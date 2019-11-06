@@ -4,6 +4,7 @@ title: Background and Border
 ---
 
 ## Alternate Background Color
+
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
 #### JSON Grammar
@@ -125,11 +126,12 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 ## Font Color / Line Color
 
-For objects containing text (input, group box, list box header, etc.), designates the font color.
+For objects containing text (text, input, group box, list box header or footer), designates the font color.
 
-For shape objects (rectangle, line, etc.), designates the color of the object's lines.
+For shape objects (rectangle, line, oval), designates the color of the object's lines.
 
 #### JSON Grammar
+
 
 |Name|Data Type|Possible Values|
 |---|---|---|
@@ -200,7 +202,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 |rowFillSource|string|The name of a longint array.|
 
 #### Objects Supported
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -209,7 +211,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 ## Transparent
 
-Sets the list box background to "Transparent". When set, any alternate background color or background color defined for the column is ignored. 
+Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored. 
 
 #### JSON Grammar
 

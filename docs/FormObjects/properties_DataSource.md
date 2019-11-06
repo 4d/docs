@@ -24,7 +24,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|automaticInsertion|boolean |"true", "false"|
+|automaticInsertion|boolean |true, false|
 
 #### Objects Supported
 
@@ -60,7 +60,7 @@ List of static values to use as labels for the tab control object.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|labels|list, collection|A list of values to fill the table control|
+|labels|list, collection|A list of values to fill the tab control|
 
 #### Objects Supported
 
@@ -107,7 +107,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 |currentItemPositionSource| string|Number expression	|
 
 #### Objects Supported
-[List Box ](listbox_overview.md#overview)
+[List Box ](listbox_overview.md)
 
 
 
@@ -157,34 +157,36 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 ## Expression
 
-This description is specific to Selection and collection type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+This description is specific to [selection](listbox_overview.md#selection-list-boxes)
+ and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
 A 4D expression to be associated with a column. You can enter:
 
-- A simple variable (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
-- A field using the standard [Table]Field syntax (selection type list box only), for example: `[Employees]LastName`. The following types of fields can be used:
+- A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+
+- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes)
+ only), for example: `[Employees]LastName`. The following types of fields can be used:
 	*	String
 	*	Numeric
 	*	Date
 	*	Time
 	*	Picture
-	*	Boolean
+	*	Boolean  
 You can use fields from the Master Table or from other tables.
-*	A 4D expression (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.
 
+-	A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
 The following expression types are supported:
 	*	String
 	*	Numeric
 	*	Date
 	*	Picture
 	*	Boolean
-	*	For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.
+  
+	For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
+	When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
+	If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression. 
 
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing **This**. `This` is a dedicated 4D command that returns a reference to the currently processed element (see the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command description). For example, you can use **This.\<propertyPath>** where and **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. 
-	
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression. 
-
-If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (*e.g. [Person]FirstName+" "+[Person]LastName*), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
+	If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
 
 If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property. 
 
