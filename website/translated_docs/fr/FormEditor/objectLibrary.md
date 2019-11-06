@@ -5,33 +5,33 @@ title: Bibliothèques d'objets
 
 ## Aperçu
 
-Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
+Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibliothèque d'objets propose une collection d'objets préconfigurés pouvant être utilisés dans vos formulaires par simple copier-coller ou glisser-déposer.
 
-4D proposes two kinds of object libraries:
+4D propose deux types de bibliothèques d'objets :
 
-- a standard, preconfigured object library, available in all your projects.
-- custom object librairies, that you can use to store your favorite form objects or full project forms.
+- une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
+- des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
 
 
-## Using the standard object library
+## Utilisation de la bibliothèque d'objets standard
 
-The standard object library is available from the Form editor: click on the last button of the toolbar: ![](assets/en/FormEditor/library1.png)
+La bibliothèque d'objets standard est disponible dans l'éditeur de formulaire : cliquez sur le dernier bouton de la barre d'outils : ![](assets/en/FormEditor/library1.png)
 
-The library is displayed in a separate window:
+La bibliothèque est affichée dans une fenêtre séparée :
 
 ![](assets/en/FormEditor/library2.png)
 
-The window has the following main features:
+La fenêtre présente les caractéristiques principales suivantes :
 
-- Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either:
-    - right-click on an object and select **Copy** in the contextual menu
-    - or drag and drop the object from the library The object is then added to the form.
+- Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
+- Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** : ![](assets/en/FormEditor/library3.png)
+- Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
+    - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
+    - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire.
 
-This library is read-only. If you want to edit default objects or create your own libray of preconfigured objects or project forms, you need to create a custom object library (see below).
+Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+Tous les objets proposés dans la bibliothèque d'objets standard sont décrits dans [cette section sur doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
