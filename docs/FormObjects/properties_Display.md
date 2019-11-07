@@ -326,7 +326,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Drop-down List](dropdownList_overview.md) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
 
 
@@ -372,15 +372,6 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
-### On Background  
-
-**On Background** makes the picture transparent. Any objects placed behind the graphic such as fields or variables are visible through the graphic.
-
-![](assets/en/FormObjects/property_pictureFormat_OnBackground.png)
-
->If you are printing pictures with the **On Background** format, they will be printed as bitmaps.
-
-When a Picture field is in this format, the user can move the picture around the inside of the Picture field by dragging it. 4D remembers the object’s position on the background. The figure below shows a form that includes a picture with the **On Background** format.
 
 ### Replicated  
 
@@ -396,7 +387,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|pictureFormat|string|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter")|
+|pictureFormat|string|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter"|
 
 #### Objects Supported
 
@@ -410,9 +401,12 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ## Three-States
 
-Allows a check box object to accept a third state.
+Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
 
-List box columns with a numeric data [type](properties_Object.md#expressioin-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
+
+#### Three-states check boxes in list box columns
+
+List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
 *	0 = unchecked box,
 *	1 = checked box,
 *	2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
@@ -427,7 +421,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|threeState| boolean|"true", "false"|
+|threeState| boolean|true, false|
 
 #### Objects Supported
 
@@ -469,8 +463,7 @@ The table below shows the Time field display formats and gives examples:
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
-
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 
@@ -479,7 +472,7 @@ The table below shows the Time field display formats and gives examples:
 
 ## Title
 
-This property is available when the [Boolean Format](#boolean-format) or the [Three-states Checkbox](#three-states) property is enabled for a boolean column, so that the title of the check box can be entered.  
+This property is available when the [Boolean Format](#boolean-format) or the [Three-states Checkbox](#three-states) property is enabled for a list box boolean column, so that the title of the check box can be entered.  
 
 #### JSON Grammar
 
@@ -564,20 +557,46 @@ You can handle the Visible property for most form objects. This property simplif
 
 ## Wordwrap
 
-> Used with the [Multiline](propertiesEntry.md#multiline) property for [input](input_overview.md) objects. 
+> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" . 
 
 Manages the display of contents when it exceeds the width of the object.
 
-When this option is selected, column text automatically wraps to the next line whenever its width exceeds that of the column, if the column height permits it. 
+#### Checked for list box/Yes for input
+`JSON grammar: "normal"` 
 
-When you do not check this option, any text that is too long is truncated and displayed with an ellipse (...).
-In the following example, the Wordwrap option is checked for the left column but not for the right one:
+When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it. 
+
+- In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+
+- In multiline columns/areas, 4D carries out automatic line returns.
+
+![](assets/en/FormObjects/wordwrap2.png)
+
+
+#### Unchecked for list box/No for input
+`JSON grammar: "none"` 
+
+When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
+
+![](assets/en/FormObjects/wordwrap3.png)
+
+In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
 
 ![](assets/en/FormObjects/property_wordwrap1.png)
 
 Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
 
 ![](assets/en/FormObjects/property_wordwrap2.png)
+
+
+#### Automatic for input (default option)
+`JSON grammar: "automatic"`
+
+- In single-line areas, words located at the end of lines are truncated and there are no line returns.
+- In multiline areas, 4D carries out automatic line returns.
+
+![](assets/en/FormObjects/wordwrap1.png)
+
 
 #### JSON Grammar
 
@@ -587,7 +606,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 
