@@ -47,9 +47,9 @@ title: JSON property list
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|"true", "false"|
 |[defaultValue](properties_RangesOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
-|[detailForm](properties_Subform.md#detail-form) (subform)<br>[detailForm](properties_ListBox.md#detail-form-name) (list box)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+|[detailForm](properties_ListBox.md#detail-form-name) (list box)<bf>[detailForm](properties_Subform.md#detail-form) (subform)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[display](properties_Display.md#not-rendered) (objects) <br>[display](properties_Display.md#invisible) (list box column)|The object is not drawn on the form.|"true", "false"|
-|[doubleClickInRowAction](properties_ListBox.md#double-click-on-row) |Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
+|[doubleClickInRowAction](properties_ListBox.md#double-click-on-row) (list box)<br>[doubleClickInRowAction](properties_Subform.md#double-click-on-row) (subform)|Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
 |[dragging](properties_Action.md#draggable)|Enables dragging function. |"none", "custom", "automatic" (excluding list, list box) |
 |[dropping](properties_Action.md#droppable)|Enables dropping function. |"none", "custom", "automatic" (excluding list, list box) |
 
@@ -117,6 +117,7 @@ title: JSON property list
 |[labels](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
 |[labelsPlacement](properties_Scale.md#label-location) (objects)<br>[labelsPlacement](properties_Appearance.md#tab-control-direction) (splitter / tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
 |[left](properties_CoordinatesAndSizing.md#left)|Positions an object on the left.|minimum: 0|
+|list, see [choiceList](properties_DataSource.md#choice-list)|A list of choices associated with a hierarchical list|A list of choices|
 |[lockedColumnCount](properties_ListBox.md#number-of-locked-columns) |Number of columns that must stay permanently displayed in the left part of a list box. |minimum: 0|
 |[loopBackToFirstFrame](properties_Animation.md#loop-back-to-first-frame)|Pictures are displayed in a continuous loop.|"true", "false"|
 
@@ -179,7 +180,7 @@ title: JSON property list
 |[scrollbarHorizontal](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[selectedItemsSource](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression	|
-|[selectionMode](properties_Action.md#multi-selectable) (hierarchical list) <br> [selectionMode](properties_ListBox.md#selection-mode) (list box)|	Allows the selection of multiple records/options.|	"multiple", "single", "none"
+|[selectionMode](properties_Action.md#multi-selectable) (hierarchical list)<br> [selectionMode](properties_ListBox.md#selection-mode) (list box)<br> [selectionMode](properties_Subform.md#selection-mode) (subform)|Allows the selection of multiple records/rows.|"multiple", "single", "none"
 |[shortcutAccel](properties_Entry.md#shortcut)|Specifies the system to use, Windows or Mac.|"true", "false"|
 |[shortcutAlt](properties_Entry.md#shortcut)|Designates the Alt key|"true", "false"|
 |[shortcutCommand](properties_Entry.md#shortcut)|Designates the Command key (macOS)|"true", "false"|

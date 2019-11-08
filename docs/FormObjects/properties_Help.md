@@ -5,23 +5,33 @@ title:Help
 
 ## Help Tip
 
-This property allows displaying help messages associated with fields and active objects in your forms.
-<p> 
+This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
->Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
+![](assets/en/FormObjects/property_helpTip.png) 
 
-![](assets/en/FormObjects/property_helpTip.png)  
+> - The display delay and maximum duration of help tips can be controlled using the ``Tips delay`` and ``Tips duration`` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
+> - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
 
-You can associate a help tip with any active object in your form by using the Help Tip drop-down list found in the "Help" theme of the Property List. You can either:
+You can either:
 
-- Choose an existing help tip. The help tip must have been previously specified in the [Help tips](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) editor of 4D. 
-- Enter the help message directly in the area. This allows you to take advantage of XLIFF architecture. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). You can also use 4D references ([see Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
-
-The message you select or enter will appear as a help tip for the field or object selected in the form. The display delay and maximum duration of help tips can be controlled using the ``Tips delay`` and ``Tips duration`` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
-
-To delete the association of a help tip with the selected object, choose **None** in the Property List.
+- designate an existing help tip, previously specified in the [Help tips](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) editor of 4D. 
+- or enter the help message directly as a string. This allows you to take advantage of XLIFF architecture. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). You can also use 4D references ([see Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
 
 >In macOS, displaying help tips is not supported in pop-up type windows.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|:---:|:---:|---|
+|tooltip|text| additional information to help a user|
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
+
+
+#### Other help features 
 
 You can also associate help messages with form objects in two other ways:
 
@@ -34,16 +44,10 @@ When different tips are associated with the same object in several locations, th
 2. form editor level
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
-#### JSON Grammar
 
-|Name|Data Type|Possible Values|
-|:---:|:---:|---|
-|tooltip|text | additional information  to help a user|
+#### See also
 
-#### Objects Supported
-
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)  - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md#overview) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
-
+[Placeholder](properties_Entry.md#placeholder)
 
 
 

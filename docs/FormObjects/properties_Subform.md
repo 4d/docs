@@ -43,7 +43,7 @@ You can select a component form name when it is published in the component.
 [Subform](subform_overview.md#overview)
 
 
-## Double click on empty row
+## Double-click on empty row
 
 Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
 - Do nothing: Ignores double-click.
@@ -61,8 +61,36 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [Subform](subform_overview.md#overview)
 
 #### See also
-[Double click on row](properties_Listbox.md#double-click-on-row)
+[Double click on row](#double-click-on-row)
 
+
+## Double-click on row
+
+`List subform`
+
+Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+
+*	**Do nothing** (default): Double-clicking a row does not trigger any automatic action.
+*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list subform](propertiesSubform.md#detail-form). The record is opened in read-write mode so it can be modified.
+*	**Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
+ 
+Regardless of the action selected/chosen, the `On Double clicked` form event is generated. 
+ 
+For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|doubleClickInRowAction |string |"editSubrecord", "displaySubrecord"|
+
+#### Objects Supported
+
+[Subform](subform_overview.md)
+
+
+#### See also
+[Double click on empty row](#double-click-on-empty-row)
 
 
 ## Enterable in list
@@ -121,3 +149,25 @@ Specifies the table that the list subform belongs to (if any).
 
 [Subform](subform_overview.md#overview)
 
+
+## Selection Mode
+
+Designates the option for allowing users to select rows: 
+- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
+- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
+- **Multiple**: Several rows can be selected simultaneously in this mode. 
+	- The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.
+	- Clicking on the record will select it, but it does not modify the current record. 
+	- A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the selected record is changed.
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|selectionMode|string|"multiple", "single", "none"|
+
+#### Objects Supported
+
+[Subform](subform_overview.md)

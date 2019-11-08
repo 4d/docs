@@ -15,7 +15,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -33,4 +33,4 @@ Defines the color of the vertical lines in a list box (gray by default).
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

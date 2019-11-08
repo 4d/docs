@@ -258,6 +258,11 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
 
 
+#### See also
+
+[Help tip](properties_Help.md)
+
+
 
 
 ## Selection always visible
@@ -301,7 +306,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |shortcutControl	|boolean	|true, false (macOS Control)|
 |shortcutShift	|boolean	|true, false|  
 ||||
-|shortcutKey	|string	|"[F1]" -> "[F15]", "[Return]",  "[Enter]",  "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]",  "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|shortcutKey	|string	|<li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 
 
 #### Objects Supported

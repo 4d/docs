@@ -18,8 +18,7 @@ A list of space-separated words used as class selectors in css files.
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) -[Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) -  [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D View Pro area](viewProArea_overview)
-
+[4D View Pro area](viewProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview)
 
 
 ## Collection or entity selection
@@ -40,11 +39,11 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource |string|Name of a collection or entity selection.|
+|dataSource |string|Expression that returns a collection or an entity selection.|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -65,11 +64,11 @@ Specify the type of list box.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|listboxType|string|"array", "collection", "currentSelection", "namedSelection"|
+|listboxType|string|"array", "currentSelection", "namedSelection", "collection"|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -85,7 +84,7 @@ However, this property has a typing function in the following specific cases:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
-- **Picture variables**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
+- **[Picture variables](inputOverview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
 Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
@@ -97,7 +96,7 @@ Otherwise, the picture variable will not be displayed correctly (only in interpr
 
 #### Objects Supported
 
-[Input Area](inputOverview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Radio Button](radiobuttonOverview.md) - [Indicators](indicatorsOveriew.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box Column](listbox_overview.md#overview)  - [List Box Header](listbox_overview.md#list-box-footers) - [Tab Control](splitterTabControlOverview#tab-controls)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Indicators](indicatorsOveriew.md) - [Input Area](inputOverview.md) - [List Box Column](listbox_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md#overview) - [Tab Control](splitterTabControlOverview#tab-controls)
 
 
 
@@ -109,17 +108,17 @@ Each active form object is associated with an object name. Each object name must
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
-For more information about naming rules for form objects, refer to [GET REGISTERED CLIENTS](https://doc.4d.com/4Dv17R5/4D/17-R5/GET-REGISTERED-CLIENTS.301-4128067.en.html) (the rules are the same) as well as to [Identifiers](https://doc.4d.com/4Dv17R5/4D/17-R5/Identifiers.300-4128320.en.html) in the 4D Language Reference manual.
+For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|name|string |Any name which does not belong to an already existing object|
+|name|string |Any allowed name which does not belong to an already existing object|
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) -  [Picture](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [4D View Pro area](viewProArea_overview)
+[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
 
 
@@ -163,7 +162,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Title
 
-This property allows inserting a label on an object. The font and the style of this label can be specified.
+Allows inserting a label on an object. The font and the style of this label can be specified.
 
 You can force a carriage return in the label by using the \ character (backslash). 
 
@@ -183,7 +182,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
+[Button](button_overview.md) (*Regular, Flat, Toolbar, Bevel, Rounded Bevel, OS X Gradient Button, OS X Textured Button, Office XP, Circle, Custom*) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
 
 
@@ -193,9 +192,8 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
  `MANDATORY SETTING`
 
-This property designates the type of the active or inactive form object. Object types are described in the [Objects](buttonOverview.md) section.
+This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
-In the Form editor, to select an object type, click the corresponding toolbar button and then trace the object in the form. After creating an object, you can modify its type using the Property List.
 
 #### JSON Grammar
 
@@ -206,10 +204,7 @@ In the Form editor, to select an object type, click the corresponding toolbar bu
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) -[Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) -  [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D View Pro area](viewProArea_overview)
-
-
-
+[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
 
 
@@ -218,7 +213,7 @@ In the Form editor, to select an object type, click the corresponding toolbar bu
 
 ## Variable Calculation
 
-This property sets the type of calculation to be done in a column footer area. 
+This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area. 
 
 >The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
@@ -244,7 +239,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 >Automatic calculations are not supported with:
 >*	footers of columns based on formulas,
->*	footers of Collection and Entity selection list boxes.
+>*	footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes.
 You need to use custom calculations. 
 
 #### JSON Grammar
@@ -325,12 +320,12 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource|string, or string array|4D variable, field name, or arbitrary complex language expression. Empty string for [dynamic variables](#dynamic-variables). String array (collection of array names) for a hierarchical listbox column|
+|dataSource|string, or string array|<li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]|
 
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Picture](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers)
+[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md)
 
 
 

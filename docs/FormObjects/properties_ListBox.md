@@ -18,7 +18,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 ## Detail Form Name
@@ -35,11 +35,11 @@ The specified form is displayed:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|detailForm |string |Name (string) of table or project form OR a POSIX path (string) to a .json file describing the form OR an object describing the form |
+|detailForm |string |<li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -48,12 +48,12 @@ The specified form is displayed:
 
 
 ## Double-click on row
-`Selection type list box or List subform`
+`Selection type list box`
 
-Sets the action to be performed when a user double-clicks on a row in the list box or in a list subform. The available options are:
+Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
 
 *	**Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name) or [for the list subform](propertiesSubform.md#detail-form). The record is opened in read-write mode so it can be modified.
+*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
 *	**Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
 
 >Double-clicking an empty row is ignored in list boxes. 
@@ -70,9 +70,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) - [Subform](subform_overview.md)
-
-
+[List Box](listbox_overview.md)
 
 
 
@@ -87,17 +85,17 @@ This property is used to specify the set to be used to manage highlighted record
 4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
  
 >*	The highlighted status of the list box rows and the highlighted status of the table records are completely independent. 
-*	If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
+>*	If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| highlightSet| string| Name of the set.|
+| highlightSet| string| Name of the set|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -107,17 +105,19 @@ This property is used to specify the set to be used to manage highlighted record
 
 ## Number of Columns
 
-Sets the number of columns. 
+Sets the number of columns of the list box.
+
+>You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-| columnCount|integer |minimum: 1
+|columnCount|integer |minimum: 1
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -156,7 +156,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 ### Number of Static Columns
@@ -171,7 +171,7 @@ Number of columns that cannot be moved during execution.
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -185,13 +185,13 @@ A 4D array controlling the display of list box rows.
 
 You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command. 
 
-The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the Row Control Array array defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
 |Constant|Value|Comment|
 |---|---|---|
 |lk row is disabled	|2|The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled|
 |lk row is hidden|1|The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible|
-|lk row is not selectable|4|The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the "Single-Click Edit" option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable|
+|lk row is not selectable|4|The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable|
 
 To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
 
@@ -204,7 +204,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 You can define several interface properties at once:
 
 ```code4d
- aLControlArr{8}:=lk row is not selectable+lk row is disabled
+ aLControlArr{8}:=lk row is not selectable + lk row is disabled
 ```
 
 ![](assets/en/FormObjects/listbox_styles6.png)
@@ -212,8 +212,10 @@ You can define several interface properties at once:
 Note that setting properties for an element overrides any other values for this element (if not reset). For example:
 
 ```code4d
- aLControlArr{6}:=lk row is disabled+lk row is not selectable //sets row 6 as disabled AND not selectable
- aLControlArr{6}:=lk row is disabled //sets row 6 as disabled but selectable again
+ aLControlArr{6}:=lk row is disabled + lk row is not selectable 
+ //sets row 6 as disabled AND not selectable
+ aLControlArr{6}:=lk row is disabled 
+ //sets row 6 as disabled but selectable again
 ```
 
 
@@ -225,7 +227,7 @@ Note that setting properties for an element overrides any other values for this 
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -233,14 +235,10 @@ Note that setting properties for an element overrides any other values for this 
 ## Selection Mode
 
 Designates the option for allowing users to select rows: 
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option (subforms) or the **Single-click edit** (list box) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
+- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
 - **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
 The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.   
-With subforms:
-	- the selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command. 
-	- Clicking on the record will select it, but it does not modify the current record. 
-	- A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the selected record is changed.
 
 
 #### JSON Grammar
@@ -251,4 +249,4 @@ With subforms:
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) - [Subform](subform_overview.md)
+[List Box](listbox_overview.md)

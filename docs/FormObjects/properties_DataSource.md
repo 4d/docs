@@ -43,10 +43,12 @@ Associates a choice list with an object. It can be a choice list name (a list re
 |Name|Data Type|Possible Values|
 |---|---|---|
 |choiceList|list, collection|A list of possible values|
+|list|list, collection|A list of possible values (hierarchical lists only)|
+
 
 #### Objects Supported
 
-[Drop-down List](dropdownList_overview.md) - 
+[Drop-down List](dropdownList_Overview.md) - 
 [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 

@@ -223,7 +223,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ## List box headers
 
-> To be able to access the header properties of a list box, you must enable the [Display Headers](properties_ListBox.md#display-headers) option of the list box.
+> To be able to access the header properties of a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option of the list box.
 
 When headers are displayed, you can select a header in the Form editor by clicking it when the list box object is selected:
 
@@ -249,7 +249,7 @@ When the `OBJECT SET VISIBLE` command is used with a header, it is applied to al
 
 ## List box footers
 
->To be able to access footer properties for a list box, you must enable the [Display Footers](properties_ListBox.md#display-footers) option.
+>To be able to access footer properties for a list box, you must enable the [Display Footers](properties_Footers.md#display-footers) option.
 
 List boxes can contain non-enterable "footers" displaying additional information. For data shown in table form, footers are usually used to display calculations such as totals or averages.
 
