@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 ![](assets/en/Project/project1.png)
 
-> If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on doc.4d.com.
+> If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
 
 ## Project folder
@@ -188,3 +188,15 @@ recentTables.json|Ordered list of tables|JSON
 preferencesv15.4DPreferences|User preferences|JSON  
 
 
+## Components folder
+
+This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+
+> A project database can be used itself as a component:
+> - for development: put an alias of the .4dproject file in the Components folder of the host database.
+> - for deployment: put the component as .4dz file (see [Building a project package](building.md)) in a .4dbase folder, just like with .4db/.4dc files. 
+
+
+## Plugins folder
+
+This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
