@@ -47,6 +47,7 @@
 		  "FormObjects/shapesOverview",
 		  "FormObjects/spinner",
 		  "FormObjects/splitters",
+		  "FormObjects/staticPicture",
 		  "FormObjects/stepper",
 		  "FormObjects/subformOverview",
 		  "FormObjects/tabControl",

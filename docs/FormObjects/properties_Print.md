@@ -14,9 +14,9 @@ You cannot place more than one variable frame object side-by-side on a form. You
 
 The print options are:
 
-- **Variable** (default option): 4D enlarges or reduces the form object area in order to print all the subrecords.
+- **Variable** option / **Print Variable Frame** checked: 4D enlarges or reduces the form object area in order to print all the subrecords.
 
-- **Fixed (Truncation)**: 4D only prints the contents that appear in the object area. The form is only printed once and the contents not printed are ignored.
+- **Fixed (Truncation)** option / **Print Variable Frame** unchecked: 4D only prints the contents that appear in the object area. The form is only printed once and the contents not printed are ignored.
 
 - **Fixed (Multiple Records)** (subforms only): the initial size of the subform area is kept but 4D prints the form several times in order to print all the records.
 
@@ -32,4 +32,4 @@ The print options are:
 
 #### Objects Supported
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only - [4D Write Pro areas](writeProArea_overview.md)

@@ -12,7 +12,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|deletableInList|boolean|True/False (default: True)|
+|deletableInList|boolean|true, false (default: true)|
 
 #### Objects Supported
 

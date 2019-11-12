@@ -10,7 +10,7 @@ You can call 4D methods from the JavaScript code executed in a Web area and get 
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
-When this property is on, a [special JavaScript object](webArea_overview.md#using-the-$4d-object) named `$4d` is instantiated in the Web area, which you can use to manage calls to 4D project methods. 
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object). 
 
 
 

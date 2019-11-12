@@ -5,13 +5,15 @@ title:Text and Picture
 
 ## Background pathname
 
-This property allows you to set the picture that will be drawn in the background of the object. As with icons, you can indicate whether the picture comes from a variable or disk file. If the object uses an icon with [different states](#number-of-states), the background picture will automically support the same number of states. 
+Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states. 
+
+The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|customBackgroundPicture |picture |absolute or relative path. Must be used in conjunction with the style property with the "custom" option.|
+|customBackgroundPicture |string |Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.|
 
 
 #### Objects Supported
@@ -24,7 +26,7 @@ This property allows you to set the picture that will be drawn in the background
 
 ## Button Style
 
-This property allows setting the general appearance of the button. The style also plays a part in the availability of certain options. 
+General appearance of the button. The button style also plays a part in the availability of certain options. 
 
 
 #### JSON Grammar
@@ -36,7 +38,7 @@ This property allows setting the general appearance of the button. The style als
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md#overview) -[Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md) 
 
 
 
@@ -91,7 +93,7 @@ Designates the placement of an icon in relation to the form object.
 
 ## Icon Offset
 
-This property allows setting a custom offset value in pixels, which will be used when the button is clicked
+Sets a custom offset value in pixels, which will be used when the button is clicked
 
 The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
 
@@ -111,7 +113,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 ## Number of States
 
-This property sets the exact number of states present in the picture used as the icon for a button or a check box. In general, a button icon includes four states: active, clicked, mouse over and inactive. 
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive. 
 
 Each state is represented by a different picture. In the source picture, the states must be stacked vertically: 
 
@@ -132,7 +134,7 @@ The following states are represented:
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md) 
 
 
 
@@ -141,21 +143,21 @@ The following states are represented:
 
 ## Picture pathname
 
-Pathname of the picture used as icon for the object. It must be relative to the **Resources** folder of the database (see [Using static pictures](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-static-pictures.300-4163735.en.html)). You can use the /RESOURCES/ [filesystem](https://doc.4d.com/4Dv17R6/4D/17-R6/File-and-folder-object-pathnames.300-4312016.en.html). 
+Sets the path of the picture that will be used as icon for the object.
 
-When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states). 
+The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+
+> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states). 
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|icon|picture |<li>absolute path <li>relative path|
+|icon|picture |Relative path in POSIX syntax.|
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [List Box Header](listbox_overview.md#list-box-headers)
-
-
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
 
 
@@ -179,11 +181,11 @@ Here are the results using the various options for this property:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textPlacement|string|"left", "right", "top", "bottom", "center"|
+|textPlacement|string|"left", "top", "right", "bottom", "center"|
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md#overview) - [Radio Button](radio_overview.md#overview) 
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md) 
 
 
 
@@ -201,7 +203,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|customBorderY|integer|For use with "custom" style. Minimum: 0|
+|customBorderY|number|For use with "custom" style. Minimum: 0|
 
 #### Objects Supported
 
@@ -226,21 +228,19 @@ To attach a pop-up menu symbol to a button, there are two display options availa
 
 |Linked|Separated|
 |:---:|:---:|
-|  ![](assets/en/FormObjects/property_popup_linked.png) |  ![](assets/en/FormObjects/property_popup_separated.png)|
+|![](assets/en/FormObjects/property_popup_linked.png) |![](assets/en/FormObjects/property_popup_separated.png)|
 
->The real availability of a "separated" mode depends on the style of the button and the platform. 
+>The actual availability of a "separated" mode depends on the style of the button and the platform. 
 
 Each option specifies the relation between the button and the attached pop-up menu:
 
-<li>When the pop-up menu is separated, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-<li>When the pop-up menu is linked, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
-
-These options also influence the handling of form events by the button (for more information on this, refer to the [4D Language Reference](https://doc.4d.com/4Dv17R5/4D/17-R5/4D-Language-Reference.100-4127072.en.html) manual).
+<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
+<li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
 
 
 ### Managing the pop-up menu
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-pop-up-menu.301-4128300.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 
 
 #### JSON Grammar

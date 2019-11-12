@@ -7,7 +7,7 @@ title:Text
 
 Sets the selected text to appear darker and heavier.
 
-You can set this property via the Property List or via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
+You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
 >This is normal text.<br>
 **This is bold text.**
@@ -16,12 +16,11 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 
 |Property|Data Type|Possible Values|
 |---|---|---|
-|fontWeight|text | "normal", "bold"|
+|fontWeight|text |"normal", "bold"|
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
-
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](textAndGroupBox_overview.md#text)
 
 
 
@@ -63,8 +62,7 @@ Three font themes are available:
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
-
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
 
@@ -76,7 +74,7 @@ There are two types of font family names:
 * *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
 * *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this property via the Property List or you via the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.  
+You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.  
 
 ><span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br>
 <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br>
@@ -92,7 +90,7 @@ You can set this property via the Property List or you via the [**OBJECT SET FON
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
 
@@ -100,13 +98,13 @@ You can set this property via the Property List or you via the [**OBJECT SET FON
 
 ## Font Color
 
-This property specifies the color of the font used in the object. The color is specified by:
+This property specifies the color of the font used in the object. The color can be specified by:
 
 * a color name - like "red"
 * a HEX value - like "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
-You can set this property via the Property List or via the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-RGB-COLORS.301-4128232.en.html) command. 
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-RGB-COLORS.301-4128232.en.html) command. 
 
 >This font is <span style="color:red">red</span>.
 
@@ -118,7 +116,7 @@ You can set this property via the Property List or via the [**OBJECT SET RGB COL
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
 
@@ -132,21 +130,22 @@ You can set this property via the Property List or via the [**OBJECT SET RGB COL
 
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
-you must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the Formula editor to specify an expression. To do this, click on the [...] button which appears when you select the area. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
 >This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
  
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
  
-````code4d
-CompanyColor:=Choose([Companies]ID;Default background color;Default light shadow color;Default foreground color;Default dark shadow color)
-````
+```code4d
+CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
+Foreground color;Dark shadow color)
+```
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|rowStrokeSource|string |Name of expression. |
+|rowStrokeSource|string |Font color expression|
 
 #### Objects Supported
 
@@ -168,7 +167,7 @@ Allows defining the object's font size in points.
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
 
@@ -184,7 +183,7 @@ Horizontal location of text within the area that contains it.
 
 #### Objects Supported
 
-[Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
 
 
 
@@ -195,7 +194,7 @@ Horizontal location of text within the area that contains it.
 
 Sets the selected text to slant slightly to the right.
 
-You can set this property via the Property List or via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
+You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
 >This is normal text.<br>
 *This is text in italics.*
@@ -208,8 +207,7 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
-
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](textAndGroupBox_overview.md#text)
 
 
 
@@ -221,7 +219,7 @@ You can set this property via the Property List or via the [**OBJECT SET FONT ST
 ## Meta Info Expression
 `Collection or entity selection type list boxes`
 
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an object variable or an expression that returns an object. The following properties are supported:
+Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
 |Property name|	Type|	Description|
 |---|---|---|
@@ -234,7 +232,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 |disabled	|boolean	|Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.|
 |cell.\<columnName>|	object|	Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object|
 
-Note: Style settings made with this property are ignored if other style settings are defined through expressions in the Property list (*i.e.*, Style Expression, Font Color Expression, Background Color Expression).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
   
 The following example uses the *Color* project method. 
 
@@ -271,11 +269,11 @@ $0:=Form.meta
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|metaSource| string|An object expression|
+|metaSource| string|Object expression to evaluate for each row/cell.|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -297,9 +295,10 @@ By default, this option is not enabled.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|styledText| boolean|"true", "false"|
+|styledText| boolean|true, false|
 
 #### Objects Supported
+
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -313,7 +312,7 @@ By default, this option is not enabled.
 
 ## Orientation
 
-Modifies the orientation (rotation) of the text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
 
 |Orientation value|Result|
 |----|---|
@@ -322,7 +321,7 @@ Modifies the orientation (rotation) of the text area. Text areas can be rotated 
 |180|![](assets/en/FormObjects/orientation3.png)|
 |270|![](assets/en/FormObjects/orientation4.png)|
 
-In addition to [static text areas](textAndGroupBox_overview.md#text), non-[enterable](properties_Entry.md#enterable) [input](input_overview.md) text objects can be rotated. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order. 
+In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order. 
 
 
 
@@ -357,7 +356,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -414,7 +413,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -423,7 +422,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 
 ## Underline
-Sets the selected text to have a line running beneath it.
+Sets the text to have a line running beneath it.
 
 >This is normal text.<br>
 >This is <span style="text-decoration:underline">underlined</span> text.
@@ -436,7 +435,8 @@ Sets the selected text to have a line running beneath it.
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular) - [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Help Button](button_overview.md#help) - [Circle Button](button_overview.md#circle) - [Custom Button](button_overview.md#custom) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Pop-up Menu / Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [Text Area](textAndGroupBox_overview.md#text) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](textAndGroupBox_overview.md#group-box) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](textAndGroupBox_overview.md#text)
+
 
 
 
@@ -447,6 +447,11 @@ Sets the selected text to have a line running beneath it.
 
 Vertical location of text within the area that contains it.
 
+The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column: 
+- `bottom` for all data (except pictures) and 
+- `top` for picture type data.
+
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
@@ -455,9 +460,7 @@ Vertical location of text within the area that contains it.
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers)
-
-
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
 
 
 

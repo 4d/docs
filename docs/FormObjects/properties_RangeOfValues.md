@@ -49,7 +49,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |excludedList|list |A list of values to be excluded.|
 
 #### Objects Supported
@@ -72,7 +72,7 @@ However, unlike the [Choice List](properties_DataSource.md#choice-list) property
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
-|:---:|:---:|---|
+|---|---|---|
 |requiredList|list |A list of mandatory values.|
 
 #### Objects Supported

@@ -33,7 +33,7 @@ title: JSON property list
 |[controlType](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
 |[currentItemSource](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[currentItemPositionSource](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
-|[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Absolute or relative path. Must be used in conjunction with the style property with the "custom" option.| 
+|[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.| 
 |[customBorderX](properties_TextAndPicture.md#horizontal-margin)|Sets the size (in pixels) of the internal horizontal margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customBorderY](properties_TextAndPicture.md#vertical-margin)|Sets the size (in pixels) of the internal vertical margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customOffset](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
@@ -99,7 +99,7 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
-|[icon](properties_TextAndPicture.md#picture-pathname) (buttons)<br>[icon](properties_Picture.md#pathname) (picture button & picture pop-up menu)|The name, number, or the pathname of the picture.|An absolute or relative path|
+|[icon](properties_TextAndPicture.md#picture-pathname) (buttons)<br>[icon](properties_Picture.md#pathname) (picture button & picture pop-up menu)|The name, number, or the pathname of the picture.|Relative path in POSIX syntax|
 |[iconFrames](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
 |[iconPlacement](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"|
 
@@ -146,7 +146,8 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
-|[pictureFormat](properties_Display.md#picture-format)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled" (pictures only), "proportionalTopLeft" (excluding pictures), "proportionalCenter"(excluding pictures)|
+|[picture](properties_Picture.md)|Static picture path|Picture path in POSIX syntax|
+|[pictureFormat](properties_Display.md#picture-format) (input, list box column or footer)<br>[pictureFormat](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[placeholder](properties_Entry.md#placeholder)	|Grays out text when the data source value is empty.|Text to be grayed out.|
 |[pluginAreaKind](properties_Object.md#plug-in-kind)|Describes the type of plug-in. |The type of plug-in. |
 |[popupPlacement](properties_TextAndPicture.md#with-pop-up-menu) |Allows displaying a symbol that appears as a triangle in the button, which indicates that there is a pop-up menu attached. |"None", Linked", "Separated" |
