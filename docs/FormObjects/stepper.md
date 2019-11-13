@@ -1,6 +1,6 @@
 ---
 id: stepper
-title: Steppers
+title: Stepper
 ---
 ## Overview
 

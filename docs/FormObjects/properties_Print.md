@@ -32,4 +32,4 @@ The print options are:
 
 #### Objects Supported
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only - [4D Write Pro areas](writeProArea_overview.md)
+[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)

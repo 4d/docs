@@ -46,7 +46,7 @@ title: JSON property list
 |[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|"true", "false"|
-|[defaultValue](properties_RangesOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
+|[defaultValue](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
 |[detailForm](properties_ListBox.md#detail-form-name) (list box)<bf>[detailForm](properties_Subform.md#detail-form) (subform)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[display](properties_Display.md#not-rendered) (objects) <br>[display](properties_Display.md#invisible) (list box column)|The object is not drawn on the form.|"true", "false"|
 |[doubleClickInRowAction](properties_ListBox.md#double-click-on-row) (list box)<br>[doubleClickInRowAction](properties_Subform.md#double-click-on-row) (subform)|Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
@@ -163,7 +163,7 @@ title: JSON property list
 |[resizingMode](properties_ResizingOptions.md#column-auto-resizing)|Specifies if a list box column should be automatically resized | "rightToLeft", "legacy"|
 |[right](properties_CoordinatesAndSizing.md#right)|Positions an object on the right.|minimum: 0|
 |[rightMargin](properties_TextAndPicture.md#horizontal-margin)|Horizontal margin value (in pixels). |minimum: 0|
-|[rowControlSource](properties_Listbox.md#row-control-array) |A 4D array defining the list box rows. |Array|
+|[rowControlSource](properties_ListBox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
 |[rowFillSource](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br>[rowFillSource](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
 |[rowHeight](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default)|

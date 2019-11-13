@@ -247,7 +247,7 @@ Using this property requires compliance with the following principles:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
 - Valid and unique references must be associated with list items.
-- If you use this property for a [pop-up menu](popupMenuDropdownList_Overview.md), it must be associated with a field.
+- If you use this property for a [drop-down list](dropdownList_Overview.md), it must be associated with a field.
 
 
 #### JSON Grammar
@@ -257,7 +257,7 @@ Using this property requires compliance with the following principles:
 |saveAs| string|"value", "reference"|
 
 #### Objects Supported
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Pop-up Menu/Drop-down List](popupMenuDropdownList_Overview.md)
+[Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 

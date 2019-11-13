@@ -1,6 +1,6 @@
 ---
 id: splitters
-title: Splitters
+title: Splitter
 ---
 
 ## Overview

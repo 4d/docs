@@ -1,6 +1,6 @@
 ---
 id: subformOverview
-title: Subforms
+title: Subform
 ---
 
 ## Overview

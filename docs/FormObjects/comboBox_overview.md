@@ -1,6 +1,6 @@
 ---
 id: comboBoxOverview
-title: Combo Boxes
+title: Combo Box
 ---
 ## Overview
 

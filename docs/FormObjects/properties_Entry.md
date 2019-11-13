@@ -71,7 +71,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 
 
@@ -130,7 +130,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -164,7 +164,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md - [Check Box](checkbox_overview.md#overview) - [Drop-down List](dropdownList_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md#overview) - [Subform](subform_overview.md#overview)
+[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
 
 
@@ -290,6 +290,7 @@ This property allows setting special meaning keys (keyboard shortcuts) for [butt
 
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
+
 ![](assets/en/FormObjects/property_shortcut.png)
 
 >You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
@@ -336,6 +337,7 @@ When this option is not enabled, users must first select the cell row and then c
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
 
 
 

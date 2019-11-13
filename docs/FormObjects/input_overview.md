@@ -1,6 +1,6 @@
 ---
 id: inputOverview
-title: Inputs
+title: Input
 ---
 
 ## Overview

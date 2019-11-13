@@ -16,7 +16,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### Objects Supported
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 
 
@@ -40,7 +40,7 @@ You can select a component form name when it is published in the component.
 
 #### Objects Supported
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 
 ## Double-click on empty row
@@ -58,7 +58,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Objects Supported
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 #### See also
 [Double click on row](#double-click-on-row)
@@ -71,7 +71,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
 
 *	**Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*	**Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list subform](propertiesSubform.md#detail-form). The record is opened in read-write mode so it can be modified.
+*	**Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
 *	**Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
  
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated. 
@@ -109,7 +109,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### Objects Supported
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 
 
@@ -130,7 +130,7 @@ You can also allow the user to enter data in the List form.
 
 #### Objects Supported
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 
 
@@ -147,7 +147,7 @@ Specifies the table that the list subform belongs to (if any).
 
 #### Objects Supported 
 
-[Subform](subform_overview.md#overview)
+[Subform](subform_overview.md)
 
 
 ## Selection Mode

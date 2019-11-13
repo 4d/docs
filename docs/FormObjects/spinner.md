@@ -1,6 +1,6 @@
 ---
 id: spinner
-title: Spinners
+title: Spinner
 ---
 ## Overview
 

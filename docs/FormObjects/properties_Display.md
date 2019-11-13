@@ -43,7 +43,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### Objects Supported
 
-[Pop-up Menu/Drop-down List](popupMenuDropdownList_overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 
@@ -54,7 +54,7 @@ Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expr
 
 In addition, a boolean expression can also be displayed as:
 - a text (in an [input object](input_overview.md))
-- a pop-up (only in [list box objects](input_listbox.md))
+- a pop-up (only in [list box objects](listbox_overview.md))
 
 In this case, you can select the text to display for each value:
 - **Text when True** - the text to be displayed when the value is "true"
@@ -117,7 +117,7 @@ The table below shows choices available:
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Pop-up Menu/Drop-down List](dropdownList_overview.md) 
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 
@@ -326,7 +326,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
 
 
@@ -463,7 +463,7 @@ The table below shows the Time field display formats and gives examples:
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 
 

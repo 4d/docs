@@ -1,6 +1,6 @@
 ---
 id: ruler
-title: Rulers
+title: Ruler
 ---
 ## Overview
 

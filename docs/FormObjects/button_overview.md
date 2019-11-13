@@ -1,6 +1,6 @@
 ---
 id: buttonOverview
-title: Buttons
+title: Button
 ---
 
 A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it. 

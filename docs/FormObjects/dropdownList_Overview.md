@@ -1,6 +1,6 @@
 ---
 id: dropdownListOverview
-title: Drop-down Lists
+title: Drop-down List
 ---
 ## Overview
 

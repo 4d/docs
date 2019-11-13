@@ -231,7 +231,7 @@ When headers are displayed, you can select a header in the Form editor by clicki
 
 You can set standard text properties for each column header of the list box; in this case, these properties have priority over those of the column or of the list box itself. 
 
-In addition, you have access to the specific properties for headers. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#sorting columns).
+In addition, you have access to the specific properties for headers. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
  
 ![](assets/en/FormObjects/lbHeaderIcon.png)
 
