@@ -194,7 +194,7 @@ This folder contains the components to be available in the project database only
 
 > A project database can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host database.
-> - for deployment: put the component as .4dz file (see [Building a project package](building.md)) in a .4dbase folder, just like with .4db/.4dc files. 
+> - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database. 
 
 
 ## Plugins folder
