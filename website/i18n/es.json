@@ -166,9 +166,6 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
-      "Project/compiling": {
-        "title": "Compiling a project"
-      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
@@ -181,9 +178,6 @@
       "Project/developing": {
         "title": "Developing a project"
       },
-      "Project/exporting": {
-        "title": "Exporting from a 4D database"
-      },
       "Project/overview": {
         "title": "Overview"
       }
@@ -193,10 +187,10 @@
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
-      "Projects in 4D (BETA)": "Projects in 4D (BETA)",
-      "MSC": "MSC",
-      "Form Editor (in progress)": "Form Editor (in progress)",
+      "Project Databases": "Project Databases",
+      "Forms": "Forms",
       "Menus": "Menus",
+      "MSC": "MSC",
       "Backup and Restore": "Backup and Restore"
     }
   },

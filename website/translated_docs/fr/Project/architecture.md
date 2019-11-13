@@ -7,7 +7,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
 
 ![](assets/en/Project/project1.png)
 
-> Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. Voir "Convertir les bases en projets" sur doc.4d.com.
+> Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
 ## Dossier Project
 
@@ -185,3 +185,14 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     | debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
     | recentTables.json            | Liste ordonée de tables                                               | JSON   |
     | preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
+
+    
+    ## Components folder
+    
+    This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+    
+    > A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: put the component as .4dz file (see [Building a project package](building.md)) in a .4dbase folder, just like with .4db/.4dc files.
+    
+    ## Plugins folder
+    
+    This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
