@@ -6,19 +6,19 @@
     "tagline": "Guides essentiels du développeur 4D",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Sauvegarde"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "Fichier d'historique (.journal)"
       },
       "Backup/overview": {
         "title": "Aperçu"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "Restitution"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "Paramètres de sauvegarde"
       },
       "Concepts/about": {
         "title": "À propos du Langage 4D"
@@ -106,7 +106,7 @@
         "title": "Variables"
       },
       "FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "Feuilles de style (style sheets)"
       },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
@@ -166,9 +166,6 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
-      "Project/compiling": {
-        "title": "Compiler un projet"
-      },
       "Project/architecture": {
         "title": "Architecture d'un projet 4D"
       },
@@ -181,9 +178,6 @@
       "Project/developing": {
         "title": "Développer un projet"
       },
-      "Project/exporting": {
-        "title": "Exporter à partir d'une base 4D"
-      },
       "Project/overview": {
         "title": "Aperçu"
       }
@@ -193,10 +187,10 @@
     },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
-      "Projects in 4D (BETA)": "Projets 4D (BETA)",
-      "MSC": "CSM",
-      "Form Editor (in progress)": "Editeur de formulaire (en cours)",
+      "Project Databases": "Project Databases",
+      "Forms": "Formulaires",
       "Menus": "Menus",
+      "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution"
     }
   },
