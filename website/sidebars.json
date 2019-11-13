@@ -24,12 +24,8 @@
 	"4D Projects (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
-	"4D Form Objects":
-	["FormObjects/formObjectsOverview",
-	{
-        "type": "subcategory",
-        "label": "Objects",
-        "ids": ["FormObjects/buttonOverview",
+	"Form Objects":["FormObjects/formObjectsOverview",
+		"FormObjects/buttonOverview",
 		  "FormObjects/buttonGridOverview",
 		  "FormObjects/checkboxOverview",
 		  "FormObjects/comboBoxOverview",
@@ -54,12 +50,8 @@
 		  "FormObjects/text",
 		  "FormObjects/webAreaOverview",
   		  "FormObjects/viewProAreaOverview",
-		  "FormObjects/writeProAreaOverview"
-		  ]
-		},{
-        "type": "subcategory",
-        "label": "Properties",
-        "ids": ["FormObjects/propertiesReference",
+		  "FormObjects/writeProAreaOverview"],		 
+	"Form Object Properties":["FormObjects/propertiesReference",
 			"FormObjects/propertiesAction",
 			"FormObjects/propertiesAnimation",
 			"FormObjects/propertiesAppearance",
@@ -85,9 +77,6 @@
 			"FormObjects/propertiesSubform",
 			"FormObjects/propertiesText",
 			"FormObjects/propertiesTextAndPicture",
-			"FormObjects/propertiesWebArea"
-			]
-		}
-	]
+			"FormObjects/propertiesWebArea"]
 }
 }
