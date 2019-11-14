@@ -197,7 +197,7 @@ const Description2 = props => (
       },
 	       {
 
-	     content: '[Project databases](Project/overview.html)<br>[Form editor](FormEditor/objectLibrary.html)<br><br>[Form Objects](FormObjects/formObjectsOverview.html)<br>[Form Object Properties](FormObjects/propertiesReference.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
+	     content: '[Project databases](Project/overview.html)<br>[Form Editor](FormEditor/objectLibrary.html)<br>[Form Objects](FormObjects/formObjectsOverview.html)<br>[Form Object Properties](FormObjects/propertiesReference.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
         title: <translate>Development</translate>,
       }
