@@ -99,7 +99,7 @@ class HomeSplash extends React.Component {
 //<Button href="#try">Overview</Button>
 //Button href={docUrl('doc1.html', language)}>Classic</Button>
 //<Button href={docUrl('doc2.html', language)}>ORDA</Button>
-			
+
 const Block = props => (
   <Container
     //padding={['bottom', 'top']}
@@ -173,7 +173,7 @@ const Description = props => (
 
 	   image: imgUrl('manuals.png'),
 		imageAlign: 'left',
-       
+
       },{
 
 	   content: <translate>[Language Concepts](Concepts/about.html)</translate>,
@@ -197,7 +197,7 @@ const Description2 = props => (
       },
 	       {
 
-	     content: '[Project databases](Project/overview.html)<br>[Forms](FormEditor/objectLibrary.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
+	     content: '[Project databases](Project/overview.html)<br>[Form editor](FormEditor/objectLibrary.html)<br><br>[Form Objects](FormObjects/formObjectsOverview.html)<br>[Form Object Properties](FormObjects/propertiesReference.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
 
         title: <translate>Development</translate>,
       }
