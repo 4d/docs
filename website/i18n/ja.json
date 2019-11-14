@@ -167,13 +167,13 @@
         "sidebar_label": "Verify Page"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "4D プロジェクトのアーキテクチャー"
       },
       "Project/building": {
         "title": "Building a project package"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "4D プロジェクトの作成"
       },
       "Project/developing": {
         "title": "Developing a project"
