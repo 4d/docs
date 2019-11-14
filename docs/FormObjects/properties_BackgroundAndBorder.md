@@ -34,7 +34,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 #### See also
 [Transparent](#transparent)

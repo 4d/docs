@@ -3,6 +3,22 @@ id: propertiesText
 title:Text 
 ---
 
+## Allow font/color picker
+
+When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
+
+
+#### JSON Grammar
+
+|Property|Data Type|Possible Values|
+|---|---|---|
+|allowFontColorPicker|boolean |false (default), true|
+
+#### Objects Supported
+
+[Input](input_overview.md)
+
+
 ## Bold
 
 Sets the selected text to appear darker and heavier.
@@ -385,6 +401,36 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 
 
+## Store with default style tags
+
+This property is only available for a [Multi-style](#multi-style) input area. 
+When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+
+For example, here is a text that includes a style modification:
+
+![](assets/en/FormObjects/tagStyle1.png)
+
+When the property is disabled, the area only stores the modification. The stored contents are therefore:
+
+```
+What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!
+```
+
+When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+
+```
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!</SPAN>
+```
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|storeDefaultStyle|boolean|true, false (default).|
+
+#### Objects Supported
+
+[Input](input_overview.md)
 
 
 

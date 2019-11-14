@@ -104,7 +104,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|enterableInList|boolean|true / false|
+|enterableInList|boolean|true, false|
 
 
 #### Objects Supported

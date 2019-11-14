@@ -153,11 +153,11 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|icon|picture |Relative path in POSIX syntax.|
+|icon|picture |Relative or filesystem path in POSIX syntax.|
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
 
 
