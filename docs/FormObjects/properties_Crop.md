@@ -2,7 +2,7 @@
 id: propertiesCrop
 title:Crop
 ---
-
+---
 ## Columns
 
 Sets the number of columns in a thumbnail table.
@@ -20,7 +20,7 @@ Sets the number of columns in a thumbnail table.
 
 
 
-
+---
 ## Rows
 
 Sets the number of rows in a thumbnail table.

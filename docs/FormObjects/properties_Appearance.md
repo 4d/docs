@@ -40,8 +40,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
-
+[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md) 
 
 
 
@@ -64,7 +63,7 @@ By default, this option is not enabled.
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 
 
@@ -162,7 +161,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-userInterface|boolean|true (default), false|
+withFormulaBar|boolean|true (default), false|
 
 #### Objects Supported
 

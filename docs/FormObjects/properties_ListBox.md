@@ -3,7 +3,7 @@ id: propertiesListBox
 title: List Box
 ---
 
-
+---
 ## Columns
 
 Collection of columns of the list box.
@@ -20,7 +20,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 [List Box](listbox_overview.md)
 
-
+---
 ## Detail Form Name
 `Selection type list box`
 
@@ -46,7 +46,7 @@ The specified form is displayed:
 
 
 
-
+---
 ## Double-click on row
 `Selection type list box`
 
@@ -75,7 +75,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 
-
+---
 ## Highlight Set
 
 `Selection type list box`
@@ -99,28 +99,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 
 
-
-
-
-
-## Number of Columns
-
-Sets the number of columns of the list box.
-
->You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|columnCount|integer |minimum: 1
-
-#### Objects Supported
-
-[List Box](listbox_overview.md)
-
-
-
+---
 ## Locked columns and static columns  
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
@@ -177,6 +156,28 @@ Number of columns that cannot be moved during execution.
 
 
 
+
+---
+## Number of Columns
+
+Sets the number of columns of the list box.
+
+>You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|columnCount|integer |minimum: 1
+
+#### Objects Supported
+
+[List Box](listbox_overview.md)
+
+
+
+
+---
 ## Row Control Array
 
 `Array type list box`
@@ -231,7 +232,7 @@ Note that setting properties for an element overrides any other values for this 
 
 
 
-
+---
 ## Selection Mode
 
 Designates the option for allowing users to select rows: 

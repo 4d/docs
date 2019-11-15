@@ -2,7 +2,7 @@
 id: propertiesTextAndPicture
 title:Text and Picture 
 ---
-
+---
 ## Background pathname
 
 Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states. 
@@ -23,7 +23,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 
 
-
+---
 ## Button Style
 
 General appearance of the button. The button style also plays a part in the availability of certain options. 
@@ -43,7 +43,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 
 
-
+---
 ## Horizontal Margin
 
 This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
@@ -70,7 +70,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 
 
-
+---
 
 ## Icon Location
 
@@ -90,7 +90,7 @@ Designates the placement of an icon in relation to the form object.
 
 
 
-
+---
 ## Icon Offset
 
 Sets a custom offset value in pixels, which will be used when the button is clicked
@@ -109,8 +109,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 
 
-
-
+---
 ## Number of States
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive. 
@@ -140,7 +139,7 @@ The following states are represented:
 
 
 
-
+---
 ## Picture pathname
 
 Sets the path of the picture that will be used as icon for the object.
@@ -153,16 +152,16 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|icon|picture |Relative path in POSIX syntax.|
+|icon|picture |Relative or filesystem path in POSIX syntax.|
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
 
 
 
-
+---
 ## Title/Picture Position
 
 This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture. 
@@ -190,7 +189,7 @@ Here are the results using the various options for this property:
 
 
 
-
+---
 ## Vertical Margin
 
 This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
@@ -212,7 +211,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 
 
-
+---
 ## With pop-up menu
 
 This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:

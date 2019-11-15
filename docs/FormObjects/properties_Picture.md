@@ -2,7 +2,7 @@
 id: propertiesPicture
 title:Picture 
 ---
-
+---
 ## Pathname
 
 Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
@@ -17,7 +17,7 @@ Two main locations can be used for static picture path:
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|icon|picture |Relative path in POSIX syntax|
+|picture|text|Relative or filesystem path in POSIX syntax|
 
 
 #### Objects Supported
@@ -25,7 +25,7 @@ Two main locations can be used for static picture path:
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
 
-
+---
 ## Display
 
 

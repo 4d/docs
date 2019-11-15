@@ -2,7 +2,7 @@
 id: propertiesDataSource
 title: Data Source 
 ---
-
+---
 ## Automatic Insertion
 
 When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
@@ -33,7 +33,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 
 
-
+---
 ## Choice List
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values. 
@@ -53,7 +53,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 
 
-
+---
 ## Choice List (static list)
 
 List of static values to use as labels for the tab control object. 
@@ -69,7 +69,7 @@ List of static values to use as labels for the tab control object.
 [Tab Control](tabControl.md)
 
 
-
+---
 ## Current item
 `Collection or entity selection list boxes`
 
@@ -89,7 +89,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 
 
-
+---
 
 ## Current item position
 `Collection or entity selection list boxes`
@@ -115,7 +115,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 
 
-
+---
 ## Data Type
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
@@ -129,7 +129,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 
 
-
+---
 
 ## Default (list of) values
 
@@ -156,7 +156,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 
 
-
+---
 ## Expression
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes)
@@ -206,7 +206,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 
 
-
+---
 
 ## Master Table
 `Current selection list boxes`
@@ -226,7 +226,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 
 
-
+---
 
 ## Save as
 
@@ -261,7 +261,7 @@ Using this property requires compliance with the following principles:
 
 
 
-
+---
 ## Selected Items
 `Collection or entity selection list boxes`
 
@@ -282,7 +282,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 [List Box ](listbox_overview.md#overview)
 
 
-
+---
 ## Selection Name
 `Named selection list boxes`
 

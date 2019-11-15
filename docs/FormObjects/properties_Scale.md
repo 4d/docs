@@ -2,7 +2,7 @@
 id: propertiesScale
 title: Scale
 ---
-
+---
 ## Barber shop
 
 Enables the "barber shop" variant for the thermometer. 
@@ -19,7 +19,7 @@ Enables the "barber shop" variant for the thermometer.
 
 
 
-
+---
 ## Display graduation
 
 Displays/Hides the graduations next to the labels.
@@ -36,7 +36,7 @@ Displays/Hides the graduations next to the labels.
 
 
 
-
+---
 ## Graduation step
 
 Scale display measurement.	
@@ -54,7 +54,7 @@ Scale display measurement.
 
 
 
-
+---
 ## Label Location
 
 Specifies the location of an object's displayed text.
@@ -75,7 +75,7 @@ Specifies the location of an object's displayed text.
 
 
 
-
+---
 ## Maximum
 
 Maximum value of an indicator. 
@@ -95,7 +95,7 @@ Maximum value of an indicator.
 
 
 
-
+---
 ## Minimum
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
@@ -113,7 +113,7 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 
 
-
+---
 ## Step
 
 Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.

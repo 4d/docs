@@ -3,7 +3,7 @@ id: propertiesSubform
 title: Subform 
 ---
 
-
+---
 ## Allow Deletion
 
 Specifies if the user can delete subrecords in a list subform.
@@ -19,7 +19,7 @@ Specifies if the user can delete subrecords in a list subform.
 [Subform](subform_overview.md)
 
 
-
+---
 ## Detail Form
 
 You use this property to declare the detail form to use in the subform. It can be:
@@ -42,7 +42,7 @@ You can select a component form name when it is published in the component.
 
 [Subform](subform_overview.md)
 
-
+---
 ## Double-click on empty row
 
 Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
@@ -63,7 +63,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 #### See also
 [Double click on row](#double-click-on-row)
 
-
+---
 ## Double-click on row
 
 `List subform`
@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 #### See also
 [Double click on empty row](#double-click-on-empty-row)
 
-
+---
 ## Enterable in list
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form). 
@@ -104,7 +104,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|enterableInList|boolean|true / false|
+|enterableInList|boolean|true, false|
 
 
 #### Objects Supported
@@ -112,8 +112,7 @@ When a list subform has this property enabled, the user can modify record data d
 [Subform](subform_overview.md)
 
 
-
-
+---
 ## List Form
 
 You use this property to declare the list form to use in the subform.  A list subform lets you enter, view, and modify data in other tables. 
@@ -134,7 +133,7 @@ You can also allow the user to enter data in the List form.
 
 
 
-
+---
 ## Source
 
 Specifies the table that the list subform belongs to (if any).
@@ -149,7 +148,7 @@ Specifies the table that the list subform belongs to (if any).
 
 [Subform](subform_overview.md)
 
-
+---
 ## Selection Mode
 
 Designates the option for allowing users to select rows: 

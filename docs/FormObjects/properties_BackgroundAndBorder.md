@@ -2,7 +2,7 @@
 id: propertiesBackgroundAndBorder
 title: Background and Border
 ---
-
+---
 ## Alternate Background Color
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
@@ -18,7 +18,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 
 
-
+---
 ## Background Color / Fill Color
 
 Defines the background color of an object. 
@@ -34,13 +34,13 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 #### See also
 [Transparent](#transparent)
 
 
-
+---
 ## Background Color Expression
 
 `Selection and collection type list boxes`
@@ -63,7 +63,7 @@ An expression or a variable (array variables cannot be used) to apply a custom b
 
 
 
-
+---
 ## Border Line Style / Dotted Line Type
 
 Allows setting a standard style for the object border.
@@ -81,7 +81,7 @@ Allows setting a standard style for the object border.
 
 
 
-
+---
 ## Dotted Line Type
 
 Describes dotted line type as a sequence of black and white points. 
@@ -99,7 +99,7 @@ Describes dotted line type as a sequence of black and white points.
 
 
 
-
+---
 ## Hide extra blank rows
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
@@ -123,7 +123,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 
 
-
+---
 ## Font Color / Line Color
 
 For objects containing text (text, input, group box, list box header or footer), designates the font color.
@@ -144,7 +144,7 @@ For shape objects (rectangle, line, oval), designates the color of the object's 
 
 
 
-
+---
 ## Line Width
 
 Designates the thickness of a line.
@@ -165,7 +165,7 @@ Designates the thickness of a line.
 
 
 
-
+---
 ## Row Background Color Array
 
 `Array type list boxes`
@@ -208,7 +208,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 
 
-
+---
 ## Transparent
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored. 

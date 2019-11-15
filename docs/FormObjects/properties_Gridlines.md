@@ -2,7 +2,7 @@
 id: propertiesGridlines
 title: Gridlines
 ---
-
+---
 ## Horizontal Line Color
 
 Defines the color of the horizontal lines in a list box (gray by default).
@@ -20,7 +20,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 
 
-
+---
 ## Vertical Line Color
 
 Defines the color of the vertical lines in a list box (gray by default).
