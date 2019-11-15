@@ -16,7 +16,7 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
-|[booleanFormat](properties_Display.md#boolean-format)|Specifies only two possible values.	|"true", "false"|
+|[booleanFormat](properties_Display.md#boolean-format)|Specifies only two possible values.	|true, false|
 |[borderRadius](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[borderStyle](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[bottom](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0|
@@ -73,7 +73,7 @@ title: JSON property list
 |Property|Description|Possible Values|
 |---|---|---|
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
-|[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|"true", "false"|
+|[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
 |[fontSize](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
 |[fontStyle](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"| 
@@ -213,11 +213,12 @@ title: JSON property list
 |[sortable](properties_Action.md#sortable)| Allows sorting column data by clicking the header.|true, false|
 |[spellcheck](properties_Entry.md#auto-spellcheck)|Activates the spell-check for the object |true, false|  
 |[splitterMode](properties_ResizingOptions.md#pusher)|When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.|"grow", "move", "fixed"|
-|startPoint|Starting point for drawing a line object (only available in JSON Grammar).|"bottomLeft", topLeft"|
+|[startPoint](shapes_overview.md#startpoint-property)|Starting point for drawing a line object (only available in JSON Grammar).|"bottomLeft", topLeft"|
 |[staticColumnCount](properties_ListBox.md#number-of-static-columns) | Number of columns that cannot be moved during execution.|minimum: 0|
 |[step](properties_Scale.md#step)| Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.|minimum: 1|
 |[storeDefaultStyle](properties_Text.md#store-with-default-style-tags)|Store the style tags with the text, even if no modification has been made|true, false|
 |[stroke](properties_Text.md#font-color) (text)<br> [stroke](properties_BackgroundAndBorder.md#line-color) (lines)<br>[stroke](properties_BackgroundAndBorder.md#transparent) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
+|[strokeDashArray](properties_BackgroundAndBorder.md#dotted-line-type)|Describes dotted line type as a sequence of black and white points|Number array or string|
 |[strokeWidth](properties_BackgroundAndBorder.md#line-width) |Designates the thickness of a line.|An integer or 0 for smallest width on a printed form|
 |[style](properties_TextAndPicture.md#multi-style)|Enables the possibility of using specific styles in the selected area.|true, false|
 |[styledText](properties_Text.md#style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
@@ -230,13 +231,14 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
+|[table](properties_Subform.md#source)|Table that the list subform belongs to (if any).|4D table name, or ""|
 |[text](properties_Object.md#title)|The title of the form object|Any text|
 |[textAlign](properties_Text.md#horizontal-alignment)|Horizontal location of text within the area that contains it. |"automatic", "right", "center", "justify", "left"|
 |[textAngle](properties_Text.md#orientation)|Modifies the orientation (rotation) of the text area. |0, 90, 180, 270|
 |[textDecoration](properties_Text.md#underline)|Sets the selected text to have a line running beneath it.|"normal", "underline"|
 |[textFormat](properties_Display.md#alpha-format)|Controls the way the alphanumeric fields and variables appear when displayed or printed.|"### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats|
 |[textPlacement](properties_TextAndPicture.md#title-picture-position)|Relative location of the button title in relation to the associated icon.|"left", "top", "right", "bottom", "center"|
-|[threeState](properties_Display.md#three-states)|Allows a check box object to accept a third state.|"true", "false"|
+|[threeState](properties_Display.md#three-states)|Allows a check box object to accept a third state.|true, false|
 |[timeFormat](properties_Display.md#time-format)|Controls the way times appear when displayed or printed. Must only be selected among the 4D built-in formats. |"systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values)|
 |[truncateMode](properties_Display.md#trucate-with-ellipsis) | Controls the display of values when list box columns are too narrow to show their full contents.|"withEllipsis", "none" |
 |[type](properties_Object.md#type)|Mandatory. Designates the data type of the form object.|"text", "rectangle", "groupBox", "tab", "line", "button", "checkbox", "radio", "dropdown", "combo", "webArea", "write", "subform", "plugin", "splitter", "buttonGrid", "progress", "ruler", "spinner", "stepper", "list", "pictureButton", "picturePopup", "listbox", "input", "view"|
@@ -248,7 +250,8 @@ title: JSON property list
 |Property|Description|Possible Values|
 |---|---|---|
 |[urlSource](properties_WebArea.md#url)|Designates the the URL loaded or being loading by the associated Web area. |A URL.|
-|[useLastFrameAsDisabled](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|"true", "false"|
+|[useLastFrameAsDisabled](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|true, false|
+|[userInterface](properties_Appearance.md#user-interface)|4D View Pro area interface.|"none" (default), "ribbon", "toolbar"|
 
 ## V
 
@@ -266,4 +269,12 @@ title: JSON property list
 |---|---|---|
 |[webEngine](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[width](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
+|[withFormulaBar](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
 |[wordwrap](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"|
+
+
+## Z
+
+|Property|Description|Possible Values|
+|---|---|---|
+|[zoom](properties_Appearance.md#zoom)|Zoom percentage for displaying 4D Write Pro area|number (minimum=0)|

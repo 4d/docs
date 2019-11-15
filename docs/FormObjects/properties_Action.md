@@ -29,7 +29,8 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+
 
 
 
@@ -59,7 +60,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) 
+[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview) 
 
 
 #### See also
@@ -74,7 +75,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|continuousExecution|boolean |"true", "false"|
+|continuousExecution|boolean |true, false|
 
 #### Objects Supported
 

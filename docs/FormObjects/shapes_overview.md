@@ -35,7 +35,7 @@ The design of rectangles is controlled through many properties (color, line thic
 
 
 #### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) (type="rectangle") - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
 ## Line
 
@@ -43,26 +43,49 @@ A static line is a decorative object for forms, drawn between two plots. Lines c
 
 The design of lines is controlled through many properties (color, line thickness, etc.).
 
-![](assets/en/FormObjects/shape_line.png)
+
+### startPoint property
+The `startPoint` JSON property defines from which coordinate to draw the line (see example).
+
+> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible. 
 
 
 
-#### JSON Example:    
+#### JSON Examples:    
 
-```code4d
+```
 	"myLine": {
-		"type": "line",			//define the type of object               
-		"left": 60,				//left position on the form  
-		"top": 160,				//top position on the form 
-		"width": 100,			//width of the object
-		"height": 20,			//height of the object
-		"borderStyle": "dashed"	//define the style of the line
-                }
+		"type": "line",	               
+		"left": 20,
+		"top": 40,
+		"width": 100,
+		"height": 80,
+		"startPoint": "topLeft", //first direction
+		"strokeDashArray": "6 2" //dashed
+		}
 ``` 
+Result:
+![](assets/en/FormObjects/shape_line1.png)
+
+
+```
+	"myLine": {
+		"type": "line",	               
+		"left": 20,
+		"top": 40,
+		"width": 100,
+		"height": 80,
+		"startPoint": "bottomLeft", //2nd direction
+		"strokeDashArray": "6 2" //dashed
+		}
+``` 
+Result:
+![](assets/en/FormObjects/shape_line2.png)
+
 
 
 #### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) (type="line") - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
 
 ## Oval
 
@@ -85,4 +108,4 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 
 #### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) (type="oval") - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

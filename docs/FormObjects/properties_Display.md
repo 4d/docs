@@ -48,29 +48,6 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 
 
-## Boolean Format
-
-Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expression is usually displayed as a pair of [radio buttons](radio_overview.md) or a [check box](checkbox_overview.md).
-
-In addition, a boolean expression can also be displayed as:
-- a text (in an [input object](input_overview.md))
-- a pop-up (only in [list box objects](listbox_overview.md))
-
-In this case, you can select the text to display for each value:
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|booleanFormat|string|"\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned"|
-
-
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
-
 
 
 
@@ -191,6 +168,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 
 For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
+
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
 
 >No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
@@ -258,6 +236,7 @@ If you want to display numbers in scientific notation, use the **ampersand** (&)
 would display 759.62 as:
 
 	7.60e+2
+
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
@@ -393,6 +372,31 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+
+
+
+## Text when False/Text when True
+
+Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expression is usually displayed as a pair of [radio buttons](radio_overview.md) or a [check box](checkbox_overview.md).
+
+In addition, a boolean expression can also be displayed as:
+- a text (in an [input object](input_overview.md))
+- a pop-up (in a [list box column](listbox_overview.md#list-box-columns))
+
+In this case, you can select the text to display for each value:
+- **Text when True** - the text to be displayed when the value is "true"
+- **Text when False** - the text to be displayed when the value is "false"
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|booleanFormat|string|"\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned"|
+
+
+#### Objects Supported
+
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 

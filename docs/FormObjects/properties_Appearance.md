@@ -161,7 +161,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-userInterface|boolean|true (default), false|
+withFormulaBar|boolean|true (default), false|
 
 #### Objects Supported
 
