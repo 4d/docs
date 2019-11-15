@@ -159,12 +159,5 @@ All radio buttons share the same set of basic properties:
 
 Additional specific properties are available depending on the [button style](#button-styles):
 
-|Additional properties|Supported by button styles|
-|---|---|
-|[Background pathname](properties_TextAndPicture.md#backgroundPathname)|[Custom](#custom)|
-|[Horizontal Margin](properties_TextAndPicture.md#horizontalMargin)|[Custom](#custom)|
-|[Icon Offset](properties_TextAndPicture.md#icon-offset)|[Custom](#custom)|
-|[Number of States](properties_TextAndPicture.md#number-of-states)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
-[Picture pathname](properties_TextAndPicture.md#picture-pathname)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
-[Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|[Toolbar button](#toolbar-button) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Custom](#custom)|
-[Vertical Margin](properties_TextAndPicture.md#verticalMargin)|[Custom](#custom)|
+- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

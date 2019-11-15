@@ -2,7 +2,7 @@
 id: propertiesHeaders
 title: Headers
 ---
-
+---
 ## Display Headers
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately. 
@@ -20,7 +20,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 
 
-
+---
 ## Height
 
 This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:

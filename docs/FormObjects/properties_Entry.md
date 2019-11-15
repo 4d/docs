@@ -2,7 +2,7 @@
 id: propertiesEntry
 title:Entry 
 ---
-
+---
 ## Auto Spellcheck
 
 4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
@@ -22,7 +22,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 [4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
 
 
-
+---
 ## Context Menu
 
 Allows the user access to a standard context menu in the object when the form is executed.
@@ -53,7 +53,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 
 
-
+---
 ## Enterable
 
 The Enterable attribute indicates whether users can enter values into the object. 
@@ -74,7 +74,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 [4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 
-
+---
 ## Entry Filter
 
 An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
@@ -138,7 +138,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 
 
-
+---
 ## Focusable
 
 When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
@@ -169,7 +169,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 
 
-
+---
 ## Keyboard Layout
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
@@ -191,7 +191,7 @@ By default, the object uses the current keyboard layout.
 
 
 
-
+---
 ## Multiline
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
@@ -223,7 +223,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 
 
-
+---
 ## Placeholder
 
 4D can display placeholder text in the fields of your forms. 
@@ -264,7 +264,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 
 
-
+---
 ## Selection always visible
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
@@ -283,7 +283,7 @@ This property keeps the selection visible within the object after it has lost th
 
 
 
-
+---
 ## Shortcut
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse. 
@@ -319,7 +319,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 
 
-
+---
 ## Single-Click Edit
 
 Enables direct passage to edit mode in list boxes.

@@ -3,7 +3,7 @@ id: propertiesListBox
 title: List Box
 ---
 
-
+---
 ## Columns
 
 Collection of columns of the list box.
@@ -20,7 +20,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 [List Box](listbox_overview.md)
 
-
+---
 ## Detail Form Name
 `Selection type list box`
 
@@ -46,7 +46,7 @@ The specified form is displayed:
 
 
 
-
+---
 ## Double-click on row
 `Selection type list box`
 
@@ -75,7 +75,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 
-
+---
 ## Highlight Set
 
 `Selection type list box`
@@ -99,7 +99,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 
 
-
+---
 ## Locked columns and static columns  
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
@@ -157,7 +157,7 @@ Number of columns that cannot be moved during execution.
 
 
 
-
+---
 ## Number of Columns
 
 Sets the number of columns of the list box.
@@ -177,7 +177,7 @@ Sets the number of columns of the list box.
 
 
 
-
+---
 ## Row Control Array
 
 `Array type list box`
@@ -232,7 +232,7 @@ Note that setting properties for an element overrides any other values for this 
 
 
 
-
+---
 ## Selection Mode
 
 Designates the option for allowing users to select rows: 

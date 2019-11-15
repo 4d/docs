@@ -2,7 +2,7 @@
 id: propertiesHierarchy
 title: Hierarchy
 ---
-
+---
 ## Hierarchical List Box
 `Array type list boxes`
 

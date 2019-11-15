@@ -4,7 +4,7 @@ title:Action
 ---
 
 
-
+---
 ## Draggable
 
 Control whether and how the user can drag the object. By default, no drag operation is allowed.
@@ -38,7 +38,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 [Droppable](#droppable)
 
 
-
+---
 ## Droppable
 
 Control whether and how the object can be the destination of a drag and drop operation. 
@@ -67,7 +67,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 [Draggable](#draggable)
 
 
-
+---
 ## Execute object method
 When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
 
@@ -86,7 +86,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 
 
-
+---
 ## Method
 
 Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
@@ -122,7 +122,7 @@ In this case, 4D does not provide automatic support for object operations.
 
 
 
-
+---
 ## Movable Rows
 `Array type list boxes`
 
@@ -142,8 +142,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 
 
-
-
+---
 ## Multi-selectable
 
 Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
@@ -161,7 +160,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 
 
-
+---
 ## Sortable
 
 Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
@@ -186,7 +185,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 
 
-
+---
 ## Standard action
 Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 

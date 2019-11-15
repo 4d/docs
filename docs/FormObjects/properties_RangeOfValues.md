@@ -2,7 +2,7 @@
 id: propertiesRangeOfValues
 title: Range of Values
 ---
-
+---
 ## Default value
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
@@ -38,7 +38,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 
 
-
+---
 
 ## Excluded List
 
@@ -58,7 +58,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 
 
-
+---
 
 ## Required List
 
