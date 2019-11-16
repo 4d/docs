@@ -3,6 +3,7 @@ id: propertiesDisplay
 0: title:Display
 ---
 
+---
 ## Alpha Format
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
@@ -48,28 +49,6 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 
 
-## Boolean Format
-
-Boolean expressions can contain one of two values: TRUE or FALSE. A Boolean expression is usually displayed as a pair of [radio buttons](radio_overview.md) or a [check box](checkbox_overview.md).
-
-In addition, a boolean expression can also be displayed as:
-- a text (in an [input object](input_overview.md))
-- a pop-up (only in [list box objects](listbox_overview.md))
-
-In this case, you can select the text to display for each value:
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
-
-#### JSON Grammar
-
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
-
-
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 
@@ -77,8 +56,7 @@ In this case, you can select the text to display for each value:
 
 
 
-
-
+---
 
 ## Date Format
 
@@ -119,52 +97,7 @@ The table below shows choices available:
 
 
 
-## Display Type
-
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
-
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
-
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when True and Text when False](#boolean-format) properties must be defined.
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values                                                                                                                                                 |
-| ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
-
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns)
-
-
-
-
-
-
-## Not rendered
-
-When this property is enabled, the object is not drawn on the form, however it can still be activated.
-
-In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
-
-
-#### JSON Grammar
-
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | boolean   | true, false     |
-
-#### Objects Supported
-
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
-
-
-
-
-
-
-
+---
 ## Number Format
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
@@ -187,6 +120,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 
 
 For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
 > No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
@@ -250,6 +184,7 @@ If you want to display numbers in scientific notation, use the **ampersand** (&)
 would display 759.62 as:
 
     7.60e+2
+
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
@@ -325,7 +260,7 @@ The following table shows how different formats affect the display of numbers. T
 
 
 
-
+---
 ## Picture Format
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
@@ -388,42 +323,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 
 
-
-
-## Three-States
-
-Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
-
-
-#### Three-states check boxes in list box columns
-
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
-*   0 = unchecked box,
-*   1 = checked box,
-*   2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
-*   -1 = invisible check box,
-*   -2 = unchecked box, not enterable,
-*   -3 = checked box, not enterable,
-*   -4 = semi-checked box, not enterable
-
-In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
-
-#### JSON Grammar
-
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
-
-#### Objects Supported
-
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
-
-
-
-
-
-
-
+---
 ## Time Format
 
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
@@ -458,11 +358,118 @@ The table below shows the Time field display formats and gives examples:
 
 
 
+---
+## Text when False/Text when True
+
+When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+- a text in an [input object](input_overview.md)
+- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+
+... you can select the text to display for each value:
+- **Text when True** - the text to be displayed when the value is "true"
+- **Text when False** - the text to be displayed when the value is "false"
+
+#### JSON Grammar
+
+| Name          | Data Type | Possible Values                                                          |
+| ------------- | --------- | ------------------------------------------------------------------------ |
+| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
+#### Objects Supported
+
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+
+
+
+
+---
+## Display Type
+
+Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
+
+Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
+
+Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+
+#### JSON Grammar
+
+| Name        | Data Type | Possible Values                                                                                                                                                 |
+| ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+
+#### Objects Supported
+
+[List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+
+---
+## Not rendered
+
+When this property is enabled, the object is not drawn on the form, however it can still be activated.
+
+In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+
+
+#### JSON Grammar
+
+| Name    | Data Type | Possible Values |
+| ------- | --------- | --------------- |
+| display | boolean   | true, false     |
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+
+
+
+
+
+
+
+---
+## Three-States
+
+Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+
+
+#### Three-states check boxes in list box columns
+
+List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
+*   0 = unchecked box,
+*   1 = checked box,
+*   2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
+*   -1 = invisible check box,
+*   -2 = unchecked box, not enterable,
+*   -3 = checked box, not enterable,
+*   -4 = semi-checked box, not enterable
+
+In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
+
+#### JSON Grammar
+
+| Name       | Data Type | Possible Values |
+| ---------- | --------- | --------------- |
+| threeState | boolean   | true, false     |
+
+#### Objects Supported
+
+[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+---
 ## Title
 
-This property is available when the [Boolean Format](#boolean-format) or the [Three-states Checkbox](#three-states) property is enabled for a list box boolean column, so that the title of the check box can be entered.
+This property is available for a list box column if:
+- the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
+- the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+
+In that cases, the title of the check box can be entered using this property.
 
 #### JSON Grammar
 
@@ -477,7 +484,7 @@ This property is available when the [Boolean Format](#boolean-format) or the [Th
 
 
 
-
+---
 
 ## Truncate with ellipsis
 
@@ -519,7 +526,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 
 
-
+---
 ## Visibility
 
 This property allows hiding by default the object in the Application environment.
@@ -536,14 +543,14 @@ You can handle the Visible property for most form objects. This property simplif
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
 
 
 
 
 
-
+---
 ## Wordwrap
 
 > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
