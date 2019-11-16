@@ -3,6 +3,7 @@ id: propertiesHelp
 0: title:Help
 ---
 
+---
 ## Help Tip
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
