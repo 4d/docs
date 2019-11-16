@@ -297,19 +297,16 @@ The Help button style can be used to display a standard system help button. By d
 
 ### Circle
 
-The Circle button style appears differently depending on the operating system:
-
- - *Windows* - is identical to the “None” style (the circle in the background is not taken into account).
-
-![](assets/en/FormObjects/button_circleW.png)
-
- - *macOS* - appears as a round system button. Two set styles are available for the circle, which depend on the size of the button in the form.
+The Circle button style appears as a round system button. This button style is designed for macOS.
 
 ![](assets/en/FormObjects/button_circleM.png)
 
+On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+
+
 #### JSON Example:
 
-```code4d
+```
     "myButton": {
                 "type": "button",   
                 "style":"circular", 
@@ -333,7 +330,7 @@ The Custom button style accepts a personalized background picture and allows man
 
 #### JSON Example:
 
-```code4d
+```code
     "myButton": {
                 "type": "button",   
                 "style":"custom",   
@@ -363,11 +360,7 @@ All buttons share the same set of basic properties:
 
 Additional specific properties are available, depending on the [button style](#button-styles):
 
+- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
+- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
 
-| Additional properties                                                  | Supported by button styles          |
-| ---------------------------------------------------------------------- | ----------------------------------- |
-| [Background pathname](properties_TextAndPicture.md#backgroundPathname) | [Custom](#custom)                   |
-| [Default Button](properties_Appearance.md#default-button)              | [Flat](#flat) - [Regular](#regular) |
-
-
-[Horizontal Margin](properties_TextAndPicture.md#horizontalMargin)|[Custom](#custom)| [Icon Offset](properties_TextAndPicture.md#icon-offset)|[Custom](#custom)| [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)|[Toolbar](#toolbar) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) -[OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Circle](#circle) - [Custom](#custom)| [Vertical Margin](properties_TextAndPicture.md#verticalMargin)|[Custom](#custom)| [With pop-up menu](properties_TextAndPicture.md#with-popup-menu)|[Toolbar](#toolbar) - [Bevel](#bevel) - [Rounded Bevel](#rounded-bevel) - [OS X Gradient](#os-x-gradient) - [OS X Textured](#os-x-textured) - [Office XP](#office-xp) - [Circle](#circle) - [Custom](#custom)|
