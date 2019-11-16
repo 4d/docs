@@ -3,6 +3,23 @@ id: propertiesText
 0: title:Text
 ---
 
+---
+## Allow font/color picker
+
+When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
+
+
+#### JSON Grammar
+
+| Property             | Data Type | Possible Values       |
+| -------------------- | --------- | --------------------- |
+| allowFontColorPicker | boolean   | false (default), true |
+
+#### Objects Supported
+
+[Input](input_overview.md)
+
+---
 ## Bold
 
 Sets the selected text to appear darker and heavier.
@@ -21,9 +38,48 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
+---
+## Italic
+
+Sets the selected text to slant slightly to the right.
+
+You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+> This is normal text.<br> *This is text in italics.*
+
+#### JSON Grammar
+
+| Name      | Data Type | Possible Values    |
+| --------- | --------- | ------------------ |
+| fontStyle | string    | "normal", "italic" |
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
 
+
+---
+## Underline
+Sets the text to have a line running beneath it.
+> This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
+
+#### JSON Grammar
+
+| Name           | Data Type | Possible Values       |
+| -------------- | --------- | --------------------- |
+| textDecoration | string    | "normal", "underline" |
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+
+
+
+
+
+
+---
 ## Font
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
@@ -87,8 +143,25 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 
 
+---
+## Font Size
+
+> This property is only available when no [font theme](#font-theme) is selected.
+
+Allows defining the object's font size in points.
+
+#### JSON Grammar
+
+| Name     | Data Type | Possible Values                       |
+| -------- | --------- | ------------------------------------- |
+| fontSize | integer   | Font size in points. Minimum value: 0 |
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 
+---
 ## Font Color
 
 This property specifies the color of the font used in the object. The color can be specified by:
@@ -114,7 +187,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 
 
-
+---
 
 ## Font Color Expression
 
@@ -142,26 +215,39 @@ Foreground color;Dark shadow color)
 
 [List Box](listbox_overview.md#overview)
 
+---
+## Style Expression
 
+`Selection and collection/entity selection type list boxes`
 
-## Font Size
+Used to apply a custom character style to each row of the list box or each cell of the column.
 
-> This property is only available when no [font theme](#font-theme) is selected.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Allows defining the object's font size in points.
+Example:
+
+```code4d
+Choose([Companies]ID;Bold;Plain;Italic;Underline)
+```
+> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
-| -------- | --------- | ------------------------------------- |
-| fontSize | integer   | Font size in points. Minimum value: 0 |
+| Name           | Data Type | Possible Values                                 |
+| -------------- | --------- | ----------------------------------------------- |
+| rowStyleSource | string    | Style expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
+
+
+
+---
 ## Horizontal Alignment
 
 Horizontal location of text within the area that contains it.
@@ -177,26 +263,27 @@ Horizontal location of text within the area that contains it.
 [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
 
 
+---
+## Vertical Alignment
 
+Vertical location of text within the area that contains it.
 
+The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
+- `bottom` for all data (except pictures) and
+- `top` for picture type data.
 
+This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
-## Italic
-
-Sets the selected text to slant slightly to the right.
-
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
-> This is normal text.<br> *This is text in italics.*
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
-| --------- | --------- | ------------------ |
-| fontStyle | string    | "normal", "italic" |
+| Name          | Data Type | Possible Values                        |
+| ------------- | --------- | -------------------------------------- |
+| verticalAlign | string    | "automatic", "top", "middle", "bottom" |
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
 
 
 
@@ -205,6 +292,8 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 
 
+
+---
 ## Meta Info Expression
 `Collection or entity selection type list boxes`
 
@@ -227,18 +316,18 @@ The following example uses the *Color* project method.
 
 In the form method, write the following code:
 
-````code4d
+```code4d
 //form method
 Case of
   :(Form event=On Load)
    Form.meta:=New object
 End case
-````
+```
 
 
 In the *Color* method, write the following code:
 
-````code4d
+```code4d
 //Color method
 //Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
@@ -249,7 +338,7 @@ Else
   Form.meta.stroke:="orange"
 End if
 $0:=Form.meta
-````
+```
 > See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
 
 
@@ -271,7 +360,7 @@ $0:=Form.meta
 
 
 
-
+---
 ## Multi-style
 
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
@@ -331,7 +420,7 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
-
+<hr />
 <h2 spaces-before="0">
   Orientation
 </h2>
@@ -445,7 +534,7 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
-
+<hr />
 <h2 spaces-before="0">
   Row Font Color Array
 </h2>
@@ -508,7 +597,7 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
-
+<hr />
 <h2 spaces-before="0">
   Row Style Array
 </h2>
@@ -570,38 +659,36 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
-
-
-
-
+<hr />
 <h2 spaces-before="0">
-  Style Expression
+  Store with default style tags
 </h2>
 
 <p spaces-before="0">
-  <code>Selection and collection/entity selection type list boxes</code>
+  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
 </p>
 
 <p spaces-before="0">
-  Used to apply a custom character style to each row of the list box or each cell of the column.
+  For example, here is a text that includes a style modification:
 </p>
 
 <p spaces-before="0">
-  You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme.
+  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
 </p>
 
 <p spaces-before="0">
-  Example:
+  When the property is disabled, the area only stores the modification. The stored contents are therefore:
 </p>
 
-<pre><code class="code4d">Choose([Companies]ID;Bold;Plain;Italic;Underline)
+<pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
 </code></pre>
-<blockquote spaces-before="0">
-  <p spaces-before="0">
-    This property can also be set using a <a href="properties_Text.md#meta-info-expression">Meta Info Expression</a>.
-  </p>
-</blockquote>
 
+<p spaces-before="0">
+  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+</p>
+
+<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
+</code></pre>
 
 <h4 spaces-before="0">
   JSON Grammar
@@ -624,15 +711,15 @@ This property enables the possibility of using specific styles in the selected a
   
   <tr>
     <td>
-      rowStyleSource
+      storeDefaultStyle
     </td>
     
     <td>
-      string
+      boolean
     </td>
     
     <td>
-      Style expression to evaluate for each row/cell.
+      true, false (default).
     </td>
   </tr>
 </table>
@@ -642,143 +729,11 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="input_overview.md">Input</a>
 </p>
 
 
 
-
-
-
-
-<h2 spaces-before="0">
-  Underline
-</h2>
-
-<p spaces-before="0">
-  Sets the text to have a line running beneath it.
-</p>
-<blockquote spaces-before="0">
-  <p spaces-before="0">
-    This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
-  </p>
-</blockquote>
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      textDecoration
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      "normal", "underline"
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="button_overview.md">Button</a> - <a href="checkbox_overview.md">Check Box</a> - <a href="comboBox_overview.md">Combo Box</a> - <a href="dropdownList_Overview.md">Drop-down List</a> - <a href="groupBox.md">Group Box</a> - <a href="list_overview.md#overview">Hierarchical List</a> - <a href="input_overview.md">Input</a> - <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="listbox_overview.md#list-box-footers">List Box Footer</a> - <a href="listbox_overview.md#list-box-headers">List Box Header</a> - <a href="radio_overview.md">Radio Button</a> - <a href="text.md">Text Area</a>
-</p>
-
-
-
-
-
-
-
-<h2 spaces-before="0">
-  Vertical Alignment
-</h2>
-
-<p spaces-before="0">
-  Vertical location of text within the area that contains it.
-</p>
-
-<p spaces-before="0">
-  The <strong x-id="1">Default</strong> option (<code>automatic</code> JSON value) sets the alignment according to the type of data found in each column:
-</p>
-
-<ul>
-  <li>
-    <code>bottom</code> for all data (except pictures) and
-  </li>
-  <li>
-    <code>top</code> for picture type data.
-  </li>
-</ul>
-
-<p spaces-before="0">
-  This property can also be handled by the <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html">OBJECT Get vertical alignment</a> and <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html">OBJECT SET VERTICAL ALIGNMENT</a> commands.
-</p>
-
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      verticalAlign
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      "automatic", "top", "middle", "bottom"
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="listbox_overview.md#list-box-footers">List Box Footer</a> - <a href="listbox_overview.md#list-box-headers">List Box Header</a>
-</p>
 
 
 
