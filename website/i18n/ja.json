@@ -121,7 +121,7 @@
         "title": "Check Box"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
         "title": "Drop-down List"
@@ -148,10 +148,10 @@
         "title": "Picture Pop-up Menu"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "Action"
@@ -232,16 +232,16 @@
         "title": "Text and Picture"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/propertyMatrix": {
         "title": "Active Object Properties"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "ラジオボタン"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -250,7 +250,7 @@
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "スプリッター"
       },
       "FormObjects/staticPicture": {
         "title": "Static picture"
@@ -262,7 +262,7 @@
         "title": "Subform"
       },
       "FormObjects/tabControl": {
-        "title": "Tab Controls"
+        "title": "タブコントロール"
       },
       "FormObjects/text": {
         "title": "Text"
@@ -271,7 +271,7 @@
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
@@ -353,9 +353,9 @@
     "categories": {
       "4D Language Concepts": "4D ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "Form Editor",
-      "Form Objects": "Form Objects",
-      "Form Object Properties": "Form Object Properties",
+      "Form Editor": "フォームエディター",
+      "Form Objects": "フォームオブジェクト",
+      "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
       "MSC": "Maintenance & Security Center",
       "Backup and Restore": "バックアップと復元"
