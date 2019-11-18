@@ -1,6 +1,6 @@
 ---
 id: radiobuttonOverview
-title: Radio Button
+title: ラジオボタン
 ---
 
 ## Overview
