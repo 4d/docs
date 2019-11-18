@@ -232,7 +232,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[プラグインエリア](pluginArea_overview.md)
 
 
 
@@ -251,7 +251,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[ラジオボタン](radio_overview.md)
 
 
 
