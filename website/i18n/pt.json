@@ -111,6 +111,171 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormObjects/buttonOverview": {
+        "title": "Button"
+      },
+      "FormObjects/buttonGridOverview": {
+        "title": "Button Grid"
+      },
+      "FormObjects/checkboxOverview": {
+        "title": "Check Box"
+      },
+      "FormObjects/comboBoxOverview": {
+        "title": "Combo Box"
+      },
+      "FormObjects/dropdownListOverview": {
+        "title": "Drop-down List"
+      },
+      "FormObjects/formObjectsOverview": {
+        "title": "About 4D Form Objects"
+      },
+      "FormObjects/groupBox": {
+        "title": "Group Box"
+      },
+      "FormObjects/inputOverview": {
+        "title": "Input"
+      },
+      "FormObjects/listOverview": {
+        "title": "Hierarchical List"
+      },
+      "FormObjects/listboxOverview": {
+        "title": "List Box"
+      },
+      "FormObjects/pictureButtonOverview": {
+        "title": "Picture Button"
+      },
+      "FormObjects/picturePopupMenuOverview": {
+        "title": "Picture Pop-up Menu"
+      },
+      "FormObjects/pluginAreaOverview": {
+        "title": "Plug-in Area"
+      },
+      "FormObjects/progressIndicator": {
+        "title": "Progress Indicator"
+      },
+      "FormObjects/propertiesAction": {
+        "title": "Action"
+      },
+      "FormObjects/propertiesAnimation": {
+        "title": "Animation"
+      },
+      "FormObjects/propertiesAppearance": {
+        "title": "Appearance"
+      },
+      "FormObjects/propertiesBackgroundAndBorder": {
+        "title": "Background and Border"
+      },
+      "FormObjects/propertiesCoordinatesAndSizing": {
+        "title": "Coordinates & Sizing"
+      },
+      "FormObjects/propertiesCrop": {
+        "title": "Crop"
+      },
+      "FormObjects/propertiesDataSource": {
+        "title": "Data Source"
+      },
+      "FormObjects/propertiesDisplay": {
+        "title": "Display"
+      },
+      "FormObjects/propertiesEntry": {
+        "title": "Entry"
+      },
+      "FormObjects/propertiesFooters": {
+        "title": "Footers"
+      },
+      "FormObjects/propertiesGridlines": {
+        "title": "Gridlines"
+      },
+      "FormObjects/propertiesHeaders": {
+        "title": "Headers"
+      },
+      "FormObjects/propertiesHelp": {
+        "title": "Help"
+      },
+      "FormObjects/propertiesHierarchy": {
+        "title": "Hierarchy"
+      },
+      "FormObjects/propertiesListBox": {
+        "title": "List Box"
+      },
+      "FormObjects/propertiesObject": {
+        "title": "Objects"
+      },
+      "FormObjects/propertiesPicture": {
+        "title": "Picture"
+      },
+      "FormObjects/propertiesPlugIns": {
+        "title": "Plug-ins"
+      },
+      "FormObjects/propertiesPrint": {
+        "title": "Print"
+      },
+      "FormObjects/propertiesRangeOfValues": {
+        "title": "Range of Values"
+      },
+      "FormObjects/propertiesReference": {
+        "title": "JSON property list"
+      },
+      "FormObjects/propertiesResizingOptions": {
+        "title": "Resizing Options"
+      },
+      "FormObjects/propertiesScale": {
+        "title": "Scale"
+      },
+      "FormObjects/propertiesSubform": {
+        "title": "Subform"
+      },
+      "FormObjects/propertiesText": {
+        "title": "Text"
+      },
+      "FormObjects/propertiesTextAndPicture": {
+        "title": "Text and Picture"
+      },
+      "FormObjects/propertiesWebArea": {
+        "title": "Web Area"
+      },
+      "FormObjects/propertyMatrix": {
+        "title": "Active Object Properties"
+      },
+      "FormObjects/radiobuttonOverview": {
+        "title": "Radio Button"
+      },
+      "FormObjects/ruler": {
+        "title": "Ruler"
+      },
+      "FormObjects/shapesOverview": {
+        "title": "Shapes"
+      },
+      "FormObjects/spinner": {
+        "title": "Spinner"
+      },
+      "FormObjects/splitters": {
+        "title": "Splitter"
+      },
+      "FormObjects/staticPicture": {
+        "title": "Static picture"
+      },
+      "FormObjects/stepper": {
+        "title": "Stepper"
+      },
+      "FormObjects/subformOverview": {
+        "title": "Subform"
+      },
+      "FormObjects/tabControl": {
+        "title": "Tab Controls"
+      },
+      "FormObjects/text": {
+        "title": "Text"
+      },
+      "FormObjects/viewProAreaOverview": {
+        "title": "4D View Pro area"
+      },
+      "FormObjects/webAreaOverview": {
+        "title": "Web Area"
+      },
+      "FormObjects/writeProAreaOverview": {
+        "title": "4D Write Pro area"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -188,7 +353,9 @@
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "Forms": "Forms",
+      "Form Editor": "Form Editor",
+      "Form Objects": "Form Objects",
+      "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore"
