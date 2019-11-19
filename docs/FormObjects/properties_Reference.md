@@ -28,14 +28,17 @@ title: JSON property list
 
 |Property|Description|Possible Values|
 |---|---|---|
-|<a name="a"></a>[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
+|<a name="a">**a**</a>|||
+|[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[allowFontColorPicker](properties_Text.md#allow-font-color-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
 |[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"|
 |[automaticInsertion](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a name="b"></a>|
+|**b**|||
 |[booleanFormat](properties_Display.md#text-when-false-text-when-true)|Specifies only two possible values.|true, false|
 |[borderRadius](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[borderStyle](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[bottom](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a name="c"></a>|
+|**c**|||
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
 |[class](properties_Object.md#css-class)|A list of space-separated words used as class selectors in css files.|A list of class names|
 |[columnCount](properties_Crop.md#columns)|Number of columns.|minimum: 1|  
@@ -50,6 +53,7 @@ title: JSON property list
 |[customBorderY](properties_TextAndPicture.md#vertical-margin)|Sets the size (in pixels) of the internal vertical margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customOffset](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
 |[customProperties](properties_Plugins.md#advanced-properties)|Advanced properties (if any) |JSON string or base64 encoded string<a name="d"></a>|
+|**d**|||
 |[dataSource](properties_Object.md#variable-or-expression) (objects)<br>[dataSource](properties_Subform.md#source) (subforms)<br>[dataSource](properties_Object.md#data-source) (array list box) <br> [dataSource](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br> [dataSource](properties_DataSource.md#expression) (list box column) <br> [dataSource](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
 |[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
@@ -63,11 +67,13 @@ title: JSON property list
 |[dpi](properties_Appearance.md#resolution)|Screen resolution for the 4D Write Pro area contents.|0=automatic, 72, 96|
 |[dragging](properties_Action.md#draggable)|Enables dragging function. |"none", "custom", "automatic" (excluding list, list box) |
 |[dropping](properties_Action.md#droppable)|Enables dropping function. |"none", "custom", "automatic" (excluding list, list box)<a name="e"></a>|
+|**e**|||
 |[enterable](properties_Entry.md#enterable)|Indicates whether users can enter values into the object.|true, false|
 |[enterableInList](properties_Subform.md#enterable-in-list)|Indicates whether users can modify record data directly in the list subform.|true, false|
 [entryFiler](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries |
 |[events](https://doc.4d.com/4Dv18/4D/18/Form-Events.302-4504424.en.html)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a name="f"></a>|
+|**f**|||
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
@@ -77,7 +83,9 @@ title: JSON property list
 |[fontWeight](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[footerHeight](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
 |[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a name="g"></a>|
+|**g**|||
 |[graduationStep](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a name="h"></a>|
+|**h**|||
 |[header](properties_Headers.md#header)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
 |[headerHeight](properties_Headers.md#height)|Used to set the row height |pattern ^(\\d+)(px&#124;em)?$ (positive decimal + px/em )|
 |[height](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
@@ -86,10 +94,13 @@ title: JSON property list
 |[hideSystemHighlight](properties_Appearance.md#hide-selection-highlight)|Used to specify hiding highlighted records in the list box.|true, false|
 |[highlightSet](properties_ListBox.md#highlight-set)| string| Name of the set.|
 |[horizontalLineStroke](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"<a name="i"></a>|
+|**i**|||
 |[icon](properties_TextAndPicture.md#picture-pathname)|The pathname of the picture used for buttons, check boxes, radio buttons, list box headers.|Relative or filesystem path in POSIX syntax.|
 |[iconFrames](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
 |[iconPlacement](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"<a name="k"></a>|
+|**k**|||
 |[keyboardDialect](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a name="l"></a>|
+|**l**|||
 |[labels](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
 |[labelsPlacement](properties_Scale.md#label-location) (objects)<br>[labelsPlacement](properties_Appearance.md#tab-control-direction) (splitter / tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
 |[layoutMode](properties_Appearance.md#view-mode) |Mode for displaying the 4D Write Pro document in the form area.|"page", "draft", "embedded"|
@@ -99,6 +110,7 @@ title: JSON property list
 |[listForm](properties_Subform.md#list-form)|List form to use in the subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form|
 |[lockedColumnCount](properties_ListBox.md#number-of-locked-columns) |Number of columns that must stay permanently displayed in the left part of a list box. |minimum: 0|
 |[loopBackToFirstFrame](properties_Animation.md#loop-back-to-first-frame)|Pictures are displayed in a continuous loop.|true, false<a name="m"></a>|
+|**m**|||
 |[max](properties_Scale.md#maximum)|The maximum allowed value. For numeric steppers, these properties represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value. |minimum: 0 (for numeric data types)|
 |[maxWidth](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest size allowed for list box columns. |minimum: 0|
 |[metaSource](properties_Text.md#meta-info-expression)| A meta object containing style and selection settings.|An object expression|
@@ -108,8 +120,10 @@ title: JSON property list
 |[minWidth](properties_CoordinatesAndSizing.md#minimum-width)|Designates the smallest size allowed for list box columns. |minimum: 0|
 |[movableRows](properties_Action.md#movable-rows)|Authorizes the movement of rows during execution. |true, false|
 |[multiline](properties_Entry.md#multiline)|Handles multiline contents. |"yes", "no", "automatic"<a name="n"></a>|
+|**n**|||
 |[name](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[numberFormat](properties_Display.md#number-format) |Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)<a name="p"></a>|
+|**p**|||
 |[picture](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax.|
 |[pictureFormat](properties_Display.md#picture-format) (input, list box column or footer)<br>[pictureFormat](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[placeholder](properties_Entry.md#placeholder)	|Grays out text when the data source value is empty.|Text to be grayed out.|
@@ -117,6 +131,7 @@ title: JSON property list
 |[popupPlacement](properties_TextAndPicture.md#with-pop-up-menu) |Allows displaying a symbol that appears as a triangle in the button, which indicates that there is a pop-up menu attached. |"None", Linked", "Separated" |
 |[printFrame](properties_Print.md#print-frame)|Print mode for objects whose size can vary from one record to another depending on their contents |"fixed", "variable", (subform only) "fixedMultiple"|
 |[progressSource](properties_WebArea.md#progression)| A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.|minimum: 0<a name="r"></a>|
+|**r**|||
 |[radioGroup](properties_Object.md#radio-group)|Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.|	Radio group name|
 |[requiredList](properties_RangeOfValues.md#required-list)|Allows setting a list where only certain values can be inserted. |A list of mandatory values.|
 |[resizable](properties_ResizingOptions.md#resizable)|Designates if the size of an object can be modified by the user.|"true", "false"|
@@ -132,6 +147,7 @@ title: JSON property list
 |[rowHeightSource](properties_CoordinatesAndSizing.md#row-height-array)|An array defining different heights for the rows in a list box. |Name of a 4D array variable.|
 |[rowStrokeSource](properties_Text.md#row-font-color-array) (array list box)<br>[rowStrokeSource](properties_Text.md#font-color-expression) (selection or collection/entity selection list box)|An array or expression for managing row colors.|Name of array or expression.|
 |[rowStyleSource](properties_Text.md#row-style-array) (array list box) <br> [rowStyleSource](properties_Text.md#style-expression) (selection or collection/entity selection list box)|An array or expression for managing row styles.|Name of array or expression.<a name="s"></a>|
+|**s**|||
 |[scrollbarHorizontal](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[selectedItemsSource](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression	|
@@ -170,6 +186,7 @@ title: JSON property list
 |[switchBackWhenReleased](properties_Animation.md#switch-back-when-released)|Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released.|true, false|
 |[switchContinuously](properties_Animation.md#switch-continuously-on-clicks)|Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation).|true, false|
 |[switchWhenRollover](properties_Animation.md#switch-when-roll-over)|Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.|true, false<a name="t"></a>|
+|**t**|||
 |[table](properties_Subform.md#source)|Table that the list subform belongs to (if any).|4D table name, or ""|
 |[text](properties_Object.md#title)|The title of the form object|Any text|
 |[textAlign](properties_Text.md#horizontal-alignment)|Horizontal location of text within the area that contains it. |"automatic", "right", "center", "justify", "left"|
@@ -183,16 +200,20 @@ title: JSON property list
 |[type](properties_Object.md#type)|Mandatory. Designates the data type of the form object.|"text", "rectangle", "groupBox", "tab", "line", "button", "checkbox", "radio", "dropdown", "combo", "webArea", "write", "subform", "plugin", "splitter", "buttonGrid", "progress", "ruler", "spinner", "stepper", "list", "pictureButton", "picturePopup", "listbox", "input", "view"|
 |[tooltip](properties_Help.md)|	Provide users with additional information about a field.|Additional information to help a user|
 |[top](properties_CoordinatesAndSizing.md#top)|Positions an object at the top (centered).|minimum: 0<a name="u"></a>|
+|**u**|||
 |[urlSource](properties_WebArea.md#url)|Designates the the URL loaded or being loading by the associated Web area. |A URL.|
 |[useLastFrameAsDisabled](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|true, false|
 |[userInterface](properties_Appearance.md#user-interface)|4D View Pro area interface.|"none" (default), "ribbon", "toolbar"<a name="v"></a>|
+|**v**|||
 |[values](properties_DataSource.md#default-list-values)|List of default values for an array listbox column|ex: "A","B","42"...|
 |[variableCalculation](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[verticalAlign](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[verticalLineStroke](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|
 |[visibility](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"<a name="w"></a>|
+|**w**|||
 |[webEngine](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[width](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
 |[withFormulaBar](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
 |[wordwrap](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"<a name="z"></a>|
+|**z**|||
 |[zoom](properties_Appearance.md#zoom)|Zoom percentage for displaying 4D Write Pro area|number (minimum=0)|
