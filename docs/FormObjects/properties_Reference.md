@@ -67,7 +67,7 @@ title: JSON property list
 |[enterableInList](properties_Subform.md#enterable-in-list)|Indicates whether users can modify record data directly in the list subform.|true, false|
 [entryFiler](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries |
 |[events](https://doc.4d.com/4Dv18/4D/18/Form-Events.302-4504424.en.html)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
-|[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.|<a name="f"></a>
+|[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a name="f"></a>|
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
