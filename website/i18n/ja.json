@@ -111,6 +111,171 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormObjects/buttonOverview": {
+        "title": "Button"
+      },
+      "FormObjects/buttonGridOverview": {
+        "title": "Button Grid"
+      },
+      "FormObjects/checkboxOverview": {
+        "title": "Check Box"
+      },
+      "FormObjects/comboBoxOverview": {
+        "title": "コンボボックス"
+      },
+      "FormObjects/dropdownListOverview": {
+        "title": "Drop-down List"
+      },
+      "FormObjects/formObjectsOverview": {
+        "title": "About 4D Form Objects"
+      },
+      "FormObjects/groupBox": {
+        "title": "Group Box"
+      },
+      "FormObjects/inputOverview": {
+        "title": "Input"
+      },
+      "FormObjects/listOverview": {
+        "title": "Hierarchical List"
+      },
+      "FormObjects/listboxOverview": {
+        "title": "List Box"
+      },
+      "FormObjects/pictureButtonOverview": {
+        "title": "Picture Button"
+      },
+      "FormObjects/picturePopupMenuOverview": {
+        "title": "Picture Pop-up Menu"
+      },
+      "FormObjects/pluginAreaOverview": {
+        "title": "プラグインエリア"
+      },
+      "FormObjects/progressIndicator": {
+        "title": "進捗インジケーター"
+      },
+      "FormObjects/propertiesAction": {
+        "title": "Action"
+      },
+      "FormObjects/propertiesAnimation": {
+        "title": "Animation"
+      },
+      "FormObjects/propertiesAppearance": {
+        "title": "Appearance"
+      },
+      "FormObjects/propertiesBackgroundAndBorder": {
+        "title": "Background and Border"
+      },
+      "FormObjects/propertiesCoordinatesAndSizing": {
+        "title": "Coordinates & Sizing"
+      },
+      "FormObjects/propertiesCrop": {
+        "title": "Crop"
+      },
+      "FormObjects/propertiesDataSource": {
+        "title": "Data Source"
+      },
+      "FormObjects/propertiesDisplay": {
+        "title": "Display"
+      },
+      "FormObjects/propertiesEntry": {
+        "title": "Entry"
+      },
+      "FormObjects/propertiesFooters": {
+        "title": "Footers"
+      },
+      "FormObjects/propertiesGridlines": {
+        "title": "Gridlines"
+      },
+      "FormObjects/propertiesHeaders": {
+        "title": "Headers"
+      },
+      "FormObjects/propertiesHelp": {
+        "title": "Help"
+      },
+      "FormObjects/propertiesHierarchy": {
+        "title": "Hierarchy"
+      },
+      "FormObjects/propertiesListBox": {
+        "title": "List Box"
+      },
+      "FormObjects/propertiesObject": {
+        "title": "Objects"
+      },
+      "FormObjects/propertiesPicture": {
+        "title": "Picture"
+      },
+      "FormObjects/propertiesPlugIns": {
+        "title": "Plug-ins"
+      },
+      "FormObjects/propertiesPrint": {
+        "title": "Print"
+      },
+      "FormObjects/propertiesRangeOfValues": {
+        "title": "Range of Values"
+      },
+      "FormObjects/propertiesReference": {
+        "title": "JSON property list"
+      },
+      "FormObjects/propertiesResizingOptions": {
+        "title": "Resizing Options"
+      },
+      "FormObjects/propertiesScale": {
+        "title": "Scale"
+      },
+      "FormObjects/propertiesSubform": {
+        "title": "Subform"
+      },
+      "FormObjects/propertiesText": {
+        "title": "Text"
+      },
+      "FormObjects/propertiesTextAndPicture": {
+        "title": "Text and Picture"
+      },
+      "FormObjects/propertiesWebArea": {
+        "title": "Webエリア"
+      },
+      "FormObjects/propertyMatrix": {
+        "title": "Active Object Properties"
+      },
+      "FormObjects/radiobuttonOverview": {
+        "title": "ラジオボタン"
+      },
+      "FormObjects/ruler": {
+        "title": "ルーラー"
+      },
+      "FormObjects/shapesOverview": {
+        "title": "Shapes"
+      },
+      "FormObjects/spinner": {
+        "title": "Spinner"
+      },
+      "FormObjects/splitters": {
+        "title": "スプリッター"
+      },
+      "FormObjects/staticPicture": {
+        "title": "Static picture"
+      },
+      "FormObjects/stepper": {
+        "title": "Stepper"
+      },
+      "FormObjects/subformOverview": {
+        "title": "Subform"
+      },
+      "FormObjects/tabControl": {
+        "title": "タブコントロール"
+      },
+      "FormObjects/text": {
+        "title": "Text"
+      },
+      "FormObjects/viewProAreaOverview": {
+        "title": "4D View Pro area"
+      },
+      "FormObjects/webAreaOverview": {
+        "title": "Webエリア"
+      },
+      "FormObjects/writeProAreaOverview": {
+        "title": "4D Write Pro area"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -167,13 +332,13 @@
         "sidebar_label": "Verify Page"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "4D プロジェクトのアーキテクチャー"
       },
       "Project/building": {
         "title": "Building a project package"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "4D プロジェクトの作成"
       },
       "Project/developing": {
         "title": "Developing a project"
@@ -188,7 +353,9 @@
     "categories": {
       "4D Language Concepts": "4D ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Forms": "Forms",
+      "Form Editor": "フォームエディター",
+      "Form Objects": "フォームオブジェクト",
+      "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
       "MSC": "Maintenance & Security Center",
       "Backup and Restore": "バックアップと復元"

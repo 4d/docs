@@ -1,13 +1,13 @@
 {
   "docs": {
-    "4D Language Concepts": 
+    "4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
         "type": "subcategory",
         "label": "Data Types",
         "ids": [
           "Concepts/data-types","Concepts/blob","Concepts/boolean","Concepts/collection","Concepts/date","Concepts/null-undefined",
-		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time","Concepts/variant"		    
+		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time","Concepts/variant"
         ]
       },
 	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared",
@@ -15,13 +15,67 @@
         "type": "subcategory",
         "label": "Control Flow",
         "ids": [
-          "Concepts/control-flow","Concepts/branching","Concepts/looping"	  
+          "Concepts/control-flow","Concepts/branching","Concepts/looping"
         ]
       },
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/building"],
-	"Forms":["FormEditor/objectLibrary","FormEditor/stylesheets"],
+	"Form Editor":["FormEditor/objectLibrary","FormEditor/stylesheets"],
+  "Form Objects":["FormObjects/formObjectsOverview",
+		"FormObjects/buttonOverview",
+		  "FormObjects/buttonGridOverview",
+		  "FormObjects/checkboxOverview",
+		  "FormObjects/comboBoxOverview",
+		  "FormObjects/dropdownListOverview",
+		  "FormObjects/groupBox",
+  		  "FormObjects/inputOverview",
+		  "FormObjects/listOverview",
+		  "FormObjects/listboxOverview",
+		  "FormObjects/pictureButtonOverview",
+		  "FormObjects/picturePopupMenuOverview",
+  		  "FormObjects/pluginAreaOverview",
+		  "FormObjects/progressIndicator",
+		  "FormObjects/radiobuttonOverview",
+		  "FormObjects/ruler",
+		  "FormObjects/shapesOverview",
+		  "FormObjects/spinner",
+		  "FormObjects/splitters",
+		  "FormObjects/staticPicture",
+		  "FormObjects/stepper",
+		  "FormObjects/subformOverview",
+		  "FormObjects/tabControl",
+		  "FormObjects/text",
+		  "FormObjects/webAreaOverview",
+  		  "FormObjects/viewProAreaOverview",
+		  "FormObjects/writeProAreaOverview"],
+	"Form Object Properties":["FormObjects/propertiesReference",
+			"FormObjects/propertiesAction",
+			"FormObjects/propertiesAnimation",
+			"FormObjects/propertiesAppearance",
+			"FormObjects/propertiesBackgroundAndBorder",
+			"FormObjects/propertiesCoordinatesAndSizing",
+			"FormObjects/propertiesCrop",
+			"FormObjects/propertiesDataSource",
+			"FormObjects/propertiesDisplay",
+			"FormObjects/propertiesEntry",
+			"FormObjects/propertiesFooters",
+			"FormObjects/propertiesGridlines",
+			"FormObjects/propertiesHeaders",
+			"FormObjects/propertiesHelp",
+			"FormObjects/propertiesHierarchy",
+			"FormObjects/propertiesListBox",
+			"FormObjects/propertiesObject",
+			"FormObjects/propertiesPicture",
+			"FormObjects/propertiesPlugIns",
+			"FormObjects/propertiesPrint",
+			"FormObjects/propertiesRangeOfValues",
+			"FormObjects/propertiesResizingOptions",
+			"FormObjects/propertiesScale",
+			"FormObjects/propertiesSubform",
+			"FormObjects/propertiesText",
+			"FormObjects/propertiesTextAndPicture",
+			"FormObjects/propertiesWebArea"],
 	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"]
