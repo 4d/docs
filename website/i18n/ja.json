@@ -118,19 +118,19 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
         "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "FormObjects/inputOverview": {
         "title": "Input"
@@ -145,7 +145,7 @@
         "title": "Picture Button"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
         "title": "プラグインエリア"
@@ -160,13 +160,13 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "座標とサイズ"
       },
       "FormObjects/propertiesCrop": {
         "title": "Crop"
@@ -178,16 +178,16 @@
         "title": "Display"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "入力"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "グリッド線"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "ヘッダー"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -199,7 +199,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
         "title": "Picture"
@@ -208,7 +208,7 @@
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
@@ -217,10 +217,10 @@
         "title": "JSON property list"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "リサイズオプション"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -235,7 +235,7 @@
         "title": "Webエリア"
       },
       "FormObjects/propertyMatrix": {
-        "title": "Active Object Properties"
+        "title": "アクティブオブジェクトプロパティ"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -253,7 +253,7 @@
         "title": "スプリッター"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "スタティックピクチャー"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -363,7 +363,7 @@
   },
   "pages-strings": {
     "Essential Guides for 4D Developers|no description given": "4D 開発のリファレンスガイド",
-    "...more to come...|no description given": "…随時加筆予定…",
+    "...more to come...|no description given": "…随時加筆中…",
     "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
     "Getting Started|no description given": "はじめに",
     "Development|no description given": "データベース開発",
