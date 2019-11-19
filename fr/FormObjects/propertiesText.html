@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Texte · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Texte · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="---"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/FormObjects/propertiesText.html">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Form Object Properties</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/shared.html">Objets et collections partagés</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/creating.html">Créer un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/architecture.html">Architecture d&#x27;un projet 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Project/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormEditor/stylesheets.html">Feuilles de style (style sheets)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/text.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesPicture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/fr/FormObjects/propertiesText.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/backup.html">Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/settings.html">Paramètres de sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/log.html">Fichier d&#x27;historique (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/fr/Backup/restore.html">Restitution</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Texte</h1></header><article><div><span><hr>
+<h2><a class="anchor" aria-hidden="true" id="allow-font-color-picker"></a><a href="#allow-font-color-picker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Allow font/color picker</h2>
+<p>When this property is enabled, the <a href="https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html">OPEN FONT PICKER</a> and <a href="https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html">OPEN COLOR PICKER</a> commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar"></a><a href="#json-grammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>allowFontColorPicker</td><td>boolean</td><td>false (default), true</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported"></a><a href="#objects-supported" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="bold"></a><a href="#bold" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bold</h2>
+<p>Sets the selected text to appear darker and heavier.</p>
+<p>You can set this property using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html"><strong>OBJECT SET FONT STYLE</strong></a> command.</p>
+<blockquote>
+<p>This is normal text.<br> <strong>This is bold text.</strong></p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-1"></a><a href="#json-grammar-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>fontWeight</td><td>Texte</td><td>&quot;normal&quot;, &quot;bold&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-1"></a><a href="#objects-supported-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="italic"></a><a href="#italic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Italic</h2>
+<p>Sets the selected text to slant slightly to the right.</p>
+<p>You can also set this property via the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html"><strong>OBJECT SET FONT STYLE</strong></a> command.</p>
+<blockquote>
+<p>This is normal text.<br> <em>This is text in italics.</em></p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-2"></a><a href="#json-grammar-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>fontStyle</td><td>string</td><td>&quot;normal&quot;, &quot;italic&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-2"></a><a href="#objects-supported-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="underline"></a><a href="#underline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Underline</h2>
+<p>Sets the text to have a line running beneath it.</p>
+<blockquote>
+<p>This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-3"></a><a href="#json-grammar-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>textDecoration</td><td>string</td><td>&quot;normal&quot;, &quot;underline&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-3"></a><a href="#objects-supported-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="font"></a><a href="#font" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font</h2>
+<p>This property allows you to specify either the <strong>font theme</strong> or the <strong>font family</strong> used in the object.</p>
+<blockquote>
+<p><strong>Font theme</strong> and <strong>font family</strong> properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="font-theme"></a><a href="#font-theme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font Theme</h3>
+<p>The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:</p>
+<ul>
+<li>the platform,</li>
+<li>the system language,</li>
+<li>and the type of form object.</li>
+</ul>
+<p>With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.</p>
+<p>Three font themes are available:</p>
+<ul>
+<li><strong>normal</strong>: automatic style, applied by default to any new object created in the Form editor.</li>
+<li><strong>main</strong> and <strong>additional</strong> font themes are only supported by <a href="/docs/fr/FormObjects/text.html">text areas</a> and <a href="/docs/fr/FormObjects/inputOverview.html">inputs</a>. These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:</li>
+</ul>
+<p><img src="/docs/assets/en/FormObjects/fontThemes.png" alt=""></p>
+<blockquote>
+<p>Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-4"></a><a href="#json-grammar-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>fontTheme</td><td>string</td><td>&quot;normal&quot;, &quot;main&quot;, &quot;additional&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-4"></a><a href="#objects-supported-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<h3><a class="anchor" aria-hidden="true" id="font-family"></a><a href="#font-family" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font Family</h3>
+<p>There are two types of font family names:</p>
+<ul>
+<li><em>family-name:</em> The name of a font-family, like &quot;times&quot;, &quot;courier&quot;, &quot;arial&quot;, etc.</li>
+<li><em>generic-family:</em> The name of a generic-family, like &quot;serif&quot;, &quot;sans-serif&quot;, &quot;cursive&quot;, &quot;fantasy&quot;, &quot;monospace&quot;.</li>
+</ul>
+<p>You can set this using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html"><strong>OBJECT SET FONT</strong></a> command.</p>
+<blockquote>
+<p><span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span></p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-5"></a><a href="#json-grammar-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>fontFamily</td><td>string</td><td>CSS font family name</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>4D recommends using only <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">web safe</a> fonts.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-5"></a><a href="#objects-supported-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="font-size"></a><a href="#font-size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font Size</h2>
+<blockquote>
+<p>This property is only available when no <a href="#font-theme">font theme</a> is selected.</p>
+</blockquote>
+<p>Allows defining the object's font size in points.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-6"></a><a href="#json-grammar-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>fontSize</td><td>integer</td><td>Font size in points. Minimum value: 0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-6"></a><a href="#objects-supported-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="font-color"></a><a href="#font-color" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font Color</h2>
+<p>This property specifies the color of the font used in the object. The color can be specified by:</p>
+<ul>
+<li>a color name - like &quot;red&quot;</li>
+<li>a HEX value - like &quot;#ff0000&quot;</li>
+<li>an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+</ul>
+<p>You can also set this property using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-RGB-COLORS.301-4128232.en.html"><strong>OBJECT SET RGB COLORS</strong></a> command.</p>
+<blockquote>
+<p>This font is <span style="color:red">red</span>.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-7"></a><a href="#json-grammar-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>stroke</td><td>string</td><td>any css value, &quot;transparent&quot;, &quot;automatic&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-7"></a><a href="#objects-supported-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/fr/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/fr/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/fr/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listOverview.html#overview">Hierarchical List</a> - <a href="/docs/fr/FormObjects/inputOverview.html">Input</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="font-color-expression"></a><a href="#font-color-expression" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Font Color Expression</h2>
+<p><code>Selection and collection/entity selection type list boxes</code></p>
+<p>Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html">OBJECT SET RGB COLORS</a> command in the 4D Language Reference manual.</p>
+<p>You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme.</p>
+<blockquote>
+<p>This property can also be set using a <a href="/docs/fr/FormObjects/propertiesText.html#meta-info-expression">Meta Info Expression</a>.</p>
+</blockquote>
+<p>The following example uses a variable name: enter <em>CompanyColor</em> for the <strong>Font Color Expression</strong> and, in the form method, write the following code:</p>
+<pre><code class="hljs css language-code4d">CompanyColor:=<span class="hljs-command">Choose</span>([Companies]ID;<span class="hljs-constant">Background color</span>;<span class="hljs-constant">Light shadow color</span>;   
+<span class="hljs-constant">Foreground color</span>;<span class="hljs-constant">Dark shadow color</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-8"></a><a href="#json-grammar-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>rowStrokeSource</td><td>string</td><td>Font color expression</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-8"></a><a href="#objects-supported-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="style-expression"></a><a href="#style-expression" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Expression</h2>
+<p><code>Selection and collection/entity selection type list boxes</code></p>
+<p>Used to apply a custom character style to each row of the list box or each cell of the column.</p>
+<p>You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme.</p>
+<p>Exemple :</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-command">Choose</span>([Companies]ID;<span class="hljs-constant">Bold</span>;<span class="hljs-constant">Plain</span>;<span class="hljs-constant">Italic</span>;<span class="hljs-constant">Underline</span>)
+</code></pre>
+<blockquote>
+<p>This property can also be set using a <a href="/docs/fr/FormObjects/propertiesText.html#meta-info-expression">Meta Info Expression</a>.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-9"></a><a href="#json-grammar-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>rowStyleSource</td><td>string</td><td>Style expression to evaluate for each row/cell.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-9"></a><a href="#objects-supported-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="horizontal-alignment"></a><a href="#horizontal-alignment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Horizontal Alignment</h2>
+<p>Horizontal location of text within the area that contains it.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-10"></a><a href="#json-grammar-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>textAlign</td><td>string</td><td>&quot;automatic&quot;, &quot;right&quot;, &quot;center&quot;, &quot;justify&quot;, &quot;left&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-10"></a><a href="#objects-supported-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Header</a> - <a href="/docs/fr/FormObjects/text.html">Text Area</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="vertical-alignment"></a><a href="#vertical-alignment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vertical Alignment</h2>
+<p>Vertical location of text within the area that contains it.</p>
+<p>The <strong>Default</strong> option (<code>automatic</code> JSON value) sets the alignment according to the type of data found in each column:</p>
+<ul>
+<li><code>bottom</code> for all data (except pictures) and</li>
+<li><code>top</code> for picture type data.</li>
+</ul>
+<p>This property can also be handled by the <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html">OBJECT Get vertical alignment</a> and <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html">OBJECT SET VERTICAL ALIGNMENT</a> commands.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-11"></a><a href="#json-grammar-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>verticalAlign</td><td>string</td><td>&quot;automatic&quot;, &quot;top&quot;, &quot;middle&quot;, &quot;bottom&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-11"></a><a href="#objects-supported-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-footers">List Box Footer</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-headers">List Box Header</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="meta-info-expression"></a><a href="#meta-info-expression" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Meta Info Expression</h2>
+<p><code>Collection or entity selection type list boxes</code></p>
+<p>Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an <strong>object variable</strong> or an <strong>expression that returns an object</strong>. The following properties are supported:</p>
+<table>
+<thead>
+<tr><th>Property name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>stroke</td><td>string</td><td>Font color. Any CSS color (ex: &quot;#FF00FF&quot;), &quot;automatic&quot;, &quot;transparent&quot;</td></tr>
+<tr><td>border-style</td><td>string</td><td>Background color. Any CSS color (ex: &quot;#F00FFF&quot;), &quot;automatic&quot;, &quot;transparent&quot;</td></tr>
+<tr><td>fontStyle</td><td>string</td><td>&quot;normal&quot;,&quot;italic&quot;</td></tr>
+<tr><td>fontWeight</td><td>string</td><td>&quot;normal&quot;,&quot;bold&quot;</td></tr>
+<tr><td>textDecoration</td><td>string</td><td>&quot;normal&quot;,&quot;underline&quot;</td></tr>
+<tr><td>unselectable</td><td>boolean</td><td>Designates the corresponding row as not being selectable (<em>i.e.</em>, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the &quot;Single-Click Edit&quot; option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is &quot;None&quot;. Default value: False.</td></tr>
+<tr><td>disabled</td><td>boolean</td><td>Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.</td></tr>
+<tr><td>cell.&lt;columnName&gt;</td><td>object</td><td>Allows applying the property to a single column. Pass in &lt;columnName&gt; the object name of the list box column. <strong>Note</strong>: &quot;unselectable&quot; and &quot;disabled&quot; properties can only be defined at row level. They are ignored if passed in the &quot;cell&quot; object</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>Style settings made with this property are ignored if other style settings are already defined through expressions (<em>i.e.</em>, <a href="#style-expression">Style Expression</a>, <a href="#font-color-expression">Font Color Expression</a>, <a href="#background-color-expression">Background Color Expression</a>).</p>
+</blockquote>
+<p>The following example uses the <em>Color</em> project method.</p>
+<p>In the form method, write the following code:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//form method
+</span><span class="hljs-keyword">Case of</span>
+  :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
+   <span class="hljs-command">Form</span><span class="hljs-property">.meta</span>:=<span class="hljs-command">New object</span>
+<span class="hljs-keyword">End case</span>
+</code></pre>
+<p>In the <em>Color</em> method, write the following code:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//Color method
+</span><span class="hljs-comment">//Sets font color for certain rows and the background color for a specific column:
+</span><span class="hljs-command">C_OBJECT</span>(<span class="hljs-param">$0</span>)
+<span class="hljs-keyword">If</span>(This<span class="hljs-property">.ID</span>&gt;5) <span class="hljs-comment">//ID is an attribute of collection objects/entities
+</span>  <span class="hljs-command">Form</span><span class="hljs-property">.meta</span><span class="hljs-property">.stroke</span>:="<span class="hljs-string">purple</span>"
+  <span class="hljs-command">Form</span><span class="hljs-property">.meta</span><span class="hljs-property">.cell</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">Column2</span>";<span class="hljs-command">New object</span>("<span class="hljs-string">fill</span>";"<span class="hljs-string">black</span>"))
+<span class="hljs-keyword">Else</span>
+  <span class="hljs-command">Form</span><span class="hljs-property">.meta</span><span class="hljs-property">.stroke</span>:="<span class="hljs-string">orange</span>"
+<span class="hljs-keyword">End if</span>
+<span class="hljs-param">$0</span>:=<span class="hljs-command">Form</span><span class="hljs-property">.meta</span>
+</code></pre>
+<blockquote>
+<p>See also the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html">This</a> command.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-12"></a><a href="#json-grammar-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type de données</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>metaSource</td><td>string</td><td>Object expression to evaluate for each row/cell.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-12"></a><a href="#objects-supported-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/fr/FormObjects/listboxOverview.html">List Box</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="multi-style"></a><a href="#multi-style" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-style</h2>
+<p>This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any &lt;SPAN&gt; HTML tags found in the area. </p></p>
+<p spaces-before="0">
+  By default, this option is not enabled.
+</p>
+<p><h4 spaces-before="0">
+JSON Grammar
+</h4></p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Name
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Type de données
+&lt;/th&gt;
+
+&lt;th&gt;
+  Possible Values
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      styledText
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  boolean
+&lt;/td&gt;
+
+&lt;td&gt;
+  true, false
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p><h4 spaces-before="0">
+Objects Supported
+</h4></p>
+<p spaces-before="0">
+  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
+</p>
+<hr />
+<h2 spaces-before="0">
+  Orientation
+</h2>
+<p spaces-before="0">
+  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+</p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Orientation value
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Result
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      0 (default)
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  &lt;img src=&quot;assets/en/FormObjects/orientation1.png&quot; alt=&quot;&quot; /&gt;
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      90
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  &lt;img src=&quot;assets/en/FormObjects/orientation2.png&quot; alt=&quot;&quot; /&gt;
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      180
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  &lt;img src=&quot;assets/en/FormObjects/orientation3.png&quot; alt=&quot;&quot; /&gt;
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      270
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  &lt;img src=&quot;assets/en/FormObjects/orientation4.png&quot; alt=&quot;&quot; /&gt;
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p spaces-before="0">
+  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+</p>
+<p><h4 spaces-before="0">
+JSON Grammar
+</h4></p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Name
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Type de données
+&lt;/th&gt;
+
+&lt;th&gt;
+  Possible Values
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      textAngle
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  number
+&lt;/td&gt;
+
+&lt;td&gt;
+  0, 90, 180, 270
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p><h4 spaces-before="0">
+Objects Supported
+</h4></p>
+<p spaces-before="0">
+  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+</p>
+<hr />
+<h2 spaces-before="0">
+  Row Font Color Array
+</h2>
+<p spaces-before="0">
+  <code>Array type list boxes</code>
+</p>
+<p spaces-before="0">
+  Allows setting a custom font color to each row of the list box or cell of the column.
+</p>
+<p spaces-before="0">
+  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+</p>
+<p><h4 spaces-before="0">
+JSON Grammar
+</h4></p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Name
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Type de données
+&lt;/th&gt;
+
+&lt;th&gt;
+  Possible Values
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      rowStrokeSource
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  string
+&lt;/td&gt;
+
+&lt;td&gt;
+  The name of a longint array
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p><h4 spaces-before="0">
+Objects Supported
+</h4></p>
+<p spaces-before="0">
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+</p>
+<hr />
+<h2 spaces-before="0">
+  Row Style Array
+</h2>
+<p spaces-before="0">
+  <code>Array type list boxes</code>
+</p>
+<p spaces-before="0">
+  Allows setting a custom font style to each row of the list box or each cell of the column.
+</p>
+<p spaces-before="0">
+  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+</p>
+<p><h4 spaces-before="0">
+JSON Grammar
+</h4></p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Name
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Type de données
+&lt;/th&gt;
+
+&lt;th&gt;
+  Possible Values
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      rowStyleSource
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  string
+&lt;/td&gt;
+
+&lt;td&gt;
+  The name of a longint array.
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p><h4 spaces-before="0">
+Objects Supported
+</h4></p>
+<p spaces-before="0">
+  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+</p>
+<hr />
+<h2 spaces-before="0">
+  Store with default style tags
+</h2>
+<p spaces-before="0">
+  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+</p>
+<p spaces-before="0">
+  For example, here is a text that includes a style modification:
+</p>
+<p spaces-before="0">
+  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
+</p>
+<p spaces-before="0">
+  When the property is disabled, the area only stores the modification. The stored contents are therefore:
+</p>
+<pre><code class="hljs">What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
+</code></pre>
+<p spaces-before="0">
+  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+</p>
+<pre><code class="hljs">&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
+</code></pre>
+<p><h4 spaces-before="0">
+JSON Grammar
+</h4></p>
+<table spaces-before="0" line-breaks-before="2">
+  <tr>
+    <th>
+      Name
+    </th>
+<pre><code class="hljs">&lt;th&gt;
+  Type de données
+&lt;/th&gt;
+
+&lt;th&gt;
+  Possible Values
+&lt;/th&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      storeDefaultStyle
+    </td>
+<pre><code class="hljs">&lt;td&gt;
+  boolean
+&lt;/td&gt;
+
+&lt;td&gt;
+  true, false (default).
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p><h4 spaces-before="0">
+Objects Supported
+</h4></p>
+<p spaces-before="0">
+  <a href="input_overview.md">Input</a>
+</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/FormObjects/propertiesSubform.html"><span class="arrow-prev">← </span><span>Subform</span></a><a class="docs-next button" href="/docs/fr/FormObjects/propertiesTextAndPicture.html"><span>Text and Picture</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#allow-font-color-picker">Allow font/color picker</a></li><li><a href="#bold">Bold</a></li><li><a href="#italic">Italic</a></li><li><a href="#underline">Underline</a></li><li><a href="#font">Font</a><ul class="toc-headings"><li><a href="#font-theme">Font Theme</a></li><li><a href="#font-family">Font Family</a></li></ul></li><li><a href="#font-size">Font Size</a></li><li><a href="#font-color">Font Color</a></li><li><a href="#font-color-expression">Font Color Expression</a></li><li><a href="#style-expression">Style Expression</a></li><li><a href="#horizontal-alignment">Horizontal Alignment</a></li><li><a href="#vertical-alignment">Vertical Alignment</a></li><li><a href="#meta-info-expression">Meta Info Expression</a></li><li><a href="#multi-style">Multi-style</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

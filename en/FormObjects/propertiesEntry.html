@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entry · Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entry · Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="---"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><img class="logo" src="/docs/img/4DlogoK.gif" alt="Documentation"/><h2 class="headerTitleWithLogo">Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/" target="_self">Developer Center</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/fr/FormObjects/propertiesEntry.html">Français</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Form Object Properties</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/building.html">Building a project package</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/FormEditor/objectLibrary.html">Object libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesPicture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesText.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Menus/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Menus/creating.html">Creating menus and menu bars</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Menus/properties.html">Menu item properties</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Menus/bars.html">Menu bar features</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Menus/sdi.html">SDI mode on Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/information.html">Information Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/repair.html">Repair Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/MSC/encrypt.html">Encrypt Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Backup and Restore<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Backup/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Backup/restore.html">Restore</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Entry</h1></header><article><div><span><hr>
+<h2><a class="anchor" aria-hidden="true" id="auto-spellcheck"></a><a href="#auto-spellcheck" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto Spellcheck</h2>
+<p>4D includes an integrated and customizable spell-check utility. Text type <a href="/docs/en/FormObjects/inputOverview.html">inputs</a> can be checked, as well as <a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro</a> documents.</p>
+<p>The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the <code>SPELL CHECKING</code> 4D language command for each object to be checked.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar"></a><a href="#json-grammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>spellcheck</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported"></a><a href="#objects-supported" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro area</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="context-menu"></a><a href="#context-menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context Menu</h2>
+<p>Allows the user access to a standard context menu in the object when the form is executed.</p>
+<p>For a picture type <a href="/docs/en/FormObjects/inputOverview.html">input</a>, in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the <strong>Import...</strong> command, which can be used to import a picture stored in a file, as well as the <strong>Save as...</strong> command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the <strong>Truncated non-centered</strong>, <strong>Scaled to fit</strong> and <strong>Scaled to fit centered prop.</strong> options are provided. The modification of the <a href="properties_Display#picture-format">display format</a> using this menu is temporary; it is not saved with the record.</p>
+<p>For a <a href="/docs/en/FormObjects/propertiesText.html#multi-style">multi-style</a> text type <a href="/docs/en/FormObjects/inputOverview.html">input</a>, in addition to standard editing commands, the context menu provides the following commands:</p>
+<ul>
+<li><strong>Fonts...</strong>: displays the font system dialog box</li>
+<li><strong>Recent fonts</strong>: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the <code>SET RECENT FONTS</code> and <code>FONT LIST</code> commands.</li>
+<li>commands for supported style modifications: font, size, style, color and background color.
+When the user modifies a style attribute via this pop-up menu, 4D generates the <code>On After Edit</code> form event.</li>
+</ul>
+<p>For a <a href="/docs/en/FormObjects/webAreaOverview.html">Web Area</a>, the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html"><code>WA SET PREFERENCE</code></a> command.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-1"></a><a href="#json-grammar-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>contextMenu</td><td>string</td><td>&quot;automatic&quot; (used if missing), &quot;none&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-1"></a><a href="#objects-supported-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/inputOverview.html">Input</a> - <a href="/docs/en/FormObjects/webAreaOverview.html">Web Area</a> - <a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro areas</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="enterable"></a><a href="#enterable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enterable</h2>
+<p>The Enterable attribute indicates whether users can enter values into the object.</p>
+<p>Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the <code>On Clicked</code>, <code>On Double Clicked</code>, <code>On Drag Over</code>, <code>On Drop</code>, <code>On Getting Focus</code> and <code>On Losing Focus</code> form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.</p>
+<p>When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-2"></a><a href="#json-grammar-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>enterable</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-2"></a><a href="#objects-supported-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro areas</a> - <a href="/docs/en/FormObjects/listOverview.html">Hierarchical List</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a> - <a href="/docs/en/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/en/FormObjects/progressIndicator.html">Progress Bar</a> - <a href="/docs/en/FormObjects/ruler.html">Ruler</a> - <a href="/docs/en/FormObjects/stepper.html">Stepper</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="entry-filter"></a><a href="#entry-filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entry Filter</h2>
+<p>An entry filter controls exactly what the user can type during data entry. Unlike <a href="/docs/en/FormObjects/propertiesRangeOfValues.html#required-list">required lists</a> for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.</p>
+<p>An entry filter operates only during data entry. It has no effect on data display after the user deselects the object. In general, you use entry filters and <a href="/docs/en/FormObjects/propertiesDisplay.html">display formats</a> together. The filter constrains data entry and the format ensures proper display of the value after data entry.</p>
+<p>During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.</p>
+<p>Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.</p>
+<h3><a class="anchor" aria-hidden="true" id="defining-an-entry-filter"></a><a href="#defining-an-entry-filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining an entry filter</h3>
+<p>Most of the time, you can use one of the <a href="#default-entry-filters">built-in filters</a> of 4D for what you need; however, you can also create and use custom filters:</p>
+<ul>
+<li>you can directly enter a filter definition string</li>
+<li>or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).</li>
+</ul>
+<p>For information about creating entry filters, see <a href="https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html">Filter and format codes</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="default-entry-filters"></a><a href="#default-entry-filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default entry filters</h3>
+<p>Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:</p>
+<table>
+<thead>
+<tr><th>Entry Filter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>~A</td><td>Allow any letters, but convert to uppercase.</td></tr>
+<tr><td>&amp;9</td><td>Allow only numbers.</td></tr>
+<tr><td>&amp;A</td><td>Allow only capital letters.</td></tr>
+<tr><td>&amp;a</td><td>Allow only letters (uppercase and lowercase).</td></tr>
+<tr><td>&amp;@</td><td>Allow only alphanumeric characters. No special characters.</td></tr>
+<tr><td>~a##</td><td>State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.</td></tr>
+<tr><td>!0&amp;9##/##/##</td><td>Standard date entry format. Display zeros in entry spaces. Allow any numbers.</td></tr>
+<tr><td>!0&amp;9 Day: ## Month: ## Year: ##</td><td>Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.</td></tr>
+<tr><td>!0&amp;9##:##</td><td>Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.</td></tr>
+<tr><td>!0&amp;9## Hrs ## Mins ## Secs</td><td>Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.</td></tr>
+<tr><td>!0&amp;9Hrs: ## Mins: ## Secs: ##</td><td>Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.</td></tr>
+<tr><td>!0&amp;9##-##-##-##</td><td>Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.</td></tr>
+<tr><td>!_&amp;9(###)!0###-####</td><td>Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.</td></tr>
+<tr><td>!0&amp;9###-###-###</td><td>Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries.</td></tr>
+<tr><td>!0&amp;9###-##-###</td><td>Social Security number. Display zeros in entry spaces. Allow any numbers.</td></tr>
+<tr><td>~&quot;A-Z;0-9; ;,;.;-&quot;</td><td>Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.</td></tr>
+<tr><td>&amp;&quot;a-z;0-9; ;,;.;-&quot;</td><td>Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.</td></tr>
+<tr><td>&amp;&quot;0-9;.;-&quot;</td><td>Numbers. Allow only numbers, decimal points, and hyphens (minus sign).</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-3"></a><a href="#json-grammar-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>entryFilter</td><td>string</td><td><li>Entry filter code or <li>Entry filter name (filter names start with | )</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-3"></a><a href="#objects-supported-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/en/FormObjects/listOverview.html">Hierarchical List</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a> - <a href="/docs/en/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="focusable"></a><a href="#focusable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Focusable</h2>
+<p>When the <strong>Focusable</strong> property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the <a href="/docs/en/FormObjects/propertiesAppearance.html#hide-focus-rectangle">Hide focus rectangle</a> option has also been selected.</p>
+<blockquote>
+<p>An <a href="/docs/en/FormObjects/inputOverview.html">input object</a> is always focusable if it has the <a href="#enterable">Enterable</a> property.</p>
+</blockquote>
+<ul>
+<li><img src="/docs/assets/en/FormObjects/property_focusable1.png" alt=""><br>Check box shows focus when selected</li>
+</ul>
+<p>
+<p>
+<ul>
+<li><img src="/docs/assets/en/FormObjects/property_focusable2.png" alt=""><br>Check box is selected but cannot show focus|</li>
+</ul>
+<p>When the <strong>Focusable</strong> property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-4"></a><a href="#json-grammar-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>focusable</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-4"></a><a href="#objects-supported-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro areas</a> - <a href="/docs/en/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/en/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/en/FormObjects/dropdownListOverview.html">Drop-down List</a> - <a href="/docs/en/FormObjects/listOverview.html">Hierarchical List</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a> - <a href="/docs/en/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/en/FormObjects/pluginAreaOverview.html">Plug-in Area</a> - <a href="/docs/en/FormObjects/radiobuttonOverview.html">Radio Button</a> - <a href="/docs/en/FormObjects/subformOverview.html">Subform</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="keyboard-layout"></a><a href="#keyboard-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keyboard Layout</h2>
+<p>This property associates a specific keyboard layout to an <a href="/docs/en/FormObjects/inputOverview.html">input object</a>. For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the &quot;Greek&quot; keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.</p>
+<p>By default, the object uses the current keyboard layout.</p>
+<blockquote>
+<p>You can also set and get the keyboard dynamically using the <code>OBJECT SET KEYBOARD LAYOUT</code> and <code>OBJECT Get keyboard layout</code> commands.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-5"></a><a href="#json-grammar-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>keyboardDialect</td><td>text</td><td>Language code, for example &quot;ar-ma&quot; or &quot;cs&quot;. See RFC3066, ISO639 and ISO3166</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-5"></a><a href="#objects-supported-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro areas</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="multiline"></a><a href="#multiline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiline</h2>
+<p>This property is available for <a href="/docs/en/FormObjects/inputOverview.html">inputs objects</a> containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).</p>
+<h4><a class="anchor" aria-hidden="true" id="automatic"></a><a href="#automatic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatic</h4>
+<ul>
+<li>In single-line inputs, words located at the end of lines are truncated and there are no line returns.</li>
+<li>In multiline inputs, 4D carries out automatic line returns:<br>
+<img src="/docs/assets/en/FormObjects/multilineAuto.png" alt=""></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="no"></a><a href="#no" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No</h4>
+<ul>
+<li>In single-line inputs, words located at the end of lines are truncated and there are no line returns.</li>
+<li>There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:<br>
+<img src="/docs/assets/en/FormObjects/multilineNo.png" alt=""></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="yes"></a><a href="#yes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Yes</h4>
+<p>When this value is selected, the property is managed by the <a href="/docs/en/FormObjects/propertiesDisplay.html#wordwrap">Wordwrap</a> option.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-6"></a><a href="#json-grammar-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>multiline</td><td>text</td><td>&quot;yes&quot;, &quot;no&quot;, &quot;automatic&quot; (default if not defined)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-6"></a><a href="#objects-supported-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="placeholder"></a><a href="#placeholder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Placeholder</h2>
+<p>4D can display placeholder text in the fields of your forms.</p>
+<p>Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:</p>
+<p><img src="/docs/assets/en/FormObjects/property_placeholder.png" alt=""></p>
+<p>The placeholder text is displayed again if the contents of the field is erased.</p>
+<p>A placeholder can be displayed for the following types of data:</p>
+<ul>
+<li>string (text or alpha)</li>
+<li>date and time when the <strong>Blank if null</strong> property is enabled.</li>
+</ul>
+<p>You can use an XLIFF reference in the &quot;:xliff:resname&quot; form as a placeholder, for example:</p>
+<pre><code class="hljs">:xliff:PH_Lastname
+</code></pre>
+<p>You only pass the reference in the &quot;Placeholder&quot; field; it is not possible to combine a reference with static text.</p>
+<blockquote>
+<p>You can also set and get the placeholder text by programming using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html">OBJECT SET PLACEHOLDER</a> and <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html">OBJECT Get placeholder</a> commands.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-7"></a><a href="#json-grammar-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>placeholder</td><td>string</td><td>Text to be displayed (grayed out) when the object does not contain any value</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-7"></a><a href="#objects-supported-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a></p>
+<h4><a class="anchor" aria-hidden="true" id="see-also"></a><a href="#see-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
+<p><a href="/docs/en/FormObjects/propertiesHelp.html">Help tip</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="selection-always-visible"></a><a href="#selection-always-visible" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selection always visible</h2>
+<p>This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see <a href="/docs/en/FormObjects/propertiesText.html#multi-style">Multi-style</a>).</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-8"></a><a href="#json-grammar-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>showSelection</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-8"></a><a href="#objects-supported-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/writeProAreaOverview.html">4D Write Pro areas</a> - <a href="/docs/en/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="shortcut"></a><a href="#shortcut" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shortcut</h2>
+<p>This property allows setting special meaning keys (keyboard shortcuts) for <a href="/docs/en/FormObjects/buttonOverview.html">buttons</a>, <a href="/docs/en/FormObjects/radiobuttonOverview.html">radio buttons</a>, and <a href="/docs/en/FormObjects/checkboxOverview.html">checkboxes</a>. They allow the user to use the control using the keyboard instead of having to use the mouse.</p>
+<p>You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.</p>
+<p><img src="/docs/assets/en/FormObjects/property_shortcut.png" alt=""></p>
+<blockquote>
+<p>You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html">Setting menu properties</a>.</p>
+</blockquote>
+<p>To view a list of all the shortcuts used in the 4D Design environment, see the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html">Shortcuts Page</a> in the Preferences dialog box.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-9"></a><a href="#json-grammar-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>shortcutAccel</td><td>boolean</td><td>true, false (Ctrl Windows/Command macOS)</td></tr>
+<tr><td>shortcutAlt</td><td>boolean</td><td>true, false</td></tr>
+<tr><td>shortcutCommand</td><td>boolean</td><td>true, false</td></tr>
+<tr><td>shortcutControl</td><td>boolean</td><td>true, false (macOS Control)</td></tr>
+<tr><td>shortcutShift</td><td>boolean</td><td>true, false</td></tr>
+<tr><td></td><td></td><td></td></tr>
+<tr><td>shortcutKey</td><td>string</td><td><li>any character key: &quot;a&quot;, &quot;b&quot;...<li>[F1]&quot; -&gt; &quot;[F15]&quot;, &quot;[Return]&quot;, &quot;[Enter]&quot;, &quot;[Backspace]&quot;, &quot;[Tab]&quot;, &quot;[Esc]&quot;, &quot;[Del]&quot;, &quot;[Home]&quot;, &quot;[End]&quot;, &quot;[Help]&quot;, &quot;[Page up]&quot;, &quot;[Page down]&quot;, &quot;[left arrow]&quot;, &quot;[right arrow]&quot;, &quot;[up arrow]&quot;, &quot;[down arrow]&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-9"></a><a href="#objects-supported-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/buttonOverview.html">Button</a> - <a href="/docs/en/FormObjects/checkboxOverview.html">Check Box</a> - <a href="/docs/en/FormObjects/pictureButtonOverview.html">Picture Button</a> -
+<a href="/docs/en/FormObjects/radiobuttonOverview.html">Radio Button</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="single-click-edit"></a><a href="#single-click-edit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Single-Click Edit</h2>
+<p>Enables direct passage to edit mode in list boxes.</p>
+<p>When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box <a href="/docs/en/FormObjects/propertiesListBox.html#selection-mode">selection mode</a> is set to &quot;None&quot;.</p>
+<p>When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-10"></a><a href="#json-grammar-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>singleClickEdit</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-10"></a><a href="#objects-supported-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/en/FormObjects/listboxOverview.html">List Box</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/FormObjects/propertiesDisplay.html"><span class="arrow-prev">← </span><span>Display</span></a><a class="docs-next button" href="/docs/en/FormObjects/propertiesFooters.html"><span>Footers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#auto-spellcheck">Auto Spellcheck</a></li><li><a href="#context-menu">Context Menu</a></li><li><a href="#enterable">Enterable</a></li><li><a href="#entry-filter">Entry Filter</a><ul class="toc-headings"><li><a href="#defining-an-entry-filter">Defining an entry filter</a></li><li><a href="#default-entry-filters">Default entry filters</a></li></ul></li><li><a href="#focusable">Focusable</a></li><li><a href="#keyboard-layout">Keyboard Layout</a></li><li><a href="#multiline">Multiline</a></li><li><a href="#placeholder">Placeholder</a></li><li><a href="#selection-always-visible">Selection always visible</a></li><li><a href="#shortcut">Shortcut</a></li><li><a href="#single-click-edit">Single-Click Edit</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/logohome.png" alt="Documentation" width="300"/></a><div><h5>Community</h5><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="https://taow.4d.com/">Get Support</a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a></div><div><h5>Product &amp; Company</h5><a href="https://store.4d.com/">Product Registration</a><a href="https://us.4d.com/product-life-cycle">Product Life Cycle</a><a href="https://us.4d.com/about-us">About us</a><a href="https://us.4d.com/contact-us">Contact us</a></div></section><section class="copyright">Copyright © 2019 4D SAS</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
