@@ -15,7 +15,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 | alternateFill | string          | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -35,7 +35,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### See also
 [Transparent](#transparent)
@@ -64,7 +64,7 @@ An expression or a variable (array variables cannot be used) to apply a custom b
 
 
 ---
-## Border Line Style / Dotted Line Type
+## Border Line Style
 
 Allows setting a standard style for the object border.
 
@@ -76,8 +76,7 @@ Allows setting a standard style for the object border.
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Plug-in Area](pluginArea_overview.md#overview) - [Subform](subform_overview.md#overview) - [Web Area](webArea_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [4D Write Pro areas](writeProArea_overview.md)
-
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 
 
@@ -124,22 +123,27 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 
 ---
-## Font Color / Line Color
+## Line Color
 
-For objects containing text (text, input, group box, list box header or footer), designates the font color.
+Designates the color of the object's lines. The color can be specified by:
 
-For shape objects (rectangle, line, oval), designates the color of the object's lines.
+* a color name - like "red"
+* a HEX value - like "#ff0000"
+* an RGB value - like "rgb(255,0,0)"
+
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 #### JSON Grammar
-
 
 | Name   | Type de données | Possible Values                           |
 | ------ | --------------- | ----------------------------------------- |
 | stroke | string          | any css value, "transparent", "automatic" |
 
+> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+
 #### Objects Supported
 
-[Group box](groupBox.md) - [Text](text.md) - [Input](input_overview.md) - [List box header](listbox_overview.md#header) - [List box footer](listbox_overview.md#footer) - [Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
@@ -156,7 +160,7 @@ Designates the thickness of a line.
 
 #### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
