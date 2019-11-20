@@ -132,43 +132,43 @@ Data フォルダーにはデータファイルのほか、データに関わる
 | data.match   | (内部用) テーブル番号に対応する UUID                                                                                                                                                                                                                                                                                                                                 | XML  |
 
 
-(*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
+(*) .4db バイナリデータベースからプロジェクトに変換すると、データファイルはコピーされます。 プロジェクトはもとのデータファイルを参照しませんので、名称変更や移動してもかまいません。
 
 ### Settings フォルダー
 
-This folder contains **user settings files for data** used for database administration.
+このフォルダーにはデータベースの管理に使用される **データファイル用のユーザー設定** ファイルが格納されます。
 
-> These settings take priority over **user settings files** and **structure settings** files.
+> この設定は **ユーザー設定** や **ストラクチャー設定** より優先されます。
 
-| 内容                  | Description                                                                                                                                                                                                          | 形式  |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML |
-| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML |
+| 内容                  | Description                                                                                                                                                                                                             | 形式  |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Backup.4DSettings   | このデータファイルを使ってデータベースが実行されている場合に使用する [バックアップオプション](Backup/settings.md) を定義したデータベースバックアップ設定です。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML |
+| settings.4DSettings | データファイル用のカスタムデータベース設定                                                                                                                                                                                                   | XML |
 
 
 ### Logs フォルダー
 
-The Logs folder contains all log files used by the project. Log files include, in particular:
+Logs フォルダーにはプロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:
 
-- database conversion,
-- web server requests,
-- backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
-- command debugging,
-- 4D Server requests (generated on client machines and on the server).
+- データベース変換
+- Webサーバーリクエスト
+- バックアップ/復元アクションのジャーナル (*Backup Journal\[xxx].txt*、[バックアップジャーナル](Backup/backup.md#backup-journal) 参照)
+- コマンドデバッグ
+- 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> データフォルダーが読み取り専用モードの場合やメンテナンスログファイルの保存には、システムのユーザー設定フォルダー (Active 4D Folder のこと、詳しくは [Get 4D folder](https://doc.4d.com/4Dv18/4D/18/Get-4D-folder.301-4505365.ja.html) コマンド参照) 内にある Logs フォルダーが利用されます。
 
 ## Settings フォルダー
 
-This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
+このフォルダーにはデータベースの管理に使用される **ユーザー設定** ファイルが格納されます。 必要に応じてこのフォルダーにファイルが追加されます。
 
-> If a data settings file exists in a Settings folder in the data folder, it takes priority over user settings file.
+> Data フォルダーの Setting フォルダー内にデータファイル用のユーザー設定ファイルがある場合には、そちらが優先されます。
 
-| 内容                  | Description                                                                                                                                                                                                                                                                                                                          | 形式   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
-| directory.json      | Description of 4D groups and users for the database, as well as their access rights                                                                                                                                                                                                                                                  | JSON |
-| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML  |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML  |
+| 内容                  | Description                                                                                                                                                                                                                                                                                                                                                               | 形式   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| directory.json      | Description of 4D groups and users for the database, as well as their access rights                                                                                                                                                                                                                                                                                       | JSON |
+| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                                                               | XML  |
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
 
 
 ## userPreferences.*userName* フォルダー
