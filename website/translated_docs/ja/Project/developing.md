@@ -1,9 +1,9 @@
 ---
 id: developing
-title: Developing a project
+title: プロジェクトの開発
 ---
 
-## Development tools
+## 開発ツール
 
 4D database projects are created locally, using the **4D Developer** application. To open a project from 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Note that you can also work with any text editor since most of the 4D project files are text files. Concurrent file access is handled via a file access manager (see below).
 
