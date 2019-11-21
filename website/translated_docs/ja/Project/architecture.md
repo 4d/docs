@@ -111,7 +111,7 @@ DerivedData フォルダーには、処理を最適化するため 4D が内部�
 
 ## Resources フォルダー
 
-Resources フォルダーには追加のカスタムデータベースリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です (*4D Server リファレンスマニュアル* の [リソースフォルダの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。
+Resources フォルダーには、追加のカスタムデータベースリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です (*4D Server リファレンスマニュアル* の [リソースフォルダの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。
 
 | 内容                    | Description                                                               | 形式      |
 | --------------------- | ------------------------------------------------------------------------- | ------- |
@@ -123,7 +123,7 @@ Resources フォルダーには追加のカスタムデータベースリソー�
 
 ## Data フォルダー
 
-Data フォルダーにはデータファイルのほか、データに関わるするファイルやフォルダーがすべて格納されています。
+Data フォルダーには、データファイルのほか、データに関わるするファイルやフォルダーがすべて格納されています。
 
 | 内容           | Description                                                                                                                                                                                                                                                                                                                                            | 形式   |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
@@ -136,7 +136,7 @@ Data フォルダーにはデータファイルのほか、データに関わる
 
 ### Settings フォルダー
 
-このフォルダーにはデータベースの管理に使用される **データファイル用のユーザー設定** ファイルが格納されます。
+Settings フォルダーには、データベースの管理に使用される **データファイル用のユーザー設定** ファイルが格納されます。
 
 > この設定は **ユーザー設定** や **ストラクチャー設定** より優先されます。
 
@@ -148,7 +148,7 @@ Data フォルダーにはデータファイルのほか、データに関わる
 
 ### Logs フォルダー
 
-Logs フォルダーにはプロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:
+Logs フォルダーには、プロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:
 
 - データベース変換
 - Webサーバーリクエスト
@@ -164,34 +164,35 @@ Logs フォルダーにはプロジェクトが使用するすべてのログフ
 
 > Data フォルダーの Setting フォルダー内にデータファイル用のユーザー設定ファイルがある場合には、そちらが優先されます。
 
-| 内容                  | Description                                                                                                                                                                                                                                                                                                                                                               | 形式   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| directory.json      | Description of 4D groups and users for the database, as well as their access rights                                                                                                                                                                                                                                                                                       | JSON |
-| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                                                               | XML  |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
+| 内容                  | Description                                                                                                                                                                                                                                                     | 形式   |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| directory.json      | 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                                                                                                        | JSON |
+| BuildApp.4DSettings | アプリケーションビルダーのダイアログボックス、または `BUILD APPLICATION` コマンドを使ったときに自動的に作成されるビルド設定ファイル                                                                                                                                                                                    | XML  |
+| Backup.4DSettings   | バックアップ開始時に [バックアップオプション](Backup/settings.md) を指定するためのデータベースバックアップ設定です。 このファイルは、*バックアップジャーナル* に保存する情報量などの追加オプションの確認や設定にも使用することができます。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
 
 
 ## userPreferences.*userName* フォルダー
 
-This folder contains files that memorize user configurations, e.g. break point positions. You can just ignore this folder. It contains for example:
+ブレークポイントの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
 
-| 内容                           | Description                                            | 形式   |
-| ---------------------------- | ------------------------------------------------------ | ---- |
-| methodPreferences.json       | Current user method editor preferences                 | JSON |
-| methodWindowPositions.json   | Current user window positions for methods              | JSON |
-| formWindowPositions.json     | Current user window positions for forms                | JSON |
-| workspace.json               | List of opened windows; on macOS, order of tab windows | JSON |
-| debuggerCatches.json         | Caught calls to commands                               | JSON |
-| recentTables.json            | Ordered list of tables                                 | JSON |
-| preferencesv15.4DPreferences | User preferences                                       | JSON |
+| 内容                           | Description                        | 形式   |
+| ---------------------------- | ---------------------------------- | ---- |
+| methodPreferences.json       | カレントユーザーのメソッドエディター環境設定             | JSON |
+| methodWindowPositions.json   | カレントユーザーのメソッドのウィンドウポジション           | JSON |
+| formWindowPositions.json     | カレントユーザーのフォームのウィンドウポジション           | JSON |
+| workspace.json               | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
+| debuggerCatches.json         | キャッチコマンドリスト                        | JSON |
+| recentTables.json            | 最近開かれたテーブルのリスト                     | JSON |
+| preferencesv15.4DPreferences | ユーザー環境設定                           | JSON |
 
 
 ## Components フォルダー
 
-This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+プロジェクトデータベースが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-> A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
+> プロジェクトデータベースはコンポーネントとして利用することができます:  
+> - 開発においては、ホストデーターベースの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - 運用時においては、コンポーネントをビルドし ([プロジェクトパッケージのビルド](building.md))、生成された .4dz ファイルを .4dbase フォルダーに格納し、それをホストデータベースの Components フォルダーに置きます。
 
 ## Plugins フォルダー
 
-This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+プロジェクトデータベースが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
