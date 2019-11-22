@@ -1,72 +1,72 @@
 ---
 id: building
-title: Building a project package
+title: プロジェクトパッケージのビルド
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
+4D Developer にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。 このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。
 
-The application builder allows you to:
+アプリケーションビルダーでは以下のことを行えます:
 
-* Build a compiled database, without interpreted code,
-* Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
-* Build different applications from the same compiled database via an XML project,
-* Build homogeneous client-server applications,
-* Build client-server applications with automatic updating of client and server parts.
-* Save your build settings for future use (*Save settings* button).
+* インタープリターコードを含まないコンパイル済みアプリケーションのビルド
+* ダブルクリックで起動可能なスタンドアロンアプリケーションのビルド (4D のデータベースエンジンである 4D Volume Desktop を組み込んだ 4D アプリケーション)
+* XML形式のプロジェクトファイル定義を用いて、同じコンパイル済みデータベースから異なるアプリケーションのビルド
+* クライアント/サーバーアプリケーションのビルド
+* クライアントとサーバーの自動更新機能を備えたクライアント/サーバーアプリケーションのビルド
+* ビルド設定の保存 (*設定保存* ボタン)
 
-## Build application overview
+## アプリケーションのビルド
 
-Building a project package can be carried out using:
+プロジェクトパッケージをビルドするには次の方法があります:
 
-- either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command, 
-- or the [Build Application window](#application-builder). 
+- [BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを使う 
+- [アプリケーションビルド](#application-builder)ウィンドウを使う 
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+このウィンドウを開くには 4D の**デザイン**メニューから**アプリケーションビルド...**を選択します。
 
 ![](assets/en/Project/buildappProj.png)
 
-The Build Application dialog includes several pages that can be accessed using tabs:
+アプリケーションビルドウィンドウには複数のページがあり、タブを使用してページを移動できます:
 
 ![](assets/en/Project/appbuilderProj.png)
 
-Building can only be carried out once the database is compiled. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
+ビルドをおこなう前にアプリケーションはコンパイルされていなければなりません。 まだコンパイルされていないアプリケーションでこのメニューコマンドを選択する、あるいはコンパイル後にコードが変更されていると、データベースを (再) コンパイルしなければならない旨の警告ダイアログが表示されます。
 
-### Build application settings
+### アプリケーションビルド設定
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
+アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、"buildApp.4DSettings" という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはデータベースの Settings フォルダーに配置されます。
 
-Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
+アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) manual.
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 詳細は専用のドキュメント [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html) を参照してください。
 
 ### Log file
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+アプリケーションをビルドすると、4D はログファイルを生成して **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
 
-- The start and end of building of targets,
-- The name and full access path of the files generated,
-- The date and time of the build,
-- Any errors that occurred.
+- ターゲットビルドの開始と終了
+- 生成されたファイルの名称とフルパス
+- ビルドの日付と時刻
+- 発生したエラー
 
-## Application name and destination folder
+## アプリケーション名と保存先フォルダー
 
 ![](assets/en/Project/buidappstructureProj.png)
 
-Enter the name of the application in **Application Name**.
+**アプリケーション名** には生成するアプリケーションの名前を入力します。
 
-Specify the folder for the built application in **Destination Folder**. If the specified folder does not already exist, 4D will create a *Build* folder for you.
+**保存先フォルダー** にはビルドされるアプリケーションの保存先を指定します。 指定したフォルダーが存在しない場合は新たに作成します。
 
-## Compiled structure page
+## コンパイル済みストラクチャーページ
 
-This tab allows you to build a standard compiled structure file and/or a compiled component:
+このページでは、標準のコンパイル済みストラクチャーファイルやコンパイル済みコンポーネントをビルドできます。
 
 ![](assets/en/Project/appbuilderProj.png)
 
-### Build compiled structure
+### コンパイル済みストラクチャーをビルド
 
-Builds a database containing only compiled code.
+コンパイル済みコードのみが含まれたアプリケーションをビルドします。
 
-This feature creates a *.4dz* file within a *Compiled Database* folder. If you have named your application “MyProject”, 4D will create:
+これにより、*Compiled Database* フォルダーの中に *.4dz* ファイルが作成されます。 If you have named your application “MyProject”, 4D will create:
 
 *\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
