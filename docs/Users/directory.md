@@ -1,6 +1,6 @@
 ---
-id: editing
-title: Managing 4D users and groups
+id: directory
+title: directory.json
 ---
 
 ## Designer and Administrator
