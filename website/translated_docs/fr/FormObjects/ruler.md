@@ -1,6 +1,6 @@
 ---
 id: ruler
-title: Ruler
+title: Règle
 ---
 
 ## Aperçu
