@@ -66,11 +66,11 @@ title: プロジェクトパッケージのビルド
 
 コンパイル済みコードのみが含まれたアプリケーションをビルドします。
 
-これにより、*Compiled Database* フォルダーの中に *.4dz* ファイルが作成されます。 If you have named your application “MyProject”, 4D will create:
+これにより、*Compiled Database* フォルダーの中に *.4dz* ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
 *\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
+> バイナリデータベースの場合に生成される .4DC ファイルとは異なり、.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーであることに注意が必要です。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D Developer です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
 #### Include related folders
 
