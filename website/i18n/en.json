@@ -342,6 +342,12 @@
       },
       "Project/overview": {
         "title": "Overview"
+      },
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
+        "title": "Overview"
       }
     },
     "links": {
@@ -355,7 +361,8 @@
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore"
+      "Backup and Restore": "Backup and Restore",
+      "Users and groups": "Users and groups"
     }
   },
   "pages-strings": {

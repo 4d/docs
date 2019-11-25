@@ -216,7 +216,7 @@ const Classic = props => (
 		imageAlign: 'left',
       },
 	  {
-        content: '[Maintenance and Security Center](MSC/overview.html)<br>[Backup and Restore](Backup/overview.html)',
+        content: '[Maintenance and Security Center](MSC/overview.html)<br>[Backup and Restore](Backup/overview.html)<br>[Users and Groups](Users/overview.html)',
         title: <translate>Administration</translate>,
       }
 
