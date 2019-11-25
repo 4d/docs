@@ -79,6 +79,6 @@
 	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
-	"Users and groups":["Users/overview","Users/editing"]
+	"Users and Groups":["Users/overview","Users/editing"]
   }
 }

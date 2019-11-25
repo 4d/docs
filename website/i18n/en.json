@@ -347,7 +347,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Access system overview"
+        "title": "Overview"
       }
     },
     "links": {
@@ -362,7 +362,7 @@
       "Menus": "Menus",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
-      "User Access": "User Access"
+      "Users and groups": "Users and groups"
     }
   },
   "pages-strings": {
