@@ -138,12 +138,13 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de données** utilisés pour l'administration de la base de données.
 
-> Ces paramètres ont la priorité sur les **fichiers de propriétés utilisateur** et les fichiers de **propriétés structure**.
+> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
+| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                                                                                                         | JSON   |
 
 
 ### Dossier Logs
@@ -163,7 +164,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     
     Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
     
-    > Si un fichier de propriétés de données existe dans un dossier Settings du dossier Data, il est prioritaire sur le fichier de propriétés utilisateur.
+    > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
     
     | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
     | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
