@@ -23,9 +23,13 @@
 	"Projects in 4D (BETA)":["Project/overview","Project/creating","Project/exporting","Project/architecture","Project/developing",
 	"Project/deploying"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
-	"HTTP REST":["REST/overview", "REST/authUsers", "REST/genInfo", "REST/manData"],
-
 	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"]
+  },
+  "Rest": {
+	"Getting started": ["REST/overview"],
+	"Guides": ["REST/authUsers"],
+	"API": ["REST/genInfo","REST/manData"]
+	
   }
 }

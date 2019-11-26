@@ -189,15 +189,18 @@
       }
     },
     "links": {
-      "Developer Center": "Developer Center"
+      "Projects": "Projects",
+      "HTTP REST": "HTTP REST"
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Projects in 4D (BETA)": "Projects in 4D (BETA)",
       "MSC": "MSC",
-      "HTTP REST": "HTTP REST",
       "Menus": "Menus",
-      "Backup and Restore": "Backup and Restore"
+      "Backup and Restore": "Backup and Restore",
+      "Getting started": "Getting started",
+      "Guides": "Guides",
+      "API": "API"
     }
   },
   "pages-strings": {

@@ -42,9 +42,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    //{doc: 'Concepts/doc1', label: '4D Language Concepts'},
-    //{doc: 'doc4', label: 'page4'},
-	{href: 'https://developer.4d.com/', label:'Developer Center'},
+    {doc: 'Concepts/about', label: 'Projects'},
+    {doc: 'REST/overview', label: 'HTTP REST'},
+	//{href: 'https://developer.4d.com/', label:'Developer Center'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
     //{blog: false, label: 'Blog'},
