@@ -464,7 +464,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 
 ---
-## Title
+## Titre de menu
 
 This property is available for a list box column if:
 - the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
