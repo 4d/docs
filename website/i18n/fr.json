@@ -342,6 +342,12 @@
       },
       "Project/overview": {
         "title": "Aperçu"
+      },
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
+        "title": "Aperçu"
       }
     },
     "links": {
@@ -355,7 +361,8 @@
       "Form Object Properties": "Propriétés des objets formulaire",
       "Menus": "Menus",
       "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution"
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {
