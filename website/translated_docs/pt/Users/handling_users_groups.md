@@ -49,7 +49,7 @@ To add a user from the Toolbox :
 
 1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
 
-The list of users displays all the users, including the [Designer and the Administrator](designer-and-administrator).
+The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
@@ -61,11 +61,11 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
-> Users can change their password at any time according to the XXXX option value or using the YYY command.
+> Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
 
 5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-The membership of users to different groups can also be set by group on the [Groups page](configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
 
 ### Deleting a user
 
