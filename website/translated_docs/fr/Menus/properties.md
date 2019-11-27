@@ -44,9 +44,9 @@ Chaque commande de menu peut avoir une méthode projet ou une action standard qu
 
 Si aucune méthode ou action standard n'est affectée à une commande de menu, le choix de cette commande provoquera la fermeture du mode Application et l'ouverture du mode Développement. Si seul le mode Application est disponible, ce qui signifie un retour au Desktop.
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the 4D database (add record, select all, etc.).
+Les actions standard peuvent être utilisées pour effectuer des opérations associées aux fonctions système (copier, quitter, etc.) ou aux fonctions de la base 4D (nouvel enregistrement, tout sélectionner, etc.).
 
-You can assign both a standard action and a project method to a menu command. In this case, the standard action is never executed; however, 4D uses this action to enable/disable the menu command according to the current context and to associate a specific operation with it according to the platform. When a menu command is deactivated, the associated project method cannot be executed.
+Vous pouvez associer à la fois une action standard et une méthode projet à une commande de menu. Dans ce cas, l’action standard n’est jamais exécutée ; toutefois, 4D utilise cette action pour activer/inactiver la commande de menu en fonction du contexte et pour associer une opération spécifique en fonction de la plateforme. Lorsqu’une commande de menu est inactivée, la méthode projet associée ne peut être exécutée.
 
 Vous choisissez d’associer une action standard ou une méthode projet à la commande de menu en fonction du type de résultat attendu. En principe, il est préférable de choisir une action standard lorsque cela est possible car les actions standard mettent en oeuvre des mécanismes optimisés, notamment l'activation/inactivation de la ligne en fonction du contexte.
 
@@ -61,21 +61,21 @@ A l'aide du langage 4D, vous pouvez associer une méthode projet via la commande
 
 ### Démarrer un process
 
-The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
+L'option **Démarrer un nouveau process** est disponible pour les commandes de menu associées à des méthodes. Elle peut être définie via une case à cocher dans l'éditeur de menus, ou via le paramètre *property* de la commande `SET MENU ITEM PROPERTY`.
 
-When the **Start a New Process** option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The **Start a New Process** option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.
+Lorsque l'option **Démarrer un nouveau process** est activée, un nouveau process est créé lorsque la commande de menu est choisie. Normalement, une méthode associée à une commande de menu est exécutée dans le process courant, à moins que vous n'appeliez explicitement un autre process dans votre code. La case à cocher **Démarrer un nouveau process** facilite le lancement d'un nouveau process. Si vous la sélectionnez, 4D créera un nouveau process lorsque la commande de menu sera sélectionnée.
 
-In the Process list, 4D assigns the new process a default name using the format "ML_ProcessNumber". The names of processes started from a menu are created by combining the prefix "ML_" with the process number.
+Dans la liste des process, 4D affecte au nouveau process un nom par défaut “ML_NumeroProcess”. Les noms des process lancés à partir d’une ligne de menu sont créés en combinant le préfixe “ML_” avec le numéro de process.
 
 ### Exécuter sans valider
 
-The **Execute without validating** option is available for menu commands associated to standard actions in the Menu editor only.
+L'option **Exécuter sans valider** est disponible pour les commandes de menu associées à des actions standard uniquement dans l'éditeur de menus.
 
-When this option is checked, 4D does not trigger the "validation" of the field where the cursor is located before executing the associated action. This option is mainly intended for **Edit** menu commands. By default, 4D processes and "validates" the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an `On Data Change` form event. This can disrupt the functioning of copy or paste type commands because when they are called, the `On Data Change` form event is generated unexpectedly. In this case, it is useful to check the **Execute without validating** option.
+Lorsque cette option est cochée, 4D ne provoquera pas la “validation” du champ dans lequel se trouve le curseur avant d’exécuter l’action associée. Cette option est principalement destinée aux commandes du menu **Edition**. Par défaut, 4D traite et “valide” le contenu d’un champ avant d’exécuter une action standard (via une commande de menu ou un raccourci-clavier), ce qui a pour effet de générer un événement formulaire `Sur données modifiées`. Ce principe peut gêner le fonctionnement des commandes du type copier ou coller, car au moment de leur appel, l’événement `Sur données modifiées` est généré de manière inopinée. Dans ce cas, il est utile de cocher l’option **Exécuter sans valider**.
 
-## Remote access privileges
+## Privilèges d'accès à distance
 
-This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
+Cette option de l'éditeur de menus permet de définir un groupe pour une commande de menu afin que seuls les utilisateurs de ce groupe puissent utiliser la commande de menu depuis un 4D distant (voir Utilisateurs et groupes).
 
 ## Options
 
