@@ -1,22 +1,22 @@
 ---
 id: editing
-title: Managing 4D users and groups
+title: Gérer les utilisateurs et les groupes 4D
 ---
 
-## Designer and Administrator
+## Super_Utilisateur et Administrateur
 
-4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
 
-The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. The Designer can:
-- access all database servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de la base de données n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :
+- accéder à tous les serveurs de la base sans restrictions,
+- créer des utilisateurs et des groupes,
+- affecter des privilèges d’accès aux groupes,
+- utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion.  L'accès au mode Développement est en lecture seule.
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 The Administrator can:
-- create users and groups,
+- créer des utilisateurs et des groupes,
 - access the 4D Server Administration window and monitor
 - access the MSC window to monitor backup, restore, or server.
 
@@ -35,7 +35,7 @@ The Designer and Administrator can each create up to 16,000 groups and 16,000 us
 
 
 
-## Users editor
+## Éditeur d'utilisateurs
 
 The editor for users is located in the Toolbox of 4D.
 
@@ -49,7 +49,7 @@ To add a user from the Toolbox :
 
 1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
 
-The list of users displays all the users, including the [Designer and the Administrator](designer-and-administrator).
+The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
@@ -61,17 +61,17 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
-> Users can change their password at any time according to the XXXX option value or using the YYY command.
+> Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
 
 5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-The membership of users to different groups can also be set by group on the [Groups page](configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
 
-### Deleting a user
+### Supprimer un utilisateur
 
-To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
+Pour supprimer un utilisateur, sélectionnez-le puis cliquez sur le bouton de suppression ou utilisez la commande **Supprimer** du menu contextuel. ![](assets/en/Users/MinussNew.png)
 
-Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
+Les utilisateurs supprimés n'apparaissent plus dans la liste de l'éditeur d'utilisateurs. A noter que les numéros des utilisateurs supprimés peuvent être réattribués lors de la création de nouveaux comptes.
 
 ### User properties
 
