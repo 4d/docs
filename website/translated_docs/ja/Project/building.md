@@ -132,52 +132,52 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 * **アプリケーション名** (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。 このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。 アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。
 
-* **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは、自身の *lastDataPath.xml* ファイルを解析し、アプリケーションのフルパスに合致する "executablePath" 属性を持つデータファイルを開こうとします。 If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
+* **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析し、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探します。 合致するエントリーが見つかった場合、同エントリー内で "dataFilePath" 属性で定義されているデータファイルが開かれます。 それ以外の場合、最後に開かれたデータファイルが開かれます(デフォルトモード)。
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
+データリンクモードについての詳細は [最後に開いたデータファイル](#last-data-file-opened) を参照してください。
 
-#### Generated files
+#### 生成されるファイル
 
-When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
+**ビルド** ボタンをクリックすると、4D は **保存先フォルダー** に **Final Application** フォルダーを作成し、 その中に指定したアプリケーション名のサブフォルダーを作成します。
 
-If you have specified "MyProject" as the name of the application, you will find the following files in this subfolder (aka MyProject):
+アプリケーション名に "MyProject"と指定した場合、MyProject サブフォルダー内には以下のファイルが置かれます:
 
 * *Windows*
     
-    * MyProject.exe - Your executable and a MyProject.rsr (the application resources)
-    * 4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
-    * Database folder - Includes a Resources folder and MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
-    * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
-    * Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section. 
-    * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
+    * MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
+    * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
+    * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resources フォルダーです。 **注**: このフォルダには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#data-file-management-in-final-applicatons)を参照してください)。
+    * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components)を参照してください。
+    * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 この点に関する詳細は [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 
+    * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば)([4D Volume Desktopフォルダーのカスタマイズ](#customizing-4d-volume-desktop-folder) 参照)
     
-    All these items must be kept in the same folder in order for the executable to operate.
+    実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
 
 * *macOS*
     
-    - A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package). 
+    - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components) を参照してください。 ライセンスの統合に関しては [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 **注**: macOSでは、4D ランゲージの [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。 
 
-#### Customizing 4D Volume Desktop folder
+#### 4D Volume Desktop フォルダーのカスタマイズ 
 
-When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for example:
+ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を *Final Application* 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
 
-* Install a 4D Volume Desktop version corresponding to a specific language;
-* Add a custom *PlugIns* folder;
-* Customize the contents of the *Resources* folder.
+* 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
+* カスタムプラグインを *Plugins* フォルダーに置く
+* *Resources* フォルダーの内容をカスタマイズする
 
-> In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
+> macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+click**)。
 
-#### Location of Web files
+#### Web ファイルの場所
 
-If your stand-alone application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+ダブルクリックで起動可能なアプリケーションを Web サーバーとして使用する場合、Web フォルダーやファイルは特定の場所にインストールする必要があります: 
 
-* *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-* default Web root folder.
+* *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはSSL接続とデータ暗号化コマンドに使用されます。
+* デフォルト Web ルートフォルダー
 
-Items must be installed:
+インストール場所:
 
-- **on Windows**: in the *Final Application\MyProject\Database* subfolder.
-- **on macOS**: next to the *MyProject.app* software package.
+- **Windows**: *Final Application\MyProject\Database* サブフォルダー内
+- **macOS**: *MyProject.app* ソフトウェアパッケージと同階層
 
 ## Client/Server page
 
@@ -220,7 +220,7 @@ This option lets you choose the linking mode between the merged application and 
 
 * **アプリケーション名** (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。 このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。 アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。
 
-* **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは、自身の *lastDataPath.xml* ファイルを解析し、アプリケーションのフルパスに合致する "executablePath" 属性を持つデータファイルを開こうとします。 If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
+* **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析し、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探します。 合致するエントリーが見つかった場合、同エントリー内で "dataFilePath" 属性で定義されているデータファイルが開かれます。 Otherwise, the last opened data file is opened (default mode).
 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
