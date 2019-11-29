@@ -229,19 +229,16 @@
         "title": "Texte"
       },
       "FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "Texte et Image"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
-      },
-      "FormObjects/propertyMatrix": {
-        "title": "Active Object Properties"
+        "title": "Zone Web"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "Bouton radio"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "Règle"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -250,10 +247,10 @@
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "Séparateur"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "Image statique"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -271,7 +268,7 @@
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
@@ -345,6 +342,12 @@
       },
       "Project/overview": {
         "title": "Aperçu"
+      },
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
+        "title": "Aperçu"
       }
     },
     "links": {
@@ -352,13 +355,14 @@
     },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
-      "Project Databases": "Project Databases",
-      "Form Editor": "Form Editor",
-      "Form Objects": "Form Objects",
-      "Form Object Properties": "Form Object Properties",
+      "Project Databases": "Bases projet",
+      "Form Editor": "Éditeur de formulaire",
+      "Form Objects": "Objets formulaires",
+      "Form Object Properties": "Propriétés des objets formulaire",
       "Menus": "Menus",
       "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution"
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {

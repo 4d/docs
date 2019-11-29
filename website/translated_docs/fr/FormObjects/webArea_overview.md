@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Web Area
+title: Zone Web
 ---
 
 ## Aperçu

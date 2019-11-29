@@ -234,9 +234,6 @@
       "FormObjects/propertiesWebArea": {
         "title": "Webエリア"
       },
-      "FormObjects/propertyMatrix": {
-        "title": "アクティブオブジェクトプロパティ"
-      },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
       },
@@ -335,15 +332,21 @@
         "title": "4D プロジェクトのアーキテクチャー"
       },
       "Project/building": {
-        "title": "Building a project package"
+        "title": "プロジェクトパッケージのビルド"
       },
       "Project/creating": {
         "title": "4D プロジェクトの作成"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "プロジェクトの開発"
       },
       "Project/overview": {
+        "title": "Overview"
+      },
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
         "title": "Overview"
       }
     },
@@ -358,7 +361,8 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
       "MSC": "Maintenance & Security Center",
-      "Backup and Restore": "バックアップと復元"
+      "Backup and Restore": "バックアップと復元",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {

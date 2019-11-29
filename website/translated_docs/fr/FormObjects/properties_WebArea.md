@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Zone Web
 ---
 
 ---
@@ -22,7 +22,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Zone Web](webArea_overview.md)
 
 
 ---
@@ -38,7 +38,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Zone Web](webArea_overview.md)
 
 
 
@@ -69,7 +69,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Zone Web](webArea_overview.md)
 
 
 
@@ -100,4 +100,4 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Zone Web](webArea_overview.md)

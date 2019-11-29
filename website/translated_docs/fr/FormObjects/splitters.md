@@ -1,6 +1,6 @@
 ---
 id: splitters
-title: Splitter
+title: Séparateur
 ---
 
 ## Aperçu

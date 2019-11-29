@@ -84,7 +84,7 @@ Here is an example object method:
 
 ### Goto Page action
 
-When you assign the `gotoPage` [standard action](properties_Action#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
 
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
 

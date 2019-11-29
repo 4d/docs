@@ -251,13 +251,13 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[Bouton radio](radio_overview.md)
 
 
 
 ---
 
-## Title
+## Titre de menu
 
 Allows inserting a label on an object. The font and the style of this label can be specified.
 
