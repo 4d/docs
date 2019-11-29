@@ -2,6 +2,12 @@
 id: propertiesReference
 title: JSON property list
 ---
+
+You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description. 
+
+>In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes. 
+
+
 [a](#a) - 
 [b](#b) - 
 [c](#c) - 
