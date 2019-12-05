@@ -6,251 +6,107 @@
  */
 
 const React = require('react');
-const translate = require('../../server/translate.js').translate;
+
 const CompLibrary = require('../../core/CompLibrary.js');
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
+
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
+//const Showcase = require(`${process.cwd()}/core/Showcase.js`);
+const translate = require('../../server/translate.js').translate;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+function HomeSplash(props) {
+  const {siteConfig, language} = props;
 
-function imgUrl(img) {
-  return siteConfig.baseUrl + 'img/' + img;
-}
-
-function docUrl(doc, language) {
-if (language == undefined) {
-    language = languageFix;
-  }
-  //return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
-  return siteConfig.baseUrl + '' + (language ? language + '/' : '') + doc;
-}
-
-function pageUrl(page, language) {
-if (language == undefined) {
-    language = languageFix;
-  }
-
-  return siteConfig.baseUrl + (language ? language + '/' : '') + page;
-}
-
-class Button extends React.Component {
-  render() {
-    return (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
-          {this.props.children}
-        </a>
-      </div>
-    );
-  }
-}
-
-Button.defaultProps = {
-  target: '_self',
-};
-
-const SplashContainer = props => (
-  <div className="homeContainer">
-    <div className="homeSplashFade">
-      <div className="wrapper homeWrapper">{props.children}</div>
-    </div>
-  </div>
-);
-
-const Logo = props => (
-  <div className="projectLogo">
-    <img src={props.img_src} />
-  </div>
-);
-
-const ProjectTitle = props => (
-  <h2 className="projectTitle">
-    {siteConfig.title}
-   <small><translate>Essential Guides for 4D Developers</translate></small>
-  </h2>
-);
-   // <small>{siteConfig.tagline}</small>
-
-const PromoSection = props => (
-  <div className="section promoSection">
-    <div className="promoRow">
-      <div className="pluginRowBlock">{props.children}</div>
-    </div>
-  </div>
-);
-
-class HomeSplash extends React.Component {
-  render() {
-    let language = this.props.language || '';
-    return (
-      <SplashContainer>
-        <Logo img_src="" />
-        <div className="inner">
-          <ProjectTitle />
-          <PromoSection><i><translate>...more to come...</translate></i>
-          </PromoSection>
+  return (
+    <div className="index-hero">
+      <div className="index-hero-inner">
+        <h1 className="index-hero-project-tagline">
+          <img
+            alt="4D Banner"
+            className="index-hero-logo"
+            src={`${siteConfig.baseUrl}img/banner-object.png`}
+          />
+          {siteConfig.title} for{' '}
+          <span className="index-hero-project-keywords">4D developers</span>.
+        </h1>
+        <div className="index-ctas">
+          <a
+            className="button index-ctas-get-started-button"
+            href={`${siteConfig.baseUrl}/${language}/Concepts/about`}>
+            <translate>Get Started</translate>
+          </a>
         </div>
-      </SplashContainer>
-    );
-  }
+      </div>
+    </div>
+  );
 }
-//<Logo img_src={imgUrl('4dlogo.png')} />
-//<Button href="#try">Overview</Button>
-//Button href={docUrl('doc1.html', language)}>Classic</Button>
-//<Button href={docUrl('doc2.html', language)}>ORDA</Button>
-
-const Block = props => (
-  <Container
-    //padding={['bottom', 'top']}
-	padding={['left', 'right']}
-    id={props.id}
-    background={props.background}>
-    <GridBlock align="left" contents={props.children} layout={props.layout} />
-  </Container>
-);
-
-
-const Features = props => (
-  <Block layout="fourColumn">
-    {[
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('4dlogo.png'),
-        imageAlign: 'top',
-        title: 'Feature One',
-      },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature Two',
-      },
-    ]}
-  </Block>
-);
-
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'left'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="light" layout="threeColumn">
-    {[
-      {
-
-
-	   image: imgUrl('manuals.png'),
-		imageAlign: 'left',
-
-      },{
-
-	   content: <translate>[Language Concepts](Concepts/about.html)</translate>,
-
-        title: <translate>Getting Started</translate>,
-      }
-
-
-    ]}
-  </Block>
-
-);
-
-const Description2 = props => (
-  <Block id="desc2" background="white" layout="threeColumn">
-    {[
- {
-
-	   image: imgUrl('manuals.png'),
-		imageAlign: 'left',
-      },
-	       {
-
-	     content: '[Project databases](Project/overview.html)<br>[Form Editor](FormEditor/objectLibrary.html)<br>[Form Objects](FormObjects/formObjectsOverview.html)<br>[Form Object Properties](FormObjects/propertiesReference.html)<br>[Menus](Menus/overview.html)<br>[4D for iOS](https://developer.4d.com/4d-for-ios/)',
-
-        title: <translate>Development</translate>,
-      }
-
-
-    ]}
-  </Block>
-
-);
-
-const Classic = props => (
-  <Block background="light" layout="threeColumn">
-    {[
-     {
-        image: imgUrl('manuals.png'),
-		imageAlign: 'left',
-      },
-	  {
-        content: '[Maintenance and Security Center](MSC/overview.html)<br>[Backup and Restore](Backup/overview.html)<br>[Users and Groups](Users/overview.html)',
-        title: <translate>Administration</translate>,
-      }
-
-
-
-    ]}
-  </Block>
-
-);
-
-var languageFix = undefined; // keep globally the language to fix issue with prop not defined
-
 
 class Index extends React.Component {
   render() {
-    let language = this.props.language || '';
-  languageFix = language;
+    const {config: siteConfig, language = 'en'} = this.props;
+    const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
+
     return (
       <div>
-        <HomeSplash language={language} />
+        <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Description />
-		  <Description2 />
-		  <Classic />
+          <Container padding={['bottom', 'top']} background="light">
+            <GridBlock
+              align="left"
+              contents={[
+                {
+                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about)`,
+                  image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
+                  imageAlign: 'top',
+                  imageAlt: 'Getting started',
+                  title: <translate>Getting started</translate>,
+                },
+                {
+                  content: `[<li>Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview)<br>[<li>Form editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary)`,
+                  //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
+                  image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
+				  imageAlign: 'top',
+                  imageAlt: 'Desktop',
+                  title: <translate>Developing a Desktop application</translate>,
+                },
+                {
+                  content: `[Web Server](${siteConfig.baseUrl}${this.props.language}/Project/overview)`,
+                  image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
+                  imageAlign: 'top',
+                  imageAlt: 'Web',
+                  title: <translate>Developing a Web application</translate>,
+                },
+              ]}
+              layout="threeColumn"
+            />
+            <br />
+            <br />
+            <GridBlock
+              align="left"
+              contents={[
+                {
+                  content: `[4D for iOS](https://developer.4d.com/4d-for-ios/)`,
+                  image: `${siteConfig.baseUrl}img/illu_MobileApplication.png`,
+                  imageAlign: 'top',
+                  imageAlt: 'Mobile',
+                  title: <translate>Developing a Mobile application</translate>,
+                },
+                {
+                  content: `[Maintenance and Security Center](${siteConfig.baseUrl}${this.props.language}/MSC/overview)<br>[Backup and Restore](${siteConfig.baseUrl}${this.props.language}/Backup/overview)<br>[Users and Groups](${siteConfig.baseUrl}${this.props.language}/Users/overview)`,
+                  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
+                  imageAlign: 'top',
+                  imageAlt: 'Admin',
+                  title: <translate>Administration</translate>,
+                },
+				{},
+              ]}
+              layout="threeColumn"
+            />
+          </Container>
         </div>
       </div>
     );
   }
 }
-
-//<Features />
- //<FeatureCallout />
-   //<LearnHow />
-  // <TryOut />
-  //<Showcase language={language} />
 
 module.exports = Index;
