@@ -366,16 +366,11 @@
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "Essential Guides for 4D Developers",
-    "...more to come...|no description given": "...more to come...",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "Getting Started",
-    "Development|no description given": "Development",
-    "Administration|no description given": "Administration",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
     "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
