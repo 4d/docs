@@ -67,7 +67,8 @@ color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 
 .index-hero-project-tagline {
   color: #fff;
-  font-size: 64px;
+  font-size: 54px;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -99,10 +100,11 @@ color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 .index-hero-logo {
   animation-duration: 2s;
   animation-name: jackInTheBox;
-  float: right;
-  margin-top: 20px;
-  padding: 20px;
+  float: left;
+  margin-top: 0;
+  padding: 0px;
   padding-right: 0;
+  width:350px;
 }
 
 .index-ctas {

@@ -26,16 +26,8 @@ function HomeSplash(props) {
             className="index-hero-logo"
             src={`${siteConfig.baseUrl}img/banner-object.png`}
           />
-          {siteConfig.title} for{' '}
-          <span className="index-hero-project-keywords">4D developers</span>.
+          {siteConfig.title} for 4D developers
         </h1>
-        <div className="index-ctas">
-          <a
-            className="button index-ctas-get-started-button"
-            href={`${siteConfig.baseUrl}/${language}/Concepts/about`}>
-            <translate>Get Started</translate>
-          </a>
-        </div>
       </div>
     </div>
   );
@@ -50,19 +42,19 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Container padding={['bottom', 'top']} background="light">
+          <Container padding={['bottom', 'top']} background="white">
             <GridBlock
               align="left"
               contents={[
                 {
-                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about)`,
+                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about)<br>[Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
-                  imageAlt: 'Getting started',
+                  imageAlt: 'Get started',
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[<li>Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview)<br>[<li>Form editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary)`,
+                  content: `[Form Editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary)<br>[Form Objects](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview)<br>[Form Object Properties](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference)<br>[Menus](${siteConfig.baseUrl}${this.props.language}/Menus/overview)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -70,7 +62,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[Web Server](${siteConfig.baseUrl}${this.props.language}/Project/overview)`,
+                  content: `[Web Server](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
