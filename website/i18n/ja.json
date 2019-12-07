@@ -366,16 +366,11 @@
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "4D 開発のリファレンスガイド",
-    "...more to come...|no description given": "…随時加筆中…",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "はじめに",
-    "Development|no description given": "データベース開発",
-    "Administration|no description given": "データベース管理",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
     "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"
