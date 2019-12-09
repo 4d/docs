@@ -47,14 +47,14 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about)<br>[Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview)`,
+                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[Form Editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary)<br>[Form Objects](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview)<br>[Form Object Properties](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference)<br>[Menus](${siteConfig.baseUrl}${this.props.language}/Menus/overview)`,
+                  content: `[Form Editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[Form Objects](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[Form Object Properties](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[Menus](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -84,7 +84,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Mobile application</translate>,
                 },
                 {
-                  content: `[Maintenance and Security Center](${siteConfig.baseUrl}${this.props.language}/MSC/overview)<br>[Backup and Restore](${siteConfig.baseUrl}${this.props.language}/Backup/overview)<br>[Users and Groups](${siteConfig.baseUrl}${this.props.language}/Users/overview)`,
+                  content: `[Maintenance and Security Center](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>[Backup and Restore](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>[Users and Groups](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
