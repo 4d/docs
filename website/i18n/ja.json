@@ -366,10 +366,10 @@
     }
   },
   "pages-strings": {
-    "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Getting started|no description given": "はじめに",
+    "Developing a Desktop application|no description given": "デスクトップアプリケーションの開発",
+    "Developing a Web application|no description given": "Web アプリケーションの開発",
+    "Developing a Mobile application|no description given": "モバイルアプリケーションの開発",
     "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
