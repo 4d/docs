@@ -27,9 +27,8 @@
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"]
   },
   "Rest": {
-	"Getting started": ["REST/overview"],
-	"Guides": ["REST/authUsers"],
-	"API": ["REST/genInfo","REST/manData"]
+	"Guides": ["REST/overview","REST/authUsers","REST/genInfo","REST/manData"],
+	"API": ["REST/apiUsers","REST/apiDataClass","REST/apiUtilities"]
 	
   }
 }

@@ -175,6 +175,15 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "REST/apiDataCLass": {
+        "title": "Dataclass"
+      },
+      "REST/apiDataClass": {
+        "title": "Dataclass"
+      },
+      "REST/apiUsers": {
+        "title": "Directory"
+      },
       "REST/authUsers": {
         "title": "Authenticating Users"
       },
@@ -198,7 +207,6 @@
       "MSC": "MSC",
       "Menus": "Menus",
       "Backup and Restore": "Backup and Restore",
-      "Getting started": "Getting started",
       "Guides": "Guides",
       "API": "API"
     }
