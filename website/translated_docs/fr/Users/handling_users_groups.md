@@ -1,6 +1,6 @@
 ---
 id: editing
-title: Gérer les utilisateurs et les groupes 4D
+title: Gestion des groupes et utilisateurs 4D
 ---
 
 ## Super_Utilisateur et Administrateur
