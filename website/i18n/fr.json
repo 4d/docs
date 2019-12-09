@@ -118,7 +118,7 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "Case à cocher"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -127,7 +127,7 @@
         "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "A propos des objets formulaires 4D"
       },
       "FormObjects/groupBox": {
         "title": "Group Box"
@@ -344,7 +344,7 @@
         "title": "Aperçu"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
         "title": "Aperçu"
@@ -362,14 +362,14 @@
       "Menus": "Menus",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
-      "Users and Groups": "Users and Groups"
+      "Users and Groups": "Groupes et utilisateurs"
     }
   },
   "pages-strings": {
-    "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Getting started|no description given": "Prise en main",
+    "Developing a Desktop application|no description given": "Développer une application Desktop",
+    "Developing a Web application|no description given": "Développer une application web",
+    "Developing a Mobile application|no description given": "Développer une application mobile",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
