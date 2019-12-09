@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: Check Box
+title: Case à cocher
 ---
 
 ## Aperçu
