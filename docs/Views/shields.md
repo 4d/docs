@@ -9,7 +9,7 @@ The Form Editor uses shields to make viewing object properties easier. You can f
 ![](assets/en/Views/shields.png) 
 
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in a view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
 
 ![](assets/en/Views/shield.png) 
 
