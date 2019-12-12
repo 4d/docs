@@ -4,11 +4,11 @@ title: Views
 ---
 
 
-4D forms enable you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed. 
+The 4D forms editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed. 
 
 For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
 
-There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked. This flexibility greatly enhances the user experience.
+There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked. 
 
 View management is handled via the View Editor.
 
@@ -19,13 +19,13 @@ View management is handled via the View Editor.
 
 There are three ways to access the View Editor: 
 
-*	**Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when views are in use)
+*	**Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
 
 	|Without views|With views|
 	|:---:|:---:|
 	|![](assets/en/Views/icon.png "No views in use")|![](assets/en/Views/icon2.png "Views in use")|
 
-* 	**Context menu**: Right-click anywhere in the Form Editor and select Views
+* 	**Context menu**: Right-click anywhere in the Form Editor and select **Views > View List**
 
 ![](assets/en/Views/contextMenu.png)
 
@@ -56,6 +56,7 @@ To create an object in another view, simply select the view in the View Editor (
 
 ![](assets/en/Views/addObject.png)
 
+## Moving objects between views
 
 It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
 
@@ -72,7 +73,9 @@ The selection is then placed in the new view:
 
 ![](assets/en/Views/objNewView.png)
 
+You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
 
+![](assets/en/Views/moveObject2.png)
 
 
 

@@ -32,7 +32,7 @@ Here is a description of each type of shield:
 |![](assets/en/Views/standardAction.png)  |Standard Action|For objects with an associated standard action |
 |![](assets/en/Views/resizing.png) |Resizing|For objects with at least one resizing property, indicates the combination of current properties |
 |![](assets/en/Views/entryOrder.png)|Entry Order|For enterable objects, indicates the number of entry order |
-|![](assets/en/Views/viewNumber.png) |Current View|For all objects with a view |
+|![](assets/en/Views/viewNumber.png) |Current View|For all objects in the current view |
 |![](assets/en/Views/filter.png) |Filter|For enterable objects with an associated entry filter |
 |![](assets/en/Views/helpTip.png) |Help Tip|For objects with an associated tip |
 |![](assets/en/Views/localized.png)|Localized|For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
