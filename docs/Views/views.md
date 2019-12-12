@@ -64,7 +64,7 @@ It's also possible to move one or more objects from one view to another. In the 
 
 >The selection can contain several objects belonging to different views. 
 
-Then, simply select the destination view of the selection and click Move to view:
+Then, simply select the destination view of the selection and click **Move to**:
 
 ![](assets/en/Views/moveObject.png)
 
