@@ -86,7 +86,7 @@ title: プロジェクトパッケージのビルド
 
 <
 
-p>*\<destination>/Components/MyComponent.4dbase/*
+*\<destination>/Components/MyComponent.4dbase/*
 
 *MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこフォルダーにコピーされます。 コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
@@ -281,120 +281,119 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 *\<ApplicationName> Client* と *\<ApplicationName> Server* があります。
 
-> エラーが発生した場合これらのフォルダーは作成されません。 In this case, open the [log file](#log-file) in order to find out the cause of the error.
+> エラーが発生した場合これらのフォルダーは作成されません。 そのような場合はエラーの原因を特定するために [ログファイル](#log-file) の内容を確認してください。
 
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The *\<ApplicationName>Server* folder contains the server portion of the application.
+*\<ApplicationName> Client* フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 *\<ApplicationName> Server* フォルダーはサーバーアプリケーションを格納します。
 
-The contents of these folders vary depending on the current platform:
+これらのフォルダーの内容はカレントのプラットフォームにより異なります:
 
-* *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-* *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
+* *Windows* - 各フォルダーに*\<ApplicationName>Client.exe* (クライアント用) あるいは*\<ApplicationName>Server.exe* (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
+* *macOS* - 各フォルダーは*\<ApplicationName>Client.app* (クライアント用) と*\<ApplicationName>Server.app* (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOSではアプリケーションを実行するためにパッケージをダブルクリックします。
     
-    >     The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them. 
+    >     ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。 
     >     
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
+"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
-#### Customizing 4D Volume Desktop folder
+#### サーバーやクライアントフォルダーのカスタマイズ
 
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. You are then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for instance:
+クライアント/サーバーアプリケーションのビルド中に、4D Server フォルダーの内容は Server サブフォルダーに、4D Volume Desktop フォルダーの内容は Client サブフォルダーにコピーされます。 元の 4D Server と 4D Volume Desktop の内容は必要に応じてカスタマイズできます。 たとえば、次のようなことが可能です
 
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
+- 特定の言語に対応した4D Serverをインストールする
+- Plugins フォルダーにプラグインを追加する
 
-#### Location of Web files
+#### Web ファイルの場所 
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
+- デフォルト Web ルートフォルダー (WebFolder)
 
-Items must be installed: * **on Windows** * **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder. * **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
+インストール場所: * **Windows** * **サーバーアプリケーション** - *Client Server executable\ \<ApplicationName> Server\Server Database* サブフォルダー内にこれらの項目を配置します。 * **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName> Client* サブフォルダー内にこれらの項目を配置します。
 
-* **on macOS** 
-    * **Server application** - next to the *\<ApplicationName>Server* software package.
-    * **Client application** - next to the *\<ApplicationName>Client* software package.
+* **macOS** 
+    * **サーバーアプリケーション** - *\<ApplicationName> Server* ソフトウェアパッケージと同階層にこれらの項目を配置します。
+    * **クライアントアプリケーション** - *\<ApplicationName> Client* ソフトウェアパッケージと同階層にこれらの項目を配置します。
 
-## Plugins & components page
+## プラグイン&コンポーネントページ
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+このページではビルドするアプリケーションに含める [プラグイン](Concepts/plug-ins.md) や [コンポーネント](Concepts/components.md) を設定できます。
 
-The page lists the elements loaded by the current 4D application:
+このページには現在 4D にロードされているプラグインやコンポーネントがリストされます:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-* **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+* **アクティブ** 列 - その行の項目をビルドするアプリケーションに統合するかどうかを指定します。 デフォルトですべての項目が選択されています。 プラグインやコンポーネントをアプリケーションから除外するには、チェックボックスの選択を外します。
 
-* **Plugins and components** column - Displays the name of the plug-in/component.
+* **プラグイン&コンポーネント** 列 - プラグイン/コンポーネントの名称を表示します。
 
-* **ID** column - Displays the plug-in/component's identification number (if any).
+* **ID** 列 - プラグイン/コンポーネントの ID (あれば) を表示します。
 
-* **Type** column - Indicates the type of item: plug-in or component.
+* **タイプ** 列 - その要素がプラグインであるかコンポーネントであるかが表示されます。
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#customizing-4d-volume-desktop-folder) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
+同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 他方、同じコンポーネントが両方にインストールされていた場合は、アプリケーションを開くことはできません。
 
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
+> 配布するアプリケーションでプラグインやコンポーネントを使用するには、それぞれ適切なライセンスが必要です。
 
-## Licenses & Certificate page
+## ライセンス&証明書ページ
 
-The Licences & Certificate page can be used to:
+ライセンス&証明書のページでは、次のようなことができます:
 
-* designate the license number(s) that you want to integrate into your single-user stand-alone application
-* sign the application by means of a certificate in macOS.
+* シングルユーザーのスタンドアロンアプリケーションに統合するライセンス番号を指定します。
+* macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](assets/en/Project/buildapplicenseProj.png)
 
-### Licenses
+### ライセンスリスト
 
-This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+アプリケーションに統合するのに使用できる配付ライセンスの一覧を表示します。 デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 
 
-To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
+ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
-When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
+\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については 詳しくは [Get 4D folder](https://doc.4d.com/4Dv18/4D/18/Get-4D-folder.301-4505365.ja.html) コマンドの説明を参照してください。
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+開発ライセンスとそれに対応した配布ライセンスを選択します。 これらのファイルは *4D Developer Professional* ライセンスや *4D Desktop Volume* ライセンスをアクティベーションした際、この場所にコピーされます。
 
-Once you have selected a file, the list will indicate the characteristics of the license that it contains.
+ファイルを選択すると、リストに選択内容が反映されます:
 
-* **License #** - Product license number
-* **License** - Name of the product
-* **Expiration date** - Expiration date of the license (if any)
-* **Path** - Location on disk
+* **ライセンス #** - 製品ライセンス番号
+* **ライセンス** - プロダクト名
+* **有効期限** - ライセンスの有効期限 (あれば)
+* **パス** - ディスク上のライセンスの場所
 
-If a license is not valid, a message will warn you.
+ライセンスが有効でない場合、警告が表示されます。
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
+必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に 4D は最も適切なライセンスを使用します。
 
-> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-" から始まる番号です)。
 
-After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+アプリケーションビルド後、配布ライセンスファイルは実行可能ファイルと同階層 (Windows) やパッケージ内 (macOS) に自動でコピーされます。
 
-### OS X signing certificate
+### OS X 署名に使用する証明書
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-- Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs: 
+- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D はビルドの際に、認証に必要な要素の有無をチェックします: 
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
+このオプションは Windows と macOS 両方の環境で表示されますが、macOS の場合においてのみ有効です。
 
-* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
+* **認証名** - Apple によって有効化されたデベロッパー認証名を入力してください。 この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
 
 ![](assets/en/Project/certificate.png)
 
-To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>.
+Apple からデベロッパ認証を取得するためには、キーチェーンアクセスのメニューのコマンドを使用するか、次のリンクへ移動してください: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>
 
-> This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
+> この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/codesign” フォルダーにあります。 エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。
 
-#### About Gatekeeper
+#### Gatekeeper について
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
+Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションとデフォルトで互換性のあるアプリケーションを生成することができます。
 
 #### About Notarization
 
