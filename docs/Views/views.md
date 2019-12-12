@@ -83,7 +83,7 @@ You can also move an object to another view via the object's context menu. Right
 
 By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs. 
 
->The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (as shown below), however it remains the default view.
+>The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (as shown below), however it remains the default view. 
 
 To rename a view, you can use either **Ctrl+click** (Windows) or **Command+click** (Mac OS) on the view name, or double-click the view name (the selected view in this case). The name then becomes editable:
 
