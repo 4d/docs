@@ -16,11 +16,11 @@ Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschäd
 
 ### Datendatei reparieren
 
-Pathname of the current data file. Über die Schaltfläche ** [...]** können Sie eine andere Datendatei auswählen. Klicken Sie auf diese Schaltfläche, erscheint ein Standard-Öffnen Dialog, um die gewünschte Datendatei zum Reparieren auszuwählen. Bei der [Standard Reparatur](#standard_repair) müssen Sie eine Datendatei wählen, die mit der geöffneten Projektdatei kompatibel ist. Bei [Reparieren nach Datensatzheader](#recover-by-record-headers) können Sie jede Datendatei wählen. Bestätigen Sie dieses Dialogfenster, erscheint der Pfadname der Datei zum Reparieren im Fenster.
+Pfadname der aktuellen Datendatei. Über die Schaltfläche ** [...]** können Sie eine andere Datendatei auswählen. Klicken Sie auf diese Schaltfläche, erscheint ein Standard-Öffnen Dialog, um die gewünschte Datendatei zum Reparieren auszuwählen. Bei der [Standard Reparatur](#standard_repair) müssen Sie eine Datendatei wählen, die mit der geöffneten Projektdatei kompatibel ist. Bei [Reparieren nach Datensatzheader](#recover-by-record-headers) können Sie jede Datendatei wählen. Bestätigen Sie dieses Dialogfenster, erscheint der Pfadname der Datei zum Reparieren im Fenster.
 
 ### Ordner Backup der Originaldateien
 
-Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert und im Unterordner “Replaced files (repairing)” im Datenbank-Ordner abgelegt. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
+Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert. und im Unterordner “Replaced files (repairing)” im Datenbank-Ordner abgelegt. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
 
 ### Reparierte Dateien
 
@@ -38,7 +38,7 @@ Verwenden Sie diese Reparatur auf niederer Ebene nur, wenn die Datendatei ernsth
 
 4D Datensätze sind unterschiedlich groß. Deshalb muss die Stelle, wo sie auf der Festplatte in einer spezifischen Tabelle, genannt Adresstabelle, gespeichert sind, beibehalten werden, um sie wieder zu finden. Das Programm greift deshalb auf die Adresse des Datensatzes über einen Index und eine Adresstabelle zu. Sind nur Datensätze oder Indizes beschädigt, reicht die Standardreparatur in der Regel aus, um das Problem zu lösen. Ist dagegen die Adresstabelle selbst betroffen, ist ein komplexeres Wiederherstellen erforderlich, da diese Tabelle wiederhergestellt werden muss. Dazu verwendet das MSC die Marker, die im Kopfteil jedes Datensatzes angelegt sind. Sie sind vergleichbar mit einem Inhaltsverzeichnis des Datensatzes, inkl. aller wichtigen Informationen, über die sich die Adresstabelle rekonstruieren lässt.
 
-> Haben Sie in der Datenbankstruktur in den Tabelleneigenschaften die Option </strong>Datensätze definitiv löschen</strong> deaktiviert, können nach dem Wiederherstellen nach Datensatzheader zuvor gelöschte Datensätze wieder erscheinen. Wiederherstellen nach Kopfteil berücksichtigt keine Einschränkungen zur Datenintegrität. So erhalten Sie nach Ausführen dieser Operation u. U. doppelte Werte in einmaligen Feldern oder NULL Werte mit Feldern, für die **Nie Null** definiert wurde.
+> Haben Sie in der Datenbankstruktur in den Tabelleneigenschaften die Option **Datensätze definitiv löschen** deaktiviert, können nach dem Wiederherstellen nach Datensatzheader zuvor gelöschte Datensätze wieder erscheinen. Wiederherstellen nach Kopfteil berücksichtigt keine Einschränkungen zur Datenintegrität. So erhalten Sie nach Ausführen dieser Operation u. U. doppelte Werte in einmaligen Feldern oder NULL Werte mit Feldern, für die **Nie Null** definiert wurde.
 
 Klicken Sie auf die Schaltfläche **Scannen und Reparieren**, scannt 4D die Datendatei komplett. Ist die Operation abgeschlossen, erscheint folgendes Fenster:
 
@@ -51,22 +51,22 @@ Der Bereich "Datensätze in Datendatei gefunden" besteht aus zwei Tabellen mit d
 - Die erste Tabelle zeigt die Information aus dem Scannen der Datendatei. Jede Zeile enthält eine Gruppe der wiederherstellbaren Datensätze in der Datendatei:
     
     - Die Spalte **Reihenfolge** gibt die Reihenfolge der Wiederherstellung für die Gruppe der Datensätze an. 
-    - Die Spalte **Anzahl** zeigt die Anzahl der Tabellen, die der Gruppe zugewiesen wurden.
-    - Die Spalte **Zieltabelle** gibt die Namen der Tabellen an, die automatisch den Gruppen der identifizierten Datensätze zugewiesen wurden. Die Namen der dazugehörigen Tabellen erscheinen automatisch in grün. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
-    - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
-- The second table lists the tables of the project file.
+    - Die Spalte **Anzahl** zeigt die Anzahl der Datensätze in der Tabelle.
+    - Die Spalte **Zieltabelle** gibt die Namen der Tabellen an, die automatisch den Gruppen der identifizierten Datensätze zugewiesen wurden. Die Namen der dazugehörigen Tabellen erscheinen automatisch in grün. Nicht zugewiesene Gruppen, z.B. Tabellen, die keinen Datensätzen zugeordnet werden konnten, erscheinen in rot.
+    - Über die Spalte **Retten** können Sie für jede Gruppe angeben, ob Sie die Datensätze wiederherstellen wollen. Diese Option ist standardmäßig für jede Gruppe mit Datensätzen markiert, die einer Tabelle zugeordnet werden können.
+- Die zweite Tabelle zeigt die Tabellen der Projekt-Datei.
 
-### Manual assigning
+### Manuell zuweisen
 
-If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
+Ließen sich einige Datensatzgruppen aufgrund einer beschädigten Adresstabelle keinen Tabellen zuweisen, können Sie diese manuell zuweisen. Dazu wählen Sie zuerst im ersten Bereich eine nicht zugewiesene Gruppe aus. Zur leichteren Zuordnung zeigt der untere Bereich "Inhalt der Datensätze" eine Vorschau vom Inhalt der ersten Datensätze:
 
 ![](assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+Als nächstes wählen Sie im rechten Bereich "Nicht-zugewiesene Tabellen" die passende Tabelle für die Gruppe aus und klicken auf die Schaltfläche **Tabelle identifizieren**. Sie können eine Tabelle auch per Drag-and-Drop zuweisen. Die Datensatzgruppe wird dann der Tabelle zugewiesen und in dieser Tabelle wiederhergestellt. Die per Hand zugewiesenen Tabellennamen erscheinen in schwarz. Über die Schaltfläche **Datensätze ignorieren** können Sie die manuell ausgeführte Zuweisung zwischen Tabelle und Datensatzgruppe wieder entfernen.
 
 ## Logbuch öffnen
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. Hier können Sie alle ausgeführten Operationen ansehen. It is created in XML format and named: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Ist das Reparieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. Hier können Sie alle ausgeführten Operationen ansehen. Es wird im XML-Format erstellt und lautet: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*":
 
 - *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
 - *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
