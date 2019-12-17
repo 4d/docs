@@ -10,6 +10,9 @@ For example, you can distribute objects according to type (fields, variables, st
 
 There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked. 
 
+
+
+
 View management is handled via the View Editor.
 
 ![](assets/en/Views/viewEditor.png)
@@ -21,13 +24,23 @@ There are three ways to access the View Editor:
 
 *	**Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
 
-	|Without views|With views|
+	|Default view only|With additional views|
 	|:---:|:---:|
 	|![](assets/en/Views/icon.png "No views in use")|![](assets/en/Views/icon2.png "Views in use")|
 
-* 	**Context menu**: Right-click anywhere in the Form Editor and select **Views > View List**
+* 	**Context menu** (form or object):
 
-![](assets/en/Views/contextMenu.png)
+	*	**Form**: Right-click anywhere in the Form Editor and select **Current View** 
+
+		![](assets/en/Views/contextMenu.png)
+		
+		The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+		
+	*	**Object**: Right-click on an object and select **Current View** 
+
+		![](assets/en/Views/contextMenu2.png)
+		
+		The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
 
 *	**Form menu**: Click on the Form menu and select View List
 
@@ -46,17 +59,92 @@ Here are a few important things to know before you start working with views:
 
 *	**Views and groups**: Only objects belonging to the current view can be grouped.
 
+*	**Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being actively being viewed.
 
 
-## Adding objects to views  
 
-An object can only belong to a single view. Any object created in a form is placed in the current view. By default, the first view ("View 1") is selected; consequently, all objects are placed in the first view of the form. 
+## Managing views
+
+### Creating views
+
+Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view. 
+
+
+![](assets/en/Views/createView.png)
+
+There are two ways to add additional views:
+
+*	Click on the **Add a new view** button at the bottom of the View Editor:
+
+![](assets/en/Views/addView.png)
+
+*	Right-click on an existing view and select **Insert view**:
+
+![](assets/en/Views/addView2.png)
+
+There is no limitation on the number of views.
+
+### Renaming views  
+
+By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs. 
+
+To rename a view, you can use either: 
+
+*	Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+
+	![](assets/en/Views/rename.png)
+	
+*	Right-click on the view name. The name then becomes editable: 
+
+	![](assets/en/Views/rename2.png)
+
+### Reordering views
+
+You can change the display order of views by dragging/dropping them within the View Editor.
+
+Note that the Default view does not change:
+
+![](assets/en/Views/reorderView.png)
+
+
+### Deleting views 
+
+To rename a view, you can use either: 
+
+*	Click on the **Delete the selected view** button at the bottom of the View Editor:
+
+	![](assets/en/Views/deleteView.png)
+
+
+*	Right-click on the view name, and select **Delete View**: 
+
+	![](assets/en/Views/deleteView2.png)
+	
+
+>If a view is deleted, any objects in it are automatically moved to the Default view.
+
+
+
+
+## Using views  
+
+Once views are created, you can use the View Editor to:
+
+*	Add object to views,
+*	Move objects from one view to another,
+*	Select all objects of the same view in a single click,
+*	Display or hide objects for each view,
+*	Lock the objects of a view.
+
+### Adding objects to views  
+
+An object can only belong to a single view. 
 
 To create an object in another view, simply select the view in the View Editor (prior to creating the object) by clicking its name (an Edit icon is displayed for the view being edited):
 
 ![](assets/en/Views/addObject.png)
 
-## Moving objects between views
+### Moving objects between views
 
 It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
 
@@ -65,9 +153,15 @@ It's also possible to move one or more objects from one view to another. In the 
 
 >The selection can contain several objects belonging to different views. 
 
-Then, simply select the destination view of the selection and click **Move to**:
+Simply select the destination view, right-click, and select **Move to**:
 
 ![](assets/en/Views/moveObject.png)
+
+OR
+
+Select the destination view of the selection and click **Move to** button at the bottom of the View Editor:
+
+![](assets/en/Views/moveObject3.png)
 
 The selection is then placed in the new view:
 
@@ -77,30 +171,7 @@ You can also move an object to another view via the object's context menu. Right
 
 ![](assets/en/Views/moveObject2.png)
 
-
-
-## Renaming views  
-
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs. 
-
->The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (as shown below), however it remains the default view. 
-
-To rename a view, you can use either **Ctrl+click** (Windows) or **Command+click** (Mac OS) on the view name, or double-click the view name (the selected view in this case). The name then becomes editable:
-
-
-![](assets/en/Views/rename.png)
-
-
-
-
-
-## Using views  
-
-Once each object is in a view, you can use the View Editor to:
-
-*	Select all objects of the same view in a single click,
-*	Display or hide objects for each view,
-*	Lock the objects of a view.
+>The current view is shown in bold text.
 
 
 
@@ -112,6 +183,10 @@ To do this, right-click on the view in which you wish to select all the objects,
 
 ![](assets/en/Views/selectAll.png)
 
+You can also use the button at the bottom of the View Editor:
+
+
+![](assets/en/Views/selectAll2.png)
 
 
 ### Show or hide objects of a view  
