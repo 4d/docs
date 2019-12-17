@@ -33,7 +33,8 @@ This information allows you to identify the source and context of each operation
 - **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
 - **Size**: Size (in bytes) of data processed by the operation.
 - **Date and Hour**: Date and hour when the operation was performed.
-- **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
+- **System User**: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.
+- **4D User**: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name. 
 - **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
 ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 - **Records**: Record number.
