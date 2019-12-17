@@ -7,7 +7,6 @@ Once you have set up users and groups in your solution's directory, you will nee
 
 You can log in a user to your application by passing the user's name and password to `$directory/login`. Once logged in, you can retrieve the user's name by using [$directory/currentUser](#$directory/currentUser) and can find out if he/she belongs to a specific group by using `$directory/currentUserBelongsTo`. To log out the current user, call `$directory/logout`.
 
-For more information about your solution's directory, refer to the section in the Solution Explorer chapter.
 
 ## $directory/currentUser
 

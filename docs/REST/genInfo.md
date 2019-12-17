@@ -7,7 +7,7 @@ The parameters in this section allow you to retrieve information about one or al
 
 For the `$catalog`, `$catalog/{datastoreClass}`, and `$catalog/$all` parameters, the user must be in a group that has **Describe** permissions. For more information, refer to **Permission Actions**.
 
-You can also upload a file (either an image or a binary file) to the server by using [#cmd id="901487"/]. Afterwards, you can then save the file to an entity by using `$method=update`.
+You can also upload a file (either an image or a binary file) to the server by using `$upload`. Afterwards, you can then save the file to an entity by using `$method=update`.
 
 
 ## $catalog  		

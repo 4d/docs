@@ -3,6 +3,11 @@ id: apiUsers
 title: Directory
 ---
 
+Once you have set up users and groups in your project's directory, you will need to have users log into the project to access and manipulate data.
+
+You can log in a user to your application by passing the user's name and password to `$directory/login`. Once logged in, you can retrieve the user's name by using [$directory/currentUser](#$directory/currentUser) and can find out if he/she belongs to a specific group by using `$directory/currentUserBelongsTo`. To log out the current user, call `$directory/logout`.
+
+
 
 ## ```$directory/login```
 
@@ -56,18 +61,9 @@ Otherwise, the response will be:
 
 
 
+## ```$directory/currentUser```
 
-----
-----  
-Once you have set up users and groups in your project's directory, you will need to have users log into the project to access and manipulate data.
-
-
-You can log in a user to your application by passing the user's name and password to `$directory/login`. Once logged in, you can retrieve the user's name by using [$directory/currentUser](#$directory/currentUser) and can find out if he/she belongs to a specific group by using `$directory/currentUserBelongsTo`. To log out the current user, call `$directory/logout`.
-
-
-## $directory/currentUser
-
->Returns information about the current user
+Returns information about the current user
 
 
 #### Description   
@@ -106,9 +102,9 @@ If no user has been logged in, the result is:
 }
 ````
 
-## $directory/currentUserBelongsTo 
+## ```$directory/currentUserBelongsTo``` 
 
->Indicates if the current user belongs to a specific group
+Indicates if the current user belongs to a specific group
 
 #### Description   
 To find out if the currently logged in user belongs to a specific group, use `$directory/currentUserBelongsTo`. You can pass either the group ID (which is the group's UUID reference number) or its name as defined in the solution's directory (see Groups in the Directory).
@@ -148,9 +144,9 @@ Otherwise, it will return:
 
 
 
-## $directory/logout 
+## ```$directory/logout``` 
 
->Logs out the current user
+Logs out the current user
 
 #### Description   
 To log out the current user from your application, use `$directory/logout`.

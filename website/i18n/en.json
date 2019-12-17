@@ -175,8 +175,122 @@
       "Project/overview": {
         "title": "Overview"
       },
-      "REST/apiDataCLass": {
-        "title": "Dataclass"
+      "REST/{attribute1_attribute2}": {
+        "title": "{attribute1,attribute2}"
+      },
+      "REST/{datastoreClass}_{attribute}(value)": {
+        "title": "{datastoreClass}:{attribute}(value)"
+      },
+      "REST/{datastoreClass}": {
+        "title": "{datastoreClass}"
+      },
+      "REST/{datastoreClass}({key})": {
+        "title": "{datastoreClass}({key})"
+      },
+      "REST/asArray": {
+        "title": "$asArray"
+      },
+      "REST/atomic_$atonce": {
+        "title": "$atomic/$atonce"
+      },
+      "REST/binary": {
+        "title": "$binary"
+      },
+      "REST/catalog_{datastoreClass}": {
+        "title": "$catalog/{datastoreClass}"
+      },
+      "REST/catalog_$all": {
+        "title": "$catalog/$all"
+      },
+      "REST/catalog": {
+        "title": "$catalog"
+      },
+      "REST/compute": {
+        "title": "$compute"
+      },
+      "REST/directory_currentUser": {
+        "title": "$directory/currentUser"
+      },
+      "REST/directory_currentUserBelongsTo": {
+        "title": "$directory/currentUserBelongsTo"
+      },
+      "REST/directory_login": {
+        "title": "$directory/login"
+      },
+      "REST/directory_logout": {
+        "title": "$directory/logout"
+      },
+      "REST/distinct": {
+        "title": "$distinct"
+      },
+      "REST/entityset{entitySetID}$logicOperator&$otherCollection": {
+        "title": "$entityset/{entitySetID}?$logicOperator...&$otherCollection"
+      },
+      "REST/entityset_{entitySetID}": {
+        "title": "$entityset/{entitySetID}"
+      },
+      "REST/expand": {
+        "title": "$expand"
+      },
+      "REST/filter": {
+        "title": "$filter"
+      },
+      "REST/imageformat": {
+        "title": "$imageformat"
+      },
+      "REST/$info": {
+        "title": "REST/$info"
+      },
+      "REST/method=delete": {
+        "title": "$method=delete"
+      },
+      "REST/method=entityset": {
+        "title": "$method=entityset"
+      },
+      "REST/method=release": {
+        "title": "$method=release"
+      },
+      "REST/method=subentityset": {
+        "title": "$method=subentityset"
+      },
+      "REST/method=update": {
+        "title": "$method=update"
+      },
+      "REST/method=validate": {
+        "title": "$method=validate"
+      },
+      "REST/orderby": {
+        "title": "$orderby"
+      },
+      "REST/querypath": {
+        "title": "$querypath"
+      },
+      "REST/queryplan": {
+        "title": "$queryplan"
+      },
+      "REST/savedfilter": {
+        "title": "$savedfilter"
+      },
+      "REST/savedorderby": {
+        "title": "$savedorderby"
+      },
+      "REST/skip": {
+        "title": "$skip"
+      },
+      "REST/timeout": {
+        "title": "$timeout"
+      },
+      "REST/top_$limit": {
+        "title": "$top/$limit"
+      },
+      "REST/upload": {
+        "title": "$upload"
+      },
+      "REST/version": {
+        "title": "$version"
+      },
+      "REST/apiUtilities": {
+        "title": "Utilities"
       },
       "REST/apiDataClass": {
         "title": "Dataclass"
