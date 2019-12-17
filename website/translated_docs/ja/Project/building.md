@@ -405,9 +405,9 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 ## アプリケーションアイコンのカスタマイズ
 
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、各アプリケーションごとにこのアイコンをカスタマイズできます。
 
-* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
+* **macOs** - アプリケーションビルドの際に条件が揃っていれば、4D はアイコンをカスタマイズします。 In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
     
     > Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
     
