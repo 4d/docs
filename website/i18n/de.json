@@ -313,20 +313,20 @@
         "sidebar_label": "Overview"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Seite Reparieren",
+        "sidebar_label": "Seite Reparieren"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Seite Wiederherstellen",
+        "sidebar_label": "Seite Wiederherstellen"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Seite Zurückfahren",
+        "sidebar_label": "Seite Zurückfahren"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Seite Prüfen",
+        "sidebar_label": "Seite Prüfen"
       },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
@@ -366,6 +366,7 @@
     }
   },
   "pages-strings": {
+    "for 4D developers|no description given": "for 4D developers",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
