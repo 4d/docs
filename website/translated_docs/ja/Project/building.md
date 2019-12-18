@@ -407,17 +407,17 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、各アプリケーションごとにこのアイコンをカスタマイズできます。
 
-* **macOs** - アプリケーションビルドの際に条件が揃っていれば、4D はアイコンをカスタマイズします。 In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
+* **macOs** - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
     
-    > Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+    > Apple, Inc. より、*icns* アイコンファイルを作成するツールが提供されています。(詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください。)
     
-    Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
+    アイコンファイルの名前はプロジェクトファイル名+"*.icns*" 拡張子でなければなりません。 4D は自動でこのファイルを認識し、アイコンとして使用します (*.icns* ファイルは *ApplicationName.icns* に名称変更されて Resourcesフォルダーに置かれます。さらに *info.plist* ファイルの *CFBundleFileIcon* エントリーを更新します)。
 
-* **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the project folder.
+* **Windows** - アプリケーションビルドの際にアイコンをカスタマイズするには、 .ico タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
     
-    Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
+    アイコンファイルの名前はストラクチャーファイル名+"*.ico*" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
+また、buildApp.4DSettings ファイルにて、使用すべきアイコンを [XML keys](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html) (SourcesFiles の項参照)によって指定することも可能です。 次のキーが利用できます:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -428,112 +428,112 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 - ClientMacIconForWinPath
 - ClientWinIconForWinPath
 
-## Management of data file(s)
+## データファイルの管理
 
-### Opening the data file
+### データファイルを開く
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+ユーザーが組み込みアプリ、またはアプリのアップデート (シングルユーザー、またはクライアント/サーバーアプリ) を起動すると、4D は有効なデータファイルを選択しようとします。 アプリケーションによって、複数の場所が順次検索されます。
 
-The opening sequence for launching a merged application is:
+組み込みアプリ起動時のオープニングシーケンスは以下のようになっています:
 
-1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
-2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
-3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+1. 4D は最後に開かれたデータファイルを開こうとします。詳しくは [後述の説明](#last-data-file-opened) を参照ください (これは初回起動時には適用されません)。
+2. 見つからない場合、4D は .4DZ ファイルと同階層の Default Data フォルダー内にあるデータファイルを、読み込み専用モードで開こうとします。
+3. これも見つからない場合、4D は標準のデフォルトデータファイルを開こうとします(.4DZ ファイルと同じ場所にある、同じ名前のファイル)。
+4. これも見つからない場合、4D は "データファイルを開く" ダイアログボックスを表示します。
 
-### Last data file opened
+### 最後に開かれたデータファイル
 
-#### Path of last data file
+#### 最後に開かれたファイルへのパス
 
-Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
+4D でビルドされたあらゆるスタンドアロンまたはサーバーアプリケーションは、最後に開かれたデータファイルのパスをアプリケーションのユーザー設定フォルダー内に保存します。
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+アプリケーションのユーザー設定フォルダーの場所は、以下のコマンドで返されるパスに対応しています:
 
 ```code4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+データファイルパスは *lastDataPath.xml* という名前の専用ファイルに保存されます。
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+これにより、アプリケーションのアップデートを提供したときにも、ローカルのユーザーデータファイル (最後に使用されたデータファイル) が初回の起動から自動的に開かれます。
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+このメカニズムは標準的な運用に適しています。 しかしながら特定の場合、たとえば組み込みアプリケーションを複製した場合などにおいて、データファイルとアプリケーションのリンクを変えたいことがあるかもしれません (次章参照)。
 
-#### Configuring the data linking mode
+#### データリンクモードの設定
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+コンパイルされたアプリケーションでは、4D は最後に使用されたデータファイルを自動的に使用します。 デフォルトでは、データファイルのパスはアプリケーションのユーザー設定フォルダー内に保存され、 **アプリケーション名 ** でリンクされます。
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+異なるデータファイルを使用するために組み込みアプリを複製する場合には、この方法は適さないかもしれません。 複製されたアプリは同じアプリケーションユーザー設定フォルダーを共有するため、同じデータファイルを使用することになります (最後に使用されたファイルが開かれるため、データファイル名を変更した場合でも結果は同じです)。
 
-4D therefore lets you link the data file path to the application path. In this case, the data file will be linked using a specific path and will not just be the last file opened. You therefore link your data **by application path**.
+そのため 4D では、アプリケーションパスを使用してデータファイルとリンクすることも可能です。 このとき、データファイルは特定のパスを使用してリンクされるので、最後に開かれたファイルであるかは問われません。 この設定を使うには、データリンクモードの基準を **アプリケーションパス** に設定します。
 
-This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
+このモードを使えば、組み込みアプリがいくつあっても、それぞれが専用のデータファイルを使えます。 ただし、デメリットもあります: アプリケーションパッケージを移動させてしまうとアプリケーションパスが変わってしまうため、データファイルを見つけられなくなります。この場合、ユーザーは開くデータファイルを指定するダイアログを提示され、正しいファイルを選択しなくてはなりません。一度選択されれば、*lastDataPath.xml* ファイルが更新され、新しい "executablePath" 属性のエントリーが保存されます。
 
-*Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
+*データがアプリケーション名でリンクされている場合の複製:* ![](assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
+*データがアプリケーションパスでリンクされている場合の複製:* ![](assets/en/Project/datalinking2.png)
 
-You can select the data linking mode during the build application process. You can either:
+このデータリンクモードはアプリケーションビルドの際に選択することができます。 次の二つから選択可能です:
 
-- Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
-- Use the **LastDataPathLookup** XML key (single-user application or server application).
+- アプリケーションビルダーの [アプリケーションページ](#application) または [クライアント/サーバーページ](#client-server) を使用する。
+- シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
-### Defining a default data folder
+### デフォルトのデータフォルダーを定義する
 
-4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+4D では、アプリケーションビルド時にデフォルトのデータファイルを指定することができます。 アプリケーションの初回起動時に、開くべきローカルデータファイルが見つからなかった場合 (前述の [オープニングシーケンス](#opening-the-data-file)参照)、デフォルトのデータファイルが読み込み専用モードで自動的に開かれます。 この機能を使って、組み込みアプリを初回起動したときのデータファイル作成・選択の操作をより制御することができます。
 
-More specifically, the following cases are covered:
+具体的には、次のような場合に対応できます:
 
-- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
-- Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
+- 新しい、またはアップデートされた組み込みアプリを起動したときに、"データファイルを開く" ダイアログが表示されるのを防ぐことができます。 たとえば、デフォルトデータファイルが開かれたことを起動時に検知して、独自のコードやダイアログを実行して、ローカルデータファイルの作成や選択を促すことができます。
+- デモアプリなどの用途で、読み込み専用データしか持たない組み込みアプリを配布することができます。
 
-To define and use a default data file:
+デフォルトのデータファイルを定義・使用するには:
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
-- When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
+- デフォルトのデータファイル (名称は必ず "Default.4DD") を、データベースプロジェクトのデフォルトフォルダー (名称は必ず "Default Data") 内に保存します。 このデフォルトのデータファイルには必要なファイルもすべて揃っている必要があります: インデックス (.4DIndx)、外部BLOB、ジャーナル、他。 必ず、有効なデフォルトデータファイルを用意するようにしてください。 なお、デフォルトデータファイルはつねに読み込み専用モードで開かれるため、データファイルの作成前に、あらかじめ大元のストラクチャー設定の "ログを使用" オプションを非選択にしておくことが推奨されます。
+- アプリケーションをビルドすると、このデフォルトデータフォルダーが組み込みアプリに統合されます。 同フォルダー内ファイルはすべて一緒に埋め込まれます。
 
-The following graphic illustrates this feature:
+この機能を図示すると次のようになります:
 
 ![](assets/en/Project/DefaultData.png)
 
-When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
+デフォルトのデータファイルが初回起動時に検知された場合、データファイルは自動的に読み込み専用モードで開かれ、カスタムのオペレーション実行ができるようになります。
 
-## Management of client connection(s)
+## クライアント接続の管理
 
-The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
+ここでは、組み込みクライアントアプリが運用環境において対象サーバーへと接続する際のメカニズム機構について説明します。
 
-### Connection scenario
+### 接続シナリオ
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+組み込みクライアントアプリの接続プロシージャーは、専用サーバーが使用不可能な場合にも柔軟に対応します。 4D クライアントアプリのスタートアップシナリオは、次のとおりです:
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-    OR  
-    If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box. 
-    - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
-    - If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+- クライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。  
+    または  
+    クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリは指定されたサーバーアドレスへ接続を試みます。
+- これが失敗した場合、クライアントアプリケーションは、アプリケーションのユーザー設定フォルダーに保存されている情報 ("lastServer.xml" ファイル、詳細は後述参照) を使用してサーバーへの接続を試みます。
+- これが失敗した場合、クライアントアプリケーションは接続エラーダイアログボックスを表示します。 
+    - ユーザーが **選択...** ボタンをクリックした場合、標準の "サーバー接続" ダイアログボックスが表示されます (ビルドの段階で許可されていた場合に限ります。詳細は後述)。
+    - ユーザーが **終了** ボタンをクリックした場合、クライアントアプリケーションは終了します。
+- 接続が成功した場合、クライアントアプリケーションは将来の使用のために、その接続情報をアプリケーションのユーザー設定フォルダーに保存します。
 
-### Storing the last server path
+### 最後に使用したサーバーパスを保存する
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+最後に使用され検証されたサーバーパスは、アプリケーションのユーザー設定フォルダー内の "lastServer.xml" ファイルに自動的に保存されます。 このフォルダは次の場所に保存されています:
 
 ```code4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+このメカニズムは、最初に指定したサーバーが何らかの理由 (例えばメンテナンスモードなど) で一時的に使用できないケースに対応します。 こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。 それ以降に接続ができなかった場合には、"lastServer.xml" のパス情報によって自動的に対処されます。
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability. 
-> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
+> - ネットワークの設定などの影響で、クライアントアプリが恒久的に検索サービスを使ったサーバー接続ができない場合には、ビルド時にあらかじめ "BuildApp.4DSettings" ファイル内の [IPAddress](https://doc.4d.com/4Dv18/4D/18/IPAddress.300-4671089.ja.html) キーでホスト名を指定しておくことが推奨されます。 このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。 
+> - スタートアップ時に **Alt/Option** キーを押しながら起動してサーバー接続ダイアログボックスを表示する方法は、すべての場合において可能です。
 
-### Availability of the server selection dialog box in case of error
+### エラー時のサーバー選択ダイアログボックス使用の可・不可
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+組み込みクライアントアプリがサーバーに接続できない場合、標準のサーバー選択ダイアログボックスを表示するかどうかは設定しておくことができます。 この設定は、アプリケーションをビルドするマシン上の [ServerSelectionAllowedXML](https://doc.4d.com/4Dv18/4D/18/ServerSelectionAllowed.300-4671093.ja.html) キーの値によって制御されます:
 
-- **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
-    `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない** デフォルトの挙動です。 アプリケーションは終了する以外の選択肢がありません。  
+    `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.  
-    `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** ユーザーは **選択...** ボタンをクリックする事によってサーバー選択ウィンドウにアクセスできます。  
+    `ServerSelectionAllowed`: **True**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
