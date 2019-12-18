@@ -27,6 +27,7 @@ This information allows you to identify the source and context of each operation
 	- Start of Transaction: Transaction started.
 	- Validation of Transaction: Transaction validated.
 	- Cancellation of Transaction: Transaction cancelled.
+	- Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 
 - **Table**: Table to which the added/deleted/modified record or BLOB belongs.
 - **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
