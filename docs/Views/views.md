@@ -28,21 +28,14 @@ There are three ways to access the View palette:
 	|:---:|:---:|
 	|![](assets/en/Views/icon.png "No views in use")|![](assets/en/Views/icon2.png "Views in use")|
 
-* 	**Context menu** (form or object):
+* 	**Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View** 
 
-	*	**Form**: Right-click anywhere in the Form Editor and select **Current View** 
-
-		![](assets/en/Views/contextMenu.png)
+	![](assets/en/Views/contextMenu.png)
 		
-		The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
 		
-	*	**Object**: Right-click on an object and select **Current View** 
 
-		![](assets/en/Views/contextMenu2.png)
-		
-		The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
-
-*	**Form menu**: Click on the Form menu and select View List
+*	**Form menu**: Click on the **Form** menu and select **View List**
 
 ![](assets/en/Views/formMenu.png)
 
@@ -59,7 +52,7 @@ Here are a few important things to know before you start working with views:
 
 *	**Views and groups**: Only objects belonging to the current view can be grouped.
 
-*	**Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being actively being viewed.
+*	**Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
 
 
 
@@ -140,7 +133,7 @@ Once views are created, you can use the View palette to:
 
 An object can only belong to a single view. 
 
-To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the view being edited):
+To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
 
 ![](assets/en/Views/addObject.png)
 
@@ -171,7 +164,7 @@ You can also move an object to another view via the object's context menu. Right
 
 ![](assets/en/Views/moveObject2.png)
 
->The current view is shown in bold text.
+>The [Current view](#before-you-begin) is shown in bold text.
 
 
 
@@ -202,7 +195,7 @@ To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the
 ![](assets/en/Views/hidden.png) 
 
 
->The current view (the view selected in the view list) cannot be hidden. 
+>The [Current view](#before-you-begin) cannot be hidden. 
 
 To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
 
@@ -222,7 +215,7 @@ To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut
 
 
 
->The current view (the view selected in the view list) cannot be locked.
+>The [Current view](#before-you-begin) cannot be locked.
 
 To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
 
