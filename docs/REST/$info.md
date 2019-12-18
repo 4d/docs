@@ -1,7 +1,7 @@
 ---
 id: info
-title: $info 
----	
+title: $info
+---
 
 Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions	
 
@@ -24,12 +24,12 @@ For each entity set currently stored in 4D Server's cache, the following informa
 
 |Property|	Type|	Description|
 |---|---|---|
-|id|	String|	A UUID that references the entity set.|
-|tableName	|String	|Name of the datastore class.|
+|id|String|	A UUID that references the entity set.|
+|tableName|String	|Name of the datastore class.|
 |selectionSize|	Number|	Number of entities in the entity set.|
-|sorted|	Boolean|	Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
-|refreshed	|Date|	When the entity set was created or the last time it was used.|
-|expires|	Date|	When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`.
+|sorted|Boolean|Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
+|refreshed|Date|When the entity set was created or the last time it was used.|
+|expires|Date|When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`.
 
 For information about how to create an entity set, refer to `$method=entityset`. If you want to remove the entity set from 4D Server's cache, use `$method=release`.
 
@@ -44,11 +44,11 @@ For each user session, the following information is returned in the *sessionInfo
 
 |Property|	Type|	Description|
 |---|---|---|
-|sessionID	|String|	A UUID that references the session.|
-|userID|	String|	A UUID that references the user who runs the session.|
-|userName|	String|	The name of the user who runs the session.
-|lifeTime	|Number	|The lifetime of a user session in seconds (3600 by default).|
-|expiration	|Date	|The current expiration date and time of the user session.|
+|sessionID|String|A UUID that references the session.|
+|userID|String|A UUID that references the user who runs the session.|
+|userName|String|The name of the user who runs the session.
+|lifeTime|Number|The lifetime of a user session in seconds (3600 by default).|
+|expiration	|Date|The current expiration date and time of the user session.|
 
 ### jsContextInfo  
 
@@ -66,17 +66,15 @@ The object in the **jsContextInfo** array details the JavaScript context pool:
 |createdContextCount	|Number of contexts created since the project was started|
 |destroyedContextCount|	Number of contexts destroyed since the project was started|
 
-### Usage  
+## Example  
 
 Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
 
-```
-GET  /rest/$info
-```
+`GET /rest/$info`
 
 **Result**:
 
-````
+```
 {
 cacheSize: 209715200,
 usedCache: 3136000,
@@ -148,7 +146,7 @@ jsContextInfo: [
     }
 ]
 }
-````
+```
 
 
 >The progress indicator information listed after the entity sets is used internally by 4D.

@@ -1,4 +1,4 @@
-{  
+{
   "license": "CC-BY-4.0",
   "scripts": {
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",

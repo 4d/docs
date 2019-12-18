@@ -238,8 +238,8 @@
       "REST/imageformat": {
         "title": "$imageformat"
       },
-      "REST/$info": {
-        "title": "REST/$info"
+      "REST/info": {
+        "title": "$info"
       },
       "REST/method=delete": {
         "title": "$method=delete"
@@ -289,20 +289,20 @@
       "REST/version": {
         "title": "$version"
       },
-      "REST/apiUtilities": {
-        "title": "Utilities"
-      },
       "REST/apiDataClass": {
         "title": "Dataclass"
       },
       "REST/apiUsers": {
         "title": "Directory"
       },
+      "REST/apiUtilities": {
+        "title": "Utilities"
+      },
       "REST/authUsers": {
         "title": "Authenticating Users"
       },
       "REST/genInfo": {
-        "title": "General Information"
+        "title": "Getting Information"
       },
       "REST/manData": {
         "title": "Manipulating Data"

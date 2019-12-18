@@ -28,11 +28,13 @@
   },
   "Rest": {
 	"Guides": ["REST/authUsers","REST/genInfo","REST/manData"],
-	"API": ["REST/overview","REST/asArray","REST/atomic_$atonce","REST/binary",
+	"API": ["REST/overview","REST/{attribute1_attribute2}","REST/{datastoreClass}({key})","REST/{datastoreClass}","REST/{datastoreClass}_{attribute}(value)","REST/asArray","REST/atomic_$atonce","REST/binary",
 	"REST/catalog","REST/catalog_$all","REST/catalog_{datastoreClass}","REST/compute",
-	"REST/directory_currentUser","REST/directory_currentUserBelongsTo","REST/directory_login","REST/directory_logout",	"REST/distinct","REST/entityset_{entitySetID}","REST/entityset{entitySetID}$logicOperator&$otherCollection","REST/expand","REST/filter","REST/imageformat","REST/info","REST/method=delete","REST/method=entityset","REST/method=release","REST/method=subentityset","REST/method=update","REST/method=validate","REST/orderby","REST/querypath",
-	"REST/queryplan","REST/savedfilter","REST/savedorderby","REST/skip",
-	"REST/timeout","REST/method=top_$limit","REST/upload","REST/version",	"REST/{attribute1_attribute2}","REST/{datastoreClass}({key})","REST/{datastoreClass}","REST/{datastoreClass}_{attribute}(value)"]	
+	"REST/directory_currentUser","REST/directory_currentUserBelongsTo","REST/directory_login","REST/directory_logout",
+	"REST/distinct","REST/entityset_{entitySetID}","REST/entityset{entitySetID}$logicOperator&$otherCollection","REST/expand",
+	"REST/filter","REST/imageformat","REST/info","REST/method=delete","REST/method=entityset","REST/method=release",
+	"REST/method=subentityset","REST/method=update","REST/method=validate","REST/orderby","REST/querypath","REST/queryplan",
+	"REST/savedfilter","REST/savedorderby","REST/skip","REST/timeout","REST/method=top_$limit","REST/upload","REST/version"]
 		
   }
 }
