@@ -13,14 +13,14 @@ There is no limit on the number of views per form. You can create as many differ
 
 
 
-View management is handled via the View Editor.
+View management is handled via the View palette.
 
 ![](assets/en/Views/viewEditor.png)
 
 
-## Accessing the View Editor
+## Accessing the View palette
 
-There are three ways to access the View Editor: 
+There are three ways to access the View palette: 
 
 *	**Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
 
@@ -74,7 +74,7 @@ Any object created in a form is placed in the first view ("View 1") of the form.
 
 There are two ways to add additional views:
 
-*	Click on the **Add a new view** button at the bottom of the View Editor:
+*	Click on the **Add a new view** button at the bottom of the View palette:
 
 ![](assets/en/Views/addView.png)
 
@@ -100,7 +100,7 @@ To rename a view, you can use either:
 
 ### Reordering views
 
-You can change the display order of views by dragging/dropping them within the View Editor.
+You can change the display order of views by dragging/dropping them within the View palette.
 
 Note that the Default view does not change:
 
@@ -111,7 +111,7 @@ Note that the Default view does not change:
 
 To rename a view, you can use either: 
 
-*	Click on the **Delete the selected view** button at the bottom of the View Editor:
+*	Click on the **Delete the selected view** button at the bottom of the View palette:
 
 	![](assets/en/Views/deleteView.png)
 
@@ -128,7 +128,7 @@ To rename a view, you can use either:
 
 ## Using views  
 
-Once views are created, you can use the View Editor to:
+Once views are created, you can use the View palette to:
 
 *	Add object to views,
 *	Move objects from one view to another,
@@ -140,7 +140,7 @@ Once views are created, you can use the View Editor to:
 
 An object can only belong to a single view. 
 
-To create an object in another view, simply select the view in the View Editor (prior to creating the object) by clicking its name (an Edit icon is displayed for the view being edited):
+To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the view being edited):
 
 ![](assets/en/Views/addObject.png)
 
@@ -159,7 +159,7 @@ Simply select the destination view, right-click, and select **Move to**:
 
 OR
 
-Select the destination view of the selection and click **Move to** button at the bottom of the View Editor:
+Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
 
 ![](assets/en/Views/moveObject3.png)
 
@@ -183,7 +183,7 @@ To do this, right-click on the view in which you wish to select all the objects,
 
 ![](assets/en/Views/selectAll.png)
 
-You can also use the button at the bottom of the View Editor:
+You can also use the button at the bottom of the View palette:
 
 
 ![](assets/en/Views/selectAll2.png)
