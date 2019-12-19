@@ -33,14 +33,14 @@ The value contained in a radio button object is not saved automatically (except 
 
 
 
-## Button Styles
+## Styles de bouton
 
 Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
 
 4D provides radio buttons in the following predefined styles:
 
 
-### Regular
+### Standard
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
@@ -49,7 +49,7 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
 
-### Flat
+### A plat
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
@@ -58,7 +58,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
 
-### Toolbar
+### Barre d’outils
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
