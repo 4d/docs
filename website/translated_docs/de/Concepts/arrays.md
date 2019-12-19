@@ -1,37 +1,37 @@
 ---
-id: arrays
+id: Arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
+Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnumeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
 
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
+> In den meisten Fällen empfiehlt es sich, **Collections** anstelle von **Arrays** zu verwenden. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
 
-## Creating Arrays
+## Arrays erstellen
 
-You create an array with one of the array declaration commands from the "Array" theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
+Sie erstellen ein Array mit einem Befehl unter dem Thema "Array", der ein Array deklariert. Jeder dieser Befehle kann ein- oder zweidimensionale Arrays erstellen oder in der Größe anpassen. Weitere Informationen zu zweidimensionalen Arrays finden Sie im Abschnitt [zweidimensionale Arrays](#two-dimensional-arrays).
 
-The following line of code creates (declares) an Integer array of 10 elements:
+Folgende Code-Zeile erstellt (deklariert) ein Array vom Typ Ganzzahl mit 10 Elementen:
 
 ```code4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
-Then, the following code resizes that same array to 20 elements:
+Dann passt folgende Code-Zeile dieses Array auf 20 Elemente an:
 
 ```code4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
-Then, the following code resizes that same array to no elements:
+und folgende Code-Zeile passt dieses Array auf keine Elemente an:
 
 ```code4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
-## Assigning values in arrays
+## Werte in Arrays zuweisen
 
-You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:
+Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Die Nummer innerhalb der Klammern bezieht sich auf ein bestimmtes Element; sie heißt Elementnummer. Folgender Code fügt fünf Namen in das Array mit Namen atNames ein und zeigt sie dann in Fenstern mit Meldungen an:
 
 ```code4d
  ARRAY TEXT(atNames;5)
@@ -45,19 +45,19 @@ You reference the elements in an array by using curly braces ({…}). A number i
  End for
 ```
 
-Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
+Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{$vlElem}. Über eine Schleife (`For...End for`, `Repeat...Until` oder `While...End while`) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.
+**Wichtig:** Achten Sie darauf, dass Sie den Zuweisungsoperator (:=) nicht mit dem Vergleichsoperator ist gleich (=) verwechseln. Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.
 
-### Assigning an array to another array
+### Ein Array einem anderen Array zuweisen
 
-Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
+Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht einem anderen zuweisen. Dafür müssen Sie den Befehl `COPY ARRAY` verwenden.
 
-## Using the element zero of an array
+## Element Null eines Array verwenden
 
-An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
+Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
-Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
+Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ein anderes Element als das zuvor gewählte anklicken. Dazu müssen Sie jedes ausgewählte Element verfolgen. Dafür könnten Sie eine Prozessvariable mit der Elementnummer des ausgewählten Elements einsetzen oder das Element Null des Array:
 
 ```code4d
   // atNames scrollable area object method
