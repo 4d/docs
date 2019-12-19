@@ -1,77 +1,77 @@
 ---
 id: buttonOverview
-title: Button
+title: Bouton
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+Un bouton est un objet actif auquel une action peut être assignée (*ex :* une tâche de base de données ou une fonction d'interface) pour qu'elle soit réalisée lorsque l'utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_regular.png)
 
-Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
+Les boutons peuvent répondre à divers besoins qui dépendent du style et de l'action qui leur est affecté(e). Par exemple, les boutons peuvent amener l'utilisateur à faire des choix ou à compléter un questionnaire ou formulaire. En fonction de leurs propriétés, les bouton peuvent être destinés à être cliqués une fois seulement et à exécuter une commande, ou à être cliqués plusieurs fois pour obtenir le résultat escompté.
 
 <p>
 
-## Handling buttons
+## Gestion des boutons
 
-The actions assigned to buttons can originate from predefined [standard actions](properties_Action.md#standard-action) or from custom object methods. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
+Les actions assignées aux boutons peuvent provenir d'[actons standard](properties_Action.md#standard-action) ou de méthodes objet personnalisées. Les actions typiques peuvent consister à laisser l'utilisateur accepter, annuler ou supprimer des enregistrements, à copier ou coller des données, à passer d'une page à l'autre dans un formulaire de plusieurs pages, à ouvrir, supprimer ou ajouter des enregistrements dans un sous-formulaire, à gérer les attributs de police dans les zones de texte , etc.
 
-Buttons with standard actions are dimmed when appropriate during form execution. For example, if the first record of a table is displayed, a button with the `firstRecord` standard action would appear dimmed.
+Les boutons avec des actions standard sont grisés le cas échéant lors de l'exécution du formulaire. Par exemple, si le premier enregistrement d'une table est affiché, un bouton avec l'action standard `firstRecord` apparaît grisé.
 
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an object method to specify the button’s action. For more information about object methods and how to create and associate them, see [Using object methods](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). Normally, you would activate the `On Clicked` event and the method would run only when the button is clicked. You can associate a method with any button.
+Si vous souhaitez qu'un bouton exécute une action qui n'est pas disponible en tant qu'action standard, laissez le champ d'action standard vide et écrivez une méthode objet pour spécifier l'action du bouton. Pour plus d'informations sur les méthodes d'objet et comment les créer et les associer, voir [Utilisation de méthodes objet](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
 
-The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**.
+La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 
-> A button can be assigned both a standard action and a method. In this case, if the button is not disabled by the standard action, the method is executed before the standard action.
-
-
-
-## Button Styles
-
-Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. A great number of variations can be obtained by combining these properties / behaviors.
-
-With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. The difference is in the processing of their associated variables.
-
-4D provides buttons in the following predefined styles:
+> Il est possible d'affecter à la fois une action standard et une méthode à un bouton. Dans ce cas, si le bouton n'est pas désactivé par l'action standard, la méthode est exécutée avant l'action standard.
 
 
 
-### Regular
+## Styles de bouton
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+Les styles de bouton contrôlent l'apparence générale d'un bouton ainsi que ses propriétés. Il est possible d'appliquer différents styles prédéfinis aux boutons ou de leur associer des menus pop-up. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
+
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets bouton sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
+
+4D propose des boutons dans les styles prédéfinis suivants :
+
+
+
+### Standard
+
+Le style de bouton Standard est un bouton système standard (c'est-à-dire un rectangle avec un libellé descriptif) qui exécute le code lorsqu'un utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_regular.png)
 
-By default, the Regular style has a light gray background with a label in the center. When the cursor hovers over the Regular button style, the border and background color change to demonstrate that it has the focus. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
+Par défaut, le style Standard a un fond gris clair avec un libellé au centre. Lorsque le curseur survole le style de bouton Sandard, la bordure et la l'arrière-plan changent de couleur. En plus de lancer l'exécution de code, le style de bouton Standard imite un bouton mécanique en changeant rapidement la couleur d'arrière-plan lorsque vous cliquez dessus.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed 
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form 
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+        "type": "button",   //définit le type d'objet
+        "style":"regular",  //définit le style du bouton
+        "defaultButton":"true"  //définit le bouton comme choix par défaut
+        "text": "OK",   //texte à faire apparaître dans le bouton
+        "action": "Annuler", //Action à exécuter
+        "left": 60,  //Position gauche dans le formulaire  
+        "top": 160, //Position supérieure dans le formulaire  
+        "width": 100,  //largeur du bouton
+        "height": 20 //hauteur du bouton
         }
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+Seuls les styles Classique et A plat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
 
 
-### Flat
+### A plat
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+Le style de bouton A plat est un bouton système standard (c'est-à-dire un rectangle avec un libellé descriptif) qui exécute le code lorsqu'un utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_flat.png)
 
 By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
 
@@ -80,7 +80,7 @@ By default, the Flat style has a white background with a label in the center, ro
                 "style":"flat", 
                 "defaultButton":"true"  
                 "text": "OK",   
-                "action": "Cancel", 
+                "action": "Annuler", 
                 "left": 60,         
                 "top": 160,         
                 "width": 100,   
@@ -89,9 +89,9 @@ By default, the Flat style has a white background with a label in the center, ro
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+Seuls les styles Classique et A plat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
 
-### Toolbar
+### Barre d’outils
 
 The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
 
@@ -103,7 +103,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -133,7 +133,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -163,7 +163,7 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
  - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -193,7 +193,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
  - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -222,7 +222,7 @@ By default, the OS X Textured style appears as:
 
  - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -252,7 +252,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
  - *macOS* - its background is always displayed.
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -277,7 +277,7 @@ The Help button style can be used to display a standard system help button. By d
 
 ![](assets/en/FormObjects/button_help.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myButton": {
@@ -304,7 +304,7 @@ The Circle button style appears as a round system button. This button style is d
 On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myButton": {
@@ -328,7 +328,7 @@ The Custom button style accepts a personalized background picture and allows man
 ![](assets/en/FormObjects/button_custom.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code
     "myButton": {
