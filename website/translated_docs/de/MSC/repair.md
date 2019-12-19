@@ -12,7 +12,7 @@ Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschäd
 > 
 > Bei einer verschlüsselten Anwendung enthält das Reparieren auch die Schritte Entschlüsselung und Verschlüsselung. Dazu ist auch der aktuelle Verschlüsselungscode erforderlich. Ist noch kein gültiger Verschlüsselungscode angegeben, erscheint ein Dialogfenster, das die Passphrase oder den Verschlüsselungscode anfordert (siehe Seite Verschlüsseln).
 
-## File overview
+## Datei Überblick
 
 ### Datendatei reparieren
 
