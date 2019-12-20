@@ -8,7 +8,7 @@ Die Seite “Information” liefert Informationen über die 4D Umgebung und die 
 
 ## Programm
 
-Der obere Bereich gibt Name, Version und Speicherort des Programms und des aktiven 4D Ordners an. Weitere Informationen dazu finden Sie im Handbuch *4D Programmiersprache* unter der Funktion ```Get 4D folder``` im Handbuch *4D Language Reference*.
+Der obere Bereich gibt Name, Version und Speicherort des Programms und des aktiven 4D Ordners an. Weitere Informationen dazu finden Sie im Handbuch *4D Programmiersprache* unter der Funktion ```Get 4D folder``` im Handbuch *4D Programmiersprache*
 
 Der mittlere Bereich gibt Name und Speicherort der Projektdatei und der Datendatei der Datenbank und des Logbuchs (wenn vorhanden) an. Der untere Bereich zeigt den Namen des 4D Lizenzinhabers, die Art der Lizenz, und bei aktivierten Kennwörtern auch den Anwendernamen. Ist das nicht der Fall, erscheint als Anwendername Designer.
 
