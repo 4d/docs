@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variables
+title: 変数
 ---
 
 Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
