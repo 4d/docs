@@ -32,7 +32,7 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
 
 - **Primärschlüssel/BLOB**: Inhalt des Primärschlüssels für jeden Datensatz (besteht der Primärschlüssel aus mehreren Feldern, sind die einzelnen Werte durch Strichpunkte voneinander getrennt) oder Sequenznummer des BLOB, welche an der Operation beteiligt ist.
 - **Prozess**: Interne Nummer des Prozesses, in dem die Operation ausgeführt wurde. Diese interne Nummer entspricht dem Kontext der Operation.
-- **Größe**: Größe (in Bytes) der Daten, die durch die Operation bearbeitet werden
+- **Größe**: Größe (in Bytes) der Daten, die durch die Operation bearbeitet werden.
 - **Datum und Uhrzeit**: Datum und Uhrzeit, zu der die Operation ausgeführt wurde.
 - **Anwender**: Name des Anwenders, der die Operation ausgeführt hat. Im Client-/Server-Modus erscheint der Name des client-seitigen Rechners; im Einzelplatz die ID des Anwenders. Sind keine 4D Kennwörter aktiviert, ist diese Spalte leer.
 - **Werte**: Werte der Felder für den Datensatz bei Hinzufügen oder Ändern. Die Werte werden durch “;” voneinander getrennt. Nur Werte in alphanumerischer Form erscheinen.  
