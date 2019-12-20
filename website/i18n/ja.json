@@ -96,14 +96,14 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "変数"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -368,9 +368,9 @@
   "pages-strings": {
     "for 4D developers|no description given": "for 4D developers",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリケーションの開発",
-    "Developing a Web application|no description given": "Web アプリケーションの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリケーションの開発",
+    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
+    "Developing a Web application|no description given": "Web アプリの開発",
+    "Developing a Mobile application|no description given": "モバイルアプリの開発",
     "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
