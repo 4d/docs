@@ -17,6 +17,8 @@
 
 em,i {font-style:italic}
 
+
+
 a {
 text-decoration: none; /* Les liens ne seront plus soulignés */
 color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
@@ -24,14 +26,15 @@ color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 
 
 
-a.cp2 {
-text-decoration: underline;
-color: #fff;
-}
 
 .copyright{
 font-size: 12px;
 text-align: center;
+color: green
+}
+
+a.cp2 {
+text-decoration: underline;
 color: #fff;
 }
 

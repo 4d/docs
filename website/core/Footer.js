@@ -42,7 +42,6 @@ class Footer extends React.Component {
 				<a href="https://twitter.com/4Dsoftware">Twitter</a>
 				<a href="https://www.youtube.com/user/4Dsoftware">Youtube</a>
 				<a href="https://github.com/4D/">GitHub</a>
-
           </div>
           <div>
             <h5>Support</h5>
@@ -59,12 +58,10 @@ class Footer extends React.Component {
 		        <a href="https://us.4d.com/contact-us">Contact us</a>
 				<a href="https://us.4d.com/4d-around-the-world">4D around the world</a>
                 <a href="https://us.4d.com/careers">Careers</a>
-
           </div>
         </section>
-
         <section className="copyright">{this.props.config.copyright}</section>
-		<section className="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions"><u>Terms & Conditions</u></a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section>
+		<section className="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms & Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section>
       </footer>
     );
   }
