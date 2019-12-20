@@ -89,27 +89,27 @@ Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ei
  End case
 ```
 
-(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
+(*) Es gibt eine Ausnahme: In einem Array vom Typ Listbox wird das Element Null intern zum Speichern des vorigen Wertes eines Elements in Bearbeitung verwendet. Sie können es also in diesem spezifischen Kontext nicht verwenden.
 
-## Two-dimensional Arrays
+## Zweidimensionale Arrays
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
+Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```code4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
-Two-dimensional arrays are essentially language objects; you can neither display nor print them.
+Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
 
-In the previous example:
+Im oben angezeigten Beispiel gilt:
 
-- atTopics is a two-dimensional array
-- atTopics{8}{5} is the 5th element (5th column...) of the 8th row
-- atTopics{20} is the 20th row and is itself a one-dimensional array
-- (atTopics) returns 100, which is the number of rows
-- (atTopics{17}) returns 50, which the number of columns for the 17th row
+- atTopics ist ein zweidimensionales Array
+- atTopics{8}{5} ist das 5. Element (5. Spalte...) der 8. Reihe
+- atTopics{20} ist die 20. Reihe und selbst ein eindimensionales Array
+- (atTopics) gibt 100 zurück, das ist die Anzahl der Reihen
+- (atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
 
-In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
+Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
 ```code4d
  C_LONGINT($vlLastTable;$vlLastField)
@@ -136,7 +136,7 @@ In the following example, a pointer to each field of each table in the database 
  End for
 ```
 
-Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:
+Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie nun die Zeiger auf die Datenfelder für eine bestimmte Tabelle:
 
 ```code4d
   // Get the pointers to the fields for the table currently displayed at the screen:
@@ -152,40 +152,40 @@ Provided that this two-dimensional array has been initialized, you can obtain th
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**Hinweis:** Wie Sie in diesem Beispiel sehen, können Reihen in zweidimensionalen Arrays dieselbe oder verschiedene Größen haben.
 
-## Arrays and Memory
+## Arrays und Speicher
 
-Unlike the data you store on disk using tables and records, an array is always held in memory in its entirety.
+Ein Array wird im Gegensatz zu Daten, die Sie in Tabellen und Datensätzen auf der Festplatte speichern, immer vollständig im Speicher gehalten.
 
-For example, if all US zip codes were entered in the [Zip Codes] table, it would contain about 100,000 records. In addition, that table would include several fields: the zip code itself and the corresponding city, county, and state. If you select only the zip codes from California, the 4D database engine creates the corresponding selection of records within the [Zip Codes] table, and then loads the records only when they are needed (i.e., when they are displayed or printed). In order words, you work with an ordered series of values (of the same type for each field) that is partially loaded from the disk into the memory by the database engine of 4D.
+Geben Sie zum Beispiel alle Postleitzahlen in einer Tabelle [PLZ] ein, enthält sie ca. 10.000 Datensätze. Die Tabelle enthält zusätzlich weitere Datenfelder, wie Landeskennzahl und Stadt. Wählen Sie nun das Postleitzahlengebiet 8, erstellt die 4D Datenbank-Engine die entsprechende Datensatzauswahl in der Tabelle [PLZ], und lädt die Datensätze nur bei Bedarf, also z.B. zum Anzeigen auf dem Bildschirm oder zum Drucken. Mit anderen Worten, Sie arbeiten mit einer geordneten Reihe von Werten vom selben Typ pro Datenfeld, die die Engine von 4D teilweise von der Festplatte in den Speicher lädt.
 
-Doing the same thing with arrays would be prohibitive for the following reasons:
+Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
-- In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.
-- Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.
-- Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- Zum Verwalten der drei Informationstypen (Landeskennzahl, Postleitzahl, Stadt) müssten Sie drei umfangreiche Arrays im Speicher halten.
+- Da ein Array immer vollständig im Speicher gehalten wird, müssten Sie alle Informationen dieser Arrays während der ganzen Arbeitssitzung im Speicher halten, auch wenn die Daten nicht ständig in Gebrauch sind.
+- Diese Arrays müssten bei jedem Starten der Datenbank komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
+**Fazit:** In Arrays sollten überschaubare Datenmengen für eine kurze Zeitspanne gehalten werden. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
 
-However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:
+Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausenden von Elementen einsetzen. Nachfolgende Tabelle zeigt die Formel zum Berechnen der Speicherbelegung für jeden Array-Typ:
 
-| Array Type      | Formula for determining Memory Usage in Bytes                        |
-| --------------- | -------------------------------------------------------------------- |
-| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Boolean         | (31+number of elements)\8                                           |
-| Date            | (1+number of elements) * 6                                           |
-| Integer         | (1+number of elements) * 2                                           |
-| Long Integer    | (1+number of elements) * 4                                           |
-| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| Real            | (1+number of elements) * 8                                           |
-| Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| Time            | (1+number of elements) * 4                                           |
-| Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
+| Array-Typ       | Formel für Speicherbelegung in Bytes                                |
+| --------------- | ------------------------------------------------------------------- |
+| Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
+| Boolean         | (31+Anzahl der Elemente) / 8                                        |
+| Date            | (1+Anzahl der Elemente) * 6                                         |
+| Zahl            | (1+Anzahl der Elemente) * 2                                         |
+| Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
+| Object          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
+| Picture         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
+| Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
+| Real            | (1+Anzahl der Elemente) * 8                                         |
+| Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
+| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
-**Notes:**
+**Hinweise:**
 
-- The size of a text in memory is calculated using this formula: ((Length + 1) * 2)
-- A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.
+- Die Größe eines Textes im Speicher wird mit der Formel ((Länge + 1)* 2) berechnet
+- Ein paar zusätzliche Bytes werden benötigt, um das ausgewählte Element, die Anzahl der Elemente und das Array selbst zu verwalten.
