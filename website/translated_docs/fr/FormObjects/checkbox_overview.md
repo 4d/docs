@@ -85,7 +85,7 @@ With the exception of the [available properties](#supported-properties), many ch
 
 4D provides check boxes in the following predefined styles:
 
-### Standard
+### Classique
 
 The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
@@ -190,7 +190,7 @@ Example with states unchecked / checked / highlighted:
 
 
 
-### Rounded Bevel
+### Bevel arrondi
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -251,7 +251,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 
 
-### OS X Textured
+### OS X Texture
 
 The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -286,7 +286,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
  - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
