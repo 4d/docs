@@ -118,7 +118,7 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Case à cocher"
+        "title": "Check Box"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -127,7 +127,7 @@
         "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "A propos des objets formulaires 4D"
+        "title": "About 4D Form Objects"
       },
       "FormObjects/groupBox": {
         "title": "Group Box"
@@ -229,16 +229,19 @@
         "title": "Texte"
       },
       "FormObjects/propertiesTextAndPicture": {
-        "title": "Texte et Image"
+        "title": "Text and Picture"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Zone Web"
+        "title": "Web Area"
+      },
+      "FormObjects/propertyMatrix": {
+        "title": "Active Object Properties"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Bouton radio"
+        "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "Règle"
+        "title": "Ruler"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -247,10 +250,10 @@
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "Séparateur"
+        "title": "Splitter"
       },
       "FormObjects/staticPicture": {
-        "title": "Image statique"
+        "title": "Static picture"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -268,7 +271,7 @@
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Zone Web"
+        "title": "Web Area"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
@@ -342,12 +345,6 @@
       },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "Users/editing": {
-        "title": "Gestion des groupes et utilisateurs 4D"
-      },
-      "Users/overview": {
-        "title": "Aperçu"
       }
     },
     "links": {
@@ -355,22 +352,21 @@
     },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
-      "Project Databases": "Bases projet",
-      "Form Editor": "Éditeur de formulaire",
-      "Form Objects": "Objets formulaires",
-      "Form Object Properties": "Propriétés des objets formulaire",
+      "Project Databases": "Project Databases",
+      "Form Editor": "Form Editor",
+      "Form Objects": "Form Objects",
+      "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution",
-      "Users and Groups": "Groupes et utilisateurs"
+      "Backup and Restore": "Sauvegarde et restitution"
     }
   },
   "pages-strings": {
-    "for 4D developers|no description given": "pour les développeurs 4D",
-    "Getting started|no description given": "Prise en main",
-    "Developing a Desktop application|no description given": "Développer une application Desktop",
-    "Developing a Web application|no description given": "Développer une application web",
-    "Developing a Mobile application|no description given": "Développer une application mobile",
+    "Essential Guides for 4D Developers|no description given": "Guides essentiels du développeur 4D",
+    "...more to come...|no description given": "...En cours de création...",
+    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
+    "Getting Started|no description given": "Prise en main",
+    "Development|no description given": "Développement",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",

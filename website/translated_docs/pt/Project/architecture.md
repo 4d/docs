@@ -138,13 +138,12 @@ The data folder contains the data file and all files and folders relating to the
 
 This folder contains **user settings files for data** used for database administration.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> These settings take priority over **user settings files** and **structure settings** files.
 
 | Contents            | Description                                                                                                                                                                                                          | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
 | settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                               | JSON   |
 
 
 ### Logs folder
@@ -163,7 +162,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> If a data settings file exists in a Settings folder in the data folder, it takes priority over user settings file.
 
 | Contents            | Description                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |

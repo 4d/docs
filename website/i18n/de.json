@@ -234,6 +234,9 @@
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
       },
+      "FormObjects/propertyMatrix": {
+        "title": "Active Object Properties"
+      },
       "FormObjects/radiobuttonOverview": {
         "title": "Radio Button"
       },
@@ -313,20 +316,20 @@
         "sidebar_label": "Overview"
       },
       "MSC/repair": {
-        "title": "Seite Reparieren",
-        "sidebar_label": "Seite Reparieren"
+        "title": "Repair Page",
+        "sidebar_label": "Repair Page"
       },
       "MSC/restore": {
-        "title": "Seite Wiederherstellen",
-        "sidebar_label": "Seite Wiederherstellen"
+        "title": "Restore Page",
+        "sidebar_label": "Restore Page"
       },
       "MSC/rollback": {
-        "title": "Seite Zurückfahren",
-        "sidebar_label": "Seite Zurückfahren"
+        "title": "Rollback Page",
+        "sidebar_label": "Rollback Page"
       },
       "MSC/verify": {
-        "title": "Seite Prüfen",
-        "sidebar_label": "Seite Prüfen"
+        "title": "Verify Page",
+        "sidebar_label": "Verify Page"
       },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
@@ -342,12 +345,6 @@
       },
       "Project/overview": {
         "title": "Overview"
-      },
-      "Users/editing": {
-        "title": "Managing 4D users and groups"
-      },
-      "Users/overview": {
-        "title": "Overview"
       }
     },
     "links": {
@@ -361,16 +358,15 @@
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups"
+      "Backup and Restore": "Backup and Restore"
     }
   },
   "pages-strings": {
-    "for 4D developers|no description given": "for 4D developers",
-    "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Essential Guides for 4D Developers|no description given": "Essential Guides for 4D Developers",
+    "...more to come...|no description given": "...more to come...",
+    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
+    "Getting Started|no description given": "Getting Started",
+    "Development|no description given": "Development",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",

@@ -1,33 +1,33 @@
 ---
 id: developing
-title: プロジェクトの開発
+title: Developing a project
 ---
 
-## 開発ツール
+## Development tools
 
-4D データベースプロジェクトは **4D Developer** アプリケーションを使ってローカルに作成します。 4D Developer でプロジェクトを開くには、*databaseName.4DProject* という名称のファイルを選択します ([4D プロジェクトのアーキテクチャー](architecture.md) 参照)。 4D プロジェクトファイルの大多数はテキストファイルなため、任意のテキストエディターを使って作業することも可能です。 ファイルへの同時アクセスはファイルアクセスマネージャーによって管理されます (後述参照)。
+4D database projects are created locally, using the **4D Developer** application. To open a project from 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Note that you can also work with any text editor since most of the 4D project files are text files. Concurrent file access is handled via a file access manager (see below).
 
-4D Server も *databaseName.4DProject* ファイルをテスト用に開くことができます: リモートの 4D マシンはデータベースに接続して利用することができますが、データベースストラクチャーファイルはすべて読み取り専用になっています。
+4D Server can open *databaseName.4DProject* files for testing purposes: remote 4D machines can connect and use the database, but all database structure files are read-only.
 
-マルチユーザー開発は標準的なソース管理ツールを使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
+Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications.
 
-## プロジェクトファイルアクセス
+## Project file access
 
-4D Developer でプロジェクトを開発するにあたって、ストラクチャー要素やメソッド、フォームの作成・変更・保存には 4D のビルトインエディターを利用することができます。 このエディターの作業対象はディスク上のファイルなため、同じファイルが同時に編集されていたり削除されていたりといった場合には競合が発生します。 たとえば、一つのメソッドをメソッドエディターで編集しつつ、標準のテキストエディターでも開いて変更した場合に競合が起こりえます。
+When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
 
-4D Developer のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:
+The 4D Developer framework includes a file access manager to control concurrent access:
 
-- 開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます:  
+- if an open file which is read-only at the OS level, a locked icon is displayed in the editor:  
     ![](assets/en/Project/lockicon.png)
-- 開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します: ![](assets/en/Project/projectReload.png)  
-    - **はい**: 編集内容を破棄してリロードします
-    - **いいえ**: 編集内容で上書き保存します
-    - **キャンセル**: 保存しません
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes: ![](assets/en/Project/projectReload.png)  
+    - **Yes**: discard editor changes and reload
+    - **No**: save changes and overwrite the other version
+    - **Cancel**: do not save
 
-この機能はすべてのビルトインエディターにおいて有効化されています:
+This feature is enabled for all built-in editors:
 
-- ストラクチャーエディター
-- フォームエディター
-- メソッドエディター
-- 環境設定
-- ツールボックス
+- Structure editor
+- Form editor
+- Method editor
+- Settings editor
+- Toolbox editor

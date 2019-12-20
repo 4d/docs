@@ -1,6 +1,6 @@
 ---
 id: propertiesGridlines
-title: グリッド線
+title: Gridlines
 ---
 
 ---

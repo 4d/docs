@@ -7,7 +7,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
 
 ![](assets/en/Project/project1.png)
 
-> Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. Voir "Conversion de bases en projets" sur [doc.4d.com](https://doc.4d.com).
+> Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
 ## Dossier Project
 
@@ -28,7 +28,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
 - 4D Developer
-- 4D Server (lecture seule, voir [Développer un projet](developing.md))
+- 4D Server (read-only, see [Developing a project](developing.md))
 
 **Note :** Dans les projets 4D, le développement est réalisé avec 4D Developer et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
@@ -119,7 +119,7 @@ Le dossier Resources contient tous les fichiers et dossiers de ressources person
 | Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | image  |
 
 
-(*) uniquement si le projet a été exporté depuis une base binaire .4db.
+(*) only if the project was exported from a .4db binary database.
 
 ## Dossier Data
 
@@ -132,19 +132,18 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 | data.match   | (interne) UUID correspondant au numéro de la table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | XML     |
 
 
-(*) Lorsque le projet est créé depuis une base binaire .4b, le fichier de données demeure inchangé. Ainsi, il peut être nommé différemment et placé dans un autre emplacement.
+(*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
 ### Dossier Settings
 
 Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de données** utilisés pour l'administration de la base de données.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> Ces paramètres ont la priorité sur les **fichiers de propriétés utilisateur** et les fichiers de **propriétés structure**.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                                                                                                         | JSON   |
 
 
 ### Dossier Logs
@@ -164,7 +163,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     
     Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
     
-    > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+    > Si un fichier de propriétés de données existe dans un dossier Settings du dossier Data, il est prioritaire sur le fichier de propriétés utilisateur.
     
     | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
     | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -188,12 +187,12 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     | preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
 
     
-    ## Dossier Components
+    ## Components folder
     
-    Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+    This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
     
-    > Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir [Créer un package projet](building.md)) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.
+    > A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
     
-    ## Dossier Plugins
+    ## Plugins folder
     
-    Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+    This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
