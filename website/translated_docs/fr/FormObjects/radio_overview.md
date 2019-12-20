@@ -40,7 +40,7 @@ Radio [button styles](properties_TextAndPicture.md#button-style) control radio b
 4D provides radio buttons in the following predefined styles:
 
 
-### Standard
+### Classique
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
@@ -55,35 +55,35 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 ![](assets/en/FormObjects/radio_flat.png)
 
-By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+By default, the Flat style has a minimalist appearance. Le style graphique du bouton A plat est particulièrement utile pour les formulaires à imprimer.
 
 
 ### Barre d’outils
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+Par défaut, le style bouton Barre d'outils a un fond transparent avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted.
+ - *Sous Windows* - le contour du bouton apparaît.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 
 
 ### Bevel
 
-The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted.
+ - *Sous Windows* - le contour du bouton apparaît.
 
   ![](assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 
-### Rounded Bevel
+### Bevel arrondi
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
 
@@ -102,7 +102,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 
 
-### OS X Textured
+### OS X Texture
 
 The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
 
@@ -120,7 +120,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
  - *Windows* - its background only appears when the mouse rolls over it.
 
