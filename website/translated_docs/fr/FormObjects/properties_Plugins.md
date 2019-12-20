@@ -14,9 +14,9 @@ Because the Advanced properties feature is under the control of the author of th
 
 #### JSON Grammar
 
-| Name             | Type de données    | Possible Values                                                                                                              |
-| ---------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| customProperties | text &#124; object | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
+| Name             | Type de données | Possible Values                                                                                                              |
+| ---------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| customProperties | Texte           | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
 
 
 #### Objects Supported

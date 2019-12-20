@@ -32,4 +32,4 @@ L’éditeur de menus est accessible via le bouton **Menus** de la Boîte à out
 
 Les barres de menus et les menus sont affichés sous forme de deux éléments d’une même liste hiérarchique, dans la partie gauche de la fenêtre. Chaque menu peut être attaché à une barre de menus ou à un autre menu. Dans le deuxième cas, le menu devient un sous-menu.
 
-4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. These numbers are used by the language commands.
+4D affecte des numéros de barre de menus séquentiellement -- Menu Bar #1 apparait en premier. Vous pouvez renommer des barres de menu mais vous ne pouvez pas modifier leur numéro. Ces derniers sont utilisés par les commandes du langage.

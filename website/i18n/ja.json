@@ -118,19 +118,19 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
         "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "FormObjects/inputOverview": {
         "title": "Input"
@@ -145,7 +145,7 @@
         "title": "Picture Button"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
         "title": "プラグインエリア"
@@ -160,13 +160,13 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "座標とサイズ"
       },
       "FormObjects/propertiesCrop": {
         "title": "Crop"
@@ -178,16 +178,16 @@
         "title": "Display"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "入力"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "グリッド線"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "ヘッダー"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -199,7 +199,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
         "title": "Picture"
@@ -208,7 +208,7 @@
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
@@ -217,10 +217,10 @@
         "title": "JSON property list"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "リサイズオプション"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -233,9 +233,6 @@
       },
       "FormObjects/propertiesWebArea": {
         "title": "Webエリア"
-      },
-      "FormObjects/propertyMatrix": {
-        "title": "Active Object Properties"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -253,7 +250,7 @@
         "title": "スプリッター"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "スタティックピクチャー"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -335,15 +332,21 @@
         "title": "4D プロジェクトのアーキテクチャー"
       },
       "Project/building": {
-        "title": "Building a project package"
+        "title": "プロジェクトパッケージのビルド"
       },
       "Project/creating": {
         "title": "4D プロジェクトの作成"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "プロジェクトの開発"
       },
       "Project/overview": {
+        "title": "Overview"
+      },
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
         "title": "Overview"
       }
     },
@@ -358,15 +361,16 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
       "MSC": "Maintenance & Security Center",
-      "Backup and Restore": "バックアップと復元"
+      "Backup and Restore": "バックアップと復元",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "4D 開発のリファレンスガイド",
-    "...more to come...|no description given": "…随時加筆予定…",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "はじめに",
-    "Development|no description given": "データベース開発",
+    "for 4D developers|no description given": "for 4D developers",
+    "Getting started|no description given": "はじめに",
+    "Developing a Desktop application|no description given": "デスクトップアプリケーションの開発",
+    "Developing a Web application|no description given": "Web アプリケーションの開発",
+    "Developing a Mobile application|no description given": "モバイルアプリケーションの開発",
     "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",

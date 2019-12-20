@@ -348,6 +348,11 @@
       },
       "Views/views": {
         "title": "Views"
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
+      },
+      "Users/overview": {
+        "title": "Overview"
       }
     },
     "links": {
@@ -361,15 +366,16 @@
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore"
+      "Backup and Restore": "Backup and Restore",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "Essential Guides for 4D Developers",
-    "...more to come...|no description given": "...more to come...",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "Getting Started",
-    "Development|no description given": "Development",
+    "for 4D developers|no description given": "for 4D developers",
+    "Getting started|no description given": "Getting started",
+    "Developing a Desktop application|no description given": "Developing a Desktop application",
+    "Developing a Web application|no description given": "Developing a Web application",
+    "Developing a Mobile application|no description given": "Developing a Mobile application",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",

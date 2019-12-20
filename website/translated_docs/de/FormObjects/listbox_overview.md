@@ -127,9 +127,9 @@ Supported properties depend on the list box type.
 | [Background Color](properties_BackgroundAndBorder.md#background-color)                       | X              | X                  | X                                       |
 | [Bold](properties_Text.md#bold)                                                              | X              | X                  | X                                       |
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                       |
-| [Border Line Style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)    | X              | X                  | X                                       |
+| [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                       |
 | [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                  | X                                       |
-| [Class](properties_Object.md#class)                                                          | X              | X                  | X                                       |
+| [Class](properties_Object.md#css-class)                                                      | X              | X                  | X                                       |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)        |                | X                  | X                                       |
 | [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                   | X              | X                  | X                                       |
 | [Current item](properties_DataSource.md#current-item)                                        |                |                    | X                                       |
@@ -213,7 +213,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ### Column Specific Properties
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 
 ## List box headers
@@ -236,7 +236,7 @@ When the `OBJECT SET VISIBLE` command is used with a header, it is applied to al
 
 ### Header Specific Properties
 
-[Bold](properties_Text.md#bold) - [Class](properties_Object.md#class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
 
@@ -260,7 +260,7 @@ When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to al
 ### Footer Specific Properties
 
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 
 ## Managing entry
@@ -871,7 +871,7 @@ The behavior attribute provides variations to the regular representation of valu
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
-````code4d
+```code4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
  OB SET($ob3;"value";-3)
@@ -879,7 +879,7 @@ The behavior attribute provides variations to the regular representation of valu
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
  OB SET($ob4;"behavior";"threeStates")
-````
+```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_behavior.png)
 
@@ -897,7 +897,7 @@ Examples:
 
 *   You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
-    ````code4d
+```code4d
     ARRAY TEXT($RequiredList;0)
     APPEND TO ARRAY($RequiredList;"Open")
     APPEND TO ARRAY($RequiredList;"Closed")
@@ -905,12 +905,12 @@ Examples:
     OB SET($ob;"valueType";"text")
     OB SET($ob;"value";"Closed")
     OB SET ARRAY($ob;"requiredList";$RequiredList)
-    ````
+```
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
 *   You want to accept any integer value, but display a combo box to suggest the most common values:
 
-    ````code4d
+```code4d
     ARRAY LONGINT($ChoiceList;0)
     APPEND TO ARRAY($ChoiceList;5)
     APPEND TO ARRAY($ChoiceList;10)
@@ -921,7 +921,7 @@ Examples:
     OB SET($ob;"valueType";"integer")
     OB SET($ob;"value";10) //10 as default value
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
-    ````
+```
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
 #### requiredListName and requiredListReference
@@ -938,18 +938,18 @@ Examples:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
-    ````code4d
+```code4d
     C_OBJECT($ob)
     OB SET($ob;"valueType";"text")
     OB SET($ob;"saveAs";"value")
     OB SET($ob;"value";"blue")
     OB SET($ob;"requiredListName";"colors") 
-    ````
+```
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 *   You want to display a drop-down list based on a list defined by programming and save it as a reference:
 
-    ````code4d
+```code4d
     <>List:=New list
     APPEND TO LIST(<>List;"Paris";1)
     APPEND TO LIST(<>List;"London";2)
@@ -960,7 +960,9 @@ Examples:
     OB SET($ob;"saveAs";"reference")
     OB SET($ob;"value";2) //displays London by default
     OB SET($ob;"requiredListReference";<>List)
-    ````
+```
+
+
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
 #### choiceListName and choiceListReference
@@ -1027,13 +1029,13 @@ When this button is clicked by a user, an `On Alternate Click` event will be gen
 
 Example:
 
-````code4d
+```code4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
 OB SET($ob;"valueType";"text")
 OB SET($ob;"alternateButton";True)
 OB SET($ob;"value";$entry)
-````
+```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
