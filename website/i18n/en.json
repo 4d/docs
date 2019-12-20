@@ -175,6 +175,7 @@
       "Project/overview": {
         "title": "Overview"
       },
+<<<<<<< Updated upstream
       "REST/{attribute1_attribute2}": {
         "title": "{attribute1,attribute2}"
       },
@@ -234,6 +235,22 @@
       },
       "REST/filter": {
         "title": "$filter"
+=======
+      "REST/directory_currentUser": {
+        "title": "$directory/currentUser"
+      },
+      "REST/directory_login": {
+        "title": "$directory/login"
+      },
+      "REST/authUsers": {
+        "title": "Authenticating Users"
+      },
+      "REST/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "Views/shields": {
+        "title": "Shields"
+>>>>>>> Stashed changes
       },
       "REST/imageformat": {
         "title": "$imageformat"
