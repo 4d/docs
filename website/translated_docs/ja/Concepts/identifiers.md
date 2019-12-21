@@ -275,7 +275,7 @@ $vsResult:=Calc creator(1;5;"Nice")
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Commands
+## プラグインコマンド
 
 You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
@@ -413,7 +413,7 @@ Be sure to use unique names for the different elements in your database. If a pa
 4D identifies names used in procedures in the following order:
 
 1. Fields
-2. Commands
+2. コマンド
 3. Methods
 4. Plug-in routines
 5. Predefined constants
