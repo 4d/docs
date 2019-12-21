@@ -99,7 +99,7 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | Description                                                                                                                                  |
+| Entry Filter                    | 説明                                                                                                                                           |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
 | &9                              | Allow only numbers.                                                                                                                          |
