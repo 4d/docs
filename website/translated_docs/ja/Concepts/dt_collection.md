@@ -66,7 +66,7 @@ You can create two types of collections:
 
 Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
 
-For example:
+たとえば:
 
 ```code4d
 $newCol:=$col.copy() //deep copy of $col to $newCol
