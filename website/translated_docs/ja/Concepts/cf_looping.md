@@ -412,7 +412,7 @@ You can define bounds to the iteration using the optional begin and end paramete
 
 If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 
-For example:
+たとえば:
 
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
