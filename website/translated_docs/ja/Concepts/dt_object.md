@@ -215,7 +215,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Assigning an undefined value to a non existing object property does nothing.
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. たとえば:
 
 ```code4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
