@@ -157,7 +157,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. たとえば:
 
 ```code4d
 //The following example tests if the last character of vtText is an At sign "@"
