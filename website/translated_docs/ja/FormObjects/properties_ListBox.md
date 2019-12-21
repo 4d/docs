@@ -206,7 +206,7 @@ You can define several interface properties at once:
 
 ![](assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+Note that setting properties for an element overrides any other values for this element (if not reset). たとえば:
 
 ```code4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
