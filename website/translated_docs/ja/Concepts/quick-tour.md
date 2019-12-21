@@ -14,7 +14,7 @@ ALERT("Hello, World!")
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
-あるいは、フォーム内のボタンにこのコードを付けた場合、フォームを実行した状態でボタンをクリックすると同様にアラートメッセージが表示されます。 いずれの方法でも、前述の1行のコードを実行するだけで目的達成です！
+あるいは、フォーム内のボタンにこのコードを付けた場合、フォームを実行した状態でボタンをクリックすると、その都度アラートメッセージが表示されます。 いずれの方法でも、前述の1行のコードを実行するだけで目的達成です！
 
 ## 値の代入
 
@@ -29,13 +29,13 @@ $myDate:=!2018/01/21! // 日付リテラルを代入します
 $myHour:=?08:12:55? // 時間リテラルを代入します
 ```
 
-代入演算 := は必ず他の演算と区別しなければなりません。 代入演算子は、式を組み合わせて新しい一つのものにするのではなく、演算子の右側の式の値を左側の変数やフィールドにコピーします。
+代入演算 (:=) は必ず他の演算と区別しなければなりません。 代入演算子は、被演算子を組み合わせて新しい一つのものにするのではなく、演算子の右側の式の値を左側の変数やフィールドにコピーします。
 
 **重要:** 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。
 
 ## 変数
 
-4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 `C_XXX` コマンドを使って、型付けのされた変数を作成します。 たとえば、日付型の変数を作成するには、次のように書くことができます:
+4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型付けのされた変数は `C_XXX` コマンドを使って作成します。 たとえば、日付型の変数を作成するには、次のように書くことができます:
 
 ```code4d
 C_DATE(MyDate) // MyDate 変数を日付型として宣言
@@ -47,9 +47,9 @@ C_DATE(MyDate) // MyDate 変数を日付型として宣言
 MyOtherDate:=Current date+30
 ```
 
-上のコードは "MyOtherDate に現在の日付プラス30日を代入します" という意味です。この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
+上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
 
-## Commands
+## コマンド
 
 4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に *4D ランゲージリファレンス* に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 Example:
 
@@ -57,7 +57,7 @@ MyOtherDate:=Current date+30
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 For example:
+コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 たとえば:
 
 ```code4d
 $c:=New collection(1;2;3;4;5)
@@ -68,7 +68,7 @@ $lastEmployee:=$employee.last()
 
 4D プラグインや 4D コンポーネントを利用して、4D 開発環境に新しくコマンドを追加することもできます。
 
-4D のユーザーコミュニティーや、サードパーティーデベロッパーによるプラグインが多数存在します。 たとえば, [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) プラグインを macOS で使用した場合:
+4D のユーザーコミュニティーや、サードパーティーデベロッパーによるプラグインが多数存在します。 たとえば, [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) プラグインを macOS で使用した場合は次のコードが書けます:
 
 ```code4d
 PDF REMOVE PAGE(path;page)
@@ -86,45 +86,45 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## 定数 
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
+4D では多くの定義済定数が用意されており、それらの値は名前によってアクセスすることができます。 たとえば、`Read Mode` は定数で、その値は 2 です。 メソッドエディターにおいて、定義済定数はデフォルトで下線付きで表示されます。 定義済みの定数によって、より可読性の高いコードを書くことができます。
 
 ```code4d
-vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
+vRef:=Open document("PassFile";"TEXT";Read Mode) // ドキュメントを読み取り専用モードで開きます
 ```
 
 ## Methods
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
+4D が提供するたくさんのビルトインコマンドを使って、独自の **プロジェクトメソッド** を組み立てることができます。 プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。
 
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
+メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 A statement performs an action, and may be simple or complex.
 
-For example, the following line is a statement that will display a confirmation dialog box:
+たとえば、次のステートメントは確認ダイアログボックスを表示します:
 
 ```code4d
-CONFIRM("Do you really want to close this account?";"Yes";"No")
+CONFIRM("このアカウントを本当に閉じますか？";"はい";"いいえ")
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+メソッドは、テストとループの制御フローの実行を含みます。 `If...Else...End if` および `Case of...Else...End case` の分岐構造が使用できるほか、ループ構造としては `While...End while`、`Repeat...Until`、`For...End for`、そして `For each...End for each` が使用可能です:
 
 The following example goes through all the characters of the text vtSomeText:
 
 ```code4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    // 文字がタブであれば処理をします
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
 
 ```code4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
+  // Do_Something メソッドのコードです
 $0:=Uppercase($1)
 ```
 
@@ -148,7 +148,7 @@ The data types are fully defined in the section [Data Types](Concepts/data-types
 
 ## Objects and collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
+You can handle 4D language objects and collections using the object notation to get or to set their values. たとえば:
 
 ```code4d
 employee.name:="Smith"
@@ -222,7 +222,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Type               | Description                                                                                                                                                                     |
+| Expression               | Type               | 説明                                                                                                                                                                              |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
@@ -249,7 +249,7 @@ You refer to an expression by the data type it returns. There are several expres
 
 ### Assignable vs non-assignable expressions
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
+An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. たとえば:
 
 ```code4d
 //$myVar variable is assignable, you can write:  
