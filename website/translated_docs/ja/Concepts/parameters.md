@@ -112,7 +112,7 @@ In the following example, the `Capitalize` project method accepts a text paramet
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
+Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. たとえば:
 
 ```code4d
 C_TEXT($string)
@@ -151,7 +151,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. たとえば:
 
 ```code4d
  C_LONGINT($0)
@@ -167,7 +167,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Values or references
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. For example:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. たとえば:
 
 ```code4d
     //Here is some code from the method MY_METHOD
