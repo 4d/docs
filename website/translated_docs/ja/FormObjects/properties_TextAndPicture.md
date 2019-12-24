@@ -152,7 +152,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 | Name | Data Type | Possible Values                              |
 | ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
+| icon | ピクチャー     | Relative or filesystem path in POSIX syntax. |
 
 #### Objects Supported
 
