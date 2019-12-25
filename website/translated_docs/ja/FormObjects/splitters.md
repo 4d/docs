@@ -3,7 +3,7 @@ id: splitters
 title: スプリッター
 ---
 
-## Overview
+## 概要
 
 A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your database’s interface. A splitter may or may not be a “pusher.”
 
