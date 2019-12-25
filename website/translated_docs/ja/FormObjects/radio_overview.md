@@ -3,7 +3,7 @@ id: radiobuttonOverview
 title: ラジオボタン
 ---
 
-## Overview
+## 概要
 
 Radio buttons are objects that allow the user to select one of a group of buttons.
 
