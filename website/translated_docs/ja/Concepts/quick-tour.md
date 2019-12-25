@@ -49,9 +49,9 @@ MyOtherDate:=Current date+30
 
 上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
 
-## コマンド
+## Commands
 
-4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に *4D ランゲージリファレンス* に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 Example:
+4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に *4D ランゲージリファレンス* に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例: 
 
 ```code4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -185,7 +185,7 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-| Operator | Operation      | Example            |
+| Operator | Operation      | 例題                 |
 | -------- | -------------- | ------------------ |
 | +        | Addition       | 1 + 2 results in 3 |
 | –        | Subtraction    | 3 – 2 results in 1 |
@@ -196,7 +196,7 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type       | Operation     | Example                                                                                              |
+| Data Type       | Operation     | 例題                                                                                                   |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
 | Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
@@ -287,7 +287,7 @@ Both styles of comments can be used simultaneously.
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+Insert `//` at the beginning of a line or after a statement to add a single line comment. 例: 
 
 ```code4d
 //This is a comment
@@ -302,7 +302,7 @@ For($vCounter;1;100) //Starting loop
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Example:
+- **Inline comments** can be inserted anywhere in the code. 例: 
 
 ```code4d
 For /* inline comment */ ($vCounter;1;100)
@@ -310,7 +310,7 @@ For /* inline comment */ ($vCounter;1;100)
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). 例: 
 
 ```code4d
 For ($vCounter;1;100)
