@@ -93,7 +93,7 @@ Here is another example: you want to execute an action only when you click on an
 
 ## Two-dimensional Arrays
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
+Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. 例: 
 
 ```code4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
