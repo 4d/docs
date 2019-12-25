@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: コンボボックス
 ---
 
-## Overview
+## 概要
 
 A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options.
 
