@@ -1,6 +1,6 @@
 ---
-id: 概要
-title: Overview
+id: overview
+title: 概要
 ---
 
 4D includes a full database backup and restore module.
