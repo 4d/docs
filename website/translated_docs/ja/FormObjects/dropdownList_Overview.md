@@ -3,7 +3,7 @@ id: dropdownListOverview
 title: ドロップダウンリスト
 ---
 
-## Overview
+## 概要
 
 Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
 
