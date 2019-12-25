@@ -192,7 +192,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### 例題
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 
