@@ -10,7 +10,7 @@ Variables, fields or expressions of the Object type can contain various types of
 - A property value can be of the following type:
     
     - number (Real, Integer, etc.)
-    - text
+    - テキスト
     - null
     - Boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
@@ -35,7 +35,7 @@ Each property value accessed through the object notation is considered an expres
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
-Example:
+例: 
 
 ```code4d
  C_OBJECT($obVar) //creation of an object type 4D variable
@@ -59,7 +59,7 @@ With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+例: 
 
 ```code4d
      employee.name:="Smith"
@@ -95,13 +95,13 @@ Object notation is available on any language element that can contains or return
      $val:=$myCollection[3].subvalue //collection element
 ```
 
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. 例: 
 
 ```code4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. 例: 
 
 ```code4d
       // MyMethod1
@@ -132,7 +132,7 @@ Using object notation with pointers is very similar to using object notation dir
     
     > pointerOnObject->["propertyName"]
 
-Example:
+例: 
 
 ```code4d
  C_OBJECT(vObj)
