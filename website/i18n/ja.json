@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -280,7 +280,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -309,8 +309,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -341,13 +341,13 @@
         "title": "プロジェクトの開発"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "概要"
       }
     },
     "links": {
