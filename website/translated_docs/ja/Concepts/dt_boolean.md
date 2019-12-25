@@ -9,7 +9,7 @@ A boolean field, variable or expression can be either TRUE or FALSE.
 
 4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
 
-### Example
+### 例題
 
 This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
 
