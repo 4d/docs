@@ -213,7 +213,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
 
-Example:
+例: 
 
 ```code4d
 OBJECT SET FONT(*;"Binfo";"Times")
@@ -237,7 +237,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:
+**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. 例: 
 
 Examples:
 
@@ -383,7 +383,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                   | Max. Length | Example                    |
+| Identifier                   | Max. Length | 例題                         |
 | ---------------------------- | ----------- | -------------------------- |
 | Table                        | 31          | [Invoices]                 |
 | Field                        | 31          | [Employees]Last Name       |
