@@ -31,7 +31,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | Property   | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| fontWeight | テキスト      | "normal", "bold" |
 
 #### Objects Supported
 
@@ -226,7 +226,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+例:
 
 ```code4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
