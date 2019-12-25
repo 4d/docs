@@ -3,7 +3,7 @@ id: ruler
 title: ルーラー
 ---
 
-## Overview
+## 概要
 
 The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
 
