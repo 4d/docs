@@ -16,9 +16,9 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### JSON Grammar
 
-| Name                 | Data Type | Possible Values         |
-| -------------------- | --------- | ----------------------- |
-| methodsAccessibility | string    | "none" (default), "all" |
+| Name                 | データタイプ | Possible Values         |
+| -------------------- | ------ | ----------------------- |
+| methodsAccessibility | string | "none" (default), "all" |
 
 #### Objects Supported
 
@@ -32,9 +32,9 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values            |
-| -------------- | --------- | -------------------------- |
-| progressSource | string    | Name of a Longint variable |
+| Name           | データタイプ | Possible Values            |
+| -------------- | ------ | -------------------------- |
+| progressSource | string | Name of a Longint variable |
 
 #### Objects Supported
 
@@ -63,9 +63,9 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| urlSource | string    | A URL.          |
+| Name      | データタイプ | Possible Values |
+| --------- | ------ | --------------- |
+| urlSource | string | A URL.          |
 
 #### Objects Supported
 
@@ -94,9 +94,9 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values      |
-| --------- | --------- | -------------------- |
-| webEngine | string    | "embedded", "system" |
+| Name      | データタイプ | Possible Values      |
+| --------- | ------ | -------------------- |
+| webEngine | string | "embedded", "system" |
 
 #### Objects Supported
 
