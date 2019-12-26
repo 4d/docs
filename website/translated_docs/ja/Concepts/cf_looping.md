@@ -105,7 +105,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-3. The following example goes through all the characters of the text vtSomeText:
+3. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```code4d
  For($vlChar;1;Length(vtSomeText))
@@ -152,7 +152,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-7. The following example goes through all the characters of the text vtSomeText:
+7. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```code4d
  For($vlChar;Length(vtSomeText);1;-1)
