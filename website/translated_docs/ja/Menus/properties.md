@@ -116,7 +116,7 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operation   |
+| Key (Windows)   | Key (macOS)        | オペレーション     |
 | --------------- | ------------------ | ----------- |
 | Ctrl+C          | Command+C          | Copy        |
 | Ctrl+Q          | Command+Q          | Quit        |
