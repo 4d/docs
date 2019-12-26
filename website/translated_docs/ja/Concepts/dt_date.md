@@ -29,9 +29,9 @@ A null date is specified by *!00-00-00!*.
 
 ## Date operators
 
-| Operation                | Syntax        | Returns | Expression                  | Value        |
+| オペレーション                  | Syntax        | Returns | Expression                  | Value        |
 | ------------------------ | ------------- | ------- | --------------------------- | ------------ |
-| Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
+| Date difference          | Date – Date   | 数値      | !2017-01-20! - !2017-01-01! | 19           |
 | Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
 | Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
 | Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | True         |
