@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| Name               | データタイプ  | Possible Values |
+| ------------------ | ------- | --------------- |
+| automaticInsertion | boolean | true, false     |
 
 #### Objects Supported
 
@@ -40,7 +40,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### JSON Grammar
 
-| Name       | Data Type        | Possible Values                                     |
+| Name       | データタイプ           | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
 | list       | list, collection | A list of possible values (hierarchical lists only) |
@@ -59,7 +59,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | Data Type        | Possible Values                          |
+| Name   | データタイプ           | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| Name              | データタイプ | Possible Values   |
+| ----------------- | ------ | ----------------- |
+| currentItemSource | string | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -101,9 +101,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Name                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| Name                      | データタイプ | Possible Values   |
+| ------------------------- | ------ | ----------------- |
+| currentItemPositionSource | string | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -113,7 +113,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 
 ---
-## Data Type
+## データタイプ
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
@@ -142,7 +142,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
+| Name   | データタイプ     | Possible Values                                                  |
 | ------ | ---------- | ---------------------------------------------------------------- |
 | values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
@@ -163,7 +163,7 @@ A 4D expression to be associated with a column. You can enter:
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
-    *   String
+    *   文字
     *   Numeric
     *   Date
     *   Time
@@ -171,7 +171,7 @@ A 4D expression to be associated with a column. You can enter:
     *   Boolean You can use fields from the Master Table or from other tables.
 
 -   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. The following expression types are supported:
-    *   String
+    *   文字
     *   Numeric
     *   Date
     *   Picture
@@ -186,9 +186,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| Name       | データタイプ | Possible Values                                                         |
+| ---------- | ------ | ----------------------------------------------------------------------- |
+| dataSource | string | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -208,9 +208,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
+| Name  | データタイプ | Possible Values |
+| ----- | ------ | --------------- |
+| table | number | Table number    |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
@@ -243,9 +243,9 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Name   | データタイプ | Possible Values      |
+| ------ | ------ | -------------------- |
+| saveAs | string | "value", "reference" |
 
 #### Objects Supported
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -264,9 +264,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| Name                | データタイプ | Possible Values       |
+| ------------------- | ------ | --------------------- |
+| selectedItemsSource | string | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -282,9 +282,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| Name           | データタイプ | Possible Values      |
+| -------------- | ------ | -------------------- |
+| namedSelection | string | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
