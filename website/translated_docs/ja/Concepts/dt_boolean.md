@@ -31,14 +31,14 @@ myBoolean:=(myButton=1)
 
 4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
 
-| Operation | Syntax                 | Returns | Expression                  | Value |
-| --------- | ---------------------- | ------- | --------------------------- | ----- |
-| AND       | Boolean & Boolean      | Boolean | ("A" = "A") & (15 # 3)      | True  |
-|           |                        |         | ("A" = "B") & (15 # 3)      | False |
-|           |                        |         | ("A" = "B") & (15 = 3)      | False |
-| OR        | Boolean &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3) | True  |
-|           |                        |         | ("A" = "B") &#124; (15 # 3) | True  |
-|           |                        |         | ("A" = "B") &#124; (15 = 3) | False |
+| オペレーション | Syntax                 | Returns | Expression                  | Value |
+| ------- | ---------------------- | ------- | --------------------------- | ----- |
+| AND     | Boolean & Boolean      | Boolean | ("A" = "A") & (15 # 3)      | True  |
+|         |                        |         | ("A" = "B") & (15 # 3)      | False |
+|         |                        |         | ("A" = "B") & (15 = 3)      | False |
+| OR      | Boolean &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3) | True  |
+|         |                        |         | ("A" = "B") &#124; (15 # 3) | True  |
+|         |                        |         | ("A" = "B") &#124; (15 = 3) | False |
 
 The following is the truth table for the AND logical operator:
 
