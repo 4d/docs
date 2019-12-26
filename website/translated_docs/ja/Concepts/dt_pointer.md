@@ -85,7 +85,7 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Syntax            | Returns | Expression    | Value |
+| オペレーション    | Syntax            | Returns | Expression    | Value |
 | ---------- | ----------------- | ------- | ------------- | ----- |
 | Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
 |            |                   |         | vPtrA = vPtrC | False |
