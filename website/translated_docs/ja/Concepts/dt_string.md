@@ -1,6 +1,6 @@
 ---
 id: string
-title: String
+title: 文字
 ---
 
 String is a generic term that stands for:
@@ -36,10 +36,10 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
+| オペレーション                  | Syntax           | Returns | Expression              | Value    |
 | ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
+| 連結 (結合)                  | String + String  | 文字      | "abc" + "def"           | "abcdef" |
+| Repetition               | String * Number  | 文字      | "ab" * 3                | "ababab" |
 | Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
 |                          |                  |         | "abc" = "abd"           | False    |
 | Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
