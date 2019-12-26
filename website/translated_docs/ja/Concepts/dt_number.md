@@ -37,15 +37,15 @@ Negative numbers are specified with the minus sign (-). たとえば:
 
 ## Number operators
 
-| Operation                | Syntax           | Returns | Expression | Value |
+| オペレーション                  | Syntax           | Returns | Expression | Value |
 | ------------------------ | ---------------- | ------- | ---------- | ----- |
-| Addition                 | Number + Number  | Number  | 2 + 3      | 5     |
-| Subtraction              | Number - Number  | Number  | 3 – 2      | 1     |
-| Multiplication           | Number * Number  | Number  | 5 * 2      | 10    |
-| Division                 | Number /Number   | Number  | 5 / 2      | 2.5   |
-| Longint division         | Number \ Number | Number  | 5 \ 2     | 2     |
-| Modulo                   | Number % Number  | Number  | 5 % 2      | 1     |
-| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3      | 8     |
+| 加算 (足し算)                 | Number + Number  | 数値      | 2 + 3      | 5     |
+| 減算 (引き算)                 | Number - Number  | 数値      | 3 – 2      | 1     |
+| 乗算 (かけ算)                 | Number * Number  | 数値      | 5 * 2      | 10    |
+| 除算 (割り算)                 | Number /Number   | 数値      | 5 / 2      | 2.5   |
+| Longint division         | Number \ Number | 数値      | 5 \ 2     | 2     |
+| Modulo                   | Number % Number  | 数値      | 5 % 2      | 1     |
+| Exponentiation           | Number ^ Number  | 数値      | 2 ^ 3      | 8     |
 | Equality                 | Number = Number  | Boolean | 10 = 10    | True  |
 |                          |                  |         | 10 = 11    | False |
 | Inequality               | Number # Number  | Boolean | 10 #11     | True  |
