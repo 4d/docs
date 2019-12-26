@@ -96,7 +96,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // ドキュメントを読み�
 
 4D が提供するたくさんのビルトインコマンドを使って、独自の **プロジェクトメソッド** を組み立てることができます。 プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。
 
-メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 A statement performs an action, and may be simple or complex.
+メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。
 
 たとえば、次のステートメントは確認ダイアログボックスを表示します:
 
@@ -106,18 +106,18 @@ CONFIRM("このアカウントを本当に閉じますか？";"はい";"いい�
 
 メソッドは、テストとループの制御フローの実行を含みます。 `If...Else...End if` および `Case of...Else...End case` の分岐構造が使用できるほか、ループ構造としては `While...End while`、`Repeat...Until`、`For...End for`、そして `For each...End for each` が使用可能です:
 
-The following example goes through all the characters of the text vtSomeText:
+テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```code4d
 For($vlChar;1;Length(vtSomeText))
-    // 文字がタブであれば処理をします
+    // 文字がタブであれば
     If(Character code(vtSomeText[[$vlChar]])=Tab)
-        //...
+        // なんらかの処理をします
     End if
 End for
 ```
 
-プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号が付けられたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
 
 ```code4d
 $myText:="hello"
@@ -128,85 +128,85 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-## Data Types
+## データタイプ
 
-In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
+4D ランゲージで扱うデータにはいくつかの種別があり、これらのデータ種別を "データタイプ" と呼びます。 基本的なデータタイプ (文字、数値、日付、時間、ブール、ピクチャー、ポインター、配列) と混合型のデータタイプ (BLOB、オブジェクト、コレクション) があります。
 
-Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.
+データタイプのうち、文字タイプと数値タイプは、複数の類似するフィールドタイプに対応する点に注意してください。 これらのフィールドにデータが格納されるとき、4D ランゲージはフィールドタイプに合致するデータタイプへとデータを自動的に変換します。 反対に、たとえば整数フィールドのデータを呼び出すと、そのデータは自動的に数値タイプとして扱われます。 つまり、4D ランゲージを使用する際に、類似するフィールドタイプを厳密に区別する必要はありません。
 
-However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
+しかし、プログラミングにおいて異なるデータタイプを混同しないようにすることは重要です。 "ABC" を日付フィールドに格納しても意味がないように、日付型の変数に "ABC" を格納することも意味がありません。 4D は、コードに書かれたことをできるだけ有効にしようとします。 たとえば、日付に数値を加算した場合は、日付に日数を加算したいものと認識します。しかし、日付に文字列を加算した場合には、4D はその操作が意味を持たないことを警告します。
 
-There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
+あるタイプとして格納したデータを、別のタイプとして使用する場合があります。 4D ランゲージには、データタイプを変換するためのコマンドが用意されています。 たとえば、数値で始まり、"abc" 等の文字で終了する部品番号を作成する場合、 以下のように記述することができます:
 
 ```code4d
-[Products]Part Number:=String(Number)+"abc"
+[Products]Part_Number:=String(Number)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+数値変数 *Number* の値が17であれば、*[Products]Part_Number* に "17abc" という文字列が代入されます。
 
-The data types are fully defined in the section [Data Types](Concepts/data-types.md).
+データタイプについては [データタイプ](Concepts/data-types.md) の節で詳しく説明しています。
 
-## Objects and collections
+## オブジェクトとコレクション
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. たとえば:
+4D ランゲージのオブジェクトとコレクションは、オブジェクト記法を使用して値を代入・取得することができます。 たとえば:
 
 ```code4d
 employee.name:="Smith"
 ```
 
-You can also use a string within square brackets, for example:
+大カッコ内と文字列の組み合わせを用いることもできます:
 
 ```code4d
 $vName:=employee["name"]
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトあるいはコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した記号を受け入れることができます:
 
 ```code4d
 $vAge:=employee.children[2].age
 ```
 
-Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
+オブジェクトのプロパティ値が、メソッド (フォーミュラ) をカプセル化したオブジェクトである場合には、プロパティ名の後に括弧 ( ) をつけることで実行できます:
 
     $f:=New object
     $f.message:=New formula(ALERT("Hello world!"))
-    $f.message() //displays "Hello world!"
+    $f.message() // "Hello world!" を表示します
     
 
-To access a collection element, you have to pass the element number embedded in square brackets:
+コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
 
 ```code4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
 ```
 
-## Operators
+## 演算子
 
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
+プログラミング言語を使用する際に、データのみを必要とする場合は非常に稀です。 データを加工、または何らかの目的のために使用することがほとんどです。 そういった計算は演算子を使っておこないます。 一般的に演算子とは、2つのデータをもとに処理をおこない、1つの新しいデータを生成します。 日常的に使用されている演算子も多くあります。 例えば、1 + 2 という式は加算演算子（プラス記号）を使用し、2つの数値を足し合わせて、3という結果を返します。 以下に、よく知られている 4つの演算子を示します。
 
-| Operator | Operation      | 例題                 |
-| -------- | -------------- | ------------------ |
-| +        | Addition       | 1 + 2 results in 3 |
-| –        | Subtraction    | 3 – 2 results in 1 |
-| *        | Multiplication | 2 * 3 results in 6 |
-| /        | Division       | 6 / 2 results in 3 |
+| 演算子 | オペレーション  | 例題           |
+| --- | -------- | ------------ |
+| +   | 加算 (足し算) | 1 + 2 の結果は 3 |
+| –   | 減算 (引き算) | 3 - 2 の結果は 1 |
+| *   | 乗算 (かけ算) | 2 * 3 の結果は 6 |
+| /   | 除算 (割り算) | 6 / 2 の結果は 3 |
 
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
+数値演算子は、使用可能な演算子のうちの 1種にすぎません。 4Dは、数値・テキスト・日付・ピクチャー等、異なるタイプのデータを扱うために、各データタイプで演算を実行するための演算子を備えています。
 
-The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
+対象のデータタイプによって、同じ記号が異なる処理に使用される場合があります。 例えば、データタイプによってプラス記号 (+) は下記のように異なる演算を実行します:
 
-| Data Type       | Operation     | 例題                                                                                                   |
-| --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
-| String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
-| Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+| データタイプ | オペレーション  | 例題                                                        |
+| ------ | -------- | --------------------------------------------------------- |
+| 数値     | 加算 (足し算) | 1 + 2 は数値を加算し、結果は 3 です。                                   |
+| 文字     | 連結 (結合)  | "みなさん" + "こんにちは" は文字を連結 (結合) し、結果は "みなさんこんにちは" です。        |
+| 日付と数値  | 日付の加算    | !2006/12/4! + 20 は、2006年12月4日に 20日を加算し、結果は 2006年12月24日です。 |
 
-The operators are fully defined in the chapter Operators and its subsections.
+演算子についての詳細は演算子の章を参照してください。
 
-## Expressions
+## 式
 
-Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
+式は、値を返します。 4D ランゲージでコードを書く際には、意識していなくても常に式を使用しています。 式は、"フォーミュラ" と呼ぶこともあります。
 
 Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
 
@@ -224,13 +224,13 @@ You refer to an expression by the data type it returns. There are several expres
 
 | Expression               | Type               | 説明                                                                                                                                                                              |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
+| “Hello”                  | 文字                 | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
+| “Hello ” + “there”       | 文字                 | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
+| “Mr. ” + [People]Name    | 文字                 | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| Uppercase("smith")       | 文字                 | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
+| 4                        | 数値                 | This is a number constant, 4.                                                                                                                                                   |
+| 4 * 2                    | 数値                 | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| myButton                 | 数値                 | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
 | !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
 | ?8:05:30?                | Time               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
