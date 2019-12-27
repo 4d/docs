@@ -208,46 +208,46 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 
 式は、値を返します。 4D ランゲージでコードを書く際には、意識していなくても常に式を使用しています。 式は、"フォーミュラ" と呼ぶこともあります。
 
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
+コマンド・演算子・変数・フィールド・オブジェクトプロパティ・コレクション要素等、複数のランゲージの要素を組み合わせて式は構成されます。 式により、ステートメント (メソッドの 1文や 1行) を構成します。 データが必要なとき、式が必要になります。
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
+式が単独で使われることはほとんどありませんが、単独で使用できる場合がいくつかあります :
 
-- Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
-- Quick Report editor as a formula for a column
+- フォーミュラエディター (フォーミュラによるクエリや並べ替えなど)
+- `EXECUTE FORMULA` コマンド
+- フォームオブジェクトやウィジェットのデータソースとして
+- デバッガー内で式の値を確認することができます
+- クイックレポートエディターでカラムにフォーミュラを使用することができます
 
-### Expression types
+### 式のタイプ
 
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
+生成する値のタイプによって、式のタイプを定義することができます。 式のタイプは複数あります。 様々なタイプの式の例を以下に示します。
 
-| Expression               | Type               | 説明                                                                                                                                                                              |
-| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | 文字                 | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | 文字                 | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | 文字                 | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | 文字                 | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | 数値                 | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | 数値                 | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | 数値                 | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
-| !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Time               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Time               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Boolean            | This command returns the Boolean value TRUE.                                                                                                                                    |
-| 10 # 20                  | Boolean            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Boolean            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Picture            | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Pointer            | This expression returns a pointer to the field called [People]Name.                                                                                                             |
-| Table (1)                | Pointer            | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Object             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+| 式                           | タイプ         | 説明                                                                              |
+| --------------------------- | ----------- | ------------------------------------------------------------------------------- |
+| "こんにちは"                     | 文字          | これは文字列定数 "こんにちは" です。 文字列定数であることを表すために二重引用符が必要です。                                |
+| "みなさん" + "こんにちは"            | 文字          | 2つの文字列 "みなさん" と "こんにちは" が + 演算子により結合され、 "みなさんこんにちは" を返します。                      |
+| [People]Name + "様"          | 文字          | 2つの文字列の結合です。 [People]Name フィールドと文字列 "様" が結合されます。 フィールドの値が "小林" の場合、"小林様" を返します。 |
+| Uppercase ("smith")         | 文字          | この式は `Uppercase` コマンドを使用して、文字列 "smith" を英大文字に変換します。 そして "SMITH" を返します。          |
+| 4                           | 数値          | これは数値定数 4です。                                                                    |
+| 4 * 2                       | 数値          | 2つの数値、4 と 2 の乗算です。乗算演算子の (*) を使用しています。 数値の 8を返します。                              |
+| myButton                    | 数値          | これはボタンに紐づけられた変数です。 ボタンの現在の値を返します: クリックされた場合に 1、それ以外は 0 を返します。                   |
+| !06/12/24! または !2006/12/24! | 日付          | この式は日付定数で 2006年12月24日を表します。                                                     |
+| Current date + 30           | 日付          | これは日付の計算です。`Current date` コマンドは現在の日付を返します。 現在の日付に 30日を加えた日付を返します。               |
+| ?8:05:30?                   | 時間          | これは時間定数で、8時5分30秒を表します。                                                          |
+| ?2:03:04? + ?1:02:03?       | 時間          | 2つの時間の足し算をおこない、3時5分7秒を返します。                                                     |
+| True                        | ブール         | このコマンドはブール値のTRUE (真) を返します。                                                     |
+| 10 # 20                     | ブール         | これは 2つの数値の論理比較です。 #記号は、"等しくない" を表します。 10と20は "等しくない" ため、この式は TRUE (真) を返します。    |
+| "ABC" = "XYZ"               | ブール         | これは文字列の論理比較です。 文字列は等しくないため、式は FALSE (偽) を返します。                                  |
+| My Picture + 50             | ピクチャー       | この式は My Picture 変数に入っているピクチャーを右に 50ピクセル移動したピクチャーを返します。                          |
+| ->[People]Name              | ポインター       | この式は [People]Name フィールドへのポインターを返します。                                            |
+| Table (1)                   | ポインター       | このコマンドは一番目に定義されたテーブルへのポインターを返します。                                               |
+| JSON Parse (MyString)       | オブジェクト      | このコマンドは MyString が適切なフォーマットであれば、オブジェクトとして返します。                                  |
+| JSON Parse (MyJSONArray)    | コレクション      | このコマンドは MyJSONArray が適切なフォーマットであれば、コレクションとして返します。                               |
+| Form.pageNumber             | オブジェクトプロパティ | オブジェクトプロパティは式として、サポートされているいずれのタイプでもありえます。                                       |
+| Col[5]                      | コレクション要素    | コレクション要素は式として、サポートされているいずれのタイプでもありえます。                                          |
+| $entitySel[0]               | エンティティ      | ORDA のエンティティセレクションの要素である、エンティティを返します。 これは **代入不可の式** です。                        |
 
-### Assignable vs non-assignable expressions
+### 代入可 vs 代入不可の式
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. たとえば:
 
