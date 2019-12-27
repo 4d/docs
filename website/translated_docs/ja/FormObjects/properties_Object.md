@@ -4,7 +4,7 @@ id: propertiesObject
 ---
 
 ---
-## Type
+## タイプ
 
  `MANDATORY SETTING`
 
@@ -296,17 +296,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Date | Time | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   |      | X    | X    | X    |      | Same as column type |
-| Maximum               | X   |      | X    | X    | X    |      | Same as column type |
-| Sum                   | X   |      | X    |      | X    |      | Same as column type |
-| Count                 | X   | X    | X    | X    | X    | X    | Longint             |
-| Average               | X   |      |      | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variance(*)           | X   |      |      | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X    | X    | X    | X    | Any                 |
+| Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
+| --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
+| Minimum               | X   |      | X  | X  | X    |      | Same as column type |
+| Maximum               | X   |      | X  | X  | X    |      | Same as column type |
+| Sum                   | X   |      | X  |    | X    |      | Same as column type |
+| Count                 | X   | X    | X  | X  | X    | X    | 倍長整数                |
+| Average               | X   |      |    | X  |      |      | 実数                  |
+| Standard deviation(*) | X   |      |    | X  |      |      | 実数                  |
+| Variance(*)           | X   |      |    | X  |      |      | 実数                  |
+| Sum squares(*)        | X   |      |    | X  |      |      | 実数                  |
+| Custom ("none")       | X   | X    | X  | X  | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
