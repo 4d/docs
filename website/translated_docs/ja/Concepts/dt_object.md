@@ -1,6 +1,6 @@
 ---
 id: object
-title: Object
+title: オブジェクト
 ---
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
@@ -12,7 +12,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - テキスト
     - null
-    - Boolean
+    - ブール
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - object (objects can be nested on several levels)
