@@ -173,16 +173,16 @@ However, in some circumstances, you may need to work with arrays holding hundred
 | Array Type      | Formula for determining Memory Usage in Bytes                        |
 | --------------- | -------------------------------------------------------------------- |
 | Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Boolean         | (31+number of elements)\8                                           |
-| Date            | (1+number of elements) * 6                                           |
-| Integer         | (1+number of elements) * 2                                           |
+| ブール             | (31+number of elements)\8                                           |
+| 日付              | (1+number of elements) * 6                                           |
+| 整数              | (1+number of elements) * 2                                           |
 | Long Integer    | (1+number of elements) * 4                                           |
-| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| Real            | (1+number of elements) * 8                                           |
-| Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| Time            | (1+number of elements) * 4                                           |
+| オブジェクト          | (1+number of elements) * 8 + Sum of the size of each object          |
+| ピクチャー           | (1+number of elements) * 8 + Sum of the size of each picture         |
+| ポインター           | (1+number of elements) * 8 + Sum of the size of each pointer         |
+| 実数              | (1+number of elements) * 8                                           |
+| テキスト            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
+| 時間              | (1+number of elements) * 4                                           |
 | Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
 
 **Notes:**
