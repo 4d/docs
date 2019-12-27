@@ -184,7 +184,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
+| [タイプ](properties_Object.md#type)                                                             | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -791,7 +791,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
-| Boolean    | check box                                                  | N/A                     |
+| ブール        | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | event      | N/A                                                        | N/A                     |
 
