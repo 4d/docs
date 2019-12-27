@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointer
+title: ポインター
 ---
 
 A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
@@ -13,14 +13,14 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Type          | To Reference            | To Use                   | To Assign                |
+| タイプ           | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| オブジェクト        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 ## Using a pointer: Basic example
 
@@ -85,11 +85,11 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| オペレーション    | Syntax            | Returns | Expression    | Value |
+| オペレーション    | Syntax            | Returns | 式             | Value |
 | ---------- | ----------------- | ------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
+| Equality   | Pointer = Pointer | ブール     | vPtrA = vPtrB | True  |
 |            |                   |         | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
+| Inequality | Pointer # Pointer | ブール     | vPtrA # vPtrC | True  |
 |            |                   |         | vPtrA # vPtrB | False |
 
 ## Main usages
