@@ -1,6 +1,6 @@
 ---
 id: boolean
-title: Boolean
+title: ブール
 ---
 
 A boolean field, variable or expression can be either TRUE or FALSE.
@@ -31,12 +31,12 @@ myBoolean:=(myButton=1)
 
 4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
 
-| オペレーション | Syntax                 | Returns | Expression                  | Value |
+| オペレーション | Syntax                 | Returns | 式                           | Value |
 | ------- | ---------------------- | ------- | --------------------------- | ----- |
-| AND     | Boolean & Boolean      | Boolean | ("A" = "A") & (15 # 3)      | True  |
+| AND     | Boolean & Boolean      | ブール     | ("A" = "A") & (15 # 3)      | True  |
 |         |                        |         | ("A" = "B") & (15 # 3)      | False |
 |         |                        |         | ("A" = "B") & (15 = 3)      | False |
-| OR      | Boolean &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3) | True  |
+| OR      | Boolean &#124; Boolean | ブール     | ("A" = "A") &#124; (15 # 3) | True  |
 |         |                        |         | ("A" = "B") &#124; (15 # 3) | True  |
 |         |                        |         | ("A" = "B") &#124; (15 = 3) | False |
 
