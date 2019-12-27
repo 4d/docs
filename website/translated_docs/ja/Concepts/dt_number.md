@@ -37,27 +37,27 @@ Negative numbers are specified with the minus sign (-). たとえば:
 
 ## Number operators
 
-| オペレーション                  | Syntax           | Returns | Expression | Value |
-| ------------------------ | ---------------- | ------- | ---------- | ----- |
-| 加算 (足し算)                 | Number + Number  | 数値      | 2 + 3      | 5     |
-| 減算 (引き算)                 | Number - Number  | 数値      | 3 – 2      | 1     |
-| 乗算 (かけ算)                 | Number * Number  | 数値      | 5 * 2      | 10    |
-| 除算 (割り算)                 | Number /Number   | 数値      | 5 / 2      | 2.5   |
-| Longint division         | Number \ Number | 数値      | 5 \ 2     | 2     |
-| Modulo                   | Number % Number  | 数値      | 5 % 2      | 1     |
-| Exponentiation           | Number ^ Number  | 数値      | 2 ^ 3      | 8     |
-| Equality                 | Number = Number  | Boolean | 10 = 10    | True  |
-|                          |                  |         | 10 = 11    | False |
-| Inequality               | Number # Number  | Boolean | 10 #11     | True  |
-|                          |                  |         | 10 # 10    | False |
-| Greater than             | Number > Number  | Boolean | 11 > 10    | True  |
-|                          |                  |         | 10 > 11    | False |
-| Less than                | Number < Number  | Boolean | 10 < 11    | True  |
-|                          |                  |         | 11 < 10    | False |
-| Greater than or equal to | Number >= Number | Boolean | 11 >= 10   | True  |
-|                          |                  |         | 10 >= 11   | False |
-| Less than or equal to    | Number <= Number | Boolean | 10 <= 11   | True  |
-|                          |                  |         | 11 <= 10   | False |
+| オペレーション                  | Syntax           | Returns | 式        | Value |
+| ------------------------ | ---------------- | ------- | -------- | ----- |
+| 加算 (足し算)                 | Number + Number  | 数値      | 2 + 3    | 5     |
+| 減算 (引き算)                 | Number - Number  | 数値      | 3 – 2    | 1     |
+| 乗算 (かけ算)                 | Number * Number  | 数値      | 5 * 2    | 10    |
+| 除算 (割り算)                 | Number /Number   | 数値      | 5 / 2    | 2.5   |
+| Longint division         | Number \ Number | 数値      | 5 \ 2   | 2     |
+| Modulo                   | Number % Number  | 数値      | 5 % 2    | 1     |
+| Exponentiation           | Number ^ Number  | 数値      | 2 ^ 3    | 8     |
+| Equality                 | Number = Number  | ブール     | 10 = 10  | True  |
+|                          |                  |         | 10 = 11  | False |
+| Inequality               | Number # Number  | ブール     | 10 #11   | True  |
+|                          |                  |         | 10 # 10  | False |
+| Greater than             | Number > Number  | ブール     | 11 > 10  | True  |
+|                          |                  |         | 10 > 11  | False |
+| Less than                | Number < Number  | ブール     | 10 < 11  | True  |
+|                          |                  |         | 11 < 10  | False |
+| Greater than or equal to | Number >= Number | ブール     | 11 >= 10 | True  |
+|                          |                  |         | 10 >= 11 | False |
+| Less than or equal to    | Number <= Number | ブール     | 10 <= 11 | True  |
+|                          |                  |         | 11 <= 10 | False |
 
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
