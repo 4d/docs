@@ -42,13 +42,13 @@
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "ブール"
       },
       "Concepts/collection": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "日付"
       },
       "Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -57,19 +57,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "オブジェクト"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "ポインター"
       },
       "Concepts/string": {
         "title": "文字"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "時間"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -202,7 +202,7 @@
         "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -226,7 +226,7 @@
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Text and Picture"
@@ -262,7 +262,7 @@
         "title": "タブコントロール"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"
