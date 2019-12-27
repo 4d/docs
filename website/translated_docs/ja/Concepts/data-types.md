@@ -7,25 +7,25 @@ In 4D, data are handled according to their type in two places: database fields a
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-| データタイプ                                     | Database support(1) | Language support     | Variable declaration         |
-| ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `ARRAY INTEGER`              |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                            |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                            |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `C_POINTER`, `ARRAY POINTER` |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `C_VARIANT`                  |
+| データタイプ                                | Database support(1) | Language support     | Variable declaration         |
+| ------------------------------------- | ------------------- | -------------------- | ---------------------------- |
+| [文字列](dt_string.md)                   | ○                   | Converted to text    | -                            |
+| [テキスト](Concepts/dt_string.md)         | ○                   | ○                    | `C_TEXT`, `ARRAY TEXT`       |
+| [日付](Concepts/dt_date.md)             | ○                   | ○                    | `C_DATE`, `ARRAY DATE`       |
+| [時間](Concepts/dt_time.md)             | ○                   | ○                    | `C_TIME`, `ARRAY TIME`       |
+| [ブール](Concepts/dt_boolean.md)         | ○                   | ○                    | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [整数](Concepts/dt_number.md)           | ○                   | Converted to longint | `ARRAY INTEGER`              |
+| [倍長整数](Concepts/dt_number.md)         | ○                   | ○                    | `C_LONGINT`, `ARRAY LONGINT` |
+| [64ビット整数](Concepts/dt_number.md)      | Yes (SQL)           | Converted to real    | -                            |
+| [実数](Concepts/dt_number.md)           | ○                   | ○                    | `C_REAL`, `ARRAY REAL`       |
+| [未定義](Concepts/dt_null_undefined.md)  | -                   | ○                    | -                            |
+| [Null](Concepts/dt_null_undefined.md) | -                   | ○                    | -                            |
+| [ポインター](Concepts/dt_pointer.md)       | -                   | ○                    | `C_POINTER`, `ARRAY POINTER` |
+| [ピクチャー](Concepts/dt_picture.md)       | ○                   | ○                    | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)           | ○                   | ○                    | `C_BLOB`, `ARRAY BLOB`       |
+| [オブジェクト](Concepts/dt_object.md)       | ○                   | ○                    | `C_OBJECT`, `ARRAY OBJECT`   |
+| [コレクション](Concepts/dt_collection.md)   | -                   | ○                    | `C_COLLECTION`               |
+| バリアント                                 | -                   | ○                    | `C_VARIANT`                  |
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 The following table illustrates these default values:
 
-| Type       | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ---------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen    | False                                                                               | True                    | True (varies)                |
-| Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Time       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text       | ""                                                                                  | ""                      | ""                           |
-| Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Object     | null                                                                                | null                    | null                         |
-| Collection | null                                                                                | null                    | null                         |
-| Variant    | undefined                                                                           | undefined               | undefined                    |
+| タイプ     | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
+| ------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
+| Booleen | False                                                                               | True                    | True (varies)                |
+| 日付      | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
+| 倍長整数    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
+| 時間      | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| ピクチャー   | picture size=0                                                                      | picture size=0          | picture size=0               |
+| 実数      | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
+| ポインター   | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| テキスト    | ""                                                                                  | ""                      | ""                           |
+| Blob    | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
+| オブジェクト  | null                                                                                | null                    | null                         |
+| コレクション  | null                                                                                | null                    | null                         |
+| Variant | undefined                                                                           | undefined               | undefined                    |
 
 ## Converting data types
 
@@ -70,11 +70,11 @@ The following table lists the basic data types, the data types to which they can
 
 | Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
 | -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Time    | Bool       |
+| String (1)           |           | Num       | 日付      | 時間      | Bool       |
 | Number (2)           | 文字        |           |         |         | Bool       |
-| Date                 | 文字        |           |         |         | Bool       |
-| Time                 | 文字        |           |         |         | Bool       |
-| Boolean              |           | Num       |         |         |            |
+| 日付                   | 文字        |           |         |         | Bool       |
+| 時間                   | 文字        |           |         |         | Bool       |
+| ブール                  |           | Num       |         |         |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
 
