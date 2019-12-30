@@ -53,7 +53,7 @@ class Footer extends React.Component {
 
           </div>
           <div>
-            <h5>Product & Company</h5>
+            <h5>Company</h5>
 		        <a href="https://us.4d.com/about-us">About 4D</a>
 		        <a href="https://us.4d.com/contact-us">Contact us</a>
 				<a href="https://us.4d.com/4d-around-the-world">4D around the world</a>
@@ -61,7 +61,7 @@ class Footer extends React.Component {
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>
-		<section className="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms & Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section>
+		<section className="copyright"><a className="cp2" href="https://us.4d.com/terms-and-conditions">Terms & Conditions</a> | <a className="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a className="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a className="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a className="cp2" href="https://us.4d.com/license">Product license</a></section>
       </footer>
     );
   }
