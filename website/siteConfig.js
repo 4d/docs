@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: '4D Documentation' /* title for your website */,
-  tagline: 'Essential Guides for 4D Developers',
+  tagline: 'Documentation for 4D Developers',
   url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,

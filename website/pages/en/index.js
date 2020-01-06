@@ -26,7 +26,7 @@ function HomeSplash(props) {
             className="index-hero-logo"
             src={`${siteConfig.baseUrl}img/banner-object.png`}
           />
-			<translate>Documentation for 4D developers</translate>
+			{siteConfig.tagline}
         </h1>
       </div>
     </div>
