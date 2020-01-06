@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Documentation' /* title for your website */,
-  tagline: 'Essential Guides for 4D Developers',
+  title: '4D Documentation' /* title for your website */,
+  tagline: 'Documentation for 4D Developers',
   url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,
@@ -63,7 +63,7 @@ const siteConfig = {
   docsSideNavCollapsible: true,
   
   /* path to images for header/footer */
-  headerIcon: 'img/4DlogoK.gif',
+  //headerIcon: 'img/4DlogoK.gif',
   footerIcon: 'img/logohome.png',
   favicon: 'img/4d.gif',
 
@@ -93,9 +93,9 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
-    'Copyright © ' +
+    '© ' +
     new Date().getFullYear() +
-    ' 4D SAS',
+    ' 4D SAS - All rights reserved',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks

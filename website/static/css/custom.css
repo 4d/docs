@@ -30,11 +30,15 @@ color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 .copyright{
 font-size: 12px;
 text-align: center;
-color: green
+/*color: green;*/
 }
 
 a.cp2 {
 text-decoration: underline;
+color: grey;
+}
+
+a.cp2:hover{
 color: #fff;
 }
 
