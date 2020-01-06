@@ -44,7 +44,7 @@ const siteConfig = {
   headerLinks: [
     //{doc: 'Concepts/doc1', label: '4D Language Concepts'},
     //{doc: 'doc4', label: 'page4'},
-	{href: 'https://developer.4d.com/', label:'Developer Center'},
+	//{href: 'https://developer.4d.com/', label:'Developer Center'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
     //{blog: false, label: 'Blog'},
