@@ -3,7 +3,7 @@ id: viewProAreaOverview
 title: Zone 4D View Pro
 ---
 
-4D View Pro allows you to insert and display a spreadsheet area in your 4D forms. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
+4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
 
 ![](assets/en/FormObjects/viewPro2.png)
 
