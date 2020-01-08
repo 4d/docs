@@ -4,60 +4,55 @@ title: $asArray
 ---
 
 
-Returns the result of a query in an array instead of JSON (*e.g.*, `$asArray=true`)
+Returns the result of a query in an array (i.e. a collection) instead of a JSON object.
+
 
 ## Description   
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request.
+If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
 
 ## Example  
 Here is an example or how to receive the response in an array.
 
- `GET  /rest/Company/?$filter="name!=Acme"&$top=3&$asArray=true`
+ `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
 **Response**:
 
 ````
 [
-    {
-        __KEY: {
-            ID: 1,
-            __STAMP: 3
-        },
-        ID: 1,
-        name: "Apple",
-        revenues: 500000,
-        staff: {
-            __COUNT: 1
-        },
-        country: "US"
-    },
-    {
-        __KEY: {
-            ID: 2,
-            __STAMP: 3
-        },
-        ID: 2,
-        name: "4D",
-        revenues: 300000,
-        staff: {
-            __COUNT: 2
-        },
-        country: "France"
-    },
-    {
-        __KEY: {
-            ID: 3,
-            __STAMP: 3
-        },
-        ID: 3,
-        name: "Microsoft",
-        revenues: 400000,
-        staff: {
-            __COUNT: 0
-        },
-        country: "US"
-    }
+	{
+		"__KEY": 15,
+		"__STAMP": 0,
+		"ID": 15,
+		"name": "Alpha North Yellow",
+		"creationDate": "!!0000-00-00!!",
+		"revenues": 82000000,
+		"extra": null,
+		"comments": "",
+		"__GlobalStamp": 0
+	},
+	{
+		"__KEY": 34,
+		"__STAMP": 0,
+		"ID": 34,
+		"name": "Astral Partner November",
+		"creationDate": "!!0000-00-00!!",
+		"revenues": 90000000,
+		"extra": null,
+		"comments": "",
+		"__GlobalStamp": 0
+	},
+	{
+		"__KEY": 47,
+		"__STAMP": 0,
+		"ID": 47,
+		"name": "Audio Production Uniform",
+		"creationDate": "!!0000-00-00!!",
+		"revenues": 28000000,
+		"extra": null,
+		"comments": "",
+		"__GlobalStamp": 0
+	}
 ]
 ````
 
@@ -65,52 +60,64 @@ The same data in its default JSON format:
 
 ````
 {
-    __entityModel: "Company",
-    __COUNT: 7,
-    __SENT: 3,
-    __FIRST: 0,
-    __ENTITIES: [
-        {
-            __KEY: "1",
-            __STAMP: 3,
-            ID: 1,
-            name: "Apple",
-            revenues: 500000,
-            staff: {
-                __deferred: {
-                    uri: "http://127.0.0.1:8082/rest/Company(1)/staff?$expand=staff"
-                }
-            },
-            country: "US"
-        },
-        {
-            __KEY: "2",
-            __STAMP: 3,
-            ID: 2,
-            name: "4D",
-            revenues: 300000,
-            staff: {
-                __deferred: {
-                    uri: "http://127.0.0.1:8082/rest/Company(2)/staff?$expand=staff"
-                }
-            },
-            country: "France"
-        },
-
-        {
-            __KEY: "3",
-            __STAMP: 3,
-            ID: 3,
-            name: "Microsoft",
-            revenues: 400000,
-            staff: {
-                __deferred: {
-                    uri: "http://127.0.0.1:8082/rest/Company(3)/staff?$expand=staff"
-                }
-            },
-            country: "US"
-        }
-    ]
+	"__entityModel": "Company",
+	"__GlobalStamp": 50,
+	"__COUNT": 52,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "15",
+			"__TIMESTAMP": "2018-03-28T14:38:07.434Z",
+			"__STAMP": 0,
+			"ID": 15,
+			"name": "Alpha North Yellow",
+			"creationDate": "0!0!0",
+			"revenues": 82000000,
+			"extra": null,
+			"comments": "",
+			"__GlobalStamp": 0,
+			"employees": {
+				"__deferred": {
+					"uri": "/rest/Company(15)/employees?$expand=employees"
+				}
+			}
+		},
+		{
+			"__KEY": "34",
+			"__TIMESTAMP": "2018-03-28T14:38:07.439Z",
+			"__STAMP": 0,
+			"ID": 34,
+			"name": "Astral Partner November",
+			"creationDate": "0!0!0",
+			"revenues": 90000000,
+			"extra": null,
+			"comments": "",
+			"__GlobalStamp": 0,
+			"employees": {
+				"__deferred": {
+					"uri": "/rest/Company(34)/employees?$expand=employees"
+				}
+			}
+		},
+		{
+			"__KEY": "47",
+			"__TIMESTAMP": "2018-03-28T14:38:07.443Z",
+			"__STAMP": 0,
+			"ID": 47,
+			"name": "Audio Production Uniform",
+			"creationDate": "0!0!0",
+			"revenues": 28000000,
+			"extra": null,
+			"comments": "",
+			"__GlobalStamp": 0,
+			"employees": {
+				"__deferred": {
+					"uri": "/rest/Company(47)/employees?$expand=employees"
+				}
+			}
+		}
+	],
+"__SENT": 3
 }
 ````
 

@@ -178,20 +178,26 @@
       "REST/{attribute1_attribute2}": {
         "title": "{attribute1,attribute2}"
       },
-      "REST/{datastoreClass}_{attribute}(value)": {
-        "title": "{datastoreClass}:{attribute}(value)"
+      "REST/{dataClass}{attribute}_value": {
+        "title": "{dataClass}:{attribute}(value)"
       },
-      "REST/{datastoreClass}": {
-        "title": "{datastoreClass}"
+      "REST/{dataClass}_{method}": {
+        "title": "{dataClass}/{method}"
       },
-      "REST/{datastoreClass}({key})": {
-        "title": "{datastoreClass}({key})"
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
+      "REST/{dataClass}_{key}": {
+        "title": "{dataClass}({key})"
       },
       "REST/asArray": {
         "title": "$asArray"
       },
       "REST/atomic_$atonce": {
         "title": "$atomic/$atonce"
+      },
+      "REST/attributes": {
+        "title": "$attributes"
       },
       "REST/binary": {
         "title": "$binary"
@@ -301,6 +307,9 @@
       "REST/authUsers": {
         "title": "Authenticating Users"
       },
+      "REST/configuration": {
+        "title": "Server Configuration"
+      },
       "REST/genInfo": {
         "title": "Getting Information"
       },
@@ -310,8 +319,8 @@
       "REST/manData": {
         "title": "Manipulating Data"
       },
-      "REST/overview": {
-        "title": "Overview"
+      "REST/REST_requests": {
+        "title": "About REST Requests"
       }
     },
     "links": {

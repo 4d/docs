@@ -3,51 +3,134 @@ id: gettingStarted
 title: Getting Started 
 ---
 
-4D Server provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
+4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
 
-The REST server is automatically available in 4D databases, you only need to configure its use.
+The REST server is included in the the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+
+This section is intended to help familiarize you with REST functionality by means of a basic example. We are going to:
+- create and configure a 4D database
+- access data from the 4D database using a standard browser.
+
+To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+
+ 
+
+## Creating and configuring the 4D database
+
+1. Launch your 4D or 4D Server application and create a new database. You can name it "Emp4D", for example.
+
+2. In the Structure editor, create an [Employees] table and add the following fields to it:
+	- Lastname (Alpha)
+	- Firstname (Alpha)
+	- Salary (Longint)
+
+![](assets/en/REST/getStarted1.png) 
+
+> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+
+3. Create forms, then create a few employees:
+
+![](assets/en/REST/getStarted2.png) 
+
+4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option. 
+
+5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+
+4D displays the default home page of the 4D Web Server.
 
 
-## Configuring the REST server
+## Accessing 4D data through the browser
 
-> REST services require the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+You can now read and edit data within 4D only through REST requests. 
 
-To start using the REST server, you first need to configure the REST access in the ""Web/REST Resource" page of the Database Settings:
+Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
 
-![](assets/en/REST/Settings.png) 
+```
+127.0.01/rest/$catalog
+``` 
 
-- Check the **Expose as REST server** option (for security reasons, by default, 4D does not respond to REST requests). The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
+The REST server replies:
 
-- Assign a group of 4D users that is authorized to establish the link to the 4D database using REST queries. This step can be done later (it *must* be done in production databases), but while the menu displays <Anyone>, REST accesses are open to all users. Keep in mind that:
-	- on 4D Server, opening a REST session requires that a free 4D client licence is available.
-	- on 4D single-user, you can open up to three REST sessions for testing purposes. 
+```
+{
+	"__UNIQID": "96A49F7EF2ABDE44BF32059D9ABC65C1",
+	"dataClasses": [
+		{
+			"name": "Employees",
+			"uri": "/rest/$catalog/Employees",
+			"dataURI": "/rest/Employees"
+		}
+	]
+}
+```
 
+It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
 
+```
+127.0.01/rest/$catalog/Employees
+``` 
 
+If you want to get all entities of the Employee dataclass, you write: 
 
+```
+127.0.01/rest/Employees
+``` 
 
-## Configuring REST server access
+**Response:**
 
-Configuring REST accesses allow you to control the user access to the REST features. Keep in mind that:
+```
+{
+	"__entityModel": "Employees",
+	"__GlobalStamp": 0,
+	"__COUNT": 3,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-01-07T17:07:52.467Z",
+			"__STAMP": 2,
+			"ID": 1,
+			"Lastname": "Brown",
+			"Firstname": "Michael",
+			"Salary": 25000
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+			"__STAMP": 2,
+			"ID": 2,
+			"Lastname": "Jones",
+			"Firstname": "Maryanne",
+			"Salary": 35000
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-01-07T17:08:34.844Z",
+			"__STAMP": 2,
+			"ID": 3,
+			"Lastname": "Smithers",
+			"Firstname": "Jack",
+			"Salary": 41000
+		}
+	],
+	"__SENT": 3
+}
+```
 
-- on 4D Server, opening a REST session requires that a free 4D client licence is available.
-- on 4D single-user, you can open up to three REST sessions for testing purposes. 
+You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
 
+```
+127.0.01/rest/Employees(2)/Lastname
+``` 
 
+**Response:**
 
- , you only need to decide which data you want to expose. 
-
-
-
-- the exposed datastores and their attributes
-- the REST server cache contents, including user sessions.
-
-## Catalog
-
-Use the [`$catalog`](catalog), [`$catalog/{datastoreClass}`](catalog_{datastoreClass}), or [`$catalog/$all`](catalog_$all) parameters to get the list of exposed datastore classes and their attributes.
-
-Note that the user must be in a group that has **Describe** permissions. For more information, refer to **Permission Actions**.
-
-## Cache info
-
-Use the [`$info`](info) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions. 
+```
+{
+	"__entityModel": "Employees",
+	"__KEY": "2",
+	"__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+	"__STAMP": 2,
+	"Lastname": "Jones"
+}
+```

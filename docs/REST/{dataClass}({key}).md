@@ -1,13 +1,13 @@
 ---
-id: {datastoreClass}({key})
-title: {datastoreClass}({key}) 
+id: {dataClass}_{key}
+title: {dataClass}({key}) 
 ---
 
-Returns the data for the specific entity defined by the datastore class's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
 ## Description   
 
-By passing the datastoreClass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 

@@ -3,19 +3,17 @@ id: REST_requests
 title: About REST Requests
 ---
 
-Using standard HTTP requests, the 4D REST API allows you to retrieve information about the datastore classes in your project, manipulate data, log into your web application, and much more. 
-
 
 The structure for a REST request is as follows:
 
-|URI	|Resource	|{Subresource}|	Querystring|
+|URI	|Resource	|{Subresource}|	{Querystring}|
 |---|---|---|---|
-|http://{servername}:{port}/rest/	|[{datastoreClass}](#datastoreclass)/|	[{attribute1, attribute2, ...}](#attribute1-attribute2-)/	| | 
-| |[{datastoreClass}({key})](#datastoreclass-key)/|	[{attribute1, attribute2, ...}](#attribute1-attribute2-)/	| |  
-| |[{datastoreClass}](#datastoreclass)/|	[{attribute1, attribute2, ...}](#attribute1-attribute2-)/|	[{method}](#datastoreclass-method)|
-| | | |[$entityset/{entitySetID}](#entityset-entitysetid)|
+|http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| | 
+| |[{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| |  
+| |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/|	[{method}](%7BdataClass%7D_%7Bmethod%7D.html)|
+| | | |[$entityset/{entitySetID}]($entityset_%7BentitySetID%7D.html)|
 | | | |[?$filter](#filter)|
-| |[{datastoreClass}:{attribute}(value)](#datastoreclass-attribute-value)| | |
+| |[{dataClass}:{attribute}(value)](%7BdataClass%7D_%attribute%7D(value).html)| | |
 
 While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 
@@ -25,9 +23,9 @@ As with all URIs, the first parameter is delimited by a “?” and all subseque
 
 >You can place all values in quotes in case of ambiguity. For example, in our above example, we could've put the value for the last name in quotes "Jones".
 
-The parameters in this chapter allow you to manipulate data in datastore classes in your 4D project. Besides retrieving data, you can also add, update, and delete entities in a datastore class.
+The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a datastore class using `POST` HTTP methods.
 
-If you want the data to be returned in an array instead of JSON, use the `$asArray` parameter.
+If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 
 
 ## REST Status and Response  

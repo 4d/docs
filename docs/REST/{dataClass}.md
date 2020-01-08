@@ -1,6 +1,6 @@
 ---
-id: {datastoreClass}
-title: {datastoreClass} 
+id: {dataClass}
+title: {dataClass} 
 ---
 
 
