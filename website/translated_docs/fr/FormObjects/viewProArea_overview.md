@@ -3,11 +3,11 @@ id: viewProAreaOverview
 title: Zone 4D View Pro
 ---
 
-4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
+4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images.
 
 ![](assets/en/FormObjects/viewPro2.png)
 
-Once you use 4D View Pro areas in your forms, you can import and export spreadsheets documents.
+Une fois que vous utilisez les zones 4D View Pro dans vos formulaires, vous pouvez importer et exporter des feuilles de calcul.
 
 
 ## Utiliser des zones 4D View Pro
