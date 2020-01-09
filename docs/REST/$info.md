@@ -55,16 +55,16 @@ For each user session, the following information is returned in the *sessionInfo
 The object in the **jsContextInfo** array details the JavaScript context pool:
 
 
-|Property|	Description|
-|---|---|
-|contextPoolSize|	Maximum number of reusable contexts that can be stored in the JS pool (50 by default)|
-|activeDebugger|	Debugger state (false by default)|
-|usedContextCount|	Number of used contexts|
-|usedContextMaxCount|	Maximum number of contexts that have been used simultaneously|
-|reusableContextCount|	Number of reusable contexts (both used and unused)|
-|unusedContextCount	|Number of unused contexts|
-|createdContextCount	|Number of contexts created since the project was started|
-|destroyedContextCount|	Number of contexts destroyed since the project was started|
+|Property|Type |Description|
+|---|---|---|
+|contextPoolSize|Number|	Maximum number of reusable contexts that can be stored in the JS pool (50 by default)|
+|activeDebugger|Boolean|	Debugger state (false by default)|
+|usedContextCount|Number|	Number of used contexts|
+|usedContextMaxCount|Number|	Maximum number of contexts that have been used simultaneously|
+|reusableContextCount|Number|	Number of reusable contexts (both used and unused)|
+|unusedContextCount	|Number|Number of unused contexts|
+|createdContextCount|Number|Number of contexts created since the project was started|
+|destroyedContextCount|Number|Number of contexts destroyed since the project was started|
 
 ## Example  
 

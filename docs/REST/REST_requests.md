@@ -11,9 +11,9 @@ The structure for a REST request is as follows:
 |http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| | 
 | |[{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| |  
 | |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/|	[{method}](%7BdataClass%7D_%7Bmethod%7D.html)|
-| | | |[$entityset/{entitySetID}]($entityset_%7BentitySetID%7D.html)|
-| | | |[?$filter](#filter)|
-| |[{dataClass}:{attribute}(value)](%7BdataClass%7D_%attribute%7D(value).html)| | |
+| | | |[$entityset/{entitySetID}](entityset_%7BentitySetID%7D.html)|
+| | | |[?$filter]($filter.md)|
+| |[{dataClass}:{attribute}(value)](%7BdataClass%7D%7Battribute%7D_value.html)| | |
 
 While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 

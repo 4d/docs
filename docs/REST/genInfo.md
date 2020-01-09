@@ -10,9 +10,12 @@ You can get several information from the REST server:
 
 ## Catalog
 
-Use the [`$catalog`](catalog), [`$catalog/{datastoreClass}`](catalog_{datastoreClass}), or [`$catalog/$all`](catalog_$all) parameters to get the list of exposed datastore classes and their attributes.
+Use the [`$catalog`](catalog), [`$catalog/{datastoreClass}`](catalog_{datastoreClass}), or [`$catalog/$all`](catalog_$all) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
 
-Note that the user must be in a group that has **Describe** permissions. For more information, refer to **Permission Actions**.
+To get the collection of all exposed dataclasses along with their attributes:
+
+`GET /rest/$catalog/$all`
+
 
 ## Cache info
 

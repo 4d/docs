@@ -46,7 +46,7 @@ You can now read and edit data within 4D only through REST requests.
 Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
 
 ```
-127.0.01/rest/$catalog
+http://127.0.01/rest/$catalog
 ``` 
 
 The REST server replies:
@@ -67,13 +67,13 @@ The REST server replies:
 It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
 
 ```
-127.0.01/rest/$catalog/Employees
+/rest/$catalog/Employees
 ``` 
 
 If you want to get all entities of the Employee dataclass, you write: 
 
 ```
-127.0.01/rest/Employees
+/rest/Employees
 ``` 
 
 **Response:**
@@ -120,7 +120,7 @@ If you want to get all entities of the Employee dataclass, you write:
 You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
 
 ```
-127.0.01/rest/Employees(2)/Lastname
+/rest/Employees(2)/Lastname
 ``` 
 
 **Response:**
@@ -134,3 +134,5 @@ You have many possibilities to filter data to receive. For example, to get only 
 	"Lastname": "Jones"
 }
 ```
+
+The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D database.  
