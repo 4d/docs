@@ -10,7 +10,7 @@ Starts the entity defined by this number in the collection (*e.g.*, `$skip=10`)
 
 `$skip` defines which entity in the collection to start with. By default, the collection sent starts with the first entity. To start with the 10th entity in the collection, pass 10.
 
-`$skip`  is generally used in conjunction with `$top/$limit` to navigate through an entity collection.
+`$skip`  is generally used in conjunction with [`$top/$limit`](top_$limit.md) to navigate through an entity collection.
 
 ## Example  
 

@@ -9,16 +9,16 @@ Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
 
 `$querypath` returns the query as it was executed by 4D Server. If, for example, a part of the query passed returns no entities, the rest of the query is not executed. The query requested is optimized as you can see in this `$querypath`.
 
-For more information about query paths, refer to the **queryPlan and queryPath** paragraph.
+For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
-In the steps array, there is an object with the following properties defining the query executed:
+In the steps collection, there is an object with the following properties defining the query executed:
 
 |Property	|Type|	Description|
 |---|---|---|
 |description|	String	|Actual query executed or "AND" when there are multiple steps|
 |time	|Number|	Number of milliseconds needed to execute the query|
 |recordsfounds|	Number	|Number of records found|
-|steps|	Array	|An array with an object defining the subsequent step of the query path|
+|steps|	Collection	|An collection with an object defining the subsequent step of the query path|
 
 ## Example  
 

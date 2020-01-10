@@ -4,12 +4,12 @@ title: $distinct
 ---
 
 
-Returns the distinct values for a specific attribute in an array (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
+Returns the distinct values for a specific attribute in a collection (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
 
 
 ## Description   
 
-`$distinct` allows you to return an array containing the distinct values for a query on a specific attribute. Only one attribute in the datastore class can be specified. Generally, the String type is best; however, you can also use it on any attribute type that could contain multiple values.
+`$distinct` allows you to return a collection containing the distinct values for a query on a specific attribute. Only one attribute in the dataclass can be specified. Generally, the String type is best; however, you can also use it on any attribute type that could contain multiple values.
 
 You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate the selection before it's placed in an array.
 

@@ -178,17 +178,8 @@
       "REST/{attribute1_attribute2}": {
         "title": "{attribute1,attribute2}"
       },
-      "REST/{dataClass}{attribute}_value": {
-        "title": "{dataClass}:{attribute}(value)"
-      },
-      "REST/{dataClass}_{method}": {
-        "title": "{dataClass}/{method}"
-      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
-      },
-      "REST/{dataClass}_{key}": {
-        "title": "{dataClass}({key})"
       },
       "REST/asArray": {
         "title": "$asArray"
@@ -202,38 +193,20 @@
       "REST/binary": {
         "title": "$binary"
       },
-      "REST/catalog_{datastoreClass}": {
-        "title": "$catalog/{datastoreClass}"
-      },
-      "REST/catalog_$all": {
-        "title": "$catalog/$all"
-      },
       "REST/catalog": {
         "title": "$catalog"
       },
       "REST/compute": {
         "title": "$compute"
       },
-      "REST/directory_currentUser": {
-        "title": "$directory/currentUser"
-      },
-      "REST/directory_currentUserBelongsTo": {
-        "title": "$directory/currentUserBelongsTo"
-      },
-      "REST/directory_login": {
-        "title": "$directory/login"
-      },
-      "REST/directory_logout": {
-        "title": "$directory/logout"
+      "REST/directory": {
+        "title": "$directory"
       },
       "REST/distinct": {
         "title": "$distinct"
       },
-      "REST/entityset{entitySetID}$logicOperator&$otherCollection": {
-        "title": "$entityset/{entitySetID}?$logicOperator...&$otherCollection"
-      },
-      "REST/entityset_{entitySetID}": {
-        "title": "$entityset/{entitySetID}"
+      "REST/entityset": {
+        "title": "$entityset"
       },
       "REST/expand": {
         "title": "$expand"
@@ -247,23 +220,8 @@
       "REST/info": {
         "title": "$info"
       },
-      "REST/method=delete": {
-        "title": "$method=delete"
-      },
-      "REST/method=entityset": {
-        "title": "$method=entityset"
-      },
-      "REST/method=release": {
-        "title": "$method=release"
-      },
-      "REST/method=subentityset": {
-        "title": "$method=subentityset"
-      },
-      "REST/method=update": {
-        "title": "$method=update"
-      },
-      "REST/method=validate": {
-        "title": "$method=validate"
+      "REST/method": {
+        "title": "$method"
       },
       "REST/orderby": {
         "title": "$orderby"
@@ -295,15 +253,6 @@
       "REST/version": {
         "title": "$version"
       },
-      "REST/apiDataClass": {
-        "title": "Dataclass"
-      },
-      "REST/apiUsers": {
-        "title": "Directory"
-      },
-      "REST/apiUtilities": {
-        "title": "Utilities"
-      },
       "REST/authUsers": {
         "title": "Authenticating Users"
       },
@@ -311,7 +260,7 @@
         "title": "Server Configuration"
       },
       "REST/genInfo": {
-        "title": "Getting Information"
+        "title": "Getting Server Information"
       },
       "REST/gettingStarted": {
         "title": "Getting Started"
@@ -321,6 +270,66 @@
       },
       "REST/REST_requests": {
         "title": "About REST Requests"
+      },
+      "REST/apiDataClass": {
+        "title": "Dataclass"
+      },
+      "REST/apiUsers": {
+        "title": "Directory"
+      },
+      "REST/apiUtilities": {
+        "title": "Utilities"
+      },
+      "REST/{dataClass}{attribute}_value": {
+        "title": "{dataClass}:{attribute}(value)"
+      },
+      "REST/{dataClass}_{method}": {
+        "title": "{dataClass}/{method}"
+      },
+      "REST/{dataClass}_{key}": {
+        "title": "{dataClass}({key})"
+      },
+      "REST/catalog_{datastoreClass}": {
+        "title": "$catalog/{datastoreClass}"
+      },
+      "REST/catalog_$all": {
+        "title": "$catalog/$all"
+      },
+      "REST/directory_currentUser": {
+        "title": "$directory/currentUser"
+      },
+      "REST/directory_currentUserBelongsTo": {
+        "title": "$directory/currentUserBelongsTo"
+      },
+      "REST/directory_login": {
+        "title": "$directory/login"
+      },
+      "REST/directory_logout": {
+        "title": "$directory/logout"
+      },
+      "REST/entityset{entitySetID}$logicOperator&$otherCollection": {
+        "title": "$entityset/{entitySetID}?$logicOperator...&$otherCollection"
+      },
+      "REST/entityset_{entitySetID}": {
+        "title": "$entityset/{entitySetID}"
+      },
+      "REST/method=delete": {
+        "title": "$method=delete"
+      },
+      "REST/method=entityset": {
+        "title": "$method=entityset"
+      },
+      "REST/method=release": {
+        "title": "$method=release"
+      },
+      "REST/method=subentityset": {
+        "title": "$method=subentityset"
+      },
+      "REST/method=update": {
+        "title": "$method=update"
+      },
+      "REST/method=validate": {
+        "title": "$method=validate"
       }
     },
     "links": {

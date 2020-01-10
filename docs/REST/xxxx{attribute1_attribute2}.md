@@ -13,7 +13,8 @@ You can apply this filter to your entities in the following ways:
 |---|---|---|
 |Datastore class	|{datastoreClass}/{att1,att2...}	|/People/firstName,lastName|
 |Collection of entities	|{datastoreClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a*'"|
-|Specific entity|	{datastoreClass}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|
+|Specific entity|	{datastoreClass}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
+||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
 |Entity selection|	{datastoreClass}/{att1,att2...}/$entityset/{entitySetID}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`.

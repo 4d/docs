@@ -4,7 +4,7 @@ title: $atomic/$atonce
 ---
 
 
-Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled. (*e.g.* `$atomic=true`)
+Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled.
 
 
 ## Description   

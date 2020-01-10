@@ -4,16 +4,22 @@ title: About REST Requests
 ---
 
 
-The structure for a REST request is as follows:
+The following structures are supported for REST requests:
 
 |URI	|Resource	|{Subresource}|	{Querystring}|
 |---|---|---|---|
-|http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| | 
-| |[{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/	| |  
-| |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html)/|	[{method}](%7BdataClass%7D_%7Bmethod%7D.html)|
-| | | |[$entityset/{entitySetID}](entityset_%7BentitySetID%7D.html)|
+|http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| | 
+| |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/|	[{method}](%7BdataClass%7D.html#dataclassmethod)|
+| | | |[$entityset/{entitySetID}](entityset.html#entitysetentitysetid)|
 | | | |[?$filter]($filter.md)|
+| | | |[$entityset/{entitySetID}](entityset.html#entitysetentitysetid)|
+| | | [{attribute}](manData.html#selecting-attributes-to-get)/|[?$compute]($compute.md)|
+| |[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| |  
 | |[{dataClass}:{attribute}(value)](%7BdataClass%7D%7Battribute%7D_value.html)| | |
+| |[$catalog]($catalog.md)| | |
+| |[$directory]($directory.md)| | |
+| |[$info]($info.md)| | |
+
 
 While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 

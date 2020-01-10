@@ -3,13 +3,13 @@ id: top_$limit
 title: $top/$limit
 ---
 
-Limits the number of entities to return (e.g., $top=50)	
+Limits the number of entities to return (e.g., `$top=50`)	
 
 ## Description   
 
-`$top/$limit` defines the limit of entities to return. By default, the number is limited to 100 or to the value specified in the Default Top Size property for your dataclass. You can use either keyword: `$top` or `$limit`.
+`$top/$limit` defines the limit of entities to return. By default, the number is limited to 100. You can use either keyword: `$top` or `$limit`.
 
-When used in conjunction with `$skip`, you can navigate through the entity collection returned by the REST request.
+When used in conjunction with [`$skip`](skip.md), you can navigate through the entity collection returned by the REST request.
 
 ## Example  
 
