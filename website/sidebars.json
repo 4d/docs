@@ -22,6 +22,7 @@
 	],
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/building"],
 	"Form Editor":["FormEditor/objectLibrary","FormEditor/stylesheets"],
+	"Form Events":["FormEvents/listbox"],
   "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
 		  "FormObjects/buttonGridOverview",
