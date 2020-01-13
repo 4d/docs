@@ -7,9 +7,9 @@ title: Getting Started
 
 The REST server is included in the the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
 
-This section is intended to help familiarize you with REST functionality by means of a basic example. We are going to:
-- create and configure a 4D database
-- access data from the 4D database using a standard browser.
+This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+- create and configure a basic 4D database
+- access data from the 4D database through REST using a standard browser.
 
 To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
 
