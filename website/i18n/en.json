@@ -444,8 +444,8 @@
       }
     },
     "links": {
-      "Projects": "Projects",
-      "Web": "Web"
+      "Docs 4D": "Docs 4D",
+      "REST": "REST"
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
@@ -457,8 +457,8 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Guides": "REST Guides",
-      "REST API": "REST API"
+      "REST Server Guides": "REST Server Guides",
+      "REST Server API": "REST Server API"
     }
   },
   "pages-strings": {
