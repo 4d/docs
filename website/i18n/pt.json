@@ -343,6 +343,99 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
+      "REST/asArray": {
+        "title": "$asArray"
+      },
+      "REST/atomic_$atonce": {
+        "title": "$atomic/$atonce"
+      },
+      "REST/attributes": {
+        "title": "$attributes"
+      },
+      "REST/binary": {
+        "title": "$binary"
+      },
+      "REST/catalog": {
+        "title": "$catalog"
+      },
+      "REST/compute": {
+        "title": "$compute"
+      },
+      "REST/directory": {
+        "title": "$directory"
+      },
+      "REST/distinct": {
+        "title": "$distinct"
+      },
+      "REST/entityset": {
+        "title": "$entityset"
+      },
+      "REST/expand": {
+        "title": "$expand"
+      },
+      "REST/filter": {
+        "title": "$filter"
+      },
+      "REST/imageformat": {
+        "title": "$imageformat"
+      },
+      "REST/info": {
+        "title": "$info"
+      },
+      "REST/method": {
+        "title": "$method"
+      },
+      "REST/orderby": {
+        "title": "$orderby"
+      },
+      "REST/querypath": {
+        "title": "$querypath"
+      },
+      "REST/queryplan": {
+        "title": "$queryplan"
+      },
+      "REST/savedfilter": {
+        "title": "$savedfilter"
+      },
+      "REST/savedorderby": {
+        "title": "$savedorderby"
+      },
+      "REST/skip": {
+        "title": "$skip"
+      },
+      "REST/timeout": {
+        "title": "$timeout"
+      },
+      "REST/top_$limit": {
+        "title": "$top/$limit"
+      },
+      "REST/upload": {
+        "title": "$upload"
+      },
+      "REST/version": {
+        "title": "$version"
+      },
+      "REST/authUsers": {
+        "title": "Authenticating Users"
+      },
+      "REST/configuration": {
+        "title": "Server Configuration"
+      },
+      "REST/genInfo": {
+        "title": "Getting Server Information"
+      },
+      "REST/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "REST/manData": {
+        "title": "Manipulating Data"
+      },
+      "REST/REST_requests": {
+        "title": "About REST Requests"
+      },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
@@ -351,7 +444,8 @@
       }
     },
     "links": {
-      "Developer Center": "Developer Center"
+      "Projects": "Projects",
+      "HTTP REST": "HTTP REST"
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
@@ -360,8 +454,8 @@
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
-      "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
+      "MSC": "MSC",
       "Users and Groups": "Users and Groups"
     }
   },
