@@ -61,7 +61,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[Web Server](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)`,
+                  content: `[Web Server](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)<br>[REST Server](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
