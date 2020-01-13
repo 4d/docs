@@ -22,7 +22,7 @@ Then, we upload the selected image to 4D Server:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Afterwards, you use this ID to add it to an attribute using `$method=update` to add the image to an entity:
+ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity:
 
  `POST  /rest/Employee/?$method=update`
 

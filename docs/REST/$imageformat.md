@@ -3,7 +3,7 @@ id: imageformat
 title: $imageformat 
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, $imageformat=png)
+Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
 
 ## Description
 
@@ -17,7 +17,7 @@ Define which format to use to display images. By default, the best format for th
 |TIFF|	TIFF format|
 |best|	Best format based on the image|
 
-Once you have defined the format, you must pass the image attribute to `$expand` to load the photo completely.
+Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
 
 If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be empty.
 

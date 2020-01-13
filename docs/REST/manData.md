@@ -20,7 +20,7 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{datastoreClass}/{method}](%7BdataClass%7D_%7Bmethod%7D.html).
+Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
 
 Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
@@ -50,7 +50,7 @@ If you modify any of the entity's attributes in the entity set, the values will 
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset_%7BentitySetID%7D_$logicOperator_&$otherCollection.html), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
+Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -77,7 +77,7 @@ You can always define which attributes to return in the REST response after an i
 
 You can apply this filter in the following ways:
 
-|Method	|Syntax|	Example|
+|Object	|Syntax|	Example|
 |---|---|---|
 |Dataclass	|{dataClass}/{att1,att2...}	|/People/firstName,lastName|
 |Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a*'"|

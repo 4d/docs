@@ -45,7 +45,7 @@ With each REST request, you get the status along with the response. Below are a 
 |0	|Request not processed (server might not be started).|
 |200 OK	|Request processed without error.|
 |401 Unauthorized	|Permissions error (check user's permissions).|
-|404 Not Found	|The datastore class is not accessible via REST ("Public on Server" as scope) or the entity set doesn't exist.|
+|404 Not Found	|The data class is not accessible via REST or the entity set doesn't exist.|
 |500 Internal Server Error	|Error processing the REST request.|
 
 ### Response  

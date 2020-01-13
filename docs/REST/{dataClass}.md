@@ -38,7 +38,7 @@ Here is a description of the data returned:
 
 For each entity, there is a **__KEY** and a **__STAMP** property. The **__KEY** property contains the value of the primary key defined for the datastore class. The **__STAMP** is an internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](#attribute1-attribute2). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
 
@@ -135,7 +135,7 @@ By passing the dataclass and a key, you can retrieve all the public information 
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](#attribute1-attribute2-). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company(1)/name,address`
 
@@ -185,7 +185,7 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
 For more information about the data returned, refer to [{dataClass}](dataClass.md).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](%7Battribute1_attribute2%7D.html). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
@@ -249,7 +249,7 @@ You can define which attributes you want to return, by passing the following:
 Or
 `GET  /rest/Employee/getEmployees/firstName`
 
-You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.html).
+You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md).
 
 
 ### Example  
