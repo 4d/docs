@@ -51,7 +51,7 @@ The following table provides information about the events handled by [list box](
 |On Collapse<p><p>*Hierarchical list box only*|44||No|<li>column</li><li>columnName</li><li>row</li>|
 |On Column Moved|32||Yes|<li>columnName</li><li>newPosition</li><li>oldPosition</li>|
 |On Column Resize|33||Yes|<li>column</li><li>columnName</li><li>newSize</li><li>oldSize</li>|
-|On Data Change<p><p>**Not in the Form event code page's table** |**20**||Yes|<li>column</li><li>columnName</li><li>row</li>|
+|On Data Change|20||Yes|<li>column</li><li>columnName</li><li>row</li>|
 |On Delete Action|58||No|<li>row</li>|
 |On Display Detail|8||No|<li>isRowSelected</li><li>row</li>|
 |On Double Clicked|13||Yes|<li>column</li><li>columnName</li><li>row</li>|
