@@ -6,19 +6,19 @@
     "tagline": "Guides essentiels du développeur 4D",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Sauvegarde"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "Fichier d'historique (.journal)"
       },
       "Backup/overview": {
         "title": "Aperçu"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "Restitution"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "Paramètres de sauvegarde"
       },
       "Concepts/about": {
         "title": "À propos du Langage 4D"
@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Heure"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Gestion des erreurs"
       },
@@ -102,40 +105,208 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "FormEditor/stylesheets": {
+        "title": "Feuilles de style (style sheets)"
+      },
+      "FormEditor/objectLibrary": {
+        "title": "Bibliothèques d'objets"
+      },
+      "FormObjects/buttonOverview": {
+        "title": "Button"
+      },
+      "FormObjects/buttonGridOverview": {
+        "title": "Button Grid"
+      },
+      "FormObjects/checkboxOverview": {
+        "title": "Case à cocher"
+      },
+      "FormObjects/comboBoxOverview": {
+        "title": "Combo Box"
+      },
+      "FormObjects/dropdownListOverview": {
+        "title": "Drop-down List"
+      },
+      "FormObjects/formObjectsOverview": {
+        "title": "A propos des objets formulaires 4D"
+      },
+      "FormObjects/groupBox": {
+        "title": "Group Box"
+      },
+      "FormObjects/inputOverview": {
+        "title": "Input"
+      },
+      "FormObjects/listOverview": {
+        "title": "Hierarchical List"
+      },
+      "FormObjects/listboxOverview": {
+        "title": "List Box"
+      },
+      "FormObjects/pictureButtonOverview": {
+        "title": "Picture Button"
+      },
+      "FormObjects/picturePopupMenuOverview": {
+        "title": "Picture Pop-up Menu"
+      },
+      "FormObjects/pluginAreaOverview": {
+        "title": "Plug-in Area"
+      },
+      "FormObjects/progressIndicator": {
+        "title": "Progress Indicator"
+      },
+      "FormObjects/propertiesAction": {
+        "title": "Action"
+      },
+      "FormObjects/propertiesAnimation": {
+        "title": "Animation"
+      },
+      "FormObjects/propertiesAppearance": {
+        "title": "Appearance"
+      },
+      "FormObjects/propertiesBackgroundAndBorder": {
+        "title": "Background and Border"
+      },
+      "FormObjects/propertiesCoordinatesAndSizing": {
+        "title": "Coordinates & Sizing"
+      },
+      "FormObjects/propertiesCrop": {
+        "title": "Crop"
+      },
+      "FormObjects/propertiesDataSource": {
+        "title": "Data Source"
+      },
+      "FormObjects/propertiesDisplay": {
+        "title": "Display"
+      },
+      "FormObjects/propertiesEntry": {
+        "title": "Entry"
+      },
+      "FormObjects/propertiesFooters": {
+        "title": "Footers"
+      },
+      "FormObjects/propertiesGridlines": {
+        "title": "Gridlines"
+      },
+      "FormObjects/propertiesHeaders": {
+        "title": "Headers"
+      },
+      "FormObjects/propertiesHelp": {
+        "title": "Help"
+      },
+      "FormObjects/propertiesHierarchy": {
+        "title": "Hierarchy"
+      },
+      "FormObjects/propertiesListBox": {
+        "title": "List Box"
+      },
+      "FormObjects/propertiesObject": {
+        "title": "Objects"
+      },
+      "FormObjects/propertiesPicture": {
+        "title": "Image"
+      },
+      "FormObjects/propertiesPlugIns": {
+        "title": "Plug-ins"
+      },
+      "FormObjects/propertiesPrint": {
+        "title": "Print"
+      },
+      "FormObjects/propertiesRangeOfValues": {
+        "title": "Range of Values"
+      },
+      "FormObjects/propertiesReference": {
+        "title": "JSON property list"
+      },
+      "FormObjects/propertiesResizingOptions": {
+        "title": "Resizing Options"
+      },
+      "FormObjects/propertiesScale": {
+        "title": "Scale"
+      },
+      "FormObjects/propertiesSubform": {
+        "title": "Subform"
+      },
+      "FormObjects/propertiesText": {
+        "title": "Texte"
+      },
+      "FormObjects/propertiesTextAndPicture": {
+        "title": "Texte et Image"
+      },
+      "FormObjects/propertiesWebArea": {
+        "title": "Zone Web"
+      },
+      "FormObjects/radiobuttonOverview": {
+        "title": "Bouton radio"
+      },
+      "FormObjects/ruler": {
+        "title": "Règle"
+      },
+      "FormObjects/shapesOverview": {
+        "title": "Shapes"
+      },
+      "FormObjects/spinner": {
+        "title": "Spinner"
+      },
+      "FormObjects/splitters": {
+        "title": "Séparateur"
+      },
+      "FormObjects/staticPicture": {
+        "title": "Image statique"
+      },
+      "FormObjects/stepper": {
+        "title": "Stepper"
+      },
+      "FormObjects/subformOverview": {
+        "title": "Subform"
+      },
+      "FormObjects/tabControl": {
+        "title": "Tab Controls"
+      },
+      "FormObjects/text": {
+        "title": "Texte"
+      },
+      "FormObjects/viewProAreaOverview": {
+        "title": "4D View Pro area"
+      },
+      "FormObjects/webAreaOverview": {
+        "title": "Zone Web"
+      },
+      "FormObjects/writeProAreaOverview": {
+        "title": "4D Write Pro area"
+      },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "Barres de menus"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "Créer des menus et des barres de menus"
       },
       "Menus/overview": {
         "title": "Aperçu"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "Propriétés des menus"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Mode SDI sous Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "MSC/overview": {
         "title": "Aperçu",
@@ -158,21 +329,24 @@
         "sidebar_label": "Page Vérification"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Architecture d'un projet 4D"
+      },
+      "Project/building": {
+        "title": "Générer un package projet"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
-      },
-      "Project/deploying": {
-        "title": "Deploying a project"
+        "title": "Créer un projet 4D"
       },
       "Project/developing": {
-        "title": "Developing a project"
-      },
-      "Project/exporting": {
-        "title": "Exporting from a 4D database"
+        "title": "Développer un projet"
       },
       "Project/overview": {
+        "title": "Aperçu"
+      },
+      "Users/editing": {
+        "title": "Gestion des groupes et utilisateurs 4D"
+      },
+      "Users/overview": {
         "title": "Aperçu"
       }
     },
@@ -181,18 +355,22 @@
     },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
-      "Projects in 4D (BETA)": "Projets 4D (BETA)",
-      "MSC": "CSM",
+      "Project Databases": "Bases projet",
+      "Form Editor": "Éditeur de formulaire",
+      "Form Objects": "Objets formulaires",
+      "Form Object Properties": "Propriétés des objets formulaire",
       "Menus": "Menus",
-      "Backup and Restore": "Sauvegarde et restitution"
+      "MSC": "CSM",
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Users and Groups": "Groupes et utilisateurs"
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "Guides essentiels du développeur 4D",
-    "...more to come...|no description given": "...En cours de création...",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "Prise en main",
-    "Development|no description given": "Développement",
+    "for 4D developers|no description given": "pour les développeurs 4D",
+    "Getting started|no description given": "Prise en main",
+    "Developing a Desktop application|no description given": "Développer une application Desktop",
+    "Developing a Web application|no description given": "Développer une application web",
+    "Developing a Mobile application|no description given": "Développer une application mobile",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",

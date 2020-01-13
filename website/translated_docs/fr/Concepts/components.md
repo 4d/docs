@@ -153,7 +153,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 **Notes :**
 
 - La commande `Table du formulaire courant` retourne `Nil` lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.
-- Les commandes SQL de définition de données (`CREATE TABLE`, `DROP TABLE`, etc.) ne peuvent pas être utilisées dans le cadre des composants. 
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component database. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
 
 ## Gestion des erreurs
 

@@ -71,6 +71,9 @@
       "Concepts/time": {
         "title": "Time"
       },
+      "Concepts/variant": {
+        "title": "Variant"
+      },
       "Concepts/error-handling": {
         "title": "Error handling"
       },
@@ -101,6 +104,174 @@
       },
       "Concepts/variables": {
         "title": "Variables"
+      },
+      "FormEditor/stylesheets": {
+        "title": "Style sheets"
+      },
+      "FormEditor/objectLibrary": {
+        "title": "Object libraries"
+      },
+      "FormObjects/buttonOverview": {
+        "title": "Button"
+      },
+      "FormObjects/buttonGridOverview": {
+        "title": "Button Grid"
+      },
+      "FormObjects/checkboxOverview": {
+        "title": "Check Box"
+      },
+      "FormObjects/comboBoxOverview": {
+        "title": "Combo Box"
+      },
+      "FormObjects/dropdownListOverview": {
+        "title": "Drop-down List"
+      },
+      "FormObjects/formObjectsOverview": {
+        "title": "About 4D Form Objects"
+      },
+      "FormObjects/groupBox": {
+        "title": "Group Box"
+      },
+      "FormObjects/inputOverview": {
+        "title": "Input"
+      },
+      "FormObjects/listOverview": {
+        "title": "Hierarchical List"
+      },
+      "FormObjects/listboxOverview": {
+        "title": "List Box"
+      },
+      "FormObjects/pictureButtonOverview": {
+        "title": "Picture Button"
+      },
+      "FormObjects/picturePopupMenuOverview": {
+        "title": "Picture Pop-up Menu"
+      },
+      "FormObjects/pluginAreaOverview": {
+        "title": "Plug-in Area"
+      },
+      "FormObjects/progressIndicator": {
+        "title": "Progress Indicator"
+      },
+      "FormObjects/propertiesAction": {
+        "title": "Action"
+      },
+      "FormObjects/propertiesAnimation": {
+        "title": "Animation"
+      },
+      "FormObjects/propertiesAppearance": {
+        "title": "Appearance"
+      },
+      "FormObjects/propertiesBackgroundAndBorder": {
+        "title": "Background and Border"
+      },
+      "FormObjects/propertiesCoordinatesAndSizing": {
+        "title": "Coordinates & Sizing"
+      },
+      "FormObjects/propertiesCrop": {
+        "title": "Crop"
+      },
+      "FormObjects/propertiesDataSource": {
+        "title": "Data Source"
+      },
+      "FormObjects/propertiesDisplay": {
+        "title": "Display"
+      },
+      "FormObjects/propertiesEntry": {
+        "title": "Entry"
+      },
+      "FormObjects/propertiesFooters": {
+        "title": "Footers"
+      },
+      "FormObjects/propertiesGridlines": {
+        "title": "Gridlines"
+      },
+      "FormObjects/propertiesHeaders": {
+        "title": "Headers"
+      },
+      "FormObjects/propertiesHelp": {
+        "title": "Help"
+      },
+      "FormObjects/propertiesHierarchy": {
+        "title": "Hierarchy"
+      },
+      "FormObjects/propertiesListBox": {
+        "title": "List Box"
+      },
+      "FormObjects/propertiesObject": {
+        "title": "Objects"
+      },
+      "FormObjects/propertiesPicture": {
+        "title": "Picture"
+      },
+      "FormObjects/propertiesPlugIns": {
+        "title": "Plug-ins"
+      },
+      "FormObjects/propertiesPrint": {
+        "title": "Print"
+      },
+      "FormObjects/propertiesRangeOfValues": {
+        "title": "Range of Values"
+      },
+      "FormObjects/propertiesReference": {
+        "title": "JSON property list"
+      },
+      "FormObjects/propertiesResizingOptions": {
+        "title": "Resizing Options"
+      },
+      "FormObjects/propertiesScale": {
+        "title": "Scale"
+      },
+      "FormObjects/propertiesSubform": {
+        "title": "Subform"
+      },
+      "FormObjects/propertiesText": {
+        "title": "Text"
+      },
+      "FormObjects/propertiesTextAndPicture": {
+        "title": "Text and Picture"
+      },
+      "FormObjects/propertiesWebArea": {
+        "title": "Web Area"
+      },
+      "FormObjects/radiobuttonOverview": {
+        "title": "Radio Button"
+      },
+      "FormObjects/ruler": {
+        "title": "Ruler"
+      },
+      "FormObjects/shapesOverview": {
+        "title": "Shapes"
+      },
+      "FormObjects/spinner": {
+        "title": "Spinner"
+      },
+      "FormObjects/splitters": {
+        "title": "Splitter"
+      },
+      "FormObjects/staticPicture": {
+        "title": "Static picture"
+      },
+      "FormObjects/stepper": {
+        "title": "Stepper"
+      },
+      "FormObjects/subformOverview": {
+        "title": "Subform"
+      },
+      "FormObjects/tabControl": {
+        "title": "Tab Controls"
+      },
+      "FormObjects/text": {
+        "title": "Text"
+      },
+      "FormObjects/viewProAreaOverview": {
+        "title": "4D View Pro area"
+      },
+      "FormObjects/webAreaOverview": {
+        "title": "Web Area"
+      },
+      "FormObjects/writeProAreaOverview": {
+        "title": "4D Write Pro area"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -160,17 +331,14 @@
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
+      "Project/building": {
+        "title": "Building a project package"
+      },
       "Project/creating": {
         "title": "Creating a 4D project"
       },
-      "Project/deploying": {
-        "title": "Deploying a project"
-      },
       "Project/developing": {
         "title": "Developing a project"
-      },
-      "Project/exporting": {
-        "title": "Exporting from a 4D database"
       },
       "Project/overview": {
         "title": "Overview"
@@ -268,68 +436,11 @@
       "REST/REST_requests": {
         "title": "About REST Requests"
       },
-      "REST/apiDataClass": {
-        "title": "Dataclass"
+      "Users/editing": {
+        "title": "Managing 4D users and groups"
       },
-      "REST/apiUsers": {
-        "title": "Directory"
-      },
-      "REST/apiUtilities": {
-        "title": "Utilities"
-      },
-      "REST/{attribute1_attribute2}": {
-        "title": "{attribute1,attribute2}"
-      },
-      "REST/{dataClass}{attribute}_value": {
-        "title": "{dataClass}:{attribute}(value)"
-      },
-      "REST/{dataClass}_{method}": {
-        "title": "{dataClass}/{method}"
-      },
-      "REST/{dataClass}_{key}": {
-        "title": "{dataClass}({key})"
-      },
-      "REST/catalog_{datastoreClass}": {
-        "title": "$catalog/{datastoreClass}"
-      },
-      "REST/catalog_$all": {
-        "title": "$catalog/$all"
-      },
-      "REST/directory_currentUser": {
-        "title": "$directory/currentUser"
-      },
-      "REST/directory_currentUserBelongsTo": {
-        "title": "$directory/currentUserBelongsTo"
-      },
-      "REST/directory_login": {
-        "title": "$directory/login"
-      },
-      "REST/directory_logout": {
-        "title": "$directory/logout"
-      },
-      "REST/entityset{entitySetID}$logicOperator&$otherCollection": {
-        "title": "$entityset/{entitySetID}?$logicOperator...&$otherCollection"
-      },
-      "REST/entityset_{entitySetID}": {
-        "title": "$entityset/{entitySetID}"
-      },
-      "REST/method=delete": {
-        "title": "$method=delete"
-      },
-      "REST/method=entityset": {
-        "title": "$method=entityset"
-      },
-      "REST/method=release": {
-        "title": "$method=release"
-      },
-      "REST/method=subentityset": {
-        "title": "$method=subentityset"
-      },
-      "REST/method=update": {
-        "title": "$method=update"
-      },
-      "REST/method=validate": {
-        "title": "$method=validate"
+      "Users/overview": {
+        "title": "Overview"
       }
     },
     "links": {
@@ -338,20 +449,23 @@
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
-      "Projects in 4D (BETA)": "Projects in 4D (BETA)",
-      "MSC": "MSC",
+      "Project Databases": "Project Databases",
+      "Form Editor": "Form Editor",
+      "Form Objects": "Form Objects",
+      "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "Backup and Restore": "Backup and Restore",
-      "Guides": "Guides",
-      "API": "API"
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {
-    "Essential Guides for 4D Developers|no description given": "Essential Guides for 4D Developers",
-    "...more to come...|no description given": "...more to come...",
-    "[Language Concepts](Concepts/about.html)|no description given": "[Language Concepts](Concepts/about.html)",
-    "Getting Started|no description given": "Getting Started",
-    "Development|no description given": "Development",
+    "Documentation for 4D developers|no description given": "Documentation for 4D developers",
+    "Getting started|no description given": "Getting started",
+    "Developing a Desktop application|no description given": "Developing a Desktop application",
+    "Developing a Web application|no description given": "Developing a Web application",
+    "Developing a Mobile application|no description given": "Developing a Mobile application",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",

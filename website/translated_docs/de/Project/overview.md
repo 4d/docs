@@ -5,7 +5,7 @@ title: Overview
 
 A 4D project contains all of the source code of a 4D database application, from the database structure to the user interface, including forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
 
-4D projects are created and handled using the 4D Developer application. Project files are then used to build final application deployment files (.4dz).
+4D projects are created and handled using the 4D Developer application. Project files are then used to build final application deployment files, that can be opened by 4D Server or 4D Volume license (merged applications).
 
 ## Project files
 
@@ -28,8 +28,8 @@ The flexibility of developing a 4D project is especially demonstrated when multi
 You create a 4D database project by:
 
 - creating a new, blank project -- see [Creating a 4D project](creating.md). 
-- exporting an existing 4D "binary" development to a project -- see [Export from a 4D database](exporting.md). 
+- exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com). 
 
 Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool
 
-4D projects can be compiled and easily deployed as single-user or client-server applications via a single packed file (.4dz) containing all your project -- see [Deploying a project](deploying.md)
+4D projects can be compiled and easily deployed as single-user or client-server applications containing compacted versions of your project -- see [Building a project package](building.md).

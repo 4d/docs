@@ -39,7 +39,7 @@ If you created a menu bar, a new bar appears in the list containing the default 
 2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name.
 OR
 Enter the custom name in the "Title" area. 
-Menu bar names must be unique. The may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
+Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### Using the 4D language
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.

@@ -1,25 +1,26 @@
 ---
 id: creating
-title: Creating a 4D project
+title: Créer un projet 4D
 ---
 
-## Requirements
+## Pré-requis
 
-New 4D projects can only be created from **4D Developer** (see [Developing a project](developing.md)).
+Les nouveaux projets 4D ne peuvent être créés uniquement à partir de **4D Developer** (reportez-vous à la section [Développer un projet](developing.md)).
 
-**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes only. For deployment, 4D projects are provided as .4dz files (zipped files). For more information, please refer to [Deploying a project](deploying.md).
+**Note :** 4D Server peut ouvrir des fichiers .4DProject en mode lecture seule, à des fins de test uniquement. Pour le déploiement, les projets 4D sont fournis sous forme de fichiers .4dz (fichiers zippés). Pour plus d'informations, reportez-vous à la section [Générer un package de projet](building.md).
 
-## Creating the project files
+> Vous pouvez créer des bases projet en exportant les bases binaires existantes. Voir "Exporter depuis une base 4D" sur [doc.4d.com](https://doc.4d.com).
 
-To create a new database project:
+## Créer des fichiers de projet
 
-1. Launch a 4D Developer application.
-2. Select **New > Database Project...** from the **File** menu: ![](assets/en/Project/project-create1.png) OR Select **Database Project...** from the **New** toolbar button: ![](assets/en/Project/projectCreate2.png)  
-    A standard **Save** dialog box appears so that you can choose the name and location of the 4D database project main folder.
-3. Enter the name of your project folder and click **Save**. This name will be used: 
-    - as the name of the main project folder (named "MyFirstProject" in the [Architecture of a 4D Project](Project/architecture.md) section example),
-    - as the name of the .4DProject file at the first level of the "Project" folder. You can choose any name allowed by your operating system. *Warning:* if your database project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+Pour créer un nouveau projet de base de données :
 
-When you validate the dialog box, 4D closes the current database (if any), creates a project folder at the indicated location, and puts all the files needed for proper operation of the database project into it. For more information, refer to [Architecture of a 4D Project](Project/architecture.md).
+1. Lancez une application 4D Developer.
+2. Sélectionnez **Nouveau> Base de données projet...** dans le menu **Fichier** : ![](assets/en/Project/project-create1.png) OU Sélectionnez **Base de données projet...** à partir du bouton **Nouveau** de la barre d’outils : ![](assets/en/Project/projectCreate2.png) Une boîte de dialogue standard d'enregistrement (**Sauvegarder**) apparaît pour vous permettre de choisir le nom et l'emplacement du dossier principal de la base projet 4D.
+3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**. Ce nom sera utilisé : 
+    - comme nom du dossier principal du projet (nommé "MyFirstProject" dans l'exemple de la section [Architecture d'un projet 4D](Project/architecture.md)),
+    - comme nom du fichier .4DProject au premier niveau du dossier "Project". Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. *Attention :* si votre base projet est destinée à fonctionner sur d'autres systèmes ou à être enregistrée via un outil de contrôle de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
 
-Next, the 4D application window is displayed with the Explorer in the foreground. You can then, for example, create project forms or display the Structure editor and add tables, fields, etc.
+Lorsque vous validez la boîte de dialogue, 4D ferme la base de données courante (le cas échéant), crée un dossier "Project" à l'emplacement indiqué et y place tous les fichiers nécessaires au bon fonctionnement de la base projet. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
+
+La fenêtre de l’application 4D s’affiche ensuite avec l’Explorateur au premier plan. Vous pouvez alors, par exemple, créer des formulaires de projet ou afficher l'éditeur de structure et ajouter des tables, des champs, etc.

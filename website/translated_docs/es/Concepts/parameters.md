@@ -20,7 +20,7 @@ Parameters are passed to methods in the same way. For example, if a project meth
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
 
-The parameters are separated by semicolons (;).
+The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. The numbering of the local variables represents the order of the parameters.
 
@@ -45,6 +45,15 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 ```
 
 **Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+
+### Supported expressions
+
+You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
+
+- tables
+- arrays
+
+Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 ## Functions
 
@@ -156,77 +165,57 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Passing mode
+## Values or references
 
-Depending on their type, parameters are passed **by copy** or **by reference**:
-
-- When a parameter is passed by copy, the local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method.
-- When a parameter is passed by reference, the local variables/parameters contain references that point to the actual source fields, variables, or expressions passed by the calling method; modifiying the value of the local parameter will modify the source value.
-
-The following table shows how the different types of elements can be passed:
-
-| Type of parameter                                                      | How passed                             | Comment                                                               |
-| ---------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------- |
-| Field, variable or expression of a scalar type (number, text, date...) | by copy                                | Can be passed by reference through a pointer, see below               |
-| Field, variable or expression of type Object                           | by reference                           | See example below                                                     |
-| Variable or expression of type Collection                              | by reference                           |                                                                       |
-| Variable or expression of type Pointer                                 | by reference                           | See Passing Pointers to Methods                                       |
-| Array                                                                  | Cannot be passed directly as parameter | Can be passed by reference through a pointer, see Arrays and Pointers |
-| Table                                                                  | Cannot be passed directly as parameter | Can be passed by reference through a pointer, see Pointers            |
-
-### Parameters passed by copy
-
-When using fields, variables and expressions of the scalar type as method parameters, only copies of values are passed.
-
-Since `$1, $2...` are local variables, they are available only within the subroutine and are cleared at the end of the subroutine. For this reason, a subroutine cannot change the value of the actual fields or variables passed as parameters at the calling method level. For example:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. For example:
 
 ```code4d
-  ` Here is some code from the method MY METHOD
-  ` ...
- DO SOMETHING([People]Last Name) ` Let's say [People]Last Name is equal to "williams"
- ALERT([People]Last Name)
+    //Here is some code from the method MY_METHOD
+DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ALERT([People]Name)
 
-  ` Here is the code of the method DO SOMETHING
+    //Here is the code of the method DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
 
-The alert box displayed by `DO SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Last Name` passed as parameter by the method `MY METHOD`.
+The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
 
-There are two ways to make the method `DO SOMETHING` change the value of the field:
+There are two ways to make the method `DO_SOMETHING` change the value of the field:
 
 1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
 
 ```code4d
-  ` Here is some code from the method MY METHOD
-  ` ...
- DO SOMETHING(->[People]Last Name) ` Let's say [People]Last Name is equal to "williams"
+  //Here is some code from the method MY_METHOD
+ DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
 
-  ` Here the code of the method DO SOMETHING
+  //Here the code of the method DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
 
 Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
 
-2. Rather than having the method `DO SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
 
 ```code4d
-  ` Here is some code from the method MY METHOD
-  ` ...
- [People]Last Name:=DO SOMETHING([People]Last Name) ` Let's say [People]Last Name is equal to "williams"
- ALERT([People]Last Name)
-  ` Here the code of the method DO SOMETHING
+    //Here is some code from the method MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Name)
+
+    //Here the code of the method DO SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the next paragraphs.
+This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Functions](#functions) paragraph.
 
-### Parameters passed by reference
+### Particular cases: objects and collections
 
-With certain value types, references to actual source values are passed as *parameters*, and not values themselves. This is the case with variables, expressions, or fields of the Object or Collection type, as well as pointer expressions. In this case, `$1, $2...` do not contain values but references. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for pointers, except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
+
+Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
 
@@ -247,7 +236,7 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
  ALERT(String($1.Age))
 ```
 
-When you execute the `CreatePerson` method, both alert boxes will read "50" since the same reference is handled by both methods.
+When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
 
 **4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
 
@@ -275,7 +264,11 @@ In the `ChangeAge` method you can write:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either: - check if all expected parameters are provided by comparing them to the `Null` value, or - preset parameter values, or - use them as empty values.
+This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
+
+- check if all expected parameters are provided by comparing them to the `Null` value, or
+- preset parameter values, or
+- use them as empty values.
 
 In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
 
