@@ -32,7 +32,6 @@ function HomeSplash(props) {
     </div>
   );
 }
-
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = 'en'} = this.props;
