@@ -18,7 +18,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 With the REST API, you can perform all the manipulations to data as you can in 4D.
 
-To add and modify entities, you can call [`$method=update`]($method=update.md). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method=validate.md). If you want to delete one or more entities, you can use [`$method=delete`]($method=delete.md).
+To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{datastoreClass}/{method}](%7BdataClass%7D_%7Bmethod%7D.html).
 
@@ -27,7 +27,7 @@ Before returning the collection, you can also sort it by using [`$orderby`]($ord
 
 ## Navigating Data  
 
-Add the [`$skip`]($skip/md) (to define with which entity to start) and [`$top/$limit`](top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
 
 
@@ -35,7 +35,7 @@ Add the [`$skip`]($skip/md) (to define with which entity to start) and [`$top/$l
 
 An entity set (aka *entity selection*) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. Using an entity set prevents you from continually querying your application for the same results. Accessing an entity set is much quicker and can improve the speed of your application.
 
-To create an entity set, call [`$method=entityset`]($method=entityset.md) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
 To access the entity set, you must use `$entityset/{entitySetID}`, for example:
 
@@ -44,7 +44,7 @@ To access the entity set, you must use `$entityset/{entitySetID}`, for example:
 
 By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). The timeout is continually being reset to the value defined for its timeout (either the default one or the one you define) each time you use it.
 
-If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method=release.md).
+If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
 
 If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. Any entities you delete will, of course, no longer be a part of the entity set.
 
@@ -52,7 +52,7 @@ If the entity set no longer exists in 4D Server's cache, it will be recreated wi
 
 Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset_%7BentitySetID%7D_$logicOperator_&$otherCollection.html), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
-A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method=entityset.md) at the end of the REST request.
+A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
 
 

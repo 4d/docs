@@ -175,9 +175,6 @@
       "Project/overview": {
         "title": "Overview"
       },
-      "REST/{attribute1_attribute2}": {
-        "title": "{attribute1,attribute2}"
-      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -279,6 +276,9 @@
       },
       "REST/apiUtilities": {
         "title": "Utilities"
+      },
+      "REST/{attribute1_attribute2}": {
+        "title": "{attribute1,attribute2}"
       },
       "REST/{dataClass}{attribute}_value": {
         "title": "{dataClass}:{attribute}(value)"

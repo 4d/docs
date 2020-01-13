@@ -10,7 +10,7 @@ You can get several information from the REST server:
 
 ## Catalog
 
-Use the [`$catalog`](catalog.md), [`$catalog/{dataClass}`](catalog.md#catalogdataclass), or [`$catalog/$all`](catalog.md#catalogall) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
+Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
 
 To get the collection of all exposed dataclasses along with their attributes:
 
@@ -19,11 +19,11 @@ To get the collection of all exposed dataclasses along with their attributes:
 
 ## Cache info
 
-Use the [`$info`](info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions. 
+Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions. 
 
 ## queryPath and queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryPlan.md) and/or [`$queryPath`]($queryPath.md) in the REST request.
+Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
 
 For example:
 
