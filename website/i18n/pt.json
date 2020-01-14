@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Essential Guides for 4D Developers",
+    "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -444,8 +444,8 @@
       }
     },
     "links": {
-      "Projects": "Projects",
-      "HTTP REST": "HTTP REST"
+      "Docs": "Docs",
+      "REST": "REST"
     },
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
@@ -454,13 +454,14 @@
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
-      "Backup and Restore": "Backup and Restore",
       "MSC": "MSC",
-      "Users and Groups": "Users and Groups"
+      "Backup and Restore": "Backup and Restore",
+      "Users and Groups": "Users and Groups",
+      "REST Server Guides": "REST Server Guides",
+      "REST Server API": "REST Server API"
     }
   },
   "pages-strings": {
-    "Documentation for 4D developers|no description given": "Documentation for 4D developers",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
