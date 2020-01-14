@@ -1,6 +1,6 @@
 ---
 id: date
-title: Date
+title: 日付
 ---
 
 - A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
@@ -29,20 +29,20 @@ A null date is specified by *!00-00-00!*.
 
 ## Date operators
 
-| Operation                | Syntax        | Returns | Expression                  | Value        |
+| オペレーション                  | Syntax        | Returns | 式                           | Value        |
 | ------------------------ | ------------- | ------- | --------------------------- | ------------ |
-| Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
-| Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
-| Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | True         |
+| Date difference          | Date – Date   | 数値      | !2017-01-20! - !2017-01-01! | 19           |
+| Day addition             | Date + Number | 日付      | !2017-01-20! + 9            | !2017-01-29! |
+| Day subtraction          | Date – Number | 日付      | !2017-01-20! - 9            | !2017-01-11! |
+| Equality                 | Date = Date   | ブール     | !2017-01-01! =!2017-01-01!  | True         |
 |                          |               |         | !2017-01-20! = !2017-01-01! | False        |
-| Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | True         |
+| Inequality               | Date # Date   | ブール     | !2017-01-20! # !2017-01-01! | True         |
 |                          |               |         | !2017-01-20! # !2017-01-20! | False        |
-| Greater than             | Date > Date   | Boolean | !2017-01-20! > !2017-01-01! | True         |
+| Greater than             | Date > Date   | ブール     | !2017-01-20! > !2017-01-01! | True         |
 |                          |               |         | !2017-01-20! > !2017-01-20! | False        |
-| Less than                | Date < Date   | Boolean | !2017-01-01! < !2017-01-20! | True         |
+| Less than                | Date < Date   | ブール     | !2017-01-01! < !2017-01-20! | True         |
 |                          |               |         | !2017-01-20! < !2017-01-20! | False        |
-| Greater than or equal to | Date >= Date  | Boolean | !2017-01-20! >=!2017-01-01! | True         |
+| Greater than or equal to | Date >= Date  | ブール     | !2017-01-20! >=!2017-01-01! | True         |
 |                          |               |         | !2017-01-01!>=!2017-01-20!  | False        |
-| Less than or equal to    | Date <= Date  | Boolean | !2017-01-01!<=!2017-01-20!  | True         |
+| Less than or equal to    | Date <= Date  | ブール     | !2017-01-01!<=!2017-01-20!  | True         |
 |                          |               |         | !2017-01-20!<=!2017-01-01!  | False        |

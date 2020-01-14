@@ -13,17 +13,17 @@ A variant type variable can contain a value of the following data types:
 - date
 - longint
 - object
-- picture
+- ピクチャー
 - pointer
 - real
-- text
+- テキスト
 - time
 - null
 - undefined
 
 > Arrays cannot be stored in variant variables.
 
-In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
+In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. たとえば:
 
 ```code4d
 C_VARIANT($variant)
@@ -37,7 +37,7 @@ $vtype:=Type($variant) // 12 (Is variant)
 $vtypeVal:=Value type($variant) // 1 (Is real)
 ```
 
-You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. For example:
+You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. たとえば:
 
 ```code4d
 C_VARIANT($v)

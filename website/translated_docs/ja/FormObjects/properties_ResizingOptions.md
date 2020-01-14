@@ -33,9 +33,9 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values         |
-| ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| Name         | データタイプ | Possible Values         |
+| ------------ | ------ | ----------------------- |
+| resizingMode | string | "rightToLeft", "legacy" |
 
 #### Objects Supported
 
@@ -60,9 +60,9 @@ Three options are available:
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| Name    | データタイプ | Possible Values         |
+| ------- | ------ | ----------------------- |
+| sizingX | string | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -85,9 +85,9 @@ Three options are available:
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| Name    | データタイプ | Possible Values         |
+| ------- | ------ | ----------------------- |
+| sizingY | string | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -111,9 +111,9 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### JSON Grammar
 
-| Name         | Data Type |           Possible Values            |
-|:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| Name         | データタイプ |           Possible Values            |
+|:------------ |:------:|:------------------------------------:|
+| splitterMode | string | "move" (pusher), "resize" (standard) |
 
 #### Objects Supported
 
@@ -129,9 +129,9 @@ Designates if the size of the column can be modified by the user.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-|:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| Name      | データタイプ  | Possible Values |
+|:--------- |:-------:|:---------------:|
+| resizable | boolean | "true", "false" |
 
 #### Objects Supported
 

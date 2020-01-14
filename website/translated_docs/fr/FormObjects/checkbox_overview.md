@@ -79,19 +79,19 @@ For detailed information on these actions, please refer to the [Standard actions
 
 ## Check box button styles
 
-Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
+Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables.
+With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
 
 4D provides check boxes in the following predefined styles:
 
-### Regular
+### Classique
 
 The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -109,13 +109,13 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 
 
-### Flat
+### A plat
 
 The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -143,7 +143,7 @@ Example with states unchecked / checked / highlighted:
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -172,7 +172,7 @@ Example with states unchecked / checked / highlighted:
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -190,7 +190,7 @@ Example with states unchecked / checked / highlighted:
 
 
 
-### Rounded Bevel
+### Bevel arrondi
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -203,7 +203,7 @@ Example on macOS:
 > on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```code4d
     "myCheckBox": {
@@ -232,7 +232,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 > On Windows, this style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -251,7 +251,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 
 
-### OS X Textured
+### OS X Texture
 
 The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -265,7 +265,7 @@ By default, the OS X Textured style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -286,7 +286,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
  - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
@@ -296,7 +296,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -328,7 +328,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -357,7 +357,7 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -382,7 +382,7 @@ The Custom check box style accepts a personalized background picture and allows 
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckbox": {

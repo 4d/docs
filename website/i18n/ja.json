@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -42,13 +42,13 @@
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "ブール"
       },
       "Concepts/collection": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "日付"
       },
       "Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -57,19 +57,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "オブジェクト"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "時間"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -96,14 +96,14 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "変数"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -202,7 +202,7 @@
         "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -226,7 +226,7 @@
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Text and Picture"
@@ -262,7 +262,7 @@
         "title": "タブコントロール"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"
@@ -280,7 +280,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -309,8 +309,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -341,17 +341,111 @@
         "title": "プロジェクトの開発"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "概要"
+      },
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
+      "REST/asArray": {
+        "title": "$asArray"
+      },
+      "REST/atomic_$atonce": {
+        "title": "$atomic/$atonce"
+      },
+      "REST/attributes": {
+        "title": "$attributes"
+      },
+      "REST/binary": {
+        "title": "$binary"
+      },
+      "REST/catalog": {
+        "title": "$catalog"
+      },
+      "REST/compute": {
+        "title": "$compute"
+      },
+      "REST/directory": {
+        "title": "$directory"
+      },
+      "REST/distinct": {
+        "title": "$distinct"
+      },
+      "REST/entityset": {
+        "title": "$entityset"
+      },
+      "REST/expand": {
+        "title": "$expand"
+      },
+      "REST/filter": {
+        "title": "$filter"
+      },
+      "REST/imageformat": {
+        "title": "$imageformat"
+      },
+      "REST/info": {
+        "title": "$info"
+      },
+      "REST/method": {
+        "title": "$method"
+      },
+      "REST/orderby": {
+        "title": "$orderby"
+      },
+      "REST/querypath": {
+        "title": "$querypath"
+      },
+      "REST/queryplan": {
+        "title": "$queryplan"
+      },
+      "REST/savedfilter": {
+        "title": "$savedfilter"
+      },
+      "REST/savedorderby": {
+        "title": "$savedorderby"
+      },
+      "REST/skip": {
+        "title": "$skip"
+      },
+      "REST/timeout": {
+        "title": "$timeout"
+      },
+      "REST/top_$limit": {
+        "title": "$top/$limit"
+      },
+      "REST/upload": {
+        "title": "$upload"
+      },
+      "REST/version": {
+        "title": "$version"
+      },
+      "REST/authUsers": {
+        "title": "Authenticating Users"
+      },
+      "REST/configuration": {
+        "title": "Server Configuration"
+      },
+      "REST/genInfo": {
+        "title": "Getting Server Information"
+      },
+      "REST/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "REST/manData": {
+        "title": "Manipulating Data"
+      },
+      "REST/REST_requests": {
+        "title": "About REST Requests"
       },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "概要"
       }
     },
     "links": {
-      "Developer Center": "デベロッパー・センター"
+      "Projects": "Projects",
+      "HTTP REST": "HTTP REST"
     },
     "categories": {
       "4D Language Concepts": "4D ランゲージのコンセプト",
@@ -360,17 +454,17 @@
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
-      "MSC": "Maintenance & Security Center",
       "Backup and Restore": "バックアップと復元",
+      "MSC": "Maintenance & Security Center",
       "Users and Groups": "Users and Groups"
     }
   },
   "pages-strings": {
-    "for 4D developers|no description given": "for 4D developers",
+    "Documentation for 4D developers|no description given": "Documentation for 4D developers",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリケーションの開発",
-    "Developing a Web application|no description given": "Web アプリケーションの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリケーションの開発",
+    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
+    "Developing a Web application|no description given": "Web アプリの開発",
+    "Developing a Mobile application|no description given": "モバイルアプリの開発",
     "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",

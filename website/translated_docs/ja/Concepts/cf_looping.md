@@ -27,7 +27,7 @@ The Boolean expression must be set by something inside the loop or else the loop
 
 If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the [Error handling](error-handling.md) page.
 
-### Example
+### 例題
 
 ```code4d
  CONFIRM("Add a new record?") //The user wants to add a record?
@@ -52,7 +52,7 @@ A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileen
 
 The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 
-### Example
+### 例題
 
 Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
 
@@ -105,7 +105,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-3. The following example goes through all the characters of the text vtSomeText:
+3. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```code4d
  For($vlChar;1;Length(vtSomeText))
@@ -152,7 +152,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-7. The following example goes through all the characters of the text vtSomeText:
+7. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```code4d
  For($vlChar;Length(vtSomeText);1;-1)
@@ -295,10 +295,10 @@ The following table compares the three types of `For each...End for each`:
 
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
+| Current_Item type                 | Variable of the same type as collection elements | エンティティ                              | Text variable               |
+| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | オブジェクト                      |
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
+| Support of begin / end parameters | ○                                                | ○                                   | No                          |
 
 - The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
 - By default, the enclosed *statement(s)* are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
@@ -319,7 +319,7 @@ At each loop iteration, the *Current_Item* variable is automatically filled with
 - The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
 
-#### Example
+#### 例題
 
 You want to compute some statistics for a collection of numbers:
 
@@ -354,7 +354,7 @@ The number of loops is based on the number of entities in the entity selection. 
 
 Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
 
-#### Example
+#### 例題
 
 You want to raise the salary of all British employees in an entity selection:
 
@@ -372,7 +372,7 @@ When `For each...End for each` is used with an *Expression* of the Object type, 
 
 The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
 
-#### Example
+#### 例題
 
 You want to switch the names to uppercase in the following object:
 
@@ -412,13 +412,13 @@ You can define bounds to the iteration using the optional begin and end paramete
 
 If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 
-For example:
+たとえば:
 
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
 - end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
 
-#### Example
+#### 例題
 
 ```code4d
  C_COLLECTION($col;$col2)
@@ -444,7 +444,7 @@ You can pass either keyword depending on your needs:
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
-#### Example
+#### 例題
 
 ```code4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)

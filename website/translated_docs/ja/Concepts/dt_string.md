@@ -1,6 +1,6 @@
 ---
 id: string
-title: String
+title: 文字
 ---
 
 String is a generic term that stands for:
@@ -36,25 +36,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
+| オペレーション                  | Syntax           | Returns | 式                       | Value    |
 | ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
+| 連結 (結合)                  | String + String  | 文字      | "abc" + "def"           | "abcdef" |
+| Repetition               | String * Number  | 文字      | "ab" * 3                | "ababab" |
+| Equality                 | String = String  | ブール     | "abc" = "abc"           | True     |
 |                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
+| Inequality               | String # String  | ブール     | "abc" # "abd"           | True     |
 |                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
+| Greater than             | String > String  | ブール     | "abd" > "abc"           | True     |
 |                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
+| Less than                | String < String  | ブール     | "abc" < "abd"           | True     |
 |                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
+| Greater than or equal to | String >= String | ブール     | "abd" >= "abc"          | True     |
 |                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
+| Less than or equal to    | String <= String | ブール     | "abc" <= "abd"          | True     |
 |                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
+| Contains keyword         | String % String  | ブール     | "Alpha Bravo" % "Bravo" | True     |
 |                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+|                          | Picture % String | ブール     | Picture_expr % "Mer"    | True (*) |
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -157,7 +157,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. たとえば:
 
 ```code4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -192,7 +192,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### 例題
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 

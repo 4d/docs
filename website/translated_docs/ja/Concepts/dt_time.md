@@ -1,6 +1,6 @@
 ---
 id: time
-title: Time
+title: 時間
 ---
 
 - A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
@@ -29,28 +29,28 @@ A null time is specified by ?00:00:00?
 
 ## Time operators
 
-| Operation                | Syntax         | Returns | Expression              | Value      |
+| オペレーション                  | Syntax         | Returns | 式                       | Value      |
 | ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | True       |
+| 加算 (足し算)                 | Time + Time    | 時間      | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| 減算 (引き算)                 | Time – Time    | 時間      | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| 加算 (足し算)                 | Time + Number  | 数値      | ?02:03:04? + 65         | 7449       |
+| 減算 (引き算)                 | Time – Number  | 数値      | ?02:03:04? – 65         | 7319       |
+| 乗算 (かけ算)                 | Time * Number  | 数値      | ?02:03:04? * 2          | 14768      |
+| 除算 (割り算)                 | Time / Number  | 数値      | ?02:03:04? / 2          | 3692       |
+| Longint division         | Time \ Number | 数値      | ?02:03:04? \ 2         | 3692       |
+| Modulo                   | Time % Time    | 時間      | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                   | Time % Number  | 数値      | ?02:03:04? % 2          | 0          |
+| Equality                 | Time = Time    | ブール     | ?01:02:03? = ?01:02:03? | True       |
 |                          |                |         | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | True       |
+| Inequality               | Time # Time    | ブール     | ?01:02:03? # ?01:02:04? | True       |
 |                          |                |         | ?01:02:03? # ?01:02:03? | False      |
-| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | True       |
+| Greater than             | Time > Time    | ブール     | ?01:02:04? > ?01:02:03? | True       |
 |                          |                |         | ?01:02:03? > ?01:02:03? | False      |
-| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | True       |
+| Less than                | Time < Time    | ブール     | ?01:02:03? < ?01:02:04? | True       |
 |                          |                |         | ?01:02:03? < ?01:02:03? | False      |
-| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | True       |
+| Greater than or equal to | Time >= Time   | ブール     | ?01:02:03? >=?01:02:03? | True       |
 |                          |                |         | ?01:02:03? >=?01:02:04? | False      |
-| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
+| Less than or equal to    | Time <= Time   | ブール     | ?01:02:03? <=?01:02:03? | True       |
 |                          |                |         | ?01:02:04? <=?01:02:03? | False      |
 
 ### Example 1

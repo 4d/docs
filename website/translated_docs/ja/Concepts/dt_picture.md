@@ -1,6 +1,6 @@
 ---
-id: picture
-title: Picture
+id: ピクチャー
+title: ピクチャー
 ---
 
 A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
@@ -39,17 +39,17 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ## Picture operators
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
+| オペレーション                   | Syntax                 | Returns | Action                                                                                                                                                             |
 | ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | Picture | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | Picture | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | Picture | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
+| Horizontal concatenation  | Pict1 + Pict2          | ピクチャー   | Add Pict2 to the right of Pict1                                                                                                                                    |
+| Vertical concatenation    | Pict1 / Pict2          | ピクチャー   | Add Pict2 to the bottom of Pict1                                                                                                                                   |
+| Exclusive superimposition | Pict1 & Pict2          | ピクチャー   | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
+| Inclusive superimposition | Pict1 &#124; Pict2     | ピクチャー   | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal move           | Picture + Number       | ピクチャー   | Move Picture horizontally Number pixels                                                                                                                            |
+| Vertical move             | Picture / Number       | ピクチャー   | Move Picture vertically Number pixels                                                                                                                              |
+| Resizing                  | Picture * Number       | ピクチャー   | Resize Picture by Number ratio                                                                                                                                     |
+| Horizontal scaling        | Picture *+ Number      | ピクチャー   | Resize Picture horizontally by Number ratio                                                                                                                        |
+| Vertical scaling          | Picture *&#124; Number | ピクチャー   | Resize Picture vertically by Number ratio                                                                                                                          |
 
 **Notes :**
 

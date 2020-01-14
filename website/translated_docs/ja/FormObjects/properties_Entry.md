@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| Name       | データタイプ  | Possible Values |
+| ---------- | ------- | --------------- |
+| spellcheck | boolean | true, false     |
 
 
 #### Objects Supported
@@ -40,9 +40,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                       |
-| ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| Name        | データタイプ | Possible Values                       |
+| ----------- | ------ | ------------------------------------- |
+| contextMenu | string | "automatic" (used if missing), "none" |
 
 #### Objects Supported
 
@@ -65,9 +65,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+| Name      | データタイプ  | Possible Values |
+| --------- | ------- | --------------- |
+| enterable | boolean | true, false     |
 
 #### Objects Supported
 
@@ -99,7 +99,7 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | Description                                                                                                                                  |
+| Entry Filter                    | 説明                                                                                                                                           |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
 | &9                              | Allow only numbers.                                                                                                                          |
@@ -123,9 +123,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | string    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| Name        | データタイプ | Possible Values                                                                                                              |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
 
 #### Objects Supported
@@ -155,9 +155,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| focusable | boolean   | true, false     |
+| Name      | データタイプ  | Possible Values |
+| --------- | ------- | --------------- |
+| focusable | boolean | true, false     |
 
 
 #### Objects Supported
@@ -178,9 +178,9 @@ By default, the object uses the current keyboard layout.
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values                                                             |
-| --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Name            | データタイプ | Possible Values                                                             |
+| --------------- | ------ | --------------------------------------------------------------------------- |
+| keyboardDialect | テキスト   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### Objects Supported
@@ -202,15 +202,15 @@ This property is available for [inputs objects](input_overview.md) containing ex
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified: ![](assets/en/FormObjects/multilineNo.png)
 
-#### Yes
+#### ○
 When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
 
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| multiline | text      | "yes", "no", "automatic" (default if not defined) |
+| Name      | データタイプ | Possible Values                                   |
+| --------- | ------ | ------------------------------------------------- |
+| multiline | テキスト   | "yes", "no", "automatic" (default if not defined) |
 
 
 #### Objects Supported
@@ -244,9 +244,9 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| Name        | データタイプ | Possible Values                                                              |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| placeholder | string | Text to be displayed (grayed out) when the object does not contain any value |
 
 #### Objects Supported
 
@@ -267,9 +267,9 @@ This property keeps the selection visible within the object after it has lost th
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| showSelection | boolean   | true, false     |
+| Name          | データタイプ  | Possible Values |
+| ------------- | ------- | --------------- |
+| showSelection | boolean | true, false     |
 
 
 #### Objects Supported
@@ -293,15 +293,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values                                                                                                                                                                                                                                                                             |
-| --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean   | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-|                 |           |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| Name            | データタイプ  | Possible Values                                                                                                                                                                                                                                                                             |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | boolean | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                                                                 |
+|                 |         |                                                                                                                                                                                                                                                                                             |
+| shortcutKey     | string  | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### Objects Supported
@@ -323,9 +323,9 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| singleClickEdit | boolean   | true, false     |
+| Name            | データタイプ  | Possible Values |
+| --------------- | ------- | --------------- |
+| singleClickEdit | boolean | true, false     |
 
 #### Objects Supported
 
