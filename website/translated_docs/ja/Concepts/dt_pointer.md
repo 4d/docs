@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: ポインター
+title: Pointer
 ---
 
 A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
