@@ -1,6 +1,6 @@
 ---
 id: propertiesScale
-title: スケール
+title: Scale
 ---
 
 ---
