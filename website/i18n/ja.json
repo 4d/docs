@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "概要"
+        "title": "Overview"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -280,7 +280,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "概要"
+        "title": "Overview"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -309,8 +309,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "概要",
-        "sidebar_label": "概要"
+        "title": "Overview",
+        "sidebar_label": "Overview"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -341,7 +341,7 @@
         "title": "プロジェクトの開発"
       },
       "Project/overview": {
-        "title": "概要"
+        "title": "Overview"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -440,7 +440,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "概要"
+        "title": "Overview"
       }
     },
     "links": {
@@ -450,12 +450,12 @@
     "categories": {
       "4D Language Concepts": "4D ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "フォームエディター",
-      "Form Objects": "フォームオブジェクト",
-      "Form Object Properties": "フォームオブジェクトプロパティ",
-      "Menus": "メニュー",
+      "Form Editor": "Form Editor",
+      "Form Objects": "Form Objects",
+      "Form Object Properties": "Form Object Properties",
+      "Menus": "Menus",
       "MSC": "Maintenance & Security Center",
-      "Backup and Restore": "バックアップと復元",
+      "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
       "REST Server Guides": "REST Server Guides",
       "REST Server API": "REST Server API"
