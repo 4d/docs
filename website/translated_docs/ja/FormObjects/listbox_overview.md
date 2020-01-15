@@ -3,7 +3,7 @@ id: listboxOverview
 title: List Box
 ---
 
-## 概要
+## Overview
 
 List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event managemet, customized appearance, moving of columns, etc.
 
