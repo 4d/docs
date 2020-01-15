@@ -1,6 +1,6 @@
 ---
 id: time
-title: 時間
+title: Time
 ---
 
 - A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
