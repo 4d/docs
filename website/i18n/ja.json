@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "次へ",
     "previous": "前へ",
-    "tagline": "4D 開発のリファレンスガイド",
+    "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -444,8 +444,8 @@
       }
     },
     "links": {
-      "Projects": "Projects",
-      "HTTP REST": "HTTP REST"
+      "Docs": "Docs",
+      "REST": "REST"
     },
     "categories": {
       "4D Language Concepts": "4D ランゲージのコンセプト",
@@ -454,13 +454,14 @@
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "メニュー",
-      "Backup and Restore": "バックアップと復元",
       "MSC": "Maintenance & Security Center",
-      "Users and Groups": "Users and Groups"
+      "Backup and Restore": "バックアップと復元",
+      "Users and Groups": "Users and Groups",
+      "REST Server Guides": "REST Server Guides",
+      "REST Server API": "REST Server API"
     }
   },
   "pages-strings": {
-    "Documentation for 4D developers|no description given": "Documentation for 4D developers",
     "Getting started|no description given": "はじめに",
     "Developing a Desktop application|no description given": "デスクトップアプリの開発",
     "Developing a Web application|no description given": "Web アプリの開発",
