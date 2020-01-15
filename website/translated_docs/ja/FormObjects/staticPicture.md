@@ -1,9 +1,9 @@
 ---
 id: staticPicture
-title: スタティックピクチャー
+title: Static picture
 ---
 
-## 概要
+## Overview
 
 Static pictures are [static objects](formObjects_overview.md#active-and-static-objects) that can be used for various purposes in 4D forms, including decoration, background, or user interface:
 
