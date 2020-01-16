@@ -419,7 +419,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Authenticating Users"
+        "title": "Sessions and Users"
       },
       "REST/configuration": {
         "title": "Server Configuration"
