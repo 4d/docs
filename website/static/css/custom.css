@@ -42,9 +42,17 @@ a.cp2:hover{
 color: #fff;
 }
 
+.blockImage {
+  height: 110px;
+
+}
+
 .imageAlignTop .blockImage {
   max-width: 60%;
+
 }
+
+
 
 
 @@media only screen and (max-width: 735px) {
@@ -177,16 +185,19 @@ color: #fff;
   .index-ctas-github-button {
     display: none;
   }
-}
 
 
-@media only screen and (max-width: 768px) {
+ {
   .gridBlock .blockElement.imageAlignTop {
     margin-bottom: 80px;
   }
+ 
 }
 
 .docImage {
   margin: 3rem auto;
+  
   max-width: 400px;
+
+}
 }
