@@ -381,7 +381,7 @@ In this example, we **POST** the following request to $method=validate:
 }]
 ```
 
-**Response**:
+**Réponse** :
 
 If the request is successful, the following response is returned:
 
