@@ -1,6 +1,6 @@
 ---
 id: collection
-title: コレクション
+title: Collection
 ---
 
 Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).

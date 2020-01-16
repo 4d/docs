@@ -275,7 +275,7 @@ $vsResult:=Calc creator(1;5;"Nice")
 vtClone:=Dump("is";"the";"it")
 ```
 
-## プラグインコマンド
+## Plug-In Commands
 
 You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 

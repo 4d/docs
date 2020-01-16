@@ -1,6 +1,6 @@
 ---
 id: propertiesHeaders
-title: ヘッダー
+title: Headers
 ---
 
 ---

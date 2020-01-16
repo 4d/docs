@@ -16,9 +16,9 @@ Two main locations can be used for static picture path:
 
 #### JSON Grammar
 
-| Name  | データタイプ | Possible Values                             |
-|:-----:|:------:| ------------------------------------------- |
-| ピクチャー |  テキスト  | Relative or filesystem path in POSIX syntax |
+|  Name   | データタイプ | Possible Values                             |
+|:-------:|:------:| ------------------------------------------- |
+| picture |  テキスト  | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported

@@ -1,6 +1,6 @@
 ---
 id: date
-title: 日付
+title: Date
 ---
 
 - A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.

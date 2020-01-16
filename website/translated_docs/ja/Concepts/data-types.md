@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 The following table illustrates these default values:
 
-| タイプ     | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen | False                                                                               | True                    | True (varies)                |
-| 日付      | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| 倍長整数    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| 時間      | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| ピクチャー   | picture size=0                                                                      | picture size=0          | picture size=0               |
-| 実数      | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| ポインター   | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| テキスト    | ""                                                                                  | ""                      | ""                           |
-| Blob    | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| オブジェクト  | null                                                                                | null                    | null                         |
-| コレクション  | null                                                                                | null                    | null                         |
-| Variant | undefined                                                                           | undefined               | undefined                    |
+| タイプ    | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
+| ------ | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
+| ブール    | False                                                                               | True                    | True (varies)                |
+| 日付     | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
+| 倍長整数   | 0                                                                                   | 1919382119              | 909540880 (varies)           |
+| 時間     | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| ピクチャー  | picture size=0                                                                      | picture size=0          | picture size=0               |
+| 実数     | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
+| ポインター  | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| テキスト   | ""                                                                                  | ""                      | ""                           |
+| BLOB   | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
+| オブジェクト | null                                                                                | null                    | null                         |
+| コレクション | null                                                                                | null                    | null                         |
+| バリアント  | undefined                                                                           | undefined               | undefined                    |
 
 ## Converting data types
 

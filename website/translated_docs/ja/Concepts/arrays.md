@@ -172,7 +172,7 @@ However, in some circumstances, you may need to work with arrays holding hundred
 
 | Array Type      | Formula for determining Memory Usage in Bytes                        |
 | --------------- | -------------------------------------------------------------------- |
-| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
+| BLOB            | (1+number of elements) * 12 + Sum of the size of each blob           |
 | ブール             | (31+number of elements)\8                                           |
 | 日付              | (1+number of elements) * 6                                           |
 | 整数              | (1+number of elements) * 2                                           |

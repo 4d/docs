@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Webエリア
+title: Web Area
 ---
 
 ---

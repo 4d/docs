@@ -1,6 +1,6 @@
 ---
 id: boolean
-title: ブール
+title: Boolean
 ---
 
 A boolean field, variable or expression can be either TRUE or FALSE.

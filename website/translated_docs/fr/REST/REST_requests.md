@@ -1,12 +1,12 @@
 ---
 id: REST_requests
-title: About REST Requests
+title: A propos des requêtes REST
 ---
 
 
-The following structures are supported for REST requests:
+Les structures suivantes sont prises en charge par les requêtes REST :
 
-| URI                              | Resource                                                                    | {Subresource}                                                              | {Querystring}                                                   |
+| URI                              | Ressource                                                                   | {Subresource}                                                              | {Querystring}                                                   |
 | -------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ | [{method}](%7BdataClass%7D.html#dataclassmethod)                |

@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字
+title: String
 ---
 
 String is a generic term that stands for:

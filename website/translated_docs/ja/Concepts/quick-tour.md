@@ -262,7 +262,7 @@ Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
-## Pointers
+## ポインター
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
 
@@ -274,9 +274,9 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
-## Comments
+## コメント
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+コメントとは、コード内の実行されないテキストのことです。 These lines are not interpreted by the 4D language and are not executed when the code is called.
 
 There are two ways to create comments:
 

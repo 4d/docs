@@ -5,10 +5,10 @@ title: Subform
 
 ## Aperçu
 
-A subform is a form included in another form.
+Un sous-formulaire est un formulaire inclus dans un autre formulaire.
 
 
-### Terminology
+### Terminologie
 
 In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
 

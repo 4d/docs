@@ -1,6 +1,6 @@
 ---
 id: propertiesFooters
-title: フッター
+title: Footers
 ---
 
 ---
