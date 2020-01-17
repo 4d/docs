@@ -129,6 +129,9 @@
       "FormObjects/formObjectsOverview": {
         "title": "About 4D Form Objects"
       },
+      "FormObjects/forms": {
+        "title": "Forms"
+      },
       "FormObjects/groupBox": {
         "title": "Group Box"
       },
@@ -233,6 +236,9 @@
       },
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
+      },
+      "FormObjects/propertiesForm": {
+        "title": "Forms"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "Radio Button"
@@ -343,6 +349,9 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "Project/pictures": {
+        "title": "Pictures"
+      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -443,10 +452,7 @@
         "title": "Overview"
       }
     },
-    "links": {
-      "Docs": "Docs",
-      "REST": "REST"
-    },
+    "links": {},
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",

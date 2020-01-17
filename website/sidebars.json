@@ -21,7 +21,7 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
-	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/building"],
+	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/Pictures","Project/developing","Project/building"],
 	"Form Editor":["FormEditor/objectLibrary","FormEditor/stylesheets"],
   "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
@@ -61,6 +61,7 @@
 			"FormObjects/propertiesDisplay",
 			"FormObjects/propertiesEntry",
 			"FormObjects/propertiesFooters",
+			"FormObjects/propertiesForm",
 			"FormObjects/propertiesGridlines",
 			"FormObjects/propertiesHeaders",
 			"FormObjects/propertiesHelp",
