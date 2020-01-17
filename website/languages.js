@@ -24,7 +24,7 @@ const languages = [
   {
     enabled: false,
     name: 'Español',
-    tag: 'es-ES',
+    tag: 'es',
   },
   {
     enabled: true,
@@ -34,7 +34,7 @@ const languages = [
   {
     enabled: false,
     name: 'Português',
-    tag: 'pt-PT',
+    tag: 'pt',
   },
 ];
 module.exports = languages;
