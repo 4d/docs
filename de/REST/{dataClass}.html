@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="de"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>{dataClass} · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass."/><meta name="docsearch:language" content="de"/><meta property="og:title" content="{dataClass} · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/de"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Deutsch</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/{dataClass}.html">English</a></li><li><a href="/docs/ja/REST/{dataClass}.html">日本語</a></li><li><a href="/docs/es/REST/{dataClass}.html">Español</a></li><li><a href="/docs/fr/REST/{dataClass}.html">Français</a></li><li><a href="/docs/pt/REST/{dataClass}.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/about.html">Über die 4D Programmiersprache</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/time.html">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Project/building.html">Building a project package</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/FormEditor/objectLibrary.html">Object libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesPicture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesText.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/de/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/Menus/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Menus/creating.html">Creating menus and menu bars</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Menus/properties.html">Menu item properties</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Menus/bars.html">Menu bar features</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Menus/sdi.html">SDI mode on Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/information.html">Seite Information</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/analysis.html">Seite Aktivität Analyse</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/verify.html">Seite Prüfen</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/backup.html">Seite Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/compact.html">Seite Kompakt</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/rollback.html">Seite Zurückfahren</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/restore.html">Seite Wiederherstellen</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/repair.html">Seite Reparieren</a></li><li class="navListItem"><a class="navItem" href="/docs/de/MSC/encrypt.html">Seite Verschlüsseln</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Backup and Restore<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/Backup/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Backup/restore.html">Restore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Users and Groups<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/de/Users/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/de/Users/editing.html">Managing 4D users and groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">REST Server <span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/de/REST/gettingStarted.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/configuration.html">Server Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/authUsers.html">Sessions and Users</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/genInfo.html">Getting Server Information</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/manData.html">Manipulating Data</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/REST_requests.html">About REST Requests</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/de/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/upload.html">$upload</a></li><li class="navListItem"><a class="navItem" href="/docs/de/REST/version.html">$version</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">{dataClass}</h1></header><article><div><span><p>Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass.</p>
+<h2><a class="anchor" aria-hidden="true" id="available-syntaxes"></a><a href="#available-syntaxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available syntaxes</h2>
+<table>
+<thead>
+<tr><th>Syntax</th><th>Example</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#dataClass"><strong>{dataClass}</strong></a></td><td><code>/Employee</code></td><td>Returns all the data (by default the first 100 entities) for the dataclass</td></tr>
+<tr><td><a href="#dataclasskey"><strong>{dataClass}({key})</strong></a></td><td><code>/Employee(22)</code></td><td>Returns the data for the specific entity defined by the dataclass's primary key</td></tr>
+<tr><td><a href="#dataclassattributevalue"><strong>{dataClass}:{attribute}(value)</strong></a></td><td><code>/Employee:firstName(John)</code></td><td>Returns the data for one entity in which the attribute's value is defined</td></tr>
+<tr><td><a href="#dataclassmethod"><strong>{dataClass}/{method}</strong></a></td><td><code>/Employee/getHighSalaries</code> or <code>/Employee/name/getAge</code></td><td>Returns an entity selection or a collection based on a dataclass method</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="dataclass"></a><a href="#dataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}</h2>
+<p>Returns all the data (by default the first 100 entities) for a specific dataclass (<em>e.g.</em>, <code>Company</code>)</p>
+<h3><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using <a href="/docs/de/REST/top_$limit.html"><code>$top/$limit</code></a>.</p>
+<p>Here is a description of the data returned:</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>__entityModel</td><td>String</td><td>Name of the datastore class.</td></tr>
+<tr><td>__COUNT</td><td>Number</td><td>Number of entities in the datastore class.</td></tr>
+<tr><td>__SENT</td><td>Number</td><td>Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or <code>$top/$limit</code> or the value in <code>$top/$limit</code>.</td></tr>
+<tr><td>__FIRST</td><td>Number</td><td>Entity number that the selection starts at. Either 0 by default or the value defined by <code>$skip</code>.</td></tr>
+<tr><td>__ENTITIES</td><td>Array</td><td>This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.</td></tr>
+</tbody>
+</table>
+<p>For each entity, there is a <strong>__KEY</strong> and a <strong>__STAMP</strong> property. The <strong>__KEY</strong> property contains the value of the primary key defined for the datastore class. The <strong>__STAMP</strong> is an internal stamp that is needed when you modify any of the values in the entity when using <code>$method=update</code>.</p>
+<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/de/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. For example:</p>
+<p><code>GET /rest/Company/name,address</code></p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>Return all the data for a specific datastore class.</p>
+<p><code>GET /rest/Employee</code></p>
+<p><strong>Result</strong>:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Company"</span>,
+    <span class="hljs-attr">"__COUNT"</span>: <span class="hljs-number">250</span>,
+    <span class="hljs-attr">"__SENT"</span>: <span class="hljs-number">100</span>,
+    <span class="hljs-attr">"__FIRST"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"__ENTITIES"</span>: [
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Adobe"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"San Jose"</span>,
+            <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>,
+            <span class="hljs-attr">"revenues"</span>: <span class="hljs-number">500000</span>,
+            <span class="hljs-attr">"staff"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(1)/staff?$expand=staff"</span>
+                }
+            }
+        },
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Apple"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Cupertino"</span>,
+            <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>,
+            <span class="hljs-attr">"revenues"</span>: <span class="hljs-number">890000</span>,
+            <span class="hljs-attr">"staff"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(2)/staff?$expand=staff"</span>
+                }
+            }
+        },
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"3"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"4D"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Clichy"</span>,
+            <span class="hljs-attr">"country"</span>: <span class="hljs-string">"France"</span>,
+            <span class="hljs-attr">"revenues"</span>: <span class="hljs-number">700000</span>,
+            <span class="hljs-attr">"staff"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(3)/staff?$expand=staff"</span>
+                }
+            }
+        },
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"4"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Microsoft"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Seattle"</span>,
+            <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>,
+            <span class="hljs-attr">"revenues"</span>: <span class="hljs-number">650000</span>,
+            <span class="hljs-attr">"staff"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(4)/staff?$expand=staff"</span>
+                }
+            }
+        }
+.....//more entities here 
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="dataclasskey"></a><a href="#dataclasskey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}({key})</h2>
+<p>Returns the data for the specific entity defined by the dataclass's primary key, <em>e.g.</em>, <code>Company(22) or Company(&quot;IT0911AB2200&quot;)</code></p>
+<h3><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the <strong>Modifying the Primary Key</strong> section in the <strong>Data Model Editor</strong>.</p>
+<p>For more information about the data returned, refer to <a href="#datastoreclass">{datastoreClass}</a>.</p>
+<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/de/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. For example:</p>
+<p><code>GET /rest/Company(1)/name,address</code></p>
+<p>If you want to expand a relation attribute using <code>$expand</code>, you do so by specifying it as shown below:</p>
+<p><code>GET /rest/Company(1)/name,address,staff?$expand=staff</code></p>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>The following request returns all the public data in the Company datastore class whose key is 1.</p>
+<p><code>GET /rest/Company(1)</code></p>
+<p><strong>Result</strong>:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Company"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Apple"</span>,
+    <span class="hljs-attr">"address"</span>: Infinite Loop,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Cupertino"</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>,
+    <span class="hljs-attr">"url"</span>: http://www.apple.com,
+    <span class="hljs-attr">"revenues"</span>: <span class="hljs-number">500000</span>,
+    <span class="hljs-attr">"staff"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(1)/staff?$expand=staff"</span>
+        }
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="dataclassattributevalue"></a><a href="#dataclassattributevalue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}:{attribute}(value)</h2>
+<p>Returns the data for one entity in which the attribute's value is defined</p>
+<h3><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>By passing the <em>dataClass</em> and an <em>attribute</em> along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.</p>
+<p><code>GET /rest/Company:companyCode(Acme001)</code></p>
+<p>For more information about the data returned, refer to <a href="dataClass.md">{dataClass}</a>.</p>
+<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/de/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. For example:</p>
+<p><code>GET /rest/Company:companyCode(Acme001)/name,address</code></p>
+<p>If you want to use a relation attribute using <a href="/docs/de/REST/attributes.html">$attributes</a>, you do so by specifying it as shown below:</p>
+<p><code>GET /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name</code></p>
+<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>The following request returns all the public data of the employee named &quot;Jones&quot;.</p>
+<p><code>GET /rest/Employee:lastname(Jones)</code></p>
+<h2><a class="anchor" aria-hidden="true" id="dataclassmethod"></a><a href="#dataclassmethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}/{method}</h2>
+<p>Returns an entity selection or a collection based on a dataclass method</p>
+<h3><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>Dataclass methods must be applied to either a dataclass or an entity selection, and must return either an entity selection or a collection. When returning a collection, however, you cannot define which attributes are returned.</p>
+<p>The method must has been declared as &quot;Available through REST server&quot; in 4D for you to be able to call it in a REST request:</p>
+<p><code>GET /rest/Employee/getHighSalaries</code> or <code>GET /rest/Employee/firstName/getHighSalaries</code></p>
+<p>If you do not have the permissions to execute the method, you will receive the following error:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__ERROR"</span>: [
+        {
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"No permission to execute method getHighSalaries in dataClass Employee"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1561</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="passing-parameters-to-a-method"></a><a href="#passing-parameters-to-a-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing Parameters to a Method</h3>
+<p>You can also pass parameters to a method either in a GET or in a POST.</p>
+<p>In a GET, you write the following:</p>
+<p><code>GET /rest/Employee/addEmployee(John,Smith)</code></p>
+<p>In a POST, you write the following :</p>
+<p><code>POST /rest/Employee/addEmployee</code></p>
+<p><strong>POST data:</strong> [&quot;John&quot;,&quot;Smith&quot;]</p>
+<h3><a class="anchor" aria-hidden="true" id="manipulating-the-data-returned-by-a-method"></a><a href="#manipulating-the-data-returned-by-a-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manipulating the Data Returned by a Method</h3>
+<p>You can define which attributes you want to return, by passing the following:</p>
+<p><code>GET /rest/Employee/firstName/getEmployees</code> Or <code>GET /rest/Employee/getEmployees/firstName</code></p>
+<p>You can also apply any of the following functions to a method: <a href="/docs/de/REST/filter.html">$filter</a>, <a href="/docs/de/REST/orderby.html">$orderby</a>, <a href="/docs/de/REST/skip.html">$skip</a>, <a href="/docs/de/REST/expand.html">$expand</a>, and <a href="/docs/de/REST/top_$limit.html">$top/$limit</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:</p>
+<p><code>GET /rest/Employee?$attributes=lastName,employer.name&amp;$top=10&amp;$skip=1/getHighSalaries</code> or <code>GET /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&amp;$top=10&amp;$skip=1</code></p>
+<p>If you want to retrieve an attribute and an extended relation attribute, you can write the following REST request:</p>
+<p><code>GET /rest/Employee/firstName,employer/getHighSalaries?$expand=employer</code></p>
+<p>In the example below, the getCities dataclass method returns a collection of cities:</p>
+<p><code>GET /rest/Employee/getCities</code></p>
+<p>Result:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: [
+        <span class="hljs-string">"Paris"</span>,
+        <span class="hljs-string">"Florence"</span>,
+        <span class="hljs-string">"New York"</span>
+    ]
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/REST/REST_requests.html"><span class="arrow-prev">← </span><span>About REST Requests</span></a><a class="docs-next button" href="/docs/de/REST/asArray.html"><span class="function-name-prevnext">$asArray</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-syntaxes">Available syntaxes</a></li><li><a href="#dataclass">{dataClass}</a><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#example">Example</a></li></ul></li><li><a href="#dataclasskey">{dataClass}({key})</a><ul class="toc-headings"><li><a href="#description-1">Description</a></li><li><a href="#example-1">Example</a></li></ul></li><li><a href="#dataclassattributevalue">{dataClass}:{attribute}(value)</a><ul class="toc-headings"><li><a href="#description-2">Description</a></li><li><a href="#example-2">Example</a></li></ul></li><li><a href="#dataclassmethod">{dataClass}/{method}</a><ul class="toc-headings"><li><a href="#description-3">Description</a></li><li><a href="#passing-parameters-to-a-method">Passing Parameters to a Method</a></li><li><a href="#manipulating-the-data-returned-by-a-method">Manipulating the Data Returned by a Method</a></li><li><a href="#example-3">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

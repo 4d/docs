@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Documentation Blog</title>
+        <title>4D Documentation Blog</title>
         <link>https://4d.github.io/docs/blog</link>
-        <description>The best place to stay up-to-date with the latest Documentation news and events.</description>
+        <description>The best place to stay up-to-date with the latest 4D Documentation news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
-            <title>Documentation Blog</title>
-            <url>https://4d.github.io/docs/img/4DlogoK.gif</url>
+            <title>4D Documentation Blog</title>
+            <url>https://4d.github.io/docs/undefined</url>
             <link>https://4d.github.io/docs/blog</link>
         </image>
-        <copyright>Copyright © 2019 4D SAS</copyright>
+        <copyright>© 2020 4D SAS - All rights reserved</copyright>
         <item>
             <title><![CDATA[New Version 1.0.0]]></title>
             <link>https://4d.github.io/docs/blog/2017/10/24/new-version-1.0.0.html</link>

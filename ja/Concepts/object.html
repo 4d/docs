@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>オブジェクト · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation:"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="オブジェクト · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation:"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/object.html">English</a></li><li><a href="/docs/de/Concepts/object.html">Deutsch</a></li><li><a href="/docs/es/Concepts/object.html">Español</a></li><li><a href="/docs/fr/Concepts/object.html">Français</a></li><li><a href="/docs/pt/Concepts/object.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Data Types</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ランゲージのコンセプト<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/about.html">4D ランゲージについて</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/quick-tour.html">概要</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/data-types.html">データタイプの概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/boolean.html">ブール</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/collection.html">コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/date.html">日付</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ja/Concepts/object.html">オブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/picture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/pointer.html">ポインター</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/string.html">文字</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/time.html">時間</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variables.html">変数</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">プロジェクトデータベース<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/creating.html">4D プロジェクトの作成</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/architecture.html">4D プロジェクトのアーキテクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/developing.html">プロジェクトの開発</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/building.html">プロジェクトパッケージのビルド</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormEditor/objectLibrary.html">Object libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/text.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPicture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesText.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/creating.html">Creating menus and menu bars</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/properties.html">Menu item properties</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/bars.html">Menu bar features</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/sdi.html">SDI mode on Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance &amp; Security Center<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/information.html">Information Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/repair.html">Repair Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/encrypt.html">Encrypt Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Backup and Restore<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/restore.html">Restore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Users and Groups<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Users/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Users/editing.html">Managing 4D users and groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">REST Server <span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/REST/gettingStarted.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/configuration.html">Server Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/authUsers.html">Sessions and Users</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/genInfo.html">Getting Server Information</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/manData.html">Manipulating Data</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/REST_requests.html">About REST Requests</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/upload.html">$upload</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/version.html">$version</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">オブジェクト</h1></header><article><div><span><p>Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation:</p>
+<ul>
+<li><p>A property name is always a text, for example &quot;Name&quot;.</p></li>
+<li><p>A property value can be of the following type:</p>
+<ul>
+<li>number (Real, Integer, etc.)</li>
+<li>テキスト</li>
+<li>null</li>
+<li>ブール</li>
+<li>pointer (stored as such, evaluated using the <code>JSON Stringify</code> command or when copying),</li>
+<li>date (date type or ISO date format string)</li>
+<li>object (objects can be nested on several levels)</li>
+<li>picture(*)</li>
+<li>collection</li>
+</ul></li>
+</ul>
+<p>(*)When exposed as text in the debugger or exported to JSON, picture object properties print &quot;[object Picture]&quot;.</p>
+<p><strong>Warning:</strong> Keep in mind that attribute names differentiate between upper and lower case.</p>
+<p>You manage Object type variables, fields or expressions using the commands available in the <strong>Objects (Language)</strong> theme or through the object notation (see <a href="/docs/ja/Concepts/object.html#syntax-basics">Syntax basics</a>). Note that specific commands of the Queries theme such as <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code>, or <code>ORDER BY ATTRIBUTE</code> can be used to carry out processing on object fields.</p>
+<p>Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:</p>
+<ul>
+<li>in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),</li>
+<li>in the Expression areas of the Debugger and the Runtime explorer,</li>
+<li>in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="initialization"></a><a href="#initialization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialization</h2>
+<p>Objects must have been initialized, for example using the <code>New object</code> command, otherwise trying to read or modify their properties will generate a syntax error.</p>
+<p>例:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$obVar</span>) <span class="hljs-comment">//creation of an object type 4D variable
+</span> <span class="hljs-locale">$obVar</span>:=<span class="hljs-command">New object</span> <span class="hljs-comment">//initialization of the object and assignment to the 4D variable
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="regular-or-shared-object"></a><a href="#regular-or-shared-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Regular or shared object</h3>
+<p>You can create two types of objects:</p>
+<ul>
+<li>regular (non-shared) objects, using the <code>New object</code> command. These objects can be edited without any specific access control but cannot be shared between processes.</li>
+<li>shared objects, using the <code>New shared object</code> command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by <code>Use...End use</code> structures. For more information, refer to the <a href="/docs/ja/Concepts/shared.html">Shared objects and collections</a> section.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="syntax-basics"></a><a href="#syntax-basics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax basics</h2>
+<p>Object notation can be used to access object property values through a chain of tokens.</p>
+<h3><a class="anchor" aria-hidden="true" id="object-properties"></a><a href="#object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object properties</h3>
+<p>With object notation, object properties can be accessed in two ways:</p>
+<ul>
+<li>using a &quot;dot&quot; symbol: &gt; object.propertyName</li>
+</ul>
+<p>例:</p>
+<pre><code class="hljs css language-code4d">     employee<span class="hljs-property">.name</span>:="<span class="hljs-string">Smith</span>"
+</code></pre>
+<ul>
+<li>using a string within square brackets: &gt; object[&quot;propertyName&quot;]</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="hljs css language-code4d">     <span class="hljs-locale">$vName</span>:=employee["<span class="hljs-string">name</span>"]
+     <span class="hljs-comment">//or also:
+</span>     <span class="hljs-locale">$property</span>:="<span class="hljs-string">name</span>"
+     <span class="hljs-locale">$vName</span>:=employee[<span class="hljs-locale">$property</span>]
+
+</code></pre>
+<p>オブジェクトプロパティ値には、オブジェクトあるいはコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した記号を受け入れることができます:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$vAge</span>:=employee<span class="hljs-property">.children</span>[2]<span class="hljs-property">.age</span>
+</code></pre>
+<p>Object notation is available on any language element that can contains or returns an object, i.e:</p>
+<ul>
+<li><strong>Objects</strong> themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-locale">$age</span>:=<span class="hljs-locale">$myObjVar</span><span class="hljs-property">.employee</span><span class="hljs-property">.age</span> <span class="hljs-comment">//variable
+</span>     <span class="hljs-locale">$addr</span>:=[Emp]data_obj<span class="hljs-property">.address</span> <span class="hljs-comment">//field
+</span>     <span class="hljs-locale">$city</span>:=<span class="hljs-locale">$addr</span><span class="hljs-property">.city</span> <span class="hljs-comment">//property of an object
+</span>     <span class="hljs-locale">$pop</span>:=<span class="hljs-locale">$aObjCountries</span>{2}<span class="hljs-property">.population</span> <span class="hljs-comment">//object array
+</span>     <span class="hljs-locale">$val</span>:=<span class="hljs-locale">$myCollection</span>[3]<span class="hljs-property">.subvalue</span> <span class="hljs-comment">//collection element
+</span></code></pre>
+<ul>
+<li><strong>4D commands</strong> that return objects. 例:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-locale">$measures</span>:=<span class="hljs-command">Get database measures</span><span class="hljs-property">.DB</span><span class="hljs-property">.tables</span>
+</code></pre>
+<ul>
+<li><strong>Project methods</strong> that return objects. 例:</li>
+</ul>
+<pre><code class="hljs css language-code4d">      <span class="hljs-comment">// MyMethod1
+</span>     <span class="hljs-command">C_OBJECT</span>(<span class="hljs-param">$0</span>)
+     <span class="hljs-param">$0</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">a</span>";10;"<span class="hljs-string">b</span>";20)
+
+      <span class="hljs-comment">//myMethod2
+</span>     <span class="hljs-locale">$result</span>:=MyMethod1<span class="hljs-property">.a</span> <span class="hljs-comment">//10
+</span></code></pre>
+<ul>
+<li><strong>Collections</strong> Example:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     myColl<span class="hljs-property">.length</span> <span class="hljs-comment">//size of the collection
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pointers"></a><a href="#pointers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers</h3>
+<p><strong>Preliminary Note:</strong> Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.</p>
+<p>Using object notation with pointers is very similar to using object notation directly with objects, except that the &quot;dot&quot; symbol must be omitted.</p>
+<ul>
+<li><p>Direct access:</p>
+<blockquote>
+<p>pointerOnObject-&gt;propertyName</p>
+</blockquote></li>
+<li><p>Access by name:</p>
+<blockquote>
+<p>pointerOnObject-&gt;[&quot;propertyName&quot;]</p>
+</blockquote></li>
+</ul>
+<p>例:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_OBJECT</span>(vObj)
+ <span class="hljs-command">C_POINTER</span>(vPtr)
+ vObj:=<span class="hljs-command">New object</span>
+ vObj<span class="hljs-property">.a</span>:=10
+ vPtr:=-&gt;vObj
+ x:=vPtr-&gt;a <span class="hljs-comment">//x=10
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="null-value"></a><a href="#null-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Null value</h3>
+<p>When using the object notation, the <strong>null</strong> value is supported though the <strong>Null</strong> command. This command can be used to assign or compare the null value to object properties or collection elements, for example:</p>
+<pre><code class="hljs css language-code4d"> myObject<span class="hljs-property">.address</span><span class="hljs-property">.zip</span>:=<span class="hljs-command">Null</span>
+ <span class="hljs-keyword">If</span>(myColl[2]=<span class="hljs-command">Null</span>)
+</code></pre>
+<p>For more information, please refer to the <code>Null</code> command description.</p>
+<h3><a class="anchor" aria-hidden="true" id="undefined-value"></a><a href="#undefined-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Undefined value</h3>
+<p>Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:</p>
+<ul>
+<li>Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+     <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$val</span>)
+     <span class="hljs-locale">$val</span>:=10 <span class="hljs-comment">//$val=10
+</span>     <span class="hljs-locale">$val</span>:=<span class="hljs-locale">$o</span><span class="hljs-property">.a</span> <span class="hljs-comment">//$o.a is undefined (no error), and assigning this value clears the variable
+</span>      <span class="hljs-comment">//$val=0
+</span></code></pre>
+<ul>
+<li>Reading the <strong>length</strong> property of an undefined collection produces 0:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">C_COLLECTION</span>(<span class="hljs-locale">$c</span>) <span class="hljs-comment">//variable created but no collection is defined
+</span>     <span class="hljs-locale">$size</span>:=<span class="hljs-locale">$c</span><span class="hljs-property">.length</span> <span class="hljs-comment">//$size = 0
+</span></code></pre>
+<ul>
+<li>An undefined value passed as parameter to a project method is automatically converted to 0 or &quot;&quot; according to the declared parameter type.</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+     mymethod(<span class="hljs-locale">$o</span><span class="hljs-property">.a</span>) <span class="hljs-comment">//pass an undefined parameter
+</span>
+      <span class="hljs-comment">//In mymethod method
+</span>     <span class="hljs-command">C_TEXT</span>(<span class="hljs-param">$1</span>) <span class="hljs-comment">//parameter type is text
+</span>      <span class="hljs-comment">// $1 contains ""
+</span></code></pre>
+<ul>
+<li>A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:</li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+     <span class="hljs-keyword">If</span>(<span class="hljs-locale">$o</span><span class="hljs-property">.a</span>) <span class="hljs-comment">// false
+</span>     <span class="hljs-keyword">End if</span>
+     <span class="hljs-keyword">Case of</span>
+        :(<span class="hljs-locale">$o</span><span class="hljs-property">.a</span>) <span class="hljs-comment">// false
+</span>     <span class="hljs-keyword">End case</span>
+</code></pre>
+<ul>
+<li>Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
+<ul>
+<li>Object, collection, pointer: Null</li>
+<li>Picture: Empty picture</li>
+<li>Boolean: False</li>
+<li>String: &quot;&quot;</li>
+<li>Number: 0</li>
+<li>Date: !00-00-00! if &quot;Use date type instead of ISO date format in objects&quot; setting is enabled, otherwise &quot;&quot;</li>
+<li>Time: 0 (number of ms)</li>
+<li>Undefined, Null: no change</li>
+</ul></li>
+</ul>
+<pre><code class="hljs css language-code4d">     <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$o</span>)
+     <span class="hljs-locale">$o</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">a</span>";2)
+     <span class="hljs-locale">$o</span><span class="hljs-property">.a</span>:=<span class="hljs-locale">$o</span><span class="hljs-property">.b</span> <span class="hljs-comment">//$o.a=0
+</span></code></pre>
+<ul>
+<li>Assigning an undefined value to a non existing object property does nothing.</li>
+</ul>
+<p>When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: <code>String</code>, <code>Num</code>, <code>Date</code>, <code>Time</code>, <code>Bool</code>. These commands return an empty value of the specified type when the expression evaluates to undefined. たとえば:</p>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$myString</span>:=<span class="hljs-command">Lowercase</span>(<span class="hljs-command">String</span>(<span class="hljs-locale">$o</span><span class="hljs-property">.a</span><span class="hljs-property">.b</span>)) <span class="hljs-comment">//make sure you get a string value even if undefined
+</span>  <span class="hljs-comment">//to avoid errors in the code
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="object-property-identifiers"></a><a href="#object-property-identifiers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object property identifiers</h2>
+<p>Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see ECMA Script standard):</p>
+<ul>
+<li>the first character must be a letter, an underscore (_), or a dollar sign ($),</li>
+<li>subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),</li>
+<li>they are case sensitive.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.</li>
+<li>Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o[&quot;My Att&quot;] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
+<p>Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.</p>
+<ul>
+<li>Writing and reading objects (this example compares object notation and command notation):</li>
+</ul>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Using the object notation
+</span> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$myObj</span>) <span class="hljs-comment">//declares a 4D variable object
+</span> <span class="hljs-locale">$myObj</span>:=<span class="hljs-command">New object</span> <span class="hljs-comment">//creates an object and assigns to the variable
+</span> <span class="hljs-locale">$myObj</span><span class="hljs-property">.age</span>:=56
+ <span class="hljs-locale">$age</span>:=<span class="hljs-locale">$myObj</span><span class="hljs-property">.age</span> <span class="hljs-comment">//56
+</span>
+  <span class="hljs-comment">// Using the command notation
+</span> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$myObj2</span>) <span class="hljs-comment">//declares a 4D variable object
+</span> <span class="hljs-command">OB SET</span>(<span class="hljs-locale">$myObj2</span>;"<span class="hljs-string">age</span>";42) <span class="hljs-comment">//creates an object and adds the age property
+</span> <span class="hljs-locale">$age</span>:=<span class="hljs-command">OB Get</span>(<span class="hljs-locale">$myObj2</span>;"<span class="hljs-string">age</span>") <span class="hljs-comment">//42
+</span>
+  <span class="hljs-comment">// Of course, both notations can be mixed
+</span> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$myObj3</span>)
+ <span class="hljs-command">OB SET</span>(<span class="hljs-locale">$myObj3</span>;"<span class="hljs-string">age</span>";10)
+ <span class="hljs-locale">$age</span>:=<span class="hljs-locale">$myObj3</span><span class="hljs-property">.age</span> <span class="hljs-comment">//10
+</span></code></pre>
+<ul>
+<li>Create a property and assign values, including objects:</li>
+</ul>
+<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$Emp</span>)
+ <span class="hljs-locale">$Emp</span>:=<span class="hljs-command">New object</span>
+ <span class="hljs-locale">$Emp</span><span class="hljs-property">.city</span>:="<span class="hljs-string">London</span>" <span class="hljs-comment">//creates the city property and sets its value to "London"
+</span> <span class="hljs-locale">$Emp</span><span class="hljs-property">.city</span>:="<span class="hljs-string">Paris</span>" <span class="hljs-comment">//modifies the city property
+</span> <span class="hljs-locale">$Emp</span><span class="hljs-property">.phone</span>:=<span class="hljs-command">New object</span>("<span class="hljs-string">office</span>";"<span class="hljs-string">123456789</span>";"<span class="hljs-string">home</span>";"<span class="hljs-string">0011223344</span>")
+  <span class="hljs-comment">//creates the phone property and sets its value to an object
+</span></code></pre>
+<ul>
+<li>Get a value in a sub-object is very simple using the object notation:</li>
+</ul>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$vCity</span>:=<span class="hljs-locale">$Emp</span><span class="hljs-property">.city</span> <span class="hljs-comment">//"Paris"
+</span> <span class="hljs-locale">$vPhone</span>:=<span class="hljs-locale">$Emp</span><span class="hljs-property">.phone</span><span class="hljs-property">.home</span> <span class="hljs-comment">//"0011223344"
+</span></code></pre>
+<ul>
+<li>You can access properties as strings using the [ ] operator</li>
+</ul>
+<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$Emp</span>["<span class="hljs-string">city</span>"]:="<span class="hljs-string">Berlin</span>" <span class="hljs-comment">//modifies the city property
+</span>  <span class="hljs-comment">//this can be useful for creating properties through variables
+</span> <span class="hljs-command">C_TEXT</span>(<span class="hljs-locale">$addr</span>)
+ <span class="hljs-locale">$addr</span>:="<span class="hljs-string">address</span>"
+ <span class="hljs-keyword">For</span>(<span class="hljs-locale">$i</span>;1;4)
+    <span class="hljs-locale">$Emp</span>[<span class="hljs-locale">$addr</span>+<span class="hljs-command">String</span>(<span class="hljs-locale">$i</span>)]:="<span class="hljs-string"></span>"
+ <span class="hljs-keyword">End for</span>
+  <span class="hljs-comment">// creates 4 empty properties "address1...address4" in the $Emp object
+</span></code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/Concepts/number.html"><span class="arrow-prev">← </span><span>Number (Real, Longint, Integer)</span></a><a class="docs-next button" href="/docs/ja/Concepts/picture.html"><span>ピクチャー</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#initialization">Initialization</a><ul class="toc-headings"><li><a href="#regular-or-shared-object">Regular or shared object</a></li></ul></li><li><a href="#syntax-basics">Syntax basics</a><ul class="toc-headings"><li><a href="#object-properties">Object properties</a></li><li><a href="#pointers">Pointers</a></li><li><a href="#null-value">Null value</a></li><li><a href="#undefined-value">Undefined value</a></li></ul></li><li><a href="#object-property-identifiers">Object property identifiers</a></li><li><a href="#examples">Examples</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

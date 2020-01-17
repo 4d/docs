@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>4D プロジェクトのアーキテクチャー · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 たとえば:"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="4D プロジェクトのアーキテクチャー · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 たとえば:"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Project/architecture.html">English</a></li><li><a href="/docs/de/Project/architecture.html">Deutsch</a></li><li><a href="/docs/es/Project/architecture.html">Español</a></li><li><a href="/docs/fr/Project/architecture.html">Français</a></li><li><a href="/docs/pt/Project/architecture.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>プロジェクトデータベース</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ランゲージのコンセプト<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/about.html">4D ランゲージについて</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/quick-tour.html">概要</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/data-types.html">データタイプの概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/boolean.html">ブール</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/collection.html">コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/date.html">日付</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/object.html">オブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/picture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/pointer.html">ポインター</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/string.html">文字</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/time.html">時間</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variables.html">変数</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">プロジェクトデータベース<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/creating.html">4D プロジェクトの作成</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ja/Project/architecture.html">4D プロジェクトのアーキテクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/developing.html">プロジェクトの開発</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/building.html">プロジェクトパッケージのビルド</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormEditor/objectLibrary.html">Object libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/text.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPicture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesText.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/creating.html">Creating menus and menu bars</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/properties.html">Menu item properties</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/bars.html">Menu bar features</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Menus/sdi.html">SDI mode on Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance &amp; Security Center<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/information.html">Information Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/repair.html">Repair Page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/MSC/encrypt.html">Encrypt Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Backup and Restore<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Backup/restore.html">Restore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Users and Groups<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Users/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Users/editing.html">Managing 4D users and groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">REST Server <span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/REST/gettingStarted.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/configuration.html">Server Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/authUsers.html">Sessions and Users</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/genInfo.html">Getting Server Information</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/manData.html">Manipulating Data</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/REST_requests.html">About REST Requests</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/upload.html">$upload</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/REST/version.html">$version</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">4D プロジェクトのアーキテクチャー</h1></header><article><div><span><p>4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 たとえば:</p>
+<p><img src="/docs/assets/en/Project/project1.png" alt=""></p>
+<blockquote>
+<p>バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります (doc.4d.com にて &quot;<a href="https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html">データベースをプロジェクトモードに変換する</a>&quot; 参照)。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="project-フォルダー"></a><a href="#project-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project フォルダー</h2>
+<p>典型的な Project フォルダーの構造です:</p>
+<ul>
+<li><em>databaseName</em>.4DProject ファイル</li>
+<li>Sources
+<ul>
+<li>DatabaseMethods</li>
+<li>Methods</li>
+<li>Forms</li>
+<li>TableForms</li>
+<li>Triggers</li>
+</ul></li>
+</ul>
+<ul>
+<li>DerivedData</li>
+<li>Trash (あれば)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="databasename4dproject-ファイル"></a><a href="#databasename4dproject-ファイル" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>databaseName</em>.4DProject ファイル</h3>
+<p>プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:</p>
+<ul>
+<li>4D Developer</li>
+<li>4D Server (読み取り専用モード；<a href="/docs/ja/Project/developing.html">プロジェクトの開発</a> 参照)</li>
+</ul>
+<p><strong>注:</strong> 4D プロジェクトの開発は 4D Developer によっておこない、マルチユーザー開発はソース管理ツールによって管理します。 4D Server は .4DProject ファイルをテスト用に開くことができます。</p>
+<h3><a class="anchor" aria-hidden="true" id="sources-フォルダー"></a><a href="#sources-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sources フォルダー</h3>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>catalog.4DCatalog</td><td>テーブルおよびフィールド定義</td><td>XML</td></tr>
+<tr><td>folders.json</td><td>エクスプローラーフォルダー定義</td><td>JSON</td></tr>
+<tr><td>menus.json</td><td>メニュー定義</td><td>JSON</td></tr>
+<tr><td>settings.4DSettings</td><td><em>ストラクチャー</em>データベース設定。 <em>ユーザー設定</em>が定義されている場合は、そちらの設定が優先されます。 <em>データファイル用のユーザー設定</em>が定義されている場合は、その設定が最優先です。</td><td>XML</td></tr>
+<tr><td>tips.json</td><td>定義されたヘルプTips</td><td>JSON</td></tr>
+<tr><td>lists.json</td><td>定義されたリスト</td><td>JSON</td></tr>
+<tr><td>filters.json</td><td>定義されたフィルター</td><td>JSON</td></tr>
+<tr><td>styleSheets.css</td><td>CSS スタイルシート</td><td>CSS</td></tr>
+<tr><td>styleSheets_mac.css</td><td>Mac用 CSS スタイルシート (変換されたバイナリデータベースより)</td><td>CSS</td></tr>
+<tr><td>styleSheets_windows.css</td><td>Windows用 CSS スタイルシート (変換されたバイナリデータベースより)</td><td>CSS</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="databasemethods-フォルダー"></a><a href="#databasemethods-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DatabaseMethods フォルダー</h4>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td><em>databaseMethodName</em>.4dm</td><td>データベース内で定義されているデータベースメソッド (1つのデータベースメソッドにつき1ファイル)。</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="methods-フォルダー"></a><a href="#methods-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods フォルダー</h4>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td><em>methodName</em>.4dm</td><td>データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="forms-フォルダー"></a><a href="#forms-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forms フォルダー</h4>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td><em>formName</em>/form.4DForm</td><td>プロジェクトフォームの定義</td><td>json</td></tr>
+<tr><td><em>formName</em>/method.4dm</td><td>プロジェクトフォームメソッド</td><td>テキスト</td></tr>
+<tr><td><em>formName</em>/Images/<em>pictureName</em></td><td>プロジェクトフォームのスタティックピクチャー</td><td>picture</td></tr>
+<tr><td><em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>オブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル)</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="tableforms-フォルダー"></a><a href="#tableforms-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TableForms フォルダー</h4>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td><em>n</em>/Input/<em>formName</em>/form.4DForm</td><td>入力テーブルフォームの定義 (n: テーブル番号)</td><td>json</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/Images/<em>pictureName</em></td><td>入力テーブルフォームのスタティックピクチャー</td><td>picture</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/method.4dm</td><td>入力テーブルフォームのフォームメソッド</td><td>テキスト</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>入力テーブルフォームのオブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル)</td><td>テキスト</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/form.4DForm</td><td>出力テーブルフォーム (n: テーブル番号)</td><td>json</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/Images/<em>pictureName</em></td><td>出力テーブルフォームのスタティックピクチャー</td><td>picture</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/method.4dm</td><td>出力テーブルフォームのフォームメソッド</td><td>テキスト</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>出力テーブルフォームのオブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル)</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="triggers-フォルダー"></a><a href="#triggers-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Triggers フォルダー</h4>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>table_<em>n</em>.4dm</td><td>データベース内で定義されているトリガーメソッド ( 1つのテーブルにつき1ファイル；n: テーブル番号)</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<p><strong>注:</strong> 拡張子 .4dm のファイルは、4D メソッドのコードをテキスト形式で格納しており、 ソース管理ツールに対応しています。</p>
+<h3><a class="anchor" aria-hidden="true" id="trash-フォルダー"></a><a href="#trash-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trash フォルダー</h3>
+<p>プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:</p>
+<ul>
+<li>Methods</li>
+<li>Forms</li>
+<li>TableForms</li>
+</ul>
+<p>削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: &quot;(myMethod).4dm&quot;)。 フォルダーの構成は <a href="#sources">Sources</a> フォルダーと同じです。</p>
+<h3><a class="anchor" aria-hidden="true" id="deriveddata-フォルダー"></a><a href="#deriveddata-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DerivedData フォルダー</h3>
+<p>DerivedData フォルダーには、処理を最適化するため 4D が内部的に使用するキャッシュデーターが格納されます。 これらは必要に応じて自動的に生成・再生成されます。 このフォルダーは無視してかまいません。</p>
+<h2><a class="anchor" aria-hidden="true" id="resources-フォルダー"></a><a href="#resources-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resources フォルダー</h2>
+<p>Resources フォルダーには、追加のカスタムデータベースリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です (<em>4D Server リファレンスマニュアル</em> の <a href="https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html">リソースフォルダの管理</a> を参照ください)。</p>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td><em>item</em></td><td>データベースリソースファイルとフォルダー</td><td>様々</td></tr>
+<tr><td>Images/Library/<em>item</em></td><td>ピクチャーライブラリの個別ピクチャーファイル(*)。 各アイテムの名称がファイル名となります。 名称が重複する場合には、名称に番号が追加されます。</td><td>picture</td></tr>
+</tbody>
+</table>
+<p>(*) .4db バイナリデータベースから変換されたプロジェクトの場合のみ</p>
+<h2><a class="anchor" aria-hidden="true" id="data-フォルダー"></a><a href="#data-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data フォルダー</h2>
+<p>Data フォルダーには、データファイルのほか、データに関わるするファイルやフォルダーがすべて格納されています。</p>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>data.4dd(*)</td><td>レコードとして入力されたデータと、レコードに属するデータが格納されたデータファイルです。 4D プロジェクトを開くと、アプリケーションはカレントデータファイルをデフォルトで開きます。 このファイルの場所や名称を変更した場合は、<em>データファイルを開く</em> ダイアログボックスが表示され、使用するデータファイルを選択するか、新しいデータファイルを作成できます。</td><td>バイナリ</td></tr>
+<tr><td>data.journal</td><td>データベースがログファイルを使用する場合のみ作成されます。 ログファイルは2つのバックアップ間のデータ保護を確実なものにするために使用されます。 データに対して実行されたすべての処理が、このファイルに順番に記録されます。 つまりデータに対して操作がおこなわれるたびに、データ上の処理 (操作の実行) とログファイル上の処理 (操作の記録) という 2つの処理が同時に発生します。 ログファイルはユーザーの処理を妨げたり遅くしたりすることなく、独立して構築されます。 データベースは 1つのログファイルしか同時に使用できません。 ログファイルにはレコードの追加・更新・削除やトランザクションなどの処理が記録されます。 ログファイルはデータベースが作成される際にデフォルトで生成されます。</td><td>バイナリ</td></tr>
+<tr><td>data.match</td><td>(内部用) テーブル番号に対応する UUID</td><td>XML</td></tr>
+</tbody>
+</table>
+<p>(*) .4db バイナリデータベースからプロジェクトに変換した場合、データファイルは変換による影響を受けません。 このデータファイルの名称を変更して移動させることができます。</p>
+<h3><a class="anchor" aria-hidden="true" id="settings-フォルダー"></a><a href="#settings-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Settings フォルダー</h3>
+<p>Settings フォルダーには、データベースの管理に使用される <strong>データファイル用のユーザー設定</strong> ファイルが格納されます。</p>
+<blockquote>
+<p>この設定は <strong><a href="#settings-folder-1">ユーザー設定</a></strong> や <strong>ストラクチャー設定</strong> より優先されます。</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>Backup.4DSettings</td><td>このデータファイルを使ってデータベースが実行されている場合に使用する <a href="/docs/ja/Backup/settings.html">バックアップオプション</a> を定義したデータベースバックアップ設定です。 バックアップ設定に使われるキーについての説明は <a href="https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html">バックアップ設定ファイル</a> マニュアルを参照ください。</td><td>XML</td></tr>
+<tr><td>settings.4DSettings</td><td>データファイル用のカスタムデータベース設定</td><td>XML</td></tr>
+<tr><td>directory.json</td><td>このデータファイルを使ってデータベースが実行されている場合に使用する 4D グループとユーザー、およびアクセス権の定義</td><td>JSON</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="logs-フォルダー"></a><a href="#logs-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logs フォルダー</h3>
+<p>Logs フォルダーには、プロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:</p>
+<ul>
+<li>データベース変換</li>
+<li>Webサーバーリクエスト</li>
+<li>バックアップ/復元アクションのジャーナル (<em>Backup Journal[xxx].txt</em>、<a href="/docs/ja/Backup/backup.html#backup-journal">バックアップジャーナル</a> 参照)</li>
+<li>コマンドデバッグ</li>
+<li>4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)</li>
+</ul>
+<blockquote>
+<p>データフォルダーが読み取り専用モードの場合やメンテナンスログファイルの保存には、システムのユーザー設定フォルダー (Active 4D Folder のこと、詳しくは <a href="https://doc.4d.com/4Dv18/4D/18/Get-4D-folder.301-4505365.ja.html">Get 4D folder</a> コマンド参照) 内にある Logs フォルダーが利用されます。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="settings-フォルダー-1"></a><a href="#settings-フォルダー-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Settings フォルダー</h2>
+<p>このフォルダーにはデータベースの管理に使用される <strong>ユーザー設定</strong> ファイルが格納されます。 必要に応じてこのフォルダーにファイルが追加されます。</p>
+<blockquote>
+<p><a href="#settings-folder">Data フォルダー</a>の Setting フォルダー内にデータファイル用のユーザー設定ファイルがある場合には、そちらが優先されます。</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>directory.json</td><td>4D グループとユーザー、およびアクセス権の定義</td><td>JSON</td></tr>
+<tr><td>BuildApp.4DSettings</td><td>アプリケーションビルダーのダイアログボックス、または <code>BUILD APPLICATION</code> コマンドを使ったときに自動的に作成されるビルド設定ファイル</td><td>XML</td></tr>
+<tr><td>Backup.4DSettings</td><td>バックアップ開始時に <a href="/docs/ja/Backup/settings.html">バックアップオプション</a> を指定するためのデータベースバックアップ設定です。 このファイルは、<em>バックアップジャーナル</em> に保存する情報量などの追加オプションの確認や設定にも使用することができます。 バックアップ設定に使われるキーについての説明は <a href="https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html">バックアップ設定ファイル</a> マニュアルを参照ください。</td><td>XML</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="userpreferencesusername-フォルダー"></a><a href="#userpreferencesusername-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>userPreferences.<em>userName</em> フォルダー</h2>
+<p>ブレークポイントの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:</p>
+<table>
+<thead>
+<tr><th>内容</th><th>説明</th><th>形式</th></tr>
+</thead>
+<tbody>
+<tr><td>methodPreferences.json</td><td>カレントユーザーのメソッドエディター環境設定</td><td>JSON</td></tr>
+<tr><td>methodWindowPositions.json</td><td>カレントユーザーのメソッドのウィンドウポジション</td><td>JSON</td></tr>
+<tr><td>formWindowPositions.json</td><td>カレントユーザーのフォームのウィンドウポジション</td><td>JSON</td></tr>
+<tr><td>workspace.json</td><td>開かれているウィンドウのリスト；macOS ではタブウィンドウの順序</td><td>JSON</td></tr>
+<tr><td>debuggerCatches.json</td><td>キャッチコマンドリスト</td><td>JSON</td></tr>
+<tr><td>recentTables.json</td><td>最近開かれたテーブルのリスト</td><td>JSON</td></tr>
+<tr><td>preferencesv15.4DPreferences</td><td>ユーザー環境設定</td><td>JSON</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="components-フォルダー"></a><a href="#components-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components フォルダー</h2>
+<p>プロジェクトデータベースが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。</p>
+<blockquote>
+<p>プロジェクトデータベースはコンポーネントとして利用することができます:</p>
+<ul>
+<li>開発においては、ホストデーターベースの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - 運用時においては、コンポーネントをビルドし (<a href="/docs/ja/Project/building.html">プロジェクトパッケージのビルド</a>)、生成された .4dz ファイルを .4dbase フォルダーに格納し、それをホストデータベースの Components フォルダーに置きます。</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="plugins-フォルダー"></a><a href="#plugins-フォルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugins フォルダー</h2>
+<p>プロジェクトデータベースが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/Project/creating.html"><span class="arrow-prev">← </span><span>4D プロジェクトの作成</span></a><a class="docs-next button" href="/docs/ja/Project/developing.html"><span>プロジェクトの開発</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#project-フォルダー">Project フォルダー</a><ul class="toc-headings"><li><a href="#databasename4dproject-ファイル"><em>databaseName</em>.4DProject ファイル</a></li><li><a href="#sources-フォルダー">Sources フォルダー</a></li><li><a href="#trash-フォルダー">Trash フォルダー</a></li><li><a href="#deriveddata-フォルダー">DerivedData フォルダー</a></li></ul></li><li><a href="#resources-フォルダー">Resources フォルダー</a></li><li><a href="#data-フォルダー">Data フォルダー</a><ul class="toc-headings"><li><a href="#settings-フォルダー">Settings フォルダー</a></li><li><a href="#logs-フォルダー">Logs フォルダー</a></li></ul></li><li><a href="#settings-フォルダー-1">Settings フォルダー</a></li><li><a href="#userpreferencesusername-フォルダー">userPreferences.<em>userName</em> フォルダー</a></li><li><a href="#components-フォルダー">Components フォルダー</a></li><li><a href="#plugins-フォルダー">Plugins フォルダー</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

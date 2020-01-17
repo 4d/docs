@@ -1,0 +1,396 @@
+<!DOCTYPE html><html lang="es"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>$method · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This parameter allows you to define the operation to execute with the returned entity or entity selection."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="$method · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="This parameter allows you to define the operation to execute with the returned entity or entity selection."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/method.html">English</a></li><li><a href="/docs/ja/REST/method.html">日本語</a></li><li><a href="/docs/de/REST/method.html">Deutsch</a></li><li><a href="/docs/fr/REST/method.html">Français</a></li><li><a href="/docs/pt/REST/method.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/quick-tour.html">A Quick Tour</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/time.html">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/shared.html">Shared objects and collections</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Databases<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Project/creating.html">Creating a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Project/architecture.html">Architecture of a 4D project</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Project/developing.html">Developing a project</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Project/building.html">Building a project package</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Editor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/FormEditor/objectLibrary.html">Object libraries</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormEditor/stylesheets.html">Style sheets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Objects<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/formObjectsOverview.html">About 4D Form Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/buttonOverview.html">Button</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/buttonGridOverview.html">Button Grid</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/checkboxOverview.html">Check Box</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/dropdownListOverview.html">Drop-down List</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/groupBox.html">Group Box</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/listOverview.html">Hierarchical List</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/pictureButtonOverview.html">Picture Button</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/pluginAreaOverview.html">Plug-in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/progressIndicator.html">Progress Indicator</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/radiobuttonOverview.html">Radio Button</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/ruler.html">Ruler</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/shapesOverview.html">Shapes</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/splitters.html">Splitter</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/staticPicture.html">Static picture</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/subformOverview.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/tabControl.html">Tab Controls</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/text.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/webAreaOverview.html">Web Area</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Object Properties<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesReference.html">JSON property list</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesAppearance.html">Appearance</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesBackgroundAndBorder.html">Background and Border</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesCoordinatesAndSizing.html">Coordinates &amp; Sizing</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesCrop.html">Crop</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesDataSource.html">Data Source</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesDisplay.html">Display</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesEntry.html">Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesFooters.html">Footers</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesGridlines.html">Gridlines</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesHeaders.html">Headers</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesHelp.html">Help</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesHierarchy.html">Hierarchy</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesObject.html">Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesPicture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesPrint.html">Print</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesRangeOfValues.html">Range of Values</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesResizingOptions.html">Resizing Options</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesScale.html">Scale</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesSubform.html">Subform</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesText.html">Text</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesTextAndPicture.html">Text and Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/es/FormObjects/propertiesWebArea.html">Web Area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Menus/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Menus/creating.html">Creating menus and menu bars</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Menus/properties.html">Menu item properties</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Menus/bars.html">Menu bar features</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Menus/sdi.html">SDI mode on Windows</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/MSC/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/information.html">Information Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/analysis.html">Activity analysis Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/verify.html">Verify Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/backup.html">Backup Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/compact.html">Compact Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/rollback.html">Rollback Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/restore.html">Restore Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/repair.html">Repair Page</a></li><li class="navListItem"><a class="navItem" href="/docs/es/MSC/encrypt.html">Encrypt Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Backup and Restore<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Backup/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Backup/backup.html">Backup</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Backup/settings.html">Backup Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Backup/log.html">Log file (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Backup/restore.html">Restore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Users and Groups<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Users/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Users/editing.html">Managing 4D users and groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">REST Server <span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/es/REST/gettingStarted.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/configuration.html">Server Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/authUsers.html">Sessions and Users</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/genInfo.html">Getting Server Information</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/manData.html">Manipulating Data</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/REST_requests.html">About REST Requests</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/es/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/info.html">$info</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/es/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/upload.html">$upload</a></li><li class="navListItem"><a class="navItem" href="/docs/es/REST/version.html">$version</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">$method</h1></header><article><div><span><p>This parameter allows you to define the operation to execute with the returned entity or entity selection.</p>
+<h2><a class="anchor" aria-hidden="true" id="available-syntaxes"></a><a href="#available-syntaxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available syntaxes</h2>
+<table>
+<thead>
+<tr><th>Syntax</th><th>Example</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#methoddelete"><strong>$method=delete</strong></a></td><td><code>POST /Employee?$filter=&quot;ID=11&quot;&amp; $method=delete</code></td><td>Deletes the current entity, entity collection, or entity selection</td></tr>
+<tr><td><a href="#methodentityset"><strong>$method=entityset</strong></a></td><td><code>GET /People/?$filter=&quot;ID&gt;320&quot;&amp; $method=entityset&amp; $timeout=600</code></td><td>Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request</td></tr>
+<tr><td><a href="#methodrelease"><strong>$method=release</strong></a></td><td><code>GET /Employee/$entityset/4CANUMBER?$method=release</code></td><td>Releases an existing entity set stored in 4D Server's cache</td></tr>
+<tr><td><a href="#methodsubentityset"><strong>$method=subentityset</strong></a></td><td><code>GET /Company(1)/staff?$expand=staff&amp; $method=subentityset&amp; $subOrderby=lastName ASC</code></td><td>Creates an entity set based on the collection of related entities defined in the REST request</td></tr>
+<tr><td><a href="#methodupdate"><strong>$method=update</strong></a></td><td><code>POST /Person/?$method=update</code></td><td>Updates and/or creates one or more entities</td></tr>
+<tr><td><a href="#methodvalidate"><strong>$method=validate</strong></a></td><td><code>POST /Employee/?$method=validate</code></td><td>Validates the request when adding and/or modifying entities</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="methoddelete"></a><a href="#methoddelete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=delete</h2>
+<p>Deletes the current entity, entity collection, or entity selection (created through REST)</p>
+<h3><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>With <code>$method=delete</code>, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, <a href="/docs/es/REST/filter.html"><code>$filter</code></a> or specifying one directly using <a href="%7BdataClass%7D.html#dataclasskey"><code>{dataClass}({key})</code></a> <em>(e.g.</em>, /Employee(22)).</p>
+<p>You can also delete the entities in an entity set, by calling <a href="/docs/es/REST/entityset.html#entitysetentitysetid"><code>$entityset/{entitySetID}</code></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
+<p>You can then write the following REST request to delete the entity whose key is 22:</p>
+<p><code>POST /rest/Employee(22)/?$method=delete</code></p>
+<p>You can also do a query as well using $filter:</p>
+<p><code>POST /rest/Employee?$filter=&quot;ID=11&quot;&amp;$method=delete</code></p>
+<p>You can also delete an entity set using $entityset/{entitySetID}:</p>
+<p><code>POST /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete</code></p>
+<p>Response:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"ok"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methodentityset"></a><a href="#methodentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=entityset</h2>
+<p>Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request</p>
+<h3><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to <code>$entityset/{entitySetID}</code> to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.</p>
+<p>If you have used <code>$savedfilter</code> and/or <code>$savedorderby</code> (in conjunction with <code>$filter</code> and/or <code>$orderby</code>) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>To create an entity set, which will be saved in 4D Server's cache for two hours, add <code>$method=entityset</code> at the end of your REST request:</p>
+<p><code>GET /rest/People/?$filter=&quot;ID&gt;320&quot;&amp;$method=entityset</code></p>
+<p>You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to <code>$timeout</code>:</p>
+<p><code>GET /rest/People/?$filter=&quot;ID&gt;320&quot;&amp;$method=entityset&amp;$timeout=600</code></p>
+<p>You can also save the filter and order by, by passing true to <code>$savedfilter</code> and <code>$savedorderby</code>.</p>
+<blockquote>
+<p><code>$skip</code> and <code>$top/$limit</code> are not taken into consideration when saving an entity set.</p>
+</blockquote>
+<p>After you create an entity set, the first element, <code>__ENTITYSET</code>, is added to the object returned and indicates the URI to use to access the entity set:</p>
+<p><code>__ENTITYSET: &quot;http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7&quot;</code></p>
+<h2><a class="anchor" aria-hidden="true" id="methodrelease"></a><a href="#methodrelease" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=release</h2>
+<p>Releases an existing entity set stored in 4D Server's cache.</p>
+<h3><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>You can release an entity set, which you created using <a href="#methodentityset"><code>$method=entityset</code></a>, from 4D Server's cache.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>Release an existing entity set:</p>
+<p><code>GET /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release</code></p>
+<h4><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
+<p>If the request was successful, the following response is returned:</p>
+<pre><code class="hljs">{
+    <span class="hljs-string">"ok"</span>: <span class="hljs-literal">true</span>
+}
+<span class="hljs-keyword">If</span> the entity set wasn<span class="hljs-symbol">'t</span> found, an error <span class="hljs-keyword">is</span> returned:
+
+{
+    <span class="hljs-string">"__ERROR"</span>: [
+        {
+             <span class="hljs-string">"message"</span>: <span class="hljs-string">"Error code: 1802\nEntitySet  \"</span><span class="hljs-number">4</span>C51204DD8184B65AC7D79F09A077F24\<span class="hljs-string">" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n"</span>,
+            <span class="hljs-string">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-string">"errCode"</span>: <span class="hljs-number">1802</span>
+        }
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methodsubentityset"></a><a href="#methodsubentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=subentityset</h2>
+<p>Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request</p>
+<h3><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p><code>$method=subentityset</code> allows you to sort the data returned by the relation attribute defined in the REST request.</p>
+<p>To sort the data, you use the <code>$subOrderby</code> property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.</p>
+<p>If you want to specify multiple attributes, you can delimit them with a comma, µ, <code>$subOrderby=&quot;lastName desc, firstName asc&quot;</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>If you want to retrieve only the related entities for a specific entity, you can make the following REST request where staff is the relation attribute in the Company dataclass linked to the Employee dataclass:</p>
+<p><code>GET /rest/Company(1)/staff?$expand=staff&amp;$method=subentityset&amp;$subOrderby=lastName ASC</code></p>
+<h4><a class="anchor" aria-hidden="true" id="response-1"></a><a href="#response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
+<pre><code class="hljs">{
+
+    <span class="hljs-attr">"__ENTITYSET"</span>: <span class="hljs-string">"/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB"</span>,
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employee"</span>,
+    <span class="hljs-attr">"__COUNT"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"__SENT"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"__FIRST"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"__ENTITIES"</span>: [
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"4"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Linda"</span>,
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>,
+            <span class="hljs-attr">"birthday"</span>: <span class="hljs-string">"1970-10-05T14:23:00Z"</span>,
+            <span class="hljs-attr">"employer"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Company(1)"</span>,
+                    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
+                }
+            }
+        },
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"John"</span>,
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Smith"</span>,
+            <span class="hljs-attr">"birthday"</span>: <span class="hljs-string">"1985-11-01T15:23:00Z"</span>,
+            <span class="hljs-attr">"employer"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Company(1)"</span>,
+                    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
+                }
+            }
+        }
+    ]
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methodupdate"></a><a href="#methodupdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=update</h2>
+<p>Updates and/or creates one or more entities</p>
+<h3><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p><code>$method=update</code> allows you to update and/or create one or more entities in a single <strong>POST</strong>. If you update and/or create one entity, it is done in an object with each property an attribute with its value, <em>e.g.</em>, <code>{ lastName: &quot;Smith&quot; }</code>. If you update and/or create multiple entities, you must create an array of objects.</p>
+<p>To update an entity, you must pass the <code>__KEY</code> and <code>__STAMP</code> parameters in the object along with any modified attributes. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your <strong>POST</strong>.</p>
+<p>All triggers, calculated attributes, and events are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.</p>
+<p>You can also put these requests to create or update entities in a transaction by calling <code>$atomic/$atonce</code>. If any errors occur during data validation, none of the entities are saved. You can also use $method=validate to validate the entities before creating or updating them.</p>
+<p>If a problem arises while adding or modifying an entity, an error will be returned to you with that information.</p>
+<blockquote>
+<p>Notes for specific attribute types:</p>
+<ul>
+<li><strong>Dates</strong> must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., &quot;2010-10-05T23:00:00Z&quot;). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).</li>
+<li><strong>Booleans</strong> are either true or false.</li>
+<li>Uploaded files using <code>$upload</code> can be applied to an attribute of type Image or BLOB by passing the object returned in the following format { &quot;ID&quot;: &quot;D507BC03E613487E9B4C2F6A0512FE50&quot;}</li>
+</ul>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>To update a specific entity, you use the following URL:</p>
+<p><code>POST /rest/Person/?$method=update</code></p>
+<p><strong>POST data:</strong></p>
+<pre><code class="hljs">{
+    <span class="hljs-attribute">__KEY</span>: <span class="hljs-string">"340"</span>,
+    __STAMP: <span class="hljs-number">2</span>,
+    firstName: <span class="hljs-string">"Pete"</span>,
+    lastName: <span class="hljs-string">"Miller"</span>
+}
+</code></pre>
+<p>The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.</p>
+<p>If you want to create an entity, you can POST the attributes using this URL:</p>
+<p><code>POST /rest/Person/?$method=update</code></p>
+<p><strong>POST data:</strong></p>
+<pre><code class="hljs">{ 
+    <span class="hljs-attribute">firstName</span>: <span class="hljs-string">"John"</span>,
+    lastName: <span class="hljs-string">"Smith"</span>
+}
+</code></pre>
+<p>You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:</p>
+<p><code>POST /rest/Person/?$method=update</code></p>
+<p><strong>POST data:</strong></p>
+<pre><code class="hljs">[{ 
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"309"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-string">"309"</span>,
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Penelope"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Miller"</span>
+}, { 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>
+}]
+</code></pre>
+<p><strong>Response:</strong></p>
+<p>When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"622"</span>, 
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>, 
+    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee(622)"</span>, 
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">622</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"John"</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Smith"</span>,
+    <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"John Smith"</span>
+}
+</code></pre>
+<blockquote>
+<p>The only reason the fullName attribute is returned is because it is a calculated attribute based on both firstName and lastName.</p>
+</blockquote>
+<p>If, for example, the stamp is not correct, the following error is returned:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__ENTITIES"</span>: [
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"309"</span>, 
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>, 
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">309</span>, 
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Betty"</span>, 
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Smith"</span>, 
+            <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"Betty Smith"</span>, 
+            <span class="hljs-attr">"__ERROR"</span>: [
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Given stamp does not match current one for record# 308 of table Employee"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1263</span>
+                }, 
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cannot save record 308 in table Employee of database Widgets"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1046</span>
+                }, 
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"The entity# 308 of the datastore class \"Employee\" cannot be saved"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1517</span>
+                }
+            ]
+        }, 
+        {
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"612"</span>, 
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">4</span>, 
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee(612)"</span>, 
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">612</span>, 
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Ann"</span>, 
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>, 
+            <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"Ann Jones"</span>
+        }
+    ]
+}
+</code></pre>
+<p>If, for example, the user does not have the appropriate permissions to update an entity, the following error is returned:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>, 
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">4</span>, 
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">2</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Paula"</span>, 
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Miller"</span>, 
+    <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"Paula Miller"</span>, 
+    <span class="hljs-attr">"telephone"</span>: <span class="hljs-string">"408-555-5555"</span>, 
+    <span class="hljs-attr">"salary"</span>: <span class="hljs-number">56000</span>, 
+    <span class="hljs-attr">"employerName"</span>: <span class="hljs-string">"Adobe"</span>, 
+    <span class="hljs-attr">"employer"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(1)"</span>, 
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
+        }
+    }, 
+    <span class="hljs-attr">"__ERROR"</span>: [
+        {
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"No permission to update for dataClass Employee"</span>, 
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1558</span>
+        }, 
+        {
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"The entity# 1 of the datastore class \"Employee\" cannot be saved"</span>, 
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1517</span>
+        }
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methodvalidate"></a><a href="#methodvalidate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=validate</h2>
+<p>Validates the request when adding and/or modifying entities</p>
+<h3><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>Before actually saving a new or modified entity with <code>$method=update</code>, you can first try to validate the actions with <code>$method=validate</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>In this example, we <strong>POST</strong> the following request to $method=validate:</p>
+<p><code>POST /rest/Employee/?$method=validate</code></p>
+<p><strong>POST data</strong>:</p>
+<pre><code class="hljs">[{
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">8</span>,
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Pete"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>,
+    <span class="hljs-attr">"salary"</span>: <span class="hljs-number">75000</span>
+}, {
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Betty"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Miller"</span>,
+}]
+</code></pre>
+<p><strong>Response</strong>:</p>
+<p>If the request is successful, the following response is returned:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"ok"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>Otherwise, you receive an error. In our case, we got an error because our salary field must be inferior to 60000:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__ENTITIES"</span>: [
+        {
+            <span class="hljs-attr">"__ERROR"</span>: [
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Value cannot be greater than 60000"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1569</span>
+                }, 
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Entity fails validation"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1570</span>
+                }, 
+                {
+                    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"The new entity of the datastore class \"Employee\" cannot be saved"</span>, 
+                    <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>, 
+                    <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1534</span>
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/REST/info.html"><span class="arrow-prev">← </span><span>$info</span></a><a class="docs-next button" href="/docs/es/REST/orderby.html"><span>$orderby</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-syntaxes">Available syntaxes</a></li><li><a href="#methoddelete">$method=delete</a><ul class="toc-headings"><li><a href="#description">Description</a></li></ul></li><li><a href="#example">Example</a></li><li><a href="#methodentityset">$method=entityset</a><ul class="toc-headings"><li><a href="#description-1">Description</a></li><li><a href="#example-1">Example</a></li></ul></li><li><a href="#methodrelease">$method=release</a><ul class="toc-headings"><li><a href="#description-2">Description</a></li><li><a href="#example-2">Example</a></li></ul></li><li><a href="#methodsubentityset">$method=subentityset</a><ul class="toc-headings"><li><a href="#description-3">Description</a></li><li><a href="#example-3">Example</a></li></ul></li><li><a href="#methodupdate">$method=update</a><ul class="toc-headings"><li><a href="#description-4">Description</a></li><li><a href="#example-4">Example</a></li></ul></li><li><a href="#methodvalidate">$method=validate</a><ul class="toc-headings"><li><a href="#description-5">Description</a></li><li><a href="#example-5">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

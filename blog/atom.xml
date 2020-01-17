@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://4d.github.io/docs/blog</id>
-    <title>Documentation Blog</title>
+    <title>4D Documentation Blog</title>
     <updated>2017-10-24T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://4d.github.io/docs/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Documentation news and events.</subtitle>
-    <logo>https://4d.github.io/docs/img/4DlogoK.gif</logo>
-    <rights>Copyright © 2019 4D SAS</rights>
+    <subtitle>The best place to stay up-to-date with the latest 4D Documentation news and events.</subtitle>
+    <logo>https://4d.github.io/docs/undefined</logo>
+    <rights>© 2020 4D SAS - All rights reserved</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://4d.github.io/docs/blog/2017/10/24/new-version-1.0.0.html</id>
