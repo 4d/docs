@@ -249,24 +249,24 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 
 ### 代入可 vs 代入不可の式
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. たとえば:
+式は、数値の4や"Hello" の文字列のようなリテラル定数であったり、`$myButton` のような変数であったりします。 式には演算子も含められます。 たとえば、4 + 2 という式は加算演算子を使って二つの数値を加算し、結果の 6 を返します。 リテラル定数や演算子を使った式は **代入不可の式**で、式に値を代入することはできません。 **代入可能な式** も存在します。 代入演算子の左側に使えるものが、代入可能な式です。 たとえば:
 
 ```code4d
-//$myVar variable is assignable, you can write:  
-$myVar:="Hello" //assign "Hello" to myVar
-//Form.pageNumber is assignable, you can write:  
-Form.pageNumber:=10 //assign 10 to Form.pageNumber
-//Form.pageTotal-Form.pageNumber is not assignable:
-Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
+// 変数 $myVar は代入可能です:  
+$myVar:="Hello" // $myVar に "Hello" を代入します
+//Form.pageNumber は代入可能です:  
+Form.pageNumber:=10 // Form.pageNumber に 10 を代入します
+//Form.pageTotal-Form.pageNumber は代入不可です:
+Form.pageTotal- Form.pageNumber:=10 // 代入不可のため、エラー
 ```
 
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+このように、リテラル定数ではなくても、演算子を使っている式は代入不可です。 たとえば、`[Person]FirstName+" "+[Person]LastName` は代入不可です。
 
 ## ポインター
 
-The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
+ポインターは、プログラミングにおいてデータを参照するための高度な方法です。 4D ではテーブル、フィールド、変数、配列、配列要素を参照するためにポインターを使用することができます。
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+対象へのポインターは、その対象の前にポインター記号 (->) を付けることで取得することができます。反対にポインターから対象を取得するには、ポインター名の後にポインター記号をつけます:
 
 ```code4d
 MyVar:="Hello"
@@ -276,48 +276,48 @@ ALERT(MyPointer->)
 
 ## コメント
 
-コメントとは、コード内の実行されないテキストのことです。 These lines are not interpreted by the 4D language and are not executed when the code is called.
+コメントとは、コード内の実行されないテキストのことです。 これらのテキストは、コード実行時にインタープリターによって無視されます。
 
-There are two ways to create comments:
+コメントの書き方は2通りあります:
 
-- `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `//` 記号の後はすべてコメントとして扱われるため、これを使って1行のコメントが書けます
+- `/*コメント*/` の表記方法でインラインコメント、または複数行にまたがるコメントが書けます
 
-Both styles of comments can be used simultaneously.
+これらの書き方は同時に使用できます。
 
-#### Single line comments (//)
+#### シングルラインコメント (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. 例: 
+コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例: 
 
 ```code4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
+// これはコメントです
+For($vCounter;1;100) // ループを開始します
+  // コメント
+  // コメント
+  // コメント
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### インライン、およびマルチラインコメント (/* */)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+コメントを `/*` と `*/` で囲むと、そのあいだのテキストはコメントとなります。 この方法でインラインおよびマルチラインコメントが書けます:
 
-- **Inline comments** can be inserted anywhere in the code. 例: 
+- **インラインコメント** の 例: 
 
 ```code4d
-For /* inline comment */ ($vCounter;1;100)
+For /* インラインコメント */ ($vCounter;1;100)
     ...
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). 例: 
+- **マルチラインコメント** は複数行にわたるコメントのことです。 この形式のコメントは入れ子にすることができ、4D コードエディターではこれを展開したり折り畳んだりすることができます。 例: 
 
 ```code4d
 For ($vCounter;1;100)
 /*
-comments  
+コメント  
     /* 
-    other comments
+    詳細なコメント
     */
 */
 ...

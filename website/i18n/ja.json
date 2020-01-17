@@ -36,7 +36,7 @@
         "title": "Components"
       },
       "Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "データタイプの概要"
       },
       "Concepts/blob": {
         "title": "BLOB"
@@ -118,19 +118,19 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "チェックボックス"
+        "title": "Check Box"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "コンボボックス"
+        "title": "Combo Box"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "ドロップダウンリスト"
+        "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "4D フォームオブジェクトについて"
+        "title": "About 4D Form Objects"
       },
       "FormObjects/groupBox": {
-        "title": "グループボックス"
+        "title": "Group Box"
       },
       "FormObjects/inputOverview": {
         "title": "Input"
@@ -145,13 +145,13 @@
         "title": "Picture Button"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "ピクチャーポップアップメニュー"
+        "title": "Picture Pop-up Menu"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "プラグインエリア"
+        "title": "Plug-in Area"
       },
       "FormObjects/progressIndicator": {
-        "title": "進捗インジケーター"
+        "title": "Progress Indicator"
       },
       "FormObjects/propertiesAction": {
         "title": "Action"
@@ -160,13 +160,13 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "アピアランス"
+        "title": "Appearance"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "座標とサイズ"
+        "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
         "title": "Crop"
@@ -178,16 +178,16 @@
         "title": "Display"
       },
       "FormObjects/propertiesEntry": {
-        "title": "入力"
+        "title": "Entry"
       },
       "FormObjects/propertiesFooters": {
-        "title": "フッター"
+        "title": "Footers"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "グリッド線"
+        "title": "Gridlines"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "ヘッダー"
+        "title": "Headers"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -199,7 +199,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "オブジェクト"
+        "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
         "title": "ピクチャー"
@@ -208,7 +208,7 @@
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "印刷"
+        "title": "Print"
       },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
@@ -217,10 +217,10 @@
         "title": "JSON property list"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "リサイズオプション"
+        "title": "Resizing Options"
       },
       "FormObjects/propertiesScale": {
-        "title": "スケール"
+        "title": "Scale"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -232,13 +232,13 @@
         "title": "Text and Picture"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Webエリア"
+        "title": "Web Area"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "ラジオボタン"
+        "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "ルーラー"
+        "title": "Ruler"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -247,10 +247,10 @@
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "スプリッター"
+        "title": "Splitter"
       },
       "FormObjects/staticPicture": {
-        "title": "スタティックピクチャー"
+        "title": "Static picture"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -259,7 +259,7 @@
         "title": "Subform"
       },
       "FormObjects/tabControl": {
-        "title": "タブコントロール"
+        "title": "Tab Controls"
       },
       "FormObjects/text": {
         "title": "テキスト"
@@ -268,7 +268,7 @@
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Webエリア"
+        "title": "Web Area"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
@@ -448,7 +448,7 @@
       "REST": "REST"
     },
     "categories": {
-      "4D Language Concepts": "4D ランゲージのコンセプト",
+      "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
       "Form Editor": "Form Editor",
       "Form Objects": "Form Objects",
