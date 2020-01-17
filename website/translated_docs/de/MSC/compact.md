@@ -1,5 +1,5 @@
 ---
-id: Seite Kompakt
+id: Kompakt
 title: Seite Kompakt
 sidebar_label: Seite Kompakt
 ---
@@ -24,13 +24,13 @@ Um das Komprimieren direkt zu starten, klicken Sie im MSC-Fenster auf die Schalt
 
 > Da beim Komprimieren die Originaldatei dupliziert wird, ist die Schaltfläche inaktiv, wenn auf der Festplatte mit dieser Datei nicht genügend Speicherplatz vorhanden ist.
 
-Dieser Vorgang komprimiert die Hauptdatei sowie alle Index-Dateien. 4D kopiert die Originaldateien und setzt sie in einen Ordner mit Namen **Replaced Files (Compacting)**, der neben der Originaldatei angelegt wird. Haben Sie mehrere Komprimierungen durchgeführt, wird jedes Mal ein neuer Ordner angelegt. Er lautet “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, u.s.w. Im erweiterten Modus können Sie den Ordner zum Abspeichern der Originaldateien verändern.
+Dieser Vorgang komprimiert die Hauptdatei sowie alle Index-Dateien. 4D kopiert die Originaldateien und setzt sie in einen Ordner mit Namen **Replaced Files (Compacting)**, der neben der Originaldatei angelegt wird. Haben Sie mehrere Komprimierungen durchgeführt, wird jedes Mal ein neuer Ordner angelegt. Er lautet “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, usw. Im erweiterten Modus können Sie den Ordner zum Abspeichern der Originaldateien verändern.
 
 Ist die Operation abgeschlossen, ersetzen die komprimierten Dateien automatisch die Originaldateien. Die Datenbank ist ohne weitere Bearbeitung sofort einsatzbereit.
 
 > Bei einer verschlüsselten Anwendung enthält die Komprimierung auch die Schritte Entschlüsselung und Verschlüsselung. Dazu ist auch der aktuelle Verschlüsselungscode erforderlich. Ist noch kein gültiger Datenschlüssel angegeben, erscheint ein Dialogfenster, dass die Passphrase oder den Datenschlüssel anfordert.
 
-**Warnung:** Die Originaldatei wird bei jedem Komprimiervorgang dupliziert, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
+**Warnung:** Die Originaldatei wird bei jedem Repariervorgang dupliziert, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
 ## Logbuch öffnen
 

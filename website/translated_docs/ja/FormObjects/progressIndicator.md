@@ -1,6 +1,6 @@
 ---
 id: progressIndicator
-title: 進捗インジケーター
+title: Progress Indicator
 ---
 
 ## Overview

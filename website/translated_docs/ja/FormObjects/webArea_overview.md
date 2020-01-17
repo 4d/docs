@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Webエリア
+title: Web Area
 ---
 
 ## Overview

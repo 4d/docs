@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: チェックボックス
+title: Check Box
 ---
 
 ## Overview

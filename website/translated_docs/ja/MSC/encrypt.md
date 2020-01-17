@@ -94,7 +94,7 @@ You can save the encryption key each time a new passphrase has been provided:
 
 Successive encryption keys can be stored on the same device.
 
-## Log file
+## ログファイル
 
 After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 

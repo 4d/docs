@@ -1,6 +1,6 @@
 ---
 id: ruler
-title: ルーラー
+title: Ruler
 ---
 
 ## Overview

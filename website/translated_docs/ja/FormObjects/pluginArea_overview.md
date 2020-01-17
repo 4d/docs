@@ -1,6 +1,6 @@
 ---
 id: pluginAreaOverview
-title: プラグインエリア
+title: Plug-in Area
 ---
 
 ## Overview

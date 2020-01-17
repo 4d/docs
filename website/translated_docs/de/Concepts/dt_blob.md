@@ -35,7 +35,7 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 You can assign BLOBs to each other.
 
-**Example:**
+**Beispiel:**
 
 ```code4d
   ` Declare two variables of type BLOB
@@ -50,7 +50,7 @@ However, no operator can be applied to BLOBs.
 
 ## Addressing BLOB contents
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Beispiel:
 
 ```code4d
   ` Declare a variable of type BLOB

@@ -11,9 +11,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON Grammar
 
-| Property             | Data Type | Possible Values       |
-| -------------------- | --------- | --------------------- |
-| allowFontColorPicker | boolean   | false (default), true |
+| Property             | データタイプ  | Possible Values       |
+| -------------------- | ------- | --------------------- |
+| allowFontColorPicker | boolean | false (default), true |
 
 #### Objects Supported
 
@@ -29,9 +29,9 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON Grammar
 
-| Property   | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| Property   | データタイプ | Possible Values  |
+| ---------- | ------ | ---------------- |
+| fontWeight | テキスト   | "normal", "bold" |
 
 #### Objects Supported
 
@@ -48,9 +48,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
-| --------- | --------- | ------------------ |
-| fontStyle | string    | "normal", "italic" |
+| Name      | データタイプ | Possible Values    |
+| --------- | ------ | ------------------ |
+| fontStyle | string | "normal", "italic" |
 
 #### Objects Supported
 
@@ -66,9 +66,9 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values       |
-| -------------- | --------- | --------------------- |
-| textDecoration | string    | "normal", "underline" |
+| Name           | データタイプ | Possible Values       |
+| -------------- | ------ | --------------------- |
+| textDecoration | string | "normal", "underline" |
 
 #### Objects Supported
 
@@ -108,9 +108,9 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                |
-| --------- | --------- | ------------------------------ |
-| fontTheme | string    | "normal", "main", "additional" |
+| Name      | データタイプ | Possible Values                |
+| --------- | ------ | ------------------------------ |
+| fontTheme | string | "normal", "main", "additional" |
 
 
 #### Objects Supported
@@ -132,9 +132,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values      |
-| ---------- | --------- | -------------------- |
-| fontFamily | string    | CSS font family name |
+| Name       | データタイプ | Possible Values      |
+| ---------- | ------ | -------------------- |
+| fontFamily | string | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objects Supported
@@ -152,9 +152,9 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
-| -------- | --------- | ------------------------------------- |
-| fontSize | integer   | Font size in points. Minimum value: 0 |
+| Name     | データタイプ  | Possible Values                       |
+| -------- | ------- | ------------------------------------- |
+| fontSize | integer | Font size in points. Minimum value: 0 |
 
 #### Objects Supported
 
@@ -179,9 +179,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| Name   | データタイプ | Possible Values                           |
+| ------ | ------ | ----------------------------------------- |
+| stroke | string | any css value, "transparent", "automatic" |
 
 #### Objects Supported
 
@@ -209,9 +209,9 @@ Foreground color;Dark shadow color)
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values       |
-| --------------- | --------- | --------------------- |
-| rowStrokeSource | string    | Font color expression |
+| Name            | データタイプ | Possible Values       |
+| --------------- | ------ | --------------------- |
+| rowStrokeSource | string | Font color expression |
 
 #### Objects Supported
 
@@ -226,7 +226,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+例:
 
 ```code4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
@@ -236,9 +236,9 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                 |
-| -------------- | --------- | ----------------------------------------------- |
-| rowStyleSource | string    | Style expression to evaluate for each row/cell. |
+| Name           | データタイプ | Possible Values                                 |
+| -------------- | ------ | ----------------------------------------------- |
+| rowStyleSource | string | Style expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -256,9 +256,9 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| textAlign | string    | "automatic", "right", "center", "justify", "left" |
+| Name      | データタイプ | Possible Values                                   |
+| --------- | ------ | ------------------------------------------------- |
+| textAlign | string | "automatic", "right", "center", "justify", "left" |
 
 #### Objects Supported
 
@@ -279,9 +279,9 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                        |
-| ------------- | --------- | -------------------------------------- |
-| verticalAlign | string    | "automatic", "top", "middle", "bottom" |
+| Name          | データタイプ | Possible Values                        |
+| ------------- | ------ | -------------------------------------- |
+| verticalAlign | string | "automatic", "top", "middle", "bottom" |
 
 #### Objects Supported
 
@@ -301,7 +301,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
+| Property name       | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
 | fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
@@ -347,9 +347,9 @@ $0:=Form.meta
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                  |
-| ---------- | --------- | ------------------------------------------------ |
-| metaSource | string    | Object expression to evaluate for each row/cell. |
+| Name       | データタイプ | Possible Values                                  |
+| ---------- | ------ | ------------------------------------------------ |
+| metaSource | string | Object expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -384,7 +384,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      データタイプ
     </th>
     
     <th>
@@ -501,7 +501,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      データタイプ
     </th>
     
     <th>
@@ -564,7 +564,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      データタイプ
     </th>
     
     <th>
@@ -628,7 +628,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      データタイプ
     </th>
     
     <th>
@@ -703,7 +703,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      データタイプ
     </th>
     
     <th>

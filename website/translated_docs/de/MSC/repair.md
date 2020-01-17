@@ -12,7 +12,7 @@ Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschäd
 > 
 > Bei einer verschlüsselten Anwendung enthält das Reparieren auch die Schritte Entschlüsselung und Verschlüsselung. Dazu ist auch der aktuelle Verschlüsselungscode erforderlich. Ist noch kein gültiger Verschlüsselungscode angegeben, erscheint ein Dialogfenster, das die Passphrase oder den Verschlüsselungscode anfordert (siehe Seite Verschlüsseln).
 
-## File overview
+## Datei Überblick
 
 ### Datendatei reparieren
 
@@ -20,7 +20,7 @@ Pfadname der aktuellen Datendatei. Über die Schaltfläche ** [...]** können Si
 
 ### Ordner Backup der Originaldateien
 
-Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert. und im Unterordner “Replaced files (repairing)” im Datenbank-Ordner abgelegt. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
+Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert und im Unterordner “Replaced files (repairing)” im Datenbank-Ordner abgelegt. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
 
 ### Reparierte Dateien
 

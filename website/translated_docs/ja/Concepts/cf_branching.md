@@ -45,7 +45,7 @@ he expression is TRUE only if both methods are TRUE. However, even if *MethodA* 
 
 The result is similar and *MethodB* is evaluated only if necessary.
 
-### Example
+### 例題
 
 ```code4d
   // Ask the user to enter a name
@@ -125,7 +125,7 @@ Only the statements following the first TRUE case (and up to the next case) will
 
 You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the `Else` will be executed.
 
-### Example
+### 例題
 
 This example tests a numeric variable and displays an alert box with a word in it:
 

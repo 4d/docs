@@ -160,7 +160,7 @@ For comparison, here is the `If...Else...End if` version of the same method:
  End if
 ```
 
-Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.
+Beachten Sie, dass mit einer Anweisung `Case of...Else...End case` nur der erste Fall WAHR ausgeführt wird. Selbst wenn zwei oder mehr Fälle WAHR sind, wird nur die Anweisung ausgeführt, die auf den ersten Fall WAHR folgt.
 
 Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
 

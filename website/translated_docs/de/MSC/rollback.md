@@ -20,6 +20,6 @@ Um ein Rollback in den Operationen auszuführen, wählen Sie die Zeile, nach der
 
 Als nächstes klicken Sie auf die Schaltfläche **Rollback**. Auf dem Bildschirm erscheint ein Dialogfenster zum Bestätigen. Klicken Sie auf die Schaltfläche **OK**, werden die Daten in dem Stadium wiederhergestellt, das zum Zeitpunkt der gewählten Operation galt.
 
-Über das PopUp-Menü am unteren Rand wählen Sie das passende Logbuch zum Ausführen der Rollback-Funktion in einer wiederhergestellten Datenbank. In this case, you must specify the data log file corresponding to the archive.
+Über das PopUp-Menü am unteren Rand wählen Sie das passende Logbuch zum Ausführen der Rollback-Funktion in einer wiederhergestellten Datenbank. In diesem Fall müssen Sie das passende Logbuch der Datei im Archiv angeben.
 
 Rollback funktioniert folgendermaßen: Klickt der Benutzer auf die Schaltfläche **Rollback**, schließt 4D die aktuelle Datenbank und stellt das letzte Backup der Daten der Datenbank wieder her. Die wiederhergestellte Datenbank wird dann geöffnet. 4D integriert die Operationen des Logbuchs bis zur gewählten Operation. Wurde die Datenbank noch nicht gesichert, startet 4D mit einer leeren Datendatei.

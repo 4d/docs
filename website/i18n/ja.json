@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "次へ",
     "previous": "前へ",
-    "tagline": "4D 開発のリファレンスガイド",
+    "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
         "title": "Backup"
@@ -36,19 +36,19 @@
         "title": "Components"
       },
       "Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "データタイプの概要"
       },
       "Concepts/blob": {
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "ブール"
       },
       "Concepts/collection": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "日付"
       },
       "Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -57,19 +57,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "オブジェクト"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "時間"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -96,14 +96,14 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "変数"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -118,19 +118,19 @@
         "title": "Button Grid"
       },
       "FormObjects/checkboxOverview": {
-        "title": "チェックボックス"
+        "title": "Check Box"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "コンボボックス"
+        "title": "Combo Box"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "ドロップダウンリスト"
+        "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "4D フォームオブジェクトについて"
+        "title": "About 4D Form Objects"
       },
       "FormObjects/groupBox": {
-        "title": "グループボックス"
+        "title": "Group Box"
       },
       "FormObjects/inputOverview": {
         "title": "Input"
@@ -145,13 +145,13 @@
         "title": "Picture Button"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "ピクチャーポップアップメニュー"
+        "title": "Picture Pop-up Menu"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "プラグインエリア"
+        "title": "Plug-in Area"
       },
       "FormObjects/progressIndicator": {
-        "title": "進捗インジケーター"
+        "title": "Progress Indicator"
       },
       "FormObjects/propertiesAction": {
         "title": "Action"
@@ -160,13 +160,13 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "アピアランス"
+        "title": "Appearance"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "座標とサイズ"
+        "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
         "title": "Crop"
@@ -178,16 +178,16 @@
         "title": "Display"
       },
       "FormObjects/propertiesEntry": {
-        "title": "入力"
+        "title": "Entry"
       },
       "FormObjects/propertiesFooters": {
-        "title": "フッター"
+        "title": "Footers"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "グリッド線"
+        "title": "Gridlines"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "ヘッダー"
+        "title": "Headers"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -199,16 +199,16 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "オブジェクト"
+        "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "印刷"
+        "title": "Print"
       },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
@@ -217,28 +217,28 @@
         "title": "JSON property list"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "リサイズオプション"
+        "title": "Resizing Options"
       },
       "FormObjects/propertiesScale": {
-        "title": "スケール"
+        "title": "Scale"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Text and Picture"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Webエリア"
+        "title": "Web Area"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "ラジオボタン"
+        "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "ルーラー"
+        "title": "Ruler"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -247,10 +247,10 @@
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "スプリッター"
+        "title": "Splitter"
       },
       "FormObjects/staticPicture": {
-        "title": "スタティックピクチャー"
+        "title": "Static picture"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
@@ -259,16 +259,16 @@
         "title": "Subform"
       },
       "FormObjects/tabControl": {
-        "title": "タブコントロール"
+        "title": "Tab Controls"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Webエリア"
+        "title": "Web Area"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
@@ -343,6 +343,99 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
+      "REST/asArray": {
+        "title": "$asArray"
+      },
+      "REST/atomic_$atonce": {
+        "title": "$atomic/$atonce"
+      },
+      "REST/attributes": {
+        "title": "$attributes"
+      },
+      "REST/binary": {
+        "title": "$binary"
+      },
+      "REST/catalog": {
+        "title": "$catalog"
+      },
+      "REST/compute": {
+        "title": "$compute"
+      },
+      "REST/directory": {
+        "title": "$directory"
+      },
+      "REST/distinct": {
+        "title": "$distinct"
+      },
+      "REST/entityset": {
+        "title": "$entityset"
+      },
+      "REST/expand": {
+        "title": "$expand"
+      },
+      "REST/filter": {
+        "title": "$filter"
+      },
+      "REST/imageformat": {
+        "title": "$imageformat"
+      },
+      "REST/info": {
+        "title": "$info"
+      },
+      "REST/method": {
+        "title": "$method"
+      },
+      "REST/orderby": {
+        "title": "$orderby"
+      },
+      "REST/querypath": {
+        "title": "$querypath"
+      },
+      "REST/queryplan": {
+        "title": "$queryplan"
+      },
+      "REST/savedfilter": {
+        "title": "$savedfilter"
+      },
+      "REST/savedorderby": {
+        "title": "$savedorderby"
+      },
+      "REST/skip": {
+        "title": "$skip"
+      },
+      "REST/timeout": {
+        "title": "$timeout"
+      },
+      "REST/top_$limit": {
+        "title": "$top/$limit"
+      },
+      "REST/upload": {
+        "title": "$upload"
+      },
+      "REST/version": {
+        "title": "$version"
+      },
+      "REST/authUsers": {
+        "title": "Sessions and Users"
+      },
+      "REST/configuration": {
+        "title": "Server Configuration"
+      },
+      "REST/genInfo": {
+        "title": "Getting Server Information"
+      },
+      "REST/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "REST/manData": {
+        "title": "Manipulating Data"
+      },
+      "REST/REST_requests": {
+        "title": "About REST Requests"
+      },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
@@ -351,26 +444,27 @@
       }
     },
     "links": {
-      "Developer Center": "デベロッパー・センター"
+      "Docs": "Docs",
+      "REST": "REST"
     },
     "categories": {
-      "4D Language Concepts": "4D ランゲージのコンセプト",
+      "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "フォームエディター",
-      "Form Objects": "フォームオブジェクト",
-      "Form Object Properties": "フォームオブジェクトプロパティ",
-      "Menus": "メニュー",
+      "Form Editor": "Form Editor",
+      "Form Objects": "Form Objects",
+      "Form Object Properties": "Form Object Properties",
+      "Menus": "Menus",
       "MSC": "Maintenance & Security Center",
-      "Backup and Restore": "バックアップと復元",
-      "Users and Groups": "Users and Groups"
+      "Backup and Restore": "Backup and Restore",
+      "Users and Groups": "Users and Groups",
+      "REST Server ": "REST Server "
     }
   },
   "pages-strings": {
-    "for 4D developers|no description given": "for 4D developers",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリケーションの開発",
-    "Developing a Web application|no description given": "Web アプリケーションの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリケーションの開発",
+    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
+    "Developing a Web application|no description given": "Web アプリの開発",
+    "Developing a Mobile application|no description given": "モバイルアプリの開発",
     "Administration|no description given": "データベース管理",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",

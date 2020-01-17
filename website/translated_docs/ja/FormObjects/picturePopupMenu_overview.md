@@ -1,6 +1,6 @@
 ---
 id: picturePopupMenuOverview
-title: ピクチャーポップアップメニュー
+title: Picture Pop-up Menu
 ---
 
 ## Overview

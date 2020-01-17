@@ -1,6 +1,6 @@
 ---
 id: staticPicture
-title: スタティックピクチャー
+title: Static picture
 ---
 
 ## Overview
