@@ -1,6 +1,6 @@
 ---
 id: propertiesCoordinatesAndSizing
-title:Coordinates & Sizing
+title: Coordinates & Sizing
 ---
 ---
 ## Automatic Row Height
