@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-title:Animation
+title: Animation
 ---
 ---
 ## Loop back to first frame
