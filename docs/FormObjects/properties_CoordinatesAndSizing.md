@@ -265,7 +265,7 @@ When a row height array is defined, each of its elements whose value is differen
 
 For example, you can write:
 
-```code4d
+```4d
 ARRAY LONGINT(RowHeights;20)
 RowHeights{5}:=3
 ```

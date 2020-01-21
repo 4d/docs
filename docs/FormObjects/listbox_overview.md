@@ -80,13 +80,13 @@ By default, 4D assigns the name “ColumnX” to each column variable, and thus 
 With array type list box, the values entered or displayed are managed using the 4D language. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
 The values of columns are managed using high-level List box commands (such as `LISTBOX INSERT ROWS` or `LISTBOX DELETE ROWS`) as well as array manipulation commands. For example, to initialize the contents of a column, you can use the following instruction:
 
-```code4d
+```4d
 ARRAY TEXT(ColumnName;size)
 ```
 
 You can also use a list:
 
-```code4d
+```4d
 LIST TO ARRAY("ListName";ColumnName)
 ```
 
@@ -114,7 +114,7 @@ When the data source is an entity selection, any modifications made on the list 
 
 When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
 
-```code4d
+```4d
 myCol:=myCol.push("new value") //display new value in list box
 ```
 
@@ -282,7 +282,7 @@ Let’s consider the example of a list box containing two arrays, one date and o
 
 Here is the method of the *arrText* column:
 
-```code4d
+```4d
  Case of
     :(Form event=On Before Data Entry) // a cell gets the focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
@@ -342,7 +342,7 @@ The [variable linked to the List box object](properties_Object.md#variable-or-ex
 Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box.
 On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines.
 For example, this method allows inverting the selection of the first row of the (array type) list box:
-```code4d
+```4d
  ARRAY BOOLEAN(tBListBox;10)
   //tBListBox is the name of the list box variable in the form
  If(tBListBox{1}=True)
@@ -402,7 +402,7 @@ For an array type list box, you need to update the [Row Background Color Array](
 
 In the object method of the list box, you can write:
 
-```code4d
+```4d
  Case of
     :(Form event=On Selection Change)
        $n:=Size of array(LB_Arrays)
@@ -427,7 +427,7 @@ For example, in the JSON form, you have defined the following Highlight Set and 
 ```
 You can write in the *UI_SetColor* method:
 
-```code4d
+```4d
  If(Is in set("$SampleSet"))
     $color:=0x0080C080 // green background
  Else
@@ -680,7 +680,7 @@ This principle is implemented for internal arrays that can be used to manage:
 
 For example, if you want to select the row containing Rennes, you must pass:
 
-```code4d
+```4d
  ->MyListbox{3}:=True
 ```
 
@@ -722,7 +722,7 @@ Given for example the following list box (the names of the associated arrays are
 
 In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
 
-```code4d
+```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
  OBJECT SET FONT STYLE(T2;Bold)
 ```
@@ -779,7 +779,7 @@ the cell content display (optional): button, list, etc.
 additional settings (optional): depend on the value type
 To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
 
-```code4d  
+```4d  
 ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob) //first element
  OB SET($ob;"valueType";"text") //defines the value type (mandatory)
@@ -861,7 +861,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
 
-````code4d
+````4d
  ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
  $entry:="Hello world!"
@@ -889,7 +889,7 @@ When the "valueType" is "real" or "integer", the object also accepts min and max
 
 These attributes can be used to control the range of input values. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
 
-````code4d
+````4d
  C_OBJECT($ob3)
  $entry3:=2015
  OB SET($ob3;"valueType";"integer")
@@ -908,7 +908,7 @@ The behavior attribute provides variations to the regular representation of valu
 |---|---|---|---|
 |behavior|	threeStates	|integer|	Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled|
 
-```code4d
+```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
  OB SET($ob3;"value";-3)
@@ -935,7 +935,7 @@ Examples:
 
 *	You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
-```code4d
+```4d
 	ARRAY TEXT($RequiredList;0)
 	APPEND TO ARRAY($RequiredList;"Open")
 	APPEND TO ARRAY($RequiredList;"Closed")
@@ -948,7 +948,7 @@ Examples:
 
 *	You want to accept any integer value, but display a combo box to suggest the most common values:
 
-```code4d
+```4d
 	ARRAY LONGINT($ChoiceList;0)
 	APPEND TO ARRAY($ChoiceList;5)
 	APPEND TO ARRAY($ChoiceList;10)
@@ -977,7 +977,7 @@ Examples:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
-```code4d
+```4d
 	C_OBJECT($ob)
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
@@ -988,7 +988,7 @@ Examples:
 	
 *	You want to display a drop-down list based on a list defined by programming and save it as a reference:
 	
-```code4d
+```4d
 	<>List:=New list
 	APPEND TO LIST(<>List;"Paris";1)
 	APPEND TO LIST(<>List;"London";2)
@@ -1017,7 +1017,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
-````code4d
+````4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
  OB SET($ob;"value";"blue")
@@ -1045,7 +1045,7 @@ Example:
 
 We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
 
-````code4d
+````4d
 ARRAY TEXT($_units;0)
 APPEND TO ARRAY($_units;"lines")
 APPEND TO ARRAY($_units;"pixels")
@@ -1068,7 +1068,7 @@ When this button is clicked by a user, an `On Alternate Click` event will be gen
 
 Example:
 
-```code4d
+```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
 OB SET($ob;"valueType";"text")
@@ -1085,7 +1085,7 @@ The "color" valueType allows you to display either a color or a text.
 
 *	If the value is a number, a colored rectangle is drawn inside the cell. Example:
 
-	````code4d
+	````4d
 	C_OBJECT($ob4)
 	OB SET($ob4;"valueType";"color")
 	OB SET($ob4;"value";0x00FF0000)
@@ -1104,7 +1104,7 @@ Optionally, you can pass a "label" attribute.
 
 Example:
 
-````code4d
+````4d
 C_OBJECT($ob)
 OB SET($ob;"valueType";"event")
 OB SET($ob;"label";"Edit...")

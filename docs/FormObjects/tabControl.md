@@ -28,7 +28,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ### JSON Example:    
 
-```code4d
+```4d
 	"myTab": {
 		"type": "tab",
  		"left": 60,	
@@ -48,7 +48,7 @@ There are several ways to supply the labels for a tab control:
 *	You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
 *	You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.  
 
-```code4d
+```4d
  ARRAY TEXT(arrPages;3)
  arrPages{1}:="Name"
  arrPages{2}:="Address"
@@ -64,7 +64,7 @@ There are several ways to supply the labels for a tab control:
 
 You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
 
-```code4d
+```4d
 FORM GOTO PAGE(arrPages)
 ```
 
@@ -72,7 +72,7 @@ The command is executed when the `On Clicked` event occurs. You should then clea
 
 Here is an example object method:
 
-```code4d
+```4d
  Case of
     :(Form event=On Load)
        LIST TO ARRAY("Tab Labels";arrPages)

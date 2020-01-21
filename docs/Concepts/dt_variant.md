@@ -25,7 +25,7 @@ A variant type variable can contain a value of the following data types:
 
 In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
 
-```code4d
+```4d
 C_VARIANT($variant)
 
 $variant:="hello world"
@@ -39,7 +39,7 @@ $vtypeVal:=Value type($variant) // 1 (Is real)
 
 You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. For example:
 
-```code4d
+```4d
 C_VARIANT($v)
 $v:="hello world"
 $v2:=$v //assign variable to another variable
@@ -50,7 +50,7 @@ $t2:=Type($v2) // 2 (Is text)
 
 Variant can be used to declare method parameters ($0, $1,...) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:
 
-```code4d
+```4d
 C_VARIANT($1)
 Case of
 : (Value type($1)=Is longint)

@@ -196,7 +196,7 @@ The row control array must be of the Longint type and include the same number of
 
 To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
 
-```code4d
+```4d
  aLControlArr{10}:=lk row is not selectable
 ```
 
@@ -204,7 +204,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 You can define several interface properties at once:
 
-```code4d
+```4d
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
 ```
 
@@ -212,7 +212,7 @@ You can define several interface properties at once:
 
 Note that setting properties for an element overrides any other values for this element (if not reset). For example:
 
-```code4d
+```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
  //sets row 6 as disabled AND not selectable
  aLControlArr{6}:=lk row is disabled 
