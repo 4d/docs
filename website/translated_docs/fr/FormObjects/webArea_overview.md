@@ -32,49 +32,49 @@ Lorsque la propriété [Accès méthodes 4D](properties_WebArea.md#access-4d-met
 
 > Cette propriété n'est disponible que si la zone Web [utilise le moteur de rendu Web intégré](#use-embedded-web-rendering-engine).
 
-### $4d object
+### Objet $4d
 
-The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+Le [moteur de rendu Web intégré 4D](#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
 
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
 ```codeJS
 $4d.HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript est sensible à la casse. Il est donc important de noter que l'objet est nommé $4d (avec un "d" minuscule).
 
-The syntax of calls to 4D methods is as follows:
+La syntaxe des appels aux méthodes 4D est la suivante :
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
-- `param1...paramN`: You can pass as many parameters as you need to the 4D method. These parameters can be of any type supported by JavaScript (string, number, array, object).
+- `param1...paramN` : Vous pouvez passer autant de paramètres que vous le souhaitez dans la méthode 4D. Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
 
-- `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. It receives the `result` parameter.
+- `function(result)` : Fonction à passer comme dernier argument. Cette fonction "callback" est appelée de manière sychronisée une fois que la méthode 4D a fini de s'exécuter. Elle reçoit le paramètre `result`.
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: Résultat de l'exécution de la méthode 4D, retournée dans l'expression "$0". Ce résultat peut être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet). Vous pouvez utiliser la commande `C_OBJECT` pour retourner les objets.
 
-> By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> Par défaut, 4D opère en UTF-8. Lorsque vous retournez du texte contenant des caractères étendus, tels que des caractères avec des accents, assurez-vous que l'encodage de la page affiché dans la zone Web est déclaré en UTF-8, sinon les caractères risquent de ne pas être retournés correctement. Dans ce cas, ajoutez la ligne suivante dans la page HTML pour déclarer l'encodage : `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemple 1
-Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
+Considérons une méthode projet 4D nommée `today` qui ne reçoit pas de paramètres et qui retourne la date courante dans une chaîne.
 
-4D code of `today` method:
+Code 4D de la méthode `today` :
 
 ```code4d
  C_TEXT($0)
  $0:=String(Current date;System date long)
 ```
 
-In the Web area, the 4D method can be called with the following syntax:
+Dans la zone Web, la méthode 4D peut être appelée avec la syntaxe suivante :
 
 ```js
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the Web area.
+La méthode 4D ne reçoit aucun paramètre mais elle retourne la valeur $0 à la fonction callback appelée par 4D après avoir exécuté la méthode. Nous souhaitons afficher la date dans la page HTML qui est chargée par la zone Web.
 
-Here is the code of the HTML page:
+Voici le code de la page HTML :
 
 ```html
 <html>
@@ -95,13 +95,13 @@ $4d.today(function(dollarZero)
 
 #### Exemple 2
 
-The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
+La méthode projet 4D `calcSum` reçoit des paramètres (`$1...$n`) et retourne leur somme dans `$0` :
 
-4D code of `calcSum` method:
+Code 4D de la méthode `calcSum` :
 
 ```code4d
- C_REAL(${1}) // receives n REAL type parameters
- C_REAL($0) // returns a Real
+ C_REAL(${1}) // reçoit n paramètres de type REEL
+ C_REAL($0) // retourne un Réel
  C_LONGINT($i;$n)
  $n:=Count parameters
  For($i;1;$n)
@@ -109,19 +109,19 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
  End for
 ```
 
-The JavaScript code run in the Web area is:
+Le code d'exécution JavaScript dans la zone Web est le suivant :
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
     {
-        var result = dollarZero // result is 262.5
+        var result = dollarZero // le résultat est 262.5
     });
 ```
 
 
-## Standard actions
+## Actions standard
 
-Four specific standard actions are available for managing Web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic Web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Quatre actions standard sont disponibles pour gérer automatiquement les zones Web : `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
 ## Evénements formulaire
@@ -179,18 +179,18 @@ Il est possible d’afficher et d’utiliser un inspecteur Web au sein des zones
 ### Afficher l’inspecteur Web
 Pour que vous puissiez afficher l’inspecteur Web dans une zone Web, les conditions suivantes doivent être réunies :
 
-- You must [select the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
-- You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
-- You must expressly enable the use of the inspector in the area by means of the following statement:
+- [Le moteur de rendu Web intégré doit être sélectionné](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone (l’inspecteur Web n’est disponible que dans cette configuration).
+- [Le menu contextuel](properties_Entry.md#context-menu) de la zone doit être activé (l’appel de l’inspecteur est effectué via ce menu)
+- L’usage de l’inspecteur doit être expressément autorisé pour la zone à l’aide de l’instruction suivante :
 
 ```code4d
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-### Using the Web inspector
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.
+### Utilisation de l’Inspecteur Web
+Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de nouvelles options telles que **Inspect Element** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone Web est alors affiché.
 
-> The Web inspector is included in the embedded Web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the Web rendering engine.
+> L’inspecteur Web est inclus dans le moteur de rendu intégré. Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu Web utilisé.
 
 
 
