@@ -443,10 +443,7 @@
         "title": "Overview"
       }
     },
-    "links": {
-      "Docs": "Docs",
-      "REST": "REST"
-    },
+    "links": {},
     "categories": {
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
