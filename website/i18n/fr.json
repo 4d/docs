@@ -241,7 +241,7 @@
         "title": "Règle"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "Formes"
       },
       "FormObjects/spinner": {
         "title": "Spinner"
@@ -443,10 +443,7 @@
         "title": "Aperçu"
       }
     },
-    "links": {
-      "Docs": "Docs",
-      "REST": "REST"
-    },
+    "links": {},
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",

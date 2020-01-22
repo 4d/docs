@@ -28,7 +28,7 @@ These files are stored in the project's "/SOURCES" folder.
 
 ### Style Sheet Architecture
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow [CSS](https://www.w3schools.com/css/) syntax and grammar.
+While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
 
 Every style rule in a style sheet contains two parts:
 
@@ -67,7 +67,7 @@ text, input {
 
 ### Object Name
 
-Corresponding to the CSS ID selector, the object name defines a specific object to style since the object's name is unique within the form.
+Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
 
 Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
 
@@ -84,7 +84,7 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class
 
-Corresponding to the CSS class selector, the class defines the style for all form objects with the `class` attribute.
+Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
 
 You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
 
@@ -116,7 +116,7 @@ class: "okButtons important"
 
 ### All Objects
 
-Corresponding to the CSS universal selector, the "*" character indicates that the following style will be applied to all objects on the form.
+Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
 
 Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
 
@@ -131,11 +131,22 @@ In the following example, all objects will have a gray fill:
 
 ### Specific Attribute
 
-Corresponding to the CSS attribute selector, styles can be applied to all form objects with a specific attribute.
+Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
 
 Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
 
-In the following example, all objects with the `borderStyle` attribute will have purple lines:
+#### Supported syntaxes
+
+| Syntax                    | Description                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [attribute]               | matches objects with the `attribute`                                                                    |
+| [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
+| [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
+| [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
+
+#### Examples
+
+All objects with the `borderStyle` attribute will have purple lines:
 
 ```
 [borderStyle]
@@ -144,17 +155,7 @@ In the following example, all objects with the `borderStyle` attribute will have
 }
 ```
 
-To designate that a style should be applied to all objects that have a specific attribute and word, use the `[attribute~="value"]` syntax:
-
-```
-[text~=Hello]
-{
-     stroke: blue;
-}
-
-```
-
-To designate that a style should be applied to distinct object types with a specific attribute and value, use the `object type[attribute="value"]` syntax:
+All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
 
 
 ```
@@ -164,8 +165,17 @@ text[text=Hello]
 }
 ```
 
+All objects with a text attribute whose value contains "Hello" will have blue lines:
 
-To designate that a style should be applied to certain object types with a specific attribute whose value begins with a specific value, use the `object type[attribute|="value"]` syntax:
+```
+[text~=Hello]
+{
+     stroke: blue;
+}
+
+```
+
+All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
 
 ```
 text[text|=Hello]

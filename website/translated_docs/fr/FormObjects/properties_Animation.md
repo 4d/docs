@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-0: title:Animation
+title: Animation
 ---
 
 ---

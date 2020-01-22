@@ -1,6 +1,6 @@
 ---
 id: propertiesPlugIns
-0: title:Plug-ins
+title: Plug-ins
 ---
 
 ---

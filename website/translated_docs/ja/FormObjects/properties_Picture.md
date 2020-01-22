@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-0: title:Picture
+title: ピクチャー
 ---
 
 ---

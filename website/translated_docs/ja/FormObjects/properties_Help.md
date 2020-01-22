@@ -1,6 +1,6 @@
 ---
 id: propertiesHelp
-0: title:Help
+title: Help
 ---
 
 ---

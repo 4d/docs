@@ -1,6 +1,6 @@
 ---
 id: propertiesPlugIns
-0: title:Plug-ins
+title: Plug-ins
 ---
 
 ---
@@ -21,5 +21,5 @@ Because the Advanced properties feature is under the control of the author of th
 
 #### Objects Supported
 
-[プラグインエリア](pluginArea_overview.md)
+[Plug-in Area](pluginArea_overview.md)
 
