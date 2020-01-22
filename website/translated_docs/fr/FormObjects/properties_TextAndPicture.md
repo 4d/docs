@@ -1,6 +1,6 @@
 ---
 id: propertiesTextAndPicture
-0: title:Text and Picture
+title: Texte et Image
 ---
 
 ---
