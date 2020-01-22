@@ -65,7 +65,7 @@ Given a 4D project method named `today` that does not receive parameters and ret
 
 4D code of `today` method:
 
-```code4d
+```4d
  C_TEXT($0)
  $0:=String(Current date;System date long)
 ```
@@ -103,7 +103,7 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
 
 4D code of `calcSum` method:
 
-```code4d
+```4d
  C_REAL(${1}) // receives n REAL type parameters
  C_REAL($0) // returns a Real
  C_LONGINT($i;$n)
@@ -188,7 +188,7 @@ The following conditions must be met in order to view the Web inspector in a Web
 - You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
 - You must expressly enable the use of the inspector in the area by means of the following statement:
 
-```code4d
+```4d
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 

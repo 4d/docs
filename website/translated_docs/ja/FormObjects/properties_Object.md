@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-0: title:Objects
+title: Objects
 ---
 
 ---
@@ -30,6 +30,7 @@ Each active form object is associated with an object name. Each object name must
 > Object names are limited to a size of 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+
 
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
@@ -233,7 +234,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 
 #### Objects Supported
-[プラグインエリア](pluginArea_overview.md)
+[Plug-in Area](pluginArea_overview.md)
 
 
 
@@ -252,7 +253,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[ラジオボタン](radio_overview.md)
+[Radio Button](radio_overview.md)
 
 
 

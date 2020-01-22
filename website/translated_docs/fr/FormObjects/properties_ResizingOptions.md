@@ -1,6 +1,6 @@
 ---
 id: propertiesResizingOptions
-0: title:Resizing Options
+title: Resizing Options
 ---
 
 ---
