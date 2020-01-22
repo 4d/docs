@@ -101,18 +101,18 @@
 <h2><a class="anchor" aria-hidden="true" id="passing-variables"></a><a href="#passing-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing variables</h2>
 <p>The local, process and interprocess variables are not shared between components and host databases. The only way to access component variables from the host database and vice versa is using pointers.</p>
 <p>Example using an array:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">//In the host database:
-</span>     <span class="hljs-command">ARRAY INTEGER</span>(MyArray;10)
-     AMethod(-&gt;MyArray)
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">//In the host database:</span>
+<span class="hljs-function">     ARRAY INTEGER</span>(MyArray;<span class="hljs-number">10</span>)
+<span class="hljs-function">     AMethod</span>(-&gt;MyArray)
 
-<span class="hljs-comment">//In the component, the AMethod project method contains:
-</span>     <span class="hljs-command">APPEND TO ARRAY</span>(<span class="hljs-param">$1</span>-&gt;;2)
+<span class="hljs-comment">//In the component, the AMethod project method contains:</span>
+<span class="hljs-function">     APPEND TO ARRAY</span>(<span class="hljs-variable">$1</span>-&gt;;<span class="hljs-number">2</span>)
 </code></pre>
 <p>Examples using variables:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_TEXT</span>(myvariable)
- component_method1(-&gt;myvariable)
- <span class="hljs-command">C_POINTER</span>(<span class="hljs-locale">$p</span>)
- <span class="hljs-locale">$p</span>:=component_method2(...)
+<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_TEXT</span>(myvariable)
+<span class="hljs-function"> component_method1</span>(-&gt;myvariable)
+<span class="hljs-function"> C_POINTER</span>(<span class="hljs-variable">$p</span>)
+ <span class="hljs-variable">$p</span>:=<span class="hljs-function">component_method2</span>(...)
 </code></pre>
 <p>When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:</p>
 <ul>
@@ -123,30 +123,30 @@ Let’s illustrate this principle with the following example: given two componen
 <li><p>If component I defines the <code>myIvar</code> variable, component C cannot access this variable by using the pointer <code>-&gt;myIvar</code>. This syntax causes an execution error.</p></li>
 <li><p>The comparison of pointers using the <code>RESOLVE POINTER</code> command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the <code>myptr1</code> and <code>myptr2</code> pointers each point to a variable, the following comparison will produce an incorrect result:</p></li>
 </ul>
-<pre><code class="hljs css language-code4d">     <span class="hljs-command">RESOLVE POINTER</span>(myptr1;vVarName1;vtablenum1;vfieldnum1)
-     <span class="hljs-command">RESOLVE POINTER</span>(myptr2;vVarName2;vtablenum2;vfieldnum2)
-     <span class="hljs-keyword">If</span>(vVarName1=vVarName2)
-      <span class="hljs-comment">//This test returns True even though the variables are different
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-function">     RESOLVE POINTER</span>(myptr<span class="hljs-number">1</span>;vVarName<span class="hljs-number">1</span>;vtablenum<span class="hljs-number">1</span>;vfieldnum<span class="hljs-number">1</span>)
+<span class="hljs-function">     RESOLVE POINTER</span>(myptr<span class="hljs-number">2</span>;vVarName<span class="hljs-number">2</span>;vtablenum<span class="hljs-number">2</span>;vfieldnum<span class="hljs-number">2</span>)<span class="hljs-keyword">
+     If</span>(vVarName<span class="hljs-number">1</span>=vVarName<span class="hljs-number">2</span>)
+      <span class="hljs-comment">//This test returns True even though the variables are different</span>
+</code></pre>
 <p>In this case, it is necessary to use the comparison of pointers:</p>
-<pre><code class="hljs css language-code4d">     <span class="hljs-keyword">If</span>(myptr1=myptr2) <span class="hljs-comment">//This test returns False
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">     If</span>(myptr<span class="hljs-number">1</span>=myptr<span class="hljs-number">2</span>) <span class="hljs-comment">//This test returns False</span>
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="access-to-tables-of-the-host-database"></a><a href="#access-to-tables-of-the-host-database" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access to tables of the host database</h2>
 <p>Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">// calling a component method
-</span>methCreateRec(-&gt;[PEOPLE];-&gt;[PEOPLE]Name;"<span class="hljs-string">Julie Andrews</span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">// calling a component method</span>
+<span class="hljs-function"><span class="hljs-title">methCreateRec</span><span class="hljs-params">(-&gt;[PEOPLE];-&gt;[PEOPLE]Name;<span class="hljs-string">"Julie Andrews"</span>)</span></span>
 </code></pre>
 <p>Within the component, the code of the <code>methCreateRec</code> method:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">C_POINTER</span>(<span class="hljs-param">$1</span>) <span class="hljs-comment">//Pointer on a table in host database
-</span><span class="hljs-command">C_POINTER</span>(<span class="hljs-param">$2</span>) <span class="hljs-comment">//Pointer on a field in host database
-</span><span class="hljs-command">C_TEXT</span>(<span class="hljs-param">$3</span>) <span class="hljs-comment">// Value to insert
-</span>
-<span class="hljs-locale">$tablepointer</span>:=<span class="hljs-param">$1</span>
-<span class="hljs-locale">$fieldpointer</span>:=<span class="hljs-param">$2</span>
-<span class="hljs-command">CREATE RECORD</span>(<span class="hljs-locale">$tablepointer</span>-&gt;)
+<pre><code class="hljs css language-code4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">//Pointer on a table in host database</span>
+<span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">//Pointer on a field in host database</span>
+<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$3</span>) <span class="hljs-comment">// Value to insert</span>
 
-<span class="hljs-locale">$fieldpointer</span>-&gt;:=<span class="hljs-param">$3</span>
-<span class="hljs-command">SAVE RECORD</span>(<span class="hljs-locale">$tablepointer</span>-&gt;)
+<span class="hljs-variable">$tablepointer</span>:=<span class="hljs-variable">$1</span>
+<span class="hljs-variable">$fieldpointer</span>:=<span class="hljs-variable">$2</span>
+<span class="hljs-function">CREATE RECORD</span>(<span class="hljs-variable">$tablepointer</span>-&gt;)
+
+<span class="hljs-variable">$fieldpointer</span>-&gt;:=<span class="hljs-variable">$3</span>
+<span class="hljs-function">SAVE RECORD</span>(<span class="hljs-variable">$tablepointer</span>-&gt;)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="scope-of-language-commands"></a><a href="#scope-of-language-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scope of language commands</h2>
 <p>Except for <a href="#unusable-commands">Unusable commands</a>, a component can use any command of the 4D language.</p>
@@ -201,62 +201,62 @@ Let’s illustrate this principle with the following example: given two componen
 <li>reads data from the external database.</li>
 </ul>
 <p>Creating the external database:</p>
-<pre><code class="hljs css language-code4d">&lt;&gt;MyDatabase:=<span class="hljs-command">Get 4D folder</span>+"<span class="hljs-string">\MyDB</span>" <span class="hljs-comment">// (Windows) stores the data in an authorized directory
-</span> <span class="hljs-command">Begin SQL</span>
-        CREATE DATABASE IF NOT EXISTS DATAFILE :[&lt;&gt;MyDatabase];
-        USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
-        <span class="hljs-plugin">CREATE TABLE</span> IF NOT EXISTS KEE<span class="hljs-plugin">PIT</span>
+<pre><code class="hljs css language-code4d">&lt;&gt;MyDatabase:=<span class="hljs-keyword">Get</span> <span class="hljs-number">4</span>D folder+"\MyDB" // (Windows) stores the data <span class="hljs-keyword">in</span> an authorized directory
+ <span class="hljs-keyword">Begin</span> <span class="hljs-keyword">SQL</span>
+        <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> DATAFILE :[&lt;&gt;MyDatabase];
+        USE <span class="hljs-keyword">DATABASE</span> DATAFILE :[&lt;&gt;MyDatabase];
+        <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> KEEPIT
         (
-        ID INT32 PRIMARY KEY,
-        kind VAR<span class="hljs-plugin">CHAR,</span>
-        name VAR<span class="hljs-plugin">CHAR,</span>
-        <span class="hljs-command">code</span> TEXT,
+        ID INT32 <span class="hljs-keyword">PRIMARY KEY</span>,
+        kind <span class="hljs-type">VARCHAR</span>,
+        <span class="hljs-type">name</span> <span class="hljs-type">VARCHAR</span>,
+        code <span class="hljs-type">TEXT</span>,
         sort_order INT32
         );
  
-        CREATE UNIQUE INDEX id_index ON KEE<span class="hljs-plugin">PIT</span> (ID);
+        <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">UNIQUE</span> <span class="hljs-keyword">INDEX</span> id_index <span class="hljs-keyword">ON</span> KEEPIT (ID);
  
-        USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
+        USE <span class="hljs-keyword">DATABASE</span> SQL_INTERNAL;
  
- <span class="hljs-command">End SQL</span>
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">SQL</span>
 </code></pre>
 <p>Writing in the external database:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$Ptr_1</span>:=<span class="hljs-param">$2</span> <span class="hljs-comment">// retrieves data from the host database through pointers
-</span> <span class="hljs-locale">$Ptr_2</span>:=<span class="hljs-param">$3</span>
- <span class="hljs-locale">$Ptr_3</span>:=<span class="hljs-param">$4</span>
- <span class="hljs-locale">$Ptr_4</span>:=<span class="hljs-param">$5</span>
- <span class="hljs-locale">$Ptr_5</span>:=<span class="hljs-param">$6</span>
- <span class="hljs-command">Begin SQL</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2</span> <span class="hljs-comment">// retrieves data from the host database through pointers</span>
+ <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
+ <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
+ <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>
+ <span class="hljs-variable">$Ptr_5</span>:=<span class="hljs-variable">$6</span><span class="hljs-keyword">
+ Begin SQL</span>
+<span class="hljs-function"> </span>
+        USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+<span class="hljs-function"> </span>
+<span class="hljs-function">        INSERT INTO KEEPIT</span>
+<span class="hljs-function">        </span>(ID, kind, name, code, sort_order)
+<span class="hljs-function">        VALUES</span>
+<span class="hljs-function">        </span>(:[<span class="hljs-variable">$Ptr_1</span>], :[<span class="hljs-variable">$Ptr_2</span>], :[<span class="hljs-variable">$Ptr_3</span>], :[<span class="hljs-variable">$Ptr_4</span>], :[<span class="hljs-variable">$Ptr_5</span>]);
+<span class="hljs-function"> </span>
+        USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
  
-        USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
- 
-        INSERT INTO KEE<span class="hljs-plugin">PIT</span>
-        (ID, kind, name, <span class="hljs-command">code</span>, sort_order)
-        VALUES
-        (:[<span class="hljs-locale">$Ptr_1</span>], :[<span class="hljs-locale">$Ptr_2</span>], :[<span class="hljs-locale">$Ptr_3</span>], :[<span class="hljs-locale">$Ptr_4</span>], :[<span class="hljs-locale">$Ptr_5</span>]);
- 
-        USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
- 
- <span class="hljs-command">End SQL</span>
+ End SQL</span>
 </code></pre>
 <p>Reading from an external database:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$Ptr_1</span>:=<span class="hljs-param">$2</span> <span class="hljs-comment">// accesses data of the host database through pointers
-</span> <span class="hljs-locale">$Ptr_2</span>:=<span class="hljs-param">$3</span>
- <span class="hljs-locale">$Ptr_3</span>:=<span class="hljs-param">$4</span>
- <span class="hljs-locale">$Ptr_4</span>:=<span class="hljs-param">$5</span>
- <span class="hljs-locale">$Ptr_5</span>:=<span class="hljs-param">$6</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2</span> <span class="hljs-comment">// accesses data of the host database through pointers</span>
+ <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
+ <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
+ <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>
+ <span class="hljs-variable">$Ptr_5</span>:=<span class="hljs-variable">$6</span><span class="hljs-keyword">
  
- <span class="hljs-command">Begin SQL</span>
+ Begin SQL</span>
+<span class="hljs-function"> </span>
+    USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+<span class="hljs-function"> </span>
+    SELECT ALL ID, kind, name, code,<span class="hljs-function"> sort_order</span>
+<span class="hljs-function">    FROM KEEPIT</span>
+    INTO :<span class="hljs-variable">$Ptr_1</span>, :<span class="hljs-variable">$Ptr_2</span>, :<span class="hljs-variable">$Ptr_3</span>, :<span class="hljs-variable">$Ptr_4</span>, :<span class="hljs-variable">$Ptr_5</span>;
+<span class="hljs-function"> </span>
+    USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
  
-    USE DATABASE DATAFILE :[&lt;&gt;MyDatabase];
- 
-    <span class="hljs-plugin">SELECT</span> ALL ID, kind, name, <span class="hljs-command">code</span>, sort_order
-    FROM KEE<span class="hljs-plugin">PIT</span>
-    INTO :<span class="hljs-locale">$Ptr_1</span>, :<span class="hljs-locale">$Ptr_2</span>, :<span class="hljs-locale">$Ptr_3</span>, :<span class="hljs-locale">$Ptr_4</span>, :<span class="hljs-locale">$Ptr_5</span>;
- 
-    USE DATABASE <span class="hljs-constant">SQL_INTERNAL</span>;
- 
- <span class="hljs-command">End SQL</span>
+ End SQL</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="use-of-resources"></a><a href="#use-of-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use of resources</h2>
 <p>Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.</p>

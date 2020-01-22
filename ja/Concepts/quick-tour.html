@@ -67,95 +67,95 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">概要</h1></header><article><div><span><p>4D ランゲージを使用して &quot;Hello, world!&quot; メッセージを表示するには複数の方法があります。 一番簡単な方法はおそらく、プロジェクトメソッドにコードを1行、次のように書くやり方です:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ALERT</span>("<span class="hljs-string">Hello, World!</span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">ALERT</span><span class="hljs-params">(<span class="hljs-string">"Hello, World!"</span>)</span></span>
 </code></pre>
 <p>このコードは、 &quot;Hello, World!&quot; メッセージが表示された、OK ボタンの付いたプラットフォームの標準的なアラートダイアログボックスを開きます。 コードを実行するには、メソッドエディターの左上にある実行ボタンをクリックします:</p>
 <p><img src="/docs/assets/en/Concepts/helloworld.png" alt="alt-text"></p>
 <p>あるいは、フォーム内のボタンにこのコードを付けた場合、フォームを実行した状態でボタンをクリックすると、その都度アラートメッセージが表示されます。 いずれの方法でも、前述の1行のコードを実行するだけで目的達成です！</p>
 <h2><a class="anchor" aria-hidden="true" id="値の代入"></a><a href="#値の代入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>値の代入</h2>
 <p>変数、フィールド、配列要素などを対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、変数にデータを代入すると言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドや配列要素に対してデータを代入する場合にも使います。</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$MyNumber</span>:=3 <span class="hljs-comment">// MyNumber 変数に数値の3を代入します
-</span>[Products]Size:=<span class="hljs-locale">$MyNumber</span> <span class="hljs-comment">// [Products]Size フィールドに MyNumber 変数の値を代入します
-</span>arrDays{2}:="<span class="hljs-string">Tuesday</span>" <span class="hljs-comment">// arrDays 配列の第二要素に文字列 "Tuesday" を代入します
-</span>MyVar:=<span class="hljs-command">Length</span>("<span class="hljs-string">Acme</span>") <span class="hljs-comment">// MyVar 変数に関数の結果 (数値の4) を代入します
-</span><span class="hljs-locale">$myDate</span>:=!2018/01/21! <span class="hljs-comment">// 日付リテラルを代入します
-</span><span class="hljs-locale">$myHour</span>:=?08:12:55? <span class="hljs-comment">// 時間リテラルを代入します
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$MyNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">// MyNumber 変数に数値の3を代入します</span>
+[Products]Size:=<span class="hljs-variable">$MyNumber</span> <span class="hljs-comment">// [Products]Size フィールドに MyNumber 変数の値を代入します</span>
+arrDays{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Tuesday"</span> <span class="hljs-comment">// arrDays 配列の第二要素に文字列 "Tuesday" を代入します</span>
+MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">// MyVar 変数に関数の結果 (数値の4) を代入します</span>
+<span class="hljs-variable">$myDate</span>:=!<span class="hljs-number">2018</span>/<span class="hljs-number">01</span>/<span class="hljs-number">21</span>! <span class="hljs-comment">// 日付リテラルを代入します</span>
+<span class="hljs-variable">$myHour</span>:=?<span class="hljs-number">08</span>:<span class="hljs-number">12</span>:<span class="hljs-number">55</span>? <span class="hljs-comment">// 時間リテラルを代入します</span>
+</code></pre>
 <p>代入演算 (:=) は必ず他の演算と区別しなければなりません。 代入演算子は、被演算子を組み合わせて新しい一つのものにするのではなく、演算子の右側の式の値を左側の変数やフィールドにコピーします。</p>
 <p><strong>重要:</strong> 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。</p>
 <h2><a class="anchor" aria-hidden="true" id="変数"></a><a href="#変数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>変数</h2>
 <p>4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型付けのされた変数は <code>C_XXX</code> コマンドを使って作成します。 たとえば、日付型の変数を作成するには、次のように書くことができます:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">C_DATE</span>(MyDate) <span class="hljs-comment">// MyDate 変数を日付型として宣言
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">C_DATE</span><span class="hljs-params">(MyDate)</span></span> <span class="hljs-comment">// MyDate 変数を日付型として宣言</span>
+</code></pre>
 <p>推奨はされませんが、変数を使用することで作成することもできます。フィールドとは異なり、変数は必ずしも正式に宣言する必要はありません。 たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:</p>
-<pre><code class="hljs css language-code4d">MyOtherDate:=<span class="hljs-command">Current date</span>+30
+<pre><code class="hljs css language-code4d">MyOtherDate:=<span class="hljs-keyword">Current</span> <span class="hljs-type">date</span>+<span class="hljs-number">30</span>
 </code></pre>
 <p>上のコードは &quot;MyOtherDate に、現在の日付に30日を加算した値を代入します&quot; という意味です。この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 <code>C_XXX</code> によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。</p>
 <h2><a class="anchor" aria-hidden="true" id="コマンド"></a><a href="#コマンド" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>コマンド</h2>
 <p>4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば <code>CREATE RECORD</code> や <code>ALERT</code> などのコマンドはテーマ別に <em>4D ランゲージリファレンス</em> に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">COPY DOCUMENT</span>("<span class="hljs-string">folder1\\name1</span>";"<span class="hljs-string">folder2\\</span>" ; "<span class="hljs-string">new</span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">COPY</span><span class="bash"> DOCUMENT(<span class="hljs-string">"folder1\\name1"</span>;<span class="hljs-string">"folder2\\"</span> ; <span class="hljs-string">"new"</span>)</span>
 </code></pre>
 <p>コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 たとえば:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$c</span>:=<span class="hljs-command">New collection</span>(1;2;3;4;5)
-<span class="hljs-locale">$nc</span>:=<span class="hljs-locale">$c</span><span class="hljs-method">.slice(<span class="hljs-normal">0</span><span class="hljs-normal">;</span><span class="hljs-normal">3</span>)</span> <span class="hljs-comment">//$nc=[1,2,3]  
-</span>
-<span class="hljs-locale">$lastEmployee</span>:=<span class="hljs-locale">$employee</span><span class="hljs-method">.last()</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
+<span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[1,2,3]  </span>
+
+<span class="hljs-variable">$lastEmployee</span>:=<span class="hljs-variable">$employee</span>.<span class="hljs-function">last</span>()
 </code></pre>
 <p>4D プラグインや 4D コンポーネントを利用して、4D 開発環境に新しくコマンドを追加することもできます。</p>
 <p>4D のユーザーコミュニティーや、サードパーティーデベロッパーによるプラグインが多数存在します。 たとえば, <a href="https://github.com/miyako/4d-plugin-pdf-pages">4d-plugin-pdf-pages</a> プラグインを macOS で使用した場合は次のコードが書けます:</p>
-<pre><code class="hljs css language-code4d">PDF REMOVE PAGE(path;page)
+<pre><code class="hljs css language-code4d">PDF REMOVE <span class="hljs-constructor">PAGE(<span class="hljs-params">path</span>;<span class="hljs-params">page</span>)</span>
 </code></pre>
 <p>4D SVG はアプリケーションの機能を拡張するユーティリティコンポーネントの一例です:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">// 図の描画
-</span>svgRef:=<span class="hljs-plugin">SVG_New</span>
-objectRef:=<span class="hljs-plugin">SVG_New_arc</span>(svgRef;100;100;90;90;180)
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">// 図の描画</span>
+svgRef:=<span class="hljs-function">SVG_New</span>
+objectRef:=<span class="hljs-function">SVG_New_arc</span>(svgRef;<span class="hljs-number">100</span>;<span class="hljs-number">100</span>;<span class="hljs-number">90</span>;<span class="hljs-number">90</span>;<span class="hljs-number">180</span>)
 </code></pre>
 <p>4D SVG は 4D に含まれています。</p>
 <h2><a class="anchor" aria-hidden="true" id="定数"></a><a href="#定数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>定数</h2>
 <p>4D では多くの定義済定数が用意されており、それらの値は名前によってアクセスすることができます。 たとえば、<code>Read Mode</code> は定数で、その値は 2 です。 メソッドエディターにおいて、定義済定数はデフォルトで下線付きで表示されます。 定義済みの定数によって、より可読性の高いコードを書くことができます。</p>
-<pre><code class="hljs css language-code4d">vRef:=<span class="hljs-command">Open document</span>("<span class="hljs-string">PassFile</span>";"<span class="hljs-string">TEXT</span>";<span class="hljs-constant">Read Mode</span>) <span class="hljs-comment">// ドキュメントを読み取り専用モードで開きます
-</span></code></pre>
+<pre><code class="hljs css language-code4d">vRef:=<span class="hljs-keyword">Open</span> document(<span class="hljs-string">"PassFile"</span>;<span class="hljs-string">"TEXT"</span>;<span class="hljs-keyword">Read</span> <span class="hljs-keyword">Mode</span>) // ドキュメントを読み取り専用モードで開きます
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="メソッド"></a><a href="#メソッド" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>メソッド</h2>
 <p>4D が提供するたくさんのビルトインコマンドを使って、独自の <strong>プロジェクトメソッド</strong> を組み立てることができます。 プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。</p>
 <p>メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。</p>
 <p>たとえば、次のステートメントは確認ダイアログボックスを表示します:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">CONFIRM</span>("<span class="hljs-string">このアカウントを本当に閉じますか？</span>";"<span class="hljs-string">はい</span>";"<span class="hljs-string">いいえ</span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">CONFIRM</span><span class="hljs-params">(<span class="hljs-string">"このアカウントを本当に閉じますか？"</span>;<span class="hljs-string">"はい"</span>;<span class="hljs-string">"いいえ"</span>)</span></span>
 </code></pre>
 <p>メソッドは、テストとループの制御フローの実行を含みます。 <code>If...Else...End if</code> および <code>Case of...Else...End case</code> の分岐構造が使用できるほか、ループ構造としては <code>While...End while</code>、<code>Repeat...Until</code>、<code>For...End for</code>、そして <code>For each...End for each</code> が使用可能です:</p>
 <p>テキスト変数 vtSomeText の文字を一つ一つループ処理します:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlChar</span>;1;<span class="hljs-command">Length</span>(vtSomeText))
-    <span class="hljs-comment">// 文字がタブであれば
-</span>    <span class="hljs-keyword">If</span>(<span class="hljs-command">Character</span> <span class="hljs-command">code</span>(vtSomeText[[<span class="hljs-locale">$vlChar</span>]])=<span class="hljs-constant">Tab</span>)
-        <span class="hljs-comment">// なんらかの処理をします
-</span>    <span class="hljs-keyword">End if</span>
-<span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Length</span>(vtSomeText))
+    <span class="hljs-comment">// 文字がタブであれば</span><span class="hljs-keyword">
+    If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
+        <span class="hljs-comment">// なんらかの処理をします</span><span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+End for</span>
 </code></pre>
 <p>プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号が付けられたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$myText</span>:="<span class="hljs-string">hello</span>"
-<span class="hljs-locale">$myText</span>:=Do_Something(<span class="hljs-locale">$myText</span>) <span class="hljs-comment">// Do_Something メソッドを呼び出します
-</span><span class="hljs-command">ALERT</span>(<span class="hljs-locale">$myText</span>) <span class="hljs-comment">//"HELLO"
-</span>
-  <span class="hljs-comment">// Do_Something メソッドのコードです
-</span><span class="hljs-param">$0</span>:=<span class="hljs-command">Uppercase</span>(<span class="hljs-param">$1</span>)
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$myText</span>:=<span class="hljs-string">"hello"</span>
+<span class="hljs-variable">$myText</span>:=<span class="hljs-function">Do_Something</span>(<span class="hljs-variable">$myText</span>) <span class="hljs-comment">// Do_Something メソッドを呼び出します</span>
+<span class="hljs-function">ALERT</span>(<span class="hljs-variable">$myText</span>) <span class="hljs-comment">//"HELLO"</span>
+
+  <span class="hljs-comment">// Do_Something メソッドのコードです</span>
+<span class="hljs-variable">$0</span>:=<span class="hljs-function">Uppercase</span>(<span class="hljs-variable">$1</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="データタイプ"></a><a href="#データタイプ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>データタイプ</h2>
 <p>4D ランゲージで扱うデータにはいくつかの種別があり、これらのデータ種別を &quot;データタイプ&quot; と呼びます。 基本的なデータタイプ (文字、数値、日付、時間、ブール、ピクチャー、ポインター、配列) と混合型のデータタイプ (BLOB、オブジェクト、コレクション) があります。</p>
 <p>データタイプのうち、文字タイプと数値タイプは、複数の類似するフィールドタイプに対応する点に注意してください。 これらのフィールドにデータが格納されるとき、4D ランゲージはフィールドタイプに合致するデータタイプへとデータを自動的に変換します。 反対に、たとえば整数フィールドのデータを呼び出すと、そのデータは自動的に数値タイプとして扱われます。 つまり、4D ランゲージを使用する際に、類似するフィールドタイプを厳密に区別する必要はありません。</p>
 <p>しかし、プログラミングにおいて異なるデータタイプを混同しないようにすることは重要です。 &quot;ABC&quot; を日付フィールドに格納しても意味がないように、日付型の変数に &quot;ABC&quot; を格納することも意味がありません。 4D は、コードに書かれたことをできるだけ有効にしようとします。 たとえば、日付に数値を加算した場合は、日付に日数を加算したいものと認識します。しかし、日付に文字列を加算した場合には、4D はその操作が意味を持たないことを警告します。</p>
 <p>あるタイプとして格納したデータを、別のタイプとして使用する場合があります。 4D ランゲージには、データタイプを変換するためのコマンドが用意されています。 たとえば、数値で始まり、&quot;abc&quot; 等の文字で終了する部品番号を作成する場合、 以下のように記述することができます:</p>
-<pre><code class="hljs css language-code4d">[Products]Part_Number:=<span class="hljs-command">String</span>(Number)+"<span class="hljs-string">abc</span>"
+<pre><code class="hljs css language-code4d">[Products]Part_Number:=<span class="hljs-built_in">String</span>(<span class="hljs-built_in">Number</span>)+<span class="hljs-string">"abc"</span>
 </code></pre>
 <p>数値変数 <em>Number</em> の値が17であれば、<em>[Products]Part_Number</em> に &quot;17abc&quot; という文字列が代入されます。</p>
 <p>データタイプについては <a href="/docs/ja/Concepts/data-types.html">データタイプ</a> の節で詳しく説明しています。</p>
 <h2><a class="anchor" aria-hidden="true" id="オブジェクトとコレクション"></a><a href="#オブジェクトとコレクション" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>オブジェクトとコレクション</h2>
 <p>4D ランゲージのオブジェクトとコレクションは、オブジェクト記法を使用して値を代入・取得することができます。 たとえば:</p>
-<pre><code class="hljs css language-code4d">employee<span class="hljs-property">.name</span>:="<span class="hljs-string">Smith</span>"
+<pre><code class="hljs css language-code4d">employee.<span class="hljs-built_in">name</span>:=<span class="hljs-string">"Smith"</span>
 </code></pre>
 <p>大カッコ内と文字列の組み合わせを用いることもできます:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$vName</span>:=employee["<span class="hljs-string">name</span>"]
+<pre><code class="hljs css language-code4d"><span class="hljs-symbol">$v</span>Name:=employee[<span class="hljs-string">"name"</span>]
 </code></pre>
 <p>オブジェクトプロパティ値には、オブジェクトあるいはコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した記号を受け入れることができます:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$vAge</span>:=employee<span class="hljs-property">.children</span>[2]<span class="hljs-property">.age</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].<span class="hljs-function">age</span>
 </code></pre>
 <p>オブジェクトのプロパティ値が、メソッド (フォーミュラ) をカプセル化したオブジェクトである場合には、プロパティ名の後に括弧 ( ) をつけることで実行できます:</p>
 <pre><code class="hljs">$f:=New object
@@ -163,10 +163,10 @@ $f.message:=New formula(ALERT(&quot;Hello world!&quot;))
 $f.message() // &quot;Hello world!&quot; を表示します
 </code></pre>
 <p>コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">C_COLLECTION</span>(myColl)
-myColl:=<span class="hljs-command">New collection</span>("<span class="hljs-string">A</span>";"<span class="hljs-string">B</span>";1;2;<span class="hljs-command">Current time</span>)
-myColl[3]  <span class="hljs-comment">// コレクションの4番目の要素にアクセスします (0起点)
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-function">C_COLLECTION</span>(myColl)
+myColl:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"A"</span>;<span class="hljs-string">"B"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;Current time)
+myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">// コレクションの4番目の要素にアクセスします (0起点)</span>
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="演算子"></a><a href="#演算子" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>演算子</h2>
 <p>プログラミング言語を使用する際に、データのみを必要とする場合は非常に稀です。 データを加工、または何らかの目的のために使用することがほとんどです。 そういった計算は演算子を使っておこないます。 一般的に演算子とは、2つのデータをもとに処理をおこない、1つの新しいデータを生成します。 日常的に使用されている演算子も多くあります。 例えば、1 + 2 という式は加算演算子（プラス記号）を使用し、2つの数値を足し合わせて、3という結果を返します。 以下に、よく知られている 4つの演算子を示します。</p>
 <table>
@@ -237,20 +237,20 @@ myColl[3]  <span class="hljs-comment">// コレクションの4番目の要素�
 </table>
 <h3><a class="anchor" aria-hidden="true" id="代入可-vs-代入不可の式"></a><a href="#代入可-vs-代入不可の式" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>代入可 vs 代入不可の式</h3>
 <p>式は、数値の4や&quot;Hello&quot; の文字列のようなリテラル定数であったり、<code>$myButton</code> のような変数であったりします。 式には演算子も含められます。 たとえば、4 + 2 という式は加算演算子を使って二つの数値を加算し、結果の 6 を返します。 リテラル定数や演算子を使った式は <strong>代入不可の式</strong>で、式に値を代入することはできません。 <strong>代入可能な式</strong> も存在します。 代入演算子の左側に使えるものが、代入可能な式です。 たとえば:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">// 変数 $myVar は代入可能です:  
-</span><span class="hljs-locale">$myVar</span>:="<span class="hljs-string">Hello</span>" <span class="hljs-comment">// $myVar に "Hello" を代入します
-</span><span class="hljs-comment">//Form.pageNumber は代入可能です:  
-</span><span class="hljs-command">Form</span><span class="hljs-property">.pageNumber</span>:=10 <span class="hljs-comment">// Form.pageNumber に 10 を代入します
-</span><span class="hljs-comment">//Form.pageTotal-Form.pageNumber は代入不可です:
-</span><span class="hljs-command">Form</span><span class="hljs-property">.pageTotal-</span> <span class="hljs-command">Form</span><span class="hljs-property">.pageNumber</span>:=10 <span class="hljs-comment">// 代入不可のため、エラー
-</span></code></pre>
+<pre><code class="hljs css language-code4d"><span class="hljs-regexp">//</span> 変数 <span class="hljs-variable">$myVar</span> は代入可能です:  
+<span class="hljs-variable">$myVar</span>:=<span class="hljs-string">"Hello"</span> <span class="hljs-regexp">//</span> <span class="hljs-variable">$myVar</span> に <span class="hljs-string">"Hello"</span> を代入します
+<span class="hljs-regexp">//</span>Form.pageNumber は代入可能です:  
+Form.pageNumber:=<span class="hljs-number">10</span> <span class="hljs-regexp">//</span> Form.pageNumber に <span class="hljs-number">10</span> を代入します
+<span class="hljs-regexp">//</span>Form.pageTotal-Form.pageNumber は代入不可です:
+Form.pageTotal- Form.pageNumber:=<span class="hljs-number">10</span> <span class="hljs-regexp">//</span> 代入不可のため、エラー
+</code></pre>
 <p>このように、リテラル定数ではなくても、演算子を使っている式は代入不可です。 たとえば、<code>[Person]FirstName+&quot; &quot;+[Person]LastName</code> は代入不可です。</p>
 <h2><a class="anchor" aria-hidden="true" id="ポインター"></a><a href="#ポインター" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ポインター</h2>
 <p>ポインターは、プログラミングにおいてデータを参照するための高度な方法です。 4D ではテーブル、フィールド、変数、配列、配列要素を参照するためにポインターを使用することができます。</p>
 <p>対象へのポインターは、その対象の前にポインター記号 (-&gt;) を付けることで取得することができます。反対にポインターから対象を取得するには、ポインター名の後にポインター記号をつけます:</p>
-<pre><code class="hljs css language-code4d">MyVar:="<span class="hljs-string">Hello</span>"
-MyPointer:=-&gt;MyVar
-<span class="hljs-command">ALERT</span>(MyPointer-&gt;)
+<pre><code class="hljs css language-code4d">MyVar:=<span class="hljs-string">"Hello"</span>
+M<span class="hljs-function"><span class="hljs-title">yPointer</span>:=-&gt;</span>MyVar
+ALERT(M<span class="hljs-function"><span class="hljs-title">yPointer</span>-&gt;</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="コメント"></a><a href="#コメント" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>コメント</h2>
 <p>コメントとは、コード内の実行されないテキストのことです。 これらのテキストは、コード実行時にインタープリターによって無視されます。</p>
@@ -262,34 +262,34 @@ MyPointer:=-&gt;MyVar
 <p>これらの書き方は同時に使用できます。</p>
 <h4><a class="anchor" aria-hidden="true" id="シングルラインコメント-"></a><a href="#シングルラインコメント-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>シングルラインコメント (//)</h4>
 <p>コードの後や行の最初に <code>//</code> を使うと、その後のテキストはすべてコメントとなります。 例:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">// これはコメントです
-</span><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vCounter</span>;1;100) <span class="hljs-comment">// ループを開始します
-</span>  <span class="hljs-comment">// コメント
-</span>  <span class="hljs-comment">// コメント
-</span>  <span class="hljs-comment">// コメント
-</span> <span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-comment">// これはコメントです</span><span class="hljs-keyword">
+For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>) <span class="hljs-comment">// ループを開始します</span>
+  <span class="hljs-comment">// コメント</span>
+  <span class="hljs-comment">// コメント</span>
+  <span class="hljs-comment">// コメント</span><span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="インライン、およびマルチラインコメント--"></a><a href="#インライン、およびマルチラインコメント--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>インライン、およびマルチラインコメント (/* */)</h4>
 <p>コメントを <code>/*</code> と <code>*/</code> で囲むと、そのあいだのテキストはコメントとなります。 この方法でインラインおよびマルチラインコメントが書けます:</p>
 <ul>
 <li><strong>インラインコメント</strong> の 例:</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span> /* インラインコメント */ (<span class="hljs-locale">$vCounter</span>;1;100)
-    ...
-<span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span> <span class="hljs-comment">/* インラインコメント */</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+    ...<span class="hljs-keyword">
+End for</span>
 </code></pre>
 <ul>
 <li><strong>マルチラインコメント</strong> は複数行にわたるコメントのことです。 この形式のコメントは入れ子にすることができ、4D コードエディターではこれを展開したり折り畳んだりすることができます。 例:</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span> (<span class="hljs-locale">$vCounter</span>;1;100)
-/*
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<span class="hljs-comment">/*
 コメント  
     /* 
     詳細なコメント
-    */
+    */</span>
 */
-...
-<span class="hljs-keyword">End for</span>
+...<span class="hljs-keyword">
+End for</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/Concepts/about.html"><span class="arrow-prev">← </span><span>4D ランゲージについて</span></a><a class="docs-next button" href="/docs/ja/Concepts/data-types.html"><span>データタイプの概要</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#値の代入">値の代入</a></li><li><a href="#変数">変数</a></li><li><a href="#コマンド">コマンド</a></li><li><a href="#定数">定数</a></li><li><a href="#メソッド">メソッド</a></li><li><a href="#データタイプ">データタイプ</a></li><li><a href="#オブジェクトとコレクション">オブジェクトとコレクション</a></li><li><a href="#演算子">演算子</a></li><li><a href="#式">式</a><ul class="toc-headings"><li><a href="#式のタイプ">式のタイプ</a></li><li><a href="#代入可-vs-代入不可の式">代入可 vs 代入不可の式</a></li></ul></li><li><a href="#ポインター">ポインター</a></li><li><a href="#コメント">コメント</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

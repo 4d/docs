@@ -73,25 +73,25 @@
 <h2><a class="anchor" aria-hidden="true" id="arrays-erstellen"></a><a href="#arrays-erstellen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays erstellen</h2>
 <p>Sie erstellen ein Array mit einem Befehl unter dem Thema &quot;Array&quot;, der ein Array deklariert. Jeder dieser Befehle kann ein- oder zweidimensionale Arrays erstellen oder in der Größe anpassen. Weitere Informationen zu zweidimensionalen Arrays finden Sie im Abschnitt <a href="#two-dimensional-arrays">zweidimensionale Arrays</a>.</p>
 <p>Folgende Code-Zeile erstellt (deklariert) ein Array vom Typ Ganzzahl mit 10 Elementen:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;10)
+<pre><code class="hljs css language-code4d"><span class="hljs-function"> ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">10</span>)
 </code></pre>
 <p>Dann passt folgende Code-Zeile dieses Array auf 20 Elemente an:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;20)
+<pre><code class="hljs css language-code4d"><span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">20</span>)
 </code></pre>
 <p>und folgende Code-Zeile passt dieses Array auf keine Elemente an:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY INTEGER</span>(aiAnArray;0)
+<pre><code class="hljs css language-code4d"><span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="werte-in-arrays-zuweisen"></a><a href="#werte-in-arrays-zuweisen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Werte in Arrays zuweisen</h2>
 <p>Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Die Nummer innerhalb der Klammern bezieht sich auf ein bestimmtes Element; sie heißt Elementnummer. Folgender Code fügt fünf Namen in das Array mit Namen atNames ein und zeigt sie dann in Fenstern mit Meldungen an:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
- atNames{1}:="<span class="hljs-string">Richard</span>"
- atNames{2}:="<span class="hljs-string">Sarah</span>"
- atNames{3}:="<span class="hljs-string">Sam</span>"
- atNames{4}:="<span class="hljs-string">Jane</span>"
- atNames{5}:="<span class="hljs-string">John</span>"
- <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;5)
-    <span class="hljs-command">ALERT</span>("<span class="hljs-string">The element #</span>"+<span class="hljs-command">String</span>(<span class="hljs-locale">$vlElem</span>)+"<span class="hljs-string"> is equal to: </span>"+atNames{<span class="hljs-locale">$vlElem</span>})
- <span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"> ARRAY TEXT</span>(atNames;<span class="hljs-number">5</span>)
+ atNames{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Richard"</span>
+ atNames{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Sarah"</span>
+ atNames{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Sam"</span>
+ atNames{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Jane"</span>
+ atNames{<span class="hljs-number">5</span>}:=<span class="hljs-string">"John"</span><span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-number">5</span>)
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"The element #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" is equal to: "</span>+atNames{<span class="hljs-variable">$vlElem</span>})<span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <p>Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{$vlElem}. Über eine Schleife (<code>For...End for</code>, <code>Repeat...Until</code> oder <code>While...End while</code>) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.</p>
 <p><strong>Wichtig:</strong> Achten Sie darauf, dass Sie den Zuweisungsoperator (:=) nicht mit dem Vergleichsoperator ist gleich (=) verwechseln. Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.</p>
@@ -100,39 +100,39 @@
 <h2><a class="anchor" aria-hidden="true" id="element-null-eines-array-verwenden"></a><a href="#element-null-eines-array-verwenden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Element Null eines Array verwenden</h2>
 <p>Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.</p>
 <p>Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ein anderes Element als das zuvor gewählte anklicken. Dazu müssen Sie jedes ausgewählte Element verfolgen. Dafür könnten Sie eine Prozessvariable mit der Elementnummer des ausgewählten Elements einsetzen oder das Element Null des Array:</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// atNames scrollable area object method
-</span> <span class="hljs-keyword">Case of</span>
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
-  <span class="hljs-comment">// Initialize the array (as shown further above)
-</span>       <span class="hljs-command">ARRAY TEXT</span>(atNames;5)
-  <span class="hljs-comment">// ...
-</span>  <span class="hljs-comment">// Initialize the element zero with the number
-</span>  <span class="hljs-comment">// of the current selected element in its string form
-</span>  <span class="hljs-comment">// Here you start with no selected element
-</span>       atNames{0}:="<span class="hljs-string">0</span>"
+<pre><code class="hljs css language-code4d">  // atNames scrollable area object method
+ Case of
+    :(Form event=On <span class="hljs-keyword">Load</span>)
+  // Initialize the <span class="hljs-built_in">array</span> (<span class="hljs-keyword">as</span> shown further above)
+       <span class="hljs-built_in">ARRAY</span> <span class="hljs-built_in">TEXT</span>(atNames;5)
+  // ...
+  // Initialize the element zero <span class="hljs-keyword">with</span> the <span class="hljs-built_in">number</span>
+  // <span class="hljs-keyword">of</span> the <span class="hljs-keyword">current</span> selected <span class="hljs-keyword">element</span> <span class="hljs-keyword">in</span> its <span class="hljs-keyword">string</span> <span class="hljs-keyword">form</span>
+  // Here you <span class="hljs-keyword">start</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">no</span> selected <span class="hljs-keyword">element</span>
+       atNames{<span class="hljs-number">0</span>}:=<span class="hljs-string">"0"</span>
 
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Unload</span>)
-  <span class="hljs-comment">// We no longer need the array
-</span>       <span class="hljs-command">CLEAR VARIABLE</span>(atNames)
+    :(<span class="hljs-keyword">Form</span> <span class="hljs-keyword">event</span>=<span class="hljs-keyword">On</span> Unload)
+  // We <span class="hljs-keyword">no</span> longer need the <span class="hljs-built_in">array</span>
+       <span class="hljs-keyword">CLEAR</span> <span class="hljs-keyword">VARIABLE</span>(atNames)
 
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Clicked</span>)
-       <span class="hljs-keyword">If</span>(atNames#0)
-          <span class="hljs-keyword">If</span>(atNames#<span class="hljs-command">Num</span>(atNames{0}))
-             vtInfo:="<span class="hljs-string">You clicked on: </span>"+atNames{atNames}+"<span class="hljs-string"> and it was not selected before.</span>"
-             atNames{0}:=<span class="hljs-command">String</span>(atNames)
-          <span class="hljs-keyword">End if</span>
-       <span class="hljs-keyword">End if</span>
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Double Clicked</span>)
-       <span class="hljs-keyword">If</span>(atNames#0)
-          <span class="hljs-command">ALERT</span>("<span class="hljs-string">You double clicked on: </span>"+atNames{atNames}
-       <span class="hljs-keyword">End if</span>
- <span class="hljs-keyword">End case</span>
+    :(<span class="hljs-keyword">Form</span> <span class="hljs-keyword">event</span>=<span class="hljs-keyword">On</span> Clicked)
+       <span class="hljs-keyword">If</span>(atNames<span class="hljs-comment">#0)</span>
+          <span class="hljs-keyword">If</span>(atNames<span class="hljs-comment">#Num(atNames{0}))</span>
+             vtInfo:=<span class="hljs-string">"You clicked on: "</span>+atNames{atNames}+<span class="hljs-string">" and it was not selected before."</span>
+             atNames{<span class="hljs-number">0</span>}:=<span class="hljs-keyword">String</span>(atNames)
+          <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+    :(<span class="hljs-keyword">Form</span> <span class="hljs-keyword">event</span>=<span class="hljs-keyword">On</span> <span class="hljs-keyword">Double</span> Clicked)
+       <span class="hljs-keyword">If</span>(atNames<span class="hljs-comment">#0)</span>
+          ALERT(<span class="hljs-string">"You double clicked on: "</span>+atNames{atNames}
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">case</span>
 </code></pre>
 <p>(*) Es gibt eine Ausnahme: In einem Array vom Typ Listbox wird das Element Null intern zum Speichern des vorigen Wertes eines Elements in Bearbeitung verwendet. Sie können es also in diesem spezifischen Kontext nicht verwenden.</p>
 <h2><a class="anchor" aria-hidden="true" id="zweidimensionale-arrays"></a><a href="#zweidimensionale-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zweidimensionale Arrays</h2>
 <p>Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">ARRAY TEXT</span>(atTopics;100;50) <span class="hljs-comment">// Creates a text array composed of 100 rows of 50 columns
-</span></code></pre>
+<pre><code class="hljs css language-code4d"> ARRAY TEXT(atTopics;100;50) // Creates a text<span class="hljs-built_in"> array </span>composed of 100 rows of 50 columns
+</code></pre>
 <p>Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.</p>
 <p>Im oben angezeigten Beispiel gilt:</p>
 <ul>
@@ -143,41 +143,41 @@
 <li>(atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe</li>
 </ul>
 <p>Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlLastTable</span>;<span class="hljs-locale">$vlLastField</span>)
- <span class="hljs-command">C_LONGINT</span>(<span class="hljs-locale">$vlFieldNumber</span>)
-  <span class="hljs-comment">// Create as many rows (empty and without columns) as there are tables
-</span> <span class="hljs-locale">$vlLastTable</span>:=<span class="hljs-command">Get last table number</span>
- <span class="hljs-command">ARRAY POINTER</span>(&lt;&gt;apFields;<span class="hljs-locale">$vlLastTable</span>;0) <span class="hljs-comment">//2D array with X rows and zero columns
-</span>  <span class="hljs-comment">// For each table
-</span> <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlTable</span>;1;<span class="hljs-locale">$vlLastTable</span>)
-    <span class="hljs-keyword">If</span>(<span class="hljs-command">Is table number valid</span>(<span class="hljs-locale">$vlTable</span>))
-       <span class="hljs-locale">$vlLastField</span>:=<span class="hljs-command">Get last field number</span>(<span class="hljs-locale">$vlTable</span>)
-  <span class="hljs-comment">// Give value of elements
-</span>       <span class="hljs-locale">$vlColumnNumber</span>:=0
-       <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlField</span>;1;<span class="hljs-locale">$vlLastField</span>)
-          <span class="hljs-keyword">If</span>(<span class="hljs-command">Is field number valid</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>))
-             <span class="hljs-locale">$vlColumnNumber</span>:=<span class="hljs-locale">$vlColumnNumber</span>+1
-  <span class="hljs-comment">//Insert a column in a row of the table underway
-</span>             <span class="hljs-command">INSERT IN ARRAY</span>(&lt;&gt;apFields{$vlTable};<span class="hljs-locale">$vlColumnNumber</span>;1)
-  <span class="hljs-comment">//Assign the "cell" with the pointer
-</span>             &lt;&gt;apFields{$vlTable}{$vlColumnNumber}:=<span class="hljs-command">Field</span>(<span class="hljs-locale">$vlTable</span>;<span class="hljs-locale">$vlField</span>)
-          <span class="hljs-keyword">End if</span>
-       <span class="hljs-keyword">End for</span>
-    <span class="hljs-keyword">End if</span>
- <span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
+  <span class="hljs-comment">// Create as many rows (empty and without columns) as there are tables</span>
+ <span class="hljs-variable">$vlLastTable</span>:=<span class="hljs-function">Get last table number</span>
+<span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">//2D array with X rows and zero columns</span>
+  <span class="hljs-comment">// For each table</span><span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$vlLastTable</span>)<span class="hljs-keyword">
+    If</span>(<span class="hljs-function">Is table number valid</span>(<span class="hljs-variable">$vlTable</span>))
+       <span class="hljs-variable">$vlLastField</span>:=<span class="hljs-function">Get last field number</span>(<span class="hljs-variable">$vlTable</span>)
+  <span class="hljs-comment">// Give value of elements</span>
+       <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
+       For</span>(<span class="hljs-variable">$vlField</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$vlLastField</span>)<span class="hljs-keyword">
+          If</span>(<span class="hljs-function">Is field number valid</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
+             <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+<span class="hljs-number">1</span>
+  <span class="hljs-comment">//Insert a column in a row of the table underway</span>
+<span class="hljs-function">             INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>};<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
+  <span class="hljs-comment">//Assign the "cell" with the pointer</span>
+             <span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>}{<span class="hljs-variable">$vlColumnNumber</span>}:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
+          End if</span><span class="hljs-keyword">
+       End for</span><span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <p>Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie nun die Zeiger auf die Datenfelder für eine bestimmte Tabelle:</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Get the pointers to the fields for the table currently displayed at the screen:
-</span> <span class="hljs-command">COPY ARRAY</span>(◊apFields{Table(<span class="hljs-command">Current form table</span>)};<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>)
-  <span class="hljs-comment">// Initialize Boolean and Date fields
-</span> <span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlElem</span>;1;<span class="hljs-command">Size of array</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>))
-    <span class="hljs-keyword">Case of</span>
-       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is date</span>)
-          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">Current date</span>
-       :(<span class="hljs-command">Type</span>(<span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;)=<span class="hljs-constant">Is Boolean</span>)
-          <span class="hljs-locale">$apTheFieldsIamWorkingOn</span>{<span class="hljs-locale">$vlElem</span>}-&gt;:=<span class="hljs-command">True</span>
-    <span class="hljs-keyword">End case</span>
- <span class="hljs-keyword">End for</span>
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Get the pointers to the fields for the table currently displayed at the screen:</span>
+<span class="hljs-function"> COPY ARRAY</span>(◊apFields{<span class="hljs-function">Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
+  <span class="hljs-comment">// Initialize Boolean and Date fields</span><span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>))<span class="hljs-keyword">
+    Case of</span>
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is date)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-function">Current date</span>
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is Boolean)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-literals">True</span><span class="hljs-keyword">
+    End case</span><span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <p><strong>Hinweis:</strong> Wie Sie in diesem Beispiel sehen, können Reihen in zweidimensionalen Arrays dieselbe oder verschiedene Größen haben.</p>
 <h2><a class="anchor" aria-hidden="true" id="arrays-und-speicher"></a><a href="#arrays-und-speicher" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays und Speicher</h2>

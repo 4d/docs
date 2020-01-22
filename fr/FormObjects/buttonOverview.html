@@ -87,17 +87,17 @@
 <p><img src="/docs/assets/en/FormObjects/button_regular.png" alt=""></p>
 <p>Par défaut, le style Classique a un fond gris clair avec un libellé au centre. Lorsque le curseur survole le style de bouton Classique, la bordure et la l'arrière-plan changent de couleur. En plus de lancer l'exécution de code, le style de bouton Classique imite un bouton mécanique en changeant rapidement la couleur d'arrière-plan lorsque vous cliquez dessus.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json-"></a><a href="#exemple-json-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-        "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   <span class="hljs-comment">//définit le type d'objet
-</span>        "<span class="hljs-string">style</span>":"<span class="hljs-string">regular</span>",  <span class="hljs-comment">//définit le style du bouton
-</span>        "<span class="hljs-string">defaultButton</span>":"<span class="hljs-string">true</span>"  <span class="hljs-comment">//définit le bouton comme choix par défaut
-</span>        "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   <span class="hljs-comment">//texte à faire apparaître dans le bouton
-</span>        "<span class="hljs-string">action</span>": "<span class="hljs-string">Annuler</span>", <span class="hljs-comment">//Action à exécuter
-</span>        "<span class="hljs-string">left</span>": 60,  <span class="hljs-comment">//Position gauche dans le formulaire  
-</span>        "<span class="hljs-string">top</span>": 160, <span class="hljs-comment">//Position supérieure dans le formulaire  
-</span>        "<span class="hljs-string">width</span>": 100,  <span class="hljs-comment">//largeur du bouton
-</span>        "<span class="hljs-string">height</span>": 20 <span class="hljs-comment">//hauteur du bouton
-</span>        }
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   <span class="hljs-comment">//définit le type d'objet</span>
+        <span class="hljs-string">"style"</span>:<span class="hljs-string">"regular"</span>,  <span class="hljs-comment">//définit le style du bouton</span>
+        <span class="hljs-string">"defaultButton"</span>:<span class="hljs-string">"true"</span>  <span class="hljs-comment">//définit le bouton comme choix par défaut</span>
+        <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   <span class="hljs-comment">//texte à faire apparaître dans le bouton</span>
+        <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>, <span class="hljs-comment">//Action à exécuter</span>
+        <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,  <span class="hljs-comment">//Position gauche dans le formulaire  </span>
+        <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>, <span class="hljs-comment">//Position supérieure dans le formulaire  </span>
+        <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,  <span class="hljs-comment">//largeur du bouton</span>
+        <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span> <span class="hljs-comment">//hauteur du bouton</span>
+        }
 </code></pre>
 <p>Seuls les styles Classique et A plat proposent la propriété <a href="/docs/fr/FormObjects/propertiesAppearance.html#default-button">Bouton par défaut</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="a-plat"></a><a href="#a-plat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A plat</h3>
@@ -106,16 +106,16 @@
 <p>Par défaut, le style A plat a un arrière-plan avec un libellé au centre, des bords arrondis et un design minimaliste. Le style graphique du bouton A plat est particulièrement utile pour les formulaires à imprimer.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--1"></a><a href="#exemple-json--1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
 <pre><code class="hljs css language-code4d">
-    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">flat</span>", 
-                "<span class="hljs-string">defaultButton</span>":"<span class="hljs-string">true</span>"  
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Annuler</span>", 
-                "<span class="hljs-string">left</span>": 60,         
-                "<span class="hljs-string">top</span>": 160,         
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"flat"</span>, 
+                <span class="hljs-string">"defaultButton"</span>:<span class="hljs-string">"true"</span>  
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,         
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <p>Seuls les styles Classique et A plat proposent la propriété <a href="/docs/fr/FormObjects/propertiesAppearance.html#default-button">Bouton par défaut</a>.</p>
@@ -130,16 +130,16 @@
 <li><em>Sous macOS</em> - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--2"></a><a href="#exemple-json--2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">toolbar</span>",  
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",       
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">separated</span>"    
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Annuler</span>",     
-                "<span class="hljs-string">left</span>": 60,             
-                "<span class="hljs-string">top</span>": 160,             
-                "<span class="hljs-string">width</span>": 100,           
-                "<span class="hljs-string">height</span>": 20        
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"toolbar"</span>,  
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,       
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"separated"</span>    
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>,     
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,             
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,             
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,           
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>        
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bevel"></a><a href="#bevel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bevel</h3>
@@ -153,16 +153,16 @@
 <li><em>Sous macOS</em> - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--3"></a><a href="#exemple-json--3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">bevel</span>",    
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",       
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">linked</span>"   
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Annuler</span>", 
-                "<span class="hljs-string">left</span>": 60,     
-                "<span class="hljs-string">top</span>": 160,     
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"bevel"</span>,    
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,       
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"linked"</span>   
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bevel-arrondi"></a><a href="#bevel-arrondi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bevel arrondi</h3>
@@ -176,16 +176,16 @@
 <li><em>macOS</em> - the corners of the button are rounded. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--4"></a><a href="#exemple-json--4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">roundedBevel</span>", 
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">none</span>" /
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Cancel</span>", 
-                "<span class="hljs-string">left</span>": 60,         
-                "<span class="hljs-string">top</span>": 160, 
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"roundedBevel"</span>, 
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"none"</span> /
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>, 
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="os-x-gradient"></a><a href="#os-x-gradient" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OS X Gradient</h3>
@@ -199,16 +199,16 @@
 <li><em>macOS</em> - the button is displayed as a two-tone system button. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--5"></a><a href="#exemple-json--5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">gradientBevel</span>",
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">linked</span>"
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Cancel</span>",     
-                "<span class="hljs-string">left</span>": 60,     
-                "<span class="hljs-string">top</span>": 160, 
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"gradientBevel"</span>,
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"linked"</span>
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,     
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>, 
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="os-x-texture"></a><a href="#os-x-texture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OS X Texture</h3>
@@ -222,16 +222,16 @@
 <li><em>macOS</em> - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--6"></a><a href="#exemple-json--6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">texturedBevel</span>",    
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">separated</span>"    
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Cancel</span>", 
-                "<span class="hljs-string">left</span>": 60,         
-                "<span class="hljs-string">top</span>": 160,     
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"texturedBevel"</span>,    
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"separated"</span>    
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="office-xp"></a><a href="#office-xp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Office XP</h3>
@@ -245,31 +245,31 @@
 <li><em>macOS</em> - its background is always displayed.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--7"></a><a href="#exemple-json--7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",   
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">office</span>",
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",
-                "<span class="hljs-string">popupPlacement</span>":"<span class="hljs-string">none</span>" 
-                "<span class="hljs-string">action</span>": "<span class="hljs-string">Cancel</span>", 
-                "<span class="hljs-string">left</span>": 60,     
-                "<span class="hljs-string">top</span>": 160, 
-                "<span class="hljs-string">width</span>": 100,
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"office"</span>,
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
+                <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"none"</span> 
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>, 
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="help"></a><a href="#help" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Help</h3>
 <p>The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.</p>
 <p><img src="/docs/assets/en/FormObjects/button_help.png" alt=""></p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--8"></a><a href="#exemple-json--8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
-<pre><code class="hljs css language-code4d">    "<span class="hljs-string">myButton</span>": {
-                "<span class="hljs-string">type</span>": "<span class="hljs-string">button</span>",
-                "<span class="hljs-string">style</span>":"<span class="hljs-string">help</span>",     
-                "<span class="hljs-string">text</span>": "<span class="hljs-string">OK</span>",   
-                "<span class="hljs-string">dropping</span>": "<span class="hljs-string">custom</span>", 
-                "<span class="hljs-string">left</span>": 60, 
-                "<span class="hljs-string">top</span>": 160,     
-                "<span class="hljs-string">width</span>": 100,   
-                "<span class="hljs-string">height</span>": 20    
+<pre><code class="hljs css language-code4d">    <span class="hljs-string">"myButton"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"help"</span>,     
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
+                <span class="hljs-string">"dropping"</span>: <span class="hljs-string">"custom"</span>, 
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>, 
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
+                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
                 }
 </code></pre>
 <blockquote>

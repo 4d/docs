@@ -93,38 +93,38 @@
 <h2><a class="anchor" aria-hidden="true" id="tables"></a><a href="#tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tables</h2>
 <p>Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">DEFAULT TABLE</span>([Commandes])
-<span class="hljs-command">FORM SET INPUT</span>([Clients];"<span class="hljs-string">Entrée</span>")
-<span class="hljs-command">ADD RECORD</span>([Lettres])
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">TABLE</span>([Commandes])
+FORM <span class="hljs-keyword">SET</span> <span class="hljs-keyword">INPUT</span>([Clients];"Entrée")
+<span class="hljs-keyword">ADD</span> <span class="hljs-type">RECORD</span>([Lettres])
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="champs"></a><a href="#champs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Champs</h2>
 <p>Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">[Commandes]Total:=<span class="hljs-command">Sum</span>([Ligne]Montant)
- <span class="hljs-command">QUERY</span>([Clients];[Clients]Nom="<span class="hljs-string">Dupont</span>")
- [Lettres]Text:=Capitalize text([Lettres]Texte)
+<pre><code class="hljs css language-code4d">[<span class="hljs-symbol">Commandes</span>]<span class="hljs-symbol">Total</span>:=<span class="hljs-symbol">Sum</span>([<span class="hljs-symbol">Ligne</span>]<span class="hljs-symbol">Montant</span>)
+ <span class="hljs-symbol">QUERY</span>([<span class="hljs-symbol">Clients</span>];[<span class="hljs-symbol">Clients</span>]<span class="hljs-symbol">Nom</span>=<span class="hljs-string">"Dupont"</span>)
+ [<span class="hljs-symbol">Lettres</span>]<span class="hljs-symbol">Text</span>:=<span class="hljs-symbol">Capitalize</span> text([<span class="hljs-symbol">Lettres</span>]<span class="hljs-symbol">Texte</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="variables-interprocess"></a><a href="#variables-interprocess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables interprocess</h2>
 <p>Vous désignez une variable interprocess en faisant précéder son nom des symboles (&lt;&gt;), formés des caractères “inférieur à” suivi de “supérieur à”.</p>
 <p>Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole &lt;&gt; non compris.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">&lt;&gt;vlProcessID:=<span class="hljs-command">Current process</span>
- &lt;&gt;vsKey:=<span class="hljs-command">Char</span>(KeyCode)
-<span class="hljs-keyword">If</span>(&lt;&gt;vtNom#"<span class="hljs-string"></span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">&lt;&gt;vlProcessID</span>:=<span class="hljs-function">Current process</span>
+ <span class="hljs-variable">&lt;&gt;vsKey</span>:=<span class="hljs-function">Char</span>(KeyCode)<span class="hljs-keyword">
+If</span>(<span class="hljs-variable">&lt;&gt;vtNom</span>#<span class="hljs-string">""</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="variables-process"></a><a href="#variables-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables process</h2>
 <p>Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou &lt;&gt;). Ce nom peut contenir jusqu’à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">vrGrandTotal:=<span class="hljs-command">Sum</span>([Comptes]Montant)
- <span class="hljs-keyword">If</span>(bValider=1)
- vsNomCourant:="<span class="hljs-string"></span>"
+<pre><code class="hljs css language-code4d">vrGrandTotal:=<span class="hljs-function">Sum</span>([Comptes]Montant)<span class="hljs-keyword">
+ If</span>(bValider=<span class="hljs-number">1</span>)
+ vsNomCourant:=<span class="hljs-string">""</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="variables-locales"></a><a href="#variables-locales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables locales</h2>
 <p>Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">For</span>(<span class="hljs-locale">$vlRecord</span>;1;100)
-<span class="hljs-keyword">If</span>(<span class="hljs-locale">$vsTempVar</span>="<span class="hljs-string">Non</span>")
-<span class="hljs-locale">$vsMyString</span>:="<span class="hljs-string">Bonjour à tous</span>"
+<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">For</span><span class="hljs-params">(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">If</span><span class="hljs-params">(<span class="hljs-variable">$vsTempVar</span>=<span class="hljs-string">"Non"</span>)</span></span>
+<span class="hljs-variable">$vsMyString</span>:=<span class="hljs-string">"Bonjour à tous"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="tableaux"></a><a href="#tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux</h2>
 <p>Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :</p>
@@ -137,122 +137,122 @@
 <p>Le nom d’un tableau interprocess est précédé du symbole (&lt;&gt;), formé des caractères “inférieur à” suivi de “supérieur à”.</p>
 <p>Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symbole &lt;&gt; non compris.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(&lt;&gt;atSujets;<span class="hljs-command">Records in table</span>([Topics]))
-<span class="hljs-command">SORT ARRAY</span>(&lt;&gt;asMotsClés;&gt;)
-<span class="hljs-command">ARRAY INTEGER</span>(&lt;&gt;aiGrosTableau;10000)
+<pre><code class="hljs css language-code4d">ARRAY <span class="hljs-constructor">TEXT(&lt;&gt;<span class="hljs-params">atSujets</span>;Records <span class="hljs-params">in</span> <span class="hljs-params">table</span>([Topics])</span>)
+SORT <span class="hljs-constructor">ARRAY(&lt;&gt;<span class="hljs-params">asMotsCl</span>é<span class="hljs-params">s</span>;&gt;)</span>
+ARRAY <span class="hljs-constructor">INTEGER(&lt;&gt;<span class="hljs-params">aiGrosTableau</span>;10000)</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="tableaux-process"></a><a href="#tableaux-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux process</h3>
 <p>Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou &lt;&gt;). Ce nom peut contenir jusqu’à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(atSujets;<span class="hljs-command">Records in table</span>([Topics]))
- <span class="hljs-command">SORT ARRAY</span>(asMotsClés;&gt;)
- <span class="hljs-command">ARRAY INTEGER</span>(aiGrosTableau;10000)
+<pre><code class="hljs css language-code4d">ARRAY <span class="hljs-constructor">TEXT(<span class="hljs-params">atSujets</span>;Records <span class="hljs-params">in</span> <span class="hljs-params">table</span>([Topics])</span>)
+ SORT <span class="hljs-constructor">ARRAY(<span class="hljs-params">asMotsCl</span>é<span class="hljs-params">s</span>;&gt;)</span>
+ ARRAY <span class="hljs-constructor">INTEGER(<span class="hljs-params">aiGrosTableau</span>;10000)</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="tableaux-locaux"></a><a href="#tableaux-locaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableaux locaux</h3>
 <p>Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY TEXT</span>(<span class="hljs-locale">$atSujets</span>;<span class="hljs-command">Records in table</span>([Topics]))
-<span class="hljs-command">SORT ARRAY</span>(<span class="hljs-locale">$asMotsClés</span>;&gt;)
-<span class="hljs-command">ARRAY INTEGER</span>(<span class="hljs-locale">$aiGrosTableau</span>;10000)
+<pre><code class="hljs css language-code4d">ARRAY <span class="hljs-constructor">TEXT($<span class="hljs-params">atSujets</span>;Records <span class="hljs-params">in</span> <span class="hljs-params">table</span>([Topics])</span>)
+SORT <span class="hljs-constructor">ARRAY($<span class="hljs-params">asMotsCl</span>é<span class="hljs-params">s</span>;&gt;)</span>
+ARRAY <span class="hljs-constructor">INTEGER($<span class="hljs-params">aiGrosTableau</span>;10000)</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="eléments-de-tableaux"></a><a href="#eléments-de-tableaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eléments de tableaux</h3>
 <p>Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess
-</span><span class="hljs-keyword">If</span>(&lt;&gt;asMotsClés{1}="<span class="hljs-string">Stop</span>")
-    &lt;&gt;atSujets{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-    <span class="hljs-locale">$viValeurSuivante</span>:=&lt;&gt;aiGrosTableau{Taille tableau(&lt;&gt;aiGrosTableau)}
- 
-  <span class="hljs-comment">// Adresser un élément d'un tableau process
-</span>    <span class="hljs-keyword">If</span>(asMotsClés{1}="<span class="hljs-string">Stop</span>")
-       atSujets{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-       <span class="hljs-locale">$viValeurSuivante</span>:=aiGrosTableau{Taille tableau(aiGrosTableau)}
- 
-  <span class="hljs-comment">// Adresser un élément d'un tableau local
-</span>       <span class="hljs-keyword">If</span>(<span class="hljs-locale">$asMotsClés</span>{1}="<span class="hljs-string">Stop</span>")
-          <span class="hljs-locale">$atSujets</span>{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-          <span class="hljs-locale">$viValeurSuivante</span>:=<span class="hljs-locale">$aiGrosTableau</span>{Taille tableau(<span class="hljs-locale">$aiGrosTableau</span>)}
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess</span><span class="hljs-keyword">
+If</span>(<span class="hljs-variable">&lt;&gt;asMotsCl</span>és{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+    <span class="hljs-variable">&lt;&gt;atSujets</span>{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+    <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">&lt;&gt;aiGrosTableau</span>{<span class="hljs-function">Taille tableau</span>(<span class="hljs-variable">&lt;&gt;aiGrosTableau</span>)}
+<span class="hljs-function"> </span>
+  <span class="hljs-comment">// Adresser un élément d'un tableau process</span><span class="hljs-keyword">
+    If</span>(asMotsClés{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+       atSujets{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+       <span class="hljs-variable">$viValeurSuivante</span>:=aiGrosTableau{<span class="hljs-function">Taille tableau</span>(aiGrosTableau)}
+<span class="hljs-function"> </span>
+  <span class="hljs-comment">// Adresser un élément d'un tableau local</span><span class="hljs-keyword">
+       If</span>(<span class="hljs-variable">$asMotsCl</span>és{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+          <span class="hljs-variable">$atSujets</span>{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+          <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">$aiGrosTableau</span>{<span class="hljs-function">Taille tableau</span>(<span class="hljs-variable">$aiGrosTableau</span>)}
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="eléments-de-tableaux-à-deux-dimensions"></a><a href="#eléments-de-tableaux-à-deux-dimensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eléments de tableaux à deux dimensions</h3>
 <p>Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…}). L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions
-</span> <span class="hljs-keyword">If</span>(&lt;&gt;asMotsClés{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
-    &lt;&gt;atSujets{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-    <span class="hljs-locale">$viValeurSuivante</span>:=&lt;&gt;aiGrosTableau{$vlSet}{Taille tableau(&lt;&gt;aiGrosTableau{$vlSet})}
- 
-  <span class="hljs-comment">// Adresser un élément d'un tableau process à deux dimensions
-</span>    <span class="hljs-keyword">If</span>(asMotsClés{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
-       atSujets{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-       <span class="hljs-locale">$viValeurSuivante</span>:=aiGrosTableau{$vlSet}{Taille tableau(aiGrosTableau{$vlSet})}
- 
-  <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions
-</span>       <span class="hljs-keyword">If</span>(<span class="hljs-locale">$asMotsClés</span>{<span class="hljs-locale">$vlLigneSuivante</span>}{1}="<span class="hljs-string">Stop</span>")
-          <span class="hljs-locale">$atSujets</span>{10}{<span class="hljs-locale">$vlElem</span>}:=[Topics]Sujet
-          <span class="hljs-locale">$viValeurSuivante</span>:=<span class="hljs-locale">$aiGrosTableau</span>{<span class="hljs-locale">$vlSet</span>}{Taille tableau(<span class="hljs-locale">$aiGrosTableau</span>{<span class="hljs-locale">$vlSet</span>})}
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions</span><span class="hljs-keyword">
+ If</span>(<span class="hljs-variable">&lt;&gt;asMotsCl</span>és{<span class="hljs-variable">$vlLigneSuivante</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+    <span class="hljs-variable">&lt;&gt;atSujets</span>{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+    <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">&lt;&gt;aiGrosTableau</span>{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Taille tableau</span>(<span class="hljs-variable">&lt;&gt;aiGrosTableau</span>{<span class="hljs-variable">$vlSet</span>})}
+<span class="hljs-function"> </span>
+  <span class="hljs-comment">// Adresser un élément d'un tableau process à deux dimensions</span><span class="hljs-keyword">
+    If</span>(asMotsClés{<span class="hljs-variable">$vlLigneSuivante</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+       atSujets{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+       <span class="hljs-variable">$viValeurSuivante</span>:=aiGrosTableau{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Taille tableau</span>(aiGrosTableau{<span class="hljs-variable">$vlSet</span>})}
+<span class="hljs-function"> </span>
+  <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions</span><span class="hljs-keyword">
+       If</span>(<span class="hljs-variable">$asMotsCl</span>és{<span class="hljs-variable">$vlLigneSuivante</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+          <span class="hljs-variable">$atSujets</span>{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Sujet</span>
+          <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">$aiGrosTableau</span>{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Taille tableau</span>(<span class="hljs-variable">$aiGrosTableau</span>{<span class="hljs-variable">$vlSet</span>})}
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="propriétés-attributs-dobjets"></a><a href="#propriétés-attributs-dobjets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (attributs) d'objets</h2>
 <p>Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez un attribut d'objet (aussi appelé propriété d'objet) en saisissant son nom précédé d'un point (.) à la suite du nom de l'objet (ou de l'attribut) qui le contient. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">monObjet<span class="hljs-property">.monAttribut</span>:="<span class="hljs-string">10</span>"
- <span class="hljs-locale">$valeur</span>:=<span class="hljs-locale">$clientObj</span><span class="hljs-property">.data</span><span class="hljs-property">.address</span><span class="hljs-property">.city</span>
+<pre><code class="hljs css language-code4d">monObjet<span class="hljs-selector-class">.monAttribut</span>:=<span class="hljs-string">"10"</span>
+ <span class="hljs-variable">$valeur</span>:=<span class="hljs-variable">$clientObj</span><span class="hljs-selector-class">.data</span><span class="hljs-selector-class">.address</span><span class="hljs-selector-class">.city</span>
 </code></pre>
 <p><strong>Note :</strong> Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section <a href="/docs/fr/Concepts/object.html#object-property-identifiers">Identificateurs des propriétés d'objets</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="formulaires"></a><a href="#formulaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formulaires</h2>
 <p>Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">FORM SET INPUT</span>([Personnes];"<span class="hljs-string">Entrée</span>")
-<span class="hljs-command">FORM SET OUTPUT</span>([Personnes];"<span class="hljs-string">Sortie</span>")
- <span class="hljs-command">DIALOG</span>([Stock];"<span class="hljs-string">Boîte de note</span>"+<span class="hljs-command">String</span>(<span class="hljs-locale">$vlStage</span>))
+<pre><code class="hljs css language-code4d"><span class="hljs-keyword">FORM</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">INPUT</span>([Personnes];<span class="hljs-string">"Entrée"</span>)
+<span class="hljs-keyword">FORM</span> <span class="hljs-keyword">SET</span> OUTPUT([Personnes];<span class="hljs-string">"Sortie"</span>)
+ DIALOG([Stock];<span class="hljs-string">"Boîte de note"</span>+<span class="hljs-built_in">String</span>(<span class="hljs-variable">$vlStage</span>))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="objets-de-formulaires"></a><a href="#objets-de-formulaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets de formulaires</h2>
 <p>Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, précédée du paramètre *. Un nom d'objet peut contenir jusqu'à 255 octets.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">OBJECT SET FONT</span>(*;"<span class="hljs-string">Binfo</span>";"<span class="hljs-string">Times</span>")
+<pre><code class="hljs css language-code4d"><span class="hljs-variable"><span class="hljs-class">OBJECT</span></span> <span class="hljs-variable">SET</span> <span class="hljs-function"><span class="hljs-title">FONT</span>(*;<span class="hljs-string">"Binfo"</span>;<span class="hljs-string">"Times"</span>)</span>
 </code></pre>
 <p><strong>Note :</strong> Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.</p>
 <h2><a class="anchor" aria-hidden="true" id="méthodes"></a><a href="#méthodes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthodes</h2>
 <p>Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant son nom. Ce nom peut contenir jusqu’à 31 caractères.</p>
 <p><strong>Note :</strong> Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">If</span>(Nouveau client)
-<span class="hljs-plugin">DELETE</span> DUPLICATED VALUES
-<span class="hljs-command">APPLY TO SELECTION</span>([Employés];AUGMENTER SALARIES)
+<pre><code class="hljs css language-code4d">If(Nouveau client)
+<span class="hljs-keyword">DELETE</span> DUPLICATED <span class="hljs-keyword">VALUES</span>
+<span class="hljs-keyword">APPLY</span> <span class="hljs-keyword">TO</span> SELECTION([Employés];AUGMENTER SALARIES)
 </code></pre>
 <p><strong>Conseil :</strong> Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.</p>
 <p><strong>Note :</strong> Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que <code>APPELER SUR EVENEMENT</code>, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Cette commande attend une méthode (fonction) ou une formule
-</span> <span class="hljs-command">QUERY</span> BY FORMULA([aTable];Recherche Spéciale)
-  <span class="hljs-comment">// Cette commande attend une méthode (procédure) ou une formule
-</span> <span class="hljs-command">APPLY TO SELECTION</span>([Employés];AUGMENTER SALARIES)
-  <span class="hljs-comment">// Mais cette commande attend un nom de méthode
-</span><span class="hljs-command">ON EVENT CALL</span>("<span class="hljs-string">GERER EVENEMENTS</span>")
+<pre><code class="hljs css language-code4d">    // Cette commande attend une méthode (fonction) ou une formule
+ QUERY BY FORMULA([aTable];Recherche Spéciale)
+  // Cette commande attend une méthode (<span class="hljs-keyword">proc</span>édure)<span class="hljs-title"> ou</span> une<span class="hljs-title"> formule</span>
+<span class="hljs-title"> APPLY</span> TO<span class="hljs-title"> SELECTION([Employés];AUGMENTER</span> SALARIES)
+  //<span class="hljs-title"> Mais</span> cette<span class="hljs-title"> commande</span> attend<span class="hljs-title"> un</span> nom<span class="hljs-title"> de</span> méthode<span class="hljs-title">
+ON</span> EVENT<span class="hljs-title"> CALL("GERER</span> EVENEMENTS")
 </code></pre>
 <p>Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. De plus, plusieurs paramètres consécutifs (s'ils sont les derniers) peuvent être adressés à l'aide de la syntaxe ${n}où n, expression numérique, est le numéro du paramètre.</p>
 <p>A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.</p>
 <p>Voici quelques exemples :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
-</span> DROP <span class="hljs-plugin">SPACES</span>(-&gt;[Personnes]Nom)
+<pre><code class="hljs css language-code4d">    <span class="hljs-regexp">//</span> Dans DROP SPACES, <span class="hljs-variable">$1</span> est pointeur sur le champ [Personnes]Nom
+ DROP SPACES(-&gt;[Personnes]Nom)
  
-  <span class="hljs-comment">// Dans Créateur tableau :
-</span>  <span class="hljs-comment">// - $1 est un numérique qui vaut 1
-</span>  <span class="hljs-comment">// - $2 est un numérique qui vaut 5
-</span>  <span class="hljs-comment">// - $3 est un texte ou un alpha qui vaut "Super"
-</span>  <span class="hljs-comment">// - La valeur résultante est assignée à $0
-</span> <span class="hljs-locale">$vsRésultat</span>:=Calc creator(1;5;"<span class="hljs-string">Super</span>")
+  <span class="hljs-regexp">//</span> Dans Créateur tableau :
+  <span class="hljs-regexp">//</span> - <span class="hljs-variable">$1</span> est un numérique qui vaut <span class="hljs-number">1</span>
+  <span class="hljs-regexp">//</span> - <span class="hljs-variable">$2</span> est un numérique qui vaut <span class="hljs-number">5</span>
+  <span class="hljs-regexp">//</span> - <span class="hljs-variable">$3</span> est un texte ou un alpha qui vaut <span class="hljs-string">"Super"</span>
+  <span class="hljs-regexp">//</span> - La valeur résultante est assignée à <span class="hljs-variable">$0</span>
+ <span class="hljs-variable">$vsR</span>ésultat:=Calc creator(<span class="hljs-number">1</span>;<span class="hljs-number">5</span>;<span class="hljs-string">"Super"</span>)
  
-  <span class="hljs-comment">// Dans Poubelle :
-</span>  <span class="hljs-comment">// - Les trois paramètres sont de type Texte ou Alpha
-</span>  <span class="hljs-comment">// - Vous pouvez y accéder par $1, $2 ou $3
-</span>  <span class="hljs-comment">// - Vous pouvez y accéder en écrivant, par exemple, ${$vlParam} où $vlParam vaut 1, 2 ou 3
-</span>  <span class="hljs-comment">// - La valeur résultante est assignée à $0
-</span> vtClone:=Dump("<span class="hljs-string">est</span>";"<span class="hljs-string">le</span>";"<span class="hljs-string">il</span>")
+  <span class="hljs-regexp">//</span> Dans Poubelle :
+  <span class="hljs-regexp">//</span> - Les trois paramètres sont de type Texte ou Alpha
+  <span class="hljs-regexp">//</span> - Vous pouvez y accéder par <span class="hljs-variable">$1</span>, <span class="hljs-variable">$2</span> ou <span class="hljs-variable">$3</span>
+  <span class="hljs-regexp">//</span> - Vous pouvez y accéder en écrivant, par exemple, <span class="hljs-variable">${$vlParam}</span> où <span class="hljs-variable">$vlParam</span> vaut <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ou <span class="hljs-number">3</span>
+  <span class="hljs-regexp">//</span> - La valeur résultante est assignée à <span class="hljs-variable">$0</span>
+ vtClone:=Dump(<span class="hljs-string">"est"</span>;<span class="hljs-string">"le"</span>;<span class="hljs-string">"il"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="commandes-de-plug-ins"></a><a href="#commandes-de-plug-ins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes de plug-ins</h2>
 <p>Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$erreur</span>:=<span class="hljs-plugin">SMTP_From</span>(<span class="hljs-locale">$smtp_id</span>;"<span class="hljs-string">henry@gmail.com</span>")
+<pre><code class="hljs css language-code4d">$erreur:=SMTP_From($smtp_id;<span class="hljs-string">"henry@gmail.com"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="ensembles"></a><a href="#ensembles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ensembles</h2>
 <p>Dans 4D, il existe deux types d'ensembles qui se distinguent par leur portée :</p>
@@ -273,18 +273,18 @@
 <p>Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.</p>
 <p><strong>Note :</strong> Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Ensembles interprocess
-</span><span class="hljs-command">USE SET</span>("<span class="hljs-string">&lt;&gt;Enregistrements supprimés</span>")
-<span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">&lt;&gt;Commandes clients</span>")
- <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">&lt;&gt;Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
-  <span class="hljs-comment">// Ensembles process
-</span>  <span class="hljs-command">USE SET</span>("<span class="hljs-string">Enregistrements supprimés</span>")
-  <span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">Commandes clients</span>")
-   <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
-  <span class="hljs-comment">// Ensembles client
-</span>    <span class="hljs-command">USE SET</span>("<span class="hljs-string">$Enregistrements supprimés</span>")
-  <span class="hljs-command">CREATE SET</span>([Clients];"<span class="hljs-string">$Commandes clients</span>")
-      <span class="hljs-keyword">If</span>(<span class="hljs-command">Records in set</span>("<span class="hljs-string">$Sélection</span>"+Chaine(<span class="hljs-locale">$i</span>))&gt;0)
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Ensembles interprocess</span>
+USE <span class="hljs-constructor">SET(<span class="hljs-string">"&lt;&gt;Enregistrements supprimés"</span>)</span>
+CREATE <span class="hljs-constructor">SET([Clients];<span class="hljs-string">"&lt;&gt;Commandes clients"</span>)</span>
+ <span class="hljs-constructor">If(Records <span class="hljs-params">in</span> <span class="hljs-params">set</span>(<span class="hljs-string">"&lt;&gt;Sélection"</span>+Chaine($<span class="hljs-params">i</span>)</span>)&gt;<span class="hljs-number">0</span>)
+  <span class="hljs-comment">// Ensembles process</span>
+  USE <span class="hljs-constructor">SET(<span class="hljs-string">"Enregistrements supprimés"</span>)</span>
+  CREATE <span class="hljs-constructor">SET([Clients];<span class="hljs-string">"Commandes clients"</span>)</span>
+   <span class="hljs-constructor">If(Records <span class="hljs-params">in</span> <span class="hljs-params">set</span>(<span class="hljs-string">"Sélection"</span>+Chaine($<span class="hljs-params">i</span>)</span>)&gt;<span class="hljs-number">0</span>)
+  <span class="hljs-comment">// Ensembles client</span>
+    USE <span class="hljs-constructor">SET(<span class="hljs-string">"$Enregistrements supprimés"</span>)</span>
+  CREATE <span class="hljs-constructor">SET([Clients];<span class="hljs-string">"$Commandes clients"</span>)</span>
+      <span class="hljs-constructor">If(Records <span class="hljs-params">in</span> <span class="hljs-params">set</span>(<span class="hljs-string">"$Sélection"</span>+Chaine($<span class="hljs-params">i</span>)</span>)&gt;<span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="sélections-temporaires"></a><a href="#sélections-temporaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélections temporaires</h2>
 <p>Dans 4D, il existe deux types de sélections temporaires, qui se distinguent par leur portée :</p>
@@ -298,10 +298,10 @@
 <h3><a class="anchor" aria-hidden="true" id="sélections-temporaires-process"></a><a href="#sélections-temporaires-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélections temporaires process</h3>
 <p>Vous déclarez une sélection temporaire process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles &lt;&gt; ou $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Sélection temporaire interprocess
-</span> <span class="hljs-command">USE NAMED SELECTION</span>([Clients];"<span class="hljs-string">&lt;&gt;ParCodePostal</span>")
-  <span class="hljs-comment">// Sélection temporaire process
-</span> <span class="hljs-command">USE NAMED SELECTION</span>([Clients];"<span class="hljs-string">ParCodePostal</span>")
+<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Sélection temporaire interprocess</span>
+ <span class="hljs-keyword">USE</span> <span class="hljs-title">NAMED</span> <span class="hljs-title">SELECTION</span>([<span class="hljs-title">Clients</span>];<span class="hljs-string">"&lt;&gt;ParCodePostal"</span>)
+  <span class="hljs-comment">// Sélection temporaire process</span>
+ <span class="hljs-keyword">USE</span> <span class="hljs-title">NAMED</span> <span class="hljs-title">SELECTION</span>([<span class="hljs-title">Clients</span>];<span class="hljs-string">"ParCodePostal"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="process"></a><a href="#process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process</h2>
 <p>En mode mono-utilisateur, ou sur le poste client en mode client/serveur, il existe deux types de process :</p>
@@ -314,10 +314,10 @@
 <h3><a class="anchor" aria-hidden="true" id="process-locaux"></a><a href="#process-locaux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process locaux</h3>
 <p>Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.</p>
 <p>Exemple :</p>
-<pre><code class="hljs css language-code4d">    <span class="hljs-comment">// Lancer le process global "Ajouter Clients"
-</span> <span class="hljs-locale">$vlProcessID</span>:=<span class="hljs-command">New process</span>("<span class="hljs-string">P_AJOUT_CLIENTS</span>";48*1024;"<span class="hljs-string">Ajouter Clients</span>")
-  <span class="hljs-comment">// Lancer le process local "$Suivre Souris"
-</span> <span class="hljs-locale">$vlProcessID</span>:=<span class="hljs-command">New process</span>("<span class="hljs-string">P_SUIVRE_SOURIS</span>";16*1024;"<span class="hljs-string">$Suivre Souris</span>")
+<pre><code class="hljs css language-code4d">    // Lancer le <span class="hljs-keyword">process</span> global <span class="hljs-string">"Ajouter Clients"</span>
+ <span class="hljs-variable">$vlProcessID:</span>=New <span class="hljs-keyword">process</span>(<span class="hljs-string">"P_AJOUT_CLIENTS"</span>;<span class="hljs-number">48</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"Ajouter Clients"</span>)
+  // Lancer le <span class="hljs-keyword">process</span> local <span class="hljs-string">"<span class="hljs-variable">$Suivre</span> Souris"</span>
+ <span class="hljs-variable">$vlProcessID:</span>=New <span class="hljs-keyword">process</span>(<span class="hljs-string">"P_SUIVRE_SOURIS"</span>;<span class="hljs-number">16</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"<span class="hljs-variable">$Suivre</span> Souris"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="résumé-des-conventions-décriture-dans-4d"></a><a href="#résumé-des-conventions-décriture-dans-4d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résumé des conventions d'écriture dans 4D</h2>
 <p>Le tableau suivant résume les principes de nommage des identifiants dans les méthodes.</p>

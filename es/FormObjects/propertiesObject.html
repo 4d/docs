@@ -123,17 +123,17 @@
 <li>You can set the type using the <a href="#expression-type">Expression type</a> property.</li>
 <li>You can use a specific initialization code when the form is loaded that uses, for example, the <code>VARIABLE TO VARIABLE</code> command:</li>
 </ul>
-<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">If</span>(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
-    <span class="hljs-command">C_TEXT</span>(<span class="hljs-locale">$init</span>)
-    <span class="hljs-locale">$Ptr_object</span>:=<span class="hljs-command">OBJECT Get pointer</span>(<span class="hljs-constant">Object named</span>;"<span class="hljs-string">comments</span>")
-    <span class="hljs-locale">$init</span>:="<span class="hljs-string"></span>"
-    <span class="hljs-command">VARIABLE TO VARIABLE</span>(<span class="hljs-command">Current process</span>;<span class="hljs-locale">$Ptr_object</span>-&gt;;<span class="hljs-locale">$init</span>)
- <span class="hljs-keyword">End if</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">If</span>(Form <span class="hljs-attribute">event</span>=On Load)
+    C_TEXT(<span class="hljs-variable">$init</span>)
+    <span class="hljs-variable">$Ptr_object</span>:=OBJECT <span class="hljs-builtin-name">Get</span> pointer(Object named;<span class="hljs-string">"comments"</span>)
+    <span class="hljs-variable">$init</span>:=<span class="hljs-string">""</span>
+    VARIABLE <span class="hljs-keyword">TO</span> VARIABLE(Current process;<span class="hljs-variable">$Ptr_object</span>-&gt;;<span class="hljs-variable">$init</span>)
+ End <span class="hljs-keyword">if</span>
 </code></pre>
 <p>In the 4D code, dynamic variables can be accessed using a pointer obtained with the <code>OBJECT Get pointer</code> command. For example:</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// assign the time 12:00:00 to the variable for the "tstart" object
-</span> <span class="hljs-locale">$p</span> :=<span class="hljs-command">OBJECT Get pointer</span>(<span class="hljs-constant">Object named</span>;"<span class="hljs-string">tstart</span>")
- <span class="hljs-locale">$p</span>-&gt;:=?12:00:00?
+<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// assign the time 12:00:00 to the variable for the "tstart" object</span>
+ <span class="hljs-variable">$p</span> :=<span class="hljs-function">OBJECT Get pointer</span>(Object named;<span class="hljs-string">"tstart"</span>)
+ <span class="hljs-variable">$p</span>-&gt;:=?<span class="hljs-number">12</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>?
 </code></pre>
 <p>There are two advantages with this mechanism:</p>
 <ul>

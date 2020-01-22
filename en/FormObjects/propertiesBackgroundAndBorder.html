@@ -204,15 +204,15 @@ The color can be specified by:</p>
 <p>The name of an array to apply a custom background color to each row of the list box or column.</p>
 <p>The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.</p>
 <p>For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:</p>
-<pre><code class="hljs css language-code4d"> &lt;&gt;_BgndColors{<span class="hljs-locale">$i</span>}:=0x00FFD0B0 <span class="hljs-comment">// orange
-</span> &lt;&gt;_BgndColors{<span class="hljs-locale">$i</span>}:=-255 <span class="hljs-comment">// default value
-</span></code></pre>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">&lt;&gt;_BgndColors</span>{<span class="hljs-variable">$i</span>}:=<span class="hljs-number">0x00</span>FFD<span class="hljs-number">0</span>B<span class="hljs-number">0</span> <span class="hljs-comment">// orange</span>
+ <span class="hljs-variable">&lt;&gt;_BgndColors</span>{<span class="hljs-variable">$i</span>}:=-<span class="hljs-number">255</span> <span class="hljs-comment">// default value</span>
+</code></pre>
 <p><img src="/docs/assets/en/FormObjects/listbox_styles1.png" alt=""></p>
 <p>Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example &lt;&gt;_BgndColor_1, &lt;&gt;_BgndColor_2 and &lt;&gt;_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:</p>
-<pre><code class="hljs css language-code4d"> &lt;&gt;_BgndColorsCol_3{2}:=0x00FF8000 <span class="hljs-comment">// dark orange
-</span> &lt;&gt;_BgndColorsCol_2{5}:=0x00FF8000
- &lt;&gt;_BgndColorsCol_1{9}:=0x00FF8000
- &lt;&gt;_BgndColorsCol_1{16}:=0x00FF8000
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">&lt;&gt;_BgndColorsCol_3</span>{<span class="hljs-number">2</span>}:=<span class="hljs-number">0x00</span>FF<span class="hljs-number">8000</span> <span class="hljs-comment">// dark orange</span>
+ <span class="hljs-variable">&lt;&gt;_BgndColorsCol_2</span>{<span class="hljs-number">5</span>}:=<span class="hljs-number">0x00</span><span class="hljs-function">FF8000</span>
+ <span class="hljs-variable">&lt;&gt;_BgndColorsCol_1</span>{<span class="hljs-number">9</span>}:=<span class="hljs-number">0x00</span><span class="hljs-function">FF8000</span>
+ <span class="hljs-variable">&lt;&gt;_BgndColorsCol_1</span>{<span class="hljs-number">16</span>}:=<span class="hljs-number">0x00</span><span class="hljs-function">FF8000</span>
 </code></pre>
 <p><img src="/docs/assets/en/FormObjects/listbox_styles2.png" alt=""></p>
 <p>You can get the same result using the <code>LISTBOX SET ROW FONT STYLE</code> and <code>LISTBOX SET ROW COLOR</code> commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.</p>

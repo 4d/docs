@@ -141,77 +141,77 @@ If your project is in <strong>Controlled Admin Access Mode</strong>, you must fi
 <p>Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:</p>
 <p><code>GET /rest/$info</code></p>
 <p><strong>Result</strong>:</p>
-<pre><code class="hljs">{
-<span class="hljs-symbol">cacheSize:</span> <span class="hljs-number">209715200</span>,
-<span class="hljs-symbol">usedCache:</span> <span class="hljs-number">3136000</span>,
-<span class="hljs-symbol">entitySetCount:</span> <span class="hljs-number">4</span>,
-<span class="hljs-symbol">entitySet:</span> [
-    {
-<span class="hljs-symbol">        id:</span> <span class="hljs-string">"1418741678864021B56F8C6D77F2FC06"</span>,
-<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"Company"</span>,
-<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">1</span>,
-<span class="hljs-symbol">        sorted:</span> false,
-<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:30:30Z"</span>,
-<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T10:35:30Z"</span>
-    },
-    {
-<span class="hljs-symbol">        id:</span> <span class="hljs-string">"CAD79E5BF339462E85DA613754C05CC0"</span>,
-<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"People"</span>,
-<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">49</span>,
-<span class="hljs-symbol">        sorted:</span> true,
-<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:28:43Z"</span>,
-<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T10:38:43Z"</span>
-    },
-    {
-<span class="hljs-symbol">        id:</span> <span class="hljs-string">"F4514C59D6B642099764C15D2BF51624"</span>,
-<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"People"</span>,
-<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">37</span>,
-<span class="hljs-symbol">        sorted:</span> false,
-<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:24:24Z"</span>,
-<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T12:24:24Z"</span>
-    }
-],
-<span class="hljs-symbol">ProgressInfo:</span> [
-    {
-<span class="hljs-symbol">        UserInfo:</span> <span class="hljs-string">"flushProgressIndicator"</span>,
-<span class="hljs-symbol">        sessions:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">        percent:</span> <span class="hljs-number">0</span>
-    },
-    {
-<span class="hljs-symbol">        UserInfo:</span> <span class="hljs-string">"indexProgressIndicator"</span>,
-<span class="hljs-symbol">        sessions:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">        percent:</span> <span class="hljs-number">0</span>
-    }
-],
-<span class="hljs-symbol">sessionInfo:</span> [ 
-    {
-<span class="hljs-symbol">        sessionID:</span> <span class="hljs-string">"6657ABBCEE7C3B4089C20D8995851E30"</span>,
-<span class="hljs-symbol">        userID:</span> <span class="hljs-string">"36713176D42DB045B01B8E650E8FA9C6"</span>,
-<span class="hljs-symbol">        userName:</span> <span class="hljs-string">"james"</span>,
-<span class="hljs-symbol">        lifeTime:</span> <span class="hljs-number">3600</span>,
-<span class="hljs-symbol">        expiration:</span> <span class="hljs-string">"2013-04-22T12:45:08Z"</span>
-    },
-    {
-<span class="hljs-symbol">        sessionID:</span> <span class="hljs-string">"A85F253EDE90CA458940337BE2939F6F"</span>,
-<span class="hljs-symbol">        userID:</span> <span class="hljs-string">"00000000000000000000000000000000"</span>,
-<span class="hljs-symbol">        userName:</span> <span class="hljs-string">"default guest"</span>,
-<span class="hljs-symbol">        lifeTime:</span> <span class="hljs-number">3600</span>,
-<span class="hljs-symbol">        expiration:</span> <span class="hljs-string">"2013-04-23T10:30:25Z"</span>
-}
-],
-<span class="hljs-symbol">jsContextInfo:</span> [
-    {
-        <span class="hljs-string">"contextPoolSize"</span>: <span class="hljs-number">50</span>,
-        <span class="hljs-string">"activeDebugger"</span>: false,
-        <span class="hljs-string">"usedContextCount"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"usedContextMaxCount"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"reusableContextCount"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"unusedContextCount"</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-string">"createdContextCount"</span>: <span class="hljs-number">4</span>,
-        <span class="hljs-string">"destroyedContextCount"</span>: <span class="hljs-number">3</span>
-    }
-]
-}
+<pre><code class="hljs"><span class="hljs-string">{</span>
+<span class="hljs-attr">cacheSize:</span> <span class="hljs-number">209715200</span><span class="hljs-string">,</span>
+<span class="hljs-attr">usedCache:</span> <span class="hljs-number">3136000</span><span class="hljs-string">,</span>
+<span class="hljs-attr">entitySetCount:</span> <span class="hljs-number">4</span><span class="hljs-string">,</span>
+<span class="hljs-attr">entitySet:</span> <span class="hljs-string">[</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">id:</span> <span class="hljs-string">"1418741678864021B56F8C6D77F2FC06"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">tableName:</span> <span class="hljs-string">"Company"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">selectionSize:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">sorted:</span> <span class="hljs-literal">false</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">refreshed:</span> <span class="hljs-string">"2011-11-18T10:30:30Z"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">expires:</span> <span class="hljs-string">"2011-11-18T10:35:30Z"</span>
+    <span class="hljs-string">},</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">id:</span> <span class="hljs-string">"CAD79E5BF339462E85DA613754C05CC0"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">tableName:</span> <span class="hljs-string">"People"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">selectionSize:</span> <span class="hljs-number">49</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">sorted:</span> <span class="hljs-literal">true</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">refreshed:</span> <span class="hljs-string">"2011-11-18T10:28:43Z"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">expires:</span> <span class="hljs-string">"2011-11-18T10:38:43Z"</span>
+    <span class="hljs-string">},</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">id:</span> <span class="hljs-string">"F4514C59D6B642099764C15D2BF51624"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">tableName:</span> <span class="hljs-string">"People"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">selectionSize:</span> <span class="hljs-number">37</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">sorted:</span> <span class="hljs-literal">false</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">refreshed:</span> <span class="hljs-string">"2011-11-18T10:24:24Z"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">expires:</span> <span class="hljs-string">"2011-11-18T12:24:24Z"</span>
+    <span class="hljs-string">}</span>
+<span class="hljs-string">],</span>
+<span class="hljs-attr">ProgressInfo:</span> <span class="hljs-string">[</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">UserInfo:</span> <span class="hljs-string">"flushProgressIndicator"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">sessions:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">percent:</span> <span class="hljs-number">0</span>
+    <span class="hljs-string">},</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">UserInfo:</span> <span class="hljs-string">"indexProgressIndicator"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">sessions:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">percent:</span> <span class="hljs-number">0</span>
+    <span class="hljs-string">}</span>
+<span class="hljs-string">],</span>
+<span class="hljs-attr">sessionInfo:</span> <span class="hljs-string">[</span> 
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">sessionID:</span> <span class="hljs-string">"6657ABBCEE7C3B4089C20D8995851E30"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">userID:</span> <span class="hljs-string">"36713176D42DB045B01B8E650E8FA9C6"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">userName:</span> <span class="hljs-string">"james"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">lifeTime:</span> <span class="hljs-number">3600</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">expiration:</span> <span class="hljs-string">"2013-04-22T12:45:08Z"</span>
+    <span class="hljs-string">},</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">sessionID:</span> <span class="hljs-string">"A85F253EDE90CA458940337BE2939F6F"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">userID:</span> <span class="hljs-string">"00000000000000000000000000000000"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">userName:</span> <span class="hljs-string">"default guest"</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">lifeTime:</span> <span class="hljs-number">3600</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">expiration:</span> <span class="hljs-string">"2013-04-23T10:30:25Z"</span>
+<span class="hljs-string">}</span>
+<span class="hljs-string">],</span>
+<span class="hljs-attr">jsContextInfo:</span> <span class="hljs-string">[</span>
+    <span class="hljs-string">{</span>
+        <span class="hljs-attr">"contextPoolSize":</span> <span class="hljs-number">50</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"activeDebugger":</span> <span class="hljs-literal">false</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"usedContextCount":</span> <span class="hljs-number">1</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"usedContextMaxCount":</span> <span class="hljs-number">1</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"reusableContextCount":</span> <span class="hljs-number">1</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"unusedContextCount":</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"createdContextCount":</span> <span class="hljs-number">4</span><span class="hljs-string">,</span>
+        <span class="hljs-attr">"destroyedContextCount":</span> <span class="hljs-number">3</span>
+    <span class="hljs-string">}</span>
+<span class="hljs-string">]</span>
+<span class="hljs-string">}</span>
 </code></pre>
 <blockquote>
 <p>The progress indicator information listed after the entity sets is used internally by 4D.</p>

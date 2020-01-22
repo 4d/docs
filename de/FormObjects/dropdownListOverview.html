@@ -77,37 +77,37 @@
 <li><p>Enter a list of default values in the object properties by selecting &quot;&lt;Static List&gt;&quot; in the <a href="/docs/de/FormObjects/propertiesDataSource.html">Data Source</a> theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.</p></li>
 <li><p>Before the object is displayed, execute code that assigns values to the array elements. For example:</p></li>
 </ul>
-<pre><code class="hljs css language-code4d">  <span class="hljs-command">ARRAY TEXT</span>(<span class="hljs-locale">$aCities</span>;6) 
-  <span class="hljs-locale">$aCities</span>{1}:="<span class="hljs-string">Philadelphia</span>" 
-  <span class="hljs-locale">$aCities</span>{2}:="<span class="hljs-string">Pittsburg</span>" 
-  <span class="hljs-locale">$aCities</span>{3}:="<span class="hljs-string">Grand Blanc</span>" 
-  <span class="hljs-locale">$aCities</span>{4}:="<span class="hljs-string">Bad Axe</span>" 
-  <span class="hljs-locale">$aCities</span>{5}:="<span class="hljs-string">Frostbite Falls</span>" 
-  <span class="hljs-locale">$aCities</span>{6}:="<span class="hljs-string">Green Bay</span>" 
+<pre><code class="hljs css language-code4d"><span class="hljs-function">  ARRAY TEXT</span>(<span class="hljs-variable">$aCities</span>;<span class="hljs-number">6</span>)<span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Philadelphia"</span><span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Pittsburg"</span><span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Grand Blanc"</span><span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Bad Axe"</span><span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">5</span>}:=<span class="hljs-string">"Frostbite Falls"</span><span class="hljs-function"> </span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">6</span>}:=<span class="hljs-string">"Green Bay"</span><span class="hljs-function"> </span>
 </code></pre>
 <p>In this case, the name of the variable associated with the object in the form must be <em>$aCities</em>. This code could be placed in the form method and be executed when the <code>On Load</code> form event runs.</p>
 <ul>
 <li>Before the object is displayed, load the values of a list into the array using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html">LIST TO ARRAY</a> command. For example:</li>
 </ul>
-<pre><code class="hljs css language-code4d">   <span class="hljs-command">LIST TO ARRAY</span>("<span class="hljs-string">Cities</span>";<span class="hljs-locale">$aCities</span>)
+<pre><code class="hljs css language-code4d">   <span class="hljs-built_in">LIST</span> <span class="hljs-keyword">TO</span> <span class="hljs-built_in">ARRAY</span>(<span class="hljs-string">"Cities"</span>;$aCities)
 </code></pre>
 <p>In this case also, the name of the variable associated with the object in the form must be <em>$aCities</em>. This code would be run in place of the assignment statements shown above.</p>
 <p>If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:</p>
-<pre><code class="hljs css language-code4d">  <span class="hljs-keyword">Case of</span>
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Load</span>)
-       <span class="hljs-command">LIST TO ARRAY</span>("<span class="hljs-string">Cities</span>";aCities)
-       <span class="hljs-keyword">If</span>(<span class="hljs-command">Record number</span>([People])&lt;0) <span class="hljs-comment">`new record
-</span>          aCities:=3 <span class="hljs-comment">`display a default value
-</span>       <span class="hljs-keyword">Else</span> <span class="hljs-comment">`existing record, display stored value
-</span>          aCities:=<span class="hljs-command">Find in array</span>(aCities;City)
-       <span class="hljs-keyword">End if</span>
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Clicked</span>) <span class="hljs-comment">`user modified selection
-</span>       City:=aCities{aCities} <span class="hljs-comment">`field gets new value
-</span>    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Validate</span>)
+<pre><code class="hljs css language-code4d">  <span class="hljs-keyword">Case</span> <span class="hljs-keyword">of</span>
+    :(Form event=<span class="hljs-keyword">On</span> <span class="hljs-keyword">Load</span>)
+       LIST <span class="hljs-keyword">TO</span> <span class="hljs-keyword">ARRAY</span>("Cities";aCities)
+       <span class="hljs-keyword">If</span>(<span class="hljs-type">Record</span> number([People])&lt;<span class="hljs-number">0</span>) `<span class="hljs-built_in">new</span> <span class="hljs-type">record</span>
+          aCities:=<span class="hljs-number">3</span> `display a <span class="hljs-keyword">default</span> <span class="hljs-keyword">value</span>
+       <span class="hljs-keyword">Else</span> `existing <span class="hljs-type">record</span>, display stored <span class="hljs-keyword">value</span>
+          aCities:=Find <span class="hljs-keyword">in</span> <span class="hljs-keyword">array</span>(aCities;City)
+       <span class="hljs-keyword">End</span> <span class="hljs-keyword">if</span>
+    :(Form event=<span class="hljs-keyword">On</span> Clicked) `<span class="hljs-keyword">user</span> modified selection
+       City:=aCities{aCities} `field gets <span class="hljs-built_in">new</span> <span class="hljs-keyword">value</span>
+    :(Form event=<span class="hljs-keyword">On</span> <span class="hljs-keyword">Validate</span>)
        City:=aCities{aCities}
-    :(<span class="hljs-command">Form</span> event=<span class="hljs-constant">On Unload</span>)
-       <span class="hljs-command">CLEAR VARIABLE</span>(aCities)
- <span class="hljs-keyword">End case</span>
+    :(Form event=<span class="hljs-keyword">On</span> Unload)
+       CLEAR VARIABLE(aCities)
+ <span class="hljs-keyword">End</span> <span class="hljs-keyword">case</span>
 </code></pre>
 <p>You must select each [event] that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.</p>
 <h2><a class="anchor" aria-hidden="true" id="using-a-choice-list"></a><a href="#using-a-choice-list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a choice list</h2>

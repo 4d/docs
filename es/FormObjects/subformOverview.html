@@ -121,16 +121,16 @@
 <p>For example, in your subform, field labels are stored in the bound object so that you can display different languages:</p>
 <p><img src="/docs/assets/en/FormObjects/subforms4.png" alt=""></p>
 <p>You can modify the labels from the subform by assigning values to the <em>InvoiceAddress</em> object:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$lang</span>)
- <span class="hljs-locale">$lang</span>:=<span class="hljs-command">New object</span>
- <span class="hljs-keyword">If</span>(&lt;&gt;lang="<span class="hljs-string">fr</span>")
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.CompanyName</span>:="<span class="hljs-string">Société :</span>"
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.LastName</span>:="<span class="hljs-string">Nom :</span>"
+<pre><code class="hljs css language-code4d"> C_OBJECT(<span class="hljs-variable">$lang</span>)
+ <span class="hljs-variable">$lang</span>:=New object
+ <span class="hljs-keyword">If</span>(&lt;&gt;<span class="hljs-attribute">lang</span>=<span class="hljs-string">"fr"</span>)
+    <span class="hljs-variable">$lang</span>.CompanyName:=<span class="hljs-string">"Société :"</span>
+    <span class="hljs-variable">$lang</span>.LastName:=<span class="hljs-string">"Nom :"</span>
  <span class="hljs-keyword">Else</span>
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.CompanyName</span>:="<span class="hljs-string">Company:</span>"
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.LastName</span>:="<span class="hljs-string">Name:</span>"
- <span class="hljs-keyword">End if</span>
- InvoiceAddress<span class="hljs-property">.Label</span>:=<span class="hljs-locale">$lang</span>
+    <span class="hljs-variable">$lang</span>.CompanyName:=<span class="hljs-string">"Company:"</span>
+    <span class="hljs-variable">$lang</span>.LastName:=<span class="hljs-string">"Name:"</span>
+ End <span class="hljs-keyword">if</span>
+ InvoiceAddress.Label:=<span class="hljs-variable">$lang</span>
 </code></pre>
 <p><img src="/docs/assets/en/FormObjects/subforms5.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="advanced-inter-form-programming"></a><a href="#advanced-inter-form-programming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced inter-form programming</h3>
@@ -144,7 +144,7 @@
 <h4><a class="anchor" aria-hidden="true" id="object-get-pointer-and-object-get-name-commands"></a><a href="#object-get-pointer-and-object-get-name-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object get pointer and Object get name commands</h4>
 <p>In addition to the <code>Object subform container</code> selector, the <code>OBJECT Get pointer</code> command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.</p>
 <p>For example, the following statement:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$ptr</span>:=<span class="hljs-command">OBJECT Get pointer</span>(<span class="hljs-constant">Object named</span>;"<span class="hljs-string">MyButton</span>";"<span class="hljs-string">MySubForm</span>")
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$ptr</span>:=OBJECT <span class="hljs-builtin-name">Get</span> pointer(Object named;<span class="hljs-string">"MyButton"</span>;<span class="hljs-string">"MySubForm"</span>)
 </code></pre>
 <p>... retrieves a pointer to the &quot;MyButton&quot; variable that is located in the &quot;MySubForm&quot; subform object. This syntax can be used to access from the parent form any object found in a subform. Also note the <code>OBJECT Get name</code> command which can be used to retrieve the name of the object that has the focus.</p>
 <h4><a class="anchor" aria-hidden="true" id="call-subform-container-command"></a><a href="#call-subform-container-command" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CALL SUBFORM CONTAINER command</h4>

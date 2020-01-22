@@ -115,10 +115,10 @@
 }
 </code></pre>
 <p>Cela signifie que le datastore contient le dataclass Employees. You can see the dataclass attributes by typing:</p>
-<pre><code class="hljs">/<span class="hljs-built_in">rest</span>/$catalog/Employees
+<pre><code class="hljs">/rest/<span class="hljs-variable">$catalog</span>/<span class="hljs-function">Employees</span>
 </code></pre>
 <p>Si vous souhaitez obtenir toutes les entités de la dataclass Employee, vous pouvez écrire :</p>
-<pre><code class="hljs">/<span class="hljs-built_in">rest</span>/Employees
+<pre><code class="hljs">/rest/<span class="hljs-function">Employees</span>
 </code></pre>
 <p><strong>Réponse :</strong></p>
 <pre><code class="hljs">{
@@ -159,7 +159,7 @@
 }
 </code></pre>
 <p>Il existe plusieurs possibilités pour filtrer les données à recevoir. Par exemple, pour obtenir uniquement la valeur de l'attribut &quot;Lastname&quot; de la 2ème entité, vous pouvez simplement écrire :</p>
-<pre><code class="hljs"><span class="hljs-string">/rest/Employees</span><span class="hljs-params">(2)</span><span class="hljs-string">/Lastname</span>
+<pre><code class="hljs">/rest/<span class="hljs-function">Employees</span>(<span class="hljs-number">2</span>)/<span class="hljs-function">Lastname</span>
 </code></pre>
 <p><strong>Réponse :</strong></p>
 <pre><code class="hljs">{

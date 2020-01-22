@@ -121,16 +121,16 @@
 <p>Par exemple, dans votre sous-formulaire, les libellés des champs sont stockés dans l'objet associé afin de vous permettre d'afficher différentes langues :</p>
 <p><img src="/docs/assets/en/FormObjects/subforms4.png" alt=""></p>
 <p>Vous pouvez modifier les libellés depuis le sous-formulaire en affectant des valeurs à l'objet <em>InvoiceAddress</em> :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-command">C_OBJECT</span>(<span class="hljs-locale">$lang</span>)
- <span class="hljs-locale">$lang</span>:=<span class="hljs-command">New object</span>
- <span class="hljs-keyword">If</span>(&lt;&gt;lang="<span class="hljs-string">fr</span>")
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.CompanyName</span>:="<span class="hljs-string">Société :</span>"
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.LastName</span>:="<span class="hljs-string">Nom :</span>"
+<pre><code class="hljs css language-code4d"> C_OBJECT(<span class="hljs-variable">$lang</span>)
+ <span class="hljs-variable">$lang</span>:=New object
+ <span class="hljs-keyword">If</span>(&lt;&gt;<span class="hljs-attribute">lang</span>=<span class="hljs-string">"fr"</span>)
+    <span class="hljs-variable">$lang</span>.CompanyName:=<span class="hljs-string">"Société :"</span>
+    <span class="hljs-variable">$lang</span>.LastName:=<span class="hljs-string">"Nom :"</span>
  <span class="hljs-keyword">Else</span>
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.CompanyName</span>:="<span class="hljs-string">Company:</span>"
-    <span class="hljs-locale">$lang</span><span class="hljs-property">.LastName</span>:="<span class="hljs-string">Name:</span>"
- <span class="hljs-keyword">End if</span>
- InvoiceAddress<span class="hljs-property">.Label</span>:=<span class="hljs-locale">$lang</span>
+    <span class="hljs-variable">$lang</span>.CompanyName:=<span class="hljs-string">"Company:"</span>
+    <span class="hljs-variable">$lang</span>.LastName:=<span class="hljs-string">"Name:"</span>
+ End <span class="hljs-keyword">if</span>
+ InvoiceAddress.Label:=<span class="hljs-variable">$lang</span>
 </code></pre>
 <p><img src="/docs/assets/en/FormObjects/subforms5.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="programmation-inter-formulaires-avancée"></a><a href="#programmation-inter-formulaires-avancée" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Programmation inter-formulaires avancée</h3>
@@ -144,7 +144,7 @@
 <h4><a class="anchor" aria-hidden="true" id="commandes-object-get-pointer-et-object-get-name"></a><a href="#commandes-object-get-pointer-et-object-get-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes Object get pointer et Object get name</h4>
 <p>Outre le sélecteur <code>Objet conteneur sous formulaire</code>, la commande <code>OBJECT Get pointer</code> admet un paramètre permettant de préciser dans quel sous-formulaire chercher l’objet dont le nom est passé en deuxième paramètre. Cette syntaxe n’est utilisable que lorsque le sélecteur Objet nommé est passé.</p>
 <p>Par exemple, l’instruction suivante :</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-locale">$ptr</span>:=<span class="hljs-command">OBJECT Get pointer</span>(<span class="hljs-constant">Object named</span>;"<span class="hljs-string">MyButton</span>";"<span class="hljs-string">MySubForm</span>")
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$ptr</span>:=OBJECT <span class="hljs-builtin-name">Get</span> pointer(Object named;<span class="hljs-string">"MyButton"</span>;<span class="hljs-string">"MySubForm"</span>)
 </code></pre>
 <p>... permet de récupérer un pointeur sur la variable &quot;MonBouton&quot; se trouvant dans l’objet sous-formulaire &quot;MonSousForm&quot;. Cette syntaxe permet d’accéder depuis le formulaire parent à tout objet se trouvant dans un sous-formulaire. A noter également la commande <code>OBJECT Get name</code> qui permet de récupérer le nom de l’objet ayant le focus.</p>
 <h4><a class="anchor" aria-hidden="true" id="commande-call-subform-container"></a><a href="#commande-call-subform-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commande CALL SUBFORM CONTAINER</h4>

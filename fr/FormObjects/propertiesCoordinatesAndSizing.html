@@ -270,8 +270,8 @@
 <p>This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).</p>
 <p>When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.</p>
 <p>For example, you can write:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">ARRAY LONGINT</span>(RowHeights;20)
-RowHeights{5}:=3
+<pre><code class="hljs css language-code4d"><span class="hljs-function">ARRAY LONGINT</span>(RowHeights;<span class="hljs-number">20</span>)
+RowHeights{<span class="hljs-number">5</span>}:=<span class="hljs-number">3</span>
 </code></pre>
 <p>Assuming that the unit of the rows is &quot;lines,&quot; then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.</p>
 <blockquote>

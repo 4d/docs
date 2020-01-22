@@ -88,35 +88,35 @@
 <p>And no entities were found, the following query path would be returned, if you write the following:</p>
 <p><code>GET /rest/$querypath</code></p>
 <p><strong>Response</strong>:</p>
-<pre><code class="hljs"><span class="hljs-symbol">__queryPath:</span> {
-<span class="hljs-symbol"> 
-    steps:</span> [
-        {
-<span class="hljs-symbol">            description:</span> <span class="hljs-string">"AND"</span>,
-<span class="hljs-symbol">            time:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">            recordsfounds:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">            steps:</span> [
-                {
-<span class="hljs-symbol">                    description:</span> <span class="hljs-string">"Join on Table : Company : People.employer = Company.ID"</span>,
-<span class="hljs-symbol">                    time:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">                    recordsfounds:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">                    steps:</span> [
-                        {
-<span class="hljs-symbol">                            steps:</span> [
-                                {
-<span class="hljs-symbol">                                    description:</span> <span class="hljs-string">"Company.name = acme"</span>,
-<span class="hljs-symbol">                                    time:</span> <span class="hljs-number">0</span>,
-<span class="hljs-symbol">                                    recordsfounds:</span> <span class="hljs-number">0</span>
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+<pre><code class="hljs"><span class="hljs-attr">__queryPath:</span> <span class="hljs-string">{</span>
  
-}
+    <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+        <span class="hljs-string">{</span>
+            <span class="hljs-attr">description:</span> <span class="hljs-string">"AND"</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                <span class="hljs-string">{</span>
+                    <span class="hljs-attr">description:</span> <span class="hljs-string">"Join on Table : Company : People.employer = Company.ID"</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                        <span class="hljs-string">{</span>
+                            <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                                <span class="hljs-string">{</span>
+                                    <span class="hljs-attr">description:</span> <span class="hljs-string">"Company.name = acme"</span><span class="hljs-string">,</span>
+                                    <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                                    <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span>
+                                <span class="hljs-string">}</span>
+                            <span class="hljs-string">]</span>
+                        <span class="hljs-string">}</span>
+                    <span class="hljs-string">]</span>
+                <span class="hljs-string">}</span>
+            <span class="hljs-string">]</span>
+        <span class="hljs-string">}</span>
+    <span class="hljs-string">]</span>
+ 
+<span class="hljs-string">}</span>
 </code></pre>
 <p>If, on the other hand, the first query returns more than one entity, the second one will be executed. If we execute the following query:</p>
 <p><code>GET /rest/Employee/$filter=&quot;employer.name=a* AND lastName!=smith&quot;&amp;$querypath=true</code></p>

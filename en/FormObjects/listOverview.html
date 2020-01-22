@@ -82,7 +82,7 @@
 <p>The <strong>language object</strong> is referenced by an unique internal ID of the Longint type, designated by <em>ListRef</em> in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: <code>New list</code>, <code>Copy list</code>, <code>Load list</code>, <code>BLOB to list</code>. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.</p>
 <p>The <strong>form object</strong> is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;&quot;ListName&quot;, etc.).</p>
 <p>You connect the hierarchical list &quot;language object&quot; with the hierarchical list &quot;form object&quot; by the intermediary of the variable containing the ListRef value. For example, if you have associated the $mylist <a href="/docs/en/FormObjects/propertiesObject.html#variable-or-expression">variable</a> to the form object, you can write:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-locale">$mylist</span>:=<span class="hljs-command">New list</span>
+<pre><code class="hljs css language-code4d">$mylist:=<span class="hljs-literal">New</span> <span class="hljs-built_in">list</span>
 </code></pre>
 <p>Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:</p>
 <ul>
@@ -97,7 +97,7 @@ Consequently, when you use commands based on the expanded/collapsed configuratio
 <p>In the case of commands that set properties, the syntax based on the object name does not mean that only the form object specified will be modified by the command, but rather that the action of the command will be based on the state of this object. The common characteristics of hierarchical lists are always modified in all of their representations.
 For example, if you execute:</p>
 </blockquote>
-<pre><code class="hljs css language-code4d"><span class="hljs-command">SET LIST ITEM</span> <span class="hljs-command">FONT</span>(*;"<span class="hljs-string">mylist1</span>";*;thefont)
+<pre><code class="hljs css language-code4d"><span class="hljs-meta">SET</span> <span class="hljs-meta">LIST</span> ITEM FONT(<span class="hljs-comment">*;</span><span class="hljs-string">"mylist1"</span>;<span class="hljs-comment">*;</span>thefont)
 </code></pre>
 <blockquote>
 <p>... you are indicating that you want to modify the font of the hierarchical list item associated with the <em>mylist1</em> form object. The command will take the current item of the <em>mylist1</em> object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.</p>
