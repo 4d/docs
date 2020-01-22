@@ -321,10 +321,10 @@ For example, this method allows inverting the selection of the first row of the 
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY BOOLEAN</span>(tBListBox;<span class="hljs-number">10</span>)
   <span class="hljs-comment">//tBListBox is the name of the list box variable in the form</span><span class="hljs-keyword">
- If</span>(tBListBox{<span class="hljs-number">1</span>}=<span class="hljs-literals">True</span>)
-    tBListBox{<span class="hljs-number">1</span>}:=<span class="hljs-literals">False</span><span class="hljs-keyword">
+ If</span>(tBListBox{<span class="hljs-number">1</span>}=<span class="hljs-literal">True</span>)
+    tBListBox{<span class="hljs-number">1</span>}:=<span class="hljs-literal">False</span><span class="hljs-keyword">
  Else</span>
-    tBListBox{<span class="hljs-number">1</span>}:=<span class="hljs-literals">True</span><span class="hljs-keyword">
+    tBListBox{<span class="hljs-number">1</span>}:=<span class="hljs-literal">True</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <blockquote>
@@ -371,7 +371,7 @@ For example, this method allows inverting the selection of the first row of the 
        <span class="hljs-variable">$n</span>:=<span class="hljs-function">Size of array</span>(LB_Arrays)
 <span class="hljs-function">       ARRAY LONGINT</span>(_ListboxBackground;<span class="hljs-variable">$n</span>) <span class="hljs-comment">// row background colors</span><span class="hljs-keyword">
        For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$n</span>)<span class="hljs-keyword">
-          If</span>(LB_Arrays{<span class="hljs-variable">$i</span>}=<span class="hljs-literals">True</span>) <span class="hljs-comment">// selected</span>
+          If</span>(LB_Arrays{<span class="hljs-variable">$i</span>}=<span class="hljs-literal">True</span>) <span class="hljs-comment">// selected</span>
              _ListboxBackground{<span class="hljs-variable">$i</span>}:=<span class="hljs-number">0x0080</span>C<span class="hljs-number">080</span> <span class="hljs-comment">// green background</span><span class="hljs-keyword">
           Else</span> <span class="hljs-comment">// not selected</span>
              _ListboxBackground{<span class="hljs-variable">$i</span>}:=<span class="hljs-function">lk inherited</span><span class="hljs-keyword">
@@ -573,7 +573,7 @@ Beginning with the third field, each variable depends on the one preceding it. F
 <li>selections</li>
 </ul>
 <p>For example, if you want to select the row containing Rennes, you must pass:</p>
-<pre><code class="hljs css language-4d"> -&gt;MyListbox{<span class="hljs-number">3</span>}:=<span class="hljs-literals">True</span>
+<pre><code class="hljs css language-4d"> -&gt;MyListbox{<span class="hljs-number">3</span>}:=<span class="hljs-literal">True</span>
 </code></pre>
 <p>Non-hierarchical representation:
 <img src="/docs/assets/en/FormObjects/hierarch7.png" alt="">
@@ -728,7 +728,7 @@ To define these properties, you need to set the appropriate attributes in the ob
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob2</span>;<span class="hljs-string">"value"</span>;<span class="hljs-number">2</span>/<span class="hljs-number">3</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"boolean"</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"value"</span>;<span class="hljs-literals">True</span>)
+<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"value"</span>;<span class="hljs-literal">True</span>)
 <span class="hljs-function"> </span>
 <span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob1</span>)
 <span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob2</span>)
@@ -895,7 +895,7 @@ To define these properties, you need to set the appropriate attributes in the ob
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
 <span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>)
-<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"alternateButton"</span>;<span class="hljs-literals">True</span>)
+<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"alternateButton"</span>;<span class="hljs-literal">True</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-variable">$entry</span>)
 </code></pre>
 <p><img src="/docs/assets/en/FormObjects/listbox_column_objectArray_alternateButton.png" alt=""></p>

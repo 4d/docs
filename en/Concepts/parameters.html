@@ -266,7 +266,7 @@ The $0 parameter (Longint), which is the result of the <code>On Drag Over</code>
 <span class="hljs-comment">//ChangeAge</span>
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
 <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span><span class="hljs-keyword">  
-If</span><span class="hljs-function"> </span>(<span class="hljs-variable">$para</span>.toAdd=<span class="hljs-literals">Null</span>)
+If</span><span class="hljs-function"> </span>(<span class="hljs-variable">$para</span>.toAdd=<span class="hljs-literal">Null</span>)
     <span class="hljs-variable">$para</span>.toAdd:=<span class="hljs-number">10</span><span class="hljs-keyword">
 End if</span>
 <span class="hljs-variable">$para</span>.Age:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-variable">$para</span>.<span class="hljs-function">toAdd</span>
