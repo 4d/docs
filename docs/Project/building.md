@@ -489,6 +489,7 @@ The opening sequence for launching a merged application is:
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder. 
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
+
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
