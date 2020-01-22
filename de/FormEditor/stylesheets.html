@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="de"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Style sheets · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Overview"/><meta name="docsearch:language" content="de"/><meta property="og:title" content="Style sheets · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Overview"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/de"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Deutsch</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/FormEditor/stylesheets.html">English</a></li><li><a href="/docs/ja/FormEditor/stylesheets.html">日本語</a></li><li><a href="/docs/es/FormEditor/stylesheets.html">Español</a></li><li><a href="/docs/fr/FormEditor/stylesheets.html">Français</a></li><li><a href="/docs/pt/FormEditor/stylesheets.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="de"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Style sheets · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Overview"/><meta name="docsearch:language" content="de"/><meta property="og:title" content="Style sheets · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Overview"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/de"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Deutsch</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/FormEditor/stylesheets.html">English</a></li><li><a href="/docs/ja/FormEditor/stylesheets.html">日本語</a></li><li><a href="/docs/es/FormEditor/stylesheets.html">Español</a></li><li><a href="/docs/fr/FormEditor/stylesheets.html">Français</a></li><li><a href="/docs/pt/FormEditor/stylesheets.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -88,7 +88,7 @@
 </table>
 <p>These files are stored in the project's &quot;/SOURCES&quot; folder.</p>
 <h3><a class="anchor" aria-hidden="true" id="style-sheet-architecture"></a><a href="#style-sheet-architecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Sheet Architecture</h3>
-<p>While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow <a href="https://www.w3schools.com/css/">CSS</a> syntax and grammar.</p>
+<p>While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.</p>
 <p>Every style rule in a style sheet contains two parts:</p>
 <ul>
 <li><p>a <em>Selector</em> - A selector defines where to apply the style. 4D supports &quot;object type&quot;, &quot;object name&quot;, &quot;class&quot;, &quot;all objects&quot;, as well as &quot;attribute value&quot; selectors.</p></li>
@@ -111,7 +111,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="object-name"></a><a href="#object-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object Name</h3>
-<p>Corresponding to the CSS ID selector, the object name defines a specific object to style since the object's name is unique within the form.</p>
+<p>Corresponding to the CSS <strong>ID selector</strong>, the object name defines a specific object to style since the object's name is unique within the form.</p>
 <p>Designate the object with a &quot;#&quot; character before the object's name, then in curly braces, declare the style(s) to apply.</p>
 <p>In the following example, the text of the object with the name &quot;okButton&quot; will be displayed in Helvetica Neue font, with a size of 20 pixels:</p>
 <pre><code class="hljs"><span class="hljs-selector-id">#okButton</span> {
@@ -120,7 +120,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="class"></a><a href="#class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class</h3>
-<p>Corresponding to the CSS class selector, the class defines the style for all form objects with the <code>class</code> attribute.</p>
+<p>Corresponding to the CSS <strong>class selector</strong>, the class defines the style for all form objects with the <code>class</code> attribute.</p>
 <p>You can specify the classes to use with a &quot;.&quot; character followed by the name of the class, and in curly braces, declare the style(s) to apply.</p>
 <p>In the following example, the text of all objects with the <code>okButtons</code> class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:</p>
 <pre><code class="hljs"><span class="hljs-selector-class">.okButtons</span> {
@@ -139,7 +139,7 @@
 <pre><code class="hljs"><span class="hljs-keyword">class</span>: "<span class="hljs-symbol">okButtons</span> <span class="hljs-symbol">important</span>"             
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="all-objects"></a><a href="#all-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All Objects</h3>
-<p>Corresponding to the CSS universal selector, the &quot;*&quot; character indicates that the following style will be applied to all objects on the form.</p>
+<p>Corresponding to the CSS <strong>universal selector</strong>, the &quot;*&quot; character indicates that the following style will be applied to all objects on the form.</p>
 <p>Designate that a style should apply to all form objects with the &quot;*&quot; character, then in curly braces, declare the style(s) to apply.</p>
 <p>In the following example, all objects will have a gray fill:</p>
 <pre><code class="hljs">* {
@@ -147,28 +147,41 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="specific-attribute"></a><a href="#specific-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specific Attribute</h3>
-<p>Corresponding to the CSS attribute selector, styles can be applied to all form objects with a specific attribute.</p>
+<p>Corresponding to the CSS <strong>attribute selectors</strong>, styles can be applied to all form objects with a specific attribute.</p>
 <p>Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.</p>
-<p>In the following example, all objects with the <code>borderStyle</code> attribute will have purple lines:</p>
+<h4><a class="anchor" aria-hidden="true" id="supported-syntaxes"></a><a href="#supported-syntaxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supported syntaxes</h4>
+<table>
+<thead>
+<tr><th>Syntax</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>[attribute]</td><td>matches objects with the <code>attribute</code></td></tr>
+<tr><td>[attribute=&quot;value&quot;]</td><td>matches objects with the <code>attribute</code> value containing exactly the specified &quot;value&quot;</td></tr>
+<tr><td>[attribute~=&quot;value&quot;]</td><td>matches objects with the <code>attribute</code> value containing the &quot;value&quot; among a space-separated list of words</td></tr>
+<tr><td>[attribute|=&quot;value&quot;]</td><td>matches objects with an <code>attribute</code> whose value starts with &quot;value&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>All objects with the <code>borderStyle</code> attribute will have purple lines:</p>
 <pre><code class="hljs"><span class="hljs-selector-attr">[borderStyle]</span>
 {
      <span class="hljs-attribute">stroke</span>: purple;
 }
 </code></pre>
-<p>To designate that a style should be applied to all objects that have a specific attribute and word, use the <code>[attribute~=&quot;value&quot;]</code> syntax:</p>
+<p>All objects of the text type with a text attribute whose value is &quot;Hello&quot; will have blue letters:</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text=Hello]</span>
+{
+     <span class="hljs-attribute">stroke</span>: blue;
+}
+</code></pre>
+<p>All objects with a text attribute whose value contains &quot;Hello&quot; will have blue lines:</p>
 <pre><code class="hljs"><span class="hljs-selector-attr">[text~=Hello]</span>
 {
      <span class="hljs-attribute">stroke</span>: blue;
 }
 
 </code></pre>
-<p>To designate that a style should be applied to distinct object types with a specific attribute and value, use the <code>object type[attribute=&quot;value&quot;]</code> syntax:</p>
-<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text=Hello]</span>
-{
-     <span class="hljs-attribute">stroke</span>: blue;
-}
-</code></pre>
-<p>To designate that a style should be applied to certain object types with a specific attribute whose value begins with a specific value, use the <code>object type[attribute|=&quot;value&quot;]</code> syntax:</p>
+<p>All objects of the text type with a text attribute whose value starts with &quot;Hello&quot; will have yellow letters:</p>
 <pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text|=Hello]</span>
 {
      <span class="hljs-attribute">stroke</span>: yellow;

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Object · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation: "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Object · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation: "/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/ja/Concepts/object.html">日本語</a></li><li><a href="/docs/de/Concepts/object.html">Deutsch</a></li><li><a href="/docs/es/Concepts/object.html">Español</a></li><li><a href="/docs/fr/Concepts/object.html">Français</a></li><li><a href="/docs/pt/Concepts/object.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Object · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation: "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Object · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation: "/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/ja/Concepts/object.html">日本語</a></li><li><a href="/docs/de/Concepts/object.html">Deutsch</a></li><li><a href="/docs/es/Concepts/object.html">Español</a></li><li><a href="/docs/fr/Concepts/object.html">Français</a></li><li><a href="/docs/pt/Concepts/object.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -94,7 +94,7 @@
 <h2><a class="anchor" aria-hidden="true" id="initialization"></a><a href="#initialization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialization</h2>
 <p>Objects must have been initialized, for example using the <code>New object</code> command, otherwise trying to read or modify their properties will generate a syntax error.</p>
 <p>Example:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$obVar</span>) <span class="hljs-comment">//creation of an object type 4D variable</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$obVar</span>) <span class="hljs-comment">//creation of an object type 4D variable</span>
  <span class="hljs-variable">$obVar</span>:=New object <span class="hljs-comment">//initialization of the object and assignment to the 4D variable</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="regular-or-shared-object"></a><a href="#regular-or-shared-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Regular or shared object</h3>
@@ -115,7 +115,7 @@ For more information, refer to the <a href="/docs/en/Concepts/shared.html">Share
 </blockquote></li>
 </ul>
 <p>Example:</p>
-<pre><code class="hljs css language-code4d">     employee.<span class="hljs-built_in">name</span>:=<span class="hljs-string">"Smith"</span>
+<pre><code class="hljs css language-4d">     employee.name:=<span class="hljs-string">"Smith"</span>
 </code></pre>
 <ul>
 <li>using a string within square brackets:
@@ -124,37 +124,37 @@ For more information, refer to the <a href="/docs/en/Concepts/shared.html">Share
 </blockquote></li>
 </ul>
 <p>Examples:</p>
-<pre><code class="hljs css language-code4d">     $vName:=employee[<span class="hljs-string">"name"</span>]
-     //<span class="hljs-keyword">or</span> also:
-     $<span class="hljs-keyword">property</span><span class="hljs-title"></span>:=<span class="hljs-string">"name"</span>
-     $vName:=employee[$<span class="hljs-keyword">property</span><span class="hljs-title"></span>]
+<pre><code class="hljs css language-4d">     <span class="hljs-variable">$vName</span>:=employee[<span class="hljs-string">"name"</span>]
+     <span class="hljs-comment">//or also:</span>
+     <span class="hljs-variable">$property</span>:=<span class="hljs-string">"name"</span>
+     <span class="hljs-variable">$vName</span>:=employee[<span class="hljs-variable">$property</span>]
 
 </code></pre>
 <p>Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].<span class="hljs-function">age</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].<span class="hljs-function">age</span>
 </code></pre>
 <p>Object notation is available on any language element that can contains or returns an object, i.e:</p>
 <ul>
 <li><strong>Objects</strong> themselves (stored in variables, fields, object properties, object arrays, or collection elements).
 Examples:</li>
 </ul>
-<pre><code class="hljs css language-code4d">     <span class="hljs-variable">$age</span>:=<span class="hljs-variable">$myObjVar</span><span class="hljs-selector-class">.employee</span><span class="hljs-selector-class">.age</span> <span class="hljs-comment">//variable</span>
-     <span class="hljs-variable">$addr</span>:=[Emp]data_obj<span class="hljs-selector-class">.address</span> <span class="hljs-comment">//field</span>
-     <span class="hljs-variable">$city</span>:=<span class="hljs-variable">$addr</span><span class="hljs-selector-class">.city</span> <span class="hljs-comment">//property of an object</span>
-     <span class="hljs-variable">$pop</span>:=<span class="hljs-variable">$aObjCountries</span>{<span class="hljs-number">2</span>}<span class="hljs-selector-class">.population</span> <span class="hljs-comment">//object array</span>
-     <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$myCollection</span>[<span class="hljs-number">3</span>]<span class="hljs-selector-class">.subvalue</span> <span class="hljs-comment">//collection element</span>
+<pre><code class="hljs css language-4d">     <span class="hljs-variable">$age</span>:=<span class="hljs-variable">$myObjVar</span>.employee.age <span class="hljs-comment">//variable</span>
+     <span class="hljs-variable">$addr</span>:=[Emp]data_obj.address <span class="hljs-comment">//field</span>
+     <span class="hljs-variable">$city</span>:=<span class="hljs-variable">$addr</span>.city <span class="hljs-comment">//property of an object</span>
+     <span class="hljs-variable">$pop</span>:=<span class="hljs-variable">$aObjCountries</span>{<span class="hljs-number">2</span>}.population <span class="hljs-comment">//object array</span>
+     <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$myCollection</span>[<span class="hljs-number">3</span>].subvalue <span class="hljs-comment">//collection element</span>
 </code></pre>
 <ul>
 <li><strong>4D commands</strong> that return objects.
 Example:</li>
 </ul>
-<pre><code class="hljs css language-code4d">     <span class="hljs-variable">$measures</span>:=<span class="hljs-builtin-name">Get</span> database measures.DB.tables
+<pre><code class="hljs css language-4d">     <span class="hljs-variable">$measures</span>:=Get database measures.DB.<span class="hljs-function">tables</span>
 </code></pre>
 <ul>
 <li><strong>Project methods</strong> that return objects.
 Example:</li>
 </ul>
-<pre><code class="hljs css language-code4d">      <span class="hljs-comment">// MyMethod1</span>
+<pre><code class="hljs css language-4d">      <span class="hljs-comment">// MyMethod1</span>
 <span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$0</span>)
      <span class="hljs-variable">$0</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"a"</span>;<span class="hljs-number">10</span>;<span class="hljs-string">"b"</span>;<span class="hljs-number">20</span>)
 <span class="hljs-function">     </span>
@@ -165,7 +165,7 @@ Example:</li>
 <li><strong>Collections</strong>
 Example:</li>
 </ul>
-<pre><code class="hljs css language-code4d">     myColl.<span class="hljs-built_in">length</span> <span class="hljs-comment">//size of the collection</span>
+<pre><code class="hljs css language-4d">     myColl.length <span class="hljs-comment">//size of the collection</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="pointers"></a><a href="#pointers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers</h3>
 <p><strong>Preliminary Note:</strong> Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.</p>
@@ -183,7 +183,7 @@ Example:</li>
 <p>pointerOnObject-&gt;[&quot;propertyName&quot;]</p>
 </blockquote>
 <p>Example:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
 <span class="hljs-function"> C_POINTER</span>(vPtr)
  vObj:=<span class="hljs-function">New object</span>
  vObj.a:=<span class="hljs-number">10</span>
@@ -192,7 +192,7 @@ Example:</li>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="null-value"></a><a href="#null-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Null value</h3>
 <p>When using the object notation, the <strong>null</strong> value is supported though the <strong>Null</strong> command. This command can be used to assign or compare the null value to object properties or collection elements, for example:</p>
-<pre><code class="hljs css language-code4d"> myObject.address.zip:=<span class="hljs-literals">Null</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"> myObject.address.zip:=<span class="hljs-literals">Null</span><span class="hljs-keyword">
  If</span>(myColl[<span class="hljs-number">2</span>]=<span class="hljs-literals">Null</span>)
 </code></pre>
 <p>For more information, please refer to the <code>Null</code> command description.</p>
@@ -201,7 +201,7 @@ Example:</li>
 <ul>
 <li>Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-function">     C_LONGINT</span>(<span class="hljs-variable">$val</span>)
      <span class="hljs-variable">$val</span>:=<span class="hljs-number">10</span> <span class="hljs-comment">//$val=10</span>
      <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$o</span>.a <span class="hljs-comment">//$o.a is undefined (no error), and assigning this value clears the variable</span>
@@ -210,13 +210,13 @@ Example:</li>
 <ul>
 <li>Reading the <strong>length</strong> property of an undefined collection produces 0:</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">     C_COLLECTION</span>(<span class="hljs-variable">$c</span>) <span class="hljs-comment">//variable created but no collection is defined</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function">     C_COLLECTION</span>(<span class="hljs-variable">$c</span>) <span class="hljs-comment">//variable created but no collection is defined</span>
      <span class="hljs-variable">$size</span>:=<span class="hljs-variable">$c</span>.length <span class="hljs-comment">//$size = 0</span>
 </code></pre>
 <ul>
 <li>An undefined value passed as parameter to a project method is automatically converted to 0 or &quot;&quot; according to the declared parameter type.</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-function">     mymethod</span>(<span class="hljs-variable">$o</span>.a) <span class="hljs-comment">//pass an undefined parameter</span>
 <span class="hljs-function">     </span>
       <span class="hljs-comment">//In mymethod method</span>
@@ -226,7 +226,7 @@ Example:</li>
 <ul>
 <li>A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)<span class="hljs-keyword">
      If</span>(<span class="hljs-variable">$o</span>.a) <span class="hljs-comment">// false</span><span class="hljs-keyword">
      End if</span><span class="hljs-keyword">
      Case of</span>
@@ -244,7 +244,7 @@ Example:</li>
 <li>Time: 0 (number of ms)</li>
 <li>Undefined, Null: no change</li>
 </ul>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$o</span>)
      <span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"a"</span>;<span class="hljs-number">2</span>)
      <span class="hljs-variable">$o</span>.a:=<span class="hljs-variable">$o</span>.b <span class="hljs-comment">//$o.a=0</span>
 </code></pre>
@@ -252,7 +252,7 @@ Example:</li>
 <li>Assigning an undefined value to a non existing object property does nothing.</li>
 </ul>
 <p>When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: <code>String</code>, <code>Num</code>, <code>Date</code>, <code>Time</code>, <code>Bool</code>. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$myString</span>:=<span class="hljs-function">Lowercase</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$o</span>.a.b)) <span class="hljs-comment">//make sure you get a string value even if undefined</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myString</span>:=<span class="hljs-function">Lowercase</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$o</span>.a.b)) <span class="hljs-comment">//make sure you get a string value even if undefined</span>
   <span class="hljs-comment">//to avoid errors in the code</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="object-property-identifiers"></a><a href="#object-property-identifiers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object property identifiers</h2>
@@ -272,7 +272,7 @@ Example:</li>
 <ul>
 <li>Writing and reading objects (this example compares object notation and command notation):</li>
 </ul>
-<pre><code class="hljs css language-code4d">  <span class="hljs-comment">// Using the object notation</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// Using the object notation</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$myObj</span>) <span class="hljs-comment">//declares a 4D variable object</span>
  <span class="hljs-variable">$myObj</span>:=New object <span class="hljs-comment">//creates an object and assigns to the variable</span>
  <span class="hljs-variable">$myObj</span>.age:=<span class="hljs-number">56</span>
@@ -291,23 +291,23 @@ Example:</li>
 <ul>
 <li>Create a property and assign values, including objects:</li>
 </ul>
-<pre><code class="hljs css language-code4d"> C_OBJECT($Emp)
- $Emp:=<span class="hljs-literal">New</span> object
- $Emp.city:=<span class="hljs-string">"London"</span> <span class="hljs-comment">//creates the city property and sets its value to "London"</span>
- $Emp.city:=<span class="hljs-string">"Paris"</span> <span class="hljs-comment">//modifies the city property</span>
- $Emp.phone:=<span class="hljs-literal">New</span> object(<span class="hljs-string">"office"</span>;<span class="hljs-string">"123456789"</span>;<span class="hljs-string">"home"</span>;<span class="hljs-string">"0011223344"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$Emp</span>)
+ <span class="hljs-variable">$Emp</span>:=<span class="hljs-function">New object</span>
+ <span class="hljs-variable">$Emp</span>.city:=<span class="hljs-string">"London"</span> <span class="hljs-comment">//creates the city property and sets its value to "London"</span>
+ <span class="hljs-variable">$Emp</span>.city:=<span class="hljs-string">"Paris"</span> <span class="hljs-comment">//modifies the city property</span>
+ <span class="hljs-variable">$Emp</span>.phone:=<span class="hljs-function">New object</span>(<span class="hljs-string">"office"</span>;<span class="hljs-string">"123456789"</span>;<span class="hljs-string">"home"</span>;<span class="hljs-string">"0011223344"</span>)
   <span class="hljs-comment">//creates the phone property and sets its value to an object</span>
 </code></pre>
 <ul>
 <li>Get a value in a sub-object is very simple using the object notation:</li>
 </ul>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$vCity</span>:=<span class="hljs-variable">$Emp</span><span class="hljs-selector-class">.city</span> <span class="hljs-comment">//"Paris"</span>
- <span class="hljs-variable">$vPhone</span>:=<span class="hljs-variable">$Emp</span><span class="hljs-selector-class">.phone</span><span class="hljs-selector-class">.home</span> <span class="hljs-comment">//"0011223344"</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$vCity</span>:=<span class="hljs-variable">$Emp</span>.city <span class="hljs-comment">//"Paris"</span>
+ <span class="hljs-variable">$vPhone</span>:=<span class="hljs-variable">$Emp</span>.phone.home <span class="hljs-comment">//"0011223344"</span>
 </code></pre>
 <ul>
 <li>You can access properties as strings using the [ ] operator</li>
 </ul>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$Emp</span>[<span class="hljs-string">"city"</span>]:=<span class="hljs-string">"Berlin"</span> <span class="hljs-comment">//modifies the city property</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Emp</span>[<span class="hljs-string">"city"</span>]:=<span class="hljs-string">"Berlin"</span> <span class="hljs-comment">//modifies the city property</span>
   <span class="hljs-comment">//this can be useful for creating properties through variables</span>
 <span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$addr</span>)
  <span class="hljs-variable">$addr</span>:=<span class="hljs-string">"address"</span><span class="hljs-keyword">
