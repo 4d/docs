@@ -60,6 +60,6 @@ The following is the truth table for the OR logical operator:
 
 **Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
-```code4d
+```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```

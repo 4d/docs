@@ -9,13 +9,13 @@ To manage Collection type variables you must use object notation (see [Syntax ba
 
 To access a collection element, you need to pass the element number inside square brackets:
 
-```code4d
+```4d
 collectionRef[expression]
 ```
 
 You can pass any valid 4D expression which returns a positive integer in expression. Examples:
 
-```code4d
+```4d
  myCollection[5]  //access to 6th element of the collection
  myCollection[$var]
 ```
@@ -24,14 +24,14 @@ You can pass any valid 4D expression which returns a positive integer in express
 
 You can assign a value to a collection element or get a collection element value using object notation:
 
-```code4d
+```4d
  myCol[10]:="My new element"
  $myVar:=myCol[0]
 ```
 
 If you assign an element's index that surpasses the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a null value:
 
-```code4d
+```4d
  C_COLLECTION(myCol)
  myCol:=New collection("A";"B")
  myCol[5]:="Z"
@@ -45,7 +45,7 @@ If you assign an element's index that surpasses the last existing element of the
 Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
 Example:
-```code4d
+```4d
  C_COLLECTION($colVar) //creation of collection type 4D variable
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
 ```
@@ -68,14 +68,14 @@ Note that, even if it does not have parameters, a member function must be called
 
 For example:
 
-```code4d
+```4d
 $newCol:=$col.copy() //deep copy of $col to $newCol
 $col.push(10;100) //add 10 and 100 to the collection
 ```
 
 Some methods return the original collection after modification, so that you can run the calls in a sequence:
 
-```code4d
+```4d
  $col:=New collection(5;20)
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
@@ -91,7 +91,7 @@ Several methods accept a _propertyPath_ as parameter. This parameter stands for:
 
 **Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
-```code4d
+```4d
  $vmin:=$col.min("My.special.property") //undefined
  $vmin:=$col.min(["My.special.property"]) //error
 ```
