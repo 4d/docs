@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-0: title:Entry
+title: Entry
 ---
 
 ---
