@@ -57,7 +57,7 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-End case[#/code4D]
+End case
 ```
 
 > When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
