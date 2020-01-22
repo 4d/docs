@@ -1,6 +1,6 @@
 ---
 id: propertiesPrint
-0: title:Print
+title: Print
 ---
 
 ---
