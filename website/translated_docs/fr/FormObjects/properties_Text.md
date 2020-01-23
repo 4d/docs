@@ -202,7 +202,7 @@ You must enter an expression or a variable (array type variables cannot be used)
 
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
 
-```code4d
+```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
 Foreground color;Dark shadow color)
 ```
@@ -228,7 +228,7 @@ You must enter an expression or a variable (array type variables cannot be used)
 
 Exemple :
 
-```code4d
+```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
@@ -318,7 +318,7 @@ The following example uses the *Color* project method.
 
 In the form method, write the following code:
 
-```code4d
+```4d
 //form method
 Case of
   :(Form event=On Load)
@@ -329,7 +329,7 @@ End case
 
 In the *Color* method, write the following code:
 
-```code4d
+```4d
 //Color method
 //Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
