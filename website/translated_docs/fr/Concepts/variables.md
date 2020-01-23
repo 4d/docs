@@ -17,25 +17,25 @@ Vous pouvez créer des variables en les déclarant à l'aide de l'une des comman
 
 Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
-```code4d
+```4d
  C_TEXT(monTexte)
 ```
 
 **Note :**Vous pouvez également créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
-```code4d
+```4d
  MaDate:=Current date+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
 ```
 
 Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par exemple, vous pouvez la stocker dans un champ du même type :
 
-```code4d
+```4d
  [MaTable]MonChamp:=MonTexte
 ```
 
 Voici quelques déclarations de variables simples :
 
-```code4d
+```4d
  C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
  C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
  C_C_LONGINT(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
@@ -50,7 +50,7 @@ Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer l
 
 L’opérateur d’assignation est le premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple :
 
-```code4d
+```4d
 MonNombre:=3
 ```
 
@@ -58,7 +58,7 @@ crée la variable *MonNombre* et lui donne la valeur numérique 3. Si MonNombre 
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer *MonNombre* à droite de l’opérateur d’assignation :
 
-```code4d
+```4d
 [Produits]Taille:=MonNombre
 ```
 
@@ -66,7 +66,7 @@ Dans ce cas, *[Produits]Taille* vaudrait 3. Cet exemple est plutôt simple, mais
 
 Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :
 
-```code4d
+```4d
 atNoms{1}:="Richard"
 ```
 
@@ -90,7 +90,7 @@ Lorsque vous développez une base comportant de nombreuses méthodes et variable
 
 Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. La commande Demander peut être appelée pour obtenir ces informations. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne. Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
-```code4d
+```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")
 If(OK=1)
     QUERY([Personnes];[Personnes]ID=$vsID)
