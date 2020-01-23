@@ -15,7 +15,7 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
 
 **Voici quelques exemples :**
 
-```code4d
+```4d
   // Déclarer une variable de type BLOB
  C_BLOB(touteVarBLOB)
   // Le BLOB est passé comme paramètre à une commande 4D
@@ -37,7 +37,7 @@ Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple
 
 ** **
 
-```code4d
+```4d
   // Déclarer deux variables de type BLOB
  C_BLOB(vBlobA;vBlobB)
   // Fixer la taille du premier BLOB à 10Ko
@@ -52,7 +52,7 @@ En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOB.
 
 Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accolades {...}. Dans un BLOB, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB. Voici un exemple :
 
-```code4d
+```4d
   // Déclarer une variable de type BLOB
  C_BLOB(vBlob)
   // Fixer la taille du BLOB à 256 octets
