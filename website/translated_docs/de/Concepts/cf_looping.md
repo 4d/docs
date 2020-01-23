@@ -7,7 +7,7 @@ title: Looping structures
 
 The formal syntax of the `While...End while` control flow structure is:
 
-```code4d
+```4d
  While(Boolean_Expression)
     statement(s)
  End while
@@ -19,7 +19,7 @@ It is common to initialize the value tested in the Boolean expression immediatel
 
 The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because *NeverStop* is always TRUE:
 
-```code4d
+```4d
  NeverStop:=True
  While(NeverStop)
  End while
@@ -29,7 +29,7 @@ If you find yourself in such a situation, where a method is executing uncontroll
 
 ### Example
 
-```code4d
+```4d
  CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) //Loop as long as the user wants to
     ADD RECORD([aTable]) //Add a new record
@@ -42,7 +42,7 @@ In this example, the `OK` system variable is set by the `CONFIRM` command before
 
 The formal syntax of the `Repeat...Until` control flow structure is:
 
-```code4d
+```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
@@ -56,7 +56,7 @@ The other difference with a `Repeat...Until` loop is that the loop continues unt
 
 Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
 
-```code4d
+```4d
  Repeat
     ADD RECORD([aTable])
  Until(OK=0)
@@ -66,7 +66,7 @@ Compare the following example with the example for the `While...End while` loop.
 
 The formal syntax of the `For...End for` control flow structure is:
 
-```code4d
+```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
     statement(s)
  End for
@@ -90,7 +90,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
 
 1. The following example executes 100 iterations:
 
-```code4d
+```4d
  For(vCounter;1;100)
   //Do something
  End for
@@ -98,7 +98,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
 
 2. The following example goes through all elements of the array anArray:
 
-```code4d
+```4d
  For($vlElem;1;Size of array(anArray))
   //Do something with the element
     anArray{$vlElem}:=...
@@ -107,7 +107,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
 
 3. The following example goes through all the characters of the text vtSomeText:
 
-```code4d
+```4d
  For($vlChar;1;Length(vtSomeText))
   //Do something with the character if it is a TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -118,7 +118,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
 
 4. The following example goes through the selected records for the table [aTable]:
 
-```code4d
+```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
   //Do something with the record
@@ -137,7 +137,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 5. The following example executes 100 iterations:
 
-```code4d
+```4d
  For(vCounter;100;1;-1)
   //Do something
  End for
@@ -145,7 +145,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 6. The following example goes through all elements of the array anArray:
 
-```code4d
+```4d
  For($vlElem;Size of array(anArray);1;-1)
   //Do something with the element
     anArray{$vlElem}:=...
@@ -154,7 +154,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 7. The following example goes through all the characters of the text vtSomeText:
 
-```code4d
+```4d
  For($vlChar;Length(vtSomeText);1;-1)
   //Do something with the character if it is a TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -165,7 +165,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 8. The following example goes through the selected records for the table [aTable]:
 
-```code4d
+```4d
  LAST RECORD([aTable])
  For($vlRecord;Records in selection([aTable]);1;-1)
   //Do something with the record
@@ -182,7 +182,7 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
 
 9. The following loop addresses only the even elements of the array anArray:
 
-```code4d
+```4d
  For($vlElem;2;Size of array(anArray);2)
   //Do something with the element #2,#4...#2n
     anArray{$vlElem}:=...
@@ -193,7 +193,7 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
 
 Let's go back to the first `For...End for` example. The following example executes 100 iterations:
 
-```code4d
+```4d
  For(vCounter;1;100)
   //Do something
  End for
@@ -201,7 +201,7 @@ Let's go back to the first `For...End for` example. The following example execut
 
 It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
 
-```code4d
+```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
   //Do something
@@ -211,7 +211,7 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
 
 Here is the equivalent `Repeat...Until` loop:
 
-```code4d
+```4d
  $i:=1 //Initialize the counter
  Repeat
   //Do something
@@ -227,7 +227,7 @@ You can use Real and Long Integer variables as well as interprocess, process, an
 
 10. Here is an example:
 
-```code4d
+```4d
  C_LONGINT($vlCounter) //use local Long Integer variables
  For($vlCounter;1;10000)
   //Do something
@@ -242,7 +242,7 @@ Here are two examples:
 
 11. The following example goes through all the elements of a two-dimensional array:
 
-```code4d
+```4d
  For($vlElem;1;Size of array(anArray))
   //...
   //Do something with the row
@@ -256,7 +256,7 @@ Here are two examples:
 
 12. The following example builds an array of pointers to all the date fields present in the database:
 
-```code4d
+```4d
  ARRAY POINTER($apDateFields;0)
  $vlElem:=0
  For($vlTable;1;Get last table number)
@@ -279,7 +279,7 @@ Here are two examples:
 
 The formal syntax of the `For each...End for each` control flow structure is:
 
-```code4d
+```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
     statement(s)
  End for each
@@ -323,7 +323,7 @@ At each loop iteration, the *Current_Item* variable is automatically filled with
 
 You want to compute some statistics for a collection of numbers:
 
-```code4d
+```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
  C_LONGINT($item;$vEven;$vOdd;$vUnder;$vOver)
@@ -358,7 +358,7 @@ Keep in mind that any modifications applied on the current entity must be saved 
 
 You want to raise the salary of all British employees in an entity selection:
 
-```code4d
+```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
     emp.salary:=emp.salary*1,03
@@ -376,7 +376,7 @@ The properties of the object are processed according to their order of creation.
 
 You want to switch the names to uppercase in the following object:
 
-```code4d
+```4d
 {
     "firstname": "gregory",
     "lastname": "badikora",
@@ -386,7 +386,7 @@ You want to switch the names to uppercase in the following object:
 
 You can write:
 
-```code4d
+```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
        vObject[property]:=Uppercase(vObject[property])
@@ -420,7 +420,7 @@ For example:
 
 #### Example
 
-```code4d
+```4d
  C_COLLECTION($col;$col2)
  $col:=New collection("a";"b";"c";"d";"e")
  $col2:=New collection(1;2;3)
@@ -446,7 +446,7 @@ You can pass either keyword depending on your needs:
 
 #### Example
 
-```code4d
+```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
