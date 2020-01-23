@@ -32,7 +32,7 @@ The **form object** is not necessarily unique: there may be several representati
 
 You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. For example, if you have associated the $mylist [variable](properties_Object.md#variable-or-expression) to the form object, you can write:
 
-```code4d
+```4d
 $mylist:=New list
 ```
 
@@ -48,7 +48,7 @@ You must use the `ListRef` ID with language commands when you want to specify th
 
 > In the case of commands that set properties, the syntax based on the object name does not mean that only the form object specified will be modified by the command, but rather that the action of the command will be based on the state of this object. The common characteristics of hierarchical lists are always modified in all of their representations. For example, if you execute:
 
-```code4d
+```4d
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 > ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. The command will take the current item of the *mylist1* object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.
