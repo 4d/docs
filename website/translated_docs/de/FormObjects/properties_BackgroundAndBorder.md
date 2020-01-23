@@ -179,7 +179,7 @@ The name of a Longint array must be entered. Each element of this array correspo
 
 For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
-```code4d
+```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
  <>_BgndColors{$i}:=-255 // default value
 ```
@@ -187,7 +187,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
-```code4d
+```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
