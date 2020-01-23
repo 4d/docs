@@ -12,7 +12,7 @@ String is a generic term that stands for:
 
 A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
 
-```code4d
+```4d
 "Add Records"
 "No records found."
 "Invoice"
@@ -63,13 +63,13 @@ The following escape sequences can be used within strings:
 - Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
 - When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
 
-```code4d
+```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
 - When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
 
-```code4d
+```4d
      "n"="ñ"
      "n"="Ñ"
      "A"="å"
@@ -82,19 +82,19 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
 
 The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
 
-```code4d
+```4d
 "abcdefghij"="abc@"
 ```
 
 The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
 
-```code4d
+```4d
     "abc@"="abcdefghij"
 ```
 
 The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
 
-```code4d
+```4d
      "abcdefghij"="abcdefghij@"
      "abcdefghij"="@abcdefghij"
      "abcdefghij"="abcd@efghij"
@@ -104,26 +104,26 @@ The wildcard means "one or more characters or nothing". The following expression
 
 On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
 
-```code4d
+```4d
 "abcdefghij"="abc@@fg"
 ```
 
 When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
 
-```code4d
+```4d
      "abcd"<="abc@" // Valid comparison
      "abcd"<="abc@ef" //Not a valid comparison
 ```
 
 If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
 
-```code4d
+```4d
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
 The following expression will be evaluated correctly:
 
-```code4d
+```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
@@ -133,7 +133,7 @@ The following expression will be evaluated correctly:
 
 Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
 
-```code4d
+```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
      "Alpha Bravo Charlie"%"vo" // Returns False
      "Alpha Bravo Charlie"%"Alpha Bravo" // Returns False
@@ -151,7 +151,7 @@ These symbols are used to refer to a single character within a string. This synt
 
 If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
 
-```code4d
+```4d
 If(vsName#"")
     vsName[[1]]:=Uppercase(vsName[[1]])
 End if
@@ -159,7 +159,7 @@ End if
 
 Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. たとえば:
 
-```code4d
+```4d
 //The following example tests if the last character of vtText is an At sign "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
@@ -196,7 +196,7 @@ will trigger the Runtime Error shown here:
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 
-```code4d
+```4d
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
@@ -215,7 +215,7 @@ The following project method capitalizes the first character of each word of the
 
 For example, the line:
 
-```code4d
+```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
