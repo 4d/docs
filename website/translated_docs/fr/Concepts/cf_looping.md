@@ -7,7 +7,7 @@ title: Structures répétitives (ou "boucles")
 
 La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
 
-```code4d
+```4d
  While(Expression_booléenne)
     instruction(s)
  End while
@@ -19,7 +19,7 @@ Il est utile d’initialiser la valeur testée dans l’expression booléenne ju
 
 La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car *NeverStop* est toujours TRUE :
 
-```code4d
+```4d
  NeverStop:=True
  While(NeverStop)
  End while
@@ -29,7 +29,7 @@ Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de 
 
 ### Exemple
 
-```code4d
+```4d
  CONFIRM("Add a new record?") // Est-ce que l'utilisateur veut ajouter un enregistrement?
  While(OK=1) // Tant que l'utilisateur accepte
     ADD RECORD([aTable]) // Ajouter un nouvel enregistrement
@@ -42,7 +42,7 @@ Dans cet exemple, la valeur de la variable système `OK` est définie par la com
 
 La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suivante :
 
-```code4d
+```4d
  Repeat
     instruction(s)
  Until(Boolean_Expression)
@@ -56,7 +56,7 @@ L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit j
 
 Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
 
-```code4d
+```4d
  Repeat
     ADD RECORD([aTable])
  Until(OK=0)
@@ -66,7 +66,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 
 La syntaxe de la structure répétitive `For...End for` est la suivante :
 
-```code4d
+```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
     instruction(s)
  End for
@@ -90,7 +90,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 
 1. La boucle suivante s'exécute 100 fois :
 
-```code4d
+```4d
  For(vCounter;1;100)
   //Faire quelque chose
  End for
@@ -98,7 +98,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 
 2. L'exemple suivant permet de traiter tous les éléments du tableau anArray :
 
-```code4d
+```4d
  For($vlElem;1;Size of array(anArray))
   //Faire quelque chose avec l'élément
     anArray{$vlElem}:=...
@@ -107,7 +107,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 
 3. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
-```code4d
+```4d
  For($vlChar;1;Length(vtSomeText))
   //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -118,7 +118,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 
 4. L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :
 
-```code4d
+```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
   //Faire quelque chose avec chaque enregistrement
@@ -137,7 +137,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 5. La boucle suivante s'exécute 100 fois :
 
-```code4d
+```4d
  For(vCounter;100;1;-1)
   //Faire quelque chose
  End for
@@ -145,7 +145,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 6. L'exemple suivant permet de traiter tous les éléments du tableau anArray :
 
-```code4d
+```4d
  For($vlElem;Size of array(anArray);1;-1)
   //Faire quelque chose avec l'élément
     anArray{$vlElem}:=...
@@ -154,7 +154,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 7. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
-```code4d
+```4d
  For($vlChar;Length(vtSomeText);1;-1)
   //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -165,7 +165,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 
 8. L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :
 
-```code4d
+```4d
  LAST RECORD([aTable])
  For($vlRecord;Records in selection([aTable]);1;-1)
   //Faire quelque chose avec chaque enregistrement
@@ -182,7 +182,7 @@ Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur 
 
 9. La boucle suivante ne traite que les éléments pairs du tableau anArray :
 
-```code4d
+```4d
  For($vlElem;2;Size of array(anArray);2)
   //Faire quelque chose avec l'élément 2,4...2n
     anArray{$vlElem}:=...
@@ -193,7 +193,7 @@ Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur 
 
 Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 fois :
 
-```code4d
+```4d
  For(vCounter;1;100)
   //Faire quelque chose
  End for
@@ -201,7 +201,7 @@ Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 f
 
 Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action. Voici la boucle `While...End while` équivalente :
 
-```code4d
+```4d
  $i :=1 // Initialisation du compteur
 While ($i<=100) // Boucle 100 fois
   // Faire quelque chose
@@ -211,7 +211,7 @@ While ($i<=100) // Boucle 100 fois
 
 Voici la boucle `Repeat...Until` équivalente :
 
-```code4d
+```4d
  $i :=1 // Initialisation du compteur
  Repeat
   // Faire quelque chose
@@ -227,7 +227,7 @@ Vous pouvez utiliser comme compteur une variable interprocess, process ou locale
 
 10. Voici un exemple :
 
-```code4d
+```4d
  C_LONGINT($vlCounter) // Utilisons une variable locale de type Entier long
 For($vlCounter;1;10000)
   // Faire quelque chose
@@ -242,7 +242,7 @@ Voici deux exemples :
 
 11. L'exemple suivant permet de traiter tous les éléments d'un tableau à deux dimensions :
 
-```code4d
+```4d
  For($vlElem;1;Size of array(anArray))
   //...
   // Faire quelque chose avec la ligne
@@ -256,7 +256,7 @@ Voici deux exemples :
 
 12. L'exemple suivant construit un tableau de pointeurs vers tous les champs de type Date présents dans la base :
 
-```code4d
+```4d
  ARRAY POINTER($apDateFields;0)
  $vlElem:=0
  For($vlTable;1;Get last table number)
@@ -279,7 +279,7 @@ Voici deux exemples :
 
 La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
 
-```code4d
+```4d
  For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
     instruction(s)
  End for each
@@ -323,7 +323,7 @@ A chaque itération de la boucle, la variable *Elément_courant* reçoit automat
 
 Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
-```code4d
+```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
  C_LONGINT($item;$vEven;$vOdd;$vUnder;$vOver)
@@ -358,7 +358,7 @@ N'oubliez pas que toute modification effectuée sur l'entity en cours de traitem
 
 Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
 
-```code4d
+```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
     emp.salary:=emp.salary*1,03
@@ -376,7 +376,7 @@ Les propriétés de l'objet sont itérées en fonction de leur ordre de créatio
 
 Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
 
-```code4d
+```4d
 {
     "firstname": "gregory",
     "lastname": "badikora",
@@ -386,7 +386,7 @@ Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'o
 
 Vous pouvez écrire :
 
-```code4d
+```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
        vObject[property]:=Uppercase(vObject[property])
@@ -420,7 +420,7 @@ Par exemple:
 
 #### Exemple
 
-```code4d
+```4d
  C_COLLECTION($col;$col2)
  $col:=New collection("a";"b";"c";"d";"e")
  $col2:=New collection(1;2;3)
@@ -446,7 +446,7 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 
 #### Exemple
 
-```code4d
+```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
