@@ -6,7 +6,7 @@ sidebar_label: Tour d'horizon
 
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
 
-```code4d
+```4d
 ALERT("Hello, World!")
 ```
 
@@ -20,7 +20,7 @@ Vous pouvez également associer ce code à un bouton de formulaire et exécuter 
 
 Vous pouvez donner des valeurs aux variables, aux champs, aux éléments de tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle assigner une valeur (ou affecter une valeur) et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs ou aux éléments de tableaux.
 
-```code4d
+```4d
 $MyNumber:=3 //assigne 3 à la variable MyNumber
 [Products]Size:=$MyNumber //assigne la variable MyNumber au champ [Products]Size
 arrDays{2}:="Tuesday" //assigne la chaîne "Tuesday" au 2ème élément arrDays
@@ -37,13 +37,13 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 
 Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide d'une commande `C_XXX`. Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
-```code4d
+```4d
 C_DATE(MyDate) //Type date type pour la variable MyDate
 ```
 
 Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
-```code4d
+```4d
 MaDate:=Current date+30
 ```
 
@@ -53,13 +53,13 @@ Le programme interprète la ligne comme “MaDate prend la valeur de la date cou
 
 Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREER ENREGISTREMENT` ou `ALERTE`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
 
-```code4d
+```4d
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
 Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées utilisées à l'aide de la notation en point. Par exemple:
 
-```code4d
+```4d
 $c:=Creer collection(1;2;3;4;5)
 $nc:=$c.slice(0;3) //$nc=[1,2,3]  
 
@@ -70,13 +70,13 @@ Vous pouvez utiliser des plug-ins ou des composants 4D qui ajoutent de nouvelles
 
 Il existe de nombreux plug-ins proposés par la communauté des utilisateurs de 4D ou des développeurs tiers. Par exemple, en utilisant les pages [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) sur macOS :
 
-```code4d
+```4d
 PDF REMOVE PAGE(path;page)
 ```
 
 4D SVG est un exemple de composant utilitaire qui augmente les capacités de votre application :
 
-```code4d
+```4d
 //faire un dessin
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
@@ -88,7 +88,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Par exemple, `XML DATA` est une constante (valeur 6). Par défaut, les constantes prédéfinies sont soulignées dans l'éditeur de méthodes 4D. Elles permettent d'écrire un code plus lisible.
 
-```code4d
+```4d
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
@@ -100,7 +100,7 @@ Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’i
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
-```code4d
+```4d
 CONFIRM("Souhaitez-vous vraiment clore ce compte ?";"Oui";"Non")
 ```
 
@@ -108,7 +108,7 @@ Une méthode contient également des testes et des boucles qui gèrent le flux d
 
 L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
-```code4d
+```4d
 For($vlChar;1;Length(vtSomeText))
     //Faire quelque chose avec le caractère s'il s'agit d'une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -119,7 +119,7 @@ End for
 
 Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
-```code4d
+```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
@@ -138,7 +138,7 @@ Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélang
 
 Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données vers d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc". Vous pouvez écrire :
 
-```code4d
+```4d
 [Produits]Matricule:=String(Numéro)+"abc"
 ```
 
@@ -150,19 +150,19 @@ Les types de données sont détaillés dans la section [Types de données](Conce
 
 Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:
 
-```code4d
+```4d
 employee.name:="Smith"
 ```
 
 Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :
 
-```code4d
+```4d
 $vName:=employee["nom"]
 ```
 
 Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
 
-```code4d
+```4d
 $vAge:=employee.children[2].age
 ```
 
@@ -175,7 +175,7 @@ A noter que si la valeur de la propriété de l'objet est un objet qui encapsule
 
 Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :
 
-```code4d
+```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //accède au 4ème élément de la collection
@@ -251,7 +251,7 @@ Vous vous référez à une expression par le biais du type de données qu’elle
 
 Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
 
-```code4d
+```4d
 //La variable $myVar est assignable, vous pouvez écrire :  
 $myVar:="Hello" //assigner "Hello" à myVar
 //Form.pageNumber est assignable, vous pouvez écrire :  
@@ -268,7 +268,7 @@ Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous perme
 
 Un pointeur sur un élément est créé en ajoutant un symbole "->" avant le nom de l'élément, et peut être déréférencé en ajoutant le symbole "->" après le nom du pointeur.
 
-```code4d
+```4d
 MaVar:="Bonjour"
 MonPointeur->->MaVar
 ALERT(MonPointeur->)
@@ -289,7 +289,7 @@ Les deux styles de commentaires peuvent être utilisés simultanément.
 
 Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Exemple :
 
-```code4d
+```4d
 //Ceci est un commentaire 
 For($vCounter;1;100) //Début de la boucle
   //commentaire
@@ -304,7 +304,7 @@ Entourez le contenu avec les caractères `/*` ... Les caractères `*/` pour cré
 
 - Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Exemple :
 
-```code4d
+```4d
 Boucle /* ligne de commentaire */ ($vCounter;1;100)
     ...
 Fin de boucle
@@ -312,7 +312,7 @@ Fin de boucle
 
 - Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
 
-```code4d
+```4d
 For ($vCounter;1;100)
 /*
 commentaires  
