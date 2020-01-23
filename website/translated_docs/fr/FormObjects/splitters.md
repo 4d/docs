@@ -23,7 +23,7 @@ Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous 
 
 #### Exemple JSON :
 
-```code4d
+```4d
 "mySplitter": {
     "type": "splitter",
     "left": 60,  
