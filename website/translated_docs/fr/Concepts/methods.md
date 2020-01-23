@@ -43,7 +43,7 @@ L'utilisation de sous-routines procure les avantages suivants :
 
 Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :
 
-```code4d
+```4d
   // Recherche d'un client
  QUERY BY EXAMPLE([Clients])
   // Sélection du formulaire entrée
@@ -56,7 +56,7 @@ Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque
 
 Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
-```code4d
+```4d
  MODIFY CUSTOMER
  PRINT SELECTION([Clients])
 ```
@@ -67,7 +67,7 @@ Si vous devez modifier votre mode de recherche des clients, comme dans notre exe
 
 Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :
 
-```code4d
+```4d
  FIND CLEARED CHECKS // Rechercher les chèques émis
  RECONCILE ACCOUNT // Rapprocher le compte
 PRINT CHECK BOOK REPORT // Imprimer un relevé
@@ -83,14 +83,14 @@ Les commandes `Formule` ou `formule sur chaine` vous permettent de créer des ob
 
 Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : 
 
-```code4d
+```4d
 //myAlert
 ALERT("Hello world!")
 ```
 
 `myAlert` peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";New formula(myAlert))
 $o.custom_Alert() //affiche "Hello world!"
@@ -98,13 +98,13 @@ $o.custom_Alert() //affiche "Hello world!"
 
 La syntaxe avec des crochets est également prise en charge :
 
-```code4d
+```4d
 $o["custom_Alert"]() //affiche "Hello world!"
 ```
 
 Vous pouvez appeler votre formule en lui [passant des paramètres](Concepts/parameters.md) $1, $2, etc., tout comme pour les méthodes projet de 4D :
 
-```code4d
+```4d
 //méthode fullName
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
@@ -112,7 +112,7 @@ $0:=$1+" "+$2
 
 Vous pouvez encapsuler `fullName` dans un objet :
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("full_name";New formula(fullName))
 $result:=$o.full_name("John";"Smith") 
@@ -122,7 +122,7 @@ $result:=$o.full_name("John";"Smith")
 
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
 
-```code4d
+```4d
 //méthode fullName2 
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
@@ -130,7 +130,7 @@ $0:=This.firstName+" "+This.lastName
 
 La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=New formula(fullName2) //add the method  
@@ -141,7 +141,7 @@ $result:=$o.fullName()
 
 A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). En appelant uniquement une seule propriété, une nouvelle référence à la formule sera retournée (et ne sera pas exécutée) :
 
-```code4d
+```4d
 $o:=$f.message //retourne l'objet formule en $o
 ```
 
@@ -181,7 +181,7 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 
 1. Vous pouvez procéder de la manière suivante :
 
-```code4d
+```4d
  $vsName:=Request("Saisissez le nom :";"Pierre")
  Si(OK=1)
     QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
@@ -203,7 +203,7 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 
 2. Vous pouvez également procéder ainsi :
 
-```code4d
+```4d
  $vsNom:=Request("Saisissez le nom :";"Pierre")
   If(OK=1)
     QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
@@ -215,7 +215,7 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 
 en utilisant la fonction récursive `Généalogie de` suivante :
 
-```code4d
+```4d
   // Méthode projet Généalogie de
   // Généalogie de ( Chaîne ) -> Texte
   // Généalogie de ( Nom ) -> Partie de la phrase
