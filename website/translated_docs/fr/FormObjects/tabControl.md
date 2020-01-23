@@ -28,7 +28,7 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
 
 ### Exemple JSON :
 
-```code4d
+```4d
     "myTab": {
         "type": "tab",
         "left": 60, 
@@ -48,7 +48,7 @@ Pour placer des intitulés dans un onglet, plusieurs possibilités se présenten
 *   Vous pouvez associer à l’onglet [une liste de valeurs](properties_DataSource.md#choice-list-static-list), accessible via une collection (liste statique) ou un pointeur JSON ("$ref") vers une liste json. Les icônes associées à des éléments de liste dans l'éditeur de listes seront affichées dans l'onglet.
 *   Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. Par exemple, vous pouvez placer ce code dans l’événement formulaire `Sur chargement`.
 
-```code4d
+```4d
  ARRAY TEXT(arrPages;3)
  arrPages{1}:="Name"
  arrPages{2}:="Address"
@@ -63,7 +63,7 @@ Pour placer des intitulés dans un onglet, plusieurs possibilités se présenten
 
 Vous pouvez utiliser la commande [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) dans la méthode objet de l’onglet pour naviguer parmi les pages du formulaire :
 
-```code4d
+```4d
 FORM GOTO PAGE(arrPages)
 ```
 
@@ -71,7 +71,7 @@ Cette commande devra être exécutée dans l’événement formulaire `Sur clic`
 
 Vous pouvez, par exemple, écrire le code suivant :
 
-```code4d
+```4d
  Case of
     :(Form event=On Load)
        LIST TO ARRAY("Tab Labels";arrPages)
