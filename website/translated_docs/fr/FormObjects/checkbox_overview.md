@@ -205,7 +205,7 @@ Example on macOS:
 
 #### Exemple JSON :
 
-```code4d
+```4d
     "myCheckBox": {
                 "type": "checkbox", 
                 "style":"roundedBevel",  
