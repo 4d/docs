@@ -12,7 +12,7 @@ title: Date
 
 A date literal constant is enclosed by exclamation marks (!…!). A date must be structured using the ISO format (!YYYY-MM-DD!). Here are some examples of date constants:
 
-```code4d
+```4d
 !1976-01-01!
 !2004-09-29!
 !2015-12-31!
