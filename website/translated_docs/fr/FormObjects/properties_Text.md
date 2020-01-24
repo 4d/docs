@@ -198,6 +198,8 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
@@ -231,6 +233,8 @@ Exemple :
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
+
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 
