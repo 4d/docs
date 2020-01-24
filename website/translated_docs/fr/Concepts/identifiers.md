@@ -36,7 +36,7 @@ Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de t
 
 Exemple :
 
-```code4d
+```4d
 DEFAULT TABLE([Commandes])
 FORM SET INPUT([Clients];"Entrée")
 ADD RECORD([Lettres])
@@ -48,7 +48,7 @@ Vous désignez un champ en spécifiant d’abord la table à laquelle il apparti
 
 Exemple :
 
-```code4d
+```4d
 [Commandes]Total:=Sum([Ligne]Montant)
  QUERY([Clients];[Clients]Nom="Dupont")
  [Lettres]Text:=Capitalize text([Lettres]Texte)
@@ -62,7 +62,7 @@ Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, sy
 
 Exemple :
 
-```code4d
+```4d
 <>vlProcessID:=Current process
  <>vsKey:=Char(KeyCode)
 If(<>vtNom#"")
@@ -74,7 +74,7 @@ Vous désignez une variable process en écrivant simplement son nom (qui ne doit
 
 Exemple :
 
-```code4d
+```4d
 vrGrandTotal:=Sum([Comptes]Montant)
  If(bValider=1)
  vsNomCourant:=""
@@ -86,7 +86,7 @@ Vous désignez une variable locale en faisant précéder son nom du symbole doll
 
 Exemple :
 
-```code4d
+```4d
 For($vlRecord;1;100)
 If($vsTempVar="Non")
 $vsMyString:="Bonjour à tous"
@@ -108,7 +108,7 @@ Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symb
 
 Exemple :
 
-```code4d
+```4d
 ARRAY TEXT(<>atSujets;Records in table([Topics]))
 SORT ARRAY(<>asMotsClés;>)
 ARRAY INTEGER(<>aiGrosTableau;10000)
@@ -120,7 +120,7 @@ Vous désignez un tableau process en écrivant simplement son nom (qui ne doit p
 
 Exemple :
 
-```code4d
+```4d
 ARRAY TEXT(atSujets;Records in table([Topics]))
  SORT ARRAY(asMotsClés;>)
  ARRAY INTEGER(aiGrosTableau;10000)
@@ -132,7 +132,7 @@ Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($
 
 Exemple :
 
-```code4d
+```4d
 ARRAY TEXT($atSujets;Records in table([Topics]))
 SORT ARRAY($asMotsClés;>)
 ARRAY INTEGER($aiGrosTableau;10000)
@@ -144,7 +144,7 @@ Vous désignez un élément d’un tableau local, process ou interprocess à l�
 
 Exemple :
 
-```code4d
+```4d
     // Adresser un élément d'un tableau interprocess
 If(<>asMotsClés{1}="Stop")
     <>atSujets{$vlElem}:=[Topics]Sujet
@@ -167,7 +167,7 @@ Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une 
 
 Exemple :
 
-```code4d
+```4d
     // Adresser un élément d'un tableau interprocess à deux dimensions
  If(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
     <>atSujets{10}{$vlElem}:=[Topics]Sujet
@@ -190,7 +190,7 @@ Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez
 
 Exemple :
 
-```code4d
+```4d
 monObjet.monAttribut:="10"
  $valeur:=$clientObj.data.address.city
 ```
@@ -203,7 +203,7 @@ Vous désignez un formulaire en utilisant une expression de type chaîne alphanu
 
 Exemple :
 
-```code4d
+```4d
 FORM SET INPUT([Personnes];"Entrée")
 FORM SET OUTPUT([Personnes];"Sortie")
  DIALOG([Stock];"Boîte de note"+String($vlStage))
@@ -215,7 +215,7 @@ Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, 
 
 Exemple :
 
-```code4d
+```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
@@ -229,7 +229,7 @@ Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant s
 
 Exemple :
 
-```code4d
+```4d
 If(Nouveau client)
 DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
@@ -241,7 +241,7 @@ APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 
 Exemple :
 
-```code4d
+```4d
     // Cette commande attend une méthode (fonction) ou une formule
  QUERY BY FORMULA([aTable];Recherche Spéciale)
   // Cette commande attend une méthode (procédure) ou une formule
@@ -256,7 +256,7 @@ A l’intérieur d'une fonction, la variable locale $0 contient la valeur à ret
 
 Voici quelques exemples :
 
-```code4d
+```4d
     // Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
  DROP SPACES(->[Personnes]Nom)
  
@@ -281,7 +281,7 @@ Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défin
 
 Exemple :
 
-```code4d
+```4d
 $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
@@ -314,7 +314,7 @@ Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom 
 
 Exemple :
 
-```code4d
+```4d
     // Ensembles interprocess
 USE SET("<>Enregistrements supprimés")
 CREATE SET([Clients];"<>Commandes clients")
@@ -348,7 +348,7 @@ Vous déclarez une sélection temporaire process en passant simplement une expre
 
 Exemple :
 
-```code4d
+```4d
     // Sélection temporaire interprocess
  USE NAMED SELECTION([Clients];"<>ParCodePostal")
   // Sélection temporaire process
@@ -372,7 +372,7 @@ Vous déclarez un process local lorsque son nom est précédé du symbole dollar
 
 Exemple :
 
-```code4d
+```4d
     // Lancer le process global "Ajouter Clients"
  $vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
   // Lancer le process local "$Suivre Souris"

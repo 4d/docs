@@ -61,7 +61,7 @@ Considérons une méthode projet 4D nommée `today` qui ne reçoit pas de param�
 
 Code 4D de la méthode `today` :
 
-```code4d
+```4d
  C_TEXT($0)
  $0:=String(Current date;System date long)
 ```
@@ -99,7 +99,7 @@ La méthode projet 4D `calcSum` reçoit des paramètres (`$1...$n`) et retourne 
 
 Code 4D de la méthode `calcSum` :
 
-```code4d
+```4d
  C_REAL(${1}) // reçoit n paramètres de type REEL
  C_REAL($0) // retourne un Réel
  C_LONGINT($i;$n)
@@ -183,7 +183,7 @@ Pour que vous puissiez afficher l’inspecteur Web dans une zone Web, les condit
 - [Le menu contextuel](properties_Entry.md#context-menu) de la zone doit être activé (l’appel de l’inspecteur est effectué via ce menu)
 - L’usage de l’inspecteur doit être expressément autorisé pour la zone à l’aide de l’instruction suivante :
 
-```code4d
+```4d
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 

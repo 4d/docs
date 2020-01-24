@@ -13,7 +13,7 @@ Les fonctions booléennes de 4D traitent des valeurs telles que `Vrai`, `Faux` e
 
 L'exemple suivant retourne Vrai dans la variable monBooléen si l'utilisateur a cliqué sur le bouton monBouton et Faux s'il n'a pas cliqué dessus. . Lorsqu'un bouton reçoit un clic, la variable du bouton prend la valeur 1.
 
-```code4d
+```4d
  If(monBouton=1) // Si le bouton a reçu un clic
     monBooléen:=True// monBooléen prend la valeur True
  Else // Si le bouton n'a pas reçu de clic,
@@ -23,7 +23,7 @@ L'exemple suivant retourne Vrai dans la variable monBooléen si l'utilisateur a 
 
 L'exemple ci-dessus peut être simplifié et écrit en une seule ligne .
 
-```code4d
+```4d
 monBooléen:=(monBouton=1)
 ```
 
@@ -60,6 +60,6 @@ Voici la "table de vérité" pour l'opérateur logique "OR" :
 
 **Astuce :** Si vous devez calculer une réunion exclusive (le "OU" exclusif) entre Expr1 et Expr2, écrivez :
 
-```code4d
+```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```

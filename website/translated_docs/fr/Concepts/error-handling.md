@@ -18,13 +18,13 @@ Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méth
 
 Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple:
 
-```code4d
+```4d
 APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
 ```
 
 Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la méthode `ON ERR CALL` à l'aide d'une chaîne vide :
 
-```code4d
+```4d
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
@@ -36,7 +36,7 @@ Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERRE
 
 La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte des composants car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur de la base de données hôte :
 
-```code4d
+```4d
  $methCurrent:=Method called on error
  ON ERR CALL("NewMethod")
   //Si le document ne peut pas être ouvert, une erreur est générée
@@ -65,14 +65,14 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 
 Voici un système de gestion des erreurs simple :
 
-```code4d
+```4d
 //installer la méthode de gestion des erreurs
  ON ERR CALL("errorMethod")
  //... exécuter le code
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
-```code4d
+```4d
 // méthode projet errorMethod
  If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
     ALERT("L'erreur "+String(Error)+" s'est produite". Le code en question est : \""+Error formula+"\"")
@@ -83,7 +83,7 @@ Voici un système de gestion des erreurs simple :
 
 Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
-```code4d
+```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais elle est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)

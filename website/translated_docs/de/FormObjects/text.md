@@ -9,7 +9,7 @@ A text object allows you to display static written content (*e.g.*, instructions
 
 #### JSON Example:
 
-```code4d
+```4d
     "myText": {
                 "type": "text",
                 "text": "Hello World!",

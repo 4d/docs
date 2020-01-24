@@ -36,7 +36,7 @@ You designate a table by placing its name between brackets: [...]. A table name 
 
 Examples:
 
-```code4d
+```4d
 DEFAULT TABLE([Orders])
 FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
@@ -48,7 +48,7 @@ You designate a field by first specifying the table to which it belongs. The fie
 
 Examples:
 
-```code4d
+```4d
 [Orders]Total:=Sum([Line]Amount)
 QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
@@ -62,7 +62,7 @@ The name of an interprocess variable can be up to 31 characters, not including t
 
 Examples:
 
-```code4d
+```4d
 <>vlProcessID:=Current process
 <>vsKey:=Char(KeyCode)
 If(<>vtName#"")
@@ -74,7 +74,7 @@ You designate a process variable by using its name (which cannot start with the 
 
 Examples:
 
-```code4d
+```4d
 <>vrGrandTotal:=Sum([Accounts]Amount)
 If(bValidate=1)
 vsCurrentName:=""
@@ -86,7 +86,7 @@ You designate a local variable by placing a dollar sign ($) before the variable 
 
 Examples:
 
-```code4d
+```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
 $vsMyString:="Hello there"
@@ -108,7 +108,7 @@ An interprocess array name can contain up to 31 characters, not including the <>
 
 Examples:
 
-```code4d
+```4d
 ARRAY TEXT(<>atSubjects;Records in table([Topics]))
 SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
@@ -120,7 +120,7 @@ You designate a process array by using its name (which cannot start with the <> 
 
 Examples:
 
-```code4d
+```4d
 ARRAY TEXT(atSubjects;Records in table([Topics]))
 SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
@@ -132,7 +132,7 @@ The name of a local array is preceded by the dollar sign ($). A local array name
 
 Examples:
 
-```code4d
+```4d
 ARRAY TEXT($atSubjects;Records in table([Topics]))
 SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
@@ -144,7 +144,7 @@ You reference an element of an interprocess, process or local array by using the
 
 Examples:
 
-```code4d
+```4d
     //Addressing an element of an interprocess array
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
@@ -167,7 +167,7 @@ You reference an element of a two-dimensional array by using the curly braces ({
 
 Examples:
 
-```code4d
+```4d
     //Addressing an element of a two-dimensional interprocess array
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -190,7 +190,7 @@ When object notation is enabled, you designate an object attribute (also called 
 
 Examples:
 
-```code4d
+```4d
 myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
@@ -203,7 +203,7 @@ You designate a form by using a string expression that represents its name. A fo
 
 Examples:
 
-```code4d
+```4d
 FORM SET INPUT([People];"Input")
 FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
@@ -215,7 +215,7 @@ You designate a form object by passing its name as a string, preceded by the * p
 
 例: 
 
-```code4d
+```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
@@ -229,7 +229,7 @@ You designate a project method (procedure or function) by using its name. A meth
 
 Examples:
 
-```code4d
+```4d
 If(New client)
 DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
@@ -241,7 +241,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 Examples:
 
-```code4d
+```4d
     //This command expects a method (function) or formula
 QUERY BY FORMULA([aTable];Special query)
     //This command expects a method (procedure) or statement
@@ -256,7 +256,7 @@ Inside a function, the $0 local variable contains the value to be returned.
 
 Examples:
 
-```code4d
+```4d
     //Within DROP SPACES $1 is a pointer to the field [People]Name
 DROP SPACES(->[People]Name)
 
@@ -281,7 +281,7 @@ You designate a plug-in command by using its name as defined by the plug-in. A p
 
 Examples:
 
-```code4d
+```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
@@ -314,7 +314,7 @@ The name of a client set is preceded by the dollar sign ($). A client set name c
 
 Examples:
 
-```code4d
+```4d
     //Interprocess sets
 USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
@@ -348,7 +348,7 @@ You denote a process named selection by using a string expression that represent
 
 Examples:
 
-```code4d
+```4d
     //Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
     //Process Named Selection
@@ -372,7 +372,7 @@ You denote a local process if the name of the process is preceded by a dollar ($
 
 Examples:
 
-```code4d
+```4d
     //Starting the global process "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
     //Starting the local process "$Follow Mouse Moves"

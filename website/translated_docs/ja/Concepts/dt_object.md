@@ -37,7 +37,7 @@ Objects must have been initialized, for example using the `New object` command, 
 
 例: 
 
-```code4d
+```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
 ```
@@ -61,7 +61,7 @@ With object notation, object properties can be accessed in two ways:
 
 例: 
 
-```code4d
+```4d
      employee.name:="Smith"
 ```
 
@@ -69,7 +69,7 @@ With object notation, object properties can be accessed in two ways:
 
 Examples:
 
-```code4d
+```4d
      $vName:=employee["name"]
      //or also:
      $property:="name"
@@ -79,7 +79,7 @@ Examples:
 
 オブジェクトプロパティ値には、オブジェクトあるいはコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した記号を受け入れることができます:
 
-```code4d
+```4d
  $vAge:=employee.children[2].age
 ```
 
@@ -87,7 +87,7 @@ Object notation is available on any language element that can contains or return
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
 
-```code4d
+```4d
      $age:=$myObjVar.employee.age //variable
      $addr:=[Emp]data_obj.address //field
      $city:=$addr.city //property of an object
@@ -97,13 +97,13 @@ Object notation is available on any language element that can contains or return
 
 - **4D commands** that return objects. 例: 
 
-```code4d
+```4d
      $measures:=Get database measures.DB.tables
 ```
 
 - **Project methods** that return objects. 例: 
 
-```code4d
+```4d
       // MyMethod1
      C_OBJECT($0)
      $0:=New object("a";10;"b";20)
@@ -114,7 +114,7 @@ Object notation is available on any language element that can contains or return
 
 - **Collections** Example:
 
-```code4d
+```4d
      myColl.length //size of the collection
 ```
 
@@ -134,7 +134,7 @@ Using object notation with pointers is very similar to using object notation dir
 
 例: 
 
-```code4d
+```4d
  C_OBJECT(vObj)
  C_POINTER(vPtr)
  vObj:=New object
@@ -147,7 +147,7 @@ Using object notation with pointers is very similar to using object notation dir
 
 When using the object notation, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties or collection elements, for example:
 
-```code4d
+```4d
  myObject.address.zip:=Null
  If(myColl[2]=Null)
 ```
@@ -160,7 +160,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
 
-```code4d
+```4d
      C_OBJECT($o)
      C_LONGINT($val)
      $val:=10 //$val=10
@@ -170,14 +170,14 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Reading the **length** property of an undefined collection produces 0:
 
-```code4d
+```4d
      C_COLLECTION($c) //variable created but no collection is defined
      $size:=$c.length //$size = 0
 ```
 
 - An undefined value passed as parameter to a project method is automatically converted to 0 or "" according to the declared parameter type.
 
-```code4d
+```4d
      C_OBJECT($o)
      mymethod($o.a) //pass an undefined parameter
 
@@ -188,7 +188,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:
 
-```code4d
+```4d
      C_OBJECT($o)
      If($o.a) // false
      End if
@@ -207,7 +207,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
     - Time: 0 (number of ms)
     - Undefined, Null: no change
 
-```code4d
+```4d
      C_OBJECT($o)
      $o:=New object("a";2)
      $o.a:=$o.b //$o.a=0
@@ -217,7 +217,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. たとえば:
 
-```code4d
+```4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
   //to avoid errors in the code
 ```
@@ -241,7 +241,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 
 - Writing and reading objects (this example compares object notation and command notation):
 
-```code4d
+```4d
   // Using the object notation
  C_OBJECT($myObj) //declares a 4D variable object
  $myObj:=New object //creates an object and assigns to the variable
@@ -261,7 +261,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 
 - Create a property and assign values, including objects:
 
-```code4d
+```4d
  C_OBJECT($Emp)
  $Emp:=New object
  $Emp.city:="London" //creates the city property and sets its value to "London"
@@ -272,14 +272,14 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 
 - Get a value in a sub-object is very simple using the object notation:
 
-```code4d
+```4d
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
 - You can access properties as strings using the [ ] operator 
 
-```code4d
+```4d
  $Emp["city"]:="Berlin" //modifies the city property
   //this can be useful for creating properties through variables
  C_TEXT($addr)

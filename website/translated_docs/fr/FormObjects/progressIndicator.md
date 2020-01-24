@@ -15,7 +15,7 @@ You can use indicators either to display or set values. For example, if a progre
 
 The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
 
-```code4d
+```4d
  $vTherm:=[Employees]Salary
 ```
 
@@ -23,7 +23,7 @@ This method assigns the value of the Salary field to the $vTherm variable. This 
 
 Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. In this case the method becomes:
 
-```code4d
+```4d
  [Employees]Salary:=$vTherm
 ```
 

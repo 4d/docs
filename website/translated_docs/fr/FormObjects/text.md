@@ -9,7 +9,7 @@ Un objet texte vous permet d'afficher du contenu écrit statique (*ex :* instruc
 
 #### Exemple JSON :
 
-```code4d
+```4d
     "myText": {
                 "type": "text",
                 "text": "Hello World!",

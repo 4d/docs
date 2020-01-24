@@ -31,7 +31,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 
 Toute instruction de modification d'objet ou de collection partagé(e) doit être encadrée par les mots-clés `Use...End use`, sinon une erreur est générée.
 
-```code4d
+```4d
  $s_obj:=New shared object("prop1";"alpha")
  Use($s_obj)
     $s_obj.prop1:="omega"
@@ -72,7 +72,7 @@ Pour plus d'informations, reportez-vous à la description de la commande `Storag
 
 La syntaxe de la structure `Use...End use` est la suivante :
 
-```code4d
+```4d
  Use(Shared_object_or_Shared_collection)
     instruction(s)
  End use
@@ -95,7 +95,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventaire parmi différents produits et mettre à jour le même objet partagé. Le process principal instancie un objet partagé vide et ensuite lance les autres process, passant en paramètre l'objet partagé et les produits à comptabiliser :
 
-```code4d
+```4d
  ARRAY TEXT($_items;0)
  ... //remplit le tableau avec les éléments à compter
  $nbItems:=Size of array($_items)
@@ -114,7 +114,7 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
-```code4d
+```4d
  C_TEXT($1)
  C_TEXT($what)
  C_OBJECT($2)
@@ -132,7 +132,7 @@ End use
 
 Les exemples suivants illustrent les règles spécifiques à observer lorsque vous utilisez des groupes partagés :
 
-```code4d
+```4d
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)

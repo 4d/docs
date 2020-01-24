@@ -50,7 +50,7 @@ Les composants et les bases hôtes ne partagent pas de variables locales, proces
 
 Exemple utilisant un tableau :
 
-```code4d
+```4d
 //Dans la base hôte :
     ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
@@ -61,7 +61,7 @@ Exemple utilisant un tableau :
 
 Exemples utilisant des variables :
 
-```code4d
+```4d
  C_TEXT(myvariable)
  component_method1(->myvariable)
  C_POINTER($p)
@@ -79,7 +79,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
 
 - La comparaison de pointeurs via la commande `RESOUDRE POINTEUR` est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différente dans un composant et la base hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
-```code4d
+```4d
      RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)
       RESOLVE POINTER(monptr2;vNomVar2;vnumtable2;vnumchamp2)
       If(vNomVar1=vNomVar2)
@@ -88,7 +88,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
 
 Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
-```code4d
+```4d
      If(monptr1=monptr2) //Ce test retourne Faux
 ```
 
@@ -96,14 +96,14 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent à la base hôte et au composant de communiquer dans ce cas. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
-```code4d
+```4d
 // appeler une méthode composant
 methCreateRec(->[PERSONNES];->[PERSONNES]Nom;"Julie Andrews")
 ```
 
 Dans le composant, le code de la méthode `methCreateRec` :
 
-```code4d
+```4d
 C_POINTER($1) //Pointeur vers une table de la base hôte
 C_POINTER($2) //Pointeur vers un champ de la base hôte
 C_TEXT($3) // Valeur à insérer
@@ -182,7 +182,7 @@ Le code suivant est inclus dans un composant et effectue trois actions élément
 
 Création de la base de données externe :
 
-```code4d
+```4d
 <>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stocke les données dans un répertoire autorisé
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
@@ -205,7 +205,7 @@ Création de la base de données externe :
 
 Ecriture dans la base de données externe :
 
-```code4d
+```4d
  $Ptr_1:=$2 // récupération des données de la base hôte via des pointeurs
  $Ptr_2:=$3
  $Ptr_3:=$4
@@ -227,7 +227,7 @@ Ecriture dans la base de données externe :
 
 Lecture dans une base de données externe :
 
-```code4d
+```4d
  $Ptr_1:=$2 // accès aux données de la base hôte via des pointeurs
  $Ptr_2:=$3
  $Ptr_3:=$4

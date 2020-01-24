@@ -12,7 +12,7 @@ Chaîne est un terme générique utilisé pour :
 
 Une constante littérale de type chaîne est incluse entre des guillemets droits ("…"). En voici quelques exemples :
 
-```code4d
+```4d
 "Ajouter Enregistrements"
 "Aucun enregistrement trouvé."
 "Facture"
@@ -63,13 +63,13 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 - Les chaînes sont toujours comparées caractère par caractère (hormis en cas de recherche par [mot-clé](dt_string.md#keywords), cf. ci-dessous).
 - Lors d'une comparaison de chaînes, 4D ne tient pas compte de la casse des caractères ; par exemple, "a"="A" retourne `VRAI`. Pour savoir si des caractères sont en majuscules ou en minuscules, vous devez comparer leurs codes de caractères. Par exemple, l'expression suivante retourne `FAUX` :
 
-```code4d
+```4d
 Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 ```
 
 - Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
 
-```code4d
+```4d
      "n"="ñ"
      "n"="Ñ"
      "A"="å"
@@ -82,19 +82,19 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 
 Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
 
-```code4d
+```4d
 "abcdefghij"="abc@"
 ```
 
 Le joker doit être utilisé dans le second opérande (la chaîne qui se trouve à droite de l'opérateur). L'expression suivante est évaluée à `FAUX` car le joker est alors considéré en tant que caractère :
 
-```code4d
+```4d
     "abc@"="abcdefghij"
 ```
 
 Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions suivantes sont évaluées à `VRAI` :
 
-```code4d
+```4d
      "abcdefghij"="abcdefghij@"
      "abcdefghij"="@abcdefghij"
      "abcdefghij"="abcd@efghij"
@@ -104,26 +104,26 @@ Le joker signifie “un ou plusieurs caractères sinon rien”. Les expressions 
 
 En revanche, dans tous les cas, lorsque deux jokers consécutifs sont placés dans une comparaison de chaînes, celle-ci sera évaluée à `FAUX`. L'expression suivante est à `FAUX` :
 
-```code4d
+```4d
 "abcdefghij"="abc@@fg"
 ```
 
 Lorsque l'opérateur de comparaison est ou contient un symbole < ou >, seule la comparaison avec un seul joker situé en fin d'opérande est prise en charge :
 
-```code4d
+```4d
      "abcd"<="abc@" //Comparaison valide
  "abcd"<="abc@ef" //Comparaison non valide
 ```
 
 Si vous souhaitez effectuer des comparaisons ou des recherches utilisant @ en tant que caractère (et non en tant que joker), vous devez utiliser l'instruction `Code de caractere(Arobase)`. Imaginons par exemple que vous souhaitiez savoir si une chaîne se termine par le caractère @. L’expression suivante (si $vaValeur n'est pas vide) retourne toujours `VRAI` :
 
-```code4d
+```4d
 ($vaValeur[[Longueur($vaValeur)]]="@")
 ```
 
 L'expression suivante sera correctement évaluée :
 
-```code4d
+```4d
 (Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
 ```
 
@@ -133,7 +133,7 @@ L'expression suivante sera correctement évaluée :
 
 A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L’opérateur **%** retournera toujours `Faux` si la recherche porte sur plusieurs mots ou une partie de mot (par exemple une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
 
-```code4d
+```4d
      "Alpha Bravo Charlie"%"Bravo" // Retourne Vrai
  "Alpha Bravo Charlie"%"vo" // Retourne Faux
  "Alpha Bravo Charlie"%"Alpha Bravo" // Retourne Faux
@@ -151,7 +151,7 @@ Ces symboles sont utilisés pour désigner un caractère particulier dans une ch
 
 Lorsque les symboles d'indice de chaîne sont placés à gauche de l'opérateur d'affectation (:=), un caractère est affecté à la position référencée dans la chaîne. Par exemple, en postulant que la chaîne vsNom n'est pas une chaîne vide, le code suivant passe le premier caractère de la chaîne vsNom en majuscule :
 
-```code4d
+```4d
 If(vsNom#"")
     vsNom[[1]]:=Uppercase(vsNom[[1]])
 End if
@@ -159,7 +159,7 @@ End if
 
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. En voici un exemple :
 
-```code4d
+```4d
 //L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
@@ -196,7 +196,7 @@ L'alerte suivante s'affichera en mode compilé :
 
 La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :
 
-```code4d
+```4d
   // Méthode projet de passage en capitale
   // PasserEnCap ( Texte ) -> Texte
   // PasserEnCap ( Texte source ) -> Texte avec des lettres capitales
@@ -215,7 +215,7 @@ La méthode projet suivante ajoute une lettre capitale à tous les mots du texte
 
 Une fois cette méthode placée dans la base, la ligne :
 
-```code4d
+```4d
 ALERT(Capitalize_text("Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !"))
 ```
 

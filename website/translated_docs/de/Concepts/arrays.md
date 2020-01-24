@@ -13,19 +13,19 @@ Sie erstellen ein Array mit einem Befehl unter dem Thema "Array", der ein Array 
 
 Folgende Code-Zeile erstellt (deklariert) ein Array vom Typ Ganzzahl mit 10 Elementen:
 
-```code4d
+```4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
 Dann passt folgende Code-Zeile dieses Array auf 20 Elemente an:
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 und folgende Code-Zeile passt dieses Array auf keine Elemente an:
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
@@ -33,7 +33,7 @@ ARRAY INTEGER(aiAnArray;0)
 
 Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Die Nummer innerhalb der Klammern bezieht sich auf ein bestimmtes Element; sie heißt Elementnummer. Folgender Code fügt fünf Namen in das Array mit Namen atNames ein und zeigt sie dann in Fenstern mit Meldungen an:
 
-```code4d
+```4d
  ARRAY TEXT(atNames;5)
  atNames{1}:="Richard"
  atNames{2}:="Sarah"
@@ -59,7 +59,7 @@ Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in e
 
 Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ein anderes Element als das zuvor gewählte anklicken. Dazu müssen Sie jedes ausgewählte Element verfolgen. Dafür könnten Sie eine Prozessvariable mit der Elementnummer des ausgewählten Elements einsetzen oder das Element Null des Array:
 
-```code4d
+```4d
   // atNames scrollable area object method
  Case of
     :(Form event=On Load)
@@ -95,7 +95,7 @@ Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ei
 
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
-```code4d
+```4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
@@ -111,7 +111,7 @@ Im oben angezeigten Beispiel gilt:
 
 Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
-```code4d
+```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Create as many rows (empty and without columns) as there are tables
@@ -138,7 +138,7 @@ Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in 
 
 Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie nun die Zeiger auf die Datenfelder für eine bestimmte Tabelle:
 
-```code4d
+```4d
   // Get the pointers to the fields for the table currently displayed at the screen:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
   // Initialize Boolean and Date fields

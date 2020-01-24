@@ -28,7 +28,7 @@ Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
 
 ### Architecture des feuilles de style
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les feuilles de style des bases projet respectent généralement la syntaxe et la grammaire CSS2.
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
@@ -67,7 +67,7 @@ text, input {
 
 ### Nom d'objet
 
-Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
+Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -84,7 +84,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
 Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -116,7 +116,7 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
+Le caractère "*" correspond au **sélecteur universel** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
 
 Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -131,22 +131,22 @@ Dans l'exemple suivant, tous les objets auront un fond gris :
 
 ### Attributs spécifiques
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
+Les styles correspondent aux **sélecteurs d'attributs** et peuvent s'appliquer à tous les objets du formulaire avec un attribut spécifique.
 
 Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-#### Supported syntaxes
+#### Syntaxes prises en charge
 
-| Syntaxe                   | Description                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [attribute]               | matches objects with the `attribute`                                                                    |
-| [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
-| [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
-| [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
+| Syntaxe                    | Description                                                                                                                 |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                | les objets ayant un `attribute`                                                                                             |
+| [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                                |
+| [attribute~="valeur"]      | les objets dont la valeur de l'`attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| [attribute&#124;="valeur"] | les objets dont l'`attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
 #### Exemples
 
-All objects with the `borderStyle` attribute will have purple lines:
+Tous les objets ayant l'attribut `borderStyle` auront des lignes violettes :
 
 ```
 [borderStyle]
@@ -155,7 +155,7 @@ All objects with the `borderStyle` attribute will have purple lines:
 }
 ```
 
-All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
+Tous les objets de type texte ayant un attribut text dont la valeur est "Hello" auront des lettres bleues :
 
 
 ```
@@ -165,7 +165,7 @@ text[text=Hello]
 }
 ```
 
-All objects with a text attribute whose value contains "Hello" will have blue lines:
+Tous les objets ayant un attribut text dont la valeur est "Hello" auront des traits bleus :
 
 ```
 [text~=Hello]
@@ -175,7 +175,7 @@ All objects with a text attribute whose value contains "Hello" will have blue li
 
 ```
 
-All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
+Tous les objets de type texte ayant un attribut text dont la valeur commence par "Hello" auront des lettres jaunes :
 
 ```
 text[text|=Hello]

@@ -21,7 +21,7 @@ Undefined is not actually a data type. It denotes a variable that has not yet be
 
 Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
 
-```code4d
+```4d
 C_OBJECT($vEmp)
 $vEmp:=New object
 $vEmp.name:="Smith"

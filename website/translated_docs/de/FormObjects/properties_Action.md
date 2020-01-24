@@ -178,6 +178,8 @@ Typical activities to be performed by active objects (*e.g.*, letting the user a
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
 
+You can also set this property using the `OBJECT SET ACTION` command.
+
 #### JSON Grammar
 
 | Name   | Data Type | Possible Values                                                                                                  |

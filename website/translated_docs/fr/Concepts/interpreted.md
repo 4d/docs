@@ -39,13 +39,13 @@ Grâce à cet aspect flexible, il est possible qu'une base agisse différemment 
 
 Par exemple, si vous écrivez :
 
-```code4d
+```4d
 C_ENTIER LONG(MyInt)
 ```
 
 et ailleurs dans la base, vous écrivez :
 
-```code4d
+```4d
 MyInt:=3.1416
 ```
 
@@ -59,7 +59,7 @@ L'ordre d'apparition des deux déclarations importe peu au compilateur, car il s
 
 Il n’est pas possible de retyper une variable. Il est, en revanche, tout à fait possible de faire pointer un pointeur successivement sur des variables de type différent. Par exemple, le code suivant s'applique aussi bien dans le mode interprété que dans le mode compilé :
 
-```code4d
+```4d
 C_POINTER($p)
 C_TEXT($name)
 C_LONGINT($age)
@@ -77,7 +77,7 @@ $p->:=55 //assigne une valeur numérique
 
 Imaginez une fonction qui retourne la longueur (nombre de caractères) de valeurs de tout type.
 
-```code4d
+```4d
   // Calc_Length (combien de caractères)
   // $1 = pointeur vers un type de variable flexible, numérique, text, heure, booléen
 
@@ -90,7 +90,7 @@ $0:=Length($result)
 
 La méthode peut alors être appelée :
 
-```code4d
+```4d
 $var1:="my text"
 $var2:=5.3
 $var3:=?10:02:24?
