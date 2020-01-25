@@ -405,7 +405,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 
 
-## Supported Properties
+## Propriétés prises en charge
 
 All check boxes share the same set of basic properties:
 
