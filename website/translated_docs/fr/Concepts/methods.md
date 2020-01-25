@@ -8,9 +8,9 @@ Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans 
 
 - **Les méthodes intégrées**, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :
     
-    - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`. 
-        - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
-        - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
+    - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`.
+    - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
+    - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
     
     Les méthodes intégrées sont détaillées dans le manuel *4D Langage* ou dans les manuels consacrés aux plug-ins et aux composants.
 
