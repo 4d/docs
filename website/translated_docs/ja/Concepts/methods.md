@@ -8,9 +8,9 @@ A method is basically a piece of code that executes one or several actions. In t
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
     
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`. 
-        - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-        - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
+    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
     
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
