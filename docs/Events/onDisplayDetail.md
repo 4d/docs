@@ -25,6 +25,7 @@ In this context, the following sequence of calls to methods and form events is t
 		- Object method with `On Display Detail` event
 	- Form method with `On Display Detail` event
 
+> The header area is handled using the [`On Header`](onHeader.md) event.
 
 Calling a 4D command that displays a dialog box from the `On Display Detail` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
 
