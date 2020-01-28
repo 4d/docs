@@ -242,6 +242,7 @@ This is <span style="text-decoration:underline">underlined</span> text.</p>
 <p><code>Selection and collection/entity selection type list boxes</code></p>
 <p>Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html">OBJECT SET RGB COLORS</a> command in the 4D Language Reference manual.</p>
 <p>You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme.</p>
+<p>You can also set this property using the <code>LISTBOX SET PROPERTY</code> command with <code>lk font color expression</code> constant.</p>
 <blockquote>
 <p>This property can also be set using a <a href="/docs/en/FormObjects/propertiesText.html#meta-info-expression">Meta Info Expression</a>.</p>
 </blockquote>
@@ -268,6 +269,7 @@ Foreground color;Dark shadow color)
 <p>Example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">Choose</span>([Companies]ID;Bold;Plain;Italic;Underline)
 </code></pre>
+<p>You can also set this property using the <code>LISTBOX SET PROPERTY</code> command with <code>lk font style expression</code> constant.</p>
 <blockquote>
 <p>This property can also be set using a <a href="/docs/en/FormObjects/propertiesText.html#meta-info-expression">Meta Info Expression</a>.</p>
 </blockquote>

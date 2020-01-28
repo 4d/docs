@@ -68,44 +68,44 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Looping structures</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="whileend-while"></a><a href="#whileend-while" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>While...End while</h2>
 <p>The formal syntax of the <code>While...End while</code> control flow structure is:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-function"><span class="hljs-title">While</span>(<span class="hljs-variable">Boolean_Expression</span>)</span>
-    <span class="hljs-function"><span class="hljs-title">statement</span>(<span class="hljs-variable">s</span>)</span>
- <span class="hljs-variable">End</span> <span class="hljs-variable"><span class="hljs-keyword">while</span></span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> While</span>(Boolean_Expression)
+<span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
+ End while</span>
 </code></pre>
 <p>A <code>While...End while</code> loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.</p>
 <p>It is common to initialize the value tested in the Boolean expression immediately before entering the <code>While...End while</code> loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and <code>While...End while</code> executes the loop.</p>
 <p>The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because <em>NeverStop</em> is always TRUE:</p>
-<pre><code class="hljs css language-code4d"> NeverStop:=<span class="hljs-literal">True</span>
- <span class="hljs-keyword">While</span>(NeverStop)
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span>
+<pre><code class="hljs css language-4d"> NeverStop:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+ While</span>(NeverStop)<span class="hljs-keyword">
+ End while</span>
 </code></pre>
 <p>If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the <a href="/docs/ja/Concepts/error-handling.html">Error handling</a> page.</p>
 <h3><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h3>
-<pre><code class="hljs css language-code4d"> CONFIRM("Add a new record?") //The <span class="hljs-keyword">user</span> wants <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> a <span class="hljs-type">record</span>?
- <span class="hljs-keyword">While</span>(OK=<span class="hljs-number">1</span>) //<span class="hljs-keyword">Loop</span> <span class="hljs-keyword">as</span> long <span class="hljs-keyword">as</span> the <span class="hljs-keyword">user</span> wants <span class="hljs-keyword">to</span>
-    <span class="hljs-keyword">ADD</span> <span class="hljs-type">RECORD</span>([aTable]) //<span class="hljs-keyword">Add</span> a <span class="hljs-built_in">new</span> <span class="hljs-type">record</span>
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span> //The <span class="hljs-keyword">loop</span> <span class="hljs-keyword">always</span> ends <span class="hljs-keyword">with</span> <span class="hljs-keyword">End</span> <span class="hljs-keyword">while</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">//The user wants to add a record?</span><span class="hljs-keyword">
+ While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//Loop as long as the user wants to</span>
+<span class="hljs-function">    ADD RECORD</span>([aTable]) <span class="hljs-comment">//Add a new record</span><span class="hljs-keyword">
+ End while</span> <span class="hljs-comment">//The loop always ends with End while</span>
 </code></pre>
 <p>In this example, the <code>OK</code> system variable is set by the <code>CONFIRM</code> command before the loop starts. If the user clicks the <strong>OK</strong> button in the confirmation dialog box, the <code>OK</code> system variable is set to 1 and the loop starts. Otherwise, the <code>OK</code> system variable is set to 0 and the loop is skipped. Once the loop starts, the <code>ADD RECORD</code> command keeps the loop going because it sets the <code>OK</code> system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the <code>OK</code> system variable is set to 0 and the loop stops.</p>
 <h2><a class="anchor" aria-hidden="true" id="repeatuntil"></a><a href="#repeatuntil" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Repeat...Until</h2>
 <p>The formal syntax of the <code>Repeat...Until</code> control flow structure is:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">Repeat</span>
-    <span class="hljs-function"><span class="hljs-title">statement</span>(<span class="hljs-variable">s</span>)</span>
- <span class="hljs-function"><span class="hljs-title">Until</span>(<span class="hljs-variable">Boolean_Expression</span>)</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
+<span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
+ Until</span>(Boolean_Expression)
 </code></pre>
 <p>A <code>Repeat...Until</code> loop is similar to a <a href="flow-control#whileend-while">While...End while</a> loop, except that it tests the Boolean expression after the loop rather than before. Thus, a <code>Repeat...Until</code> loop always executes the loop once, whereas if the Boolean expression is initially False, a <code>While...End while</code> loop does not execute the loop at all.</p>
 <p>The other difference with a <code>Repeat...Until</code> loop is that the loop continues until the Boolean expression is TRUE.</p>
 <h3><a class="anchor" aria-hidden="true" id="例題-1"></a><a href="#例題-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h3>
 <p>Compare the following example with the example for the <code>While...End while</code> loop. Note that the Boolean expression does not need to be initialized—there is no <code>CONFIRM</code> command to initialize the <code>OK</code> variable.</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> Repeat</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
 <span class="hljs-function">    ADD RECORD</span>([aTable])<span class="hljs-keyword">
  Until</span>(OK=<span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="forend-for"></a><a href="#forend-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For...End for</h2>
 <p>The formal syntax of the <code>For...End for</code> control flow structure is:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-function"><span class="hljs-title">For</span>(<span class="hljs-variable">Counter_Variable</span>;<span class="hljs-variable">Start_Expression</span>;<span class="hljs-variable">End_Expression</span>{;<span class="hljs-variable">Increment_Expression</span>})</span>
-    <span class="hljs-function"><span class="hljs-title">statement</span>(<span class="hljs-variable">s</span>)</span>
- <span class="hljs-variable">End</span> <span class="hljs-variable">for</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
+<span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <p>The <code>For...End for</code> loop is a loop controlled by a counter variable:</p>
 <ul>
@@ -124,14 +124,14 @@
 <ol>
 <li>The following example executes 100 iterations:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
   <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="2">
 <li>The following example goes through all elements of the array anArray:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
   <span class="hljs-comment">//Do something with the element</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
@@ -139,7 +139,7 @@
 <ol start="3">
 <li>テキスト変数 vtSomeText の文字を一つ一つループ処理します:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Length</span>(vtSomeText))
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Length</span>(vtSomeText))
   <span class="hljs-comment">//Do something with the character if it is a TAB</span><span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
@@ -149,14 +149,14 @@
 <ol start="4">
 <li>The following example goes through the selected records for the table [aTable]:</li>
 </ol>
-<pre><code class="hljs css language-code4d"> FIRST <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
- <span class="hljs-constructor">For($<span class="hljs-params">vlRecord</span>;1;Records <span class="hljs-params">in</span> <span class="hljs-params">selection</span>([<span class="hljs-params">aTable</span>])</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> FIRST RECORD</span>([aTable])<span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Records in selection</span>([aTable]))
   <span class="hljs-comment">//Do something with the record</span>
-    SEND <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+<span class="hljs-function">    SEND RECORD</span>([aTable])
   <span class="hljs-comment">//...</span>
   <span class="hljs-comment">//Go to the next record</span>
-    NEXT <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
- End for
+<span class="hljs-function">    NEXT RECORD</span>([aTable])<span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <p>Most of the <code>For...End for</code> loops you will write in your databases will look like the ones listed in these examples.</p>
 <h3><a class="anchor" aria-hidden="true" id="decrementing-variable-counter"></a><a href="#decrementing-variable-counter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decrementing variable counter</h3>
@@ -164,14 +164,14 @@
 <ol start="5">
 <li>The following example executes 100 iterations:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="6">
 <li>The following example goes through all elements of the array anArray:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Do something with the element</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
@@ -179,7 +179,7 @@
 <ol start="7">
 <li>テキスト変数 vtSomeText の文字を一つ一つループ処理します:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-function">Length</span>(vtSomeText);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-function">Length</span>(vtSomeText);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Do something with the character if it is a TAB</span><span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
@@ -189,40 +189,40 @@
 <ol start="8">
 <li>The following example goes through the selected records for the table [aTable]:</li>
 </ol>
-<pre><code class="hljs css language-code4d"> LAST <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
- <span class="hljs-constructor">For($<span class="hljs-params">vlRecord</span>;Records <span class="hljs-params">in</span> <span class="hljs-params">selection</span>([<span class="hljs-params">aTable</span>])</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> LAST RECORD</span>([aTable])<span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-function">Records in selection</span>([aTable]);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Do something with the record</span>
-    SEND <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
+<span class="hljs-function">    SEND RECORD</span>([aTable])
   <span class="hljs-comment">//...</span>
   <span class="hljs-comment">//Go to the previous record</span>
-    PREVIOUS <span class="hljs-constructor">RECORD([<span class="hljs-params">aTable</span>])</span>
- End for
+<span class="hljs-function">    PREVIOUS RECORD</span>([aTable])<span class="hljs-keyword">
+ End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="incrementing-the-counter-variable-by-more-than-one"></a><a href="#incrementing-the-counter-variable-by-more-than-one" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incrementing the counter variable by more than one</h3>
 <p>If you need to, you can use an <em>Increment_Expression</em> (positive or negative) whose absolute value is greater than one.</p>
 <ol start="9">
 <li>The following loop addresses only the even elements of the array anArray:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">2</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">2</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">2</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">2</span>)
   <span class="hljs-comment">//Do something with the element #2,#4...#2n</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="comparing-looping-structures"></a><a href="#comparing-looping-structures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparing looping structures</h3>
 <p>Let's go back to the first <code>For...End for</code> example. The following example executes 100 iterations:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
   <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>It is interesting to see how the <code>While...End while</code> loop and <code>Repeat...Until</code> loop would perform the same action. Here is the equivalent <code>While...End while</code> loop:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
  While</span>(<span class="hljs-variable">$i</span>&lt;=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 times</span>
   <span class="hljs-comment">//Do something</span>
     <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
  End while</span>
 </code></pre>
 <p>Here is the equivalent <code>Repeat...Until</code> loop:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
  Repeat</span>
   <span class="hljs-comment">//Do something</span>
     <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
@@ -234,7 +234,7 @@
 <ol start="10">
 <li>Here is an example:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlCounter</span>) <span class="hljs-comment">//use local Long Integer variables</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlCounter</span>) <span class="hljs-comment">//use local Long Integer variables</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">10000</span>)
   <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
  End for</span>
@@ -245,7 +245,7 @@
 <ol start="11">
 <li>The following example goes through all the elements of a two-dimensional array:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
   <span class="hljs-comment">//...</span>
   <span class="hljs-comment">//Do something with the row</span>
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
@@ -258,7 +258,7 @@
 <ol start="12">
 <li>The following example builds an array of pointers to all the date fields present in the database:</li>
 </ol>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-number">0</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-number">0</span>)
  <span class="hljs-variable">$vlElem</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;Get last table number)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Is table number valid</span>(<span class="hljs-variable">$vlTable</span>))<span class="hljs-keyword">
@@ -277,9 +277,9 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="for-eachend-for-each"></a><a href="#for-eachend-for-each" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each...End for each</h2>
 <p>The formal syntax of the <code>For each...End for each</code> control flow structure is:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span>(Current_Item;Expression{;<span class="hljs-keyword">begin</span>{;<span class="hljs-keyword">end</span>}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Boolean_Expression)}
-    <span class="hljs-keyword">statement</span>(s)
- <span class="hljs-keyword">End</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(Current_Item;Expression{;begin{;end}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Boolean_Expression)}
+<span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
+ End for each</span>
 </code></pre>
 <p>The <code>For each...End for each</code> structure iterates a specified <em>Current_item</em> over all values of the <em>Expression</em>. The <em>Current_item</em> type depends on the <em>Expression</em> type. The <code>For each...End for each</code> loop can iterate through three <em>Expression</em> types:</p>
 <ul>
@@ -320,7 +320,7 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>You want to compute some statistics for a collection of numbers:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$nums</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$nums</span>)
  <span class="hljs-variable">$nums</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">5001</span>;<span class="hljs-number">6665</span>;<span class="hljs-number">33</span>;<span class="hljs-number">1</span>;<span class="hljs-number">42</span>;<span class="hljs-number">7850</span>)
 <span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$vEven</span>;<span class="hljs-variable">$vOdd</span>;<span class="hljs-variable">$vUnder</span>;<span class="hljs-variable">$vOver</span>)<span class="hljs-keyword">
  For each</span>(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$nums</span>)<span class="hljs-keyword">
@@ -346,7 +346,7 @@
 <p>Keep in mind that any modifications applied on the current entity must be saved explicitly using <code>entity.save( )</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-3"></a><a href="#例題-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>You want to raise the salary of all British employees in an entity selection:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_OBJECT</span>(emp)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(emp)<span class="hljs-keyword">
  For each</span>(emp;ds.Employees.<span class="hljs-function">query</span>(<span class="hljs-string">"country='UK'"</span>))
     emp.salary:=emp.salary*<span class="hljs-number">1,03</span>
     emp.<span class="hljs-function">save</span>()<span class="hljs-keyword">
@@ -357,18 +357,18 @@
 <p>The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-4"></a><a href="#例題-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>You want to switch the names to uppercase in the following object:</p>
-<pre><code class="hljs css language-code4d">{
-    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"gregory"</span>,
-    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"badikora"</span>,
-    <span class="hljs-attr">"age"</span>: <span class="hljs-number">20</span>
+<pre><code class="hljs css language-4d">{
+    <span class="hljs-string">"firstname"</span>: <span class="hljs-string">"gregory"</span>,
+    <span class="hljs-string">"lastname"</span>: <span class="hljs-string">"badikora"</span>,
+    <span class="hljs-string">"age"</span>:<span class="hljs-function"> 20</span>
 }
 </code></pre>
 <p>You can write:</p>
-<pre><code class="hljs css language-code4d"> For each(<span class="hljs-keyword">property</span><span class="hljs-title"></span>;vObject)
-    If(Value <span class="hljs-keyword">type</span>(vObject[<span class="hljs-keyword">property</span><span class="hljs-title"></span>])=Is text)
-       vObject[<span class="hljs-keyword">property</span><span class="hljs-title"></span>]:=Uppercase(vObject[<span class="hljs-keyword">property</span><span class="hljs-title"></span>])
-    End if
- End for each
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(property;vObject)<span class="hljs-keyword">
+    If</span>(<span class="hljs-function">Value type</span>(vObject[property])=Is text)
+       vObject[property]:=<span class="hljs-function">Uppercase</span>(vObject[property])<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End for each</span>
 </code></pre>
 <pre><code class="hljs">{
     &quot;firstname&quot;: &quot;GREGORY&quot;,
@@ -391,7 +391,7 @@
 <li>end=-2 -&gt; end=-2+10=8 -&gt; iteration stops before the 8th element (#7), i.e. at the 7th element.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$col</span>;<span class="hljs-variable">$col2</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$col</span>;<span class="hljs-variable">$col2</span>)
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"a"</span>;<span class="hljs-string">"b"</span>;<span class="hljs-string">"c"</span>;<span class="hljs-string">"d"</span>;<span class="hljs-string">"e"</span>)
  <span class="hljs-variable">$col2</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>)
 <span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$item</span>)<span class="hljs-keyword">
@@ -412,7 +412,7 @@
 <li>The <code>While</code> condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$colNum</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>;<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>;<span class="hljs-number">9</span>;<span class="hljs-number">10</span>)
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$colNum</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>;<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>;<span class="hljs-number">9</span>;<span class="hljs-number">10</span>)
 
  <span class="hljs-variable">$total</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
  For each</span>(<span class="hljs-variable">$num</span>;<span class="hljs-variable">$colNum</span>)<span class="hljs-keyword">While</span>(<span class="hljs-variable">$total</span>&lt;<span class="hljs-number">30</span>) <span class="hljs-comment">//tested at the beginning</span>

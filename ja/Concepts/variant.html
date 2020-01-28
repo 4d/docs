@@ -87,7 +87,7 @@
 <p>Arrays cannot be stored in variant variables.</p>
 </blockquote>
 <p>In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. たとえば:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$variant</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$variant</span>)
 
 <span class="hljs-variable">$variant</span>:=<span class="hljs-string">"hello world"</span>
 <span class="hljs-variable">$vtype</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$variant</span>) <span class="hljs-comment">// 12 (Is variant)</span>
@@ -98,21 +98,21 @@
 <span class="hljs-variable">$vtypeVal</span>:=<span class="hljs-function">Value type</span>(<span class="hljs-variable">$variant</span>) <span class="hljs-comment">// 1 (Is real)</span>
 </code></pre>
 <p>You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. たとえば:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function"><span class="hljs-title">C_VARIANT</span><span class="hljs-params">(<span class="hljs-variable">$v</span>)</span></span>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$v</span>)
 <span class="hljs-variable">$v</span>:=<span class="hljs-string">"hello world"</span>
 <span class="hljs-variable">$v2</span>:=<span class="hljs-variable">$v</span> <span class="hljs-comment">//assign variable to another variable</span>
 
-<span class="hljs-variable">$t</span>:=Type(<span class="hljs-variable">$v</span>) <span class="hljs-comment">// 12 (Is variant)</span>
-<span class="hljs-variable">$t2</span>:=Type(<span class="hljs-variable">$v2</span>) <span class="hljs-comment">// 2 (Is text)</span>
+<span class="hljs-variable">$t</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$v</span>) <span class="hljs-comment">// 12 (Is variant)</span>
+<span class="hljs-variable">$t2</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$v2</span>) <span class="hljs-comment">// 2 (Is text)</span>
 </code></pre>
 <p>Variant can be used to declare method parameters ($0, $1,...) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
 Case of</span>
 :<span class="hljs-function"> </span>(<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is longint)
 ...
 :<span class="hljs-function"> </span>(<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is text)
 ...<span class="hljs-keyword">
-End case</span>[#/code<span class="hljs-number">4</span>D]
+End case</span>
 </code></pre>
 <blockquote>
 <p>When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types.</p>
