@@ -1064,8 +1064,6 @@ If you want to add an ellipsis button [...] to a cell, you just need to pass the
 
 When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
 
->`On Alternate Click` is the new name of the `On Arrow Click` event, renamed in 4D v15 to highlight its extended scope.
-
 Example:
 
 ```4d
@@ -1124,8 +1122,6 @@ Several events can be handled while using an object list box array:
 	*	in a check box (switch between checked/unchecked)
 *	**On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
 *	**On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
-
->`On Alternative Click` is the new name of the `On Arrow Click` event that was available in previous versions of 4D. This event has been renamed in 4D v15 since its scope has been extended.
 
 
 

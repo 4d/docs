@@ -18,13 +18,13 @@ In 4D, all errors can be catched and handled in a specific project method, the *
 
 This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
 
-```code4d
+```4d
 ON ERR CALL("IO_ERRORS") //Installs the error-handling method
 ```
 
 To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
 
-```code4d
+```4d
 ON ERR CALL("") //gives back control to 4D
 ```
 
@@ -36,7 +36,7 @@ An error-handling method installed by the `ON ERR CALL` command only applies to 
 
 The `Method called on error` command allows to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of components because it enables you to temporarily change and then restore the host database error-catching method:
 
-```code4d
+```4d
  $methCurrent:=Method called on error
  ON ERR CALL("NewMethod")
   //If the document cannot be opened, an error is generated
@@ -65,14 +65,14 @@ Within the custom error method, you have access to several information that will
 
 Here is a simple error-handling system:
 
-```code4d
+```4d
 //installing the error handling method
  ON ERR CALL("errorMethod")
  //... executing code
  ON ERR CALL("") //giving control back to 4D
 ```
 
-```code4d
+```4d
 // errorMethod project method
  If(Error#1006) //this is not a user interruption
     ALERT("The error "+String(Error)+" occurred". The code in question is: \""+Error formula+"\"")
@@ -83,7 +83,7 @@ Here is a simple error-handling system:
 
 If you mainly want the standard error dialog box to be hidden, you can install an empty error-handling method. The `Error` system variable can be tested in any method, i.e. outside of the error-handling method:
 
-```code4d
+```4d
 ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
 $doc:=Open document( "myFile.txt")
 If (Error=-43)

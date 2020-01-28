@@ -13,19 +13,19 @@ Vous créez un tableau au moyen de l'une des commandes de déclaration du thème
 
 Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 
-```code4d
+```4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
 Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Enfin, cette ligne de code redimensionne le même tableau à 0 élément :
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
@@ -33,7 +33,7 @@ ARRAY INTEGER(aiAnArray;0)
 
 Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. Ce nombre est appelé numéro de l'élément. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :
 
-```code4d
+```4d
  ARRAY TEXT(atNames;5)
  atNames{1}:="Richard"
  atNames{2}:="Sarah"
@@ -59,7 +59,7 @@ Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas a
 
 Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous cliquez sur un élément autre que l'élément préalablement sélectionné. Pour cela, vous devez garder la trace de chaque élément sélectionné. Une façon de le faire est d'utiliser une variable process dans laquelle vous conservez le numéro de l'élément sélectionné. Une autre manière consiste à utiliser l'élément zéro du tableau :
 
-```code4d
+```4d
   // Méthode objet zone de défilement atNoms
  Case of
    :(Form event=On Load)
@@ -95,7 +95,7 @@ Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous
 
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
-```code4d
+```4d
  ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
@@ -111,7 +111,7 @@ Dans l'exemple prédédent :
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
-```code4d
+```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
@@ -138,7 +138,7 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
 
 Dans la mesure où le tableau à deux dimensions a été initialisé, vous pouvez obtenir ainsi les pointeurs vers les champs d'une table de votre choix :
 
-```code4d
+```4d
   // Obtenir les pointeurs vers les champs pour la table affichée à l'écran:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
   // Initialiser les champs booléens et date

@@ -22,7 +22,7 @@ The design of rectangles is controlled through many properties (color, line thic
 
 #### JSON Example:
 
-```code4d
+```4d
     "myRectangle": {
         "type": "rectangle",    //define the type of object
         "left": 60,             //left position on the form  
@@ -93,7 +93,7 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 #### JSON Example:
 
-```code4d
+```4d
     "myOval": {
         "type": "oval",     //define the type of object
         "left": 60,         //left position on the form  

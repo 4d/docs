@@ -18,7 +18,7 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 ### JSON Example:
 
-```code4d
+```4d
     "myText": {
         "type": "input",    //define the type of object
         "spellcheck": true, //enable spelling verification

@@ -39,13 +39,13 @@ Because of this flexibility, it is possible that a database can perform differen
 
 For example, if you write:
 
-```code4d
+```4d
 C_LONGINT(MyInt)
 ```
 
 and elsewhere in the database, you write:
 
-```code4d
+```4d
 MyInt:=3.1416
 ```
 
@@ -59,7 +59,7 @@ The order in which the two statements appear is irrelevant to the compiler, beca
 
 A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
 
-```code4d
+```4d
 C_POINTER($p)
 C_TEXT($name)
 C_LONGINT($age)
@@ -77,7 +77,7 @@ $p->:=55 //assigns a number value
 
 Imagine a function that returns the length (number of charaters) of values that can be of any type.
 
-```code4d
+```4d
   // Calc_Length (how many characters)
   // $1 = pointer to flexible variable type, numeric, text, time, boolean
 
@@ -90,7 +90,7 @@ $0:=Length($result)
 
 Then this method can be called:
 
-```code4d
+```4d
 $var1:="my text"
 $var2:=5.3
 $var3:=?10:02:24?

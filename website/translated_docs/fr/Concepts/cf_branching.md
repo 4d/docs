@@ -7,7 +7,7 @@ title: Structures conditionnelles
 
 La syntaxe de la structure conditionnelle `If...Else...End if` est la suivante :
 
-```code4d
+```4d
  If(Boolean_Expression)
     instruction(s)
  Else
@@ -17,7 +17,7 @@ End if
 
 A noter que l'élément `Else` est optionnel, vous pouvez écrire :
 
-```code4d
+```4d
  If(Boolean_Expression)
     instruction(s)
  End if
@@ -27,7 +27,7 @@ La structure `If...Else...End if` permet à votre méthode de choisir dans une a
 
 A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
-```code4d
+```4d
  If(MethodA & MethodB)
     ...
  End if
@@ -35,7 +35,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
 
 L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si *MethodA* retourne FALSE, 4D évaluera quand même *MethodB*, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
-```code4d
+```4d
  If(MethodA)
     If(MethodB)
        ...
@@ -47,7 +47,7 @@ Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
 
 ### Exemple
 
-```code4d
+```4d
   // Demander à l'utilisateur de saisir un nom
  $Find:=Request(Type a name)
  If(OK=1)
@@ -59,7 +59,7 @@ Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
 
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
-```code4d
+```4d
  If(Expression_booléenne)
  Else
     instruction(s)
@@ -68,7 +68,7 @@ Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
 
 ou :
 
-```code4d
+```4d
  If(Expression_booléenne)
     instruction(s)
  Else
@@ -79,7 +79,7 @@ ou :
 
 La syntaxe de la structure conditionnelle `Case of...Else...End case` est la suivante :
 
-```code4d
+```4d
  Case of
     :(Expression_booléenne)
        instruction(s)
@@ -98,7 +98,7 @@ La syntaxe de la structure conditionnelle `Case of...Else...End case` est la sui
 
 A noter que l'élément `Else` est optionnel, vous pouvez écrire :
 
-```code4d
+```4d
  Case of
     :(Expression_booléenne)
        instruction(s)
@@ -117,7 +117,7 @@ Tout comme la structure `If...Else...End if`, la structure `Case of...Else...End
 
 Chaque expression booléenne débute par le caractère deux points (`:`). La combinaison de deux points et d’une expression booléenne est appelée un cas. Par exemple, la ligne suivante est un cas :
 
-```code4d
+```4d
 :(bValidate=1)
 ```
 
@@ -129,7 +129,7 @@ Vous pouvez placer une instruction Else après le dernier cas. Si tous les cas s
 
 Cet exemple teste une variable numérique et affiche une boîte de dialogue d’alerte comportant un simple mot :
 
-```code4d
+```4d
  Case of
     :(vResult=1) // Teste si le numéro est 1
        ALERT("One.") // Si c’est 1, afficher une alerte
@@ -144,7 +144,7 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 
 A titre de comparaison, voici la version avec `If...Else...End if` de la même méthode :
 
-```code4d
+```4d
  If(vResult=1) //Teste si le numéro est 1
     ALERT("One.") //Si c’est 1, afficher une alerte
  Else
@@ -164,7 +164,7 @@ Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul 
 
 Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante : 
 
-```code4d
+```4d
  Case of
     :(vResult=1)
        ... //instruction(s)
@@ -175,7 +175,7 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 ... les instructions associées au cas complexe ne seront jamais exécutées. En effet, pour que ce cas soit TRUE, ses deux conditions booléennes doivent l’être. Or, la première condition est celle du cas simple situé précédemment. Lorsqu'elle est TRUE, le cas simple est exécuté et 4D sort de la structure conditionnelle, sans évaluer le cas complexe. Pour que ce type de méthode fonctionne, vous devez écrire :
 
-```code4d
+```4d
  Case of
     :((vResult=1) & (vCondition#2)) // Les cas complexes doivent toujours être placés en premier
        ... //Instruction(s)
@@ -188,7 +188,7 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
-```code4d
+```4d
  Case of
     :(Expression_booléenne)
     :(Expression_booléenne)
@@ -203,7 +203,7 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 ou :
 
-```code4d
+```4d
  Case of
     :(Expression_booléenne)
     :(Expression_booléenne)
@@ -218,7 +218,7 @@ ou :
 
 ou :
 
-```code4d
+```4d
  Case of
     Else
        instruction(s)

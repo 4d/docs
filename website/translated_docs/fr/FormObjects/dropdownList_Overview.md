@@ -22,7 +22,7 @@ Drop-down list objects are initialized by loading a list of values into an array
 
 * Before the object is displayed, execute code that assigns values to the array elements. Par exemple:
 
-```code4d
+```4d
   ARRAY TEXT($aCities;6) 
   $aCities{1}:="Philadelphia" 
   $aCities{2}:="Pittsburg" 
@@ -35,7 +35,7 @@ In this case, the name of the variable associated with the object in the form mu
 
 *  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Par exemple:
 
-```code4d
+```4d
    LIST TO ARRAY("Cities";$aCities)
 ```
 
@@ -43,7 +43,7 @@ In this case, the name of the variable associated with the object in the form mu
 
 If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
 
-```code4d
+```4d
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
@@ -86,5 +86,5 @@ You can assign a standard action to a pop-up menu/drop-down list ([Action](prope
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
-## Supported Properties
+## Propriétés prises en charge
 [Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save as](properties_DataSource.md#save-as) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  

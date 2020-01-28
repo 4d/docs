@@ -17,7 +17,7 @@ Avec une version française de 4D, une heure est structurée sous la forme heure
 
 Voici quelques exemples de constantes littérales de type heure :
 
-```code4d
+```4d
 ?00:00:00? // minuit
 ?09:30:00? // 9:30 du matin
 ?13:01:59? // 13 heures, 1 minute et 59 secondes
@@ -61,7 +61,7 @@ Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Tim
 
 La seconde ligne peut également être écrite de la façon suivante :
 
-```code4d
+```4d
   // La ligne suivante assigne à la variable $vhBientôt l'heure qu'il sera dans une heure
  $vhSoon:=Current time+?01:00:00?
 ```
@@ -70,7 +70,7 @@ La seconde ligne peut également être écrite de la façon suivante :
 
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
-```code4d
+```4d
 $t1:=?23:00:00? // il est 23h
      //on souhaite ajouter 2 heures 30
  $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?

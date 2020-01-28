@@ -13,7 +13,7 @@ A boolean field, variable or expression can be either TRUE or FALSE.
 
 This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
 
-```code4d
+```4d
  If(myButton=1) ` If the button was clicked
     myBoolean:=True ` myBoolean is set to True
  Else ` If the button was not clicked,
@@ -23,7 +23,7 @@ This example sets a Boolean variable based on the value of a button. It returns 
 
 The previous example can be simplified into one line.
 
-```code4d
+```4d
 myBoolean:=(myButton=1)
 ```
 
@@ -60,6 +60,6 @@ The following is the truth table for the OR logical operator:
 
 **Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
-```code4d
+```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```

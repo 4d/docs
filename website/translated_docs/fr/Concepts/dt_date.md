@@ -12,7 +12,7 @@ title: Date
 
 Une constante littérale de type date est comprise entre deux points d'exclamation (!…!). Une date doit être structurée avec le format ISO (!YYYY-MM-DD!). Voici quelques exemples de constantes dates :
 
-```code4d
+```4d
 !1976-01-01!
 !2004-09-29!
 !2015-12-31!

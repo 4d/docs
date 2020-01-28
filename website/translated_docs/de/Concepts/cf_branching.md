@@ -7,7 +7,7 @@ title: Branching structures
 
 The formal syntax of the `If...Else...End if` control flow structure is:
 
-```code4d
+```4d
  If(Boolean_Expression)
     statement(s)
  Else
@@ -17,7 +17,7 @@ The formal syntax of the `If...Else...End if` control flow structure is:
 
 Note that the `Else` part is optional; you can write:
 
-```code4d
+```4d
  If(Boolean_Expression)
     statement(s)
  End if
@@ -27,7 +27,7 @@ The `If...Else...End if` structure lets your method choose between two actions, 
 
 Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
 
-```code4d
+```4d
  If(MethodA & MethodB)
     ...
  End if
@@ -35,7 +35,7 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
 
 he expression is TRUE only if both methods are TRUE. However, even if *MethodA* returns FALSE, 4D will still evaluate *MethodB*, which is a useless waste of time. In this case, it is more interesting to use a structure like:
 
-```code4d
+```4d
  If(MethodA)
     If(MethodB)
        ...
@@ -47,7 +47,7 @@ The result is similar and *MethodB* is evaluated only if necessary.
 
 ### Example
 
-```code4d
+```4d
   // Ask the user to enter a name
  $Find:=Request(Type a name)
  If(OK=1)
@@ -59,7 +59,7 @@ The result is similar and *MethodB* is evaluated only if necessary.
 
 **Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
 
-```code4d
+```4d
  If(Boolean_Expression)
  Else
     statement(s)
@@ -68,7 +68,7 @@ The result is similar and *MethodB* is evaluated only if necessary.
 
 or:
 
-```code4d
+```4d
  If(Boolean_Expression)
     statement(s)
  Else
@@ -79,7 +79,7 @@ or:
 
 The formal syntax of the `Case of...Else...End case` control flow structure is:
 
-```code4d
+```4d
  Case of
     :(Boolean_Expression)
        statement(s)
@@ -98,7 +98,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
 
 Note that the `Else` part is optional; you can write:
 
-```code4d
+```4d
  Case of
     :(Boolean_Expression)
        statement(s)
@@ -117,7 +117,7 @@ As with the `If...Else...End if` structure, the `Case of...Else...End case` stru
 
 Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
 
-```code4d
+```4d
 :(bValidate=1)
 ```
 
@@ -129,7 +129,7 @@ You can include an Else statement after the last case. If all of the cases are F
 
 This example tests a numeric variable and displays an alert box with a word in it:
 
-```code4d
+```4d
  Case of
     :(vResult=1) //Test if the number is 1
        ALERT("One.") //If it is 1, display an alert
@@ -144,7 +144,7 @@ This example tests a numeric variable and displays an alert box with a word in i
 
 For comparison, here is the `If...Else...End if` version of the same method:
 
-```code4d
+```4d
  If(vResult=1) //Test if the number is 1
     ALERT("One.") //If it is 1, display an alert
  Else
@@ -164,7 +164,7 @@ Beachten Sie, dass mit einer Anweisung `Case of...Else...End case` nur der erste
 
 Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
 
-```code4d
+```4d
  Case of
     :(vResult=1)
        ... //statement(s)
@@ -175,7 +175,7 @@ Consequently, when you want to implement hierarchical tests, you should make sur
 
 In the code above, the presence of the second condition is not detected since the test "vResult=1" branches off the code before any further testing. For the code to operate properly, you can write it as follows:
 
-```code4d
+```4d
  Case of
     :((vResult=1) & (vCondition#2)) //this case will be detected first
        ... //statement(s)
@@ -188,7 +188,7 @@ Also, if you want to implement hierarchical testing, you may consider using hier
 
 **Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
 
-```code4d
+```4d
  Case of
     :(Boolean_Expression)
     :(Boolean_Expression)
@@ -203,7 +203,7 @@ Also, if you want to implement hierarchical testing, you may consider using hier
 
 or:
 
-```code4d
+```4d
  Case of
     :(Boolean_Expression)
     :(Boolean_Expression)
@@ -218,7 +218,7 @@ or:
 
 or:
 
-```code4d
+```4d
  Case of
     Else
        statement(s)

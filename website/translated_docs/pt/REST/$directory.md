@@ -118,7 +118,7 @@ All parameters must be passed in **headers** of a POST method:
 
 ### Example
 
-```code4d
+```4d
 C_TEXT($response;$body_t)
 ARRAY TEXT($hKey;3)
 ARRAY TEXT($hValues;3)

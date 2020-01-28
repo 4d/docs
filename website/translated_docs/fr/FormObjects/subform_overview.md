@@ -89,7 +89,7 @@ Par exemple, dans votre sous-formulaire, les libellés des champs sont stockés 
 
 Vous pouvez modifier les libellés depuis le sous-formulaire en affectant des valeurs à l'objet *InvoiceAddress* :
 
-```code4d
+```4d
  C_OBJECT($lang)
  $lang:=New object
  If(<>lang="fr")
@@ -119,7 +119,7 @@ Outre le sélecteur `Objet conteneur sous formulaire`, la commande `OBJECT Get p
 
 Par exemple, l’instruction suivante :
 
-```code4d
+```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 

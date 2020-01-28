@@ -22,7 +22,7 @@ Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épais
 
 #### Exemple JSON :
 
-```code4d
+```4d
     "myRectangle": {
         "type": "rectangle",    //définit le type d'objet
         "left": 60,             //position sur la gauche du formulaire
@@ -93,7 +93,7 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 #### Exemple JSON :
 
-```code4d
+```4d
     "myOval": {
         "type": "oval",     //define the type of object
         "left": 60,         //left position on the form  
