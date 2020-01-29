@@ -111,6 +111,9 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormEvents/listbox": {
+        "title": "List Box Events"
+      },
       "FormObjects/buttonOverview": {
         "title": "Button"
       },
@@ -885,6 +888,7 @@
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
       "Form Editor": "Form Editor",
+      "Form Events": "Form Events",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
