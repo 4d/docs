@@ -29,7 +29,7 @@ function Versions(props) {
             <h1>{siteConfig.title} Versions</h1>
           </header>
           <p><translate>New versions of this project are released every so often.</translate></p>
-          <h3 id="latest"><translate>Current final version (Feature release or LTS)</translate></h3>
+          <h3 id="latest"><translate>Current BETA version</translate></h3>
           <table className="versions">
             <tbody>
               <tr>
@@ -38,9 +38,9 @@ function Versions(props) {
                   {/* You are supposed to change this href where appropriate
                         Example: href="<baseUrl>/docs(/:language)/:id" */}
                   <a
-                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
+                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}${
                       props.language ? props.language + '/' : ''
-                    }doc1`}>
+                    }Concepts/about`}>
                     Documentation
                   </a>
                 </td>
@@ -51,21 +51,20 @@ function Versions(props) {
             </tbody>
           </table>
           <p>
-            <translate>This is the version that is configured automatically when you first
-            install this project.</translate>
+            <translate>This is the default version displayed when you connect to developer.4d.com/docs.</translate>
           </p>
-          <h3 id="rc">Current BETA version</h3>
+          <h3 id="rc">Next version (alpha)</h3>
           <table className="versions">
             <tbody>
               <tr>
-                <th>master</th>
+                <th>v18 R2 BETA</th>
                 <td>
                   {/* You are supposed to change this href where appropriate
                         Example: href="<baseUrl>/docs(/:language)/next/:id" */}
                   <a
-                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
+                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}${
                       props.language ? props.language + '/' : ''
-                    }next/doc1`}>
+                    }next/Concepts/about`}>
                     Documentation
                   </a>
                 </td>
@@ -76,8 +75,8 @@ function Versions(props) {
             </tbody>
           </table>
           <p>Other text describing this section.</p>
-          <h3 id="archive">Past Versions</h3>
-          <p>Here you can find previous versions of the documentation.</p>
+          <h3 id="archive">Current public versions</h3>
+          <p>Documentation of the latest 4D versions.</p>
           <table className="versions">
             <tbody>
               {versions.map(
