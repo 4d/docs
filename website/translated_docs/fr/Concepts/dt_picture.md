@@ -72,7 +72,7 @@ Dans les exemples ci-dessous, chaque expression est suivie de sa représentation
 
 Concaténation horizontale
 
-```code4d
+```4d
  cercle+rectangle // Place le rectangle à droite du cercle
 rectangle+cercle // Place le cercle à droite du rectangle
 ```
@@ -81,7 +81,7 @@ rectangle+cercle // Place le cercle à droite du rectangle
 
 Concaténation verticale
 
-```code4d
+```4d
  circle/rectangle //Place the rectangle under the circle
  rectangle/circle //Place the circle under the rectangle
 ```
@@ -90,7 +90,7 @@ Concaténation verticale
 
 Superposition exclusive
 
-```code4d
+```4d
 Pict3:=Pict1 & Pict2 // Superposer Pict2 à Pict1
 ```
 
@@ -98,7 +98,7 @@ Pict3:=Pict1 & Pict2 // Superposer Pict2 à Pict1
 
 Superposition inclusive
 
-```code4d
+```4d
 Pict3:=Pict1|Pict2 // Récupérer le masque résultant de la superposition de deux images de même taille
 ```
 
@@ -106,7 +106,7 @@ Pict3:=Pict1|Pict2 // Récupérer le masque résultant de la superposition de de
 
 Déplacement horizontal
 
-```code4d
+```4d
 rectangle+50 // Déplace le rectangle 50 pixels vers la droite
 rectangle-50 // Déplace le rectangle 50 pixels vers la gauche
 ```
@@ -115,7 +115,7 @@ rectangle-50 // Déplace le rectangle 50 pixels vers la gauche
 
 Déplacement vertical
 
-```code4d
+```4d
 rectangle/50 // Déplace le rectangle 50 pixels vers le bas
 rectangle/-20 // Déplace le rectangle 20 pixels vers le haut
 ```
@@ -124,7 +124,7 @@ rectangle/-20 // Déplace le rectangle 20 pixels vers le haut
 
 Redimensionnement
 
-```code4d
+```4d
 rectangle*1.5 // Augmente la taille du rectangle de 50%
  rectangle*0.5 // Réduit la taille du rectangle de 50%
 ```
@@ -133,7 +133,7 @@ rectangle*1.5 // Augmente la taille du rectangle de 50%
 
 Extension horizontale
 
-```code4d
+```4d
 cercle*+3 // Multiplie par 3 la largeur du cercle
  cercle*+0,25 // La largeur du cercle est réduite à un quart de sa taille originale
 ```
@@ -142,7 +142,7 @@ cercle*+3 // Multiplie par 3 la largeur du cercle
 
 Extension verticale
 
-```code4d
+```4d
 cercle*/2 // Double la hauteur du cercle
  cercle*/0.25 // La hauteur du cercle est réduite à un quart de sa taille originale
 ```

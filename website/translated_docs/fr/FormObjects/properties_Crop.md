@@ -1,6 +1,6 @@
 ---
 id: propertiesCrop
-0: title:Crop
+title: Crop
 ---
 
 ---

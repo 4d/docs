@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title:Display
+title: Display
 ---
 
 ---
@@ -445,6 +445,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 ## Three-States
 
 
+
 Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
 
 
@@ -580,6 +581,7 @@ When this option is selected, text automatically wraps to the next line whenever
 - In multiline columns/areas, 4D carries out automatic line returns.
 
 ![](assets/en/FormObjects/wordwrap2.png)
+
 
 
 #### Unchecked for list box/No for input

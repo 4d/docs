@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-0: title:Appearance
+title: Appearance
 ---
 
 ---

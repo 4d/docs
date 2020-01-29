@@ -17,7 +17,7 @@ A time literal constant is ordered hour:minute:second, with a colon (:) setting 
 
 Here are some examples of time literals:
 
-```code4d
+```4d
 ?00:00:00? ` midnight
 ?09:30:00? ` 9:30 am
 ?13:01:59? ` 1 pm, 1 minute, and 59 seconds
@@ -29,28 +29,28 @@ A null time is specified by ?00:00:00?
 
 ## Time operators
 
-| Operation                | Syntax         | Returns | Expression              | Value      |
+| オペレーション                  | Syntax         | Returns | 式                       | Value      |
 | ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | True       |
+| 加算 (足し算)                 | Time + Time    | 時間      | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| 減算 (引き算)                 | Time – Time    | 時間      | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| 加算 (足し算)                 | Time + Number  | 数値      | ?02:03:04? + 65         | 7449       |
+| 減算 (引き算)                 | Time – Number  | 数値      | ?02:03:04? – 65         | 7319       |
+| 乗算 (かけ算)                 | Time * Number  | 数値      | ?02:03:04? * 2          | 14768      |
+| 除算 (割り算)                 | Time / Number  | 数値      | ?02:03:04? / 2          | 3692       |
+| Longint division         | Time \ Number | 数値      | ?02:03:04? \ 2         | 3692       |
+| Modulo                   | Time % Time    | 時間      | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                   | Time % Number  | 数値      | ?02:03:04? % 2          | 0          |
+| Equality                 | Time = Time    | ブール     | ?01:02:03? = ?01:02:03? | True       |
 |                          |                |         | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | True       |
+| Inequality               | Time # Time    | ブール     | ?01:02:03? # ?01:02:04? | True       |
 |                          |                |         | ?01:02:03? # ?01:02:03? | False      |
-| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | True       |
+| Greater than             | Time > Time    | ブール     | ?01:02:04? > ?01:02:03? | True       |
 |                          |                |         | ?01:02:03? > ?01:02:03? | False      |
-| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | True       |
+| Less than                | Time < Time    | ブール     | ?01:02:03? < ?01:02:04? | True       |
 |                          |                |         | ?01:02:03? < ?01:02:03? | False      |
-| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | True       |
+| Greater than or equal to | Time >= Time   | ブール     | ?01:02:03? >=?01:02:03? | True       |
 |                          |                |         | ?01:02:03? >=?01:02:04? | False      |
-| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
+| Less than or equal to    | Time <= Time   | ブール     | ?01:02:03? <=?01:02:03? | True       |
 |                          |                |         | ?01:02:04? <=?01:02:03? | False      |
 
 ### Example 1
@@ -61,7 +61,7 @@ You can combine expressions of the time and number types using the `Time`or`Curr
 
 The second line could be written in a simpler way:
 
-```code4d
+```4d
   // The following line assigns to $vHSoon the time it will be in one hour
  $vhSoon:=Current time+?01:00:00?
 ```
@@ -70,7 +70,7 @@ The second line could be written in a simpler way:
 
 The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
 
-```code4d
+```4d
 $t1:=?23:00:00? // It is 23:00 p.m.
   // We want to add 2 and a half hours
 $t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?

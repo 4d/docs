@@ -8,9 +8,9 @@ A method is basically a piece of code that executes one or several actions. In t
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
     
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`. 
-        - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-        - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
+    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
     
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
@@ -43,7 +43,7 @@ You use subroutines to:
 
 For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
 
-```code4d
+```4d
   // Look for a customer
  QUERY BY EXAMPLE([Customers])
   // Select the input form
@@ -56,7 +56,7 @@ If you do not use subroutines, you will have to write the code each time you wan
 
 If the previously described code was a method called `MODIFY CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
 
-```code4d
+```4d
  MODIFY CUSTOMER
  PRINT SELECTION([Customers])
 ```
@@ -67,7 +67,7 @@ If you need to change your method of finding customers in this example database,
 
 Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account database:
 
-```code4d
+```4d
  FIND CLEARED CHECKS ` Find the cleared checks
  RECONCILE ACCOUNT ` Reconcile the account
  PRINT CHECK BOOK REPORT ` Print a checkbook report
@@ -83,14 +83,14 @@ The `New formula` or `New formula from string` commands allow you to create nati
 
 To execute a method stored in an object property, use the **( )** operator after the property name. For example:
 
-```code4d
+```4d
 //myAlert
 ALERT("Hello world!")
 ```
 
 Then `myAlert` can be encapsulated in any object and called:
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";New formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
@@ -98,13 +98,13 @@ $o.custom_Alert() //displays "Hello world!"
 
 Syntax with brackets is also supported:
 
-```code4d
+```4d
 $o["custom_Alert"]() //displays "Hello world!"
 ```
 
 You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
 
-```code4d
+```4d
 //fullName method
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
@@ -112,7 +112,7 @@ $0:=$1+" "+$2
 
 You can encapsulate `fullName` in an object:
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("full_name";New formula(fullName))
 $result:=$o.full_name("John";"Smith") 
@@ -122,7 +122,7 @@ $result:=$o.full_name("John";"Smith")
 
 Combined with the `This`function, such object methods allow writing powerful generic code. For example:
 
-```code4d
+```4d
 //fullName2 method
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
@@ -130,7 +130,7 @@ $0:=This.firstName+" "+This.lastName
 
 Then the method acts like a new, calculated attribute that can be added to other attributes:
 
-```code4d
+```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=New formula(fullName2) //add the method  
@@ -141,7 +141,7 @@ $result:=$o.fullName()
 
 Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
-```code4d
+```4d
 $o:=$f.message //returns the formula object in $o
 ```
 
@@ -181,7 +181,7 @@ For this example, we assume the values in the fields are unique (there are no tw
 
 1. You can build the sentence in this way:
 
-```code4d
+```4d
  $vsName:=Request("Enter the name:";"John")
  If(OK=1)
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
@@ -203,7 +203,7 @@ For this example, we assume the values in the fields are unique (there are no tw
 
 2. You can also build it this way:
 
-```code4d
+```4d
  $vsName:=Request("Enter the name:";"John")
  If(OK=1)
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
@@ -215,7 +215,7 @@ For this example, we assume the values in the fields are unique (there are no tw
 
 with the recursive function `Genealogy of` listed here:
 
-```code4d
+```4d
   ` Genealogy of project method
   ` Genealogy of ( String ) -> Text
   ` Genealogy of ( Name ) -> Part of sentence

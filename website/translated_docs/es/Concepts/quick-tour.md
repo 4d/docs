@@ -6,7 +6,7 @@ sidebar_label: A Quick Tour
 
 Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
 
-```code4d
+```4d
 ALERT("Hello, World!")
 ```
 
@@ -20,7 +20,7 @@ Or, you could attach this code to a button in a form and execute the form, in wh
 
 Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
 
-```code4d
+```4d
 $MyNumber:=3 //assigns 3 to MyNumber variable  
 [Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
 arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
@@ -37,13 +37,13 @@ You MUST distinguish the assignment operator := from the other operators. Rather
 
 The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a `C_XXX` command. For example, to create a variable of the date type, you can write:
 
-```code4d
+```4d
 C_DATE(MyDate) //Date type for MyDate variable
 ```
 
 Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:
 
-```code4d
+```4d
 MyOtherDate:=Current date+30
 ```
 
@@ -53,13 +53,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
 
-```code4d
+```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
 Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
 
-```code4d
+```4d
 $c:=New collection(1;2;3;4;5)
 $nc:=$c.slice(0;3) //$nc=[1,2,3]  
 
@@ -70,13 +70,13 @@ You can use 4D plug-ins or 4D components that add new commands to your 4D develo
 
 There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
 
-```code4d
+```4d
 PDF REMOVE PAGE(path;page)
 ```
 
 4D SVG is an example of a utility component extending the capabilities of your application:
 
-```code4d
+```4d
 //drawing a picture
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
@@ -88,7 +88,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
 
-```code4d
+```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
@@ -100,7 +100,7 @@ A method is composed of statements; each statement consists of one line in the m
 
 For example, the following line is a statement that will display a confirmation dialog box:
 
-```code4d
+```4d
 CONFIRM("Do you really want to close this account?";"Yes";"No")
 ```
 
@@ -108,7 +108,7 @@ A method also contains tests and loops that control the flow of the execution. 4
 
 The following example goes through all the characters of the text vtSomeText:
 
-```code4d
+```4d
 For($vlChar;1;Length(vtSomeText))
     //Do something with the character if it is a TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -119,7 +119,7 @@ End for
 
 A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
 
-```code4d
+```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
@@ -138,7 +138,7 @@ However, when using the language it is important that you do not mix different d
 
 There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
 
-```code4d
+```4d
 [Products]Part Number:=String(Number)+"abc"
 ```
 
@@ -150,19 +150,19 @@ The data types are fully defined in the section [Data Types](Concepts/data-types
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
 
-```code4d
+```4d
 employee.name:="Smith"
 ```
 
 You can also use a string within square brackets, for example:
 
-```code4d
+```4d
 $vName:=employee["name"]
 ```
 
 Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
 
-```code4d
+```4d
 $vAge:=employee.children[2].age
 ```
 
@@ -175,7 +175,7 @@ Note that if the object property value is an object that encapsulates a method (
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
-```code4d
+```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
@@ -251,7 +251,7 @@ You refer to an expression by the data type it returns. There are several expres
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
 
-```code4d
+```4d
 //$myVar variable is assignable, you can write:  
 $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageNumber is assignable, you can write:  
@@ -268,7 +268,7 @@ The 4D language provides an advanced implementation of pointers, that allow writ
 
 A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
 
-```code4d
+```4d
 MyVar:="Hello"
 MyPointer:=->MyVar
 ALERT(MyPointer->)
@@ -289,7 +289,7 @@ Both styles of comments can be used simultaneously.
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
 
-```code4d
+```4d
 //This is a comment
 For($vCounter;1;100) //Starting loop
   //comment
@@ -304,7 +304,7 @@ Surround contents with `/*` ... `*/` characters to create inline comments or mul
 
 - **Inline comments** can be inserted anywhere in the code. Example:
 
-```code4d
+```4d
 For /* inline comment */ ($vCounter;1;100)
     ...
 End for
@@ -312,7 +312,7 @@ End for
 
 - **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
 
-```code4d
+```4d
 For ($vCounter;1;100)
 /*
 comments  

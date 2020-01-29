@@ -15,7 +15,7 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 **Examples:**
 
-```code4d
+```4d
   ` Declare a variable of type BLOB
  C_BLOB(anyBlobVar)
   ` The BLOB is passed as parameter to a 4D command
@@ -35,9 +35,9 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 You can assign BLOBs to each other.
 
-**Example:**
+**例: **
 
-```code4d
+```4d
   ` Declare two variables of type BLOB
  C_BLOB(vBlobA;vBlobB)
   ` Set the size of the first BLOB to 10K
@@ -50,9 +50,9 @@ However, no operator can be applied to BLOBs.
 
 ## Addressing BLOB contents
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. 例: 
 
-```code4d
+```4d
   ` Declare a variable of type BLOB
  C_BLOB(vBlob)
   ` Set the size of the BLOB to 256 bytes

@@ -489,7 +489,8 @@ The opening sequence for launching a merged application is:
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder. 
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
-```code4d
+
+```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
@@ -565,7 +566,7 @@ The connection procedure for merged client applications supports cases where the
 
 The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
 
-```code4d
+```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 

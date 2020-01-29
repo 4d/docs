@@ -13,19 +13,19 @@ You create an array with one of the array declaration commands from the "Array" 
 
 The following line of code creates (declares) an Integer array of 10 elements:
 
-```code4d
+```4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
 Then, the following code resizes that same array to 20 elements:
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Then, the following code resizes that same array to no elements:
 
-```code4d
+```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
@@ -33,7 +33,7 @@ ARRAY INTEGER(aiAnArray;0)
 
 You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:
 
-```code4d
+```4d
  ARRAY TEXT(atNames;5)
  atNames{1}:="Richard"
  atNames{2}:="Sarah"
@@ -59,7 +59,7 @@ An array always has an element zero. While element zero is not shown when an arr
 
 Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
 
-```code4d
+```4d
   // atNames scrollable area object method
  Case of
     :(Form event=On Load)
@@ -93,9 +93,9 @@ Here is another example: you want to execute an action only when you click on an
 
 ## Two-dimensional Arrays
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
+Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. 例: 
 
-```code4d
+```4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
@@ -111,7 +111,7 @@ In the previous example:
 
 In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
 
-```code4d
+```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Create as many rows (empty and without columns) as there are tables
@@ -138,7 +138,7 @@ In the following example, a pointer to each field of each table in the database 
 
 Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:
 
-```code4d
+```4d
   // Get the pointers to the fields for the table currently displayed at the screen:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
   // Initialize Boolean and Date fields
@@ -172,17 +172,17 @@ However, in some circumstances, you may need to work with arrays holding hundred
 
 | Array Type      | Formula for determining Memory Usage in Bytes                        |
 | --------------- | -------------------------------------------------------------------- |
-| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Boolean         | (31+number of elements)\8                                           |
-| Date            | (1+number of elements) * 6                                           |
-| Integer         | (1+number of elements) * 2                                           |
+| BLOB            | (1+number of elements) * 12 + Sum of the size of each blob           |
+| ブール             | (31+number of elements)\8                                           |
+| 日付              | (1+number of elements) * 6                                           |
+| 整数              | (1+number of elements) * 2                                           |
 | Long Integer    | (1+number of elements) * 4                                           |
-| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| Real            | (1+number of elements) * 8                                           |
-| Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| Time            | (1+number of elements) * 4                                           |
+| オブジェクト          | (1+number of elements) * 8 + Sum of the size of each object          |
+| ピクチャー           | (1+number of elements) * 8 + Sum of the size of each picture         |
+| ポインター           | (1+number of elements) * 8 + Sum of the size of each pointer         |
+| 実数              | (1+number of elements) * 8                                           |
+| テキスト            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
+| 時間              | (1+number of elements) * 4                                           |
 | Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
 
 **Notes:**

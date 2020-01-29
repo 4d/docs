@@ -10,13 +10,13 @@ You'll often find that you need to pass data to your methods. This is easily don
 
 **Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
-```code4d
+```4d
 ALERT("Hello")
 ```
 
 Parameters are passed to methods in the same way. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
 
-```code4d
+```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
 
@@ -24,7 +24,7 @@ The parameters are separated by semicolons (;). Their value is evaluated at the 
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. The numbering of the local variables represents the order of the parameters.
 
-```code4d
+```4d
   //Code of the method DO SOMETHING
   //Assuming all parameters are of the text type
  C_TEXT($1;$2;$3)
@@ -38,7 +38,7 @@ Within the subroutine, you can use the parameters $1, $2... in the same way you 
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
-```code4d
+```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
 //pass the !05/05/10! date as parameter to the SetCalendarDate  
 // in the context of a subform
@@ -63,7 +63,7 @@ Data can be returned from methods. A method that returns a value is called a fun
 
 For example, the following line is a statement that uses the built-in function, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
 
-```code4d
+```4d
 MyLength:=Length("How did I get here?")
 ```
 
@@ -71,13 +71,13 @@ Any subroutine can return a value. The value to be returned is put into the loca
 
 For example, the following function, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 
-```code4d
+```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
 The following is an example that uses the Uppercase4 function:
 
-```code4d
+```4d
 NewPhrase:=Uppercase4("This is good.")
 ```
 
@@ -91,7 +91,7 @@ Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you 
 
 In the following example, the `OneMethodAmongOthers` project method declares three parameters:
 
-```code4d
+```4d
   // OneMethodAmongOthers Project Method
   // OneMethodAmongOthers ( Real ; Date { ; Long } )
   // OneMethodAmongOthers ( Amount ; Date { ; Ratio } )
@@ -103,7 +103,7 @@ In the following example, the `OneMethodAmongOthers` project method declares thr
 
 In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
 
-```code4d
+```4d
   // Capitalize Project Method
   // Capitalize ( Text ) -> Text
   // Capitalize ( Source string ) -> Capitalized string
@@ -112,9 +112,9 @@ In the following example, the `Capitalize` project method accepts a text paramet
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
+Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. たとえば:
 
-```code4d
+```4d
 C_TEXT($string)
 C_LONGINT($idProc;$int)
 C_OBJECT($obj)
@@ -124,7 +124,7 @@ $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 
 This code can be executed in compiled mode only if "foo_method" declares its parameters:
 
-```code4d
+```4d
 //foo_method
 C_TEXT($1)
 C_LONGINT($2)
@@ -134,7 +134,7 @@ C_OBJECT($3)
 
 **Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
 
-```code4d
+```4d
  C_REAL(OneMethodAmongOthers;$1) 
 ```
 
@@ -144,16 +144,16 @@ Parameter declaration is also mandatory in the following contexts (these context
 
 - Database methods For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
 
-```code4d
+```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
 - Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. たとえば:
 
-```code4d
+```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
     $0:=0
@@ -167,9 +167,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Values or references
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. For example:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. たとえば:
 
-```code4d
+```4d
     //Here is some code from the method MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
@@ -185,7 +185,7 @@ There are two ways to make the method `DO_SOMETHING` change the value of the fie
 
 1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
 
-```code4d
+```4d
   //Here is some code from the method MY_METHOD
  DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
@@ -199,7 +199,7 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
 
 2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
 
-```code4d
+```4d
     //Here is some code from the method MY METHOD
  [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Name)
@@ -219,7 +219,7 @@ Consequently, when using such data types as parameters, `$1, $2...` do not conta
 
 For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
 
-```code4d
+```4d
   //CreatePerson
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
@@ -229,7 +229,7 @@ For example, consider the `CreatePerson` method that creates an object and sends
 
 The `ChangeAge` method adds 10 to the Age attribute of the received object
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1)
  $1.Age:=$1.Age+10
@@ -246,7 +246,7 @@ Using objects as parameters allow you to handle **named parameters**. This progr
 
 For example, using the `CreatePerson` method:
 
-```code4d
+```4d
   //CreatePerson
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
@@ -256,7 +256,7 @@ For example, using the `CreatePerson` method:
 
 In the `ChangeAge` method you can write:
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
@@ -272,7 +272,7 @@ This provides a powerful way to define [optional parameters](#optional-parameter
 
 In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
@@ -284,7 +284,7 @@ Then both parameters are optional; if they are not filled, the result will be " 
 
 Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
 
-```code4d
+```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
@@ -306,7 +306,7 @@ With named variables, any parameter can be optional. In the above example, all p
 
 In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. You can call it in the following ways:
 
-```code4d
+```4d
 ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
@@ -319,7 +319,7 @@ Using the `Count parameters` command from within the called method, you can dete
 
 The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
 
-```code4d
+```4d
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
@@ -339,7 +339,7 @@ The following example displays a text message and can insert the text into a doc
 
 After this project method has been added to your application, you can write:
 
-```code4d
+```4d
 APPEND TEXT(vtSomeText) //Will only display the  message
 APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
@@ -351,7 +351,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
-```code4d
+```4d
   //SEND PACKETS Project Method
   //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
@@ -371,7 +371,7 @@ For example, consider a function that adds values and returns the sum formatted 
 
 This function is called in the following manner:
 
-```code4d
+```4d
  Result:=MySum("##0.00";125,2;33,5;24)
 
 ```
@@ -380,7 +380,7 @@ In this case, the calling method will get the string “182.70”, which is the 
 
 Here is the function, named `MySum`:
 
-```code4d
+```4d
  $Sum:=0
  For($i;2;Count parameters)
     $Sum:=$Sum+${$i}
@@ -390,7 +390,7 @@ Here is the function, named `MySum`:
 
 This function can now be called in various ways:
 
-```code4d
+```4d
  Result:=MySum("##0.00";125,2;33,5;24)
  Result:=MySum("000";1;18;4;23;17)
 ```
@@ -399,7 +399,7 @@ This function can now be called in various ways:
 
 As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
-```code4d
+```4d
  C_LONGINT(${4})
 ```
 

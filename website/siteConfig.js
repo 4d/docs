@@ -42,8 +42,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    //{doc: 'Concepts/doc1', label: '4D Language Concepts'},
-    //{doc: 'doc4', label: 'page4'},
+
+    //{doc: 'Concepts/about', label: 'Docs'},
+    //{doc: 'REST/gettingStarted', label: 'REST'},
+
 	//{href: 'https://developer.4d.com/', label:'Developer Center'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
@@ -99,7 +101,7 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: 'routeros',
   },
 
   // Add custom scripts here that would be placed in <script> tags

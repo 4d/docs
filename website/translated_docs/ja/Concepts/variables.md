@@ -17,25 +17,25 @@ You create variables by declaring them using one of the "Compiler" or "Arrays" t
 
 For example, if you want to define a text variable, you write:
 
-```code4d
+```4d
  C_TEXT(myText)
 ```
 
 **Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
 
-```code4d
+```4d
  MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
 ```
 
 Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
 
-```code4d
+```4d
  [MyTable]MyField:=MyText
 ```
 
 The following are some basic variable declarations:
 
-```code4d
+```4d
  C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
  C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
@@ -48,9 +48,9 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. たとえば:
 
-```code4d
+```4d
 MyNumber:=3
 ```
 
@@ -58,7 +58,7 @@ creates the variable *MyNumber* and puts the number 3 into it. If MyNumber alrea
 
 Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
 
-```code4d
+```4d
 [Products]Size:=MyNumber
 ```
 
@@ -66,7 +66,7 @@ In this case, *[Products]Size* would be equal to 3. This example is rather simpl
 
 You assign data to array elements by using curly braces ({...}):
 
-```code4d
+```4d
 atNames{1}:="Richard"
 ```
 
@@ -90,7 +90,7 @@ When you are working in a database with many methods and variables, you often fi
 
 Frequently, in a database, small pieces of information are needed from the user. The command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
 
-```code4d
+```4d
  $vsID:=Request("Please enter your ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)

@@ -37,7 +37,7 @@ Les objets doivent être initialisés à l'aide, par exemple, de la commande `Ne
 
 Exemple :
 
-```code4d
+```4d
  C_OBJET($obVar) //création d'une variable 4D de type objet.
  $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
 ```
@@ -61,7 +61,7 @@ Avec la notation objet, il est possible d'accéder aux propriétés d'objets (au
 
 Exemple :
 
-```code4d
+```4d
      employee.name:="Smith"
 ```
 
@@ -69,7 +69,7 @@ Exemple :
 
 Exemple :
 
-```code4d
+```4d
      $vName:=employee["name"]
      //ou :
      $property:="name"
@@ -79,7 +79,7 @@ Exemple :
 
 Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
 
-```code4d
+```4d
  $vAge:=employee.children[2].age
 ```
 
@@ -87,7 +87,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 - avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Exemple :
 
-```code4d
+```4d
      $age:=$myObjVar.employee.age //variable
  $addr:=[Emp]data_obj.address //champ
  $city:=$addr.city //propriété d'un objet
@@ -97,13 +97,13 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 - avec les **commandes 4D** qui retournent des objets. Exemple :
 
-```code4d
+```4d
      $measures:=Lire mesures base.DB.tables
 ```
 
 - avec les **méthodes projet** qui retournent des objets. Exemple :
 
-```code4d
+```4d
       // MyMethod1
      C_OBJECT($0)
      $0:=New object("a";10;"b";20)
@@ -114,7 +114,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 - avec les **collections** Exemple:
 
-```code4d
+```4d
      myColl.length //taille de la collection
 ```
 
@@ -134,7 +134,7 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 
 Exemple :
 
-```code4d
+```4d
  C_OBJECT(vObj)
  C_POINTER(vPtr)
  vObj:=New object
@@ -147,7 +147,7 @@ Exemple :
 
 Lorsque la notation objet est utilisée, la valeur **null** est prise en charge via la commande **Null**. Cette commande peut être utilisée pour affecter ou comparer la valeur null aux propriétés d'objets ou aux éléments de collections, par exemple :
 
-```code4d
+```4d
  myObject.address.zip:=Null
  If(myColl[2]=Null)
 ```
@@ -160,7 +160,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 
 - La lecture d'une propriété d'un objet ou d'une valeur indéfini(e) renvoie Indéfini ; l'affectation d'une valeur indéfinie à des variables (hors tableaux) a le même effet qu'appeler EFFACER VARIABLE avec elles :
 
-```code4d
+```4d
      C_OBJET($o)
  C_ENTIER Long($val)
  $val:=10 //$val=10
@@ -170,14 +170,14 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 
 - La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
 
-```code4d
+```4d
      C_COLLECTION($c) //variable créée mais pas de collection définie
  $size:=$c.length //$size = 0
 ```
 
 - Une valeur indéfinie passée en paramètre à une méthode projet est automatiquement convertie en 0 ou en "" en fonction de la déclaration du type du paramètre.
 
-```code4d
+```4d
      C_OBJECT($o)
  mymethod($o.a) //passage d'un paramètre indéfini
  
@@ -188,7 +188,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 
 - Une expression de condition est automatiquement convertie à Faux lorsque son évaluation donne Indéfinie avec les mots-clés Si et Au cas ou :
 
-```code4d
+```4d
      C_OBJECT($o)
      If($o.a) // faux
      End if
@@ -207,7 +207,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
     - Heure : 0 (nombre de ms)
     - Indéfini, Null : pas de changement
 
-```code4d
+```4d
      C_OBJECT($o)
  $o:=New object("a";2)
  $o.a:=$o.b //$o.a=0
@@ -217,7 +217,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 
 Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : `String`, `Num`, `Time`, `Date`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :
 
-```code4d
+```4d
  $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie
   //afin d'éviter des erreurs dans le code
 ```
@@ -241,7 +241,7 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
 
 - Ecriture et lecture de propriétés d'objets (cet exemple compare la notation objet et la syntaxe avec commandes) :
 
-```code4d
+```4d
   // Utilisation de la notation objet
  C_OBJECT($myObj) //déclaration d'une variable objet 4D
  $myObj:=New object //création d'un objet et affectation à la variable
@@ -261,7 +261,7 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
 
 - Création de propriétés et affectation de valeurs, y compris d'autres objets :
 
-```code4d
+```4d
  C_OBJECT($Emp)
  $Emp:=New object
  $Emp.city:="London" //crée la propriété city avec la valeur "London"
@@ -272,14 +272,14 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
 
 - Lire une valeur dans un sous-objet est très simple avec la notation objet :
 
-```code4d
+```4d
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
 - Vous pouvez accéder aux propriétés d'objets via des chaînes grâce à l'opérateur [ ] 
 
-```code4d
+```4d
  $Emp["city"]:="Berlin" //modification de la propriété city
   //cette syntaxe est utile pour créer des propriétés à l'aide de variables
  C_TEXT($addr)

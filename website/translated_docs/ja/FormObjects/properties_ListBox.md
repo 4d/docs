@@ -10,7 +10,7 @@ Collection of columns of the list box.
 
 #### JSON Grammar
 
-| Name    | Data Type                    | Possible Values                                  |
+| Name    | データタイプ                       | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -33,9 +33,9 @@ The specified form is displayed:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                       |
-| ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+| Name       | データタイプ | Possible Values                                                                                                                                                                                       |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
 #### Objects Supported
 
@@ -63,9 +63,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| Name                   | データタイプ | Possible Values                     |
+| ---------------------- | ------ | ----------------------------------- |
+| doubleClickInRowAction | string | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
@@ -87,9 +87,9 @@ This property is used to specify the set to be used to manage highlighted record
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+| Name         | データタイプ | Possible Values |
+| ------------ | ------ | --------------- |
+| highlightSet | string | Name of the set |
 
 #### Objects Supported
 
@@ -126,9 +126,9 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| lockedColumnCount | integer   | minimum: 0      |
+| Name              | データタイプ  | Possible Values |
+| ----------------- | ------- | --------------- |
+| lockedColumnCount | integer | minimum: 0      |
 
 #### Objects Supported
 
@@ -141,9 +141,9 @@ Number of columns that cannot be moved during execution.
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| staticColumnCount | integer   | minimum: 0      |
+| Name              | データタイプ  | Possible Values |
+| ----------------- | ------- | --------------- |
+| staticColumnCount | integer | minimum: 0      |
 
 #### Objects Supported
 
@@ -162,9 +162,9 @@ Sets the number of columns of the list box.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| columnCount | integer   | minimum: 1      |
+| Name        | データタイプ  | Possible Values |
+| ----------- | ------- | --------------- |
+| columnCount | integer | minimum: 1      |
 
 #### Objects Supported
 
@@ -192,7 +192,7 @@ The row control array must be of the Longint type and include the same number of
 
 To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
 
-```code4d
+```4d
  aLControlArr{10}:=lk row is not selectable
 ```
 
@@ -200,15 +200,15 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 You can define several interface properties at once:
 
-```code4d
+```4d
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
 ```
 
 ![](assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+Note that setting properties for an element overrides any other values for this element (if not reset). たとえば:
 
-```code4d
+```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
  //sets row 6 as disabled AND not selectable
  aLControlArr{6}:=lk row is disabled 
@@ -218,9 +218,9 @@ Note that setting properties for an element overrides any other values for this 
 
 #### JSON Grammar
 
-| Name             | Data Type | Possible Values        |
-| ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| Name             | データタイプ | Possible Values        |
+| ---------------- | ------ | ---------------------- |
+| rowControlSource | string | Row control array name |
 
 #### Objects Supported
 
@@ -239,9 +239,9 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| Name          | データタイプ | Possible Values              |
+| ------------- | ------ | ---------------------------- |
+| selectionMode | string | "multiple", "single", "none" |
 
 #### Objects Supported
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title:Action 
+title: Action 
 ---
 
 
@@ -190,6 +190,8 @@ In other cases (list boxes based on named selections, columns associated with ex
 Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
+
+You can also set this property using the `OBJECT SET ACTION` command.
 
 #### JSON Grammar
 

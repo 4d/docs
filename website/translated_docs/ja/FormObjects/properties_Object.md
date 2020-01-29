@@ -1,10 +1,10 @@
 ---
 id: propertiesObject
-0: title:Objects
+title: Objects
 ---
 
 ---
-## Type
+## タイプ
 
  `MANDATORY SETTING`
 
@@ -13,9 +13,9 @@ This property designates the type of the [active or inactive form object](formOb
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
-| ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| Name | データタイプ | Possible Values                                                                                                                                                                                                                                                                                          |
+| ---- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type | string | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
 #### Objects Supported
@@ -32,13 +32,14 @@ Each active form object is associated with an object name. Each object name must
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
 
+
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                      |
-| ---- | --------- | -------------------------------------------------------------------- |
-| name | string    | Any allowed name which does not belong to an already existing object |
+| Name | データタイプ | Possible Values                                                      |
+| ---- | ------ | -------------------------------------------------------------------- |
+| name | string | Any allowed name which does not belong to an already existing object |
 
 #### Objects Supported
 
@@ -59,7 +60,7 @@ The form object variables allow you to control and monitor the objects. For exam
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
-### Expressions
+### 式
 
 You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
@@ -75,7 +76,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
 - You can set the type using the [Expression type](#expression-type) property.
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
 
-```code4d
+```4d
  If(Form event=On Load)
     C_TEXT($init)
     $Ptr_object:=OBJECT Get pointer(Object named;"comments")
@@ -84,9 +85,9 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. たとえば:
 
-```code4d
+```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
@@ -106,7 +107,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
 
 #### JSON Grammar
 
-| Name       | Data Type               | Possible Values                                                                                                                                                                                                                                                                                                                       |
+| Name       | データタイプ                  | Possible Values                                                                                                                                                                                                                                                                                                                       |
 | ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
@@ -136,9 +137,9 @@ However, this property has a typing function in the following specific cases:
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| Name               | データタイプ | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
 
 #### Objects Supported
 
@@ -153,9 +154,9 @@ A list of space-separated words used as class selectors in css files.
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                           |
-| ----- | --------- | --------------------------------------------------------- |
-| class | string    | One string with CSS name(s) separated by space characters |
+| Name  | データタイプ | Possible Values                                           |
+| ----- | ------ | --------------------------------------------------------- |
+| class | string | One string with CSS name(s) separated by space characters |
 
 
 #### Objects Supported
@@ -179,9 +180,9 @@ The collection or the entity selection must be available to the form when it is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                              |
-| ---------- | --------- | ------------------------------------------------------------ |
-| dataSource | string    | Expression that returns a collection or an entity selection. |
+| Name       | データタイプ | Possible Values                                              |
+| ---------- | ------ | ------------------------------------------------------------ |
+| dataSource | string | Expression that returns a collection or an entity selection. |
 
 #### Objects Supported
 
@@ -206,9 +207,9 @@ Specify the type of list box.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                             |
-| ----------- | --------- | ----------------------------------------------------------- |
-| listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
+| Name        | データタイプ | Possible Values                                             |
+| ----------- | ------ | ----------------------------------------------------------- |
+| listboxType | string | "array", "currentSelection", "namedSelection", "collection" |
 
 #### Objects Supported
 
@@ -227,13 +228,13 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                               |
-| -------------- | --------- | ------------------------------------------------------------- |
-| pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
+| Name           | データタイプ | Possible Values                                               |
+| -------------- | ------ | ------------------------------------------------------------- |
+| pluginAreaKind | string | Name of the plug-in external area (starts with a % character) |
 
 
 #### Objects Supported
-[プラグインエリア](pluginArea_overview.md)
+[Plug-in Area](pluginArea_overview.md)
 
 
 
@@ -245,14 +246,14 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| radioGroup | string    | Radio group name |
+| Name       | データタイプ | Possible Values  |
+| ---------- | ------ | ---------------- |
+| radioGroup | string | Radio group name |
 
 
 #### Objects Supported
 
-[ラジオボタン](radio_overview.md)
+[Radio Button](radio_overview.md)
 
 
 
@@ -274,9 +275,9 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| Name | データタイプ | Possible Values |
+| ---- | ------ | --------------- |
+| テキスト | string | any text        |
 
 #### Objects Supported
 
@@ -296,17 +297,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Date | Time | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   |      | X    | X    | X    |      | Same as column type |
-| Maximum               | X   |      | X    | X    | X    |      | Same as column type |
-| Sum                   | X   |      | X    |      | X    |      | Same as column type |
-| Count                 | X   | X    | X    | X    | X    | X    | Longint             |
-| Average               | X   |      |      | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variance(*)           | X   |      |      | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X    | X    | X    | X    | Any                 |
+| Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
+| --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
+| Minimum               | X   |      | X  | X  | X    |      | Same as column type |
+| Maximum               | X   |      | X  | X  | X    |      | Same as column type |
+| Sum                   | X   |      | X  |    | X    |      | Same as column type |
+| Count                 | X   | X    | X  | X  | X    | X    | 倍長整数                |
+| Average               | X   |      |    | X  |      |      | 実数                  |
+| Standard deviation(*) | X   |      |    | X  |      |      | 実数                  |
+| Variance(*)           | X   |      |    | X  |      |      | 実数                  |
+| Sum squares(*)        | X   |      |    | X  |      |      | 実数                  |
+| Custom ("none")       | X   | X    | X  | X  | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
@@ -317,9 +318,9 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                                                                                       |
-| ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Name                | データタイプ | Possible Values                                                                                       |
+| ------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
 #### Objects Supported
 

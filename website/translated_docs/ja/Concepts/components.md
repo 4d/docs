@@ -50,7 +50,7 @@ The local, process and interprocess variables are not shared between components 
 
 Example using an array:
 
-```code4d
+```4d
 //In the host database:
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
@@ -61,7 +61,7 @@ Example using an array:
 
 Examples using variables:
 
-```code4d
+```4d
  C_TEXT(myvariable)
  component_method1(->myvariable)
  C_POINTER($p)
@@ -79,7 +79,7 @@ When you use pointers to allow components and the host database to communicate, 
 
 - The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
 
-```code4d
+```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
      RESOLVE POINTER(myptr2;vVarName2;vtablenum2;vfieldnum2)
      If(vVarName1=vVarName2)
@@ -88,7 +88,7 @@ When you use pointers to allow components and the host database to communicate, 
 
 In this case, it is necessary to use the comparison of pointers:
 
-```code4d
+```4d
      If(myptr1=myptr2) //This test returns False
 ```
 
@@ -96,14 +96,14 @@ In this case, it is necessary to use the comparison of pointers:
 
 Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:
 
-```code4d
+```4d
 // calling a component method
 methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 ```
 
 Within the component, the code of the `methCreateRec` method:
 
-```code4d
+```4d
 C_POINTER($1) //Pointer on a table in host database
 C_POINTER($2) //Pointer on a field in host database
 C_TEXT($3) // Value to insert
@@ -172,7 +172,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 A component cannot use the tables and fields defined in the 4D structure of the matrix database. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. An external database is a 4D database that is independent from the main 4D database, but that you can work with from the main 4D database. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
 
-### Example
+### 例題
 
 The following code is included in a component and performs three basic actions with an external database:
 
@@ -182,7 +182,7 @@ The following code is included in a component and performs three basic actions w
 
 Creating the external database:
 
-```code4d
+```4d
 <>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
@@ -205,7 +205,7 @@ Creating the external database:
 
 Writing in the external database:
 
-```code4d
+```4d
  $Ptr_1:=$2 // retrieves data from the host database through pointers
  $Ptr_2:=$3
  $Ptr_3:=$4
@@ -227,7 +227,7 @@ Writing in the external database:
 
 Reading from an external database:
 
-```code4d
+```4d
  $Ptr_1:=$2 // accesses data of the host database through pointers
  $Ptr_2:=$3
  $Ptr_3:=$4

@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-0: title:Text
+title: Text
 ---
 
 ---
@@ -198,11 +198,13 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
 
-```code4d
+```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
 Foreground color;Dark shadow color)
 ```
@@ -226,11 +228,13 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+Beispiel:
 
-```code4d
+```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
+
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 
@@ -318,7 +322,7 @@ The following example uses the *Color* project method.
 
 In the form method, write the following code:
 
-```code4d
+```4d
 //form method
 Case of
   :(Form event=On Load)
@@ -329,7 +333,7 @@ End case
 
 In the *Color* method, write the following code:
 
-```code4d
+```4d
 //Color method
 //Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)

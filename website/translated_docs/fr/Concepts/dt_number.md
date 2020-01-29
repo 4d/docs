@@ -19,7 +19,7 @@ Vous pouvez assigner tout nombre d'un type numérique à un nombre d'un autre ty
 
 Une constante littérale numérique s’écrit comme un nombre réel. Voici quelques exemples de constantes numériques :
 
-```code4d
+```4d
 27
 123.76
 0.0076
@@ -29,7 +29,7 @@ Une constante littérale numérique s’écrit comme un nombre réel. Voici quel
 
 Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 
-```code4d
+```4d
 -27
 -123.76
 -0.0076
@@ -74,7 +74,7 @@ L'opérateur modulo % divise le premier nombre par le second et retourne le rest
 
 L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué. Par exemple :
 
-```code4d
+```4d
  3+4*5
 ```
 
@@ -82,7 +82,7 @@ retourne 35 car l'expression est évaluée comme 3 + 4, qui donne 7, multiplié 
 
 Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins. Par exemple :
 
-```code4d
+```4d
  3+(4*5)
 ```
 

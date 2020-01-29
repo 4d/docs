@@ -28,7 +28,7 @@ Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
 
 ### Architecture des feuilles de style
 
-Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les feuilles de style des bases projet respectent généralement la syntaxe et la grammaire [CSS](https://www.w3schools.com/css/).
+Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les feuilles de style des bases projet respectent généralement la syntaxe et la grammaire CSS2.
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
@@ -67,7 +67,7 @@ text, input {
 
 ### Nom d'objet
 
-Tout en correspondant au sélection d'identifiant CSS, le nom d'objet définit un objet spécifique à styler puisque le nom de l'objet est unique dans le formulaire.
+Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -84,7 +84,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 ### Class
 
-Correspondant au sélecteur CSS class, la classe définit le style de tous les objets formulaire avec l'attribut `classe`.
+Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
 Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -116,7 +116,7 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Correspondant au sélecteur CSS universel, le caractère "*" indique que le style suivant sera appliqué à tous les objets du formulaire.
+Le caractère "*" correspond au **sélecteur universel** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
 
 Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -131,11 +131,22 @@ Dans l'exemple suivant, tous les objets auront un fond gris :
 
 ### Attributs spécifiques
 
-Correspondant au sélecteur d'attribut CSS, les styles peuvent être appliqués à tous les objets de formulaire avec un attribut spécifique.
+Les styles correspondent aux **sélecteurs d'attributs** et peuvent s'appliquer à tous les objets du formulaire avec un attribut spécifique.
 
 Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-Dans l'exemple suivant, tous les objets avec l'attribut `borderStyle` auront des lignes violettes :
+#### Syntaxes prises en charge
+
+| Syntaxe                    | Description                                                                                                                 |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                | les objets ayant un `attribute`                                                                                             |
+| [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                                |
+| [attribute~="valeur"]      | les objets dont la valeur de l'`attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| [attribute&#124;="valeur"] | les objets dont l'`attribute` contient une valeur qui commence par celle de "valeur"                                        |
+
+#### Exemples
+
+Tous les objets ayant l'attribut `borderStyle` auront des lignes violettes :
 
 ```
 [borderStyle]
@@ -144,17 +155,7 @@ Dans l'exemple suivant, tous les objets avec l'attribut `borderStyle` auront des
 }
 ```
 
-Pour indiquer qu'un style doit être appliqué à tous les objets ayant un attribut et un mot spécifiques, utilisez la syntaxe `[attribute~="value"]` :
-
-```
-[text~=Hello]
-{
-     stroke: blue;
-}
-
-```
-
-Pour indiquer qu'un style doit être appliqué à des types d'objet distincts avec un attribut et une valeur spécifiques, utilisez la syntaxe `object type[attribute="value"]` :
+Tous les objets de type texte ayant un attribut text dont la valeur est "Hello" auront des lettres bleues :
 
 
 ```
@@ -164,8 +165,17 @@ text[text=Hello]
 }
 ```
 
+Tous les objets ayant un attribut text dont la valeur est "Hello" auront des traits bleus :
 
-Pour indiquer qu'un style doit être appliqué à certains types d'objet avec un attribut spécifique dont la valeur commence par une valeur spécifique, utilisez la syntaxe `object type[attribute|="value"]` :
+```
+[text~=Hello]
+{
+     stroke: blue;
+}
+
+```
+
+Tous les objets de type texte ayant un attribut text dont la valeur commence par "Hello" auront des lettres jaunes :
 
 ```
 text[text|=Hello]
@@ -194,7 +204,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | -------------- | ---------------- |
 | borderStyle    | border-style     |
 | border-style   | background-color |
-| fontFamily     | fontFamily       |
+| fontFamily     | font-family      |
 | fontSize       | font-size        |
 | fontStyle      | font-style       |
 | fontWeight     | font-weight      |

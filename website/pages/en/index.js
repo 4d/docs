@@ -32,7 +32,6 @@ function HomeSplash(props) {
     </div>
   );
 }
-
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = 'en'} = this.props;
@@ -47,14 +46,14 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[Language Concepts](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[Project databases](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
+                  content: `[<translate>Language Concepts</translate>](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[<translate>Project databases</translate>](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[Form Editor](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[Form Objects](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[Form Object Properties](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[Menus](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[<translate>Form Editor</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -62,7 +61,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[Web Server](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)`,
+                  content: `[<translate>Web Server</translate>](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)<br>[<translate>REST Server</translate>](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
@@ -84,7 +83,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Mobile application</translate>,
                 },
                 {
-                  content: `[Maintenance and Security Center](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>[Backup and Restore](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>[Users and Groups](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
+                  content: `[<translate>Maintenance and Security Center</translate>](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>[<translate>Backup and Restore</translate>](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>[<translate>Users and Groups</translate>](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',

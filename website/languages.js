@@ -12,19 +12,19 @@ const languages = [
     tag: 'en',
   },
   {
-    enabled: false,
+    enabled: true,
     name: '日本語',
     tag: 'ja',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Deutsch',
     tag: 'de',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Español',
-    tag: 'es-ES',
+    tag: 'es',
   },
   {
     enabled: true,
@@ -32,9 +32,9 @@ const languages = [
     tag: 'fr',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Português',
-    tag: 'pt-PT',
+    tag: 'pt',
   },
 ];
 module.exports = languages;

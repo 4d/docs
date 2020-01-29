@@ -28,7 +28,7 @@ Modifications can be applied to shared objects and shared collections:
 
 However, all modification instructions in a shared object or collection must be surrounded by the `Use...End use` keywords, otherwise an error is generated.
 
-```code4d
+```4d
  $s_obj:=New shared object("prop1";"alpha")
  Use($s_obj)
     $s_obj.prop1:="omega"
@@ -65,7 +65,7 @@ For more information, refer to the `Storage` command description.
 ## Use...End use
 The formal syntax of the `Use...End use` structure is:
 
-```code4d
+```4d
  Use(Shared_object_or_Shared_collection)
     statement(s)
  End use
@@ -89,7 +89,7 @@ Shared objects and shared collections are designed to allow communication betwee
 
 You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
 
-```code4d
+```4d
  ARRAY TEXT($_items;0)
  ... //fill the array with items to count
  $nbItems:=Size of array($_items)
@@ -108,7 +108,7 @@ You want to launch several processes that perform an inventory task on different
 
 In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
 
-```code4d
+```4d
  C_TEXT($1)
  C_TEXT($what)
  C_OBJECT($2)
@@ -126,7 +126,7 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
 
 The following examples highlight specific rules when handling shared groups:
 
-```code4d
+```4d
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)

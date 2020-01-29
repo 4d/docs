@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: チェックボックス
+title: Check Box
 ---
 
 ## Overview
@@ -205,7 +205,7 @@ Example on macOS:
 
 #### JSON Example:
 
-```code4d
+```4d
     "myCheckBox": {
                 "type": "checkbox", 
                 "style":"roundedBevel",  

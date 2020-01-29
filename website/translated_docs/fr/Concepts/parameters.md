@@ -10,13 +10,13 @@ Vous aurez souvent besoin de fournir des valeurs à vos méthodes. Vous pouvez f
 
 **Les paramètres** (ou **arguments**) sont des données dont les méthodes ont besoin pour s’exécuter. Le terme *paramètres* ou *arguments* est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERTE` :
 
-```code4d
+```4d
 ALERT("Bonjour")
 ```
 
 Les paramètres sont passés de la même manière aux méthodes. Par exemple, si la méthode FAIRE QUELQUE CHOSE accepte trois paramètres, l'appel à cette méthode pourrait être de la forme suivante :
 
-```code4d
+```4d
 FAIRE QUELQUE CHOSE(AvecCeci;EtCela;CommeCeci)
 ```
 
@@ -24,7 +24,7 @@ Les paramètres sont séparés par des points-virgules (;). Leur valeur est calc
 
 Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est automatiquement copiée séquentiellement dans des variables locales numérotées : $1, $2, $3, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
-```code4d
+```4d
   //Code de la méthode FAIRE QUELQUE CHOSE
   //Supposons que tous les paramètres sont de type texte
  C_TEXT($1;$2;$3)
@@ -38,7 +38,7 @@ A l'intérieur de la sous-routine, vous pouvez utiliser les paramètres $1, $2..
 
 Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des commandes consacrées, comme par exemple :
 
-```code4d
+```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
 //passez la date !05/05/10! comme paramètre de SetCalendarDate
 // dans le contexte d'un sous-formulaire
@@ -63,7 +63,7 @@ Les commandes de 4D ou de plug-ins qui retournent une valeur sont également app
 
 Par exemple, la ligne d’instruction suivante utilise une fonction intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur* : 
 
-```code4d
+```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
 ```
 
@@ -71,13 +71,13 @@ Toute sous-routine peut retourner une valeur. La valeur à retourner est placée
 
 Par exemple, la fonction suivante, appelée `Majuscules4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
 
-```code4d
+```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
 Voici un exemple qui utilise la fonction Majuscules4 :
 
-```code4d
+```4d
 NouvellePhrase:=Majuscules4("Bien joué.")
 ```
 
@@ -91,7 +91,7 @@ Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méth
 
 Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare trois paramètres :
 
-```code4d
+```4d
   // Méthode projet OneMethodAmongOthers
   // OneMethodAmongOthers ( Réel ; Date { ; Entier long} )
   // OneMethodAmongOthers ( Amount ; Date { ; Pourcentage } )
@@ -103,7 +103,7 @@ Dans l'exemple ci-dessous, la méthode projet `OneMethodAmongOthers` déclare tr
 
 Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
 
-```code4d
+```4d
   // Méthode projet ajoutCapitale
   // ajoutCapitale ( Texte ) -> Texte
   // ajoutCapitale( Chaîne source ) -> chaîne avec la première lettre capitale
@@ -114,7 +114,7 @@ Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre
 
 L'utilisation de commandes telles que `Nouveau process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple:
 
-```code4d
+```4d
 C_TEXT($string)
 C_LONGINT($idProc;$int)
 C_OBJECT($obj)
@@ -124,7 +124,7 @@ $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 
 Ce code peut être exécuté en mode compilé, uniquement si "foo_method" déclare ses paramètres :
 
-```code4d
+```4d
 //foo_method
 C_TEXT($1)
 C_LONGINT($2)
@@ -134,7 +134,7 @@ C_OBJECT($3)
 
 **Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 
-```code4d
+```4d
  C_REAL(OneMethodAmongOthers;$1) 
 ```
 
@@ -144,7 +144,7 @@ La déclaration des paramètres est également obligatoire dans les contextes su
 
 - Méthodes base Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
-```code4d
+```4d
 // Sur connexion Web
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
@@ -153,7 +153,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 
-```code4d
+```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
     $0:=0
@@ -169,7 +169,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2, etc... de la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
 
-```code4d
+```4d
     //Voici du code extrait de la méthode MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
@@ -185,7 +185,7 @@ Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la vale
 
 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
-```code4d
+```4d
   //Voici du code extrait de la méthode  MY_METHOD
  DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
@@ -199,7 +199,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
 
 2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur. 
 
-```code4d
+```4d
     //Voici du code extrait de la méthode MY METHOD
  [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Name)
@@ -219,7 +219,7 @@ Par conséquent, lorsque vous utilisez des types de données comme paramètres, 
 
 Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
-```code4d
+```4d
   //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
@@ -229,7 +229,7 @@ Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et 
 
 La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1)
 $1.Age:=$1.Age+10
@@ -246,7 +246,7 @@ L'utilisation d'objets en tant que paramètres vous permet de gérer des **param
 
 Par exemple, si vous utilisez la méthode `CreatePerson` :
 
-```code4d
+```4d
   //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
@@ -256,7 +256,7 @@ Par exemple, si vous utilisez la méthode `CreatePerson` :
 
 Dans la méthode `ChangeAge`, vous pouvez écrire :
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
@@ -272,7 +272,7 @@ C'est un moyen puissant de définir des [paramètres optionnels](#optional-param
 
 Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
 
-```code4d
+```4d
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
@@ -284,7 +284,7 @@ Les deux paramètres sont alors optionnels. S'ils ne sont pas renseignés, le r�
 
 Enfin, les paramètres nommés permettent de maintenir et de reproduire des applications en toutes simplicité et sécurité. Imaginez que vous réalisez, par la suite, qu'ajouter 10 ans n'est pas toujours approprié. Vous aurez besoin d'un autre paramètre pour définir le nombre d'années à ajouter. Vous pouvez écrire :
 
-```code4d
+```4d
 $person:=New object("Nom";"Smith";"Age";40;"àAjouter";10)
 ChangeAge($person)
 
@@ -306,7 +306,7 @@ Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dan
 
 Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
-```code4d
+```4d
 ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
 ALERT("Temps écoulé") //1 paramètre
 ```
@@ -319,7 +319,7 @@ A l'aide de la commande `Count parameters` contenue dans la méthode appelée, v
 
 L'exemple suivant affiche un message et peut insérer le texte dans un document sur disque ou dans une zone 4D Write Pro :
 
-```code4d
+```4d
 // Méthode projet APPEND TEXT
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
@@ -339,7 +339,7 @@ L'exemple suivant affiche un message et peut insérer le texte dans un document 
 
 Une fois que cette méthode projet a été ajoutée à votre application, vous pouvez écrire :
 
-```code4d
+```4d
 APPEND TEXT(vtSomeText) //Affichera uniquement le message
 APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans $path
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
@@ -351,7 +351,7 @@ Les méthodes projets 4D acceptent un grand nombre de paramètres de même type,
 
 Dans l'exemple qui suit, la méthode projet `ENVOYER PAQUET` accepte le paramètre de temps suivi d'un nombre de variables des paramètres de texte :
 
-```code4d
+```4d
   //Méthode projet ENVOYER PAQUET
   //ENVOYER PAQUET ( Heure ; Texte { ; Texte2... ; TexteN } )
   //ENVOYER PAQUET ( docRef ; Données { ; Données2... ; DonnéesN } )
@@ -371,7 +371,7 @@ Illustrons notre propos par un exemple : écrivons une fonction qui prend des va
 
 Un appel à cette fonction se fera de la façon suivante :
 
-```code4d
+```4d
  Résultat:=LaSomme("##0,00";125,2;33,5;24)
 
 ```
@@ -380,7 +380,7 @@ La méthode appelante récupérera dans ce cas la chaîne : 182,70, somme des no
 
 Examinons maintenant la fonction que nous appelons `LaSomme` :
 
-```code4d
+```4d
  $Somme:=0
  For($i;2;Nombre de paramètres)
     $Somme:=$Somme+${$i}
@@ -390,7 +390,7 @@ Examinons maintenant la fonction que nous appelons `LaSomme` :
 
 Cette fonction pourra être appelée de diverses manières :
 
-```code4d
+```4d
  Résultat:=LaSomme("##0,00";125,2;33,5;24)
  Résultat:=LaSomme("000";1;18;4;23;17)
 ```
@@ -399,7 +399,7 @@ Cette fonction pourra être appelée de diverses manières :
 
 De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Pour déclarer ces paramètres, utilisez une directive de compilateur à laquelle vous passez ${N} comme paramètre, où N est le premier paramètre générique.
 
-```code4d
+```4d
  C_LONGINT(${4})
 ```
 

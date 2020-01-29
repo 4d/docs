@@ -23,7 +23,7 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
 
 #### JSON Example:    
 
-```code4d
+```4d
 "mySplitter": {
 	"type": "splitter",
 	"left": 60,  

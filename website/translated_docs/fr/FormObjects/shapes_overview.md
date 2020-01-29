@@ -1,57 +1,57 @@
 ---
 id: shapesOverview
-title: Shapes
+title: Formes
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+Les formes sont des [objets statiques](formObjects_overview.md#active-and-static-objects) qui peuvent être ajoutées à des formes 4D.
 
-4D forms support the following basic shapes:
+Les formes 4D prennent en charge les formes basiques suivantes :
 
 - rectangles
-- lines
-- ovals
+- lignes
+- ovales
 
 
 ## Rectangle
 
-A static rectangle is a decorative object for forms. Rectangles are constrained to squared shapes.
+Un rectangle statique est un objet décoratif contenu dans les formulaires. Rectangles are constrained to squared shapes.
 
-The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épaisseur de ligne, motif, etc.). L'[arrondi](properties_CoordinatesAndSizing.md#corner-radius), en particulier, des coins du rectangle peuvent être définis.
 
 ![](assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
-```code4d
+```4d
     "myRectangle": {
-        "type": "rectangle",    //define the type of object
-        "left": 60,             //left position on the form  
-        "top": 160,             //top position on the form 
-        "width": 100,           //width of the object
-        "height": 20,           //height of the object
-        "borderRadius": 20      //define the roundness of the corners
+        "type": "rectangle",    //définit le type d'objet
+        "left": 60,             //position sur la gauche du formulaire
+        "top": 160,             //position en haut du formulaire
+        "width": 100,           //largeur de l'objet 
+        "height": 20,           //hauteur de l'objet
+        "borderRadius": 20      //définit le rayon d'arrondi
                 }
 ```
 
 
-#### Supported Properties
+#### Propriétés prises en charge
 [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Line
+## Ligne
 
 A static line is a decorative object for forms, drawn between two plots. Lines can be horizontal, vertical, or of any angle shapes.
 
 The design of lines is controlled through many properties (color, line thickness, etc.).
 
 
-### startPoint property
+### propriété startPoint
 The `startPoint` JSON property defines from which coordinate to draw the line (see example).
 
 > the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
 
 
 
-#### JSON Examples:
+#### Exemple JSON :
 
 ```
     "myLine": {
@@ -60,11 +60,11 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
         "top": 40,
         "width": 100,
         "height": 80,
-        "startPoint": "topLeft", //first direction
-        "strokeDashArray": "6 2" //dashed
+        "startPoint": "topLeft", //première orientation
+        "strokeDashArray": "6 2" //pointillé
         }
 ```
-Result: ![](assets/en/FormObjects/shape_line1.png)
+Résultat : ![](assets/en/FormObjects/shape_line1.png)
 
 
 ```
@@ -74,26 +74,26 @@ Result: ![](assets/en/FormObjects/shape_line1.png)
         "top": 40,
         "width": 100,
         "height": 80,
-        "startPoint": "bottomLeft", //2nd direction
-        "strokeDashArray": "6 2" //dashed
+        "startPoint": "bottomLeft", //deuxième orientation
+        "strokeDashArray": "6 2" //pointillé
         }
 ```
-Result: ![](assets/en/FormObjects/shape_line2.png)
+Résultat : ![](assets/en/FormObjects/shape_line2.png)
 
 
 
-#### Supported Properties
+#### Propriétés prises en charge
 [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Oval
+## Ovale
 
 A static oval is a decorative object for forms. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
 
 ![](assets/en/FormObjects/shape_oval.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
-```code4d
+```4d
     "myOval": {
         "type": "oval",     //define the type of object
         "left": 60,         //left position on the form  
@@ -105,5 +105,5 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 ```
 
 
-#### Supported Properties
+#### Propriétés prises en charge
 [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

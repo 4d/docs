@@ -94,7 +94,7 @@ For example, in your subform, field labels are stored in the bound object so tha
 
 You can modify the labels from the subform by assigning values to the *InvoiceAddress* object:
 
-```code4d
+```4d
  C_OBJECT($lang)
  $lang:=New object
  If(<>lang="fr")
@@ -124,7 +124,7 @@ In addition to the `Object subform container` selector, the `OBJECT Get pointer`
 
 For example, the following statement:
 
-```code4d
+```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 

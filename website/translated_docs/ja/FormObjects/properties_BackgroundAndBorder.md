@@ -10,9 +10,9 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                           |
-| ------------- | --------- | ----------------------------------------- |
-| alternateFill | string    | any css value; "transparent"; "automatic" |
+| Name          | データタイプ | Possible Values                           |
+| ------------- | ------ | ----------------------------------------- |
+| alternateFill | string | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -29,9 +29,9 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 #### JSON Grammar
 
 
-| Name | Data Type | Possible Values                           |
-| ---- | --------- | ----------------------------------------- |
-| fill | string    | any css value; "transparent"; "automatic" |
+| Name | データタイプ | Possible Values                           |
+| ---- | ------ | ----------------------------------------- |
+| fill | string | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 
@@ -47,13 +47,15 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 `Selection and collection type list boxes`
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
+
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
 > With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                           |
-| ------------- | --------- | ----------------------------------------- |
-| rowFillSource | string    | An expression returning a RGB color value |
+| Name          | データタイプ | Possible Values                           |
+| ------------- | ------ | ----------------------------------------- |
+| rowFillSource | string | An expression returning a RGB color value |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -70,9 +72,9 @@ Allows setting a standard style for the object border.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                   |
-| ----------- | --------- | ----------------------------------------------------------------- |
-| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| Name        | データタイプ | Possible Values                                                   |
+| ----------- | ------ | ----------------------------------------------------------------- |
+| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### Objects Supported
 
@@ -87,7 +89,7 @@ Describes dotted line type as a sequence of black and white points.
 
 #### JSON Grammar
 
-| Name            | Data Type              | Possible Values                                                          |
+| Name            | データタイプ                 | Possible Values                                                          |
 | --------------- | ---------------------- | ------------------------------------------------------------------------ |
 | strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
@@ -111,9 +113,9 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| hideExtraBlankRows | boolean   | true, false     |
+| Name               | データタイプ  | Possible Values |
+| ------------------ | ------- | --------------- |
+| hideExtraBlankRows | boolean | true, false     |
 
 #### Objects Supported
 
@@ -135,9 +137,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| Name   | データタイプ | Possible Values                           |
+| ------ | ------ | ----------------------------------------- |
+| stroke | string | any css value, "transparent", "automatic" |
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
@@ -154,9 +156,9 @@ Designates the thickness of a line.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                   |
-| ----------- | --------- | ----------------------------------------------------------------- |
-| strokeWidth | number    | 0 for smallest width on a printed form, or any integer value < 20 |
+| Name        | データタイプ | Possible Values                                                   |
+| ----------- | ------ | ----------------------------------------------------------------- |
+| strokeWidth | number | 0 for smallest width on a printed form, or any integer value < 20 |
 
 #### Objects Supported
 
@@ -179,7 +181,7 @@ The name of a Longint array must be entered. Each element of this array correspo
 
 For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
-```code4d
+```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
  <>_BgndColors{$i}:=-255 // default value
 ```
@@ -187,7 +189,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
-```code4d
+```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
@@ -200,9 +202,9 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| rowFillSource | string    | The name of a longint array. |
+| Name          | データタイプ | Possible Values              |
+| ------------- | ------ | ---------------------------- |
+| rowFillSource | string | The name of a longint array. |
 
 #### Objects Supported
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -218,9 +220,9 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| fill | text      | "transparent"   |
+| Name | データタイプ | Possible Values |
+| ---- | ------ | --------------- |
+| fill | テキスト   | "transparent"   |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)

@@ -1,6 +1,6 @@
 ---
 id: propertiesTextAndPicture
-title:Text and Picture 
+title: Text and Picture 
 ---
 ---
 ## Background pathname

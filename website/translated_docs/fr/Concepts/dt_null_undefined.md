@@ -21,7 +21,7 @@ Indéfinie n'est pas véritablement un type de données. Une variable dite "ind�
 
 Cet exemple compare les différents résultats de la commande `Indefinie` et de la commande `Null` appliquées aux propriétés d'objets, en fonction du contexte :
 
-```code4d
+```4d
 C_OBJECT($vEmp)
 $vEmp:=New object
 $vEmp.name:="Smith"

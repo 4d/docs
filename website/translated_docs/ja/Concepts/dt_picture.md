@@ -39,17 +39,17 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ## Picture operators
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
+| オペレーション                   | Syntax                 | Returns | Action                                                                                                                                                             |
 | ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | Picture | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | Picture | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | Picture | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
+| Horizontal concatenation  | Pict1 + Pict2          | ピクチャー   | Add Pict2 to the right of Pict1                                                                                                                                    |
+| Vertical concatenation    | Pict1 / Pict2          | ピクチャー   | Add Pict2 to the bottom of Pict1                                                                                                                                   |
+| Exclusive superimposition | Pict1 & Pict2          | ピクチャー   | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
+| Inclusive superimposition | Pict1 &#124; Pict2     | ピクチャー   | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal move           | Picture + Number       | ピクチャー   | Move Picture horizontally Number pixels                                                                                                                            |
+| Vertical move             | Picture / Number       | ピクチャー   | Move Picture vertically Number pixels                                                                                                                              |
+| Resizing                  | Picture * Number       | ピクチャー   | Resize Picture by Number ratio                                                                                                                                     |
+| Horizontal scaling        | Picture *+ Number      | ピクチャー   | Resize Picture horizontally by Number ratio                                                                                                                        |
+| Vertical scaling          | Picture *&#124; Number | ピクチャー   | Resize Picture vertically by Number ratio                                                                                                                          |
 
 **Notes :**
 
@@ -72,7 +72,7 @@ In the following examples, each expression is followed by its graphical represen
 
 Horizontal concatenation
 
-```code4d
+```4d
  circle+rectangle //Place the rectangle to the right of the circle
  rectangle+circle //Place the circle to the right of the rectangle
 ```
@@ -81,7 +81,7 @@ Horizontal concatenation
 
 Vertical concatenation
 
-```code4d
+```4d
  circle/rectangle //Place the rectangle under the circle
  rectangle/circle //Place the circle under the rectangle
 ```
@@ -90,7 +90,7 @@ Vertical concatenation
 
 Exclusive superimposition
 
-```code4d
+```4d
 Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 ```
 
@@ -98,7 +98,7 @@ Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 
 Inclusive superimposition
 
-```code4d
+```4d
 Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
 ```
 
@@ -106,7 +106,7 @@ Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of
 
 Horizontal move
 
-```code4d
+```4d
 rectangle+50 //Move the rectangle 50 pixels to the right
 rectangle-50 //Move the rectangle 50 pixels to the left
 ```
@@ -115,7 +115,7 @@ rectangle-50 //Move the rectangle 50 pixels to the left
 
 Vertical move
 
-```code4d
+```4d
 rectangle/50 //Move the rectangle down by 50 pixels
 rectangle/-20 //Move the rectangle up by 20 pixels
 ```
@@ -124,7 +124,7 @@ rectangle/-20 //Move the rectangle up by 20 pixels
 
 Resize
 
-```code4d
+```4d
 rectangle*1.5 //The rectangle becomes 50% bigger
 rectangle*0.5 //The rectangle becomes 50% smaller
 ```
@@ -133,7 +133,7 @@ rectangle*0.5 //The rectangle becomes 50% smaller
 
 Horizontal scaling
 
-```code4d
+```4d
 circle*+3 //The circle becomes 3 times wider
 circle*+0.25 //The circle's width becomes a quarter of what it was
 ```
@@ -142,7 +142,7 @@ circle*+0.25 //The circle's width becomes a quarter of what it was
 
 Vertical scaling
 
-```code4d
+```4d
 circle*|2 //The circle becomes twice as tall
 circle*|0.25 //The circle's height becomes a quarter of what it was
 ```

@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-0: title:Objects
+title: Objects
 ---
 
 ---
@@ -30,6 +30,7 @@ Each active form object is associated with an object name. Each object name must
 > Object names are limited to a size of 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+
 
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
@@ -75,7 +76,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
 - You can set the type using the [Expression type](#expression-type) property.
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
 
-```code4d
+```4d
  If(Form event=On Load)
     C_TEXT($init)
     $Ptr_object:=OBJECT Get pointer(Object named;"comments")
@@ -86,7 +87,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
 
 In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Par exemple:
 
-```code4d
+```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?

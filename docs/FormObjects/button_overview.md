@@ -46,7 +46,7 @@ By default, the Regular style has a light gray background with a label in the ce
 
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
 		"type": "button",	//define the type of object
 		"style":"regular",	//define the style of the button
@@ -74,7 +74,7 @@ By default, the Flat style has a white background with a label in the center, ro
 
 #### JSON Example:    
 
-```code4d
+```4d
 
 	"myButton": {
                 "type": "button",	
@@ -106,7 +106,7 @@ By default, the Toolbar style has a transparent background with a label in the c
  
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",	
                 "style":"toolbar",	
@@ -136,7 +136,7 @@ By default, the Bevel style has a light gray background with a label in the cent
  
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",
                 "style":"bevel",	
@@ -166,7 +166,7 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",
                 "style":"roundedBevel",	
@@ -196,7 +196,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
  
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",	
                 "style":"gradientBevel",
@@ -225,7 +225,7 @@ By default, the OS X Textured style appears as:
 
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",	
                 "style":"texturedBevel",	
@@ -255,7 +255,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",	
                 "style":"office",
@@ -280,7 +280,7 @@ The Help button style can be used to display a standard system help button. By d
 
 #### JSON Example:    
 
-```code4d
+```4d
 	"myButton": {
                 "type": "button",
                 "style":"help",		
@@ -363,5 +363,5 @@ Additional specific properties are available, depending on the [button style](#b
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
 - [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
-- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-popup-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesResizingOptions
-title:Resizing Options 
+title: Resizing Options 
 ---
 ---
 ## Column Auto-Resizing
