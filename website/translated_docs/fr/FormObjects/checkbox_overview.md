@@ -24,7 +24,7 @@ A check box can be associated to a [variable or expression](properties_Object.md
 Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options.
 
 
-### Three-States check box
+### Cases à cocher à trois états
 
 Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection.
 
@@ -38,44 +38,44 @@ The variable associated with the check box returns the value 2 when the check bo
 > In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
 
 
-## Using a standard action
+## Utiliser une action standard
 
-You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area.
+Vous pouvez affecter une [action standard](properties_Action.md#standard-action) à une case à cocher pour gérer les attributs des zones de texte. Par exemple, si vous sélectionnez l'action standard `fontBold`, à l'exécution la case à cocher permettra de gérer l'attribut "gras" du texte sélectionné dans la zone de texte courante.
 
-Only actions that can represent a true/false status ("checkable" actions) are supported by this object:
+Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
 
-| Supported actions                   | Usage condition (if any) |
-| ----------------------------------- | ------------------------ |
-| avoidPageBreakInsideEnabled         | 4D Write Pro areas only  |
-| fontItalic                          |                          |
-| fontBold                            |                          |
-| fontLinethrough                     |                          |
-| fontSubscript                       | 4D Write Pro areas only  |
-| fontSuperscript                     | 4D Write Pro areas only  |
-| fontUnderline                       |                          |
-| font/showDialog                     | Mac only                 |
-| htmlWYSIWIGEnabled                  | 4D Write Pro areas only  |
-| section/differentFirstPage          | 4D Write Pro areas only  |
-| section/differentLeftRightPages     | 4D Write Pro areas only  |
-| spell/autoCorrectionEnabled         |                          |
-| spell/autoDashSubstitutionsEnabled  | Mac only                 |
-| spell/autoLanguageEnabled           | Mac only                 |
-| spell/autoQuoteSubstitutionsEnabled | Mac only                 |
-| spell/autoSubstitutionsEnabled      |                          |
-| spell/enabled                       |                          |
-| spell/grammarEnabled                | Mac only                 |
-| spell/showDialog                    | Mac only                 |
-| spell/visibleSubstitutions          |                          |
-| visibleBackground                   | 4D Write Pro areas only  |
-| visibleFooters                      | 4D Write Pro areas only  |
-| visibleHeaders                      | 4D Write Pro areas only  |
-| visibleHiddenChars                  | 4D Write Pro areas only  |
-| visibleHorizontalRuler              | 4D Write Pro areas only  |
-| visiblePageFrames                   | 4D Write Pro areas only  |
-| visibleReferences                   |                          |
-| widowAndOrphanControlEnabled        | 4D Write Pro areas only  |
+| Actions prises en charge            | Conditions d'utilisation (le cas échéant) |
+| ----------------------------------- | ----------------------------------------- |
+| avoidPageBreakInsideEnabled         | Zones 4D Write Pro uniquement             |
+| fontItalic                          |                                           |
+| fontBold                            |                                           |
+| fontLinethrough                     |                                           |
+| fontSubscript                       | Zones 4D Write Pro uniquement             |
+| fontSuperscript                     | Zones 4D Write Pro uniquement             |
+| fontUnderline                       |                                           |
+| font/showDialog                     | Mac uniquement                            |
+| htmlWYSIWIGEnabled                  | Zones 4D Write Pro uniquement             |
+| section/differentFirstPage          | Zones 4D Write Pro uniquement             |
+| section/differentLeftRightPages     | Zones 4D Write Pro uniquement             |
+| spell/autoCorrectionEnabled         |                                           |
+| spell/autoDashSubstitutionsEnabled  | Mac uniquement                            |
+| spell/autoLanguageEnabled           | Mac uniquement                            |
+| spell/autoQuoteSubstitutionsEnabled | Mac uniquement                            |
+| spell/autoSubstitutionsEnabled      |                                           |
+| spell/enabled                       |                                           |
+| spell/grammarEnabled                | Mac uniquement                            |
+| spell/showDialog                    | Mac uniquement                            |
+| spell/visibleSubstitutions          |                                           |
+| visibleBackground                   | Zones 4D Write Pro uniquement             |
+| visibleFooters                      | Zones 4D Write Pro uniquement             |
+| visibleHeaders                      | Zones 4D Write Pro uniquement             |
+| visibleHiddenChars                  | Zones 4D Write Pro uniquement             |
+| visibleHorizontalRuler              | Zones 4D Write Pro uniquement             |
+| visiblePageFrames                   | Zones 4D Write Pro uniquement             |
+| visibleReferences                   |                                           |
+| widowAndOrphanControlEnabled        | Zones 4D Write Pro uniquement             |
 
-For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
 
 ## Check box button styles
 
