@@ -13,14 +13,14 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| タイプ           | To Reference            | To Use                   | To Assign                |
+| Type          | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 ## Using a pointer: Basic example
 
@@ -85,11 +85,11 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| オペレーション    | Syntax            | Returns | 式             | Value |
+| Operation  | Syntax            | Returns | Expression    | Value |
 | ---------- | ----------------- | ------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | ブール     | vPtrA = vPtrB | True  |
+| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
 |            |                   |         | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | ブール     | vPtrA # vPtrC | True  |
+| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
 |            |                   |         | vPtrA # vPtrB | False |
 
 ## Main usages
