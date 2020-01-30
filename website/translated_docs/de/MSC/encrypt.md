@@ -1,7 +1,7 @@
 ---
 id: Verschlüsseln
 title: Seite Verschlüsseln
-sidebar_label: Seite Verschlüsseln
+sidebar_label: Encrypt Page
 ---
 
 Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln".
@@ -69,7 +69,7 @@ Die Datendatei wird erneut ordnungsgemäß mit dem aktuellen Schlüssel verschl�
 Diese Operation bietet sich an, wenn Sie Ihren aktuellen Verschlüsselungscode für Daten verändern müssen, um bestimmte Sicherheitsregeln einzuhalten (z. B. wenn ein Admin das Unternehmen verlassen hat).
 
 1. Wählen Sie die Option **Ändern Sie Ihre Passphrase und verschlüsseln Sie die Daten erneut**.
-2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
+2. Enter the current data encryption key.
 3. Geben Sie die neue Passphrase ein. Für zusätzliche Sicherheit werden Sie aufgefordert, diese ein zweites Mal einzugeben: ![](assets/en/MSC/MSC_encrypt9.png) Die Datendatei wird mit dem neuen Schlüssel verschlüsselt und es erscheint eine Meldung als Bestätigung. ![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Alle Daten entschlüsseln
