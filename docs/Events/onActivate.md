@@ -5,7 +5,7 @@ title: On Activate
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|11|Form|The form’s window becomes the frontmost window|
+|11|Form|The form's window becomes the frontmost window|
 
 
 ## Description
