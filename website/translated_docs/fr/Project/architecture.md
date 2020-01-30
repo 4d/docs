@@ -50,47 +50,47 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier DatabaseMethods
 
-| Contenu                  | Description                                                      | Format |
+| Contents                 | Description                                                      | Format |
 | ------------------------ | ---------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Méthodes base définies dans la base. Un fichier par méthode base | Texte  |
+| *databaseMethodName*.4dm | Méthodes base définies dans la base. Un fichier par méthode base | text   |
 
 
 #### Dossier Methods
 
-| Contenu          | Description                                                   | Format |
+| Contents         | Description                                                   | Format |
 | ---------------- | ------------------------------------------------------------- | ------ |
-| *methodName*.4dm | Méthodes projet définies dans la base. Un fichier par méthode | Texte  |
+| *methodName*.4dm | Méthodes projet définies dans la base. Un fichier par méthode | text   |
 
 
 #### Dossier Forms
 
-| Contenu                                      | Description                                  | Format |
+| Contents                                     | Description                                  | Format |
 | -------------------------------------------- | -------------------------------------------- | ------ |
 | *nomFormulaire*/form.4DForm                  | Description du formulaire projet             | json   |
-| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | Texte  |
+| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | text   |
 | *nomFormulaire*/Images/*nomImage*            | Image statique du formulaire projet          | image  |
-| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
+| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | text   |
 
 
 #### Dossier TableForms
 
-| Contenu                                                 | Description                                                                  | Format |
+| Contents                                                | Description                                                                  | Format |
 | ------------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
 | *n*/Input/*nomFormulaire*/form.4DForm                   | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json   |
 | *n*/Input/*nomFormulaire*/Images/*nomImage*             | Images statiques du formulaire d'entrée de la table                          | image  |
-| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | Texte  |
-| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte  |
+| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | text   |
+| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. One file per object method            | text   |
 | *n*/Output/*nomFormulaire*/form.4DForm                  | Description du formulaire de sortie de la table (n étant le numéro de table) | json   |
 | *n*/Output/*nomFormulaire*/Images/*nomImage*            | Images statiques du formulaire de sortie de la table                         | image  |
-| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | Texte  |
-| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte  |
+| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | text   |
+| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. One file per object method           | text   |
 
 
 #### Dossier Triggers
 
-| Contenu       | Description                                                                                          | Format |
+| Contents      | Description                                                                                          | Format |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------ |
-| table_*n*.4dm | Méthodes trigger définies dans la base. Un fichier de trigger par table (n étant le numéro de table) | Texte  |
+| table_*n*.4dm | Méthodes trigger définies dans la base. Un fichier de trigger par table (n étant le numéro de table) | text   |
 
 
 **Note :** L'extension de fichier .4dm est un format de fichier texte contenant le code d'une méthode 4D. Il est compatible avec les outils de contrôle de version.
@@ -113,7 +113,7 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés de la base de données. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
-| Contenu               | Description                                                                                                                                                                                 | Format |
+| Contents              | Description                                                                                                                                                                                 | Format |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés |
 | Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | image  |
@@ -125,10 +125,10 @@ Le dossier Resources contient tous les fichiers et dossiers de ressources person
 
 Le dossier Data contient le fichier de données ainsi que tous les fichiers et dossiers relatifs aux données.
 
-| Contenu      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Format  |
+| Contents     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Format  |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | data.4dd(*)  | Fichier de données contenant les données saisies dans les enregistrements et toutes les données appartenant aux enregistrements. Lorsque vous ouvrez un projet 4D, l'application ouvre par défaut le fichier de données courant. Si vous modifiez le nom ou l'emplacement de ce fichier, la boîte de dialogue *Ouvrir un fichier de données* apparaît alors pour vous permettre de sélectionner le fichier de données à utiliser ou d'en créer un nouveau                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | binaire |
-| data.journal | Créé uniquement lorsque la base de données utilise un fichier journal. Le fichier journal est utilisé pour assurer la sécurité des données entre les sauvegardes. Toutes les opérations effectuées sur les données sont enregistrées séquentiellement dans ce fichier. Par conséquent, chaque opération sur les données entraîne deux actions simultanées : la première sur les données (l'instruction est exécutée normalement) et la seconde dans le fichier journal (une description de l'opération est enregistrée). Le fichier journal est construit indépendamment, sans perturber ni ralentir le travail de l'utilisateur. Une base de données ne peut fonctionner qu'avec un seul fichier journal à la fois. Le fichier journal enregistre des opérations telles que des ajouts, des modifications ou des suppressions d'enregistrements, des transactions, etc. Il est généré par défaut lors de la création d'une base de données. | binaire |
+| data.journal | Créé uniquement lorsque la base de données utilise un fichier journal. Le fichier journal est utilisé pour assurer la sécurité des données entre les sauvegardes. Toutes les opérations effectuées sur les données sont enregistrées séquentiellement dans ce fichier. Par conséquent, chaque opération sur les données entraîne deux actions simultanées : la première sur les données (l'instruction est exécutée normalement) et la seconde dans le fichier journal (une description de l'opération est enregistrée). Le fichier journal est construit indépendamment, sans perturber ni ralentir le travail de l'utilisateur. Une base de données ne peut fonctionner qu'avec un seul fichier journal à la fois. Le fichier journal enregistre des opérations telles que des ajouts, des modifications ou des suppressions d'enregistrements, des transactions, etc. Il est généré par défaut lors de la création d'une base de données. | binary  |
 | data.match   | (interne) UUID correspondant au numéro de la table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | XML     |
 
 
@@ -140,7 +140,7 @@ Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de d
 
 > These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
 
-| Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
+| Contents            | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
@@ -166,7 +166,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     
     > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
     
-    | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
+    | Contents            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
     | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
     | directory.json      | Description des groupes et utilisateurs 4D pour la base de données, ainsi que leurs droits d'accès                                                                                                                                                                                                                                                                                                                                                 | JSON   |
     | BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
@@ -177,7 +177,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     
     Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
     
-    | Contenu                      | Description                                                           | Format |
+    | Contents                     | Description                                                           | Format |
     | ---------------------------- | --------------------------------------------------------------------- | ------ |
     | methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
     | methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
