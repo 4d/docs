@@ -10,9 +10,9 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 #### JSON Grammar
 
-| Name        | Type de données | Possible Values |
-| ----------- | --------------- | --------------- |
-| showHeaders | boolean         | true, false     |
+| Name        | Data Type | Possible Values |
+| ----------- | --------- | --------------- |
+| showHeaders | boolean   | true, false     |
 
 #### Objects Supported
 
@@ -40,7 +40,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "List Box": {
@@ -55,9 +55,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### JSON Grammar
 
-| Name         | Type de données | Possible Values                 |
-| ------------ | --------------- | ------------------------------- |
-| headerHeight | string          | positive decimal+px &#124; em ) |
+| Name         | Data Type | Possible Values                 |
+| ------------ | --------- | ------------------------------- |
+| headerHeight | string    | positive decimal+px &#124; em ) |
 
 #### Objects Supported
 
