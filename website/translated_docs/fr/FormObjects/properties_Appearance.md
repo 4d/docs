@@ -8,16 +8,16 @@ title: Appearance
 
 The default button property modifies a button's appearance in order to indicate the recommended choice to the user. The difference in appearance depends on the OS.
 
-|                                                           Sous Windows                                                           |                                                        macOS                                                        |
+|                                                             Windows                                                              |                                                        macOS                                                        |
 |:--------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------:|
 | The default button has a blue outline. <p> ![](assets/en/FormObjects/property_defaultButtonWindows.en.png) | The default buttons are blue.<p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png) |
 > There can only be one default button per form page.
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  defaultButton|boolean|true, false |
 
 #### Objects Supported
@@ -34,9 +34,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON Grammar
 
-| Name          | Type de données | Possible Values |
-| ------------- | --------------- | --------------- |
-| hideFocusRing | boolean         | true, false     |
+| Name          | Data Type | Possible Values |
+| ------------- | --------- | --------------- |
+| hideFocusRing | boolean   | true, false     |
 
 #### Objects Supported
 
@@ -57,9 +57,9 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name                | Type de données | Possible Values |
-| ------------------- | --------------- | --------------- |
-| hideSystemHighlight | boolean         | true, false     |
+| Name                | Data Type | Possible Values |
+| ------------------- | --------- | --------------- |
+| hideSystemHighlight | boolean   | true, false     |
 
 #### Objects Supported
 
@@ -77,8 +77,8 @@ Available values:
 
 | Property List | JSON value  | Description                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 
@@ -87,9 +87,9 @@ Available values:
 
 #### JSON Grammar
 
-| Name                | Type de données | Possible Values                  |
-| ------------------- | --------------- | -------------------------------- |
-| scrollbarHorizontal | Texte           | "visible", "hidden", "automatic" |
+| Name                | Data Type | Possible Values                  |
+| ------------------- | --------- | -------------------------------- |
+| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -106,9 +106,9 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  dpi|number|0=automatic, 72, 96 |
 
 #### Objects Supported
@@ -125,9 +125,9 @@ Displays/hides both background images and background color.
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showBackground|boolean|true (default), false|
 
 #### Objects Supported
@@ -142,9 +142,9 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showFooters|boolean|true (default), false|
 
 #### Objects Supported
@@ -162,9 +162,9 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  withFormulaBar|boolean|true (default), false|
 
 #### Objects Supported
@@ -179,9 +179,9 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showHeaders|boolean|true (default), false|
 
 #### Objects Supported
@@ -198,9 +198,9 @@ Displays/hides invisible characters
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showHiddenChars|boolean|true (default), false|
 
 #### Objects Supported
@@ -216,9 +216,9 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showHorizontalRuler|boolean|true (default), false|
 
 #### Objects Supported
@@ -237,9 +237,9 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showHTMLWysiwyg|boolean|true, false (default)|
 
 #### Objects Supported
@@ -254,9 +254,9 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showPageFrames|boolean|true, false|
 
 #### Objects Supported
@@ -283,9 +283,9 @@ With the Show references property on, the reference is displayed:
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showReferences|boolean|true, false (default)|
 
 #### Objects Supported
@@ -300,9 +300,9 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  showVerticalRuler|boolean|true (default), false|
 
 #### Objects Supported
@@ -319,9 +319,9 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  labelsPlacement|boolean|"top", "bottom" |
 
 #### Objects Supported
@@ -336,9 +336,9 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  userInterface|text|"none" (default), "ribbon", "toolbar" |
 
 #### Objects Supported
@@ -359,8 +359,8 @@ Available values:
 
 | Property List | JSON value  | Description                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -371,9 +371,9 @@ Available values:
 
 #### JSON Grammar
 
-| Name              | Type de données | Possible Values                  |
-| ----------------- | --------------- | -------------------------------- |
-| scrollbarVertical | Texte           | "visible", "hidden", "automatic" |
+| Name              | Data Type | Possible Values                  |
+| ----------------- | --------- | -------------------------------- |
+| scrollbarVertical | text      | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -398,9 +398,9 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  layoutMode|text|"page", "draft", "embedded"|
 
 #### Objects Supported
@@ -415,9 +415,9 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### JSON Grammar
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+|      |           |                 |
  zoom|number|minimum = 0 |
 
 #### Objects Supported
