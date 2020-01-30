@@ -11,7 +11,7 @@ Autorise les actions d'une requête REST à faire partie d'une transaction. Si a
 Lorsque plusieurs actions sont réunies, vous pouvez utiliser `$atomic/$atonce` pour vous assurer qu'aucune action ne se réalise si l'une d'elle échoue. Vous pouvez utiliser `$atomic` ou `$atonce`.
 
 
-## Exemple
+## Example
 Nous appelons la requête REST suivante dans une transaction.
 
  `POST  /rest/Employee?$method=update&$atomic=true`
