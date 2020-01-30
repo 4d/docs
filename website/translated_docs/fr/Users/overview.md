@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Aperçu
+title: Overview
 ---
 
 Si différentes personnes utilisent votre base de données, vous pouvez souhaiter contrôler ses accès ou proposer différentes fonctionnalités ou interfaces aux utilisateurs connectés. Il peut être également essentiel de protéger des données importantes. Vous pouvez fournir cette protection en affectant des mots de passe aux utilisateurs et en créant des groupes qui possèdent des niveaux d’accès correspondant à des degrés de confidentialité différents.
@@ -40,16 +40,16 @@ Dans les bases projet (fichiers .4DProject ou .4dz), les utilisateurs et groupes
 
 |                                                                                 | 4D Developer (monoposte)                                | 4D Server |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------- | --------- |
-| Ajouter/modifier des utilisateurs et groupes                                    | oui                                                     | oui       |
-| Affecter l'accès des utilisateurs/groupes aux serveurs                          | oui                                                     | oui       |
-| Identification de l'utilisateur                                                 | non (tous les utilisateurs sont des Super_Utilisateur)  | oui       |
-| Contrôle d'accès une fois qu'un mot de passe a été affecté au Super_Utilisateur | non (tous les accès sont accordés au Super_Utilisateur) | oui       |
+| Ajouter/modifier des utilisateurs et groupes                                    | oui                                                     | yes       |
+| Affecter l'accès des utilisateurs/groupes aux serveurs                          | yes                                                     | yes       |
+| Identification de l'utilisateur                                                 | non (tous les utilisateurs sont des Super_Utilisateur)  | yes       |
+| Contrôle d'accès une fois qu'un mot de passe a été affecté au Super_Utilisateur | non (tous les accès sont accordés au Super_Utilisateur) | yes       |
 
 
 
 
 
-## Éditeur de boîte à outils
+## Toolbox editor
 
 Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils de 4D. Ces éditeurs peuvent être utilisés pour la création d'utilisateurs et de groupes, l'affectation de mots de passe aux utilisateurs, le placement d'utilisateurs dans des groupes, etc.
 
