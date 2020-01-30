@@ -1,7 +1,7 @@
 ---
 id: Kompakt
 title: Seite Kompakt
-sidebar_label: Seite Kompakt
+sidebar_label: Compact Page
 ---
 
 Auf dieser Seite können Sie die Funktionen zum Komprimieren der Datendatei verwenden.
