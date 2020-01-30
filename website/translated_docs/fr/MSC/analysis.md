@@ -1,7 +1,7 @@
 ---
 id: analysis
 title: Page Analyse d'activités
-sidebar_label: Page Analyse d'activités
+sidebar_label: Activity analysis Page
 ---
 
 La page Analyse d'activités du CSM permet de visualiser le contenu du fichier d’historique courant. Cette fonction est utile pour analyser l’utilisation d’une base de données ou détecter la ou les opération(s) à l’origine d’erreurs ou de dysfonctionnements. Dans le cadre d’une base de données exploitée en client-serveur, elle permet de vérifier les opérations effectuées par chaque poste client.
