@@ -1,7 +1,7 @@
 ---
 id: Analyse
 title: Seite Aktivität Analyse
-sidebar_label: Seite Aktivität Analyse
+sidebar_label: Activity analysis Page
 ---
 
 Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. Diese Funktion ist hilfreich, um die Verwendung der Datenbank zu analysieren oder die Operationen herauszufinden, die Fehler verursachen oder die Funktionsweise beeinträchtigen. Läuft die Anwendung im Client-/Server-Modus, können Sie auch die Operationen auf jedem Client-Rechner überprüfen.
