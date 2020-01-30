@@ -39,7 +39,7 @@ title: プロジェクトパッケージのビルド
 
 また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 詳細は専用のドキュメント [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html) を参照してください。
 
-### ログファイル
+### Log file
 
 アプリケーションをビルドすると、4D はログファイルを生成して **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
 
@@ -216,11 +216,11 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 #### データリンクモードの基準
 
-このオプションを使って、組み込みアプリケーションとローカルデータファイルとのリンクモードを選択します。 二種類のリンクモードから選択可能です:
+このオプションを使って、組み込みアプリケーションとローカルデータファイルとのリンクモードを選択します。 Two data linking modes are available:
 
-* **アプリケーション名** (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。 このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。 アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。
+* **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
-* **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 
+* **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. 
 
 データリンクモードについての詳細は [最後に開いたデータファイル](#last-data-file-opened) を参照してください。
 
@@ -432,32 +432,32 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 ### データファイルを開く
 
-ユーザーが組み込みアプリ、またはアプリのアップデート (シングルユーザー、またはクライアント/サーバーアプリ) を起動すると、4D は有効なデータファイルを選択しようとします。 Several locations are examined by the application successively.
+ユーザーが組み込みアプリ、またはアプリのアップデート (シングルユーザー、またはクライアント/サーバーアプリ) を起動すると、4D は有効なデータファイルを選択しようとします。 アプリケーションによって、複数の場所が順次検索されます。
 
-The opening sequence for launching a merged application is:
+組み込みアプリ起動時のオープニングシーケンスは以下のようになっています:
 
-1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
-2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
-3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+1. 4D は最後に開かれたデータファイルを開こうとします。詳しくは [後述の説明](#last-data-file-opened) を参照ください (これは初回起動時には適用されません)。
+2. 見つからない場合、4D は .4DZ ファイルと同階層の Default Data フォルダー内にあるデータファイルを、読み込み専用モードで開こうとします。
+3. これも見つからない場合、4D は標準のデフォルトデータファイルを開こうとします(.4DZ ファイルと同じ場所にある、同じ名前のファイル)。
+4. これも見つからない場合、4D は "データファイルを開く" ダイアログボックスを表示します。
 
-### Last data file opened
+### 最後に開かれたデータファイル
 
-#### Path of last data file
+#### 最後に開かれたファイルへのパス
 
-Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
+4D でビルドされたスタンドアロンまたはサーバーアプリケーションは、最後に開かれたデータファイルのパスをアプリケーションのユーザー設定フォルダー内に保存します。
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+アプリケーションのユーザー設定フォルダーの場所は、以下のコマンドで返されるパスに対応しています:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+データファイルパスは *lastDataPath.xml* という名前の専用ファイルに保存されます。
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+これにより、アプリケーションのアップデートを提供したときにも、ローカルのユーザーデータファイル (最後に使用されたデータファイル) が初回の起動から自動的に開かれます。
 
-This mechanism is usually suitable for standard deployments. しかしながら特定の場合、たとえば組み込みアプリケーションを複製した場合などにおいて、データファイルとアプリケーションのリンクを変えたいことがあるかもしれません (次章参照)。
+このメカニズムは標準的な運用に適しています。 しかしながら特定の場合、たとえば組み込みアプリケーションを複製した場合などにおいて、データファイルとアプリケーションのリンクを変えたいことがあるかもしれません (次章参照)。
 
 #### データリンクモードの設定
 
@@ -517,13 +517,13 @@ This mechanism is usually suitable for standard deployments. しかしながら�
 
 ### 最後に使用したサーバーパスを保存する
 
-最後に使用され検証されたサーバーパスは、アプリケーションのユーザー設定フォルダー内の "lastServer.xml" ファイルに自動的に保存されます。 This folder is stored at the following location:
+最後に使用され検証されたサーバーパスは、アプリケーションのユーザー設定フォルダー内の "lastServer.xml" ファイルに自動的に保存されます。 このフォルダは次の場所に保存されています:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。 それ以降に接続ができなかった場合には、"lastServer.xml" のパス情報によって自動的に対処されます。
+このメカニズムは、最初に指定したサーバーが何らかの理由 (例えばメンテナンスモードなど) で一時的に使用できないケースに対応します。 こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。 それ以降に接続ができなかった場合には、"lastServer.xml" のパス情報によって自動的に対処されます。
 
 > - ネットワークの設定などの影響で、クライアントアプリが恒久的に検索サービスを使ったサーバー接続ができない場合には、ビルド時にあらかじめ "BuildApp.4DSettings" ファイル内の [IPAddress](https://doc.4d.com/4Dv18/4D/18/IPAddress.300-4671089.ja.html) キーでホスト名を指定しておくことが推奨されます。 このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。 
 > - スタートアップ時に **Alt/Option** キーを押しながら起動してサーバー接続ダイアログボックスを表示する方法は、すべての場合において可能です。

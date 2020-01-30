@@ -182,7 +182,7 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
 | Real            | (1+Anzahl der Elemente) * 8                                         |
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
-| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Time            | (1+number of elements) * 4                                          |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
 **Hinweise:**

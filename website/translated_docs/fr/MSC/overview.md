@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Aperçu
+title: Overview
 sidebar_label: Présentation
 ---
 

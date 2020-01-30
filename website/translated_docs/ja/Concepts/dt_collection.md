@@ -44,7 +44,7 @@ If you assign an element's index that surpasses the last existing element of the
 
 Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
-例: 
+Example:
 
 ```4d
  C_COLLECTION($colVar) //creation of collection type 4D variable
@@ -66,7 +66,7 @@ You can create two types of collections:
 
 Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
 
-たとえば:
+For example:
 
 ```4d
 $newCol:=$col.copy() //deep copy of $col to $newCol

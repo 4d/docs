@@ -27,7 +27,7 @@ La valeur de l'expression booléenne doit pouvoir être modifiée par un éléme
 
 Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. Pour plus d'informations sur ce point, reportez-vous à la section [Débogueur](error-handling.md).
 
-### Exemple
+### Example
 
 ```4d
  CONFIRM("Add a new record?") // Est-ce que l'utilisateur veut ajouter un enregistrement?
@@ -52,7 +52,7 @@ La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-c
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
-### Exemple
+### Example
 
 Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
 
@@ -135,7 +135,7 @@ La plupart des structures `For...End for` que vous écrirez dans vos bases resse
 
 Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 
-5. La boucle suivante s'exécute 100 fois :
+5. The following example executes 100 iterations:
 
 ```4d
  For(vCounter;100;1;-1)
@@ -143,7 +143,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
  End for
 ```
 
-6. L'exemple suivant permet de traiter tous les éléments du tableau anArray :
+6. The following example goes through all elements of the array anArray:
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
@@ -152,7 +152,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
  End for
 ```
 
-7. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
+7. The following example goes through all the characters of the text vtSomeText:
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
@@ -163,7 +163,7 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
  End for
 ```
 
-8. L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :
+8. The following example goes through the selected records for the table [aTable]:
 
 ```4d
  LAST RECORD([aTable])
@@ -191,7 +191,7 @@ Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur 
 
 ### Comparaison des structures répétitives
 
-Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 fois :
+Revenons au premier exemple `For...End for`. The following example executes 100 iterations:
 
 ```4d
  For(vCounter;1;100)
@@ -296,9 +296,9 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 |                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
 | ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
 | Type Elément_courant                      | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
-| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Objet                         |
+| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Object                        |
 | Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
-| Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
+| Prise en charge de Paramètres début / fin | Yes                                                     | Yes                                | No                            |
 
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
 - Par défaut, les *instructions* incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
@@ -319,7 +319,7 @@ A chaque itération de la boucle, la variable *Elément_courant* reçoit automat
 - La variable *Elément_courant* doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable *Elément_courant* ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
-#### Exemple
+#### Example
 
 Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
@@ -354,7 +354,7 @@ Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity
 
 N'oubliez pas que toute modification effectuée sur l'entity en cours de traitement doit être explicitement sauvegardée (si nécessaire) à l'aide de la méthode `entity.save( )`.
 
-#### Exemple
+#### Example
 
 Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
 
@@ -372,7 +372,7 @@ Lorsque `For each...End for each` est utilisée avec une *Expression* de type Ob
 
 Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
-#### Exemple
+#### Example
 
 Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
 
@@ -418,7 +418,7 @@ Par exemple:
 - début=-4 -> début=-4+10=6 -> l'itération démarre au 6e élément (numéro 5)
 - fin=-2 -> fin=-2+10=8 -> l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément. 
 
-#### Exemple
+#### Example
 
 ```4d
  C_COLLECTION($col;$col2)
@@ -444,7 +444,7 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 - La condition `Until` est testée à la fin de chaque itération, donc si *Expression* n'est ni vide ni Null, la boucle sera exécutée au moins une fois.
 - La condition `While` est testée au début de chaque itération, donc en fonction du résultat de la condition, la boucle peut ne pas être exécutée du tout.
 
-#### Exemple
+#### Example
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)

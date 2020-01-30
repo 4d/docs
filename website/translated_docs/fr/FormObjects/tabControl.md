@@ -26,7 +26,7 @@ Si l’onglet est assez large, il affiche les intitulés et les icônes. S’il 
 Sous macOS, les onglets peuvent être orientés, en plus de la position standard (en haut), à droite, à gauche ou en bas.
 
 
-### Exemple JSON :
+### JSON Example:
 
 ```4d
     "myTab": {

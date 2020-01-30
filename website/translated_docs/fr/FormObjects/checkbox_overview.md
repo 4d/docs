@@ -1,17 +1,17 @@
 ---
 id: checkboxOverview
-title: Case à cocher
+title: Check Box
 ---
 
-## Aperçu
+## Overview
 
-A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
+Une case à cocher est un type de bouton utilisée pour saisir ou afficher une donnée binaire (vrai-faux). Elle peut être soit sélectionnée soit désélectionnée, mais un troisième état peut également être défini (voir ci-dessous).
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
+L’effet d’une case à cocher est contrôlé par une méthode. Comme tous les boutons, une case à cocher est initialisée à la valeur zéro lorsque le formulaire est ouvert pour la première fois. La méthode associée à une case à cocher est exécutée lorsqu’elle est cochée.
 
-A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Une case à cocher affiche généralement du texte en face de la case. Ce texte est défini dans la zone [Titre](properties_Object.md#title) du thème “Objets” de la Liste des propriétés. Vous pouvez saisir dans cette zone un libellé sous forme de référence XLIFF (cf. [Annexe B : Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 
 ## Using check boxes
@@ -24,7 +24,7 @@ A check box can be associated to a [variable or expression](properties_Object.md
 Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options.
 
 
-### Three-States check box
+### Cases à cocher à trois états
 
 Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection.
 
@@ -38,60 +38,60 @@ The variable associated with the check box returns the value 2 when the check bo
 > In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
 
 
-## Using a standard action
+## Utiliser une action standard
 
-You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area.
+Vous pouvez affecter une [action standard](properties_Action.md#standard-action) à une case à cocher pour gérer les attributs des zones de texte. Par exemple, si vous sélectionnez l'action standard `fontBold`, à l'exécution la case à cocher permettra de gérer l'attribut "gras" du texte sélectionné dans la zone de texte courante.
 
-Only actions that can represent a true/false status ("checkable" actions) are supported by this object:
+Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
 
-| Supported actions                   | Usage condition (if any) |
-| ----------------------------------- | ------------------------ |
-| avoidPageBreakInsideEnabled         | 4D Write Pro areas only  |
-| fontItalic                          |                          |
-| fontBold                            |                          |
-| fontLinethrough                     |                          |
-| fontSubscript                       | 4D Write Pro areas only  |
-| fontSuperscript                     | 4D Write Pro areas only  |
-| fontUnderline                       |                          |
-| font/showDialog                     | Mac only                 |
-| htmlWYSIWIGEnabled                  | 4D Write Pro areas only  |
-| section/differentFirstPage          | 4D Write Pro areas only  |
-| section/differentLeftRightPages     | 4D Write Pro areas only  |
-| spell/autoCorrectionEnabled         |                          |
-| spell/autoDashSubstitutionsEnabled  | Mac only                 |
-| spell/autoLanguageEnabled           | Mac only                 |
-| spell/autoQuoteSubstitutionsEnabled | Mac only                 |
-| spell/autoSubstitutionsEnabled      |                          |
-| spell/enabled                       |                          |
-| spell/grammarEnabled                | Mac only                 |
-| spell/showDialog                    | Mac only                 |
-| spell/visibleSubstitutions          |                          |
-| visibleBackground                   | 4D Write Pro areas only  |
-| visibleFooters                      | 4D Write Pro areas only  |
-| visibleHeaders                      | 4D Write Pro areas only  |
-| visibleHiddenChars                  | 4D Write Pro areas only  |
-| visibleHorizontalRuler              | 4D Write Pro areas only  |
-| visiblePageFrames                   | 4D Write Pro areas only  |
-| visibleReferences                   |                          |
-| widowAndOrphanControlEnabled        | 4D Write Pro areas only  |
+| Actions prises en charge            | Conditions d'utilisation (le cas échéant) |
+| ----------------------------------- | ----------------------------------------- |
+| avoidPageBreakInsideEnabled         | Zones 4D Write Pro uniquement             |
+| fontItalic                          |                                           |
+| fontBold                            |                                           |
+| fontLinethrough                     |                                           |
+| fontSubscript                       | 4D Write Pro areas only                   |
+| fontSuperscript                     | 4D Write Pro areas only                   |
+| fontUnderline                       |                                           |
+| font/showDialog                     | Mac uniquement                            |
+| htmlWYSIWIGEnabled                  | 4D Write Pro areas only                   |
+| section/differentFirstPage          | 4D Write Pro areas only                   |
+| section/differentLeftRightPages     | 4D Write Pro areas only                   |
+| spell/autoCorrectionEnabled         |                                           |
+| spell/autoDashSubstitutionsEnabled  | Mac only                                  |
+| spell/autoLanguageEnabled           | Mac only                                  |
+| spell/autoQuoteSubstitutionsEnabled | Mac only                                  |
+| spell/autoSubstitutionsEnabled      |                                           |
+| spell/enabled                       |                                           |
+| spell/grammarEnabled                | Mac only                                  |
+| spell/showDialog                    | Mac only                                  |
+| spell/visibleSubstitutions          |                                           |
+| visibleBackground                   | 4D Write Pro areas only                   |
+| visibleFooters                      | 4D Write Pro areas only                   |
+| visibleHeaders                      | 4D Write Pro areas only                   |
+| visibleHiddenChars                  | 4D Write Pro areas only                   |
+| visibleHorizontalRuler              | 4D Write Pro areas only                   |
+| visiblePageFrames                   | 4D Write Pro areas only                   |
+| visibleReferences                   |                                           |
+| widowAndOrphanControlEnabled        | 4D Write Pro areas only                   |
 
-For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
 
 ## Check box button styles
 
-Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
+Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
+With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables.
 
 4D provides check boxes in the following predefined styles:
 
-### Classique
+### Regular
 
 The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -109,13 +109,13 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 
 
-### A plat
+### Flat
 
 The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -143,7 +143,7 @@ Example with states unchecked / checked / highlighted:
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -172,7 +172,7 @@ Example with states unchecked / checked / highlighted:
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -190,7 +190,7 @@ Example with states unchecked / checked / highlighted:
 
 
 
-### Bevel arrondi
+### Rounded Bevel
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -203,7 +203,7 @@ Example on macOS:
 > on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```4d
     "myCheckBox": {
@@ -232,7 +232,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 > On Windows, this style is identical to the [Bevel](#bevel) style.
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -251,7 +251,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 
 
-### OS X Texture
+### OS X Textured
 
 The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -265,7 +265,7 @@ By default, the OS X Textured style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -286,7 +286,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
  - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
@@ -296,7 +296,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -328,7 +328,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -348,7 +348,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
 
 In macOS and Windows, a check box with the "Disclosure" style appears as a standard disclosure button, usually used to show/hide additional information. When used as a radio button, the button symbol points downwards with value 0 and upwards with value 1.
 
- - *Sous Windows*
+ - *Windows*
 
     ![](assets/en/FormObjects/checkbox_disclosure.png)
 
@@ -357,7 +357,7 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -382,7 +382,7 @@ The Custom check box style accepts a personalized background picture and allows 
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "myCheckbox": {
@@ -405,7 +405,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 
 
-## Propriétés prises en charge
+## Supported Properties
 
 All check boxes share the same set of basic properties:
 

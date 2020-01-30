@@ -112,7 +112,7 @@ Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre
  $0:=Majusc(Sous chaine($1;1;1))+Minusc(Sous chaine($1;2))
 ```
 
-L'utilisation de commandes telles que `Nouveau process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple:
+L'utilisation de commandes telles que `Nouveau process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. For example:
 
 ```4d
 C_TEXT($string)
@@ -151,7 +151,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Triggers Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. For example:
 
 ```4d
  C_LONGINT($0)
@@ -167,7 +167,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Valeurs ou références
 
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2, etc... de la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2, etc... de la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. For example:
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD
@@ -247,11 +247,11 @@ L'utilisation d'objets en tant que paramètres vous permet de gérer des **param
 Par exemple, si vous utilisez la méthode `CreatePerson` :
 
 ```4d
-  //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
+  //CreatePerson
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
- ALERT(Chaine(OB Lire($person;"Age")))  
+ ALERT(String($person.Age))  
 ```
 
 Dans la méthode `ChangeAge`, vous pouvez écrire :

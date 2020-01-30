@@ -37,7 +37,7 @@ Le fichier d’historique courant est automatiquement sauvegardé avec le fichie
 
 ## Créer le fichier d’historique
 
-Par défaut, toute base créée avec 4D utilise un fichier d’historique (option définie dans la Page **Général** des Préférences de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
+Par défaut, toute base créée avec 4D utilise un fichier d’historique (option définie dans la Page **Général** des Préférences de 4D). The log file is named *data.journal* and is placed in the Data folder.
 
 Vous pouvez à tout moment savoir si votre base utilise un fichier d’historique : l’option **Utiliser le fichier d’historique** est cochée dans la Page **Sauvegarde/Configuration** des Propriétés de la base. Si vous avez désélectionné cette option ou si vous utilisez une base sans fichier d’historique et souhaitez mettre en place une stratégie de sauvegarde avec fichier d’historique, il vous appartient d’en créer un.
 

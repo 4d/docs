@@ -1,7 +1,7 @@
 ---
 id: encrypt
 title: Page chiffrement
-sidebar_label: Page chiffrement
+sidebar_label: Encrypt Page
 ---
 
 Vous pouvez vous aider de cette page pour chiffrer et déchiffrer (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base. Pour des informations plus détaillées sur le chiffrement des données dans 4D, veuillez consulter la section "Chiffrer les données".
@@ -62,14 +62,14 @@ Cette opération est utile lorsque l'attribut **Chiffrable** a été modifié po
 1. Cliquez sur **Re-chiffrer les données à l'aide de la clé actuelle**.
 2. Saisissez la clé de chiffrement des données actuelle.
 
-Le fichier de données est correctement re-chiffré à l'aide de la clé actuelle et un message de confirmation s'affiche : ![](assets/fr/MSC/MSC_encrypt8.png)
+Le fichier de données est correctement re-chiffré à l'aide de la clé actuelle et un message de confirmation s'affiche : ![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Changer votre phrase secrète et re-chiffrer les données
 
 Cette opération est utile en cas de modification de la clé de chiffrement des données actuelle. Par exemple, il se peut que vous la modifiiez pour vous conformer aux règles de sécurité (telles que la nécessité de modifier la phrase secrète tous les trois mois).
 
 1. Cliquez sur **Changer votre phrase secrète et re-chiffrer les données**.
-2. Saisissez la clé de chiffrement des données actuelle.
+2. Enter the current data encryption key.
 3. Saisissez la nouvelle phrase secrète (pour plus de sécurité, il vous est demandé de la saisir deux fois) : ![](assets/en/MSC/MSC_encrypt9.png) Le fichier de données est entièrement déchiffré et un message de confirmation s'affiche : ![](assets/fr/MSC/MSC_encrypt8.png)
 
 ### Enlever le chiffrement de toutes les données

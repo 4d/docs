@@ -1,7 +1,7 @@
 ---
 id: Prüfen
 title: Seite Prüfen
-sidebar_label: Seite Prüfen
+sidebar_label: Verify Page
 ---
 
 Auf dieser Seite können Sie die Datenintegrität überprüfen. Die Überprüfung lässt sich in Datensätzen und/oder Indizes durchführen. Diese Funktionalität prüft nur die Datenintegrität. Bei Fehlern oder notwendigen Reparaturen erhalten Sie eine Meldung, die [Seite Reparieren](repair.md) zu verwenden.
@@ -18,14 +18,14 @@ Die Seite enthält die Schaltflächen für Aktionen, über die Sie direkt auf di
 
 > Sie können Datensätze und Indizes auch im Detail Tabelle für Tabelle überprüfen. Weitere Informationen dazu finden Sie im unteren Abschnitt.
 
-## Logbuch öffnen
+## Open log file
 
 Bei allen Überprüfungsarten generiert 4D ein Logbuch im Ordner `Logs` der Datenbank. Hier erscheinen alle durchgeführten Überprüfungen und evtl. gefundene Fehler. Gibt es keine Fehler, wird das durch [OK] angezeigt. Das Logbuch wird im XML-Format angelegt und hat den Namen *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml:
 
-- *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
-- *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
+- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
-Klicken Sie auf die Schaltfläche **Logbuch öffnen**, zeigt 4D das neueste Logbuch im standardmäßigen Browser des Rechners.
+When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
 ## Details
 

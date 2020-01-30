@@ -31,11 +31,11 @@ Chaque valeur de propriété accessible par la notation objet est considérée c
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
-## Initialisation
+## Initialization
 
 Les objets doivent être initialisés à l'aide, par exemple, de la commande `New object`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
 
-Exemple :
+Example:
 
 ```4d
  C_OBJET($obVar) //création d'une variable 4D de type objet.
@@ -47,7 +47,7 @@ Exemple :
 Vous pouvez créer deux types d'objets :
 
 - standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process. 
-- partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
+- partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Principes de syntaxe
 

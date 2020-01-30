@@ -1,39 +1,39 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: Liste déroulante
 ---
 
-## Aperçu
+## Overview
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+Les pop-up/listes déroulantes sont des objets qui permettent à l’utilisateur de sélectionner un élément dans une liste. Vous gérez les éléments qui apparaissent dans les listes déroulantes à l’aide de tableaux, d’énumérations ou d'actions standard.
 
 On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
 
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
 
-## Using an array
+## Utiliser un tableau
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Un pop-up/liste déroulante affiche le tableau sous la forme d’une liste de valeurs qui apparaît lorsqu’on clique dessus.
 
-Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+Drop-down list objects are initialized by loading a list of values into an array. Vous pouvez réaliser cette opération de plusieurs manières :
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Saisir une liste de valeurs par défaut dans les propriétés de l’objet<Static List>Pour cela, dans le thème [Sources de données](properties_DataSource.md) de la Liste des propriétés, sélectionnez "\". Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
-* Before the object is displayed, execute code that assigns values to the array elements. Par exemple:
+* Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :
 
 ```4d
   ARRAY TEXT($aCities;6) 
-  $aCities{1}:="Philadelphia" 
+  $aCities{1}:="Philadelphie" 
   $aCities{2}:="Pittsburg" 
   $aCities{3}:="Grand Blanc" 
   $aCities{4}:="Bad Axe" 
   $aCities{5}:="Frostbite Falls" 
   $aCities{6}:="Green Bay" 
 ```
-In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
-*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Par exemple:
+*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. For example:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
@@ -86,5 +86,5 @@ You can assign a standard action to a pop-up menu/drop-down list ([Action](prope
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
-## Propriétés prises en charge
+## Supported Properties
 [Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save as](properties_DataSource.md#save-as) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  

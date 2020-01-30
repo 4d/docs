@@ -39,17 +39,17 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 ## Opérateurs sur les images
 
-| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                   |
-| ------------------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Concaténation horizontale | Image1 + Image2 | Image    | Place Image2 à la droite d'Image1                                                                                                                                        |
-| Concaténation verticale   | Image1 / Image2 | Image    | Place Image2 au-dessous d'Image1                                                                                                                                         |
-| Superposition exclusive   | Image1 & Image2 | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
-| Superposition inclusive   | Image1 | Image2 | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Déplacement horizontal    | Image + Nombre  | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
-| Déplacement vertical      | Image / Nombre  | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
-| Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
-| Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
-| Extension verticale       | Image *| Nombre | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
+| Operation                 | Syntax          | Returns | Action                                                                                                                                                                   |
+| ------------------------- | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Concaténation horizontale | Image1 + Image2 | Image   | Place Image2 à la droite d'Image1                                                                                                                                        |
+| Concaténation verticale   | Image1 / Image2 | Image   | Place Image2 au-dessous d'Image1                                                                                                                                         |
+| Superposition exclusive   | Image1 & Image2 | Image   | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
+| Superposition inclusive   | Image1 | Image2 | Image   | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal move           | Image + Nombre  | Picture | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
+| Vertical move             | Image / Nombre  | Picture | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
+| Redimensionnement         | Image * Nombre  | Picture | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
+| Horizontal scaling        | Image *+ Nombre | Picture | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
+| Vertical scaling          | Image *| Nombre | Picture | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
 
 **Notes :**
 
@@ -60,7 +60,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 - Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images. 
 - 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. Les coordonnées sont retournées dans les **Variables système** *MouseX* et *MouseY*. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*. Vous pouvez lire la valeur des variables MouseX et MouseY dans le contexte des événements formulaire **Sur clic**, **Sur double clic**, **Sur relâchement bouton**, **Sur début survol** et **Sur survol**.
 
-### Exemples
+### Examples
 
 Toutes les images qui sont affichées utilisent le format d'affichage **Image sur fond**.
 
@@ -70,7 +70,7 @@ Voici l'image rectangle : ![](assets/en/Concepts/Concepts/rectangle.en.png)
 
 Dans les exemples ci-dessous, chaque expression est suivie de sa représentation graphique.
 
-Concaténation horizontale
+Horizontal concatenation
 
 ```4d
  cercle+rectangle // Place le rectangle à droite du cercle
@@ -79,7 +79,7 @@ rectangle+cercle // Place le cercle à droite du rectangle
 
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
-Concaténation verticale
+Vertical concatenation
 
 ```4d
  circle/rectangle //Place the rectangle under the circle
@@ -88,7 +88,7 @@ Concaténation verticale
 
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
-Superposition exclusive
+Exclusive superimposition
 
 ```4d
 Pict3:=Pict1 & Pict2 // Superposer Pict2 à Pict1
@@ -96,7 +96,7 @@ Pict3:=Pict1 & Pict2 // Superposer Pict2 à Pict1
 
 ![](assets/en/Concepts/superimpoExc.fr.png)
 
-Superposition inclusive
+Inclusive superimposition
 
 ```4d
 Pict3:=Pict1|Pict2 // Récupérer le masque résultant de la superposition de deux images de même taille

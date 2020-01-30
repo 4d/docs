@@ -85,12 +85,12 @@ Avec :
  vPtrC:=->autreObjet
 ```
 
-| Opération | Syntaxe             | Retourne | Expression    | Valeur |
-| --------- | ------------------- | -------- | ------------- | ------ |
-| Egalité   | Pointeur = Pointeur | Booléen  | vPtrA = vPtrB | Vrai   |
-|           |                     |          | vPtrA = vPtrB | Faux   |
-| Inégalité | Pointeur # Pointeur | Booléen  | vPtrA # vPtrC | Vrai   |
-|           |                     |          | vPtrA # vPtrB | Faux   |
+| Operation | Syntax              | Returns | Expression    | Value |
+| --------- | ------------------- | ------- | ------------- | ----- |
+| Egalité   | Pointeur = Pointeur | Booléen | vPtrA = vPtrB | Vrai  |
+|           |                     |         | vPtrA = vPtrB | Faux  |
+| Inégalité | Pointeur # Pointeur | Booléen | vPtrA # vPtrC | Vrai  |
+|           |                     |         | vPtrA # vPtrB | Faux  |
 
 ## Principales utilisations
 
@@ -128,7 +128,7 @@ Vous pouvez également récupérer un pointeur vers un champ à l’aide de la f
 $ChampPtr:=Champ(1;2)
 ```
 
-Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :
+You can use the dereferenced pointer in commands, like this:
 
 ```4d
 OBJECT SET FONT($FieldPtr->;"Arial")

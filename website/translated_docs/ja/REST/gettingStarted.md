@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: はじめに
+title: Getting Started
 ---
 
 4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.

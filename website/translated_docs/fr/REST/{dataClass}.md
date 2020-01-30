@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 ## Available syntaxes
 
-| Syntaxe                                                        | Exemple                                                | Description                                                                     |
+| Syntax                                                         | Example                                                | Description                                                                     |
 | -------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                  | `/Employee`                                            | Returns all the data (by default the first 100 entities) for the dataclass      |
 | [**{dataClass}({key})**](#dataclasskey)                        | `/Employee(22)`                                        | Returns the data for the specific entity defined by the dataclass's primary key |
@@ -30,23 +30,23 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                   |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | Chaine  | Name of the datastore class.                                                                                                                                                                                                                                  |
-| __COUNT       | Nombre  | Number of entities in the datastore class.                                                                                                                                                                                                                    |
-| __SENT        | Nombre  | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
-| __FIRST       | Nombre  | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                                                                              |
-| __ENTITIES    | Tableau | This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.                                                             |
+| Property      | Type   | Description                                                                                                                                                                                                                                                   |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| __entityModel | String | Name of the datastore class.                                                                                                                                                                                                                                  |
+| __COUNT       | Number | Number of entities in the datastore class.                                                                                                                                                                                                                    |
+| __SENT        | Number | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
+| __FIRST       | Number | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                                                                              |
+| __ENTITIES    | Array  | This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.                                                             |
 
 For each entity, there is a **__KEY** and a **__STAMP** property. The **__KEY** property contains the value of the primary key defined for the datastore class. The **__STAMP** is an internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
 
 
 
-### Exemple
+### Example
 
 Return all the data for a specific datastore class.
 
@@ -137,7 +137,7 @@ By passing the dataclass and a key, you can retrieve all the public information 
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company(1)/name,address`
 
@@ -145,7 +145,7 @@ If you want to expand a relation attribute using `$expand`, you do so by specify
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Exemple
+### Example
 
 The following request returns all the public data in the Company datastore class whose key is 1.
 
@@ -187,7 +187,7 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
 For more information about the data returned, refer to [{dataClass}](dataClass.md).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
@@ -195,7 +195,7 @@ If you want to use a relation attribute using [$attributes]($attributes.md), you
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Exemple
+### Example
 
 The following request returns all the public data of the employee named "Jones".
 
@@ -249,7 +249,7 @@ You can define which attributes you want to return, by passing the following:
 You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md).
 
 
-### Exemple
+### Example
 
 In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:
 

@@ -10,12 +10,12 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | Types de données                             | Pris en charge par la base(1) | Pris en charge par le langage | Déclaration de la variable   |
 | -------------------------------------------- | ----------------------------- | ----------------------------- | ---------------------------- |
 | [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                            |
-| [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `ARRAY DATE`       |
+| [Texte](Concepts/dt_string.md)               | Yes                           | Yes                           | `C_TEXT`, `ARRAY TEXT`       |
+| [Date](Concepts/dt_date.md)                  | Yes                           | Yes                           | `C_DATE`, `ARRAY DATE`       |
 | [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_TIME`, `ARRAY TIME`       |
 | [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_LONGINT`, `ARRAY LONGINT` |
+| [Integer](Concepts/dt_number.md)             | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
+| [Entier long](Concepts/dt_number.md)         | Yes                           | Yes                           | `C_LONGINT`, `ARRAY LONGINT` |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                            |
 | [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REAL`, `ARRAY REAL`       |
 | [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                            |
@@ -25,7 +25,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `ARRAY BLOB`       |
 | [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `C_VARIANT`                  |
+| [Variant](Concepts/dt_variant.md)(2)         | -                             | Yes                           | `C_VARIANT`                  |
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
 
@@ -47,20 +47,20 @@ La valeur par défaut dépend du type et de la catégorie de la variable, du con
 
 Le tableau suivant illustre ces valeurs par défaut :
 
-| Type        | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
-| ----------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
-| Booléen     | Faux                                                                           | Vrai                     | True (varie)                |
-| Date        | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
-| Entier long | 0                                                                              | 1919382119               | 909540880 (varie)           |
-| Heure       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
-| Image       | picture size=0                                                                 | picture size=0           | picture size=0              |
-| Réel        | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
-| Pointeur    | Nil=true                                                                       | Nil=true                 | Nil=true                    |
-| Texte       | ""                                                                             | ""                       | ""                          |
-| Blob        | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
-| Objet       | null                                                                           | null                     | null                        |
-| Collection  | null                                                                           | null                     | null                        |
-| Variant     | indéfini                                                                       | indéfini                 | indéfini                    |
+| Type       | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
+| ---------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
+| Booléen    | Faux                                                                           | Vrai                     | True (varie)                |
+| Date       | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
+| Longint    | 0                                                                              | 1919382119               | 909540880 (varie)           |
+| Time       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
+| Picture    | picture size=0                                                                 | picture size=0           | picture size=0              |
+| Real       | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
+| Pointer    | Nil=true                                                                       | Nil=true                 | Nil=true                    |
+| Text       | ""                                                                             | ""                       | ""                          |
+| Blob       | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
+| Object     | null                                                                           | null                     | null                        |
+| Collection | null                                                                           | null                     | null                        |
+| Variant    | indéfini                                                                       | indéfini                 | indéfini                    |
 
 ## Convertir les types de données
 
