@@ -1,7 +1,7 @@
 ---
 id: quick-tour
 title: Tour d'horizon
-sidebar_label: Tour d'horizon
+sidebar_label: A Quick Tour
 ---
 
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
@@ -51,13 +51,13 @@ Le programme interprète la ligne comme “MyDate prend la valeur de la date cou
 
 ## Commandes
 
-Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREATE RECORD` ou `ALERT`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
+Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREATE RECORD` ou `ALERT`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Example:
 
 ```4d
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
-Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple:
+Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. For example:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -92,11 +92,11 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
-## Méthodes
+## Methods
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
-Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
+Une méthode est composée de plusieurs lignes d’instructions. A statement performs an action, and may be simple or complex.
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
@@ -106,7 +106,7 @@ CONFIRM("Souhaitez-vous vraiment clore ce compte ?";"Oui";"Non")
 
 Une méthode contient également des testes et des boucles qui gèrent le flux d'exécution. Les méthodes 4D prennent en charge les structures `If...Else...End if` et `Case of...Else...End case` ainsi que les boucles : `While...End while`, `Repeat...Until`, `For...End for`, et `For each...End for each`:
 
-L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
+The following example goes through all the characters of the text vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
@@ -117,7 +117,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```4d
 $myText:="hello"
@@ -128,7 +128,7 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-## Types de données
+## Data Types
 
 De nombreux types de données peuvent être manipulés via le langage 4D. Il existe des types de données élémentaires (chaîne, numérique, date, heure, booléen, image, pointeur, tableau), ainsi que des types de données composites (BLOBs, objets, collections).
 
@@ -160,7 +160,7 @@ Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :
 $vName:=employee["nom"]
 ```
 
-Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
+Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
 
 ```4d
 $vAge:=employee.children[2].age
@@ -185,7 +185,7 @@ myColl[3]  //accède au 4ème élément de la collection
 
 Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. Par exemple, 1 + 2 utilise l’opérateur d’addition (ou signe plus) pour faire la somme de deux nombres, et le résultat est 3. Le tableau ci-dessous présente quelques opérateurs courants :
 
-| Opérateur | Opération      | Exemple   |
+| Opérateur | Operation      | Example   |
 | --------- | -------------- | --------- |
 | +         | Addition       | 1 +2 = 3  |
 | –         | Soustraction   | 3 - 2 = 1 |
@@ -196,10 +196,10 @@ Les opérateurs numériques ne représentent qu’un seul des différents types 
 
 Souvent, les mêmes symboles sont utilisés pour des opérations différentes, en fonction du type de données traitées. Par exemple, le signe (+) peut effectuer diverses opérations, comme le montre le tableau suivant :
 
-| Type de données   | Opération        | Exemple                                                                                             |
+| Type de données   | Operation        | Example                                                                                             |
 | ----------------- | ---------------- | --------------------------------------------------------------------------------------------------- |
 | Numérique         | Addition         | 1 + 2 ajoute les nombres, le résultat est 3                                                         |
-| Chaine            | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”      |
+| String            | Concatenation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”      |
 | Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1989, le résultat est la date 21 janvier 1989 |
 
 Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
@@ -233,15 +233,15 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | MonBouton               | Numérique             | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
 | !1997-01-25!            | Date                  | C'est une constante date pour la date 25/01/97 (25 janvier 1997).                                                                                                                    |
 | Current date+ 30        | Date                  | C'est une expression de type Date qui utilise la commande `Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date. |
-| ?8:05:30?               | Heure                 | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
-| ?2:03:04? + ?1:02:03?   | Heure                 | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
-| Vrai                    | Booléen               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
-| 10 # 20                 | Booléen               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
-| “ABC” = “XYZ”           | Booléen               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
-| MonImage + 50           | Image                 | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
-| ->[Amis]Nom             | Pointeur              | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
-| Table(1)                | Pointeur              | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
-| JSON Parse (MaChaine)   | Objet                 | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
+| ?8:05:30?               | Time                  | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
+| ?2:03:04? + ?1:02:03?   | Time                  | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
+| True                    | Boolean               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
+| 10 # 20                 | Boolean               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
+| “ABC” = “XYZ”           | Boolean               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
+| MonImage + 50           | Picture               | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
+| ->[Amis]Nom             | Pointer               | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
+| Table(1)                | Pointer               | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
+| JSON Parse (MaChaine)   | Object                | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
 | Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
@@ -249,7 +249,7 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 
 ### Expressions assignables et non-assignables
 
-Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
+Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. For example:
 
 ```4d
 //La variable $myVar est assignable, vous pouvez écrire :  
@@ -262,7 +262,7 @@ Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 
 En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
 
-## Pointeurs
+## Pointers
 
 Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous permettre d'écrire un code puissant et modulaire. Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux.
 
@@ -287,7 +287,7 @@ Les deux styles de commentaires peuvent être utilisés simultanément.
 
 #### Ligne de commentaire (//)
 
-Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Exemple :
+Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Example:
 
 ```4d
 //Ceci est un commentaire 
@@ -302,7 +302,7 @@ For($vCounter;1;100) //Début de la boucle
 
 Entourez le contenu avec les caractères `/*...*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 
-- Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Exemple :
+- Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Example:
 
 ```4d
 For /* ligne de commentaire */ ($vCounter;1;100)
@@ -310,7 +310,7 @@ For /* ligne de commentaire */ ($vCounter;1;100)
 End for
 ```
 
-- Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
+- Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Example:
 
 ```4d
 For ($vCounter;1;100)
