@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Zone Web
+title: Web Area
 ---
 
 ---
@@ -16,13 +16,13 @@ Lorsque cette propriété est cochée, un objet JavaScript spécial `$4d` est in
 
 #### Grammaire JSON
 
-| Nom                  | Type de données | Valeurs possibles          |
-| -------------------- | --------------- | -------------------------- |
-| methodsAccessibility | chaîne          | "none" (par défaut), "all" |
+| Nom                  | Data Type | Valeurs possibles          |
+| -------------------- | --------- | -------------------------- |
+| methodsAccessibility | chaîne    | "none" (par défaut), "all" |
 
 #### Objets pris en charge
 
-[Zone Web](webArea_overview.md)
+[Web Area](webArea_overview.md)
 
 
 ---
@@ -32,13 +32,13 @@ La variable "Progression" est de type Entier long. Elle contient une valeur entr
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles              |
-| -------------- | --------------- | ------------------------------ |
-| progressSource | chaîne          | Nom d'une variable Entier long |
+| Nom            | Data Type | Valeurs possibles              |
+| -------------- | --------- | ------------------------------ |
+| progressSource | chaîne    | Nom d'une variable Entier long |
 
 #### Objets pris en charge
 
-[Zone Web](webArea_overview.md)
+[Web Area](webArea_overview.md)
 
 
 
@@ -63,13 +63,13 @@ La variable URL produit les mêmes effets que la commande [WA OUVRIR URL](https:
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles |
-| --------- | --------------- | ----------------- |
-| urlSource | chaîne          | Une URL.          |
+| Nom       | Data Type | Valeurs possibles |
+| --------- | --------- | ----------------- |
+| urlSource | chaîne    | Une URL.          |
 
 #### Objets pris en charge
 
-[Zone Web](webArea_overview.md)
+[Web Area](webArea_overview.md)
 
 
 
@@ -94,10 +94,10 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles    |
-| --------- | --------------- | -------------------- |
-| webEngine | chaîne          | "embedded", "system" |
+| Nom       | Data Type | Valeurs possibles    |
+| --------- | --------- | -------------------- |
+| webEngine | chaîne    | "embedded", "system" |
 
 #### Objets pris en charge
 
-[Zone Web](webArea_overview.md)
+[Web Area](webArea_overview.md)
