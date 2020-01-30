@@ -92,7 +92,7 @@ If($vsTempVar="Non")
 $vsMyString:="Bonjour à tous"
 ```
 
-## Tableaux
+## Arrays
 
 Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :
 
@@ -254,7 +254,7 @@ Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres s
 
 A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.
 
-Voici quelques exemples :
+Examples:
 
 ```4d
     // Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
