@@ -108,7 +108,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. たとえば:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -184,7 +184,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [タイプ](properties_Object.md#type)                                                             | X              | X                  | X                                       |
+| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -201,7 +201,7 @@ Supported properties depend on the list box type.
 ### Supported Form Events
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties) | コメント                                                                             |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties) | Comments                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                  |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                  |
@@ -241,14 +241,14 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | タイプ     | 説明                                                                    |
+| Property         | Type    | Description                                                           |
 | ---------------- | ------- | --------------------------------------------------------------------- |
-| area             | テキスト    | List box object area ("header", "footer", "cell")                     |
-| areaName         | テキスト    | Name of the area                                                      |
+| area             | text    | List box object area ("header", "footer", "cell")                     |
+| areaName         | text    | Name of the area                                                      |
 | column           | longint | Column number                                                         |
-| columnName       | テキスト    | Name of the column                                                    |
-| footerName       | テキスト    | Name of the footer                                                    |
-| headerName       | テキスト    | Name of the header                                                    |
+| columnName       | text    | Name of the column                                                    |
+| footerName       | text    | Name of the footer                                                    |
+| headerName       | text    | Name of the header                                                    |
 | horizontalScroll | longint | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected    | boolean | True if row is selected, else False                                   |
 | newPosition      | longint | New position of the column or row                                     |
@@ -280,7 +280,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ### Supported Form Events
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | コメント                                                                             |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | Comments                                                                         |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                  |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                  |
@@ -467,7 +467,7 @@ Note that list box arrays used for defining the appearance of selected rows must
 - `On Activate` (form property)
 - `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
 
-##### 例題
+##### Example
 
 You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 
@@ -860,11 +860,11 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| テキスト      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
-| color     | background color                               | テキスト                                                                                           |
+| color     | background color                               | text                                                                                           |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
@@ -876,12 +876,12 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
-| テキスト       | same as defined in object                                  | any (no control)        |
+| text       | same as defined in object                                  | any (no control)        |
 | real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
-| ブール        | check box                                                  | N/A                     |
+| Boolean    | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | event      | N/A                                                        | N/A                     |
 
@@ -891,9 +891,9 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | テキスト | real | integer | boolean | color | event |
+|                       | valueType                               | text | real | integer | boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *説明*                                    |      |      |         |         |       |       |
+| *Attributes*          | *Description*                           |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
 | min                   | minimum value                           |      | x    | x       |         |       |       |
 | max                   | maximum value                           |      | x    | x       |         |       |       |
@@ -957,7 +957,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | 説明                                                                                                                                                                                     |
+| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                            |
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
@@ -1063,7 +1063,7 @@ Use "choiceListName" or "choiceListReference" depending on the origin of the lis
 > * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-例:
+Example:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
@@ -1093,7 +1093,7 @@ Regardless of the way the unit list is defined, it can be associated with the fo
 
 The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
-例:
+Example:
 
 We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
 
@@ -1116,7 +1116,7 @@ If you want to add an ellipsis button [...] to a cell, you just need to pass the
 
 When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
 
-例:
+Example:
 
 ```4d
 C_OBJECT($ob1)
@@ -1133,7 +1133,7 @@ OB SET($ob;"value";$entry)
 
 The "color" valueType allows you to display either a color or a text.
 
-*   If the value is a number, a colored rectangle is drawn inside the cell. 例:
+*   If the value is a number, a colored rectangle is drawn inside the cell. Example:
 
     ````4d
     C_OBJECT($ob4)
@@ -1152,7 +1152,7 @@ The "event" valueType displays a simple button that generates an `On Clicked` ev
 
 Optionally, you can pass a "label" attribute.
 
-例:
+Example:
 
 ````4d
 C_OBJECT($ob)
