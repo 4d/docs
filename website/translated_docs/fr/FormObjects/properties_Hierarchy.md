@@ -17,9 +17,9 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 #### JSON Grammar
 
-| Name       | Type de données | Possible Values                                  |
-| ---------- | --------------- | ------------------------------------------------ |
-| datasource | string array    | Collection of array names defining the hierarchy |
+| Name       | Data Type    | Possible Values                                  |
+| ---------- | ------------ | ------------------------------------------------ |
+| datasource | string array | Collection of array names defining the hierarchy |
 
 #### Objects Supported
 
