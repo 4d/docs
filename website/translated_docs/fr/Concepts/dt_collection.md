@@ -44,7 +44,7 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 
 Les collections doivent être initialisées à l'aide, par exemple, de la commande `Creer collection`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification d'un ou plusieurs élements de la collection.
 
-Exemple :
+Example:
 
 ```4d
  C_COLLECTION($colVar) //création d'une variable 4D de type collection.
