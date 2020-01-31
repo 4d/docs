@@ -9,23 +9,23 @@ title: データタイプの概要
 
 | データタイプ                                | データベース  | ランゲージ   | 変数宣言                         |
 | ------------------------------------- | ------- | ------- | ---------------------------- |
-| [文字列](dt_string.md)                   | ○       | テキストに変換 | -                            |
-| [テキスト](Concepts/dt_string.md)         | Yes     | Yes     | `C_TEXT`, `ARRAY TEXT`       |
-| [日付](Concepts/dt_date.md)             | Yes     | Yes     | `C_DATE`, `ARRAY DATE`       |
-| [時間](Concepts/dt_time.md)             | Yes     | Yes     | `C_TIME`, `ARRAY TIME`       |
-| [ブール](Concepts/dt_boolean.md)         | Yes     | Yes     | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)      | Yes     | 倍長整数に変換 | `ARRAY INTEGER`              |
-| [倍長整数](Concepts/dt_number.md)         | Yes     | Yes     | `C_LONGINT`, `ARRAY LONGINT` |
-| [64ビット整数](Concepts/dt_number.md)      | ○ (SQL) | 実数に変換   | -                            |
-| [実数](Concepts/dt_number.md)           | Yes     | Yes     | `C_REAL`, `ARRAY REAL`       |
-| [未定義](Concepts/dt_null_undefined.md)  | -       | Yes     | -                            |
-| [Null](Concepts/dt_null_undefined.md) | -       | Yes     | -                            |
-| [ポインター](Concepts/dt_pointer.md)       | -       | Yes     | `C_POINTER`, `ARRAY POINTER` |
-| [ピクチャー](Concepts/dt_picture.md)       | Yes     | Yes     | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)           | Yes     | Yes     | `C_BLOB`, `ARRAY BLOB`       |
-| [オブジェクト](Concepts/dt_object.md)       | Yes     | Yes     | `C_OBJECT`, `ARRAY OBJECT`   |
-| [コレクション](Concepts/dt_collection.md)   | -       | Yes     | `C_COLLECTION`               |
-| バリアント                                 | -       | Yes     | `C_VARIANT`                  |
+| [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                            |
+| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | `C_TEXT`, `ARRAY TEXT`       |
+| [日付](Concepts/dt_date.md)             | ◯       | ◯       | `C_DATE`, `ARRAY DATE`       |
+| [時間](Concepts/dt_time.md)             | ◯       | ◯       | `C_TIME`, `ARRAY TIME`       |
+| [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | `ARRAY INTEGER`              |
+| [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | `C_LONGINT`, `ARRAY LONGINT` |
+| [64ビット整数](Concepts/dt_number.md)      | ◯ (SQL) | 実数に変換   | -                            |
+| [実数](Concepts/dt_number.md)           | ◯       | ◯       | `C_REAL`, `ARRAY REAL`       |
+| [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                            |
+| [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                            |
+| [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `C_POINTER`, `ARRAY POINTER` |
+| [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `C_BLOB`, `ARRAY BLOB`       |
+| [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `C_OBJECT`, `ARRAY OBJECT`   |
+| [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `C_COLLECTION`               |
+| バリアント                                 | -       | ◯       | `C_VARIANT`                  |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
@@ -47,20 +47,20 @@ title: データタイプの概要
 
 以下の表はこれらのデフォルトの値をあらわしたものです:
 
-| 型          | インタープロセス変数 / プロセス変数 / インタープリターモードのローカル変数 / コンパイルモードで "ゼロにする" のローカル変数 | コンパイルモードで "ランダム値にする" のローカル変数 | コンパイルモードで "なし" のローカル変数      |
-| ---------- | -------------------------------------------------------------------- | ---------------------------- | --------------------------- |
-| ブール        | False                                                                | True                         | True (場合による)                |
-| Date       | 00-00-00                                                             | 00-00-00                     | 00-00-00                    |
-| Longint    | 0                                                                    | 1919382119                   | 909540880 (場合による)           |
-| Time       | 00:00:00                                                             | 533161:41:59                 | 249345:34:24 (場合による)        |
-| Picture    | ピクチャーサイズ=0                                                           | picture size=0               | picture size=0              |
-| Real       | 0                                                                    | 1.250753659382e+243          | 1.972748538022e-217 (場合による) |
-| Pointer    | Nil=true                                                             | Nil=true                     | Nil=true                    |
-| Text       | ""                                                                   | ""                           | ""                          |
-| BLOB       | Blob サイズ=0                                                           | Blob size=0                  | Blob size=0                 |
-| Object     | null                                                                 | null                         | null                        |
-| Collection | null                                                                 | null                         | null                        |
-| バリアント      | undefined                                                            | undefined                    | undefined                   |
+| 型      | インタープロセス変数 / プロセス変数 / インタープリターモードのローカル変数 / コンパイルモードで "ゼロにする" のローカル変数 | コンパイルモードで "ランダム値にする" のローカル変数 | コンパイルモードで "なし" のローカル変数      |
+| ------ | -------------------------------------------------------------------- | ---------------------------- | --------------------------- |
+| ブール    | False                                                                | True                         | True (場合による)                |
+| 日付     | 00-00-00                                                             | 00-00-00                     | 00-00-00                    |
+| 倍長整数   | 0                                                                    | 1919382119                   | 909540880 (場合による)           |
+| 時間     | 00:00:00                                                             | 533161:41:59                 | 249345:34:24 (場合による)        |
+| ピクチャー  | ピクチャーサイズ=0                                                           | ピクチャーサイズ=0                   | ピクチャーサイズ=0                  |
+| 実数     | 0                                                                    | 1.250753659382e+243          | 1.972748538022e-217 (場合による) |
+| ポインター  | Nil=true                                                             | Nil=true                     | Nil=true                    |
+| テキスト   | ""                                                                   | ""                           | ""                          |
+| BLOB   | Blob サイズ=0                                                           | Blob サイズ=0                   | Blob サイズ=0                  |
+| オブジェクト | null                                                                 | null                         | null                        |
+| コレクション | null                                                                 | null                         | null                        |
+| バリアント  | undefined                                                            | undefined                    | undefined                   |
 
 ## データタイプの変換
 
@@ -72,9 +72,9 @@ title: データタイプの概要
 | ------- | ------ | ----- | ----- | ----- | ------ |
 | 文字列 (1) |        | Num   | Date  | Time  | Bool   |
 | 数値 (2)  | String |       |       |       | Bool   |
-| Date    | String |       |       |       | Bool   |
-| Time    | String |       |       |       | Bool   |
-| Boolean |        | Num   |       |       |        |
+| 日付      | String |       |       |       | Bool   |
+| 時間      | String |       |       |       | Bool   |
+| ブール     |        | Num   |       |       |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 
