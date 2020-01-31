@@ -3,7 +3,7 @@ id: architecture
 title: 4D プロジェクトのアーキテクチャー
 ---
 
-4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 For example:
+4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 たとえば:
 
 ![](assets/en/Project/project1.png)
 
@@ -23,7 +23,7 @@ title: 4D プロジェクトのアーキテクチャー
 + DerivedData
 + Trash (あれば)
 
-### *databaseName*.4DProject file
+### *databaseName*.4DProject ファイル
 
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
@@ -50,40 +50,40 @@ title: 4D プロジェクトのアーキテクチャー
 
 #### DatabaseMethods フォルダー
 
-| Contents                 | Description                                        | Format |
-| ------------------------ | -------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | データベース内で定義されているデータベースメソッド (1つのデータベースメソッドにつき1ファイル)。 | text   |
+| 内容                       | 説明                                                 | 形式   |
+| ------------------------ | -------------------------------------------------- | ---- |
+| *databaseMethodName*.4dm | データベース内で定義されているデータベースメソッド (1つのデータベースメソッドにつき1ファイル)。 | テキスト |
 
 
 #### Methods フォルダー
 
-| Contents         | Description                                  | Format |
-| ---------------- | -------------------------------------------- | ------ |
-| *methodName*.4dm | データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。 | text   |
+| 内容               | 説明                                           | 形式   |
+| ---------------- | -------------------------------------------- | ---- |
+| *methodName*.4dm | データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。 | テキスト |
 
 
 #### Forms フォルダー
 
-| Contents                                  | Description                        | Format  |
-| ----------------------------------------- | ---------------------------------- | ------- |
-| *formName*/form.4DForm                    | プロジェクトフォームの定義                      | json    |
-| *formName*/method.4dm                     | プロジェクトフォームメソッド                     | text    |
-| *formName*/Images/*pictureName*           | プロジェクトフォームのスタティックピクチャー             | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | オブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル) | text    |
+| 内容                                        | 説明                                 | 形式    |
+| ----------------------------------------- | ---------------------------------- | ----- |
+| *formName*/form.4DForm                    | プロジェクトフォームの定義                      | JSON  |
+| *formName*/method.4dm                     | プロジェクトフォームメソッド                     | テキスト  |
+| *formName*/Images/*pictureName*           | プロジェクトフォームのスタティックピクチャー             | ピクチャー |
+| *formName*/ObjectMethods/*objectName*.4dm | オブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル) | テキスト  |
 
 
 #### TableForms フォルダー
 
-| Contents                                             | Description                                      | Format  |
-| ---------------------------------------------------- | ------------------------------------------------ | ------- |
-| *n*/Input/*formName*/form.4DForm                     | 入力テーブルフォームの定義 (n: テーブル番号)                        | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | 入力テーブルフォームのスタティックピクチャー                           | picture |
-| *n*/Input/*formName*/method.4dm                      | 入力テーブルフォームのフォームメソッド                              | text    |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | 入力テーブルフォームのオブジェクトメソッド One file per object method | text    |
-| *n*/Output/*formName*/form.4DForm                    | 出力テーブルフォーム (n: テーブル番号)                           | json    |
-| *n*/Output/*formName*/Images/*pictureName*           | 出力テーブルフォームのスタティックピクチャー                           | picture |
-| *n*/Output/*formName*/method.4dm                     | 出力テーブルフォームのフォームメソッド                              | text    |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | 出力テーブルフォームのオブジェクトメソッド One file per object method | text    |
+| 内容                                                   | 説明                                            | 形式    |
+| ---------------------------------------------------- | --------------------------------------------- | ----- |
+| *n*/Input/*formName*/form.4DForm                     | 入力テーブルフォームの定義 (n: テーブル番号)                     | JSON  |
+| *n*/Input/*formName*/Images/*pictureName*            | 入力テーブルフォームのスタティックピクチャー                        | ピクチャー |
+| *n*/Input/*formName*/method.4dm                      | 入力テーブルフォームのフォームメソッド                           | テキスト  |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | 入力テーブルフォームのオブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル) | テキスト  |
+| *n*/Output/*formName*/form.4DForm                    | 出力テーブルフォーム (n: テーブル番号)                        | JSON  |
+| *n*/Output/*formName*/Images/*pictureName*           | 出力テーブルフォームのスタティックピクチャー                        | ピクチャー |
+| *n*/Output/*formName*/method.4dm                     | 出力テーブルフォームのフォームメソッド                           | テキスト  |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | 出力テーブルフォームのオブジェクトメソッド (1つのオブジェクトメソッドにつき1ファイル) | テキスト  |
 
 
 #### Triggers フォルダー
