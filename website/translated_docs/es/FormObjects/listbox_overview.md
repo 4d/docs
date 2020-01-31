@@ -368,7 +368,7 @@ Here is the method of the *arrText* column:
 
 ```4d
  Case of
-    :(Form event=On Before Data Entry) // a cell gets the focus
+    :(FORM event.code=On Before Data Entry) // a cell gets the focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
   // identification of cell
        If(arrDate{$row}<Current date) // if date is earlier than today
@@ -483,7 +483,7 @@ In the object method of the list box, you can write:
 
 ```4d
  Case of
-    :(Form event=On Selection Change)
+    :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
        ARRAY LONGINT(_ListboxBackground;$n) // row background colors
        For($i;1;$n)
