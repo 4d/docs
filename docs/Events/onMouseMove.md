@@ -19,7 +19,7 @@ If the event is checked for an object only, it is generated only when the cursor
 
 The `On Mouse Move` event updates the *MouseX* and *MouseY* system variables.  
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/propertiesDisplay.md#visibility) property do not generate this event.
+Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
 
 
 ### Calling stack

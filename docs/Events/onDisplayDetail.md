@@ -32,7 +32,7 @@ Calling a 4D command that displays a dialog box from the `On Display Detail` eve
 
 ### Selection list box
 
-This event is generated when a row of a [**selection type**](FormObjects/listboxOverview.md#selection-list-boxes) is displayed.
+This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) is displayed.
 
 
 ### Displayed line number

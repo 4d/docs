@@ -12,7 +12,7 @@ title: On Page Change
 
 This event is only available at the form level (it is called in the form method). It is generated each time the current page of the form changes (following a call to the `FORM GOTO PAGE` command or a standard navigation action).
 
-Note that it is generated after the page is fully loaded, i.e. once all the objects it contains are initialized, including [Web areas](FormObjects/webAreaOverview.md).
+Note that it is generated after the page is fully loaded, i.e. once all the objects it contains are initialized, including [Web areas](FormObjects/webArea_overview.md).
 
 > The only exception is 4D View Pro areas, for which you need to call the [On VP Ready](onVpReady.md) specific event. 
 

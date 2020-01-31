@@ -16,12 +16,12 @@ This event is generated when a click occurs on the header of a column in the lis
 
 > The [`On Clicked`](onClicked.md) event is generated when a right click (Windows) or Ctrl+click (macOS) occurs on a column or column header. You can test the number of clicks made by the user by means of the `Clickcount` command.
 
-If the [Sortable](FormObjects/propertiesAction.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
 
 - If `$0` equals 0, a standard sort is performed.
 - If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
 
-If the [Sortable](FormObjects/propertiesAction.md#sortable) property is not selected for the list box, the `$0` variable is not used.
+If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
 
 ### 4D View Pro
 

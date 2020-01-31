@@ -13,7 +13,7 @@ title: On Open Detail
 The `On Open Detail` event can be used in the following contexts:
 
 - **Output forms**: A record is about to be displayed in the detail form associated with the output form. This event cannot be selected for project forms, it is only available with **table forms**.  
-- List box of the [**selection type**](FormObjects/listboxOverview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
+- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
 
 
 ### Displayed line number

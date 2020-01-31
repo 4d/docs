@@ -10,7 +10,7 @@ title: On Begin Drag Over
 
 ## Description
 
-The `On Begin Drag Over` form event can be selected for any form objects that can be dragged. It is generated in every case where the object has the [Draggable](FormObjects/propertiesAction.md#draggable) property. It can be called from the method of the source object or the form method of the source object.
+The `On Begin Drag Over` form event can be selected for any form objects that can be dragged. It is generated in every case where the object has the [Draggable](FormObjects/properties_Action.md#draggable) property. It can be called from the method of the source object or the form method of the source object.
 
 > Unlike the [`On Drag Over`](onDragOver.md) form event, `On Begin Drag Over` is called within the context of the **source object** of the drag action.
 

@@ -12,7 +12,7 @@ title: On Alternative Click
 
 ### Buttons
 
-Some button styles can be [linked to a pop-up menu](/FormObjects/propertiesTextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
+Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
 
 4D allows you to manage this type of button using the `On Alternative Click` event. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
 
@@ -23,9 +23,8 @@ Some button styles can be [linked to a pop-up menu](/FormObjects/propertiesTextA
 
 ### List box
 
-This event is generated in columns of [object array type list boxes](FormObjects/listboxOverview.md#object-arrays-in-columns-4d-view-pro), when the user clicks on a widget ellipsis button ("alternateButton" attribute). 
+This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), when the user clicks on a widget ellipsis button ("alternateButton" attribute). 
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](/FormObjects/listboxOverview.md#alternatebutton). 
-
+See the [description of the "alternateButton" attribute](FormObjects/listbox_overview.md#alternatebutton). 

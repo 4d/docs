@@ -53,7 +53,7 @@ class Index extends React.Component {
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[<translate>Form Editor</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[<translate>Form Editor</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Form Events</translate>](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -61,7 +61,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[<translate>Web Server</translate>](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html)<br>[<translate>REST Server</translate>](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
+                  content: `[<translate>Web Server</translate>](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.${this.props.language}.html)<br>[<translate>REST Server</translate>](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',

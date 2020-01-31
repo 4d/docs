@@ -14,7 +14,7 @@ This event is generated once when the mouse cursor leaves the graphic area of an
 
 The `On Mouse Leave` event updates the *MouseX* and *MouseY* system variables.  
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/propertiesDisplay.md#visibility) property do not generate this event.
+Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
 
 
 ### Calling stack

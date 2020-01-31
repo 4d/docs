@@ -14,7 +14,7 @@ This event is generated once, when the mouse cursor enters the graphic area of a
 
 The `On Mouse Enter` event updates the *MouseX* and *MouseY* system variables.  
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/propertiesDisplay.md#visibility) property do not generate this event.
+Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
 
 
 ### Calling stack

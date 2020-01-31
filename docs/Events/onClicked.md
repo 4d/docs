@@ -16,11 +16,11 @@ The `On Clicked` event is generated when the user clicks on an object.
 
 The `On Clicked` event usually occurs once the mouse button is released. However, there are several exceptions:
 
-- [Invisible buttons](FormObjects/propertiesDisplay.md#not-rendered): The `On Clicked` event occurs as soon as the click is made and does not wait for the mouse button to be released.
-- [Rulers](FormObjects/ruler.md): If the [Execute object method](FormObjects/propertiesAction.md#execute-object-method) option is set to **true**, the `On Clicked` event occurs as soon as the click is made.
-- [Combo boxes](FormObjects/comboBoxOverview.md): The `On Clicked` event occurs only if the user selects another value in the associated menu. A [combo box](FormObjects/comboBoxOverview.md) must be treated as an enterable text area whose associated drop-down list provides default values. Consequently, you handle data entry within a combo box through the `On Before Keystroke`, `On After Keystroke` and `On Data Change` events.
-- [Drop-down lists](FormObjects/dropdownListOverview.md): The `On Clicked` event occurs only if the user selects another value in the menu. The `On Data Change` event allows you to detect the activation of the object when a value different from the current value is selected
-- The `On Clicked` event is generated when a right click (Windows) or Ctrl+click (macOS) occurs on a list box [column](FormObjects/listboxOverview.md#list-box-columns) or [column header](FormObjects/listboxOverview.html#list-box-headers). 
+- [Invisible buttons](FormObjects/properties_Display.md#not-rendered): The `On Clicked` event occurs as soon as the click is made and does not wait for the mouse button to be released.
+- [Rulers](FormObjects/ruler.md): If the [Execute object method](FormObjects/properties_Action.md#execute-object-method) option is set to **true**, the `On Clicked` event occurs as soon as the click is made.
+- [Combo boxes](FormObjects/comboBox_overview.md): The `On Clicked` event occurs only if the user selects another value in the associated menu. A [combo box](FormObjects/comboBox_overview.md) must be treated as an enterable text area whose associated drop-down list provides default values. Consequently, you handle data entry within a combo box through the `On Before Keystroke`, `On After Keystroke` and `On Data Change` events.
+- [Drop-down lists](FormObjects/dropdownList_Overview.md): The `On Clicked` event occurs only if the user selects another value in the menu. The `On Data Change` event allows you to detect the activation of the object when a value different from the current value is selected
+- The `On Clicked` event is generated when a right click (Windows) or Ctrl+click (macOS) occurs on a list box [column](FormObjects/listbox_overview.md#list-box-columns) or [column header](FormObjects/listbox_overview.md#list-box-headers). 
 
 In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
 
