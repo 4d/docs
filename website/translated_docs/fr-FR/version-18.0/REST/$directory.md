@@ -9,7 +9,7 @@ The directory handles user access through REST requests.
 
 ## Available syntaxes
 
-| Syntax                                                                | Method | Description                                                      |
+| Syntaxe                                                               | Method | Description                                                      |
 | --------------------------------------------------------------------- | ------ | ---------------------------------------------------------------- |
 | [**$directory/currentUser**](#directorycurrentuser)                   | `GET`  | Returns information about the current user                       |
 | [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST` | Indicates if the current user belongs to a specific group        |
@@ -27,12 +27,12 @@ By calling `$directory/currentUser` after a user has logged in, you can retrieve
 
 | Property | Type   | Description                                |
 | -------- | ------ | ------------------------------------------ |
-| userName | String | Username used to log into the application. |
-| fullName | String | Full name of the user.                     |
-| ID       | String | UUID referencing the user.                 |
+| userName | Chaine | Username used to log into the application. |
+| fullName | Chaine | Full name of the user.                     |
+| ID       | Chaine | UUID referencing the user.                 |
 
 
-### Example
+### Exemple
  Call `$directory/currentUser` to find out the current user of your application.
 
 `GET  /rest/$directory/currentUser`
@@ -68,7 +68,7 @@ To find out if the currently logged in user belongs to a specific group, use `$d
 
 If we want to check to see if the current user is a member of the Sales group, we must pass either *GroupID* or *GroupName* in the `POST`.
 
-### Example
+### Exemple
 Below is an example of how to pass either the GroupID or GroupName in the `POST` data.
 
 `POST  /rest/$directory/currentUserBelongsTo`
@@ -117,7 +117,7 @@ All parameters must be passed in **headers** of a POST method:
 | session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
 
 
-### Example
+### Exemple
 
 ```4d
 C_TEXT($response;$body_t)
@@ -159,7 +159,7 @@ Logs out the current user.
 ### Description
 To log out the current user from your application, use `$directory/logout`.
 
-### Example
+### Exemple
 You call `$directory/logout` to log the current user out of the application.
 
 `GET  /rest/$directory/logout`
