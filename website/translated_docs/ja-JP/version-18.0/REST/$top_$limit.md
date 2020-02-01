@@ -6,13 +6,13 @@ original_id: top_$limit
 
 Limits the number of entities to return (e.g., `$top=50`)
 
-## Description
+## 説明
 
 `$top/$limit` defines the limit of entities to return. By default, the number is limited to 100. You can use either keyword: `$top` or `$limit`.
 
 When used in conjunction with [`$skip`]($skip.md), you can navigate through the entity collection returned by the REST request.
 
-## Example
+## 例題
 
 In the following example, we request the next ten entities after the 20th entity:
 
