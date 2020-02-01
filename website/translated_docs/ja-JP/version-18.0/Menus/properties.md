@@ -24,7 +24,7 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Description                 | Usage                                                         |
+| Character   | 説明                          | Usage                                                         |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
 | <B          | less than B                 | Bold font                                                     |
@@ -117,7 +117,7 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operation   |
+| Key (Windows)   | Key (macOS)        | 演算子         |
 | --------------- | ------------------ | ----------- |
 | Ctrl+C          | Command+C          | Copy        |
 | Ctrl+Q          | Command+Q          | Quit        |
