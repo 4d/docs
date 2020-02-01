@@ -36,7 +36,7 @@ Then, we upload the selected image to 4D Server:
 }
 ````
 
-**Response**:
+**Réponse** :
 
 The modified entity is returned:
 
