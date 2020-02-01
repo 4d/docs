@@ -3,7 +3,7 @@ id: progressIndicator
 title: Indicateurs de progression
 ---
 
-## Overview
+## Aperçu
 
 Un indicateur de progression (également appelé "thermomètre") est conçu pour afficher ou définir graphiquement des valeurs numériques ou date/heure.
 
