@@ -96,13 +96,13 @@ La syntaxe de la structure conditionnelle `Case of...Else...End case` est la sui
  End case
 ```
 
-Note that the `Else` part is optional; you can write:
+A noter que l'élément `Else` est optionnel, vous pouvez écrire :
 
 ```4d
  Case of
-    :(Boolean_Expression)
-       statement(s)
-    :(Boolean_Expression)
+    :(Expression_booléenne)
+       instruction(s)
+    :(Expression_booléenne)
        statement(s)
        .
        .
@@ -180,13 +180,13 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
     :((vResult=1) & (vCondition#2)) // Les cas complexes doivent toujours être placés en premier
        ... //Instruction(s)
     :(vResult=1)
-       ... //statement(s)
+       ... //instruction(s)
  End case
 ```
 
 
 
-**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```4d
  Case of
@@ -201,7 +201,7 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
  End case
 ```
 
-or:
+ou :
 
 ```4d
  Case of
@@ -216,7 +216,7 @@ or:
  End case
 ```
 
-or:
+ou :
 
 ```4d
  Case of
