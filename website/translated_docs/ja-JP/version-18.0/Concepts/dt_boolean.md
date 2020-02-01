@@ -1,47 +1,47 @@
 ---
 id: version-18.0-boolean
-title: Boolean
+title: ブール
 original_id: boolean
 ---
 
-A boolean field, variable or expression can be either TRUE or FALSE.
+ブールのフィールド、変数、式は、TRUE（真）またはFALSE（偽）のいずれかになります。
 
-## Boolean functions
+## ブール関数
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
+4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. 詳細については、これらのコマンドの説明を参照ください。
 
-### Example
+### 例題
 
-This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
+ボタンの値に基づいて、ブール変数に値を設定します。 myButton ボタンがクリックされたら myBoolean に True を、クリックされていなければ False を設定します。 ボタンがクリックされるとボタン変数の値は1になります。
 
 ```4d
- If(myButton=1) ` If the button was clicked
-    myBoolean:=True ` myBoolean is set to True
- Else ` If the button was not clicked,
-    myBoolean:=False ` myBoolean is set to False
+ If(myButton=1) // ボタンがクリックされたら
+    myBoolean:=True // myBoolean を True に設定
+ Else // ボタンがクリックされていなければ
+    myBoolean:=False // myBoolean を False に設定
  End if
 ```
 
-The previous example can be simplified into one line.
+上のコードは以下のように一行で書くこともできます。
 
 ```4d
 myBoolean:=(myButton=1)
 ```
 
-## Logical operators
+## 論理演算子
 
-4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
+4Dは、ブール式に対して機能する次の論理演算子をサポートしています: 論理積 (AND) と論理和 (OR)。 論理積 (AND) は両方の式が TRUE である場合に TRUE を返します。 論理和 (OR) は少なくとも一方の式が TRUE の時に TRUE を返します。 次の表に、論理演算子を示します:
 
-| Operation | Syntax                  | Returns | Expression                   | Value |
-| --------- | ----------------------- | ------- | ---------------------------- | ----- |
-| AND       | Boolean & Boolean       | Boolean | ("A" = "A") & (15 # 3)       | True  |
-|           |                         |         | ("A" = "B") & (15 # 3)       | False |
-|           |                         |         | ("A" = "B") & (15 = 3)       | False |
-| OR        | Boolean  &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3)  | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 # 3) | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 = 3) | False |
+| 演算子 | シンタックス         | 戻り値 | 式                            | 結果    |
+| --- | -------------- | --- | ---------------------------- | ----- |
+| AND | ブール & ブール      | ブール | ("A" = "A") & (15 # 3)       | True  |
+|     |                |     | ("A" = "B") & (15 # 3)       | False |
+|     |                |     | ("A" = "B") & (15 = 3)       | False |
+| OR  | ブール &#124; ブール | ブール | ("A" = "A") &#124; (15 # 3)  | True  |
+|     |                |     | ("A" = "B") &#124;  (15 # 3) | True  |
+|     |                |     | ("A" = "B") &#124;  (15 = 3) | False |
 
-The following is the truth table for the AND logical operator:
+論理演算子 (AND) の真偽表を示します:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
@@ -50,7 +50,7 @@ The following is the truth table for the AND logical operator:
 | False | True  | False         |
 | False | False | False         |
 
-The following is the truth table for the OR logical operator:
+論理演算子 (OR) の真偽表を示します:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
