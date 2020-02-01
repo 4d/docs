@@ -10,7 +10,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Example              | Description                                                                      |
+| シンタックス                                        | 例題                   | 説明                                                                               |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -21,7 +21,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 
-### Description
+### 説明
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
@@ -30,14 +30,14 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Property | Type   | Description                                                                       |
+| Property | 型      | 説明                                                                                |
 | -------- | ------ | --------------------------------------------------------------------------------- |
 | name     | String | Name of the dataclass.                                                            |
 | uri      | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
 | dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
 
 
-### Example
+### 例題
 
 `GET  /rest/$catalog`
 
@@ -65,14 +65,14 @@ Here is a description of the properties returned for each dataclass in your proj
 
 Returns information about all of your project's dataclasses and their attributes
 
-### Description
+### 説明
 
 Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model. Remember that the scope for the datastore classes and their attributes must be **Public** for any information to be returned.
 
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### 例題
 
 `GET  /rest/$catalog/$all`
 
@@ -181,7 +181,7 @@ For more information about what is returned for each datastore class and its att
 
 Returns information about a dataclass and its attributes
 
-### Description
+### 説明
 
 Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the datastore classes in your project's datastore, use [`$catalog/$all`](#catalogall).
 
@@ -197,7 +197,7 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Type   | Description                                                                                        |
+| Property       | 型      | 説明                                                                                                 |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | name           | String | Name of the dataclass                                                                              |
 | collectionName | String | Collection name of the dataclass                                                                   |
@@ -209,21 +209,21 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property      | Type    | Description                                                                                                                                                 |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | String  | Attribute name.                                                                                                                                             |
-| kind          | String  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
-| scope         | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed       | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type          | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| minLength     | Number  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
-| maxLength     | Number  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
-| autoComplete  | Boolean | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
-| identifying   | Boolean | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
-| multiLine     | Boolean | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
-| path          | String  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
-| readOnly      | Boolean | This property is True if the attribute is of type calculated or alias.                                                                                      |
-| defaultFormat | Object  | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+| Property      | 型      | 説明                                                                                                                                                          |
+| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | String | Attribute name.                                                                                                                                             |
+| kind          | String | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
+| scope         | String | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
+| indexed       | String | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
+| type          | String | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
+| minLength     | 数値     | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
+| maxLength     | 数値     | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
+| autoComplete  | ブール    | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
+| identifying   | ブール    | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
+| multiLine     | ブール    | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
+| path          | String | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
+| readOnly      | ブール    | This property is True if the attribute is of type calculated or alias.                                                                                      |
+| defaultFormat | オブジェクト | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
 ### Method(s)
 
@@ -234,7 +234,7 @@ Defines the project methods asociated to the dataclass, if any.
 The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
 
 
-### Example
+### 例題
 You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`
