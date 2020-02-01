@@ -3,7 +3,7 @@ id: objectLibrary
 title: Bibliothèques d'objets
 ---
 
-## Overview
+## Aperçu
 
 Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibliothèque d'objets propose une collection d'objets préconfigurés pouvant être utilisés dans vos formulaires par simple copier-coller ou glisser-déposer.
 
