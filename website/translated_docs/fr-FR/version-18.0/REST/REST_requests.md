@@ -5,9 +5,9 @@ original_id: REST_requests
 ---
 
 
-The following structures are supported for REST requests:
+Les structures suivantes sont prises en charge par les requêtes REST :
 
-| URI                              | Resource                                                                    | {Subresource}                                                              | {Querystring}                                                   |
+| URI                              | Ressource                                                                   | {Subresource}                                                              | {Querystring}                                                   |
 | -------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ | [{method}](%7BdataClass%7D.html#dataclassmethod)                |
@@ -24,7 +24,7 @@ The following structures are supported for REST requests:
 
 While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Par exemple:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > You can place all values in quotes in case of ambiguity. For example, in our above example, we could've put the value for the last name in quotes "Jones".
