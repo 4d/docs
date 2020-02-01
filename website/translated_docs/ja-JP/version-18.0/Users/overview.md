@@ -50,7 +50,7 @@ In project databases (.4DProject or .4dz files), 4D users and groups can be conf
 
 
 
-## Toolbox editor
+## ツールボックス
 
 The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 
