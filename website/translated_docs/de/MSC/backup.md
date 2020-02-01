@@ -1,7 +1,7 @@
 ---
 id: backup
 title: Seite Backup
-sidebar_label: Backup Page
+sidebar_label: Seite Backup
 ---
 
 Die Seite Backup des MSC zeigt die Backup-Einstellungen für die Datenbank. Hier können Sie auch ein manuelles Backup starten:
