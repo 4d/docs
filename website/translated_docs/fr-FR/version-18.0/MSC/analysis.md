@@ -1,42 +1,42 @@
 ---
 id: version-18.0-analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: Page Analyse d'activités
+sidebar_label: Page Analyse d'activités
 original_id: analysis
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+La page Analyse d'activités du CSM permet de visualiser le contenu du fichier d’historique courant. Cette fonction est utile pour analyser l’utilisation d’une base de données ou détecter la ou les opération(s) à l’origine d’erreurs ou de dysfonctionnements. Dans le cadre d’une base de données exploitée en client-serveur, elle permet de vérifier les opérations effectuées par chaque poste client.
+> Il est également possible de revenir en arrière parmi les opérations effectuées sur les données de la base. Pour plus d’informations sur ce point, reportez-vous à la section [Page Retour](rollback.md) arrière.
 
-![](assets/en/MSC/MSC_analysis.png)
+![](assets/fr/MSC/MSC_analysis.png)
 
-Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+Chaque opération élémentaire enregistrée dans le fichier d’historique apparaît sous forme d’une ligne. Les colonnes fournissent diverses informations concernant l’opération. Vous pouvez réorganiser les colonnes comme vous le souhaitez en cliquant sur leur en-tête.
 
-This information allows you to identify the source and context of each operation:
+Les informations affichées permettent d’identifier la source et le contexte de chaque opération :
 
 - **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. This column can contain one of the following operations:
-    - Opening of Data File: Opening of a data file.
-    - Closing of Data File: Closing of an open data file.
-    - Creation of a Context: Creation of a process that specifies an execution context.
-    - Closing of a Context: Closing of process.
-    - Addition: Creation and storage of a record.
-    - Adding a BLOB: Storage of a BLOB in a BLOB field.
-    - Deletion: Deletion of a record.
-    - Modification: Modification of a record.
-    - Start of Transaction: Transaction started.
-    - Validation of Transaction: Transaction validated.
-    - Cancellation of Transaction: Transaction cancelled.
+- **Action**: Type of operation performed on the data. Cette colonne peut contenir les opérations suivantes :
+    - Ouverture du fichier de données : ouverture d’un fichier de données.
+    - Fermeture du fichier de données : fermeture du fichier de données ouvert.
+    - Création d’un contexte : création d’un process définissant un contexte d’exécution.
+    - Fermeture d’un contexte : fermeture d’un process.
+    - Ajout : création et stockage d’un enregistrement.
+    - Ajout d’un BLOB : stockage d’un BLOB dans un champ BLOB.
+    - Suppression : suppression d’un enregistrement.
+    - Modification : modification d’un enregistrement.
+    - Début de transaction : transaction démarrée.
+    - Validation de transaction : transaction validée.
+    - Annulation de transaction : transaction annulée.
 
 - **Table**: Table to which the added/deleted/modified record or BLOB belongs.
 - **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
+- **Process**: Internal number of process in which the operation was carried out. Taille : taille en octets des données traitées par l’opération.
 - **Size**: Size (in bytes) of data processed by the operation.
 - **Date and Hour**: Date and hour when the operation was performed.
 - **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
 - **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed. ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 - **Records**: Record number.
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). The Browse button can be used to select and open another log file for the database. The **Export...** button can be used to export the contents of the file as text.
+Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). Le bouton **Parcourir...** vous permet de sélectionner et d’ouvrir un autre fichier d’historique de la base. The **Export...** button can be used to export the contents of the file as text.
 
 
