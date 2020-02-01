@@ -9,7 +9,7 @@ After creating an entity set by using `$method=entityset`, you can then use it s
 
 ## Available syntaxes
 
-| Syntax                                                                                                     | Example                                                                            | Description                                                  |
+| シンタックス                                                                                                     | 例題                                                                                 | 説明                                                           |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Retrieves an existing entity set                             |
 | [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
@@ -22,7 +22,7 @@ After creating an entity set by using `$method=entityset`, you can then use it s
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 
-### Description
+### 説明
 
 This syntax allows you to execue any operation on a defined entity set.
 
@@ -30,7 +30,7 @@ Because entity sets have a time limit on them (either by default or after callin
 
 When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`](top_$limit.md).
 
-### Example
+### 例題
 
 After you create an entity set, the entity set ID is returned along with the data. You call this ID in the following manner:
 
@@ -41,14 +41,14 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Type   | Description                                                    |
+| Parameter        | 型      | 説明                                                             |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | Entity set ID                                                  |
 
 
 
-### Description
+### 説明
 
 After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same datastore class.
 
@@ -56,7 +56,7 @@ You can then create another entity set containing the results from this call by 
 
 Here are the logical operators:
 
-| Operator  | Description                                                                                                                                                |
+| 演算子       | 説明                                                                                                                                                         |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Returns the entities in common to both entity sets                                                                                                         |
 | OR        | Returns the entities in both entity sets                                                                                                                   |
@@ -83,7 +83,7 @@ The syntax is as follows:
 
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
-### Example
+### 例題
 In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
