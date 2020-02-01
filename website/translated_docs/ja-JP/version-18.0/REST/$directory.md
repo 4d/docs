@@ -9,7 +9,7 @@ The directory handles user access through REST requests.
 
 ## Available syntaxes
 
-| Syntax                                                                | Method | Description                                                      |
+| シンタックス                                                                | Method | 説明                                                               |
 | --------------------------------------------------------------------- | ------ | ---------------------------------------------------------------- |
 | [**$directory/currentUser**](#directorycurrentuser)                   | `GET`  | Returns information about the current user                       |
 | [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST` | Indicates if the current user belongs to a specific group        |
@@ -22,17 +22,17 @@ The directory handles user access through REST requests.
 Returns information about the current user
 
 
-### Description
+### 説明
 By calling `$directory/currentUser` after a user has logged in, you can retrieve the following information:
 
-| Property | Type   | Description                                |
+| Property | 型      | 説明                                         |
 | -------- | ------ | ------------------------------------------ |
 | userName | String | Username used to log into the application. |
 | fullName | String | Full name of the user.                     |
 | ID       | String | UUID referencing the user.                 |
 
 
-### Example
+### 例題
  Call `$directory/currentUser` to find out the current user of your application.
 
 `GET  /rest/$directory/currentUser`
@@ -63,12 +63,12 @@ If no user has been logged in, the result is:
 
 Indicates if the current user belongs to a specific GroupID or GroupName.
 
-### Description
+### 説明
 To find out if the currently logged in user belongs to a specific group, use `$directory/currentUserBelongsTo`. You can pass either the group ID (which is the group's UUID reference number) or its name as defined in the datastore directory.
 
 If we want to check to see if the current user is a member of the Sales group, we must pass either *GroupID* or *GroupName* in the `POST`.
 
-### Example
+### 例題
 Below is an example of how to pass either the GroupID or GroupName in the `POST` data.
 
 `POST  /rest/$directory/currentUserBelongsTo`
@@ -104,7 +104,7 @@ Otherwise, it will return:
 
 Opens a REST session on your 4D application and logs in the user.
 
-### Description
+### 説明
 Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
 
 All parameters must be passed in **headers** of a POST method:
@@ -117,7 +117,7 @@ All parameters must be passed in **headers** of a POST method:
 | session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
 
 
-### Example
+### 例題
 
 ```4d
 C_TEXT($response;$body_t)
@@ -156,10 +156,10 @@ Otherwise, the response will be:
 
 Logs out the current user.
 
-### Description
+### 説明
 To log out the current user from your application, use `$directory/logout`.
 
-### Example
+### 例題
 You call `$directory/logout` to log the current user out of the application.
 
 `GET  /rest/$directory/logout`
