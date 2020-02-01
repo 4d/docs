@@ -33,7 +33,7 @@ If we pass the following REST request for our Company datastore class (which has
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Réponse** :
 
 ```
 {
@@ -80,7 +80,7 @@ If we pass the following REST request for our Employee datastore class (which ha
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Réponse** :
 
 ```
 {
