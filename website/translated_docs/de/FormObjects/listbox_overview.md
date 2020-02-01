@@ -615,7 +615,7 @@ Two printing modes are available: **preview mode** - which can be used to print 
 
 Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
 
-### Advanced mode
+### Erweiterter Modus
 
 In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
 
@@ -1063,7 +1063,7 @@ Use "choiceListName" or "choiceListReference" depending on the origin of the lis
 > * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Example:
+Beispiel:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
@@ -1093,7 +1093,7 @@ Regardless of the way the unit list is defined, it can be associated with the fo
 
 The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
-Example:
+Beispiel:
 
 We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
 
@@ -1116,7 +1116,7 @@ If you want to add an ellipsis button [...] to a cell, you just need to pass the
 
 When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
 
-Example:
+Beispiel:
 
 ```4d
 C_OBJECT($ob1)
@@ -1133,7 +1133,7 @@ OB SET($ob;"value";$entry)
 
 The "color" valueType allows you to display either a color or a text.
 
-*   If the value is a number, a colored rectangle is drawn inside the cell. Example:
+*   If the value is a number, a colored rectangle is drawn inside the cell. Beispiel:
 
     ````4d
     C_OBJECT($ob4)
@@ -1152,7 +1152,7 @@ The "event" valueType displays a simple button that generates an `On Clicked` ev
 
 Optionally, you can pass a "label" attribute.
 
-Example:
+Beispiel:
 
 ````4d
 C_OBJECT($ob)
