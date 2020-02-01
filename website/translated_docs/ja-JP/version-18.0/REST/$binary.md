@@ -1,12 +1,12 @@
 ---
 id: version-18.0-binary
 title: '$binary'
-original_id: binary
+original_id: バイナリ
 ---
 
 Pass "true" to save the BLOB as a document (must also pass `$expand={blobAttributeName}`)
 
-## Description
+## 説明
 
 `$binary` allows you to save the BLOB as a document.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
 
