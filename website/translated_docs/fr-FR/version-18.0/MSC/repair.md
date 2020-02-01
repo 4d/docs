@@ -1,68 +1,68 @@
 ---
 id: version-18.0-repair
-title: Repair Page
-sidebar_label: Repair Page
+title: Page Réparation
+sidebar_label: Page Réparation
 original_id: repair
 ---
 
-This page is used to repair the data file when it has been damaged. Generally, you will only use these functions at the request of 4D, when anomalies have been detected while opening the database or following a [verification](verify.md).
+Cette page permet de réparer le fichier de données ou le fichier de structure lorsqu’il a été endommagé. Généralement, vous n’utiliserez ces fonctions qu’à la demande de 4D, lorsque des anomalies auront été détectées à l’ouverture de la base ou à la suite d’une [vérification](verify.md).
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
-> Repairing is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode.
-> When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
+**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. Il est important de prendre cela en considération (notamment sous macOS, où les applications 4D apparaissent sous forme de paquet) afin de ne pas augmenter excessivement la taille de l'application. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
+> La réparation n’est disponible qu’en mode maintenance. Si vous tentez d’effectuer cette opération en mode standard, une boîte de dialogue d’alerte vous prévient que la base va être fermée puis relancée en mode maintenance.
+> Lorsque la base est chiffrée, la réparation des données comprend le déchiffrage et le chiffrage et nécessite ainsi la clé de chiffrement de données courante. Si aucune clé de chiffrement valide n'a déjà été fournie, une boite de dialogue s'affiche pour demander pour demander le mot de passe ou la clé de chiffrement (voir Page Chiffrement).
 
-## File overview
+## Fichiers
 
-### Data file to be repaired
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. If you perform a [standard repair](#standard_repair), you must select a data file that is compatible with the open project file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+### Fichier de données à réparer
+Chemin d’accès du fichier de données courant. The **[...]** button can be used to specify another data file. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à réparer. Si vous effectuez une [réparation standard](#standard_repair), vous devez sélectionner un fichier de données compatible avec le fichier de structure ouvert. Si vous effectuez une réparation par [récupération des en-têtes d'enregistrements](#recover-by-record-headers), vous pouvez sélectionner tout fichier de données. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre.
 
-### Original files backup folder
-By default, the original data file will be duplicated before the repair operation. It will be placed in a subfolder named “Replaced files (repairing)” in the database folder. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+### Dossier de sauvegarde
+Par défaut, le fichier de données original sera dupliqué avant réparation. Il sera placé dans un sous-dossier libellé “Replaced files (repairing)” dans le dossier de la base. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
 
-### Repaired files
-4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (database folder by default). The blank file is filled with the recovered data.
+### Fichiers réparés
+4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. Le fichier d’origine est déplacé dans le dossier nommé "\Replaced Files (Repairing) date heure" dont l’emplacement a été défini dans la zone de "Dossier de sauvegarde" (dossier de la base par défaut). Le fichier vide est rempli avec les données récupérées.
 
 
-## Standard repair
+## Réparation standard
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
+La réparation standard permet de réparer des données dans lesquelles seuls quelques enregistrements ou index sont endommagés (les tables d'adresses sont intactes). Les données sont compactées et réparées. A noter que ce type de réparation ne peut être effectué que si le fichier de données et le fichier de structure correspondent.
 
-When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. If so, you can open the database immediately. ![](assets/en/MSC/MSC_RepairOK.png)
+A l’issue de la procédure, la page "Réparation" du CSM est affichée. Un message indique si la réparation a été effectuée avec succès. Dans ce cas, vous pouvez immédiatement ouvrir la base. ![](assets/fr/MSC/MSC_RepairOK.png)
 
-## Recover by record headers
-Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
+## Réparation par en-têtes d'enregistrements
+Cette option de réparation de bas niveau est à utiliser uniquement dans le cas où le fichier de données a été fortement endommagé et une fois que toutes les autres solutions (restitution de sauvegarde, réparation standard) se sont avérées inefficaces.
 
-4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
+Les enregistrements de 4D sont de taille variable : il est donc nécessaire, pour les retrouver, de conserver dans une table spéciale l’endroit où ils sont stockés sur votre disque. Le programme accède donc à l’adresse de l’enregistrement par l’intermédiaire d’un index et d’une table d’adresses. Si seuls des enregistrements ou des index sont endommagés, l’option de réparation standard suffira généralement pour résoudre le problème. C’est lorsque la table d’adresses est touchée qu’il faudra en venir à une récupération plus sophistiquée, puisqu’il faut la reconstituer. Pour réaliser cette opération, le CSM utilise le marqueur qui se trouve en en-tête de chaque enregistrement. Les marqueurs peuvent être comparés à des résumés des enregistrements, comportant l’essentiel de leurs informations, et à partir desquels une reconstitution de la table d’adresses est possible.
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. La récupération par en-têtes ne tient pas compte des éventuelles contraintes d’intégrité. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
+When you click on **Scan and repair...**, 4D performs a complete scan of the data file. A l’issue de cette analyse, le résultat est affiché dans la fenêtre suivante :
 
-![](assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+![](assets/fr/MSC/mscrepair2.png)
+> Si tous les enregistrements et toutes les tables ont été attribués, seule la zone principale est affichée.
 
-The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
+La zone "Enregistrements trouvés dans le fichier de données" comporte deux tableaux synthétisant les informations issues de l’analyse du fichier de données.
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
+- Le premier tableau liste les informations issues de l’analyse du fichier de données. Chaque ligne représente un groupe d’enregistrements récupérables dans le fichier de données :
     - The **Order** column indicates the recovery order for the group of records.
     - The **Count** column indicates the number of the records in the table.
-    - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
-    - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
+    - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. Les noms des tables attribuées automatiquement sont affichés en caractères verts. Les groupes qui n'ont pas encore été attribués, c'est-à-dire, les tables qui n'ont pas pu être associées à des enregistrements sont affichées en caractères rouges.
+    - The **Recover** column lets you indicate, for each group, whether you want to recover the records. Par défaut, l’option est cochée pour tous les groupes avec les enregistrements qui peuvent être associés à une table.
 
-- The second table lists the tables of the project file.
+- Le deuxième tableau liste les tables du fichier de structure.
 
 
-### Manual assigning
-If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
+### Attribution manuelle
+Si, du fait de l’endommagement de la table d’adresses, un ou plusieurs groupes d’enregistrements n’ont pas pu être attribués à des tables, vous pouvez les attribuer manuellement. Pour attribuer une table à un groupe non identifié, sélectionnez le groupe dans le premier tableau. Lorsque vous sélectionnez des enregistrements non identifiés, la zone "Contenu des enregistrements" affiche une prévisualisation du contenu des premiers enregistrements du groupe afin de vous permettre de les attribuer plus facilement :
 
 ![](assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Vous pouvez également attribuer une table par glisser-déposer. Le groupe d’enregistrements est alors associé à la table, il sera récupéré dans cette table. Les noms des tables attribuées manuellement sont affichés en caractères noirs. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
 
-## Open log file
+## Voir le compte rendu
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Une fois la réparation terminée, 4D génère un fichier de compte-rendu dans le dossier Logs de la base. Ce fichier liste l’ensemble des opérations qui ont été menées. Il est créé au format xml et est nommé *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" où :
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
