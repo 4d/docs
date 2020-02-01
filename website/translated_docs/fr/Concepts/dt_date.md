@@ -22,27 +22,27 @@ Une date nulle s’écrit *!00-00-00!*.
 
 **Astuce :** L'éditeur de méthodes dispose d'un raccourci pour entrer une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
 
-**Notes:**
+**Notes :**
 
 - Pour des raisons de compatibilité, 4D accepte que l'année soit saisie sur deux chiffres. Dans ce cas, le programme considère qu’elle appartient au XXe ou au XXIe siècle selon qu'elle est supérieure ou inférieure à 30, sauf si ce fonctionnement par défaut a été modifié à l'aide de la commande ```SIECLE PAR DEFAUT``` 
 - Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le format de date défini dans votre système. Généralement dans un environnement français, une date est saisie sous la forme jour/mois/année, une barre oblique "/" séparant les valeurs.
 
 ## Opérateurs sur les dates
 
-| Operation                | Syntax           | Returns | Expression                  | Value        |
-| ------------------------ | ---------------- | ------- | --------------------------- | ------------ |
-| Différence               | Date - Date      | Nombre  | !2017-01-20! - !2017-01-01! | 19           |
-| Addition                 | Date + Numérique | Date    | !2017-01-20! + 9            | !2017-01-29! |
-| Soustraction             | Date - Numérique | Date    | !2017-01-20! - 9            | !2017-01-11! |
-| Equality                 | Date = Date      | Boolean | !2017-01-01! =!2017-01-01!  | True         |
-|                          |                  |         | !2017-01-20! = !2017-01-01! | False        |
-| Inequality               | Date # Date      | Boolean | !2017-01-20! # !2017-01-01! | True         |
-|                          |                  |         | !2017-01-20! # !2017-01-20! | False        |
-| Greater than             | Date > Date      | Boolean | !2017-01-20! > !2017-01-01! | True         |
-|                          |                  |         | !2017-01-20! > !2017-01-20! | False        |
-| Less than                | Date < Date      | Boolean | !2017-01-01! < !2017-01-20! | True         |
-|                          |                  |         | !2017-01-20! < !2017-01-20! | False        |
-| Greater than or equal to | Date >= Date     | Boolean | !2017-01-20! >=!2017-01-01! | True         |
-|                          |                  |         | !2017-01-01!>=!2017-01-20!  | False        |
-| Less than or equal to    | Date <= Date     | Boolean | !2017-01-01!<=!2017-01-20!  | True         |
-|                          |                  |         | !2017-01-20!<=!2017-01-01!  | False        |
+| Opération           | Syntaxe          | Retourne | Expression                  | Valeur       |
+| ------------------- | ---------------- | -------- | --------------------------- | ------------ |
+| Différence          | Date - Date      | Nombre   | !2017-01-20! - !2017-01-01! | 19           |
+| Addition            | Date + Numérique | Date     | !2017-01-20! + 9            | !2017-01-29! |
+| Soustraction        | Date - Numérique | Date     | !2017-01-20! - 9            | !2017-01-11! |
+| Egalité             | Date = Date      | Booléen  | !2017-01-01! =!2017-01-01!  | True         |
+|                     |                  |          | !2017-01-20! = !2017-01-01! | False        |
+| Inégalité           | Date # Date      | Booléen  | !2017-01-20! # !2017-01-01! | True         |
+|                     |                  |          | !2017-01-20! # !2017-01-20! | False        |
+| Supérieur à         | Date > Date      | Booléen  | !2017-01-20! > !2017-01-01! | True         |
+|                     |                  |          | !2017-01-20! > !2017-01-20! | False        |
+| Inférieur à         | Date < Date      | Booléen  | !2017-01-01! < !2017-01-20! | True         |
+|                     |                  |          | !2017-01-20! < !2017-01-20! | False        |
+| Supérieur ou égal à | Date >= Date     | Booléen  | !2017-01-20! >=!2017-01-01! | True         |
+|                     |                  |          | !2017-01-01!>=!2017-01-20!  | False        |
+| Inférieur ou égal à | Date <= Date     | Booléen  | !2017-01-01!<=!2017-01-20!  | True         |
+|                     |                  |          | !2017-01-20!<=!2017-01-01!  | False        |
