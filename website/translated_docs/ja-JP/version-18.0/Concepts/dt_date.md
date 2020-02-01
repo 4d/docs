@@ -1,6 +1,6 @@
 ---
 id: version-18.0-date
-title: Date
+title: 日付
 original_id: date
 ---
 
@@ -30,20 +30,20 @@ A null date is specified by _!00-00-00!_.
 
 ## Date operators
 
-| Operation                | Syntax        | Returns | Expression                  | Value        |
-| ------------------------ | ------------- | ------- | --------------------------- | ------------ |
-| Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
-| Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
-| Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | True         |
-|                          |               |         | !2017-01-20! = !2017-01-01! | False        |
-| Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | True         |
-|                          |               |         | !2017-01-20! # !2017-01-20! | False        |
-| Greater than             | Date > Date   | Boolean | !2017-01-20! > !2017-01-01! | True         |
-|                          |               |         | !2017-01-20! > !2017-01-20! | False        |
-| Less than                | Date < Date   | Boolean | !2017-01-01! < !2017-01-20! | True         |
-|                          |               |         | !2017-01-20! < !2017-01-20! | False        |
-| Greater than or equal to | Date >= Date  | Boolean | !2017-01-20! >=!2017-01-01! | True         |
-|                          |               |         | !2017-01-01!>=!2017-01-20!  | False        |
-| Less than or equal to    | Date <= Date  | Boolean | !2017-01-01!<=!2017-01-20!  | True         |
-|                          |               |         | !2017-01-20!<=!2017-01-01!  | False        |
+| 演算子                      | シンタックス        | 戻り値 | 式                           | 結果           |
+| ------------------------ | ------------- | --- | --------------------------- | ------------ |
+| Date difference          | Date – Date   | 数値  | !2017-01-20! - !2017-01-01! | 19           |
+| Day addition             | Date + Number | 日付  | !2017-01-20! + 9            | !2017-01-29! |
+| Day subtraction          | Date – Number | 日付  | !2017-01-20! - 9            | !2017-01-11! |
+| Equality                 | Date = Date   | ブール | !2017-01-01! =!2017-01-01!  | True         |
+|                          |               |     | !2017-01-20! = !2017-01-01! | False        |
+| Inequality               | Date # Date   | ブール | !2017-01-20! # !2017-01-01! | True         |
+|                          |               |     | !2017-01-20! # !2017-01-20! | False        |
+| Greater than             | Date > Date   | ブール | !2017-01-20! > !2017-01-01! | True         |
+|                          |               |     | !2017-01-20! > !2017-01-20! | False        |
+| Less than                | Date < Date   | ブール | !2017-01-01! < !2017-01-20! | True         |
+|                          |               |     | !2017-01-20! < !2017-01-20! | False        |
+| Greater than or equal to | Date >= Date  | ブール | !2017-01-20! >=!2017-01-01! | True         |
+|                          |               |     | !2017-01-01!>=!2017-01-20!  | False        |
+| Less than or equal to    | Date <= Date  | ブール | !2017-01-01!<=!2017-01-20!  | True         |
+|                          |               |     | !2017-01-20!<=!2017-01-01!  | False        |
