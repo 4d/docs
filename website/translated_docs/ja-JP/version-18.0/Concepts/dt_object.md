@@ -1,6 +1,6 @@
 ---
 id: version-18.0-object
-title: Object
+title: オブジェクト
 original_id: object
 ---
 
@@ -10,9 +10,9 @@ Variables, fields or expressions of the Object type can contain various types of
 
 - A property value can be of the following type:
     - number (Real, Integer, etc.)
-    - text
+    - テキスト
     - null
-    - Boolean
+    - ブール
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - object (objects can be nested on several levels)
@@ -35,7 +35,7 @@ Each property value accessed through the object notation is considered an expres
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
-Example:
+例:
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -57,14 +57,14 @@ With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+例:
 ```4d
      employee.name:="Smith"
 ```
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+例:
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -73,13 +73,13 @@ Examples:
 
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトあるいはコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した記号を受け入れることができます:
 ```4d
  $vAge:=employee.children[2].age
 ```
 Object notation is available on any language element that can contains or returns an object, i.e:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). 例:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -88,13 +88,13 @@ Object notation is available on any language element that can contains or return
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. 例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. 例:
 
 ```4d
       // MyMethod1
@@ -122,7 +122,7 @@ Using object notation with pointers is very similar to using object notation dir
 - Access by name:
 > pointerOnObject->["propertyName"]
 
-Example:
+例:
 
 ```4d
  C_OBJECT(vObj)
@@ -205,7 +205,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Assigning an undefined value to a non existing object property does nothing.
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. たとえば:
 
 ```4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
