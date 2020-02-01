@@ -21,7 +21,7 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "4D ランゲージについて"
       },
       "Concepts/arrays": {
         "title": "Arrays"
@@ -36,19 +36,19 @@
         "title": "Components"
       },
       "Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "データタイプの概要"
       },
       "Concepts/blob": {
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "ブール"
       },
       "Concepts/collection": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "日付"
       },
       "Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -57,19 +57,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "オブジェクト"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "ポインター"
       },
       "Concepts/string": {
         "title": "String"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "時間"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -96,23 +96,20 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "変数"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
-      },
-      "FormEvents/listbox": {
-        "title": "List Box Events"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -205,7 +202,7 @@
         "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -229,7 +226,7 @@
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Text and Picture"
@@ -265,7 +262,7 @@
         "title": "Tab Controls"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"
@@ -332,19 +329,22 @@
         "sidebar_label": "Verify Page"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "4D プロジェクトのアーキテクチャー"
       },
       "Project/building": {
-        "title": "Building a project package"
+        "title": "プロジェクトパッケージのビルド"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "4D プロジェクトの作成"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "プロジェクトの開発"
       },
       "Project/overview": {
         "title": "Overview"
+      },
+      "Project/pictures": {
+        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -461,7 +461,7 @@
         "title": "Backup Settings"
       },
       "version-18.0/Concepts/version-18.0-about": {
-        "title": "About the 4D Language"
+        "title": "4D ランゲージについて"
       },
       "version-18.0/Concepts/version-18.0-arrays": {
         "title": "Arrays"
@@ -476,19 +476,19 @@
         "title": "Components"
       },
       "version-18.0/Concepts/version-18.0-data-types": {
-        "title": "Data types overview"
+        "title": "データタイプの概要"
       },
       "version-18.0/Concepts/version-18.0-blob": {
         "title": "BLOB"
       },
       "version-18.0/Concepts/version-18.0-boolean": {
-        "title": "Boolean"
+        "title": "ブール"
       },
       "version-18.0/Concepts/version-18.0-collection": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "version-18.0/Concepts/version-18.0-date": {
-        "title": "Date"
+        "title": "日付"
       },
       "version-18.0/Concepts/version-18.0-null-undefined": {
         "title": "Null and Undefined"
@@ -497,19 +497,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "version-18.0/Concepts/version-18.0-object": {
-        "title": "Object"
+        "title": "オブジェクト"
       },
       "version-18.0/Concepts/version-18.0-picture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "version-18.0/Concepts/version-18.0-pointer": {
-        "title": "Pointer"
+        "title": "ポインター"
       },
       "version-18.0/Concepts/version-18.0-string": {
         "title": "String"
       },
       "version-18.0/Concepts/version-18.0-time": {
-        "title": "Time"
+        "title": "時間"
       },
       "version-18.0/Concepts/version-18.0-variant": {
         "title": "Variant"
@@ -536,14 +536,14 @@
         "title": "Plug-ins"
       },
       "version-18.0/Concepts/version-18.0-quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "version-18.0/Concepts/version-18.0-shared": {
         "title": "Shared objects and collections"
       },
       "version-18.0/Concepts/version-18.0-variables": {
-        "title": "Variables"
+        "title": "変数"
       },
       "version-18.0/FormEditor/version-18.0-stylesheets": {
         "title": "Style sheets"
@@ -642,7 +642,7 @@
         "title": "Objects"
       },
       "version-18.0/FormObjects/version-18.0-propertiesPicture": {
-        "title": "Picture"
+        "title": "ピクチャー"
       },
       "version-18.0/FormObjects/version-18.0-propertiesPlugIns": {
         "title": "Plug-ins"
@@ -666,7 +666,7 @@
         "title": "Subform"
       },
       "version-18.0/FormObjects/version-18.0-propertiesText": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "version-18.0/FormObjects/version-18.0-propertiesTextAndPicture": {
         "title": "Text and Picture"
@@ -702,7 +702,7 @@
         "title": "Tab Controls"
       },
       "version-18.0/FormObjects/version-18.0-text": {
-        "title": "Text"
+        "title": "テキスト"
       },
       "version-18.0/FormObjects/version-18.0-viewProAreaOverview": {
         "title": "4D View Pro area"
@@ -769,16 +769,16 @@
         "sidebar_label": "Verify Page"
       },
       "version-18.0/Project/version-18.0-architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "4D プロジェクトのアーキテクチャー"
       },
       "version-18.0/Project/version-18.0-building": {
-        "title": "Building a project package"
+        "title": "プロジェクトパッケージのビルド"
       },
       "version-18.0/Project/version-18.0-creating": {
-        "title": "Creating a 4D project"
+        "title": "4D プロジェクトの作成"
       },
       "version-18.0/Project/version-18.0-developing": {
-        "title": "Developing a project"
+        "title": "プロジェクトの開発"
       },
       "version-18.0/Project/version-18.0-overview": {
         "title": "Overview"
@@ -868,7 +868,7 @@
         "title": "Getting Server Information"
       },
       "version-18.0/REST/version-18.0-gettingStarted": {
-        "title": "Getting Started"
+        "title": "はじめに"
       },
       "version-18.0/REST/version-18.0-manData": {
         "title": "Manipulating Data"
@@ -905,8 +905,8 @@
     "Developing a Mobile application|no description given": "モバイルアプリの開発",
     "Administration|no description given": "データベース管理",
     "New versions of this project are released every so often.|no description given": "New versions of this project are released every so often.",
-    "Current final version (Feature release or LTS)|no description given": "Current final version (Feature release or LTS)",
-    "This is the version that is configured automatically when you first install this project.|no description given": "This is the version that is configured automatically when you first install this project.",
+    "Current BETA version|no description given": "Current BETA version",
+    "This is the default version displayed when you connect to developer.4d.com/docs.|no description given": "This is the default version displayed when you connect to developer.4d.com/docs.",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"
