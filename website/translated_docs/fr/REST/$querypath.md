@@ -15,12 +15,12 @@ In the steps collection, there is an object with the following properties defini
 
 | Property      | Type       | Description                                                                 |
 | ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
+| description   | Chaine     | Actual query executed or "AND" when there are multiple steps                |
+| time          | Nombre     | Number of milliseconds needed to execute the query                          |
+| recordsfounds | Nombre     | Number of records found                                                     |
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
-## Example
+## Exemple
 
 If you passed the following query:
 
@@ -30,7 +30,7 @@ And no entities were found, the following query path would be returned, if you w
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Réponse** :
 
 ```
 __queryPath: {
