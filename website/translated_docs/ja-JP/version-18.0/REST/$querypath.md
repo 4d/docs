@@ -6,7 +6,7 @@ original_id: querypath
    	
 Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
 
-## Description
+## 説明
 
 `$querypath` returns the query as it was executed by 4D Server. If, for example, a part of the query passed returns no entities, the rest of the query is not executed. The query requested is optimized as you can see in this `$querypath`.
 
@@ -14,14 +14,14 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 In the steps collection, there is an object with the following properties defining the query executed:
 
-| Property      | Type       | Description                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
-| steps         | Collection | An collection with an object defining the subsequent step of the query path |
+| Property      | 型      | 説明                                                                          |
+| ------------- | ------ | --------------------------------------------------------------------------- |
+| description   | String | Actual query executed or "AND" when there are multiple steps                |
+| time          | 数値     | Number of milliseconds needed to execute the query                          |
+| recordsfounds | 数値     | Number of records found                                                     |
+| steps         | コレクション | An collection with an object defining the subsequent step of the query path |
 
-## Example
+## 例題
 
 If you passed the following query:
 
