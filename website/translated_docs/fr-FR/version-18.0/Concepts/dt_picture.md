@@ -1,140 +1,140 @@
 ---
 id: version-18.0-picture
-title: Picture
+title: Image
 original_id: picture
 ---
 
-A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
+Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D ou des commandes de plug-in.
 
-## Native Formats Supported
+## Formats natifs pris en charge
 
-4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+4D intègre une gestion native des images. Cela signifie que les images sont affichées et stockées dans leur format d’origine, sans interprétation dans 4D. Les spécificités des différents formats (ombrages, zones transparentes...) sont conservées en cas de copier-coller et affichées sans altération. Cette prise en charge native est valide pour toutes les images stockées dans 4D : images de la bibliothèque, images collées dans les formulaires en mode Développement, images collées dans les champs ou variables en mode Application, etc.
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
+4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 
-- Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO.
+- Sous Windows, 4D utilise WIC (Windows Imaging Component)
+- Sous macOS, 4D utilise ImageIO.
 
-The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
+Les formats d'image les plus courants sont pris en charge par les deux plates-formes : jpeg, gif, png, tiff, bmp, etc. Sous macOS, le format pdf est également disponible pour l'encodage et le décodage.
 
-The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODE LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
+La liste complète des formats pris en charge varie en fonction du système d’exploitation et des codecs personnalisés installés sur les postes. Pour connaître les codecs disponibles, vous devez utiliser la commande `PICTURE CODE LIST`. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.
 
-**Note:** WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
+**Note:** WIC and ImageIO permit the use of metadata in pictures. Deux commandes, `SET PICTURE METADATA` et `GET PICTURE METADATA`, vous permettent d'en bénéficier dans vos développements.
 
-### Picture Codec IDs
+### Identifiants de codecs d'images
 
-Picture formats recognized by 4D are returned by the `PICTURE CODE LIST` command as picture Codec IDs. They can be returned in the following forms:
+Les formats d'images reconnus par 4D sont retournés par la commande `LISTE CODECS IMAGES` sous forme d'identifiants de codecs d'images. Ces identifiants peuvent être :
 
-- As an extension (for example “.gif”)
-- As a Mime type (for example “image/jpeg”)
+- une extension (par exemple “.gif”)
+- Un type Mime (par exemple “image/jpg”)
 
-The form returned for each format will depend on the way the Codec is recorded at the operating system level. Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODE LIST` command.
+La forme utilisée pour chaque format dépend du mode de déclaration du codec au niveau du système d’exploitation. La plupart des commandes de gestion d'images de 4D attendent un identifiant de codec en paramètre. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODE LIST`.
 
-### Unavailable picture format
+### Format d'image non disponible
 
-A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon. The icon is automatically used wherever the picture is meant to be displayed:
+Une icône spécifique est affichée pour les images stockées dans un format non disponible sur le poste. L'extension du format manquant est inscrite en bas de l'icône. L'icône est automatiquement utilisée partout où l'image doit être affichée :
 
 ![](assets/en/Concepts/missingpict.en.png)
 
-This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for instance, for PDF pictures on Windows, or for old pictures based on PICT.
+Cette icône indique que l'image ne peut être ni affichée ni manipulée localement -- mais elle peut être stockée sans altération pour être affichée sur une autre machine. C'est le cas, par exemple, pour les images PDF sous Windows ou les images au format PICT.
 
-## Picture operators
+## Opérateurs sur les images
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
-| ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | Picture | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | Picture | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | Picture | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
+| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                   |
+| ------------------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Concaténation horizontale | Image1 + Image2 | Image    | Place Image2 à la droite d'Image1                                                                                                                                        |
+| Concaténation verticale   | Image1 / Image2 | Image    | Place Image2 au-dessous d'Image1                                                                                                                                         |
+| Superposition exclusive   | Image1 & Image2 | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
+| Superposition inclusive   | Image1 | Image2 | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Déplacement horizontal    | Image + Nombre  | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
+| Déplacement vertical      | Image / Nombre  | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
+| Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
+| Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
+| Extension verticale       | Image *| Nombre | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
 
 **Notes :**
 
-- In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
-- The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
-- The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
-- Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+- A noter que pour que l'opérateur | puisse être utilisé, Image1 et Image2 doivent être strictement de la même dimension. Si les deux images sont de taille différente, l’opération Image1 | Image2 produit une image vide.
+- La commande `COMBINE PICTURES` permet d'effectuer des superpositions en conservant les caractéristiques de chaque image source dans l'image résultante.
+- Les opérateurs sur les images retournent des images vectorielles si les deux images sont elles aussi vectorielles (rappelez-vous qu'une image imprimée avec le format d'affichage Sur fond est imprimée en tant que bitmap).
+- Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande `TRANSFORM PICTURE`.
+- Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images.
+- 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
 
-### Examples
+### Exemples
 
 In the following examples, all of the pictures are shown using the display format **On Background**.
 
-Here is the picture circle: ![](assets/en/Concepts/Concepts/Circle.en.png)
+Voici l'image cercle : ![](assets/en/Concepts/Concepts/Circle.en.png)
 
-Here is the picture rectangle: ![](assets/en/Concepts/Concepts/rectangle.en.png)
+Voici l'image rectangle : ![](assets/en/Concepts/Concepts/rectangle.en.png)
 
-In the following examples, each expression is followed by its graphical representation.
+Dans les exemples ci-dessous, chaque expression est suivie de sa représentation graphique.
 
-Horizontal concatenation
+Concaténation horizontale
 ```4d
- circle+rectangle //Place the rectangle to the right of the circle
- rectangle+circle //Place the circle to the right of the rectangle
+ cercle+rectangle // Place le rectangle à droite du cercle
+rectangle+cercle // Place le cercle à droite du rectangle
 ```
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
-Vertical concatenation
+Concaténation verticale
 ```4d
  circle/rectangle //Place the rectangle under the circle
  rectangle/circle //Place the circle under the rectangle
 ```
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
-Exclusive superimposition
+Superposition exclusive
 ```4d
-Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
+Pict3:=Pict1 & Pict2 // Superposer Pict2 à Pict1
 ```
 ![](assets/en/Concepts/superimpoExc.fr.png)
 
-Inclusive superimposition
+Superposition inclusive
 ```4d
-Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
+Pict3:=Pict1|Pict2 // Récupérer le masque résultant de la superposition de deux images de même taille
 ```
 ![](assets/en/Concepts/superimpoInc.fr.png)
 
-Horizontal move
+Déplacement horizontal
 ```4d
-rectangle+50 //Move the rectangle 50 pixels to the right
-rectangle-50 //Move the rectangle 50 pixels to the left
+rectangle+50 // Déplace le rectangle 50 pixels vers la droite
+rectangle-50 // Déplace le rectangle 50 pixels vers la gauche
 ```
 ![](assets/en/Concepts/hormove.en.png)
 
-Vertical move
+Déplacement vertical
 
 ```4d
-rectangle/50 //Move the rectangle down by 50 pixels
-rectangle/-20 //Move the rectangle up by 20 pixels
+rectangle/50 // Déplace le rectangle 50 pixels vers le bas
+rectangle/-20 // Déplace le rectangle 20 pixels vers le haut
 ```
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
 
-Resize
+Redimensionnement
 
 ```4d
-rectangle*1.5 //The rectangle becomes 50% bigger
-rectangle*0.5 //The rectangle becomes 50% smaller
+rectangle*1.5 // Augmente la taille du rectangle de 50%
+ rectangle*0.5 // Réduit la taille du rectangle de 50%
 ```
 ![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
 
-Horizontal scaling
+Extension horizontale
 
 ```4d
-circle*+3 //The circle becomes 3 times wider
-circle*+0.25 //The circle's width becomes a quarter of what it was
+cercle*+3 // Multiplie par 3 la largeur du cercle
+ cercle*+0,25 // La largeur du cercle est réduite à un quart de sa taille originale
 ```
 
 ![](assets/en/Concepts/Horscaling.en.png)![](assets/en/Concepts/Horscaling2.en.png)
 
-Vertical scaling
+Extension verticale
 
 ```4d
-circle*|2 //The circle becomes twice as tall
-circle*|0.25 //The circle's height becomes a quarter of what it was
+cercle*/2 // Double la hauteur du cercle
+ cercle*/0.25 // La hauteur du cercle est réduite à un quart de sa taille originale
 ```
 
 ![](assets/en/Concepts/vertscaling.en.png)![](assets/en/Concepts/veticalscaling2.en.png)
