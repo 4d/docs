@@ -1,63 +1,63 @@
 ---
 id: version-18.0-boolean
-title: Boolean
+title: Booléen
 original_id: boolean
 ---
 
-A boolean field, variable or expression can be either TRUE or FALSE.
+Un champ, une variable ou une expression de type booléen peut être soit VRAI soit FAUX.
 
-## Boolean functions
+## Fonctions booléennes
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
+4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
 
-### Example
+### Exemple
 
-This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
+L'exemple suivant retourne Vrai dans la variable monBooléen si l'utilisateur a cliqué sur le bouton monBouton et Faux s'il n'a pas cliqué dessus. . Lorsqu'un bouton reçoit un clic, la variable du bouton prend la valeur 1.
 
 ```4d
- If(myButton=1) ` If the button was clicked
-    myBoolean:=True ` myBoolean is set to True
- Else ` If the button was not clicked,
-    myBoolean:=False ` myBoolean is set to False
+ If(monBouton=1) // Si le bouton a reçu un clic
+    monBooléen:=True// monBooléen prend la valeur True
+ Else // Si le bouton n'a pas reçu de clic,
+    monBooléen:=False //monBooléen prend la valeur False
  End if
 ```
 
-The previous example can be simplified into one line.
+L'exemple ci-dessus peut être simplifié et écrit en une seule ligne .
 
 ```4d
-myBoolean:=(myButton=1)
+monBooléen:=(monBouton=1)
 ```
 
-## Logical operators
+## Opérateurs logiques
 
-4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
+4D supporte deux opérateurs logiques : l'opérateur d'intersection (AND) et l'opérateur de réunion inclusive (OR). Le AND logique retourne TRUE si les deux expressions sont VRAIES. Le OR logique retourne TRUE si au moins une des expressions est VRAIE. Le tableau suivant décrit les opérateurs logiques :
 
-| Operation | Syntax                  | Returns | Expression                   | Value |
-| --------- | ----------------------- | ------- | ---------------------------- | ----- |
-| AND       | Boolean & Boolean       | Boolean | ("A" = "A") & (15 # 3)       | True  |
-|           |                         |         | ("A" = "B") & (15 # 3)       | False |
-|           |                         |         | ("A" = "B") & (15 = 3)       | False |
-| OR        | Boolean  &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3)  | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 # 3) | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 = 3) | False |
+| Opération | Syntaxe           | Retourne | Expression                   | Valeur |
+| --------- | ----------------- | -------- | ---------------------------- | ------ |
+| AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)       | Vrai   |
+|           |                   |          | ("A" = "B") & (15 # 3)       | Faux   |
+|           |                   |          | ("A" = "B") & (15 = 3)       | Faux   |
+| OU        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3)  | Vrai   |
+|           |                   |          | ("A" = "B") &#124;  (15 # 3) | Vrai   |
+|           |                   |          | ("A" = "B") &#124;  (15 = 3) | Faux   |
 
-The following is the truth table for the AND logical operator:
+Voici la "table de vérité" pour l'opérateur logique "AND" :
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
-| True  | True  | True          |
-| True  | False | False         |
-| False | True  | False         |
-| False | False | False         |
+| Vrai  | Vrai  | Vrai          |
+| Vrai  | Faux  | Faux          |
+| Faux  | Vrai  | Faux          |
+| Faux  | Faux  | Faux          |
 
-The following is the truth table for the OR logical operator:
+Voici la "table de vérité" pour l'opérateur logique "OR" :
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
-| True  | True  | True               |
-| True  | False | True               |
-| False | True  | True               |
-| False | False | False              |
+| Vrai  | Vrai  | Vrai               |
+| Vrai  | Faux  | Vrai               |
+| Faux  | Vrai  | Vrai               |
+| Faux  | Faux  | Faux               |
 
 **Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
