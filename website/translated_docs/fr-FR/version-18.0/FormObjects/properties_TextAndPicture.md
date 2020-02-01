@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesTextAndPicture
-title: Text and Picture
+title: Texte et Image
 original_id: propertiesTextAndPicture
 ---
 
@@ -13,9 +13,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name                    | Data Type | Possible Values                                                                                              |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Name                    | Type de données | Possible Values                                                                                              |
+| ----------------------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
+| customBackgroundPicture | string          | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
 #### Objects Supported
@@ -33,9 +33,9 @@ General appearance of the button. The button style also plays a part in the avai
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                                                                                                                                    |
-|:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| Name  | Type de données | Possible Values                                                                                                                                                    |
+|:-----:|:---------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| style |      Texte      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
@@ -52,7 +52,7 @@ This property allows setting the size (in pixels) of the horizontal margins of t
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| With / Without       | Example                                                   |
+| With / Without       | Exemple                                                   |
 | -------------------- | --------------------------------------------------------- |
 | Without margin       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
@@ -60,9 +60,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderX | number    | For use with "custom" style. Minimum: 0 |
+| Name          | Type de données | Possible Values                         |
+| ------------- | --------------- | --------------------------------------- |
+| customBorderX | number          | For use with "custom" style. Minimum: 0 |
 
 #### Objects Supported
 
@@ -79,9 +79,9 @@ Designates the placement of an icon in relation to the form object.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values         |
-| ------------- | --------- | ----------------------- |
-| iconPlacement | string    | "none", "left", "right" |
+| Name          | Type de données | Possible Values         |
+| ------------- | --------------- | ----------------------- |
+| iconPlacement | string          | "none", "left", "right" |
 
 #### Objects Supported
 
@@ -100,9 +100,9 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| customOffset | number    | minimum: 0      |
+| Name         | Type de données | Possible Values |
+| ------------ | --------------- | --------------- |
+| customOffset | number          | minimum: 0      |
 
 #### Objects Supported
 
@@ -128,9 +128,9 @@ The following states are represented:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| iconFrames | number    | minimum: 1      |
+| Name       | Type de données | Possible Values |
+| ---------- | --------------- | --------------- |
+| iconFrames | number          | minimum: 1      |
 
 #### Objects Supported
 
@@ -151,9 +151,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                              |
-| ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
+| Name | Type de données | Possible Values                              |
+| ---- | --------------- | -------------------------------------------- |
+| icon | picture         | Relative or filesystem path in POSIX syntax. |
 
 #### Objects Supported
 
@@ -169,7 +169,7 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Description                                                                                                                                      | Example                                                        |
+| Option       | Description                                                                                                                                      | Exemple                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
@@ -179,9 +179,9 @@ Here are the results using the various options for this property:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                            |
-| ------------- | --------- | ------------------------------------------ |
-| textPlacement | string    | "left", "top", "right", "bottom", "center" |
+| Name          | Type de données | Possible Values                            |
+| ------------- | --------------- | ------------------------------------------ |
+| textPlacement | string          | "left", "top", "right", "bottom", "center" |
 
 #### Objects Supported
 
@@ -201,9 +201,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderY | number    | For use with "custom" style. Minimum: 0 |
+| Name          | Type de données | Possible Values                         |
+| ------------- | --------------- | --------------------------------------- |
+| customBorderY | number          | For use with "custom" style. Minimum: 0 |
 
 #### Objects Supported
 
@@ -243,9 +243,9 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                                                                      |
-|:-------------- | --------- | ---------------------------------------------------------------------------------------------------- |
-| popupPlacement | string    | <li>"none"<li>"linked"<li>"separated" |
+| Name           | Type de données | Possible Values                                                                                      |
+|:-------------- | --------------- | ---------------------------------------------------------------------------------------------------- |
+| popupPlacement | string          | <li>"none"<li>"linked"<li>"separated" |
 
 
 #### Objects Supported
