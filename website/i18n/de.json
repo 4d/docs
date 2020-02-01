@@ -21,7 +21,7 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "Über die 4D Programmiersprache"
       },
       "Concepts/arrays": {
         "title": "Arrays"
@@ -110,9 +110,6 @@
       },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
-      },
-      "FormEvents/listbox": {
-        "title": "List Box Events"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -292,44 +289,44 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Seite Aktivität Analyse",
+        "sidebar_label": "Seite Aktivität Analyse"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Seite Backup",
+        "sidebar_label": "Seite Backup"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Seite Kompakt",
+        "sidebar_label": "Seite Kompakt"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Seite Verschlüsseln",
+        "sidebar_label": "Seite Verschlüsseln"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Seite Information",
+        "sidebar_label": "Seite Information"
       },
       "MSC/overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Seite Reparieren",
+        "sidebar_label": "Seite Reparieren"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Seite Wiederherstellen",
+        "sidebar_label": "Seite Wiederherstellen"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Seite Zurückfahren",
+        "sidebar_label": "Seite Zurückfahren"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Seite Prüfen",
+        "sidebar_label": "Seite Prüfen"
       },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
@@ -345,6 +342,9 @@
       },
       "Project/overview": {
         "title": "Overview"
+      },
+      "Project/pictures": {
+        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -461,7 +461,7 @@
         "title": "Backup Settings"
       },
       "version-18.0/Concepts/version-18.0-about": {
-        "title": "About the 4D Language"
+        "title": "Über die 4D Programmiersprache"
       },
       "version-18.0/Concepts/version-18.0-arrays": {
         "title": "Arrays"
@@ -729,44 +729,44 @@
         "title": "SDI mode on Windows"
       },
       "version-18.0/MSC/version-18.0-analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Seite Aktivität Analyse",
+        "sidebar_label": "Seite Aktivität Analyse"
       },
       "version-18.0/MSC/version-18.0-backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Seite Backup",
+        "sidebar_label": "Seite Backup"
       },
       "version-18.0/MSC/version-18.0-compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Seite Kompakt",
+        "sidebar_label": "Seite Kompakt"
       },
       "version-18.0/MSC/version-18.0-encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Seite Verschlüsseln",
+        "sidebar_label": "Seite Verschlüsseln"
       },
       "version-18.0/MSC/version-18.0-information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Seite Information",
+        "sidebar_label": "Seite Information"
       },
       "version-18.0/MSC/version-18.0-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
       "version-18.0/MSC/version-18.0-repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Seite Reparieren",
+        "sidebar_label": "Seite Reparieren"
       },
       "version-18.0/MSC/version-18.0-restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Seite Wiederherstellen",
+        "sidebar_label": "Seite Wiederherstellen"
       },
       "version-18.0/MSC/version-18.0-rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Seite Zurückfahren",
+        "sidebar_label": "Seite Zurückfahren"
       },
       "version-18.0/MSC/version-18.0-verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Seite Prüfen",
+        "sidebar_label": "Seite Prüfen"
       },
       "version-18.0/Project/version-18.0-architecture": {
         "title": "Architecture of a 4D project"
@@ -905,8 +905,8 @@
     "Developing a Mobile application|no description given": "Developing a Mobile application",
     "Administration|no description given": "Administration",
     "New versions of this project are released every so often.|no description given": "New versions of this project are released every so often.",
-    "Current final version (Feature release or LTS)|no description given": "Current final version (Feature release or LTS)",
-    "This is the version that is configured automatically when you first install this project.|no description given": "This is the version that is configured automatically when you first install this project.",
+    "Current BETA version|no description given": "Current BETA version",
+    "This is the default version displayed when you connect to developer.4d.com/docs.|no description given": "This is the default version displayed when you connect to developer.4d.com/docs.",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
