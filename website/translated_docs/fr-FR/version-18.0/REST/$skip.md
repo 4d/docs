@@ -13,7 +13,7 @@ Starts the entity defined by this number in the collection (*e.g.*, `$skip=10`)
 
 `$skip`  is generally used in conjunction with [`$top/$limit`]($top_$limit.md) to navigate through an entity collection.
 
-## Example
+## Exemple
 
 In the following example, we go to the 20th entity in our entity set:
 
