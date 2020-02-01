@@ -35,7 +35,7 @@ Each property value accessed through the object notation is considered an expres
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
-Example:
+Beispiel:
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -57,7 +57,7 @@ With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+Beispiel:
 ```4d
      employee.name:="Smith"
 ```
@@ -88,13 +88,13 @@ Object notation is available on any language element that can contains or return
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. Beispiel:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. Beispiel:
 
 ```4d
       // MyMethod1
@@ -122,7 +122,7 @@ Using object notation with pointers is very similar to using object notation dir
 - Access by name:
 > pointerOnObject->["propertyName"]
 
-Example:
+Beispiel:
 
 ```4d
  C_OBJECT(vObj)
