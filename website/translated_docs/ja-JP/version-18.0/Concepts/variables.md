@@ -1,6 +1,6 @@
 ---
 id: version-18.0-variables
-title: Variables
+title: 変数
 original_id: variables
 ---
 
@@ -49,7 +49,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. たとえば:
 
 ```4d
 MyNumber:=3
