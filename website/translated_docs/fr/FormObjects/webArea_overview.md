@@ -3,7 +3,7 @@ id: webAreaOverview
 title: Zones Web
 ---
 
-## Overview
+## Aperçu
 
 Les zones Web (Web Areas) peuvent afficher tout type de contenu Web(*) à l’intérieur de vos formulaires : pages HTML au contenu statique ou dynamique, fichiers, images, JavaScript, etc. Le moteur de rendu de la zone Web dépend de la plate-forme d’exécution de l’application et de [l'option de moteur de rendu](properties_WebArea.md#use-embedded-web-rendering-engine) sélectionnée.
 
@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 > Par défaut, 4D opère en UTF-8. Lorsque vous retournez du texte contenant des caractères étendus, tels que des caractères avec des accents, assurez-vous que l'encodage de la page affiché dans la zone Web est déclaré en UTF-8, sinon les caractères risquent de ne pas être retournés correctement. Dans ce cas, ajoutez la ligne suivante dans la page HTML pour déclarer l'encodage : `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1
+#### Exemple 1
 Considérons une méthode projet 4D nommée `today` qui ne reçoit pas de paramètres et qui retourne la date courante dans une chaîne.
 
 Code 4D de la méthode `today` :
@@ -93,7 +93,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Example 2
+#### Exemple 2
 
 La méthode projet 4D `calcSum` reçoit des paramètres (`$1...$n`) et retourne leur somme dans `$0` :
 
