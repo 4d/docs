@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods
+title: Méthodes
 ---
 
 
@@ -120,7 +120,7 @@ $result:=$o.full_name("John";"Smith")
 // équivalent à $result:=fullName("param1";"param2")
 ```
 
-Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. For example:
+Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
 
 ```4d
 //méthode fullName2 
@@ -247,6 +247,6 @@ Outre les **méthodes projets**, 4D prend en charge plusieurs types de méthodes
 | Type                             | Contexte d'appel                                                                                           | Accepte les paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                           | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
-| **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                     | No                     | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
-| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier) | No                     | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
+| **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                     | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
+| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier) | Non                    | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
 | **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                      | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D. Voir la section Méthodes bases                                                                                                                                                      |
