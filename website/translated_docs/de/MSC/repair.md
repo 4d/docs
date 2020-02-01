@@ -1,12 +1,12 @@
 ---
 id: Reparieren
 title: Seite Reparieren
-sidebar_label: Repair Page
+sidebar_label: Seite Reparieren
 ---
 
 Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschädigung. Diese Funktionen verwenden Sie in der Regel nur auf Anforderung von 4D, wenn beim Öffnen der Datenbank Unregelmäßigkeiten auftreten oder nach einer [Überprüfung](verify.md).
 
-**Warnung:** Die Originaldatei wird bei jedem Repariervorgang dupliziert, was den Anwendungsordner vergrößert. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
+**Warnung:** Die Originaldatei wird bei jedem Repariervorgang dupliziert, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
 > Reparieren ist nur im Wartungsmodus verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erscheint eine Meldung, dass die Anwendung geschlossen und im Wartungsmodus geöffnet wird.
 > 
@@ -64,11 +64,11 @@ Ließen sich einige Datensatzgruppen aufgrund einer beschädigten Adresstabelle 
 
 Als nächstes wählen Sie im rechten Bereich "Nicht-zugewiesene Tabellen" die passende Tabelle für die Gruppe aus und klicken auf die Schaltfläche **Tabelle identifizieren**. Sie können eine Tabelle auch per Drag-and-Drop zuweisen. Die Datensatzgruppe wird dann der Tabelle zugewiesen und in dieser Tabelle wiederhergestellt. Die per Hand zugewiesenen Tabellennamen erscheinen in schwarz. Über die Schaltfläche **Datensätze ignorieren** können Sie die manuell ausgeführte Zuweisung zwischen Tabelle und Datensatzgruppe wieder entfernen.
 
-## Open log file
+## Logbuch öffnen
 
-Ist das Reparieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. This file allows you to view all the operations carried out. Es wird im XML-Format erstellt und lautet: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*":
+Ist das Reparieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. Hier können Sie alle ausgeführten Operationen ansehen. Es wird im XML-Format erstellt und lautet: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*":
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
+- *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Klicken Sie auf die Schaltfläche **Logbuch öffnen**, zeigt 4D das neueste Logbuch im standardmäßigen Browser des Rechners.
