@@ -12,7 +12,7 @@ Image version number
 
 The value of the image's version parameter is modified by the server.
 
-## Example
+## Exemple
 
 The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
 
