@@ -14,7 +14,7 @@ If you want to perform a calculation on an attribute, you write the following:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-If you want to pass an Object attribute, you must pass one of its property. For example:
+If you want to pass an Object attribute, you must pass one of its property. Par exemple:
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
@@ -31,13 +31,13 @@ You can use any of the following keywords:
 | sum     | Get the sum on a numerical attribute                                                                                                                                                  |
 
 
-## Example
+## Exemple
 
 If you want to get all the computations for an attribute of type Number, you can write:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
 ````
 {
@@ -55,7 +55,7 @@ If you want to get all the computations for an attribute of type String, you can
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
 ````
 {
@@ -71,7 +71,7 @@ If you want to just get one calculation on an attribute, you can write the follo
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**Réponse** :
 
 `235000`
 

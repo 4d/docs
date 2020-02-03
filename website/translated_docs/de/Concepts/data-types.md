@@ -14,7 +14,7 @@ Although they are usually equivalent, some data types available at the database 
 | [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
 | [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
 | [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `ARRAY INTEGER`              |
+| [Zahl](Concepts/dt_number.md)              | Yes                 | Converted to longint | `ARRAY INTEGER`              |
 | [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
 | [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |

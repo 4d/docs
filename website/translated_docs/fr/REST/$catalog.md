@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Example              | Description                                                                      |
+| Syntaxe                                       | Exemple              | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -31,12 +31,12 @@ Here is a description of the properties returned for each dataclass in your proj
 
 | Property | Type   | Description                                                                       |
 | -------- | ------ | --------------------------------------------------------------------------------- |
-| name     | String | Name of the dataclass.                                                            |
-| uri      | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
+| name     | Chaine | Name of the dataclass.                                                            |
+| uri      | Chaine | A URI allowing you to obtain information about the |dataclass and its attributes. |
+| dataURI  | Chaine | A URI that allows you to view the data in the dataclass.                          |
 
 
-### Example
+### Exemple
 
 `GET  /rest/$catalog`
 
@@ -71,7 +71,7 @@ Calling `$catalog/$all` allows you to receive detailed information about the att
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### Exemple
 
 `GET  /rest/$catalog/$all`
 
@@ -198,10 +198,10 @@ The following properties are returned for an exposed dataclass:
 
 | Property       | Type   | Description                                                                                        |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | String | Name of the dataclass                                                                              |
-| collectionName | String | Collection name of the dataclass                                                                   |
-| scope          | String | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | String | A URI to the data in the dataclass                                                                 |
+| name           | Chaine | Name of the dataclass                                                                              |
+| collectionName | Chaine | Collection name of the dataclass                                                                   |
+| scope          | Chaine | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
+| dataURI        | Chaine | A URI to the data in the dataclass                                                                 |
 
 
 ### Attribute(s)
@@ -210,19 +210,19 @@ Here are the properties for each exposed attribute that are returned:
 
 | Property      | Type    | Description                                                                                                                                                 |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | String  | Attribute name.                                                                                                                                             |
-| kind          | String  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
-| scope         | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed       | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type          | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| minLength     | Number  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
-| maxLength     | Number  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
-| autoComplete  | Boolean | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
-| identifying   | Boolean | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
-| multiLine     | Boolean | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
-| path          | String  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
-| readOnly      | Boolean | This property is True if the attribute is of type calculated or alias.                                                                                      |
-| defaultFormat | Object  | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+| name          | Chaine  | Attribute name.                                                                                                                                             |
+| kind          | Chaine  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
+| scope         | Chaine  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
+| indexed       | Chaine  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
+| type          | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
+| minLength     | Nombre  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
+| maxLength     | Nombre  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
+| autoComplete  | Booléen | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
+| identifying   | Booléen | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
+| multiLine     | Booléen | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
+| path          | Chaine  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
+| readOnly      | Booléen | This property is True if the attribute is of type calculated or alias.                                                                                      |
+| defaultFormat | Objet   | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
 ### Method(s)
 
@@ -233,7 +233,7 @@ Defines the project methods asociated to the dataclass, if any.
 The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
 
 
-### Example
+### Exemple
 You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`

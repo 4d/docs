@@ -44,10 +44,10 @@ Voici la "table de vérité" pour l'opérateur logique "AND" :
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
-| True  | True  | True          |
-| True  | False | False         |
-| False | True  | False         |
-| False | False | False         |
+| Vrai  | True  | True          |
+| Vrai  | Faux  | False         |
+| Faux  | Vrai  | Faux          |
+| Faux  | False | False         |
 
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 

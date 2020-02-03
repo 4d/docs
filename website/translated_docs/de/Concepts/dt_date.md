@@ -22,7 +22,7 @@ A null date is specified by *!00-00-00!*.
 
 **Tip:** The Method Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
 
-**Notes:**
+**Hinweise:**
 
 - For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the ```SET DEFAULT CENTURY``` command.
 - If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.

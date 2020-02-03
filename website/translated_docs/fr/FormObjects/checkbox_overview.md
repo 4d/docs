@@ -165,7 +165,7 @@ Example with states unchecked / checked / highlighted:
 
 The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
 
-The Bevel style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+The Bevel style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Example with states unchecked / checked / highlighted:
 
@@ -194,7 +194,7 @@ Example with states unchecked / checked / highlighted:
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The Rounded Bevel style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+The Rounded Bevel style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Example on macOS:
 
@@ -203,7 +203,7 @@ Example on macOS:
 > on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```4d
     "myCheckBox": {
@@ -225,14 +225,14 @@ Example on macOS:
 
 The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
   ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
 > On Windows, this style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -265,7 +265,7 @@ By default, the OS X Textured style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -286,7 +286,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
  - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
@@ -296,7 +296,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -328,7 +328,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -348,7 +348,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
 
 In macOS and Windows, a check box with the "Disclosure" style appears as a standard disclosure button, usually used to show/hide additional information. When used as a radio button, the button symbol points downwards with value 0 and upwards with value 1.
 
- - *Windows*
+ - *Sous Windows*
 
     ![](assets/en/FormObjects/checkbox_disclosure.png)
 
@@ -357,7 +357,7 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckBox": {
@@ -382,7 +382,7 @@ The Custom check box style accepts a personalized background picture and allows 
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "myCheckbox": {

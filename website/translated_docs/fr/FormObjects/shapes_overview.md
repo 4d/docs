@@ -20,7 +20,7 @@ Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épais
 
 ![](assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```4d
     "myRectangle": {
@@ -91,7 +91,7 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 ![](assets/en/FormObjects/shape_oval.png)
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```4d
     "myOval": {

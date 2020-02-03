@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Gestion des erreurs
 ---
 
 Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dans votre application et à y répondre. 4D fournit un support complet pour la détection et la signalisation des erreurs lors de l'exécution, ainsi que pour l'analyse de leurs conditions.
@@ -16,7 +16,7 @@ La gestion des erreurs répond à deux besoins principaux :
 
 Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
 
-Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. For example:
+Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple:
 
 ```4d
 APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
@@ -61,7 +61,7 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D. 
 
-#### Example
+#### Exemple
 
 Voici un système de gestion des erreurs simple :
 

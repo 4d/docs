@@ -1,7 +1,7 @@
 ---
 id: Zurückfahren
 title: Seite Zurückfahren
-sidebar_label: Rollback Page
+sidebar_label: Seite Zurückfahren
 ---
 
 Auf dieser Seite können Sie auf die Funktion Rollback für die im Logbuch ausgeführten Operationen zugreifen. Sie arbeitet ähnlich wie die Operation Rückgängig auf mehreren Ebenen. Das ist besonders hilfreich, wenn ein Datensatz versehentlich in der Datenbank gelöscht wurde.

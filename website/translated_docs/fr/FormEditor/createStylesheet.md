@@ -137,14 +137,14 @@ Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) 
 
 #### Syntaxes prises en charge
 
-| Syntax                     | Description                                                                                                                 |
+| Syntaxe                    | Description                                                                                                                 |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [attribute]                | les objets ayant un `attribute`                                                                                             |
 | [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                                |
 | [attribute~="valeur"]      | les objets dont la valeur de l'`attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
 | [attribute&#124;="valeur"] | les objets dont l'`attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
-#### Examples
+#### Exemples
 
 Tous les objets ayant l'attribut `borderStyle` auront des lignes violettes :
 
@@ -203,7 +203,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | 4D             | CSS              |
 | -------------- | ---------------- |
 | borderStyle    | border-style     |
-| fill           | background-color |
+| border-style   | background-color |
 | fontFamily     | font-family      |
 | fontSize       | font-size        |
 | fontStyle      | font-style       |
@@ -248,16 +248,16 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 
 **Exemple 1 :**
 
-| Description du formulaire JSON | Style Sheet   | 4D affiche |
-| ------------------------------ | ------------- | ---------- |
-| `"text": "Button",`            | `text: Edit;` | `"Button"` |
+| Description du formulaire JSON | Feuille de style | 4D affiche |
+| ------------------------------ | ---------------- | ---------- |
+| `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
 
 **Exemple 2 :**
 
-| JSON form description | Style Sheet              | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| Description du formulaire JSON | Feuille de style         | 4D affiche |
+| ------------------------------ | ------------------------ | ---------- |
+| `"text": "Button",`            | `text: Edit !important;` | `"Edit"`   |
 
 
 

@@ -150,7 +150,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notes :**
 
 - La commande `Table du formulaire courant` retourne `Nil` lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.
 - SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component database. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
@@ -172,7 +172,7 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 
 Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D de la base matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. Une base externe est une base 4D indépendante de la base 4D principale, mais qui est manipulée depuis la base 4D principale. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
-### Example
+### Exemple
 
 Le code suivant est inclus dans un composant et effectue trois actions élémentaires avec une base de données externe :
 

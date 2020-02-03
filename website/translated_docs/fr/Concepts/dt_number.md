@@ -27,7 +27,7 @@ Une constante littérale numérique s’écrit comme un nombre réel. Voici quel
 
 **Note :** Depuis 4D v15, le séparateur décimal est par défaut le point (.), quelle que soit la langue du système. Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le séparateur défini dans votre système.
 
-Les nombres négatifs s’écrivent précédés du signe moins (-). For example:
+Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 
 ```4d
 -27
@@ -37,27 +37,27 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). For example:
 
 ## Opérateurs sur les nombres
 
-| Operation                | Syntax           | Returns | Expression | Value |
-| ------------------------ | ---------------- | ------- | ---------- | ----- |
-| Addition                 | Nombre + Nombre  | Number  | 2 + 3      | 5     |
-| Subtraction              | Nombre - Nombre  | Number  | 3 – 2      | 1     |
-| Multiplication           | Number * Number  | Number  | 5 * 2      | 10    |
-| Division                 | Number /Number   | Number  | 5 / 2      | 2.5   |
-| Division entière         | Nombre \ Nombre | Number  | 5 \ 2     | 2     |
-| Modulo                   | Nombre % Nombre  | Number  | 5 % 2      | 1     |
-| Exponentiation           | Nombre ^ Nombre  | Number  | 2 ^ 3      | 8     |
-| Egalité                  | Nombre = Nombre  | Boolean | 10 = 10    | True  |
-|                          |                  |         | 10 = 11    | False |
-| Inequality               | Nombre # Nombre  | Boolean | 10 #11     | True  |
-|                          |                  |         | 10 # 10    | False |
-| Greater than             | Nombre > Nombre  | Boolean | 11 > 10    | True  |
-|                          |                  |         | 10 > 11    | False |
-| Less than                | Nombre < Nombre  | Boolean | 10 < 11    | True  |
-|                          |                  |         | 11 < 10    | False |
-| Greater than or equal to | Nombre >= Nombre | Boolean | 11 >= 10   | True  |
-|                          |                  |         | 10 >= 11   | False |
-| Less than or equal to    | Nombre <= Number | Boolean | 10 <= 11   | True  |
-|                          |                  |         | 11 <= 10   | False |
+| Opération           | Syntaxe          | Retourne | Expression | Valeur |
+| ------------------- | ---------------- | -------- | ---------- | ------ |
+| Addition            | Nombre + Nombre  | Nombre   | 2 + 3      | 5      |
+| Soustraction        | Nombre - Nombre  | Nombre   | 3 – 2      | 1      |
+| Multiplication      | Number * Number  | Nombre   | 5 * 2      | 10     |
+| Division            | Number /Number   | Nombre   | 5 / 2      | 2.5    |
+| Division entière    | Nombre \ Nombre | Nombre   | 5 \ 2     | 2      |
+| Modulo              | Nombre % Nombre  | Nombre   | 5 % 2      | 1      |
+| Exponentiation      | Nombre ^ Nombre  | Nombre   | 2 ^ 3      | 8      |
+| Egalité             | Nombre = Nombre  | Booléen  | 10 = 10    | True   |
+|                     |                  |          | 10 = 11    | False  |
+| Inégalité           | Nombre # Nombre  | Booléen  | 10 #11     | True   |
+|                     |                  |          | 10 # 10    | False  |
+| Supérieur à         | Nombre > Nombre  | Booléen  | 11 > 10    | True   |
+|                     |                  |          | 10 > 11    | False  |
+| Inférieur à         | Nombre < Nombre  | Booléen  | 10 < 11    | True   |
+|                     |                  |          | 11 < 10    | False  |
+| Supérieur ou égal à | Nombre >= Nombre | Booléen  | 11 >= 10   | True   |
+|                     |                  |          | 10 >= 11   | False  |
+| Inférieur ou égal à | Nombre <= Number | Booléen  | 10 <= 11   | True   |
+|                     |                  |          | 11 <= 10   | False  |
 
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
 

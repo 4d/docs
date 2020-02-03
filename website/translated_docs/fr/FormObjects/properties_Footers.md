@@ -10,9 +10,9 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| showFooters | boolean   | true, false     |
+| Name        | Type de données | Possible Values |
+| ----------- | --------------- | --------------- |
+| showFooters | boolean         | true, false     |
 
 #### Objects Supported
 
@@ -42,7 +42,7 @@ Note that converting back and forth may lead to an end result that is different 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
 
-#### JSON Example:
+#### Exemple JSON :
 
 ```
     "List Box": {
@@ -56,9 +56,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values               |
-| ------------ | --------- | ----------------------------- |
-| footerHeight | string    | positive decimal+px &#124; em |
+| Name         | Type de données | Possible Values               |
+| ------------ | --------------- | ----------------------------- |
+| footerHeight | string          | positive decimal+px &#124; em |
 
 #### Objects Supported
 

@@ -16,7 +16,7 @@ L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de 
 Après le Super_Utilisateur, le second plus puissant utilisateur est **l’Administrateur**, qui est en général responsable de la gestion du système d’accès et des fonctionnalités d'administration.
 
 L'Administrateur peut :
-- create users and groups,
+- créer des utilisateurs et des groupes,
 - accéder au moniteur et à la fenêtre d'administration de 4D Server
 - accéder à la fenêtre CSM pour gérer les sauvegardes, restitutions ou le serveur.
 
