@@ -58,7 +58,7 @@ Here are the logical operators:
 | Operator  | Description                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Returns the entities in common to both entity sets                                                                                                         |
-| OR        | Returns the entities in both entity sets                                                                                                                   |
+| ODER      | Returns the entities in both entity sets                                                                                                                   |
 | EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
 > The logical operators are not case-sensitive, so you can write "AND" or "and".
@@ -69,7 +69,7 @@ Below is a representation of the logical operators based on two entity sets. The
 
 ![](assets/en/REST/and.png)
 
-**OR**
+**ODER**
 
 ![](assets/en/REST/or.png)
 

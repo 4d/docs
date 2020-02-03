@@ -1,7 +1,7 @@
 ---
 id: Information
 title: Seite Information
-sidebar_label: Information Page
+sidebar_label: Seite Information
 ---
 
 Die Seite “Information” liefert Informationen über die 4D Umgebung und die Systemumgebung, die Dateien der Datenbank und der Anwendung. Über die Registerkarten am oberen Rand können Sie die einzelnen Seiten aufrufen.

@@ -116,7 +116,7 @@ Vous pouvez utiliser toute touche alphanumérique comme raccourci clavier, hormi
 
 Les combinaisons réservées sont décrites dans le tableau suivant :
 
-| Clé (Windows)  | Clé (macOS)        | Operation               |
+| Clé (Windows)  | Clé (macOS)        | Opération               |
 | -------------- | ------------------ | ----------------------- |
 | Ctrl+C         | Commande+C         | Copier                  |
 | Ctrl+Q         | Commande+Q         | Quitter                 |

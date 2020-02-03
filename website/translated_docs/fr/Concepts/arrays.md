@@ -182,7 +182,7 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Pointeur        | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
 | Réel            | (1+nombre d'éléments) * 8                                               |
 | Texte           | (1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2 |
-| Heure           | (1+number of elements) * 4                                              |
+| Heure           | (1+nombre d'éléments) * 4                                               |
 | Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
 
 **Notes :**

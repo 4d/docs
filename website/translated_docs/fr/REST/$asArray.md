@@ -11,7 +11,7 @@ Retourne le résultat d'une requête sous forme de tableau (c'est-à-dire une co
 
 Si vous souhaitez obtenir la réponse sous forme de tableau, il vous suffit d'ajouter `$asArray` à votre requête REST (*ex :*, `$asArray=true`).
 
-## Example
+## Exemple
 Voici un exemple pour obtenir une réponse sous forme de tableau.
 
  `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`

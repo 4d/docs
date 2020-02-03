@@ -6,34 +6,34 @@
     "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Sauvegarde"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "Fichier d'historique (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "Restitution"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "Paramètres de sauvegarde"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "À propos du Langage 4D"
       },
       "Concepts/arrays": {
-        "title": "Arrays"
+        "title": "Tableaux"
       },
       "Concepts/branching": {
-        "title": "Branching structures"
+        "title": "Structures conditionnelles"
       },
       "Concepts/looping": {
-        "title": "Looping structures"
+        "title": "Structures répétitives (ou \"boucles\")"
       },
       "Concepts/components": {
-        "title": "Components"
+        "title": "Composants"
       },
       "Concepts/data-types": {
         "title": "Types de données"
@@ -42,7 +42,7 @@
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "Booléen"
       },
       "Concepts/collection": {
         "title": "Collection"
@@ -51,74 +51,71 @@
         "title": "Date"
       },
       "Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null et Indefinie"
       },
       "Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "Numérique (Réel, Entier, Entier long)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "Objet"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "Image"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "Pointeur"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "Chaine"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "Heure"
       },
       "Concepts/variant": {
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Gestion des erreurs"
       },
       "Concepts/control-flow": {
         "title": "Conditions et boucles"
       },
       "Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "Identifiants"
       },
       "Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "Modes interprété et compilé"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "Méthodes"
       },
       "Concepts/parameters": {
-        "title": "Parameters"
+        "title": "Paramètres"
       },
       "Concepts/plug-ins": {
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "Tour d'horizon",
+        "sidebar_label": "Tour d'horizon"
       },
       "Concepts/shared": {
-        "title": "Shared objects and collections"
+        "title": "Objets et collections partagés"
       },
       "Concepts/variables": {
         "title": "Variables"
       },
       "FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "Feuilles de style (style sheets)"
       },
       "FormEditor/objectLibrary": {
-        "title": "Object libraries"
-      },
-      "FormEvents/listbox": {
-        "title": "List Box Events"
+        "title": "Bibliothèques d'objets"
       },
       "FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "Bouton"
       },
       "FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "Grille de boutons"
       },
       "FormObjects/checkboxOverview": {
         "title": "Case à cocher"
@@ -205,7 +202,7 @@
         "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "Image"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -229,7 +226,7 @@
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "Texte"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Texte et Image"
@@ -244,7 +241,7 @@
         "title": "Règle"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "Formes"
       },
       "FormObjects/spinner": {
         "title": "Spinner"
@@ -265,86 +262,89 @@
         "title": "Tab Controls"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "Texte"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "Barres de menus"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "Créer des menus et des barres de menus"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "Propriétés des menus"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Mode SDI sous Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Aperçu",
+        "sidebar_label": "Aperçu"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Page Réparation",
+        "sidebar_label": "Page Réparation"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Page restitution",
+        "sidebar_label": "Page restitution"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Page Retour en arrière",
+        "sidebar_label": "Page Retour en arrière"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Page Vérification",
+        "sidebar_label": "Page Vérification"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Architecture d'un projet 4D"
       },
       "Project/building": {
-        "title": "Building a project package"
+        "title": "Générer un package projet"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "Créer un projet 4D"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "Développer un projet"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Aperçu"
+      },
+      "Project/pictures": {
+        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -443,46 +443,46 @@
         "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "version-18.0/Backup/version-18.0-backup": {
-        "title": "Backup"
+        "title": "Sauvegarde"
       },
       "version-18.0/Backup/version-18.0-log": {
-        "title": "Log file (.journal)"
+        "title": "Fichier d'historique (.journal)"
       },
       "version-18.0/Backup/version-18.0-overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "version-18.0/Backup/version-18.0-restore": {
-        "title": "Restore"
+        "title": "Restitution"
       },
       "version-18.0/Backup/version-18.0-settings": {
-        "title": "Backup Settings"
+        "title": "Paramètres de sauvegarde"
       },
       "version-18.0/Concepts/version-18.0-about": {
-        "title": "About the 4D Language"
+        "title": "À propos du Langage 4D"
       },
       "version-18.0/Concepts/version-18.0-arrays": {
-        "title": "Arrays"
+        "title": "Tableaux"
       },
       "version-18.0/Concepts/version-18.0-branching": {
-        "title": "Branching structures"
+        "title": "Structures conditionnelles"
       },
       "version-18.0/Concepts/version-18.0-looping": {
-        "title": "Looping structures"
+        "title": "Structures répétitives (ou \"boucles\")"
       },
       "version-18.0/Concepts/version-18.0-components": {
-        "title": "Components"
+        "title": "Composants"
       },
       "version-18.0/Concepts/version-18.0-data-types": {
-        "title": "Data types overview"
+        "title": "Types de données"
       },
       "version-18.0/Concepts/version-18.0-blob": {
         "title": "BLOB"
       },
       "version-18.0/Concepts/version-18.0-boolean": {
-        "title": "Boolean"
+        "title": "Booléen"
       },
       "version-18.0/Concepts/version-18.0-collection": {
         "title": "Collection"
@@ -491,74 +491,74 @@
         "title": "Date"
       },
       "version-18.0/Concepts/version-18.0-null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null et Indefinie"
       },
       "version-18.0/Concepts/version-18.0-number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "Numérique (Réel, Entier, Entier long)"
       },
       "version-18.0/Concepts/version-18.0-object": {
-        "title": "Object"
+        "title": "Objet"
       },
       "version-18.0/Concepts/version-18.0-picture": {
-        "title": "Picture"
+        "title": "Image"
       },
       "version-18.0/Concepts/version-18.0-pointer": {
-        "title": "Pointer"
+        "title": "Pointeur"
       },
       "version-18.0/Concepts/version-18.0-string": {
-        "title": "String"
+        "title": "Chaine"
       },
       "version-18.0/Concepts/version-18.0-time": {
-        "title": "Time"
+        "title": "Heure"
       },
       "version-18.0/Concepts/version-18.0-variant": {
         "title": "Variant"
       },
       "version-18.0/Concepts/version-18.0-error-handling": {
-        "title": "Error handling"
+        "title": "Gestion des erreurs"
       },
       "version-18.0/Concepts/version-18.0-control-flow": {
-        "title": "Control flow overview"
+        "title": "Conditions et boucles"
       },
       "version-18.0/Concepts/version-18.0-identifiers": {
-        "title": "Identifiers"
+        "title": "Identifiants"
       },
       "version-18.0/Concepts/version-18.0-interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "Modes interprété et compilé"
       },
       "version-18.0/Concepts/version-18.0-methods": {
-        "title": "Methods"
+        "title": "Méthodes"
       },
       "version-18.0/Concepts/version-18.0-parameters": {
-        "title": "Parameters"
+        "title": "Paramètres"
       },
       "version-18.0/Concepts/version-18.0-plug-ins": {
         "title": "Plug-ins"
       },
       "version-18.0/Concepts/version-18.0-quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "Tour d'horizon",
+        "sidebar_label": "Tour d'horizon"
       },
       "version-18.0/Concepts/version-18.0-shared": {
-        "title": "Shared objects and collections"
+        "title": "Objets et collections partagés"
       },
       "version-18.0/Concepts/version-18.0-variables": {
         "title": "Variables"
       },
       "version-18.0/FormEditor/version-18.0-stylesheets": {
-        "title": "Style sheets"
+        "title": "Feuilles de style (style sheets)"
       },
       "version-18.0/FormEditor/version-18.0-objectLibrary": {
-        "title": "Object libraries"
+        "title": "Bibliothèques d'objets"
       },
       "version-18.0/FormObjects/version-18.0-buttonOverview": {
-        "title": "Button"
+        "title": "Bouton"
       },
       "version-18.0/FormObjects/version-18.0-buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "Grille de boutons"
       },
       "version-18.0/FormObjects/version-18.0-checkboxOverview": {
-        "title": "Check Box"
+        "title": "Case à cocher"
       },
       "version-18.0/FormObjects/version-18.0-comboBoxOverview": {
         "title": "Combo Box"
@@ -567,7 +567,7 @@
         "title": "Drop-down List"
       },
       "version-18.0/FormObjects/version-18.0-formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "A propos des objets formulaires 4D"
       },
       "version-18.0/FormObjects/version-18.0-groupBox": {
         "title": "Group Box"
@@ -642,7 +642,7 @@
         "title": "Objects"
       },
       "version-18.0/FormObjects/version-18.0-propertiesPicture": {
-        "title": "Picture"
+        "title": "Image"
       },
       "version-18.0/FormObjects/version-18.0-propertiesPlugIns": {
         "title": "Plug-ins"
@@ -666,31 +666,31 @@
         "title": "Subform"
       },
       "version-18.0/FormObjects/version-18.0-propertiesText": {
-        "title": "Text"
+        "title": "Texte"
       },
       "version-18.0/FormObjects/version-18.0-propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "Texte et Image"
       },
       "version-18.0/FormObjects/version-18.0-propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "version-18.0/FormObjects/version-18.0-radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "Bouton radio"
       },
       "version-18.0/FormObjects/version-18.0-ruler": {
-        "title": "Ruler"
+        "title": "Règle"
       },
       "version-18.0/FormObjects/version-18.0-shapesOverview": {
-        "title": "Shapes"
+        "title": "Formes"
       },
       "version-18.0/FormObjects/version-18.0-spinner": {
         "title": "Spinner"
       },
       "version-18.0/FormObjects/version-18.0-splitters": {
-        "title": "Splitter"
+        "title": "Séparateur"
       },
       "version-18.0/FormObjects/version-18.0-staticPicture": {
-        "title": "Static picture"
+        "title": "Image statique"
       },
       "version-18.0/FormObjects/version-18.0-stepper": {
         "title": "Stepper"
@@ -702,86 +702,86 @@
         "title": "Tab Controls"
       },
       "version-18.0/FormObjects/version-18.0-text": {
-        "title": "Text"
+        "title": "Texte"
       },
       "version-18.0/FormObjects/version-18.0-viewProAreaOverview": {
         "title": "4D View Pro area"
       },
       "version-18.0/FormObjects/version-18.0-webAreaOverview": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "version-18.0/FormObjects/version-18.0-writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
       "version-18.0/Menus/version-18.0-bars": {
-        "title": "Menu bar features"
+        "title": "Barres de menus"
       },
       "version-18.0/Menus/version-18.0-creating": {
-        "title": "Creating menus and menu bars"
+        "title": "Créer des menus et des barres de menus"
       },
       "version-18.0/Menus/version-18.0-overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "version-18.0/Menus/version-18.0-properties": {
-        "title": "Menu item properties"
+        "title": "Propriétés des menus"
       },
       "version-18.0/Menus/version-18.0-sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Mode SDI sous Windows"
       },
       "version-18.0/MSC/version-18.0-analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "version-18.0/MSC/version-18.0-backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "version-18.0/MSC/version-18.0-compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "version-18.0/MSC/version-18.0-encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "version-18.0/MSC/version-18.0-information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "version-18.0/MSC/version-18.0-overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Aperçu",
+        "sidebar_label": "Aperçu"
       },
       "version-18.0/MSC/version-18.0-repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Page Réparation",
+        "sidebar_label": "Page Réparation"
       },
       "version-18.0/MSC/version-18.0-restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Page restitution",
+        "sidebar_label": "Page restitution"
       },
       "version-18.0/MSC/version-18.0-rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Page Retour en arrière",
+        "sidebar_label": "Page Retour en arrière"
       },
       "version-18.0/MSC/version-18.0-verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Page Vérification",
+        "sidebar_label": "Page Vérification"
       },
       "version-18.0/Project/version-18.0-architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Architecture d'un projet 4D"
       },
       "version-18.0/Project/version-18.0-building": {
-        "title": "Building a project package"
+        "title": "Générer un package projet"
       },
       "version-18.0/Project/version-18.0-creating": {
-        "title": "Creating a 4D project"
+        "title": "Créer un projet 4D"
       },
       "version-18.0/Project/version-18.0-developing": {
-        "title": "Developing a project"
+        "title": "Développer un projet"
       },
       "version-18.0/Project/version-18.0-overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       },
       "version-18.0/REST/version-18.0-{dataClass}": {
         "title": "{dataClass}"
@@ -877,10 +877,10 @@
         "title": "About REST Requests"
       },
       "version-18.0/Users/version-18.0-editing": {
-        "title": "Managing 4D users and groups"
+        "title": "Gestion des groupes et utilisateurs 4D"
       },
       "version-18.0/Users/version-18.0-overview": {
-        "title": "Overview"
+        "title": "Aperçu"
       }
     },
     "links": {},
@@ -905,8 +905,8 @@
     "Developing a Mobile application|no description given": "Développer une application mobile",
     "Administration|no description given": "Administration",
     "New versions of this project are released every so often.|no description given": "New versions of this project are released every so often.",
-    "Current final version (Feature release or LTS)|no description given": "Current final version (Feature release or LTS)",
-    "This is the version that is configured automatically when you first install this project.|no description given": "This is the version that is configured automatically when you first install this project.",
+    "Current BETA version|no description given": "Current BETA version",
+    "This is the default version displayed when you connect to developer.4d.com/docs.|no description given": "This is the default version displayed when you connect to developer.4d.com/docs.",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"
