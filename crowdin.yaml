@@ -50,5 +50,5 @@ files:
 
   -
     source: '/website/versioned_docs/**/*.md'
-    translation: '/website/translated_docs/%locale%/**/%original_file_name%'
+    translation: '/website/translated_docs/%two_letters_code%/**/%original_file_name%'
     languages_mapping: *anchor
