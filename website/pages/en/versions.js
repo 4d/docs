@@ -85,7 +85,7 @@ function Versions(props) {
 */}
 
           <h3 id="archive">Current public versions</h3>
-          <p><translate>Documentation of the latest 4D versions.</translate></p>
+          <p><translate>Documentation of the current 4D versions.</translate></p>
           <table className="versions">
             <tbody>
               {versions.map(
