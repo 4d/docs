@@ -445,6 +445,16 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "version-18 R2/FormObjects/version-18 R2-listboxOverview": {
+        "title": "List Box"
+      },
+      "version-18 R2/MSC/version-18 R2-analysis": {
+        "title": "Activity analysis Page",
+        "sidebar_label": "Activity analysis Page"
+      },
+      "version-18 R2/Project/version-18 R2-pictures": {
+        "title": "Pictures"
+      },
       "version-18.0/Backup/version-18.0-backup": {
         "title": "Backup"
       },
@@ -905,8 +915,10 @@
     "Developing a Mobile application|no description given": "Developing a Mobile application",
     "Administration|no description given": "Administration",
     "New versions of this project are released every so often.|no description given": "New versions of this project are released every so often.",
-    "Current BETA version|no description given": "Current BETA version",
+    "Latest version (BETA)|no description given": "Latest version (BETA)",
     "This is the default version displayed when you connect to developer.4d.com/docs.|no description given": "This is the default version displayed when you connect to developer.4d.com/docs.",
+    "Documentation of the latest 4D versions.|no description given": "Documentation of the latest 4D versions.",
+    "You can find past versions of this project on|no description given": "You can find past versions of this project on",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
