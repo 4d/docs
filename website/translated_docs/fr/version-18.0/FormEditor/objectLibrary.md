@@ -46,7 +46,7 @@ A l’aide des bibliothèques d'objets, vous pouvez constituer des fonds d’obj
 
 ### Créer une bibliothèque d’objets
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. Une boîte de dialogue standard d’enregistrement de fichiers apparaît, vous permettant de choisir le nom et l’emplacement de la bibliothèque d’objets.
+Pour créer une bibliothèque d’objets, sélectionnez la commande **Nouveau > Bibliothèque d’objets...** dans le menu **Fichier** ou dans la barre d’outils de 4D. Une boîte de dialogue standard d’enregistrement de fichiers apparaît, vous permettant de choisir le nom et l’emplacement de la bibliothèque d’objets.
 
 Lorsque vous validez la boîte de dialogue, 4D crée sur disque une nouvelle bibliothèque d’objets et affiche sa fenêtre (vide par défaut).
 
@@ -58,7 +58,7 @@ Vous pouvez créer autant de bibliothèques que vous voulez par projet. Une bibl
 
 Une même bibliothèque d’objets ne peut être ouverte que par une seule base à la fois. En revanche, il est possible d’ouvrir plusieurs bibliothèques différentes dans la même base.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la bibliothèque d’objets à ouvrir. Vous pouvez sélectionner les types de fichier suivants :
+Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la commande **Ouvrir>Bibliothèque d’objets...** dans le menu **Fichier** ou la barre d’outils de 4D. Une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la bibliothèque d’objets à ouvrir. Vous pouvez sélectionner les types de fichier suivants :
 - **.4dproject**
 - **.4dz**
 
