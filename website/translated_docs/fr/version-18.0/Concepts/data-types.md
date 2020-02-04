@@ -30,7 +30,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) Le variant n'est pas un type de *données* un type de *variable* qui peut contenir une valeur de n'importe quel autre type.
 
 ## Valeurs par défaut
 
@@ -41,10 +41,10 @@ La valeur par défaut dépend du type et de la catégorie de la variable, du con
 - Les variables process et interprocess sont toujours positionnées "à zéro" (qui signifie selon les cas 0, chaîne vide, blob vide, pointeur nil, date 00-00-00…)
 - Les variables locales sont positionnées :
     - en mode interprété : à zéro
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
+    - en mode compilé, dépendant de l'option **Initialiser les variables locales** des Propriétés de la base :
         - à zéro lorsque "à zéro" est sélectionné,
         - à une valeur arbitraire fixe lorsque "à une valeur aberrante" est sélectionné (0x72677267 pour les numériques et les heures, toujours vrai pour les booléens), équivalent de "à zéro" pour les autres,
-        - à "non" : pas d'initialisation, c'est-à-dire que tout ce qui est dans la RAM est utilisé pour les variables; c'est le cas des valeurs déjà utilisées pour les autres variables. **Note:** 4D recommends to use "to zero".
+        - à "non" : pas d'initialisation, c'est-à-dire que tout ce qui est dans la RAM est utilisé pour les variables; c'est le cas des valeurs déjà utilisées pour les autres variables. **Note :** Il est recommandé d'utiliser "à zéro".
 
 Le tableau suivant illustre ces valeurs par défaut :
 
@@ -82,4 +82,4 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 
 (2) Les valeurs de type Heure peuvent être utilisées en tant que numériques.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Note :** Ce tableau ne traite pas les conversions de données plus complexes obtenues à l'aide d'une combinaison d'opérateurs et d'autres commandes.
