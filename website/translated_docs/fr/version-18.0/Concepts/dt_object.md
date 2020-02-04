@@ -21,9 +21,9 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 (*)Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[objet Image]".
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
+Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Lorsque la notation objet est activée dans votre base (voir ci-dessous), vous pouvez utiliser ces valeurs là où une expression 4D est attendue :
 
@@ -79,7 +79,7 @@ Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une 
 ```
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Voici quelques exemples :
+- avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Voici quelques exemples :
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -88,13 +88,13 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
  $pop:=$aObjCountries{2}.population //tableau d'objets
  $val:=$myCollection[3].subvalue //élément de collection
 ```
-- **4D commands** that return objects. Exemple :
+- avec les **commandes 4D** qui retournent des objets. Exemple :
 
 ```4d
      $measures:=Lire mesures base.DB.tables
 ```
 
-- **Project methods** that return objects. Exemple :
+- avec les **méthodes projet** qui retournent des objets. Exemple :
 
 ```4d
       // MyMethod1
@@ -112,7 +112,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 ### Pointeurs
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
+**Note :** Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
 
 La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole "point" doit être omis.
 
@@ -135,7 +135,7 @@ Exemple :
 
 ### Valeur Null
 
-When using the object notation, the **null** value is supported though the **Null** command. Cette commande peut être utilisée pour affecter ou comparer la valeur null aux propriétés d'objets ou aux éléments de collections, par exemple :
+Lorsque la notation objet est utilisée, la valeur **null** est prise en charge via la commande **Null**. Cette commande peut être utilisée pour affecter ou comparer la valeur null aux propriétés d'objets ou aux éléments de collections, par exemple :
 
 ```4d
  myObject.address.zip:=Null
@@ -158,7 +158,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
   //$val=0
 ```
 
-- Reading the **length** property of an undefined collection produces 0:
+- La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
 
 ```4d
      C_COLLECTION($c) //variable créée mais pas de collection définie
