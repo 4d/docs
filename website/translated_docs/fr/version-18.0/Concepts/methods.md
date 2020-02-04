@@ -7,16 +7,16 @@ original_id: methods
 
 Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Les méthodes intégrées incluent :
+- **Les méthodes intégrées**, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :
     - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`.
     - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
     - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
 
-    Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
+    Les méthodes intégrées sont détaillées dans le manuel *4D Langage* ou dans les manuels consacrés aux plug-ins et aux composants.
 
-- **project methods**, where you can write your own code to execute any custom actions. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Une méthode projet est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions). La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes d’instructions.
+- Les **méthodes projets**, dans lesquelles vous pouvez écrire votre propre code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Une méthode projet est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions). La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes d’instructions.
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. Voir [Méthodes spécialisées](#specialized-methods).
+**Note :** 4D fournit également des méthodes spécifiques exécutées automatiquement en fonction de la base ou des événements formulaires. Voir [Méthodes spécialisées](#specialized-methods).
 
 
 ## Méthodes projet
@@ -77,11 +77,11 @@ Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’es
 
 ### Méthodes associées à des objets
 
-You can encapsulate your project methods in **formula** objects and call them from your objects.
+Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
 Les commandes `Formule` ou `formule sur chaine` vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. Par exemple:
+Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : Par exemple:
 
 ```4d
 //myAlert
@@ -151,12 +151,12 @@ L’automatisation de séquences d’actions est une possibilité très puissant
 
 ### Méthodes de gestion de process
 
-A **process method** is a project method that is called when a process is started. Le process existera tant que la méthode sera en cours d'exécution. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
+Une **méthode projet** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété *Démarrer un nouveau process* est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
 
 ### Méthodes de gestion d’événements et d'erreurs
-An **event catching method** runs in a separate process as the process method for catching events. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR EVENEMENT`.
+Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR EVENEMENT`.
 
-An **error catching method** is an interrupt-based project method. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR ERREUR`.
+Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR ERREUR`.
 
 ## Méthode projet récursives
 
@@ -223,7 +223,7 @@ End if
 
 Vous notez que la méthode `Généalogie de` s'appelle elle-même.
 
-The first way is an **iterative algorithm**. The second way is a **recursive algorithm**.
+La première manière de procéder utilise un **algorithme itératif**. La seconde manière utilise un **algorithme récursif**.
 
 Lorsque vous implémentez du code pour traiter des cas comme celui décrit ci-dessus, vous aurez toujours le choix entre écrire des méthodes utilisant des algorithmes itératifs ou récursifs. Typiquement, la récursivité fournit un code plus concis, plus facile à lire et à maintenir, mais elle est facultative.
 
@@ -232,16 +232,16 @@ Dans 4D, la récursivité est typiquement utilisée pour :
 - Traiter les enregistrements de tables liées les unes aux autres de la même manière que décrit dans l'exemple ci-dessus.
 - Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes `LISTE DES DOSSIERS` et `LISTE DES DOCUMENTS`. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
-**Important:** Recursive calls should always end at some point. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
+**Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
 
 
 ## Méthodes spécialisées
 
-In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
+Outre les **méthodes projets**, 4D prend en charge plusieurs types de méthodes spécifiques, appelées automatiquement en fonction des événements :
 
 | Type                             | Contexte d'appel                                                                                           | Accepte les paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                           | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
 | **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                     | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
-| **Trigger** (aka *Table method*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier) | Non                    | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
+| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier) | Non                    | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
 | **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                      | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D. Voir la section Méthodes bases                                                                                                                                                      |
