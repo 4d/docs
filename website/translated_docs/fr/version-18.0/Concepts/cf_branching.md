@@ -33,7 +33,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  End if
 ```
 
-L'expression n'est TRUE que si les deux méthodes sont TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. Dans ce cas, il est préférable d'utiliser une structure du type :
+L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```4d
  If(MethodA)
@@ -43,7 +43,7 @@ L'expression n'est TRUE que si les deux méthodes sont TRUE. However, even if _M
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
 ### Exemple
 
@@ -57,7 +57,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  End if 
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```4d
  If(Expression_booléenne)
@@ -180,7 +180,7 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
  End case
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 ```4d
  Case of
     :(Expression_booléenne)
