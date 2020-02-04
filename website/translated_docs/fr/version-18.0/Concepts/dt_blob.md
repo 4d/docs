@@ -28,7 +28,7 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
   // Un pointeur vers le BLOB est passé comme paramètre à une de vos méthodes
  COMPUTE BLOB(->touteVarBLOB)
 ```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
 
 ## Assignation
 
