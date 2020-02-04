@@ -8,7 +8,7 @@ original_id: time
 - Les heures sont stockées dans un format de 24 heures.
 - Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
 
 ## Constantes littérales de type heure
 
@@ -26,7 +26,7 @@ Voici quelques exemples de constantes littérales de type heure :
 
 Une heure nulle s’écrit ?00:00:00?
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
+**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour saisir une heure nulle. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
 
 ## Opérateurs sur les heures
 
