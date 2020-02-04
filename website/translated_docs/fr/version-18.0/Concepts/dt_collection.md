@@ -21,7 +21,7 @@ Vous pouvez passer toute expression 4D valide qui retourne un nombre entier posi
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 
 Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection à l'aide de la notation objet :
 
@@ -60,7 +60,7 @@ Vous pouvez créer deux types de collections :
 
 ## Méthodes de collection
 
-4D collection references benefit from special methods (sometimes named *member functions*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
+Les références de collections 4D bénéficient de méthodes spécifiques (souvent appelées *fonctions méthodes* ou *méthodes membres*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
 
 > {$result:=}myCollection.method( {params} )
 
@@ -84,12 +84,12 @@ Certaines méthodes retournent la collection d'origine après modification, de m
 ### paramètre cheminPropriété
 
 
-Several methods accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
+Plusieurs méthodes de collection admettent un _paramètre nommé cheminPropriété_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Attention :** Lorsqu'un paramètre cheminPropriété est attendu, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini
