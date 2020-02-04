@@ -211,4 +211,4 @@ La ligne suivante récupère "Bonjour" à partir de $MaVar et la place dans $Nou
 $NouvelleVar:=($PointeurDeux->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.
