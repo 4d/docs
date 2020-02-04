@@ -32,7 +32,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | \\\                 | \ (Barre oblique inversée) |
 | \\"                  | " (Guillemets)              |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
+**Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
@@ -79,7 +79,7 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 
 ### Le joker (@)
 
-The 4D language supports **@** as a wildcard character. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
 
 ```4d
 "abcdefghij"="abc@"
@@ -125,11 +125,11 @@ L'expression suivante sera correctement évaluée :
 ```4d
 (Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
 ```
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Note :** Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.
 
 ### Mots-clés
 
-A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
+A la différence des autres comparaisons de chaîne, les recherches par mots-clés recherchent des “mots” dans des “textes” : les mots sont évalués individuellement et dans leur globalité. L’opérateur **%** retournera toujours `Faux` si la recherche porte sur plusieurs mots ou une partie de mot (par exemple une syllabe). Les “mots” sont des chaînes de caractères encadrées par des “séparateurs”, qui sont les espaces, les caractères de ponctuation et les tirets. Une apostrophe, comme dans “aujourd'hui”, est généralement considérée comme partie du mot, mais sera ignorée dans certains cas (cf. règles ci-dessous). Les nombres peuvent être recherchés car ils sont évalués dans leur ensemble (incluant les symboles décimaux). Les autres symboles (monnaie, température, etc.) seront ignorés.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Retourne Vrai
@@ -138,7 +138,7 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Alpha,Bravo,Charlie"%"Alpha" // Retourne Vrai
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
+> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
 Les symboles d'indice de chaîne sont les suivants : [[...]]
