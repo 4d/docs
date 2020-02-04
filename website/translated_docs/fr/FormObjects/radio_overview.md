@@ -5,9 +5,9 @@ title: Bouton radio
 
 ## Aperçu
 
-Radio buttons are objects that allow the user to select one of a group of buttons.
+Les boutons radio sont des objets qui permettent à l’utilisateur de sélectionner une valeur parmi un groupe de valeurs.
 
-Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).
+Un bouton radio apparaît sous la forme d’un texte suivi d’un cercle. However, radio buttons can have [various appearances](#button-styles).
 
 ![](assets/en/FormObjects/radio1.png)
 
