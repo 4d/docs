@@ -48,7 +48,7 @@ Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs
 
 Pour ajouter un utilisateur depuis la boite à outils :
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D affiche la fenêtre d’édition des utilisateurs.
+1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs.
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
@@ -93,7 +93,7 @@ Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souha
 
 Pour créer un groupe :
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
+1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
 
 2. Cliquez sur le bouton d’ajout ![](assets/en/Users/PlussNew.png) situé au-dessous de la Liste des groupes. OU Cliquez avec le bouton droit de la souris dans la Liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
