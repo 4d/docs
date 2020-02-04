@@ -19,7 +19,7 @@ Les formats d'image les plus courants sont pris en charge par les deux plates-fo
 
 La liste complète des formats pris en charge varie en fonction du système d’exploitation et des codecs personnalisés installés sur les postes. Pour connaître les codecs disponibles, vous devez utiliser la commande `PICTURE CODE LIST`. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.
 
-**Note:** WIC and ImageIO permit the use of metadata in pictures. Deux commandes, `SET PICTURE METADATA` et `GET PICTURE METADATA`, vous permettent d'en bénéficier dans vos développements.
+**Note :** WIC et ImageIO permettent l’utilisation de métadonnées dans les images. Deux commandes, `SET PICTURE METADATA` et `GET PICTURE METADATA`, vous permettent d'en bénéficier dans vos développements.
 
 ### Identifiants de codecs d'images
 
@@ -59,12 +59,12 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 - Les opérateurs sur les images retournent des images vectorielles si les deux images sont elles aussi vectorielles (rappelez-vous qu'une image imprimée avec le format d'affichage Sur fond est imprimée en tant que bitmap).
 - Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande `TRANSFORM PICTURE`.
 - Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images.
-- 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+- 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
 
 ### Exemples
 
-In the following examples, all of the pictures are shown using the display format **On Background**.
+Toutes les images qui sont affichées utilisent le format d'affichage **Image sur fond**.
 
 Voici l'image cercle : ![](assets/en/Concepts/Concepts/Circle.en.png)
 
