@@ -20,7 +20,7 @@ De plus, les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc
 
 Les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code.
 
-La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. 4D project files are particularly well suited to be managed by a **source control** repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:
+La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. Les fichiers de projet 4D sont particulièrement bien adaptés pour être gérés par un système de **contrôle de version** (Perforce, Git, SVN, etc.), permettant aux équipes de développement de tirer parti de fonctionnalités telles que :
 
 - Versioning
 - Comparaisons de révision
