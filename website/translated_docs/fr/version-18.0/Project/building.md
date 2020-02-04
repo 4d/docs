@@ -13,7 +13,7 @@ Le générateur d'applications vous permet de :
 *   Générer différentes applications à partir de la même base de données compilée via un projet XML,
 *   Générer des applications client-serveur homogènes,
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
-*   Save your build settings for future use (*Save settings* button).
+*   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
 
 
 
@@ -46,7 +46,7 @@ Les clés XML fournissent des options supplémentaires à celles affichées dans
 
 ### Fichier d'historique
 
-When an application is built, 4D generates a log file in the **Logs** folder. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+Lors de la génération d’une application, 4D génère un fichier d'historique dans le dossier **Logs**. Le fichier d'historique stocke les informations suivantes pour chaque génération :
 - Le début et la fin de la génération des cibles,
 - Le nom et le chemin d'accès complet des fichiers générés,
 - La date et l'heure de la génération,
@@ -58,9 +58,9 @@ When an application is built, 4D generates a log file in the **Logs** folder. Le
 
 ![](assets/en/Project/buidappstructureProj.png)
 
-Enter the name of the application in **Application Name**.
+Entrez le nom de l'application dans **Nom de l'application**.
 
-Specify the folder for the built application in **Destination Folder**. If the specified folder does not already exist, 4D will create a *Build* folder for you.
+Spécifiez le dossier de l'application générée dans le**Dossier de destination**. Si le dossier spécifié n'existe pas déjà, 4D vous créera un dossier *Build*.
 
 
 
@@ -75,7 +75,7 @@ Cet onglet vous permet de générer un fichier de structure compilé standard et
 
 Génère une base de données contenant uniquement du code compilé.
 
-This feature creates a *.4dz* file within a *Compiled Database* folder. Si vous avez nommé votre application «MyProject», 4D créera :
+Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database*. Si vous avez nommé votre application «MyProject», 4D créera :
 
 *\<destination\>/Compiled Database/\<nomdelabase>/\MyProject.4dz*
 
