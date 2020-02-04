@@ -4,18 +4,18 @@ title: Modes interprété et compilé
 original_id: interpreted-compiled
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+Les applications 4D fonctionnent en mode **interprété** ou en mode **compilé** :
 
 - En mode interprété, les déclarations sont lues et traduites en langage machine lorsqu'elles sont exécutées. Vous pouvez ajouter ou modifier le code là où vous le souhaitez, l'application se met à jour automatiquement.
 - En mode compilé, toutes les méthodes sont lues et traduites une seule fois, lors de la compilation. Par la suite, l'application contient uniquement des instructions au niveau de l'assemblage, il n'est donc plus possible de modifier le code.
 
 Les avantages procurés par le compilateur sont les suivants :
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Les conflits de logique et de syntaxe sont détectés.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Alors, la base compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Vitesse :** votre base de données s'exécute de 3 à 1000 fois plus vite.
+- **Vérification du code** : la cohérence interne du code de votre application de base de données est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
+- **Protection :** une fois votre base compilée, vous pouvez en supprimer le code interprété. Alors, la base compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
+- **Application indépendantes "double-cliquables" **: une base compilée peut également être transformée en application indépendante (sous Windows, des fichiers ".EXE") comportant sa propre icône.
+- **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif.
 
 ## Différences entre le code interprété et le code compilé
 Bien que l'application fonctionnera de la même manière en modes interprété et compilé, il est important de connaitre les différences que l'on peut rencontrer pendant la saisie du code qui sera compilé. L'interpréteur de 4D est généralement plus souple que le compilateur.
@@ -48,7 +48,7 @@ et ailleurs dans la base, vous écrivez :
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+Dans cet exemple, `MyInt` se voit assigner la même valeur (3) dans les modes interprété et compilé, étant donné que la directive du compilateur est interprétée *avant* la déclaration d'affectation.
 
 L'interpréteur 4D utilise des directives de compilateur pour typer les variables. Lorsque l'interpréteur rencontre une directive de compilateur, il type la variable en fonction de la directive. Si une déclaration ultérieure tente d'affecter une valeur incorrecte (ex : affecter une valeur alphanumérique à une variable numérique), l'affectation n'aura pas lieu et générera une erreur.
 
