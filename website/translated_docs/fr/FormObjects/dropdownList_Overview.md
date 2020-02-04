@@ -16,7 +16,7 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 
 Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Un pop-up/liste déroulante affiche le tableau sous la forme d’une liste de valeurs qui apparaît lorsqu’on clique dessus.
 
-Drop-down list objects are initialized by loading a list of values into an array. Vous pouvez réaliser cette opération de plusieurs manières :
+Les objets pop-up/listes déroulantes peuvent être initialisés par le chargement d’une liste de valeurs dans un tableau. Vous pouvez réaliser cette opération de plusieurs manières :
 
 * Saisir une liste de valeurs par défaut dans les propriétés de l’objet<Static List>Pour cela, dans le thème [Sources de données](properties_DataSource.md) de la Liste des propriétés, sélectionnez "\". Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
@@ -31,7 +31,7 @@ Drop-down list objects are initialized by loading a list of values into an array
   $aCities{5}:="Frostbite Falls" 
   $aCities{6}:="Green Bay" 
 ```
-Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
 *  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Par exemple:
 
