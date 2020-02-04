@@ -14,8 +14,8 @@ Chaque opération élémentaire enregistrée dans le fichier d’historique appa
 
 Les informations affichées permettent d’identifier la source et le contexte de chaque opération :
 
-- **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. Cette colonne peut contenir les opérations suivantes :
+- **Opération** : numéro de séquence de l’opération dans le fichier d’historique.
+- **Action** : type d’opération effectuée. Cette colonne peut contenir les opérations suivantes :
     - Ouverture du fichier de données : ouverture d’un fichier de données.
     - Fermeture du fichier de données : fermeture du fichier de données ouvert.
     - Création d’un contexte : création d’un process définissant un contexte d’exécution.
@@ -28,15 +28,15 @@ Les informations affichées permettent d’identifier la source et le contexte d
     - Validation de transaction : transaction validée.
     - Annulation de transaction : transaction annulée.
 
-- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
-- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. Taille : taille en octets des données traitées par l’opération.
-- **Size**: Size (in bytes) of data processed by the operation.
-- **Date and Hour**: Date and hour when the operation was performed.
-- **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
-- **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed. ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **Table** : table à laquelle appartient l’enregistrement ajouté/supprimé/modifié ou le BLOB.
+- **Clé primaire/BLOB** : contenu de la clé primaire de l'enregistrement (lorsque la clé primaire est composée de plusieurs champs, les valeurs sont séparées par des points-virgules), ou numéro de séquence du BLOB impliqué dans l’opération.
+- **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
+- **Taille** : taille (en octets) des données traitées par l’opération.
+- **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
+- **Utilisateur** : nom de l’utilisateur ayant effectué l’opération. En version client-serveur, il s’agit du nom de la machine du poste client. En version monoposte, il s’agit du nom d’identification de l’utilisateur. Si les mots de passe de 4D ne sont pas activés, cette colonne est vide.
+- **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed. ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
+- **Enregistrements** : Numéro de l’enregistrement.
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). Le bouton **Parcourir...** vous permet de sélectionner et d’ouvrir un autre fichier d’historique de la base. The **Export...** button can be used to export the contents of the file as text.
+Cliquez sur le bouton **Analyser** pour mettre à jour le contenu du fichier d’historique courant de la base sélectionnée (nommé par défaut nomdonnées.journal). Le bouton **Parcourir...** vous permet de sélectionner et d’ouvrir un autre fichier d’historique de la base. Le bouton **Exporter...** vous permet d’exporter le contenu du fichier sous forme de texte.
 
 
