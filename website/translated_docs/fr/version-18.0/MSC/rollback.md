@@ -19,8 +19,8 @@ Pour effectuer un retour en arrière parmi les opérations, vous devez sélectio
 
 ![](assets/en/MSC/MSC_rollback2.png)
 
-Next click on the **Rollback** button. 4D vous demande de confirmer l’opération. If you click **OK**, the data is then restored to the exact state it was in at the moment of the selected action.
+Cliquez ensuite sur le bouton **Revenir en arrière**. 4D vous demande de confirmer l’opération. Si vous cliquez sur **OK**, les données sont alors restituées dans l’état exact où elles se trouvaient au moment de l’action sélectionnée.
 
 Le menu situé en bas de la fenêtre vous permet de sélectionner le fichier d’historique à utiliser lorsque vous appliquez la fonction de retour en arrière à une base restituée. Dans ce cas, vous devez désigner le fichier d’historique correspondant à l’archive.
 
-Here is how the rollback function works: when the user clicks the **Rollback** button, 4D shuts the current database and restores the last backup of the database data. La base restituée est ensuite ouverte et 4D intègre les opérations de l’historique jusqu’à l’opération sélectionnée. Si la base n’avait pas encore été sauvegardée, 4D repart d’un fichier de données vierge.
+Le principe mis en oeuvre pour la fonction de retour arrière est le suivant : lorsque l’utilisateur clique sur le bouton **Revenir en arrière**, 4D referme la base de données courante et restitue la dernière sauvegarde des données de la base. La base restituée est ensuite ouverte et 4D intègre les opérations de l’historique jusqu’à l’opération sélectionnée. Si la base n’avait pas encore été sauvegardée, 4D repart d’un fichier de données vierge.
