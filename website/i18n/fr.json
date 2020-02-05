@@ -455,19 +455,19 @@
       "version-18 R2/Project/version-18 R2-pictures": {
         "title": "Images"
       },
-      "version-18.0/Backup/version-18.0-backup": {
+      "version-18.0-Backup/backup": {
         "title": "Sauvegarde"
       },
-      "version-18.0/Backup/version-18.0-log": {
+      "version-18.0-Backup/log": {
         "title": "Fichier d'historique (.journal)"
       },
-      "version-18.0/Backup/version-18.0-overview": {
+      "version-18.0-Backup/overview": {
         "title": "Aperçu"
       },
-      "version-18.0/Backup/version-18.0-restore": {
+      "version-18.0-Backup/restore": {
         "title": "Restitution"
       },
-      "version-18.0/Backup/version-18.0-settings": {
+      "version-18.0-Backup/settings": {
         "title": "Paramètres de sauvegarde"
       },
       "version-18.0/Concepts/version-18.0-about": {
