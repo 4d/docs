@@ -24,11 +24,11 @@ Returns information about the current user
 
 By calling `$directory/currentUser` after a user has logged in, you can retrieve the following information:
 
-| Property | Type   | Description                                |
-| -------- | ------ | ------------------------------------------ |
-| userName | Chaine | Username used to log into the application. |
-| fullName | Chaine | Full name of the user.                     |
-| ID       | Chaine | UUID referencing the user.                 |
+| Propriété | Type   | Description                                |
+| --------- | ------ | ------------------------------------------ |
+| userName  | Chaine | Username used to log into the application. |
+| fullName  | Chaine | Full name of the user.                     |
+| ID        | Chaine | UUID referencing the user.                 |
 
 
 ### Exemple
