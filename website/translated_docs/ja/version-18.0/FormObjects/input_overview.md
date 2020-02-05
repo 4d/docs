@@ -4,7 +4,7 @@ title: Input
 original_id: inputOverview
 ---
 
-## Overview
+## 概要
 
 Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
 
