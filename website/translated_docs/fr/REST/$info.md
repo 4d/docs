@@ -8,7 +8,7 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 ## Description
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Type    | Description                                                                                    |
+| Propriété      | Type    | Description                                                                                    |
 | -------------- | ------- | ---------------------------------------------------------------------------------------------- |
 | cacheSize      | Nombre  | Wakanda Server's cache size.                                                                   |
 | usedCache      | Nombre  | How much of Wakanda Server's cache has been used.                                              |
@@ -22,7 +22,7 @@ When you call this request for your project, you retrieve information in the fol
 For each entity set currently stored in 4D Server's cache, the following information is returned:
 
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                         |
+| Propriété     | Type    | Description                                                                                                                                                                                                                                                         |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | Chaine  | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | tableName     | Chaine  | Name of the datastore class.                                                                                                                                                                                                                                        |
@@ -39,7 +39,7 @@ For information about how to create an entity set, refer to `$method=entityset`.
 
 For each user session, the following information is returned in the *sessionInfo* array:
 
-| Property   | Type   | Description                                                  |
+| Propriété  | Type   | Description                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | Chaine | A UUID that references the session.                          |
 | userID     | Chaine | A UUID that references the user who runs the session.        |
@@ -52,7 +52,7 @@ For each user session, the following information is returned in the *sessionInfo
 The object in the **jsContextInfo** array details the JavaScript context pool:
 
 
-| Property              | Type    | Description                                                                           |
+| Propriété             | Type    | Description                                                                           |
 | --------------------- | ------- | ------------------------------------------------------------------------------------- |
 | contextPoolSize       | Nombre  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
 | activeDebugger        | Booléen | Debugger state (false by default)                                                     |
