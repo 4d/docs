@@ -4,7 +4,7 @@ title: Style sheets
 original_id: stylesheets
 ---
 
-## Overview
+## 概要
 
 A style sheet groups together a combination of attributes for form objects — from text attributes to nearly any available object attribute.
 
@@ -238,7 +238,7 @@ To override this behavior, the style value must be followed with an `!important`
 
 | JSON form description | Style Sheet              | 4D displays |
 | --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| `"text": "Button",`   | `text: Edit !important;` | `"編集"`      |
 
 
 ### Multiple Style Sheets
