@@ -17,14 +17,14 @@ A backup can be started in three ways:
 
 ### Manual backup
 
-1. Select the **Backup...** command in the 4D **File** menu. The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
+1. Select the **Backup...** command in the 4D **File** menu.  
+    The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings. 
 
-- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
+- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md). 
 
 The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
 
- 2. Click **Backup** to start the backup using current parameters.
-
+2. Click **Backup** to start the backup using current parameters.
 
 ### Scheduled automatic backup
 
@@ -32,11 +32,9 @@ Scheduled backups are started automatically. They are configured in the **Backup
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
-
 ### BACKUP command
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
-
 
 ## Managing the backup processing
 
@@ -65,7 +63,7 @@ It may happen that a backup is not executed properly. There may be several cause
 
 In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**. displayed in the Last Backup Information area of the Backup page in the MSC or in GRAPH SETTINGS of 4D Server, as well as in the Backup journal of the database.
 
-- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method. 
 - **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of database files and accessible attached files) and returns an error.
 - **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
 

@@ -14,14 +14,14 @@ La capacité de se référer à quelque chose sans connaître son identité exac
 
 Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux. Le tableau suivant vous fournit un exemple de chaque type :
 
-| Type        | Référencement           | Référencement            | Affectation              |
-| ----------- | ----------------------- | ------------------------ | ------------------------ |
-| Table       | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| Champ       | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
-| Variable    | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
-| Tableau     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| Elém. tabl. | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Objet       | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Type        | Référencement        | Référencement              | Affectation                |
+| ----------- | -------------------- | -------------------------- | -------------------------- |
+| Table       | vpTble:=->[Table]    | DEFAULT TABLE(vpTble->)    | n/a                        |
+| Champ       | vpChp:=->[Table]Chp  | ALERT(vpChp->)             | vpChp->:="Jean"            |
+| Variable    | vpVar:=->Variable    | ALERT(vpVar->)             | vpVar->:="Jean"            |
+| Tableau     | vpT:=->Tableau       | SORT ARRAY(vpT->;>)        | COPY ARRAY(Tab;vpT->)      |
+| Elém. tabl. | vpElem:=->Tableau{1} | ALERT(vpElem->)            | vpElem->:="Jean"           |
+| Objet       | vpObj:=->monObjet    | ALERT (vpObj->monAttribut) | vpObj->monAttribut:="John" |
 
 
 ## Utiliser des pointeurs : un exemple
@@ -31,37 +31,45 @@ Il est plus facile d’expliquer l’utilisation des pointeurs au travers d’un
 ```4d
 MaVar:="Bonjour"
 ```
+
 MaVar est désormais une variable contenant la chaîne “Bonjour”. Nous pouvons alors créer un pointeur vers MaVar :
 
 ```4d
 C_POINTER($MonPointeur)
 $MonPointeur:=->MaVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MaVar. Ce pointeur est assigné à MonPointeur via l’opérateur d’assignation.
+
+Le symbole -> signifie “pointer vers” (ce symbole est formé du caractère “tiret” (-) suivi du caractère “supérieur à”). Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MaVar. Ce pointeur est assigné à MonPointeur via l’opérateur d’assignation.
 
 $MonPointeur est désormais une variable qui contient un pointeur vers $MaVar. $MonPointeur ne contient pas “Bonjour”, la valeur de $MaVar, mais vous pouvez utiliser $MonPointeur pour obtenir cette valeur. L’expression suivante retourne la valeur de $MaVar :
+
 ```4d
 $MonPointeur->
 ```
 
-Dans ce cas, la chaîne “Bonjour” est retournée. The -> symbol, when it follows a pointer, references the object pointed to. On dit alors qu’on dépointe le pointeur.
+Dans ce cas, la chaîne “Bonjour” est retournée. Lorsque le symbole -> est placé derrière un pointeur, la valeur de l’objet vers lequel pointe le pointeur est récupérée. On dit alors qu’on dépointe le pointeur.
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Bonjour :
+Il est important de comprendre que vous pouvez utiliser un pointeur suivi du symbole -> partout où vous auriez pu utiliser l’objet pointé lui-même. Vous pouvez placer l’expression $MonPointeur-> partout où vous pourriez utiliser la variable originale $MaVar. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Bonjour :
+
 ```4d
 ALERTE($MonPointeur->)
 ```
 
 Vous pouvez également utiliser $MonPointeur pour modifier la valeur de $MaVar. Par exemple, l’instruction suivante stocke la chaîne “Au revoir” dans la variable $MaVar :
+
 ```4d
 $MonPointeur->:="Au revoir"
 ```
-If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :
+
+Si vous examinez les deux utilisations de l’expression $MonPointeur-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MaVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :
 
 ```4d
 ALERT($MonPointeur->)
  ALERT($MaVar)
 ```
+
 Les deux lignes suivantes effectuent la même opération ; elles assignent la chaîne "Au revoir" à $MaVar :
+
 ```4d
 $MonPointeur->:="Au revoir"
 $MaVar:="Au revoir"
@@ -70,6 +78,7 @@ $MaVar:="Au revoir"
 ## Opérateurs sur les pointeurs
 
 Avec :
+
 ```4d
   // vPtrA et vPtrB pointent sur le même objet
  vPtrA:=->unObjet
@@ -85,32 +94,45 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Booléen  | vPtrA # vPtrC | Vrai   |
 |           |                     |          | vPtrA # vPtrB | Faux   |
 
+
 ## Principales utilisations
+
 ### Utiliser des pointeurs vers des tables
+
 Partout où le langage requiert un nom de table, vous pouvez utiliser un pointeur dépointé vers une table. Pour créer un pointeur vers une table, écrivez une instruction du type :
+
 ```4d
 $TablePtr:=->[touteTable]
 ```
+
 Vous pouvez également récupérer un pointeur vers une table à l’aide de la fonction Table. Par exemple :
-```4d  
+
+```4d
 $TablePtr:=Table(20)
 ```
+
 Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :
-```4d  
+
+```4d
 DEFAULT TABLE($TablePtr->)
 ```
+
 ### Utiliser des pointeurs vers des champs
+
 Partout où le langage requiert un nom de champ, vous pouvez utiliser un pointeur dépointé vers un champ. Pour créer un pointeur vers un champ, écrivez une ligne d'instruction du type :
+
 ```4d
 $ChampPtr:=->[uneTable]CeChamp
 ```
 
 Vous pouvez également récupérer un pointeur vers un champ à l’aide de la fonction `Champ`. Par exemple :
+
 ```4d
 $ChampPtr:=Champ(1;2)
 ```
 
 Vous pouvez utiliser le pointeur dépointé dans vos commandes, comme ceci :
+
 ```4d
 OBJECT SET FONT($FieldPtr->;"Arial")
 ```
@@ -120,15 +142,18 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.
 
 Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans Méthode1 :
+
 ```4d
  $MaVar:="Bonjour"
  Méthode2(->$MaVar)
 ```
+
 Dans Méthode2, le débogueur affichera $1 de la façon suivante :
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------ |
-|    |                    |
+| $1 | ->$MaVar (Méthode1) |
+| -- | ------------------- |
+|    |                     |
+
 
 La valeur de $1 sera :
 
@@ -136,35 +161,47 @@ La valeur de $1 sera :
 | ---------------- | --------- |
 |                  |           |
 
+
 ### Utiliser des pointeurs vers des éléments de tableau
+
 Vous pouvez créer un pointeur vers un élément de tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à une variable appelée $ElémPtr un pointeur vers le premier élément :
+
 ```4d
 ARRAY REAL($unTableau;10) // Créer un tableau
  $ElémPtr:=->$unTableau{1} // Créer un pointeur vers l’élément de tableau
 ```
 
 Vous pouvez alors utiliser le pointeur dépointé pour assigner une valeur à l’élément, comme ceci :
+
 ```4d
 $ElémPtr->:=8
 ```
 
 ### Utiliser des pointeurs vers des tableaux
+
 Vous pouvez créer un pointeur vers un tableau. Par exemple, les lignes d'instruction suivantes créent un tableau et assignent à la variable nommée $TabPtr un pointeur vers le tableau :
+
 ```4d
 ARRAY REAL($unTableau;10) // Créer un tableau
 $TabPtr:=->$unTableau // Créer un pointeur vers le tableau
 ```
+
 Il est important de comprendre que ce pointeur pointe vers le tableau, et non vers un élément du tableau. Par exemple, vous pourriez utiliser le pointeur dépointé de la manière suivante :
+
 ```4d
 SORT ARRAY(TabPtr->;>) // Tri du tableau
 ```
+
 Si vous devez vous référer au quatrième élément du tableau à l’aide du pointeur, vous pouvez écrire :
+
 ```4d
  TabPtr->{4}:=84
 ```
 
 ### Passer des pointeurs aux méthodes
-Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `Recoit Deux`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
+
+Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `Recoit Deux`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules. 
+
 ```4d
   // Méthode projet Recoit Deux
   // $1 – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en majuscules.
@@ -174,16 +211,18 @@ Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’in
 ```
 
 L'instruction suivante emploie la méthode `Recoit Deux` pour passer un champ en caractères majuscules et une variable en caractères minuscules :
-```  
-takeTwo(->[MaTable]MonChamp;->$MaVar)
-```
+
+    takeTwo(->[MaTable]MonChamp;->$MaVar)
+    
 
 Si le champ, [MaTable]MonChamp, contenait la chaîne "dupont", celle-ci deviendrait "DUPONT". Si la variable $MaVar contenait la chaîne "BONJOUR", celle-ci deviendrait "bonjour".
 
 Dans la méthode Recoit Deux (et, en fait, à chaque fois que vous utilisez des pointeurs), il est important que les types de données des objets référencés soient corrects. Dans l’exemple précédent, les pointeurs doivent pointer vers des objets contenant une chaîne ou un texte.
 
 ### Pointeurs vers des pointeurs
+
 Si vous aimez compliquer les choses à l'extrême (bien que cela ne soit pas nécessaire dans 4D), vous pouvez utiliser des pointeurs pour référencer d'autres pointeurs. Examinons l’exemple suivant :
+
 ```4d
  $MaVar:="Bonjour"
 $PointeurUn:=->$MaVar
@@ -191,24 +230,26 @@ $PointeurDeux:=->$PointeurUn
 ($PointeurDeux->)->:="Au revoir"
 ALERT(($PointeurDeux->)->)
 ```
+
 Cet exemple affiche une boîte de dialogue d’alerte contenant “Au revoir”.
 
 Voici la description de chaque ligne de l’exemple :
 
-- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Donc, dans ce cas, la valeur "Au revoir" est assignée à la $MaVar.
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MaVar.
+- $MaVar := "Bonjour" --> Cette ligne place simplement la chaîne "Bonjour" dans la variable $MaVar.
+- $PointeurUn := ->$MaVar --> $PointeurUn contient désormais un pointeur vers $MaVar.
+- $PointeurDeux :=->$PointeurUn --> $PointeurDeux (une nouvelle variable) contient un pointeur vers $PointeurUn, qui, elle, pointe vers $MaVar.
+- ($PointeurDeux->)-> := "Au revoir" --> $PointeurDeux-> référence le contenu de $PointeurUn, qui elle-même référence $MaVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Au revoir" est assignée à la $MaVar.
+- ALERTE (($PointeurDeux->)->) --> C'est ici la même chose que précédemment : $PointeurDeux-> référence le contenu de $PointeurUn, qui elle-même référence $MaVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MaVar.
 
 La ligne suivante place la valeur "Bonjour" dans $MaVar :
+
 ```4d
 ($PointeurDeux->)->:="Bonjour"
 ```
 
 La ligne suivante récupère "Bonjour" à partir de $MaVar et la place dans $NouvelleVar :
-```
-$NouvelleVar:=($PointeurDeux->)->
-```
 
-**Important:** Multiple dereferencing requires parentheses.
+    $NouvelleVar:=($PointeurDeux->)->
+    
+
+**Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.

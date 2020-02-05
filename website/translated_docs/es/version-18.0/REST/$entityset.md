@@ -6,7 +6,6 @@ original_id: entityset
 
 After creating an entity set by using `$method=entityset`, you can then use it subsequently.
 
-
 ## Available syntaxes
 
 | Syntax                                                                                                     | Example                                                                            | Description                                                  |
@@ -15,12 +14,9 @@ After creating an entity set by using `$method=entityset`, you can then use it s
 | [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
 
 
-
-
 ## $entityset/{entitySetID}
 
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
-
 
 ### Description
 
@@ -34,8 +30,7 @@ When you retrieve an existing entity set stored in 4D Server's cache, you can al
 
 After you create an entity set, the entity set ID is returned along with the data. You call this ID in the following manner:
 
- `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
-
+`GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
 ## $entityset/{entitySetID}?$operator...&$otherCollection
 
@@ -45,7 +40,6 @@ Create another entity set based on previously created entity sets
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | Entity set ID                                                  |
-
 
 
 ### Description
@@ -62,6 +56,8 @@ Here are the logical operators:
 | OR        | Returns the entities in both entity sets                                                                                                                   |
 | EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
+
+
 > The logical operators are not case-sensitive, so you can write "AND" or "and".
 
 Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
@@ -78,19 +74,19 @@ Below is a representation of the logical operators based on two entity sets. The
 
 ![](assets/en/REST/except.png)
 
-
 The syntax is as follows:
 
- `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
+`GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
 ### Example
+
 In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
 
- `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
+`GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
 If we want to know if the two entity sets intersect, we can write the following:
 
- `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
+`GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
 If there is an intersection, this query returns true. Otherwise, it returns false.
 

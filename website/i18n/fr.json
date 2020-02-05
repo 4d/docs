@@ -190,7 +190,7 @@
         "title": "Headers"
       },
       "FormObjects/propertiesHelp": {
-        "title": "Help"
+        "title": "Aide"
       },
       "FormObjects/propertiesHierarchy": {
         "title": "Hierarchy"
@@ -445,14 +445,14 @@
       "Users/overview": {
         "title": "Aperçu"
       },
-      "version-18 R2/FormObjects/version-18 R2-listboxOverview": {
+      "version-18 R2 BETA/FormObjects/version-18 R2 BETA-listboxOverview": {
         "title": "List Box"
       },
-      "version-18 R2/MSC/version-18 R2-analysis": {
+      "version-18 R2 BETA/MSC/version-18 R2 BETA-analysis": {
         "title": "Page Analyse d'activités",
         "sidebar_label": "Page Analyse d'activités"
       },
-      "version-18 R2/Project/version-18 R2-pictures": {
+      "version-18 R2 BETA/Project/version-18 R2 BETA-pictures": {
         "title": "Images"
       },
       "version-18.0-Backup/backup": {
@@ -640,7 +640,7 @@
         "title": "Headers"
       },
       "version-18.0/FormObjects/version-18.0-propertiesHelp": {
-        "title": "Help"
+        "title": "Aide"
       },
       "version-18.0/FormObjects/version-18.0-propertiesHierarchy": {
         "title": "Hierarchy"

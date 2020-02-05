@@ -7,7 +7,7 @@ original_id: quick-tour
 
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
 
-```4d  
+```4d
 ALERT("Hello, World!")
 ```
 
@@ -16,7 +16,6 @@ Ce code affichera une boîte de dialogue d'alerte standard contenant le message 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
 Vous pouvez également associer ce code à un bouton de formulaire et exécuter le formulaire. Dans ce cas, en cliquant sur le bouton, vous afficherez la boîte de dialogue d'alerte. Dans tous les cas, vous venez d'exécuter votre première ligne de code 4D !
-
 
 ## Assigner des valeurs
 
@@ -33,7 +32,7 @@ $myHour:=?08:12:55? //assigne une heure littérale
 
 Vous devez impérativement distinguer l'opérateur d'affectation := des autres opérateurs. Plutôt que de combiner des expressions dans une nouvelle expression, l'opérateur d'affectation copie la valeur de l'expression à droite de l'opérateur d'affectation dans la variable ou le champ situé à gauche de l'opérateur.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. Un opérateur d'affectation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.
+**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). Un opérateur d'affectation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.
 
 ## Variables
 
@@ -53,7 +52,7 @@ Le programme interprète la ligne comme “MyDate prend la valeur de la date cou
 
 ## Commandes
 
-Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
+Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREATE RECORD` ou `ALERT`, sont décrites dans le *Manuel Langage de 4D*, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :
 
 ```4d
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
@@ -83,6 +82,7 @@ PDF REMOVE PAGE(path;page)
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
+
 4D SVG est inclus dans 4D.
 
 ## Constantes
@@ -95,7 +95,7 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 
 ## Méthodes
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
+4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
 Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
 
@@ -129,7 +129,6 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-
 ## Types de données
 
 De nombreux types de données peuvent être manipulés via le langage 4D. Il existe des types de données élémentaires (chaîne, numérique, date, heure, booléen, image, pointeur, tableau), ainsi que des types de données composites (BLOBs, objets, collections).
@@ -144,7 +143,7 @@ Certains cas nécessitent que vous stockiez des données dans un type et que vou
 [Produits]Matricule:=String(Numéro)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Si *Numéro* vaut 17, *[Produits]Matricule* prendra la valeur “17abc”.
 
 Les types de données sont détaillés dans la section [Types de données](Concepts/data-types.md).
 
@@ -170,11 +169,10 @@ $vAge:=employee.children[2].age
 
 A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-```
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //affiche "Hello world!"
-```
+    $f:=New object
+    $f.message:=New formula(ALERT("Hello world!"))
+    $f.message() //affiche "Hello world!"
+    
 
 Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :
 
@@ -184,8 +182,8 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //accède au 4ème élément de la collection
 ```
 
-
 ## Opérateurs
+
 Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. Par exemple, 1 + 2 utilise l’opérateur d’addition (ou signe plus) pour faire la somme de deux nombres, et le résultat est 3. Le tableau ci-dessous présente quelques opérateurs courants :
 
 | Opérateur | Opération      | Exemple   |
@@ -194,6 +192,7 @@ Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de 
 | –         | Soustraction   | 3 - 2 = 1 |
 | *         | Multiplication | 2 * 3 = 6 |
 | /         | Division       | 6 / 2 = 3 |
+
 
 Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
 
@@ -205,8 +204,8 @@ Souvent, les mêmes symboles sont utilisés pour des opérations différentes, e
 | Chaine            | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”      |
 | Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1989, le résultat est la date 21 janvier 1989 |
 
-Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
 
+Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
 
 ## Expressions
 
@@ -222,8 +221,8 @@ Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endro
 - Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
 - Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
 
-
 ### Types d’expressions
+
 Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
 
 | Expression              | Type                  | Description                                                                                                                                                                          |
@@ -243,19 +242,20 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | 10 # 20                 | Booléen               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
 | “ABC” = “XYZ”           | Booléen               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
 | MonImage + 50           | Image                 | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
-| ->[People]Name          | Pointeur              | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
+| ->[Amis]Nom             | Pointeur              | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
 | Table(1)                | Pointeur              | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
 | JSON Parse (MaChaine)   | Objet                 | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
 | Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
-| $entitySel[0]           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. This kind of expression is **non-assignable**                                                            |
+| $entitySel[0]           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas assignable**                                                            |
+
 
 ### Expressions assignables et non-assignables
 
-Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
+Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
 
-```4d  
+```4d
 //La variable $myVar est assignable, vous pouvez écrire :  
 $myVar:="Hello" //assigner "Hello" à myVar
 //Form.pageNumber est assignable, vous pouvez écrire :  
@@ -263,14 +263,14 @@ Form.pageNumber:=10 //assigne 10 à Form.pageNumber
 //Form.pageTotal-Form.pageNumber n'est pas assignable :
 Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 ```
-En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
 
+En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
 
 ## Pointeurs
 
 Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous permettre d'écrire un code puissant et modulaire. Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux.
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+Un pointeur sur un élément est créé en ajoutant un symbole "->" avant le nom de l'élément, et peut être déréférencé en ajoutant le symbole "->" après le nom du pointeur.
 
 ```4d
 MaVar:="Bonjour"
@@ -306,7 +306,7 @@ For($vCounter;1;100) //Début de la boucle
 
 Entourez le contenu avec les caractères `/*...*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Exemple :
+- Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Exemple :
 
 ```4d
 For /* ligne de commentaire */ ($vCounter;1;100)
@@ -314,7 +314,7 @@ For /* ligne de commentaire */ ($vCounter;1;100)
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
+- Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
 
 ```4d
 For ($vCounter;1;100)

@@ -6,8 +6,8 @@ original_id: identifiers
 
 Cette section détaille les règles d'écriture et de nommage appliquées aux divers identifiants utilisés dans le langage de 4D (variables, tableaux, objets, formulaires, etc.).
 
-
 ## Règles de base
+
 Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 - Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
@@ -19,22 +19,24 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 - 4D ignore les espaces superflus.
 
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
+
 - Les espaces sont interdits.
 - Les points (.) et les crochets ([ ]) sont interdits.
 - Les noms sont sensibles à la casse.
 
 ### Règles supplémentaires pour SQL
+
 - Seuls les caractères _0123456789abcdefghijklmnopqrstuvwxyz sont acceptés
 - Les noms ne doivent pas comporter de mot-clé SQL (commande, attribut, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
-
+**Note :** La zone "SQL" de l'inspecteur de l'éditeur de Structure signale automatiquement les caractères non autorisés dans un nom de table ou de champ.
 
 ## Tables
 
 Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 DEFAULT TABLE([Commandes])
 FORM SET INPUT([Clients];"Entrée")
@@ -46,6 +48,7 @@ ADD RECORD([Lettres])
 Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 [Commandes]Total:=Sum([Ligne]Montant)
  QUERY([Clients];[Clients]Nom="Dupont")
@@ -59,6 +62,7 @@ Vous désignez une variable interprocess en faisant précéder son nom des symbo
 Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
 
 Voici quelques exemples :
+
 ```4d
 <>vlProcessID:=Current process
  <>vsKey:=Char(KeyCode)
@@ -70,6 +74,7 @@ If(<>vtNom#"")
 Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 vrGrandTotal:=Sum([Comptes]Montant)
  If(bValider=1)
@@ -81,6 +86,7 @@ vrGrandTotal:=Sum([Comptes]Montant)
 Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
 Voici quelques exemples :
+
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="Non")
@@ -96,11 +102,13 @@ Vous désignez un tableau en écrivant simplement son nom, qui est celui que vou
 - Tableaux locaux.
 
 ### Tableaux interprocess
+
 Le nom d’un tableau interprocess est précédé du symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
 
 Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
 
 Voici quelques exemples :
+
 ```4d
 ARRAY TEXT(<>atSujets;Records in table([Topics]))
 SORT ARRAY(<>asMotsClés;>)
@@ -108,9 +116,11 @@ ARRAY INTEGER(<>aiGrosTableau;10000)
 ```
 
 ### Tableaux process
+
 Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 ARRAY TEXT(atSujets;Records in table([Topics]))
  SORT ARRAY(asMotsClés;>)
@@ -118,9 +128,11 @@ ARRAY TEXT(atSujets;Records in table([Topics]))
 ```
 
 ### Tableaux locaux
+
 Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
 Voici quelques exemples :
+
 ```4d
 ARRAY TEXT($atSujets;Records in table([Topics]))
 SORT ARRAY($asMotsClés;>)
@@ -128,10 +140,12 @@ ARRAY INTEGER($aiGrosTableau;10000)
 ```
 
 ### Eléments de tableaux
+
 Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.
 
 Voici quelques exemples :
-```4d  
+
+```4d
     // Adresser un élément d'un tableau interprocess
 If(<>asMotsClés{1}="Stop")
     <>atSujets{$vlElem}:=[Topics]Sujet
@@ -149,9 +163,11 @@ If(<>asMotsClés{1}="Stop")
 ```
 
 ### Eléments de tableaux à deux dimensions
+
 Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…}). L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
 Voici quelques exemples :
+
 ```4d
     // Adresser un élément d'un tableau interprocess à deux dimensions
  If(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
@@ -174,18 +190,20 @@ Voici quelques exemples :
 Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez un attribut d'objet (aussi appelé propriété d'objet) en saisissant son nom précédé d'un point (.) à la suite du nom de l'objet (ou de l'attribut) qui le contient. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Voici quelques exemples :
+
 ```4d
 monObjet.monAttribut:="10"
  $valeur:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
+**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulaires
 
 Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 FORM SET INPUT([Personnes];"Entrée")
 FORM SET OUTPUT([Personnes];"Sortie")
@@ -197,30 +215,33 @@ FORM SET OUTPUT([Personnes];"Sortie")
 Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, précédée du paramètre *. Un nom d'objet peut contenir jusqu'à 255 octets.
 
 Exemple :
+
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
+**Note :** Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
 
 ## Méthodes
 
 Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant son nom. Ce nom peut contenir jusqu’à 31 caractères.
 
-**Note:** A project method that does not return a result is also called a procedure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
+**Note :** Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
 
 Voici quelques exemples :
+
 ```4d
 If(Nouveau client)
 DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
-**Note:** When you call a method, you just type its name. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
+**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
 
 Voici quelques exemples :
+
 ```4d
     // Cette commande attend une méthode (fonction) ou une formule
  QUERY BY FORMULA([aTable];Recherche Spéciale)
@@ -235,6 +256,7 @@ Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres s
 A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.
 
 Voici quelques exemples :
+
 ```4d
     // Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
  DROP SPACES(->[Personnes]Nom)
@@ -259,6 +281,7 @@ Voici quelques exemples :
 Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
 
 Voici quelques exemples :
+
 ```4d
 $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -275,19 +298,23 @@ On peut également distinguer un troisième type d'ensemble, spécifique à 4D S
 - Ensembles clients
 
 ### Ensembles interprocess
+
 Un ensemble est déclaré interprocess lorsque son nom, qui est une expression de type chaîne alphanumérique, est précédé du symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
 
 Le nom d’un ensemble interprocess peut comporter jusqu’à 255 caractères, symbole <> non compris.
 
 ### Ensembles process
+
 Vous déclarez un ensemble process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $). Le nom d’un ensemble process peut comporter jusqu’à 255 caractères.
 
 ### Ensembles clients
+
 Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
 
-**Note:** Sets are maintained on the Server machine. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
+**Note :** Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
 
 Voici quelques exemples :
+
 ```4d
     // Ensembles interprocess
 USE SET("<>Enregistrements supprimés")
@@ -311,14 +338,17 @@ Dans 4D, il existe deux types de sélections temporaires, qui se distinguent par
 - Sélections temporaires process.
 
 ### Sélections temporaires interprocess
+
 Vous désignez une sélection temporaire interprocess en utilisant une expression de type chaîne débutant par le symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
 
 Le nom d'une sélection temporaire interprocess peut contenir jusqu’à 255 caractères, symbole <> non compris.
 
 ### Sélections temporaires process
+
 Vous déclarez une sélection temporaire process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
 
 Voici quelques exemples :
+
 ```4d
     // Sélection temporaire interprocess
  USE NAMED SELECTION([Clients];"<>ParCodePostal")
@@ -334,12 +364,15 @@ En mode mono-utilisateur, ou sur le poste client en mode client/serveur, il exis
 - Process locaux.
 
 ### Process globaux
+
 Vous déclarez un process global en passant une expression de type chaîne de caractères qui représente son nom (qui ne doit pas commencer par le symbole $). Le nom d’un process peut comporter jusqu’à 255 caractères.
 
 ### Process locaux
+
 Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.
 
 Voici quelques exemples :
+
 ```4d
     // Lancer le process global "Ajouter Clients"
  $vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
@@ -369,10 +402,11 @@ Le tableau suivant résume les principes de nommage des identifiants dans les m�
 | Sélection temporaire              | 255           | "Employés de A à Z"            |
 | Sélection temporaire interprocess | <> + 255      | "<>Employés de Z à A"          |
 | Process local                     | $ + 255       | "$SuivreEvénements"            |
-| Process global                    | 255           | "*P_INVOICES_MODULE*"        |
+| Process global                    | 255           | "*P_MODULE_FACTURES*"        |
 | Sémaphore                         | 255           | "monsémaphore"                 |
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+
+**Note :** En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.
 
 ## Résoudre les conflits de noms
 
@@ -387,5 +421,4 @@ Veillez à utiliser des noms uniques pour les différents éléments de votre ba
 5. Constantes prédéfinies
 6. Variables.
 
-Par exemple, 4D dispose d’une fonction interne appelée `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.
-
+Par exemple, 4D dispose d’une fonction interne appelée `Date`. Si vous appelez *Date* une de vos méthodes, 4D considérera `Date` comme étant la fonction interne et non votre méthode. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.

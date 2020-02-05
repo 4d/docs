@@ -10,21 +10,19 @@ A 4D project is made of several folders and files, stored within a single parent
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
-
 ## Project folder
 
 The Project folder typically contains the following hierarchy:
 
 - *databaseName*.4DProject file
-- Sources
+- Sources 
     + DatabaseMethods
     + Methods
     + Forms
     + TableForms
     + Triggers
-- DerivedData
-- Trash (if any)
-
++ DerivedData
++ Trash (if any)
 
 ### *databaseName*.4DProject file
 
@@ -34,7 +32,6 @@ Project development file, used to designate and launch the project. This file ca
 - 4D Server (read-only, see [Developing a project](developing.md))
 
 **Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
-
 
 ### Sources folder
 
@@ -58,11 +55,13 @@ Project development file, used to designate and launch the project. This file ca
 | ------------------------ | ---------------------------------------------------------------------- | ------ |
 | *databaseMethodName*.4dm | Database methods defined in the database. One file per database method | text   |
 
+
 #### Methods folder
 
 | Contents         | Description                                                  | Format |
 | ---------------- | ------------------------------------------------------------ | ------ |
 | *methodName*.4dm | Project methods defined in the database. One file per method | text   |
+
 
 #### Forms folder
 
@@ -72,6 +71,7 @@ Project development file, used to designate and launch the project. This file ca
 | *formName*/method.4dm                     | Project form method                        | text    |
 | *formName*/Images/*pictureName*           | Project form static picture                | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | text    |
+
 
 #### TableForms folder
 
@@ -86,14 +86,15 @@ Project development file, used to designate and launch the project. This file ca
 | *n*/Output/*formName*/method.4dm                     | Output table form method                               | text    |
 | *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | text    |
 
+
 #### Triggers folder
 
 | Contents      | Description                                                                                 | Format |
 | ------------- | ------------------------------------------------------------------------------------------- | ------ |
 | table_*n*.4dm | Trigger methods defined in the database. One trigger file per table (n is the table number) | text   |
 
-**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
+**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
 ### Trash folder
 
@@ -105,11 +106,9 @@ The Trash folder contains methods and forms that were deleted from the project (
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
 
-
 ### DerivedData folder
 
 The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
-
 
 ## Resources folder
 
@@ -120,8 +119,8 @@ The Resources folder contains any custom database resource files and folders. In
 | *item*                | Database resource files and folders                                                                                                                   | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
-(*) only if the project was exported from a .4db binary database.
 
+(*) only if the project was exported from a .4db binary database.
 
 ## Data folder
 
@@ -132,6 +131,7 @@ The data folder contains the data file and all files and folders relating to the
 | data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                    | binary |
 | data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. | binary |
 | data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
+
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
@@ -146,7 +146,6 @@ This folder contains **user settings files for data** used for database administ
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
 | settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
 | directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                               | JSON   |
-
 
 
 ### Logs folder
@@ -194,7 +193,6 @@ This folder contains files that memorize user configurations, e.g. break point p
 This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
 
 > A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
-
 
 ## Plugins folder
 

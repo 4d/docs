@@ -9,6 +9,7 @@ Variables, fields or expressions of the Object type can contain various types of
 - A property name is always a text, for example "Name".
 
 - A property value can be of the following type:
+    
     - number (Real, Integer, etc.)
     - text
     - null
@@ -36,6 +37,7 @@ Each property value accessed through the object notation is considered an expres
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
 Beispiel:
+
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -45,8 +47,9 @@ Beispiel:
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
+- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
 - shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+
 ## Syntax basics
 
 Object notation can be used to access object property values through a chain of tokens.
@@ -58,6 +61,7 @@ With object notation, object properties can be accessed in two ways:
 - using a "dot" symbol: > object.propertyName
 
 Beispiel:
+
 ```4d
      employee.name:="Smith"
 ```
@@ -65,6 +69,7 @@ Beispiel:
 - using a string within square brackets: > object["propertyName"]
 
 Examples:
+
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -74,9 +79,11 @@ Examples:
 ```
 
 Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+
 ```4d
  $vAge:=employee.children[2].age
 ```
+
 Object notation is available on any language element that can contains or returns an object, i.e:
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
@@ -88,6 +95,7 @@ Object notation is available on any language element that can contains or return
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
+
 - **4D commands** that return objects. Beispiel:
 
 ```4d
@@ -112,15 +120,18 @@ Object notation is available on any language element that can contains or return
 ```
 
 ### Pointers
+
 **Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.
 
 Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
 
 - Direct access:
-> pointerOnObject->propertyName
+    
+    > pointerOnObject->propertyName
 
 - Access by name:
-> pointerOnObject->["propertyName"]
+    
+    > pointerOnObject->["propertyName"]
 
 Beispiel:
 
@@ -187,7 +198,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
+- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type: 
  - Object, collection, pointer: Null
  - Picture: Empty picture
  - Boolean: False
@@ -225,8 +236,8 @@ Token member names (i.e., object property names accessed using the object notati
 - Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
-
 ## Examples
+
 Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
 
 - Writing and reading objects (this example compares object notation and command notation):
@@ -266,7 +277,8 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- You can access properties as strings using the [ ] operator
+
+- You can access properties as strings using the [ ] operator 
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

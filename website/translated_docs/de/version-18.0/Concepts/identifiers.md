@@ -6,8 +6,8 @@ original_id: identifiers
 
 This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
 
-
 ## Basic Rules
+
 The following rules apply for all 4D frameworks.
 
 - A name can begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
@@ -19,22 +19,24 @@ The following rules apply for all 4D frameworks.
 - Any trailing spaces are ignored.
 
 ### Additional rules for object property and ORDA names
+
 - Space characters are not allowed.
 - Periods (".") and brackets ("[ ]") are not allowed.
 - Names are case sensitive.
 
 ### Additional rules for SQL
+
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
 - Names must not include any SQL keywords (command, attribute, etc.).
 
 **Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
-
 
 ## Tables
 
 You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 DEFAULT TABLE([Orders])
 FORM SET INPUT([Clients];"Entry")
@@ -46,6 +48,7 @@ ADD RECORD([Letters])
 You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 [Orders]Total:=Sum([Line]Amount)
 QUERY([Clients];[Clients]Name="Smith")
@@ -59,6 +62,7 @@ You designate an interprocess variable by preceding the name of the variable wit
 The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
 
 Examples:
+
 ```4d
 <>vlProcessID:=Current process
 <>vsKey:=Char(KeyCode)
@@ -70,6 +74,7 @@ If(<>vtName#"")
 You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 <>vrGrandTotal:=Sum([Accounts]Amount)
 If(bValidate=1)
@@ -81,6 +86,7 @@ vsCurrentName:=""
 You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
 
 Examples:
+
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
@@ -96,11 +102,13 @@ You designate an array by using its name, which is the name you pass to an array
 - Local arrays.
 
 ### Interprocess Arrays
+
 The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 An interprocess array name can contain up to 31 characters, not including the <> symbols.
 
 Examples:
+
 ```4d
 ARRAY TEXT(<>atSubjects;Records in table([Topics]))
 SORT ARRAY(<>asKeywords;>)
@@ -108,9 +116,11 @@ ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
 ### Process Arrays
+
 You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 ARRAY TEXT(atSubjects;Records in table([Topics]))
 SORT ARRAY(asKeywords;>)
@@ -118,9 +128,11 @@ ARRAY INTEGER(aiBigArray;10000)
 ```
 
 ### Local Arrays
+
 The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
 
 Examples:
+
 ```4d
 ARRAY TEXT($atSubjects;Records in table([Topics]))
 SORT ARRAY($asKeywords;>)
@@ -128,10 +140,12 @@ ARRAY INTEGER($aiBigArray;10000)
 ```
 
 ### Elements of arrays
+
 You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
 
 Examples:
-```4d  
+
+```4d
     //Addressing an element of an interprocess array
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
@@ -149,9 +163,11 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### Elements of two-dimensional arrays
+
 You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
 Examples:
+
 ```4d
     //Addressing an element of a two-dimensional interprocess array
 If(<>asKeywords{$vlNextRow}{1}="Stop")
@@ -174,6 +190,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
 
 Examples:
+
 ```4d
 myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
@@ -186,6 +203,7 @@ $value:=$clientObj.data.address.city
 You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 FORM SET INPUT([People];"Input")
 FORM SET OUTPUT([People];"Output")
@@ -197,6 +215,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
 
 Beispiel:
+
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
@@ -210,6 +229,7 @@ You designate a project method (procedure or function) by using its name. A meth
 **Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
 
 Examples:
+
 ```4d
 If(New client)
 DELETE DUPLICATED VALUES
@@ -221,6 +241,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 **Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Beispiel:
 
 Examples:
+
 ```4d
     //This command expects a method (function) or formula
 QUERY BY FORMULA([aTable];Special query)
@@ -235,6 +256,7 @@ Project methods can accept parameters (arguments). The parameters are passed to 
 Inside a function, the $0 local variable contains the value to be returned.
 
 Examples:
+
 ```4d
     //Within DROP SPACES $1 is a pointer to the field [People]Name
 DROP SPACES(->[People]Name)
@@ -259,6 +281,7 @@ vtClone:=Dump("is";"the";"it")
 You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
 Examples:
+
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -275,19 +298,23 @@ From the scope point of view, there are two types of sets:
 - Client sets
 
 ### Interprocess Sets
+
 A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 An interprocess set name can contain up to 255 characters, not including the <> symbols.
 
 ### Process Sets
+
 You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
 
 ### Client Sets
+
 The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
 **Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
 
 Examples:
+
 ```4d
     //Interprocess sets
 USE SET("<>Deleted Records")
@@ -311,14 +338,17 @@ From the scope point of view, there are two types of named selections:
 - Process named selections.
 
 ### Interprocess Named Selections
+
 A named selection is an interprocess named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 An interprocess named selection name can contain up to 255 characters, not including the <> symbols.
 
 ### Process Named Selections
+
 You denote a process named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $). A named selection name can contain up to 255 characters.
 
 Examples:
+
 ```4d
     //Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
@@ -334,12 +364,15 @@ In the single-user version, or in Client/Server on the Client side, there are tw
 - Local processes.
 
 ### Global Processes
+
 You denote a global process by using a string expression that represents its name (which cannot start with the dollar sign $). A process name can contain up to 255 characters.
 
 ### Local Processes
+
 You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
 
 Examples:
+
 ```4d
     //Starting the global process "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
@@ -372,6 +405,7 @@ The following table summarizes 4D naming conventions.
 | Global Process               | 255         | "*P_INVOICES_MODULE*"    |
 | Semaphore                    | 255         | "mysemaphore"              |
 
+
 **Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
 ## Resolving Naming Conflicts
@@ -388,4 +422,3 @@ Be sure to use unique names for the different elements in your database. If a pa
 6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
-

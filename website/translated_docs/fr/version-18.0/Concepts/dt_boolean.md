@@ -8,7 +8,7 @@ Un champ, une variable ou une expression de type booléen peut être soit VRAI s
 
 ## Fonctions booléennes
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
+Les fonctions booléennes de 4D traitent des valeurs telles que `Vrai`, `Faux` et `Non` dans le thème **Booléens** consacré. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
 
 ### Exemple
 
@@ -32,14 +32,15 @@ monBooléen:=(monBouton=1)
 
 4D supporte deux opérateurs logiques : l'opérateur d'intersection (AND) et l'opérateur de réunion inclusive (OR). Le AND logique retourne TRUE si les deux expressions sont VRAIES. Le OR logique retourne TRUE si au moins une des expressions est VRAIE. Le tableau suivant décrit les opérateurs logiques :
 
-| Opération | Syntaxe           | Retourne | Expression                   | Valeur |
-| --------- | ----------------- | -------- | ---------------------------- | ------ |
-| AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)       | Vrai   |
-|           |                   |          | ("A" = "B") & (15 # 3)       | Faux   |
-|           |                   |          | ("A" = "B") & (15 = 3)       | Faux   |
-| OU        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3)  | Vrai   |
-|           |                   |          | ("A" = "B") &#124;  (15 # 3) | Vrai   |
-|           |                   |          | ("A" = "B") &#124;  (15 = 3) | Faux   |
+| Opération | Syntaxe           | Retourne | Expression                  | Valeur |
+| --------- | ----------------- | -------- | --------------------------- | ------ |
+| AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)      | Vrai   |
+|           |                   |          | ("A" = "B") & (15 # 3)      | Faux   |
+|           |                   |          | ("A" = "B") & (15 = 3)      | Faux   |
+| OU        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3) | Vrai   |
+|           |                   |          | ("A" = "B") &#124; (15 # 3) | Vrai   |
+|           |                   |          | ("A" = "B") &#124; (15 = 3) | Faux   |
+
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
@@ -50,6 +51,7 @@ Voici la "table de vérité" pour l'opérateur logique "AND" :
 | Faux  | Vrai  | Faux          |
 | Faux  | Faux  | Faux          |
 
+
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
@@ -59,7 +61,8 @@ Voici la "table de vérité" pour l'opérateur logique "OR" :
 | Faux  | Vrai  | Vrai               |
 | Faux  | Faux  | Faux               |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+
+**Astuce :** Si vous devez calculer une réunion exclusive (le "OU" exclusif) entre Expr1 et Expr2, écrivez :
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  

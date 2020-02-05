@@ -17,6 +17,7 @@ The formal syntax of the `If...Else...End if` control flow structure is:
 ```
 
 Note that the `Else` part is optional; you can write:
+
 ```4d
  If(Boolean_Expression)
     statement(s)
@@ -33,7 +34,7 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
  End if
 ```
 
-he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+he expression is TRUE only if both methods are TRUE. However, even if *MethodA* returns FALSE, 4D will still evaluate *MethodB*, which is a useless waste of time. In this case, it is more interesting to use a structure like:
 
 ```4d
  If(MethodA)
@@ -43,7 +44,7 @@ he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ 
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+The result is similar and *MethodB* is evaluated only if necessary.
 
 ### 例題
 
@@ -65,6 +66,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
     statement(s)
  End if
 ```
+
 or:
 
 ```4d
@@ -77,6 +79,7 @@ or:
 ## Case of...Else...End case
 
 The formal syntax of the `Case of...Else...End case` control flow structure is:
+
 ```4d
  Case of
     :(Boolean_Expression)
@@ -95,6 +98,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
 ```
 
 Note that the `Else` part is optional; you can write:
+
 ```4d
  Case of
     :(Boolean_Expression)
@@ -109,6 +113,7 @@ Note that the `Else` part is optional; you can write:
        statement(s)
  End case
 ```
+
 As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
 
 Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
@@ -183,6 +188,7 @@ In the code above, the presence of the second condition is not detected since th
 Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
 
 **Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
+
 ```4d
  Case of
     :(Boolean_Expression)
@@ -197,6 +203,7 @@ Also, if you want to implement hierarchical testing, you may consider using hier
 ```
 
 or:
+
 ```4d
  Case of
     :(Boolean_Expression)
@@ -211,6 +218,7 @@ or:
 ```
 
 or:
+
 ```4d
  Case of
     Else
