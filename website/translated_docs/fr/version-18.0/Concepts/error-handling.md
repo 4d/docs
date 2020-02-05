@@ -9,12 +9,13 @@ Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dan
 La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
-- détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
+- détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface. 
+
 > Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
 ## Installer une méthode de gestion des erreurs
 
-In 4D, all errors can be catched and handled in a specific project method, the **error-handling** (or **error-catching**) method.
+Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
 
 Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple:
 
@@ -23,6 +24,7 @@ APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
 ```
 
 Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la méthode `ON ERR CALL` à l'aide d'une chaîne vide :
+
 ```4d
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
@@ -50,16 +52,15 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
 Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
 - Variables système (*) :
-
+    
   - `Error` (entier long): Code d'erreur
   - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
   - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
-  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur. 
 
 (*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 
-- La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
-
+- La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D. 
 
 #### Exemple
 
@@ -91,5 +92,3 @@ If (Error=-43)
 End if
 ON ERR CALL("")
 ```
-
-
