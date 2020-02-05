@@ -46,7 +46,7 @@ Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Di
  End for
 ```
 
-Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{$vlElem}. Über eine Schleife (`For...End for`, `Repeat...Until` oder `While...End while`) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.
+Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{3}. Über eine Schleife (`For...End for`, `Repeat...Until` oder `While...End while`) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.
 
 **Wichtig:** Achten Sie darauf, dass Sie den Zuweisungsoperator (:=) nicht mit dem Vergleichsoperator ist gleich (=) verwechseln. Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.
 
