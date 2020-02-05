@@ -1,6 +1,6 @@
 ---
 id: version-18.0-tabControl
-title: Tab Controls
+title: Onglets
 original_id: tabControl
 ---
 
