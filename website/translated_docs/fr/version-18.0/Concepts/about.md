@@ -9,13 +9,12 @@ Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est 
 - Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches, etc.),
 - Créer et imprimer des états et des étiquettes complexes avec les données de la base,
 - Communiquer avec d’autres systèmes d’information,
-- Envoyer des e-mails,
+- Envoyer des e-mails, 
 - Gérer des documents et des pages web,
 - Importer et exporter des données entre des bases 4D et d’autres applications,
 - Incorporer des procédures écrites dans d’autres langages que celui de 4D.
 
 La flexibilité et la puissance du langage de 4D en font l’outil idéal pour exécuter toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent exécuter des calculs rapidement, les utilisateurs plus expérimentés peuvent personnaliser leurs bases sans connaissances préalables en programmation et les développeurs chevronnés peuvent utiliser ce langage puissant pour ajouter à leurs bases de données des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Quant aux développeurs ayant une maîtrise de la programmation dans d’autres langages, ils peuvent ajouter leurs propres commandes au langage de 4D.
-
 
 ## Qu'est-ce qu'un langage ?
 
