@@ -30,12 +30,12 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| Property      | 型      | 説明                                                                                                                                                                                                                                                            |
+| Property      | Type   | 説明                                                                                                                                                                                                                                                            |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | String | Name of the datastore class.                                                                                                                                                                                                                                  |
-| __COUNT       | 数値     | Number of entities in the datastore class.                                                                                                                                                                                                                    |
-| __SENT        | 数値     | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
-| __FIRST       | 数値     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                                                                              |
+| __COUNT       | Number | Number of entities in the datastore class.                                                                                                                                                                                                                    |
+| __SENT        | Number | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
+| __FIRST       | Number | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                                                                              |
 | __ENTITIES    | Array  | This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.                                                             |
 
 
