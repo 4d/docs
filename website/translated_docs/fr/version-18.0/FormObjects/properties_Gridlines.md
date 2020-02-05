@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesGridlines
-title: Gridlines
+title: Quadrillage
 original_id: propertiesGridlines
 ---
 
