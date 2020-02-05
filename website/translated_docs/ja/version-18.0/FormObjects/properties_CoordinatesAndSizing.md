@@ -124,9 +124,9 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### JSON Grammar
 
-| Name         | データタイプ  | Possible Values |
-| ------------ | ------- | --------------- |
-| borderRadius | integer | minimum: 0      |
+| Name         | データタイプ | Possible Values |
+| ------------ | ------ | --------------- |
+| borderRadius | 整数     | minimum: 0      |
 
 
 #### Objects Supported
