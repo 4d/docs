@@ -1,6 +1,6 @@
 ---
 id: version-18.0-object
-title: オブジェクト
+title: Objects
 original_id: object
 ---
 
@@ -13,7 +13,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - テキスト
     - null
-    - ブール
+    - Boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - object (objects can be nested on several levels)
@@ -119,7 +119,7 @@ Object notation is available on any language element that can contains or return
      myColl.length //size of the collection
 ```
 
-### Pointers
+### ポインター
 
 **Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.
 
