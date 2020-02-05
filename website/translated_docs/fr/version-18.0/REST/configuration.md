@@ -1,6 +1,6 @@
 ---
 id: version-18.0-configuration
-title: Server Configuration
+title: Configuration du serveur
 original_id: configuration
 ---
 
