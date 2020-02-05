@@ -54,6 +54,7 @@ Une heure nulle s’écrit ?00:00:00?
 | Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
 |                     |                |          | ?01:02:04? <=?01:02:03? | Faux       |
 
+
 ### Exemple 1
 
 Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
@@ -77,4 +78,3 @@ $t1:=?23:00:00? // il est 23h
  $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? , il est bien 1h30 le lendemain
 ```
-
