@@ -561,10 +561,10 @@
       "version-18.0/FormEditor/version-18.0-objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
-      "version-18.0/FormObjects/version-18.0-buttonOverview": {
+      "version-18.0-FormObjects/buttonOverview": {
         "title": "Bouton"
       },
-      "version-18.0/FormObjects/version-18.0-buttonGridOverview": {
+      "version-18.0-FormObjects/version-18.0-buttonGridOverview": {
         "title": "Grille de boutons"
       },
       "version-18.0/FormObjects/version-18.0-checkboxOverview": {
