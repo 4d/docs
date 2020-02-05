@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesRangeOfValues
-title: Range of Values
+title: Plage de valeurs
 original_id: propertiesRangeOfValues
 ---
 
