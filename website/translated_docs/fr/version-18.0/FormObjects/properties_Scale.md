@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesScale
-title: Scale
+title: Echelle
 original_id: propertiesScale
 ---
 
