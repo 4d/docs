@@ -38,25 +38,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| 演算子                      | シンタックス           | 戻り値    | 式                       | 結果       |
-| ------------------------ | ---------------- | ------ | ----------------------- | -------- |
-| 連結 (結合)                  | String + String  | String | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | ブール    | "abc" = "abc"           | True     |
-|                          |                  |        | "abc" = "abd"           | False    |
-| Inequality               | String # String  | ブール    | "abc" # "abd"           | True     |
-|                          |                  |        | "abc" # "abc"           | False    |
-| Greater than             | String > String  | ブール    | "abd" > "abc"           | True     |
-|                          |                  |        | "abc" > "abc"           | False    |
-| Less than                | String < String  | ブール    | "abc" < "abd"           | True     |
-|                          |                  |        | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | ブール    | "abd" >= "abc"          | True     |
-|                          |                  |        | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | ブール    | "abc" <= "abd"          | True     |
-|                          |                  |        | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | ブール    | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |        | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | ブール    | Picture_expr % "Mer"    | True (*) |
+| 演算子                      | シンタックス           | 戻り値     | 式                       | Value    |
+| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
+| 連結 (結合)                  | String + String  | String  | "abc" + "def"           | "abcdef" |
+| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
+| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
+|                          |                  |         | "abc" = "abd"           | False    |
+| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
+|                          |                  |         | "abc" # "abc"           | False    |
+| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
+|                          |                  |         | "abc" > "abc"           | False    |
+| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
+|                          |                  |         | "abc" < "abc"           | False    |
+| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
+|                          |                  |         | "abc" >= "abd"          | False    |
+| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
+|                          |                  |         | "abd" <= "abc"          | False    |
+| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
+|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
+|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
 
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
