@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesResizingOptions
-title: Resizing Options
+title: Options de redimensionnement
 original_id: propertiesResizingOptions
 ---
 
