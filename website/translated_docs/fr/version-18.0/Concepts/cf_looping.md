@@ -5,17 +5,21 @@ original_id: looping
 ---
 
 ## While...End while
+
 La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
+
 ```4d
  While(Expression_booléenne)
     instruction(s)
  End while
 ```
+
 Une boucle `While...End while` exécute les instructions comprises entre `While` et `End while` aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
 
 Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle `While...End while`. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.
 
-La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car _NeverStop_ est toujours TRUE :
+La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car *NeverStop* est toujours TRUE :
+
 ```4d
  NeverStop:=True
  While(NeverStop)
@@ -38,16 +42,19 @@ Dans cet exemple, la valeur de la variable système `OK` est définie par la com
 ## Repeat...Until
 
 La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suivante :
+
 ```4d
  Repeat
     instruction(s)
  Until(Boolean_Expression)
 ```
+
 La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
 ### Exemple
+
 Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
 
 ```4d
@@ -57,6 +64,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 ```
 
 ## For...End for
+
 La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 ```4d
@@ -67,19 +75,20 @@ La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 La structure `For...End for` est une boucle contrôlée par un compteur :
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
+- La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
 - La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
 - Lorsque le compteur atteint la valeur définie par *End_Expression*, la boucle s'arrête.
 
-**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.
+**Important :** Les expressions numériques *Start_Expression*, *End_Expression* et *Increment_Expression* sont évaluées une seule fois, au début de la boucle. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
+**Astuce :** En revanche, vous pouvez, si vous le souhaitez, modifier la valeur de la variable *Counter_Variable* depuis l'intérieur de la boucle et cela affectera l'exécution de la boucle.
 
 - Généralement, *Start_Expression* est inférieure à *End_Expression*.
-- If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
-- If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. Reportez-vous ci-dessous au paragraphe décrivant ce point.
+- Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.
+- Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
 
 ### Exemples élémentaires
+
 1. La boucle suivante s'exécute 100 fois :
 
 ```4d
@@ -125,7 +134,7 @@ La plupart des structures `For...End for` que vous écrirez dans vos bases resse
 
 ### Décrémenter la variable Compteur
 
-Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
+Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 
 5. La boucle suivante s'exécute 100 fois :
 
@@ -181,10 +190,10 @@ Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur 
  End for
 ```
 
-
 ### Comparaison des structures répétitives
 
 Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 fois :
+
 ```4d
  For(vCounter;1;100)
   //Faire quelque chose
@@ -192,6 +201,7 @@ Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 f
 ```
 
 Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action. Voici la boucle `While...End while` équivalente :
+
 ```4d
  $i :=1 // Initialisation du compteur
 While ($i<=100) // Boucle 100 fois
@@ -201,6 +211,7 @@ While ($i<=100) // Boucle 100 fois
 ```
 
 Voici la boucle `Repeat...Until` équivalente :
+
 ```4d
  $i :=1 // Initialisation du compteur
  Repeat
@@ -208,6 +219,7 @@ Voici la boucle `Repeat...Until` équivalente :
     $i :=$i +1 // Il faut incrémenter le compteur
 Until($i=100) // Boucle 100 fois
 ```
+
 **Astuce :** La boucle `For...End for` est généralement plus rapide que les boucles `While...End while` et `Repeat...Until` car 4D teste la condition en interne pour chaque cycle de la boucle et incrémente lui-même le compteur. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure `For...End for`.
 
 ### Optimiser l'exécution de For...End for
@@ -265,6 +277,7 @@ Voici deux exemples :
 ```
 
 ## For each...End for each
+
 La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
 
 ```4d
@@ -273,7 +286,7 @@ La syntaxe de la structure répétitive (ou boucle) `For each...End for each` es
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. Le type de *Elément_courant* dépend du type de *Expression*. La boucle `For each...End for each` peut itérer parmi trois types d'*Expression* :
+La structure `For each...End for each` exécute le cycle d'instructions définies pour chaque *Elément_courant* de *Expression*. Le type de *Elément_courant* dépend du type de *Expression*. La boucle `For each...End for each` peut itérer parmi trois types d'*Expression* :
 
 - collections : boucle sur chaque élément de la collection,
 - entity selections : boucle sur chaque entity,
@@ -288,28 +301,30 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 | Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
 | Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
 
+
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
-- Par défaut, les _instructions_ incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Use...End use`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Use...End use` :
+- Par défaut, les *instructions* incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
+- Les paramètres optionnels *début* et *fin* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
+- La boucle `For each...End for each` peut être utilisée sur une **collection partagée** ou un **objet partagé**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Use...End use`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Use...End use` : 
     - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
-    - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
+    - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise. 
 
 ### Boucle sur collections
 
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
+Lorsque `For each...End for each` est utilisée avec une *Expression* de type *Collection*, le paramètre *Elément_courant* est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
 
-La collection doit contenir uniquement des éléments du même type. Dans le cas contraire, une erreur sera retournée dès que la première valeur de type différent sera assignée à la variable _Elément_courant_.
+La collection doit contenir uniquement des éléments du même type. Dans le cas contraire, une erreur sera retournée dès que la première valeur de type différent sera assignée à la variable *Elément_courant*.
 
-A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
+A chaque itération de la boucle, la variable *Elément_courant* reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, sa modification ne sera pas répercutée sur l'élément de la collection.
-- La variable _Elément_courant_ doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
-- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
+- Si la variable *Elément_courant* est de type objet ou collection (i.e. si *Expression* est une collection d'objets ou une collection de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections sont passés par référence). Si la variable est de type scalaire, sa modification ne sera pas répercutée sur l'élément de la collection.
+- La variable *Elément_courant* doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable *Elément_courant* ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
 #### Exemple
 
 Vous souhaitez calculer quelques statistiques sur une collection de nombres :
+
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -333,7 +348,7 @@ Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
 ### Boucle sur entity selections
 
-When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
+Lorsque `For each...End for each` est utilisée avec une *Expression* de type *Entity selection*, le paramètre *Elément_courant* contient l'entity en cours de traitement.
 
 Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre *Elément_courant* reçoit automatiquement l'entity qui est en cours de traitement.
 
@@ -344,6 +359,7 @@ N'oubliez pas que toute modification effectuée sur l'entity en cours de traitem
 #### Exemple
 
 Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
+
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -354,13 +370,14 @@ Vous souhaitez augmenter le salaire de tous les employés britanniques dans une 
 
 ### Boucles sur des propriétés d'objets
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Lorsque `For each...End for each` est utilisée avec une *Expression* de type Objet, le paramètre *Elément_courant* est une variable texte qui reçoit automatiquement le nom de la propriété en cours de traitement.
 
 Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
 #### Exemple
 
 Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
+
 ```4d
 {
     "firstname": "gregory",
@@ -368,7 +385,9 @@ Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'o
     "age": 20
 }
 ```
+
 Vous pouvez écrire :
+
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -376,28 +395,30 @@ Vous pouvez écrire :
     End if
  End for each
 ```
-```
-{
-    "firstname": "GREGORY",
-    "lastname": "BADIKORA",
-    "age": 20
-}
-```
+
+    {
+        "firstname": "GREGORY",
+        "lastname": "BADIKORA",
+        "age": 20
+    }
+    
+
 ### Paramètres début / fin
 
 Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**Note :** Les paramètres *début* et *fin* sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).
 
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- Dans le paramètre *début*, passez la position de l'élément de *Expression* auquel démarrer l'itération (*début* est inclus).
+- Dans le paramètre *fin*, vous pouvez passer la position de l'élément de *Expression* auquel stopper l'itération (*fin* est exclus). 
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). Si la valeur calculée est négative, *begin* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
+Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expression*, les éléments sont itérés depuis *début* jusqu'au dernier inclus. Si les paramètres *début* et *fin* sont des valeurs positives, ils représentent des positions d'éléments dans *Expression*. Si *begin* est une valeur négative, elle est recalculée comme `begin:=begin+Taille expression` (elle est considérée comme un décalage à partir de la fin de *Expression*). Si la valeur calculée est négative, *begin* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
 
 Par exemple:
+
 - une collection contient 10 éléments (numérotés de 0 à 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- début=-4 -> début=-4+10=6 -> l'itération démarre au 6e élément (numéro 5)
+- fin=-2 -> fin=-2+10=8 -> l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément. 
 
 #### Exemple
 
@@ -415,7 +436,9 @@ Par exemple:
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
+
 ### Conditions Until et While
+
 Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. Lorsqu'une instruction `Until(condition)` ou `While(condition)` est associée à la boucle, l'itération stoppe dès que la condition est évaluée à True.
 
 Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
@@ -440,4 +463,3 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
-
