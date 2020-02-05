@@ -1,6 +1,6 @@
 ---
 id: version-18.0-object
-title: Objet
+title: Objets
 original_id: object
 ---
 
