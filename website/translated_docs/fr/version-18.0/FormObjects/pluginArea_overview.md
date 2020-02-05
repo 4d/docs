@@ -1,6 +1,6 @@
 ---
 id: version-18.0-pluginAreaOverview
-title: Plug-in Area
+title: Zone de plug-in
 original_id: pluginAreaOverview
 ---
 
