@@ -1,6 +1,6 @@
 ---
 id: version-18.0-variables
-title: 変数
+title: Variables
 original_id: variables
 ---
 
