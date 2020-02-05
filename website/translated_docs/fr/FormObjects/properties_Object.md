@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objets
 ---
 
 ---
@@ -234,7 +234,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[Zone de plug-in](pluginArea_overview.md)
 
 
 
