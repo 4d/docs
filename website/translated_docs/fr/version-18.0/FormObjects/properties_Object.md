@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesObject
-title: Objects
+title: Objets
 original_id: propertiesObject
 ---
 
@@ -212,7 +212,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### Objects Supported
                     
-                    [Plug-in Area](pluginArea_overview.md)
+                    [Zone de plug-in](pluginArea_overview.md)
                     
                     * * *
                     
