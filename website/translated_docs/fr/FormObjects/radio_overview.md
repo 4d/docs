@@ -5,9 +5,9 @@ title: Bouton radio
 
 ## Aperçu
 
-Radio buttons are objects that allow the user to select one of a group of buttons.
+Les boutons radio sont des objets qui permettent à l’utilisateur de sélectionner une valeur parmi un groupe de valeurs.
 
-Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).
+Un bouton radio apparaît sous la forme d’un texte suivi d’un cercle. However, radio buttons can have [various appearances](#button-styles).
 
 ![](assets/en/FormObjects/radio1.png)
 
@@ -85,20 +85,20 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
 ### Bevel arrondi
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
+Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel), à l'exception des coins du bouton qui peuvent, selon le système d'exploitation, être arrondis.
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+ - *Sous macOS* - les coins du bouton sont arrondis. ![](assets/en/FormObjects/roundedBevel.png)
 
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
+Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, avoir deux tons.
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the button is displayed as a two-tone system button.
+ - *Sous macOs* - le bouton s'affiche comme un bouton à deux tons.
 
 
 
@@ -106,11 +106,11 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
 
-By default, the OS X Textured style appears as:
+Par défaut, le style OS X Textured apparaît comme :
 
  - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
   ![](assets/en/FormObjects/OSXTextured.png)
 
@@ -120,19 +120,19 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
+Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole.
 
   ![](assets/en/FormObjects/radio_xp.png)
 
- - *macOS* - its background is always displayed.
+ - *Sous macOS* - son arrière-plan est toujours affiché.
 
 
 
 ### Contracter/Déployer
 
-This button style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
+This button style can be used to add a standard collapse/expand icon. Ces boutons sont utilisés nativement dans les listes hiérarchiques. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 
@@ -145,7 +145,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
 
-### Custom
+### Personnalisé
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 
@@ -158,5 +158,5 @@ All radio buttons share the same set of basic properties:
 
 Additional specific properties are available depending on the [button style](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname) - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#verticalMargin) (Personnalisé)
 - [Nombre d'états](properties_TextAndPicture.md#number-of-states) - [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) - [Position Titre/Image](properties_TextAndPicture.md#title-picture-position) (Bouton barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Personnalisé)

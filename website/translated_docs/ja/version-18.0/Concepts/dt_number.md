@@ -6,8 +6,8 @@ original_id: number
 
 Number is a generic term that stands for:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1.
+- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits). 
+- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1. 
 - Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
 
 **Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
@@ -15,7 +15,6 @@ Number is a generic term that stands for:
 You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
 
 **Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
-
 
 ## Number literals
 
@@ -61,6 +60,7 @@ Negative numbers are specified with the minus sign (-). たとえば:
 | Less than or equal to    | Number <= Number | ブール | 10 <= 11 | True  |
 |                          |                  |     | 11 <= 10 | False |
 
+
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
 - 10 % 2 returns 0 because 10 is evenly divided by 2.
@@ -68,8 +68,9 @@ The modulo operator % divides the first number by the second number and returns 
 - 10.5 % 2 returns 0 because the remainder is not a whole number.
 
 **WARNING:**
+
 - The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only.
+- The longint division operator \ returns significant values with integer numbers only. 
 
 ### Precedence
 

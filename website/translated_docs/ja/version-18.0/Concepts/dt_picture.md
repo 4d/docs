@@ -13,7 +13,7 @@ A Picture field, variable or expression can be any Windows or Macintosh picture.
 4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
 
 - Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO.
+- Under macOS, 4D uses ImageIO. 
 
 The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
 
@@ -52,15 +52,15 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 | Horizontal scaling        | Picture *+ Number      | ピクチャー | Resize Picture horizontally by Number ratio                                                                                                                        |
 | Vertical scaling          | Picture *&#124; Number | ピクチャー | Resize Picture vertically by Number ratio                                                                                                                          |
 
+
 **Notes :**
 
 - In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
 - The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
 - The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
 - Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
-
+- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
+- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
 ### Examples
 
@@ -73,36 +73,46 @@ Here is the picture rectangle: ![](assets/en/Concepts/Concepts/rectangle.en.png)
 In the following examples, each expression is followed by its graphical representation.
 
 Horizontal concatenation
+
 ```4d
  circle+rectangle //Place the rectangle to the right of the circle
  rectangle+circle //Place the circle to the right of the rectangle
 ```
+
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
 Vertical concatenation
+
 ```4d
  circle/rectangle //Place the rectangle under the circle
  rectangle/circle //Place the circle under the rectangle
 ```
+
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
 Exclusive superimposition
+
 ```4d
 Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 ```
+
 ![](assets/en/Concepts/superimpoExc.fr.png)
 
 Inclusive superimposition
+
 ```4d
 Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
 ```
+
 ![](assets/en/Concepts/superimpoInc.fr.png)
 
 Horizontal move
+
 ```4d
 rectangle+50 //Move the rectangle 50 pixels to the right
 rectangle-50 //Move the rectangle 50 pixels to the left
 ```
+
 ![](assets/en/Concepts/hormove.en.png)
 
 Vertical move
@@ -111,6 +121,7 @@ Vertical move
 rectangle/50 //Move the rectangle down by 50 pixels
 rectangle/-20 //Move the rectangle up by 20 pixels
 ```
+
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
 
 Resize
@@ -119,6 +130,7 @@ Resize
 rectangle*1.5 //The rectangle becomes 50% bigger
 rectangle*0.5 //The rectangle becomes 50% smaller
 ```
+
 ![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
 
 Horizontal scaling

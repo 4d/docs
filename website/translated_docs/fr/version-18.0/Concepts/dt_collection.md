@@ -21,7 +21,7 @@ Vous pouvez passer toute expression 4D valide qui retourne un nombre entier posi
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 
 Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection à l'aide de la notation objet :
 
@@ -46,6 +46,7 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 Les collections doivent être initialisées à l'aide, par exemple, de la commande `Creer collection`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification d'un ou plusieurs élements de la collection.
 
 Exemple :
+
 ```4d
  C_COLLECTION($colVar) //création d'une variable 4D de type collection.
  $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
@@ -55,12 +56,12 @@ Exemple :
 
 Vous pouvez créer deux types de collections :
 
-- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
+- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process. 
+- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
 
 ## Méthodes de collection
 
-4D collection references benefit from special methods (sometimes named *member functions*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
+Les références de collections 4D bénéficient de méthodes spécifiques (souvent appelées *fonctions méthodes* ou *méthodes membres*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
 
 > {$result:=}myCollection.method( {params} )
 
@@ -80,16 +81,14 @@ Certaines méthodes retournent la collection d'origine après modification, de m
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
-
 ### paramètre cheminPropriété
 
-
-Several methods accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
+Plusieurs méthodes de collection admettent un *paramètre nommé cheminPropriété*. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
-- soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
+- soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom". 
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Attention :** Lorsqu'un paramètre cheminPropriété est attendu, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini

@@ -5,8 +5,8 @@ original_id: arrays
 ---
 
 An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
 
+> In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
 
 ## Creating Arrays
 
@@ -19,11 +19,13 @@ The following line of code creates (declares) an Integer array of 10 elements:
 ```
 
 Then, the following code resizes that same array to 20 elements:
+
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Then, the following code resizes that same array to no elements:
+
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
@@ -43,14 +45,14 @@ You reference the elements in an array by using curly braces ({…}). A number i
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
+
 Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
 
 **Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.
 
-
 ### Assigning an array to another array
-Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
 
+Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
 
 ## Using the element zero of an array
 
@@ -90,10 +92,9 @@ Here is another example: you want to execute an action only when you click on an
 
 (*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
 
-
 ## Two-dimensional Arrays
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. 例:
+Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. 例: 
 
 ```4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
@@ -184,6 +185,7 @@ However, in some circumstances, you may need to work with arrays holding hundred
 | テキスト            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
 | 時間              | (1+number of elements) * 4                                           |
 | Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
+
 
 **Notes:**
 

@@ -5,9 +5,9 @@ original_id: date
 ---
 
 - Les variables, champs ou expressions de type Date peuvent être compris entre 1/1/100 et 31/12/32767.
-- Bien que le mode de représentation des dates par C_DATE permette de manipuler des dates allant jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite plus basse.
+- Bien que le mode de représentation des dates par C_DATE permette de manipuler des dates allant jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite plus basse. 
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Date dans les descriptions des commandes sont appelés Date, sauf spécification explicite.
 
 ## Constantes littérales de type date
 
@@ -19,13 +19,13 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 !2015-12-31!
 ```
 
-A null date is specified by _!00-00-00!_.
+Une date nulle s’écrit *!00-00-00!*.
 
-**Tip:** The Method Editor includes a shortcut for entering a null date. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
+**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour entrer une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
 
 **Notes :**
 
-- Pour des raisons de compatibilité, 4D accepte que l'année soit saisie sur deux chiffres. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
+- Pour des raisons de compatibilité, 4D accepte que l'année soit saisie sur deux chiffres. Dans ce cas, le programme considère qu’elle appartient au XXe ou au XXIe siècle selon qu'elle est supérieure ou inférieure à 30, sauf si ce fonctionnement par défaut a été modifié à l'aide de la commande ```SIECLE PAR DEFAUT``` 
 - Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" (cf. Page Méthodes), vous devez utiliser le format de date défini dans votre système. Généralement dans un environnement français, une date est saisie sous la forme jour/mois/année, une barre oblique "/" séparant les valeurs.
 
 ## Opérateurs sur les dates
