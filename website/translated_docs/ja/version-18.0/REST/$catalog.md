@@ -28,7 +28,7 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
-| Property | 型      | 説明                                                                                |
+| Property | Type   | 説明                                                                                |
 | -------- | ------ | --------------------------------------------------------------------------------- |
 | name     | String | Name of the dataclass.                                                            |
 | uri      | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
@@ -189,10 +189,10 @@ The information you retrieve concerns the following:
 
 The following properties are returned for an exposed dataclass:
 
-| Property       | 型      | 説明                                                                                                 |
+| Property       | タイプ    | 説明                                                                                                 |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | name           | String | Name of the dataclass                                                                              |
-| collectionName | String | Collection name of the dataclass                                                                   |
+| collectionName | 文字     | Collection name of the dataclass                                                                   |
 | scope          | String | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
 | dataURI        | String | A URI to the data in the dataclass                                                                 |
 
@@ -201,21 +201,21 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property      | 型      | 説明                                                                                                                                                          |
-| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | String | Attribute name.                                                                                                                                             |
-| kind          | String | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
-| scope         | String | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed       | String | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type          | String | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| minLength     | 数値     | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
-| maxLength     | 数値     | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
-| autoComplete  | ブール    | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
-| identifying   | ブール    | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
-| multiLine     | ブール    | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
-| path          | String | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
-| readOnly      | ブール    | This property is True if the attribute is of type calculated or alias.                                                                                      |
-| defaultFormat | オブジェクト | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+| Property      | Type    | 説明                                                                                                                                                          |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | String  | Attribute name.                                                                                                                                             |
+| kind          | String  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
+| scope         | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
+| indexed       | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
+| type          | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
+| minLength     | Number  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
+| maxLength     | Number  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
+| autoComplete  | Boolean | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
+| identifying   | Boolean | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
+| multiLine     | Boolean | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
+| path          | String  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
+| readOnly      | Boolean | This property is True if the attribute is of type calculated or alias.                                                                                      |
+| defaultFormat | Object  | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
 
 ### Method(s)
