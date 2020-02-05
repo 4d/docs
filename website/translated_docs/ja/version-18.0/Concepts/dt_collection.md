@@ -14,7 +14,7 @@ To access a collection element, you need to pass the element number inside squar
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in expression. 例:
+You can pass any valid 4D expression which returns a positive integer in expression. 例: 
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
@@ -45,7 +45,8 @@ If you assign an element's index that surpasses the last existing element of the
 
 Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
-例:
+例: 
+
 ```4d
  C_COLLECTION($colVar) //creation of collection type 4D variable
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
@@ -55,7 +56,7 @@ Collections must have been initialized, for example using the `New collection` c
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes.
+- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes. 
 - shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Collection methods
@@ -80,11 +81,9 @@ Some methods return the original collection after modification, so that you can 
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
-
 ### propertyPath parameter
 
-
-Several methods accept a _propertyPath_ as parameter. This parameter stands for:
+Several methods accept a *propertyPath* as parameter. This parameter stands for:
 
 - either an object property name, for example "lastName"
 - or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
