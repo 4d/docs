@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesPrint
-title: Print
+title: Imprimer
 original_id: propertiesPrint
 ---
 
