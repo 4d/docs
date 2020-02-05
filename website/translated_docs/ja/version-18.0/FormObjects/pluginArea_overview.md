@@ -4,7 +4,7 @@ title: Plug-in Area
 original_id: pluginAreaOverview
 ---
 
-## Overview
+## 概要
 
 A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications. A plug-in can perform a simple task such as displaying a digital clock on a form, or a complex task such as providing full-featured word processing, spreadsheet, or graphics capabilities.
 
