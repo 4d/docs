@@ -1,6 +1,6 @@
 ---
 id: propertiesHierarchy
-title: Hierarchy
+title: Hiérarchie
 ---
 
 ---
