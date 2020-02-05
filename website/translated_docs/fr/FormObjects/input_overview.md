@@ -11,21 +11,21 @@ Les zones de saisie vous permettent d'ajouter des expressions saisissables ou no
 
 Les zones de saisie peuvent contenir [des expressions assignables ou non assignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
-In addition, inputs can be [enterable or non-enterable](properties_Entry.md#enterable). An enterable input accepts data. You can set data entry controls for the object. A non-enterable input can only display values but cannot be edited by the user.
+De plus, les zones de saisie peuvent être [saisissables ou non saisissables](properties_Entry.md#enterable). Une zone de saisie saisissable accepte des données. Vous pouvez définir des contrôles de saisie de données pour l'objet. Une zone de saisie non saisissable peut uniquement afficher des valeurs mais ne peut pas être modifiée par l'utilisateur.
 
-You can manage the data with object or form [methods](Concepts/methods.md).
+Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet ou formulaire.
 
 
 ### Exemple JSON :
 
 ```4d
     "myText": {
-        "type": "input",    //define the type of object
-        "spellcheck": true, //enable spelling verification
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20        //height of the object
+        "type": "input",    //définir le type d'objet
+        "spellcheck": true, //autoriser la correction orthographique
+        "left": 60,         //position gauche dans le formulaire  
+        "top": 160,         //position haute dans le formulaire 
+        "width": 100,       //largeur de l'objet
+        "height": 20        //hauteur de l'objet
         }
 ```
 
@@ -35,10 +35,10 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 
 ---
-## Input alternatives
+## Alternatives
 
-You can also represent field and variable expressions in your forms using alternative objects, more particularly:
+Vous pouvez également représenter des expressions de champ et de variable dans vos formulaires à l'aide d'objets alternatifs, plus particulièrement :
 
-*   You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-*   You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
-*   You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+*   Vous pouvez afficher et saisir des données à partir des champs de la base de données directement dans des colonnes [de type List box](listbox_overview.md).
+*   Vous pouvez représenter un champ de liste ou une variable directement dans un formulaire à l'aide d'objets [Pop-up menus/Listes déroulantes](popupMenuDropdownList_overview) et [Combo box](comboBox_overview.md).
+*   Vous pouvez représenter une expression booléenne sous forme de [case à cocher](checkbox_overview.md) ou de [bouton radio](radio_overview.md).
