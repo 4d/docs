@@ -143,9 +143,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name | データタイプ  | Possible Values                              |
-| ---- | ------- | -------------------------------------------- |
-| icon | picture | Relative or filesystem path in POSIX syntax. |
+| Name | データタイプ | Possible Values                              |
+| ---- | ------ | -------------------------------------------- |
+| icon | ピクチャー  | Relative or filesystem path in POSIX syntax. |
 
 
 #### Objects Supported
