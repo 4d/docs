@@ -7,7 +7,7 @@ original_id: quick-tour
 
 Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
 
-```4d  
+```4d
 ALERT("Hello, World!")
 ```
 
@@ -16,7 +16,6 @@ This code will display a platform-standard alert dialog box with the "Hello, Wor
 ![alt-text](assets/en/Concepts/helloworld.png)
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
-
 
 ## Assigning Values
 
@@ -53,7 +52,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Beispiel:
+4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -83,6 +82,7 @@ PDF REMOVE PAGE(path;page)
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
+
 4D SVG is included in 4D.
 
 ## Constants
@@ -129,7 +129,6 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-
 ## Data Types
 
 In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
@@ -144,7 +143,7 @@ There are cases in which you need to store data as one type and use it as anothe
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
@@ -170,11 +169,10 @@ $vAge:=employee.children[2].age
 
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
-```
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
-```
+    $f:=New object
+    $f.message:=New formula(ALERT("Hello world!"))
+    $f.message() //displays "Hello world!"
+    
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
@@ -184,8 +182,8 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-
 ## Operators
+
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
 | Operator | Operation      | Example            |
@@ -194,6 +192,7 @@ When you use the language, it is rare that you will simply want a piece of data.
 | –        | Subtraction    | 3 – 2 results in 1 |
 | *        | Multiplication | 2 * 3 results in 6 |
 | /        | Division       | 6 / 2 results in 3 |
+
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
@@ -205,8 +204,8 @@ The same symbols are often used for different operations, depending on the data 
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
-The operators are fully defined in the chapter Operators and its subsections.
 
+The operators are fully defined in the chapter Operators and its subsections.
 
 ## Expressions
 
@@ -222,8 +221,8 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 - Debugger where the value of expressions can be checked
 - Quick Report editor as a formula for a column
 
-
 ### Expression types
+
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
 | Expression               | Type               | Description                                                                                                                                                                     |
@@ -251,11 +250,12 @@ You refer to an expression by the data type it returns. There are several expres
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
 | $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
+
 ### Assignable vs non-assignable expressions
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
 
-```4d  
+```4d
 //$myVar variable is assignable, you can write:  
 $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageNumber is assignable, you can write:  
@@ -263,8 +263,8 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
+In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
 ## Pointers
 
