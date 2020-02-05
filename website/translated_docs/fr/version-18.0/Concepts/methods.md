@@ -8,28 +8,29 @@ original_id: methods
 Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :
 
 - **Les méthodes intégrées**, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :
+    
     - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`.
     - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
     - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
-
+    
     Les méthodes intégrées sont détaillées dans le manuel *4D Langage* ou dans les manuels consacrés aux plug-ins et aux composants.
 
 - Les **méthodes projets**, dans lesquelles vous pouvez écrire votre propre code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Une méthode projet est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions). La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes d’instructions.
 
 **Note :** 4D fournit également des méthodes spécifiques exécutées automatiquement en fonction de la base ou des événements formulaires. Voir [Méthodes spécialisées](#specialized-methods).
 
-
 ## Méthodes projet
 
 Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :
 
 - Sous-routine et fonction
-- Méthode associée à un objet
+- Méthode associée à un objet 
 - Méthode de menu
 - Méthode de gestion de process
 - Méthode de gestion d’événements et d'erreurs
 
 ### Sous-routines et fonctions
+
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
 Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes projets, ou à partir des [méthodes prédéfinies](#predefined-methods) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
@@ -87,7 +88,9 @@ Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opé
 //myAlert
 ALERT("Hello world!")
 ```
+
 `myAlert` peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :
+
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";New formula(myAlert))
@@ -107,7 +110,9 @@ Vous pouvez appeler votre formule en lui [passant des paramètres](Concepts/para
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
+
 Vous pouvez encapsuler `fullName` dans un objet :
+
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";New formula(fullName))
@@ -115,6 +120,7 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // équivalent à $result:=fullName("param1";"param2")
 ```
+
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
 
 ```4d
@@ -122,6 +128,7 @@ Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous pe
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
+
 La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :
 
 ```4d
@@ -133,8 +140,6 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-
-
 A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). En appelant uniquement une seule propriété, une nouvelle référence à la formule sera retournée (et ne sera pas exécutée) :
 
 ```4d
@@ -142,18 +147,19 @@ $o:=$f.message //retourne l'objet formule en $o
 ```
 
 ### Méthodes de menu
+
 Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. Ce fonctionnement est l’un des principaux aspects de la personnalisation d’une base de données. C’est en créant des menus qui appellent des méthodes de menu que vous personnalisez votre base.
 
 Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.
 
 L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre base.
 
-
 ### Méthodes de gestion de process
 
 Une **méthode projet** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété *Démarrer un nouveau process* est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
 
 ### Méthodes de gestion d’événements et d'erreurs
+
 Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR EVENEMENT`.
 
 Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR ERREUR`.
@@ -168,6 +174,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple:
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
 Examinons l'exemple suivant : vous disposez d'une table `[Amis et relations]` composée de l'ensemble de champs suivant (très simplifié) :
+
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
 
@@ -233,7 +240,6 @@ Dans 4D, la récursivité est typiquement utilisée pour :
 - Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes `LISTE DES DOSSIERS` et `LISTE DES DOCUMENTS`. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
 **Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
-
 
 ## Méthodes spécialisées
 
