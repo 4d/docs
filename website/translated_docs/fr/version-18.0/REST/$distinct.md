@@ -19,7 +19,7 @@ In our example below, we want to retrieve the distinct values for a company name
 
 `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Response**:
+**Réponse** :
 
     [
         "Adobe",
