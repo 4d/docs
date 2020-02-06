@@ -383,7 +383,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                   | Max. Length | Example                    |
+| Identifier                   | Max. Length | Beispiel                   |
 | ---------------------------- | ----------- | -------------------------- |
 | Table                        | 31          | [Invoices]                 |
 | Field                        | 31          | [Employees]Last Name       |
