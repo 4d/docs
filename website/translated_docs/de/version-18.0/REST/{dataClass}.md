@@ -12,7 +12,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 ## Available syntaxes
 
-| Syntax                                                         | Example                                                | Description                                                                     |
+| Syntax                                                         | Beispiel                                               | Description                                                                     |
 | -------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                  | `/Employee`                                            | Returns all the data (by default the first 100 entities) for the dataclass      |
 | [**{dataClass}({key})**](#dataclasskey)                        | `/Employee(22)`                                        | Returns the data for the specific entity defined by the dataclass's primary key |
@@ -45,7 +45,7 @@ If you want to specify which attributes you want to return, define them using th
 
 `GET  /rest/Company/name,address`
 
-### Example
+### Beispiel
 
 Return all the data for a specific datastore class.
 
@@ -142,7 +142,7 @@ If you want to expand a relation attribute using `$expand`, you do so by specify
 
 `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Example
+### Beispiel
 
 The following request returns all the public data in the Company datastore class whose key is 1.
 
@@ -189,7 +189,7 @@ If you want to use a relation attribute using [$attributes]($attributes.md), you
 
 `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Example
+### Beispiel
 
 The following request returns all the public data of the employee named "Jones".
 
@@ -242,7 +242,7 @@ You can define which attributes you want to return, by passing the following:
 
 You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md).
 
-### Example
+### Beispiel
 
 In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:
 
