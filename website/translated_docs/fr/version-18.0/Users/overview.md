@@ -14,13 +14,13 @@ Le système de gestion des accès de 4D est basé sur les notions d’utilisateu
 
 Les groupes peuvent alors se voir affecter des privilèges d'accès à des parties spécifiques ou des fonctionnalités de la base (accès au mode Développement, serveur HTTP, serveur SQL, etc.), ou à toute partie personnalisée.
 
-The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et au Développement assignés au groupe "Devs" :
 
 ![](assets/en/Users/Access1.png)
 
 ## Activer le contrôle des accès
 
-You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
+Le contrôle effectif des accès par mots de passe de 4D est activé par **l’affectation d’un mot de passe au Super_Utilisateur**.
 
 Tant que le Super_Utilisateur n’a pas de mot de passe, 4D permet à tout utilisateur d’accéder à toutes les parties de la base, même si vous avez défini des utilisateurs et des groupes (à l'ouverture de la base, aucune identification n'est requise). 
 
@@ -50,7 +50,7 @@ Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils 
 
 ## Fichier directory.json
 
-Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
+Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans un fichier spécifique de la base nommé **directory.json**.
 
 Ce fichier peut être stocké dans les emplacements suivants :
 

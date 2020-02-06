@@ -106,7 +106,7 @@ CONFIRM("Do you really want to close this account?";"Yes";"No")
 
 A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
 
-The following example goes through all the characters of the text vtSomeText:
+Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
@@ -185,7 +185,7 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-| Operator | Operation      | Example            |
+| Operator | Operation      | Beispiel           |
 | -------- | -------------- | ------------------ |
 | +        | Addition       | 1 + 2 results in 3 |
 | –        | Subtraction    | 3 – 2 results in 1 |
@@ -196,7 +196,7 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type       | Operation     | Example                                                                                              |
+| Data Type       | Operation     | Beispiel                                                                                             |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
 | Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |

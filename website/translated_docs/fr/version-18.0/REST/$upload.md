@@ -38,7 +38,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
     }
     
 
-**Response**:
+**Réponse** :
 
 The modified entity is returned:
 

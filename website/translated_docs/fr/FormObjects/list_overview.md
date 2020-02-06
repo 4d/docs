@@ -9,17 +9,17 @@ Les listes hiérarchiques sont des objets de formulaire permettant d'afficher de
 
 ![](assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+Le cas échéant, l'icône déployer/contractée est automatiquement affichée à gauche de l'élément. Les listes hiérarchiques prennent en charge un nombre illimité de sous-niveaux.
 
 
-## Hierarchical list data source
+## Sources de données de liste hiérarchique
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+Le contenu d'un objet formulaire liste hiérarchique peut être initialisé de l'une des manières suivantes :
 
-- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. The choice list must have been defined in the List editor in Design mode.
-- Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
+- Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via sa référence *ListRef*, à l'aide des commandes de [liste hiérarchique](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) du langage 4D.
 
 
 ## RefListe et nom d'objet
@@ -141,13 +141,13 @@ Dans la plupart des cas, lorsque vous utilisez des listes hiérarchiques pour de
 En pratique, vous devez vous préoccuper des numéros de référence d'éléments lorsque vous voulez accéder directement par programmation à n'importe quel élément de la liste, et pas nécessairement à l'élément couramment sélectionné.
 
 
-## Modifiable element
+## Élément modifiable
 
-You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item.
+Vous pouvez choisir si les éléments de la liste hiérarchique peuvent être modifiés par l'utilisateur à l'aide du raccourci **Alt + clic** (Windows)/ **Option + clic** (macOS), ou en effectuant un clic long sur le texte de l'élément.
 
-- Whatever the hierarchical list data source, you can control the whole object with the [Enterable](properties_Entry.md#enterable) property.
+- Quelle que soit la source de données de la liste hiérarchique, vous pouvez contrôler l'ensemble de l'objet avec la propriété [Saisissable](properties_Entry.md#enterable).
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
 
 
 ## Propriétés prises en charge

@@ -62,7 +62,7 @@ Within the custom error method, you have access to several information that will
 
 - the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application. 
 
-#### Example
+#### Beispiel
 
 Here is a simple error-handling system:
 

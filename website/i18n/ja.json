@@ -51,10 +51,10 @@
         "title": "日付"
       },
       "Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null と 未定義"
       },
       "Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "数値 (実数、倍長整数、整数)"
       },
       "Concepts/object": {
         "title": "オブジェクト"
@@ -491,10 +491,10 @@
         "title": "日付"
       },
       "version-18.0-Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null と 未定義"
       },
       "version-18.0-Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "数値 (実数、倍長整数、整数)"
       },
       "version-18.0-Concepts/object": {
         "title": "Objects"

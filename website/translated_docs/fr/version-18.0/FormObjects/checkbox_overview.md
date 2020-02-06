@@ -239,7 +239,7 @@ Par défaut, le style OS X Textured apparaît comme :
     
     ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
-- *macOS* - a standard system button displaying a color change from light to dark gray. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+- *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
     
     ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -262,11 +262,11 @@ Le style de case à cocher Office XP combine l'apparence du style [Classique](#r
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+- *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Example with states unchecked / checked / highlighted:
     
     ![](assets/en/FormObjects/checkbox_officexp.png)
 
-- *macOS* - its background is always displayed. Example with states unchecked / checked:
+- *Sous macOS* - son arrière-plan est toujours affiché. Example with states unchecked / checked:
     
     ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 

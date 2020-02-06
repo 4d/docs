@@ -63,7 +63,7 @@ The object in the **jsContextInfo** array details the JavaScript context pool:
 | createdContextCount   | Number  | Number of contexts created since the project was started                              |
 | destroyedContextCount | Number  | Number of contexts destroyed since the project was started                            |
 
-## Example
+## Beispiel
 
 Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
 

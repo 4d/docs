@@ -65,26 +65,26 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Forms
 
-| Contenu                                      | Description                                  | Format  |
-| -------------------------------------------- | -------------------------------------------- | ------- |
-| *nomFormulaire*/form.4DForm                  | Description du formulaire projet             | json    |
-| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | Texte   |
-| *nomFormulaire*/Images/*nomImage*            | Image statique du formulaire projet          | picture |
-| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
+| Contenu                                      | Description                                  | Format |
+| -------------------------------------------- | -------------------------------------------- | ------ |
+| *nomFormulaire*/form.4DForm                  | Description du formulaire projet             | json   |
+| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | Texte  |
+| *nomFormulaire*/Images/*nomImage*            | Image statique du formulaire projet          | image  |
+| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
 
 
 #### Dossier TableForms
 
-| Contenu                                                 | Description                                                                  | Format  |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
-| *n*/Input/*nomFormulaire*/form.4DForm                   | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
-| *n*/Input/*nomFormulaire*/Images/*nomImage*             | Images statiques du formulaire d'entrée de la table                          | picture |
-| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | Texte   |
-| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
-| *n*/Output/*nomFormulaire*/form.4DForm                  | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
-| *n*/Output/*nomFormulaire*/Images/*nomImage*            | Images statiques du formulaire de sortie de la table                         | picture |
-| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | Texte   |
-| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte   |
+| Contenu                                                 | Description                                                                  | Format |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
+| *n*/Input/*nomFormulaire*/form.4DForm                   | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json   |
+| *n*/Input/*nomFormulaire*/Images/*nomImage*             | Images statiques du formulaire d'entrée de la table                          | image  |
+| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | Texte  |
+| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte  |
+| *n*/Output/*nomFormulaire*/form.4DForm                  | Description du formulaire de sortie de la table (n étant le numéro de table) | json   |
+| *n*/Output/*nomFormulaire*/Images/*nomImage*            | Images statiques du formulaire de sortie de la table                         | image  |
+| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | Texte  |
+| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte  |
 
 
 #### Dossier Triggers
@@ -114,10 +114,10 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés de la base de données. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
-| Contenu               | Description                                                                                                                                                                                 | Format  |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés  |
-| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | picture |
+| Contenu               | Description                                                                                                                                                                                 | Format |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés |
+| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | image  |
 
 
 (*) uniquement si le projet a été exporté depuis une base binaire .4db.
@@ -139,13 +139,13 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de données** utilisés pour l'administration de la base de données.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> Ces paramètres ont la priorité sur les **fichiers de propriétés utilisateur** et les fichiers de **propriétés structure**.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                                                                                                         | JSON   |
+| directory.json      | Description des groupes et utilisateurs 4D et leurs droits d'accès lorsque la base est lancée avec un fichier de données.                                                                                                                                                                      | JSON   |
 
 
 ### Dossier Logs
@@ -165,7 +165,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     
     Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
     
-    > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+    > Si un fichier de propriétés de données existe dans un dossier Settings du [dossier Data](#settings-folder), il est prioritaire sur le fichier de propriétés utilisateur.
     
     | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
     | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |

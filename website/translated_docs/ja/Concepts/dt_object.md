@@ -31,7 +31,7 @@ Each property value accessed through the object notation is considered an expres
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization
+## 初期化
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
@@ -47,7 +47,7 @@ Objects must have been initialized, for example using the `New object` command, 
 You can create two types of objects:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 詳細な情報については、[共有オブジェクトと共有コレクション](Concepts/shared.md) を参照ください。
 
 ## Syntax basics
 
@@ -235,7 +235,7 @@ Token member names (i.e., object property names accessed using the object notati
 - Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
-## Examples
+## 例題
 
 Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
 

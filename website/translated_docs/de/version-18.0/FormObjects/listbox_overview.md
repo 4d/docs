@@ -360,7 +360,7 @@ Note that list box arrays used for defining the appearance of selected rows must
 - `On Activate` (form property)
 - `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
 
-##### Example
+##### Beispiel
 
 You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 

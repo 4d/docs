@@ -85,12 +85,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| 演算子        | シンタックス            | 戻り値 | 式             | 結果    |
-| ---------- | ----------------- | --- | ------------- | ----- |
-| Equality   | Pointer = Pointer | ブール | vPtrA = vPtrB | True  |
-|            |                   |     | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | ブール | vPtrA # vPtrC | True  |
-|            |                   |     | vPtrA # vPtrB | False |
+| 演算子 | シンタックス            | 戻り値 | 式             | 結果    |
+| --- | ----------------- | --- | ------------- | ----- |
+| 等しい | Pointer = Pointer | ブール | vPtrA = vPtrB | True  |
+|     |                   |     | vPtrA = vPtrC | False |
+| 異なる | Pointer # Pointer | ブール | vPtrA # vPtrC | True  |
+|     |                   |     | vPtrA # vPtrB | False |
 
 ## Main usages
 

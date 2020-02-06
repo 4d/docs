@@ -22,7 +22,7 @@ In the steps collection, there is an object with the following properties defini
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
 
-## Example
+## Beispiel
 
 If you passed the following query:
 

@@ -27,10 +27,10 @@
         "title": "Arrays"
       },
       "Concepts/branching": {
-        "title": "Branching structures"
+        "title": "Abfragestrukturen"
       },
       "Concepts/looping": {
-        "title": "Looping structures"
+        "title": "Schleifenstrukturen"
       },
       "Concepts/components": {
         "title": "Components"
@@ -78,7 +78,7 @@
         "title": "Error handling"
       },
       "Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "Ablaufsteuerung Überblick"
       },
       "Concepts/identifiers": {
         "title": "Identifiers"
@@ -467,10 +467,10 @@
         "title": "Arrays"
       },
       "version-18.0-Concepts/branching": {
-        "title": "Branching structures"
+        "title": "Abfragestrukturen"
       },
       "version-18.0-Concepts/looping": {
-        "title": "Looping structures"
+        "title": "Schleifenstrukturen"
       },
       "version-18.0-Concepts/components": {
         "title": "Components"
@@ -518,7 +518,7 @@
         "title": "Error handling"
       },
       "version-18.0-Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "Ablaufsteuerung Überblick"
       },
       "version-18.0-Concepts/identifiers": {
         "title": "Identifiers"

@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Example              | Description                                                                      |
+| Syntax                                        | Beispiel             | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -35,7 +35,7 @@ Here is a description of the properties returned for each dataclass in your proj
 | dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
 
 
-### Example
+### Beispiel
 
 `GET  /rest/$catalog`
 
@@ -67,7 +67,7 @@ Calling `$catalog/$all` allows you to receive detailed information about the att
 
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
-### Example
+### Beispiel
 
 `GET  /rest/$catalog/$all`
 
@@ -226,7 +226,7 @@ Defines the project methods asociated to the dataclass, if any.
 
 The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
 
-### Example
+### Beispiel
 
 You can retrieve the information regarding a specific datastore class.
 

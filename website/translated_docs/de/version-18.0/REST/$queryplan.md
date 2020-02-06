@@ -19,7 +19,7 @@ $queryplan returns the query plan as it was passed to 4D Server.
 
 For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
-## Example
+## Beispiel
 
 If you pass the following query:
 
