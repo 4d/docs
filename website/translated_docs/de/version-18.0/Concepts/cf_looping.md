@@ -1,12 +1,12 @@
 ---
 id: version-18.0-looping
-title: Looping structures
-original_id: looping
+title: Schleifenstrukturen
+original_id: Schleifen
 ---
 
 ## While...End while
 
-The formal syntax of the `While...End while` control flow structure is:
+Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
 
 ```4d
  While(Boolean_Expression)
@@ -14,11 +14,11 @@ The formal syntax of the `While...End while` control flow structure is:
  End while
 ```
 
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.
+Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife solange aus, wie der Boolean Ausdruck TRUE ist. Sie prüft den Boolean Ausdruck am Beginn der Schleife und tritt gar nicht in die Schleife ein, wenn der Ausdruck FALSE ist.
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
+Es ist üblich, den getesteten Wert im Boolean Ausdruck direkt vor Eintreten in die Schleife `While...End while` zu initialisieren. Den Wert initialisieren heißt, Sie setzen etwas Passendes, so dass der Boolean Ausdruck TRUE ist und `While...End while` die Schleife ausführt.
 
-The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because *NeverStop* is always TRUE:
+Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da *NeverStop* immer TRUE ist:
 
 ```4d
  NeverStop:=True
@@ -26,9 +26,9 @@ The Boolean expression must be set by something inside the loop or else the loop
  End while
 ```
 
-If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the [Error handling](error-handling.md) page.
+In solch einer Situation, also bei einer unkontrolliert ablaufenden Methode können Sie die Schleife über den Schrittmodus stoppen und das Problem beheben. Weitere Informationen dazu finden Sie auf der Seite [Fehlerverwaltung](error-handling.md).
 
-### Example
+### Beispiel
 
 ```4d
  CONFIRM("Add a new record?") //The user wants to add a record?
@@ -37,11 +37,11 @@ If you find yourself in such a situation, where a method is executing uncontroll
  End while //The loop always ends with End while
 ```
 
-In this example, the `OK` system variable is set by the `CONFIRM` command before the loop starts. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Otherwise, the `OK` system variable is set to 0 and the loop is skipped. Once the loop starts, the `ADD RECORD` command keeps the loop going because it sets the `OK` system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the `OK` system variable is set to 0 and the loop stops.
+In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` gesetzt, bevor die Schleife startet. Klickt der Benutzer im Dialogfenster Bestätigen auf die Schaltfläche **OK**, wird die Systemvariable `OK` auf 1 gesetzt und die Schleife startet. Ansonsten wird die Systemvariable `OK` auf 0 gesetzt und die Schleife übersprungen. Sobald die Schleife läuft, sorgt der Befehl `ADD RECORD` dafür, dass sie weiterläuft, da er die Systemvariable `OK` auf 1 setzt, wenn der Benutzer den Datensatz sichert. Annulliert der Benutzer den letzten Datensatz, d.h. er sichert ihn nicht, wird die Systemvariable `OK` auf 0 gesetzt und die Schleife stoppt.
 
 ## Repeat...Until
 
-The formal syntax of the `Repeat...Until` control flow structure is:
+Die formale Syntax der Abfragefolge `Repeat...Until` lautet:
 
 ```4d
  Repeat
@@ -49,13 +49,13 @@ The formal syntax of the `Repeat...Until` control flow structure is:
  Until(Boolean_Expression)
 ```
 
-A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End while](flow-control#whileend-while), mit dem Unterschied, dass der Boolean Ausdruck nicht vor, sondern nach der Schleife getestet wird. So führt `Repeat...Until` die Schleife immer einmal aus, während `While...End while` die Schleife gar nicht ausführt, wenn am Anfang der Boolean Ausdruck FALSE ist.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+Ein weiterer Unterschied ist, dass `Repeat...Until` weiterläuft, bis der Boolean Ausdruck TRUE ist.
 
-### Example
+### Beispiel
 
-Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
+Vergleichen Sie folgendes Beispiel mit dem Beispiel zu `While...End while`. Beachten Sie, dass der Boolean Ausdruck nicht initialisiert werden muss—es gibt keinen Befehl `CONFIRM` zum Initialisieren der Variable `OK`.
 
 ```4d
  Repeat
@@ -65,7 +65,7 @@ Compare the following example with the example for the `While...End while` loop.
 
 ## For...End for
 
-The formal syntax of the `For...End for` control flow structure is:
+Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -73,23 +73,23 @@ The formal syntax of the `For...End for` control flow structure is:
  End for
 ```
 
-The `For...End for` loop is a loop controlled by a counter variable:
+Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
-- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
-- When the counter variable passes the *End_Expression* value, the loop stops.
+- *Counter_Variable* ist eine numerische Variable vom Typ Zahl oder Lange Ganzzahl. Sie wird von der Schleife `For...End for` auf den in *Start_Expression* festgelegten Wert initialisiert.
+- Die Zählervariable wird nach jedem Durchlaufen der Schleife um den optionalen Wert, der in *Increment_Expression* angegeben ist, erhöht. Tragen Sie hier keinen Wert ein, wird die Zählervariable standardmäßig um Eins (1) erhöht.
+- Sobald die Zählervariable *End_Expression* durchläuft, stoppt die Schleife.
 
-**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. If these expressions are variables, changing one of these variables within the loop will not affect the loop.
+**Wichtig:** Die numerischen Ausdrücke *Start_Expression*, *End_Expression* und *Increment_Expression* werden einmal am Schleifenbeginn gewertet. Sind diese Ausdrücke Variablen, und ändern Sie eine dieser Variablen innerhalb der Schleife, hat das keine Auswirkung auf die Schleife.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
+**Tipp:** Für besondere Zwecke können Sie den Wert der Zählervariablen *Counter_Variable* innerhalb der Schleife ändern; das wirkt sich dann auch auf die Schleife aus.
 
-- Usually *Start_Expression* is less than *End_Expression*.
-- If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
-- If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. See the examples.
+- Im Normalfall ist *Start_Expression* kleiner als *End_Expression*.
+- Sind *Start_Expression* und *End_Expression* gleich, wird die Schleife nur einmal ausgeführt.
+- Ist *Start_Expression* größer als *End_Expression*, wird die Schleife gar nicht ausgeführt, außer *Increment_Expression* hat einen negativen Wert. Sehen Sie die Beispiele.
 
-### Basic examples
+### Allgemeine Beispiele
 
-1. The following example executes 100 iterations:
+1. Folgendes Beispiel führt 100 Durchläufe aus:
 
 ```4d
  For(vCounter;1;100)
@@ -97,7 +97,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-2. The following example goes through all elements of the array anArray:
+2. Folgendes Beispiel durchläuft alle Elemente des Array anArray:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -106,7 +106,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-3. The following example goes through all the characters of the text vtSomeText:
+3. Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 
 ```4d
  For($vlChar;1;Length(vtSomeText))
@@ -117,7 +117,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-4. The following example goes through the selected records for the table [aTable]:
+4. Folgendes Beispiel durchläuft die ausgewählten Datensätze für die Tabelle [aTable]:
 
 ```4d
  FIRST RECORD([aTable])
@@ -130,13 +130,13 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples.
+Die meisten der Schleifen `For...End for` in Ihrer Datenbank sehen wie in den oben aufgeführten Beispielen aus.
 
-### Decrementing variable counter
+### Variablenzähler verringern
 
-In some cases, you may want to have a loop whose counter variable is decreasing rather than increasing. To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. The following examples do the same thing as the previous examples, but in reverse order:
+Manchmal benötigen Sie in einer Schleife eine absteigende Zählervariable. Dazu muss *Start_Expression* größer als *End_Expression* sein und *Increment_Expression* einen negativen Wert haben. Folgende Beispiele führen dieselben Aktionen wie oben aus, sie zählen jedoch rückwärts:
 
-5. The following example executes 100 iterations:
+5. Folgendes Beispiel führt 100 Durchläufe aus:
 
 ```4d
  For(vCounter;100;1;-1)
@@ -144,7 +144,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-6. The following example goes through all elements of the array anArray:
+6. Folgendes Beispiel durchläuft alle Elemente des Array anArray:
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
@@ -153,7 +153,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-7. The following example goes through all the characters of the text vtSomeText:
+7. Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
@@ -164,7 +164,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-8. The following example goes through the selected records for the table [aTable]:
+8. Folgendes Beispiel durchläuft die ausgewählten Datensätze für die Tabelle [aTable]:
 
 ```4d
  LAST RECORD([aTable])
@@ -177,11 +177,11 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
  End for
 ```
 
-### Incrementing the counter variable by more than one
+### Die Zählervariable um mehr als Eins erhöhen
 
-If you need to, you can use an *Increment_Expression* (positive or negative) whose absolute value is greater than one.
+Bei Bedarf können Sie *Increment_Expression* (positiv oder negativ) für absolute Werte größer als Eins einsetzen.
 
-9. The following loop addresses only the even elements of the array anArray:
+9. Folgende Schleife ordnet dem Array anArray nur die geraden Elemente zu:
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
@@ -190,9 +190,9 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
  End for
 ```
 
-### Comparing looping structures
+### Die Strukturen der Schleifen vergleichen
 
-Let's go back to the first `For...End for` example. The following example executes 100 iterations:
+Let's go back to the first `For...End for` example. Folgendes Beispiel führt 100 Durchläufe aus:
 
 ```4d
  For(vCounter;1;100)
@@ -321,7 +321,7 @@ At each loop iteration, the *Current_Item* variable is automatically filled with
 - The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
 
-#### Example
+#### Beispiel
 
 You want to compute some statistics for a collection of numbers:
 
@@ -356,7 +356,7 @@ The number of loops is based on the number of entities in the entity selection. 
 
 Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
 
-#### Example
+#### Beispiel
 
 You want to raise the salary of all British employees in an entity selection:
 
@@ -374,7 +374,7 @@ When `For each...End for each` is used with an *Expression* of the Object type, 
 
 The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
 
-#### Example
+#### Beispiel
 
 You want to switch the names to uppercase in the following object:
 
@@ -420,7 +420,7 @@ For example:
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
 - end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
 
-#### Example
+#### Beispiel
 
 ```4d
  C_COLLECTION($col;$col2)
@@ -446,7 +446,7 @@ You can pass either keyword depending on your needs:
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
-#### Example
+#### Beispiel
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
