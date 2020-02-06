@@ -31,7 +31,7 @@ By calling `$directory/currentUser` after a user has logged in, you can retrieve
 | ID       | String | UUID referencing the user.                 |
 
 
-### Example
+### Beispiel
  Call `$directory/currentUser` to find out the current user of your application.
 
 `GET  /rest/$directory/currentUser`
@@ -67,7 +67,7 @@ To find out if the currently logged in user belongs to a specific group, use `$d
 
 If we want to check to see if the current user is a member of the Sales group, we must pass either *GroupID* or *GroupName* in the `POST`.
 
-### Example
+### Beispiel
 Below is an example of how to pass either the GroupID or GroupName in the `POST` data.
 
 `POST  /rest/$directory/currentUserBelongsTo`
@@ -116,7 +116,7 @@ All parameters must be passed in **headers** of a POST method:
 | session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
 
 
-### Example
+### Beispiel
 
 ```4d
 C_TEXT($response;$body_t)
@@ -158,7 +158,7 @@ Logs out the current user.
 ### Description
 To log out the current user from your application, use `$directory/logout`.
 
-### Example
+### Beispiel
 You call `$directory/logout` to log the current user out of the application.
 
 `GET  /rest/$directory/logout`
