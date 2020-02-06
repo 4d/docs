@@ -132,7 +132,7 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
 
-#### Examples
+#### 例題
 
 All objects with the `borderStyle` attribute will have purple lines:
 
