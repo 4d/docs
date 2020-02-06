@@ -17,7 +17,7 @@ Le système de gestion des accès de 4D est basé sur les notions d’utilisateu
 
 Les groupes peuvent alors se voir affecter des privilèges d'accès à des parties spécifiques ou des fonctionnalités de la base (accès au mode Développement, serveur HTTP, serveur SQL, etc.), ou à toute partie personnalisée.
 
-The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et au Développement assignés au groupe "Devs" :
 
 ![](assets/en/Users/Access1.png)
 
