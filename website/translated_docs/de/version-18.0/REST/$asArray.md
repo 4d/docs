@@ -11,7 +11,7 @@ Returns the result of a query in an array (i.e. a collection) instead of a JSON 
 
 If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
 
-## Example
+## Beispiel
 
 Here is an example or how to receive the response in an array.
 
