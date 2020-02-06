@@ -52,7 +52,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 Vous pouvez utiliser n'importe quelle [expression](Concepts/quick-tour.md#expression-types) comme paramètre, à l'exception des :
 
 - tables
-- arrays
+- tableaux
 
 Les expressions de tables ou de tableaux peuvent être passées uniquement [comme une référence utilisant un pointeur](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
