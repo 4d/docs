@@ -50,7 +50,7 @@ High resolution displays have a higher pixel density than traditional standard d
 
 The following table demonstrates the difference between display resolution and picture pixel density.
 
-| Display Type        | Scale Factor                                   | Example                                                          |
+| Display Type        | Scale Factor                                   | Beispiel                                                         |
 | ------------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
 | Standard Resolution | 1:1 pixel density.                             | **1x**  
 ![](assets/en/Project/pictureScale1.png)  
