@@ -12,7 +12,7 @@ Limits the number of entities to return (e.g., `$top=50`)
 
 When used in conjunction with [`$skip`]($skip.md), you can navigate through the entity collection returned by the REST request.
 
-## Example
+## Beispiel
 
 In the following example, we request the next ten entities after the 20th entity:
 
