@@ -1,5 +1,5 @@
 ---
-id: version-18 R2 BETA-analysis
+id: version-18R2_BETA-analysis
 title: Page Analyse d'activités
 sidebar_label: Page Analyse d'activités
 original_id: analysis

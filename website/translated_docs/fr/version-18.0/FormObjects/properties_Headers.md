@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesHeaders
-title: Headers
+title: En-têtes
 original_id: propertiesHeaders
 ---
 

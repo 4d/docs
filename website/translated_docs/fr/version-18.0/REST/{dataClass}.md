@@ -30,7 +30,7 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                   |
+| Propriété     | Type    | Description                                                                                                                                                                                                                                                   |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | Chaine  | Name of the datastore class.                                                                                                                                                                                                                                  |
 | __COUNT       | Nombre  | Number of entities in the datastore class.                                                                                                                                                                                                                    |

@@ -1,6 +1,6 @@
 ---
 id: version-18.0-dropdownListOverview
-title: Drop-down List
+title: Liste déroulante
 original_id: dropdownListOverview
 ---
 

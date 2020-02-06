@@ -14,7 +14,7 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 In the steps collection, there is an object with the following properties defining the query executed:
 
-| Property      | Type       | Description                                                                 |
+| Propriété     | Type       | Description                                                                 |
 | ------------- | ---------- | --------------------------------------------------------------------------- |
 | description   | Chaine     | Actual query executed or "AND" when there are multiple steps                |
 | time          | Nombre     | Number of milliseconds needed to execute the query                          |

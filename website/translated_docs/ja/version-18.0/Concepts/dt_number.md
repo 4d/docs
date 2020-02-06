@@ -38,27 +38,27 @@ Negative numbers are specified with the minus sign (-). たとえば:
 
 ## Number operators
 
-| 演算子                      | シンタックス           | 戻り値 | 式        | 結果    |
-| ------------------------ | ---------------- | --- | -------- | ----- |
-| 加算 (足し算)                 | Number + Number  | 数値  | 2 + 3    | 5     |
-| 減算 (引き算)                 | Number - Number  | 数値  | 3 – 2    | 1     |
-| 乗算 (かけ算)                 | Number * Number  | 数値  | 5 * 2    | 10    |
-| 除算 (割り算)                 | Number /Number   | 数値  | 5 / 2    | 2.5   |
-| Longint division         | Number \ Number | 数値  | 5 \ 2   | 2     |
-| Modulo                   | Number % Number  | 数値  | 5 % 2    | 1     |
-| Exponentiation           | Number ^ Number  | 数値  | 2 ^ 3    | 8     |
-| Equality                 | Number = Number  | ブール | 10 = 10  | True  |
-|                          |                  |     | 10 = 11  | False |
-| Inequality               | Number # Number  | ブール | 10 #11   | True  |
-|                          |                  |     | 10 # 10  | False |
-| Greater than             | Number > Number  | ブール | 11 > 10  | True  |
-|                          |                  |     | 10 > 11  | False |
-| Less than                | Number < Number  | ブール | 10 < 11  | True  |
-|                          |                  |     | 11 < 10  | False |
-| Greater than or equal to | Number >= Number | ブール | 11 >= 10 | True  |
-|                          |                  |     | 10 >= 11 | False |
-| Less than or equal to    | Number <= Number | ブール | 10 <= 11 | True  |
-|                          |                  |     | 11 <= 10 | False |
+| 演算子                      | シンタックス           | 戻り値     | 式        | 結果    |
+| ------------------------ | ---------------- | ------- | -------- | ----- |
+| 加算 (足し算)                 | Number + Number  | 数値      | 2 + 3    | 5     |
+| 減算 (引き算)                 | Number - Number  | Number  | 3 – 2    | 1     |
+| 乗算 (かけ算)                 | Number * Number  | Number  | 5 * 2    | 10    |
+| 除算 (割り算)                 | Number /Number   | Number  | 5 / 2    | 2.5   |
+| Longint division         | Number \ Number | Number  | 5 \ 2   | 2     |
+| Modulo                   | Number % Number  | Number  | 5 % 2    | 1     |
+| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3    | 8     |
+| Equality                 | Number = Number  | Boolean | 10 = 10  | True  |
+|                          |                  |         | 10 = 11  | False |
+| Inequality               | Number # Number  | Boolean | 10 #11   | True  |
+|                          |                  |         | 10 # 10  | False |
+| Greater than             | Number > Number  | Boolean | 11 > 10  | True  |
+|                          |                  |         | 10 > 11  | False |
+| Less than                | Number < Number  | Boolean | 10 < 11  | True  |
+|                          |                  |         | 11 < 10  | False |
+| Greater than or equal to | Number >= Number | Boolean | 11 >= 10 | True  |
+|                          |                  |         | 10 >= 11 | False |
+| Less than or equal to    | Number <= Number | Boolean | 10 <= 11 | True  |
+|                          |                  |         | 11 <= 10 | False |
 
 
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
@@ -82,7 +82,7 @@ The order in which an expression is evaluated is called precedence. 4D has a str
 
 returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
 
-To override the left-to-right precedence, you MUST use parentheses. たとえば:
+To override the left-to-right precedence, you MUST use parentheses. 例: 
 
 ```4d
  3+(4*5)

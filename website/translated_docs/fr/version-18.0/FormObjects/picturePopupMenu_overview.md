@@ -1,6 +1,6 @@
 ---
 id: version-18.0-picturePopupMenuOverview
-title: Picture Pop-up Menu
+title: Pop-up menu image
 original_id: picturePopupMenuOverview
 ---
 

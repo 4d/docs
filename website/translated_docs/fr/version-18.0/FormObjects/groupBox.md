@@ -1,6 +1,6 @@
 ---
 id: version-18.0-groupBox
-title: Group Box
+title: Zone de groupe
 original_id: groupBox
 ---
 

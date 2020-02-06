@@ -29,11 +29,11 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Property | Type   | Description                                                                       |
-| -------- | ------ | --------------------------------------------------------------------------------- |
-| name     | Chaine | Name of the dataclass.                                                            |
-| uri      | Chaine | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI  | Chaine | A URI that allows you to view the data in the dataclass.                          |
+| Propriété | Type   | Description                                                                       |
+| --------- | ------ | --------------------------------------------------------------------------------- |
+| name      | Chaine | Name of the dataclass.                                                            |
+| uri       | Chaine | A URI allowing you to obtain information about the |dataclass and its attributes. |
+| dataURI   | Chaine | A URI that allows you to view the data in the dataclass.                          |
 
 
 ### Exemple
@@ -196,7 +196,7 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Type   | Description                                                                                        |
+| Propriété      | Type   | Description                                                                                        |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | name           | Chaine | Name of the dataclass                                                                              |
 | collectionName | Chaine | Collection name of the dataclass                                                                   |
@@ -208,7 +208,7 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property      | Type    | Description                                                                                                                                                 |
+| Propriété     | Type    | Description                                                                                                                                                 |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name          | Chaine  | Attribute name.                                                                                                                                             |
 | kind          | Chaine  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |

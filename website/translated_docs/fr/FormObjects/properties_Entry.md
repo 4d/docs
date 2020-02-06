@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Saisie
 ---
 
 ---

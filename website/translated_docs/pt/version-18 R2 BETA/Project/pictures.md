@@ -1,5 +1,5 @@
 ---
-id: version-18 R2 BETA-pictures
+id: version-18R2_BETA-pictures
 title: Pictures
 original_id: pictures
 ---

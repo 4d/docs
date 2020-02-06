@@ -1,7 +1,7 @@
 ---
 id: version-18.0-binary
 title: '$binary'
-original_id: バイナリ
+original_id: binary
 ---
 
 Pass "true" to save the BLOB as a document (must also pass `$expand={blobAttributeName}`)

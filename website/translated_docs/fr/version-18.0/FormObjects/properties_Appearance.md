@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesAppearance
-title: Appearance
+title: Apparence
 original_id: propertiesAppearance
 ---
 

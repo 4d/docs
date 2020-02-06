@@ -1,6 +1,6 @@
 ---
 id: version-18.0-REST_requests
-title: About REST Requests
+title: A propos des requêtes REST
 original_id: REST_requests
 ---
 

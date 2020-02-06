@@ -1,6 +1,6 @@
 ---
 id: version-18.0-gettingStarted
-title: Getting Started
+title: Prise en main
 original_id: gettingStarted
 ---
 

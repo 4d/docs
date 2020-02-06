@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesCrop
-title: Crop
+title: Découpage
 original_id: propertiesCrop
 ---
 

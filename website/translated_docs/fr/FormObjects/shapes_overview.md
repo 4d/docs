@@ -14,7 +14,7 @@ Les formes 4D prennent en charge les formes basiques suivantes :
 
 ## Rectangle
 
-Un rectangle statique est un objet décoratif contenu dans les formulaires. Rectangles are constrained to squared shapes.
+Un rectangle statique est un objet décoratif contenu dans les formulaires. Les rectangles sont limités à des formes carrées.
 
 Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épaisseur de ligne, motif, etc.). L'[arrondi](properties_CoordinatesAndSizing.md#corner-radius), en particulier, des coins du rectangle peuvent être définis.
 
@@ -39,7 +39,7 @@ Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épais
 
 ## Ligne
 
-A static line is a decorative object for forms, drawn between two plots. Lines can be horizontal, vertical, or of any angle shapes.
+Une ligne statique est un objet décoratif pour les formulaires, entre deux tracés. Lines can be horizontal, vertical, or of any angle shapes.
 
 The design of lines is controlled through many properties (color, line thickness, etc.).
 
@@ -87,7 +87,7 @@ Résultat : ![](assets/en/FormObjects/shape_line2.png)
 
 ## Ovale
 
-A static oval is a decorative object for forms. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Un ovale statique est un objet décoratif contenu dans les formulaires. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
 
 ![](assets/en/FormObjects/shape_oval.png)
 

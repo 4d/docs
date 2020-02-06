@@ -61,9 +61,9 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | データタイプ           | Possible Values                          |
-| ------ | ---------------- | ---------------------------------------- |
-| labels | list, collection | A list of values to fill the tab control |
+| Name | データタイプ           | Possible Values                          |
+| ---- | ---------------- | ---------------------------------------- |
+| ラベル  | list, collection | A list of values to fill the tab control |
 
 
 #### Objects Supported
@@ -165,9 +165,9 @@ A 4D expression to be associated with a column. You can enter:
     
     * String
     * Numeric
-    * 日付
-    * 時間
-    * ピクチャー
+    * Date
+    * Time
+    * Picture
     * Boolean  
         You can use fields from the Master Table or from other tables.
 * A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.  
@@ -175,9 +175,9 @@ A 4D expression to be associated with a column. You can enter:
     
     * String
     * Numeric
-    * 日付
+    * Date
     * ピクチャー
-    *     ブール
+    *     Boolean
             
         
         For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  

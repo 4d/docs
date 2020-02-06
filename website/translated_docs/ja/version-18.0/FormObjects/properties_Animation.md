@@ -63,9 +63,9 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### JSON Grammar
 
-| Name       | データタイプ  | Possible Values |
-| ---------- | ------- | --------------- |
-| frameDelay | integer | minimum: 0      |
+| Name       | データタイプ | Possible Values |
+| ---------- | ------ | --------------- |
+| frameDelay | 整数     | minimum: 0      |
 
 
 #### Objects Supported

@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesHierarchy
-title: Hierarchy
+title: Hiérarchie
 original_id: propertiesHierarchy
 ---
 

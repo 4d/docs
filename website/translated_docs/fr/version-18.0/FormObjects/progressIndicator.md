@@ -1,6 +1,6 @@
 ---
 id: version-18.0-progressIndicator
-title: Progress Indicator
+title: Indicateurs de progression
 original_id: progressIndicator
 ---
 

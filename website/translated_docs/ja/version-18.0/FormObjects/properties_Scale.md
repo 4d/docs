@@ -46,9 +46,9 @@ Scale display measurement.
 
 #### JSON Grammar
 
-|      Name      | データタイプ  | Possible Values |
-|:--------------:|:-------:| --------------- |
-| graduationStep | integer | minimum: 0      |
+|      Name      | データタイプ | Possible Values |
+|:--------------:|:------:| --------------- |
+| graduationStep |   整数   | minimum: 0      |
 
 
 #### Objects Supported
@@ -121,9 +121,9 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 
 #### JSON Grammar
 
-| Name | データタイプ  | Possible Values |
-|:----:|:-------:| --------------- |
-| step | integer | minimum: 1      |
+| Name | データタイプ | Possible Values |
+|:----:|:------:| --------------- |
+| step |   整数   | minimum: 1      |
 
 
 #### Objects Supported

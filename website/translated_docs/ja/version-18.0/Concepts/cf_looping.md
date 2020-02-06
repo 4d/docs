@@ -297,9 +297,9 @@ The following table compares the three types of `For each...End for each`:
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
 | Current_Item type                 | Variable of the same type as collection elements | エンティティ                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | オブジェクト                      |
+| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | ◯                                                | ◯                                   | No                          |
+| Support of begin / end parameters | ◯                                                | ◯                                   | ×                           |
 
 
 - The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.

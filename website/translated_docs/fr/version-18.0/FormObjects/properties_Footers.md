@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesFooters
-title: Footers
+title: Pieds
 original_id: propertiesFooters
 ---
 
