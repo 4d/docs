@@ -36,7 +36,7 @@ If you want to get all the computations for an attribute of type Number, you can
 
 `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
     {
         "salary": {
@@ -53,7 +53,7 @@ If you want to get all the computations for an attribute of type String, you can
 
 `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
     {
         "salary": {
@@ -68,7 +68,7 @@ If you want to just get one calculation on an attribute, you can write the follo
 
 `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**Réponse** :
 
 `235000`
 
