@@ -66,7 +66,7 @@ You can always define which attributes to return in the REST response after an i
 
 You can apply this filter in the following ways:
 
-| Object                 | Syntax                                              | Example                                                       |
+| Object                 | Syntax                                              | Beispiel                                                      |
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a*'"           |
