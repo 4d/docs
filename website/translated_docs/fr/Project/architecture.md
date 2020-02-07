@@ -154,46 +154,45 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 - conversion de base de données,
 - requêtes de serveur Web,
 - journal des activités de sauvegarde/restitution (*Journal de sauvegarde\[xxx].txt, voir [Journal de sauvegarde](Backup/backup.md#backup-journal))</li> 
-    
-    - débogage de commandes,
-    - Requêtes 4D Server (générées sur les postes clients et sur le serveur).</ul> 
-    
-    > Un dossier Logs supplémentaire est disponible dans le dossier des préférences utilisateur du système (dossier 4D actif, voir la commande [Lire dossier 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html)) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.
-    
-    ## Dossier Settings
-    
-    Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
-    
-    > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
-    
-    | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
-    | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-    | directory.json      | Description des groupes et utilisateurs 4D pour la base de données, ainsi que leurs droits d'accès                                                                                                                                                                                                                                                                                                                                                 | JSON   |
-    | BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
-    | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
+- débogage de commandes,
+- Requêtes 4D Server (générées sur les postes clients et sur le serveur).</ul> 
 
-    
-    ## Dossier userPreferences.*userName*
-    
-    Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
-    
-    | Contenu                      | Description                                                           | Format |
-    | ---------------------------- | --------------------------------------------------------------------- | ------ |
-    | methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
-    | methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
-    | formWindowPositions.json     | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
-    | workspace.json               | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
-    | debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
-    | recentTables.json            | Liste ordonée de tables                                               | JSON   |
-    | preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
+> Un dossier Logs supplémentaire est disponible dans le dossier des préférences utilisateur du système (dossier 4D actif, voir la commande [Lire dossier 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html)) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.
 
-    
-    ## Dossier Components
-    
-    Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
-    
-    > Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir [Créer un package projet](building.md)) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.
-    
-    ## Dossier Plugins
-    
-    Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+## Dossier Settings
+
+Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
+
+> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+
+| Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| directory.json      | Description des groupes et utilisateurs 4D pour la base de données, ainsi que leurs droits d'accès                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
+| Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
+
+
+## Dossier userPreferences.*userName*
+
+Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
+
+| Contenu                      | Description                                                           | Format |
+| ---------------------------- | --------------------------------------------------------------------- | ------ |
+| methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
+| methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
+| formWindowPositions.json     | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
+| workspace.json               | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
+| debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
+| recentTables.json            | Liste ordonée de tables                                               | JSON   |
+| preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
+
+
+## Dossier Components
+
+Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+
+> Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir [Créer un package projet](building.md)) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.
+
+## Dossier Plugins
+
+Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
