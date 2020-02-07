@@ -185,6 +185,7 @@ However, in some circumstances, you may need to work with arrays holding hundred
 | Time            | (1+number of elements) * 4                                           |
 | Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
 
+
 **Notes:**
 
 - The size of a text in memory is calculated using this formula: ((Length + 1) * 2)
