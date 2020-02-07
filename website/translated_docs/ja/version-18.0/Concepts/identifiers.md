@@ -419,6 +419,6 @@ Be sure to use unique names for the different elements in your database. If a pa
 3. Methods
 4. Plug-in routines
 5. Predefined constants
-6. 変数.
+6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
