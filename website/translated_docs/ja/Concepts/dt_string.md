@@ -32,6 +32,7 @@ The following escape sequences can be used within strings:
 | \\\          | \ (Backslash)       |
 | \\"           | " (Quotation marks)  |
 
+
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
 ## String operators
@@ -55,6 +56,7 @@ The following escape sequences can be used within strings:
 | Contains keyword | String % String  | ブール    | "Alpha Bravo" % "Bravo" | True     |
 |                  |                  |        | "Alpha Bravo" % "ravo"  | False    |
 |                  | Picture % String | ブール    | Picture_expr % "Mer"    | True (*) |
+
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
