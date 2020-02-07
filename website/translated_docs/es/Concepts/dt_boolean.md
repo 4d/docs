@@ -40,6 +40,7 @@ myBoolean:=(myButton=1)
 |           |                        |         | ("A" = "B") &#124; (15 # 3) | True  |
 |           |                        |         | ("A" = "B") &#124; (15 = 3) | False |
 
+
 The following is the truth table for the AND logical operator:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
@@ -49,6 +50,7 @@ The following is the truth table for the AND logical operator:
 | False | True  | False         |
 | False | False | False         |
 
+
 The following is the truth table for the OR logical operator:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
@@ -57,6 +59,7 @@ The following is the truth table for the OR logical operator:
 | True  | False | True               |
 | False | True  | True               |
 | False | False | False              |
+
 
 **Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
