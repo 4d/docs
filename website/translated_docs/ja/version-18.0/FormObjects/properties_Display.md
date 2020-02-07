@@ -451,7 +451,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## タイトル
+        ## Title
         
         This property is available for a list box column if:
         
