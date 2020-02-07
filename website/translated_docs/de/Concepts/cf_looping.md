@@ -300,6 +300,7 @@ The following table compares the three types of `For each...End for each`:
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
 | Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
 
+
 - The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
 - By default, the enclosed *statement(s)* are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
 - The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
