@@ -11,7 +11,7 @@ Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 
 $queryplan returns the query plan as it was passed to 4D Server.
 
-| Property | Type   | 説明                                                                                          |
+| Property | 型      | 説明                                                                                          |
 | -------- | ------ | ------------------------------------------------------------------------------------------- |
 | item     | String | Actual query executed                                                                       |
 | subquery | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
