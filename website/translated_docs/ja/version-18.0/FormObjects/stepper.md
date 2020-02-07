@@ -4,7 +4,7 @@ title: Stepper
 original_id: stepper
 ---
 
-## 概要
+## Overview
 
 A stepper lets the user scroll through numeric values, durations (times) or dates by predefined steps by clicking on the arrow buttons.
 
