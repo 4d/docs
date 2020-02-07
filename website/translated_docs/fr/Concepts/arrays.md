@@ -185,6 +185,7 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Heure           | (1+nombre d'éléments) * 4                                               |
 | Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
 
+
 **Notes :**
 
 - La taille d'un texte en mémoire se calcule par la formule ((Longueur + 1) * 2)
