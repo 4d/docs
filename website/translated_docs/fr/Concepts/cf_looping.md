@@ -300,6 +300,7 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 | Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
 | Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
 
+
 - Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
 - Par défaut, les *instructions* incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
 - Les paramètres optionnels *début* et *fin* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
@@ -307,7 +308,7 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
     - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
     - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise. 
 
-### Boucles sur collections
+### Boucle sur collections
 
 Lorsque `For each...End for each` est utilisée avec une *Expression* de type *Collection*, le paramètre *Elément_courant* est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
 
@@ -344,7 +345,7 @@ Vous souhaitez calculer quelques statistiques sur une collection de nombres :
   //$vUnder=4,$vOver=2
 ```
 
-### Boucle sur des entity selections
+### Boucle sur entity selections
 
 Lorsque `For each...End for each` est utilisée avec une *Expression* de type *Entity selection*, le paramètre *Elément_courant* contient l'entity en cours de traitement.
 
