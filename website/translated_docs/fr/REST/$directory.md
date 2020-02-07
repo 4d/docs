@@ -5,7 +5,6 @@ title: '$directory'
 
 The directory handles user access through REST requests.
 
-
 ## Available syntaxes
 
 | Syntaxe                                                               | Method | Description                                                      |
@@ -16,12 +15,12 @@ The directory handles user access through REST requests.
 | [**$directory/logout**](#directorylogout)                             | `GET`  | Logs out the current user                                        |
 
 
-
 ## $directory/currentUser
+
 Returns information about the current user
 
-
 ### Description
+
 By calling `$directory/currentUser` after a user has logged in, you can retrieve the following information:
 
 | Propriété | Type   | Description                                |
@@ -32,42 +31,41 @@ By calling `$directory/currentUser` after a user has logged in, you can retrieve
 
 
 ### Exemple
- Call `$directory/currentUser` to find out the current user of your application.
+
+Call `$directory/currentUser` to find out the current user of your application.
 
 `GET  /rest/$directory/currentUser`
 
 **Result**:
 
-````
-{
-    "result": {
-        "userName": "jsmith", 
-        "fullName": "John Smith", 
-        "ID": "12F169764253481E89F0E4EA8C1D791A"
+    {
+        "result": {
+            "userName": "jsmith", 
+            "fullName": "John Smith", 
+            "ID": "12F169764253481E89F0E4EA8C1D791A"
+        }
     }
-}
-````
-
+    
 
 If no user has been logged in, the result is:
 
-````
-{
-    "result": null
-}
-````
-
+    {
+        "result": null
+    }
+    
 
 ## $directory/currentUserBelongsTo
 
 Indicates if the current user belongs to a specific GroupID or GroupName.
 
 ### Description
+
 To find out if the currently logged in user belongs to a specific group, use `$directory/currentUserBelongsTo`. You can pass either the group ID (which is the group's UUID reference number) or its name as defined in the datastore directory.
 
 If we want to check to see if the current user is a member of the Sales group, we must pass either *GroupID* or *GroupName* in the `POST`.
 
 ### Exemple
+
 Below is an example of how to pass either the GroupID or GroupName in the `POST` data.
 
 `POST  /rest/$directory/currentUserBelongsTo`
@@ -84,26 +82,24 @@ or
 
 If the current user is in the group specified in the array, the response will be:
 
-````
-{
-    "result": true
-}
-````
+    {
+        "result": true
+    }
+    
 
 Otherwise, it will return:
 
-````
-{
-     "result": false
-}
-````
-
+    {
+         "result": false
+    }
+    
 
 ## $directory/login
 
 Opens a REST session on your 4D application and logs in the user.
 
 ### Description
+
 Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
 
 All parameters must be passed in **headers** of a POST method:
@@ -135,30 +131,28 @@ $httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$
 
 If the login was successful, the result will be:
 
-```
-{
-    "result": true
-}
-```
+    {
+        "result": true
+    }
+    
 
 Otherwise, the response will be:
 
-```
-{
-     "result": false
-}
-```
-
+    {
+         "result": false
+    }
+    
 
 ## $directory/logout
-
 
 Logs out the current user.
 
 ### Description
+
 To log out the current user from your application, use `$directory/logout`.
 
 ### Exemple
+
 You call `$directory/logout` to log the current user out of the application.
 
 `GET  /rest/$directory/logout`
@@ -167,16 +161,13 @@ You call `$directory/logout` to log the current user out of the application.
 
 If the logout was successful, the result will be:
 
-````
-{
-    "result": true
-}
-````
+    {
+        "result": true
+    }
+    
 
 Otherwise, the response will be:
 
-````
-{
-     "result": false
-}
-````
+    {
+         "result": false
+    }
