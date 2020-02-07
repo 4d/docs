@@ -1,6 +1,6 @@
 ---
 id: picture
-title: Picture
+title: ピクチャー
 ---
 
 A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
@@ -50,6 +50,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 | Resizing                  | Picture * Number       | ピクチャー | Resize Picture by Number ratio                                                                                                                                     |
 | Horizontal scaling        | Picture *+ Number      | ピクチャー | Resize Picture horizontally by Number ratio                                                                                                                        |
 | Vertical scaling          | Picture *&#124; Number | ピクチャー | Resize Picture vertically by Number ratio                                                                                                                          |
+
 
 **Notes :**
 
