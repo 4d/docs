@@ -35,7 +35,7 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
 
 Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant.
 
-** **
+**Exemple :**
 
 ```4d
   // Déclarer deux variables de type BLOB
@@ -50,7 +50,7 @@ En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOB.
 
 ## Adresser le contenu d'un BLOB
 
-Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accolades {...}. Dans un BLOB, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB. Voici un exemple :
+Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accolades {...}. Dans un BLOB, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB. Exemple :
 
 ```4d
   // Déclarer une variable de type BLOB
