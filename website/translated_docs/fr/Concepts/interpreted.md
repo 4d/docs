@@ -31,6 +31,7 @@ Bien que l'application fonctionnera de la même manière en modes interprété e
 | Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe.                                               | Les propriétés du process préemptif sont ignorées                                    |
 | La commande `APPELER 4D` est nécessaire pour appeler des boucles spécifiques                                                                                                                                                             | Il est toujours possible d'interrompre 4D                                            |
 
+
 ## Utiliser les directives du compilateur avec l'interpréteur
 
 Les directives de compilateur ne sont pas requises pour les bases non compilées. L'interpréteur type automatiquement chaque variable selon son utilisation dans la déclaration, et une variable peut être retypée librement dans la base.
