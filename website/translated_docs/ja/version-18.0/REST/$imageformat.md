@@ -10,7 +10,7 @@ Defines which image format to use for retrieving images (*e.g.*, `$imageformat=p
 
 Define which format to use to display images. By default, the best format for the image will be chosen. You can, however, select one of the following formats:
 
-| Type | 説明                             |
+| 型    | 説明                             |
 | ---- | ------------------------------ |
 | GIF  | GIF format                     |
 | PNG  | PNG format                     |
