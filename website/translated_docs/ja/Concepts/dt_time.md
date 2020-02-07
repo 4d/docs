@@ -1,6 +1,6 @@
 ---
 id: time
-title: Time
+title: 時間
 ---
 
 - A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
@@ -52,6 +52,7 @@ A null time is specified by ?00:00:00?
 |           |                |     | ?01:02:03? >=?01:02:04? | False      |
 | 以下        | Time <= Time   | ブール | ?01:02:03? <=?01:02:03? | True       |
 |           |                |     | ?01:02:04? <=?01:02:03? | False      |
+
 
 ### Example 1
 
