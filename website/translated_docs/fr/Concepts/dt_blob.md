@@ -58,9 +58,9 @@ Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accol
   // Fixer la taille du BLOB à 256 octets
  SET BLOB SIZE(vBlob;256)
   // La boucle suivante initialise les 256 octets du BLOB à zéro
- Boucle(vOctet;0;Taille BLOB(vBlob)-1)
+ For(vOctet;0;Taille BLOB(vBlob)-1)
     vBlob{vOctet}:=0
- Fin de boucle
+ End for
 ```
 
 Comme vous pouvez adresser individuellement tous les octets d'un BLOB, vous pouvez littéralement stocker tout ce que vous voulez dans une variable ou un champ de type BLOB.
