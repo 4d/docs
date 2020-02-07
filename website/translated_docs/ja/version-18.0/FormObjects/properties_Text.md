@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesText
-title: Text
+title: テキスト
 original_id: propertiesText
 ---
 
@@ -158,9 +158,9 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | データタイプ | Possible Values                       |
-| -------- | ------ | ------------------------------------- |
-| fontSize | 整数     | Font size in points. Minimum value: 0 |
+| Name     | データタイプ  | Possible Values                       |
+| -------- | ------- | ------------------------------------- |
+| fontSize | integer | Font size in points. Minimum value: 0 |
 
 
 #### Objects Supported
@@ -306,7 +306,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type    | 説明                                                                                                                                                                                                                                                                                                                                                                         |
+| Property name       | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
 | fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
