@@ -48,7 +48,7 @@ ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
-L’opérateur d’assignation est le premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple :
+L’opérateur d’assignation est le premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
 
 ```4d
 MonNombre:=3
@@ -105,7 +105,7 @@ Cette méthode demande simplement à l’utilisateur de saisir un numéro d’id
 
 Une variable process est “visible” uniquement dans le process où elle a été créée. Elle est utilisable par toutes les méthodes du process et toutes les méthodes appelées depuis le process.
 
-Le nom d’une variable process ne comporte aucun préfixe. Une variable process peut comporter jusqu’à 31 caractères.
+Le nom d’une variable process ne comporte aucun préfixe. Ce nom peut contenir jusqu’à 31 caractères.
 
 En mode interprété, les variables sont gérées dynamiquement : elles sont créées en mémoire et effacées “à la volée”. En mode compilé, tous les process que vous créez (process utilisateurs) partagent la même définition des variables process, mais chaque process dispose de sa propre instance pour chaque variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
 
