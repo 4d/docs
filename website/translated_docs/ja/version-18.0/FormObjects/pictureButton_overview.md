@@ -4,7 +4,7 @@ title: Picture Button
 original_id: pictureButtonOverview
 ---
 
-## 概要
+## Overview
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
 
@@ -13,13 +13,13 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.  
     For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states. 
 
-| Property                   | JSON name              | Value |
-| -------------------------- | ---------------------- | ----- |
-| Rows                       | rowCount               | 1     |
-| Columns                    | columnCount            | 4     |
-| Switch back when Released  | switchBackWhenReleased | true  |
-| Switch when Roll Over      | switchWhenRollover     | true  |
-| Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
+| Property                   | JSON name              | 結果   |
+| -------------------------- | ---------------------- | ---- |
+| Rows                       | rowCount               | 1    |
+| Columns                    | columnCount            | 4    |
+| Switch back when Released  | switchBackWhenReleased | true |
+| Switch when Roll Over      | switchWhenRollover     | true |
+| Use Last Frame as Disabled | useLastFrameAsDisabled | true |
 
 
 * As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).  
