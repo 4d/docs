@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Présentation
+title: Aperçu
 ---
 
 4D inclut un module complet de sauvegarde des bases de données et de récupération en cas d’incident.
