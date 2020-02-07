@@ -185,6 +185,7 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | Time            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
+
 **Hinweise:**
 
 - Die Größe eines Textes im Speicher wird mit der Formel ((Länge + 1)* 2) berechnet
