@@ -1,6 +1,6 @@
 ---
 id: version-18.0-variant
-title: バリアント
+title: Variant
 original_id: variant
 ---
 
@@ -12,11 +12,11 @@ A variant type variable can contain a value of the following data types:
 - boolean
 - collection
 - date
-- 倍長整数
+- longint
 - object
 - picture
 - pointer
-- 実数
+- real
 - テキスト
 - time
 - null
