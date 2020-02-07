@@ -6,7 +6,6 @@ title: '$catalog'
 
 The catalog describes all the dataclasses and attributes available in the datastore.
 
-
 ## Available syntaxes
 
 | Syntaxe                                       | Exemple              | Description                                                                      |
@@ -17,8 +16,8 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
+Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 ### Description
 
@@ -27,7 +26,6 @@ When you call `$catalog`, a list of the dataclasses is returned along with two U
 Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
 
 Here is a description of the properties returned for each dataclass in your project's datastore:
-
 
 | Propriété | Type   | Description                                                                       |
 | --------- | ------ | --------------------------------------------------------------------------------- |
@@ -42,23 +40,21 @@ Here is a description of the properties returned for each dataclass in your proj
 
 **Result**:
 
-````
-{
-    dataClasses: [
-        {
-            name: "Company",
-            uri: "http://127.0.0.1:8081/rest/$catalog/Company",
-            dataURI: "http://127.0.0.1:8081/rest/Company"
-        },
-        {
-            name: "Employee",
-            uri: "http://127.0.0.1:8081/rest/$catalog/Employee",
-            dataURI: "http://127.0.0.1:8081/rest/Employee"
-        }
-    ]
-}
-````
-
+    {
+        dataClasses: [
+            {
+                name: "Company",
+                uri: "http://127.0.0.1:8081/rest/$catalog/Company",
+                dataURI: "http://127.0.0.1:8081/rest/Company"
+            },
+            {
+                name: "Employee",
+                uri: "http://127.0.0.1:8081/rest/$catalog/Employee",
+                dataURI: "http://127.0.0.1:8081/rest/Employee"
+            }
+        ]
+    }
+    
 
 ## $catalog/$all
 
@@ -70,111 +66,108 @@ Calling `$catalog/$all` allows you to receive detailed information about the att
 
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
-
 ### Exemple
 
 `GET  /rest/$catalog/$all`
 
 **Result**:
 
-````
-{
-
-    "dataClasses": [
-        {
-            "name": "Company",
-            "className": "Company",
-            "collectionName": "CompanyCollection",
-            "scope": "public",
-            "dataURI": "/rest/Company",
-            "attributes": [
-                {
-                    "name": "ID",
-                    "kind": "storage",
-                    "scope": "public",
-                    "indexed": true,
-                    "type": "long",
-                    "identifying": true
-                },
-                {
-                    "name": "name",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "revenues",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "number"
-                },
-                {
-                    "name": "staff",
-                    "kind": "relatedEntities",
-                    "matchColumn": "employees,staff",
-                    "scope": "public",
-                    "type": "EmployeeCollection",
-                    "reversePath": true,
-                    "path": "employer"
-                },
-                {
-                    "name": "url",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                }
-            ],
-            "key": [
-                {
-                    "name": "ID"
-                }
-            ]
-        },
-        {
-            "name": "Employee",
-            "className": "Employee",
-            "collectionName": "EmployeeCollection",
-            "scope": "public",
-            "dataURI": "/rest/Employee",
-            "attributes": [
-                {
-                    "name": "ID",
-                    "kind": "storage",
-                    "scope": "public",
-                    "indexed": true,
-                    "type": "long",
-                    "identifying": true
-                },
-                {
-                    "name": "firstname",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "lastname",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "employer",
-                    "kind": "relatedEntity",
-                    "scope": "public",
-                    "type": "Company",
-                    "path": "Company"
-                }
-            ],
-            "key": [
-                {
-                    "name": "ID"
-                }
-            ]
-        }
-    ]
-}
-````
-
+    {
+    
+        "dataClasses": [
+            {
+                "name": "Company",
+                "className": "Company",
+                "collectionName": "CompanyCollection",
+                "scope": "public",
+                "dataURI": "/rest/Company",
+                "attributes": [
+                    {
+                        "name": "ID",
+                        "kind": "storage",
+                        "scope": "public",
+                        "indexed": true,
+                        "type": "long",
+                        "identifying": true
+                    },
+                    {
+                        "name": "name",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "revenues",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "number"
+                    },
+                    {
+                        "name": "staff",
+                        "kind": "relatedEntities",
+                        "matchColumn": "employees,staff",
+                        "scope": "public",
+                        "type": "EmployeeCollection",
+                        "reversePath": true,
+                        "path": "employer"
+                    },
+                    {
+                        "name": "url",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    }
+                ],
+                "key": [
+                    {
+                        "name": "ID"
+                    }
+                ]
+            },
+            {
+                "name": "Employee",
+                "className": "Employee",
+                "collectionName": "EmployeeCollection",
+                "scope": "public",
+                "dataURI": "/rest/Employee",
+                "attributes": [
+                    {
+                        "name": "ID",
+                        "kind": "storage",
+                        "scope": "public",
+                        "indexed": true,
+                        "type": "long",
+                        "identifying": true
+                    },
+                    {
+                        "name": "firstname",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "lastname",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "employer",
+                        "kind": "relatedEntity",
+                        "scope": "public",
+                        "type": "Company",
+                        "path": "Company"
+                    }
+                ],
+                "key": [
+                    {
+                        "name": "ID"
+                    }
+                ]
+            }
+        ]
+    }
+    
 
 ## $catalog/{dataClass}
 
@@ -186,15 +179,14 @@ Calling `$catalog/{dataClass}` for a specific dataclass will return the followin
 
 The information you retrieve concerns the following:
 
-*   Dataclass
-*   Attribute(s)
-*   Method(s) if any
-*   Primary key
+* Dataclass
+* Attribute(s)
+* Method(s) if any
+* Primary key
 
 ### DataClass
 
 The following properties are returned for an exposed dataclass:
-
 
 | Propriété      | Type   | Description                                                                                        |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
@@ -224,6 +216,7 @@ Here are the properties for each exposed attribute that are returned:
 | readOnly      | Booléen | This property is True if the attribute is of type calculated or alias.                                                                                      |
 | defaultFormat | Objet   | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
+
 ### Method(s)
 
 Defines the project methods asociated to the dataclass, if any.
@@ -232,106 +225,103 @@ Defines the project methods asociated to the dataclass, if any.
 
 The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
 
-
 ### Exemple
+
 You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`
 
 **Result**:
 
-````
-{
-    name: "Employee",
-    className: "Employee",
-    collectionName: "EmployeeCollection",
-    scope: "public",
-    dataURI: "http://127.0.0.1:8081/rest/Employee",
-    defaultTopSize: 20,
-    extraProperties: {
-        panelColor: "#76923C",
-        __CDATA: "\n\n\t\t\n",
-        panel: {
-            isOpen: "true",
-            pathVisible: "true",
-            __CDATA: "\n\n\t\t\t\n",
-            position: {
-                X: "394",
-                Y: "42"
-            }
-        }
-    },
-    attributes: [
-        {
-            name: "ID",
-            kind: "storage",
-            scope: "public",
-            indexed: true,
-            type: "long",
-            identifying: true
-        },
-        {
-            name: "firstName",
-            kind: "storage",
-            scope: "public",
-            type: "string"
-        },
-        {
-            name: "lastName",
-            kind: "storage",
-            scope: "public",
-            type: "string"
-        },
-        {
-            name: "fullName",
-            kind: "calculated",
-            scope: "public",
-            type: "string",
-            readOnly: true
-        },
-        {
-            name: "salary",
-            kind: "storage",
-            scope: "public",
-            type: "number",
-            defaultFormat: {
-                format: "$###,###.00"
+    {
+        name: "Employee",
+        className: "Employee",
+        collectionName: "EmployeeCollection",
+        scope: "public",
+        dataURI: "http://127.0.0.1:8081/rest/Employee",
+        defaultTopSize: 20,
+        extraProperties: {
+            panelColor: "#76923C",
+            __CDATA: "\n\n\t\t\n",
+            panel: {
+                isOpen: "true",
+                pathVisible: "true",
+                __CDATA: "\n\n\t\t\t\n",
+                position: {
+                    X: "394",
+                    Y: "42"
+                }
             }
         },
-        {
-            name: "photo",
-            kind: "storage",
-            scope: "public",
-            type: "image"
-        },
-        {
-            name: "employer",
-            kind: "relatedEntity",
-            scope: "public",
-            type: "Company",
-            path: "Company"
-        },
-        {
-            name: "employerName",
-            kind: "alias",
-            scope: "public",
-            type: "string",
-            path: "employer.name",
-            readOnly: true
-        },
-        {
-            name: "description",
-            kind: "storage",
-            scope: "public",
-            type: "string",
-            multiLine: true
-        },
-   ],
-    key: [
-        {
-            name: "ID"
-        }
-    ]
-}
-````
-
+        attributes: [
+            {
+                name: "ID",
+                kind: "storage",
+                scope: "public",
+                indexed: true,
+                type: "long",
+                identifying: true
+            },
+            {
+                name: "firstName",
+                kind: "storage",
+                scope: "public",
+                type: "string"
+            },
+            {
+                name: "lastName",
+                kind: "storage",
+                scope: "public",
+                type: "string"
+            },
+            {
+                name: "fullName",
+                kind: "calculated",
+                scope: "public",
+                type: "string",
+                readOnly: true
+            },
+            {
+                name: "salary",
+                kind: "storage",
+                scope: "public",
+                type: "number",
+                defaultFormat: {
+                    format: "$###,###.00"
+                }
+            },
+            {
+                name: "photo",
+                kind: "storage",
+                scope: "public",
+                type: "image"
+            },
+            {
+                name: "employer",
+                kind: "relatedEntity",
+                scope: "public",
+                type: "Company",
+                path: "Company"
+            },
+            {
+                name: "employerName",
+                kind: "alias",
+                scope: "public",
+                type: "string",
+                path: "employer.name",
+                readOnly: true
+            },
+            {
+                name: "description",
+                kind: "storage",
+                scope: "public",
+                type: "string",
+                multiLine: true
+            },
+       ],
+        key: [
+            {
+                name: "ID"
+            }
+        ]
+    }
