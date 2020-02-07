@@ -22,8 +22,8 @@ La page comporte quatre boutons d’action permettant un accès direct aux fonct
 
 Quelle que soit la vérification demandée, 4D génère un fichier de compte-rendu dans le dossier `Logs` de la base. Ce fichier liste l’ensemble des vérifications effectuées et signale chaque erreur rencontrée, le cas échéant ([OK] est affiché lorsque la vérification est correcte). Il est créé au format XML et est nommé *NomBase**Verify_Log**aaaa-mm-jjj hh-mm-ss*.xml" où :
 
-- *NomBase* est le nom du fichier de structure sans extension, par exemple "Factures",
-- *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
+- *<NomBase>* est le nom du fichier de structure sans extension, par exemple "Factures",
+- *<aaaa-mm-jj hh-mm-ss>* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
 Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
 
