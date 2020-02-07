@@ -6,7 +6,7 @@ sidebar_label: Page Réparation
 
 Cette page permet de réparer le fichier de données ou le fichier de structure lorsqu’il a été endommagé. Généralement, vous n’utiliserez ces fonctions qu’à la demande de 4D, lorsque des anomalies auront été détectées à l’ouverture de la base ou à la suite d’une [vérification](verify.md).
 
-**Attention :** Chaque réparation entraîne la duplication du fichier d’origine et donc l’augmentation de la taille du dossier de l’application. Il est important de tenir compte de ce mécanisme (notamment sous macOS où les applications 4D apparaissent sous forme de packages) pour que l’application ne grossisse pas de façon excessive. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
+**Attention :** Chaque réparation entraîne la duplication du fichier d’origine et donc l’augmentation de la taille du dossier de l’application. Il est important de prendre cela en considération (notamment sous macOS, où les applications 4D apparaissent sous forme de paquet) afin de ne pas augmenter excessivement la taille de l'application. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
 
 > La réparation n’est disponible qu’en mode maintenance. Si vous tentez d’effectuer cette opération en mode standard, une boîte de dialogue d’alerte vous prévient que la base va être fermée puis relancée en mode maintenance.
 > 
