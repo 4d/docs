@@ -81,7 +81,7 @@ Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les 
 
 Les commandes `Formule` ou `formule sur chaine` vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
 
-Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : 
+Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : Par exemple:
 
 ```4d
 //myAlert
@@ -165,7 +165,7 @@ Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. 
 
 ## Méthode projet récursives
 
-Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
+Des méthodes projet peuvent s'appeler les unes les autres. Par exemple:
 
 - Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.
 - Une méthode peut s'appeler elle-même.
