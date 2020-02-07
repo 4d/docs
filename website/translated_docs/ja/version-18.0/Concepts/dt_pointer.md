@@ -1,6 +1,6 @@
 ---
 id: version-18.0-pointer
-title: Pointer
+title: ポインター
 original_id: pointer
 ---
 
@@ -14,14 +14,14 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Type          | To Reference            | To Use                   | To Assign                |
+| 型             | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| オブジェクト        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## Using a pointer: Basic example
@@ -87,12 +87,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| 演算子 | シンタックス            | 戻り値     | 式             | Value |
-| --- | ----------------- | ------- | ------------- | ----- |
-| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
-|     |                   |         | vPtrA = vPtrC | False |
-| 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
-|     |                   |         | vPtrA # vPtrB | False |
+| 演算子 | シンタックス            | 戻り値 | 式             | 結果    |
+| --- | ----------------- | --- | ------------- | ----- |
+| 等しい | Pointer = Pointer | ブール | vPtrA = vPtrB | True  |
+|     |                   |     | vPtrA = vPtrC | False |
+| 異なる | Pointer # Pointer | ブール | vPtrA # vPtrC | True  |
+|     |                   |     | vPtrA # vPtrB | False |
 
 
 ## Main usages
