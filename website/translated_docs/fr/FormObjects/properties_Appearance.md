@@ -37,7 +37,7 @@ p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
 
 * * *
 
-## Hide focus rectangle
+## Cacher rectangle de focus
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
@@ -54,7 +54,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 * * *
 
-## Hide selection highlight
+## Cacher surlignage sélection
 
 `Selection type list boxes`
 
@@ -77,7 +77,7 @@ By default, this option is not enabled.
 
 * * *
 
-## Horizontal Scroll Bar
+## Barre de défilement horizontale
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
@@ -348,7 +348,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 * * *
 
-## Vertical Scroll Bar
+## Barre de défilement verticale
 
 An interface tool allowing the user to move the viewing area up and down.
 
