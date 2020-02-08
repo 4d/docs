@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesDataSource
-title: Data Source
+title: Source de données
 original_id: propertiesDataSource
 ---
 
@@ -72,7 +72,7 @@ List of static values to use as labels for the tab control object.
 
 * * *
 
-## Current item
+## Élément courant
 
 `Collection or entity selection list boxes`
 
@@ -93,7 +93,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 * * *
 
-## Current item position
+## Position élément courant
 
 `Collection or entity selection list boxes`
 
@@ -201,7 +201,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 * * *
 
-## Master Table
+## Table principale
 
 `Current selection list boxes`
 
@@ -255,7 +255,7 @@ Using this property requires compliance with the following principles:
 
 * * *
 
-## Selected Items
+## Eléments sélectionnés
 
 `Collection or entity selection list boxes`
 
