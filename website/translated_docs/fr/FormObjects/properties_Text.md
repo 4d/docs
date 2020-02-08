@@ -22,7 +22,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 * * *
 
-## Bold
+## Gras
 
 Sets the selected text to appear darker and heavier.
 
@@ -44,7 +44,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 * * *
 
-## Italic
+## Italique
 
 Sets the selected text to slant slightly to the right.
 
@@ -66,7 +66,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 * * *
 
-## Underline
+## Souligné
 
 Sets the text to have a line running beneath it.
 
@@ -86,7 +86,7 @@ Sets the text to have a line running beneath it.
 
 * * *
 
-## Font
+## Police
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
 
@@ -149,7 +149,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 * * *
 
-## Font Size
+## Taille
 
 > This property is only available when no [font theme](#font-theme) is selected.
 
@@ -168,7 +168,7 @@ Allows defining the object's font size in points.
 
 * * *
 
-## Font Color
+## Couleur de la police
 
 Designates the font color.
 
@@ -195,7 +195,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 * * *
 
-## Font Color Expression
+## Expression couleur police
 
 `Selection and collection/entity selection type list boxes`
 
@@ -227,7 +227,7 @@ Foreground color;Dark shadow color)
 
 * * *
 
-## Style Expression
+## Expression style
 
 `Selection and collection/entity selection type list boxes`
 
@@ -258,7 +258,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 * * *
 
-## Horizontal Alignment
+## Alignement horizontal
 
 Horizontal location of text within the area that contains it.
 
@@ -275,7 +275,7 @@ Horizontal location of text within the area that contains it.
 
 * * *
 
-## Vertical Alignment
+## Alignement vertical
 
 Vertical location of text within the area that contains it.
 
@@ -522,7 +522,7 @@ This property enables the possibility of using specific styles in the selected a
 <hr />
 
 <h2>
-  Row Font Color Array
+  Tableau couleurs de police
 </h2>
 
 <p>
@@ -582,7 +582,7 @@ This property enables the possibility of using specific styles in the selected a
 <hr />
 
 <h2>
-  Row Style Array
+  Tableau de styles
 </h2>
 
 <p>
