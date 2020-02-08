@@ -44,7 +44,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 * * *
 
-## Bottom
+## Bas
 
 Bottom coordinate of the object in the form.
 
@@ -61,7 +61,7 @@ Bottom coordinate of the object in the form.
 
 * * *
 
-## Left
+## Gauche
 
 Left coordinate of the object on the form.
 
@@ -78,7 +78,7 @@ Left coordinate of the object on the form.
 
 * * *
 
-## Right
+## Droite
 
 Right coordinate of the object in the form.
 
@@ -95,7 +95,7 @@ Right coordinate of the object in the form.
 
 * * *
 
-## Top
+## Haut
 
 Top coordinate of the object in the form.
 
@@ -154,7 +154,7 @@ This property designates an object's vertical size.
 
 * * *
 
-## Width
+## Largeur
 
 This property designates an object's horizontal size.
 
@@ -213,7 +213,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 * * *
 
-## Row Height
+## Hauteur des lignes
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
 
@@ -230,11 +230,11 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### See also
 
-[Row Height Array](#row-height-array)
+[Tableau hauteurs des lignes](#row-height-array)
 
 * * *
 
-## Row Height Array
+## Tableau hauteurs des lignes
 
 `4D View Pro only: This feature requires a 4D View Pro license.`
 
@@ -267,4 +267,4 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### See also
 
-[Row Height](#row-height)
+[Hauteur des lignes](#row-height)
