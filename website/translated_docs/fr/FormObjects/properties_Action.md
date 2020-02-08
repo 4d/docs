@@ -6,7 +6,7 @@ title: Action
 
 * * *
 
-## Draggable
+## Glissable
 
 Control whether and how the user can drag the object. By default, no drag operation is allowed.
 
@@ -33,11 +33,11 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### See also
 
-[Droppable](#droppable)
+[Déposable](#droppable)
 
 * * *
 
-## Droppable
+## Déposable
 
 Control whether and how the object can be the destination of a drag and drop operation.
 
@@ -62,7 +62,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### See also
 
-[Draggable](#draggable)
+[Glissable](#draggable)
 
 * * *
 
@@ -83,7 +83,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 * * *
 
-## Method
+## Méthode
 
 Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
@@ -112,7 +112,7 @@ Several types of method references are supported:
 
 * * *
 
-## Movable Rows
+## Lignes déplaçables
 
 `Array type list boxes`
 
@@ -148,7 +148,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 * * *
 
-## Sortable
+## Triable
 
 Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
 
@@ -169,7 +169,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 * * *
 
-## Standard action
+## Action standard
 
 Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 
