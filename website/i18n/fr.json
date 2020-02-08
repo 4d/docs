@@ -172,7 +172,7 @@
         "title": "Découpage"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Source de données"
       },
       "FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -612,7 +612,7 @@
         "title": "Découpage"
       },
       "version-18.0-FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Source de données"
       },
       "version-18.0-FormObjects/propertiesDisplay": {
         "title": "Display"
