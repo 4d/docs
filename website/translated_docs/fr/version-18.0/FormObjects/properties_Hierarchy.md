@@ -6,7 +6,7 @@ original_id: propertiesHierarchy
 
 * * *
 
-## Hierarchical List Box
+## List box hiérarchique
 
 `Array type list boxes`
 
