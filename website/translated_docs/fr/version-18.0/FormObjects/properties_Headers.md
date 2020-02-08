@@ -6,7 +6,7 @@ original_id: propertiesHeaders
 
 * * *
 
-## Display Headers
+## Afficher en-têtes
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
