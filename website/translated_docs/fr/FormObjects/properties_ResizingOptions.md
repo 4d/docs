@@ -5,7 +5,7 @@ title: Options de redimensionnement
 
 * * *
 
-## Column Auto-Resizing
+## Redimensionnement colonnes auto
 
 When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 
@@ -44,7 +44,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 * * *
 
-## Horizontal Sizing
+## Dimensionnement horizontal
 
 This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
@@ -72,7 +72,7 @@ Three options are available:
 
 * * *
 
-## Vertical Sizing
+## Dimensionnement vertical
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
