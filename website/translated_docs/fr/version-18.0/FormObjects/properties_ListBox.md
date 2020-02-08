@@ -25,7 +25,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 * * *
 
-## Detail Form Name
+## Nom formulaire détaillé
 
 `Selection type list box`
 
@@ -47,7 +47,7 @@ The specified form is displayed:
             
             * * *
             
-            ## Double-click on row
+            ## Double-clic sur ligne
             
             `Selection type list box`
             
@@ -76,7 +76,7 @@ The specified form is displayed:
             
             * * *
             
-            ## Highlight Set
+            ## Ensemble surlignage
             
             `Selection type list box`
             
@@ -122,7 +122,7 @@ The specified form is displayed:
             ![](assets/en/FormObjects/property_lockedStaticColumns2.png)
             
             * You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
-            ### Number of Locked Columns
+            ### Nombre de colonnes verrouillées
             
             Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
             
@@ -137,7 +137,7 @@ The specified form is displayed:
             
             [List Box](listbox_overview.md)
             
-            ### Number of Static Columns
+            ### Nombre de colonnes statiques
             
             Number of columns that cannot be moved during execution.
             
@@ -154,7 +154,7 @@ The specified form is displayed:
             
             * * *
             
-            ## Number of Columns
+            ## Nombre de colonnes
             
             Sets the number of columns of the list box.
             
@@ -173,7 +173,7 @@ The specified form is displayed:
             
             * * *
             
-            ## Row Control Array
+            ## Tableau de contrôle des lignes
             
             `Array type list box`
             
@@ -228,7 +228,7 @@ The specified form is displayed:
             
             * * *
             
-            ## Selection Mode
+            ## Mode de sélection
             
             Designates the option for allowing users to select rows:
             
