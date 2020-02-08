@@ -5,7 +5,7 @@ title: Background and Border
 
 * * *
 
-## Alternate Background Color
+## Couleur de fond alternée
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
@@ -45,7 +45,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 * * *
 
-## Background Color Expression
+## Expression couleur de fond
 
 `Selection and collection type list boxes`
 
@@ -68,7 +68,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 * * *
 
-## Border Line Style
+## Style de la bordure
 
 Allows setting a standard style for the object border.
 
@@ -102,7 +102,7 @@ Describes dotted line type as a sequence of black and white points.
 
 * * *
 
-## Hide extra blank rows
+## Masquer lignes vides finales
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
@@ -167,7 +167,7 @@ Designates the thickness of a line.
 
 * * *
 
-## Row Background Color Array
+## Tableau couleurs de fond
 
 `Array type list boxes`
 
