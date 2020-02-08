@@ -71,7 +71,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 * * *
 
-## Double-click on row
+## Double-clic sur ligne
 
 `List subform`
 
@@ -159,7 +159,7 @@ Specifies the table that the list subform belongs to (if any).
 
 * * *
 
-## Selection Mode
+## Mode de sélection
 
 Designates the option for allowing users to select rows:
 
