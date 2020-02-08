@@ -430,7 +430,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         ## Three-States
         
-        Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+        Allows a check box object to accept a third state. La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
         
         #### Three-states check boxes in list box columns
         
@@ -510,7 +510,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Visibility
+        ## Visibilité
         
         This property allows hiding by default the object in the Application environment.
         
