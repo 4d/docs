@@ -17,8 +17,8 @@ Une case à cocher affiche généralement du texte en face de la case. Ce texte 
 
 Une case à cocher peut être associée à une [variable ou expression](properties_Object.md#variable-or-expression) de type entier ou booléen.
 
-- **integer:** if the box is checked, the variable has the value 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
-- **boolean:** if the box is checked, the variable has the value `True`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`. 
+- **entier :** si la case est cochée, la variable prend la valeur 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
+- **booléen :** si la case est cochée, la variable prend la valeur `Vrai`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`. 
 
 Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Un groupe de cases à cocher permet à l'utilisateur de cocher plusieurs options.
 
@@ -32,7 +32,7 @@ Pour qu’une case à cocher prenne en charge ce troisième état, vous devez lu
 
 Cette propriété n’est disponible que pour les cases à cocher classiques et à plat associées à des [variables ou expressions](properties_Object.md#variable-or-expression) numériques — les cases à cocher de représentation des expressions booléennes sont exclues de ce principe (une expression booléenne ne pouvant pas se trouver dans un état intermédiaire). 
 
-The variable associated with the check box returns the value 2 when the check box is in the third state.
+La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
 
 > En saisie, les cases à cocher à trois états affichent séquentiellement chaque état, dans l’ordre suivant : non coché / coché / intermédiaire / non coché, etc. L’état intermédiaire étant généralement inutile en saisie ; il vous suffit, dans le code, de “forcer” la valeur de la variable à 0 lorsqu’elle prend la valeur 2 afin de passer directement de l’état coché à l’état non coché.
 
@@ -80,13 +80,13 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 Les styles de bouton des cases à cocher contrôlent l'apparence générale d'une case à cocher ainsi que ses propriétés. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D propose des cases à cocher avec les styles prédéfinis suivants :
 
 ### Classique
 
-The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+Le style Classique de case à cocher correspond à un système de case à cocher standard (*i.e.*, un rectangle avec un titre descriptif) :
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
