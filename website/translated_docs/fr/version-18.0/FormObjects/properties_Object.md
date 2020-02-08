@@ -48,7 +48,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 * * *
 
-## Variable or Expression
+## Variable ou expression
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
@@ -97,7 +97,7 @@ There are two advantages with this mechanism:
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
-### Hierarchical List Box
+### List box hiérarchique
 
 Using a string array (collection of arrays names) as *dataSource* value for a list box column defines a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
@@ -150,7 +150,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     * * *
                     
-                    ## Collection or entity selection
+                    ## Collection ou entity selection
                     
                     To use collection elements or entities to define the row contents of the list box.
                     
@@ -176,7 +176,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     * * *
                     
-                    ## Data Source
+                    ## Source de données
                     
                     Specify the type of list box.
                     
