@@ -8,12 +8,12 @@ The directory handles user access through REST requests.
 
 ## Available syntaxes
 
-| Syntaxe                                                               | Method | Description                                                      |
-| --------------------------------------------------------------------- | ------ | ---------------------------------------------------------------- |
-| [**$directory/currentUser**](#directorycurrentuser)                   | `GET`  | Returns information about the current user                       |
-| [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST` | Indicates if the current user belongs to a specific group        |
-| [**$directory/login**](#directorylogin)                               | `POST` | Opens a REST session on your 4D application and logs in the user |
-| [**$directory/logout**](#directorylogout)                             | `GET`  | Logs out the current user                                        |
+| Syntaxe                                                               | Méthode | Description                                                      |
+| --------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
+| [**$directory/currentUser**](#directorycurrentuser)                   | `GET`   | Returns information about the current user                       |
+| [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST`  | Indicates if the current user belongs to a specific group        |
+| [**$directory/login**](#directorylogin)                               | `POST`  | Opens a REST session on your 4D application and logs in the user |
+| [**$directory/logout**](#directorylogout)                             | `GET`   | Logs out the current user                                        |
 
 
 ## $directory/currentUser
