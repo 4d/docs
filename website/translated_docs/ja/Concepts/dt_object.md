@@ -57,7 +57,7 @@ title: オブジェクト
 
 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- using a "dot" symbol: > object.propertyName
+- "ドット"記号を使用する方法: > object.propertyName
 
 例: 
 
@@ -65,7 +65,7 @@ title: オブジェクト
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- 大カッコ内の文字列を使用する方法: > object["propertyName"]
 
 例: 
 
@@ -112,7 +112,7 @@ title: オブジェクト
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **コレクション** Example:
 
 ```4d
      myColl.length // コレクションの長さ
@@ -158,7 +158,7 @@ title: オブジェクト
 
 オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の式を読み込んだ、または割り当てようとしたときに 4D は通常、エラーを生成します。 ただし以下の場合には生成されません:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- 未定義のオブジェクトやプロパティ値を読み込むと未定義 (undefined) が返されます。未定義の値を (配列を除く) 変数に割り当てることは、`CLEAR VARIABLE` コマンドを使うのと同じ効果があります:
 
 ```4d
      C_OBJECT($o)
