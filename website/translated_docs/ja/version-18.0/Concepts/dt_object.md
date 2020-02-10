@@ -18,7 +18,7 @@ original_id: object
     - 日付 (日付型あるいは ISO日付フォーマット文字列)
     - オブジェクト (オブジェクトは入れ子にすることができます)
     - ピクチャー (*)
-    - collection
+    - collection-1
 
 (*) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -58,7 +58,7 @@ original_id: object
 
 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- using a "dot" symbol: > object.propertyName
+- "ドット"記号を使用する方法: > object.propertyName
 
 例: 
 
@@ -66,7 +66,7 @@ original_id: object
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- 大カッコ内の文字列を使用する方法: > object["propertyName"]
 
 例: 
 
@@ -113,7 +113,7 @@ original_id: object
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **コレクション** Example:
 
 ```4d
      myColl.length // コレクションの長さ
