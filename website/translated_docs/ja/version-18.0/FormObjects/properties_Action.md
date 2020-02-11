@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesAction
-title: Action
+title: 動作
 original_id: propertiesAction
 ---
 
