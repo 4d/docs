@@ -72,7 +72,7 @@
         "title": "時間"
       },
       "Concepts/variant": {
-        "title": "Variant"
+        "title": "バリアント"
       },
       "Concepts/error-handling": {
         "title": "Error handling"
@@ -154,7 +154,7 @@
         "title": "Progress Indicator"
       },
       "FormObjects/propertiesAction": {
-        "title": "Action"
+        "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
         "title": "Animation"
@@ -512,7 +512,7 @@
         "title": "時間"
       },
       "version-18.0-Concepts/variant": {
-        "title": "Variant"
+        "title": "バリアント"
       },
       "version-18.0-Concepts/error-handling": {
         "title": "Error handling"
@@ -594,7 +594,7 @@
         "title": "Progress Indicator"
       },
       "version-18.0-FormObjects/propertiesAction": {
-        "title": "Action"
+        "title": "動作"
       },
       "version-18.0-FormObjects/propertiesAnimation": {
         "title": "Animation"
