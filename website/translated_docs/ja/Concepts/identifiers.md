@@ -385,8 +385,8 @@ The following table summarizes 4D naming conventions.
 
 | Identifier                   | Max. Length | 例題                         |
 | ---------------------------- | ----------- | -------------------------- |
-| Table                        | 31          | [Invoices]                 |
-| Field                        | 31          | [Employees]Last Name       |
+| テーブル                         | 31          | [Invoices]                 |
+| フィールド                        | 31          | [Employees]Last Name       |
 | Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
 | Process Variable/Array       | 31          | vsCurrentName              |
 | Local Variable/Array         | $ + 31      | $vlLocalCounter            |
