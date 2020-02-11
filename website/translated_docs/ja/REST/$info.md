@@ -9,15 +9,15 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | 型     | 説明                                                                                             |
-| -------------- | ----- | ---------------------------------------------------------------------------------------------- |
-| cacheSize      | 数値    | Wakanda Server's cache size.                                                                   |
-| usedCache      | 数値    | How much of Wakanda Server's cache has been used.                                              |
-| entitySetCount | 数値    | Number of entity sets.                                                                         |
-| entitySet      | Array | An array in which each object contains information about each entity set.                      |
-| ProgressInfo   | Array | An array containing information about progress indicator information.                          |
-| sessionInfo    | Array | An array in which each object contains information about each user session.                    |
-| jsContextInfo  | Array | An array containing one object that returns the information about the JavaScript context pool. |
+| Property       | 型  | 説明                                                                                             |
+| -------------- | -- | ---------------------------------------------------------------------------------------------- |
+| cacheSize      | 数値 | Wakanda Server's cache size.                                                                   |
+| usedCache      | 数値 | How much of Wakanda Server's cache has been used.                                              |
+| entitySetCount | 数値 | Number of entity sets.                                                                         |
+| entitySet      | 配列 | An array in which each object contains information about each entity set.                      |
+| ProgressInfo   | 配列 | An array containing information about progress indicator information.                          |
+| sessionInfo    | 配列 | An array in which each object contains information about each user session.                    |
+| jsContextInfo  | 配列 | An array containing one object that returns the information about the JavaScript context pool. |
 
 
 ### entitySet
