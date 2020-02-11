@@ -1,6 +1,6 @@
 ---
 id: version-18.0-variant
-title: Variant
+title: バリアント
 original_id: variant
 ---
 
