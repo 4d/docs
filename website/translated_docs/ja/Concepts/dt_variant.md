@@ -1,6 +1,6 @@
 ---
 id: variant
-title: Variant
+title: バリアント
 ---
 
 Variant is a variable type which allows encapsulating data of any valid regular type in a variable. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.
