@@ -36,7 +36,7 @@ Here is a description of the data returned:
 | __COUNT       | 数値     | Number of entities in the datastore class.                                                                                                                                                                                                                    |
 | __SENT        | 数値     | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
 | __FIRST       | 数値     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                                                                              |
-| __ENTITIES    | Array  | This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.                                                             |
+| __ENTITIES    | 配列     | This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.                                                             |
 
 
 For each entity, there is a **__KEY** and a **__STAMP** property. The **__KEY** property contains the value of the primary key defined for the datastore class. The **__STAMP** is an internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.
