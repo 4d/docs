@@ -6,7 +6,7 @@ original_id: method
 
 This parameter allows you to define the operation to execute with the returned entity or entity selection.
 
-## Available syntaxes
+## Syntaxe
 
 | Syntaxe                                         | Exemple                                                                                         | Description                                                                                                |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ You can also delete an entity set using $entityset/{entitySetID}:
 
 `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
-Response:
+Réponse :
 
     {
         "ok": true
@@ -91,7 +91,7 @@ Release an existing entity set:
 
 `GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
 
-#### Response:
+#### Réponse :
 
 If the request was successful, the following response is returned:
 
@@ -129,7 +129,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 `GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
 
-#### Response:
+#### Réponse :
 
     {
     
@@ -242,7 +242,7 @@ You can also create and update multiple entities at the same time using the same
     }]
     
 
-**Response:**
+**Réponse :**
 
 When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
 
