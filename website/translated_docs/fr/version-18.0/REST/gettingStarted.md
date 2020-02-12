@@ -72,7 +72,7 @@ Si vous souhaitez obtenir toutes les entités de la dataclass Employee, vous pou
     /rest/Employees
     
 
-**Response:**
+**Réponse :**
 
     {
         "__entityModel": "Employees",
@@ -117,7 +117,7 @@ Il existe plusieurs possibilités pour filtrer les données à recevoir. Par exe
     /rest/Employees(2)/Lastname
     
 
-**Response:**
+**Réponse :**
 
     {
         "__entityModel": "Employees",
