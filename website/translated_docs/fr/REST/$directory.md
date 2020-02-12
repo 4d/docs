@@ -5,7 +5,7 @@ title: '$directory'
 
 The directory handles user access through REST requests.
 
-## Available syntaxes
+## Syntaxe
 
 | Syntaxe                                                               | Méthode | Description                                                      |
 | --------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
@@ -36,7 +36,7 @@ Call `$directory/currentUser` to find out the current user of your application.
 
 `GET  /rest/$directory/currentUser`
 
-**Result**:
+**Résultat** :
 
     {
         "result": {
@@ -127,7 +127,7 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**Résultat** :
 
 If the login was successful, the result will be:
 
@@ -157,7 +157,7 @@ You call `$directory/logout` to log the current user out of the application.
 
 `GET  /rest/$directory/logout`
 
-**Result**:
+**Résultat** :
 
 If the logout was successful, the result will be:
 
