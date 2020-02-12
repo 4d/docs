@@ -4,13 +4,13 @@ title: '$version'
 original_id: version
 ---
 
-Image version number
+Numéro de version de l'image
 
 ## Description
 
-`$version` is the image's version number returned by the server. The version number, which is sent by the server, works around the browser's cache so that you are sure to retrieve the correct image.
+`$version` est le numéro de version de l'image retourné par le serveur. Le numéro de version, qui est envoyé par le serveur, fonctionne autour du cache du navigateur afin que vous soyez sûr de récupérer la bonne image.
 
-The value of the image's version parameter is modified by the server.
+La valeur du paramètre de version de l'image est modifiée par le serveur.
 
 ## Exemple
 
