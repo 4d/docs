@@ -5,7 +5,7 @@ title: '$entityset'
 
 After creating an entity set by using `$method=entityset`, you can then use it subsequently.
 
-## Available syntaxes
+## Syntaxe
 
 | Syntaxe                                                                                                    | Exemple                                                                            | Description                                                  |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
