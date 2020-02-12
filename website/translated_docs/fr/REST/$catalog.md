@@ -6,7 +6,7 @@ title: '$catalog'
 
 The catalog describes all the dataclasses and attributes available in the datastore.
 
-## Available syntaxes
+## Syntaxe
 
 | Syntaxe                                       | Exemple              | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ For more information about what is returned for each datastore class and its att
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**Résultat** :
 
     {
     
@@ -171,32 +171,32 @@ For more information about what is returned for each datastore class and its att
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+Retourne des informations sur une dataclass et ses attributs
 
 ### Description
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the datastore classes in your project's datastore, use [`$catalog/$all`](#catalogall).
+L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. Si vous souhaitez récupérer ces informations pour toutes les classes de datastore dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
 
-The information you retrieve concerns the following:
+Les informations que vous récupérez concernent :
 
 * Dataclass
-* Attribute(s)
-* Method(s) if any
-* Primary key
+* Attribut(s)
+* Méthode(s) le cas échéant
+* Clé primaire
 
 ### DataClass
 
-The following properties are returned for an exposed dataclass:
+Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 | Propriété      | Type   | Description                                                                                        |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | Chaine | Name of the dataclass                                                                              |
-| collectionName | Chaine | Collection name of the dataclass                                                                   |
+| name           | Chaine | Nom de la dataclass                                                                                |
+| collectionName | Chaine | Nom de la collection de la dataclass                                                               |
 | scope          | Chaine | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | Chaine | A URI to the data in the dataclass                                                                 |
+| dataURI        | Chaine | Un URI aux données de la dataclass                                                                 |
 
 
-### Attribute(s)
+### Attribut(s)
 
 Here are the properties for each exposed attribute that are returned:
 
@@ -217,11 +217,11 @@ Here are the properties for each exposed attribute that are returned:
 | defaultFormat | Objet   | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
 
-### Method(s)
+### Méthode(s)
 
 Defines the project methods asociated to the dataclass, if any.
 
-### Primary Key
+### Clé primaire
 
 The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
 
@@ -231,7 +231,7 @@ You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Résultat** :
 
     {
         name: "Employee",
