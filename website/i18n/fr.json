@@ -422,7 +422,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Sessions et utilisateurs"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
@@ -434,7 +434,7 @@
         "title": "Prise en main"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulation des données"
       },
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
@@ -859,7 +859,7 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Sessions et utilisateurs"
       },
       "version-18.0-REST/configuration": {
         "title": "Configuration du serveur"
@@ -871,7 +871,7 @@
         "title": "Prise en main"
       },
       "version-18.0-REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulation des données"
       },
       "version-18.0-REST/REST_requests": {
         "title": "A propos des requêtes REST"
