@@ -4,59 +4,60 @@ title: String
 original_id: string
 ---
 
-String is a generic term that stands for:
+文字列とは、以下を示す総称です:
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- テキストフィールドまたは変数: テキストフィールド、変数、または式には 0～2 GB のテキストを格納することができます。
+- 文字フィールド: 文字フィールドには 0～255 文字までの文字を格納することができます (上限はフィールドが定義されたときに設定されます)。
 
-## String literals
+## 文字列リテラル
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+文字列リテラル定数は、次のように二重引用符 ("...") で囲んで表します。 文字列定数の例を次に示します:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"レコード追加"
+"レコードが見つかりません"
+"送り状"
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+空の文字列は、2つの引用符の間に何も入れない状態 ("") で表します。
 
-### Escape sequences
+### エスケープシーケンス
 
-The following escape sequences can be used within strings:
+以下のエスケープシーケンスを文字列内で使用できます:
 
-| Escape sequence | Character replaced   |
-| --------------- | -------------------- |
-| \n             | LF (Line feed)       |
-| \t             | HT (Tab)             |
-| \r             | CR (Carriage return) |
-| \\\          | \ (Backslash)       |
-| \\"           | " (Quotation marks)  |
+| エスケープシーケンス | 意味する文字        |
+| ---------- | ------------- |
+| \n        | LF (行送り)      |
+| \t        | HT (タブ)       |
+| \r        | CR (改行)       |
+| \\\     | \ (バックスラッシュ) |
+| \\"      | " (引用符)       |
 
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はメソッドエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。  
+さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのメソッドエディターに記述する場合は "\\\\\" となる点に注意してください。
 
-## String operators
+## 文字列演算子
 
-| 演算子              | シンタックス           | 戻り値    | 式                       | 結果       |
-| ---------------- | ---------------- | ------ | ----------------------- | -------- |
-| 連結 (結合)          | String + String  | String | "abc" + "def"           | "abcdef" |
-| Repetition       | String * Number  | String | "ab" * 3                | "ababab" |
-| 等しい              | String = String  | ブール    | "abc" = "abc"           | True     |
-|                  |                  |        | "abc" = "abd"           | False    |
-| 異なる              | String # String  | ブール    | "abc" # "abd"           | True     |
-|                  |                  |        | "abc" # "abc"           | False    |
-| 大きい              | String > String  | ブール    | "abd" > "abc"           | True     |
-|                  |                  |        | "abc" > "abc"           | False    |
-| 小さい              | String < String  | ブール    | "abc" < "abd"           | True     |
-|                  |                  |        | "abc" < "abc"           | False    |
-| 以上               | String >= String | ブール    | "abd" >= "abc"          | True     |
-|                  |                  |        | "abc" >= "abd"          | False    |
-| 以下               | String <= String | ブール    | "abc" <= "abd"          | True     |
-|                  |                  |        | "abd" <= "abc"          | False    |
-| Contains keyword | String % String  | ブール    | "Alpha Bravo" % "Bravo" | True     |
-|                  |                  |        | "Alpha Bravo" % "ravo"  | False    |
-|                  | Picture % String | ブール    | Picture_expr % "Mer"    | True (*) |
+| 演算子      | シンタックス        | 戻り値    | 式                       | 結果       |
+| -------- | ------------- | ------ | ----------------------- | -------- |
+| 連結 (結合)  | 文字列 + 文字列     | String | "abc" + "def"           | "abcdef" |
+| 繰り返し     | 文字列 * 数値      | String | "ab" * 3                | "ababab" |
+| 等しい      | 文字列 = 文字列     | ブール    | "abc" = "abc"           | True     |
+|          |               |        | "abc" = "abd"           | False    |
+| 異なる      | 文字列 # 文字列     | ブール    | "abc" # "abd"           | True     |
+|          |               |        | "abc" # "abc"           | False    |
+| 大きい      | 文字列 > 文字列     | ブール    | "abd" > "abc"           | True     |
+|          |               |        | "abc" > "abc"           | False    |
+| 小さい      | 文字列 < 文字列     | ブール    | "abc" < "abd"           | True     |
+|          |               |        | "abc" < "abc"           | False    |
+| 以上       | 文字列 >= 文字列    | ブール    | "abd" >= "abc"          | True     |
+|          |               |        | "abc" >= "abd"          | False    |
+| 以下       | 文字列 <= String | ブール    | "abc" <= "abd"          | True     |
+|          |               |        | "abd" <= "abc"          | False    |
+| キーワードを含む | 文字列 % 文字列     | ブール    | "Alpha Bravo" % "Bravo" | True     |
+|          |               |        | "Alpha Bravo" % "ravo"  | False    |
+|          | ピクチャー % 文字列   | ブール    | Picture_expr % "Mer"    | True (*) |
 
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
