@@ -8,7 +8,7 @@ Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in
 
 ## Description
 
-This parameter allows you to do calculations on your data.
+Ce paramètre vous permet de réaliser des calculs avec vos données.
 
 If you want to perform a calculation on an attribute, you write the following:
 
@@ -20,7 +20,7 @@ If you want to pass an Object attribute, you must pass one of its property. Par 
 
 You can use any of the following keywords:
 
-| Keyword | Description                                                                                                                                                                           |
+| Mot-clé | Description                                                                                                                                                                           |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
 | average | Get the average on a numerical attribute                                                                                                                                              |
@@ -76,6 +76,6 @@ If you want to perform a calculation on an Object attribute, you can write the f
 
 `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
-Response:
+Réponse :
 
 `45`
