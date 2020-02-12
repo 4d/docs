@@ -6,7 +6,7 @@ original_id: directory
 
 The directory handles user access through REST requests.
 
-## Available syntaxes
+## Syntaxe
 
 | Syntaxe                                                               | Méthode | Description                                                      |
 | --------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
