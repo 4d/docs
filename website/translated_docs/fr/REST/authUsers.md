@@ -1,21 +1,21 @@
 ---
 id: authUsers
-title: Sessions and Users
+title: Sessions et utilisateurs
 ---
 
-## Session cookie
+## Cookie de session
 
-Each REST request is handled through a specific session on the 4D server.
+Chaque requête REST est gérée via une session spécifique sur le serveur 4D.
 
-When a first valid REST request is received, the server creates the session and sends a **session cookie** named `WASID4D`, containing the session UUID, for example:
+Lorsqu'une première requête REST valide est reçue, le serveur crée la session et envoie **un cookie de session** nommé `WASID4D`, contenant l'UUID de session, par exemple :
 
     WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
     
 
-In the subsequent REST requests, make sure this cookie is included in the header so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
+Assurez-vous, dans les requêtes REST, que ce cookie est inclus dans l'en-tête afin de réutiliser la même session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
 
-## Authenticating users
+## Authentification des utilisateurs
 
-Once you have set up users and groups in your project's directory, you will need to have users log into the project to access and manipulate data.
+Une fois que vous avez configuré les utilisateurs et les groupes dans le répertoire de votre projet, vous devrez demander aux utilisateurs de se connecter au projet pour accéder aux données et les manipuler.
 
-You can log in a user to your application by passing the user's name and password to [`$directory/login`](directory_login). Once logged in, you can retrieve the user's name by using [`$directory/currentUser`](directory_currentUser) and can find out if he/she belongs to a specific group by using [`$directory/currentUserBelongsTo`](directory_currentUserBelongsTo). To log out the current user, call [`$directory/logout`](directory_logout).
+Vous pouvez connecter un utilisateur à votre application en passant le nom et le mot de passe de l'utilisateur dans [`$directory/login`](directory_login). Une fois connecté, vous pouvez récupérer le nom de l'utilisateur en utilisant [`$directory/currentUser`](directory_currentUser) et savoir s'il appartient à un groupe spécifique en utilisant [`$directory/currentUserBelongsTo`](directory_currentUserBelongsTo). Pour déconnecter l'utilisateur actuel, appelez [`$directory/logout`](directory_logout).
