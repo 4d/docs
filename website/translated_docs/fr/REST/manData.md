@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulating Data
+title: Manipulation des données
 ---
 
 All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
@@ -41,7 +41,7 @@ If you want to remove an entity set from 4D Server's cache, you can use [`$metho
 
 If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. Any entities you delete will, of course, no longer be a part of the entity set.
 
-If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
+If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
 Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
