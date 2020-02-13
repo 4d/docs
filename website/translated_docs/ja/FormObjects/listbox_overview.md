@@ -316,18 +316,18 @@ Form events on list box or list box column objects may return the following addi
 | ---------------- | ------- | --------------------------------------------------------------------- |
 | area             | テキスト    | List box object area ("header", "footer", "cell")                     |
 | areaName         | テキスト    | Name of the area                                                      |
-| column           | longint | Column number                                                         |
+| column           | 倍長整数    | Column number                                                         |
 | columnName       | テキスト    | Name of the column                                                    |
 | footerName       | テキスト    | Name of the footer                                                    |
 | headerName       | テキスト    | Name of the header                                                    |
-| horizontalScroll | longint | Positive if scroll is towards the right, negative if towards the left |
+| horizontalScroll | 倍長整数    | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected    | boolean | True if row is selected, else False                                   |
-| newPosition      | longint | New position of the column or row                                     |
-| newSize          | longint | New size (in pixels) of the column or row                             |
-| oldPosition      | longint | Previous position of the column or row                                |
-| oldSize          | longint | Previous size (in pixels) of the column or row                        |
-| row              | longint | Row number                                                            |
-| verticalScroll   | longint | Positive if scroll is towards the bottom, negative if towards the top |
+| newPosition      | 倍長整数    | New position of the column or row                                     |
+| newSize          | 倍長整数    | New size (in pixels) of the column or row                             |
+| oldPosition      | 倍長整数    | Previous position of the column or row                                |
+| oldSize          | 倍長整数    | Previous size (in pixels) of the column or row                        |
+| row              | 倍長整数    | Row number                                                            |
+| verticalScroll   | 倍長整数    | Positive if scroll is towards the bottom, negative if towards the top |
 
 
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
@@ -977,7 +977,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | テキスト      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
-| real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
+| 実数        | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | テキスト                                                                                           |
@@ -994,7 +994,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
 | テキスト       | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
+| 実数         | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
@@ -1009,25 +1009,25 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | テキスト | real | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *説明*                                    |      |      |         |         |       |       |
-| value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
-| behavior              | "threeStates" value                     |      |      | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
-| choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x    | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x       |         |       |       |
-| unitList              | array of X elements                     | x    | x    | x       |         |       |       |
-| unitReference         | index of selected element               | x    | x    | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x    | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x    | x       | x       | x     |       |
+|                       | valueType                               | テキスト | 実数 | integer | boolean | color | event |
+| --------------------- | --------------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
+| *Attributes*          | *説明*                                    |      |    |         |         |       |       |
+| value                 | cell value (input or output)            | x    | x  | x       |         |       |       |
+| min                   | minimum value                           |      | x  | x       |         |       |       |
+| max                   | maximum value                           |      | x  | x       |         |       |       |
+| behavior              | "threeStates" value                     |      |    | x       |         |       |       |
+| requiredList          | drop-down list defined in object        | x    | x  | x       |         |       |       |
+| choiceList            | combo box defined in object             | x    | x  | x       |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x  | x       |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x    | x  | x       |         |       |       |
+| saveAs                | "reference" or "value"                  | x    | x  | x       |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x    | x  | x       |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x    | x  | x       |         |       |       |
+| unitList              | array of X elements                     | x    | x  | x       |         |       |       |
+| unitReference         | index of selected element               | x    | x  | x       |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x    | x  | x       |         |       |       |
+| unitsListName         | 4D list name for units                  | x    | x  | x       |         |       |       |
+| alternateButton       | add an alternate button                 | x    | x  | x       | x       | x     |       |
 
 
 #### value
