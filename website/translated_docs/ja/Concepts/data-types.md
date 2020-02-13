@@ -61,7 +61,7 @@ title: データタイプの概要
 | BLOB   | Blob サイズ=0                                                           | Blob サイズ=0                   | Blob サイズ=0                  |
 | オブジェクト | null                                                                 | null                         | null                        |
 | コレクション | null                                                                 | null                         | null                        |
-| バリアント  | undefined                                                            | undefined                    | undefined                   |
+| バリアント  | 未定義                                                                  | 未定義                          | 未定義                         |
 
 
 ## データタイプの変換
