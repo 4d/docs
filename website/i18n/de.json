@@ -96,14 +96,14 @@
         "title": "Plug-ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "Schnelle Tour",
+        "sidebar_label": "Schnelle Tour"
       },
       "Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "Variablen"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -536,14 +536,14 @@
         "title": "Plug-ins"
       },
       "version-18.0-Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "Schnelle Tour",
+        "sidebar_label": "Schnelle Tour"
       },
       "version-18.0-Concepts/shared": {
         "title": "Shared objects and collections"
       },
       "version-18.0-Concepts/variables": {
-        "title": "Variables"
+        "title": "Variablen"
       },
       "version-18.0-FormEditor/stylesheets": {
         "title": "Style sheets"
