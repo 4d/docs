@@ -4,43 +4,42 @@ title: Configuration du serveur
 original_id: configuration
 ---
 
-Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your database directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
+À l'aide de requêtes HTTP standard, le serveur 4D REST permet aux applications externes d'accéder directement aux données de votre base, c'est-à-dire de récupérer des informations sur les dataclass de votre projet, de manipuler des données, de vous connecter à votre application Web et bien plus encore.
 
-To start using the REST features, you need to start and configure the 4D REST server.
+Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et configurer le serveur 4D REST.
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.  
+> - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D gratuite disponible.  
 >     
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.  
->     You need to manage the [session cookie](authUsers.md#session-cookie) to use the same session for your requesting application. 
+> - Sur 4D monoposte, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test. Vous devez gérer le [cookie de session](authUsers.md#session-cookie) pour utiliser la même session pour votre application. 
 
-## Starting the REST Server
+## Démarrage du serveur REST
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the database settings in order for REST requests to be processed.
+Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes REST. Si vous souhaitez démarrer le serveur REST, vous devez cocher l'option **Exposer en tant que serveur REST** dans la page "Web/REST" des paramètres de la base pour que les demandes REST soient traitées.
 
 ![alt-text](assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+> Les services REST utilisent le serveur HTTP 4D; vous devez donc vous assurer que le serveur Web 4D est lancé.
 
-The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
+Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
-## Configuring REST access
+## Configuration de l'accès REST
 
-By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
+Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est évidemment pas recommandé pour des raisons de sécurité et de contrôle de l'utilisation des licences clientes.
 
-You can configuring REST accesses with one of the following means:
+Vous pouvez configurer les accès REST de l'une des manières suivantes :
 
-- assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Database Settings;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
+- assigner un groupe d'utilisateurs en **lecture/écriture** aux services REST dans la page "Web/REST" des paramètres de la base;
+- saisir d'une méthode base `On REST Authentication`pour intercepter et gérer chaque demande REST initiale.
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Database Settings is ignored.
+> Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Une fois qu'une méthode base `On REST Authentication` a été définie, 4D lui donne entièrement le contrôle des requêtes REST .
 
-### Using the Database settings
+### Utilisation des paramètres de la base
 
-The **Read/Write** menu in the "Web/REST resource" page of the database settings specifies a group of 4D users that is authorized to establish the link to the 4D database using REST queries.
+Le menu **Lecture/Écriture** de la page "Web/REST" des paramètres de la base spécifie un groupe d'utilisateurs 4D autorisé à établir le lien vers la base de données 4D à l'aide de requêtes REST.
 
-By default, the menu displays **<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+Par défaut, le menu affiche **<Anyone>**, ce qui signifie que les accès REST sont ouverts à tous les utilisateurs. Une fois que vous avez spécifié un groupe, seul un compte utilisateur 4D appartenant à ce groupe peut être utilisé pour [accéder à 4D via une requête REST](authUsers.md). Si un compte utilisé n'appartient pas à ce groupe, 4D renvoie une erreur d'authentification à l'expéditeur de la requête.
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Database Settings.
+> Pour que ce paramètre prenne effet, la méthode base `On REST Authentication` ne doit pas être définie. S'il existe, 4D ignore les paramètres d'accès définis dans les propriétés de la base.
 
 ### Méthode base On REST Authentication
 
