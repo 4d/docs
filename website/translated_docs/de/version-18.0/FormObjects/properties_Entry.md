@@ -193,12 +193,12 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         - In single-line inputs, words located at the end of lines are truncated and there are no line returns. 
         - In multiline inputs, 4D carries out automatic line returns:  
             ![](assets/en/FormObjects/multilineAuto.png)
-        #### No
+        #### Nein
         
         - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
         - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
             ![](assets/en/FormObjects/multilineNo.png)
-        #### Yes
+        #### Ja
         
         When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
         
