@@ -3,7 +3,7 @@ id: Arrays
 title: Arrays
 ---
 
-Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnumeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
+Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnummeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
 
 > In den meisten Fällen empfiehlt es sich, **Collections** anstelle von **Arrays** zu verwenden. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
 
@@ -158,7 +158,7 @@ Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie n
 
 Ein Array wird im Gegensatz zu Daten, die Sie in Tabellen und Datensätzen auf der Festplatte speichern, immer vollständig im Speicher gehalten.
 
-Geben Sie zum Beispiel alle Postleitzahlen in einer Tabelle [PLZ] ein, enthält sie ca. 10.000 Datensätze. Die Tabelle enthält zusätzlich weitere Datenfelder, wie Landeskennzahl und Stadt. Wählen Sie nun das Postleitzahlengebiet 8, erstellt die 4D Datenbank-Engine die entsprechende Datensatzauswahl in der Tabelle [PLZ], und lädt die Datensätze nur bei Bedarf, also z.B. zum Anzeigen auf dem Bildschirm oder zum Drucken. Mit anderen Worten, Sie arbeiten mit einer geordneten Reihe von Werten vom selben Typ pro Datenfeld, die die Engine von 4D teilweise von der Festplatte in den Speicher lädt.
+Geben Sie zum Beispiel alle Postleitzahlen in einer Tabelle [PLZ] ein, enthält sie ca. 10.000 Datensätze. Die Tabelle enthält zusätzlich weitere Datenfelder, wie Landeskennzahl und Stadt. Wählen Sie nun das Postleitzahlengebiet 8, erstellt die 4D Datenbank-Engine die entsprechende Datensatzauswahl in der Tabelle [PLZ] und lädt die Datensätze nur bei Bedarf, also z.B. zum Anzeigen auf dem Bildschirm oder zum Drucken. Mit anderen Worten, Sie arbeiten mit einer geordneten Reihe von Werten vom selben Typ pro Datenfeld, die die Engine von 4D teilweise von der Festplatte in den Speicher lädt.
 
 Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
