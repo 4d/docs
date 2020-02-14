@@ -21,7 +21,7 @@ Téléchargez ensuite l'image sélectionnée sur 4D Server :
 
 `POST  /rest/$upload?$rawPict=true`
 
-**Result**:
+**Résultat** :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
