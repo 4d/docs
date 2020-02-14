@@ -4,40 +4,40 @@ title: '$directory'
 original_id: directory
 ---
 
-The directory handles user access through REST requests.
+Le répertoire gère l'accès des utilisateurs via les requêtes REST.
 
 ## Syntaxe
 
-| Syntaxe                                                               | Méthode | Description                                                      |
-| --------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
-| [**$directory/currentUser**](#directorycurrentuser)                   | `GET`   | Returns information about the current user                       |
-| [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST`  | Indicates if the current user belongs to a specific group        |
-| [**$directory/login**](#directorylogin)                               | `POST`  | Opens a REST session on your 4D application and logs in the user |
-| [**$directory/logout**](#directorylogout)                             | `GET`   | Logs out the current user                                        |
+| Syntaxe                                                               | Méthode | Description                                                               |
+| --------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------- |
+| [**$directory/currentUser**](#directorycurrentuser)                   | `GET`   | Retourne des informations sur l'utilisateur courant                       |
+| [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST`  | Indique si l'utilisateur courant appartient à un groupe spécifique        |
+| [**$directory/login**](#directorylogin)                               | `POST`  | Ouvre une session REST sur votre application 4D et connecte l'utilisateur |
+| [**$directory/logout**](#directorylogout)                             | `GET`   | Déconnecte l'utilisateur courant                                          |
 
 
 ## $directory/currentUser
 
-Returns information about the current user
+Retourne des informations sur l'utilisateur courant
 
 ### Description
 
-By calling `$directory/currentUser` after a user has logged in, you can retrieve the following information:
+En appelant `$directory/currentUser` après la connexion d'un utilisateur, vous pouvez récupérer les informations suivantes :
 
-| Propriété | Type   | Description                                |
-| --------- | ------ | ------------------------------------------ |
-| userName  | Chaine | Username used to log into the application. |
-| fullName  | Chaine | Full name of the user.                     |
-| ID        | Chaine | UUID referencing the user.                 |
+| Propriété | Type   | Description                                                |
+| --------- | ------ | ---------------------------------------------------------- |
+| userName  | Chaine | Nom d'utilisateur saisi pour se connecter à l'application. |
+| fullName  | Chaine | Nom complet de l'utilisateur.                              |
+| ID        | Chaine | UUID référençant l'utilisateur.                            |
 
 
 ### Exemple
 
-Call `$directory/currentUser` to find out the current user of your application.
+Appelez `$directory/currentUser` pour identifier l'utilisateur courant de votre application.
 
 `GET  /rest/$directory/currentUser`
 
-**Result**:
+**Résultat** :
 
     {
         "result": {
@@ -48,7 +48,7 @@ Call `$directory/currentUser` to find out the current user of your application.
     }
     
 
-If no user has been logged in, the result is:
+Si aucun utilisateur n'est connecté, le résultat est le suivant :
 
     {
         "result": null
@@ -57,17 +57,17 @@ If no user has been logged in, the result is:
 
 ## $directory/currentUserBelongsTo
 
-Indicates if the current user belongs to a specific GroupID or GroupName.
+Indique si l'utilisateur courant appartient à un GroupID ou GroupName spécifique.
 
 ### Description
 
-To find out if the currently logged in user belongs to a specific group, use `$directory/currentUserBelongsTo`. You can pass either the group ID (which is the group's UUID reference number) or its name as defined in the datastore directory.
+Pour savoir si l'utilisateur actuellement connecté appartient à un groupe spécifique, utilisez `$directory/currentUserBelongsTo`. Vous pouvez passer soit l'ID du groupe (qui correspond au numéro de référence UUID du groupe) soit son nom tel que défini dans le répertoire du datastore.
 
-If we want to check to see if the current user is a member of the Sales group, we must pass either *GroupID* or *GroupName* in the `POST`.
+Si nous voulons vérifier que l'utilisateur actuel est membre du groupe Ventes, nous devons passer *GroupID* ou *GroupName* dans le `POST`.
 
 ### Exemple
 
-Below is an example of how to pass either the GroupID or GroupName in the `POST` data.
+Vous trouverez ci-dessous un exemple de la façon de passer le GroupID ou GroupName dans les données `POST`.
 
 `POST  /rest/$directory/currentUserBelongsTo`
 
@@ -75,20 +75,20 @@ Below is an example of how to pass either the GroupID or GroupName in the `POST`
 
 `["88BAF858143D4B13B26AF48C7A5A7A68"]`
 
-or
+ou
 
-`["Sales"]`
+`["Ventes"]`
 
-**Result**:
+**Résultat** :
 
-If the current user is in the group specified in the array, the response will be:
+Si l'utilisateur courant appartient au groupe spécifié dans le tableau, la réponse sera la suivante :
 
     {
         "result": true
     }
     
 
-Otherwise, it will return:
+Sinon, elle retournera :
 
     {
          "result": false
@@ -97,20 +97,20 @@ Otherwise, it will return:
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+Ouvre une session REST sur votre application 4D et connecte l'utilisateur.
 
 ### Description
 
-Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
+Utilisez `$directory/login` pour ouvrir une session dans votre application 4D via REST et connectez un utilisateur. Vous pouvez également modifier le timeout par défaut de la session 4D.
 
-All parameters must be passed in **headers** of a POST method:
+Tous les paramètres doivent être passés dans les **en-têtes** d'une méthode POST :
 
-| Header key         | Header value                                                                 |
-| ------------------ | ---------------------------------------------------------------------------- |
-| username-4D        | User - Not mandatory                                                         |
-| password-4D        | Password - Not mandatory                                                     |
-| hashed-password-4D | Hashed password - Not mandatory                                              |
-| session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
+| Clé de l'en-tête   | Valeur de l'en-tête                                                                                |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| username-4D        | Utilisateur - Non obligatoire                                                                      |
+| password-4D        | Mot de passe - Non obligatoire                                                                     |
+| hashed-password-4D | Mot de passe hâché - Non obligatoire                                                               |
+| session-4D-length  | Timeout d'inactivité de la session (en minutes). Ne peut pas être inférieur à 60 - Non obligatoire |
 
 
 ### Exemple
@@ -128,16 +128,16 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**Résultat** :
 
-If the login was successful, the result will be:
+Si la connexion a réussi, le résultat sera le suivant :
 
     {
         "result": true
     }
     
 
-Otherwise, the response will be:
+Sinon, la réponse sera la suivante :
 
     {
          "result": false
@@ -146,28 +146,28 @@ Otherwise, the response will be:
 
 ## $directory/logout
 
-Logs out the current user.
+Déconnecte l'utilisateur courant.
 
 ### Description
 
-To log out the current user from your application, use `$directory/logout`.
+Pour déconnecter l'utilisateur courant de votre application, utilisez `$directory/logout`.
 
 ### Exemple
 
-You call `$directory/logout` to log the current user out of the application.
+Vous appelez `$directory/logout` pour déconnecter l'utilisateur courant de l'application.
 
 `GET  /rest/$directory/logout`
 
-**Result**:
+**Résultat** :
 
-If the logout was successful, the result will be:
+Si la déconnexion a réussi, le résultat sera le suivant :
 
     {
         "result": true
     }
     
 
-Otherwise, the response will be:
+Sinon, la réponse sera la suivante :
 
     {
          "result": false
