@@ -32,7 +32,7 @@ Voici une description des données retournées :
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                              |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| __entityModel | Chaine  | Name of the datastore class.                                                                                                                                                                                                                                             |
+| __entityModel | Chaine  | Nom de la classe du datastore.                                                                                                                                                                                                                                           |
 | __COUNT       | Nombre  | Nombre d'entités dans la classe du datastore.                                                                                                                                                                                                                            |
 | __SENT        | Nombre  | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie dans la propriété Default Top Size (dans les propriétés de la classe de datastore) ou `$top§$limit` ou la valeur dans `$top/$limit`. |
 | __FIRST       | Nombre  | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                                                                             |
@@ -51,7 +51,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
 
 `GET  /rest/Employee`
 
-**Result**:
+**Résultat** :
 
     {
         "__entityModel": "Company",
@@ -148,7 +148,7 @@ La requête suivante retourne toutes les données publiques de la classe de data
 
 `GET  /rest/Company(1)`
 
-**Result**:
+**Résultat** :
 
     {
         "__entityModel": "Company",
