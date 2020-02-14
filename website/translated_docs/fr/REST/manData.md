@@ -93,7 +93,7 @@ The following requests returns only the first name and last name from the People
 
 `GET  /rest/People/firstName,lastName/`
 
-**Result**:
+**Résultat** :
 
     {
         __entityModel: "People",
@@ -131,7 +131,7 @@ The following requests returns only the first name and last name from the People
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A*'"/`
 
-**Result**:
+**Résultat** :
 
     {
         __entityModel: "People",
@@ -155,7 +155,7 @@ The following request returns only the first name and last name attributes from 
 
 `GET  /rest/People(3)/firstName,lastName/`
 
-**Result**:
+**Résultat** :
 
     {
         __entityModel: "People",
@@ -168,7 +168,7 @@ The following request returns only the first name and last name attributes from 
 
 `GET  /rest/People(3)/`
 
-**Result**:
+**Résultat** :
 
     {
         __entityModel: "People",
@@ -196,7 +196,7 @@ If you have a dataclass method, you can define which attributes to return as sho
 
 `GET  /rest/People/firstName,lastName/getHighSalaries`
 
-or
+ou
 
 `GET  /rest/People/getHighSalaries/firstName,lastName`
 
@@ -206,15 +206,15 @@ Once you have created an entity set, you can filter the information in it by def
 
 `GET /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
 
-## Viewing an image attribute
+## Affichage d'un attribut d'image
 
-If you want to view an image attribute in its entirety, write the following:
+Si vous souhaitez afficher intégralement un attribut d'image, saisissez ce qui suit :
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
+Pour plus d'informations sur les formats d'image, reportez-vous à [`$imageformat`]($imageformat.md). Pour plus d'informations sur le paramètre de version, reportez-vous à [`$version`]($version.md).
 
-## Saving a BLOB attribute to disk
+## Enregistrement d'un attribut BLOB sur le disque
 
 If you want to save a BLOB stored in your dataclass, you can write the following:
 
