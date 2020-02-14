@@ -23,7 +23,7 @@ The following structures are supported for REST requests:
 
 While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Beispiel:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
