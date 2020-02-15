@@ -21,14 +21,14 @@ You can either:
 
 > In macOS, displaying help tips is not supported in pop-up type windows.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-|  Name   | Type de données | Possible Values                       |
+|   Nom   | Type de données | Valeurs possibles                     |
 |:-------:|:---------------:| ------------------------------------- |
 | tooltip |      Texte      | additional information to help a user |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
 
