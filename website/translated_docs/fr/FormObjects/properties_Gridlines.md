@@ -9,14 +9,14 @@ title: Quadrillage
 
 Defines the color of the horizontal lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name                 | Type de données | Possible Values                            |
+| Nom                  | Type de données | Valeurs possibles                          |
 | -------------------- | --------------- | ------------------------------------------ |
 | horizontalLineStroke | color           | any css value, "'transparent", "automatic" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box](listbox_overview.md)
 
@@ -26,13 +26,13 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 Defines the color of the vertical lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name               | Type de données | Possible Values                            |
+| Nom                | Type de données | Valeurs possibles                          |
 | ------------------ | --------------- | ------------------------------------------ |
 | verticalLineStroke | color           | any css value, "'transparent", "automatic" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box](listbox_overview.md)
