@@ -46,40 +46,40 @@ La méthode base `On REST Authentication` vous permet de contrôler de manière 
 
 ## Exposer les tables et les champs
 
-Once REST services are enabled in the 4D database, by default a REST session can access all tables and fields of the datastore, and thus use their data. For example, if your database contains an [Employee] table, it is possible to write:
+Une fois que les services REST sont activés dans la base 4D, par défaut une session REST peut accéder à toutes les tables et les champs du datastore, et utiliser leurs données. Par exemple, si votre base de données contient une table [Employee], il est possible d'écrire :
 
     http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
     
     
 
-This request will return all employees whose salary field is higher than 10000.
+Cette requête retournera tous les employés dont le champ "salary" est supérieur à 10 000.
 
-> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default.
+> Les tables et/ou champs 4D dont l'attribut est "invisible" sont également exposés par défaut dans REST.
 
-If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
+Si vous souhaitez personnaliser les objets du datastore accessibles via REST, vous devez désactiver l'exposition de chaque table et/ou champ que vous souhaitez masquer. Lorsqu'une requête REST tente d'accéder à une ressource non autorisée, 4D retourne une erreur.
 
-### Exposing tables
+### Exposer des tables
 
-By default, all tables are exposed in REST.
+Par défaut, toutes les tables sont exposées dans REST.
 
-For security reasons, you may want to only expose certain tables of your datastore to REST calls. For instance, if you created a [Users] table storing user names and passwords, it would be better not to expose it.
+Pour des raisons de sécurité, vous pouvez choisir d'exposer uniquement certaines tables du datastore aux appels REST. Par exemple, si vous avez créé une table [Users] stockant les noms d'utilisateur et les mots de passe, il serait préférable de ne pas l'exposer.
 
-To remove the REST exposure for a table:
+Pour supprimer l'exposition REST d'une table :
 
-1. Display the Table Inspector in the Structure editor and select the table you want to modify.
+1. Affichez l'Inspecteur de table dans l'Editeur de structure et sélectionnez la table à modifier.
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
+2. Décochez l'option **Exposer en tant que ressource REST** : ![alt-text](assets/en/REST/table.png) Procédez ainsi pour chaque table dont l'exposition doit être modifiée.
 
-### Exposing fields
+### Exposer des champs
 
-By default, all 4D database fields are exposed in REST.
+Par défaut, touts les champs d'une base 4D sont exposés dans REST.
 
-You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field.
+Vous pouvez choisir d'exposer certains champs de vos tables à REST. Par exemple, si vous ne souhaitez pas exposer le champ [Employees]Salary.
 
-To remove the REST exposure for a field:
+Pour supprimer l'exposition REST d'un champ :
 
-1. Display the Field Inspector in the Structure editor and select the field you want to modify.
+1. Affichez l'Inspecteur de champ dans l'Editeur de structure et sélectionnez le champ à modifier.
 
-2. Uncheck the **Expose as REST resource** for the field. ![alt-text](assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. Décochez la case **Exposer en tant que ressource RES**T pour le champ. ![alt-text](assets/en/REST/field.png) Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
