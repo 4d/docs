@@ -428,7 +428,7 @@
         "title": "Configuration du serveur"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obtenir des informations du serveur"
       },
       "REST/gettingStarted": {
         "title": "Prise en main"
@@ -865,7 +865,7 @@
         "title": "Configuration du serveur"
       },
       "version-18.0-REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obtenir des informations du serveur"
       },
       "version-18.0-REST/gettingStarted": {
         "title": "Prise en main"
