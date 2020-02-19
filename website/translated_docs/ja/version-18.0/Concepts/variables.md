@@ -4,90 +4,90 @@ title: 変数
 original_id: variables
 ---
 
-Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
 
-When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+データベースを作成する際には、フィールドに名前とデータタイプを指定します。 同様に、変数にも名前と [データタイプ](Concepts/data-types.md) を指定します。
 
-Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
+変数はランゲージの要素です。画面上に表示されることのない、裏方に徹した変数を作成・利用することができます。 もちろん、フォーム上に変数の値を表示することもできます (ポインターやBLOBを除く)。また、変数に値を入力したり、変数の値をレポートに印刷したりすることも可能です。 このとき、入力可や入力不可の変数オブジェクトはフィールドオブジェクトと同様に振舞い、提供されるコントロールも類似しています。 フォーム上のボタン、リストボックス、スクロールエリア、ピクチャーボタンなどのオブジェクトも変数を使って制御することができるほか、保存不要な計算結果を表示させることもできます。
 
-## Creating Variables
+## 変数の作成
 
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
+変数を作成するには、"コンパイラー" または "配列" テーマのコマンドを使って変数を宣言します。
 
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**注:** 配列とは、変数の一種です。 配列とは、同じタイプの変数を番号付きで並べたものです。 詳細については [配列](Concepts/arrays.md) を参照ください。
 
-For example, if you want to define a text variable, you write:
+たとえば、テキスト変数を宣言するには次のように書きます:
 
 ```4d
  C_TEXT(myText)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
+**注:** この方法は推奨されませんが、単純に使用することによって変数を作成することもできます。フィールドのように、正式にそれらを定義することは必須ではありません。 たとえば、今日の日付に30日を加えた日付を保持する変数が必要な場合、以下のように書くことができます:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
+ MyDate:=Current date+30 // MyDateを作成し、そこに30日後の日付が代入されます
 ```
 
-Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
+いったん作成された変数は、データベースで必要とされる場所に使用できます。 たとえば、テキスト変数を同じタイプのフィールドに格納するには次のように書きます:
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
-The following are some basic variable declarations:
+いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
+ C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します
+ C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
+ C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
+ C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
+ C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します
+ ARRAY LONGINT(alAnArray;10) // プロセス変数 alAnArray を 10個の倍長整数型要素を持つ配列として宣言します
 ```
 
-## Assigning Data
+## 変数への代入
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、**変数にデータを代入する**と言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドに対してデータを代入する場合にも使います。
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. たとえば:
+代入演算子は、変数を作成し、変数にデータを代入するために使用します。 作成する変数名を代入演算子の左側に書きます。 たとえば:
 
 ```4d
 MyNumber:=3
 ```
 
-creates the variable *MyNumber* and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+は変数 *MyNumber* を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに *MyNumber* 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+これで、*[Products]Size* の値は3になります。 この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
 
-You assign data to array elements by using curly braces ({...}):
+配列要素にデータを代入するには中カッコ ({...}) を使用します:
 
 ```4d
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## ローカル、プロセス、およびインタープロセス変数
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+**ローカル**、**プロセス**、および **インタープロセス** という、3種類の変数の変数を作成することができます。 これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
 
-### Local variables
+### ローカル変数
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+ローカル変数はその名のとおりメソッド内でローカルであり、変数が作成されたメソッドの範囲内でのみ使用可能で、その他のメソッドからはアクセスできません。 メソッド内でローカルであるというのは、正式には「スコープがローカルである」といいます。ローカル変数は、その使用範囲をメソッド内に限定するために用います。
 
-You may want to use a local variable to:
+ローカル変数は、以下のような目的のために使用されます:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
-- Reduce the number of process variables
+- 他の変数名との重複を避ける。
+- データを一時的に使用する。
+- プロセス変数の数を減らす。
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+ローカル変数の名前は必ずドル記号 ($) で始め、この記号を除く31文字までの文字を指定できます。 これより長い名前を指定すると、4D は余分の32文字以降を切り捨てます。
 
-When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+多くのメソッドや変数を持つデータベースで作業する場合、現在作業しているメソッドの範囲内で一時的に変数が必要となる場合がよくあります。 この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
 
 Frequently, in a database, small pieces of information are needed from the user. The command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
 
