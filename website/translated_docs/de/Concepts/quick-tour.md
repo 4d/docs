@@ -1,24 +1,24 @@
 ---
-id: quick-tour
-title: A Quick Tour
-sidebar_label: A Quick Tour
+id: Schnelle Tour
+title: Schnelle Tour
+sidebar_label: Schnelle Tour
 ---
 
-Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
+Mit der 4D Programmiersprache lässt sich die gängige Meldung "Hello, world!" auf dem Bildschirm auf verschiedenen Wegen erzeugen. Der einfachste Weg ist, eine Zeile in eine Projektmethode setzen:
 
 ```4d
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
+This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. Zum Ausführen des Code klicken Sie einfach im Methodeneditor auf die Schaltfläche zum Ausführen:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
-Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
+Oder Sie können diesen Code einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
 
-## Assigning Values
+## Werte zuweisen
 
-Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
+Daten lassen sich in Variablen, Felder, Array Elemente etc. setzen und daraus kopieren. Daten in eine Variable setzen heißt, der Variablen die Daten zuweisen. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern oder Array Elementen Daten zuzuweisen.
 
 ```4d
 $MyNumber:=3 //assigns 3 to MyNumber variable  
@@ -29,35 +29,35 @@ $myDate:=!2018/01/21! //assigns a date literal
 $myHour:=?08:12:55? //assigns a time literal
 ```
 
-You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.
+Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er kombiniert nicht Ausdrücke zu einem neuen, sondern kopiert die Werte des Ausdrucks auf seiner rechten Seite in die Variable oder das Feld auf seiner linken Seite.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+**Wichtig:** Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Solche Fehler sind für den Compiler oft schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
 
-## Variables
+## Variablen
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a `C_XXX` command. For example, to create a variable of the date type, you can write:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem `C_XXX` Befehl. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
 C_DATE(MyDate) //Date type for MyDate variable
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+Der Code liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile erstellt eine Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+Einige Befehle sind an Collections oder Objekte gebunden. In diesem Fall werden sie Methoden genannt und mit der Objektnotation verwendet. Beispiel:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -68,7 +68,7 @@ $lastEmployee:=$employee.last()
 
 You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
 
-There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
+Die 4D User Community oder 3rd-Party Entwickler bieten auf dem Markt viele Plug-Ins für spezifische Bereiche an. Es gibt zum Beispiel das [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) auf macOS:
 
 ```4d
 PDF REMOVE PAGE(path;page)
@@ -148,7 +148,7 @@ The data types are fully defined in the section [Data Types](Concepts/data-types
 
 ## Objects and collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
+You can handle 4D language objects and collections using the object notation to get or to set their values. Beispiel:
 
 ```4d
 employee.name:="Smith"
@@ -192,6 +192,7 @@ When you use the language, it is rare that you will simply want a piece of data.
 | *        | Multiplication | 2 * 3 results in 6 |
 | /        | Division       | 6 / 2 results in 3 |
 
+
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
@@ -201,6 +202,7 @@ The same symbols are often used for different operations, depending on the data 
 | Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+
 
 The operators are fully defined in the chapter Operators and its subsections.
 
@@ -247,9 +249,10 @@ You refer to an expression by the data type it returns. There are several expres
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
 | $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
+
 ### Assignable vs non-assignable expressions
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
+An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. Beispiel:
 
 ```4d
 //$myVar variable is assignable, you can write:  

@@ -4,57 +4,55 @@ title: '$upload'
 ---
 
 
-Returns an ID of the file uploaded to the server
+Retourne un ID du fichier téléchargé sur le serveur
 
 ## Description
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+Publiez cette requête lorsque vous vous souhaitez télécharger un fichier sur le serveur. S'il s'agit d'une image, passez `$rawPict=true`. Pour tous les autres fichiers, passez `$binary=true`.
 
-## Image upload example
-To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
+Vous pouvez modifier le timeout, qui est par défaut de 120 secondes, en passant une valeur au paramètre `$timeout`.
 
-Then, we upload the selected image to 4D Server:
+## Exemple de téléchargement d'image
 
- `POST  /rest/$upload?$rawPict=true`
+Pour télécharger une image, vous devez d'abord sélectionner l'objet fichier sur le client à l'aide de l'API intégré HTML 5 pour utiliser le fichier à partir d'une application Web. 4D utilise l'attribut de type MIME de l'objet fichier afin de le gérer correctement.
 
-**Result**:
+Téléchargez ensuite l'image sélectionnée sur 4D Server :
+
+`POST  /rest/$upload?$rawPict=true`
+
+**Résultat** :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity:
+Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant [`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité :</p> 
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Data POST** :
 
-````
-{
-    __KEY: "12",
-    __STAMP: 4,
-    photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
-}
-````
+    {
+        __KEY: "12",
+        __STAMP: 4,
+        photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
+    }
+    
 
 **Réponse** :
 
-The modified entity is returned:
+L'entité modifiée est retournée :
 
-````
-{
-    "__KEY": "12", 
-    "__STAMP": 5, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(12)", 
-    "ID": 12, 
-    "firstName": "John", 
-    "firstName": "Smith",
-    "photo":
     {
-        "__deferred":
+        "__KEY": "12", 
+        "__STAMP": 5, 
+        "uri": "http://127.0.0.1:8081/rest/Employee(12)", 
+        "ID": 12, 
+        "firstName": "John", 
+        "firstName": "Smith",
+        "photo":
         {
-            "uri": "/rest/Employee(12)/photo?$imageformat=best&$version=1&$expand=photo",
-            "image": true
-        }
-    },}
-````
- 
+            "__deferred":
+            {
+                "uri": "/rest/Employee(12)/photo?$imageformat=best&$version=1&$expand=photo",
+                "image": true
+            }
+        },}

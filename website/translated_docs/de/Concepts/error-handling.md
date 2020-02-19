@@ -16,7 +16,7 @@ Error handling meets two main needs:
 
 In 4D, all errors can be catched and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
+This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. Beispiel:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Installs the error-handling method
@@ -52,10 +52,10 @@ Within the custom error method, you have access to several information that will
 
 - dedicated system variables(*):
     
-    - `Error` (longint): error code
-    - `Error method` (text): name of the method that triggered the error
-    - `Error line` (longint): line number in the method that triggered the error
-    - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error. 
+  - `Error` (longint): error code
+  - `Error method` (text): name of the method that triggered the error
+  - `Error line` (longint): line number in the method that triggered the error
+  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error. 
 
 (*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
 

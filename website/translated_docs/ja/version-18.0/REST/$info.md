@@ -10,29 +10,29 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Type   | 説明                                                                                             |
-| -------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| cacheSize      | Number | Wakanda Server's cache size.                                                                   |
-| usedCache      | Number | How much of Wakanda Server's cache has been used.                                              |
-| entitySetCount | Number | Number of entity sets.                                                                         |
-| entitySet      | Array  | An array in which each object contains information about each entity set.                      |
-| ProgressInfo   | Array  | An array containing information about progress indicator information.                          |
-| sessionInfo    | Array  | An array in which each object contains information about each user session.                    |
-| jsContextInfo  | Array  | An array containing one object that returns the information about the JavaScript context pool. |
+| Property       | 型  | 説明                                                                                             |
+| -------------- | -- | ---------------------------------------------------------------------------------------------- |
+| cacheSize      | 数値 | Wakanda Server's cache size.                                                                   |
+| usedCache      | 数値 | How much of Wakanda Server's cache has been used.                                              |
+| entitySetCount | 数値 | Number of entity sets.                                                                         |
+| entitySet      | 配列 | An array in which each object contains information about each entity set.                      |
+| ProgressInfo   | 配列 | An array containing information about progress indicator information.                          |
+| sessionInfo    | 配列 | An array in which each object contains information about each user session.                    |
+| jsContextInfo  | 配列 | An array containing one object that returns the information about the JavaScript context pool. |
 
 
 ### entitySet
 
 For each entity set currently stored in 4D Server's cache, the following information is returned:
 
-| Property      | Type    | 説明                                                                                                                                                                                                                                                                  |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| tableName     | String  | Name of the datastore class.                                                                                                                                                                                                                                        |
-| selectionSize | Number  | Number of entities in the entity set.                                                                                                                                                                                                                               |
-| sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Date    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Date    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| Property      | 型      | 説明                                                                                                                                                                                                                                                                  |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String | A UUID that references the entity set.                                                                                                                                                                                                                              |
+| tableName     | String | Name of the datastore class.                                                                                                                                                                                                                                        |
+| selectionSize | 数値     | Number of entities in the entity set.                                                                                                                                                                                                                               |
+| sorted        | ブール    | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
+| refreshed     | 日付     | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
+| expires       | 日付     | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
 
 
 For information about how to create an entity set, refer to `$method=entityset`. If you want to remove the entity set from 4D Server's cache, use `$method=release`.
@@ -45,29 +45,29 @@ For information about how to create an entity set, refer to `$method=entityset`.
 
 For each user session, the following information is returned in the *sessionInfo* array:
 
-| Property   | タイプ    | 説明                                                           |
+| Property   | 型      | 説明                                                           |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | String | A UUID that references the session.                          |
-| userID     | 文字     | A UUID that references the user who runs the session.        |
+| userID     | String | A UUID that references the user who runs the session.        |
 | userName   | String | The name of the user who runs the session.                   |
-| lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration | Date   | The current expiration date and time of the user session.    |
+| lifeTime   | 数値     | The lifetime of a user session in seconds (3600 by default). |
+| expiration | 日付     | The current expiration date and time of the user session.    |
 
 
 ### jsContextInfo
 
 The object in the **jsContextInfo** array details the JavaScript context pool:
 
-| Property              | Type    | 説明                                                                                    |
-| --------------------- | ------- | ------------------------------------------------------------------------------------- |
-| contextPoolSize       | Number  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
-| activeDebugger        | Boolean | Debugger state (false by default)                                                     |
-| usedContextCount      | Number  | Number of used contexts                                                               |
-| usedContextMaxCount   | Number  | Maximum number of contexts that have been used simultaneously                         |
-| reusableContextCount  | Number  | Number of reusable contexts (both used and unused)                                    |
-| unusedContextCount    | Number  | Number of unused contexts                                                             |
-| createdContextCount   | Number  | Number of contexts created since the project was started                              |
-| destroyedContextCount | Number  | Number of contexts destroyed since the project was started                            |
+| Property              | 型   | 説明                                                                                    |
+| --------------------- | --- | ------------------------------------------------------------------------------------- |
+| contextPoolSize       | 数値  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
+| activeDebugger        | ブール | Debugger state (false by default)                                                     |
+| usedContextCount      | 数値  | Number of used contexts                                                               |
+| usedContextMaxCount   | 数値  | Maximum number of contexts that have been used simultaneously                         |
+| reusableContextCount  | 数値  | Number of reusable contexts (both used and unused)                                    |
+| unusedContextCount    | 数値  | Number of unused contexts                                                             |
+| createdContextCount   | 数値  | Number of contexts created since the project was started                              |
+| destroyedContextCount | 数値  | Number of contexts destroyed since the project was started                            |
 
 
 ## 例題

@@ -14,14 +14,14 @@ Il est possible d’appeler des méthodes 4D depuis le code JavaScript exécuté
 
 Lorsque cette propriété est cochée, un objet JavaScript spécial `$4d` est instancié dans la zone Web et permet de [gérer les appels aux méthodes projet de 4D](webArea_overview.md#4d-object).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name                 | Type de données | Possible Values            |
+| Nom                  | Type de données | Valeurs possibles          |
 | -------------------- | --------------- | -------------------------- |
 | methodsAccessibility | string          | "none" (par défaut), "all" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Zone Web](webArea_overview.md)
 
@@ -31,14 +31,14 @@ Lorsque cette propriété est cochée, un objet JavaScript spécial `$4d` est in
 
 La variable "Progression" est de type Entier long. Elle contient une valeur entre 0 et 100, représentant le pourcentage du chargement complet de la page affichée dans la zone Web. La variable est mise à jour automatiquement par 4D. Il n’est pas possible de la modifier manuellement.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name           | Type de données | Possible Values                |
+| Nom            | Type de données | Valeurs possibles              |
 | -------------- | --------------- | ------------------------------ |
 | progressSource | string          | Nom d'une variable Entier long |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Zone Web](webArea_overview.md)
 
@@ -62,14 +62,14 @@ La variable URL produit les mêmes effets que la commande [WA OUVRIR URL](https:
 - Si la variable URL ne contient pas de protocole (http, mailto, file, etc.), la zone Web ajoute "http://", ce qui n’est pas le cas pour la commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
 - Lorsque la zone Web n’est pas affichée dans le formulaire (lorsqu’elle se trouve sur une autre page du formulaire), l’exécution de la commande[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) est sans effet tandis que la valorisation de la variable URL permet de mettre à jour l’URL courant.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name      | Type de données | Possible Values |
-| --------- | --------------- | --------------- |
-| urlSource | string          | Une URL.        |
+| Nom       | Type de données | Valeurs possibles |
+| --------- | --------------- | ----------------- |
+| urlSource | string          | Une URL.          |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Zone Web](webArea_overview.md)
 
@@ -91,13 +91,13 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
         * `WA enable plugins`
     * Lorsque les déposer d'URL sont rendus possibles par le sélecteur `WA enable URL drop` de la commande [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html), le premier déposer doit être précédé d'au moins un appel à la commande [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) ou d'une affectation vers la variable d'URL associée à la zone.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name      | Type de données | Possible Values      |
+| Nom       | Type de données | Valeurs possibles    |
 | --------- | --------------- | -------------------- |
 | webEngine | string          | "embedded", "system" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Zone Web](webArea_overview.md)

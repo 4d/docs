@@ -7,7 +7,7 @@ In Methoden, ganz gleich, ob sie einfach oder komplex sind, verwenden Sie immer 
 
 - **Sequentiell**: Die sequentielle Struktur ist eine einfache lineare Struktur. Eine Sequenz ist eine Reihe von Anweisungen, die 4D eine nach der anderen, von der ersten bis zur letzten ausführt. Ein typisches Beispiel ist die einzeilige Routine, die häufig für Objektmethoden verwendet wird. Zum Beispiel: `[People]lastName:=Uppercase([People]lastName)`
 - **[Abfragen](Concepts/cf_branching.md)**: Bei einer Abfrage können Methoden eine Bedingung testen und je nach Ergebnis, unterschiedliche Wege wählen. Die Bedingung ist ein Boolean Ausdruck, der TRUE oder FALSE ermittelt. Eine Abfragestruktur ist `If...Else...End if`. Sie leitet den Programmfluss auf einen von zwei möglichen Wegen. Die andere Abfragestruktur ist `Case of...Else...End case`. Sie leitet den Programmfluss auf einen von vielen Wegen.
-- **[Schleifen](Concepts/cf_looping.md)**Beim Schreiben von Methoden kommt es häufig vor, dass Sie eine Abfolge von Anweisungen mehrere Male wiederholen müssen. Dafür bietet die 4D Programmiersprache folgende Schleifenstrukturen: 
+- **[Looping](Concepts/cf_looping.md)**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. Dafür bietet die 4D Programmiersprache folgende Schleifenstrukturen: 
     - `While...End while`
     - `Repeat...Until`
     - `For...End for`

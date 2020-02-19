@@ -385,8 +385,8 @@ The following table summarizes 4D naming conventions.
 
 | Identifier                   | Max. Length | 例題                         |
 | ---------------------------- | ----------- | -------------------------- |
-| Table                        | 31          | [Invoices]                 |
-| Field                        | 31          | [Employees]Last Name       |
+| テーブル                         | 31          | [Invoices]                 |
+| フィールド                        | 31          | [Employees]Last Name       |
 | Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
 | Process Variable/Array       | 31          | vsCurrentName              |
 | Local Variable/Array         | $ + 31      | $vlLocalCounter            |
@@ -403,6 +403,7 @@ The following table summarizes 4D naming conventions.
 | Local Process                | $ + 255     | "$Follow Events"           |
 | Global Process               | 255         | "*P_INVOICES_MODULE*"    |
 | Semaphore                    | 255         | "mysemaphore"              |
+
 
 **Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 

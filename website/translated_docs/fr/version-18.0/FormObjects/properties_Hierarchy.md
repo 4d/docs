@@ -6,7 +6,7 @@ original_id: propertiesHierarchy
 
 * * *
 
-## Hierarchical List Box
+## List box hiérarchique
 
 `Array type list boxes`
 
@@ -16,13 +16,13 @@ Additional options (**Variable 1...10**) are available when the *Hierarchical Li
 
 See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Type de données | Possible Values                                  |
+| Nom        | Type de données | Valeurs possibles                                |
 | ---------- | --------------- | ------------------------------------------------ |
 | datasource | string array    | Collection of array names defining the hierarchy |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box](listbox_overview.md)

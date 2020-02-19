@@ -27,6 +27,7 @@ Although they are usually equivalent, some data types available at the database 
 | [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `C_VARIANT`                  |
 
+
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
 (2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
@@ -62,6 +63,7 @@ The following table illustrates these default values:
 | Collection | null                                                                                | null                    | null                         |
 | Variant    | undefined                                                                           | undefined               | undefined                    |
 
+
 ## Converting data types
 
 The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
@@ -75,6 +77,7 @@ The following table lists the basic data types, the data types to which they can
 | Date                 | String    |           |         |         | Bool       |
 | Time                 | String    |           |         |         | Bool       |
 | Boolean              |           | Num       |         |         |            |
+
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
 

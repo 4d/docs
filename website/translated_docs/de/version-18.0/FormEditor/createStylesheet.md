@@ -212,7 +212,7 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
     - css color name: `fill: red;`
     - hexa value: `fill: #FF0000;`
     - the `rgb()` function: `fill:rgb(255,0,0)`
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
+- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Beispiel:
     
     - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`

@@ -48,7 +48,7 @@ Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
 ### Beispiel
 
 ```4d
-  // Der Benutzer soll einen Namen eingeben
+  // Ask the user to enter a name
  $Find:=Request(Type a name)
  If(OK=1)
     QUERY([People];[People]LastName=$Find)

@@ -46,18 +46,19 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 | Division entière    | Nombre \ Nombre | Nombre   | 5 \ 2     | 2      |
 | Modulo              | Nombre % Nombre  | Nombre   | 5 % 2      | 1      |
 | Exponentiation      | Nombre ^ Nombre  | Nombre   | 2 ^ 3      | 8      |
-| Egalité             | Nombre = Nombre  | Booléen  | 10 = 10    | True   |
-|                     |                  |          | 10 = 11    | False  |
-| Inégalité           | Nombre # Nombre  | Booléen  | 10 #11     | True   |
-|                     |                  |          | 10 # 10    | False  |
-| Supérieur à         | Nombre > Nombre  | Booléen  | 11 > 10    | True   |
-|                     |                  |          | 10 > 11    | False  |
-| Inférieur à         | Nombre < Nombre  | Booléen  | 10 < 11    | True   |
-|                     |                  |          | 11 < 10    | False  |
-| Supérieur ou égal à | Nombre >= Nombre | Booléen  | 11 >= 10   | True   |
-|                     |                  |          | 10 >= 11   | False  |
-| Inférieur ou égal à | Nombre <= Number | Booléen  | 10 <= 11   | True   |
-|                     |                  |          | 11 <= 10   | False  |
+| Egalité             | Nombre = Nombre  | Booléen  | 10 = 10    | Vrai   |
+|                     |                  |          | 10 = 11    | Faux   |
+| Inégalité           | Nombre # Nombre  | Booléen  | 10 #11     | Vrai   |
+|                     |                  |          | 10 # 10    | Faux   |
+| Supérieur à         | Nombre > Nombre  | Booléen  | 11 > 10    | Vrai   |
+|                     |                  |          | 10 > 11    | Faux   |
+| Inférieur à         | Nombre < Nombre  | Booléen  | 10 < 11    | Vrai   |
+|                     |                  |          | 11 < 10    | Faux   |
+| Supérieur ou égal à | Nombre >= Nombre | Booléen  | 11 >= 10   | Vrai   |
+|                     |                  |          | 10 >= 11   | Faux   |
+| Inférieur ou égal à | Nombre <= Number | Booléen  | 10 <= 11   | Vrai   |
+|                     |                  |          | 11 <= 10   | Faux   |
+
 
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
 
@@ -72,7 +73,7 @@ L'opérateur modulo % divise le premier nombre par le second et retourne le rest
 
 ### Priorité
 
-L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué. Par exemple :
+L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué. Par exemple:
 
 ```4d
  3+4*5
@@ -80,7 +81,7 @@ L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D appl
 
 retourne 35 car l'expression est évaluée comme 3 + 4, qui donne 7, multiplié par 5, ce qui donne 35.
 
-Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins. Par exemple :
+Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins. Par exemple:
 
 ```4d
  3+(4*5)

@@ -11,13 +11,13 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
     
     - Nombre (réel, entier long, etc.)
     - Texte
-    - Null
+    - null
     - Booléen
     - Pointeur (stocké tel quel, évalué à l’aide de la commande `JSON Stringify` ou lors d’une copie),
     - Date (type date ou chaîne au format date ISO)
     - Objet (les objets peuvent être imbriqués sur plusieurs niveaux)
     - Image(*)
-    - Collection
+    - collection
 
 (*)Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[objet Image]".
 
@@ -57,7 +57,7 @@ La notation objet est utilisée pour accéder aux valeurs de propriétés d'obje
 
 Avec la notation objet, il est possible d'accéder aux propriétés d'objets (aussi appelées attributs d'objets) de deux façons :
 
-- à l'aide du symbole "point" : objet.NomPropriété
+- à l'aide du symbole "point" : > objet.NomPropriété
 
 Exemple :
 
@@ -65,9 +65,9 @@ Exemple :
      employee.name:="Smith"
 ```
 
-- à l'aide d'une chaîne entre crochets : objet["NomPropriété"]
+- à l'aide d'une chaîne entre crochets : > objet["NomPropriété"]
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
      $vName:=employee["name"]
@@ -85,7 +85,7 @@ Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une 
 
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
-- avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Exemple :
+- avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Voici quelques exemples :
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -112,7 +112,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- avec les **collections** Exemple:
+- **Collections** Exemple :
 
 ```4d
      myColl.length //taille de la collection
@@ -158,7 +158,7 @@ Pour plus d'informations, veuillez vous reporter à la description de la command
 
 L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous : 
 
-- La lecture d'une propriété d'un objet ou d'une valeur indéfini(e) renvoie Indéfini ; l'affectation d'une valeur indéfinie à des variables (hors tableaux) a le même effet qu'appeler EFFACER VARIABLE avec elles :
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
 
 ```4d
      C_OBJET($o)
@@ -198,14 +198,14 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 ```
 
 - L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type : 
-    - Objet, collection, pointeur : Null
-    - Image : image vide
-    - Booléen : False
-    - Chaîne : ""
-    - Numérique : 0
-    - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""! si la base utilise le type date pour les objets, sinon ""
-    - Heure : 0 (nombre de ms)
-    - Indéfini, Null : pas de changement
+ - Objet, collection, pointeur : Null
+ - Image : image vide
+ - Booléen : False
+ - Chaîne : ""
+ - Numérique : 0
+ - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""! si la base utilise le type date pour les objets, sinon ""
+ - Heure : 0 (nombre de ms)
+ - Indéfini, Null : pas de changement
 
 ```4d
      C_OBJECT($o)
@@ -215,7 +215,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 
 - L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
 
-Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : `String`, `Num`, `Time`, `Date`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :
+Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : `String`, `Num`, `Time`, `Date`, `Bool`. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple:
 
 ```4d
  $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie

@@ -4,334 +4,324 @@ title: '$catalog'
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.
+Le catalogue décrit toutes les dataclass et les attributs disponibles dans le datastore.
 
+## Syntaxe
 
-## Available syntaxes
-
-| Syntaxe                                       | Exemple              | Description                                                                      |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Returns information about a dataclass and its attributes                         |
+| Syntaxe                                       | Exemple              | Description                                                                            |
+| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                      | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
+| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
+| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
+Retourne une liste de dataclass dans votre projet avec deux URI : une pour accéder aux informations sur sa structure et une pour récupérer les données de la dataclass
 
 ### Description
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+Lorsque vous appelez `$catalog`, une liste des dataclass est retournée avec deux URI pour chaque dataclass dans le datastore de votre projet.
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Seules les dataclass exposées apparaissent dans cette liste pour le datastore de votre projet. Pour plus d'informations, reportez-vous à la section [**Exposition des tableaux et des champs**](configuration.md#exposing-tables-and-fields).
 
-Here is a description of the properties returned for each dataclass in your project's datastore:
+Voici une description des propriétés retournées pour chaque dataclass dans le datastore de votre projet :
 
-
-| Propriété | Type   | Description                                                                       |
-| --------- | ------ | --------------------------------------------------------------------------------- |
-| name      | Chaine | Name of the dataclass.                                                            |
-| uri       | Chaine | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI   | Chaine | A URI that allows you to view the data in the dataclass.                          |
+| Propriété | Type   | Description                                                                          |
+| --------- | ------ | ------------------------------------------------------------------------------------ |
+| name      | Chaine | Nom de la dataclass.                                                                 |
+| uri       | Chaine | Un URI vous permettant d'obtenir des informations sur la dataclass et ses attributs. |
+| dataURI   | Chaine | URI vous permettant d'afficher les données dans la dataclass.                        |
 
 
 ### Exemple
 
 `GET  /rest/$catalog`
 
-**Result**:
+**Résultat** :
 
-````
-{
-    dataClasses: [
-        {
-            name: "Company",
-            uri: "http://127.0.0.1:8081/rest/$catalog/Company",
-            dataURI: "http://127.0.0.1:8081/rest/Company"
-        },
-        {
-            name: "Employee",
-            uri: "http://127.0.0.1:8081/rest/$catalog/Employee",
-            dataURI: "http://127.0.0.1:8081/rest/Employee"
-        }
-    ]
-}
-````
-
+    {
+        dataClasses: [
+            {
+                name: "Company",
+                uri: "http://127.0.0.1:8081/rest/$catalog/Company",
+                dataURI: "http://127.0.0.1:8081/rest/Company"
+            },
+            {
+                name: "Employee",
+                uri: "http://127.0.0.1:8081/rest/$catalog/Employee",
+                dataURI: "http://127.0.0.1:8081/rest/Employee"
+            }
+        ]
+    }
+    
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes
+Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs
 
 ### Description
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model. Remember that the scope for the datastore classes and their attributes must be **Public** for any information to be returned.
+En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des classes du datastore du modèle courant de votre projet. A noter que la portée des classes du datastore et de leurs attributs doit être **publique** pour que toutes les informations soient retournées.
 
-For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
-
+Pour plus d'informations sur ce qui est retourné pour chaque classe du datastore et ses attributs, utilisez [`$catalog/{dataClass}`](#catalogdataClass).
 
 ### Exemple
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**Résultat** :
 
-````
-{
-
-    "dataClasses": [
-        {
-            "name": "Company",
-            "className": "Company",
-            "collectionName": "CompanyCollection",
-            "scope": "public",
-            "dataURI": "/rest/Company",
-            "attributes": [
-                {
-                    "name": "ID",
-                    "kind": "storage",
-                    "scope": "public",
-                    "indexed": true,
-                    "type": "long",
-                    "identifying": true
-                },
-                {
-                    "name": "name",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "revenues",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "number"
-                },
-                {
-                    "name": "staff",
-                    "kind": "relatedEntities",
-                    "matchColumn": "employees,staff",
-                    "scope": "public",
-                    "type": "EmployeeCollection",
-                    "reversePath": true,
-                    "path": "employer"
-                },
-                {
-                    "name": "url",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                }
-            ],
-            "key": [
-                {
-                    "name": "ID"
-                }
-            ]
-        },
-        {
-            "name": "Employee",
-            "className": "Employee",
-            "collectionName": "EmployeeCollection",
-            "scope": "public",
-            "dataURI": "/rest/Employee",
-            "attributes": [
-                {
-                    "name": "ID",
-                    "kind": "storage",
-                    "scope": "public",
-                    "indexed": true,
-                    "type": "long",
-                    "identifying": true
-                },
-                {
-                    "name": "firstname",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "lastname",
-                    "kind": "storage",
-                    "scope": "public",
-                    "type": "string"
-                },
-                {
-                    "name": "employer",
-                    "kind": "relatedEntity",
-                    "scope": "public",
-                    "type": "Company",
-                    "path": "Company"
-                }
-            ],
-            "key": [
-                {
-                    "name": "ID"
-                }
-            ]
-        }
-    ]
-}
-````
-
+    {
+    
+        "dataClasses": [
+            {
+                "name": "Company",
+                "className": "Company",
+                "collectionName": "CompanyCollection",
+                "scope": "public",
+                "dataURI": "/rest/Company",
+                "attributes": [
+                    {
+                        "name": "ID",
+                        "kind": "storage",
+                        "scope": "public",
+                        "indexed": true,
+                        "type": "long",
+                        "identifying": true
+                    },
+                    {
+                        "name": "name",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "revenues",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "number"
+                    },
+                    {
+                        "name": "staff",
+                        "kind": "relatedEntities",
+                        "matchColumn": "employees,staff",
+                        "scope": "public",
+                        "type": "EmployeeCollection",
+                        "reversePath": true,
+                        "path": "employer"
+                    },
+                    {
+                        "name": "url",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    }
+                ],
+                "key": [
+                    {
+                        "name": "ID"
+                    }
+                ]
+            },
+            {
+                "name": "Employee",
+                "className": "Employee",
+                "collectionName": "EmployeeCollection",
+                "scope": "public",
+                "dataURI": "/rest/Employee",
+                "attributes": [
+                    {
+                        "name": "ID",
+                        "kind": "storage",
+                        "scope": "public",
+                        "indexed": true,
+                        "type": "long",
+                        "identifying": true
+                    },
+                    {
+                        "name": "firstname",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "lastname",
+                        "kind": "storage",
+                        "scope": "public",
+                        "type": "string"
+                    },
+                    {
+                        "name": "employer",
+                        "kind": "relatedEntity",
+                        "scope": "public",
+                        "type": "Company",
+                        "path": "Company"
+                    }
+                ],
+                "key": [
+                    {
+                        "name": "ID"
+                    }
+                ]
+            }
+        ]
+    }
+    
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+Retourne des informations sur une dataclass et ses attributs
 
 ### Description
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the datastore classes in your project's datastore, use [`$catalog/$all`](#catalogall).
+L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. Si vous souhaitez récupérer ces informations pour toutes les classes de datastore dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
 
-The information you retrieve concerns the following:
+Les informations que vous récupérez concernent :
 
-*   Dataclass
-*   Attribute(s)
-*   Method(s) if any
-*   Primary key
+* Dataclass
+* Attribut(s)
+* Méthode(s) le cas échéant
+* Clé primaire
 
 ### DataClass
 
-The following properties are returned for an exposed dataclass:
+Les propriétés suivantes sont retournées pour une dataclass exposée :
+
+| Propriété      | Type   | Description                                                                                                      |
+| -------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
+| name           | Chaine | Nom de la dataclass                                                                                              |
+| collectionName | Chaine | Nom de la collection de la dataclass                                                                             |
+| scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont l'étendue est publique sont affichées) |
+| dataURI        | Chaine | Un URI aux données de la dataclass                                                                               |
 
 
-| Propriété      | Type   | Description                                                                                        |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | Chaine | Name of the dataclass                                                                              |
-| collectionName | Chaine | Collection name of the dataclass                                                                   |
-| scope          | Chaine | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | Chaine | A URI to the data in the dataclass                                                                 |
+### Attribut(s)
+
+Voici les propriétés de chaque attribut exposé qui sont retournées :
+
+| Propriété     | Type      | Description                                                                                                                                                                      |
+| ------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | Chaine    | Le nom de l’attribut.                                                                                                                                                            |
+| kind          | Chaine    | Le type d'attribut (stockage, calculé, relatedEntity et alias).                                                                                                                  |
+| scope         | Chaine    | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
+| indexed       | Chaine    | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
+| type          | Chaine    | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
+| minLength     | Numérique | Cette propriété renvoie la valeur saisie pour la propriété **MinLength**, si elle a été saisie.                                                                                  |
+| maxLength     | Numérique | Cette propriété renvoie la valeur saisie pour la propriété **MaxLength**, si elle a été saisie.                                                                                  |
+| autoComplete  | Booléen   | Cette propriété renvoie True si la propriété **Autocomplete** a été vérifiée. Sinon, cette propriété n'apparaîtra pas.                                                           |
+| identifying   | Booléen   | Cette propriété renvoie True si la propriété **Identifying** a été vérifiée. Sinon, cette propriété n'apparaîtra pas.                                                            |
+| multiLine     | Booléen   | Cette propriété renvoie True si la propriété **Multiline** a été vérifiée. Sinon, cette propriété n'apparaîtra pas.                                                              |
+| path          | Chaine    | Pour un attribut d'alias, le type est un chemin (par exemple, employer.name)                                                                                                     |
+| readOnly      | Booléen   | Cette propriété est mise à True si l'attribut est de type calculé ou alias.                                                                                                      |
+| defaultFormat | Objet     | Si vous définissez un format pour l'attribut dans la propriété **defaultFormat**, il apparaîtra dans la propriété "format".                                                      |
 
 
-### Attribute(s)
+### Méthode(s)
 
-Here are the properties for each exposed attribute that are returned:
+Définit les méthodes projet associées à la dataclass, le cas échéant.
 
-| Propriété     | Type    | Description                                                                                                                                                 |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | Chaine  | Attribute name.                                                                                                                                             |
-| kind          | Chaine  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
-| scope         | Chaine  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed       | Chaine  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type          | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| minLength     | Nombre  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
-| maxLength     | Nombre  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
-| autoComplete  | Booléen | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
-| identifying   | Booléen | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
-| multiLine     | Booléen | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
-| path          | Chaine  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
-| readOnly      | Booléen | This property is True if the attribute is of type calculated or alias.                                                                                      |
-| defaultFormat | Objet   | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+### Clé primaire
 
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any.
-
-### Primary Key
-
-The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
-
+L'objet clé retourne le nom de l'attribut (**name**) défini comme **clé primaire** pour la classe du datastore.
 
 ### Exemple
-You can retrieve the information regarding a specific datastore class.
+
+Vous pouvez récupérer les informations concernant une classe de datastore spécifique.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Résultat** :
 
-````
-{
-    name: "Employee",
-    className: "Employee",
-    collectionName: "EmployeeCollection",
-    scope: "public",
-    dataURI: "http://127.0.0.1:8081/rest/Employee",
-    defaultTopSize: 20,
-    extraProperties: {
-        panelColor: "#76923C",
-        __CDATA: "\n\n\t\t\n",
-        panel: {
-            isOpen: "true",
-            pathVisible: "true",
-            __CDATA: "\n\n\t\t\t\n",
-            position: {
-                X: "394",
-                Y: "42"
-            }
-        }
-    },
-    attributes: [
-        {
-            name: "ID",
-            kind: "storage",
-            scope: "public",
-            indexed: true,
-            type: "long",
-            identifying: true
-        },
-        {
-            name: "firstName",
-            kind: "storage",
-            scope: "public",
-            type: "string"
-        },
-        {
-            name: "lastName",
-            kind: "storage",
-            scope: "public",
-            type: "string"
-        },
-        {
-            name: "fullName",
-            kind: "calculated",
-            scope: "public",
-            type: "string",
-            readOnly: true
-        },
-        {
-            name: "salary",
-            kind: "storage",
-            scope: "public",
-            type: "number",
-            defaultFormat: {
-                format: "$###,###.00"
+    {
+        name: "Employee",
+        className: "Employee",
+        collectionName: "EmployeeCollection",
+        scope: "public",
+        dataURI: "http://127.0.0.1:8081/rest/Employee",
+        defaultTopSize: 20,
+        extraProperties: {
+            panelColor: "#76923C",
+            __CDATA: "\n\n\t\t\n",
+            panel: {
+                isOpen: "true",
+                pathVisible: "true",
+                __CDATA: "\n\n\t\t\t\n",
+                position: {
+                    X: "394",
+                    Y: "42"
+                }
             }
         },
-        {
-            name: "photo",
-            kind: "storage",
-            scope: "public",
-            type: "image"
-        },
-        {
-            name: "employer",
-            kind: "relatedEntity",
-            scope: "public",
-            type: "Company",
-            path: "Company"
-        },
-        {
-            name: "employerName",
-            kind: "alias",
-            scope: "public",
-            type: "string",
-            path: "employer.name",
-            readOnly: true
-        },
-        {
-            name: "description",
-            kind: "storage",
-            scope: "public",
-            type: "string",
-            multiLine: true
-        },
-   ],
-    key: [
-        {
-            name: "ID"
-        }
-    ]
-}
-````
-
+        attributes: [
+            {
+                name: "ID",
+                kind: "storage",
+                scope: "public",
+                indexed: true,
+                type: "long",
+                identifying: true
+            },
+            {
+                name: "firstName",
+                kind: "storage",
+                scope: "public",
+                type: "string"
+            },
+            {
+                name: "lastName",
+                kind: "storage",
+                scope: "public",
+                type: "string"
+            },
+            {
+                name: "fullName",
+                kind: "calculated",
+                scope: "public",
+                type: "string",
+                readOnly: true
+            },
+            {
+                name: "salary",
+                kind: "storage",
+                scope: "public",
+                type: "number",
+                defaultFormat: {
+                    format: "$###,###.00"
+                }
+            },
+            {
+                name: "photo",
+                kind: "storage",
+                scope: "public",
+                type: "image"
+            },
+            {
+                name: "employer",
+                kind: "relatedEntity",
+                scope: "public",
+                type: "Company",
+                path: "Company"
+            },
+            {
+                name: "employerName",
+                kind: "alias",
+                scope: "public",
+                type: "string",
+                path: "employer.name",
+                readOnly: true
+            },
+            {
+                name: "description",
+                kind: "storage",
+                scope: "public",
+                type: "string",
+                multiLine: true
+            },
+       ],
+        key: [
+            {
+                name: "ID"
+            }
+        ]
+    }

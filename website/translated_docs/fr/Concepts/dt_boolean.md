@@ -33,30 +33,33 @@ monBooléen:=(monBouton=1)
 
 | Opération | Syntaxe           | Retourne | Expression                  | Valeur |
 | --------- | ----------------- | -------- | --------------------------- | ------ |
-| AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)      | True   |
-|           |                   |          | ("A" = "B") & (15 # 3)      | False  |
-|           |                   |          | ("A" = "B") & (15 = 3)      | False  |
-| OR        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3) | True   |
-|           |                   |          | ("A" = "B") &#124; (15 # 3) | True   |
-|           |                   |          | ("A" = "B") &#124; (15 = 3) | False  |
+| AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)      | Vrai   |
+|           |                   |          | ("A" = "B") & (15 # 3)      | Faux   |
+|           |                   |          | ("A" = "B") & (15 = 3)      | Faux   |
+| OU        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3) | Vrai   |
+|           |                   |          | ("A" = "B") &#124; (15 # 3) | Vrai   |
+|           |                   |          | ("A" = "B") &#124; (15 = 3) | Faux   |
+
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
-| Vrai  | True  | True          |
-| Vrai  | Faux  | False         |
+| Vrai  | Vrai  | Vrai          |
+| Vrai  | Faux  | Faux          |
 | Faux  | Vrai  | Faux          |
-| Faux  | False | False         |
+| Faux  | Faux  | Faux          |
+
 
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
-| True  | True  | True               |
-| True  | False | True               |
-| False | True  | True               |
-| False | False | False              |
+| Vrai  | Vrai  | Vrai               |
+| Vrai  | Faux  | Vrai               |
+| Faux  | Vrai  | Vrai               |
+| Faux  | Faux  | Faux               |
+
 
 **Astuce :** Si vous devez calculer une réunion exclusive (le "OU" exclusif) entre Expr1 et Expr2, écrivez :
 

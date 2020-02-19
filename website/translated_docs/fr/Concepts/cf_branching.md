@@ -195,9 +195,9 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
       ...
 
     :(Expression_booléenne)
-        instruction(s)
+       instruction(s)
     Else
-        instruction(s)
+       instruction(s)
  End case
 ```
 

@@ -1,150 +1,151 @@
 ---
 id: picture
-title: Picture
+title: ピクチャー
 ---
 
-A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
+ピクチャーのフィールド・変数・式に格納されるデータは、任意の Windows または Macintosh の画像です。 これらの画像には、ペーストボード上に置いたり、4Dコマンドやプラグインコマンドを使用してディスクから読み出すことのできる画像を含みます。
 
-## Native Formats Supported
+## サポートされるネイティブフォーマット
 
-4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+4Dはピクチャーフォーマットのネイティブ管理を統合しています。 これは、ピクチャーが変換されることなく、元のフォーマットのまま 4D で格納、表示されることを意味します。 (シェイドや透過など) フォーマットにより異なる特定の機能はコピー・ペーストされる際にも保持され、改変なく表示されます。 このネイティブサポートは 4D に格納されるすべてのピクチャー (ライブラリピクチャー、デザインモードでフォームにペーストされたピクチャー、アプリケーションモードでフィールドや変数にペーストされたピクチャーなど) に対して有効です。
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
+4D は Windows と macOS の両方においてネイティブな API を使用してフィールドや変数のピクチャーをエンコード (書き込み) およびデコード (読み込み) します。 これらの実装は現在デジタルカメラで使用されている RAW フォーマット含め、数多くのネイティブなフォーマットへのアクセスを提供します。
 
-- Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO. 
+- Windows では、4DはWIC (Windows Imaging Component) を使用します。
+- macOS では、4D は ImageIO を使用します。 
 
-The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
+もっとも一般的なフォーマット (例: jpeg、gif、png、tiff、bmp、等) はどちらのフォーマットでもサポートされます。 macOS では、PDF フォーマットのエンコーディング/デコーディングも可能です。
 
-The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODE LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
+サポートされるフォーマットの完全なリストは OS や、マシンにインストールされているカスタムコーデックによって異なります。 どのコーデックが利用可能かを調べるためには、`PICTURE CODEC LIST` コマンドを使用してください。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
-**Note:** WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
+**注:** WIC および ImageIO はピクチャー内のメタデータの書き込みを許可しています。 `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
 
-### Picture Codec IDs
+### ピクチャー Codec ID
 
-Picture formats recognized by 4D are returned by the `PICTURE CODE LIST` command as picture Codec IDs. They can be returned in the following forms:
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。 これは以下の形式で返されます:
 
-- As an extension (for example “.gif”)
-- As a Mime type (for example “image/jpeg”)
+- 拡張子 (例: “.gif”)
+- MIME タイプ (例: “image/jpeg”)
 
-The form returned for each format will depend on the way the Codec is recorded at the operating system level. Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODE LIST` command.
+それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。 多くの 4Dピクチャー管理コマンドは Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 
-### Unavailable picture format
+### 利用不可能なピクチャーフォーマット
 
-A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon. The icon is automatically used wherever the picture is meant to be displayed:
+マシン上で利用できないフォーマットのピクチャーに対しては、専用のアイコンが表示されます。 アイコンの下部にその拡張子が表示されます。 このアイコンは、そのピクチャーが表示されるべきところに自動的に使用されます:
 
 ![](assets/en/Concepts/missingpict.en.png)
 
-This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for instance, for PDF pictures on Windows, or for old pictures based on PICT.
+このアイコンは、そのピクチャーがローカルでは表示も編集もできないことを意味します。ですが、中身を改変することなく保存し、他のマシンで表示することは可能です。 たとえば、Windows における PDF ピクチャーや、古い PICT フォーマットのピクチャーなどが該当します。
 
-## Picture operators
+## ピクチャー演算子
 
-| 演算子                       | シンタックス                 | 戻り値   | Action                                                                                                                                                             |
-| ------------------------- | ---------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | ピクチャー | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | ピクチャー | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | ピクチャー | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | ピクチャー | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | ピクチャー | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | ピクチャー | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | ピクチャー | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | ピクチャー | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | ピクチャー | Resize Picture vertically by Number ratio                                                                                                                          |
+| 演算子    | シンタックス             | 戻り値   | 動作                                                                                                                 |
+| ------ | ------------------ | ----- | ------------------------------------------------------------------------------------------------------------------ |
+| 水平連結   | Pict1 + Pict2      | ピクチャー | Pict1 の右側に Pict2 を追加します                                                                                            |
+| 垂直連結   | Pict1 / Pict2      | ピクチャー | Pict1 の下側に Pict2 を追加します                                                                                            |
+| 排他的論理和 | Pict1 & Pict2      | ピクチャー | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。               |
+| 包括的論理和 | Pict1 &#124; Pict2 | ピクチャー | Pict1 と Pict2 を重ね、そのマスクした結果を返します (両ピクチャーとも同じサイズである必要があります) `$equal:=Equal pictures(Pict1;Pict2;Pict3)` と同じ結果になります。 |
+| 水平移動   | ピクチャー + 数値         | ピクチャー | 指定ピクセル分、ピクチャーを横に移動します。                                                                                             |
+| 垂直移動   | ピクチャー / 数値         | ピクチャー | 指定ピクセル分、ピクチャーを縦に移動します。                                                                                             |
+| サイズ変更  | ピクチャー * 数値         | ピクチャー | 割合によってピクチャーをサイズ変更します。                                                                                              |
+| 水平スケール | ピクチャー *+ 数値        | ピクチャー | 割合によってピクチャー幅をサイズ変更します。                                                                                             |
+| 垂直スケール | ピクチャー *| 数値        | ピクチャー | 割合によってピクチャー高さをサイズ変更します。                                                                                            |
 
-**Notes :**
 
-- In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
-- The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
-- The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
-- Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+**注:**
+
+- | 演算子を使用するためには、Pict1 と Pict2 が完全に同一のサイズでなければなりません。 二つのピクチャーサイズに違いがある場合、Pict1 | Pict2 は空のピクチャーを生成します。
+- `COMBINE PICTURES` コマンドは、それぞれのソースピクチャーの特性を結果ピクチャーに保持しつつ、ピクチャーの重ね合わせをおこないます。
+- 2つの元ピクチャーがベクター形式の場合、ピクチャー演算子はベクターピクチャーを返します。 しかし、表示形式 On Background でプリントされるピクチャーはビットマップとしてプリントされる点に留意してください。
+- `TRANSFORM PICTURE` コマンドを使って、さらなる画像処理をおこなうことができます。
+- ピクチャー用の比較演算子はありませんが、`Equal picture` コマンドを使って 2つのピクチャーを比較することができます。 
+- 4D ではピクチャーフィールドや変数をクリック、またはホバーした際のマウスのローカル座標を取得できます。これはスクロールやズーム処理がおこなわれている場合でも可能です。 このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。 座標は *MouseX* と *MouseY* **システム変数** に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。 これらの値は、**On Clicked**、**On Double Clicked**、**On Mouse up**、**On Mouse Enter**、あるいは **On Mouse Move** フォームイベントの一部として取得することができます。
 
 ### 例題
 
-In the following examples, all of the pictures are shown using the display format **On Background**.
+以下の例では、ピクチャーの表示形式はすべて **On Background** に設定しています。
 
-Here is the picture circle: ![](assets/en/Concepts/Concepts/Circle.en.png)
+これは circle (円) ピクチャーです:![](assets/en/Concepts/Concepts/Circle.en.png)
 
-Here is the picture rectangle: ![](assets/en/Concepts/Concepts/rectangle.en.png)
+これは rectangle (長方形) ピクチャーです:![](assets/en/Concepts/Concepts/rectangle.en.png)
 
-In the following examples, each expression is followed by its graphical representation.
+以下の例は、各ピクチャー演算子の効果を表したものです。
 
-Horizontal concatenation
+水平連結
 
 ```4d
- circle+rectangle //Place the rectangle to the right of the circle
- rectangle+circle //Place the circle to the right of the rectangle
+ circle+rectangle // circle の右に rectangle が追加されます。
+ rectangle+circle // rectangle の右に circle が追加されます。
 ```
 
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
-Vertical concatenation
+垂直連結
 
 ```4d
- circle/rectangle //Place the rectangle under the circle
- rectangle/circle //Place the circle under the rectangle
+ circle/rectangle // circle の下に rectangle が追加されます。
+ rectangle/circle // rectangle の下に circle が追加されます。
 ```
 
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
-Exclusive superimposition
+排他的論理和
 
 ```4d
-Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
+Pict3:=Pict1 & Pict2 // Pict1 の上に Pict2 を重ねます。
 ```
 
 ![](assets/en/Concepts/superimpoExc.fr.png)
 
-Inclusive superimposition
+包括的論理和
 
 ```4d
-Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
+Pict3:=Pict1|Pict2 // 同じサイズの二つのピクチャーを重ね合わせた上でそのマスクの結果を返します。
 ```
 
 ![](assets/en/Concepts/superimpoInc.fr.png)
 
-Horizontal move
+水平移動
 
 ```4d
-rectangle+50 //Move the rectangle 50 pixels to the right
-rectangle-50 //Move the rectangle 50 pixels to the left
+rectangle+50 // rectangle を右に 50ピクセル移動します。
+rectangle-50 // rectangle を左に 50ピクセル移動します。
 ```
 
 ![](assets/en/Concepts/hormove.en.png)
 
-Vertical move
+垂直移動
 
 ```4d
-rectangle/50 //Move the rectangle down by 50 pixels
-rectangle/-20 //Move the rectangle up by 20 pixels
+rectangle/50 // rectangle を下に 50ピクセル移動します。
+rectangle/-20 // rectangle を上に 20ピクセル移動します。
 ```
 
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
 
-Resize
+サイズ変更
 
 ```4d
-rectangle*1.5 //The rectangle becomes 50% bigger
-rectangle*0.5 //The rectangle becomes 50% smaller
+rectangle*1.5 // rectangle を 50%拡大します。
+rectangle*0.5 // rectangle を 50%縮小します。
 ```
 
 ![](assets/en/Concepts/resize.en.png)![](assets/en/Concepts/resisze2.en.png)
 
-Horizontal scaling
+水平スケール
 
 ```4d
-circle*+3 //The circle becomes 3 times wider
-circle*+0.25 //The circle's width becomes a quarter of what it was
+circle*+3 // circle の幅を 3倍に広げます。
+circle*+0.25 // circle の幅を 25%に縮めます。
 ```
 
 ![](assets/en/Concepts/Horscaling.en.png)![](assets/en/Concepts/Horscaling2.en.png)
 
-Vertical scaling
+垂直スケール
 
 ```4d
-circle*|2 //The circle becomes twice as tall
-circle*|0.25 //The circle's height becomes a quarter of what it was
+circle*|2 // circle の高さを 2倍に伸ばします。
+circle *| 0.25 // circle の高さを 25%に縮めます。
 ```
 
 ![](assets/en/Concepts/vertscaling.en.png)![](assets/en/Concepts/veticalscaling2.en.png)

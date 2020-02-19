@@ -4,48 +4,44 @@ title: '$orderby'
 ---
 
 
-Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
+Trie les données retournées par l'attribut et l'ordre de tri définis (par exemple,`$orderby="lastName desc, salaire asc"`)
 
 ## Description
 
-`$orderby` orders the entities returned by the REST request. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. By default, the data is sorted in ascending order. If you want to specify multiple attributes, you can delimit them with a comma, *e.g.*, `$orderby="lastName desc, firstName asc"`.
-
+`$orderby` ordonne les entités retournées par la requête REST. Pour chaque attribut, définissez l'ordre sur `ASC` (ou `asc`) pour l'ordre croissant et sur `DESC` (`desc`) pour l'ordre décroissant. Par défaut, les données sont triées par ordre croissant. Si vous souhaitez spécifier plusieurs attributs, vous pouvez les délimiter avec une virgule, par exemple, `$orderby="lastName desc, firstName asc"`.
 
 ## Exemple
 
-In this example, we retrieve entities and sort them at the same time:
+Dans cet exemple, nous récupérons les entités et les trions en même temps :
 
- `GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
+`GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
 
-The example below sorts the entity set by lastName attribute in ascending order:
+L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordre croissant :
 
- `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
+`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
-**Result**:
+**Résultat** :
 
-```
-{
-    __entityModel: "Employee",
-    __COUNT: 10,
-    __SENT: 10,
-    __FIRST: 0,
-    __ENTITIES: [
-        {
-            __KEY: "1",
-            __STAMP: 1,
-            firstName: "John",
-            lastName: "Smith",
-            salary: 90000
-        },
-        {
-            __KEY: "2",
-            __STAMP: 2,
-            firstName: "Susan",
-            lastName: "O'Leary",
-            salary: 80000
-        },
-// more entities
-    ]
-}
-```
-
+    {
+        __entityModel: "Employee",
+        __COUNT: 10,
+        __SENT: 10,
+        __FIRST: 0,
+        __ENTITIES: [
+            {
+                __KEY: "1",
+                __STAMP: 1,
+                firstName: "John",
+                lastName: "Smith",
+                salary: 90000
+            },
+            {
+                __KEY: "2",
+                __STAMP: 2,
+                firstName: "Susan",
+                lastName: "O'Leary",
+                salary: 80000
+            },
+    // plus d'entités
+        ]
+    }

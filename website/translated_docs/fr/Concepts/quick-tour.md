@@ -148,10 +148,10 @@ Les types de données sont détaillés dans la section [Types de données](Conce
 
 ## Objets et collections
 
-Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple :
+Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:
 
 ```4d
-employee.name:="Dupont"
+employee.name:="Smith"
 ```
 
 Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :
@@ -192,15 +192,17 @@ Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de 
 | *         | Multiplication | 2 * 3 = 6 |
 | /         | Division       | 6 / 2 = 3 |
 
+
 Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
 
 Souvent, les mêmes symboles sont utilisés pour des opérations différentes, en fonction du type de données traitées. Par exemple, le signe (+) peut effectuer diverses opérations, comme le montre le tableau suivant :
 
 | Type de données   | Opération        | Exemple                                                                                             |
 | ----------------- | ---------------- | --------------------------------------------------------------------------------------------------- |
-| Numérique         | Addition         | 1 + 2 ajoute les nombres, le résultat est 3                                                         |
+| Nombre            | Addition         | 1 + 2 ajoute les nombres, le résultat est 3                                                         |
 | Chaine            | Concaténation    | “Bonjour” + “à tous” concatène (met bout à bout) les chaînes, le résultat est “Bonjour à tous”      |
 | Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1989, le résultat est la date 21 janvier 1989 |
+
 
 Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
 
@@ -224,13 +226,13 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 
 | Expression              | Type                  | Description                                                                                                                                                                          |
 | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| “Bonjour”               | Chaîne                | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                                |
-| “Bonjour ” + “à tous”   | Chaîne                | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.        |
-| “M. ” + [Amis]Nom       | Chaîne                | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.               |
-| Uppercase("smith")      | Chaîne                | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                              |
-| 4                       | Numérique             | C'est une constante numérique, 4.                                                                                                                                                    |
-| 4 * 2                   | Numérique             | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                                    |
-| MonBouton               | Numérique             | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
+| “Bonjour”               | Chaine                | Le mot Bonjour est une constante chaîne, signalée par les guillemets.                                                                                                                |
+| “Bonjour ” + “à tous”   | Chaine                | Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.        |
+| “M. ” + [Amis]Nom       | Chaine                | Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.               |
+| Uppercase("smith")      | Chaine                | Cette expression utilise `Uppercase`, une commande du langage, pour convertir la chaîne "dupont" en majuscules. Elle retourne “DUPONT”.                                              |
+| 4                       | Nombre                | C'est une constante numérique, 4.                                                                                                                                                    |
+| 4 * 2                   | Nombre                | Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.                                                                    |
+| MonBouton               | Nombre                | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
 | !1997-01-25!            | Date                  | C'est une constante date pour la date 25/01/97 (25 janvier 1997).                                                                                                                    |
 | Current date+ 30        | Date                  | C'est une expression de type Date qui utilise la commande `Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date. |
 | ?8:05:30?               | Heure                 | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
@@ -245,7 +247,8 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
 | Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
-| $entitySel[0]           | Entité                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas assignable**                                                            |
+| $entitySel[0]           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas assignable**                                                            |
+
 
 ### Expressions assignables et non-assignables
 

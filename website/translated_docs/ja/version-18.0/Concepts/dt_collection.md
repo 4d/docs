@@ -1,6 +1,6 @@
 ---
 id: version-18.0-collection
-title: Collection
+title: コレクション
 original_id: collection
 ---
 

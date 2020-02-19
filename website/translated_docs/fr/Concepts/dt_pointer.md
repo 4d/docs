@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointeurs
+title: Pointeur
 ---
 
 Les variables ou expressions de type Pointeur sont des références à d'autres variables (y compris des tableaux et des éléments de tableaux), à des tables, des champs ou des objets. Il n'existe pas de champ de type Pointeur.
@@ -21,6 +21,7 @@ Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des
 | Tableau     | vpT:=->Tableau       | SORT ARRAY(vpT->;>)        | COPY ARRAY(Tab;vpT->)      |
 | Elém. tabl. | vpElem:=->Tableau{1} | ALERT(vpElem->)            | vpElem->:="Jean"           |
 | Objet       | vpObj:=->monObjet    | ALERT (vpObj->monAttribut) | vpObj->monAttribut:="John" |
+
 
 ## Utiliser des pointeurs : un exemple
 
@@ -92,6 +93,7 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Booléen  | vPtrA # vPtrC | Vrai   |
 |           |                     |          | vPtrA # vPtrB | Faux   |
 
+
 ## Principales utilisations
 
 ### Utiliser des pointeurs vers des tables
@@ -151,11 +153,13 @@ Dans Méthode2, le débogueur affichera $1 de la façon suivante :
 | -- | ------------------- |
 |    |                     |
 
+
 La valeur de $1 sera :
 
 | $MaVar(Méthode1) | "Bonjour" |
 | ---------------- | --------- |
 |                  |           |
+
 
 ### Utiliser des pointeurs vers des éléments de tableau
 

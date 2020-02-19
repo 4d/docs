@@ -5,7 +5,7 @@ title: Schleifenstrukturen
 
 ## While...End while
 
-Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
+Die formale Syntax der Abfragefolge `While...End while` lautet:
 
 ```4d
  While(Boolean_Expression)
@@ -13,11 +13,11 @@ Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
  End while
 ```
 
-Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife solange aus, wie der Boolean Ausdruck TRUE ist. Sie prüft den Boolean Ausdruck am Beginn der Schleife und tritt gar nicht in die Schleife ein, wenn der Ausdruck FALSE ist.
+Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife solange aus, wie der Boolean Ausdruck wahr ist. Sie prüft den Boolean Ausdruck am Beginn der Schleife und tritt gar nicht in die Schleife ein, wenn der Ausdruck FALSE ist.
 
 Es ist üblich, den getesteten Wert im Boolean Ausdruck direkt vor Eintreten in die Schleife `While...End while` zu initialisieren. Den Wert initialisieren heißt, Sie setzen etwas Passendes, so dass der Boolean Ausdruck TRUE ist und `While...End while` die Schleife ausführt.
 
-Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da *NeverStop* immer TRUE ist:
+Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da *NeverStop* immer wahr ist:
 
 ```4d
  NeverStop:=True
@@ -48,7 +48,7 @@ Die formale Syntax der Abfragefolge `Repeat...Until` lautet:
  Until(Boolean_Expression)
 ```
 
-Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End while](flow-control#whileend-while), mit dem Unterschied, dass der Boolean Ausdruck nicht vor, sondern nach der Schleife getestet wird. So führt `Repeat...Until` die Schleife immer einmal aus, während `While...End while` die Schleife gar nicht ausführt, wenn am Anfang der Boolean Ausdruck FALSE ist.
+Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End while](flow-control#whileend-while), mit dem Unterschied, dass der Boolean Ausdruck nicht vor, sondern nach der Schleife getestet wird. So führt `Repeat...Until` die Schleife immer einmal aus, während `While...End while` die Schleife gar nicht ausführt, wenn am Anfang der Boolean Ausdruck falsch ist.
 
 Ein weiterer Unterschied ist, dass `Repeat...Until` weiterläuft, bis der Boolean Ausdruck TRUE ist.
 
@@ -191,7 +191,7 @@ Bei Bedarf können Sie *Increment_Expression* (positiv oder negativ) für absolu
 
 ### Die Strukturen der Schleifen vergleichen
 
-Let's go back to the first `For...End for` example. Folgendes Beispiel führt 100 Durchläufe aus:
+Gehen wir zurück zum ersten Beispiel in `For...End for`. Folgendes Beispiel führt 100 Durchläufe aus:
 
 ```4d
  For(vCounter;1;100)
@@ -199,7 +199,7 @@ Let's go back to the first `For...End for` example. Folgendes Beispiel führt 10
  End for
 ```
 
-It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+Es ist interessant zu vergleichen, wie die Schleifen `While...End while` und `Repeat...Until` dieselbe Aktion durchführen. Ausführung mit der Schleife `While...End while`:
 
 ```4d
  $i:=1 //Initialize the counter
@@ -209,7 +209,7 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
  End while
 ```
 
-Here is the equivalent `Repeat...Until` loop:
+Ausführung mit der Schleife `Repeat...Until`:
 
 ```4d
  $i:=1 //Initialize the counter
@@ -219,13 +219,13 @@ Here is the equivalent `Repeat...Until` loop:
  Until($i=100) //Loop 100 times
 ```
 
-**Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
+**Tipp:** Die Schleife `For...End for` ist normalerweise schneller als die Schleifen `While...End while` und `Repeat...Until`, da 4D die Bedingung für jeden Schleifenzyklus intern abfragt und dann den Zähler erhöht. Verwenden Sie deshalb möglichst die Schleife `For...End for`.
 
-### Optimizing the execution of the For...End for loops
+### Die Ausführung der Schleife For...End for optimieren
 
-You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
+Sie können als Zähler Variablen vom Typ Zahl und Lange Ganzzahl, aber auch Interprozess-, Prozess- und lokale Variablen verwenden. Verwenden Sie für lange sich wiederholende Schleifen, besonders im kompilierten Modus, lokale Variablen vom Typ Lange Ganzzahl.
 
-10. Here is an example:
+10. Hier ein Beispiel:
 
 ```4d
  C_LONGINT($vlCounter) //use local Long Integer variables
@@ -234,13 +234,13 @@ You can use Real and Long Integer variables as well as interprocess, process, an
  End for
 ```
 
-### Nested For...End for looping structures
+### In Schleifen eingebaute For...End for Abfragen
 
-You can nest as many control structures as you (reasonably) need. This includes nesting `For...End for` loops. To avoid mistakes, make sure to use different counter variables for each looping structure.
+Sie können so viele Kontrollstrukturen verschachteln, wie Sie (vernünftigerweise) benötigen. Das sind verschachtelte `For...End for` Schleifen. Um Fehler zu vermeiden, verwenden Sie für jede Schleifenstruktur eine andere Zählervariable.
 
-Here are two examples:
+Hier zwei Beispiele:
 
-11. The following example goes through all the elements of a two-dimensional array:
+11. Folgendes Beispiel durchläuft alle Elemente eines zweidimensionalen Array:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -254,7 +254,7 @@ Here are two examples:
  End for
 ```
 
-12. The following example builds an array of pointers to all the date fields present in the database:
+12. Dieses Beispiel erstellt ein Array mit Zeigern auf alle vorhandenen Datumsfelder in der Anwendung:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -277,7 +277,7 @@ Here are two examples:
 
 ## For each...End for each
 
-The formal syntax of the `For each...End for each` control flow structure is:
+Die formale Syntax der Abfragefolge `For each..End for each` lautet:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -285,43 +285,44 @@ The formal syntax of the `For each...End for each` control flow structure is:
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
+Die Struktur `For each...End for each` durchläuft den angegebenen Eintrag *Current_item* für alle Werte von *Expression*. Der Typ *Current_item* richtet sich nach der Art von *Expression*. Die Schleife `For each...End for each` kann drei Arten durchlaufen:
 
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
+- Collections: Schleife durch jedes Element der Collection
+- Entity-Selections: Schleife durch jede Entity
+- Objekte: Schleife durch jede Objekteigenschaft
 
-The following table compares the three types of `For each...End for each`:
+Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
 
-|                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
-| --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
-| Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
+|                                         | Schleife durch Collections                        | Schleife durch Entity-Selections | Schleife durch Objekte         |
+| --------------------------------------- | ------------------------------------------------- | -------------------------------- | ------------------------------ |
+| Typ Current_Item                        | Variable vom gleichen Typ wie Collection Elemente | Entity                           | Textvariable                   |
+| Typ Expression                          | Collection (mit Elementen vom gleichen Typ)       | Entity-Selection                 | Object                         |
+| Anzahl Schleifen (standardmäßig)        | Anzahl der Collection Elemente                    | Anzahl Entities in der Selection | Anzahl der Objekteigenschaften |
+| Unterstützung der Parameter begin / end | Ja                                                | Ja                               | Nein                           |
 
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed *statement(s)* are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords: 
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required. 
 
-### Loop through collections
+- Die Anzahl Schleifen wird beim Starten berechnet und ändert sich nicht während der Durchführung. Einträge während der Schleife hinzufügen oder entfernen wird generell nicht empfohlen, da dies zu fehlenden oder überflüssigen Wiederholungen führen kann.
+- Standardmäßig werden die angegebenen *Anweisungen* für jeden Wert in *Expression* ausgeführt. Es ist jedoch möglich, die Schleife durch Testen einer Bedingung entweder am Anfang (`While`) oder am Ende der Schleife (`Until`) zu verlassen.
+- Über die optionalen Parameter *begin* und *end* lassen sich in Collections und Entity-Selections Grenzen für die Schleife definieren.
+- Die Schleife `For each...End for each` lässt sich für eine **shared collection** oder ein **shared object** verwenden. Muss Ihr Code ein oder mehrere Elemente der Collection oder Objekteigenschaften ändern, müssen Sie `Use...End use` verwenden. Sie können `Use...End use` je nach Bedarf wie folgt aufrufen: 
+    - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsman geändert werden sollen, oder
+    - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist. 
 
-When `For each...End for each` is used with an *Expression* of the *Collection* type, the *Current_Item* parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+### Schleife durch Collections
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the *Current_Item* variable is assigned the first mismatched value type.
+Beim Verwenden von `For each...End for each` mit einer *Expression* vom Typ *Collection* ist der Parameter *Current_Item* eine Variable vom gleichen Typ wie die Collection Elemente. Die Anzahl Schleifen basiert standardmäßig auf der Anzahl Einträge in der Collection.
 
-At each loop iteration, the *Current_Item* variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+Die Collection darf nur Elemente vom gleichen Typ enthalten, sonst wird ein Fehler zurückgegeben, sobald die Variable *Current_Item* dem ersten Wert mit einem unpassenden Typ zugewiesen wird.
 
-- If the *Current_Item* variable is of the object type or collection type (i.e. if *Expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
-- The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
+Bei jeder Wiederholung der Schleife wird die Variable *Current_Item* automatisch mit dem passenden Element der Collection gefüllt. Dabei müssen Sie folgende Punkte berücksichtigen:
+
+- Ist die Variable *Current_Item* vom Typ Objekt oder Collection (z.B. wenn *Expression* eine Collection von Objekten oder von Collections ist), wird durch Ändern dieser Variablen automatisch das zutreffende Element der Collection geändert (weil Objekte und Collections beide dieselbe Referenz nutzen). Bei einer Variablen mit einem skalaren Typ wird nur die Variable geändert.
+- Die Variable *Current_Item* muss vom gleichen Typ wie die Elemente der Collection sein. Ist ein Element davon nicht vom gleichen Typ wie die Variable, wird ein Fehler generiert und die Schleife stoppt.
+- Enthält die Collection Elemente mit einem Wert **Null**, wird ein Fehler generiert, wenn der Variablentyp von *Current_Item* keine **Null** Werte unterstützt, wie z. B. der Typ Lange Ganzzahl.
 
 #### Beispiel
 
-You want to compute some statistics for a collection of numbers:
+Sie wollen für eine Collection mit Zahlen ein paar Statistiken berechnen:
 
 ```4d
  C_COLLECTION($nums)
@@ -344,19 +345,19 @@ You want to compute some statistics for a collection of numbers:
   //$vUnder=4,$vOver=2
 ```
 
-### Loop through entity selections
+### Schleife durch Entity-Selections
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+Beim Verwenden von `For each...End for each` mit einer *Expression* vom Typ *Entity-Selection* ist der Parameter *Current_Item* die Entity, die gerade bearbeitet wird.
 
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
+Die Anzahl Schleifen basiert auf der Anzahl Entities in der Entity-Selection. Bei jeder Wiederholung der Schleife wird der Parameter *Current_Item* automatisch mit der Entity der Entity-Selection gefüllt, die gerade bearbeitet wird.
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**Hinweis:** Enthält die Entity-Selection eine Entity, die zwischenzeitlich durch einen anderen Prozess entfernt wurde, wird sie während der Schleife automatisch übersprungen.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
+Beachten Sie, dass jede Änderung in der aktuellen Entity explizit mit `entity.save( )` gesichert werden muss.
 
 #### Beispiel
 
-You want to raise the salary of all British employees in an entity selection:
+Sie wollen das Gehalt aller britischen Angestellten in einer Entity-Selection erhöhen:
 
 ```4d
  C_OBJECT(emp)
@@ -366,15 +367,15 @@ You want to raise the salary of all British employees in an entity selection:
  End for each
 ```
 
-### Loop through object properties
+### Schleife durch Objekteigenschaften
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Beim Verwenden von `For each...End for each` mit einer* Expression* vom Typ Objekt ist der Parameter *Current_Item* eine Textvariable, die automatisch mit dem Namen der gerade bearbeiteten Eigenschaft gefüllt wird.
 
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+Die Eigenschaften des Objekts werden in der Reihenfolge ihrer Erstellung bearbeitet. Während der Schleife lassen sich Eigenschaften im Objekt hinzufügen oder daraus entfernen. Das verändert nicht die Anzahl Schleifen, diese basiert weiterhin auf der ursprünglichen Anzahl Eigenschaften für das Objekt.
 
 #### Beispiel
 
-You want to switch the names to uppercase in the following object:
+Sie wollen die Namen in folgendem Objekt auf Großschreibung umstellen:
 
 ```4d
 {
@@ -384,7 +385,7 @@ You want to switch the names to uppercase in the following object:
 }
 ```
 
-You can write:
+Sie schreiben:
 
 ```4d
  For each(property;vObject)
@@ -401,22 +402,22 @@ You can write:
     }
     
 
-### begin / end parameters
+### Parameter begin / end
 
-You can define bounds to the iteration using the optional begin and end parameters.
+Mit den optionalen Parametern begin und end können Sie Grenzen für die Wiederholung der Schleife definieren.
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**Hinweis:** Die Parameter *begin* und *end* sind nur für Schleifen in Collections und Entity-Selections möglich, in Objekteigenschaften werden sie ignoriert.
 
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
+- Im Parameter *begin* übergeben Sie die Position des Elements in *Expression*, bei der der Durchlauf startet (inkl. *begin*).
+- Im Parameter *end* übergeben Sie die Position des Elements in *Expression*, bei der Durchlauf stoppt (exkl. *end*). 
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
+Wird *end* weggelassen oder ist *end* größer als die Anzahl Elemente in *Expression*, werden Elemente ab *begin* bis zum letzten Element einschließlich durchlaufen. Sind die Parameter *begin* und *end* positive Werte, geben sie die aktuellen Positionen der Elemente in *Expression* an. Ist *begin* ein negativer Wert, wird er als `begin:=begin+Expression size` berechnet (=Versatz vom Ende der *Expression*). Ist der berechnete Wert negativ, wird *begin* auf 0 gesetzt. **Hinweis:** Auch wenn *begin* negativ ist, erfolgt der Durchlauf in der standardmäßigen Reihenfolge. Ist *end* ein negativer Wert, wird er berechnet als `end:=end+Expression size`
 
-For example:
+Beispiel:
 
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
+- Eine Collection enthält 10 Elemente (nummeriert von 0 bis 9)
+- begin=-4 -> begin=-4+10=6 -> der Durchlauf startet mit dem 6. Element (#5)
+- end=-2 -> end=-2+10=8 -> der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element. 
 
 #### Beispiel
 
@@ -435,14 +436,14 @@ For example:
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 
-### Until and While conditions
+### Bedingungen Until und While
 
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` or a `While(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to True.
+Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. Ist eine Anweisung `Until(condition)` oder `While(condition)` in der Schleife zugewiesen, stoppt der Durchlauf, sobald die Bedingung mit wahr gewertet wird.
 
-You can pass either keyword depending on your needs:
+Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- Die Bedingung `Until` wird am Ende jedes Durchlaufs getestet, d. h. wenn *Expression* nicht leer oder null ist, wird die Schleife mindestens einmal ausgeführt.
+- Die Bedingung `While` wird am Anfang jedes Durchlaufs getestet, d. h. je nach Ergebnis der Bedingung wird die Schleife u. U. gar nicht ausgeführt.
 
 #### Beispiel
 

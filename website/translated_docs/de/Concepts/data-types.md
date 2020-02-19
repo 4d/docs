@@ -9,23 +9,24 @@ Although they are usually equivalent, some data types available at the database 
 
 | Data Types                                 | Database support(1) | Language support     | Variable declaration         |
 | ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Zahl](Concepts/dt_number.md)              | Yes                 | Converted to longint | `ARRAY INTEGER`              |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
+| [Alphanumeric](dt_string.md)               | Ja                  | Converted to text    | -                            |
+| [Text](Concepts/dt_string.md)              | Ja                  | Ja                   | `C_TEXT`, `ARRAY TEXT`       |
+| [Date](Concepts/dt_date.md)                | Ja                  | Ja                   | `C_DATE`, `ARRAY DATE`       |
+| [Time](Concepts/dt_time.md)                | Ja                  | Ja                   | `C_TIME`, `ARRAY TIME`       |
+| [Boolean](Concepts/dt_boolean.md)          | Ja                  | Ja                   | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [Zahl](Concepts/dt_number.md)              | Ja                  | Converted to longint | `ARRAY INTEGER`              |
+| [Longint](Concepts/dt_number.md)           | Ja                  | Ja                   | `C_LONGINT`, `ARRAY LONGINT` |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                            |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                            |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `C_POINTER`, `ARRAY POINTER` |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `C_VARIANT`                  |
+| [Real](Concepts/dt_number.md)              | Ja                  | Ja                   | `C_REAL`, `ARRAY REAL`       |
+| [Undefined](Concepts/dt_null_undefined.md) | -                   | Ja                   | -                            |
+| [Null](Concepts/dt_null_undefined.md)      | -                   | Ja                   | -                            |
+| [Pointer](Concepts/dt_pointer.md)          | -                   | Ja                   | `C_POINTER`, `ARRAY POINTER` |
+| [Picture](Concepts/dt_picture.md)          | Ja                  | Ja                   | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)                | Ja                  | Ja                   | `C_BLOB`, `ARRAY BLOB`       |
+| [Object](Concepts/dt_object.md)            | Ja                  | Ja                   | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Collection](Concepts/dt_collection.md)    | -                   | Ja                   | `C_COLLECTION`               |
+| [Variant](Concepts/dt_variant.md)(2)       | -                   | Ja                   | `C_VARIANT`                  |
+
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
@@ -62,6 +63,7 @@ The following table illustrates these default values:
 | Collection | null                                                                                | null                    | null                         |
 | Variant    | undefined                                                                           | undefined               | undefined                    |
 
+
 ## Converting data types
 
 The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
@@ -75,6 +77,7 @@ The following table lists the basic data types, the data types to which they can
 | Date                 | String    |           |         |         | Bool       |
 | Time                 | String    |           |         |         | Bool       |
 | Boolean              |           | Num       |         |         |            |
+
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
 

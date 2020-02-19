@@ -386,8 +386,8 @@ The following table summarizes 4D naming conventions.
 
 | Identifier                   | Max. Length | 例題                         |
 | ---------------------------- | ----------- | -------------------------- |
-| Table                        | 31          | [Invoices]                 |
-| Field                        | 31          | [Employees]Last Name       |
+| テーブル                         | 31          | [Invoices]                 |
+| フィールド                        | 31          | [Employees]Last Name       |
 | Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
 | Process Variable/Array       | 31          | vsCurrentName              |
 | Local Variable/Array         | $ + 31      | $vlLocalCounter            |
@@ -419,6 +419,6 @@ Be sure to use unique names for the different elements in your database. If a pa
 3. Methods
 4. Plug-in routines
 5. Predefined constants
-6. 変数.
+6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.

@@ -1,6 +1,6 @@
 ---
 id: boolean
-title: Boolean
+title: ブール
 ---
 
 ブールのフィールド、変数、式は、TRUE（真）またはFALSE（偽）のいずれかになります。
@@ -40,6 +40,7 @@ myBoolean:=(myButton=1)
 |     |                |     | ("A" = "B") &#124; (15 # 3) | True  |
 |     |                |     | ("A" = "B") &#124; (15 = 3) | False |
 
+
 論理演算子 (AND) の真偽表を示します:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
@@ -49,6 +50,7 @@ myBoolean:=(myButton=1)
 | False | True  | False         |
 | False | False | False         |
 
+
 論理演算子 (OR) の真偽表を示します:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
@@ -57,6 +59,7 @@ myBoolean:=(myButton=1)
 | True  | False | True               |
 | False | True  | True               |
 | False | False | False              |
+
 
 **Tip:** 式1と式2の排他的結合子演算を実行する必要がある場合、次の評価式を使用します:
 

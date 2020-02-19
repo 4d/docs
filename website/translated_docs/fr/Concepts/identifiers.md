@@ -34,7 +34,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 DEFAULT TABLE([Commandes])
@@ -46,7 +46,7 @@ ADD RECORD([Lettres])
 
 Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 [Commandes]Total:=Sum([Ligne]Montant)
@@ -60,7 +60,7 @@ Vous désignez une variable interprocess en faisant précéder son nom des symbo
 
 Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 <>vlProcessID:=Current process
@@ -72,7 +72,7 @@ If(<>vtNom#"")
 
 Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 vrGrandTotal:=Sum([Comptes]Montant)
@@ -84,7 +84,7 @@ vrGrandTotal:=Sum([Comptes]Montant)
 
 Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 For($vlRecord;1;100)
@@ -106,7 +106,7 @@ Le nom d’un tableau interprocess est précédé du symbole (<>), formé des ca
 
 Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 ARRAY TEXT(<>atSujets;Records in table([Topics]))
@@ -118,7 +118,7 @@ ARRAY INTEGER(<>aiGrosTableau;10000)
 
 Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 ARRAY TEXT(atSujets;Records in table([Topics]))
@@ -130,7 +130,7 @@ ARRAY TEXT(atSujets;Records in table([Topics]))
 
 Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 ARRAY TEXT($atSujets;Records in table([Topics]))
@@ -142,7 +142,7 @@ ARRAY INTEGER($aiGrosTableau;10000)
 
 Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Adresser un élément d'un tableau interprocess
@@ -165,7 +165,7 @@ If(<>asMotsClés{1}="Stop")
 
 Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…}). L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Adresser un élément d'un tableau interprocess à deux dimensions
@@ -188,7 +188,7 @@ Exemple :
 
 Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez un attribut d'objet (aussi appelé propriété d'objet) en saisissant son nom précédé d'un point (.) à la suite du nom de l'objet (ou de l'attribut) qui le contient. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 monObjet.monAttribut:="10"
@@ -201,7 +201,7 @@ monObjet.monAttribut:="10"
 
 Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 FORM SET INPUT([Personnes];"Entrée")
@@ -227,7 +227,7 @@ Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant s
 
 **Note :** Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 If(Nouveau client)
@@ -237,9 +237,9 @@ APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 
 **Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
-**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. 
+**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Cette commande attend une méthode (fonction) ou une formule
@@ -279,7 +279,7 @@ Voici quelques exemples :
 
 Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
 $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
@@ -312,7 +312,7 @@ Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom 
 
 **Note :** Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Ensembles interprocess
@@ -346,7 +346,7 @@ Le nom d'une sélection temporaire interprocess peut contenir jusqu’à 255 car
 
 Vous déclarez une sélection temporaire process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Sélection temporaire interprocess
@@ -370,7 +370,7 @@ Vous déclarez un process global en passant une expression de type chaîne de ca
 
 Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.
 
-Exemple :
+Voici quelques exemples :
 
 ```4d
     // Lancer le process global "Ajouter Clients"
@@ -403,6 +403,7 @@ Le tableau suivant résume les principes de nommage des identifiants dans les m�
 | Process local                     | $ + 255       | "$SuivreEvénements"            |
 | Process global                    | 255           | "*P_MODULE_FACTURES*"        |
 | Sémaphore                         | 255           | "monsémaphore"                 |
+
 
 **Note :** En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.
 

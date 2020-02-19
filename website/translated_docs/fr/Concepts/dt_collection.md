@@ -1,6 +1,6 @@
 ---
 id: collection
-title: Collections
+title: Collection
 ---
 
 Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, objet, booléen, collection ou null).
@@ -13,7 +13,7 @@ Pour des informations complémentaires sur les collections 4D, passez le numéro
 collectionRef[expression]
 ```
 
-Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans expression. Exemples :
+Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans expression. Voici quelques exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection

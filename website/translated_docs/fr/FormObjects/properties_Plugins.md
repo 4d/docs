@@ -3,23 +3,21 @@ id: propertiesPlugIns
 title: Plug-ins
 ---
 
----
+* * *
+
 ## Advanced Properties
 
 If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
 
 Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
 
+#### Grammaire JSON
 
-
-#### JSON Grammar
-
-| Name             | Type de données | Possible Values                                                                                                              |
+| Nom              | Type de données | Valeurs possibles                                                                                                            |
 | ---------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | customProperties | Texte           | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Zone de plug-in](pluginArea_overview.md)
-

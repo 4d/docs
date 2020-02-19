@@ -4,7 +4,7 @@ title: List Box
 original_id: listboxOverview
 ---
 
-## 概要
+## Overview
 
 List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event managemet, customized appearance, moving of columns, etc.
 
@@ -175,7 +175,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
+| [型](properties_Object.md#type)                                                               | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -280,7 +280,7 @@ In order to preserve data consistency for selection type and entity selection ty
 
 The typical sequence of events generated during data entry or modification is as follows:
 
-| Action                                                                          | Listbox type(s)             | Sequence of events                                                                                                                                                                                             |
+| 動作                                                                              | Listbox type(s)             | Sequence of events                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | All                         | On Before Data Entry                                                                                                                                                                                           |
 |                                                                                 | All                         | On Getting Focus                                                                                                                                                                                               |
@@ -744,7 +744,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | テキスト      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | 実数        | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| 整数        | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
+| integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | テキスト                                                                                           |
 | event     | button with label                              |                                                                                                |
@@ -762,9 +762,9 @@ You cannot set display formats or entry filters for columns of object-type list 
 | テキスト       | same as defined in object                                  | any (no control)        |
 | 実数         | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
-| 整数         | same as defined in object                                  | "0-9" and "-"           |
+| integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
-| Boolean    | check box                                                  | N/A                     |
+| ブール        | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | event      | N/A                                                        | N/A                     |
 
@@ -775,25 +775,25 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | テキスト | 実数 | 整数 | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | -- | -- | ------- | ----- | ----- |
-| *Attributes*          | *説明*                                    |      |    |    |         |       |       |
-| value                 | cell value (input or output)            | x    | x  | x  |         |       |       |
-| min                   | minimum value                           |      | x  | x  |         |       |       |
-| max                   | maximum value                           |      | x  | x  |         |       |       |
-| behavior              | "threeStates" value                     |      |    | x  |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x  | x  |         |       |       |
-| choiceList            | combo box defined in object             | x    | x  | x  |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x  | x  |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x  | x  |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x  | x  |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x  | x  |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x  | x  |         |       |       |
-| unitList              | array of X elements                     | x    | x  | x  |         |       |       |
-| unitReference         | index of selected element               | x    | x  | x  |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x  | x  |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x  | x  |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x  | x  | x       | x     |       |
+|                       | valueType                               | テキスト | 実数 | integer | boolean | color | event |
+| --------------------- | --------------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
+| *Attributes*          | *説明*                                    |      |    |         |         |       |       |
+| value                 | cell value (input or output)            | x    | x  | x       |         |       |       |
+| min                   | minimum value                           |      | x  | x       |         |       |       |
+| max                   | maximum value                           |      | x  | x       |         |       |       |
+| behavior              | "threeStates" value                     |      |    | x       |         |       |       |
+| requiredList          | drop-down list defined in object        | x    | x  | x       |         |       |       |
+| choiceList            | combo box defined in object             | x    | x  | x       |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x  | x       |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x    | x  | x       |         |       |       |
+| saveAs                | "reference" or "value"                  | x    | x  | x       |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x    | x  | x       |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x    | x  | x       |         |       |       |
+| unitList              | array of X elements                     | x    | x  | x       |         |       |       |
+| unitReference         | index of selected element               | x    | x  | x       |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x    | x  | x       |         |       |       |
+| unitsListName         | 4D list name for units                  | x    | x  | x       |         |       |       |
+| alternateButton       | add an alternate button                 | x    | x  | x       | x       | x     |       |
 
 
 #### value
@@ -845,7 +845,7 @@ The behavior attribute provides variations to the regular representation of valu
 
 | Attribute | Available value(s) | valueType(s) | 説明                                                                                                                                                                                   |
 | --------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| behavior  | threeStates        | 整数           | Represents a numeric value as a three-states check box.  
+| behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.  
 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 

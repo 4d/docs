@@ -1,6 +1,6 @@
 ---
 id: version-18.0-overview
-title: 概要
+title: Overview
 original_id: overview
 ---
 

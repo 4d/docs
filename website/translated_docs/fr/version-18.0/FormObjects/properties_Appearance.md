@@ -25,37 +25,37 @@ p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
 
 > There can only be one default button per form page.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  defaultButton|boolean|true, false | 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
 
 * * *
 
-## Hide focus rectangle
+## Cacher rectangle de focus
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Type de données | Possible Values |
-| ------------- | --------------- | --------------- |
-| hideFocusRing | boolean         | true, false     |
+| Nom           | Type de données | Valeurs possibles |
+| ------------- | --------------- | ----------------- |
+| hideFocusRing | boolean         | true, false       |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
 
 * * *
 
-## Hide selection highlight
+## Cacher surlignage sélection
 
 `Selection type list boxes`
 
@@ -65,20 +65,20 @@ When this option is enabled, the selection highlight is no longer visible for se
 
 By default, this option is not enabled.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name                | Type de données | Possible Values |
-| ------------------- | --------------- | --------------- |
-| hideSystemHighlight | boolean         | true, false     |
+| Nom                 | Type de données | Valeurs possibles |
+| ------------------- | --------------- | ----------------- |
+| hideSystemHighlight | boolean         | true, false       |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box](listbox_overview.md)
 
 * * *
 
-## Horizontal Scroll Bar
+## Barre de défilement horizontale
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
@@ -93,14 +93,14 @@ Available values:
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name                | Type de données | Possible Values                  |
+| Nom                 | Type de données | Valeurs possibles                |
 | ------------------- | --------------- | -------------------------------- |
 | scrollbarHorizontal | Texte           | "visible", "hidden", "automatic" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
@@ -114,14 +114,14 @@ Available values:
 
 Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  dpi|number|0=automatic, 72, 96 | 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -131,14 +131,14 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 Displays/hides both background images and background color.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showBackground|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -148,14 +148,14 @@ Displays/hides both background images and background color.
 
 Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showFooters|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -167,14 +167,14 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 > This property is available only for the [Toolbar](#user-interface) interface.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  withFormulaBar|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D View Pro area](viewProArea_overview.md)
 
@@ -184,14 +184,14 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showHeaders|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -201,14 +201,14 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 Displays/hides invisible characters
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showHiddenChars|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -218,14 +218,14 @@ Displays/hides invisible characters
 
 Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showHorizontalRuler|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -235,14 +235,14 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showHTMLWysiwyg|boolean|true, false (default)| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -252,14 +252,14 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showPageFrames|boolean|true, false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -279,14 +279,14 @@ With the Show references property on, the reference is displayed:
 
 > 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showReferences|boolean|true, false (default)| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -296,14 +296,14 @@ With the Show references property on, the reference is displayed:
 
 Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  showVerticalRuler|boolean|true (default), false| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -315,14 +315,14 @@ You can set the direction of tab controls in your forms. This property is availa
 
 When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  labelsPlacement|boolean|"top", "bottom" | 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Tab Control](tabControl.md)
 
@@ -332,14 +332,14 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  userInterface|text|"none" (default), "ribbon", "toolbar" | 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D View Pro area](viewProArea_overview.md)
 
@@ -349,7 +349,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 * * *
 
-## Vertical Scroll Bar
+## Barre de défilement verticale
 
 An interface tool allowing the user to move the viewing area up and down.
 
@@ -366,14 +366,14 @@ Available values:
 > 
 > If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name              | Type de données | Possible Values                  |
+| Nom               | Type de données | Valeurs possibles                |
 | ----------------- | --------------- | -------------------------------- |
 | scrollbarVertical | Texte           | "visible", "hidden", "automatic" |
 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
@@ -393,14 +393,14 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 > The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  layoutMode|text|"page", "draft", "embedded"| 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
 
@@ -410,13 +410,13 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 Sets the zoom percentage for displaying 4D Write Pro area contents.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name | Type de données | Possible Values |
-| ---- | --------------- | --------------- |
-|      |                 |                 |
+| Nom | Type de données | Valeurs possibles |
+| --- | --------------- | ----------------- |
+|     |                 |                   |
  zoom|number|minimum = 0 | 
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)

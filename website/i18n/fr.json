@@ -172,7 +172,7 @@
         "title": "Découpage"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Source de données"
       },
       "FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -422,19 +422,19 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Sessions et utilisateurs"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obtenir des informations du serveur"
       },
       "REST/gettingStarted": {
         "title": "Prise en main"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulation des données"
       },
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
@@ -612,7 +612,7 @@
         "title": "Découpage"
       },
       "version-18.0-FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Source de données"
       },
       "version-18.0-FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -859,19 +859,19 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Sessions et utilisateurs"
       },
       "version-18.0-REST/configuration": {
         "title": "Configuration du serveur"
       },
       "version-18.0-REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obtenir des informations du serveur"
       },
       "version-18.0-REST/gettingStarted": {
         "title": "Prise en main"
       },
       "version-18.0-REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulation des données"
       },
       "version-18.0-REST/REST_requests": {
         "title": "A propos des requêtes REST"

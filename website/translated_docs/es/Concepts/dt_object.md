@@ -158,7 +158,7 @@ For more information, please refer to the `Null` command description.
 
 Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
 
 ```4d
      C_OBJECT($o)
@@ -198,14 +198,14 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 ```
 
 - Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type: 
-    - Object, collection, pointer: Null
-    - Picture: Empty picture
-    - Boolean: False
-    - String: ""
-    - Number: 0
-    - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
-    - Time: 0 (number of ms)
-    - Undefined, Null: no change
+ - Object, collection, pointer: Null
+ - Picture: Empty picture
+ - Boolean: False
+ - String: ""
+ - Number: 0
+ - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+ - Time: 0 (number of ms)
+ - Undefined, Null: no change
 
 ```4d
      C_OBJECT($o)

@@ -52,10 +52,10 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 
 - Variables système (*) :
     
-    - `Error` (entier long): Code d'erreur
-    - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
-    - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
-    - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur. 
+  - `Error` (entier long): Code d'erreur
+  - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
+  - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur. 
 
 (*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 

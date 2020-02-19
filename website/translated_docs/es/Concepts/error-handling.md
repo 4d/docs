@@ -52,10 +52,10 @@ Within the custom error method, you have access to several information that will
 
 - dedicated system variables(*):
     
-    - `Error` (longint): error code
-    - `Error method` (text): name of the method that triggered the error
-    - `Error line` (longint): line number in the method that triggered the error
-    - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error. 
+  - `Error` (longint): error code
+  - `Error method` (text): name of the method that triggered the error
+  - `Error line` (longint): line number in the method that triggered the error
+  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error. 
 
 (*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
 

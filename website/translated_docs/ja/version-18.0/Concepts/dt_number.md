@@ -38,27 +38,27 @@ original_id: number
 
 ## 数値演算子
 
-| 演算子       | シンタックス           | 戻り値     | 式        | 結果    |
-| --------- | ---------------- | ------- | -------- | ----- |
-| 加算 (足し算)  | 数値 + 数値          | 数値      | 2 + 3    | 5     |
-| 減算 (引き算)  | 数値 - 数値          | Number  | 3 – 2    | 1     |
-| 乗算 (かけ算)  | 数値 * 数値          | Number  | 5 * 2    | 10    |
-| 除算 (割り算)  | 数値 / 数値          | Number  | 5 / 2    | 2.5   |
-| 倍長整数を返す除算 | 数値 \ 数値         | Number  | 5 \ 2   | 2     |
-| モジューロ     | 数値 % 数値          | Number  | 5 % 2    | 1     |
-| 指数        | 数値 ^ 数値          | Number  | 2 ^ 3    | 8     |
-| 等しい       | 数値 = 数値          | Boolean | 10 = 10  | True  |
-|           |                  |         | 10 = 11  | False |
-| 異なる       | 数値 # 数値          | Boolean | 10 # 11  | True  |
-|           |                  |         | 10 # 10  | False |
-| 大きい       | 数値 > 数値          | Boolean | 11 > 10  | True  |
-|           |                  |         | 10 > 11  | False |
-| 小さい       | 数値 < 数値          | Boolean | 10 < 11  | True  |
-|           |                  |         | 11 < 10  | False |
-| 以上        | 数値 >= 数値         | Boolean | 11 >= 10 | True  |
-|           |                  |         | 10 >= 11 | False |
-| 以下        | Number <= Number | Boolean | 10 <= 11 | True  |
-|           |                  |         | 11 <= 10 | False |
+| 演算子       | シンタックス       | 戻り値 | 式        | 結果    |
+| --------- | ------------ | --- | -------- | ----- |
+| 加算 (足し算)  | 数値 + 数値      | 数値  | 2 + 3    | 5     |
+| 減算 (引き算)  | 数値 - 数値      | 数値  | 3 – 2    | 1     |
+| 乗算 (かけ算)  | 数値 * 数値      | 数値  | 5 * 2    | 10    |
+| 除算 (割り算)  | 数値 / 数値      | 数値  | 5 / 2    | 2.5   |
+| 倍長整数を返す除算 | 数値 \ 数値     | 数値  | 5 \ 2   | 2     |
+| モジューロ     | 数値 % 数値      | 数値  | 5 % 2    | 1     |
+| 指数        | 数値 ^ 数値      | 数値  | 2 ^ 3    | 8     |
+| 等しい       | 数値 = 数値      | ブール | 10 = 10  | True  |
+|           |              |     | 10 = 11  | False |
+| 異なる       | 数値 # 数値      | ブール | 10 # 11  | True  |
+|           |              |     | 10 # 10  | False |
+| 大きい       | 数値 > 数値      | ブール | 11 > 10  | True  |
+|           |              |     | 10 > 11  | False |
+| 小さい       | 数値 < 数値      | ブール | 10 < 11  | True  |
+|           |              |     | 11 < 10  | False |
+| 以上        | 数値 >= 数値     | ブール | 11 >= 10 | True  |
+|           |              |     | 10 >= 11 | False |
+| 以下        | 数値 <= Number | ブール | 10 <= 11 | True  |
+|           |              |     | 11 <= 10 | False |
 
 
 モジューロ演算子 % は最初の数値を 2番目の数値で除算し、その余りの整数を返します。 次に例を示します:
@@ -72,22 +72,22 @@ original_id: number
 - モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 この範囲外の数値のモジューロ演算を実行するには、`Mod` コマンドを使用します。
 - 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。 
 
-### Precedence
+### 優先順位
 
-The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. たとえば:
+式を評価する順番を優先順位と呼びます。 4D における優先順位は厳密に左から右で、代数的順序は採用されていません。 たとえば:
 
 ```4d
  3+4*5
 ```
 
-returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
+これは 35 を返します。最初に式 3+4 の結果 7 を求め、それに 5 を乗じるので、結果は 35 になります。
 
-To override the left-to-right precedence, you MUST use parentheses. 例: 
+左から右の優先順位を変更するには、必ずカッコを使用します。 たとえば:
 
 ```4d
  3+(4*5)
 ```
 
-returns 23 because the expression (4 * 5) is evaluated first, because of the parentheses. The result is 20, which is then added to 3 for the final result of 23.
+この式は、23 を返します。カッコがあるため、最初に式 (4*5) の結果 20 を求め、 それに 3 を加えて、結果は 23 になります。
 
-Parentheses can be nested inside other sets of parentheses. Be sure that each left parenthesis has a matching right parenthesis to ensure proper evaluation of expressions. Lack of, or incorrect use of parentheses can cause unexpected results or invalid expressions. Furthermore, if you intend to compile your applications, you must have matching parentheses—the compiler detects a missing parenthesis as a syntax error.
+カッコは、他のカッコの組の内側にネストすることができます。 式の評価が正しくおこなわれるように、必ず各左カッコに対応する右カッコを指定してください。 カッコの不足または誤用は、予測できない結果や、式の無効化につながります。 またコンパイルする場合は、左カッコと右カッコは同じ数でなければなりません。組になっていないカッコはシンタックスエラーとして検出されます。
