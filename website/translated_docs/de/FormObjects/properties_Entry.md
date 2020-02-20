@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| Name       | Datentyp | Possible Values |
+| ---------- | -------- | --------------- |
+| spellcheck | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -40,9 +40,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                       |
-| ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| Name        | Datentyp | Possible Values                       |
+| ----------- | -------- | ------------------------------------- |
+| contextMenu | string   | "automatic" (used if missing), "none" |
 
 
 #### Objects Supported
@@ -61,9 +61,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+| Name      | Datentyp | Possible Values |
+| --------- | -------- | --------------- |
+| enterable | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -151,9 +151,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON Grammar
         
-        | Name      | Data Type | Possible Values |
-        | --------- | --------- | --------------- |
-        | focusable | boolean   | true, false     |
+        | Name      | Datentyp | Possible Values |
+        | --------- | -------- | --------------- |
+        | focusable | boolean  | true, false     |
 
         
         #### Objects Supported
@@ -172,9 +172,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON Grammar
         
-        | Name            | Data Type | Possible Values                                                             |
-        | --------------- | --------- | --------------------------------------------------------------------------- |
-        | keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+        | Name            | Datentyp | Possible Values                                                             |
+        | --------------- | -------- | --------------------------------------------------------------------------- |
+        | keyboardDialect | text     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
         
         #### Objects Supported
@@ -203,9 +203,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON Grammar
         
-        | Name      | Data Type | Possible Values                                   |
-        | --------- | --------- | ------------------------------------------------- |
-        | multiline | text      | "yes", "no", "automatic" (default if not defined) |
+        | Name      | Datentyp | Possible Values                                   |
+        | --------- | -------- | ------------------------------------------------- |
+        | multiline | text     | "yes", "no", "automatic" (default if not defined) |
 
         
         #### Objects Supported
@@ -240,9 +240,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON Grammar
         
-        | Name        | Data Type | Possible Values                                                              |
-        | ----------- | --------- | ---------------------------------------------------------------------------- |
-        | placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+        | Name        | Datentyp | Possible Values                                                              |
+        | ----------- | -------- | ---------------------------------------------------------------------------- |
+        | placeholder | string   | Text to be displayed (grayed out) when the object does not contain any value |
 
         
         #### Objects Supported
@@ -261,9 +261,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON Grammar
         
-        | Name          | Data Type | Possible Values |
-        | ------------- | --------- | --------------- |
-        | showSelection | boolean   | true, false     |
+        | Name          | Datentyp | Possible Values |
+        | ------------- | -------- | --------------- |
+        | showSelection | boolean  | true, false     |
 
         
         #### Objects Supported
@@ -304,9 +304,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 #### JSON Grammar
                 
-                | Name            | Data Type | Possible Values |
-                | --------------- | --------- | --------------- |
-                | singleClickEdit | boolean   | true, false     |
+                | Name            | Datentyp | Possible Values |
+                | --------------- | -------- | --------------- |
+                | singleClickEdit | boolean  | true, false     |
 
                 
                 #### Objects Supported
