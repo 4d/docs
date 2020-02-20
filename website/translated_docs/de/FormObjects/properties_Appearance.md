@@ -26,9 +26,9 @@ p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  defaultButton|boolean|true, false | 
 
 #### Objects Supported
@@ -43,9 +43,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| hideFocusRing | boolean   | true, false     |
+| Name          | Datentyp | Possible Values |
+| ------------- | -------- | --------------- |
+| hideFocusRing | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -66,9 +66,9 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| hideSystemHighlight | boolean   | true, false     |
+| Name                | Datentyp | Possible Values |
+| ------------------- | -------- | --------------- |
+| hideSystemHighlight | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -94,9 +94,9 @@ Available values:
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                  |
-| ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| Name                | Datentyp | Possible Values                  |
+| ------------------- | -------- | -------------------------------- |
+| scrollbarHorizontal | text     | "visible", "hidden", "automatic" |
 
 
 #### Objects Supported
@@ -115,9 +115,9 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  dpi|number|0=automatic, 72, 96 | 
 
 #### Objects Supported
@@ -132,9 +132,9 @@ Displays/hides both background images and background color.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showBackground|boolean|true (default), false| 
 
 #### Objects Supported
@@ -149,9 +149,9 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showFooters|boolean|true (default), false| 
 
 #### Objects Supported
@@ -168,9 +168,9 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  withFormulaBar|boolean|true (default), false| 
 
 #### Objects Supported
@@ -185,9 +185,9 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHeaders|boolean|true (default), false| 
 
 #### Objects Supported
@@ -202,9 +202,9 @@ Displays/hides invisible characters
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHiddenChars|boolean|true (default), false| 
 
 #### Objects Supported
@@ -219,9 +219,9 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHorizontalRuler|boolean|true (default), false| 
 
 #### Objects Supported
@@ -236,9 +236,9 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHTMLWysiwyg|boolean|true, false (default)| 
 
 #### Objects Supported
@@ -253,9 +253,9 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showPageFrames|boolean|true, false| 
 
 #### Objects Supported
@@ -280,9 +280,9 @@ With the Show references property on, the reference is displayed:
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showReferences|boolean|true, false (default)| 
 
 #### Objects Supported
@@ -297,9 +297,9 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showVerticalRuler|boolean|true (default), false| 
 
 #### Objects Supported
@@ -316,9 +316,9 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  labelsPlacement|boolean|"top", "bottom" | 
 
 #### Objects Supported
@@ -333,9 +333,9 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  userInterface|text|"none" (default), "ribbon", "toolbar" | 
 
 #### Objects Supported
@@ -367,9 +367,9 @@ Available values:
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values                  |
-| ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| Name              | Datentyp | Possible Values                  |
+| ----------------- | -------- | -------------------------------- |
+| scrollbarVertical | text     | "visible", "hidden", "automatic" |
 
 
 #### Objects Supported
@@ -394,9 +394,9 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  layoutMode|text|"page", "draft", "embedded"| 
 
 #### Objects Supported
@@ -411,9 +411,9 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  zoom|number|minimum = 0 | 
 
 #### Objects Supported
