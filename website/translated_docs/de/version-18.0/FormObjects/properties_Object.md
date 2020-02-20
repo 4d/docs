@@ -14,9 +14,9 @@ This property designates the type of the [active or inactive form object](formOb
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
-| ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| Name | Datentyp | Possible Values                                                                                                                                                                                                                                                                                          |
+| ---- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type | string   | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
 #### Objects Supported
@@ -37,9 +37,9 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                      |
-| ---- | --------- | -------------------------------------------------------------------- |
-| name | string    | Any allowed name which does not belong to an already existing object |
+| Name | Datentyp | Possible Values                                                      |
+| ---- | -------- | -------------------------------------------------------------------- |
+| name | string   | Any allowed name which does not belong to an already existing object |
 
 
 #### Objects Supported
@@ -60,7 +60,7 @@ The form object variables allow you to control and monitor the objects. For exam
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
-### Expressions
+### Ausdrücke
 
 You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 
@@ -139,9 +139,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name  | Data Type | Possible Values                                           |
-                    | ----- | --------- | --------------------------------------------------------- |
-                    | class | string    | One string with CSS name(s) separated by space characters |
+                    | Name  | Datentyp | Possible Values                                           |
+                    | ----- | -------- | --------------------------------------------------------- |
+                    | class | string   | One string with CSS name(s) separated by space characters |
 
                     
                     #### Objects Supported
@@ -165,9 +165,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name       | Data Type | Possible Values                                              |
-                    | ---------- | --------- | ------------------------------------------------------------ |
-                    | dataSource | string    | Expression that returns a collection or an entity selection. |
+                    | Name       | Datentyp | Possible Values                                              |
+                    | ---------- | -------- | ------------------------------------------------------------ |
+                    | dataSource | string   | Expression that returns a collection or an entity selection. |
 
                     
                     #### Objects Supported
@@ -188,9 +188,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property. 
                     #### JSON Grammar
                     
-                    | Name        | Data Type | Possible Values                                             |
-                    | ----------- | --------- | ----------------------------------------------------------- |
-                    | listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
+                    | Name        | Datentyp | Possible Values                                             |
+                    | ----------- | -------- | ----------------------------------------------------------- |
+                    | listboxType | string   | "array", "currentSelection", "namedSelection", "collection" |
 
                     
                     #### Objects Supported
@@ -205,9 +205,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name           | Data Type | Possible Values                                               |
-                    | -------------- | --------- | ------------------------------------------------------------- |
-                    | pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
+                    | Name           | Datentyp | Possible Values                                               |
+                    | -------------- | -------- | ------------------------------------------------------------- |
+                    | pluginAreaKind | string   | Name of the plug-in external area (starts with a % character) |
 
                     
                     #### Objects Supported
@@ -222,9 +222,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name       | Data Type | Possible Values  |
-                    | ---------- | --------- | ---------------- |
-                    | radioGroup | string    | Radio group name |
+                    | Name       | Datentyp | Possible Values  |
+                    | ---------- | -------- | ---------------- |
+                    | radioGroup | string   | Radio group name |
 
                     
                     #### Objects Supported
@@ -249,9 +249,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name | Data Type | Possible Values |
-                    | ---- | --------- | --------------- |
-                    | text | string    | any text        |
+                    | Name | Datentyp | Possible Values |
+                    | ---- | -------- | --------------- |
+                    | text | string   | any text        |
 
                     
                     #### Objects Supported
@@ -291,9 +291,9 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### JSON Grammar
                     
-                    | Name                | Data Type | Possible Values                                                                                       |
-                    | ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-                    | variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+                    | Name                | Datentyp | Possible Values                                                                                       |
+                    | ------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+                    | variableCalculation | string   | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
                     
                     #### Objects Supported
