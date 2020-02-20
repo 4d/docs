@@ -11,9 +11,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON Grammar
 
-| Property             | Data Type | Possible Values       |
-| -------------------- | --------- | --------------------- |
-| allowFontColorPicker | boolean   | false (default), true |
+| Property             | Datentyp | Possible Values       |
+| -------------------- | -------- | --------------------- |
+| allowFontColorPicker | boolean  | false (default), true |
 
 
 #### Objects Supported
@@ -33,9 +33,9 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON Grammar
 
-| Property   | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| Property   | Datentyp | Possible Values  |
+| ---------- | -------- | ---------------- |
+| fontWeight | text     | "normal", "bold" |
 
 
 #### Objects Supported
@@ -55,9 +55,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
-| --------- | --------- | ------------------ |
-| fontStyle | string    | "normal", "italic" |
+| Name      | Datentyp | Possible Values    |
+| --------- | -------- | ------------------ |
+| fontStyle | string   | "normal", "italic" |
 
 
 #### Objects Supported
@@ -75,9 +75,9 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values       |
-| -------------- | --------- | --------------------- |
-| textDecoration | string    | "normal", "underline" |
+| Name           | Datentyp | Possible Values       |
+| -------------- | -------- | --------------------- |
+| textDecoration | string   | "normal", "underline" |
 
 
 #### Objects Supported
@@ -113,9 +113,9 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                |
-| --------- | --------- | ------------------------------ |
-| fontTheme | string    | "normal", "main", "additional" |
+| Name      | Datentyp | Possible Values                |
+| --------- | -------- | ------------------------------ |
+| fontTheme | string   | "normal", "main", "additional" |
 
 
 #### Objects Supported
@@ -136,9 +136,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 > <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values      |
-| ---------- | --------- | -------------------- |
-| fontFamily | string    | CSS font family name |
+| Name       | Datentyp | Possible Values      |
+| ---------- | -------- | -------------------- |
+| fontFamily | string   | CSS font family name |
 
 
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
@@ -157,9 +157,9 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
-| -------- | --------- | ------------------------------------- |
-| fontSize | integer   | Font size in points. Minimum value: 0 |
+| Name     | Datentyp | Possible Values                       |
+| -------- | -------- | ------------------------------------- |
+| fontSize | integer  | Font size in points. Minimum value: 0 |
 
 
 #### Objects Supported
@@ -184,9 +184,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| Name   | Datentyp | Possible Values                           |
+| ------ | -------- | ----------------------------------------- |
+| stroke | string   | any css value, "transparent", "automatic" |
 
 
 #### Objects Supported
@@ -216,9 +216,9 @@ Foreground color;Dark shadow color)
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values       |
-| --------------- | --------- | --------------------- |
-| rowStrokeSource | string    | Font color expression |
+| Name            | Datentyp | Possible Values       |
+| --------------- | -------- | --------------------- |
+| rowStrokeSource | string   | Font color expression |
 
 
 #### Objects Supported
@@ -247,9 +247,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                 |
-| -------------- | --------- | ----------------------------------------------- |
-| rowStyleSource | string    | Style expression to evaluate for each row/cell. |
+| Name           | Datentyp | Possible Values                                 |
+| -------------- | -------- | ----------------------------------------------- |
+| rowStyleSource | string   | Style expression to evaluate for each row/cell. |
 
 
 #### Objects Supported
@@ -264,9 +264,9 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| textAlign | string    | "automatic", "right", "center", "justify", "left" |
+| Name      | Datentyp | Possible Values                                   |
+| --------- | -------- | ------------------------------------------------- |
+| textAlign | string   | "automatic", "right", "center", "justify", "left" |
 
 
 #### Objects Supported
@@ -288,9 +288,9 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                        |
-| ------------- | --------- | -------------------------------------- |
-| verticalAlign | string    | "automatic", "top", "middle", "bottom" |
+| Name          | Datentyp | Possible Values                        |
+| ------------- | -------- | -------------------------------------- |
+| verticalAlign | string   | "automatic", "top", "middle", "bottom" |
 
 
 #### Objects Supported
@@ -350,9 +350,9 @@ $0:=Form.meta
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                  |
-| ---------- | --------- | ------------------------------------------------ |
-| metaSource | string    | Object expression to evaluate for each row/cell. |
+| Name       | Datentyp | Possible Values                                  |
+| ---------- | -------- | ------------------------------------------------ |
+| metaSource | string   | Object expression to evaluate for each row/cell. |
 
 
 #### Objects Supported
@@ -380,7 +380,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Datentyp
     </th>
     
     <th>
@@ -488,7 +488,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Datentyp
     </th>
     
     <th>
@@ -548,7 +548,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Datentyp
     </th>
     
     <th>
@@ -608,7 +608,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Datentyp
     </th>
     
     <th>
@@ -682,7 +682,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Datentyp
     </th>
     
     <th>
