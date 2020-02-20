@@ -11,9 +11,9 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values             |
-| --------------- | --------- | --------------------------- |
-| deletableInList | boolean   | true, false (default: true) |
+| Name            | Datentyp | Possible Values             |
+| --------------- | -------- | --------------------------- |
+| deletableInList | boolean  | true, false (default: true) |
 
 
 #### Objects Supported
@@ -35,9 +35,9 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                     |
-| ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Name       | Datentyp | Possible Values                                                                                                                     |
+| ---------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string   | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 
 #### Objects Supported
@@ -55,9 +55,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### JSON Grammar
 
-| Name                         | Data Type | Possible Values                    |
-| ---------------------------- | --------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string    | "addSubrecord" or "" to do nothing |
+| Name                         | Datentyp | Possible Values                    |
+| ---------------------------- | -------- | ---------------------------------- |
+| doubleClickInEmptyAreaAction | string   | "addSubrecord" or "" to do nothing |
 
 
 #### Objects Supported
@@ -86,9 +86,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| Name                   | Datentyp | Possible Values                     |
+| ---------------------- | -------- | ----------------------------------- |
+| doubleClickInRowAction | string   | "editSubrecord", "displaySubrecord" |
 
 
 #### Objects Supported
@@ -109,9 +109,9 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| enterableInList | boolean   | true, false     |
+| Name            | Datentyp | Possible Values |
+| --------------- | -------- | --------------- |
+| enterableInList | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -130,9 +130,9 @@ You can also allow the user to enter data in the List form.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                                                                                                     |
-| -------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Name     | Datentyp | Possible Values                                                                                                                     |
+| -------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | string   | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 
 #### Objects Supported
@@ -147,9 +147,9 @@ Specifies the table that the list subform belongs to (if any).
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                   |
-| ----- | --------- | --------------------------------- |
-| table | string    | 4D table name, or "" if no table. |
+| Name  | Datentyp | Possible Values                   |
+| ----- | -------- | --------------------------------- |
+| table | string   | 4D table name, or "" if no table. |
 
 
 #### Objects Supported
@@ -172,9 +172,9 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| Name          | Datentyp | Possible Values              |
+| ------------- | -------- | ---------------------------- |
+| selectionMode | string   | "multiple", "single", "none" |
 
 
 #### Objects Supported
