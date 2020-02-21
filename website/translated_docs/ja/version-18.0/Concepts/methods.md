@@ -173,7 +173,7 @@ Project methods can call themselves. たとえば:
 
 This is called recursion. The 4D language fully supports recursion.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+次に例を示します。 Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
 
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`

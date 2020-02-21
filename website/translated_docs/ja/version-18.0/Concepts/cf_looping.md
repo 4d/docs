@@ -226,7 +226,7 @@ Here is the equivalent `Repeat...Until` loop:
 
 You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
 
-10. Here is an example:
+10. 次に例を示します:
 
 ```4d
  C_LONGINT($vlCounter) //use local Long Integer variables

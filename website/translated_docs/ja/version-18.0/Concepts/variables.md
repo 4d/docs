@@ -89,41 +89,41 @@ atNames{1}:="Richard"
 
 多くのメソッドや変数を持つデータベースで作業する場合、現在作業しているメソッドの範囲内で一時的に変数が必要となる場合がよくあります。 この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
 
-Frequently, in a database, small pieces of information are needed from the user. The command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+データベースではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 `Request` コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長期間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("ID を入力してください:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+このメソッドは、ユーザーに ID を入力するように要求します。 ローカル変数 $vsID にレスポンスが代入され、ユーザーが入力した ID に基づいた検索がおこなわれます。 このメソッドが終了した時点で、$vsID ローカル変数はメモリから消去されます。 この変数は 1回のみ、このメソッド内でしか使われないため、これ以上維持する必要はありません。
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**注:** メソッドに渡される $1, $2...等の引数は ローカル変数です。 詳細については [パラメーター](Concepts/parameters.md) を参照ください。
 
-### Process variables
+### プロセス変数
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+プロセス変数は、同じプロセスの範囲内に限り使用可能です。 この変数はプロセスメソッドと、そのプロセス内で呼び出された他のメソッドで使用することができます。
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+プロセス変数には名前に付ける接頭辞がありません。 プロセス変数名の長さは、最大31文字まで指定できます。
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
+インタープリターモードでは、変数は動的にメモリ上に作成・消去されます。これに対してコンパイルモードでは、作成したすべてのプロセス (ユーザープロセス) で同じプロセス変数定義が共有されますが、変数のインスタンスはプロセス毎に異なるものとなります。 たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+バージョン6より、`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできるようになりました。 これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
 
-- Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- コード内の特定の箇所におけるプロセス間通信
+- プロセス間のドラッグ＆ドロップ処理
+- クライアント/サーバーにおいて、クライアントマシン上のプロセスとサーバーマシン上のストアドプロシージャー間の通信
 
-For more information, see the chapter **Processes** and the description of these commands.
+詳細については **プロセス** の章と、各コマンドの説明を参照ください。
 
-### Interprocess variables
+### インタープロセス変数
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.
+インタープロセス変数はデータベース全体で使用することができ、すべてのコオペラティブプロセスで共有されます。 これらは主としてプロセス間で情報を共有するために使われます。
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
-The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+インタープロセス変数の名前は、必ずインタープロセス記号 (<>) で始めます。記号の後に31バイトまでの名前を指定できます。
 
-In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
