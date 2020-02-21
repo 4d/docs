@@ -343,6 +343,9 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
       "REST/asArray": {
         "title": "$asArray"
       },
@@ -420,9 +423,6 @@
       },
       "REST/configuration": {
         "title": "Server Configuration"
-      },
-      "REST/{dataClass}": {
-        "title": "{dataClass}"
       },
       "REST/genInfo": {
         "title": "Getting Server Information"

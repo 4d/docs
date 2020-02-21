@@ -158,7 +158,7 @@
         "type": "subcategory",
         "label": "API",
         "ids": [
-          "version-18.0-REST/dataClass_name",
+          "version-18.0-REST/{dataClass}",
           "version-18.0-REST/asArray",
           "version-18.0-REST/atomic_$atonce",
           "version-18.0-REST/attributes",

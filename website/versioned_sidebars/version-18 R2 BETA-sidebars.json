@@ -161,7 +161,7 @@
         "type": "subcategory",
         "label": "API",
         "ids": [
-          "version-18 R2 BETA-REST/dataClass_name",
+          "version-18 R2 BETA-REST/{dataClass}",
           "version-18 R2 BETA-REST/asArray",
           "version-18 R2 BETA-REST/atomic_$atonce",
           "version-18 R2 BETA-REST/attributes",
