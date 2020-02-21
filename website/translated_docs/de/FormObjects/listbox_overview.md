@@ -217,7 +217,7 @@ Supported properties depend on the list box type.
 
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Comments                                                                        |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Kommentare                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | On After Edit        | - [column](#additional-properties)
 - [columnName](#additional-properties)
@@ -368,7 +368,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Comments                                                                        |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Kommentare                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | On After Edit        | - [column](#additional-properties)
 - [columnName](#additional-properties)

@@ -11,7 +11,7 @@ Collection of columns of the list box.
 
 #### JSON Grammar
 
-| Name    | Data Type                    | Possible Values                                  |
+| Name    | Datentyp                     | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -64,9 +64,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name                   | Data Type | Possible Values                     |
-            | ---------------------- | --------- | ----------------------------------- |
-            | doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+            | Name                   | Datentyp | Possible Values                     |
+            | ---------------------- | -------- | ----------------------------------- |
+            | doubleClickInRowAction | string   | "editSubrecord", "displaySubrecord" |
 
             
             #### Objects Supported
@@ -88,9 +88,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name         | Data Type | Possible Values |
-            | ------------ | --------- | --------------- |
-            | highlightSet | string    | Name of the set |
+            | Name         | Datentyp | Possible Values |
+            | ------------ | -------- | --------------- |
+            | highlightSet | string   | Name of the set |
 
             
             #### Objects Supported
@@ -127,9 +127,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name              | Data Type | Possible Values |
-            | ----------------- | --------- | --------------- |
-            | lockedColumnCount | integer   | minimum: 0      |
+            | Name              | Datentyp | Possible Values |
+            | ----------------- | -------- | --------------- |
+            | lockedColumnCount | integer  | minimum: 0      |
 
             
             #### Objects Supported
@@ -142,9 +142,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name              | Data Type | Possible Values |
-            | ----------------- | --------- | --------------- |
-            | staticColumnCount | integer   | minimum: 0      |
+            | Name              | Datentyp | Possible Values |
+            | ----------------- | -------- | --------------- |
+            | staticColumnCount | integer  | minimum: 0      |
 
             
             #### Objects Supported
@@ -161,9 +161,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name        | Data Type | Possible Values |
-            | ----------- | --------- | --------------- |
-            | columnCount | integer   | minimum: 1      |
+            | Name        | Datentyp | Possible Values |
+            | ----------- | -------- | --------------- |
+            | columnCount | integer  | minimum: 1      |
 
             
             #### Objects Supported
@@ -216,9 +216,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name             | Data Type | Possible Values        |
-            | ---------------- | --------- | ---------------------- |
-            | rowControlSource | string    | Row control array name |
+            | Name             | Datentyp | Possible Values        |
+            | ---------------- | -------- | ---------------------- |
+            | rowControlSource | string   | Row control array name |
 
             
             #### Objects Supported
@@ -237,9 +237,9 @@ The specified form is displayed:
             - **Multiple**: Several rows can be selected simultaneously in this mode. 
             #### JSON Grammar
             
-            | Name          | Data Type | Possible Values              |
-            | ------------- | --------- | ---------------------------- |
-            | selectionMode | string    | "multiple", "single", "none" |
+            | Name          | Datentyp | Possible Values              |
+            | ------------- | -------- | ---------------------------- |
+            | selectionMode | string   | "multiple", "single", "none" |
 
             
             #### Objects Supported

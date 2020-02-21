@@ -10,11 +10,11 @@ Mit der 4D Programmiersprache lässt sich die gängige Meldung "Hello, world!" a
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. Zum Ausführen des Code klicken Sie einfach im Methodeneditor auf die Schaltfläche zum Ausführen:
+Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. Zum Ausführen des Code klicken Sie einfach im Methodeneditor auf die Schaltfläche zum Ausführen:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
-Oder Sie können diesen Code einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
+Sie können diesen Code auch einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
 
 ## Werte zuweisen
 
@@ -31,7 +31,7 @@ $myHour:=?08:12:55? //assigns a time literal
 
 Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er kombiniert nicht Ausdrücke zu einem neuen, sondern kopiert die Werte des Ausdrucks auf seiner rechten Seite in die Variable oder das Feld auf seiner linken Seite.
 
-**Wichtig:** Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Solche Fehler sind für den Compiler oft schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
+**Wichtig:** Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
 
 ## Variablen
 
@@ -51,7 +51,7 @@ Der Code liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese 
 
 ## Commands
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch *4D Programmiersprache* beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -66,7 +66,7 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
+Über 4D Plug-Ins oder 4D Komponenten können Sie Ihre 4D Entwicklungsumgebung mit weiteren Befehlen ausbauen.
 
 Die 4D User Community oder 3rd-Party Entwickler bieten auf dem Markt viele Plug-Ins für spezifische Bereiche an. Es gibt zum Beispiel das [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) auf macOS:
 
@@ -74,7 +74,7 @@ Die 4D User Community oder 3rd-Party Entwickler bieten auf dem Markt viele Plug-
 PDF REMOVE PAGE(path;page)
 ```
 
-4D SVG is an example of a utility component extending the capabilities of your application:
+4D SVG ist ein Beispiel für eine Utility-Komponente, welche die Funktionsweise Ihrer Anwendung erweitert:
 
 ```4d
 //drawing a picture
@@ -82,11 +82,11 @@ svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
 
-4D SVG is included in 4D.
+4D SVG ist in 4D enthalten.
 
-## Constants
+## Konstanten
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
+4D bietet einen umfangreichen Satz vordefinierter Konstanten, deren Werte per Name zugänglich sind. Zum Beispiel ist `Read Mode` eine Konstante (Wert 2). Vordefinierte Konstanten erscheinen im Methodeneditor standardmäßig unterstrichen. Das sorgt für leichter lesbaren Code.
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
@@ -94,17 +94,17 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 ## Methods
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
+4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
+Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. A statement performs an action, and may be simple or complex.
 
-For example, the following line is a statement that will display a confirmation dialog box:
+Zum Beispiel ist die folgende Zeile eine Anweisung, die ein Dialogfenster zum Bestätigen anzeigt:
 
 ```4d
 CONFIRM("Do you really want to close this account?";"Yes";"No")
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+Eine Methode enthält auch Abfragen und Schleifen, die den Ablauf der Ausführung steuern. 4D Methoden unterstützen die Abfragen `If...Else...End if` und `Case of...Else...End case` sowie die Schleifen `While...End while`, `Repeat...Until`, `For...End for` und `For each...End for each`:
 
 Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 
@@ -117,7 +117,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Eine Methode kann einen einzelnen Wert im Parameter $0 zurückgeben. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
 
 ```4d
 $myText:="hello"
@@ -130,31 +130,31 @@ $0:=Uppercase($1)
 
 ## Data Types
 
-In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
+In der Programmiersprache werden die verschiedenen Arten von Daten zum Bearbeiten als Datentypen bezeichnet. Es gibt grundlegende Datentypen (String, numerisch, Datum, Zeit, Boolean, Bild, Zeiger, Arrays) und zusammengesetzte Datentypen (BLOBs, Objekte, Collections).
 
-Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.
+Beachten Sie, dass sich die Datentypen String und numerisch mehr als einem Datenfeldtyp zuweisen lassen. Werden Daten in ein Feld gesetzt, konvertiert die Sprache die Daten automatisch in den korrekten Typ für das Feld. So werden zum Beispiel bei einem Feld vom Typ Ganzzahl die Daten automatisch als numerisch behandelt. Das bedeutet, Sie müssen sich keine Gedanken beim Mischen ähnlicher Datenfeldtypen machen; den das verwaltet die Programmiersprache für Sie.
 
-However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
+Es ist jedoch wichtig, dass Sie nicht unterschiedliche Datentypen miteinander mischen. So macht es keinen Sinn, "ABC" in einem Feld oder einer Variablen vom Typ Datum zu speichern. In den meisten Fällen ist 4D sehr tolerant und versucht, das was Sie tun, sinnvoll zu machen. Fügen Sie zum Beispiel einem Datum eine Zahl hinzu, nimmt 4D an, dass Sie dem Datum diese Anzahl Tage hinzufügen wollen. Versuchen Sie dagegen, einem Datum einen String hinzuzufügen, sagt Ihnen 4D, dass das nicht funktionieren kann.
 
-There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
+In manchen Fällen müssen Sie Daten als einen Typ speichern und als anderen Typ verwenden. Die Programmiersprache enthält eine ganze Reihe von Befehlen, mit denen Sie einen Datentyp in einen anderen konvertieren können. Sie müssen zum Beispiel eine Artikelnummer erstellen, die mit einer Zahl beginnt und mit Zeichen wie "abc" endet. In diesem Fall schreiben Sie:
 
 ```4d
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+Ist *Number* 17, dann erhält *[Products]Part Number* den String "17abc".
 
-The data types are fully defined in the section [Data Types](Concepts/data-types.md).
+Die komplette Übersicht der Datentypen finden Sie im Abschnitt [Datentypen](Concepts/data-types.md).
 
-## Objects and collections
+## Objekte und Collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. Beispiel:
+Sie können Objekte und Collections der 4D Programmiersprache mit der Objektnotation verwalten, um ihre Werte zu erhalten oder zu setzen. Beispiel:
 
 ```4d
 employee.name:="Smith"
 ```
 
-You can also use a string within square brackets, for example:
+Sie können auch ein String in eckigen Klammern verwenden, zum Beispiel:
 
 ```4d
 $vName:=employee["name"]
@@ -166,14 +166,14 @@ Since an object property value can be an object or a collection, object notation
 $vAge:=employee.children[2].age
 ```
 
-Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
+Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftnamen Klammern () anfügen, um die Methode auszuführen:
 
     $f:=New object
     $f.message:=New formula(ALERT("Hello world!"))
     $f.message() //displays "Hello world!"
     
 
-To access a collection element, you have to pass the element number embedded in square brackets:
+Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
 ```4d
 C_COLLECTION(myColl)
@@ -181,78 +181,78 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Operators
+## Operatoren
 
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
+In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil wollen. Es ist eher so, dass Sie etwas für oder mit diesen Daten durchführen wollen. Dafür verwenden Sie Operatoren. Operatoren führen in der Regel mit 2 Teilen von Daten eine Operation aus, die ein neues Datenteil ergeben. Sie kennen bereits viele Operatoren. Zum Beispiel verwendet 1 + 2 den Operator für Addition (oder Pluszeichen), um zwei Zahlen zusammenzählen. Das Ergebnis ist 3. Diese Übersicht zeigt die gängigen numerischen Operatoren:
 
-| Operator | Operation      | Beispiel           |
-| -------- | -------------- | ------------------ |
-| +        | Addition       | 1 + 2 results in 3 |
-| –        | Subtraction    | 3 – 2 results in 1 |
-| *        | Multiplication | 2 * 3 results in 6 |
-| /        | Division       | 6 / 2 results in 3 |
-
-
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
-
-The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
-
-| Data Type       | Operation     | Beispiel                                                                                             |
-| --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
-| String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
-| Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+| Operator | Operation      | Beispiel       |
+| -------- | -------------- | -------------- |
+| +        | Addition       | 1 + 2 ergibt 3 |
+| –        | Subtraction    | 3 - 2 ergibt 1 |
+| *        | Multiplication | 2 * 3 ergibt 6 |
+| /        | Division       | 6 / 2 ergibt 3 |
 
 
-The operators are fully defined in the chapter Operators and its subsections.
+Numerische Operatoren sind ein Typ der verfügbaren Operatoren. 4D unterstützt viele verschiedene Datentypen, wie Zahlen, Text, Datum und Bilder. So gibt es auch Operatoren, um Operationen mit den verschiedenen Datentypen auszuführen.
 
-## Expressions
+Je nach Datentyp werden die gleichen Symbole oft für verschiedene Operationen verwendet. Zum Beispiel führt das Pluszeichen (+) je nach Datentyp unterschiedliche Operationen aus:
 
-Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
-
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
-
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
-
-- Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
-- Quick Report editor as a formula for a column
-
-### Expression types
-
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
-
-| Expression               | Type               | Description                                                                                                                                                                     |
-| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
-| !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Time               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Time               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Boolean            | This command returns the Boolean value TRUE.                                                                                                                                    |
-| 10 # 20                  | Boolean            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Boolean            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Picture            | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Pointer            | This expression returns a pointer to the field called [People]Name.                                                                                                             |
-| Table (1)                | Pointer            | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Object             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+| Datentyp       | Operation      | Beispiel                                                                                        |
+| -------------- | -------------- | ----------------------------------------------------------------------------------------------- |
+| Number         | Addition       | 1 + 2 addiert die Zahlen und ergibt 3                                                           |
+| String         | Concatenation  | "Hello " + "there" verbindet bzw. setzt die Strings zusammen und ergibt "Hello there"           |
+| Datum und Zahl | Datumsaddition | !1989-01-01! + 20 addiert 20 Tage zum Datum 1. Januar 1989 und ergibt das Datum 21. Januar 1989 |
 
 
-### Assignable vs non-assignable expressions
+Weitere Informationen dazu finden Sie im Kapitel Operatoren.
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. Beispiel:
+## Ausdrücke
+
+Ausdrücke werden gesetzt und geben einen Wert zurück. Tatsächlich verwenden Sie in der 4D Programmiersprache andauernd Ausdrücke und betrachten sie eher als den Wert, den sie darstellen. Ausdrücke werden manchmal auch als Formeln bezeichnet.
+
+Ausdrücke setzen sich aus fast allen anderen Teilen der Programmiersprache zusammen: Befehle, Operatoren, Variablen, Felder, Objekteigenschaften und Elemente von Collections. Mit Ausdrücken erstellen Sie Anweisungen (Code-Zeilen), die sie dann zum Erstellen von Methoden verwenden. Die Programmiersprache verwendet Ausdrücke überall, wo sie einen Teil von Daten braucht.
+
+Ausdrücke sind selten eigenständig. Es gibt jedoch einige Stellen in 4D, wo sich ein Ausdruck allein verwenden lässt. Das gilt für:
+
+- Formulareditor (Formel anwenden, Suche mit Formel, Sortiere nach Formel)
+- Befehl `EXECUTE FORMULA`
+- Eigenschaftenliste, wo ein Ausdruck als Datenquelle für die meisten der Widgets dient
+- Debugger, wo sich der Wert des Ausdrucks prüfen lässt
+- Schnellberichteditor als Formel für eine Spalte
+
+### Ausdruckstypen
+
+Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es gibt folgende Typen. Die folgende Übersicht zeigt Beispiele für die verschiedenen Ausdruckstypen.
+
+| Expression               | Type               | Description                                                                                                                                                                        |
+| ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String             | Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.                                                                                                |
+| “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                            |
+| “Mr. ” + [People]Name    | String             | Zwei Strings werden zusammengefügt: der String "Mr. ” und der aktuelle Wert des Feldes Name in der Tabelle People. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück. |
+| Uppercase("smith")       | String             | Dieser Ausdruck verwendet den 4D Befehl `Uppercase`, um den String “smith” in Großbuchstaben umzuwandeln. Er gibt “SMITH” zurück.                                                  |
+| 4                        | Number             | Dies ist die numerische Konstante 4.                                                                                                                                               |
+| 4 * 2                    | Number             | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                        |
+| myButton                 | Number             | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.                     |
+| !1997-01-25!             | Date               | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                            |
+| Current date+ 30         | Date               | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
+| ?8:05:30?                | Time               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |
+| ?2:03:04? + ?1:02:03?    | Time               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                        |
+| True                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                                   |
+| 10 # 20                  | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Zahlen. Das Nummernzeichen (#) bedeutet "ist ungleich zu". Da 10 "ungleich zu" 20 ist, gibt der Ausdruck TRUE zurück.               |
+| “ABC” = “XYZ”            | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Strings. Sie sind ungleich, also gibt der Ausdruck FALSE zurück.                                                                    |
+| My Picture + 50          | Picture            | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                          |
+| ->[People]Name           | Pointer            | Dieser Ausdruck gibt einen Zeiger auf das Feld [People]Name zurück.                                                                                                                |
+| Table (1)                | Pointer            | Dies ist ein Befehl, der einen Zeiger auf die erste Tabelle zurückgibt.                                                                                                            |
+| JSON Parse (MyString)    | Object             | Dies ist ein Befehl, der MyString als ein Objekt zurückgibt (bei geeignetem Format)                                                                                                |
+| JSON Parse (MyJSONArray) | Collection         | Dies ist ein Befehl, der MyJSONArray als eine Collection zurückgibt (bei geeignetem Format)                                                                                        |
+| Form.pageNumber          | Objekteigenschaft  | Eine Objekteigenschaft ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |
+| Col[5]                   | Collection Element | Ein Collection Element ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |
+| $entitySel[0]            | Entity             | Ein Element einer ORDA Entity-Selection ist ein Ausdruck vom Typ Entity. Diese Art Ausdruck ist **nicht-zuweisbar**                                                                |
+
+
+### Zuweisbare und nicht-zuweisbare Ausdrücke
+
+Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String "Hello", oder eine Variable wie `$myButton`. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. Diese Ausdrücke sind in allen Fällen **nicht-zuweisbar**, d.h. Sie können ihnen keinen Wert zuweisen. In 4D können Ausdrücke **zuweisbar** sein. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:
 
 ```4d
 //$myVar variable is assignable, you can write:  
@@ -263,13 +263,13 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
 
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+Im allgemeinen sind Ausdrücke mit Operator nicht-zuweisbar. Beispiel: `[Person]FirstName+" "+[Person]LastName` ist nicht zuweisbar.
 
 ## Pointers
 
-The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
+Die 4D Programmiersprache bietet eine fortschrittliche Implementierung von Zeigern zum Schreiben von leistungsfähigem und modularem Code. Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und Array Elemente verweisen.
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+Ein Zeiger wird mit dem Symbol "->" vor dem Elementnamen erstellt und durch das Symbol "->" nach dem Elementnamen wieder aufgelöst (dereferenziert).
 
 ```4d
 MyVar:="Hello"
@@ -277,20 +277,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
-## Comments
+## Kommentare
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Kommentare sind inaktive Zeilen von Code. Diese Zeilen werden nicht von der 4D Programmiersprache interpretiert und nicht ausgeführt, wenn der Code aufgerufen wird.
 
-There are two ways to create comments:
+Es gibt zwei Varianten zum Erstellen von Kommentaren:
 
-- `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `//` für einzeilige Kommentare
+- `/*...*/` für ein- oder mehrzeilige Kommentare.
 
-Both styles of comments can be used simultaneously.
+Beide Varianten lassen sich gleichzeitig verwenden.
 
-#### Single line comments (//)
+#### Einzeilige Kommentare (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Beispiel:
+Fügen Sie `//` am Beginn einer Zeile oder nach einer Anweisung hinzu. Beispiel:
 
 ```4d
 //This is a comment
@@ -301,19 +301,18 @@ For($vCounter;1;100) //Starting loop
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Ein- oder mehrzeilige Kommentare (/* */)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+Umklammern Sie den Inhalt mit `/*` ... `*/` Zeichen zum Erstellen von eingebundenen Kommentaren oder mehrzeiligen Kommentarblöcken. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Beispiel:
+- **Eingebundene Kommentare** können überall im Code eingefügt werden. Beispiel:
 
 ```4d
-For /* inline comment */ ($vCounter;1;100)
-    ...
+Für /* eingebundenen Kommentar */ ($vCounter;1;100)...
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Beispiel:
+- **Mehrzeilige Kommentarblöcke** können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
 
 ```4d
 For ($vCounter;1;100)
