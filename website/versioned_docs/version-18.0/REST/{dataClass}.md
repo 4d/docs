@@ -184,8 +184,6 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-For more information about the data returned, refer to [{dataClass}](dataClass.md).
-
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
