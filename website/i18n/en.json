@@ -343,12 +343,6 @@
       "Project/overview": {
         "title": "Overview"
       },
-      "Project/pictures": {
-        "title": "Pictures"
-      },
-      "REST/{dataClass}": {
-        "title": "{dataClass}"
-      },
       "REST/asArray": {
         "title": "$asArray"
       },
@@ -427,6 +421,9 @@
       "REST/configuration": {
         "title": "Server Configuration"
       },
+      "REST/{dataClass}": {
+        "title": "{dataClass}"
+      },
       "REST/genInfo": {
         "title": "Getting Server Information"
       },
@@ -444,6 +441,16 @@
       },
       "Users/overview": {
         "title": "Overview"
+      },
+      "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
+        "title": "List Box"
+      },
+      "version-18 R2 BETA-MSC/version-18R2_BETA-analysis": {
+        "title": "Activity analysis Page",
+        "sidebar_label": "Activity analysis Page"
+      },
+      "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
+        "title": "Pictures"
       },
       "version-18.0-Backup/backup": {
         "title": "Backup"
@@ -881,16 +888,6 @@
       },
       "version-18.0-Users/overview": {
         "title": "Overview"
-      },
-      "version-18R2_BETA-FormObjects/listboxOverview": {
-        "title": "List Box"
-      },
-      "version-18R2_BETA-MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
-      },
-      "version-18R2_BETA-Project/pictures": {
-        "title": "Pictures"
       }
     },
     "links": {},

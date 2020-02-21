@@ -61,7 +61,7 @@ Here is another example: you want to execute an action only when you click on an
 ```4d
   // atNames scrollable area object method
  Case of
-    :(Form event=On Load)
+    :(Form event code=On Load)
   // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
   // ...
@@ -70,20 +70,20 @@ Here is another example: you want to execute an action only when you click on an
   // Here you start with no selected element
        atNames{0}:="0"
  
-    :(Form event=On Unload)
+    :(Form event code=On Unload)
   // We no longer need the array
        CLEAR VARIABLE(atNames)
  
-    :(Form event=On Clicked)
+    :(Form event code=On Clicked)
        If(atNames#0)
           If(atNames#Num(atNames{0}))
              vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
              atNames{0}:=String(atNames)
           End if
        End if
-    :(Form event=On Double Clicked)
+    :(Form event code=On Double Clicked)
        If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
+          ALERT("You double clicked on: "+atNames{atNames})
        End if
  End case
 ```
