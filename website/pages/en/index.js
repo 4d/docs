@@ -36,7 +36,22 @@ class Index extends React.Component {
   render() {
     const {config: siteConfig, language = 'en'} = this.props;
     const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
+    var subContents={
+      languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
+      projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
+	  formEditor: <translate>Form Editor</translate>,
+	  formObjects: <translate>Form Objects</translate>,
+	  formObjectProperties: <translate>Form Object Properties</translate>,
+	  menus: <translate>Menus</translate>,
+	  webServer: <translate>Web Server</translate>,
+	  restServer: <translate>REST Server</translate>,
+	  msc: <translate>Maintenance and Security Center</translate>,
+	  backup: <translate>Backup and Restore</translate>,
+	  users: <translate>Users and Groups</translate>	  
+    };
 
+	
+	
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
@@ -46,14 +61,14 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[<translate>Language Concepts</translate>](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[<translate>Project databases</translate>](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
+                  content: `[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[<translate>Form Editor</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -61,7 +76,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[<translate>Web Server</translate>](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.${this.props.language}.html)<br>[<translate>REST Server</translate>](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
+                  content: `[${subContents.webServer}](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.${this.props.language}.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
@@ -83,7 +98,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Mobile application</translate>,
                 },
                 {
-                  content: `[<translate>Maintenance and Security Center</translate>](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>[<translate>Backup and Restore</translate>](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>[<translate>Users and Groups</translate>](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
+                  content: `[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>[${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>[${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
