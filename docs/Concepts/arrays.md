@@ -55,35 +55,24 @@ Unlike text or string variables, you cannot assign one array to another. To copy
 
 An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
 
-Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
+Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
 
 ```4d
-  // atNames scrollable area object method
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
     :(Form event code=On Load)
-  // Initialize the array (as shown further above)
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialize the element zero with the number
-  // of the current selected element in its string form
-  // Here you start with no selected element
-       atNames{0}:="0"
- 
-    :(Form event code=On Unload)
-  // We no longer need the array
-       CLEAR VARIABLE(atNames)
- 
-    :(Form event code=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event code=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames})
-       End if
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+		ARRAY TEXT(atName;5)
+		atName{0}:=Please select an item"
+		atName{1}:="Text1"
+		atName{2}:="Text2"
+		atName{3}:="Text3"
+		atName{4}:="Text4"
+		atName{5}:="Text5"
+	// Position the array to element 0
+  		atName:=0
  End case
 ```
  
