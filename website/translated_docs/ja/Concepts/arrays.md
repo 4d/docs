@@ -1,37 +1,37 @@
 ---
 id: arrays
-title: Arrays
+title: 配列
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
+**配列** とは、同じタイプの **変数** を番号付きで並べたものです。 各変数は、配列の **要素** といいます。 配列のサイズとは、配列が持つ要素の数を指します。配列は作成時にサイズが与えられ、要素の追加・挿入・削除によって、または作成時に使用したコマンドの再使用によって、何度でもサイズを変更することができます。 配列要素には、1 から N の番号が付けられます (N は配列のサイズ)。 配列は必ず、特別な [要素ゼロ](#using-the-element-zero-of-an-array) を持ちます。 配列は 4D の変数です。 他の変数と同様、配列にもスコープがあり、4D ランゲージの規則に従いますが、他と異なるところがいくつかあります。
 
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
+> ほとんどの場合において、**配列** より **コレクション** の利用が推奨されます。 コレクションは配列より柔軟なだけでなく、たくさんの専用メソッドを持ちます。 詳細については、[コレクション](Concepts/dt_collection.md) を参照してください。
 
-## Creating Arrays
+## 配列の作成
 
-You create an array with one of the array declaration commands from the "Array" theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
+配列は、"配列" テーマの配列宣言コマンドのいずれかを使用して作成します。 配列宣言コマンドは、1次元または 2次元の配列の作成やサイズ変更をすることができます。 2次元配列の詳細については [2次元配列](#two-dimensional-arrays) を参照してください。
 
-The following line of code creates (declares) an Integer array of 10 elements:
+次のコードは、10個の要素からなる整数配列を作成 (宣言) します:
 
 ```4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
-Then, the following code resizes that same array to 20 elements:
+次のコードは、さきほど作成した配列を20要素にサイズ変更します:
 
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
-Then, the following code resizes that same array to no elements:
+次のコードは、この配列を要素なしにサイズ変更します:
 
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
-## Assigning values in arrays
+## 配列要素への値の代入
 
-You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:
+配列中の要素は中カッコ ({…}) を使用して参照します。 中カッコの中には数字を入れて特定の要素を指定します。この数字を要素番号といいます。 次のコードは、5つの名前を atNames という配列に入れ、それらを警告ウィンドウに表示します:
 
 ```4d
  ARRAY TEXT(atNames;5)
@@ -41,29 +41,29 @@ You reference the elements in an array by using curly braces ({…}). A number i
  atNames{4}:="Jane"
  atNames{5}:="John"
  For($vlElem;1;5)
-    ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
+    ALERT("要素番号 #"+String($vlElem)+" の値は "+atNames{$vlElem}+" です。")
  End for
 ```
 
-Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
+atNames{$vlElem} というシンタックスに注目してください。 atNames{3} のように数値リテラルを使うだけでなく、数値変数によって配列の要素番号を指定することができます。 ループ構造による反復を使用すると (`For...End for`, `Repeat...Until` または `While...End while`)、短いコードで配列の全要素、または一部の要素を対象とした処理をおこなうことができます。
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.
+**重要:** 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 代入と比較は、まったく異なった性質の処理です。
 
-### Assigning an array to another array
+### 配列への配列の代入
 
-Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
+文字列やテキスト変数と違って、配列に配列を代入することはできません。 配列をそっくりそのまま別の配列にコピーするには `COPY ARRAY` コマンドを使います。
 
-## Using the element zero of an array
+## 配列の要素ゼロ
 
-An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
+配列は必ず、要素ゼロを持ちます。 ドロップダウンメニューなどのフォームオブジェクトに配列が設定されていた場合、要素ゼロが表示されることはありませんが、ランゲージでの使用に制限はありません (*)。
 
-Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
+たとえば、現在選択中の要素以外をクリックした場合にのみ、特定の動作をさせたいとします。 そのためには、選択されている要素を記憶しておく必要があります。 これを実現するひとつの方法は、選択された要素の要素番号を保持するプロセス変数を使用することです。 もうひとつの方法は、次のように配列の要素ゼロを使用する方法です:
 
 ```4d
-  // atNames scrollable area object method
+  // ドロップダウンメニューなどのオブジェクトメソッド
  Case of
     :(Form event=On Load)
-  // Initialize the array (as shown further above)
+  // 配列を初期化します
        ARRAY TEXT(atNames;5)
   // ...
   // Initialize the element zero with the number
@@ -89,7 +89,7 @@ Here is another example: you want to execute an action only when you click on an
  End case
 ```
 
-(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
+(*) ひとつだけ例外があります。配列タイプのリストボックスでは、編集中の元の値を保持するため、内部的に配列の要素ゼロが使用されます。この特別なケースでは、開発者は 0番目の要素を使用できません。
 
 ## Two-dimensional Arrays
 
