@@ -88,7 +88,7 @@ Le nom d’une variable locale commence toujours par le signe dollar ($) et peut
 
 Lorsque vous développez une base comportant de nombreuses méthodes et variables, il arrive souvent que vous n’ayez besoin d’utiliser une variable que dans une méthode. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
 
-Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. La commande Demander peut être appelée pour obtenir ces informations. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne. Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
+Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne. Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")
