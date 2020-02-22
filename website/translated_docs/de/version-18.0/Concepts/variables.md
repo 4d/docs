@@ -37,7 +37,7 @@ Once created, you can use a variable wherever you need it in your database. For 
 The following are some basic variable declarations:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+<br /> C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
  C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
  C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
@@ -89,7 +89,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in a database, small pieces of information are needed from the user. The command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
+Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
