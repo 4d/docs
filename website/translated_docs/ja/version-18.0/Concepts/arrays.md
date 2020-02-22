@@ -61,10 +61,10 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 たとえば、現在選択中の要素以外をクリックした場合にのみ、特定の動作をさせたいとします。 そのためには、選択されている要素を記憶しておく必要があります。 これを実現するひとつの方法は、選択された要素の要素番号を保持するプロセス変数を使用することです。 もうひとつの方法は、次のように配列の要素ゼロを使用する方法です:
 
 ```4d
-  // ドロップダウンメニューなどのオブジェクトメソッド
+  // atNames scrollable area object method
  Case of
-    :(Form event=On Load)
-  // 配列を初期化します
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
   // ...
   // Initialize the element zero with the number
@@ -72,20 +72,20 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
   // Here you start with no selected element
        atNames{0}:="0"
 
-    :(Form event=On Unload)
+    :(Form event code=On Unload)
   // We no longer need the array
        CLEAR VARIABLE(atNames)
 
-    :(Form event=On Clicked)
+    :(Form event code=On Clicked)
        If(atNames#0)
           If(atNames#Num(atNames{0}))
              vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
              atNames{0}:=String(atNames)
           End if
        End if
-    :(Form event=On Double Clicked)
+    :(Form event code=On Double Clicked)
        If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
+          ALERT("You double clicked on: "+atNames{atNames})
        End if
  End case
 ```
