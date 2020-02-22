@@ -57,35 +57,24 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 
 配列は必ず、要素ゼロを持ちます。 ドロップダウンメニューなどのフォームオブジェクトに配列が設定されていた場合、要素ゼロが表示されることはありませんが、ランゲージでの使用に制限はありません (*)。
 
-たとえば、現在選択中の要素以外をクリックした場合にのみ、特定の動作をさせたいとします。 そのためには、選択されている要素を記憶しておく必要があります。 これを実現するひとつの方法は、選択された要素の要素番号を保持するプロセス変数を使用することです。 もうひとつの方法は、次のように配列の要素ゼロを使用する方法です:
+Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
 
 ```4d
-  // ドロップダウンメニューなどのオブジェクトメソッド
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
-    :(Form event=On Load)
-  // 配列を初期化します
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialize the element zero with the number
-  // of the current selected element in its string form
-  // Here you start with no selected element
-       atNames{0}:="0"
-
-    :(Form event=On Unload)
-  // We no longer need the array
-       CLEAR VARIABLE(atNames)
-
-    :(Form event=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
-       End if
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+        ARRAY TEXT(atName;5)
+        atName{0}:=Please select an item"
+        atName{1}:="Text1"
+        atName{2}:="Text2"
+        atName{3}:="Text3"
+        atName{4}:="Text4"
+        atName{5}:="Text5"
+    // Position the array to element 0
+        atName:=0
  End case
 ```
 
