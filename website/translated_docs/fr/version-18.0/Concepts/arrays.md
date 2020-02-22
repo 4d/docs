@@ -61,31 +61,31 @@ Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas a
 Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous cliquez sur un élément autre que l'élément préalablement sélectionné. Pour cela, vous devez garder la trace de chaque élément sélectionné. Une façon de le faire est d'utiliser une variable process dans laquelle vous conservez le numéro de l'élément sélectionné. Une autre manière consiste à utiliser l'élément zéro du tableau :
 
 ```4d
-  // Méthode objet zone de défilement atNoms
+  // atNames scrollable area object method
  Case of
-   :(Form event=On Load)
-   //Initialisons le tableau (comme indiqué ci-dessous)
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
   // ...
-  // Initialiser l'élément zéro avec le numéro
-  // de l'élément courant sélectionné sous sa forme alphanumérique
-  // Ici vous commencez sans élément sélectionné
+  // Initialize the element zero with the number
+  // of the current selected element in its string form
+  // Here you start with no selected element
        atNames{0}:="0"
- 
-    :(Form event=On Unload)
-  // Nous n'avons plus besoin du tableau
+
+    :(Form event code=On Unload)
+  // We no longer need the array
        CLEAR VARIABLE(atNames)
- 
-    :(Form event=On Clicked)
+
+    :(Form event code=On Clicked)
        If(atNames#0)
           If(atNames#Num(atNames{0}))
              vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
              atNames{0}:=String(atNames)
           End if
        End if
-    :(Form event=On Double Clicked)
+    :(Form event code=On Double Clicked)
        If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
+          ALERT("You double clicked on: "+atNames{atNames})
        End if
  End case
 ```
