@@ -108,7 +108,7 @@ Three font themes are available:
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 
 
