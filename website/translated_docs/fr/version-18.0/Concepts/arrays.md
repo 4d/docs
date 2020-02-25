@@ -107,8 +107,8 @@ Dans l'exemple prédédent :
 - atTopics est un tableau à deux dimensions
 - atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne
 - atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension
-- (atTopics) retourne 100, qui est le nombre de lignes
-- (atTopics{17}) retourne 50, qui est le nombre de colonnes de la 17e ligne
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
