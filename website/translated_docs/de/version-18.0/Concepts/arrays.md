@@ -107,8 +107,8 @@ Im oben angezeigten Beispiel gilt:
 - atTopics ist ein zweidimensionales Array
 - atTopics{8}{5} ist das 5. Element (5. Spalte...) der 8. Reihe
 - atTopics{20} ist die 20. Reihe und selbst ein eindimensionales Array
-- (atTopics) gibt 100 zurück, das ist die Anzahl der Reihen
-- (atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
