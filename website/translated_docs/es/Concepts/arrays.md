@@ -85,7 +85,7 @@ Here is another example: you want to initialize a form object with a text value 
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Two-dimensional arrays are essentially language objects; you can neither display nor print them.
@@ -95,8 +95,8 @@ In the previous example:
 - atTopics is a two-dimensional array
 - atTopics{8}{5} is the 5th element (5th column...) of the 8th row
 - atTopics{20} is the 20th row and is itself a one-dimensional array
-- (atTopics) returns 100, which is the number of rows
-- (atTopics{17}) returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
 
