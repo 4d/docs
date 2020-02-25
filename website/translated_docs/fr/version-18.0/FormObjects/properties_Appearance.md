@@ -84,11 +84,11 @@ An interface tool allowing the user to move the viewing area to the left or righ
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automatic           | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -106,7 +106,7 @@ Available values:
 
 #### See also
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barre de défilement verticale](#vertical-scroll-bar)
 
 * * *
 
@@ -180,7 +180,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 * * *
 
-## Show headers
+## Montrer les entêtes
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
@@ -197,9 +197,9 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 * * *
 
-## Show hidden characters
+## Montrer les caractères cachés
 
-Displays/hides invisible characters
+Affiche/masque les caractères visibles
 
 #### Grammaire JSON
 
@@ -214,7 +214,7 @@ Displays/hides invisible characters
 
 * * *
 
-## Show horizontal ruler
+## Montrer la règle horizontale
 
 Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
 
@@ -231,7 +231,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 * * *
 
-## Show HTML WYSYWIG
+## Montrer HTML WYSYWIG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -355,11 +355,11 @@ An interface tool allowing the user to move the viewing area up and down.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automatic           | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -379,7 +379,7 @@ Available values:
 
 #### See also
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barre de défilement horizontale](#horizontal-scroll-bar)
 
 * * *
 
@@ -398,7 +398,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- layoutMode|text|"page", "draft", "embedded"| 
+ layoutMode|texte|"page", "draft", "embedded"| 
 
 #### Objets pris en charge
 
@@ -415,7 +415,7 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- zoom|number|minimum = 0 | 
+ zoom|numérique|minimum = 0 | 
 
 #### Objets pris en charge
 
