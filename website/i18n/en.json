@@ -441,6 +441,9 @@
       },
       "Users/overview": {
         "title": "Overview"
+      },
+      "WebServer/webServerOverview": {
+        "title": "Web Server object"
       }
     },
     "links": {},
