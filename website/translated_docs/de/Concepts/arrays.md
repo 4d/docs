@@ -85,7 +85,7 @@ Here is another example: you want to initialize a form object with a text value 
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
@@ -95,8 +95,8 @@ Im oben angezeigten Beispiel gilt:
 - atTopics ist ein zweidimensionales Array
 - atTopics{8}{5} ist das 5. Element (5. Spalte...) der 8. Reihe
 - atTopics{20} ist die 20. Reihe und selbst ein eindimensionales Array
-- (atTopics) gibt 100 zurück, das ist die Anzahl der Reihen
-- (atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
