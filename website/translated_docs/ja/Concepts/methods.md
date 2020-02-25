@@ -1,20 +1,20 @@
 ---
 id: methods
-title: Methods
+title: メソッド
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+メソッドとは、1つ以上の動作を実行するコードのことです。 4D ランゲージにおいて、2種類のメソッドが存在します:
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
+- **ビルトインメソッド:** 4D またはサードパーティーによって提供されるもので、これらをコード内で利用することができます。 ビルトインメソッドには次のものが含まれます:
     
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
-    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - 4D API のコマンドや関数 (`ALERT` や `Current date` など)
+    - ネイティブオブジェクトやコレクションに付属しているメンバーメソッド (`collection.orderBy()` や `entity.save()` など)
+    - 4D やサードパーティーによって提供されるプラグインやコンポーネントのコマンド (`SVG_New_arc` など)
     
-    Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
+    ビルトインメソッドの詳細については、* 4D ランゲージリファレンス* マニュアルや、プラグイン・コンポーネントの専用マニュアルを参照ください。
 
-- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. ステートメントは単純な場合もあれば、複雑な場合もあります。 Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
+- **プロジェクトメソッド:** 任意の動作の実行するためにデベロッパー自身が作成するコードのことです。 作成されたプロジェクトメソッドは、そのデータベースの中でランゲージの一部となります。 プロジェクトメソッドは、ステートメントで構成されます。ステートメントとは、メソッドの 1行のことで 1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。 各ステートメントは常に 1行ですが最大 32,000文字まで使用することができます。 The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
 
 **Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
 
