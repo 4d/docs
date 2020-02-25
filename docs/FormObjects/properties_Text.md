@@ -156,8 +156,6 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 ---
 ## Font Size
 
-> This property is only available when no [font theme](#font-theme) is selected. 
-
 Allows defining the object's font size in points. 
 
 #### JSON Grammar
