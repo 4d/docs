@@ -39,7 +39,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ## Picture operators
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
+| Operation                 | Syntax                 | Ergibt  | Action                                                                                                                                                             |
 | ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
 | Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
