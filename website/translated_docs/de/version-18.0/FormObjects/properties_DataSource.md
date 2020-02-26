@@ -28,7 +28,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 | Name               | Datentyp | Possible Values |
 | ------------------ | -------- | --------------- |
-| automaticInsertion | boolean  | true, false     |
+| automaticInsertion | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -153,7 +153,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 * * *
 
-## Expression
+## Ausdruck
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
