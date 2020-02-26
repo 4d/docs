@@ -95,8 +95,8 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 - atTopics は、2次元配列です。
 - atTopics{8}{5} は、8行5列目の要素です。
 - atTopics{20} は 20行目を指し、それ自体が 1次元の配列です。
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` は、行数の 100を返します。
+- `Size of array(atTopics{17})` は、17行目の列数である50を返します。
 
 以下の例では、データベースの各テーブルの各フィールドへのポインターが 2次元配列に格納されます:
 
