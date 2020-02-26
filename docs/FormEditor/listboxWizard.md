@@ -16,20 +16,20 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 1.	In the Form editor toolbar, click on the List box builder icon:
  
-	![](../assets/en/FormEditor/listboxBuilderIcon.png)
+	![](assets/en/FormEditor/listboxBuilderIcon.png)
 	
 	The List box builder is displayed:
 	
 
-	![](../assets/en/FormEditor/listboxBuilder.png)
+	![](assets/en/FormEditor/listboxBuilder.png)
 	
 2.	Select a table from the Table dropdown list:
 
-	![](../assets/en/FormEditor/listboxBuilderTable.png)
+	![](assets/en/FormEditor/listboxBuilderTable.png)
 	
 3.	Select the fields for the list box in the Fields area:
 
-	![](../assets/en/FormEditor/listboxBuilderFields.png)
+	![](assets/en/FormEditor/listboxBuilderFields.png)
 	
 	By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
 	
@@ -37,7 +37,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 4.	The expression to fill the list box's rows from the entity selection is prefilled:
 
-	![](../assets/en/FormEditor/listboxBuilderExpression.png)
+	![](assets/en/FormEditor/listboxBuilderExpression.png)
 	
 	
 	This expression can be changed if necessary (e.g., linking entity selection tables)
@@ -46,8 +46,8 @@ The List box builder lets you create and fill entity selection list boxes in a f
 	
 5.	Click the the **Build widget** button to create the list box.
 
-	![](../assets/en/FormEditor/listboxBuilderBuild.png)
+	![](assets/en/FormEditor/listboxBuilderBuild.png)
 	
 The list box:
 
-![](../assets/en/FormEditor/listboxBuilderListbox.png)
+![](assets/en/FormEditor/listboxBuilderListbox.png)
