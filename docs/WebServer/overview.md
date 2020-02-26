@@ -5,7 +5,7 @@ title: Web Server object
 
 ## Overview
 
-A 4D application can start and monitor a web server related to the main (host) database, and also another web server related to each hosted component.
+A 4D application can start and monitor a web server for the main (host) database, and also a web server for each hosted component.
 
 It means that, if you installed for example two components in your host database, you will be able to start and monitor up to 3 independant web servers from your application:
 
@@ -24,13 +24,19 @@ This feature allows you to develop independant components and features that come
 
 ## Instantiating a Web Server object
 
-To instantiate a web server object from the current database, just call the `WEB Server` command:
+The Web server object of the host database (default Web server) is automatically loaded by 4D at startup. Thus, if you write in a fresh new database:
+
+```4d
+$nbSrv:=WEB Server list.length //$nbSrv=1
+```
+
+To instantiate a web server object, call the `WEB Server` command:
 
 ```4d
 C_OBJECT(webServer)
-	//call the current web server
+	//call the web server from the current context
 webServer:=WEB Server  
-	//equivalent to:
+	//equivalent to
 webServer:=WEB Server(Web server database)
 ```
 
@@ -104,7 +110,7 @@ A web server object contains the following properties.
 |perfectForwardSecrecy|boolean|PFS availability on the server|true/false|
 |rootFolder|text|Pathname of Web server root folder|Posix or system syntax|
 |sessionCookieDomain|text|"domain" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.|text|
-|sessionCookieName|text|Name of the cookie used for storing the session ID|Default = "4DSID"|x|
+|sessionCookieName|text|Name of the cookie used for storing the session ID|Default = "4DSID"|
 |sessionCookiePath|text|"path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.|text|
 |sessionIPAddressValidation|boolean|IP address validation for session cookies. For security reasons, by default the Web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application|true (default)/false|
 
