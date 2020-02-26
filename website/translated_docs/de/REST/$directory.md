@@ -23,7 +23,7 @@ Returns information about the current user
 
 By calling `$directory/currentUser` after a user has logged in, you can retrieve the following information:
 
-| Property | Type   | Description                                |
+| Property | Typ    | Description                                |
 | -------- | ------ | ------------------------------------------ |
 | userName | String | Username used to log into the application. |
 | fullName | String | Full name of the user.                     |
