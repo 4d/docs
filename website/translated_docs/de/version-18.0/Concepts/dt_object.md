@@ -12,7 +12,7 @@ Variables, fields or expressions of the Object type can contain various types of
     
     - number (Real, Integer, etc.)
     - text
-    - null
+    - Null
     - Boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
@@ -68,7 +68,7 @@ Beispiel:
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+Beispiele:
 
 ```4d
      $vName:=employee["name"]
@@ -86,7 +86,7 @@ Since an object property value can be an object or a collection, object notation
 
 Object notation is available on any language element that can contains or returns an object, i.e:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Beispiele:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
