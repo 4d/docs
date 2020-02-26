@@ -6,7 +6,7 @@ original_id: propertiesObject
 
 * * *
 
-## Type
+## Typ
 
 `MANDATORY SETTING`
 
@@ -273,7 +273,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     | Minimum               | X   |      | X    | X    | X    |      | Same as column type |
                     | Maximum               | X   |      | X    | X    | X    |      | Same as column type |
                     | Sum                   | X   |      | X    |      | X    |      | Same as column type |
-                    | Count                 | X   | X    | X    | X    | X    | X    | Longint             |
+                    | Count                 | X   | X    | X    | X    | X    | X    | Lange Ganzzahl      |
                     | Average               | X   |      |      | X    |      |      | Real                |
                     | Standard deviation(*) | X   |      |      | X    |      |      | Real                |
                     | Variance(*)           | X   |      |      | X    |      |      | Real                |
