@@ -1,41 +1,41 @@
 ---
 id: version-18.0-parameters
-title: Parameters
+title: 引数
 original_id: parameters
 ---
 
 
-## Using parameters
+## 引数について
 
-You'll often find that you need to pass data to your methods. This is easily done with parameters.
+メソッドにデータを渡す必要がしばしば発生します。 これは引数によって容易にできます。
 
-**Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**引数** (または **パラメーター**) は、メソッドが処理に必要とするデータのことです。 *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
 
 ```4d
 ALERT("Hello")
 ```
 
-Parameters are passed to methods in the same way. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
+メソッドに引数を渡す場合も同様におこないます。 たとえば、メソッド DO SOMETHING が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
 
-The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に評価されます。
 
-In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. The numbering of the local variables represents the order of the parameters.
+サブルーチン (呼び出されるメソッド) 内で、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます。 ローカル変数の番号は、引数の順序を表わします。
 
 ```4d
-  //Code of the method DO SOMETHING
-  //Assuming all parameters are of the text type
+  // DO SOMETHING メソッド
+  // すべての引数がテキスト型とします
  C_TEXT($1;$2;$3)
  ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the WithThis parameter
-  //$2 contains the AndThat parameter
-  //$3 contains the ThisWay parameter
+  // $1 には WithThis 引数が入ります
+  // $2 には AndThat 引数が入ります
+  // $3 には ThisWay 引数が入ります
 ```
 
-Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドを使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
