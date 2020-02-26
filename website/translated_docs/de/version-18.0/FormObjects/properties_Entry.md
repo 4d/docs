@@ -16,7 +16,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Name       | Datentyp | Possible Values |
 | ---------- | -------- | --------------- |
-| spellcheck | boolean  | true, false     |
+| spellcheck | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -64,7 +64,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Name      | Datentyp | Possible Values |
 | --------- | -------- | --------------- |
-| enterable | boolean  | true, false     |
+| enterable | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -154,7 +154,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Name      | Datentyp | Possible Values |
         | --------- | -------- | --------------- |
-        | focusable | boolean  | true, false     |
+        | focusable | Boolean  | true, false     |
 
         
         #### Objects Supported
@@ -264,7 +264,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Name          | Datentyp | Possible Values |
         | ------------- | -------- | --------------- |
-        | showSelection | boolean  | true, false     |
+        | showSelection | Boolean  | true, false     |
 
         
         #### Objects Supported
@@ -307,7 +307,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 | Name            | Datentyp | Possible Values |
                 | --------------- | -------- | --------------- |
-                | singleClickEdit | boolean  | true, false     |
+                | singleClickEdit | Boolean  | true, false     |
 
                 
                 #### Objects Supported
