@@ -2,7 +2,7 @@
 id: version-18.0-encrypt
 title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
-original_id: Verschlüsseln
+original_id: encrypt
 ---
 
 Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln".
