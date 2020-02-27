@@ -2,7 +2,7 @@
 id: version-18.0-compact
 title: Seite Kompakt
 sidebar_label: Seite Kompakt
-original_id: Kompakt
+original_id: compact
 ---
 
 Auf dieser Seite können Sie die Funktionen zum Komprimieren der Datendatei verwenden.
