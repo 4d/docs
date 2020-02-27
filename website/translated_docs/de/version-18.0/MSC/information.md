@@ -2,7 +2,7 @@
 id: version-18.0-information
 title: Seite Information
 sidebar_label: Seite Information
-original_id: Information
+original_id: information
 ---
 
 Die Seite “Information” liefert Informationen über die 4D Umgebung und die Systemumgebung, die Dateien der Datenbank und der Anwendung. Über die Registerkarten am oberen Rand können Sie die einzelnen Seiten aufrufen.
@@ -18,7 +18,7 @@ Der mittlere Bereich gibt Name und Speicherort der Projektdatei und der Datendat
 
 - **"Licenses" Ordner** Diese Schaltfläche zeigt den Inhalt des aktiven Licenses Ordner in einem neuen Systemfenster an. Alle Lizenzdateien, die in Ihrer 4D Umgebung installiert sind, sind in diesem Ordner auf Ihrer Festplatte zusammengefasst. Beim Öffnen über einen Web Browser erscheinen die Informationen über die enthaltenen Lizenzen und ihre Merkmale. Der Speicherort des Ordners Licenses kann je nach Version Ihres Betriebssystems variieren. Weitere Informationen dazu finden Sie unter der 4D Funktion **Get 4D folder**. ```Get 4D folder``` command. ***Hinweis:** Sie können auf diesen Ordner auch zugreifen, wenn Sie im Menü Hilfe>Lizenz aktualisieren aufrufen.*</p></li> </ul> 
     
-    ## Tables
+    ## Tabellen
     
     Diese Seite gibt einen Überblick über die Tabellen in Ihrer Anwendung:
     
