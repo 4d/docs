@@ -1,7 +1,7 @@
 ---
 id: version-18.0-arrays
 title: Arrays
-original_id: Arrays
+original_id: arrays
 ---
 
 Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnummeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
@@ -175,15 +175,15 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | --------------- | ------------------------------------------------------------------- |
 | Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
 | Boolean         | (31+Anzahl der Elemente) / 8                                        |
-| Date            | (1+Anzahl der Elemente) * 6                                         |
+| Datum           | (1+Anzahl der Elemente) * 6                                         |
 | Zahl            | (1+Anzahl der Elemente) * 2                                         |
 | Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
-| Object          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
-| Picture         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
-| Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
-| Real            | (1+Anzahl der Elemente) * 8                                         |
+| Objekt          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
+| Bild            | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
+| Zeiger          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
+| Zahl            | (1+Anzahl der Elemente) * 8                                         |
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
-| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Zeit            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
 
