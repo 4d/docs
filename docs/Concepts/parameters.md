@@ -84,7 +84,15 @@ NewPhrase:=Uppercase4("This is good.")
 
 In this example, the variable *NewPhrase* gets “THIS is good.”
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, in the previous `DO SOMETHING` example, `$0` was first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
+
+```4d
+// Do_something
+$0:=Uppercase($1)
+ALERT($0)
+```
+
+In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
 
 
 ## Declaring parameters
