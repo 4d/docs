@@ -1,6 +1,7 @@
 ---
-id: propertiesReference
+id: version-18.0-propertiesReference
 title: JSON property list
+original_id: propertiesReference
 ---
 
 You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
@@ -12,7 +13,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 <table>
   <tr>
     <th>
-      Propriété
+      Property
     </th>
     
     <th>
@@ -20,7 +21,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </th>
     
     <th>
-      Valeurs possibles
+      Possible Values
     </th>
   </tr>
   
@@ -128,7 +129,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -156,7 +157,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      minimum : 0<a name="c"></a>
+      minimum: 0<a name="c"></a>
     </td>
   </tr>
   
@@ -322,7 +323,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -336,7 +337,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -350,7 +351,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   

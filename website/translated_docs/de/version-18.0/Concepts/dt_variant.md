@@ -9,7 +9,7 @@ Variant is a variable type which allows encapsulating data of any valid regular 
 A variant type variable can contain a value of the following data types:
 
 - BLOB
-- boolean
+- Boolean
 - collection
 - date
 - longint
@@ -19,8 +19,8 @@ A variant type variable can contain a value of the following data types:
 - real
 - text
 - time
-- null
-- undefined
+- Null
+- Undefiniert
 
 > Arrays cannot be stored in variant variables.
 

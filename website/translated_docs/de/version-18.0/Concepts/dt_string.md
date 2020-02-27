@@ -38,24 +38,24 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
+| Operation                | Syntax           | Ergibt  | Ausdruck                | Wert     |
 | ------------------------ | ---------------- | ------- | ----------------------- | -------- |
 | Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
 | Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
+| Equality                 | String = String  | Boolean | "abc" = "abc"           | Wahr     |
+|                          |                  |         | "abc" = "abd"           | Falsch   |
+| Inequality               | String # String  | Boolean | "abc" # "abd"           | Wahr     |
+|                          |                  |         | "abc" # "abc"           | Falsch   |
+| Greater than             | String > String  | Boolean | "abd" > "abc"           | Wahr     |
+|                          |                  |         | "abc" > "abc"           | Falsch   |
+| Less than                | String < String  | Boolean | "abc" < "abd"           | Wahr     |
+|                          |                  |         | "abc" < "abc"           | Falsch   |
+| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | Wahr     |
+|                          |                  |         | "abc" >= "abd"          | Falsch   |
+| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
+|                          |                  |         | "abd" <= "abc"          | Falsch   |
+| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
+|                          |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
 |                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
 
 

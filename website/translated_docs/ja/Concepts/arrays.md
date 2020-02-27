@@ -55,80 +55,69 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 
 ## 配列の要素ゼロ
 
-配列は必ず、要素ゼロを持ちます。 ドロップダウンメニューなどのフォームオブジェクトに配列が設定されていた場合、要素ゼロが表示されることはありませんが、ランゲージでの使用に制限はありません (*)。
+配列は必ず、要素ゼロを持ちます。 ドロップダウンリストなどのフォームオブジェクトに配列が設定されていた場合、要素ゼロが表示されることはありませんが、ランゲージでの利用に制限はありません (*)。
 
-たとえば、現在選択中の要素以外をクリックした場合にのみ、特定の動作をさせたいとします。 そのためには、選択されている要素を記憶しておく必要があります。 これを実現するひとつの方法は、選択された要素の要素番号を保持するプロセス変数を使用することです。 もうひとつの方法は、次のように配列の要素ゼロを使用する方法です:
+例として、デフォルト値を指定せずにフォームオブジェクトを初期化したいとします。 このような場合に配列の要素ゼロが利用できます:
 
 ```4d
-  // ドロップダウンメニューなどのオブジェクトメソッド
+  // atName 配列と紐づいているコンボボックスまたはドロップダウンリストの 
+  // フォームオブジェクトメソッドです
  Case of
-    :(Form event=On Load)
+    :(Form event code=On Load)
+  // 要素ゼロを含め
   // 配列を初期化します
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialize the element zero with the number
-  // of the current selected element in its string form
-  // Here you start with no selected element
-       atNames{0}:="0"
-
-    :(Form event=On Unload)
-  // We no longer need the array
-       CLEAR VARIABLE(atNames)
-
-    :(Form event=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
-       End if
+        ARRAY TEXT(atName;5)
+        atName{0}:=選択してください"
+        atName{1}:="Text1"
+        atName{2}:="Text2"
+        atName{3}:="Text3"
+        atName{4}:="Text4"
+        atName{5}:="Text5"
+    // 配列の選択要素を要素ゼロに設定します
+        atName:=0
  End case
 ```
 
-(*) ひとつだけ例外があります。配列タイプのリストボックスでは、編集中の元の値を保持するため、内部的に配列の要素ゼロが使用されます。この特別なケースでは、開発者は 0番目の要素を使用できません。
+(*) ひとつだけ例外があります。配列タイプのリストボックスでは、編集中の元の値を保持するため、内部的に配列の要素ゼロが使用されます。この特別なケースでは、開発者は 0番目の要素を利用できません。
 
-## Two-dimensional Arrays
+## 二次元配列
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. 例: 
+配列宣言コマンドはそれぞれ、1次元および 2次元の配列を作成、またはサイズ変更ができます。 例: 
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /> ARRAY TEXT(atTopics;100;50) // 100行と 50列からなるテキスト配列を作成します
 ```
 
-Two-dimensional arrays are essentially language objects; you can neither display nor print them.
+2次元配列は、本質的にはランゲージオブジェクトであり、表示や印刷することはできません。
 
-In the previous example:
+上のコードで作成した atTopics 配列について、次のことが言えます:
 
-- atTopics is a two-dimensional array
-- atTopics{8}{5} is the 5th element (5th column...) of the 8th row
-- atTopics{20} is the 20th row and is itself a one-dimensional array
-- (atTopics) returns 100, which is the number of rows
-- (atTopics{17}) returns 50, which the number of columns for the 17th row
+- atTopics は、2次元配列です。
+- atTopics{8}{5} は、8行5列目の要素です。
+- atTopics{20} は 20行目を指し、それ自体が 1次元の配列です。
+- `Size of array(atTopics)` は、行数の 100を返します。
+- `Size of array(atTopics{17})` は、17行目の列数である50を返します。
 
-In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
+以下の例では、データベースの各テーブルの各フィールドへのポインターが 2次元配列に格納されます:
 
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Create as many rows (empty and without columns) as there are tables
+  // テーブルと同じ数の空行 (つまり、列なし) を持つ配列作成します
  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
-  // For each table
+ ARRAY POINTER(<>apFields;$vlLastTable;0) // X行 0列の 2D配列
+  // テーブル毎に
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Get last field number($vlTable)
-  // Give value of elements
+  // 全フィールドをチェックします
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insert a column in a row of the table underway
+  // 当該テーブルの行にフィールドに対応する列を挿入していきます
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Assign the "cell" with the pointer
+  // 作成した "セル" にポインターを割り当てます
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -136,12 +125,12 @@ In the following example, a pointer to each field of each table in the database 
  End for
 ```
 
-Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:
+このように初期化された 2次元配列を使って、以下の方法で特定のテーブルが持つ全フィールドへのポインターを取得できます:
 
 ```4d
-  // Get the pointers to the fields for the table currently displayed at the screen:
+  // 現在選択されているテーブルの、フィールドへのポインターを取得します:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  // Initialize Boolean and Date fields
+  // ブールと日付フィールドを初期化します
  For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
@@ -152,41 +141,41 @@ Provided that this two-dimensional array has been initialized, you can obtain th
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**注:** この例でわかるように、2次元配列の行の列数はそれぞれが同じサイズでも異なるサイズでも構いません。
 
-## Arrays and Memory
+## 配列とメモリ
 
-Unlike the data you store on disk using tables and records, an array is always held in memory in its entirety.
+テーブルやレコードを使用してディスク上に格納するデータと異なり、配列は常に全体がメモリに保持されます。
 
-For example, if all US zip codes were entered in the [Zip Codes] table, it would contain about 100,000 records. In addition, that table would include several fields: the zip code itself and the corresponding city, county, and state. If you select only the zip codes from California, the 4D database engine creates the corresponding selection of records within the [Zip Codes] table, and then loads the records only when they are needed (i.e., when they are displayed or printed). In order words, you work with an ordered series of values (of the same type for each field) that is partially loaded from the disk into the memory by the database engine of 4D.
+たとえば、米国内の郵便番号がすべて [Zip Codes] テーブルに入力されている場合、約100,000件のレコードになります。 加えて、そのテーブルには郵便番号のほかに、対応する市・郡・州という複数のフィールドがあるとします。 カリフォルニアの郵便番号を選択した場合、4D データベースエンジンは [Zip Codes] テーブルから該当するレコードセレクションを作成して、必要な場合にのみ各レコードをロードします (たとえば表示や印刷時)。 つまり、4Dのデータベースエンジンによってディスクからメモリに部分的にロードされた (フィールドごとに同じタイプの) 順序づけられた一連の値で作業するということです。
 
-Doing the same thing with arrays would be prohibitive for the following reasons:
+同じことを配列で実行するのは、次の理由で禁止すべきです:
 
-- In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.
-- Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.
-- Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- 4つの情報タイプ (郵便番号、市、郡、州) を維持するためには、4つの大きな配列をメモリ内で維持する必要があります。
+- 配列は、常に全体がメモリ内に維持されるため、常時使用しない場合でも、作業セッションの間すべてのデータをメモリに置いておく必要があります。
+- 配列全体が常にメモリ内に維持されることから、データベースが開始されるたびに 4つの配列をディスクからロードして、終了時にはディスクに保存する必要があります。当該データが作業セッション中に使用・変更されない場合もこれを省略することができません。
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
+**結論:** 配列は、ほどよい量のデータを短時間維持するためのものです。 他方、配列はメモリ内に置かれるため、扱いやすく高速操作が可能です。
 
-However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:
+しかし、状況によっては何百、何千という要素を持った配列で作業する必要があります。 次の表に、各配列タイプがメモリ上に占めるバイト数を求めるための計算式を示します:
 
-| Array Type      | Formula for determining Memory Usage in Bytes                        |
-| --------------- | -------------------------------------------------------------------- |
-| BLOB            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| ブール             | (31+number of elements)\8                                           |
-| 日付              | (1+number of elements) * 6                                           |
-| 整数              | (1+number of elements) * 2                                           |
-| Long Integer    | (1+number of elements) * 4                                           |
-| オブジェクト          | (1+number of elements) * 8 + Sum of the size of each object          |
-| ピクチャー           | (1+number of elements) * 8 + Sum of the size of each picture         |
-| ポインター           | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| 実数              | (1+number of elements) * 8                                           |
-| テキスト            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| 時間              | (1+number of elements) * 4                                           |
-| Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
+| 配列タイプ  | メモリ使用量の計算式 (バイト単位)                 |
+| ------ | ---------------------------------- |
+| BLOB   | (1+要素数) * 12 + 全BLOB要素の合計サイズ       |
+| ブール    | (31+要素数)\8                        |
+| 日付     | (1+要素数) * 6                        |
+| 整数     | (1+要素数) * 2                        |
+| 倍長整数   | (1+要素数) * 4                        |
+| オブジェクト | (1+要素数) * 8 + 全オブジェクトの合計サイズ        |
+| ピクチャー  | (1+要素数) * 8 + 全ピクチャーの合計サイズ         |
+| ポインター  | (1+要素数) * 8 + 全ポインターの合計サイズ         |
+| 実数     | (1+要素数) * 8                        |
+| テキスト   | (1+要素数) * 20 + (全テキストの合計サイズ) * 2 |
+| 時間     | (1+要素数) * 4                        |
+| 2次元    | (1+要素数) * 16 + 配列サイズの合計            |
 
 
-**Notes:**
+**注:**
 
-- The size of a text in memory is calculated using this formula: ((Length + 1) * 2)
-- A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.
+- メモリ中のテキストサイズは以下の式で計算されます: ((Length + 1) * 2)
+- 選択した要素や要素数、配列自体の情報を保持するため、さらに数バイトを要します。

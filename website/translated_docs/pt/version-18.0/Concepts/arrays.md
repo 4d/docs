@@ -63,7 +63,7 @@ Here is another example: you want to execute an action only when you click on an
 ```4d
   // atNames scrollable area object method
  Case of
-    :(Form event=On Load)
+    :(Form event code=On Load)
   // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
   // ...
@@ -72,20 +72,20 @@ Here is another example: you want to execute an action only when you click on an
   // Here you start with no selected element
        atNames{0}:="0"
 
-    :(Form event=On Unload)
+    :(Form event code=On Unload)
   // We no longer need the array
        CLEAR VARIABLE(atNames)
 
-    :(Form event=On Clicked)
+    :(Form event code=On Clicked)
        If(atNames#0)
           If(atNames#Num(atNames{0}))
              vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
              atNames{0}:=String(atNames)
           End if
        End if
-    :(Form event=On Double Clicked)
+    :(Form event code=On Double Clicked)
        If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
+          ALERT("You double clicked on: "+atNames{atNames})
        End if
  End case
 ```
@@ -107,8 +107,8 @@ In the previous example:
 - atTopics is a two-dimensional array
 - atTopics{8}{5} is the 5th element (5th column...) of the 8th row
 - atTopics{20} is the 20th row and is itself a one-dimensional array
-- (atTopics) returns 100, which is the number of rows
-- (atTopics{17}) returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
 

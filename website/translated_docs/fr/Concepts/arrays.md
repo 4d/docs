@@ -57,35 +57,24 @@ Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Ch
 
 Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.
 
-Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous cliquez sur un élément autre que l'élément préalablement sélectionné. Pour cela, vous devez garder la trace de chaque élément sélectionné. Une façon de le faire est d'utiliser une variable process dans laquelle vous conservez le numéro de l'élément sélectionné. Une autre manière consiste à utiliser l'élément zéro du tableau :
+Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
 
 ```4d
-  // Méthode objet zone de défilement atNoms
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
-   :(Form event=On Load)
-   //Initialisons le tableau (comme indiqué ci-dessous)
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialiser l'élément zéro avec le numéro
-  // de l'élément courant sélectionné sous sa forme alphanumérique
-  // Ici vous commencez sans élément sélectionné
-       atNames{0}:="0"
- 
-    :(Form event=On Unload)
-  // Nous n'avons plus besoin du tableau
-       CLEAR VARIABLE(atNames)
- 
-    :(Form event=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
-       End if
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+        ARRAY TEXT(atName;5)
+        atName{0}:=Please select an item"
+        atName{1}:="Text1"
+        atName{2}:="Text2"
+        atName{3}:="Text3"
+        atName{4}:="Text4"
+        atName{5}:="Text5"
+    // Position the array to element 0
+        atName:=0
  End case
 ```
 
@@ -96,7 +85,7 @@ Voici un autre exemple : vous voulez exécuter une action seulement lorsque vous
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
+<br /> ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
 Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.
@@ -106,8 +95,8 @@ Dans l'exemple prédédent :
 - atTopics est un tableau à deux dimensions
 - atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne
 - atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension
-- (atTopics) retourne 100, qui est le nombre de lignes
-- (atTopics{17}) retourne 50, qui est le nombre de colonnes de la 17e ligne
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 

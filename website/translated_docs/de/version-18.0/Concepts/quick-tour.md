@@ -129,7 +129,7 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
-## Data Types
+## Datentypen
 
 In der Programmiersprache werden die verschiedenen Arten von Daten zum Bearbeiten als Datentypen bezeichnet. Es gibt grundlegende Datentypen (String, numerisch, Datum, Zeit, Boolean, Bild, Zeiger, Arrays) und zusammengesetzte Datentypen (BLOBs, Objekte, Collections).
 
@@ -225,7 +225,7 @@ Ausdrücke sind selten eigenständig. Es gibt jedoch einige Stellen in 4D, wo si
 
 Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es gibt folgende Typen. Die folgende Übersicht zeigt Beispiele für die verschiedenen Ausdruckstypen.
 
-| Expression               | Type               | Description                                                                                                                                                                        |
+| Ausdruck                 | Typ                | Description                                                                                                                                                                        |
 | ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.                                                                                                |
 | “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                            |
@@ -238,7 +238,7 @@ Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es 
 | Current date+ 30         | Date               | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
 | ?8:05:30?                | Time               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |
 | ?2:03:04? + ?1:02:03?    | Time               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                        |
-| True                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                                   |
+| Wahr                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                                   |
 | 10 # 20                  | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Zahlen. Das Nummernzeichen (#) bedeutet "ist ungleich zu". Da 10 "ungleich zu" 20 ist, gibt der Ausdruck TRUE zurück.               |
 | “ABC” = “XYZ”            | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Strings. Sie sind ungleich, also gibt der Ausdruck FALSE zurück.                                                                    |
 | My Picture + 50          | Picture            | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                          |

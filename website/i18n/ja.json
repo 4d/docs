@@ -87,10 +87,10 @@
         "title": "Interpreted and Compiled modes"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
-        "title": "Parameters"
+        "title": "引数"
       },
       "Concepts/plug-ins": {
         "title": "Plug-ins"
@@ -534,10 +534,10 @@
         "title": "Interpreted and Compiled modes"
       },
       "version-18.0-Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "version-18.0-Concepts/parameters": {
-        "title": "Parameters"
+        "title": "引数"
       },
       "version-18.0-Concepts/plug-ins": {
         "title": "Plug-ins"

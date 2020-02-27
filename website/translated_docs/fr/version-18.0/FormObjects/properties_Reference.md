@@ -1,6 +1,7 @@
 ---
-id: propertiesReference
+id: version-18.0-propertiesReference
 title: JSON property list
+original_id: propertiesReference
 ---
 
 You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.

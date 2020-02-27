@@ -175,7 +175,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
+| [Typ](properties_Object.md#type)                                                             | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -313,7 +313,7 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Type    | Description                                                           |
+| Property         | Typ     | Description                                                           |
 | ---------------- | ------- | --------------------------------------------------------------------- |
 | area             | text    | List box object area ("header", "footer", "cell")                     |
 | areaName         | text    | Name of the area                                                      |
@@ -322,7 +322,7 @@ Form events on list box or list box column objects may return the following addi
 | footerName       | text    | Name of the footer                                                    |
 | headerName       | text    | Name of the header                                                    |
 | horizontalScroll | longint | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | boolean | True if row is selected, else False                                   |
+| isRowSelected    | Boolean | True if row is selected, else False                                   |
 | newPosition      | longint | New position of the column or row                                     |
 | newSize          | longint | New size (in pixels) of the column or row                             |
 | oldPosition      | longint | Previous position of the column or row                                |
@@ -980,7 +980,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | check box                                      | drop-down menu (required list)                                                                 |
+| Boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | text                                                                                           |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
@@ -1010,7 +1010,7 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | text | real | integer | boolean | color | event |
+|                       | valueType                               | text | real | integer | Boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
 | *Attributes*          | *Description*                           |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
@@ -1107,7 +1107,7 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
 
 > The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
@@ -1149,7 +1149,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
