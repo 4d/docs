@@ -34,85 +34,86 @@ DO SOMETHING(WithThis;AndThat;ThisWay)
   // $3 には ThisWay 引数が入ります
 ```
 
-これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドを使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
+これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
-The same principles are used when methods are executed through dedicated commands, for example:
+メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
-//pass the !05/05/10! date as parameter to the SetCalendarDate  
-// in the context of a subform
+// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// その際に引数として日付リテラル !05/05/10! を渡します
 ```
 
-**Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+**注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#declaring-parameters) 参照)
 
-### Supported expressions
+### 引数としてサポートされている式
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
+引数はあらゆる [式](Concepts/quick-tour.md#expression-types) の形で渡すことができますが、例外があります:
 
-- tables
+- テーブル
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+テーブルや配列の式は [ポインターを介した参照として](Concepts/dt_pointer.md#pointers-as-parameters-to-methods) 渡す必要があります。
 
-## Functions
+## 関数
 
-Data can be returned from methods. A method that returns a value is called a function.
+メソッドからデータを返すこともできます。 値を返すメソッドを関数と呼びます。
 
-4D or 4D Plug-in commands that return a value are also called functions.
+値を返す 4Dコマンドや 4Dプラグインコマンドも関数と呼びます。
 
-For example, the following line is a statement that uses the built-in function, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+以下は、文字列のデータ長を返すビルトインの `Length` 関数を用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. The value to be returned is put into the local variable `$0`.
+どのようなサブルーチンでも値を返すことができます。 返す値は、ローカル変数 `$0` に格納します。
 
-For example, the following function, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+たとえば、`Uppercase4` という以下の関数は、始めの 4文字を大文字に変換した文字列を返します:
 
 ```4d
+// Uppercase4 メソッド
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 function:
+以下は、Uppercase4 を関数として使用する例です:
 
 ```4d
 NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *NewPhrase* gets “THIS is good.”
+変数 *NewPhrase* には“THIS is good.” が格納されます。
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, in the previous `DO SOMETHING` example, `$0` was first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+戻り値 `$0` はサブルーチン内のローカル変数です。 したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば、前述の `DO SOMETHING` メソッドの例において、`$0` は最初に大文字に変換した `$1` の値を割り当てられ、その後 `ALERT` コマンドの引数として使われました。 このように、サブルーチン内の他のローカル変数と同じように `$0` を使うことができます。 サブルーチン終了時に、その時点での `$0` の値を呼び出し元のメソッドに戻すのは 4Dがおこないます。
 
-## Declaring parameters
+## パラメーターの宣言
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+[インタープリターモード](Concepts/interpreted.md) では必須ではないものの、問題を避けるにはメソッドの各パラメーターを宣言しておくべきでしょう。
 
-In the following example, the `OneMethodAmongOthers` project method declares three parameters:
+次の例では `OneMethodAmongOthers` プロジェクトメソッドに設定されている 3つのパラメーターをそれぞれ宣言しています:
 
 ```4d
-  // OneMethodAmongOthers Project Method
-  // OneMethodAmongOthers ( Real ; Date { ; Long } )
-  // OneMethodAmongOthers ( Amount ; Date { ; Ratio } )
+  // OneMethodAmongOthers プロジェクトメソッド
+  // OneMethodAmongOthers ( 実数 ; 日付 { ; 倍長整数 } )
+  // OneMethodAmongOthers ( 数量 ; 日付 { ; 割合 } )
 
- C_REAL($1) // 1st parameter is of type Real
- C_DATE($2) // 2nd parameter is of type Date
- C_LONGINT($3) // 3rd parameter is of type Long Integer
+ C_REAL($1) // 1番目のパラメーターは実数型です
+ C_DATE($2) // 2番目のパラメーターは日付型です
+ C_LONGINT($3) // 3番目のパラメーターは倍長整数型です
 ```
 
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
 
 ```4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
+  // Capitalize プロジェクトメソッド
+  // Capitalize ( Text ) -> テキスト
+  // Capitalize ( Source string ) -> 大文字の文字列
 
  C_TEXT($0;$1)
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. たとえば:
+`New process` コマンドなどでプロセスメソッドを呼び出す場合にも、そのメソッドが引数を受け取るのであれば、それらは明示的に宣言されていなくてはなりません。 たとえば:
 
 ```4d
 C_TEXT($string)
@@ -122,7 +123,7 @@ C_OBJECT($obj)
 $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+"foo_method" において各パラメーターが適切に宣言されている場合のみ、コンパイルモードで上のコードを実行することができます:
 
 ```4d
 //foo_method
@@ -132,13 +133,13 @@ C_OBJECT($3)
 ...
 ```
 
-**Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+**注:** プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、"Compiler" で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
 
 ```4d
  C_REAL(OneMethodAmongOthers;$1) 
 ```
 
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+詳細については [インタープリターモードとコンパイルモード](Concepts/interpreted.md) を参照ください。
 
 Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
 

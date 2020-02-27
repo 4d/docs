@@ -1,6 +1,6 @@
 ---
 id: version-18.0-date
-title: Date
+title: Datum
 original_id: date
 ---
 
@@ -33,8 +33,8 @@ A null date is specified by *!00-00-00!*.
 | Operation                | Syntax        | Ergibt  | Ausdruck                    | Wert         |
 | ------------------------ | ------------- | ------- | --------------------------- | ------------ |
 | Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
-| Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
+| Day addition             | Date + Number | Datum   | !2017-01-20! + 9            | !2017-01-29! |
+| Day subtraction          | Date – Number | Datum   | !2017-01-20! - 9            | !2017-01-11! |
 | Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | Wahr         |
 |                          |               |         | !2017-01-20! = !2017-01-01! | Falsch       |
 | Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | Wahr         |

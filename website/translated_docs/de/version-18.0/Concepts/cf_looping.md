@@ -1,7 +1,7 @@
 ---
 id: version-18.0-looping
 title: Schleifenstrukturen
-original_id: Schleifen
+original_id: looping
 ---
 
 ## While...End while
@@ -297,7 +297,7 @@ Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
 |                                         | Schleife durch Collections                        | Schleife durch Entity-Selections | Schleife durch Objekte         |
 | --------------------------------------- | ------------------------------------------------- | -------------------------------- | ------------------------------ |
 | Typ Current_Item                        | Variable vom gleichen Typ wie Collection Elemente | Entity                           | Textvariable                   |
-| Typ Expression                          | Collection (mit Elementen vom gleichen Typ)       | Entity-Selection                 | Object                         |
+| Typ Expression                          | Collection (mit Elementen vom gleichen Typ)       | Entity-Selection                 | Objekt                         |
 | Anzahl Schleifen (standardmäßig)        | Anzahl der Collection Elemente                    | Anzahl Entities in der Selection | Anzahl der Objekteigenschaften |
 | Unterstützung der Parameter begin / end | Ja                                                | Ja                               | Nein                           |
 

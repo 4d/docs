@@ -2,7 +2,7 @@
 id: version-18.0-repair
 title: Seite Reparieren
 sidebar_label: Seite Reparieren
-original_id: Reparieren
+original_id: repair
 ---
 
 Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschädigung. Diese Funktionen verwenden Sie in der Regel nur auf Anforderung von 4D, wenn beim Öffnen der Datenbank Unregelmäßigkeiten auftreten oder nach einer [Überprüfung](verify.md).

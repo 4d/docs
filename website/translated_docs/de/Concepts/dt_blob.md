@@ -1,5 +1,5 @@
 ---
-id: BLOB
+id: blob
 title: BLOB
 ---
 

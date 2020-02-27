@@ -1,7 +1,7 @@
 ---
 id: version-18.0-blob
 title: BLOB
-original_id: BLOB
+original_id: blob
 ---
 
 - A BLOB (Binary Large OBjects) sind miteinander zusammenhängende Bytes unterschiedlicher Länge, die Sie als ganze Einheit oder als einzelne Bytes ansprechen können. Ein BLOB kann leer sein (Länge Null) oder bis zu 2147483647 Bytes enthalten (2 GB). 

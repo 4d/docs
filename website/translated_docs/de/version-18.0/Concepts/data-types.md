@@ -1,7 +1,7 @@
 ---
 id: version-18.0-data-types
 title: Überblick über Datentypen
-original_id: Datentypen
+original_id: data-types
 ---
 
 In 4D werden Daten je nach Typ an zwei Stellen verwaltet: Datenfeld der Datenbank und 4D Programmiersprache.
@@ -12,19 +12,19 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 | ----------------------------------------------- | --------------------------- | -------------------------------- | ---------------------------- |
 | [Alphanumerisch](dt_string.md)                  | Ja                          | Konvertiert in Text              | -                            |
 | [Text](Concepts/dt_string.md)                   | Ja                          | Ja                               | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                     | Ja                          | Ja                               | `C_DATE`, `ARRAY DATE`       |
-| [Time](Concepts/dt_time.md)                     | Ja                          | Ja                               | `C_TIME`, `ARRAY TIME`       |
+| [Datum](Concepts/dt_date.md)                    | Ja                          | Ja                               | `C_DATE`, `ARRAY DATE`       |
+| [Zeit](Concepts/dt_time.md)                     | Ja                          | Ja                               | `C_TIME`, `ARRAY TIME`       |
 | [Boolean](Concepts/dt_boolean.md)               | Ja                          | Ja                               | `C_BOOLEAN`, `ARRAY BOOLEAN` |
 | [Zahl](Concepts/dt_number.md)                   | Ja                          | Konvertiert in Lange Ganzzahl    | `ARRAY INTEGER`              |
 | [Lange Ganzzahl](Concepts/dt_number.md)         | Ja                          | Ja                               | `C_LONGINT`, `ARRAY LONGINT` |
 | [lange Ganzzahl 64 bits](Concepts/dt_number.md) | Ja (SQL)                    | Konvertiert in Zahl              | -                            |
-| [Real](Concepts/dt_number.md)                   | Ja                          | Ja                               | `C_REAL`, `ARRAY REAL`       |
+| [Zahl](Concepts/dt_number.md)                   | Ja                          | Ja                               | `C_REAL`, `ARRAY REAL`       |
 | [Undefiniert](Concepts/dt_null_undefined.md)    | -                           | Ja                               | -                            |
 | [Null](Concepts/dt_null_undefined.md)           | -                           | Ja                               | -                            |
-| [Pointer](Concepts/dt_pointer.md)               | -                           | Ja                               | `C_POINTER`, `ARRAY POINTER` |
-| [Picture](Concepts/dt_picture.md)               | Ja                          | Ja                               | `C_PICTURE`, `ARRAY PICTURE` |
+| [Zeiger](Concepts/dt_pointer.md)                | -                           | Ja                               | `C_POINTER`, `ARRAY POINTER` |
+| [Bild](Concepts/dt_picture.md)                  | Ja                          | Ja                               | `C_PICTURE`, `ARRAY PICTURE` |
 | [BLOB](Concepts/dt_blob.md)                     | Ja                          | Ja                               | `C_BLOB`, `ARRAY BLOB`       |
-| [Object](Concepts/dt_object.md)                 | Ja                          | Ja                               | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Objekt](Concepts/dt_object.md)                 | Ja                          | Ja                               | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)         | -                           | Ja                               | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)            | -                           | Ja                               | `C_VARIANT`                  |
 
@@ -52,15 +52,15 @@ Nachfolgende Übersicht erläutert diese Standardwerte:
 | Typ            | Interprozess/Prozess (interpretiert/kompiliert), Lokal (interpretiert/kompiliert "auf Null") | Lokal kompiliert "zufälliger Wert" | Lokal kompiliert "Nein"        |
 | -------------- | -------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------ |
 | Boolean        | Falsch                                                                                       | Wahr                               | Wahr (variiert)                |
-| Date           | 00-00-00                                                                                     | 00-00-00                           | 00-00-00                       |
+| Datum          | 00-00-00                                                                                     | 00-00-00                           | 00-00-00                       |
 | Lange Ganzzahl | 0                                                                                            | 1919382119                         | 909540880 (variiert)           |
-| Time           | 00:00:00                                                                                     | 533161:41:59                       | 249345:34:24 (variiert)        |
-| Picture        | Bildgröße=0                                                                                  | Bildgröße=0                        | Bildgröße=0                    |
-| Real           | 0                                                                                            | 1.250753659382e+243                | 1.972748538022e-217 (variiert) |
-| Pointer        | Nil=wahr                                                                                     | Nil=wahr                           | Nil=wahr                       |
+| Zeit           | 00:00:00                                                                                     | 533161:41:59                       | 249345:34:24 (variiert)        |
+| Bild           | Bildgröße=0                                                                                  | Bildgröße=0                        | Bildgröße=0                    |
+| Zahl           | 0                                                                                            | 1.250753659382e+243                | 1.972748538022e-217 (variiert) |
+| Zeiger         | Nil=wahr                                                                                     | Nil=wahr                           | Nil=wahr                       |
 | Text           | ""                                                                                           | ""                                 | ""                             |
 | Blob           | Größe des BLOB=0                                                                             | Größe des BLOB=0                   | Größe des BLOB=0               |
-| Object         | Null                                                                                         | Null                               | Null                           |
+| Objekt         | Null                                                                                         | Null                               | Null                           |
 | Collection     | Null                                                                                         | Null                               | Null                           |
 | Variant        | Undefiniert                                                                                  | Undefiniert                        | Undefiniert                    |
 
@@ -73,10 +73,10 @@ Nachfolgende Liste zeigt die wichtigsten Datentypen, in welchen Typ sie konverti
 
 | Datentyp zum Konvertieren | in String | in Zahl | in Datum | in Zeit | in Boolean |
 | ------------------------- | --------- | ------- | -------- | ------- | ---------- |
-| String (1)                |           | Num     | Date     | Time    | Bool       |
+| String (1)                |           | Num     | Datum    | Zeit    | Bool       |
 | Zahl (2)                  | String    |         |          |         | Bool       |
-| Date                      | String    |         |          |         | Bool       |
-| Time                      | String    |         |          |         | Bool       |
+| Datum                     | String    |         |          |         | Bool       |
+| Zeit                      | String    |         |          |         | Bool       |
 | Boolean                   |           | Num     |          |         |            |
 
 

@@ -31,8 +31,8 @@ For each entity set currently stored in 4D Server's cache, the following informa
 | tableName     | String  | Name of the datastore class.                                                                                                                                                                                                                                        |
 | selectionSize | Number  | Number of entities in the entity set.                                                                                                                                                                                                                               |
 | sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Date    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Date    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| refreshed     | Datum   | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
+| expires       | Datum   | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
 
 
 For information about how to create an entity set, refer to `$method=entityset`. If you want to remove the entity set from 4D Server's cache, use `$method=release`.
@@ -51,7 +51,7 @@ For each user session, the following information is returned in the *sessionInfo
 | userID     | String | A UUID that references the user who runs the session.        |
 | userName   | String | The name of the user who runs the session.                   |
 | lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration | Date   | The current expiration date and time of the user session.    |
+| expiration | Datum  | The current expiration date and time of the user session.    |
 
 
 ### jsContextInfo

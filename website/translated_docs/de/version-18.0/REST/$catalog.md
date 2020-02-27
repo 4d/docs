@@ -215,7 +215,7 @@ Here are the properties for each exposed attribute that are returned:
 | multiLine     | Boolean | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
 | path          | String  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
 | readOnly      | Boolean | This property is True if the attribute is of type calculated or alias.                                                                                      |
-| defaultFormat | Object  | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+| defaultFormat | Objekt  | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
 
 
 ### Method(s)

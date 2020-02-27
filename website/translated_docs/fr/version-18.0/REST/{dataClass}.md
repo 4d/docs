@@ -12,12 +12,13 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 ## Syntaxe
 
-| Syntaxe                                                        | Exemple                                                | Description                                                                            |
-| -------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                  | `/Employee`                                            | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
-| [**{dataClass}({clé})**](#dataclasskey)                        | `/Employee(22)`                                        | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue) | `/Employee:firstName(John)`                            | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
-| [**{dataClass}/{méthode}**](#dataclassmethod)                  | `/Employee/getHighSalaries` or `/Employee/name/getAge` | Renvoie une entity selection ou une collection basée sur une méthode de la dataclass   |
+| Syntaxe                                                        | Exemple                     | Description                                                                            |
+| -------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                  | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
+| [**{dataClass}({clé})**](#dataclasskey)                        | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue) | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
+| [**{dataClass}/{méthode}**](#dataclassmethod)                  | `/Employee/getHighSalaries` | Renvoie une entity selection ou une collection basée sur une méthode de la dataclass   |
+| [**{dataClass}({key})/{method}**](#dataclasskey)               | `/Employee(22)/getAge`      | Returns a value based on an entity method                                              |
 
 
 ## {dataClass}
@@ -179,8 +180,6 @@ En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupé
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-Pour plus d'informations sur les données retournées, reportez-vous à [{dataClass}](dataClass.md).
-
 Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
@@ -203,9 +202,7 @@ Renvoie une entity selection ou une collection basée sur une méthode de la dat
 
 Les méthodes de dataclass doivent être appliquées à une Dataclass ou à une entity selection et doivent retourner une entity selection ou une collection. Cependant, lorsque vous retournez une collection, vous ne pouvez pas définir les attributs retournés.
 
-La méthode doit avoir été déclarée "Disponible via le serveur REST" dans 4D pour que vous puissiez l'appeler dans une requête REST :
-
-`GET  /rest/Employee/getHighSalaries` ou `GET  /rest/Employee/firstName/getHighSalaries`
+`POST  /rest/Employee/getHighSalaries`
 
 Si vous n'êtes pas autorisé à exécuter la méthode, vous recevrez l'erreur suivante :
 
@@ -220,15 +217,23 @@ Si vous n'êtes pas autorisé à exécuter la méthode, vous recevrez l'erreur s
     }
     
 
+### 4D Configuration
+
+To be called in a REST request, a method must:
+
+- have been declared as "Available through REST server" in 4D,
+- have its master table and scope defined accordingly: 
+    - **Table**: master table
+    - **Scope**: 
+        - **Table** -for methods applied to the whole table (dataclass)
+        - **Current record** -for method applied to the current record (entity)
+        - **Current selection** -for methods applied to the current selection
+
+![alt-text](assets/en/REST/MethodProp.png)
+
 ### Passer des paramètres à une méthode
 
-Vous pouvez également passer des paramètres à une méthode dans un GET ou dans un POST.
-
-Dans un GET, vous écrivez ce qui suit :
-
-`GET  /rest/Employee/addEmployee(John,Smith)`
-
-Dans un POST, vous écrivez ce qui suit :
+You can also pass parameters to a method in a POST.
 
 `POST  /rest/Employee/addEmployee`
 
@@ -238,23 +243,25 @@ Dans un POST, vous écrivez ce qui suit :
 
 Vous pouvez définir les attributs que vous souhaitez retourner, en passant les éléments suivants :
 
-`GET  /rest/Employee/firstName/getEmployees` Ou `GET  /rest/Employee/getEmployees/firstName`
+`POST /rest/Employee/getEmployees?$attributes=lastName,firstName`
 
-Vous pouvez également appliquer l'une des fonctions suivantes à une méthode : [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), et [$top/$limit]($top_$limit.md).
+Vous pouvez également appliquer l'une des fonctions suivantes à une méthode : [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), et [$top/$limit]($top_$limit.md). In this case, the method applies to an entity selection. Par exemple:
+
+`POST /rest/Employee/getEmployees?$attributes=lastName,firstName&$filter=salary>20000`
 
 ### Exemple
 
 Dans l'exemple ci-dessous, nous appelons notre méthode, mais parcourons également la collection en retournant les dix entités suivant la sixième entité :
 
-`GET  /rest/Employee?$attributes=lastName,employer.name&$top=10&$skip=1/getHighSalaries` ou `GET  /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
+POST /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
 
 Si vous souhaitez récupérer un attribut et un attribut relationnel, vous pouvez saisir la requête REST suivante :
 
-`GET  /rest/Employee/firstName,employer/getHighSalaries?$expand=employer`
+`POST  /rest/Employee/getHighSalaries?$attributes=lastName,employer&$expand=employer`
 
 Dans l'exemple ci-dessous, la méthode de dataclass getCities retourne une collection de villes :
 
-`GET  /rest/Employee/getCities`
+`POST  /rest/Employee/getCities`
 
 Result:
 

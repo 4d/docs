@@ -1,5 +1,5 @@
 ---
-id: Arrays
+id: arrays
 title: Arrays
 ---
 
@@ -57,7 +57,7 @@ Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht e
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
-Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
+Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisieren, jedoch ohne Setzen eines Standardwerts. Hierfür können Sie das Element Null des Array verwenden:
 
 ```4d
   // method for a combo box or drop-down list  
@@ -163,15 +163,15 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | --------------- | ------------------------------------------------------------------- |
 | Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
 | Boolean         | (31+Anzahl der Elemente) / 8                                        |
-| Date            | (1+Anzahl der Elemente) * 6                                         |
+| Datum           | (1+Anzahl der Elemente) * 6                                         |
 | Zahl            | (1+Anzahl der Elemente) * 2                                         |
 | Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
-| Object          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
-| Picture         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
-| Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
-| Real            | (1+Anzahl der Elemente) * 8                                         |
+| Objekt          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
+| Bild            | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
+| Zeiger          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
+| Zahl            | (1+Anzahl der Elemente) * 8                                         |
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
-| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Zeit            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
 
