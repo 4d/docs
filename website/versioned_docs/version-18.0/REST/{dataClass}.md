@@ -1,6 +1,7 @@
 ---
-id: {dataClass}
-title: {dataClass} 
+id: version-18.0-{dataClass}
+title: {dataClass}
+original_id: {dataClass}
 ---
 
 

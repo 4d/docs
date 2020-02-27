@@ -1,6 +1,7 @@
 ---
-id: entityset
+id: version-18.0-entityset
 title: $entityset
+original_id: entityset
 ---
 
 After creating an entity set by using `$method=entityset`, you can then use it subsequently.
