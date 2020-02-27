@@ -1,7 +1,7 @@
 ---
 id: version-18.0-boolean
 title: Boolean
-original_id: Boolean
+original_id: boolean
 ---
 
 Ein Datenfeld, Ausdruck oder eine Variable vom Typ Boolean kann entweder WAHR oder FALSCH sein.
@@ -62,7 +62,7 @@ Für das logische ODER gilt:
 | Falsch | Falsch | Falsch             |
 
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Tipp:** Zum Berechnen eines ausschließenden ODER zwischen Expr1 and Expr2 schreiben Sie:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
