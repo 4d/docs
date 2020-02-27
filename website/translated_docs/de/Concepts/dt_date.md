@@ -1,6 +1,6 @@
 ---
 id: date
-title: Date
+title: Datum
 ---
 
 - A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
@@ -32,8 +32,8 @@ A null date is specified by *!00-00-00!*.
 | Operation                | Syntax        | Ergibt  | Ausdruck                    | Wert         |
 | ------------------------ | ------------- | ------- | --------------------------- | ------------ |
 | Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| Day addition             | Date + Number | Date    | !2017-01-20! + 9            | !2017-01-29! |
-| Day subtraction          | Date – Number | Date    | !2017-01-20! - 9            | !2017-01-11! |
+| Day addition             | Date + Number | Datum   | !2017-01-20! + 9            | !2017-01-29! |
+| Day subtraction          | Date – Number | Datum   | !2017-01-20! - 9            | !2017-01-11! |
 | Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | Wahr         |
 |                          |               |         | !2017-01-20! = !2017-01-01! | Falsch       |
 | Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | Wahr         |
