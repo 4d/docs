@@ -92,7 +92,7 @@ ALERT("Hello world!")
 
 ```4d
 C_OBJECT($o)
-$o:=New object("custom_Alert";New formula(myAlert))
+$o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() // "Hello world!" と表示します
 ```
 
@@ -114,7 +114,7 @@ $0:=$1+" "+$2
 
 ```4d
 C_OBJECT($o)
-$o:=New object("full_name";New formula(fullName))
+$o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
 // $result:=fullName("param1";"param2") と同義です
@@ -133,7 +133,7 @@ $0:=This.firstName+" "+This.lastName
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=New formula(fullName2) // メソッドをオブジェクトに追加します
+$o.fullName:=Formula(fullName2) // メソッドをオブジェクトに追加します
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
