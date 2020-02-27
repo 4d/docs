@@ -14,9 +14,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name                    | Data Type | Possible Values                                                                                              |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Name                    | Datentyp | Possible Values                                                                                              |
+| ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| customBackgroundPicture | string   | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
 #### Objects Supported
@@ -31,9 +31,9 @@ General appearance of the button. The button style also plays a part in the avai
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                                                                                                                                    |
-|:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| Name  | Datentyp | Possible Values                                                                                                                                                    |
+|:-----:|:--------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| style |   text   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
@@ -58,9 +58,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderX | number    | For use with "custom" style. Minimum: 0 |
+| Name          | Datentyp | Possible Values                         |
+| ------------- | -------- | --------------------------------------- |
+| customBorderX | number   | For use with "custom" style. Minimum: 0 |
 
 
 #### Objects Supported
@@ -75,9 +75,9 @@ Designates the placement of an icon in relation to the form object.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values         |
-| ------------- | --------- | ----------------------- |
-| iconPlacement | string    | "none", "left", "right" |
+| Name          | Datentyp | Possible Values         |
+| ------------- | -------- | ----------------------- |
+| iconPlacement | string   | "none", "left", "right" |
 
 
 #### Objects Supported
@@ -94,9 +94,9 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| customOffset | number    | minimum: 0      |
+| Name         | Datentyp | Possible Values |
+| ------------ | -------- | --------------- |
+| customOffset | number   | minimum: 0      |
 
 
 #### Objects Supported
@@ -122,9 +122,9 @@ The following states are represented:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| iconFrames | number    | minimum: 1      |
+| Name       | Datentyp | Possible Values |
+| ---------- | -------- | --------------- |
+| iconFrames | number   | minimum: 1      |
 
 
 #### Objects Supported
@@ -143,9 +143,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                              |
-| ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
+| Name | Datentyp | Possible Values                              |
+| ---- | -------- | -------------------------------------------- |
+| icon | picture  | Relative or filesystem path in POSIX syntax. |
 
 
 #### Objects Supported
@@ -171,9 +171,9 @@ Here are the results using the various options for this property:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                            |
-| ------------- | --------- | ------------------------------------------ |
-| textPlacement | string    | "left", "top", "right", "bottom", "center" |
+| Name          | Datentyp | Possible Values                            |
+| ------------- | -------- | ------------------------------------------ |
+| textPlacement | string   | "left", "top", "right", "bottom", "center" |
 
 
 #### Objects Supported
@@ -192,9 +192,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderY | number    | For use with "custom" style. Minimum: 0 |
+| Name          | Datentyp | Possible Values                         |
+| ------------- | -------- | --------------------------------------- |
+| customBorderY | number   | For use with "custom" style. Minimum: 0 |
 
 
 #### Objects Supported
@@ -242,7 +242,7 @@ Each option specifies the relation between the button and the attached pop-up me
         </th>
         
         <th>
-          Data Type
+          Datentyp
         </th>
         
         <th>

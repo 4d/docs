@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointer
+title: Zeiger
 ---
 
 A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
@@ -13,14 +13,14 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Type          | To Reference            | To Use                   | To Assign                |
+| Typ           | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Objekt        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## Using a pointer: Basic example
@@ -86,12 +86,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Syntax            | Returns | Expression    | Value |
-| ---------- | ----------------- | ------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
-|            |                   |         | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
-|            |                   |         | vPtrA # vPtrB | False |
+| Operation  | Syntax            | Ergibt  | Ausdruck      | Wert   |
+| ---------- | ----------------- | ------- | ------------- | ------ |
+| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | Wahr   |
+|            |                   |         | vPtrA = vPtrC | Falsch |
+| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | Wahr   |
+|            |                   |         | vPtrA # vPtrB | Falsch |
 
 
 ## Main usages

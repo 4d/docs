@@ -24,7 +24,7 @@ This syntax allows you to execue any operation on a defined entity set.
 
 Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`](top_$limit.md).
+When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
 
 ### Beispiel
 
@@ -36,7 +36,7 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Type   | Description                                                    |
+| Parameter        | Typ    | Description                                                    |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | Entity set ID                                                  |
@@ -52,7 +52,7 @@ Here are the logical operators:
 
 | Operator  | Description                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Returns the entities in common to both entity sets                                                                                                         |
+| UND       | Returns the entities in common to both entity sets                                                                                                         |
 | ODER      | Returns the entities in both entity sets                                                                                                                   |
 | EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
@@ -62,7 +62,7 @@ Here are the logical operators:
 
 Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
 
-**AND**
+**UND**
 
 ![](assets/en/REST/and.png)
 

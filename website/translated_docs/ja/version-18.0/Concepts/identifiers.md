@@ -71,7 +71,7 @@ If(<>vtName#"")
 
 ## Process Variables
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). プロセス変数名の長さは、最大31文字まで指定できます。
 
 例: 
 
@@ -93,7 +93,7 @@ If($vsTempVar="No")
 $vsMyString:="Hello there"
 ```
 
-## Arrays
+## 配列
 
 You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
 
@@ -415,8 +415,8 @@ Be sure to use unique names for the different elements in your database. If a pa
 4D identifies names used in procedures in the following order:
 
 1. Fields
-2. Commands
-3. Methods
+2. コマンド
+3. メソッド
 4. Plug-in routines
 5. Predefined constants
 6. Variables.

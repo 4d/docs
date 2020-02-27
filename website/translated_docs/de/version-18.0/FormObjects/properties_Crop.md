@@ -12,9 +12,9 @@ Sets the number of columns in a thumbnail table.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-|:----------- |:---------:| --------------- |
-| columnCount |  integer  | minimum: 1      |
+| Name        | Datentyp | Possible Values |
+|:----------- |:--------:| --------------- |
+| columnCount | integer  | minimum: 1      |
 
 
 #### Objects Supported
@@ -29,9 +29,9 @@ Sets the number of rows in a thumbnail table.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-|:-------- |:---------:| --------------- |
-| rowCount |  integer  | minimum: 1      |
+| Name     | Datentyp | Possible Values |
+|:-------- |:--------:| --------------- |
+| rowCount | integer  | minimum: 1      |
 
 
 #### Objects Supported

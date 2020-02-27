@@ -17,7 +17,7 @@ original_id: architecture
 - *databaseName*.4DProject ファイル
 - Sources 
     + DatabaseMethods
-    + Methods
+    + メソッド
     + Forms
     + TableForms
     + Triggers
@@ -100,7 +100,7 @@ original_id: architecture
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- Methods
+- メソッド
 - Forms
 - TableForms
 

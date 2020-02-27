@@ -58,7 +58,15 @@ Une heure nulle s’écrit ?00:00:00?
 
 Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
 
-Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Time`ou`Current time`.
+You can combine expressions of the time and number types using the `Time` or `Current time` functions:
+
+```4d
+    //The following line assigns to $vlSeconds the number of seconds   
+    //that will be elapsed between midnight and one hour from now
+$vlSeconds:=Current time+3600
+    //The following line assigns to $vHSoon the time it will be in one hour
+$vhSoon:=Time(Current time+3600)
+```
 
 La seconde ligne peut également être écrite de la façon suivante :
 

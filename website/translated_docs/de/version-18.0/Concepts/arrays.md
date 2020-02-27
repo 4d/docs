@@ -1,10 +1,10 @@
 ---
 id: version-18.0-arrays
 title: Arrays
-original_id: Arrays
+original_id: arrays
 ---
 
-Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnumeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
+Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnummeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
 
 > In den meisten Fällen empfiehlt es sich, **Collections** anstelle von **Arrays** zu verwenden. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
 
@@ -63,7 +63,7 @@ Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ei
 ```4d
   // atNames scrollable area object method
  Case of
-    :(Form event=On Load)
+    :(Form event code=On Load)
   // Initialize the array (as shown further above)
        ARRAY TEXT(atNames;5)
   // ...
@@ -72,20 +72,20 @@ Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ei
   // Here you start with no selected element
        atNames{0}:="0"
 
-    :(Form event=On Unload)
+    :(Form event code=On Unload)
   // We no longer need the array
        CLEAR VARIABLE(atNames)
 
-    :(Form event=On Clicked)
+    :(Form event code=On Clicked)
        If(atNames#0)
           If(atNames#Num(atNames{0}))
              vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
              atNames{0}:=String(atNames)
           End if
        End if
-    :(Form event=On Double Clicked)
+    :(Form event code=On Double Clicked)
        If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
+          ALERT("You double clicked on: "+atNames{atNames})
        End if
  End case
 ```
@@ -107,8 +107,8 @@ Im oben angezeigten Beispiel gilt:
 - atTopics ist ein zweidimensionales Array
 - atTopics{8}{5} ist das 5. Element (5. Spalte...) der 8. Reihe
 - atTopics{20} ist die 20. Reihe und selbst ein eindimensionales Array
-- (atTopics) gibt 100 zurück, das ist die Anzahl der Reihen
-- (atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
+- `Größe des Array(atTopics)` gibt 100 zurück, das ist die Anzahl der Reihen
+- `Größe des Array(atTopics{17})` gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
 
 Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
@@ -159,7 +159,7 @@ Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie n
 
 Ein Array wird im Gegensatz zu Daten, die Sie in Tabellen und Datensätzen auf der Festplatte speichern, immer vollständig im Speicher gehalten.
 
-Geben Sie zum Beispiel alle Postleitzahlen in einer Tabelle [PLZ] ein, enthält sie ca. 10.000 Datensätze. Die Tabelle enthält zusätzlich weitere Datenfelder, wie Landeskennzahl und Stadt. Wählen Sie nun das Postleitzahlengebiet 8, erstellt die 4D Datenbank-Engine die entsprechende Datensatzauswahl in der Tabelle [PLZ], und lädt die Datensätze nur bei Bedarf, also z.B. zum Anzeigen auf dem Bildschirm oder zum Drucken. Mit anderen Worten, Sie arbeiten mit einer geordneten Reihe von Werten vom selben Typ pro Datenfeld, die die Engine von 4D teilweise von der Festplatte in den Speicher lädt.
+Geben Sie zum Beispiel alle Postleitzahlen in einer Tabelle [PLZ] ein, enthält sie ca. 10.000 Datensätze. Die Tabelle enthält zusätzlich weitere Datenfelder, wie Landeskennzahl und Stadt. Wählen Sie nun das Postleitzahlengebiet 8, erstellt die 4D Datenbank-Engine die entsprechende Datensatzauswahl in der Tabelle [PLZ] und lädt die Datensätze nur bei Bedarf, also z.B. zum Anzeigen auf dem Bildschirm oder zum Drucken. Mit anderen Worten, Sie arbeiten mit einer geordneten Reihe von Werten vom selben Typ pro Datenfeld, die die Engine von 4D teilweise von der Festplatte in den Speicher lädt.
 
 Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
@@ -175,15 +175,15 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | --------------- | ------------------------------------------------------------------- |
 | Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
 | Boolean         | (31+Anzahl der Elemente) / 8                                        |
-| Date            | (1+Anzahl der Elemente) * 6                                         |
+| Datum           | (1+Anzahl der Elemente) * 6                                         |
 | Zahl            | (1+Anzahl der Elemente) * 2                                         |
 | Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
-| Object          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
-| Picture         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
-| Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
-| Real            | (1+Anzahl der Elemente) * 8                                         |
+| Objekt          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
+| Bild            | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
+| Zeiger          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
+| Zahl            | (1+Anzahl der Elemente) * 8                                         |
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
-| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Zeit            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
 

@@ -1,5 +1,5 @@
 ---
-id: Abfragen
+id: branching
 title: Abfragestrukturen
 ---
 
@@ -33,7 +33,7 @@ Beachten Sie, dass der Boolean Ausdruck immer voll gewertet wird. Siehe hierzu f
  End if
 ```
 
-he expression is TRUE only if both methods are TRUE. Jedoch, selbst wenn *MethodA* FALSE zurückgibt, bewertet 4D weiter *MethodB*, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
+Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn *MethodA* FALSE zurückgibt, bewertet 4D weiter *MethodB*, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
 
 ```4d
  If(MethodA)
@@ -162,7 +162,7 @@ Zum Vergleich folgt hier dieselbe Methode mit der Abfrage `If...Else...End if`:
 
 Beachten Sie, dass mit einer Anweisung `Case of...Else...End case` nur die erste Bedingung TRUE ausgeführt wird. Selbst wenn zwei oder mehr Bedingungen wahr sind, wird nur die Anweisung ausgeführt, die auf die erste Bedingung TRUE folgt.
 
-Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. Soll zum Beispiel der Test, ob Bedingung1 zutrifft, das Testen von Bedingung1&Bedingung2 enthalten, muss Bedingung1 in der Abruffolge an letzter Stelle stehen. Zum Beispiel kann folgender Code nie die letzte Bedingung bewerten:
+Bei hierarchischen Tests sollten Sie sicherstellen, dass die Anweisungen für Bedingungen mit geringerer Hierarchie im Textablauf zuerst erscheinen. Soll zum Beispiel der Test, ob Bedingung1 zutrifft, das Testen von Bedingung1&Bedingung2 enthalten, muss Bedingung1 in der Abruffolge an letzter Stelle stehen. Zum Beispiel kann folgender Code nie die letzte Bedingung bewerten:
 
 ```4d
  Case of

@@ -36,7 +36,7 @@
         "title": "Components"
       },
       "Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "Überblick über Datentypen"
       },
       "Concepts/blob": {
         "title": "BLOB"
@@ -48,7 +48,7 @@
         "title": "Collection"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "Datum"
       },
       "Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -57,19 +57,19 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "Objekt"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "Zeiger"
       },
       "Concepts/string": {
         "title": "String"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "Zeit"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -81,13 +81,13 @@
         "title": "Ablaufsteuerung Überblick"
       },
       "Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "Namensregeln"
       },
       "Concepts/interpreted-compiled": {
         "title": "Interpreted and Compiled modes"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "Methoden"
       },
       "Concepts/parameters": {
         "title": "Parameters"
@@ -202,7 +202,7 @@
         "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -343,9 +343,6 @@
       "Project/overview": {
         "title": "Overview"
       },
-      "Project/pictures": {
-        "title": "Pictures"
-      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -445,6 +442,16 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
+        "title": "List Box"
+      },
+      "version-18 R2 BETA-MSC/version-18R2_BETA-analysis": {
+        "title": "Seite Aktivität Analyse",
+        "sidebar_label": "Seite Aktivität Analyse"
+      },
+      "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
+        "title": "Pictures"
+      },
       "version-18.0-Backup/backup": {
         "title": "Backup"
       },
@@ -476,7 +483,7 @@
         "title": "Components"
       },
       "version-18.0-Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "Überblick über Datentypen"
       },
       "version-18.0-Concepts/blob": {
         "title": "BLOB"
@@ -488,7 +495,7 @@
         "title": "Collection"
       },
       "version-18.0-Concepts/date": {
-        "title": "Date"
+        "title": "Datum"
       },
       "version-18.0-Concepts/null-undefined": {
         "title": "Null and Undefined"
@@ -500,16 +507,16 @@
         "title": "Objects"
       },
       "version-18.0-Concepts/picture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "version-18.0-Concepts/pointer": {
-        "title": "Pointer"
+        "title": "Zeiger"
       },
       "version-18.0-Concepts/string": {
         "title": "String"
       },
       "version-18.0-Concepts/time": {
-        "title": "Time"
+        "title": "Zeit"
       },
       "version-18.0-Concepts/variant": {
         "title": "Variant"
@@ -521,13 +528,13 @@
         "title": "Ablaufsteuerung Überblick"
       },
       "version-18.0-Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "Namensregeln"
       },
       "version-18.0-Concepts/interpreted-compiled": {
         "title": "Interpreted and Compiled modes"
       },
       "version-18.0-Concepts/methods": {
-        "title": "Methods"
+        "title": "Methoden"
       },
       "version-18.0-Concepts/parameters": {
         "title": "Parameters"
@@ -642,7 +649,7 @@
         "title": "Objects"
       },
       "version-18.0-FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "version-18.0-FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
@@ -881,16 +888,6 @@
       },
       "version-18.0-Users/overview": {
         "title": "Overview"
-      },
-      "version-18R2_BETA-FormObjects/listboxOverview": {
-        "title": "List Box"
-      },
-      "version-18R2_BETA-MSC/analysis": {
-        "title": "Seite Aktivität Analyse",
-        "sidebar_label": "Seite Aktivität Analyse"
-      },
-      "version-18R2_BETA-Project/pictures": {
-        "title": "Pictures"
       }
     },
     "links": {},
@@ -909,6 +906,17 @@
     }
   },
   "pages-strings": {
+    "Language Concepts|in index page Getting started": "Language Concepts",
+    "Project databases|in index page Getting started": "Project databases",
+    "Form Editor|no description given": "Form Editor",
+    "Form Objects|no description given": "Form Objects",
+    "Form Object Properties|no description given": "Form Object Properties",
+    "Menus|no description given": "Menus",
+    "Web Server|no description given": "Web Server",
+    "REST Server|no description given": "REST Server",
+    "Maintenance and Security Center|no description given": "Maintenance and Security Center",
+    "Backup and Restore|no description given": "Backup and Restore",
+    "Users and Groups|no description given": "Users and Groups",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",

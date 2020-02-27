@@ -442,17 +442,17 @@
       "Users/overview": {
         "title": "Overview"
       },
-      "version-18 R2 BETA/FormObjects/version-18R2_BETA-listboxOverview": {
+      "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
         "title": "List Box"
       },
-      "version-18 R2 BETA/MSC/version-18R2_BETA-analysis": {
+      "version-18 R2 BETA-MSC/version-18R2_BETA-analysis": {
         "title": "Activity analysis Page",
         "sidebar_label": "Activity analysis Page"
       },
-      "version-18 R2 BETA/Project/version-18R2_BETA-pictures": {
+      "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
         "title": "Pictures"
       },
-      "version-18.0/Backup/version-18.0-backup": {
+      "version-18.0-Backup/backup": {
         "title": "Backup"
       },
       "version-18.0/Backup/version-18.0-log": {
@@ -906,6 +906,17 @@
     }
   },
   "pages-strings": {
+    "Language Concepts|in index page Getting started": "Language Concepts",
+    "Project databases|in index page Getting started": "Project databases",
+    "Form Editor|no description given": "Form Editor",
+    "Form Objects|no description given": "Form Objects",
+    "Form Object Properties|no description given": "Form Object Properties",
+    "Menus|no description given": "Menus",
+    "Web Server|no description given": "Web Server",
+    "REST Server|no description given": "REST Server",
+    "Maintenance and Security Center|no description given": "Maintenance and Security Center",
+    "Backup and Restore|no description given": "Backup and Restore",
+    "Users and Groups|no description given": "Users and Groups",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",

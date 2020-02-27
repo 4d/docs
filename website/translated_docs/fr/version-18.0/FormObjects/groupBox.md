@@ -8,7 +8,7 @@ Une zone de groupe est un objet statique qui vous permet de rassembler visuellem
 
 ![](assets/en/FormObjects/groupBox.png)
 
-> The name of a group box is static text; you can use a “localizable” reference as with any 4D label (see [Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) and *XLIFF Architecture* section in 4D Design Reference.
+> Le nom d'une zone de groupe est un texte statique ; vous pouvez utiliser une référence "localisable", comme pour toute étiquette 4D (voir [Utiliser des references dans les textes statiques](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) et la section *Architecture XLIFF* dans le manuel Développement de 4D.
 
 #### Exemple JSON :
 

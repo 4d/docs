@@ -225,7 +225,7 @@ Here is the equivalent `Repeat...Until` loop:
 
 You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
 
-10. Here is an example:
+10. 次に例を示します:
 
 ```4d
  C_LONGINT($vlCounter) //use local Long Integer variables
@@ -298,7 +298,7 @@ The following table compares the three types of `For each...End for each`:
 | Current_Item type                 | Variable of the same type as collection elements | エンティティ                              | Text variable               |
 | Expression type                   | Collection (with elements of the same type)      | Entity selection                    | オブジェクト                      |
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | ◯                                                | ◯                                   | No                          |
+| Support of begin / end parameters | ◯                                                | ◯                                   | ×                           |
 
 
 - The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.

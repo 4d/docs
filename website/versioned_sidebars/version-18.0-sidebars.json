@@ -9,7 +9,7 @@
         "ids": [
           "version-18.0-Concepts/data-types",
           "version-18.0-Concepts/blob",
-          "Concepts/version-18.0-boolean",
+          "version-18.0-Concepts/boolean",
           "version-18.0-Concepts/collection",
           "version-18.0-Concepts/date",
           "version-18.0-Concepts/null-undefined",

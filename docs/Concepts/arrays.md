@@ -55,35 +55,24 @@ Unlike text or string variables, you cannot assign one array to another. To copy
 
 An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
 
-Here is another example: you want to execute an action only when you click on an element other than the previously selected element. To do this, you must keep track of each selected element. One way to do this is to use a process variable in which you maintain the element number of the selected element. Another way is to use the element zero of the array:
+Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
 
 ```4d
-  // atNames scrollable area object method
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
-    :(Form event=On Load)
-  // Initialize the array (as shown further above)
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialize the element zero with the number
-  // of the current selected element in its string form
-  // Here you start with no selected element
-       atNames{0}:="0"
- 
-    :(Form event=On Unload)
-  // We no longer need the array
-       CLEAR VARIABLE(atNames)
- 
-    :(Form event=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
-       End if
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+		ARRAY TEXT(atName;5)
+		atName{0}:=Please select an item"
+		atName{1}:="Text1"
+		atName{2}:="Text2"
+		atName{3}:="Text3"
+		atName{4}:="Text4"
+		atName{5}:="Text5"
+	// Position the array to element 0
+  		atName:=0
  End case
 ```
  
@@ -95,6 +84,7 @@ Here is another example: you want to execute an action only when you click on an
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```4d
+
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
@@ -105,8 +95,8 @@ In the previous example:
 - atTopics is a two-dimensional array
 - atTopics{8}{5} is the 5th element (5th column...) of the 8th row
 - atTopics{20} is the 20th row and is itself a one-dimensional array
-- (atTopics) returns 100, which is the number of rows
-- (atTopics{17}) returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` returns 100, which is the number of rows
+- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
 
 In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
 

@@ -2,7 +2,7 @@
 id: version-18.0-verify
 title: Seite Prüfen
 sidebar_label: Seite Prüfen
-original_id: Prüfen
+original_id: verify
 ---
 
 Auf dieser Seite können Sie die Datenintegrität überprüfen. Die Überprüfung lässt sich in Datensätzen und/oder Indizes durchführen. Diese Funktionalität prüft nur die Datenintegrität. Bei Fehlern oder notwendigen Reparaturen erhalten Sie eine Meldung, die [Seite Reparieren](repair.md) zu verwenden.

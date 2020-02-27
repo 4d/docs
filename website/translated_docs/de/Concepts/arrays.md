@@ -1,5 +1,5 @@
 ---
-id: Arrays
+id: arrays
 title: Arrays
 ---
 
@@ -57,35 +57,24 @@ Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht e
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
-Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ein anderes Element als das zuvor gewählte anklicken. Dazu müssen Sie jedes ausgewählte Element verfolgen. Dafür könnten Sie eine Prozessvariable mit der Elementnummer des ausgewählten Elements einsetzen oder das Element Null des Array:
+Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisieren, jedoch ohne Setzen eines Standardwerts. Hierfür können Sie das Element Null des Array verwenden:
 
 ```4d
-  // atNames scrollable area object method
+  // method for a combo box or drop-down list  
+  // bound to atName variable array
  Case of
-    :(Form event=On Load)
-  // Initialize the array (as shown further above)
-       ARRAY TEXT(atNames;5)
-  // ...
-  // Initialize the element zero with the number
-  // of the current selected element in its string form
-  // Here you start with no selected element
-       atNames{0}:="0"
-
-    :(Form event=On Unload)
-  // We no longer need the array
-       CLEAR VARIABLE(atNames)
-
-    :(Form event=On Clicked)
-       If(atNames#0)
-          If(atNames#Num(atNames{0}))
-             vtInfo:="You clicked on: "+atNames{atNames}+" and it was not selected before."
-             atNames{0}:=String(atNames)
-          End if
-       End if
-    :(Form event=On Double Clicked)
-       If(atNames#0)
-          ALERT("You double clicked on: "+atNames{atNames}
-       End if
+    :(Form event code=On Load)
+  // Initialize the array (as shown further above)  
+  // But use the element zero
+        ARRAY TEXT(atName;5)
+        atName{0}:=Please select an item"
+        atName{1}:="Text1"
+        atName{2}:="Text2"
+        atName{3}:="Text3"
+        atName{4}:="Text4"
+        atName{5}:="Text5"
+    // Position the array to element 0
+        atName:=0
  End case
 ```
 
@@ -96,7 +85,7 @@ Hier ein weiteres Beispiel: Sie möchten eine Aktion nur ausführen, wenn Sie ei
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
@@ -106,8 +95,8 @@ Im oben angezeigten Beispiel gilt:
 - atTopics ist ein zweidimensionales Array
 - atTopics{8}{5} ist das 5. Element (5. Spalte...) der 8. Reihe
 - atTopics{20} ist die 20. Reihe und selbst ein eindimensionales Array
-- (atTopics) gibt 100 zurück, das ist die Anzahl der Reihen
-- (atTopics{17}) gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
+- `Größe des Array(atTopics)` gibt 100 zurück, das ist die Anzahl der Reihen
+- `Größe des Array(atTopics{17})` gibt 50 zurück, das ist die Anzahl der Spalten für die 17. Reihe
 
 Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in einem zweidimensionalen Array:
 
@@ -174,15 +163,15 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | --------------- | ------------------------------------------------------------------- |
 | Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
 | Boolean         | (31+Anzahl der Elemente) / 8                                        |
-| Date            | (1+Anzahl der Elemente) * 6                                         |
+| Datum           | (1+Anzahl der Elemente) * 6                                         |
 | Zahl            | (1+Anzahl der Elemente) * 2                                         |
 | Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
-| Object          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
-| Picture         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
-| Pointer         | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
-| Real            | (1+Anzahl der Elemente) * 8                                         |
+| Objekt          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
+| Bild            | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |
+| Zeiger          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Zeigers         |
+| Zahl            | (1+Anzahl der Elemente) * 8                                         |
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
-| Time            | (1+Anzahl der Elemente) * 4                                         |
+| Zeit            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
 
 

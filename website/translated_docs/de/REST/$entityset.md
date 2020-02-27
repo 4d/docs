@@ -35,7 +35,7 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Type   | Description                                                    |
+| Parameter        | Typ    | Description                                                    |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | Entity set ID                                                  |
@@ -51,7 +51,7 @@ Here are the logical operators:
 
 | Operator  | Description                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Returns the entities in common to both entity sets                                                                                                         |
+| UND       | Returns the entities in common to both entity sets                                                                                                         |
 | ODER      | Returns the entities in both entity sets                                                                                                                   |
 | EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
@@ -61,7 +61,7 @@ Here are the logical operators:
 
 Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
 
-**AND**
+**UND**
 
 ![](assets/en/REST/and.png)
 

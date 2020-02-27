@@ -19,8 +19,8 @@ A variant type variable can contain a value of the following data types:
 - real
 - text
 - time
-- null
-- undefined
+- Null
+- Undefiniert
 
 > Arrays cannot be stored in variant variables.
 

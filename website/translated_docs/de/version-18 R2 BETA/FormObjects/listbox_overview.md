@@ -155,7 +155,7 @@ Supported properties depend on the list box type.
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                       |
 | [Method](properties_Action.md#method)                                                        | X              | X                  | X                                       |
 | [Movable Rows](properties_Action.md#movable-rows)                                            | X              |                    |                                         |
-| [Named Selection](properties_DataSource.md#selectionName)                                    |                | X                  |                                         |
+| [Temporäre Auswahl](properties_DataSource.md#selectionName)                                  |                | X                  |                                         |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                       |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                       |
@@ -175,7 +175,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
+| [Typ](properties_Object.md#type)                                                             | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -218,7 +218,7 @@ Supported properties depend on the list box type.
 
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Comments                                                                        |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Kommentare                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | On After Edit        | - [column](#additional-properties)
 - [columnName](#additional-properties)
@@ -313,7 +313,7 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Type    | Description                                                           |
+| Property         | Typ     | Description                                                           |
 | ---------------- | ------- | --------------------------------------------------------------------- |
 | area             | text    | List box object area ("header", "footer", "cell")                     |
 | areaName         | text    | Name of the area                                                      |
@@ -369,7 +369,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Comments                                                                        |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | Kommentare                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | On After Edit        | - [column](#additional-properties)
 - [columnName](#additional-properties)
@@ -1107,7 +1107,7 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
 
 > The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
@@ -1149,7 +1149,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 

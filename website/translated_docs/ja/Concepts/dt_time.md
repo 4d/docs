@@ -58,11 +58,15 @@ title: 時間
 
 時間式を数値と組み合わせた式から時間式を取得するには、`Time` コマンドと `Time string` コマンドを使用します。
 
-`Time` や `Current time` コマンドを使う際に、時間型と数値型の式を組み合わせることが出来ます。たとえば:   
-` // 以下の行は $vlSeconds に、深夜0時から現在より1時間後までに経過した秒数を代入します。<br />
- $vlSeconds:=Current time+3600<br />
-  // 以下の行は $vHSoon 1時間後の時刻を代入します。<br />
- $vhSoon:=Time(Current time+3600)<br />`
+`Time` または `Current time` コマンドを使用する際に、時間型と数値型の式を組み合わせることができます:
+
+```4d
+    // 以下の行は $vlSeconds に、深夜0時から現在の
+    // 1時間後までに経過した秒数を代入します。
+$vlSeconds:=Current time+3600
+    // 以下の行は $vHSoon に 1時間後の時刻を代入します。
+$vhSoon:=Time(Current time+3600)
+```
 
 2番目の行はより簡単に記述することができます:
 

@@ -83,11 +83,11 @@ An interface tool allowing the user to move the viewing area to the left or righ
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automatic           | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -103,9 +103,9 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Voir également
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barre de défilement verticale](#vertical-scroll-bar)
 
 * * *
 
@@ -179,7 +179,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 * * *
 
-## Show headers
+## Montrer les entêtes
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
@@ -196,9 +196,9 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 * * *
 
-## Show hidden characters
+## Montrer les caractères cachés
 
-Displays/hides invisible characters
+Affiche/masque les caractères visibles
 
 #### Grammaire JSON
 
@@ -213,7 +213,7 @@ Displays/hides invisible characters
 
 * * *
 
-## Show horizontal ruler
+## Montrer la règle horizontale
 
 Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
 
@@ -230,7 +230,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 * * *
 
-## Show HTML WYSYWIG
+## Montrer HTML WYSYWIG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -243,7 +243,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md)
 
 * * *
 
@@ -340,9 +340,9 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objets pris en charge
 
-[4D View Pro area](viewProArea_overview.md)
+[Zone 4D View Pro](viewProArea_overview.md)
 
-#### See also
+#### Voir également
 
 [4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
@@ -352,13 +352,13 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 An interface tool allowing the user to move the viewing area up and down.
 
-Available values:
+Valeurs :
 
-| Property List | JSON value  | Description                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non           | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automatic           | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -374,11 +374,11 @@ Available values:
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
-#### See also
+#### Voir également
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barre de défilement horizontale](#horizontal-scroll-bar)
 
 * * *
 
@@ -397,7 +397,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- layoutMode|text|"page", "draft", "embedded"| 
+ layoutMode|texte|"page", "draft", "embedded"| 
 
 #### Objets pris en charge
 
@@ -414,8 +414,8 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- zoom|number|minimum = 0 | 
+ zoom|numérique|minimum = 0 | 
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md)
