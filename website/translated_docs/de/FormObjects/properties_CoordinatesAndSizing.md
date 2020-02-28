@@ -34,7 +34,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 | Name          | Datentyp | Possible Values |
 | ------------- | -------- | --------------- |
-| rowHeightAuto | Boolean  | true, false     |
+| rowHeightAuto | boolean  | true, false     |
 
 
 #### Objects Supported
