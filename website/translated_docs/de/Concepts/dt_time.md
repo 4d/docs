@@ -1,6 +1,6 @@
 ---
 id: time
-title: Time
+title: Zeit
 ---
 
 - A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
@@ -31,14 +31,14 @@ A null time is specified by ?00:00:00?
 
 | Operation                | Syntax         | Ergibt  | Ausdruck                | Wert       |
 | ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition                 | Time + Time    | Zeit    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Subtraction              | Time – Time    | Zeit    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
 | Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
 | Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
 | Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
 | Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
 | Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                   | Time % Time    | Zeit    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
 | Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | Wahr       |
 |                          |                |         | ?01:02:03? = ?01:02:04? | Falsch     |
@@ -56,7 +56,7 @@ A null time is specified by ?00:00:00?
 
 ### Example 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands Time and Time string.
+To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
 You can combine expressions of the time and number types using the `Time` or `Current time` functions:
 
