@@ -16,8 +16,8 @@ The Project folder typically contains the following hierarchy:
 - *databaseName*.4DProject file
 - Sources 
     + DatabaseMethods
-    + Methods
-    + Forms
+    + Methoden
+    + Formulare
     + TableForms
     + Triggers
 + DerivedData
@@ -99,8 +99,8 @@ Project development file, used to designate and launch the project. This file ca
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- Methods
-- Forms
+- Methoden
+- Formulare
 - TableForms
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
