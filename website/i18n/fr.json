@@ -455,438 +455,438 @@
       "version-18.0-Backup/backup": {
         "title": "Sauvegarde"
       },
-      "version-18.0-Backup/log": {
+      "version-18.0/Backup/version-18.0-log": {
         "title": "Fichier d'historique (.journal)"
       },
-      "version-18.0-Backup/overview": {
+      "version-18.0/Backup/version-18.0-overview": {
         "title": "Aperçu"
       },
-      "version-18.0-Backup/restore": {
+      "version-18.0/Backup/version-18.0-restore": {
         "title": "Restitution"
       },
-      "version-18.0-Backup/settings": {
+      "version-18.0/Backup/version-18.0-settings": {
         "title": "Paramètres de sauvegarde"
       },
-      "version-18.0-Concepts/about": {
+      "version-18.0/Concepts/version-18.0-about": {
         "title": "À propos du Langage 4D"
       },
-      "version-18.0-Concepts/arrays": {
+      "version-18.0/Concepts/version-18.0-arrays": {
         "title": "Tableaux"
       },
-      "version-18.0-Concepts/branching": {
+      "version-18.0/Concepts/version-18.0-branching": {
         "title": "Structures conditionnelles"
       },
-      "version-18.0-Concepts/looping": {
+      "version-18.0/Concepts/version-18.0-looping": {
         "title": "Structures répétitives (ou \"boucles\")"
       },
-      "version-18.0-Concepts/components": {
+      "version-18.0/Concepts/version-18.0-components": {
         "title": "Composants"
       },
-      "version-18.0-Concepts/data-types": {
+      "version-18.0/Concepts/version-18.0-data-types": {
         "title": "Types de données"
       },
-      "version-18.0-Concepts/blob": {
+      "version-18.0/Concepts/version-18.0-blob": {
         "title": "BLOB"
       },
-      "version-18.0-Concepts/boolean": {
+      "version-18.0/Concepts/version-18.0-boolean": {
         "title": "Booléen"
       },
-      "version-18.0-Concepts/collection": {
+      "version-18.0/Concepts/version-18.0-collection": {
         "title": "Collection"
       },
-      "version-18.0-Concepts/date": {
+      "version-18.0/Concepts/version-18.0-date": {
         "title": "Date"
       },
-      "version-18.0-Concepts/null-undefined": {
+      "version-18.0/Concepts/version-18.0-null-undefined": {
         "title": "Null et Indefinie"
       },
-      "version-18.0-Concepts/number": {
+      "version-18.0/Concepts/version-18.0-number": {
         "title": "Numérique (Réel, Entier, Entier long)"
       },
-      "version-18.0-Concepts/object": {
+      "version-18.0/Concepts/version-18.0-object": {
         "title": "Objets"
       },
-      "version-18.0-Concepts/picture": {
+      "version-18.0/Concepts/version-18.0-picture": {
         "title": "Image"
       },
-      "version-18.0-Concepts/pointer": {
+      "version-18.0/Concepts/version-18.0-pointer": {
         "title": "Pointeur"
       },
-      "version-18.0-Concepts/string": {
+      "version-18.0/Concepts/version-18.0-string": {
         "title": "Chaine"
       },
-      "version-18.0-Concepts/time": {
+      "version-18.0/Concepts/version-18.0-time": {
         "title": "Heure"
       },
-      "version-18.0-Concepts/variant": {
+      "version-18.0/Concepts/version-18.0-variant": {
         "title": "Variant"
       },
-      "version-18.0-Concepts/error-handling": {
+      "version-18.0/Concepts/version-18.0-error-handling": {
         "title": "Gestion des erreurs"
       },
-      "version-18.0-Concepts/control-flow": {
+      "version-18.0/Concepts/version-18.0-control-flow": {
         "title": "Conditions et boucles"
       },
-      "version-18.0-Concepts/identifiers": {
+      "version-18.0/Concepts/version-18.0-identifiers": {
         "title": "Identifiants"
       },
-      "version-18.0-Concepts/interpreted-compiled": {
+      "version-18.0/Concepts/version-18.0-interpreted-compiled": {
         "title": "Modes interprété et compilé"
       },
-      "version-18.0-Concepts/methods": {
+      "version-18.0/Concepts/version-18.0-methods": {
         "title": "Méthodes"
       },
-      "version-18.0-Concepts/parameters": {
+      "version-18.0/Concepts/version-18.0-parameters": {
         "title": "Paramètres"
       },
-      "version-18.0-Concepts/plug-ins": {
+      "version-18.0/Concepts/version-18.0-plug-ins": {
         "title": "Plug-ins"
       },
-      "version-18.0-Concepts/quick-tour": {
+      "version-18.0/Concepts/version-18.0-quick-tour": {
         "title": "Tour d'horizon",
         "sidebar_label": "Tour d'horizon"
       },
-      "version-18.0-Concepts/shared": {
+      "version-18.0/Concepts/version-18.0-shared": {
         "title": "Objets et collections partagés"
       },
-      "version-18.0-Concepts/variables": {
+      "version-18.0/Concepts/version-18.0-variables": {
         "title": "Variables"
       },
-      "version-18.0-FormEditor/stylesheets": {
+      "version-18.0/FormEditor/version-18.0-stylesheets": {
         "title": "Feuilles de style (style sheets)"
       },
-      "version-18.0-FormEditor/objectLibrary": {
+      "version-18.0/FormEditor/version-18.0-objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
-      "version-18.0-FormObjects/buttonOverview": {
+      "version-18.0/FormObjects/version-18.0-buttonOverview": {
         "title": "Bouton"
       },
-      "version-18.0-FormObjects/buttonGridOverview": {
+      "version-18.0/FormObjects/version-18.0-buttonGridOverview": {
         "title": "Grille de boutons"
       },
-      "version-18.0-FormObjects/checkboxOverview": {
+      "version-18.0/FormObjects/version-18.0-checkboxOverview": {
         "title": "Case à cocher"
       },
-      "version-18.0-FormObjects/comboBoxOverview": {
+      "version-18.0/FormObjects/version-18.0-comboBoxOverview": {
         "title": "Combo Box"
       },
-      "version-18.0-FormObjects/dropdownListOverview": {
+      "version-18.0/FormObjects/version-18.0-dropdownListOverview": {
         "title": "Liste déroulante"
       },
-      "version-18.0-FormObjects/formObjectsOverview": {
+      "version-18.0/FormObjects/version-18.0-formObjectsOverview": {
         "title": "A propos des objets formulaires 4D"
       },
-      "version-18.0-FormObjects/groupBox": {
+      "version-18.0/FormObjects/version-18.0-groupBox": {
         "title": "Zone de groupe"
       },
-      "version-18.0-FormObjects/inputOverview": {
+      "version-18.0/FormObjects/version-18.0-inputOverview": {
         "title": "Input"
       },
-      "version-18.0-FormObjects/listOverview": {
+      "version-18.0/FormObjects/version-18.0-listOverview": {
         "title": "Hierarchical List"
       },
-      "version-18.0-FormObjects/listboxOverview": {
+      "version-18.0/FormObjects/version-18.0-listboxOverview": {
         "title": "List Box"
       },
-      "version-18.0-FormObjects/pictureButtonOverview": {
+      "version-18.0/FormObjects/version-18.0-pictureButtonOverview": {
         "title": "Bouton image"
       },
-      "version-18.0-FormObjects/picturePopupMenuOverview": {
+      "version-18.0/FormObjects/version-18.0-picturePopupMenuOverview": {
         "title": "Pop-up menu image"
       },
-      "version-18.0-FormObjects/pluginAreaOverview": {
+      "version-18.0/FormObjects/version-18.0-pluginAreaOverview": {
         "title": "Zone de plug-in"
       },
-      "version-18.0-FormObjects/progressIndicator": {
+      "version-18.0/FormObjects/version-18.0-progressIndicator": {
         "title": "Indicateurs de progression"
       },
-      "version-18.0-FormObjects/propertiesAction": {
+      "version-18.0/FormObjects/version-18.0-propertiesAction": {
         "title": "Action"
       },
-      "version-18.0-FormObjects/propertiesAnimation": {
+      "version-18.0/FormObjects/version-18.0-propertiesAnimation": {
         "title": "Animation"
       },
-      "version-18.0-FormObjects/propertiesAppearance": {
+      "version-18.0/FormObjects/version-18.0-propertiesAppearance": {
         "title": "Apparence"
       },
-      "version-18.0-FormObjects/propertiesBackgroundAndBorder": {
+      "version-18.0/FormObjects/version-18.0-propertiesBackgroundAndBorder": {
         "title": "Background and Border"
       },
-      "version-18.0-FormObjects/propertiesCoordinatesAndSizing": {
+      "version-18.0/FormObjects/version-18.0-propertiesCoordinatesAndSizing": {
         "title": "Coordonnées et dimensions"
       },
-      "version-18.0-FormObjects/propertiesCrop": {
+      "version-18.0/FormObjects/version-18.0-propertiesCrop": {
         "title": "Découpage"
       },
-      "version-18.0-FormObjects/propertiesDataSource": {
+      "version-18.0/FormObjects/version-18.0-propertiesDataSource": {
         "title": "Source de données"
       },
-      "version-18.0-FormObjects/propertiesDisplay": {
+      "version-18.0/FormObjects/version-18.0-propertiesDisplay": {
         "title": "Display"
       },
-      "version-18.0-FormObjects/propertiesEntry": {
+      "version-18.0/FormObjects/version-18.0-propertiesEntry": {
         "title": "Saisie"
       },
-      "version-18.0-FormObjects/propertiesFooters": {
+      "version-18.0/FormObjects/version-18.0-propertiesFooters": {
         "title": "Pieds"
       },
-      "version-18.0-FormObjects/propertiesGridlines": {
+      "version-18.0/FormObjects/version-18.0-propertiesGridlines": {
         "title": "Quadrillage"
       },
-      "version-18.0-FormObjects/propertiesHeaders": {
+      "version-18.0/FormObjects/version-18.0-propertiesHeaders": {
         "title": "En-têtes"
       },
-      "version-18.0-FormObjects/propertiesHelp": {
+      "version-18.0/FormObjects/version-18.0-propertiesHelp": {
         "title": "Aide"
       },
-      "version-18.0-FormObjects/propertiesHierarchy": {
+      "version-18.0/FormObjects/version-18.0-propertiesHierarchy": {
         "title": "Hiérarchie"
       },
-      "version-18.0-FormObjects/propertiesListBox": {
+      "version-18.0/FormObjects/version-18.0-propertiesListBox": {
         "title": "List Box"
       },
-      "version-18.0-FormObjects/propertiesObject": {
+      "version-18.0/FormObjects/version-18.0-propertiesObject": {
         "title": "Objets"
       },
-      "version-18.0-FormObjects/propertiesPicture": {
+      "version-18.0/FormObjects/version-18.0-propertiesPicture": {
         "title": "Image"
       },
-      "version-18.0-FormObjects/propertiesPlugIns": {
+      "version-18.0/FormObjects/version-18.0-propertiesPlugIns": {
         "title": "Plug-ins"
       },
-      "version-18.0-FormObjects/propertiesPrint": {
+      "version-18.0/FormObjects/version-18.0-propertiesPrint": {
         "title": "Imprimer"
       },
-      "version-18.0-FormObjects/propertiesRangeOfValues": {
+      "version-18.0/FormObjects/version-18.0-propertiesRangeOfValues": {
         "title": "Plage de valeurs"
       },
-      "version-18.0-FormObjects/propertiesReference": {
+      "version-18.0/FormObjects/version-18.0-propertiesReference": {
         "title": "JSON property list"
       },
-      "version-18.0-FormObjects/propertiesResizingOptions": {
+      "version-18.0/FormObjects/version-18.0-propertiesResizingOptions": {
         "title": "Options de redimensionnement"
       },
-      "version-18.0-FormObjects/propertiesScale": {
+      "version-18.0/FormObjects/version-18.0-propertiesScale": {
         "title": "Echelle"
       },
-      "version-18.0-FormObjects/propertiesSubform": {
+      "version-18.0/FormObjects/version-18.0-propertiesSubform": {
         "title": "Subform"
       },
-      "version-18.0-FormObjects/propertiesText": {
+      "version-18.0/FormObjects/version-18.0-propertiesText": {
         "title": "Texte"
       },
-      "version-18.0-FormObjects/propertiesTextAndPicture": {
+      "version-18.0/FormObjects/version-18.0-propertiesTextAndPicture": {
         "title": "Texte et Image"
       },
-      "version-18.0-FormObjects/propertiesWebArea": {
+      "version-18.0/FormObjects/version-18.0-propertiesWebArea": {
         "title": "Zone Web"
       },
-      "version-18.0-FormObjects/radiobuttonOverview": {
+      "version-18.0/FormObjects/version-18.0-radiobuttonOverview": {
         "title": "Bouton radio"
       },
-      "version-18.0-FormObjects/ruler": {
+      "version-18.0/FormObjects/version-18.0-ruler": {
         "title": "Règle"
       },
-      "version-18.0-FormObjects/shapesOverview": {
+      "version-18.0/FormObjects/version-18.0-shapesOverview": {
         "title": "Formes"
       },
-      "version-18.0-FormObjects/spinner": {
+      "version-18.0/FormObjects/version-18.0-spinner": {
         "title": "Spinner"
       },
-      "version-18.0-FormObjects/splitters": {
+      "version-18.0/FormObjects/version-18.0-splitters": {
         "title": "Séparateur"
       },
-      "version-18.0-FormObjects/staticPicture": {
+      "version-18.0/FormObjects/version-18.0-staticPicture": {
         "title": "Image statique"
       },
-      "version-18.0-FormObjects/stepper": {
+      "version-18.0/FormObjects/version-18.0-stepper": {
         "title": "Stepper"
       },
-      "version-18.0-FormObjects/subformOverview": {
+      "version-18.0/FormObjects/version-18.0-subformOverview": {
         "title": "Subform"
       },
-      "version-18.0-FormObjects/tabControl": {
+      "version-18.0/FormObjects/version-18.0-tabControl": {
         "title": "Onglets"
       },
-      "version-18.0-FormObjects/text": {
+      "version-18.0/FormObjects/version-18.0-text": {
         "title": "Texte"
       },
-      "version-18.0-FormObjects/viewProAreaOverview": {
+      "version-18.0/FormObjects/version-18.0-viewProAreaOverview": {
         "title": "4D View Pro area"
       },
-      "version-18.0-FormObjects/webAreaOverview": {
+      "version-18.0/FormObjects/version-18.0-webAreaOverview": {
         "title": "Zone Web"
       },
-      "version-18.0-FormObjects/writeProAreaOverview": {
+      "version-18.0/FormObjects/version-18.0-writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
-      "version-18.0-Menus/bars": {
+      "version-18.0/Menus/version-18.0-bars": {
         "title": "Barres de menus"
       },
-      "version-18.0-Menus/creating": {
+      "version-18.0/Menus/version-18.0-creating": {
         "title": "Créer des menus et des barres de menus"
       },
-      "version-18.0-Menus/overview": {
+      "version-18.0/Menus/version-18.0-overview": {
         "title": "Aperçu"
       },
-      "version-18.0-Menus/properties": {
+      "version-18.0/Menus/version-18.0-properties": {
         "title": "Propriétés des menus"
       },
-      "version-18.0-Menus/sdi": {
+      "version-18.0/Menus/version-18.0-sdi": {
         "title": "Mode SDI sous Windows"
       },
-      "version-18.0-MSC/analysis": {
+      "version-18.0/MSC/version-18.0-analysis": {
         "title": "Page Analyse d'activités",
         "sidebar_label": "Page Analyse d'activités"
       },
-      "version-18.0-MSC/backup": {
+      "version-18.0/MSC/version-18.0-backup": {
         "title": "Page Sauvegarde",
         "sidebar_label": "Page Sauvegarde"
       },
-      "version-18.0-MSC/compact": {
+      "version-18.0/MSC/version-18.0-compact": {
         "title": "Page compactage",
         "sidebar_label": "Page compactage"
       },
-      "version-18.0-MSC/encrypt": {
+      "version-18.0/MSC/version-18.0-encrypt": {
         "title": "Page chiffrement",
         "sidebar_label": "Page chiffrement"
       },
-      "version-18.0-MSC/information": {
+      "version-18.0/MSC/version-18.0-information": {
         "title": "Page informations",
         "sidebar_label": "Page informations"
       },
-      "version-18.0-MSC/overview": {
+      "version-18.0/MSC/version-18.0-overview": {
         "title": "Aperçu",
         "sidebar_label": "Aperçu"
       },
-      "version-18.0-MSC/repair": {
+      "version-18.0/MSC/version-18.0-repair": {
         "title": "Page Réparation",
         "sidebar_label": "Page Réparation"
       },
-      "version-18.0-MSC/restore": {
+      "version-18.0/MSC/version-18.0-restore": {
         "title": "Page restitution",
         "sidebar_label": "Page restitution"
       },
-      "version-18.0-MSC/rollback": {
+      "version-18.0/MSC/version-18.0-rollback": {
         "title": "Page Retour en arrière",
         "sidebar_label": "Page Retour en arrière"
       },
-      "version-18.0-MSC/verify": {
+      "version-18.0/MSC/version-18.0-verify": {
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
-      "version-18.0-Project/architecture": {
+      "version-18.0/Project/version-18.0-architecture": {
         "title": "Architecture d'un projet 4D"
       },
-      "version-18.0-Project/building": {
+      "version-18.0/Project/version-18.0-building": {
         "title": "Générer un package projet"
       },
-      "version-18.0-Project/creating": {
+      "version-18.0/Project/version-18.0-creating": {
         "title": "Créer un projet 4D"
       },
-      "version-18.0-Project/developing": {
+      "version-18.0/Project/version-18.0-developing": {
         "title": "Développer un projet"
       },
-      "version-18.0-Project/overview": {
+      "version-18.0/Project/version-18.0-overview": {
         "title": "Aperçu"
       },
-      "version-18.0-REST/{dataClass}": {
+      "version-18.0/REST/version-18.0-{dataClass}": {
         "title": "{dataClass}"
       },
-      "version-18.0-REST/asArray": {
+      "version-18.0/REST/version-18.0-asArray": {
         "title": "$asArray"
       },
-      "version-18.0-REST/atomic_$atonce": {
+      "version-18.0/REST/version-18.0-atomic_$atonce": {
         "title": "$atomic/$atonce"
       },
-      "version-18.0-REST/attributes": {
+      "version-18.0/REST/version-18.0-attributes": {
         "title": "$attributes"
       },
-      "version-18.0-REST/binary": {
+      "version-18.0/REST/version-18.0-binary": {
         "title": "$binary"
       },
-      "version-18.0-REST/catalog": {
+      "version-18.0/REST/version-18.0-catalog": {
         "title": "$catalog"
       },
-      "version-18.0-REST/compute": {
+      "version-18.0/REST/version-18.0-compute": {
         "title": "$compute"
       },
-      "version-18.0-REST/directory": {
+      "version-18.0/REST/version-18.0-directory": {
         "title": "$directory"
       },
-      "version-18.0-REST/distinct": {
+      "version-18.0/REST/version-18.0-distinct": {
         "title": "$distinct"
       },
-      "version-18.0-REST/entityset": {
+      "version-18.0/REST/version-18.0-entityset": {
         "title": "$entityset"
       },
-      "version-18.0-REST/expand": {
+      "version-18.0/REST/version-18.0-expand": {
         "title": "$expand"
       },
-      "version-18.0-REST/filter": {
+      "version-18.0/REST/version-18.0-filter": {
         "title": "$filter"
       },
-      "version-18.0-REST/imageformat": {
+      "version-18.0/REST/version-18.0-imageformat": {
         "title": "$imageformat"
       },
-      "version-18.0-REST/info": {
+      "version-18.0/REST/version-18.0-info": {
         "title": "$info"
       },
-      "version-18.0-REST/method": {
+      "version-18.0/REST/version-18.0-method": {
         "title": "$method"
       },
-      "version-18.0-REST/orderby": {
+      "version-18.0/REST/version-18.0-orderby": {
         "title": "$orderby"
       },
-      "version-18.0-REST/querypath": {
+      "version-18.0/REST/version-18.0-querypath": {
         "title": "$querypath"
       },
-      "version-18.0-REST/queryplan": {
+      "version-18.0/REST/version-18.0-queryplan": {
         "title": "$queryplan"
       },
-      "version-18.0-REST/savedfilter": {
+      "version-18.0/REST/version-18.0-savedfilter": {
         "title": "$savedfilter"
       },
-      "version-18.0-REST/savedorderby": {
+      "version-18.0/REST/version-18.0-savedorderby": {
         "title": "$savedorderby"
       },
-      "version-18.0-REST/skip": {
+      "version-18.0/REST/version-18.0-skip": {
         "title": "$skip"
       },
-      "version-18.0-REST/timeout": {
+      "version-18.0/REST/version-18.0-timeout": {
         "title": "$timeout"
       },
-      "version-18.0-REST/top_$limit": {
+      "version-18.0/REST/version-18.0-top_$limit": {
         "title": "$top/$limit"
       },
-      "version-18.0-REST/upload": {
+      "version-18.0/REST/version-18.0-upload": {
         "title": "$upload"
       },
-      "version-18.0-REST/version": {
+      "version-18.0/REST/version-18.0-version": {
         "title": "$version"
       },
-      "version-18.0-REST/authUsers": {
+      "version-18.0/REST/version-18.0-authUsers": {
         "title": "Sessions et utilisateurs"
       },
-      "version-18.0-REST/configuration": {
+      "version-18.0/REST/version-18.0-configuration": {
         "title": "Configuration du serveur"
       },
-      "version-18.0-REST/genInfo": {
+      "version-18.0/REST/version-18.0-genInfo": {
         "title": "Obtenir des informations du serveur"
       },
-      "version-18.0-REST/gettingStarted": {
+      "version-18.0/REST/version-18.0-gettingStarted": {
         "title": "Prise en main"
       },
-      "version-18.0-REST/manData": {
+      "version-18.0/REST/version-18.0-manData": {
         "title": "Manipulation des données"
       },
-      "version-18.0-REST/REST_requests": {
+      "version-18.0/REST/version-18.0-REST_requests": {
         "title": "A propos des requêtes REST"
       },
-      "version-18.0-Users/editing": {
+      "version-18.0/Users/version-18.0-editing": {
         "title": "Gestion des groupes et utilisateurs 4D"
       },
-      "version-18.0-Users/overview": {
+      "version-18.0/Users/version-18.0-overview": {
         "title": "Aperçu"
       }
     },
