@@ -1,5 +1,5 @@
 ---
-id: Kompakt
+id: compact
 title: Seite Kompakt
 sidebar_label: Seite Kompakt
 ---
