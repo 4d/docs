@@ -1,6 +1,6 @@
 ---
 id: version-18.0-methods
-title: Methods
+title: Methoden
 original_id: methods
 ---
 
@@ -80,7 +80,7 @@ Even for someone who doesn’t know the database, it is clear what this code doe
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
 To execute a method stored in an object property, use the **( )** operator after the property name. Beispiel:
 
@@ -93,7 +93,7 @@ Then `myAlert` can be encapsulated in any object and called:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("custom_Alert";New formula(myAlert))
+$o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
 
@@ -115,7 +115,7 @@ You can encapsulate `fullName` in an object:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("full_name";New formula(fullName))
+$o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
@@ -134,7 +134,7 @@ Then the method acts like a new, calculated attribute that can be added to other
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=New formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
