@@ -30,7 +30,7 @@ Displays/Hides the graduations next to the labels.
 
 |      Name       | Datentyp | Possible Values |
 |:---------------:|:--------:| --------------- |
-| showGraduations | Boolean  | "true", "false" |
+| showGraduations | boolean  | "true", "false" |
 
 
 #### Objects Supported
