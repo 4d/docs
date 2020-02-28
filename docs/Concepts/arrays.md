@@ -55,7 +55,7 @@ Unlike text or string variables, you cannot assign one array to another. To copy
 
 An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
 
-Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
+Here is another example: you want to initialize a form object with a text value but without setting a default value. You can use the element zero of the array:
 
 ```4d
   // method for a combo box or drop-down list  
@@ -84,6 +84,7 @@ Here is another example: you want to initialize a form object with a text value 
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```4d
+
 
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
