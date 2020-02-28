@@ -108,6 +108,9 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
+      "FormEditor/listboxWizard": {
+        "title": "List Box Builder"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },

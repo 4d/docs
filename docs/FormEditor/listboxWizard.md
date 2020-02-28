@@ -3,7 +3,6 @@ id: listboxWizard
 title: List Box Builder
 ---
 
-## Creating a list box
 
 You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form editor.
 
@@ -15,19 +14,18 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 
 1.	In the Form editor toolbar, click on the List box builder icon:
- 
+	
 	![](assets/en/FormEditor/listboxBuilderIcon.png)
 	
 	The List box builder is displayed:
 	
-
-	![](assets/en/FormEditor/listboxBuilder.png)
+	![](assets/en/FormEditor/listboxBuilder.png)	
 	
-2.	Select a table from the Table dropdown list:
+2.	Select a table from the **Table** dropdown list:
 
 	![](assets/en/FormEditor/listboxBuilderTable.png)
 	
-3.	Select the fields for the list box in the Fields area:
+3.	Select the fields for the list box in the **Fields** area:
 
 	![](assets/en/FormEditor/listboxBuilderFields.png)
 	
@@ -39,8 +37,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 	![](assets/en/FormEditor/listboxBuilderExpression.png)
 	
-	
-	This expression can be changed if necessary (e.g., linking entity selection tables)
+	This expression can be changed if necessary (*e.g.*, linking entity selection tables)
 	
 	Clicking on the clipboard icon will copy the expression into memory.
 	
@@ -48,6 +45,6 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 	![](assets/en/FormEditor/listboxBuilderBuild.png)
 	
-The list box:
+The final list box:
 
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
