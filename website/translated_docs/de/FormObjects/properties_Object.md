@@ -267,17 +267,17 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
                     
-                    | Calculation           | Num | Text | Date | Time | Bool | Pict | footer var type     |
-                    | --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-                    | Minimum               | X   |      | X    | X    | X    |      | Same as column type |
-                    | Maximum               | X   |      | X    | X    | X    |      | Same as column type |
-                    | Sum                   | X   |      | X    |      | X    |      | Same as column type |
-                    | Count                 | X   | X    | X    | X    | X    | X    | Lange Ganzzahl      |
-                    | Average               | X   |      |      | X    |      |      | Real                |
-                    | Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-                    | Variance(*)           | X   |      |      | X    |      |      | Real                |
-                    | Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-                    | Custom ("none")       | X   | X    | X    | X    | X    | X    | Any                 |
+                    | Calculation           | Num | Text | Datum | Zeit | Bool | Pict | footer var type     |
+                    | --------------------- | --- | ---- | ----- | ---- | ---- | ---- | ------------------- |
+                    | Minimum               | X   |      | X     | X    | X    |      | Same as column type |
+                    | Maximum               | X   |      | X     | X    | X    |      | Same as column type |
+                    | Sum                   | X   |      | X     |      | X    |      | Same as column type |
+                    | Count                 | X   | X    | X     | X    | X    | X    | Lange Ganzzahl      |
+                    | Average               | X   |      |       | X    |      |      | Zahl                |
+                    | Standard deviation(*) | X   |      |       | X    |      |      | Zahl                |
+                    | Variance(*)           | X   |      |       | X    |      |      | Zahl                |
+                    | Sum squares(*)        | X   |      |       | X    |      |      | Zahl                |
+                    | Custom ("none")       | X   | X    | X     | X    | X    | X    | Any                 |
 
                     
                     (*) Only for array type list boxes.
