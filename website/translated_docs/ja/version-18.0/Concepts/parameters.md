@@ -142,18 +142,18 @@ C_OBJECT($3)
 
 詳細については [インタープリターモードとコンパイルモード](Concepts/interpreted.md) を参照ください。
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
-- Database methods For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- データベースメソッド たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数 $1 〜 $6 を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- トリガー トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to decalre it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. たとえば:
+- `On Drag Over` フォームイベントを受け入れるオブジェクト `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
 
 ```4d
  C_LONGINT($0)
@@ -167,69 +167,69 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Values or references
+## 引数の渡し方: 値か参照か
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the subroutine, it does not change the value in the calling method. たとえば:
+引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をサブルーチンのローカル変数である $1, $2 ... に渡します ([引数について](#using-parameters) 参照)。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
 
 ```4d
-    //Here is some code from the method MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+    // MY_METHOD メソッド
+DO_SOMETHING([People]Name) // [People]Name の値が "williams" だとします
 ALERT([People]Name)
 
-    //Here is the code of the method DO_SOMETHING
+    // DO_SOMETHING メソッド
  $1:=Uppercase($1)
  ALERT($1)
 ```
 
-The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+`DO_SOMETHING` メソッドによって表示されたアラートボックスでは "WILLIAMS" と表示され、`MY_METHOD` メソッドによって表示されるアラートボックスでは "williams" と表示されます。 `DO_SOMETHING` メソッドは $1 の値をローカルな範囲で変更しましたが、これは `MY_METHOD` メソッドがサブルーチンに渡す引数として指定した [People]Last Name フィールドの値には影響しません。
 
-There are two ways to make the method `DO_SOMETHING` change the value of the field:
+もし `DO_SOMETHING` メソッド内でフィールドの値を変更したいのであれば、2通りのやり方があります:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. サブルーチンに渡す式としてフィールドではなく、フィールドへのポインターを指定することができます。この場合、以下のようにコードを書きます:
 
 ```4d
-  //Here is some code from the method MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+  // MY_METHOD メソッド
+ DO_SOMETHING(->[People]Name) // [People]Name の値が "williams" だとします
  ALERT([People]Last Name)
 
-  //Here the code of the method DO_SOMETHING
+  // DO_SOMETHING メソッド
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
 
-Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
+この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 $1 引数によって **参照** される対象 (上記コード内での $1-> ) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. `DO_SOMETHING` メソッドに "何かさせる" 代わりに、値を返すようにメソッドを書き直すこともできます。 たとえば、以下のようにコードです:
 
 ```4d
-    //Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+    // MY_METHOD メソッド
+ [People]Name:=DO_SOMETHING([People]Name) // もとの [People]Name の値が "williams" だとします
  ALERT([People]Name)
 
-    //Here the code of the method DO SOMETHING
+    // DO_SOMETHING メソッド
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Functions](#functions) paragraph.
+このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。詳細については [関数](#functions) の章を参照ください。
 
-### Particular cases: objects and collections
+### 特殊ケース: オブジェクトやコレクションの場合
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
+オブジェクトやコレクションのデータタイプは参照 (つまり、内部的な *ポインター*) を介した形でのみ扱われることに注意が必要です。
 
-Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+したがって、`$1、$2...` には *値* ではなく *参照* が格納されます。 `$1、$2...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは [ポインター](Concepts/dt_pointer.md#pointers-as-parameters-to-methods) に対する原理と同じものですが、`$1、$2...` の使用にあたって参照を外す必要はありません。
 
-For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
+次の例では、`CreatePerson` メソッドはオブジェクトを作成したのち、それを引数として `ChangeAge` に渡します:
 
 ```4d
-  //CreatePerson
+  // CreatePerson メソッド
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
 
-The `ChangeAge` method adds 10 to the Age attribute of the received object
+`ChangeAge` メソッドは受け取ったオブジェクトの Age 属性に 10を加えます:
 
 ```4d
   //ChangeAge
@@ -238,32 +238,32 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
  ALERT(String($1.Age))
 ```
 
-When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
+`CreatePerson` メソッドを実行すると、サブルーチンにおいても同じオブジェクト参照が扱われているため、両方のアラートボックスにおいて ”50” と表示されます。
 
-**4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
+**4D Server:** "サーバー上で実行" オプションが使用された場合など、同じマシン上で実行されないメソッド間で引数が渡される場合、参照渡しは利用できません。 このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。
 
-## Named parameters
+## 名前付き引数
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
+引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
-For example, using the `CreatePerson` method:
+たとえば、`CreatePerson` メソッドを例にとると:
 
 ```4d
-  //CreatePerson
+  // CreatePerson メソッド
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
 
-In the `ChangeAge` method you can write:
+`ChangeAge` メソッドを次のように書けます:
 
 ```4d
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
  $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
+ ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
 ```
 
 This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
@@ -279,7 +279,7 @@ In the `ChangeAge` method above, both Age and Name properties are mandatory and 
  C_OBJECT($1;$para)
  $para:=$1  
  $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
@@ -290,14 +290,14 @@ Finally, with named parameters, maintaining or refactoring applications is very 
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
-//ChangeAge
+// ChangeAge メソッド
 C_OBJECT($1;$para)
 $para:=$1  
 If ($para.toAdd=Null)
     $para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
@@ -322,9 +322,9 @@ Using the `Count parameters` command from within the called method, you can dete
 The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
 
 ```4d
-// APPEND TEXT Project Method
-// APPEND TEXT ( Text { ; Text { ; Object } } )
-// APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
+// APPEND TEXT プロジェクトメソッド
+// APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )
+// APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
  C_TEXT($1;$2)
  C_OBJECT($3)
@@ -354,8 +354,8 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
 ```4d
-  //SEND PACKETS Project Method
-  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
+  //SEND PACKETS プロジェクトメソッド
+  //SEND PACKETS ( 時間 ; テキスト { ; テキスト2... ; テキストN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
 
  C_TIME($1)
