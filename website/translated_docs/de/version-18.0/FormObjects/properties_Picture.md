@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesPicture
-title: Picture
+title: Bild
 original_id: propertiesPicture
 ---
 
