@@ -418,7 +418,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         | Name    | Datentyp | Possible Values |
         | ------- | -------- | --------------- |
-        | display | Boolean  | true, false     |
+        | display | boolean  | true, false     |
 
         
         #### Objects Supported
@@ -441,7 +441,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         | Name       | Datentyp | Possible Values |
         | ---------- | -------- | --------------- |
-        | threeState | Boolean  | true, false     |
+        | threeState | boolean  | true, false     |
 
         
         #### Objects Supported
