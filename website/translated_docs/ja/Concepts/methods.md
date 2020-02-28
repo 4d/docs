@@ -79,7 +79,7 @@ title: メソッド
 
 プロジェクトメソッドは、**フォーミュラ** オブジェクトにカプセル化して、オブジェクトから呼び出すことができます。
 
-`Formula` または `Formula from string` コマンドを使用すると、オブジェクトプロパティに格納可能な、ネイティブなフォーミュラオブジェクトを作成することができます: つまり、カスタムなオブジェクトメソッドを実装することが可能です。
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. つまり、カスタムなオブジェクトメソッドを実装することが可能です。
 
 オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **( )** をつけます。 たとえば:
 
@@ -93,7 +93,7 @@ ALERT("Hello world!")
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() // "Hello world!" と表示します
+$o.custom_Alert() //displays "Hello world!"
 ```
 
 大カッコを使用したシンタックスもサポートされます:
@@ -117,7 +117,7 @@ C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-// $result:=fullName("param1";"param2") と同義です
+// equivalent to $result:=fullName("param1";"param2")
 ```
 
 `This` 関数と組み合わせることで、オブジェクトメソッドを利用した汎用的なコードを書くことができます。 たとえば:
@@ -133,7 +133,7 @@ $0:=This.firstName+" "+This.lastName
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) // メソッドをオブジェクトに追加します
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
