@@ -56,7 +56,7 @@ Une heure nulle s’écrit ?00:00:00?
 
 ### Exemple 1
 
-Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
+To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
 You can combine expressions of the time and number types using the `Time` or `Current time` functions:
 
