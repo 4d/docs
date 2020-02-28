@@ -14,7 +14,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 | Property             | Datentyp | Possible Values       |
 | -------------------- | -------- | --------------------- |
-| allowFontColorPicker | Boolean  | false (default), true |
+| allowFontColorPicker | boolean  | false (default), true |
 
 
 #### Objects Supported
@@ -313,8 +313,8 @@ Specifies an expression or a variable which will be evaluated for each row displ
 | fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | Boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| disabled            | Boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
+| unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
+| disabled            | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
 | cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
 
@@ -395,7 +395,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      Boolean
+      boolean
     </td>
     
     <td>
@@ -697,7 +697,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      Boolean
+      boolean
     </td>
     
     <td>
