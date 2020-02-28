@@ -7,20 +7,20 @@ title: Texte et Image
 
 ## Background pathname
 
-Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+Définit le chemin d'accès de l'image qui sera dessinée en arrière-plan de l'objet. Si l'objet utilise une [icône](#picture-pathname) avec [différents états](#number-of-states), l'image de fond prendra automatiquement en charge le même nombre d'états.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
 #### Grammaire JSON
 
-| Nom                     | Type de données | Valeurs possibles                                                                                            |
-| ----------------------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string          | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Nom                     | Type de données | Valeurs possibles                                                                                        |
+| ----------------------- | --------------- | -------------------------------------------------------------------------------------------------------- |
+| customBackgroundPicture | chaîne          | Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style". |
 
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 * * *
 
@@ -37,51 +37,51 @@ General appearance of the button. The button style also plays a part in the avai
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) - [Bouton radio](radio_overview.md) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 * * *
 
 ## Marge horizontale
 
-This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
+Cette propriété permet de définir la taille (en pixels) des marges horizontales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
-This parameter is useful, for example, when the background picture contains borders:
+Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordures :
 
-| With / Without       | Exemple                                                   |
+| Avec / Sans          | Exemple                                                   |
 | -------------------- | --------------------------------------------------------- |
-| Without margin       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
-| With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
+| Sans marge           | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
+| Avec marge 13 pixels | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
 
 
-> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
+> Cette propriété fonctionne avec la propriété [Marge verticale](#vertical-margin).
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                       |
-| ------------- | --------------- | --------------------------------------- |
-| customBorderX | number          | For use with "custom" style. Minimum: 0 |
+| Nom           | Type de données | Valeurs possibles                                    |
+| ------------- | --------------- | ---------------------------------------------------- |
+| customBorderX | numérique       | A utiliser avec le style "personnalisé". Minimum : 0 |
 
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 * * *
 
-## Icon Location
+## Emplacement de l'icône
 
-Designates the placement of an icon in relation to the form object.
+Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles       |
-| ------------- | --------------- | ----------------------- |
-| iconPlacement | string          | "none", "left", "right" |
+| Nom           | Type de données | Valeurs possibles           |
+| ------------- | --------------- | --------------------------- |
+| iconPlacement | chaîne          | "aucun", "gauche", "droite" |
 
 
 #### Objets pris en charge
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Entête de List Box](listbox_overview.md#list-box-headers)
 
 * * *
 
@@ -100,7 +100,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 * * *
 
@@ -136,7 +136,7 @@ The following states are represented:
 
 Sets the path of the picture that will be used as icon for the object.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
 > When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
 
@@ -183,7 +183,7 @@ Here are the results using the various options for this property:
 
 ## Vertical Margin
 
-This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
+This property allows setting the size (in pixels) of the vertical margins of the button. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
 This parameter is useful, for example, when the background picture contains borders.
 
@@ -191,14 +191,14 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                       |
-| ------------- | --------------- | --------------------------------------- |
-| customBorderY | number          | For use with "custom" style. Minimum: 0 |
+| Nom           | Type de données | Valeurs possibles                                    |
+| ------------- | --------------- | ---------------------------------------------------- |
+| customBorderY | number          | A utiliser avec le style "personnalisé". Minimum : 0 |
 
 
 #### Objets pris en charge
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Bouton personnalisé](button_overview.md#custom) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
 
 * * *
 
