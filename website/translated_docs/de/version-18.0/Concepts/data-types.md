@@ -15,7 +15,7 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 | [Datum](Concepts/dt_date.md)                    | Ja                          | Ja                               | `C_DATE`, `ARRAY DATE`       |
 | [Zeit](Concepts/dt_time.md)                     | Ja                          | Ja                               | `C_TIME`, `ARRAY TIME`       |
 | [Boolean](Concepts/dt_boolean.md)               | Ja                          | Ja                               | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Zahl](Concepts/dt_number.md)                   | Ja                          | Konvertiert in Lange Ganzzahl    | `ARRAY INTEGER`              |
+| [Ganzzahl](Concepts/dt_number.md)               | Ja                          | Konvertiert in Lange Ganzzahl    | `ARRAY INTEGER`              |
 | [Lange Ganzzahl](Concepts/dt_number.md)         | Ja                          | Ja                               | `C_LONGINT`, `ARRAY LONGINT` |
 | [lange Ganzzahl 64 bits](Concepts/dt_number.md) | Ja (SQL)                    | Konvertiert in Zahl              | -                            |
 | [Zahl](Concepts/dt_number.md)                   | Ja                          | Ja                               | `C_REAL`, `ARRAY REAL`       |

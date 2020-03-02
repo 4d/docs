@@ -1,5 +1,5 @@
 ---
-id: Prüfen
+id: verify
 title: Seite Prüfen
 sidebar_label: Seite Prüfen
 ---

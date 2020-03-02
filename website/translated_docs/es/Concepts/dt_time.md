@@ -56,7 +56,7 @@ A null time is specified by ?00:00:00?
 
 ### Example 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands Time and Time string.
+To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
 You can combine expressions of the time and number types using the `Time` or `Current time` functions:
 

@@ -2,7 +2,7 @@
 id: version-18.0-quick-tour
 title: Schnelle Tour
 sidebar_label: Schnelle Tour
-original_id: Schnelle Tour
+original_id: quick-tour
 ---
 
 Mit der 4D Programmiersprache lässt sich die gängige Meldung "Hello, world!" auf dem Bildschirm auf verschiedenen Wegen erzeugen. Der einfachste Weg ist, eine Zeile in eine Projektmethode setzen:
@@ -50,7 +50,7 @@ MyOtherDate:=Current date+30
 
 Der Code liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile erstellt eine Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
 
-## Commands
+## Befehle
 
 4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch *4D Programmiersprache* beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
@@ -93,7 +93,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-## Methods
+## Methoden
 
 4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
@@ -118,7 +118,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Eine Methode kann einen einzelnen Wert im Parameter $0 zurückgeben. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
+Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. Die Parameter sind innerhalb der aufgerufenen Methode als durchnumerierte lokale Variablen verfügbar: $1, $2,…, $n. Eine Methode kann einen einzelnen Wert im Parameter $0 zurückgeben. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
 
 ```4d
 $myText:="hello"
@@ -234,17 +234,17 @@ Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es 
 | 4                        | Number             | Dies ist die numerische Konstante 4.                                                                                                                                               |
 | 4 * 2                    | Number             | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                        |
 | myButton                 | Number             | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.                     |
-| !1997-01-25!             | Date               | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                            |
-| Current date+ 30         | Date               | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
-| ?8:05:30?                | Time               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |
-| ?2:03:04? + ?1:02:03?    | Time               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                        |
+| !1997-01-25!             | Datum              | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                            |
+| Current date+ 30         | Datum              | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
+| ?8:05:30?                | Zeit               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |
+| ?2:03:04? + ?1:02:03?    | Zeit               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                        |
 | Wahr                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                                   |
 | 10 # 20                  | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Zahlen. Das Nummernzeichen (#) bedeutet "ist ungleich zu". Da 10 "ungleich zu" 20 ist, gibt der Ausdruck TRUE zurück.               |
 | “ABC” = “XYZ”            | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Strings. Sie sind ungleich, also gibt der Ausdruck FALSE zurück.                                                                    |
-| My Picture + 50          | Picture            | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                          |
-| ->[People]Name           | Pointer            | Dieser Ausdruck gibt einen Zeiger auf das Feld [People]Name zurück.                                                                                                                |
-| Table (1)                | Pointer            | Dies ist ein Befehl, der einen Zeiger auf die erste Tabelle zurückgibt.                                                                                                            |
-| JSON Parse (MyString)    | Object             | Dies ist ein Befehl, der MyString als ein Objekt zurückgibt (bei geeignetem Format)                                                                                                |
+| My Picture + 50          | Bild               | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                          |
+| ->[People]Name           | Zeiger             | Dieser Ausdruck gibt einen Zeiger auf das Feld [People]Name zurück.                                                                                                                |
+| Table (1)                | Zeiger             | Dies ist ein Befehl, der einen Zeiger auf die erste Tabelle zurückgibt.                                                                                                            |
+| JSON Parse (MyString)    | Objekt             | Dies ist ein Befehl, der MyString als ein Objekt zurückgibt (bei geeignetem Format)                                                                                                |
 | JSON Parse (MyJSONArray) | Collection         | Dies ist ein Befehl, der MyJSONArray als eine Collection zurückgibt (bei geeignetem Format)                                                                                        |
 | Form.pageNumber          | Objekteigenschaft  | Eine Objekteigenschaft ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |
 | Col[5]                   | Collection Element | Ein Collection Element ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |

@@ -80,7 +80,7 @@ Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’es
 
 Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
-Les commandes `Formule` ou `formule sur chaine` vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
 
 Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : Par exemple:
 
@@ -93,8 +93,8 @@ ALERT("Hello world!")
 
 ```4d
 C_OBJECT($o)
-$o:=New object("custom_Alert";New formula(myAlert))
-$o.custom_Alert() //affiche "Hello world!"
+$o:=New object("custom_Alert";Formula(myAlert))
+$o.custom_Alert() //displays "Hello world!"
 ```
 
 La syntaxe avec des crochets est également prise en charge :
@@ -115,10 +115,10 @@ Vous pouvez encapsuler `fullName` dans un objet :
 
 ```4d
 C_OBJECT($o)
-$o:=New object("full_name";New formula(fullName))
+$o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-// équivalent à $result:=fullName("param1";"param2")
+// equivalent to $result:=fullName("param1";"param2")
 ```
 
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
@@ -134,7 +134,7 @@ La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajout�
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=New formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"

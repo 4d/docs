@@ -74,7 +74,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 | Name                | Datentyp | Possible Values |
 | ------------------- | -------- | --------------- |
-| continuousExecution | Boolean  | true, false     |
+| continuousExecution | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -122,7 +122,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 | Name        | Datentyp | Possible Values |
 | ----------- | -------- | --------------- |
-| movableRows | Boolean  | true, false     |
+| movableRows | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -160,7 +160,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 | Name     | Datentyp | Possible Values |
 | -------- | -------- | --------------- |
-| sortable | Boolean  | true, false     |
+| sortable | boolean  | true, false     |
 
 
 #### Objects Supported

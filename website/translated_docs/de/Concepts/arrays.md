@@ -57,7 +57,7 @@ Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht e
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
-Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisieren, jedoch ohne Setzen eines Standardwerts. Hierfür können Sie das Element Null des Array verwenden:
+Here is another example: you want to initialize a form object with a text value but without setting a default value. Hierfür können Sie das Element Null des Array verwenden:
 
 ```4d
   // method for a combo box or drop-down list  
@@ -85,7 +85,7 @@ Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisier
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
-<br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /><br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
@@ -164,7 +164,7 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | Blob            | (1+Anzahl der Elemente) * 12 + Summe der Größe jedes Blob           |
 | Boolean         | (31+Anzahl der Elemente) / 8                                        |
 | Datum           | (1+Anzahl der Elemente) * 6                                         |
-| Zahl            | (1+Anzahl der Elemente) * 2                                         |
+| Ganzzahl        | (1+Anzahl der Elemente) * 2                                         |
 | Lange Ganzzahl  | (1+Anzahl der Elemente) * 4                                         |
 | Objekt          | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Objekts         |
 | Bild            | (1+Anzahl der Elemente) * 8 + Summe der Größe jedes Bilds           |

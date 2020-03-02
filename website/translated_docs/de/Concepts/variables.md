@@ -105,7 +105,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+A process variable does not have a prefix before its name. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
 
 In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
 

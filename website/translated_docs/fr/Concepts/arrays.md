@@ -57,7 +57,7 @@ Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Ch
 
 Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.
 
-Here is another example: you want to initialize a form object with a text value but without settinf a default value. You can use the element zero of the array:
+Here is another example: you want to initialize a form object with a text value but without setting a default value. You can use the element zero of the array:
 
 ```4d
   // method for a combo box or drop-down list  
@@ -85,7 +85,7 @@ Here is another example: you want to initialize a form object with a text value 
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
 ```4d
-<br /> ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
+<br /><br /> ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
 Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.

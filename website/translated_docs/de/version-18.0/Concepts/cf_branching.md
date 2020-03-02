@@ -58,7 +58,7 @@ Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
  End if 
 ```
 
-**Tipp:**Für bestimmte Fälle können Sie Abfragen auch ohne Befehlsfolge ausführen. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
+**Tipp:** Für bestimmte Fälle können Sie Abfragen auch ohne Befehlsfolge ausführen. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
 
 ```4d
  If(Boolean_Expression)

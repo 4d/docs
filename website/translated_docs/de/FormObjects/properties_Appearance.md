@@ -45,7 +45,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 | Name          | Datentyp | Possible Values |
 | ------------- | -------- | --------------- |
-| hideFocusRing | Boolean  | true, false     |
+| hideFocusRing | boolean  | true, false     |
 
 
 #### Objects Supported
@@ -68,7 +68,7 @@ By default, this option is not enabled.
 
 | Name                | Datentyp | Possible Values |
 | ------------------- | -------- | --------------- |
-| hideSystemHighlight | Boolean  | true, false     |
+| hideSystemHighlight | boolean  | true, false     |
 
 
 #### Objects Supported
