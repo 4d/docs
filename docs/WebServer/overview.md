@@ -5,19 +5,19 @@ title: Web Server object
 
 ## Overview
 
-A 4D application can start and monitor a web server for the main (host) database, and also a web server for each hosted component.
+A 4D project can start and monitor a web server for the main (host) database, and also for each hosted component.
 
-It means that, if you installed for example two components in your host database, you will be able to start and monitor up to 3 independant web servers from your application:
+For example, if you installed two components in your main database, you will be able to start and monitor up to 3 independant web servers from your application:
 
 - one web server for the host database,
 - one web server for the component #1,
 - one web server for the component #2.
 
-There is no other limit than memory to the number of components and thus, of web servers, that can be attached to a single 4D database. 
+There is no other limit than memory to the number of components and thus, of web servers, that can be attached to a single 4D database project. 
 
-Each 4D web server, including the web server of the main database, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current database or any component. 
+Each 4D web server, including the web server of the main database, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current database or from any component. 
 
-> The WEB commands of the 4D language are supported but can only apply to the main web server, or to the web servers of the remote application (with 4D Server). 
+> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot control the web server to which they apply (see below). 
 
 This feature allows you to develop independant components and features that come with their own web interface. 
 
@@ -27,7 +27,8 @@ This feature allows you to develop independant components and features that come
 The Web server object of the host database (default Web server) is automatically loaded by 4D at startup. Thus, if you write in a fresh new database:
 
 ```4d
-$nbSrv:=WEB Server list.length //$nbSrv=1
+$nbSrv:=WEB Server list.length   
+//$nbSrv value is 1
 ```
 
 To instantiate a web server object, call the `WEB Server` command:
@@ -57,20 +58,21 @@ A web server object contains the following member methods:
 
 |Method|Parameter|Return value|Description|
 |---|---|---|---|
-|`start()`|settings (object)|webServer (object)|Starts the web server|
+|`start()`|settings (object)|status (object)|Starts the web server|
 |`stop()`|-|-|Stops the web server|
 
 To start and stop a web server, just call the `start()` and `stop()` member methods of the web server object:
 
 ```4d
-	//to start the web server with default settings
-webServer.start()
+C_OBJECT($status)
+  	//to start a web server with default settings
+$status:=webServer.start()
 	//to start the web server with custom settings  
 	//$settings object contains web server properties
 webServer.start($settings)
 
 	//to stop the web server
-webServer.stop()
+$status:=webServer.stop()
 ``` 
 
 
