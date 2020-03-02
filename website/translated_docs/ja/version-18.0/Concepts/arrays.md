@@ -58,7 +58,7 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 
 配列は必ず、要素ゼロを持ちます。 ドロップダウンリストなどのフォームオブジェクトに配列が設定されていた場合、要素ゼロが表示されることはありませんが、ランゲージでの利用に制限はありません (*)。
 
-Here is another example: you want to initialize a form object with a text value but without setting a default value. このような場合に配列の要素ゼロが利用できます:
+例として、デフォルト値を指定せずにフォームオブジェクトを初期化したいとします。 このような場合に配列の要素ゼロが利用できます:
 
 ```4d
   // atName 配列と紐づいているコンボボックスまたはドロップダウンリストの 
