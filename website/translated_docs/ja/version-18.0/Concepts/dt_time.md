@@ -57,7 +57,7 @@ original_id: time
 
 ### 例題 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
+時間式を数値と組み合わせた式から時間式を取得するには、`Time` コマンドと `Time string` コマンドを使用します。
 
 `Time` または `Current time` コマンドを使用する際に、時間型と数値型の式を組み合わせることができます:
 
