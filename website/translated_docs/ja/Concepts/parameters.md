@@ -273,11 +273,11 @@ ALERT([People]Name)
  ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
 ```
 
-This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
+これは [任意のパラメーター](#optional-parameters) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
 
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
+- `Null` 値と比較することで、必要な引数がすべて提供されているかをチェックします
+- 引数の値をプリセットします
+- 渡されていない引数は空値として扱います
 
 In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
 
