@@ -1,6 +1,6 @@
 ---
 id: string
-title: Chaînes
+title: Chaine
 ---
 
 Chaîne est un terme générique utilisé pour :
@@ -32,29 +32,31 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | \\\                 | \ (Barre oblique inversée) |
 | \\"                  | " (Guillemets)              |
 
+
 **Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
 | Opération           | Syntaxe                   | Retourne | Expression              | Valeur   |
 | ------------------- | ------------------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne           | Chaîne   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne * Nombre           | Chaîne   | "ab" * 3                | "ababab" |
-| Egalité             | Chaîne = Chaîne           | Booléen  | "abc" = "abc"           | True     |
-|                     |                           |          | "abc" = "abd"           | False    |
-| Inégalité           | Chaîne # Chaîne           | Booléen  | "abc" # "abd"           | True     |
-|                     |                           |          | "abc" # "abc"           | False    |
-| Supérieur à         | Chaîne > Chaîne           | Booléen  | "abd" > "abc"           | True     |
-|                     |                           |          | "abc" > "abc"           | False    |
-| Inférieur à         | Chaîne < Chaîne           | Booléen  | "abc" < "abd"           | True     |
-|                     |                           |          | "abc" < "abc"           | False    |
-| Supérieur ou égal à | Chaîne >= Chaîne          | Booléen  | "abd" >= "abc"          | True     |
-|                     |                           |          | "abc" >= "abd"          | False    |
-| Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | True     |
-|                     |                           |          | "abd" <= "abc"<= "abc"  | False    |
-| Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | True     |
-|                     |                           |          | "Alpha Bravo" % "ravo"  | False    |
+| Concaténation       | Chaîne + Chaîne           | Chaine   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne * Nombre           | Chaine   | "ab" * 3                | "ababab" |
+| Egalité             | Chaîne = Chaîne           | Booléen  | "abc" = "abc"           | Vrai     |
+|                     |                           |          | "abc" = "abd"           | Faux     |
+| Inégalité           | Chaîne # Chaîne           | Booléen  | "abc" # "abd"           | Vrai     |
+|                     |                           |          | "abc" # "abc"           | Faux     |
+| Supérieur à         | Chaîne > Chaîne           | Booléen  | "abd" > "abc"           | Vrai     |
+|                     |                           |          | "abc" > "abc"           | Faux     |
+| Inférieur à         | Chaîne < Chaîne           | Booléen  | "abc" < "abd"           | Vrai     |
+|                     |                           |          | "abc" < "abc"           | Faux     |
+| Supérieur ou égal à | Chaîne >= Chaîne          | Booléen  | "abd" >= "abc"          | Vrai     |
+|                     |                           |          | "abc" >= "abd"          | Faux     |
+| Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | Vrai     |
+|                     |                           |          | "abd" <= "abc"<= "abc"  | Faux     |
+| Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
+|                     |                           |          | "Alpha Bravo" % "ravo"  | Faux     |
 |                     | Image % Chaîne            | Booléen  | Expr_image % "Mer"      | True (*) |
+
 
 (*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
@@ -157,7 +159,7 @@ If(vsNom#"")
 End if
 ```
 
-Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. En voici un exemple :
+Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple:
 
 ```4d
 //L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"

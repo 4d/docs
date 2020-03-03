@@ -51,6 +51,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 | Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
 | Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
 
+
 **Notes :**
 
 - In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.

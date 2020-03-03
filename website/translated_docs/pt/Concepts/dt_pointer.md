@@ -22,6 +22,7 @@ You can use pointers to reference tables, fields, variables, arrays, array eleme
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
 | Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
+
 ## Using a pointer: Basic example
 
 It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:
@@ -92,6 +93,7 @@ With:
 | Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
 |            |                   |         | vPtrA # vPtrB | False |
 
+
 ## Main usages
 
 ### Pointers to tables
@@ -151,11 +153,13 @@ In Method2, the debugger will display $1 as follows:
 | -- | ------------------ |
 |    |                    |
 
+
 The value of $1 will be:
 
 | $MyVar (Method1) | "Hello world" |
 | ---------------- | ------------- |
 |                  |               |
+
 
 ### Pointers to array elements
 

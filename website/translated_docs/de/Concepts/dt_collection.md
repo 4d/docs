@@ -13,7 +13,7 @@ To access a collection element, you need to pass the element number inside squar
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in expression. Examples:
+You can pass any valid 4D expression which returns a positive integer in expression. Beispiele:
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
@@ -66,7 +66,7 @@ You can create two types of collections:
 
 Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
 
-For example:
+Beispiel:
 
 ```4d
 $newCol:=$col.copy() //deep copy of $col to $newCol

@@ -1,5 +1,5 @@
 ---
-id: Reparieren
+id: repair
 title: Seite Reparieren
 sidebar_label: Seite Reparieren
 ---

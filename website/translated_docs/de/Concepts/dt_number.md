@@ -27,7 +27,7 @@ A numeric literal constant is written as a real number. Here are some examples o
 
 **Note:** Since 4D v15, the default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option (see Methods Page), you must use the separator defined in your system.
 
-Negative numbers are specified with the minus sign (-). For example:
+Negative numbers are specified with the minus sign (-). Beispiel:
 
 ```4d
 -27
@@ -37,27 +37,28 @@ Negative numbers are specified with the minus sign (-). For example:
 
 ## Number operators
 
-| Operation                | Syntax           | Returns | Expression | Value |
-| ------------------------ | ---------------- | ------- | ---------- | ----- |
-| Addition                 | Number + Number  | Number  | 2 + 3      | 5     |
-| Subtraction              | Number - Number  | Number  | 3 – 2      | 1     |
-| Multiplication           | Number * Number  | Number  | 5 * 2      | 10    |
-| Division                 | Number /Number   | Number  | 5 / 2      | 2.5   |
-| Longint division         | Number \ Number | Number  | 5 \ 2     | 2     |
-| Modulo                   | Number % Number  | Number  | 5 % 2      | 1     |
-| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3      | 8     |
-| Equality                 | Number = Number  | Boolean | 10 = 10    | True  |
-|                          |                  |         | 10 = 11    | False |
-| Inequality               | Number # Number  | Boolean | 10 #11     | True  |
-|                          |                  |         | 10 # 10    | False |
-| Greater than             | Number > Number  | Boolean | 11 > 10    | True  |
-|                          |                  |         | 10 > 11    | False |
-| Less than                | Number < Number  | Boolean | 10 < 11    | True  |
-|                          |                  |         | 11 < 10    | False |
-| Greater than or equal to | Number >= Number | Boolean | 11 >= 10   | True  |
-|                          |                  |         | 10 >= 11   | False |
-| Less than or equal to    | Number <= Number | Boolean | 10 <= 11   | True  |
-|                          |                  |         | 11 <= 10   | False |
+| Operation                | Syntax           | Ergibt  | Ausdruck | Wert   |
+| ------------------------ | ---------------- | ------- | -------- | ------ |
+| Addition                 | Number + Number  | Number  | 2 + 3    | 5      |
+| Subtraction              | Number - Number  | Number  | 3 – 2    | 1      |
+| Multiplication           | Number * Number  | Number  | 5 * 2    | 10     |
+| Division                 | Number /Number   | Number  | 5 / 2    | 2.5    |
+| Longint division         | Number \ Number | Number  | 5 \ 2   | 2      |
+| Modulo                   | Number % Number  | Number  | 5 % 2    | 1      |
+| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3    | 8      |
+| Equality                 | Number = Number  | Boolean | 10 = 10  | Wahr   |
+|                          |                  |         | 10 = 11  | Falsch |
+| Inequality               | Number # Number  | Boolean | 10 #11   | Wahr   |
+|                          |                  |         | 10 # 10  | Falsch |
+| Greater than             | Number > Number  | Boolean | 11 > 10  | Wahr   |
+|                          |                  |         | 10 > 11  | Falsch |
+| Less than                | Number < Number  | Boolean | 10 < 11  | Wahr   |
+|                          |                  |         | 11 < 10  | Falsch |
+| Greater than or equal to | Number >= Number | Boolean | 11 >= 10 | Wahr   |
+|                          |                  |         | 10 >= 11 | Falsch |
+| Less than or equal to    | Number <= Number | Boolean | 10 <= 11 | Wahr   |
+|                          |                  |         | 11 <= 10 | Falsch |
+
 
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
@@ -72,7 +73,7 @@ The modulo operator % divides the first number by the second number and returns 
 
 ### Precedence
 
-The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. For example:
+The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. Beispiel:
 
 ```4d
  3+4*5
@@ -80,7 +81,7 @@ The order in which an expression is evaluated is called precedence. 4D has a str
 
 returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
 
-To override the left-to-right precedence, you MUST use parentheses. For example:
+To override the left-to-right precedence, you MUST use parentheses. Beispiel:
 
 ```4d
  3+(4*5)

@@ -192,6 +192,7 @@ When you use the language, it is rare that you will simply want a piece of data.
 | *        | Multiplication | 2 * 3 results in 6 |
 | /        | Division       | 6 / 2 results in 3 |
 
+
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
@@ -201,6 +202,7 @@ The same symbols are often used for different operations, depending on the data 
 | Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+
 
 The operators are fully defined in the chapter Operators and its subsections.
 
@@ -246,6 +248,7 @@ You refer to an expression by the data type it returns. There are several expres
 | Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
 | $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+
 
 ### Assignable vs non-assignable expressions
 

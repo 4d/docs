@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods
+title: Methoden
 ---
 
 
@@ -8,9 +8,9 @@ A method is basically a piece of code that executes one or several actions. In t
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
     
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`. 
-        - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-        - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
+    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
     
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
@@ -79,9 +79,9 @@ Even for someone who doesn’t know the database, it is clear what this code doe
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. For example:
+To execute a method stored in an object property, use the **( )** operator after the property name. Beispiel:
 
 ```4d
 //myAlert
@@ -92,7 +92,7 @@ Then `myAlert` can be encapsulated in any object and called:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("custom_Alert";New formula(myAlert))
+$o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
 
@@ -114,13 +114,13 @@ You can encapsulate `fullName` in an object:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("full_name";New formula(fullName))
+$o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
 
-Combined with the `This`function, such object methods allow writing powerful generic code. For example:
+Combined with the `This`function, such object methods allow writing powerful generic code. Beispiel:
 
 ```4d
 //fullName2 method
@@ -133,7 +133,7 @@ Then the method acts like a new, calculated attribute that can be added to other
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=New formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
@@ -165,7 +165,7 @@ An **error catching method** is an interrupt-based project method. Each time an 
 
 ## Recursive Project Methods
 
-Project methods can call themselves. For example:
+Project methods can call themselves. Beispiel:
 
 - The method A may call the method B which may call A, so A will call B again and so on.
 - A method can call itself.
@@ -244,9 +244,9 @@ Some typical uses of recursion in 4D are:
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 
-| Type                             | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
+| Typ                              | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
 | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | Nein               | Property of a form object (also called widget)                                                                                                                       |
+| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | Nein               | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | Nein               | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
 | **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |

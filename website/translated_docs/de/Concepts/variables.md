@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variables
+title: Variablen
 ---
 
 Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
@@ -48,7 +48,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Beispiel:
 
 ```4d
 MyNumber:=3
@@ -88,7 +88,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in a database, small pieces of information are needed from the user. The command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
@@ -105,7 +105,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+A process variable does not have a prefix before its name. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
 
 In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
 

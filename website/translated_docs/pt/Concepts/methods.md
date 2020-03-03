@@ -8,9 +8,9 @@ A method is basically a piece of code that executes one or several actions. In t
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
     
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`. 
-        - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-        - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
+    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
     
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
@@ -79,7 +79,7 @@ Even for someone who doesn’t know the database, it is clear what this code doe
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `New formula` or `New formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
 To execute a method stored in an object property, use the **( )** operator after the property name. For example:
 
@@ -92,7 +92,7 @@ Then `myAlert` can be encapsulated in any object and called:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("custom_Alert";New formula(myAlert))
+$o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
 
@@ -114,7 +114,7 @@ You can encapsulate `fullName` in an object:
 
 ```4d
 C_OBJECT($o)
-$o:=New object("full_name";New formula(fullName))
+$o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
@@ -133,7 +133,7 @@ Then the method acts like a new, calculated attribute that can be added to other
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=New formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"

@@ -31,6 +31,7 @@ Although application will work the same way in interpreted and compiled modes, t
 | If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
 | The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | It is always possible to interrupt 4D                                          |
 
+
 ## Using Compiler Directives with the Interpreter
 
 Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
