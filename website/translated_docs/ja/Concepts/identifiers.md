@@ -34,7 +34,7 @@ The following rules apply for all 4D frameworks.
 
 You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
 
-Examples:
+例: 
 
 ```4d
 DEFAULT TABLE([Orders])
@@ -46,7 +46,7 @@ ADD RECORD([Letters])
 
 You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
 
-Examples:
+例: 
 
 ```4d
 [Orders]Total:=Sum([Line]Amount)
@@ -60,7 +60,7 @@ You designate an interprocess variable by preceding the name of the variable wit
 
 The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
 
-Examples:
+例: 
 
 ```4d
 <>vlProcessID:=Current process
@@ -70,9 +70,9 @@ If(<>vtName#"")
 
 ## Process Variables
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). プロセス変数名の長さは、最大31文字まで指定できます。
 
-Examples:
+例: 
 
 ```4d
 <>vrGrandTotal:=Sum([Accounts]Amount)
@@ -84,7 +84,7 @@ vsCurrentName:=""
 
 You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
 
-Examples:
+例: 
 
 ```4d
 For($vlRecord;1;100)
@@ -92,7 +92,7 @@ If($vsTempVar="No")
 $vsMyString:="Hello there"
 ```
 
-## Arrays
+## 配列
 
 You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
 
@@ -106,7 +106,7 @@ The name of an interprocess array is preceded by the symbols (<>) — a “less 
 
 An interprocess array name can contain up to 31 characters, not including the <> symbols.
 
-Examples:
+例: 
 
 ```4d
 ARRAY TEXT(<>atSubjects;Records in table([Topics]))
@@ -118,7 +118,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 
 You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
 
-Examples:
+例: 
 
 ```4d
 ARRAY TEXT(atSubjects;Records in table([Topics]))
@@ -130,7 +130,7 @@ ARRAY INTEGER(aiBigArray;10000)
 
 The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
 
-Examples:
+例: 
 
 ```4d
 ARRAY TEXT($atSubjects;Records in table([Topics]))
@@ -142,7 +142,7 @@ ARRAY INTEGER($aiBigArray;10000)
 
 You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
 
-Examples:
+例: 
 
 ```4d
     //Addressing an element of an interprocess array
@@ -165,7 +165,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 
 You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
-Examples:
+例: 
 
 ```4d
     //Addressing an element of a two-dimensional interprocess array
@@ -188,7 +188,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
 
-Examples:
+例: 
 
 ```4d
 myObject.myAttribute:="10"
@@ -201,7 +201,7 @@ $value:=$clientObj.data.address.city
 
 You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
 
-Examples:
+例: 
 
 ```4d
 FORM SET INPUT([People];"Input")
@@ -227,7 +227,7 @@ You designate a project method (procedure or function) by using its name. A meth
 
 **Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
 
-Examples:
+例: 
 
 ```4d
 If(New client)
@@ -239,7 +239,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. 例: 
 
-Examples:
+例: 
 
 ```4d
     //This command expects a method (function) or formula
@@ -254,7 +254,7 @@ Project methods can accept parameters (arguments). メソッドに引数を渡�
 
 Inside a function, the $0 local variable contains the value to be returned.
 
-Examples:
+例: 
 
 ```4d
     //Within DROP SPACES $1 is a pointer to the field [People]Name
@@ -279,7 +279,7 @@ vtClone:=Dump("is";"the";"it")
 
 You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
-Examples:
+例: 
 
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
@@ -312,7 +312,7 @@ The name of a client set is preceded by the dollar sign ($). A client set name c
 
 **Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
 
-Examples:
+例: 
 
 ```4d
     //Interprocess sets
@@ -346,7 +346,7 @@ An interprocess named selection name can contain up to 255 characters, not inclu
 
 You denote a process named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $). A named selection name can contain up to 255 characters.
 
-Examples:
+例: 
 
 ```4d
     //Interprocess Named Selection
@@ -370,7 +370,7 @@ You denote a global process by using a string expression that represents its nam
 
 You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
 
-Examples:
+例: 
 
 ```4d
     //Starting the global process "Add Customers"
@@ -385,8 +385,8 @@ The following table summarizes 4D naming conventions.
 
 | Identifier                   | Max. Length | 例題                         |
 | ---------------------------- | ----------- | -------------------------- |
-| Table                        | 31          | [Invoices]                 |
-| Field                        | 31          | [Employees]Last Name       |
+| テーブル                         | 31          | [Invoices]                 |
+| フィールド                        | 31          | [Employees]Last Name       |
 | Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
 | Process Variable/Array       | 31          | vsCurrentName              |
 | Local Variable/Array         | $ + 31      | $vlLocalCounter            |
@@ -404,6 +404,7 @@ The following table summarizes 4D naming conventions.
 | Global Process               | 255         | "*P_INVOICES_MODULE*"    |
 | Semaphore                    | 255         | "mysemaphore"              |
 
+
 **Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
 ## Resolving Naming Conflicts
@@ -413,8 +414,8 @@ Be sure to use unique names for the different elements in your database. If a pa
 4D identifies names used in procedures in the following order:
 
 1. Fields
-2. Commands
-3. Methods
+2. コマンド
+3. メソッド
 4. Plug-in routines
 5. Predefined constants
 6. Variables.

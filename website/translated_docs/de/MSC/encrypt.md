@@ -1,5 +1,5 @@
 ---
-id: Verschlüsseln
+id: encrypt
 title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
 ---

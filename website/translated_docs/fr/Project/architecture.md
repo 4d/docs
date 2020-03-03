@@ -3,7 +3,7 @@ id: architecture
 title: Architecture d'un projet 4D
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base. Par exemple :
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base. Par exemple:
 
 ![](assets/en/Project/project1.png)
 
@@ -16,8 +16,8 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 - Fichier *nomBase*.4DProject
 - Sources 
     + DatabaseMethods
-    + Methods
-    + Forms
+    + Méthodes
+    + Formulaires
     + TableForms
     + Triggers
 + DerivedData
@@ -64,26 +64,26 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Forms
 
-| Contenu                                      | Description                                  | Format |
-| -------------------------------------------- | -------------------------------------------- | ------ |
-| *nomFormulaire*/form.4DForm                  | Description du formulaire projet             | json   |
-| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | Texte  |
-| *nomFormulaire*/Images/*nomImage*            | Image statique du formulaire projet          | image  |
-| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
+| Contenu                                      | Description                                  | Format  |
+| -------------------------------------------- | -------------------------------------------- | ------- |
+| *nomFormulaire*/form.4DForm                  | Description du formulaire projet             | json    |
+| *nomFormulaire*/method.4dm                   | Méthode formulaire projet                    | Texte   |
+| *nomFormulaire*/Images/*nomImage*            | Image statique du formulaire projet          | picture |
+| *nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
 
 
 #### Dossier TableForms
 
-| Contenu                                                 | Description                                                                  | Format |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
-| *n*/Input/*nomFormulaire*/form.4DForm                   | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json   |
-| *n*/Input/*nomFormulaire*/Images/*nomImage*             | Images statiques du formulaire d'entrée de la table                          | image  |
-| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | Texte  |
-| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte  |
-| *n*/Output/*nomFormulaire*/form.4DForm                  | Description du formulaire de sortie de la table (n étant le numéro de table) | json   |
-| *n*/Output/*nomFormulaire*/Images/*nomImage*            | Images statiques du formulaire de sortie de la table                         | image  |
-| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | Texte  |
-| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte  |
+| Contenu                                                 | Description                                                                  | Format  |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
+| *n*/Input/*nomFormulaire*/form.4DForm                   | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
+| *n*/Input/*nomFormulaire*/Images/*nomImage*             | Images statiques du formulaire d'entrée de la table                          | picture |
+| *n*/Input/*nomFormulaire*/method.4dm                    | Méthode du formulaire d'entrée de la table                                   | Texte   |
+| *n*/Input/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
+| *n*/Output/*nomFormulaire*/form.4DForm                  | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
+| *n*/Output/*nomFormulaire*/Images/*nomImage*            | Images statiques du formulaire de sortie de la table                         | picture |
+| *n*/Output/*nomFormulaire*/method.4dm                   | Méthode du formulaire de sortie de la table                                  | Texte   |
+| *n*/Output/*nomFormulaire*/ObjectMethods/*nomObjet*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte   |
 
 
 #### Dossier Triggers
@@ -99,8 +99,8 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
-- Methods
-- Forms
+- Méthodes
+- Formulaires
 - TableForms
 
 Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
@@ -113,10 +113,10 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés de la base de données. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
-| Contenu               | Description                                                                                                                                                                                 | Format |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés |
-| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | image  |
+| Contenu               | Description                                                                                                                                                                                 | Format  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés  |
+| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | picture |
 
 
 (*) uniquement si le projet a été exporté depuis une base binaire .4db.

@@ -1,6 +1,6 @@
 ---
 id: object
-title: Object
+title: Objekt
 ---
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
@@ -11,7 +11,7 @@ Variables, fields or expressions of the Object type can contain various types of
     
     - number (Real, Integer, etc.)
     - text
-    - null
+    - Null
     - Boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
@@ -67,7 +67,7 @@ Beispiel:
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+Beispiele:
 
 ```4d
      $vName:=employee["name"]
@@ -85,7 +85,7 @@ Since an object property value can be an object or a collection, object notation
 
 Object notation is available on any language element that can contains or returns an object, i.e:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Beispiele:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -158,7 +158,7 @@ For more information, please refer to the `Null` command description.
 
 Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
 
 ```4d
      C_OBJECT($o)
@@ -198,14 +198,14 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 ```
 
 - Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type: 
-    - Object, collection, pointer: Null
-    - Picture: Empty picture
-    - Boolean: False
-    - String: ""
-    - Number: 0
-    - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
-    - Time: 0 (number of ms)
-    - Undefined, Null: no change
+ - Object, collection, pointer: Null
+ - Picture: Empty picture
+ - Boolean: False
+ - String: ""
+ - Number: 0
+ - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+ - Time: 0 (number of ms)
+ - Undefined, Null: no change
 
 ```4d
      C_OBJECT($o)
@@ -215,7 +215,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 
 - Assigning an undefined value to a non existing object property does nothing.
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. Beispiel:
 
 ```4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined

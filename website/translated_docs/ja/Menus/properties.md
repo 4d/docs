@@ -38,7 +38,7 @@ You can associate a custom parameter with each menu item. A menu item parameter 
 
 Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
 
-## Action
+## 動作
 
 Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
 
@@ -116,7 +116,7 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | オペレーション     |
+| Key (Windows)   | Key (macOS)        | 演算子         |
 | --------------- | ------------------ | ----------- |
 | Ctrl+C          | Command+C          | Copy        |
 | Ctrl+Q          | Command+Q          | Quit        |

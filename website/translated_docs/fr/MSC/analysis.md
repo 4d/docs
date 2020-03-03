@@ -28,13 +28,15 @@ Les informations affichées permettent d’identifier la source et le contexte d
     - Début de transaction : transaction démarrée.
     - Validation de transaction : transaction validée.
     - Annulation de transaction : transaction annulée.
+    - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 - **Table** : table à laquelle appartient l’enregistrement ajouté/supprimé/modifié ou le BLOB.
 
 - **Clé primaire/BLOB** : contenu de la clé primaire de l'enregistrement (lorsque la clé primaire est composée de plusieurs champs, les valeurs sont séparées par des points-virgules), ou numéro de séquence du BLOB impliqué dans l’opération.
 - **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
 - **Taille** : taille (en octets) des données traitées par l’opération.
 - **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
-- **Utilisateur** : nom de l’utilisateur ayant effectué l’opération. En version client-serveur, il s’agit du nom de la machine du poste client. En version monoposte, il s’agit du nom d’identification de l’utilisateur. Si les mots de passe de 4D ne sont pas activés, cette colonne est vide.
+- **Utilisateur système** : nom du système de l’utilisateur ayant effectué l’opération. En version client-serveur, il s’agit du nom de la machine du poste client. En version monoposte, le nom de session de l’utilisateur s'affiche.
+- **Utilisateur 4D** : nom de l’utilisateur 4D ayant effectué l’opération. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D. 
 - **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. Les valeurs sont séparées par des “;”. Seules les valeurs représentables sous forme alphanumérique sont affichées.  
     ***Note** : Si la base est chiffrée et si aucune clé de données valide correspondant au fichier d'historique n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 - **Enregistrements** : Numéro de l’enregistrement.

@@ -32,29 +32,31 @@ The following escape sequences can be used within strings:
 | \\\          | \ (Backslash)       |
 | \\"           | " (Quotation marks)  |
 
+
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
+| Operation                | Syntax           | Ergibt  | Ausdruck                | Wert     |
 | ------------------------ | ---------------- | ------- | ----------------------- | -------- |
 | Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
 | Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
+| Equality                 | String = String  | Boolean | "abc" = "abc"           | Wahr     |
+|                          |                  |         | "abc" = "abd"           | Falsch   |
+| Inequality               | String # String  | Boolean | "abc" # "abd"           | Wahr     |
+|                          |                  |         | "abc" # "abc"           | Falsch   |
+| Greater than             | String > String  | Boolean | "abd" > "abc"           | Wahr     |
+|                          |                  |         | "abc" > "abc"           | Falsch   |
+| Less than                | String < String  | Boolean | "abc" < "abd"           | Wahr     |
+|                          |                  |         | "abc" < "abc"           | Falsch   |
+| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | Wahr     |
+|                          |                  |         | "abc" >= "abd"          | Falsch   |
+| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
+|                          |                  |         | "abd" <= "abc"          | Falsch   |
+| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
+|                          |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
 |                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -157,7 +159,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Beispiel:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -192,7 +194,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### Beispiel
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 

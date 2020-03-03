@@ -1,6 +1,6 @@
 ---
 id: picture
-title: Images
+title: Image
 ---
 
 Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D ou des commandes de plug-in.
@@ -50,6 +50,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 | Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
 | Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
 | Extension verticale       | Image *| Nombre | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
+
 
 **Notes :**
 

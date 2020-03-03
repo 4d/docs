@@ -14,7 +14,9 @@ Dataclass names can be used directly in the REST requests to work with entities,
 |[**{dataClass}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
 |[**{dataClass}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
 |[**{dataClass}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
-|[**{dataClass}/{method}**](#dataclassmethod)|`/Employee/getHighSalaries` or `/Employee/name/getAge`|Returns an entity selection or a collection based on a dataclass method|
+|[**{dataClass}/{method}**](#dataclassmethod)|`/Employee/getHighSalaries`|Returns an entity selection or a collection based on a dataclass method|
+|[**{dataClass}({key})/{method}**](#dataclasskey)|`/Employee(22)/getAge`|Returns a value based on an entity method|
+
 
 
 
@@ -183,8 +185,6 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-For more information about the data returned, refer to [{dataClass}](dataClass.md).
-
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
@@ -208,11 +208,9 @@ Returns an entity selection or a collection based on a dataclass method
 
 Dataclass methods must be applied to either a dataclass or an entity selection, and must return either an entity selection or a collection. When returning a collection, however, you cannot define which attributes are returned.
 
-The method must has been declared as "Available through REST server" in 4D for you to be able to call it in a REST request:
 
-`GET  /rest/Employee/getHighSalaries`
-or
-`GET  /rest/Employee/firstName/getHighSalaries`
+`POST  /rest/Employee/getHighSalaries`
+
 
 If you do not have the permissions to execute the method, you will receive the following error:
 
@@ -228,14 +226,24 @@ If you do not have the permissions to execute the method, you will receive the f
 }
 ```
 
+### 4D Configuration
+
+To be called in a REST request, a method must:
+
+- have been declared as "Available through REST server" in 4D,
+- have its master table and scope defined accordingly:
+	-  **Table**:  master table
+	-  **Scope**: 
+		- **Table** -for methods applied to the whole table (dataclass)
+		- **Current record** -for method applied to the current record (entity)
+		- **Current selection** -for methods applied to the current selection
+
+![alt-text](assets/en/REST/MethodProp.png)
+
+
 ### Passing Parameters to a Method  
-You can also pass parameters to a method either in a GET or in a POST.
 
-In a GET, you write the following:
-
-`GET  /rest/Employee/addEmployee(John,Smith)`
-
-In a POST, you write the following :
+You can also pass parameters to a method in a POST.
 
 `POST  /rest/Employee/addEmployee`
 
@@ -243,30 +251,30 @@ In a POST, you write the following :
 ["John","Smith"]
 
 ### Manipulating the Data Returned by a Method  
+
 You can define which attributes you want to return, by passing the following:
 
-`GET  /rest/Employee/firstName/getEmployees`
-Or
-`GET  /rest/Employee/getEmployees/firstName`
+`POST /rest/Employee/getEmployees?$attributes=lastName,firstName`
 
-You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md).
+You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md). In this case, the method applies to an entity selection. For example:
+
+`POST /rest/Employee/getEmployees?$attributes=lastName,firstName&$filter=salary>20000`
+
 
 
 ### Example  
 
 In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:
 
-`GET  /rest/Employee?$attributes=lastName,employer.name&$top=10&$skip=1/getHighSalaries`
-or
-`GET  /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
+POST  /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
 
 If you want to retrieve an attribute and an extended relation attribute, you can write the following REST request:
 
-`GET  /rest/Employee/firstName,employer/getHighSalaries?$expand=employer`
+`POST  /rest/Employee/getHighSalaries?$attributes=lastName,employer&$expand=employer`
 
 In the example below, the getCities dataclass method returns a collection of cities:
 
-`GET  /rest/Employee/getCities`
+`POST  /rest/Employee/getCities`
 
 Result:
 

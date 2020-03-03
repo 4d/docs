@@ -84,7 +84,7 @@ La modification des options de sauvegarde et de restauration est facultative. Le
 
 - **Sauvegarder uniquement si le fichier de données a été modifié** : lorsque cette option est cochée, 4D déclenche les sauvegardes périodiques uniquement si des données ont été ajoutées, modifiées ou supprimées dans la base depuis la dernière sauvegarde. Dans le cas contraire, la sauvegarde prévue est annulée et reportée à l’échéance suivante. Aucune erreur n’est générée ; le report est toutefois indiqué dans le Journal des sauvegardes. Cette option permet notamment d’économiser du temps machine sur la sauvegarde de bases principalement utilisées en consultation. A noter qu'elle ne prend pas en compte les éventuelles modifications apportées au fichier de structure ou aux fichiers joints.
     
-    > Ce paramètre concerne à la fois les sauvegardes de la base et les sauvegardes de l’historique.
+    > Ce paramètre concerne à la fois les jeux de sauvegarde de la base et les jeux de sauvegarde de l’historique.
 
 - **Effacer la sauvegarde la plus ancienne avant sauvegarde / après sauvegarde** : cette option n’est utilisée que si l’option “Conserver uniquement les N derniers fichiers de sauvegarde” est cochée. Elle vous permet de spécifier si 4D doit commencer par effacer l’archive la plus ancienne avant d’effectuer une sauvegarde (option **avant**) ou si l’effacement doit être effectué après la sauvegarde (option **après**). Pour que ce mécanisme fonctionne, l’archive la plus ancienne ne doit pas avoir été renommée ou déplacée.
 

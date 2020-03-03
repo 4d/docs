@@ -81,6 +81,8 @@ const siteConfig = {
 
   },
 
+  editUrl: 'https://github.com/4D/docs/edit/develop/docs/',
+
   /* custom fonts for website */
   /*fonts: {
     myFont: [
@@ -102,6 +104,10 @@ const siteConfig = {
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'routeros',
+    hljs: function(hljs) {
+      var hljsRobotsTxt = require('highlightjs-4d');
+      hljs.registerLanguage("4d", hljsRobotsTxt);
+    }
   },
 
   // Add custom scripts here that would be placed in <script> tags

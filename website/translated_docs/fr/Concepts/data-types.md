@@ -27,6 +27,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `C_VARIANT`                  |
 
+
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
 
 (2) Le variant n'est pas un type de *données* un type de *variable* qui peut contenir une valeur de n'importe quel autre type.
@@ -62,6 +63,7 @@ Le tableau suivant illustre ces valeurs par défaut :
 | Collection  | null                                                                           | null                     | null                        |
 | Variant     | indéfini                                                                       | indéfini                 | indéfini                    |
 
+
 ## Convertir les types de données
 
 Le langage de 4D comporte des fonctions et des opérateurs vous permettant de convertir des types de données en d’autres types, dans la mesure où de telles conversions ont un sens. 4D assure la vérification des types de données. Ainsi, vous ne pouvez pas écrire : "abc"+0.5+!25/12/96!-?00:30:45?, car cette opération génère une erreur de syntaxe. 
@@ -75,6 +77,7 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 | Date              | Chaine    |              |         |          | Bool       |
 | Heure             | Chaine    |              |         |          | Bool       |
 | Booléen           |           | Num          |         |          |            |
+
 
 (1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`.
 

@@ -21,37 +21,37 @@ Les structures suivantes sont prises en charge par les requêtes REST :
 |                                  | [$info]($info.md)                                                           |                                                                            |                                                                 |
 
 
-While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
+Si toutes les requêtes REST doivent contenir les paramètres URI et Resource, la sous-ressource (qui filtre les données retournées) est facultative.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Par exemple:
+Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple :
 
- `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
-> You can place all values in quotes in case of ambiguity. For example, in our above example, we could've put the value for the last name in quotes "Jones".
+`GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
-The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a datastore class using `POST` HTTP methods.
+> Vous pouvez placer toutes les valeurs entre guillemets en cas de doute. Par exemple, dans notre exemple ci-dessus, nous aurions pu saisir la valeur du nom de famille entre guillemets "Jones".
 
-If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
+Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Outre la récupération de données à l'aide des méthodes HTTP `GET`, vous pouvez également ajouter, mettre à jour et supprimer des entités d'une classe de datastore à l'aide des méthodes HTTP `POST`.
+
+Si vous souhaitez que les données soient retournées dans un tableau au lieu d'un JSON, utilisez le paramètre [`$asArray`]($asArray.md).
+
+## Statut et réponse REST
+
+À chaque requête REST, le serveur retourne l'état et une réponse (avec ou sans erreur).
+
+### Statut de la requête
+
+Avec chaque requête REST, vous obtenez le statut et la réponse. Voici quelques exemples de statuts :
+
+| Statut                    | Description                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| 0                         | Requête non traitée (le serveur n'est peut-être pas été lancé).                  |
+| 200 OK                    | Requête traitée sans erreur.                                                     |
+| 401 Unauthorized          | Erreur d'autorisation (vérifiez les autorisations de l'utilisateur).             |
+| 404 Not Found             | La data n'est pas accessible via REST ou bien l'ensemble d'entités n'existe pas. |
+| 500 Internal Server Error | Erreur lors du traitement de la requête REST.                                    |
 
 
-## REST Status and Response
-With each REST request, the server returns the status and a response (with or without an error).
+### Réponse
 
-### Request Status
-With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
+La réponse (au format JSON) varie en fonction de la requête.
 
-| Status                    | Description                                                                |
-| ------------------------- | -------------------------------------------------------------------------- |
-| 0                         | Request not processed (server might not be started).                       |
-| 200 OK                    | Request processed without error.                                           |
-| 401 Unauthorized          | Permissions error (check user's permissions).                              |
-| 404 Not Found             | The data class is not accessible via REST or the entity set doesn't exist. |
-| 500 Internal Server Error | Error processing the REST request.                                         |
-
-### Response
-
-The response (in JSON format) varies depending on the request.
-
-If an error arises, it will be sent along with the response from the server or it will be the response from the server.
-
- 
-
+Si une erreur survient, elle sera envoyée avec la réponse du serveur ou bien ce sera la réponse du serveur.

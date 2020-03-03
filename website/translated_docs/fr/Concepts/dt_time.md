@@ -31,7 +31,7 @@ Une heure nulle s’écrit ?00:00:00?
 
 | Opération           | Syntaxe        | Retourne | Expression              | Valeur     |
 | ------------------- | -------------- | -------- | ----------------------- | ---------- |
-| Addition            | Time + Time    | Time     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Addition            | Time + Time    | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
 | Soustraction        | Time - Time    | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
 | Addition            | Time + Number  | Nombre   | ?02:03:04? + 65         | 7449       |
 | Soustraction        | Time – Number  | Nombre   | ?02:03:04? – 65         | 7319       |
@@ -40,24 +40,33 @@ Une heure nulle s’écrit ?00:00:00?
 | Division entière    | Time \ Number | Nombre   | ?02:03:04? \ 2         | 3692       |
 | Modulo              | Time % Time    | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Modulo              | Time % Number  | Nombre   | ?02:03:04? % 2          | 0          |
-| Egalité             | Time = Time    | Booléen  | ?01:02:03? = ?01:02:03? | True       |
-|                     |                |          | ?01:02:03? = ?01:02:04? | False      |
-| Inégalité           | Time # Time    | Booléen  | ?01:02:03? # ?01:02:04? | True       |
-|                     |                |          | ?01:02:03? # ?01:02:03? | False      |
-| Supérieur à         | Time > Time    | Booléen  | ?01:02:04? > ?01:02:03? | True       |
-|                     |                |          | ?01:02:03? > ?01:02:03? | False      |
-| Inférieur à         | Time < Time    | Booléen  | ?01:02:03? < ?01:02:04? | True       |
-|                     |                |          | ?01:02:03? < ?01:02:03? | False      |
-| Supérieur ou égal à | Time >= Time   | Booléen  | ?01:02:03? >=?01:02:03? | True       |
-|                     |                |          | ?01:02:03? >=?01:02:04? | False      |
-| Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | True       |
-|                     |                |          | ?01:02:04? <=?01:02:03? | False      |
+| Egalité             | Time = Time    | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
+|                     |                |          | ?01:02:03? = ?01:02:04? | Faux       |
+| Inégalité           | Time # Time    | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
+|                     |                |          | ?01:02:03? # ?01:02:03? | Faux       |
+| Supérieur à         | Time > Time    | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
+|                     |                |          | ?01:02:03? > ?01:02:03? | Faux       |
+| Inférieur à         | Time < Time    | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
+|                     |                |          | ?01:02:03? < ?01:02:03? | Faux       |
+| Supérieur ou égal à | Time >= Time   | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                |          | ?01:02:03? >=?01:02:04? | Faux       |
+| Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
+|                     |                |          | ?01:02:04? <=?01:02:03? | Faux       |
+
 
 ### Exemple 1
 
-Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions Time et Time string.
+To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
-Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Time`ou`Current time`.
+You can combine expressions of the time and number types using the `Time` or `Current time` functions:
+
+```4d
+    //The following line assigns to $vlSeconds the number of seconds   
+    //that will be elapsed between midnight and one hour from now
+$vlSeconds:=Current time+3600
+    //The following line assigns to $vHSoon the time it will be in one hour
+$vhSoon:=Time(Current time+3600)
+```
 
 La seconde ligne peut également être écrite de la façon suivante :
 

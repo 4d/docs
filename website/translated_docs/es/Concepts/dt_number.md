@@ -59,6 +59,7 @@ Negative numbers are specified with the minus sign (-). For example:
 | Less than or equal to    | Number <= Number | Boolean | 10 <= 11   | True  |
 |                          |                  |         | 11 <= 10   | False |
 
+
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
 - 10 % 2 returns 0 because 10 is evenly divided by 2.
