@@ -42,7 +42,9 @@ Every style rule in a style sheet contains two parts:
 
 Corresponding to the CSS element selector, the object type defines the type of object to style.
 
-Specify the object, then in curly braces, declare the style(s) to apply.
+Specify the object type, then in curly braces, declare the style(s) to apply.
+
+> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
 
 In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
 
@@ -52,7 +54,7 @@ In the following example, all objects of the *button* type will display text in 
     }
     
 
-To apply the same style to multiple types of objects, specify the objects separated by a "," then in curly braces, declare the style(s) to apply:
+To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
 
     text, input {
       text-align: left;

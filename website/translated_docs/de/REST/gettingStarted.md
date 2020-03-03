@@ -5,7 +5,7 @@ title: Getting Started
 
 4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
 
-The REST server is included in the the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
 
 This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
 
