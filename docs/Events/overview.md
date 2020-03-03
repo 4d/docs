@@ -16,6 +16,20 @@ End if
 
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur. 
 
+
+## Event object
+
+Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form|
+|code|longint|Numeric value of the form event. Also returned by the `Form event code` command|
+|description|text|Name of the form event (e.g. "On After Edit")|
+
+Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.  
+
+
 ## Events and Methods  
 
 When a form event occurs, 4D performs the following actions:
@@ -39,10 +53,10 @@ The following table summarizes how object and form methods are called for each e
 |On Unload|Yes|Yes|All objects|
 |On Validate|Yes|Yes|All objects|
 |On Clicked|Yes |Yes|Involved object only|
-|On Double Clicked|Yes|Yes	Involved object only|
+|On Double Clicked|Yes|Yes|Involved object only|
 |On Before Keystroke|Yes|Yes|Involved object only|
 |On After Keystroke|Yes|Yes|Involved object only|
-|On After|Edit|Yes|Yes|Involved object only|
+|On After Edit|Yes|Yes|Involved object only|
 |On Getting Focus|Yes|Yes|Involved object only|
 |On Losing Focus|Yes|Yes|Involved object only|
 |On Activate|Never|Yes|None|

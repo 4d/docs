@@ -25,7 +25,7 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 ### 4D View Pro
 
-This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the object returned by the `FORM Event` command contains:
+This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 |Property|Type|Description|
 |---|---|---|
@@ -46,7 +46,8 @@ This event is generated when the user clicks on a column or row header in a 4D V
        :(FORM Event.sheetArea=2)
           VP SET CELL STYLE(FORM Event.range;New object("backColor";"gray"))
        :(FORM Event.sheetArea=0)
-          VP SET CELL STYLE(FORM Event.range;New object("borderBottom";New object("color";"#800080";"style";vk line style thick)))
+          VP SET CELL STYLE(FORM Event.range;New object("borderBottom";\
+          New object("color";"#800080";"style";vk line style thick)))
     End case
  End if
 ```

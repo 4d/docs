@@ -15,7 +15,7 @@ This event is triggered when the form is being loaded or printed.
 All the objects of the form (from any page) whose `On Load` object event property is selected will have their object method called. 
 Then, if the `On Load` form event property is selected, the form will have its form method called.
 
-> The [`On Load`] and [`On Unload`](onUnload.md) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+> The `On Load` and [`On Unload`](onUnload.md) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
 
 
 ### Subform

@@ -18,7 +18,7 @@ This event is generated when the width of a column in the list box is modified b
 
 ### 4D View Pro
 
-This event is generated when the width of a column is modified by a user. On this context, the object returned by the `FORM Event` command contains:
+This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 |Property|Type|Description|
 |---|---|---|

@@ -5,7 +5,7 @@ title: On Alternative Click
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|38|[Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|- Buttons: The "arrow" area of a button is clicked<br>- List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked|
+|38|[Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|<li>Buttons: The "arrow" area of a button is clicked<li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked|
 
 
 ## Description

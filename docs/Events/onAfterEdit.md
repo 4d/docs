@@ -33,24 +33,57 @@ The object returned by the `FORM Event` command contains:
 |sheetName|text|Name of the sheet of the event|
 |action|text|"editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted"|
  
-Depending on the action property value, the event object will contain additional properties.
+Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
-|Property|Type|Description|Available with action|
-|---|---|---|---|
-|range|object|Cell range|"editChange", "valueChanged", "formulaChanged", "clipboardPasted"
-|editingText|variant|The value from the current editor|"editChange"
-|oldValue|variant|Value of cell before change| "valueChanged"
-|newValue|variant|Value of cell after change| "valueChanged"
-|fromRange|object|Range of source cell range (being dragged)|"DragDropBlock"
-|toRange|object|Range of the destination cell range (drop location)|"DragDropBlock"
-|copy|boolean|Specifies if the source range is copied or not|"DragDropBlock"
-|insert|boolean|Specifies if the source range is inserted or not|"DragDropBlock"
-|fillRange|object|Range used for fill |"DragFillBlock"
-autoFillType|longint|Value used for the fill.<br>0: Cells are filled with all data (values, formatting, and formulas)<br>1: Cells are filled with automatically sequential data<br>2: Cells are filled with formatting only<br>3: Cells are filled with values but not formatting<br>4: Values are removed from the cells<br>5: Cells are filled automatically|"DragFillBlock"
-|fillDirection|longint|Direction of the fill.<br>0: The cells to the left are filled<br>1: The cells to the right are filled<br>2: The cells above are filled<br>3: The cells below are filled|"DragFillBlock"
-|formula|text|The formula entered|"formulaChanged"
-|pasteOption|longint|Specifies what is pasted from the clipboard:<br>0: Everything is pasted (values, formatting, and formulas)<br>1: Only values are pasted<br>2: Only the formatting is pasted<br>3: Only formulas are pasted<br>4: Values and formatting are pasted (not formulas)<br>5: Formulas and formatting are pasted (not values)|"clipboardPasted"
-|pasteData|object|The data from the clipboard to be pasted<br>"text" (text): The text from the clipboard<br>"html" (text):The HTML from the clipboard|"clipboardPasted"
+#### action = editChange
+
+|Property|Type|Description|
+|---|---|---|
+|range|object|Cell range|
+|editingText|variant|The value from the current editor|
+
+#### action = valueChanged
+
+|Property|Type|Description|
+|---|---|---|
+|range|object|Cell range|
+|oldValue|variant|Value of cell before change|
+|newValue|variant|Value of cell after change|
+
+
+#### action = DragDropBlock
+
+|Property|Type|Description|
+|---|---|---|
+|fromRange|object|Range of source cell range (being dragged)|
+|toRange|object|Range of the destination cell range (drop location)|
+|copy|boolean|Specifies if the source range is copied or not|
+|insert|boolean|Specifies if the source range is inserted or not|
+
+
+#### action = DragFillBlock
+
+|Property|Type|Description|
+|---|---|---|
+|fillRange|object|Range used for fill |
+autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically|
+|fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
+
+
+#### action = formulaChanged
+
+|Property|Type|Description|
+|---|---|---|
+|range|object|Cell range|
+|formula|text|The formula entered|
+
+#### action = clipboardPasted
+
+|Property|Type|Description|
+|---|---|---|
+|range|object|Cell range|
+|pasteOption|longint|Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values)|
+|pasteData|object|The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard|
 
 
 #### Example
@@ -60,7 +93,9 @@ Here is an example handling an `On After Edit` event:
 ```4d
  If(FORM Event.code=On After Edit)
     If(FORM Event.action="valueChanged")
-       ALERT("WARNING: You are currently changing the value from "+String(FORM Event.oldValue)+" to "+String(FORM Event.newValue)+"!")
+       ALERT("WARNING: You are currently changing the value\  
+       from "+String(FORM Event.oldValue)+\  
+       " to "+String(FORM Event.newValue)+"!")
     End if
  End if
 ```
@@ -69,6 +104,7 @@ The above example could generate an event object like this:
 
 ```
 {
+
 "code":45;
 "description":"On After Edit";
 "objectName":"ViewProArea"
