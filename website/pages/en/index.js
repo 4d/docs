@@ -68,6 +68,7 @@ class Index extends React.Component {
                   title: <translate>Getting started</translate>,
                 },
                 {
+
                   content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
