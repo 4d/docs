@@ -1,7 +1,7 @@
 ---
 id: version-18.0-overview
-title: Overview
-sidebar_label: Overview
+title: 概要
+sidebar_label: 概要
 original_id: overview
 ---
 
