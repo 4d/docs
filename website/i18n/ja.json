@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -100,10 +100,190 @@
         "sidebar_label": "概要"
       },
       "Concepts/shared": {
-        "title": "Shared objects and collections"
+        "title": "共有オブジェクトと共有コレクション"
       },
       "Concepts/variables": {
         "title": "変数"
+      },
+      "Events/onActivate": {
+        "title": "On Activate"
+      },
+      "Events/onAfterEdit": {
+        "title": "On After Edit"
+      },
+      "Events/onAfterKeystroke": {
+        "title": "On After Keystroke"
+      },
+      "Events/onAfterSort": {
+        "title": "On After Sort"
+      },
+      "Events/onAlternativeClick": {
+        "title": "On Alternative Click"
+      },
+      "Events/onBeforeDataEntry": {
+        "title": "On Before Data Entry"
+      },
+      "Events/onBeforeKeystroke": {
+        "title": "On Before Keystroke"
+      },
+      "Events/onBeginDragOver": {
+        "title": "On Begin Drag Over"
+      },
+      "Events/onBeginUrlLoading": {
+        "title": "On Begin URL Loading"
+      },
+      "Events/onBoundVariableChange": {
+        "title": "On Bound Variable Change"
+      },
+      "Events/onClicked": {
+        "title": "On Clicked"
+      },
+      "Events/onCloseBox": {
+        "title": "On Close Box"
+      },
+      "Events/onCloseDetail": {
+        "title": "On Close Detail"
+      },
+      "Events/onCollapse": {
+        "title": "On Collapse"
+      },
+      "Events/onColumnMoved": {
+        "title": "On Column Moved"
+      },
+      "Events/onColumnResize": {
+        "title": "On Column Resize"
+      },
+      "Events/onDataChange": {
+        "title": "On Data Change"
+      },
+      "Events/onDeactivate": {
+        "title": "On Deactivate"
+      },
+      "Events/onDeleteAction": {
+        "title": "On Delete Action"
+      },
+      "Events/onDisplayDetail": {
+        "title": "On Display Detail"
+      },
+      "Events/onDoubleClicked": {
+        "title": "On Double Clicked"
+      },
+      "Events/onDragOver": {
+        "title": "On Drag Over"
+      },
+      "Events/onDrop": {
+        "title": "On Drop"
+      },
+      "Events/onEndUrlLoading": {
+        "title": "On End URL Loading"
+      },
+      "Events/onExpand": {
+        "title": "On Expand"
+      },
+      "Events/onFooterClick": {
+        "title": "On Footer Click"
+      },
+      "Events/onGettingFocus": {
+        "title": "On Getting focus"
+      },
+      "Events/onHeader": {
+        "title": "On Header"
+      },
+      "Events/onHeaderClick": {
+        "title": "On Header Click"
+      },
+      "Events/onLoad": {
+        "title": "On Load"
+      },
+      "Events/onLoadRecord": {
+        "title": "On Load Record"
+      },
+      "Events/onLongClick": {
+        "title": "On Long Click"
+      },
+      "Events/onLosingFocus": {
+        "title": "On Losing focus"
+      },
+      "Events/onMenuSelected": {
+        "title": "On Menu Selected"
+      },
+      "Events/onMouseEnter": {
+        "title": "On Mouse Enter"
+      },
+      "Events/onMouseLeave": {
+        "title": "On Mouse Leave"
+      },
+      "Events/onMouseMove": {
+        "title": "On Mouse Move"
+      },
+      "Events/onMouseUp": {
+        "title": "On Mouse Up"
+      },
+      "Events/onOpenDetail": {
+        "title": "On Open Detail"
+      },
+      "Events/onOpenExternalLink": {
+        "title": "On Open External Link"
+      },
+      "Events/onOutsideCall": {
+        "title": "On Outside Call"
+      },
+      "Events/onPageChange": {
+        "title": "On Page Change"
+      },
+      "Events/onPlugInArea": {
+        "title": "On Plug in Area"
+      },
+      "Events/onPrintingBreak": {
+        "title": "On Printing Break"
+      },
+      "Events/onPrintingDetail": {
+        "title": "On Printing Detail"
+      },
+      "Events/onPrintingFooter": {
+        "title": "On Printing Footer"
+      },
+      "Events/onResize": {
+        "title": "On Resize"
+      },
+      "Events/onRowMoved": {
+        "title": "On Row Moved"
+      },
+      "Events/onRowResize": {
+        "title": "On Row Resize"
+      },
+      "Events/onScroll": {
+        "title": "On Scroll"
+      },
+      "Events/onSelectionChange": {
+        "title": "On Selection Change"
+      },
+      "Events/onTimer": {
+        "title": "On Timer"
+      },
+      "Events/onUnload": {
+        "title": "On Unload"
+      },
+      "Events/onUrlFiltering": {
+        "title": "On URL Filtering"
+      },
+      "Events/onUrlLoadingError": {
+        "title": "On URL Loading Error"
+      },
+      "Events/onUrlResourceLoading": {
+        "title": "On URL Resource Loading"
+      },
+      "Events/onValidate": {
+        "title": "On Validate"
+      },
+      "Events/onVpReady": {
+        "title": "On VP Ready"
+      },
+      "Events/onWindowOpeningDenied": {
+        "title": "On Window Opening Denied"
+      },
+      "Events/overview": {
+        "title": "概要"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -280,7 +460,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -309,8 +489,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -341,7 +521,7 @@
         "title": "プロジェクトの開発"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -440,7 +620,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
         "title": "List Box"
@@ -459,7 +639,7 @@
         "title": "Log file (.journal)"
       },
       "version-18.0-Backup/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "version-18.0-Backup/restore": {
         "title": "Restore"
@@ -547,7 +727,7 @@
         "sidebar_label": "概要"
       },
       "version-18.0-Concepts/shared": {
-        "title": "Shared objects and collections"
+        "title": "共有オブジェクトと共有コレクション"
       },
       "version-18.0-Concepts/variables": {
         "title": "変数"
@@ -727,7 +907,7 @@
         "title": "Creating menus and menu bars"
       },
       "version-18.0-Menus/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "version-18.0-Menus/properties": {
         "title": "Menu item properties"
@@ -756,8 +936,8 @@
         "sidebar_label": "Information Page"
       },
       "version-18.0-MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "概要",
+        "sidebar_label": "概要"
       },
       "version-18.0-MSC/repair": {
         "title": "Repair Page",
@@ -788,7 +968,7 @@
         "title": "プロジェクトの開発"
       },
       "version-18.0-Project/overview": {
-        "title": "Overview"
+        "title": "概要"
       },
       "version-18.0-REST/{dataClass}": {
         "title": "{dataClass}"
@@ -887,7 +1067,7 @@
         "title": "Managing 4D users and groups"
       },
       "version-18.0-Users/overview": {
-        "title": "Overview"
+        "title": "概要"
       }
     },
     "links": {},
