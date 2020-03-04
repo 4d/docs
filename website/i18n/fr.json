@@ -105,6 +105,186 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Events/onActivate": {
+        "title": "Sur activation"
+      },
+      "Events/onAfterEdit": {
+        "title": "Sur après modification"
+      },
+      "Events/onAfterKeystroke": {
+        "title": "Sue après frappe clavier"
+      },
+      "Events/onAfterSort": {
+        "title": "Sur après tri"
+      },
+      "Events/onAlternativeClick": {
+        "title": "Sur clic alternatif"
+      },
+      "Events/onBeforeDataEntry": {
+        "title": "Sur avant saisie"
+      },
+      "Events/onBeforeKeystroke": {
+        "title": "Sue avant frappe clavier"
+      },
+      "Events/onBeginDragOver": {
+        "title": "Sur début survol"
+      },
+      "Events/onBeginUrlLoading": {
+        "title": "On Begin URL Loading"
+      },
+      "Events/onBoundVariableChange": {
+        "title": "On Bound Variable Change"
+      },
+      "Events/onClicked": {
+        "title": "Sur clic"
+      },
+      "Events/onCloseBox": {
+        "title": "On Close Box"
+      },
+      "Events/onCloseDetail": {
+        "title": "Sur fermeture corps"
+      },
+      "Events/onCollapse": {
+        "title": "Sur contracter"
+      },
+      "Events/onColumnMoved": {
+        "title": "Sur déplacement colonne"
+      },
+      "Events/onColumnResize": {
+        "title": "Sur redimensionnement colonne"
+      },
+      "Events/onDataChange": {
+        "title": "Sur données modifiées"
+      },
+      "Events/onDeactivate": {
+        "title": "On Deactivate"
+      },
+      "Events/onDeleteAction": {
+        "title": "Sur action suppression"
+      },
+      "Events/onDisplayDetail": {
+        "title": "Sur affichage corps"
+      },
+      "Events/onDoubleClicked": {
+        "title": "Sur double clic"
+      },
+      "Events/onDragOver": {
+        "title": "Sur glisser"
+      },
+      "Events/onDrop": {
+        "title": "Sur déposer"
+      },
+      "Events/onEndUrlLoading": {
+        "title": "On End URL Loading"
+      },
+      "Events/onExpand": {
+        "title": "Sur déployer"
+      },
+      "Events/onFooterClick": {
+        "title": "Sur clic pied"
+      },
+      "Events/onGettingFocus": {
+        "title": "On Getting focus"
+      },
+      "Events/onHeader": {
+        "title": "On Header"
+      },
+      "Events/onHeaderClick": {
+        "title": "Sur clic entête"
+      },
+      "Events/onLoad": {
+        "title": "On Load"
+      },
+      "Events/onLoadRecord": {
+        "title": "On Load Record"
+      },
+      "Events/onLongClick": {
+        "title": "On Long Click"
+      },
+      "Events/onLosingFocus": {
+        "title": "On Losing focus"
+      },
+      "Events/onMenuSelected": {
+        "title": "On Menu Selected"
+      },
+      "Events/onMouseEnter": {
+        "title": "Sur début survol"
+      },
+      "Events/onMouseLeave": {
+        "title": "Sur fin survol"
+      },
+      "Events/onMouseMove": {
+        "title": "Sur survol"
+      },
+      "Events/onMouseUp": {
+        "title": "On Mouse Up"
+      },
+      "Events/onOpenDetail": {
+        "title": "Sur ouverture corps"
+      },
+      "Events/onOpenExternalLink": {
+        "title": "On Open External Link"
+      },
+      "Events/onOutsideCall": {
+        "title": "On Outside Call"
+      },
+      "Events/onPageChange": {
+        "title": "On Page Change"
+      },
+      "Events/onPlugInArea": {
+        "title": "On Plug in Area"
+      },
+      "Events/onPrintingBreak": {
+        "title": "On Printing Break"
+      },
+      "Events/onPrintingDetail": {
+        "title": "On Printing Detail"
+      },
+      "Events/onPrintingFooter": {
+        "title": "On Printing Footer"
+      },
+      "Events/onResize": {
+        "title": "On Resize"
+      },
+      "Events/onRowMoved": {
+        "title": "Sur déplacement ligne"
+      },
+      "Events/onRowResize": {
+        "title": "On Row Resize"
+      },
+      "Events/onScroll": {
+        "title": "Sur défilement"
+      },
+      "Events/onSelectionChange": {
+        "title": "Sur nouvelle sélection"
+      },
+      "Events/onTimer": {
+        "title": "On Timer"
+      },
+      "Events/onUnload": {
+        "title": "On Unload"
+      },
+      "Events/onUrlFiltering": {
+        "title": "On URL Filtering"
+      },
+      "Events/onUrlLoadingError": {
+        "title": "On URL Loading Error"
+      },
+      "Events/onUrlResourceLoading": {
+        "title": "On URL Resource Loading"
+      },
+      "Events/onValidate": {
+        "title": "On Validate"
+      },
+      "Events/onVpReady": {
+        "title": "On VP Ready"
+      },
+      "Events/onWindowOpeningDenied": {
+        "title": "On Window Opening Denied"
+      },
+      "Events/overview": {
+        "title": "Aperçu"
+      },
       "FormEditor/stylesheets": {
         "title": "Feuilles de style (style sheets)"
       },
