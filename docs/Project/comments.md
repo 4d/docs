@@ -14,28 +14,74 @@ The following elements accept comments:
 - Forms
 - Tables and Fields
 
-Your comments are written in markdown syntax (.md files) using any editor. They are stored as independant files withinh your project folder, and can be displayed in the right-side area of the Explorer.
+Your comments are written in markdown syntax (.md files) using any editor. They are stored as independant files withinh your project folder, and can be displayed in the right-side area of the Explorer:
+
+![](assets/en/Project/explorer_Comments.png)
 
 
 
-## Project file access
+## Comment files
 
-When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+### Comment file name
 
-The 4D Developer framework includes a file access manager to control concurrent access:
+Comment files get the same name as their attached element, with the ".md" extension. For example, the comment file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
-- if an open file which is read-only at the OS level, a locked icon is displayed in the editor:   
-![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:
-![](assets/en/Project/projectReload.png)  
-	- **Yes**: discard editor changes and reload
-	- **No**: save changes and overwrite the other version
-	- **Cancel**: do not save
+In the Explorer, 4D will automatically display the comment file with the same name as the selected element (see below).  
 
-This feature is enabled for all built-in editors:
 
-- Structure editor
-- Form editor
-- Method editor
-- Settings editor
-- Toolbox editor
+### Comment file architecture 
+
+All comment files are stored in the `Documentation` folder, located at the first level of the project folder.
+
+The `Documentation` folder architecture is the following:
+
+- **Documentation**
+	+ **Classes**
+		* myClass.md
+	+ **DatabaseMethods**
+		* onStartup.md
+		* ...
+	+ **Forms**
+		* loginDial.md
+		* ...
+	+ **Methods**
+		* myMethod.md
+		* ...
+	+ **TableForms**
+		* **1**
+			- input.md
+			- ...
+		* ...
+	+ **Triggers**
+		* table1.md
+		* ...
+
+- A project form and its project form method share the same comment file for form and method. 
+- A table form and its table form method share the same comment file for form and method. 
+
+
+## Viewing comments
+
+In the 4D interface, you can view existing comments:
+
+- in the right side of the Explorer,
+- in the method editor tips (partial view).
+
+### Explorer
+
+To view an existing comment in the 4D Explorer:
+
+1. Make sure the right side panel is displayed.
+2. Select the documented element in the Explorer list.
+3. Click the **Comments** button located below the preview area.
+	- the existing documentation file is displayed in the area (the file is not editable)
+	- if there is no comment file for the element, a **Create** button is displayed.
+	
+
+
+
+
+
+
+## Writing comments
+

@@ -514,6 +514,9 @@
       "Project/building": {
         "title": "Building a project package"
       },
+      "Project/comments": {
+        "title": "Comments"
+      },
       "Project/creating": {
         "title": "Creating a 4D project"
       },
