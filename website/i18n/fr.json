@@ -622,6 +622,186 @@
       "Users/overview": {
         "title": "Aperçu"
       },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onActivate": {
+        "title": "Sur activation"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onAfterEdit": {
+        "title": "Sur après modification"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onAfterKeystroke": {
+        "title": "Sue après frappe clavier"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onAfterSort": {
+        "title": "Sur après tri"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onAlternativeClick": {
+        "title": "Sur clic alternatif"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onBeforeDataEntry": {
+        "title": "Sur avant saisie"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onBeforeKeystroke": {
+        "title": "Sue avant frappe clavier"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onBeginDragOver": {
+        "title": "Sur début survol"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onBeginUrlLoading": {
+        "title": "On Begin URL Loading"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onBoundVariableChange": {
+        "title": "On Bound Variable Change"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onClicked": {
+        "title": "Sur clic"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onCloseBox": {
+        "title": "On Close Box"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onCloseDetail": {
+        "title": "Sur fermeture corps"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onCollapse": {
+        "title": "Sur contracter"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onColumnMoved": {
+        "title": "Sur déplacement colonne"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onColumnResize": {
+        "title": "Sur redimensionnement colonne"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDataChange": {
+        "title": "Sur données modifiées"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDeactivate": {
+        "title": "On Deactivate"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDeleteAction": {
+        "title": "Sur action suppression"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDisplayDetail": {
+        "title": "Sur affichage corps"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDoubleClicked": {
+        "title": "Sur double clic"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDragOver": {
+        "title": "Sur glisser"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onDrop": {
+        "title": "Sur déposer"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onEndUrlLoading": {
+        "title": "On End URL Loading"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onExpand": {
+        "title": "Sur déployer"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onFooterClick": {
+        "title": "Sur clic pied"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onGettingFocus": {
+        "title": "On Getting focus"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onHeader": {
+        "title": "On Header"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onHeaderClick": {
+        "title": "Sur clic entête"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onLoad": {
+        "title": "On Load"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onLoadRecord": {
+        "title": "On Load Record"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onLongClick": {
+        "title": "On Long Click"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onLosingFocus": {
+        "title": "On Losing focus"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onMenuSelected": {
+        "title": "On Menu Selected"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onMouseEnter": {
+        "title": "Sur début survol"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onMouseLeave": {
+        "title": "Sur fin survol"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onMouseMove": {
+        "title": "Sur survol"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onMouseUp": {
+        "title": "On Mouse Up"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onOpenDetail": {
+        "title": "Sur ouverture corps"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onOpenExternalLink": {
+        "title": "On Open External Link"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onOutsideCall": {
+        "title": "On Outside Call"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onPageChange": {
+        "title": "On Page Change"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onPlugInArea": {
+        "title": "On Plug in Area"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onPrintingBreak": {
+        "title": "On Printing Break"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onPrintingDetail": {
+        "title": "On Printing Detail"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onPrintingFooter": {
+        "title": "On Printing Footer"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onResize": {
+        "title": "On Resize"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onRowMoved": {
+        "title": "Sur déplacement ligne"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onRowResize": {
+        "title": "On Row Resize"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onScroll": {
+        "title": "Sur défilement"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onSelectionChange": {
+        "title": "Sur nouvelle sélection"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onTimer": {
+        "title": "On Timer"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onUnload": {
+        "title": "On Unload"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onUrlFiltering": {
+        "title": "On URL Filtering"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onUrlLoadingError": {
+        "title": "On URL Loading Error"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onUrlResourceLoading": {
+        "title": "On URL Resource Loading"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onValidate": {
+        "title": "On Validate"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onVpReady": {
+        "title": "On VP Ready"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-onWindowOpeningDenied": {
+        "title": "On Window Opening Denied"
+      },
+      "version-18 R2 BETA-Events/version-18R2_BETA-overview": {
+        "title": "Aperçu"
+      },
       "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
         "title": "List Box"
       },
@@ -1075,9 +1255,9 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
       "Form Editor": "Éditeur de formulaire",
-      "Form Events": "Evénements formulaire",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
+      "Form Events": "Evénements formulaire",
       "Menus": "Menus",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
@@ -1089,6 +1269,7 @@
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
     "Form Editor|no description given": "Éditeur de formulaire",
+    "Form Events|no description given": "Evénements formulaire",
     "Form Objects|no description given": "Objets formulaires",
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
