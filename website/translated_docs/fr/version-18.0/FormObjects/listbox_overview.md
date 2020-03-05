@@ -26,18 +26,18 @@ It is also possible to resize each column, and the user can modify the order of 
 
 The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
 
-### List box parts
+### Parties de list box
 
-A list box is composed of four distinct parts:
+Une list box est composée de quatre parties distinctes :
 
-* the list box object in its entirety, 
-* columns, 
-* column headers, and 
-* column footers. 
+* l’objet list box dans sa globalité, 
+* les colonnes, 
+* les en-têtes des colonnes, et 
+* les pieds des colonnes. 
 
 ![](assets/en/FormObjects/listbox_parts.png)
 
-Each part has its own name as well as specific properties. For example, the number of columns or the alternating color of each row is set in the list box object properties, the width of each column is set in the column properties, and the font of the header is set in the header properties.
+Chaque partie dispose de son propre nom d’objet et de propriétés spécifiques. Par exemple, le nombre de colonnes ou la couleur alternée de chaque ligne sont définies dans les propriétés de l’objet list box, la largeur de chaque colonne est définie dans les propriétés des colonnes et la police de l’en-tête est définie dans les propriétés des en-têtes.
 
 It is possible to add an object method to the list box object and/or to each column of the list box. Object methods are called in the following order:
 
@@ -46,9 +46,9 @@ It is possible to add an object method to the list box object and/or to each col
 
 The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
 
-### List box types
+### Types de list box
 
-There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
+Il existe différents types de list box avec leurs propres comportements et propriétés spécifiques. The list box type depends on its [Data Source property](properties_Object.md#data-source):
 
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes). 
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.

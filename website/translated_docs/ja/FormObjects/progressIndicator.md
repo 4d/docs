@@ -3,7 +3,7 @@ id: progressIndicator
 title: Progress Indicator
 ---
 
-## Overview
+## 概要
 
 A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
 
