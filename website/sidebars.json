@@ -29,6 +29,7 @@
 		  "FormObjects/checkboxOverview",
 		  "FormObjects/comboBoxOverview",
 		  "FormObjects/dropdownListOverview",
+		  "FormObjects/forms",
 		  "FormObjects/groupBox",
   		  "FormObjects/inputOverview",
 		  "FormObjects/listOverview",

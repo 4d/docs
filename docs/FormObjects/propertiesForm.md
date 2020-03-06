@@ -199,15 +199,14 @@ To assign a menu bar to a form, select a menu bar from the “Associated Menu Ba
 
  If the menu bar of the form is identical to the current menu bar, it is not added. The form menu bar will operate for both input and output forms.
 
-*	The **Active Menu Bar** option appears when you select a menu bar. If you want to use this form in a custom application, select the Active Menu Bar option. This option tells 4D not to disable the current menu bar. If this option is not selected, 4D disables the current menu bar and only permits access to the form’s menu bar.
-*	
->You can also associate a menu bar with a form in the Form Properties (Explorer) dialog box.
+*	The **Associated Menu Bar** option appears when you select a menu bar. If you want to use this form in a custom application, select the Associated Menu Bar option. This option tells 4D not to disable the current menu bar. If this option is not selected, 4D disables the current menu bar and only permits access to the form’s menu bar.
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-||||
+|menuBar|string|Name of a menu bar|
 
 
 ---
@@ -299,7 +298,7 @@ To select or deselect all events, hold down **Ctrl** (Windows) or **Command** (m
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|events|String array or number array|onActivate, onAfterEdit, onAfterKeystroke, onAfterSort, onAlternateClick, onBeforeDataEntry, onBeforeKeystroke, onBeginDragOver, onBeginURLLoading, onBoundVariableChange, onClick, onCloseBox, onCloseDetail, onCollapse, onColumnMove, onColumnResize, onDataChange, onDeactivate, onDeleteAction, onDisplayDetail, onDoubleClick, onDragOver, onDrop, onEndURLLoading, onExpand, onFooterClick, onGettingFocus, onHeader, onHeaderClick, onLoad, onLoadRecord, onLongClick, onLosingFocus, onMenuSelect, onMouseEnter, onMouseLeave, onMouseMove, onMouseUp, onOpenDetail, onOpenExternalLink, onOutsideCall, onPagechange, onPluginArea, onPrintingBreak, onPrintingDetail, onPrintingFooter, onResize, onRowMove, onScroll, onSelectionChange, onTimer, onUnload, onURLFiltering, onURLLoadingError, onURLResourceLoading, onValidate, onVPReady, onWindowOpeningDenied|
+|events|string array or number array|onActivate, onAfterEdit, onAfterKeystroke, onAfterSort, onAlternateClick, onBeforeDataEntry, onBeforeKeystroke, onBeginDragOver, onBeginURLLoading, onBoundVariableChange, onClick, onCloseBox, onCloseDetail, onCollapse, onColumnMove, onColumnResize, onDataChange, onDeactivate, onDeleteAction, onDisplayDetail, onDoubleClick, onDragOver, onDrop, onEndURLLoading, onExpand, onFooterClick, onGettingFocus, onHeader, onHeaderClick, onLoad, onLoadRecord, onLongClick, onLosingFocus, onMenuSelect, onMouseEnter, onMouseLeave, onMouseMove, onMouseUp, onOpenDetail, onOpenExternalLink, onOutsideCall, onPagechange, onPluginArea, onPrintingBreak, onPrintingDetail, onPrintingFooter, onResize, onRowMove, onScroll, onSelectionChange, onTimer, onUnload, onURLFiltering, onURLLoadingError, onURLResourceLoading, onValidate, onVPReady, onWindowOpeningDenied|
 
 
 ---

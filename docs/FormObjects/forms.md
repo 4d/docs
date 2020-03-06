@@ -1,144 +1,269 @@
 ---
 id: forms
-title: Forms
+title: Overview
 ---
 
 
-Form properties are set in the Property List of the Form editor.
-Certain form properties can be set using the Form Properties window specific to the Explorer. For more information about this point, refer to Form Properties (Explorer).
+Form objects provide the interface through which information is entered, modified, and printed. A user interacts with the data in a database using forms and prints reports using forms. In custom applications, you can use forms to create custom dialog boxes and palettes.
 
-General properties  
-Form type  
-You can change the form type, i.e. its destination. For project forms, there are two types available: Detail Form and Detail Form for Printing. For table forms, two additional types are also available: List Form and List Form for Printing.
+Each table in your database generally has at least two forms. One form is for listing records on-screen and the other form displays one record at a time and is used for data entry and modification. The form that lists records is called the output form or list form and the form that displays one record at a time is called the input form or detail form. When you are viewing records using the list form, you can double-click a record to view it using the current detail form.
 
-This property determines the options that appear in the Property List for the form. 
+## Form Contents   
 
-It also allows you to restrict the number of forms displayed in the current Input and Output form selection lists (the List of tables window, see Browsing different tables and forms): only forms whose type corresponds to the list are displayed. 
+In custom applications you can use the language to control which forms to use. For example, you may want to switch sets of forms depending on the type of screen used. You can also use the language to use different sets of forms for Web browsers and 4D Client users. When you write a custom application, you can create forms for use as custom dialog boxes or floating palettes. In custom applications, you can also use multiple processes to allow users to work with several forms simultaneously.
 
-The Form Type property is found at the top of the Property List. When the form type is None, it is displayed in both menus of the List of tables. 
+A form can display fields from more than one table. You can place fields from a related One table on a form and allow users to enter values directly into the related One table. You can also include a subform that displays a list of records from a related Many table. A subform displays a list of records from another table or a subtable in the master table. With a subform, the user can view, enter, and modify records in another table. This is sometimes known as a master-detail relationship. For example, an invoicing application would use a subform on the invoicing input form that lets the user enter line items for the invoice. Although the line items appear on the invoicing screen, the line item records are actually stored in a related Many table.
 
-Note: You can also set the form type using the Form Properties window specific to the Explorer (see Form Properties (Explorer)).
+A form used for data entry can have more than one subform. For example, a contacts manager database can use one subform for telephone numbers, another subform for ToDo’s, and another for prior contacts with the person. Each subform displays records from a different related Many table.
 
-Inherited forms  
-These properties are described in Using inherited forms.
+A particular form can use some of the fields in a table or all of the fields. You might have two input forms, for example — one for use by a clerk and another for use by supervisors — neither of which contains all the fields. You might use another group of fields for the screen display and yet a fourth group for a printed report.
+Forms can be modified at any time, regardless of whether you have entered data into the database. Changes to a form do not affect the data stored on disk in any way.
 
-Default Window Title  
-The default window title is used when the form is opened using the Open window and Open form window functions in the Application environment. The default window title appears in the Title bar of the window. To set the default window title, enter it in the Window Title entry area of the Property List.
+Each form has one or more display pages in which fields and other enterable objects appear. If your fields don’t fit on one page, you can create additional pages. When you create a multi-page form, you also add buttons or a tab control to allow users to move from one page to another.
 
-You can use dynamic references to set the window titles for forms, i.e.:
+Each form also has a background page (a page zero) on which you place objects that appear on all display pages. Use the background page to place background graphics, buttons, a tab control, and other graphic objects that define the “look” of the page, such as rectangles and labels.
 
-A standard XLIFF reference (see PICTURE TO BLOB).
-A table or field label: The syntax to apply is <?[TableNum]FieldNum> or <?[TableName]FieldName>. The reference is resolved when the FORM SET INPUT command is called (if the * parameter is passed and if it is followed by a call to Open window) and when the Open form window command is called.
-A variable or a field: The syntax to apply is <VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
-Notes:
-
-The number of characters for a window title is limited to 31.
-You can also set the window title using the Form Properties window specific to the Explorer (see Form Properties (Explorer)).
-Save Geometry  
-When the Save Geometry option is checked, if the window is opened using the Open form window command with the * parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
-
-the current page,
-the position, size and visibility of each form object (including the size and visibility of list box columns).
-Note: This option does not take into account objects generated using the OBJECT DUPLICATE command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects. 
-
-When this option is checked, the Save Value option is also available for certain objects. For more information and several examples of use, refer to Memorization of window geometry.
-
-Form and window size  
-A form is always displayed in a window. 4D lets you set the size of both the form and the window, as well as their respective behavior when resized.
-These properties are interdependent and your application interface results from their interaction. Keep in mind that the result also depends on the resizing properties assigned to each form object (for more on this subject, refer to Resizing).
-
-Form Size  
-You set the form size properties using the “Form Size” theme of the Property List. The following choices are available:
-
-Size based on: Automatic Size: The size of the form will be that necessary to display all the objects, to which will be added the margin values entered in the Hor. margin and Vert. margin fields (in pixels).
-Size based on: Set size: The size of the form will be based on what you enter (in pixels) in the Width and Height fields (when you select the Set size option, the Hor. margin and Vert. margin fields change to Width and Height).
-Size based on: object: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
-You can choose this option when you want to use active objects placed in an offscreen area (i.e., outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.
-When you select the Automatic Size option or a size based on an object, you have the Hor. margin and Vert. margin fields. You can then enter values (in pixels) to set additional margins to be added to the edges of the form. These values also determine the top and right-hand margins of forms used in the Label editor.
-Note: For output forms, only the Hor. margin or Width fields are available.
-Dynamic adjustment: The Dynamic adjustment property is available in the “Form Size” theme for forms converted from a 4D version prior to version 2004, when the Automatic Size property is selected. This property modifies the resizing mode of forms. In previous versions of 4D, when a form had the Automatic Size property, the form size was calculated only at the moment when the form was opened. If any modifications were made subsequently using commands such as OBJECT MOVE, the size of the form was not adjusted. Henceforth, the form size is dynamically adjusted in this case. This principle is activated for new forms. On the other hand, for compatibility reasons, the forms of converted databases do not have this property by default. If you want the size of converted forms to be dynamically adjusted, you can check the Dynamic adjustment option.
-Window Size  
-When an input form is displayed in a custom application, you ordinarily open the form using the Open window or Open form window functions.
-Open window lets you specify the top, left, bottom, and right coordinates of the window as well as the window type. In this case, the size of the window does not depend on that of the form. On the other hand, the resizing possibilities will depend on the options set in the “Form Size” theme and on the window type. Open form window creates a new window based on the sizing and resizing properties of the form passed as parameter. 
-
-You can set form window resizing in the Property List.The following options are available:
-
-With Constraints: This property is available for forms converted from previous 4D versions (prior to version 2004). It is used to reproduce the behavior of the prior “Resizable” form property: when this option is not checked, the mechanisms that handle object resizing and window size constraints are disabled. This way, the user can freely resize the form window but the objects it contains are neither resized nor moved. The minimum/maximum or fixed size properties as well as the resizing properties of the objects are ignored. This corresponds to the behavior of former versions of 4D and must only be used for compatibility reasons within specific interfaces. The behavior of current 4D databases corresponds to the checked option (standard mode).
-Fixed Width: If you check this option, the window width will be locked and it will not be possible for the user to resize it. If this option is not checked, the width of the form window can be modified. In this case, the Minimum Width and Maximum Width entry areas can be used to determine the resizing limits.
-Fixed Height: If you check this option, the window height will be locked and it will not be possible for the user to resize it. If this option is not checked, the height of the form window can be modified. In this case, the Minimum Height and Maximum Height entry areas can be used to determine the resizing limits.
-As a general rule, it is necessary to prevent the user from hiding enterable areas and control buttons.
-
-Appearance  
-Platform  
-The platform interface property sets the appearance of a form according to the context of its execution. This property can also be set individually for each form object (see the “Platform” section in Setting object display properties).
-
-Two interface properties are available: System and Printing. They are used as follows: When displayed on screen, a form must respect the current operating system interface (System). When it is set to be printed, the appearance of objects must be adapted (Printing), regardless of the platform. 
-
-System: This property allows adapting the appearance of the form or object automatically depending on the current platform on which 4D is running:
-When the form is displayed under Mac OS X, the form or object has a Mac OS X look and feel,
-When the form is displayed under Windows, the form or object has the look and feel based on the current “Appearance” setting of the control panel.
-This mode is used by default for all the forms and objects in databases created with 4D version 2004 or higher.
-Printing: This property allows adapting the appearance of the form or object for printing: any object or graphic item (button, check box, tab, line, etc.) is drawn as a vector in order to produce a satisfactory result for printing. The same result is obtained regardless of the platform on which the form is displayed or printed.
-Textured (on Mac OS)  
-This form property activates the textured look for the form when it is displayed using the Open form window command on Mac OS. This look is found throughout the Mac OS X interface:
+>When a multipage table form is used as an output form (*e.g.*, when it is printed), only the first display page appears.
 
 
 
-If the form is displayed in a window that was not created by Open form window (for example in the Design mode), the property will not be taken into account. Under Mac OS, the metal look is previewed in the Form editor when the Textured option is checked and when the form limits are displayed. When the form is executed under Windows, this option has no effect.
+## Form Types 
+ 
+4D lets you create two categories of forms: table forms and project forms. Basically, table forms are attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Project forms are independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components.
 
-Hide Grow Box  
-Checking this option hides the grow box in a form window. This option is taken into account when you call the form using the DIALOG command for example.
+Project forms can be used to create interfaces that comply with OS standards more easily. In particular, calling (via the DIALOG command) project forms that display the selections of records in subforms is now recommended by 4D for the display of records in list form. With a little additional programming, this combination is an improvement on the MODIFY SELECTION and DISPLAY SELECTION commands.
 
-Print  
-The print properties are described in Printing a form.
+Table forms and project forms are grouped separately on the Forms Page of the Explorer.
 
-Assigning a menu bar to a form  
-When you create an application, you can create custom menus. Custom menus allow you to add menu commands for automating specific tasks in the database, such as, for example, creating a report.
+### Characteristics of table forms  
 
-Custom menus are created in the Menu Bar editor. Each menu bar that you create includes at least one menu and is assigned a unique ID number and name. For more information on creating menu bars, menus and menu commands, refer to the chapter Menus and menu bars.
+Every form is attached to a table. Each table must usually have at least one form so that information can be entered into fields and displayed on screen. Typically, a table has separate input and output forms. The input form is the one used for data entry. It displays one record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (i.e., First Record, Last Record, Previous Record, Next Record). The output form displays a list of records, with one line per record. The results of queries are shown in the output form and the user can double-click a line in an output form to display the input form for that record.
 
-To assign a menu bar to a form, select a menu bar from the “Associated Menu Bar” List in the Property List. The [...] button lets you access the menu bar editor directly (see Menus and menu bars). In the Application environment, a menu bar that is assigned to a form is added to the right of the current menu bar.
+The following illustrations show a typical input and output form:
 
- If the menu bar of the form is identical to the current menu bar, it is not added. The form menu bar will operate for both input and output forms.
 
-The Active Menu Bar option appears when you select a menu bar. If you want to use this form in a custom application, select the Active Menu Bar option. This option tells 4D not to disable the current menu bar. If this option is not selected, 4D disables the current menu bar and only permits access to the form’s menu bar.
-Note: You can also associate a menu bar with a form in the Form Properties (Explorer) dialog box.
 
-Controlling form access  
-You can control access to a form by setting Access and Owner privileges for groups of users. A single group can be assigned for each privilege using the Access and Owner drop-down lists. For information about creating a password access system with users and groups, see the chapter Users and groups.
 
-The Access drop-down list controls which group can use the form in the records display window or in custom applications. If a user that is not in this group attempts to use the form, 4D displays a message saying that the user’s password does not allow him or her to use the form.
 
-The Owner drop-down list controls which group can edit the form in the Design environment. If a user who is not in this group attempts to open the form in the Design environment, 4D displays a message saying that the user does not have the access privileges needed to edit the form. 
+When you try to display the records of a table before creating a form for this table, 4D asks you if you want to it to create default input and output forms for you.
 
-Users who are assigned to both groups can use the form in both the Design environment and in custom applications.
 
-To set access privileges for a form:
 
-Display the form properties in the Property List.
-Use the Access and Owner drop-down lists to make the desired access privilege assignments.
-The names of existing groups are displayed in each drop-down list.
 
-The [...] button can be used to access the Groups editor directly in the Tool Box of 4D.
-You can also assign access groups to a form in the Form Properties (Explorer) dialog box.
 
-Help  
-4D allows you to associate a custom on-line help file with each database. The creation of help files is described in Appendix A: Assigning a custom help file. 
+Note: With the Automatic Form Creation option in the Preferences, you can, for example, set 4D to automatically create default forms and therefore not display the Create Default Form dialog box. For more information, refer to the General Page.
 
-Help files can be contextual, which means that they can display information related to the context from which they were called. To do so, you can associate a Help Topic Number to a form. Make sure you assign help topic numbers that match numbers defined in the help file. This is done in the “Help” theme of the Property List .
+Click Yes (or Yes for All) to create default forms. You can always return to the Design environment and modify them or replace them with more sophisticated forms. Without making any modifications, you can start using these forms to enter and display data in your database. You can also click No if you do not want to associate a form with the table. Data entry and/or display can then be carried out using project forms. Your database can use up to 32,000 forms per table, that perform specific functions.
 
-Action  
-The Edit... button lets you access the Form method. This is covered in Editing methods.
+### Characteristics of project forms  
 
-Markers  
-This area lets you specify the precise location of markers on the vertical ruler of the form. Markers are mainly used in output forms. They control the information that is listed and set header, breaks, detail and footer areas of the form. For more information about the use of control markers, see Using output control lines.
+Project forms differ from table forms in the following manner:
 
-Note: The label width triangle on the horizontal ruler controls the width of a label when you create a form for printing mailing labels using the PRINT LABEL command.
+*	Project forms can only be of the detail (page) type. The mechanisms for output (list) forms are not compatible with project forms.
+*	Project forms do not appear in the List of tables and cannot be designated as the current input or output form. They cannot be used in the Label editor nor in the 4D import/export editor (see Exporting and importing data).
+*	Project forms can only be displayed using the DIALOG command or as inherited forms (see Using inherited forms).
+*	Project forms can contain the same types of objects as table forms, including fields.
+When fields are used, the project form stores the number of the table and the field. When a form is copied from one database to another or within a component, the references are also copied. The table and field used are those of the target database. In the case of incompatibility (non-existent table, incorrect field type, etc.), the form will not work correctly.
+Since project forms are mainly intended to be used in the context of the DIALOG command, the buttons with standard actions for record management (Next record, Delete record, etc.) are not provided by default in the editor nor in the New Form Wizard. You must manage the display of records and any data modification therein using language commands.
+On the other hand, when project forms are used as inherited forms by the table forms, the use of automatic record management mechanisms is possible.
+*	Project forms can have a form method, like table forms, which can be accessed from the Methods Page of the Explorer.
 
-Events  
-This area sets the events that can lead to the execution of the form method. When the form is used, only the events that you select will actually occur. If you do not select any events, the form method will never be called.
-Your database will run faster if you deselect superfluous events.
-For more information about form events, refer to the Form event code command.
+### Transforming a table form into a project form (and vice versa)  
 
-To select or deselect all events, hold down Ctrl (under Windows) or Command (under Mac OS) and click an event.
+It is possible to change a table form into a project form (or to carry out the opposite transformation) at any time.
+Be careful, when transforming table forms into project forms, any automatic functioning concerning data management that is present in the table form will no longer work once the form has been transformed. Similarly, a “list form” or “list form for printing” type form will be transformed into a project form of the “page” type. 
+
+Changing the type of a form can be done by drag and drop or copy/paste on the Forms Page of the Explorer. This can be done in the same database or between two different databases. 
+
+To transform a project form into a table form and vice versa:
+
+1.	On the Forms page of the Explorer, click on the form that you want to transform and drop it on the destination item.
+When transforming a project form into a table form, you must drop the form onto the name of the table to which it will be attached.
+By default, the form is moved when the drag and drop operation is carried out inside the same database. If you want to copy the form, hold down the Alt (Windows) or Option (Mac OS) key during the drag and drop. When the drag and drop is between two different databases, the form can only be copied. You can also use the standard Copy/ Paste commands in the context menu of the Explorer.
+
+
+
+## Creating Forms 
+ 
+4D lets you create standard forms quickly. It also provides powerful tools that let you create forms that implement sophisticated interfaces. Your forms can provide exactly what your database needs. With only point and click operations, you can create a basic form with fields, buttons, variables, and so on.
+
+There are three ways to create and modify 4D forms, the Form Editor, the Explorer, and [dynamically](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.en.html).
+
+### Form Editor
+
+The Form editor is an object-oriented drawing environment that lets you customize forms by manipulating objects on the form directly. For example, you can reposition objects, add objects, create multipage forms with tab controls, enforce business rules by specifying data entry constraints, specify form access privileges, associate a custom menu bar with a form, and write form and object methods that run automatically when the form is used. 
+
+### Explorer
+
+You can create a blank form directly from the Explorer. The form is created without any fields, buttons or variables and is opened in the Form editor. It can then be put together entirely using the Form editor. Creating blank forms is useful when you want to generate dialog boxes containing only variables or plug-in areas.
+
+To create a blank form:
+
+1.	Display the Forms Page of the Explorer.
+2.	Select the item corresponding to the category of form you want to create:
+	*	For a project form: select either the “Project Forms” label or an existing project form,
+	*	For a table form: select the name of a table.
+3.	Click on the add button  of the Explorer. The following dialog box appears:
+
+	*	Project form
+
+	*	Table form
+
+
+4.	Enter the form name in the corresponding entry area.
+You will use this name, more particularly, to refer to the form during programming.
+
+5.	(Optional) Select a storage folder for the form.
+If you select a folder name from the drop-down list, the form will be placed in this folder. Folders can be used to organize the objects of your applications and are managed on the Home Page of the Explorer. By default, the form is created at the Top Level, i.e., not in any storage folder.
+
+6.	Click on OK.
+The blank form is then opened in a new window of the Form editor.
+
+>**Compatibility note**: Since several versions, 4D no longer adds default navigation buttons at runtime to forms that do not have any. You must create your own set of navigation buttons when necessary. 
+
+
+
+### Dynamically
+
+See [Dynamic Forms](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.en.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Editing a form
+
+You can open a form in the Form editor as follows:
+
+1.	Choose **Open > Form...** from the *File* menu.<p>
+	OR<p>
+	In the Structure editor, hold down **Ctrl+Shift** and double-click 			the table title whose forms you want to open.<p>
+	OR<p>
+	In the Structure editor, right-click on the table name, then select **Show Forms...** in the context menu.<p>
+4D displays the **Forms Page** of the Explorer. You can expand the "Project Forms" or any of the table names to display the forms associated with them. If you have double-clicked a table’s name or used the context menu of the Structure editor, that table is already selected.
+2.	If necessary, expand the table name that contains the form you want to modify.<p>
+Right-click on the name of the form to be modified, then select **Edit Form...** in the context menu.<p>
+OR<p>
+Select the form then choose **Edit Form...** in the options menu of the Explorer.<p>
+OR<p>
+Double-click the name of the form or in the preview area.<p>
+4D displays the form in a Form editor window.<p>
+	>These actions are also available on the **Home Page** of the Explorer.
+	>4D Server: Object locking occurs when two or more users attempt to modify the same form simultaneously. If a user is modifying a form in the Design environment, the form is locked. Other users cannot modify that same form until the first user frees the form by closing it.
+
+
+### Locking information  
+
+A closed lock icon is displayed if objects in the form or the form file are locked. Locking can occur in both project and client/server modes when:
+
+The file for that form is 'Read-only' (Projects only). Clicking on the lock icon will display an alert to unlock it, if possible. If unlocking is successful, the lock icon disappears.
+Two or more users attempt to modify the same form at the same time. The form cannot be used until the first user frees it by closing the window (Client/server only).
+In both cases, the form can be opened in 'Read-only', but cannot be used until the lock is removed.
+
+
+## Renaming a form  
+ 
+You can rename the form in the Property List or using the Forms Page of the Explorer.
+
+You use the names of forms when you are establishing default input and output forms for a table and in commands that accept a form name as a parameter, such as `FORM SET INPUT` and `FORM SET OUTPUT`.
+
+You cannot use the same name for more than one project form, or for more than one form per table. This will confuse 4D when you try to refer to a form by name. You can, however, use the same form name with different tables. For example, you can name all your input forms “Input” and all your output forms “Output.”
+
+>If you rename a form that is referred to elsewhere in the database (such as in methods), be sure to update the references to this form. To do this, you can use the search and replace function in the Design environment (see [Renaming](https://doc.4d.com/4Dv18/4D/18/Renaming.300-4575730.en.html)).
+
+### via the Explorer
+
+1.	Display the **Forms Page** of the Explorer.
+	A hierarchical list of tables and forms appears.
+2.	Hold down the Alt key (Windows) or the Option key (Mac OS) and click on the form name.
+	OR
+	Click twice on the name of the form you want to change.
+	The form name becomes editable.
+3.	Enter the new name.
+4.	Press Tab or click anywhere outside the entry area to save the new name.
+
+### via the Property List window 
+
+1.	Display the form properties in the Property List.
+2.	Enter a name in the Form Name area.
+
+
+
+## Designating input and output forms  
+
+
+Each table has one current input form and one current output form. The input form is used for entering and modifying records, and the output form is used to list records. Usually, you use a Detail form for input and a List form for output.
+
+You can change which form to use for input and output at any time. This change can be made in the **List of tables window** as well as using the `FORM SET INPUT` and `FORM SET OUTPUT` commands. In this case, the changes only apply to the current work session. 
+
+You can also specify default input and output forms in the Design environment. In this case, the changes will be saved with the database.
+
+To change the input and output forms for a table:
+
+1.	Display the Forms Page of the Explorer.
+2.	Expand the table for which you want to modify the default input or output form.
+	The letter I is displayed next to the name of the current Input form and the letter O is displayed next to the current Output form.
+3.	Right-click on the name of the form to be designated and choose the Input Form or Output Form command in the context menu:
+
+	OR
+	
+	Choose the Input Form or Output Form command in the options menu of the Explorer.
+
+>Only table forms can be designated as input or output forms. 
+
+You can also designate the same form as the Input and Output form. In this case the character B (for Both) will be displayed next to it.
+
+
+## Deleting a form  
+
+You can delete any project form or any table form that is not designated as a current input or output form (or both). The deletion button is disabled when you select the current input or output form.
+
+To delete a form:
+
+1.	Display the Forms Page of the Explorer.
+2.	Expand the “Project Forms” theme or the table that contains the form you want to delete.
+3.	Select the form you want to delete and click the deletion button  of the Explorer.
+
+	OR
+	
+	Use the **Delete Form** command in the context menu of the Explorer (right-click on the form name).
+	
+	4D asks you to confirm the deletion.
+4.	Click on **OK**.
+	4D deletes the form. The form is moved to the Trash and can be recovered at any time so long as the Trash has not been emptied (see [Trash Page](https://doc.4d.com/4Dv18/4D/18/Trash-Page.300-4575681.en.html)). 
+
+>It is also possible to delete a form from the **Home Page** of the Explorer (using the same procedure).
+
+
+## Printing a form  
+
+Each form has a maximum area of about 1245 square feet. You scroll to bring hidden portions of the form into view. For viewing on screen, your form design can use this entire area. You can scroll to view any element you place in the form.
+
+For printing, form elements must fit within a single page width, but may be several pages in length. The actual size of a page depends on your printing device, the paper it is using, and the specifications you enter in the Page Setup dialog box. 4D displays page border lines in the Form editor. These lines indicate the page limits. The page border lines respond to any page setup changes. The page setup specifications are stored with the form when it is closed. The form’s limits can be displayed or hidden using the Paper command in the Display submenu of the Form editor (see Showing/hiding elements in the Form editor). 
+
+The figure below shows the page border lines:
+
+
+
+
+
+## Saving forms  
+ 
+It is a good idea to save any changes you make to a form, especially when using 4D Server with multiple users. You can save a form by closing or saving it. You can close a form by clicking its close box or by choosing **Close Form: Name** from the **File**. To save a form without closing it, choose **Save Form: Name** from the **File** menu.
+
+Once a form has been saved, you can continue to work on it. If you make a mistake or do not like the changes you have made, you can revert to the last saved version of the form. This makes the form appear exactly as it did the last time that it was saved. To do this, choose **Revert...** from the **File** menu.
+
+>**4D Server**: When a form is saved in the Design environment, users are able to see your changes the next time they open the form.
+
 
