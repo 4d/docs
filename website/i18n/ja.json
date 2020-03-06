@@ -27,7 +27,7 @@
         "title": "配列"
       },
       "Concepts/branching": {
-        "title": "Branching structures"
+        "title": "分岐構造"
       },
       "Concepts/looping": {
         "title": "Looping structures"
@@ -78,7 +78,7 @@
         "title": "Error handling"
       },
       "Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "制御フロー"
       },
       "Concepts/identifiers": {
         "title": "Identifiers"
@@ -834,7 +834,7 @@
         "title": "配列"
       },
       "version-18.0-Concepts/branching": {
-        "title": "Branching structures"
+        "title": "分岐構造"
       },
       "version-18.0-Concepts/looping": {
         "title": "Looping structures"
@@ -885,7 +885,7 @@
         "title": "Error handling"
       },
       "version-18.0-Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "制御フロー"
       },
       "version-18.0-Concepts/identifiers": {
         "title": "Identifiers"
