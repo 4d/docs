@@ -48,116 +48,118 @@ title: 共有オブジェクトと共有コレクション
 
 共有グループのルールについての詳細は、例題2を参照してください。
 
-**注:** 共有グループは、*ロック識別子* と呼ばれる内部プロパティによって管理されています。 For detailed information on this value, please refer to the 4D Developer's guide.
+**注:** 共有グループは、*ロック識別子* と呼ばれる内部プロパティによって管理されています。 この値についての詳細は、[ランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/Shared-objects-and-shared-collections.300-4505654.ja.html#3648963) を参照ください。
 
-### Read
+### 読み出し
 
-Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
+たとえ共有オブジェクト/コレクションが他のプロセスによって使用中であっても、それらのプロパティや要素は、`Use...End use` 構文を呼び出さずとも取得することが可能です。
 
-However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
+ただし、複数の値が互いにリンクしていてそれらを一度に読み出す必要がある場合には、一貫性の観点から、共有オブジェクト/コレクションを `Use...End use` 内で扱う必要があります。
 
-### Duplication
+### 複製
 
-Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
+共有オブジェクト (あるいは共有オブジェクトをプロパティとして格納しているオブジェクト) に対して `OB Copy` コマンドを使用することは可能ですが、含まれている子オブジェクト含め、標準 (非共有) のオブジェクトが戻り値として返されます。
 
-### Storage
+### ストレージ
 
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは `Storage` コマンドから返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
 
-Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
+`ストレージ` オブジェクトは標準の共有オブジェクトとは異なり、共有オブジェクト/コレクションがプロパティとして追加されたときでも共有グループを作成しないという点に注意してください。 この例外的な振る舞いにより、**ストレージ** オブジェクトを使用するたびに、リンクされている共有オブジェクト/コレクションをすべてロックせずに済みます。
 
-For more information, refer to the `Storage` command description.
+詳細な情報については、`Storage` コマンドの詳細を参照してください。
 
 ## Use...End use
 
-The formal syntax of the `Use...End use` structure is:
+`Use...End use` 構文の正式なシンタックスは、以下の通りです:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
-    statement(s)
+    statement(s) // ステートメント
  End use
 ```
 
-The `Use...End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
+`Use...End use` 構文は、内部セマフォーの保護下において *Shared_object_or_Shared_collection* 引数に対して処理を実行するステートメントを定義します。 *Shared_object_or_Shared_collection* として任意の有効な共有オブジェクトあるいは共有コレクションを渡すことができます。
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. They can be passed by reference as parameters from a process to another one. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Surrounding modifications on shared objects or shared collections by the `Use...End use` keywords is mandatory to prevent concurrent access between processes.
+共有オブジェクトおよび共有コレクションは、プロセス間の (とくに **プリエンプティブ4Dプロセス** 間の) 通信ができるように設計されています 。 これらはプロセスから他のプロセスへ、参照型の引数として渡すことができます。 共有オブジェクトおよび共有コレクションについての詳細な情報については、**共有オブジェクトと共有コレクション** を参照してください。 共有オブジェクトおよび共有コレクションを扱う際には、複数プロセスによる同時アクセスを避けるために、必ずそれらを `Use...End use` キーワードでくくる必要があります。
 
-- Once the **Use** line is successfully executed, all *Shared_object_or_Shared_collection* properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The *statement(s)* sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
-- If another shared object or collection is added as a property of the *Shared_object_or_Shared_collection* parameter, they become connected within the same shared group (see **Using shared objects or collections**).
-- If another process tries to access one of the *Shared_object_or_Shared_collection* properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated. 
-- The **End use** line unlocks the *Shared_object_or_Shared_collection* properties and all objects sharing the same locking identifier.
-- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed. 
-
-**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
-
-## 例題 1
-
-You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
-
-```4d
- ARRAY TEXT($_items;0)
- ... //fill the array with items to count
- $nbItems:=Size of array($_items)
- C_OBJECT($inventory)
- $inventory:=New shared object
- Use($inventory)
-    $inventory.nbItems:=$nbItems
- End use
-
-  //Create processes
- For($i;1;$nbItems)
-    $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
- End for
-```
-
-In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
-
-```4d
- C_TEXT($1)
- C_TEXT($what)
- C_OBJECT($2)
- C_OBJECT($inventory)
- $what:=$1 //for better readability
- $inventory:=$2
-
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
- End use
-```
-
-## 例題 2
-
-The following examples highlight specific rules when handling shared groups:
-
-```4d
- $ob1:=New shared object
- $ob2:=New shared object
- Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
- End use
-
- $ob3:=New shared object
- $ob4:=New shared object
- Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
- End use
-
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
- End use
-
- Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
- End use
-
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
- End use
-```
+- **Use** の実行が成功すると、対応する **End use</code> が実行されるまで、*Shared_object_or_Shared_collection* のプすべてのロパティ/要素は他のあらゆるプロセスに対し書き込みアクセスがロックされます。</li> 
+    
+    - *statement(s)* で実行されるステートメントは、*Shared_object_or_Shared_collection* のプロパティ/要素に対して、競合アクセスのリスクなしに変更も実行することができます。
+    - *Shared_object_or_Shared_collection* に他の共有オブジェクトあるいはコレクションがプロパティとして追加された場合、それらも同じ共有グループとして連結されます (**共有オブジェクト/共有コレクションの使用** を参照してください)。
+    - **Use...End use ** 内ステートメントの実行中に、他のプロセスが *Shared_object_or_Shared_collection* のプロパティやリンクされたプロパティにアクセスしようとした場合、そのアクセスは自動的に保留され、実行中の処理が終了するまで待機します。 
+    - **End use** は、*Shared_object_or_Shared_collection* プロパティおよび、同じロック識別子を共有するすべてのオブジェクトのロックを解除します。
+    - 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 この場合、すべてのロックはスタックされ、プロパティ/要素は最後の **End use** が実行されたときに解除されます。 </ul> 
+    
+    **注:** コレクションのメンバーメソッドが共有コレクションを変更する場合、そのメソッド実行中は、対象の共有コレクションに対して **Use** が内部的に自動で呼ばれます。
+    
+    ## 例題 1
+    
+    それぞれ異なる製品の在庫更新を実行する複数のプロセスを起動し、同じ共有オブジェクトを更新していきます。 まずメインプロセスで空の共有オブジェクトをインスタンス化してから、共有オブジェクトへの参照と対象製品を引数として渡して別プロセス起動します:
+    
+    ```4d
+     ARRAY TEXT($_items;0)
+     ... // 在庫を確認する製品を配列に格納します
+     $nbItems:=Size of array($_items)
+     C_OBJECT($inventory)
+     $inventory:=New shared object
+     Use($inventory)
+        $inventory.nbItems:=$nbItems
+     End use
+    
+      // プロセスを起動します
+     For($i;1;$nbItems)
+        $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
+      //$inventory オブジェクトは参照で渡されます
+     End for
+    ```
+    
+    "HowMany" メソッド内では、在庫確認が終わるとすぐに $inventory 共有オブジェクトが更新されます:
+    
+    ```4d
+     C_TEXT($1)
+     C_TEXT($what)
+     C_OBJECT($2)
+     C_OBJECT($inventory)
+     $what:=$1 // 可読性のため
+     $inventory:=$2
+    
+     $count:=CountMethod($what) // 在庫確認用のメソッド
+     Use($inventory) // 共有オブジェクトを使用します
+        $inventory[$what]:=$count  // 当該製品の在庫を保存します
+     End use
+    ```
+    
+    ## 例題 2
+    
+    以下の例題は、共有グループを扱う際のルールについて説明しています:
+    
+    ```4d
+     $ob1:=New shared object
+     $ob2:=New shared object
+     Use($ob1)
+        $ob1.a:=$ob2  // グループ1 が作成されます
+     End use
+    
+     $ob3:=New shared object
+     $ob4:=New shared object
+     Use($ob3)
+        $ob3.a:=$ob4  // グループ2 が作成されます
+     End use
+    
+     Use($ob1) // グループ1のオブジェクトを使用します
+        $ob1.b:=$ob4  // これはエラーになります
+      // $ob4 はすでに他のグループに所属しているため
+      // 代入することはできません
+     End use
+    
+     Use($ob3)
+        $ob3.a:=Null // グループ2から$ob4 への参照をすべて解除します
+    
+     End use
+    
+     Use($ob1) // グループ1のオブジェクトを使用します
+        $ob1.b:=$ob4  // これもエラーになります
+      // $ob4 は依然としてグループ2に所属しているため
+      // 代入は不可能です
+     End use
+    ```
