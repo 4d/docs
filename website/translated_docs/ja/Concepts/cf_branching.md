@@ -1,6 +1,6 @@
 ---
 id: branching
-title: Branching structures
+title: 分岐構造
 ---
 
 ## If...Else...End if
