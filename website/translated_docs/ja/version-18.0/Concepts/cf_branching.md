@@ -1,6 +1,6 @@
 ---
 id: version-18.0-branching
-title: Branching structures
+title: 分岐構造
 original_id: branching
 ---
 
