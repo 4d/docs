@@ -749,17 +749,17 @@ In this mode:
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. 
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
-## Hierarchical list boxes
+## List box hiérarchiques
 
-A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
+Une list box hiérarchique est une list box dans laquelle le contenu de la première colonne apparaît sous forme hiérarchique. Ce type de représentation est adapté à la présentation d’informations comportant des valeurs répétées et/ou hiérarchiquement dépendantes (pays/région/ville...).
 
-> Only [array type list boxes](#array-list-boxes) can be hierarchical.
+> Seules les [list box de type tableau](#array-list-boxes) peuvent être hiérarchiques.
 
-Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
+Les list box hiérarchiques constituent un mode de représentation particulier des données, mais ne modifient pas la structure de ces données (les tableaux). Les list box hiérarchiques sont gérées exactement de la même manière que les list box non hiérarchiques.
 
-### Defining the hierarchy
+### Définir une hiérarchie
 
-To specify a hierarchical list box, there are several possibilities:
+Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 * Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
 * Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
