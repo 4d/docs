@@ -263,7 +263,7 @@ Dans l'exemple ci-dessous, la méthode de dataclass getCities retourne une colle
 
 `POST  /rest/Employee/getCities`
 
-Result:
+Résultat :
 
     {
         "result": [
