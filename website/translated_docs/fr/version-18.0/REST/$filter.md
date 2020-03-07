@@ -47,7 +47,7 @@ Pour plus d'informations sur la façon de rechercher des données dans 4D, repor
 >         
 >         Si vous passez la valeur directement, vous pouvez écrire ce qui suit : `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`</blockquote> 
 >         
->         ## Attribute
+>         ## Attribut
 >         
 >         Si l'attribut se trouve dans la même dataclass, vous pouvez simplement le passer directement (par exemple, `firstName`). Cependant, si vous souhaitez lancer une requête dans une autre dataclass, vous devez inclure le nom de l'attribut relationnel et le nom d'attribut, c'est-à-dire le chemin d'accès (par exemple, employeur.nom). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
 >         
