@@ -39,9 +39,11 @@ The List box builder lets you create and fill entity selection list boxes in a f
 	
 	This expression can be changed if necessary.
 	
-	Clicking on the clipboard icon will copy the expression for loading all records into memory. In the case of the example shown, the copied expression when pasted is: `Form.currentSelection:=ds.Category.all()` 
+5.	Clicking on the **Copy** button will copy the expression for loading all records into memory:
+
+	![](assets/en/FormEditor/listboxBuilderCode.png)
 	
-5.	Click the the **Build widget** button to create the list box.
+6.	Click the the **Build widget** button to create the list box.
 
 	![](assets/en/FormEditor/listboxBuilderBuild.png)
 	
