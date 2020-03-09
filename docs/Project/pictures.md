@@ -49,7 +49,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 ### Picture Resolution
 
-4D supports both high resolution displays on both macOS and Windows platforms for the following:
+4D supports high resolution displays on both macOS and Windows platforms for the following:
 
 *	Static pictures
 *	3D buttons/radio/check boxes

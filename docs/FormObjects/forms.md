@@ -1,8 +1,9 @@
 ---
 id: forms
-title: Overview
+title: Forms
 ---
 
+## Overview
 
 Form objects provide the interface through which information is entered, modified, and printed. A user interacts with the data in a database using forms and prints reports using forms. In custom applications, you can use forms to create custom dialog boxes and palettes.
 
@@ -31,7 +32,7 @@ Each form also has a background page (a page zero) on which you place objects th
  
 4D lets you create two categories of forms: table forms and project forms. Basically, table forms are attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Project forms are independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components.
 
-Project forms can be used to create interfaces that comply with OS standards more easily. In particular, calling (via the DIALOG command) project forms that display the selections of records in subforms is now recommended by 4D for the display of records in list form. With a little additional programming, this combination is an improvement on the MODIFY SELECTION and DISPLAY SELECTION commands.
+Project forms can be used to create interfaces that comply with OS standards more easily. In particular, calling (via the `DIALOG` command) project forms that display the selections of records in subforms is now recommended by 4D for the display of records in list form. With a little additional programming, this combination is an improvement on the `MODIFY SELECTION` and `DISPLAY SELECTION` commands.
 
 Table forms and project forms are grouped separately on the Forms Page of the Explorer.
 
@@ -91,7 +92,21 @@ There are three ways to create and modify 4D forms, the Form Editor, the Explore
 
 ### Form Editor
 
-The Form editor is an object-oriented drawing environment that lets you customize forms by manipulating objects on the form directly. For example, you can reposition objects, add objects, create multipage forms with tab controls, enforce business rules by specifying data entry constraints, specify form access privileges, associate a custom menu bar with a form, and write form and object methods that run automatically when the form is used. 
+The Form editor is an object-oriented drawing environment that lets you customize forms by manipulating objects on the form directly.
+
+For example, you can reposition objects, add objects, create multipage forms with tab controls, enforce business rules by specifying data entry constraints, specify form access privileges, associate a custom menu bar with a form, and write form and object methods that run automatically when the form is used. 
+
+To create a blank form:
+
+1.	Select **File > New > Form** or use the **Ctrl+Shift+L** keyboard shortcut:
+
+	![](assets/en/FormObjects/formNew.png)
+	
+	The following dialog box appears:
+
+	![](assets/en/FormObjects/formProj.png)
+	
+2.	Click **OK**. The blank form is then opened in a new window of the Form editor.
 
 ### Explorer
 
@@ -100,26 +115,28 @@ You can create a blank form directly from the Explorer. The form is created with
 To create a blank form:
 
 1.	Display the Forms Page of the Explorer.
+
+	![](assets/en/FormObjects/formEditor.png)
+
 2.	Select the item corresponding to the category of form you want to create:
-	*	For a project form: select either the “Project Forms” label or an existing project form,
+	*	For a project form: select either the “Project Forms” label (as shown in the image above) or an existing project form,
 	*	For a table form: select the name of a table.
-3.	Click on the add button  of the Explorer. The following dialog box appears:
+3.	Click on the add button of the Explorer. 
 
-	*	Project form
+	![](assets/en/FormObjects/fromAdd.png)
 
-	*	Table form
+	The following dialog box appears:
+
+	![](assets/en/FormObjects/formProj.png)
 
 
 4.	Enter the form name in the corresponding entry area.
 You will use this name, more particularly, to refer to the form during programming.
 
 5.	(Optional) Select a storage folder for the form.
-If you select a folder name from the drop-down list, the form will be placed in this folder. Folders can be used to organize the objects of your applications and are managed on the Home Page of the Explorer. By default, the form is created at the Top Level, i.e., not in any storage folder.
+If you select a folder name from the drop-down list, the form will be placed in this folder. Folders can be used to organize the objects of your applications and are managed on the Home Page of the Explorer. By default, the form is created at the Top Level, *i.e.*, not in any storage folder.
 
-6.	Click on OK.
-The blank form is then opened in a new window of the Form editor.
-
->**Compatibility note**: Since several versions, 4D no longer adds default navigation buttons at runtime to forms that do not have any. You must create your own set of navigation buttons when necessary. 
+6.	Click **OK**. The blank form is then opened in a new window of the Form editor.
 
 
 
