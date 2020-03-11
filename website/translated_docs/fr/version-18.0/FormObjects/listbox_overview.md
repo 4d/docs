@@ -514,23 +514,23 @@ In this mode:
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. 
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
-## Hierarchical list boxes
+## List box hiérarchiques
 
-A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
+Une list box hiérarchique est une list box dans laquelle le contenu de la première colonne apparaît sous forme hiérarchique. Ce type de représentation est adapté à la présentation d’informations comportant des valeurs répétées et/ou hiérarchiquement dépendantes (pays/région/ville...).
 
-> Only [array type list boxes](#array-list-boxes) can be hierarchical.
+> Seules les [list box de type tableau](#array-list-boxes) peuvent être hiérarchiques.
 
-Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
+Les list box hiérarchiques constituent un mode de représentation particulier des données, mais ne modifient pas la structure de ces données (les tableaux). Les list box hiérarchiques sont gérées exactement de la même manière que les list box non hiérarchiques.
 
-### Defining the hierarchy
+### Définir une hiérarchie
 
-To specify a hierarchical list box, there are several possibilities:
+Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
-* Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
-* Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-* Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
+* Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaire (ou déditez le formulaire JSON).
+* Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
+* Utiliser les commandes [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) et [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html). Ces commandes sont décrites dans le *manuel Langage de 4D*.
 
-#### Hierarchical List Box property
+#### Propriétés de la List Box hiérarchique
 
 This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 
@@ -546,158 +546,158 @@ This principle is not applied when only one variable is specified in the hierarc
 
 > If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see below), the unnecessary columns are automatically removed from the list box.
 
-#### Create hierarchy using the contextual menu
+#### Créer une hiérarchie via le menu contextuel
 
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
+Lorsque vous sélectionnez au moins une colonne en plus de la première dans un objet list box (de type tableau) dans l’éditeur de formulaires, la commande **Créer hiérarchie** est disponible dans le menu contextuel :
 
 ![](assets/en/FormObjects/listbox_hierarchy1.png)
 
-This command is a shortcut to define a hierarchy. When it is selected, the following actions are carried out:
+This command is a shortcut to define a hierarchy. Lorsque vous la choisissez, les actions suivantes sont effectuées :
 
-* The **Hierarchical list box** option is checked for the object in the Property List.
-* The variables of the columns are used to specify the hierarchy. They replace any variables already specified.
-* The columns selected no longer appear in the list box (except for the title of the first one).
+* L'option **List box hiérarchique** est cochée pour l’objet dans la Liste des propriétés.
+* Les variables des colonnes sont utilisées pour définir la hiérarchie. Elles remplacent les variables éventuellement déjà définies.
+* Les colonnes sélectionnées n’apparaissent plus dans la list box (à l’exception du titre de la première).
 
-Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+Exemple : soit une list box dont les premières colonnes contiennent Pays, Région, Ville et Population. Lorsque Pays, Région et Ville sont sélectionnées (cf. illustration ci-dessus), si vous choisissez **Créer hiérarchie** dans le menu contextuel, une hiérarchie à trois niveaux est créée dans la première colonne, les colonnes 2 et 3 sont supprimées et la colonne Population la deuxième :
 
-![](assets/en/FormObjects/listbox_hierarchy2.png)
+![](assets/fr/FormObjects/listbox_hierarchy2.png)
 
-##### Cancel hierarchy
+##### Annuler une hiérarchie
 
-When the first column is selected and already specified as hierarchical, you can use the **Cancel hierarchy** command. When you choose this command, the following actions are carried out:
+Lorsque la première colonne est sélectionnée et déjà définie comme hiérarchique, vous pouvez utiliser la commande **Annuler hiérarchie**. Lorsque vous choisissez cette commande, les actions suivantes sont effectuées :
 
-* The **Hierarchical list box** option is deselected for the object,
-* The hierarchical levels 2 to X are removed and transformed into columns added to the list box.
+* L’option **List box hiérarchique** est désélectionnée pour l’objet,
+* Les niveaux hiérarchiques 2 à n sont supprimés et transformés en colonnes ajoutées dans la list box.
 
-### How it works
+### Principes de fonctionnement
 
-When a form containing a hierarchical list box is opened for the first time, by default all the rows are expanded.
+A la première ouverture d’un formulaire contenant une list box hiérarchique, par défaut toutes les lignes sont déployées.
 
-A break row and a hierarchical "node" are automatically added in the list box when values are repeated in the arrays. For example, imagine a list box containing four arrays specifying cities, each city being characterized by its country, its region, its name and its number of inhabitants:
+Une ligne de rupture et un "noeud" hiérarchique sont automatiquement ajoutés dans la list box lorsque des valeurs sont répétées dans les tableaux. Par exemple, imaginons une list box contenant quatre tableaux définissant des villes, chaque ville étant caractérisée par un pays, une région, un nom et un nombre d’habitants :
 
-![](assets/en/FormObjects/hierarch1.png)
+![](assets/fr/FormObjects/hierarch1.png)
 
-If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:
+Si cette list box est affichée sous forme hiérarchique (les trois premiers tableaux étant inclus dans la hiérarchie), vous obtenez :
 
-![](assets/en/FormObjects/hierarch2.png)
+![](assets/fr/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
+Les tableaux ne sont pas triés avant la construction de la hiérarchie. Si par exemple un tableau contient les données AAABBAACC, la hiérarchie obtenue sera :
 
 > A B A C
 
-To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
+Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. Si vous effectuez **Alt+clic** (Windows) ou **Option+clic** (macOS) sur le nœud, tous ses sous-éléments seront déployés ou contractés. Ces opérations peuvent également être effectuées par programmation à l'aide des commandes `LISTBOX EXPAND` et `LISTBOX COLLAPSE`.
 
-When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.
+Lorsque des valeurs de type date ou heure sont incluses dans une list box hiérarchique, elles sont affichées dans un format normalisé.
 
-#### Sorts in hierarchical list boxes
+#### Gestion des tris dans les list box hiérarchiques
 
-In a list box in hierarchical mode, a standard sort (carried out by clicking on the header of a list box column) is always constructed as follows:
+Dans une list box en mode hiérarchique, un tri standard (effectué suite à un clic dans un en-tête de colonne de la list box) est toujours construit de la manière suivante :
 
-- In the first place, all the levels of the hierarchical column (first column) are automatically sorted by ascending order.
-- The sort is then carried out by ascending or descending order (according to the user action) on the values of the column that was clicked.
-- All the columns are synchronized. 
-- During subsequent sorts carried out on non-hierarchical columns of the list box, only the last level of the first column is sorted. It is possible to modify the sorting of this column by clicking on its header.
+- En premier lieu, tous les niveaux de la colonne hiérarchique (première colonne) sont automatiquement triés par ordre croissant.
+- Le tri est ensuite effectué par ordre croissant ou décroissant (suivant l’action utilisateur) sur les valeurs de la colonne où le clic a eu lieu.
+- Toutes les colonnes sont synchronisées. 
+- Lors des tris ultérieurs des colonnes non hiérarchiques de la list box, seul le dernier niveau de la première colonne est trié. Il est possible de modifier le tri de cette colonne en cliquant sur son en-tête.
 
-Given for example the following list box, in which no specific sort is specified:
+Soit par exemple la list box suivante, dans laquelle aucun tri spécifique n’est défini :
 
-![](assets/en/FormObjects/hierarch3.png)
+![](assets/fr/FormObjects/hierarch3.png)
 
-If you click on the "Population" header to sort the populations by ascending (or alternately descending) order, the data appear as follows:
+Si vous cliquez sur l’en-tête "Population" afin de trier les populations par ordre croissant (ou alternativement décroissant), les données apparaissent ainsi :
 
-![](assets/en/FormObjects/hierarch4.png)
+![](assets/fr/FormObjects/hierarch4.png)
 
-As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
+Comme pour toutes les list box, vous pouvez [désactiver le mécanisme de tri standard](properties_Action.md#sortable) en désélectionnant la propriété "Triable" pour la list box et gérer le tri par programmation.
 
-#### Selections and positions in hierarchical list boxes
+#### Gestion des sélections et des positions dans les list box hiérarchiques
 
-A hierarchical list box displays a variable number of rows on screen according to the expanded/collapsed state of the hierarchical nodes. This does not however mean that the number of rows of the arrays vary. Only the display is modified, not the data. It is important to understand this principle because programmed management of hierarchical list boxes is always based on the data of the arrays, not on the displayed data. In particular, the break rows added automatically are not taken into account in the display options arrays (see below).
+Une list box hiérarchique affiche un nombre variable de lignes à l’écran en fonction de l’état déployé/contracté des nœuds hiérachiques. Cela ne signifie pas pour autant que le nombre de lignes des tableaux varie. Seul l’affichage est modifié, pas les données. Il est important de comprendre ce principe car la gestion programmée des list box hiérarchiques se base toujours sur les données des tableaux, pas sur les données affichées. En particulier, les lignes de rupture ajoutées automatiquement ne sont pas prises en compte dans les tableaux d’options d’affichage (cf. ci-dessous le paragraphe Gestion des lignes de rupture).
 
-Let’s look at the following arrays for example:
+Examinons par exemple les tableaux suivants :
 
-![](assets/en/FormObjects/hierarch5.png)
+![](assets/fr/FormObjects/hierarch5.png)
 
-If these arrays are represented hierarchically, the row "Quimper" will not be displayed on the second row, but on the fourth, because of the two break rows that are added:
+Si ces tableaux sont représentés hiérarchiquement, la ligne "Quimper" ne sera pas affichée sur la deuxième ligne mais sur la quatrième, à cause des deux lignes de rupture ajoutées :
 
-![](assets/en/FormObjects/hierarch6.png)
+![](assets/fr/FormObjects/hierarch6.png)
 
-Regardless of how the data are displayed in the list box (hierarchically or not), if you want to change the row containing "Quimper" to bold, you must use the statement Style{2} = bold. Only the position of the row in the arrays is taken into account.
+Quelle que soit la manière dont les données sont affichées dans la list box (hiérarchique ou non-hiérarchique), si vous souhaitez passer la ligne contenant "Quimper" en gras, vous devrez utiliser l’instruction TabStyle{2} = Gras. Seule la position de la ligne dans les tableaux est prise en compte.
 
-This principle is implemented for internal arrays that can be used to manage:
+Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
-- colors
-- background colors
-- styles
-- hidden rows
-- selections
+- les couleurs
+- les couleurs de fond
+- les styles
+- les lignes masquées
+- les sélections
 
-For example, if you want to select the row containing Rennes, you must pass:
+Par exemple, si vous voulez sélectionner la ligne contenant Rennes, vous devez passer :
 
 ```4d
  ->MyListbox{3}:=True
 ```
 
-Non-hierarchical representation: ![](assets/en/FormObjects/hierarch7.png) Hierarchical representation: ![](assets/en/FormObjects/hierarch8.png)
+Représentation non hiérarchique : ![](assets/fr/FormObjects/hierarch7.png) Représentation hiérarchique : ![](assets/fr/FormObjects/hierarch8.png)
 
-> If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected.
+> Si une ou plusieurs lignes sont masquées du fait que leurs parents ont été contractés, elles ne sont plus sélectionnées. Seules les lignes visibles (directement ou suite à un défilement) sont sélectionnables. Autrement dit, les lignes ne peuvent pas être à la fois sélectionnées et cachées.
 
-As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
+Tout comme pour les sélections, la commande `LISTBOX GET CELL POSITION` retournera les mêmes valeurs pour une list box hiérarchique et une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, `LISTBOX GET CELL POSITION` retournera la même position : (3;2).
 
-*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch9.png)
+*Représentation non hiérarchique :* ![](assets/fr/FormObjects/hierarch9.png)
 
-*Hierarchical representation:* ![](assets/en/FormObjects/hierarch10.png)
+*Représentation hiérarchique :* ![](assets/fr/FormObjects/hierarch10.png)
 
-When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
+Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de rupture est automatiquement masquée. Dans l’exemple ci-dessus, si les lignes 1 à 3 sont masquées, la ligne de rupture "Bretagne" n’apparaîtra pas.
 
-#### Break rows
+#### Lignes de rupture
 
-If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case:
+Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant . Dans le cas suivant :
 
-![](assets/en/FormObjects/hierarch11.png)
+![](assets/fr/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
+... `LISTBOX GET CELL POSITION` retourne (2;4). Pour sélectionner une ligne de rupture par programmation, vous devez utiliser la commande `LISTBOX SELECT BREAK`.
 
-Break rows are not taken into account in the internal arrays used to manage the graphic appearance of list boxes (styles and colors). It is however possible to modify these characteristics for break rows via the graphic management commands for objects. You simply need to execute the appropriate commands on the arrays that constitute the hierarchy.
+Les lignes de rupture ne sont pas prises en compte dans les tableaux internes permettant de gérer l’apparence graphique des list box (styles et couleurs). Il est toutefois possible de modifier ces caractéristiques pour les lignes de rupture via les commandes de gestion graphique des objets. Il suffit pour cela d’exécuter ces commandes appropriées sur les tableaux constituant la hiérarchie.
 
-Given for example the following list box (the names of the associated arrays are specified in parentheses):
+Soit par exemple la list box suivante (les noms des tableaux associés sont précisés entre parenthèses) :
 
-*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch12.png)
+*Représentation non hiérarchique :* ![](assets/fr/FormObjects/hierarch12.png)
 
-*Hierarchical representation:* ![](assets/en/FormObjects/hierarch13.png)
+*Représentation hiérarchique :* ![](assets/fr/FormObjects/hierarch13.png)
 
-In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
+En mode hiérarchique, les niveaux de rupture ne sont pas pris en compte par les tableaux de modification de style nommés `tStyle` et `tCouleurs`. Pour modifier la couleur ou le style des niveaux de rupture, vous devez exécuter les instructions suivantes :
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
  OBJECT SET FONT STYLE(T2;Bold)
 ```
 
-> In this context, only the syntax using the array variable can function with the object property commands because the arrays do not have any associated object.
+> Dans ce contexte, seule la syntaxe utilisant la variable tableau peut fonctionner avec les commandes de propriété d’objet car les tableaux n’ont alors pas d’objet associé.
 
-Result:
+Résultat :
 
-![](assets/en/FormObjects/hierarch14.png)
+![](assets/fr/FormObjects/hierarch14.png)
 
-#### Optimized management of expand/collapse
+#### Gestion optimisée du déployer/contracter
 
-You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events.
+Vous pouvez optimiser l’affichage et la gestion des list box hiérarchiques en tirant parti des événements formulaire `On Expand` et `On Collapse`.
 
-A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
+Une list box hiérarchique est construite à partir du contenu des tableaux qui la constituent, elle ne peut donc être affichée que lorsque tous les tableaux sont chargés en mémoire. Ce principe peut rendre difficile la génération de list box hiérarchiques de grande taille basées sur des tableaux générés à partir des données (via la commande `SELECTION TO ARRAY`), pour des raisons de rapidité d’affichage et d’utilisation de la mémoire.
 
-Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
+L'emploi des événements formulaire `On Expand` et `On Collapse` permet de s’affranchir de ces contraintes : il est possible de n’afficher qu’une partie de la hiérarchie et d’effectuer le chargement et le déchargement des tableaux à la volée, en fonction des actions de l’utilisateur. Dans le contexte de ces événements, la commande `LISTBOX GET CELL POSITION` retourne la cellule sur laquelle l’utilisateur a cliqué afin de déployer ou de contracter une ligne.
 
-In this case, you must fill and empty arrays through the code. The principles to be implemented are:
+Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués par le code. Les principes à mettre en oeuvre sont :
 
-- When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons: ![](assets/en/FormObjects/hierarch15.png)
+- A l’affichage de la listbox, seul le premier tableau doit être rempli. Vous devez toutefois créer un second tableau avec des valeurs vides afin que la list box affiche les boutons déployer/contracter : ![](assets/fr/FormObjects/hierarch15.png)
 
-- When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command. ![](assets/en/FormObjects/hierarch16.png)
+- Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. La commande `LISTBOX GET CELL POSITION` retourne la cellule concernée et vous permet de construire la hiérarchie adéquate : vous alimentez le premier tableau avec des valeurs répétées et le second avec les valeurs issues de la commande `SELECTION TO ARRAY`, et vous insérez dans la list box autant de lignes que nécessaire à l’aide de la commande `LISTBOX INSERT ROWS`. ![](assets/fr/FormObjects/hierarch16.png)
 
-- When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
+- Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande `LISTBOX GET CELL POSITION` retourne la cellule concernée : vous supprimez de la list box autant de lignes que nécessaire à l’aide de la commande `LISTBOX DELETE ROWS`.
 
-## Object arrays in columns (4D View Pro)
+## Tableaux objets dans les colonnes (4D View Pro)
 
-List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
+Les colonnes de list box peuvent être associées à des tableaux d'objets. Comme les tableaux d'objets peuvent contenir des données de types différents, cette puissante fonctionnalité vous permet de saisir et d'afficher divers types de valeurs dans les lignes d'une même colonne, ainsi que d'utiliser divers objets d'interface (widgets). Par exemple, vous pouvez placer une zone de saisie de texte dans la première ligne, une case à cocher dans la seconde, et une liste déroulante dans la troisième. Les tableaux d'objets vous donnent également accès à des widgets supplémentaires, tels que des boutons ou des sélecteurs de couleurs (color picker).
 
-The following list box was designed using an object array:
+La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
 
@@ -727,7 +727,7 @@ ARRAY OBJECT(obColumn;0) //column array
 
 > Display format and entry filters cannot be set for an object column. They automatically depend on the value type.
 
-#### valueType and data display
+#### valueType et affichage des données
 
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
@@ -753,7 +753,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 You set the cell display and options using specific attributes in each object (see below).
 
-#### Display formats and entry filters
+#### Formats d'affichage et filtres de saisie
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
@@ -771,7 +771,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 ### Attributs
 
-Each element of the object array is an object that can contain one or more attributes that will define the cell contents and data display (see example above).
+Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusieurs attributs qui définiront le contenu de la cellule et l'affichage des données (voir exemple ci-dessus).
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
@@ -841,12 +841,12 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+L'attribut behavior propose des variations de la représentation standard des valeurs. Une seule variation est possible :
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                          |
-| --------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.  
-2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                      |
+| -------- | ----------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates             | integer      | Représente une valeur numérique sous forme de case à cocher à trois états.   
+2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
 
 
 ```4d
@@ -861,20 +861,20 @@ The behavior attribute provides variations to the regular representation of valu
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_behavior.png)
 
-#### requiredList and choiceList
+#### requiredList et choiceList
 
-When a "choiceList" or a "requiredList" attribute is present inside the object, the text input is replaced by a drop-down list or a combo box, depending of the attribute:
+Lorsqu'un attribut "choiceList" ou "requiredList" est présent dans l'objet, la zone de saisie de texte est remplacée par une liste déroulante ou une combo box, en fonction de l'attribut :
 
-* If the attribute is "choiceList", the cell is displayed as a combo box. This means that the user can select or type a value.
-* If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
+* Si l'attribut est "choiceList", la cellule est affichée sous forme de combo box. Cela signifie que l'utilisateur peut sélectionner ou saisir une valeur.
+* Si l'attribut est "requiredList", la cellule est affichée sous forme de liste déroulante. Cela signifie que l'utilisateur peut uniquement sélectionner une des valeurs de la liste.
 
-In both cases, a "value" attribute can be used to preselect a value in the widget.
+Dans les deux cas, vous pouvez utiliser un attribut "value" pour présélectionner une valeur dans le widget.
 
-> The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> Les valeurs du widget sont définies via un tableau. Si vous souhaitez associer le widget à une énumération 4D existante, vous devez utiliser les attributs "requiredListReference", "requiredListName", "choiceListReference" ou "choiceListName".
 
 Voici quelques exemples :
 
-* You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
+* Vous voulez afficher une liste déroulante avec juste deux options, "Open" ou "Closed". "Closed" doit être présélectionné :
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -888,7 +888,7 @@ Voici quelques exemples :
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-* You want to accept any integer value, but display a combo box to suggest the most common values:
+* Vous voulez accepter toute valeur entière, mais afficher une combo box contenant les valeurs les plus communes :
 
 ```4d
     ARRAY LONGINT($ChoiceList;0)
@@ -899,38 +899,38 @@ Voici quelques exemples :
     APPEND TO ARRAY($ChoiceList;100)
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
-    OB SET($ob;"value";10) //10 as default value
+    OB SET($ob;"value";10) //10 comme valeur par défaut
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName et requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+Les attributs "requiredListName" et "requiredListReference" vous permettent d'utiliser, dans une cellule de list box, une énumération définie dans 4D soit en mode Développement (via l'éditeur d'Enumérations de la Boîte à outils) soit par programmation (à l'aide de la commande New list). La cellule sera alors affichée sous forme de liste déroulante. Cela signifie que l'utilisateur pourra uniquement choisir une des valeurs fournies dans la liste.
 
-Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Utilisez "requiredListName" ou "requiredListReference" en fonction de la provenance de la liste : si la liste provient de la Boîte à outils, utilisez son nom ; sinon, si la liste a été définie par programmation, passez sa référence. Dans les deux cas, vous pouvez utiliser un attribut "value" pour présélectionner une valeur dans le widget.
 
-> * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * Si vous souhaitez définir des valeurs d'énumération via un simple tableau, vous pouvez utiliser l'attribut "requiredList".
+> * Si la liste contient du texte représentant des valeurs réelles, le séparateur décimal doit être le point ("."), quels que soient les paramètres locaux, ex : "17.6" "1234.456".
 
 Voici quelques exemples :
 
-* You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
+* Vous voulez afficher une liste déroulante basée sur une énumération nommée "colors" définie dans la Boîte à outils (contenant les valeurs "bleu", "jaune" et "vert"), la stocker en tant que valeur et afficher "bleu" par défaut :
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
     C_OBJECT($ob)
     OB SET($ob;"valueType";"text")
     OB SET($ob;"saveAs";"value")
-    OB SET($ob;"value";"blue")
+    OB SET($ob;"value";"bleu")
     OB SET($ob;"requiredListName";"colors") 
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-* You want to display a drop-down list based on a list defined by programming and save it as a reference:
+* Vous voulez afficher une liste déroulante basée sur une liste créée par programmation, et la stocker en tant que référence :
 
 ```4d
     <>List:=New list
@@ -941,73 +941,73 @@ Voici quelques exemples :
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
     OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
+    OB SET($ob;"value";2) //affiche London par défaut
     OB SET($ob;"requiredListReference";<>List)
 ```
 
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
     
 
-#### choiceListName and choiceListReference
+#### choiceListName et choiceListReference
 
-The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
+Les attributs "choiceListName" et "choiceListReference" permettent d'utiliser, dans une cellule de list box, une énumération définie dans 4D soit en mode Développement (via l'éditeur de la Boîte à outils) soit par programmation (à l'aide de la commande New list). La cellule sera alors affichée sous forme de combo box, ce qui signifie que l'utilisateur pourra choisir une des valeurs de la liste ou en saisir une.
 
-Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Utilisez "choiceListName" ou "choiceListReference" en fonction de la provenance de la liste : si la liste provient de la Boîte à outils, utilisez son nom ; sinon, si la liste a été définie par programmation, passez sa référence. Dans les deux cas, vous pouvez utiliser un attribut "value" pour présélectionner une valeur dans le widget.
 
-> * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * Si vous souhaitez définir des valeurs d'énumération via un simple tableau, vous pouvez utiliser l'attribut "choiceList".
+> * Si la liste contient du texte représentant des valeurs réelles, le séparateur décimal doit être le point ("."), quels que soient les paramètres locaux, ex : "17.6" "1234.456".
 
 Exemple :
 
-You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
+Vous voulez afficher une combo box basée sur une énumération nommée "colors" définie dans la Boîte à outils (contenant les valeurs "bleu", "jaune" et "vert") et afficher "vert" par défaut :
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
- OB SET($ob;"value";"blue")
+ OB SET($ob;"value";"vert")
  OB SET($ob;"choiceListName";"colors")
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-#### unitsList, unitsListName, unitsListReference and unitReference
+#### unitsList, unitsListName, unitsListReference et unitReference
 
-You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). To define the unit list, you can use one of the following attributes:
+Vous pouvez utiliser des attributs spécifiques afin d'associer des unités aux valeurs des cellules (par exemple "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
 
-* "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Use this attribute to define units within the object.
-* "unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
-* "unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
+* "unitsList" : un tableau contenant les x éléments définissant les unités disponibles (ex : "cm", "pouces", "km", "miles", etc.). Utilisez cet attribut pour définir des unités dans l'objet.
+* "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une liste 4D créée avec la commande [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
+* "unitsListName" : un nom d'énumération 4D créée en mode Développement contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une énumération 4D créée dans la Boîte à outils.
 
-Regardless of the way the unit list is defined, it can be associated with the following attribute:
+Quel que soit son mode de définition, la liste d'unités peut être associée à l'attribut suivant :
 
-* "unitReference": a single value that contains the index (from 1 to x) of the selected item in the "unitList", "unitsListReference" or "unitsListName" values list.
+* "unitReference" : une valeur simple contenant l'indice (de 1 à x) de l'élément sélectionné dans la liste de valeurs "unitList", "unitsListReference" ou "unitsListName".
 
-The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
+L'unité courante est affichée sous forme de bouton affichant successivement les valeurs de "unitList", "unitsListReference" ou "unitsListName" à chaque clic (par exemple "pixels" -> "lignes" -> "cm" -> "pixels" -> etc.)
 
 Exemple :
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+Vous souhaitez définir une valeur de saisie numérique suivie d'une unité parmi deux possibles : "cm" ou "pixels". La valeur courante est "2" + "cm". Vous utilisez des valeurs définies directement dans l'objet (attribut "unitsList") :
 
 ```4d
 ARRAY TEXT($_units;0)
-APPEND TO ARRAY($_units;"lines")
+APPEND TO ARRAY($_units;"cm")
 APPEND TO ARRAY($_units;"pixels")
 C_OBJECT($ob)
 OB SET($ob;"valueType";"integer")
 OB SET($ob;"value";2) // 2 "units"
-OB SET($ob;"unitReference";1) //"lines"
+OB SET($ob;"unitReference";1) //"cm"
 OB SET ARRAY($ob;"unitsList";$_units)
 ```
 
-![](assets/en/FormObjects/listbox_column_objectArray_unitList.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_unitList.png)
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. The button will be displayed in the cell automatically.
+Si vous souhaitez ajouter un bouton d'ellipse [...] dans une cellule, il suffit de passer l'attribut "alternateButton" avec la valeur vrai dans l'objet. Le bouton sera automatiquement affiché dans la cellule.
 
-When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
+Lorsque l'utilisateur clique sur ce bouton, un événement `On Alternative Click` est généré, vous permettant de traiter cette action comme vous le souhaitez (reportez-vous ci-dessous au paragraphe "Gestion des événements" pour plus d'informations).
 
 Exemple :
 
@@ -1021,11 +1021,11 @@ OB SET($ob;"value";$entry)
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-#### color valueType
+#### valueType color
 
-The "color" valueType allows you to display either a color or a text.
+L'attribut "valueType" de valeur "color" vous permet d'afficher soit une couleur, soit un texte.
 
-* If the value is a number, a colored rectangle is drawn inside the cell. Exemple :
+* Si la valeur est un nombre, un rectangle de couleur est dessiné à l'intérieur de la cellule. Exemple :
     
     ```4d
     C_OBJECT($ob4)
@@ -1035,13 +1035,13 @@ The "color" valueType allows you to display either a color or a text.
     
     ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-* If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+* Si la valeur est un texte, le texte est simplement affiché (par exemple : "value";"Automatic").
 
-#### event valueType
+#### valueType event
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+L'attribut "valueType" de valeur "event" affiche un bouton qui génère simplement un événement `On Clicked` lorsque l'utilisateur clique dessus. Aucune donnée ou valeur ne peut être passée ou retournée.
 
-Optionally, you can pass a "label" attribute.
+Optionnellement, il est possible de passer un attribut "label".
 
 Exemple :
 
@@ -1055,13 +1055,13 @@ OB SET($ob;"label";"Edit...")
 
 ### Gestion des événements
 
-Several events can be handled while using an object list box array:
+Plusieurs événements peuvent être gérés dans les colonnes de list box de type tableau d'objets. Voici une synthèse des événements spécifiques :
 
-* **On Data Change**: An `On Data Change` event is triggered when any value has been modified either: 
-    * in a text input zone
-    * in a drop-down list
-    * in a combo box area
-    * in a unit button (switch from value x to value x+1)
-    * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget : 
+    * zone de saisie de texte
+    * listes déroulante
+    * zone de combo box
+    * bouton d'unité (passage valeur x à valeur x+1)
+    * case à cocher (passage cochée/non cochée)
+* **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
+* **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.
