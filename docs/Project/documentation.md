@@ -1,40 +1,40 @@
 ---
-id: documentation
-title: Documenting projects
+id: comments
+title: Explorer Comments
 ---
 
 ## Overview
 
 
-In project databases, you can document your methods as well as your forms, tables, or fields. Creating a documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database. 
+In project databases, you can comment your methods as well as your forms, tables, or fields. Using comments is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Comments can contain a description of an element as well as any information necessary to understand how the element functions in the database. 
 
-The following project elements accept documentation:
+The following project elements accept comments:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Forms
 - Tables and Fields
 
-Your documentation files are written in markdown syntax (.md files) using any editor that supports markdown. They are stored as independant files within your project folder. 
+Your comments are written in markdown syntax (.md files) using any compliant editor. They are stored as independant files within your project folder. 
 
-Documentation is displayed in the right-side pane of the Explorer: 
+Comments are displayed in the right-side pane of the Explorer: 
 
-![](assets/en/Project/explorer_Doc.png)
+![](assets/en/Project/explorer_Comments.png)
 
-It can also be exposed partially as [code editor tips](#viewing-documentation-in-the-code-editor).
-
-
-## Documentation files
-
-### Documentation file name
-
-Documentation files get the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
-
-In the Explorer, 4D will automatically display the documentation file with the same name as the selected element (see below).  
+They can also be exposed partially as [code editor tips](#viewing-comments-in-the-code-editor).
 
 
-### Documentation file architecture 
+## Comment files
 
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
+### Comment file name
+
+Comment files get the same name as their attached element, with the ".md" extension. For example, the comment file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+
+In the Explorer, 4D will automatically display the comment file with the same name as the selected element (see below).  
+
+
+### Comment file architecture 
+
+All comment files are stored in the `Documentation` folder, located at the first level of the project folder.
 
 The `Documentation` folder architecture is the following:
 
@@ -59,21 +59,21 @@ The `Documentation` folder architecture is the following:
 		* table1.md
 		* ...
 
-- A project form and its project form method share the same documentation file for form and method. 
-- A table form and its table form method share the same documentation file for form and method. 
+- A project form and its project form method share the same comment file for form and method. 
+- A table form and its table form method share the same comment file for form and method. 
 
 > Renaming or deleting a documented element in your project will result in renaming or deleting the associated markdown file. 
 
 
-## Documentation in the Explorer
+## Comments in the Explorer
 
-### Viewing documentation
+### Viewing comments
 
-To view a documentation in the Explorer window:
+To view a comment in the Explorer window:
 
 1. Make sure the right side panel is displayed.
 2. Select the documented element in the Explorer list.
-3. Click the **Documentation** button located below the preview area.
+3. Click the **Comments** button located below the preview area.
 
 ![](assets/en/Project/comments-explo2.png)
 
@@ -81,55 +81,55 @@ To view a documentation in the Explorer window:
 
 - Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
 
-### Editing documentation file
+### Editing comment file
 
-You can create and/or edit a markdown documentation file from the Explorer window for the selected element.
+You can create and/or edit a markdown comment file from the Explorer window for the selected element.
 
-If there is no documentation file for the selected element, you can:
+If there is no comment file for the selected element, you can:
 
-- click on the **Create** button in the `Documentation` pane or,
-- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+- click on the **Create** button in the `Comments` pane or,
+- choose the **Edit Comments...** option in the contextual menu or options menu of the Explorer.
 
 ![](assets/en/Project/comments-explo3.png)
 
-4D automatically creates a .md file with a basic template at appropriate name and location and opens it with your default markdown editor. 
+4D automatically creates a .md file with a basic template at appropriate name and location and opens it with your default OS editor. 
 
-If a documentation file already exists for the selected element, you can open it with your markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer. 
+If a comment file already exists for the selected element, you can open it with your default OS editor by choosing the **Edit Comments...** option in the contextual menu or options menu of the Explorer. 
 
 
 
-## Viewing documentation in the code editor
+## Viewing comments in the code editor
 
 The 4D code editor displays a part of the documentation of a method in its help tip. 
 
 ![](assets/en/Project/codeEditor_Comments.png)
 
-> The first line contains the **prototype** of the method, automatically generated by the 4D code parser. 
+> The first line contains the **prototype** of the method, automatically generated by the compiler. 
 
 If a file named "<MethodName>.md" exists in "<package>/documentation" folder, the code editor displays, by priority:
 
 - Any text entered in a html `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 	
-- Or, if no html `comment` tag is used, the first sentence after a `# Description` tag of the markdown file.
+- Or, if no html `comment` tag is used, the first sentence after the `## Description` tag of the markdown file.
 
 > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
 
 
-## Documentation file definition
+## Comment file definition
 
-4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
+4D uses a basic template to create new comment files. This template suggests specific features that allow you to [display information in the code editor](#viewing-comments-in-the-code-editor).
 
 However, you can use any [supported markdown tags](#supported-markdown). 
 
-New documentation files are created with this default contents:
+New comment files are created with this default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
 |Line|Description|
 |---|---|
-|\<!-- Replace with your summary -->|HTML comment. Used in priority as the method description in the code editor tips|
-|\```4D \ Example code \```|Used to format 4D code examples (uses highlight.js library)|
+|\<!-- Summary -->|HTML comment. Used in priority as the method description in the code editor tips|
+|\```4D \ Prototype \```|Used to format 4D code examples (uses highlight.js library)|
 |## Description|Heading level 2 in markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used|
 
 
