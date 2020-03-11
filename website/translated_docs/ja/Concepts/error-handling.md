@@ -1,34 +1,34 @@
 ---
 id: error-handling
-title: Error handling
+title: エラー処理
 ---
 
-Error handling is the process of anticipating and responding to errors that might occur in your application. 4D provides a comprehensive support for catching and reporting errors at runtime, as well as for investigating their conditions.
+エラー処理とは、アプリケーション内で発生する可能性のあるエラーに備え、対処することです。 ランタイムにおけるエラーのキャッチや報告、またそれらの条件を検証するため、4Dは包括的なサポートを提供しています。
 
-Error handling meets two main needs:
+エラー処理は次の2つの要望に応えます:
 
-- finding out and fixing potential errors and bugs in your code during the development phase,
-- catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface. 
+- 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
+- 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。 
 
-> It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine, and could log errors in a dedicated file for further analyses.
+> 4D Server 上で実行されるコードのため、4D Server にはエラー処理メソッドを実装しておくことが強く推奨されます。 このメソッドによって、サーバーマシンにおいて予期せぬダイアログが表示されることを防ぎ、エラーの調査に必要なログを専用ファイルにとることができます。
 
-## Installing an error-handling method
+## エラー処理メソッドの実装
 
-In 4D, all errors can be catched and handled in a specific project method, the **error-handling** (or **error-catching**) method.
+4D においては、エラー専用のプロジェクトメソッドである **エラー処理** (または **エラーキャッチ**) メソッド内ですべてのエラーをキャッチし、処理することができます。
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. たとえば:
-
-```4d
-ON ERR CALL("IO_ERRORS") //Installs the error-handling method
-```
-
-To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
+このプロジェクトメソッドはカレントプロセスに対して実装 (インストール) され、インタープリターモードかコンパイルモードかにかかわらず、プロセス内で発生するすべてのエラーの際に自動で呼び出されます。 このプロジェクトメソッドを *実装* するには、`ON ERR CALL` コマンドをコールし、コマンドに当該プロジェクトメソッド名を引数として渡します。 たとえば:
 
 ```4d
-ON ERR CALL("") //gives back control to 4D
+ON ERR CALL("IO_ERRORS") // エラー処理メソッドを実装します
 ```
 
-### Scope and components
+エラーの検知を中止するには、空の文字列を指定して再度 `ON ERR CALL` コマンドをコールします:
+
+```4d
+ON ERR CALL("") // エラーの検知を中止します
+```
+
+### スコープとコンポーネント
 
 You can define a single error-catching method for the whole application or different methods per application module. However, only one method can be installed per process.
 
