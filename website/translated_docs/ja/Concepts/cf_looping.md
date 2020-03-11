@@ -25,7 +25,7 @@ title: ループ構造
  End while
 ```
 
-このようにメソッドの実行が制御不能になった場合には、トレース機能を使用し、ループを止めて、問題点を追跡することができます。 メソッドのトレース方法については、[エラーハンドリング](error-handling.md) の章を見てください。
+このようにメソッドの実行が制御不能になった場合には、トレース機能を使用し、ループを止めて、問題点を追跡することができます。 メソッドのトレース方法については、[エラー処理](error-handling.md) の章を見てください。
 
 ### 例題
 
@@ -293,7 +293,7 @@ title: ループ構造
 
 以下の表は、`For each...End for each` の3つのタイプを比較したものです:
 
-|                         | コレクション内をループ        | エンティティセレクション内をループ | オブジェクト内をループ   |
+|                         | コレクション内のループ        | エンティティセレクション内のループ | オブジェクト内のループ   |
 | ----------------------- | ------------------ | ----------------- | ------------- |
 | Current_Item の型         | コレクション要素と同じ型の変数    | エンティティ            | テキスト変数        |
 | Expression の型           | (同じ型の要素を持つ) コレクション | エンティティセレクション      | オブジェクト        |
@@ -304,25 +304,25 @@ title: ループ構造
 - ループの数は開始時に評価され、処理中に変化することはありません。 ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
 - デフォルトでは、内部の *statement(s)* 部の処理は、*Expression* の各項目に対して実行されます。 しかしながら、ループの先頭 (`While`) あるいはループの終わり (`Until`) で条件をテストすることで、ループを抜け出すことは可能です。
 - 任意の *begin* および *end* パラメーターを指定することで、コレクションおよびエンティティセレクションに対してループの範囲を定義することができます。
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords: 
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required. 
+- `For each...End for each` ループは **共有コレクション** や **共有オブジェクト** に対して使用することもできます。 コレクションの要素またはオブジェクトのプロパティを変更する場合は、`Use...End use` 構文も追加で必要です。 `Use...End use` 構文の使い方は、つぎのように状況に応じて異なります: 
+    - 整合性のため要素やプロパティを一括で処理しなくてはならない場合には、ループに入る前 (外側) に使います。
+    - 要素やプロパティを個々に変更して差し支えない場合は、ループの中で使います。 
 
-### コレクション内をループ
+### コレクション内のループ
 
-When `For each...End for each` is used with an *Expression* of the *Collection* type, the *Current_Item* parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+`For each...End for each` が *Collection* 型の *Expression* に対して使用された場合、*Current_Item* はコレクション要素と同じ型の変数です。 デフォルトでは、ループの回数はコレクションの要素数に基づいています。
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the *Current_Item* variable is assigned the first mismatched value type.
+コレクションの要素はすべて同じ型でなくてはなりません。そうでない場合には、*Current_Item* 変数に別の型の値が代入されたときにエラーが生成されます。
 
-At each loop iteration, the *Current_Item* variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+各ループの繰り返しにおいて、*Current_Item* 変数には、合致するコレクションの要素が自動的に代入されます。 このとき、以下の点に注意する必要があります:
 
-- If the *Current_Item* variable is of the object type or collection type (i.e. if *Expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
-- The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
+- *Current_Item* 変数がオブジェクト型あるいはコレクション型であった場合 (つまり *Expression* がオブジェクトのコレクション、あるいはコレクションのコレクションであった場合)、この変数を変更すると自動的にコレクションの対応する要素も変更されます (オブジェクトとコレクションは同じ参照を共有しているからです)。 変数がスカラー型である場合、変数のみが変更されます。
+- *Current_Item* 変数は、コレクション要素の型と合致している必要があります。 コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
+- コレクションが **Null** 値の要素を格納していたとき、*Current_Item* 変数の型が **Null** 値をサポートしない型 (倍長整数変数など) であった場合にはエラーが生成されます。 
 
 #### 例題
 
-You want to compute some statistics for a collection of numbers:
+数値のコレクションを対象に、統計情報を計算します:
 
 ```4d
  C_COLLECTION($nums)
@@ -345,19 +345,19 @@ You want to compute some statistics for a collection of numbers:
   //$vUnder=4,$vOver=2
 ```
 
-### エンティティセレクション内をループ
+### エンティティセレクション内のループ
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+`For each...End for each` が *Entity selection* 型の *Expression* に対して使用された場合、*Current_Item* は現在処理中のエンティティです。
 
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
+ループの回数はエンティティセレクション内のエンティティの数に基づきます。 各ループの繰り返しにおいて、*Current_Item* には、処理の対象であるエンティティセレクション内のエンティティが自動的に代入されます。
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**注:** エンティティセレクション内のエンティティが、途中で他のプロセスによって削除された場合、そのエンティティはループにおいて自動的にスキップされます。
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
+カレントエンティティに対して適用された変更は、`entity.save( )` で明示的に保存する必要があることに注意してください。
 
 #### 例題
 
-You want to raise the salary of all British employees in an entity selection:
+Employees データクラスの中から、英国の従業員の給与を引き上げます:
 
 ```4d
  C_OBJECT(emp)
@@ -367,15 +367,15 @@ You want to raise the salary of all British employees in an entity selection:
  End for each
 ```
 
-### Loop through object properties
+### オブジェクト内のループ
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+`For each...End for each` が Object 型の *Expression* に対して使用された場合、*Current_Item* は現在処理中のプロパティ名が自動代入されたテキスト変数です。
 
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+オブジェクトのプロパティは作成順に処理されていきます。 ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
 
 #### 例題
 
-You want to switch the names to uppercase in the following object:
+下のオブジェクトに格納されている名前に関したプロパティの値をすべて大文字に変えます:
 
 ```4d
 {
@@ -385,7 +385,7 @@ You want to switch the names to uppercase in the following object:
 }
 ```
 
-You can write:
+以下のように書くことができます:
 
 ```4d
  For each(property;vObject)
@@ -402,22 +402,22 @@ You can write:
     }
     
 
-### begin / end parameters
+### begin / end パラメーター
 
-You can define bounds to the iteration using the optional begin and end parameters.
+任意の begin と end パラメーターを指定することで、繰り返しの範囲を定義することができます。
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**注:** *begin* と *end* パラメーターは、コレクションおよびエンティティセレクション型に対するループにおいてのみ使用することができます (オブジェクト型のときは無視されます)。
 
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
+- *begin* には、*Expression* においてループを開始したい要素位置を渡します (このとき *begin* の値が指す要素はループに含まれます)。
+- *end* には、*Expression* においてループを終了する要素位置を渡します (このとき *end* の値が指す要素はループに含まれません)。 
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
+*end* が省略されている、あるいは *end* が *Expression* の要素数より大きい場合、*begin* 引数の位置から最後の要素まで (含まれる) をループします。 *begin* と *end* が正の値の場合、それらは *Expression* 内の要素の実際の位置を表します。 *begin* 引数が負の値の場合、それは `begin:=begin+Expression のサイズ` として再計算されます (つまり、*Expression* の終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*begin* は0に設定されます。 **注:** *begin* が負の値だったとしても、繰り返しそのものは標準の順番で実行されます。 *end* が負の値だった場合、それは `end:=end+Expression のサイズ` として再計算されます。
 
 たとえば:
 
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
+- コレクションには 10の要素が格納されています (ナンバリングは #0から#9)
+- begin=-4 -> begin=-4+10=6 -> ループは6番目の要素 (#5) から開始されます
+- end=-2 -> end=-2+10=8 -> 繰り返しは8番目の要素 (#7) の前に終了します、つまり7番目 (#6) の要素の処理が最後のループとなります。 
 
 #### 例題
 
@@ -436,14 +436,14 @@ If *end* is omitted or if *end* is greater than the number of elements in *Expre
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 
-### Until and While conditions
+### Until と While 条件
 
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` or a `While(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to True.
+`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が TRUE に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が FALSE になるとループが停止します。
 
-You can pass either keyword depending on your needs:
+使用する条件は状況に応じて選べます:
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- `Until` 条件は各ループの終わりにテストされます。そのため、*Expression* が空あるいは null でないかぎり、ループは少なくとも1回は実行されます。
+- `While` 条件は各ループの始めにテストされます。そのため、評価の結果次第では、ループは一度も実行されないこともありえます。
 
 #### 例題
 
@@ -451,13 +451,13 @@ You can pass either keyword depending on your needs:
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
+ For each($num;$colNum)While($total<30) // 最初にテストされます
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
 
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ For each($num;$colNum)Until($total>30) // 最後にテストされます
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
