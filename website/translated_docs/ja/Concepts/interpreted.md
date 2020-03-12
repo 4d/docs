@@ -1,35 +1,35 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: インタープリターモードとコンパイル済みモード
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+4D アプリケーションは **インタープリター** または **コンパイル済み** モードで実行することができます:
 
-- in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code. 
+- インタープリターモードにおいて、コードは実行時に読み込まれてマシン語に翻訳されます。 コードはいつでも追加・変更することができ、アプリケーションは自動的に更新されます。
+- コンパイル済みモードにおいては、コンパイル時にすべてのコードが一括で読み込まれて翻訳されます。 コンパイル後のアプリケーションにはアセンブリレベルの指示のみが残され、コード編集はできません。 
 
-The advantages of the compilation are:
+コンパイルには以下のようなメリットがあります:
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes. 
+- **速度**: データベースの実行速度を3倍から1000倍速くします。
+- **コードチェック**: データベースアプリケーションコードの整合性をチェックし、 論理的矛盾や構文的矛盾を検出します。
+- **保護**: データベースをコンパイルすると、インタープリターコードを削除できます。 コンパイルされたデータベースは、故意的にも不注意からもストラクチャーやメソッドの表示・修正ができないこと以外は、オリジナルのデータベースと同じに動作します。
+- **ダブルクリックで起動するアプリケーション**: コンパイル後のデータベースは、独自のアイコンを持つスタンドアロンアプリケーション (.EXEファイル) に作り変えることもできます。
+- **プリエンプティブモードでの実行**: プリエンプティブプロセスとして実行できるのは、コンパイルされたコードに限られます。 
 
-## Differences between interpreted and compiled code
+## インタープリターコードとコンパイル済みコードの違い
 
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
+アプリケーションの動作は同じであっても、インタープリターモードとコンパイル済みモードにはいくつかの相違点があり、コンパイルされるコードを書くにあたってはこれらを意識しておく必要があります。 基本的に、4D のインタープリターはコンパイラーより柔軟です。
 
-| Compiled                                                                                                                                                                               | Interpreted                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
-| All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |
-| You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
-| You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possible                                                                       |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
-| The `Undefined` function always returns False for variables. Variables are always defined.                                                                                             |                                                                                |
-| If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | It is always possible to interrupt 4D                                          |
+| コンパイル済みコード                                                                               | インタープリターコード                      |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| 変数名とメソッド名が被ってはいけません。                                                                     | エラーは生成されませんが、メソッドが優先されます。        |
+| コンパイラ指示子 (例: `C_LONGINT`) によって、またはコンパイル時にコンパイラーによって、すべての変数は型指定されなければなりません。               | 変数の型は実行中に決定していくことができます (推奨されません) |
+| 変数や配列のデータタイプは変更できません。                                                                    | 変数や配列のデータタイプは変更可能です (推奨されません)    |
+| 1次元配列を2次元配列に、また2次元配列を1次元配列に変更することはできません。                                                 | 可能です。                            |
+| コンパイラーにより変数のタイプ定義はおこなわれますが、フォーム上の変数のようにデータタイプが明確でない場合は、コンパイラー指示子を使用して変数のデータタイプを指定するべきです。 |                                  |
+| `Undefined` 関数は、常に False を返します。 変数は常に定義されています。                                           |                                  |
+| メソッドの "プリエンプティブプロセスで実行可能" プロパティにチェックを入れていた場合、コードは他のスレッドアンセーフなコマンドやメソッドを呼び出してはいけません。      | プリエンプティブプロセスプロパティは無視されます。        |
+| 特定のループの場合、割り込みを可能にするには `IDLE` コマンドが必要です。                                                 | いつでも割り込み可能です。                    |
 
 
 ## Using Compiler Directives with the Interpreter
