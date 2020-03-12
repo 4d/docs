@@ -514,14 +514,14 @@
       "Project/building": {
         "title": "Building a project package"
       },
-      "Project/comments": {
-        "title": "Explorer Comments"
-      },
       "Project/creating": {
         "title": "Creating a 4D project"
       },
       "Project/developing": {
         "title": "Developing a project"
+      },
+      "Project/documentation": {
+        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "Overview"
