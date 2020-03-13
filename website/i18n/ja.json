@@ -84,7 +84,7 @@
         "title": "Identifiers"
       },
       "Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
         "title": "メソッド"
@@ -891,7 +891,7 @@
         "title": "Identifiers"
       },
       "version-18.0-Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "インタープリターモードとコンパイル済みモード"
       },
       "version-18.0-Concepts/methods": {
         "title": "メソッド"
