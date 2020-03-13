@@ -3,14 +3,14 @@ id: date
 title: Datum
 ---
 
-- A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
-- Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit. 
+- Datenfelder, Variablen oder Ausdrücke vom Typ Datum umfassen den Bereich 1.1.100 bis 31.12.32.767. Das Datum wird in der deutschen Version von 4D im Format Tag/Monat/Jahr dargestellt, in der internationalen Version im Format Monat/Tag/Jahr.
+- Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32 767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben. 
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache werden Datumsparameter als Datum bezeichnet, wenn nichts anderes angegeben ist.
 
-## Date literals
+## Datumsformat
 
-A date literal constant is enclosed by exclamation marks (!…!). A date must be structured using the ISO format (!YYYY-MM-DD!). Here are some examples of date constants:
+Ein Datumsformat steht zwischen Ausrufezeichen (!…!). Ein Datum muss im ISO Format strukturiert werden (!YYYY-MM-DD!). Hier ein paar Beispiele:
 
 ```4d
 !1976-01-01!
@@ -18,14 +18,14 @@ A date literal constant is enclosed by exclamation marks (!…!). A date must be
 !2015-12-31!
 ```
 
-A null date is specified by *!00-00-00!*.
+Ein Nulldatum wird als *!00-00-00!* angegeben.
 
-**Tip:** The Method Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Tipp:** Der Methodeneditor enthält ein Kürzel zur Eingabe eines Nulldatums. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.
 
 **Hinweise:**
 
-- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the ```SET DEFAULT CENTURY``` command.
-- If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.
+- Zur Wahrung der Kompatibilität lässt 4D die Eingabe zweistelliger Jahreszahlen zu. Eine zweistellige Jahreszahl bedeutet 20. oder 21. Jahrhundert, je nachdem ob es größer oder kleiner als 30 ist, außer die Einstellung wurde mit dem Befehl ```SET DEFAULT CENTURY``` geändert.
+- Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Geben Sie im Methodeneditor ein Datum im deutschen Format, z. B. 13.3.20 ein, wird es automatisch in das internationale Format YYYY-MM-DD umgesetzt, also 2020-03-13.
 
 ## Date operators
 
