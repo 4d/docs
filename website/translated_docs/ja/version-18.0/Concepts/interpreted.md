@@ -33,29 +33,29 @@ original_id: interpreted-compiled
 | 特定のループの場合、割り込みを可能にするには `IDLE` コマンドが必要です。                                                 | いつでも割り込み可能です。                    |
 
 
-## Using Compiler Directives with the Interpreter
+## インタープリターでコンパイラー指示子を使用する
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+コンパイルしないデータベースには、コンパイラー命令は必須ではありません。 インタープリターは、各ステートメントにおける変数の使い方に準じて自動的に変数の型を設定し、データベース内の変数の型を再定義することができます。
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
+インタープリターがこのように柔軟に対応するので、インタープリターモードとコンパイル済みモードでは、データベースの動作が異なることがあります。
 
-For example, if you write:
+たとえば、あるところでは次のように記述して:
 
 ```4d
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+データベースの他の場所では、下記のように記述した場合:
 
 ```4d
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+この例では、コンパイラー指示子が代入ステートメントより *先に* 解釈されれば、インタープリターでもコンパイル後でも `Myint` には同じ値 (3) が代入されます。
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+4D のインタープリターは、コンパイラー指示子を使用して変数の型を定義します。 コード内でコンパイラー指示子が検出されると、インタープリターはそれに従って変数の型を定義します。 それ以降のステートメントで間違った値を代入しようとすると (たとえば、数値変数に文字を割り当てるなど)、代入はおこなわれず、エラーが生成されます。
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+コンパイラーにとっては、この2つのステートメントのどちらが先に表示されても問題ではありません。はじめにデータベース全体を調べてコンパイラー指示子を探すからです。 しかし、インタープリターは系統立てて処理するわけではなく、 実行される順にステートメントを解釈します。 ユーザーが何をおこなうかによって、この順序は当然異なります。 したがって、常にコンパイラー指示子によって型定義してから変数を使用するようデータベースを計画することが肝心です。
 
 ## Using pointers to avoid retyping
 
