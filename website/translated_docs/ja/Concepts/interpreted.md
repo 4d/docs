@@ -32,9 +32,9 @@ title: インタープリターモードとコンパイル済みモード
 | 特定のループの場合、割り込みを可能にするには `IDLE` コマンドが必要です。                                                 | いつでも割り込み可能です。                    |
 
 
-## インタープリターでコンパイラー指示子を使用する
+## インタープリターでコンパイラー指示子を使用する場合
 
-コンパイルしないデータベースには、コンパイラー命令は必須ではありません。 インタープリターは、各ステートメントにおける変数の使い方に準じて自動的に変数の型を設定し、データベース内の変数の型を再定義することができます。
+コンパイルしないデータベースには、コンパイラー命令は必須ではありません。 インタープリターは、各ステートメントにおける変数の使い方に準じて自動的に変数の型を設定し、データベース内の変数の型を変えることができます。
 
 インタープリターがこのように柔軟に対応するので、インタープリターモードとコンパイル済みモードでは、データベースの動作が異なることがあります。
 
@@ -54,11 +54,11 @@ MyInt:=3.1416
 
 4D のインタープリターは、コンパイラー指示子を使用して変数の型を定義します。 コード内でコンパイラー指示子が検出されると、インタープリターはそれに従って変数の型を定義します。 それ以降のステートメントで間違った値を代入しようとすると (たとえば、数値変数に文字を割り当てるなど)、代入はおこなわれず、エラーが生成されます。
 
-コンパイラーにとっては、この2つのステートメントのどちらが先に表示されても問題ではありません。はじめにデータベース全体を調べてコンパイラー指示子を探すからです。 しかし、インタープリターは系統立てて処理するわけではなく、 実行される順にステートメントを解釈します。 ユーザーが何をおこなうかによって、この順序は当然異なります。 したがって、常にコンパイラー指示子によって型定義してから変数を使用するようデータベースを計画することが重要です。
+コンパイラーにとっては、この2つのステートメントのどちらが先に表示されても問題ではありません。はじめにデータベース全体を調べてコンパイラー指示子を探すからです。 しかし、インタープリターは系統立てて処理するわけではなく、 実行される順にステートメントを解釈します。 ユーザーが何をおこなうかによって、この順序は当然異なります。 したがって、常にコンパイラー指示子によって型定義してから変数を使用するようデータベースを計画することが肝心です。
 
-## Using pointers to avoid retyping
+## ポインターの使用で型の矛盾を避ける
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+変数の型は変更することができません。 しかし、ポインターを活用して異なるデータ型の変数を参照することはできます。 たとえば、次のコードはインタープリターおよびコンパイル済みモードの両方で動作します:
 
 ```4d
 C_POINTER($p)
@@ -68,19 +68,19 @@ C_LONGINT($age)
 $name:="Smith"
 $age:=50
 
-$p:=->$name //text target for the pointer
-$p->:="Wesson" //assigns a text value
+$p:=->$name // テキストへのポインター
+$p->:="Wesson" // テキストの代入
 
 $p:=->$age  
-// new target of different type for the pointer
-$p->:=55 //assigns a number value
+// 数値へのポインターに変更
+$p->:=55 // 数値の代入
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+値の型に関わらず、その値の長さ (文字の数) を返す関数を考えてみましょう:
 
 ```4d
-  // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length 文字の数を返す関数
+  // $1 = 数値、テキスト、時間、ブール型の変数へのポインター
 
 C_POINTER($1)
 C_TEXT($result)  
@@ -89,7 +89,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+この関数は次のように使えます:
 
 ```4d
 $var1:="my text"
@@ -99,5 +99,5 @@ $var4:=True
 
 $vLength:=Calc_Length(->$var1)+Calc_Length(->$var2)+Calc_Length (->$var3)+Calc_Length(->$var4)
 
-ALERT("Total length: "+String($vLength))
+ALERT("長さの合計: "+String($vLength))
 ```
