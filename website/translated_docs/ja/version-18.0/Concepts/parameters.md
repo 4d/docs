@@ -197,7 +197,7 @@ ALERT([People]Name)
  ALERT($1->)
 ```
 
-この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 $1 引数によって **参照** される対象 (上記コード内での $1-> ) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
+この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 $1 引数によって **参照** される対象 (上記コード内での $1-&gt;) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
 
 2. `DO_SOMETHING` メソッドに "何かさせる" 代わりに、値を返すようにメソッドを書き直すこともできます。 たとえば、以下のようにコードです:
 
@@ -266,7 +266,7 @@ ALERT([People]Name)
  ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
 ```
 
-これは [任意のパラメーター](#optional-parameters) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
+これは [任意パラメーター](#optional-parameters) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
 
 - `Null` 値と比較することで、必要な引数がすべて提供されているかをチェックします
 - 引数の値をプリセットします
@@ -282,9 +282,9 @@ ALERT([People]Name)
  ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
-Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
+すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は " is 10 years old" となってしまうにせよ、いずれの引数も任意となります。
 
-Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
+名前付き引数を利用すると、アプリケーションの保守やリファクタリングが簡単かつ安全におこなえます。 さきほどの例で、加算する年数を場合に応じて変えたほうが適切であると、あとから気づいたとします。 メソッドのパラメーターとして、加算年数を追加しなくてはなりません。 この場合、次のように書けます:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -300,26 +300,26 @@ $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
-The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
+このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+名前付き引数を使うと、すべてのパラメーターを任意にすることができます。 上の例ではすべてのパラメーターが任意で、いずれを指定しても順序はありません。
 
-## Optional parameters
+## 任意パラメーター
 
-In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. You can call it in the following ways:
+*4D ランゲージリファレンス* において、コマンドシンタックス中の { } 文字 (中括弧) はその引数が省略可能であることを示します。 たとえば、`ALERT (message{; okButtonTitle})` は *okButtonTitle* が省略できることを意味します。 この場合、次のような呼び出し方が可能です:
 
 ```4d
-ALERT("Are you sure?";"Yes I am") //2 parameters
-ALERT("Time is over") //1 parameter
+ALERT("Are you sure?";"Yes I am") // 2つの引数
+ALERT("Time is over") // 1つの引数
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。
 
-> When optional parameters are needed in your methods, you might also consider using [Named parameters](#named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> 任意パラメーターが必要な場合、[名前付き引数](#named-parameters) を利用すると型の制限がなく、柔軟で便利です。
 
-Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
+`Count parameters` コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。
 
-The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
+次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。
 
 ```4d
 // APPEND TEXT プロジェクトメソッド
@@ -333,25 +333,25 @@ The following example displays a text message and can insert the text into a doc
  If(Count parameters>=3)
     WP SET TEXT($3;$1;wk append)
  Else
-    If(Count parameters>=2)
+    If(Count parameters=2)
        TEXT TO DOCUMENT($2;$1)
     End if
- End if
+ End if>
 ```
 
-After this project method has been added to your application, you can write:
+このプロジェクトメソッドをアプリケーションに追加したあとは、次のように呼び出すことができます:
 
 ```4d
-APPEND TEXT(vtSomeText) //Will only display the  message
-APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path
-APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
+APPEND TEXT(vtSomeText) // メッセージを表示します
+APPEND TEXT(vtSomeText;$path) // メッセージを表示して、 $path のドキュメントに書き出します
+APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea の4D Write Pro ドキュメントに追記します
 ```
 
-## Parameter indirection
+## 引数の間接参照
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを **引数の間接参照** といいます。 同じ型の不定数の引数を受け取るメソッドの場合、`Count parameters` コマンドと組み合わせることで、これらの引数を `For...End for` ループと引数関節参照シンタックスで操作することができます。
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+次の例では `SEND PACKETS` プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
 
 ```4d
   //SEND PACKETS プロジェクトメソッド
@@ -367,20 +367,20 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
+引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i}を **ジェネリックパラメータ** (generic parameter) と呼びます。
 
-For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
+以下は間接参照の例です。引数の数値を合計した結果を、引数として渡された表示形式で返すような関数を考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。 
 
-This function is called in the following manner:
+この関数は、以下のようにして呼び出します:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
 
 ```
 
-In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
+この場合、数値を合計し、指定した形式に編集された文字列 "182.70" が返されます。 関数の引数は正しい順序で渡す必要があります。最初に表示形式、次に数値です。
 
-Here is the function, named `MySum`:
+以下は `MySum` 関数です:
 
 ```4d
  $Sum:=0
@@ -390,21 +390,21 @@ Here is the function, named `MySum`:
  $0:=String($Sum;$1)
 ```
 
-This function can now be called in various ways:
+この関数は様々な呼び出し方ができます:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
  Result:=MySum("000";1;18;4;23;17)
 ```
 
-### Declaring generic parameters
+### ジェネリックパラメーターの宣言
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+他のローカル変数と同様、ジェネリックパラメーターはコンパイラーに指示する必要はありません。 ただし、曖昧になりそうな場合や最適化のために必要な場合は コンパイラ支持子に ${N} を渡す、以下のシンタックスを使用することができます (N は最初のジェネリックパラメーターの番号です):
 
 ```4d
  C_LONGINT(${4})
 ```
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
+このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
 
-**Note:** The number in the declaration has to be a constant and not a variable.
+**注:** 宣言に使用する数値は変数ではなく、定数でなくてはなりません。

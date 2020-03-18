@@ -44,7 +44,7 @@ You can now read and edit data within 4D only through REST requests.
 
 Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
 
-    http://127.0.01/rest/$catalog
+    http://127.0.0.1/rest/$catalog
     
 
 The REST server replies:

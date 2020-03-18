@@ -40,6 +40,7 @@ class Index extends React.Component {
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
       projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
 	  formEditor: <translate>Form Editor</translate>,
+	  events: <translate>Form Events</translate>,
 	  formObjects: <translate>Form Objects</translate>,
 	  formObjectProperties: <translate>Form Object Properties</translate>,
 	  menus: <translate>Menus</translate>,
@@ -68,7 +69,8 @@ class Index extends React.Component {
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+
+                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',

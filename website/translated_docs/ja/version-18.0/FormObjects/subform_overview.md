@@ -4,7 +4,7 @@ title: Subform
 original_id: subformOverview
 ---
 
-## Overview
+## 概要
 
 A subform is a form included in another form.
 
