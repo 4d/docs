@@ -1,27 +1,27 @@
 ---
 id: plug-ins
-title: Plug-ins
+title: プラグイン
 ---
 
-As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+4Dアプリケーションの開発を進めていくと、最初は気付かなかった数多くの機能を発見することでしょう。 それだけでなく、**プラグイン** を4D開発環境に追加することで、標準の4Dの機能を高めることもできます。
 
-## Why the need for a plug-in?
+## プラグインの必要性
 
-Although 4D provides hundred of built-in methods used to manipulate objects, records and implement user interface, some special use or feature (sometimes platform dependant) may be needed: one may need ODBC under Windows, another may need Apple services under macOS, while yet another may want to implement specific statistics tools, social network login, payment platform, file access over the network, a special user interface, or a private picture structure.
+オブジェクトやレコードの操作、ユーザーインターフェースの実装のため、4D は数百のビルトインコマンドを提供していますが、さらに特殊な機能 (プラットフォーム依存のものなど) が必要になることがあります。たとえば、Windows上のODBC 、macOS上のアップルサービス、特殊な統計機能、ソーシャルネットワークログイン、決済用のプラットフォーム、ネットワークを介したファイルアクセス、特殊なユーザーインターフェース、独自のピクチャー構造などです。
 
-It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
+これらの機能をすべて、macOS と Windows の両方で 4D コマンドによって提供しようとした場合、コマンド数は数千に膨れ上がると同時に、ほとんどのユーザーはそれらの追加機能を必要としないでしょう。 また、そのような万能ツールを作り上げたとしても、その結果として 4D 環境は複雑化することになり、4D の学習が困難になるだけでなく、成果が得られるまで時間を要するようになるでしょう。
 
-The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
+4D 環境のモジュール性により、基礎的なアプリケーションの作成はもちろんのこと、非常に複雑なシステムの開発も可能です。 4D プラグインのアーキテクチャーによって、4D 環境はあらゆるアプリケーションとユーザーに対して開かれています。 4D プラグインによってアプリケーションやユーザーの生産性を飛躍させることができます。
 
-## What is a plug-in and what can it do?
+## プラグインとは何か
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+プラグインとは、4D 起動時にロードされるコードのことです。 プラグインは、4D に機能を追加します。
 
-Usually, a plug-in does things that:
+通常、プラグインは:
 
-- 4D cannot do (ie, specific platform technology),
-- will be very hard to write just using 4D,
-- are only available as Plug-in Entrypoint
+- 4D ができないことを処理します (プラットフォーム特有の技術など)
+- 4D だけでは難しいことを実現します
+- プラグインのエントリーポイントの形でのみ提供されている機能を提供します
 
 A plug-in usually contains a set of routines given to the 4D Developer. It can handle an External Area and run an external process.
 

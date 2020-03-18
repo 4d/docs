@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesPlugIns
-title: Plug-ins
+title: プラグイン
 original_id: propertiesPlugIns
 ---
 
