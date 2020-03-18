@@ -76,36 +76,36 @@ title: コンポーネント
     
  - コンポーネントC が定義する変数 `myCvar` があるとき、コンポーネントI はポインター `->myCvar` を使用して変数の値にアクセスすることができます。
  - コンポーネントI が定義する変数 `myIvar` があるとき、コンポーネントC はポインター `->myIvar` を使用しても変数の値にアクセスすることはできません。 このシンタックスは実行エラーを起こします。 
-- `RESOLVE POINTER` を使用したポインターの比較はお勧めできません。 変数の分割の原則により、ホストデータベースとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- `RESOLVE POINTER` を使用したポインターの比較はお勧めできません。 変数の分離の原則により、ホストデータベースとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
      RESOLVE POINTER(myptr2;vVarName2;vtablenum2;vfieldnum2)
      If(vVarName1=vVarName2)
-      //This test returns True even though the variables are different
+      // 変数が異なっているにもかかわらず、このテストはTrue を返します
 ```
 
-In this case, it is necessary to use the comparison of pointers:
+このような場合には、ポインターを比較しなければなりません:
 
 ```4d
-     If(myptr1=myptr2) //This test returns False
+     If(myptr1=myptr2) // このテストはFalse を返します
 ```
 
-## Access to tables of the host database
+## ホストデータベースのテーブルへのアクセス
 
-Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:
+コンポーネントでテーブルを使用することはできませんが、ホストデータベースとコンポーネントはポインターを使用して通信を行うことができます。 たとえば、以下はコンポーネントで実行可能なメソッドです:
 
 ```4d
-// calling a component method
+// コンポーネントメソッドの呼び出し
 methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 ```
 
-Within the component, the code of the `methCreateRec` method:
+コンポーネント内の `methCreateRec` メソッドのコード:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host database
-C_POINTER($2) //Pointer on a field in host database
-C_TEXT($3) // Value to insert
+C_POINTER($1) // ホストデータベースのテーブルへのポインター
+C_POINTER($2) // ホストデータベースのフィールドへのポインター
+C_TEXT($3) // 代入する値
 
 $tablepointer:=$1
 $fieldpointer:=$2
@@ -115,21 +115,21 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
-## Scope of language commands
+## ランゲージコマンドのスコープ
 
-Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
+[使用できないコマンド](#unusable-commands) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host database (a component does not have its own users and groups).
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし `EXECUTE METHOD` コマンドは除きます。このコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストデータベースのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the database. When these commands are called from a component, they are applied to the host database.
+`SET DATABASE PARAMETER` と `Get database parameter` コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストデータベースに適用されます。
 
-Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
+さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
+`COMPONENT LIST` コマンドを使用して、ホストデータベースにロードされたコンポーネントのリストを取得できます。
 
-### Unusable commands
+### 使用できないコマンド
 
-The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+(読み込み専用モードで開かれるため) ストラクチャーファイルを更新する以下のコマンドは、コンポーネントで使用することができません。 コンポーネント中で以下のコマンドを実行すると、-10511, "CommandName コマンドをコンポーネントでコールすることはできません" のエラーが生成されます:
 
 - `ON EVENT CALL`
 - `Method called on event`
@@ -151,38 +151,38 @@ The following commands are not compatible for use within a component because the
 
 **注:**
 
-- The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component database. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
+- `Current form table` コマンドは、プロジェクトフォームのコンテキストで呼び出されると `Nil` を返します。 ゆえにこのコマンドをコンポーネントで使用することはできません。
+- SQLデータ定義言語のコマンド (`CREATE TABLE`、`DROP TABLE`等) をコンポーネントのフレームワークで使用することはできません。 ただし、外部データベースの場合は使用することができます (`CREATE DATABASE` SQL コマンド参照)。
 
 ## エラー処理
 
-An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running database. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host database is not called, and vice versa.
+`ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のデータベースに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストデータベースの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
 
-## Use of forms
+## フォームの使用
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix database can be used by the component. 
-- A component can call table forms of the host database. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 マトリクスデータベースのすべてのプロジェクトフォームをコンポーネントで使用することができます。 
+- コンポーネントはホストデータベースのテーブルフォームを使用できます。 この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
+**注:** コンポーネントが `ADD RECORD` コマンドを使用すると、ホストデータベースのコンテキストで、ホストデータベースのカレントの入力フォームが表示されます。 したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. This is described in Sharing of forms.
+- コンポーネントフォームをホストデータベース内でサブフォームとして公開することができます。 これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。 この点についてはフォームの共有で説明しています。
 
-## Use of tables and fields
+## テーブルやフィールドの利用
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix database. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. An external database is a 4D database that is independent from the main 4D database, but that you can work with from the main 4D database. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
+コンポーネントは、マトリクスデータベースのストラクチャーで定義されたテーブルやフィールドを使用することはできません。 しかし外部データベースを作成し、そのテーブルやフィールドを必要に応じ利用することはできます。 外部データベースの作成と管理は SQL を用いておこないます。 外部データベースは、メインの4Dデータベースから独立している別の 4Dデータベースですが、メインデータベースから操作が可能です。 外部データベースの利用は、そのデータベースを一時的にカレントデータベースに指定することです。言い換えれば、4Dが実行する SQL クエリのターゲットデータベースとして外部データベースを指定します。 外部データベースの作成は SQL の `CREATE DATABASE` コマンドを使用します。
 
 ### 例題
 
-The following code is included in a component and performs three basic actions with an external database:
+以下のコードはコンポーネントに実装されており、外部データベースに対して3つの基本的なアクションをおこないます:
 
-- creates the external database if it does not already exist,
-- adds data to the external database,
-- reads data from the external database.
+- 外部データベースを作成します (存在しない場合)
+- 外部データベースにデータを追加します
+- 外部データベースからデータを読み込みます
 
-Creating the external database:
+外部データベースの作成:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) データを許可されているディレクトリに保存します
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
@@ -202,10 +202,10 @@ Creating the external database:
  End SQL
 ```
 
-Writing in the external database:
+外部データベースへのデータ書き込み:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host database through pointers
+ $Ptr_1:=$2 // ホストデータベースへのデータアクセスはポインターを通じておこないます
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -224,10 +224,10 @@ Writing in the external database:
  End SQL
 ```
 
-Reading from an external database:
+外部データベースからデータを読み込み:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host database through pointers
+ $Ptr_1:=$2 // ホストデータベースへのデータアクセスはポインターを通じておこないます
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -246,18 +246,18 @@ Reading from an external database:
  End SQL
 ```
 
-## Use of resources
+## リソースの使用
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+コンポーネントはリソースを使用することができます。 リソース管理の原則に従い、コンポーネントが .4dbase 形式の場合 (推奨されるアーキテクチャー)、Resources フォルダは .4dbase フォルダーの中に置かれます。
 
-Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
+これによって自動メカニズムが有効となり、コンポーネントの Resources フォルダー内で見つかった XLIFF ファイルは、 同コンポーネントによってロードされます。
 
-In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+1つ以上のコンポーネントを含むホストデータベースでは、ホストデータベースと同様にそれぞれのコンポーネントも固有のリソースチェーンを持っています。リソースは異なるデータベース間で分離されます。コンポーネントA のリソースにコンポーネントB やホストデータベースからアクセスすることはできません。
 
-## On-line help for components
+## コンポーネントのオンラインヘルプ
 
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
+コンポーネントにオンラインヘルプを追加できるように、専用のメカニズムが実装されています。 原理は 4D データベースに提供されているものと同じです:
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file.
+- コンポーネントヘルプは拡張子が .htm, .html または (Windows のみ) .chm で提供されます。
+- ヘルプファイルはコンポーネントのストラクチャーファイルと同階層に置かれ、ストラクチャーと同じ名前でなくてはなりません。
+- このファイルは自動的にアプリケーションのヘルプメニューに、" ヘルプ: ヘルプファイル名" のタイトルでロードされます。
