@@ -44,5 +44,5 @@ A null date is specified by _!00-00-00!_.
 			||||!2017-01-20! < !2017-01-20!	|False|
 |Greater than or equal to	|Date >= Date	|Boolean	|!2017-01-20! >=!2017-01-01!	|True|
 			||||!2017-01-01!>=!2017-01-20!	|False|
-|Less than or equal to	|Date <= Date	|Boolean	|!2017-01-01!<=!2017-01-20!|	True|
-		||||	!2017-01-20!<=!2017-01-01!|	False|
+|Less than or equal to	|Date \<= Date	|Boolean	|!2017-01-01!\<=!2017-01-20!|	True|
+		||||	!2017-01-20!\<=!2017-01-01!|	False|
