@@ -24,7 +24,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Datentyp | Possible Values                                              |
 | -------- | -------- | ------------------------------------------------------------ |
-| dragging | text     | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | Text     | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -53,7 +53,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Datentyp | Possible Values                                              |
 | -------- | -------- | ------------------------------------------------------------ |
-| dropping | text     | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | Text     | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -103,7 +103,7 @@ Several types of method references are supported:
 
 | Name   | Datentyp | Possible Values                                                    |
 | ------ | -------- | ------------------------------------------------------------------ |
-| method | text     | Object method standard or custom file path, or project method name |
+| method | Text     | Object method standard or custom file path, or project method name |
 
 
 #### Objects Supported
@@ -139,7 +139,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | Name          | Datentyp | Possible Values              |
 | ------------- | -------- | ---------------------------- |
-| selectionMode | text     | "multiple", "single", "none" |
+| selectionMode | Text     | "multiple", "single", "none" |
 
 
 #### Objects Supported
