@@ -1,30 +1,30 @@
 ---
 id: version-18.0-object
 title: Objects
-original_id: object
+original_id: Objekt
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
+Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von "native" 4D Objekten basiert auf dem klassischen Prinzip von "Eigenschaft/Wert" bzw. "Attribut/Wert" Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:
 
-- A property name is always a text, for example "Name".
+- Ein Eigenschaftenname ist immer ein Text, z. B. "Name".
 
-- A property value can be of the following type:
+- Der Wert einer Eigenschaft kann einer der folgenden Typen sein:
     
-    - number (Real, Integer, etc.)
-    - text
+    - numerisch (Zahl, Ganzzahl, etc.)
+    - Text
     - Null
     - Boolean
-    - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
-    - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
+    - Zeiger (als solcher gespeichert, wird beim Verwenden der Funktion `JSON Stringify` oder beim Kopieren bewertet)
+    - Datum (Datumstyp oder ISO Datumsformat)
+    - Objekt (Objekte können in mehrere Stufen verschachtelt sein)
+    - Bild (*)
     - collection
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Objekte vom Typ Variable, Felder oder Ausdruck verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation oder über die Objektnotation (siehe [Syntax basics](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
 Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
 
@@ -236,7 +236,7 @@ Token member names (i.e., object property names accessed using the object notati
 - Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
-## Examples
+## Beispiele
 
 Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
 
