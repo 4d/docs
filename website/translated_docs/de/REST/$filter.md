@@ -78,7 +78,7 @@ For more information regarding how to query data in 4D, refer to the [dataClass.
 >         | begin      | begins with              |
 
 >         
->         ## Examples
+>         ## Beispiele
 >         
 >         In the following example, we look for all employees whose last name begins with a "j":
 >         
