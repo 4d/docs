@@ -19,11 +19,11 @@ The current selection of rows or columns is modified. In this context, the [even
 | Property      | Typ     | Description                    |
 | ------------- | ------- | ------------------------------ |
 | code          | longint | 31                             |
-| description   | text    | "On Selection Change"          |
-| objectName    | text    | 4D View Pro area name          |
-| sheetName     | text    | Name of the sheet of the event |
-| oldSelections | object  | Cell range before change       |
-| newSelections | object  | Cell range after change        |
+| description   | Text    | "On Selection Change"          |
+| objectName    | Text    | 4D View Pro area name          |
+| sheetName     | Text    | Name of the sheet of the event |
+| oldSelections | Objekt  | Cell range before change       |
+| newSelections | Objekt  | Cell range after change        |
 
 
 #### Beispiel
