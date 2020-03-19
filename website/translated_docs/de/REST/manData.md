@@ -76,7 +76,7 @@ You can apply this filter in the following ways:
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
-### Examples
+### Beispiele
 
 Here are a few examples, showing you how to specify which attributes to return depending on the technique used to retrieve entities.
 
