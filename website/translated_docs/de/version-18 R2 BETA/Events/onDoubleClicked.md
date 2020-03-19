@@ -24,10 +24,10 @@ This event is generated when the user doubl-clicks anywhere on a 4D View Pro doc
 | Property    | Typ     | Description                    |
 | ----------- | ------- | ------------------------------ |
 | code        | longint | 13                             |
-| description | text    | "On Double Clicked"            |
-| objectName  | text    | 4D View Pro area name          |
-| sheetName   | text    | Name of the sheet of the event |
-| range       | object  | Cell range                     |
+| description | Text    | "On Double Clicked"            |
+| objectName  | Text    | 4D View Pro area name          |
+| sheetName   | Text    | Name of the sheet of the event |
+| range       | Objekt  | Cell range                     |
 
 
 #### Beispiel

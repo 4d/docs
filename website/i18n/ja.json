@@ -81,7 +81,7 @@
         "title": "制御フロー"
       },
       "Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "識別子の命名規則"
       },
       "Concepts/interpreted-compiled": {
         "title": "インタープリターモードとコンパイル済みモード"
@@ -888,7 +888,7 @@
         "title": "制御フロー"
       },
       "version-18.0-Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "識別子の命名規則"
       },
       "version-18.0-Concepts/interpreted-compiled": {
         "title": "インタープリターモードとコンパイル済みモード"

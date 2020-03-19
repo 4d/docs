@@ -29,10 +29,10 @@ The object returned by the `FORM Event` command contains:
 | Property    | Typ     | Description                                                                                         |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | Text    | "On After Edit"                                                                                     |
+| objectName  | Text    | 4D View Pro area name                                                                               |
+| sheetName   | Text    | Name of the sheet of the event                                                                      |
+| action      | Text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
@@ -41,7 +41,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property    | Typ     | Description                       |
 | ----------- | ------- | --------------------------------- |
-| range       | object  | Cell range                        |
+| range       | Objekt  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 
@@ -49,7 +49,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property | Typ     | Description                 |
 | -------- | ------- | --------------------------- |
-| range    | object  | Cell range                  |
+| range    | Objekt  | Cell range                  |
 | oldValue | variant | Value of cell before change |
 | newValue | variant | Value of cell after change  |
 
@@ -58,8 +58,8 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property  | Typ     | Description                                         |
 | --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
+| fromRange | Objekt  | Range of source cell range (being dragged)          |
+| toRange   | Objekt  | Range of the destination cell range (drop location) |
 | copy      | boolean | Specifies if the source range is copied or not      |
 | insert    | boolean | Specifies if the source range is inserted or not    |
 
@@ -68,7 +68,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property  | Typ    | Description         |
 | --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
+| fillRange | Objekt | Range used for fill |
  autoFillType|longint|Value used for the fill.
 
 - 0: Cells are filled with all data (values, formatting, and formulas)
@@ -85,8 +85,8 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         
                                         | Property | Typ    | Description         |
                                         | -------- | ------ | ------------------- |
-                                        | range    | object | Cell range          |
-                                        | formula  | text   | The formula entered |
+                                        | range    | Objekt | Cell range          |
+                                        | formula  | Text   | The formula entered |
 
                                         
                                         #### action = clipboardPasted
@@ -112,7 +112,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              object
+                                              Objekt
                                             </td>
                                             
                                             <td>
@@ -144,7 +144,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                                             </td>
                                                             
                                                             <td>
-                                                              object
+                                                              Objekt
                                                             </td>
                                                             
                                                             <td>

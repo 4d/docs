@@ -1,7 +1,7 @@
 ---
 id: version-18.0-text
 title: Text
-original_id: text
+original_id: Text
 ---
 
 ## Overview

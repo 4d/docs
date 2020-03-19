@@ -38,10 +38,10 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | Property    | Typ     | Description                    |
 | ----------- | ------- | ------------------------------ |
 | code        | longint | On Clicked                     |
-| description | text    | "On Clicked"                   |
-| objectName  | text    | 4D View Pro area name          |
-| sheetName   | text    | Name of the sheet of the event |
-| range       | object  | Cell range                     |
+| description | Text    | "On Clicked"                   |
+| objectName  | Text    | 4D View Pro area name          |
+| sheetName   | Text    | Name of the sheet of the event |
+| range       | Objekt  | Cell range                     |
 
 
 #### Beispiel

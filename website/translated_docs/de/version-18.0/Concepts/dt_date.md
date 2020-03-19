@@ -26,24 +26,24 @@ Ein Nulldatum wird als *!00-00-00!* angegeben.
 **Hinweise:**
 
 - Zur Wahrung der Kompatibilität lässt 4D die Eingabe zweistelliger Jahreszahlen zu. Eine zweistellige Jahreszahl bedeutet 20. oder 21. Jahrhundert, je nachdem ob es größer oder kleiner als 30 ist, außer die Einstellung wurde mit dem Befehl ```SET DEFAULT CENTURY``` geändert.
-- Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Geben Sie im Methodeneditor ein Datum im deutschen Format, z. B. 13.3.20 ein, wird es automatisch in das internationale Format YYYY-MM-DD umgesetzt, also 2020-03-13.
+- Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/).
 
-## Date operators
+## Datumsoperatoren
 
-| Operation                | Syntax        | Ergibt  | Ausdruck                    | Wert         |
-| ------------------------ | ------------- | ------- | --------------------------- | ------------ |
-| Date difference          | Date – Date   | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| Day addition             | Date + Number | Datum   | !2017-01-20! + 9            | !2017-01-29! |
-| Day subtraction          | Date – Number | Datum   | !2017-01-20! - 9            | !2017-01-11! |
-| Equality                 | Date = Date   | Boolean | !2017-01-01! =!2017-01-01!  | Wahr         |
-|                          |               |         | !2017-01-20! = !2017-01-01! | Falsch       |
-| Inequality               | Date # Date   | Boolean | !2017-01-20! # !2017-01-01! | Wahr         |
-|                          |               |         | !2017-01-20! # !2017-01-20! | Falsch       |
-| Greater than             | Date > Date   | Boolean | !2017-01-20! > !2017-01-01! | Wahr         |
-|                          |               |         | !2017-01-20! > !2017-01-20! | Falsch       |
-| Less than                | Date < Date   | Boolean | !2017-01-01! < !2017-01-20! | Wahr         |
-|                          |               |         | !2017-01-20! < !2017-01-20! | Falsch       |
-| Greater than or equal to | Date >= Date  | Boolean | !2017-01-20! >=!2017-01-01! | Wahr         |
-|                          |               |         | !2017-01-01!>=!2017-01-20!  | Falsch       |
-| Less than or equal to    | Date <= Date  | Boolean | !2017-01-01!<=!2017-01-20!  | Wahr         |
-|                          |               |         | !2017-01-20!<=!2017-01-01!  | Falsch       |
+| Operation               | Syntax         | Ergibt  | Ausdruck                    | Wert         |
+| ----------------------- | -------------- | ------- | --------------------------- | ------------ |
+| Datumsdifferenz         | Datum – Datum  | Zahl    | !2017-01-20! - !2017-01-01! | 19           |
+| Datumsaddition          | Datum + Zahl   | Datum   | !2017-01-20! + 9            | !2017-01-29! |
+| Datumssubtraktion       | Datum - Zahl   | Datum   | !2017-01-20! - 9            | !2017-01-11! |
+| Gleichheit              | Datum = Datum  | Boolean | !2017-01-01! =!2017-01-01!  | Wahr         |
+|                         |                |         | !2017-01-20! = !2017-01-01! | Falsch       |
+| Ungleichheit            | Datum # Datum  | Boolean | !2017-01-20! # !2017-01-01! | Wahr         |
+|                         |                |         | !2017-01-20! # !2017-01-20! | Falsch       |
+| Größer als              | Datum > Datum  | Boolean | !2017-01-20! > !2017-01-01! | Wahr         |
+|                         |                |         | !2017-01-20! > !2017-01-20! | Falsch       |
+| Kleiner als             | Datum > Datum  | Boolean | !2017-01-01! < !2017-01-20! | Wahr         |
+|                         |                |         | !2017-01-20! < !2017-01-20! | Falsch       |
+| Größer als oder gleich  | Datum >= Datum | Boolean | !2017-01-20! >=!2017-01-01! | Wahr         |
+|                         |                |         | !2017-01-01!>=!2017-01-20!  | Falsch       |
+| Kleiner als oder gleich | Datum <= Date  | Boolean | !2017-01-01!<=!2017-01-20!  | Wahr         |
+|                         |                |         | !2017-01-20!<=!2017-01-01!  | Falsch       |

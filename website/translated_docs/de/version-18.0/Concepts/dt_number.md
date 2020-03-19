@@ -1,24 +1,24 @@
 ---
 id: version-18.0-number
-title: Number (Real, Longint, Integer)
+title: Numerisch (Zahl, Lange Ganzzahl, Ganzzahl)
 original_id: number
 ---
 
-Number is a generic term that stands for:
+Numerisch ist der Oberbegriff für:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits). 
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1. 
-- Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
+- Datenfeld, Variable oder Ausdruck vom Typ Zahl. Der Typ Zahl umfasst den Bereich ±1,7e±308 mit 13 Stellen Genauigkeit. 
+- Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Lange Ganzzahl (4 Bytes) umfasst den Bereich -2 147 483 648 bis 2 147 483 647 (-2^31..(2^31)-1). 
+- Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Ganzzahl (2 Bytes) umfasst den Bereich -32 768 bis 32 767 (2^15..(2^15)-1).
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+**Hinweis:** Feldwerte vom Typ Ganzzahl werden in der 4D Programmiersprache automatisch in Lange Ganzzahl umgewandelt.
 
-You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
+Sie können numerische Datentypen untereinander zuweisen. 4D erledigt die Konvertierung und kürzt oder rundet bei Bedarf. Jedoch gibt die Konvertierung bei Werten außerhalb des entsprechenden Bereichs keinen gültigen Wert zurück. Sie können numerische Datentypen in Ausdrücken miteinander mischen.
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+**Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache gilt der Begriff numerisch für alle Datentypen der Art Zahl, Ganzzahl und Lange Ganzzahl, wenn nichts anderes angegeben ist.
 
-## Number literals
+## Zahlenformate
 
-A numeric literal constant is written as a real number. Here are some examples of numeric constants:
+Eine numerische Konstante wird als einfache Zahl geschrieben. Hier sehen Sie ein paar Beispiele:
 
 ```4d
 27
@@ -26,9 +26,9 @@ A numeric literal constant is written as a real number. Here are some examples o
 0.0076
 ```
 
-**Note:** Since 4D v15, the default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option (see Methods Page), you must use the separator defined in your system.
+**Hinweis:** Seit 4D v15 ist der Dezimaltrenner standardmäßig ein Punkt (.), unabhängig von der Sprache des Betriebssystems. Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden) markiert, müssen Sie den Trenner verwenden, der in Ihrem System definiert ist.
 
-Negative numbers are specified with the minus sign (-). Beispiel:
+Negative Zahlen werden mit dem Minuszeichen (-) angegeben. Beispiel:
 
 ```4d
 -27
@@ -36,58 +36,58 @@ Negative numbers are specified with the minus sign (-). Beispiel:
 -0.0076
 ```
 
-## Number operators
+## Zahlenoperatoren
 
-| Operation                | Syntax           | Ergibt  | Ausdruck | Wert   |
-| ------------------------ | ---------------- | ------- | -------- | ------ |
-| Addition                 | Number + Number  | Number  | 2 + 3    | 5      |
-| Subtraction              | Number - Number  | Number  | 3 – 2    | 1      |
-| Multiplication           | Number * Number  | Number  | 5 * 2    | 10     |
-| Division                 | Number /Number   | Number  | 5 / 2    | 2.5    |
-| Longint division         | Number \ Number | Number  | 5 \ 2   | 2      |
-| Modulo                   | Number % Number  | Number  | 5 % 2    | 1      |
-| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3    | 8      |
-| Equality                 | Number = Number  | Boolean | 10 = 10  | Wahr   |
-|                          |                  |         | 10 = 11  | Falsch |
-| Inequality               | Number # Number  | Boolean | 10 #11   | Wahr   |
-|                          |                  |         | 10 # 10  | Falsch |
-| Greater than             | Number > Number  | Boolean | 11 > 10  | Wahr   |
-|                          |                  |         | 10 > 11  | Falsch |
-| Less than                | Number < Number  | Boolean | 10 < 11  | Wahr   |
-|                          |                  |         | 11 < 10  | Falsch |
-| Greater than or equal to | Number >= Number | Boolean | 11 >= 10 | Wahr   |
-|                          |                  |         | 10 >= 11 | Falsch |
-| Less than or equal to    | Number <= Number | Boolean | 10 <= 11 | Wahr   |
-|                          |                  |         | 11 <= 10 | Falsch |
+| Operation               | Syntax         | Ergibt  | Ausdruck | Wert   |
+| ----------------------- | -------------- | ------- | -------- | ------ |
+| Addition                | Zahl + Zahl    | Zahl    | 2 + 3    | 5      |
+| Subtraktion             | Zahl - Zahl    | Zahl    | 3 – 2    | 1      |
+| Multiplikation          | Zahl * Zahl    | Zahl    | 5 * 2    | 10     |
+| Division                | Zahl / Zahl    | Zahl    | 5 / 2    | 2.5    |
+| Ganzzahlige Division    | Zahl \ Zahl   | Zahl    | 5 \ 2   | 2      |
+| Modulo                  | Zahl % Zahl    | Zahl    | 5 % 2    | 1      |
+| Exponent                | Zahl ^ Zahl    | Zahl    | 2 ^ 3    | 8      |
+| Gleichheit              | Zahl = Zahl    | Boolean | 10 = 10  | Wahr   |
+|                         |                |         | 10 = 11  | Falsch |
+| Ungleichheit            | Zahl # Zahl    | Boolean | 10 #11   | Wahr   |
+|                         |                |         | 10 # 10  | Falsch |
+| Größer als              | Zahl > Zahl    | Boolean | 11 > 10  | Wahr   |
+|                         |                |         | 10 > 11  | Falsch |
+| Kleiner als             | Zahl < Zahl    | Boolean | 10 < 11  | Wahr   |
+|                         |                |         | 11 < 10  | Falsch |
+| Größer als oder gleich  | Zahl >= Zahl   | Boolean | 11 >= 10 | Wahr   |
+|                         |                |         | 10 >= 11 | Falsch |
+| Kleiner als oder gleich | Zahl <= Number | Boolean | 10 <= 11 | Wahr   |
+|                         |                |         | 11 <= 10 | Falsch |
 
 
-The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
+Der Modulo Operator % dividiert die erste Zahl durch die zweite und übergibt den ganzzahligen Restwert. Hier sehen Sie ein paar Beispiele:
 
-- 10 % 2 returns 0 because 10 is evenly divided by 2.
-- 10 % 3 returns 1 because the remainder is 1.
-- 10.5 % 2 returns 0 because the remainder is not a whole number.
+- 10 % 2 ergibt 0, da kein Restwert übrigbleibt.
+- 10 % 3 ergibt 1, da der Restwert 1 ist.
+- 10.5 % 2 ergibt 0, da der Restwert keine Ganzzahl ist.
 
-**WARNING:**
+**WARNUNG:**
 
-- The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only. 
+- Der Modulo Operator % gibt signifikante Werte mit Zahlen aus dem Bereich Lange Ganzzahl (von - 2^31 bis + 2^31 - 1) zurück. Verwenden Sie bei Berechnungen des Restwerts mit Zahlen außerhalb dieses Bereich die Funktion `Mod`.
+- Der Operator für ganzzahlige Division \ gibt nur für Ganzzahlen signifikante Werte zurück. 
 
-### Precedence
+### Rangfolge
 
-The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. Beispiel:
+Die Reihenfolge, in der ein Ausdruck berechnet wird, heißt Rangfolge. 4D hat eine Rangfolge von links-nach-rechts, die algebraische Rangfolge wird nicht berücksichtigt. Beispiel:
 
 ```4d
  3+4*5
 ```
 
-returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
+ergibt 35, da der Ausdruck von links nach rechts berechnet wird: 3 + 4 ist gleich 7, multipliziert mit 5 ergibt als Endergebnis 35.
 
-To override the left-to-right precedence, you MUST use parentheses. Beispiel:
+Wollen Sie die Rangfolge von links nach rechts ändern, MÜSSEN Sie Klammern setzen. Beispiel:
 
 ```4d
  3+(4*5)
 ```
 
-returns 23 because the expression (4 * 5) is evaluated first, because of the parentheses. The result is 20, which is then added to 3 for the final result of 23.
+ergibt 23, da der Ausdruck (4 * 5) aufgrund der Klammer zuerst berechnet wird. Zum Ergebnis 20 wird dann 3 hinzugezählt. Das ergibt als Endergebnis 23.
 
-Parentheses can be nested inside other sets of parentheses. Be sure that each left parenthesis has a matching right parenthesis to ensure proper evaluation of expressions. Lack of, or incorrect use of parentheses can cause unexpected results or invalid expressions. Furthermore, if you intend to compile your applications, you must have matching parentheses—the compiler detects a missing parenthesis as a syntax error.
+Sie können Klammern auch innerhalb anderer Klammern setzen. Achten Sie darauf, dass eine geöffnete Klammer auch immer wieder geschlossen wird. Fehlende oder falsch gesetzte Klammern können ungültige Ausdrücke oder unerwartete Ergebnisse hervorrufen. Außerdem können Sie Ihre Anwendungen nur kompilieren, wenn die Klammern zusammenpassen. Bei fehlenden Klammern meldet 4D Compiler einen Syntaxfehler.

@@ -51,10 +51,10 @@
         "title": "Datum"
       },
       "Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null und Undefiniert"
       },
       "Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "Numerisch (Zahl, Lange Ganzzahl, Ganzzahl)"
       },
       "Concepts/object": {
         "title": "Objekt"
@@ -858,10 +858,10 @@
         "title": "Datum"
       },
       "version-18.0-Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null und Undefiniert"
       },
       "version-18.0-Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "Numerisch (Zahl, Lange Ganzzahl, Ganzzahl)"
       },
       "version-18.0-Concepts/object": {
         "title": "Objects"

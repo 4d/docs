@@ -189,8 +189,8 @@ In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil woll
 | Operator | Operation      | Beispiel       |
 | -------- | -------------- | -------------- |
 | +        | Addition       | 1 + 2 ergibt 3 |
-| –        | Subtraction    | 3 - 2 ergibt 1 |
-| *        | Multiplication | 2 * 3 ergibt 6 |
+| –        | Subtraktion    | 3 - 2 ergibt 1 |
+| *        | Multiplikation | 2 * 3 ergibt 6 |
 | /        | Division       | 6 / 2 ergibt 3 |
 
 
@@ -200,7 +200,7 @@ Je nach Datentyp werden die gleichen Symbole oft für verschiedene Operationen v
 
 | Datentyp       | Operation      | Beispiel                                                                                        |
 | -------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| Number         | Addition       | 1 + 2 addiert die Zahlen und ergibt 3                                                           |
+| Zahl           | Addition       | 1 + 2 addiert die Zahlen und ergibt 3                                                           |
 | String         | Concatenation  | "Hello " + "there" verbindet bzw. setzt die Strings zusammen und ergibt "Hello there"           |
 | Datum und Zahl | Datumsaddition | !1989-01-01! + 20 addiert 20 Tage zum Datum 1. Januar 1989 und ergibt das Datum 21. Januar 1989 |
 
@@ -231,9 +231,9 @@ Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es 
 | “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                            |
 | “Mr. ” + [People]Name    | String             | Zwei Strings werden zusammengefügt: der String "Mr. ” und der aktuelle Wert des Feldes Name in der Tabelle People. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück. |
 | Uppercase("smith")       | String             | Dieser Ausdruck verwendet den 4D Befehl `Uppercase`, um den String “smith” in Großbuchstaben umzuwandeln. Er gibt “SMITH” zurück.                                                  |
-| 4                        | Number             | Dies ist die numerische Konstante 4.                                                                                                                                               |
-| 4 * 2                    | Number             | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                        |
-| myButton                 | Number             | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.                     |
+| 4                        | Zahl               | Dies ist die numerische Konstante 4.                                                                                                                                               |
+| 4 * 2                    | Zahl               | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                        |
+| myButton                 | Zahl               | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.                     |
 | !1997-01-25!             | Datum              | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                            |
 | Current date+ 30         | Datum              | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
 | ?8:05:30?                | Zeit               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |

@@ -86,12 +86,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Syntax            | Ergibt  | Ausdruck      | Wert   |
-| ---------- | ----------------- | ------- | ------------- | ------ |
-| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | Wahr   |
-|            |                   |         | vPtrA = vPtrC | Falsch |
-| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | Wahr   |
-|            |                   |         | vPtrA # vPtrB | Falsch |
+| Operation    | Syntax            | Ergibt  | Ausdruck      | Wert   |
+| ------------ | ----------------- | ------- | ------------- | ------ |
+| Gleichheit   | Pointer = Pointer | Boolean | vPtrA = vPtrB | Wahr   |
+|              |                   |         | vPtrA = vPtrC | Falsch |
+| Ungleichheit | Pointer # Pointer | Boolean | vPtrA # vPtrC | Wahr   |
+|              |                   |         | vPtrA # vPtrB | Falsch |
 
 
 ## Main usages

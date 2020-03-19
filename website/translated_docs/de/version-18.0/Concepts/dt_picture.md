@@ -62,7 +62,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 - There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
 - 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
-### Examples
+### Beispiele
 
 In the following examples, all of the pictures are shown using the display format **On Background**.
 

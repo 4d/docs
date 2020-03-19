@@ -62,7 +62,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      text
+      Text
     </td>
     
     <td>
@@ -76,7 +76,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      text
+      Text
     </td>
     
     <td>
@@ -90,7 +90,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      text
+      Text
     </td>
     
     <td>
@@ -104,7 +104,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      object
+      Objekt
     </td>
     
     <td>
