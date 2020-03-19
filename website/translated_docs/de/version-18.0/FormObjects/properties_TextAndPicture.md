@@ -33,7 +33,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 | Name  | Datentyp | Possible Values                                                                                                                                                    |
 |:-----:|:--------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |   Text   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
