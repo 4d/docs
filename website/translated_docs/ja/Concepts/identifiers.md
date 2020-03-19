@@ -1,38 +1,38 @@
 ---
 id: identifiers
-title: Identifiers
+title: 識別子の命名規則
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+この章では、4D ランゲージにおけるさまざまな要素 (変数、テーブル、オブジェクト、フォームなど) の命名規則について説明します。
 
-## Basic Rules
+## 基本ルール
 
-The following rules apply for all 4D frameworks.
+以下の命名規則は 4D フレームワークにおいて全般的に適用されます:
 
-- A name can begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Commas, slashes, quotation marks, and colons are not allowed.
-- Characters reserved for use as operators, such as * and +, are not allowed.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
-- Any trailing spaces are ignored.
+- 識別子の 1文字目は、半角アルファベット、アンダースコア ("_")、あるいはドル記号 ("$") で始めます。
+- その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
+- テーブル・フィールド・メソッド・変数の名称に、ピリオド (".") および大カッコ ("[ ]") は使用できません。
+- カンマ (,)・スラッシュ(/)・引用符(")・コロン(:) の使用は禁止されています。
+- 演算子として用いられる記号 ("*" や "+" など) の使用は禁止されています。
+- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (If, For 等)、そして定数が含まれます。
+- 名前の最後につけたスペースは無視されます。
 
-### Additional rules for object property and ORDA names
+### ORDA に適用される追加ルール
 
-- Space characters are not allowed.
-- Periods (".") and brackets ("[ ]") are not allowed.
-- Names are case sensitive.
+- スペースは使えません。
+- ピリオド (".") および大カッコ ("[ ]") は使用できません。
+- 大文字・小文字は区別されます。
 
-### Additional rules for SQL
+### SQL で処理する場合の追加ルール
 
-- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+- 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。
+- 名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**注:** ストラクチャーエディターのインスペクター下部にある ”SQL” エリアには、テーブル名やフィールド名として許可されない文字があると警告が表示されます。
 
-## Tables
+## テーブル
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+大カッコ内 ([...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。
 
 例: 
 
@@ -42,9 +42,9 @@ FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
 ```
 
-## Fields
+## フィールド
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
+フィールドが属するテーブルを最初に指定することで、フィールドを表します。 フィールド名はテーブル名のすぐ後に続けます。 フィールド名は31文字以内で指定します。
 
 例: 
 
@@ -54,11 +54,11 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprocess Variables
+## インタープロセス変数
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+名前の先頭にインタープロセス記号 (<>) を付けることによって、インタープロセス変数を表します。
 
-The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
+インタープロセス変数名は、<> 記号を除いて最大255文字以内で指定することができます。
 
 例: 
 
@@ -68,9 +68,9 @@ The name of an interprocess variable can be up to 31 characters, not including t
 If(<>vtName#"")
 ```
 
-## Process Variables
+## プロセス変数
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). プロセス変数名の長さは、最大31文字まで指定できます。
+(<>記号や$記号から始まらない) 名前を使用して、プロセス変数を表します。 プロセス変数は255文字以内の文字で名前を指定します
 
 例: 
 
@@ -80,9 +80,9 @@ If(bValidate=1)
 vsCurrentName:=""
 ```
 
-## Local Variables
+## ローカル変数
 
-You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
+ドル記号 ($) を名前の先頭につけてローカル変数を表します。 ローカル変数名は、ドル記号 ($) を除いて255文字まで指定することができます。
 
 例: 
 
@@ -94,17 +94,17 @@ $vsMyString:="Hello there"
 
 ## 配列
 
-You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
+配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 配列は変数であり、スコープに基づいて次の3種類があります:
 
-- Interprocess arrays,
-- Process arrays,
-- Local arrays.
+- インタープロセス配列
+- プロセス配列
+- ローカル配列
 
-### Interprocess Arrays
+### インタープロセス配列
 
-The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+インタープロセス配列の名前は、先頭にインタープロセス記号 (<>) が付きます。
 
-An interprocess array name can contain up to 31 characters, not including the <> symbols.
+インタープロセス配列名は、インタープロセス記号 (<>) を除いて255文字以内で指定します。
 
 例: 
 
@@ -114,9 +114,9 @@ SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
-### Process Arrays
+### プロセス配列
 
-You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
+(<>記号や$記号から始まらない) 名前を使用して、プロセス配列を表わします。 プロセス配列名は255文字以内で指定します。
 
 例: 
 
@@ -126,9 +126,9 @@ SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
 ```
 
-### Local Arrays
+### ローカル配列
 
-The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
+配列名がドル記号 ($) で始まるものは、ローカル配列です。 ローカル配列名は、ドル ($) 記号を除いて255文字以内で指定します。
 
 例: 
 
@@ -138,55 +138,55 @@ SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elements of arrays
+### 配列の要素
 
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+中カッコ ("{ }") を使用して、インタープロセス配列、プロセス配列、ローカル配列の要素を参照します。 参照される配列要素は数式で表されます。
 
 例: 
 
 ```4d
-    //Addressing an element of an interprocess array
+    // インタープロセス配列の要素を指定します
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Addressing an element of a process array
+    // プロセス配列の要素を指定します
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Addressing an element of a local array
+    // ローカル配列の要素を指定します
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
+### 二次元配列の要素
 
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
+中カッコ ("{ }") を2回使用して、2次元配列の要素を参照します。 参照される要素は2組の中カッコ内の2つの数式で表されます。
 
 例: 
 
 ```4d
-    //Addressing an element of a two-dimensional interprocess array
+    // 2次元インタープロセス配列の要素を指定します
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional process array
+    // 2次元プロセス配列の要素を指定します
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional local array
+    // 2次元ローカル配列の要素を指定します
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
-## Object attributes
+## オブジェクト属性
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
+オブジェクト記法が有効化されているとき、ドット (".") をオブジェクト名 (あるいは属性名) と属性名の間に置くことでオブジェクト属性 (オブジェクトプロパティとも呼びます) を指定します。 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
 
 例: 
 
@@ -413,7 +413,7 @@ Be sure to use unique names for the different elements in your database. If a pa
 
 4D identifies names used in procedures in the following order:
 
-1. Fields
+1. フィールド
 2. コマンド
 3. メソッド
 4. Plug-in routines
