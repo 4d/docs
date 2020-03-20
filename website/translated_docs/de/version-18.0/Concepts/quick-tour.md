@@ -161,7 +161,7 @@ Sie können auch ein String in eckigen Klammern verwenden, zum Beispiel:
 $vName:=employee["name"]
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, akzeptiert Objektnotation eine Folge von Symbolen, um auf Untereigenschaften zuzugreifen, wie zum Beispiel:
 
 ```4d
 $vAge:=employee.children[2].age
@@ -266,7 +266,7 @@ Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 
 Im allgemeinen sind Ausdrücke mit Operator nicht-zuweisbar. Beispiel: `[Person]FirstName+" "+[Person]LastName` ist nicht zuweisbar.
 
-## Pointers
+## Zeiger
 
 Die 4D Programmiersprache bietet eine fortschrittliche Implementierung von Zeigern zum Schreiben von leistungsfähigem und modularem Code. Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und Array Elemente verweisen.
 
