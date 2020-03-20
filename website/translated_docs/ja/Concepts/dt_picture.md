@@ -65,9 +65,9 @@ title: ピクチャー
 
 以下の例では、ピクチャーの表示形式はすべて **On Background** に設定しています。
 
-これは circle (円) ピクチャーです:![](assets/en/Concepts/Concepts/Circle.en.png)
+これは circle (円) ピクチャーです:![](assets/en/Concepts/Circle.en.png)
 
-これは rectangle (長方形) ピクチャーです:![](assets/en/Concepts/Concepts/rectangle.en.png)
+これは rectangle (長方形) ピクチャーです:![](assets/en/Concepts/rectangle.en.png)
 
 以下の例は、各ピクチャー演算子の効果を表したものです。
 
