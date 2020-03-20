@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesAction
-title: Action
+title: Aktion
 original_id: propertiesAction
 ---
 
