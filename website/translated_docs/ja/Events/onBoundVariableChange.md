@@ -5,7 +5,7 @@ title: On Bound Variable Change
 
 | Code | Can be called by | Definition                                  |
 | ---- | ---------------- | ------------------------------------------- |
-| 54   | Form             | The variable bound to a subform is modified |
+| 54   | フォーム             | The variable bound to a subform is modified |
 
 
 ## 説明
