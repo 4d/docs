@@ -5,7 +5,7 @@ title: On Resize
 
 | Code | Can be called by | Definition                                                                                                                            |
 | ---- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 29   | Form             | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
+| 29   | フォーム             | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
 
 
 ## 説明
