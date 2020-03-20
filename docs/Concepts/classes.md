@@ -14,14 +14,18 @@ The class model in 4D is similar to classes in JavaScript, and based on a chain 
 
 ### Class object
 
-A class is an object itself. A class object can have following properties:
+A class is an object itself, of class "Class". A class object has the following properties and methods:
 
-- a name which must be ECMAScript compliant
+- `name` which must be ECMAScript compliant
+- `superclass` object (optional, null if none)
+- `new()` method, allowing to instantiate class objects.
+
+In addtion, a class object can reference: 
 - a `constructor` object (optional)
-- a `superclass` object (optional)
-- a `prototype` object containing named function objects
+- a `prototype` object, containing named function objects (optional).
 
 A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+
 
 ### Property lookup and prototype
 
@@ -47,13 +51,8 @@ $instance:=OB Instance of($poly;4D.Object)
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
 
-Member functions are objects of class "Function", with following functions:
 
-- `apply()`
-- `call()`
-
-
-### Class stores
+## Class stores
 
 Available classes are accessible from their class stores. The following class stores are available:
 
@@ -61,9 +60,13 @@ Available classes are accessible from their class stores. The following class st
 - a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
 
 
-## User class definition
+## Creating a user class
 
-A user class in 4D is defined by a specific method file (.md), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name. For example, if you want to create a class named "Polygon", you need to have:
+A user class in 4D is defined by a specific method file (.md), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+
+> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
+
+For example, if you want to define a class named "Polygon", you need to create the following file:
 
 - Database folder
 	+ Project
@@ -71,12 +74,12 @@ A user class in 4D is defined by a specific method file (.md), stored in the `/P
 			- Classes
 				+ Polygon.4dm
 
-The class file name must be ECMAScript compliant.  
-
 > Class files are automatically created by 4D at the appropriate location when you create a class from the 4D Developer interface (**New > Class...** from the **File** menu, **New Class...** from the Explorer contextual menu -- see XXXX).
 
 
-A user class file only defines a model of object that can be instantiated in the database code by calling the `new()` class member method.
+### Class contents
+
+Basically, a user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method.
 You will usually use specific [class keywords(#class-keywords)] in the class file.
 
 Note however that, if you create an empty class file, you will instantiate empty objects of the defined class in the database code. For example, if you create the following `Empty.md` class file: 
@@ -99,8 +102,8 @@ $cName:=OB Class($o).name //"Empty"
 
 Specific 4D keywords can be used in class definitions:
 
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Function \<ClassName>` to define member methods of the objects. 
+- `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends \<ClassName>` to define inheritance.
 - You can also use the `Super` command to call methods from the parent class.
 
@@ -145,11 +148,27 @@ Function \<name>
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. 
+Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class. 
 
 In the class definition file, function declarations use the `Function` keyword, and single token containing the name of the function. The tokenizer requires the function name to be Ecmascript compliant.
 
-In the database code, class functions are called as member methods of the object instance: `()` operator is required and can include parameters, if any. Example `myObject.methodName("hello")`
+In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+
+- use of the `()` operator. For example `myObject.methodName("hello")`.
+- use of a "Function" class member methods
+	- `apply()`
+	- `call()`
+
+In the 4D debugger, the description of a Function can be:
+- \<\<User Function: {className}.{functionName}>> for a user class function
+- \<\<Native Function: {className}.{functionName}>> for a 4d builtin class function
+- \<\<Formula: {formula}>> for a 4d formula
+
+
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
+> - the compiler does not generate any error (which is different compared to regular methods),
+> - an error is thrown by 4D only at runtime.
+
 
 #### Example
 
@@ -199,6 +218,7 @@ Class extension must respect the following rules:
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
 
+An extended class can call the constructor of its parent class using the `Super` command.
 
 #### Example
 
