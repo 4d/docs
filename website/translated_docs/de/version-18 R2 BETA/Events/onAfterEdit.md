@@ -41,7 +41,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property    | Typ     | Description                       |
 | ----------- | ------- | --------------------------------- |
-| range       | Objekt  | Cell range                        |
+| range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 
@@ -49,7 +49,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property | Typ     | Description                 |
 | -------- | ------- | --------------------------- |
-| range    | Objekt  | Cell range                  |
+| range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
 | newValue | variant | Value of cell after change  |
 
@@ -58,8 +58,8 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property  | Typ     | Description                                         |
 | --------- | ------- | --------------------------------------------------- |
-| fromRange | Objekt  | Range of source cell range (being dragged)          |
-| toRange   | Objekt  | Range of the destination cell range (drop location) |
+| fromRange | object  | Range of source cell range (being dragged)          |
+| toRange   | object  | Range of the destination cell range (drop location) |
 | copy      | boolean | Specifies if the source range is copied or not      |
 | insert    | boolean | Specifies if the source range is inserted or not    |
 
@@ -68,7 +68,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Property  | Typ    | Description         |
 | --------- | ------ | ------------------- |
-| fillRange | Objekt | Range used for fill |
+| fillRange | object | Range used for fill |
  autoFillType|longint|Value used for the fill.
 
 - 0: Cells are filled with all data (values, formatting, and formulas)
@@ -85,7 +85,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         
                                         | Property | Typ    | Description         |
                                         | -------- | ------ | ------------------- |
-                                        | range    | Objekt | Cell range          |
+                                        | range    | object | Cell range          |
                                         | formula  | Text   | The formula entered |
 
                                         
@@ -112,7 +112,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              Objekt
+                                              object
                                             </td>
                                             
                                             <td>
@@ -144,7 +144,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                                             </td>
                                                             
                                                             <td>
-                                                              Objekt
+                                                              object
                                                             </td>
                                                             
                                                             <td>
