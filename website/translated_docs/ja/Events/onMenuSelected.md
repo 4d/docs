@@ -5,7 +5,7 @@ title: On Menu Selected
 
 | Code | Can be called by | Definition                                             |
 | ---- | ---------------- | ------------------------------------------------------ |
-| 18   | Form             | A menu item has been chosen in the associated menu bar |
+| 18   | フォーム             | A menu item has been chosen in the associated menu bar |
 
 
 ## 説明
