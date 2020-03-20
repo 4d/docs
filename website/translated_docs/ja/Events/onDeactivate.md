@@ -5,7 +5,7 @@ title: On Deactivate
 
 | Code | Can be called by | Definition                                          |
 | ---- | ---------------- | --------------------------------------------------- |
-| 12   | Form             | The form’s window ceases to be the frontmost window |
+| 12   | フォーム             | The form’s window ceases to be the frontmost window |
 
 
 ## 説明

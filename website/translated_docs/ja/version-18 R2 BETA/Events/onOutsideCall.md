@@ -6,7 +6,7 @@ original_id: onOutsideCall
 
 | Code | Can be called by | Definition                                   |
 | ---- | ---------------- | -------------------------------------------- |
-| 10   | Form             | The form received a `POST OUTSIDE CALL` call |
+| 10   | フォーム             | The form received a `POST OUTSIDE CALL` call |
 
 
 ## 説明

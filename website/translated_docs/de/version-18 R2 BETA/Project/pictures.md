@@ -4,43 +4,43 @@ title: Pictures
 original_id: pictures
 ---
 
-## Native Formats Supported
+## Native Unterstützung von Formaten
 
-4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+4D enthält die native Verwaltung von Bildformaten, d. h. die Bilder werden in ihrem Originalformat angezeigt und gespeichert, ohne jegliche Interpretation durch 4D. Die spezifischen Merkmale der verschiedenen Formate, wie Schatten, transparente Bereiche, o. ä. werden beim Kopieren und Einsetzen beibehalten und ohne Veränderung angezeigt. Die native Verwaltung gilt für alle in 4D gespeicherten Bilder: Bilder aus der Objektbibliothek, im Designmodus in Formulare eingefügte Bilder, im Anwendungsmodus in Datenfelder oder Variablen eingefügte Bilder, etc.
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
+4D verwendet native APIs, um Felder und Variablen vom Typ Bild unter Windows und auf macOS zu codieren (schreiben) bzw. decodieren (lesen). Dies bietet Zugriff auf zahlreiche native Formate, inkl. RAW, dem gängigen Format für Digitalkameras.
 
 * Windows, 4D uses WIC (Windows Imaging Component). 
 * macOS, 4D uses ImageIO.
 
-The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
+Die gängigsten Bildformate werden auf beiden Plattformen unterstützt: jpeg, gif, png, tiff, bmp, etc. Auf macOS ist auch das Format pdf zum Codieren und Decodieren verfügbar.
 
-The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the PICTURE CODEC LIST command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
+Die unterstützten Formate variieren unter Windows und auf macOS je nach Betriebssystem und den eigenen Codecs, die auf den Rechnern installiert sind. To find out which codecs are available, you must use the PICTURE CODEC LIST command. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
 
 > WIC and ImageIO permit the use of metadata in pictures. Two commands, SET PICTURE METADATA and GET PICTURE METADATA, let you benefit from metadata in your developments.
 
-### Picture Codec IDs
+### Bild Codec Kennung
 
-Picture formats recognized by 4D are returned by the PICTURE CODEC LIST command as picture Codec IDs. They can be returned in the following forms:
+Picture formats recognized by 4D are returned by the PICTURE CODEC LIST command as picture Codec IDs. Es gibt folgende Formen:
 
-* As an extension (for example “.gif”)
-* As a Mime type (for example “image/jpeg”)
+* Als Endung (zum Beispiel “.gif”)
+* Als Mime Typ (zum Beispiel “image/jpeg”)
 
-The form returned for each format will depend on the way the Codec is recorded at the operating system level.
+Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist.
 
-Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the PICTURE CODEC LIST command.
+Die meisten 4D Befehle zur Bildverwaltung können eine Codec Kennung als Parameter empfangen. It is therefore imperative to use the system ID returned by the PICTURE CODEC LIST command.
 
-### Unavailable picture format
+### Nicht verfügbares Bildformat
 
-A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon:
+Für Bildformate, die auf dem verwendeten Rechner nicht verfügbar sind, erscheint ein spezifischer Icon. The extension of the missing format is shown at the bottom of the icon:
 
 ![](assets/en/Project/picNoFormat.png)
 
-The icon is automatically used wherever the picture is meant to be displayed:
+Dieser Icon erscheint automatisch beim Anzeigen der betroffenen Bilder:
 
 ![](assets/en/Project/picNoFormat2.png)
 
-This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for instance, for PDF pictures on Windows, or for PICT format pictures.
+Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lässt sich aber speichern und ggf. auf anderen Rechnern anzeigen. This is the case, for instance, for PDF pictures on Windows, or for PICT format pictures.
 
 ## Picture Resolution
 

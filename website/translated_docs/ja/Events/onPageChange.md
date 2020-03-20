@@ -5,7 +5,7 @@ title: On Page Change
 
 | Code | Can be called by | Definition                              |
 | ---- | ---------------- | --------------------------------------- |
-| 56   | Form             | The current page of the form is changed |
+| 56   | フォーム             | The current page of the form is changed |
 
 
 ## 説明

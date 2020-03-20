@@ -6,7 +6,7 @@ original_id: onActivate
 
 | Code | Can be called by | Definition                                     |
 | ---- | ---------------- | ---------------------------------------------- |
-| 11   | Form             | The form's window becomes the frontmost window |
+| 11   | フォーム             | The form's window becomes the frontmost window |
 
 
 ## 説明

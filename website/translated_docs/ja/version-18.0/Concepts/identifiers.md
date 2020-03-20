@@ -198,9 +198,9 @@ $value:=$clientObj.data.address.city
 
 **注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
 
-## Forms
+## フォーム
 
-You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
+フォームの名前は文字列を使用して表します。 フォーム名は31文字以内で指定します。
 
 例: 
 
@@ -210,9 +210,9 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Form objects
+## フォームオブジェクト
 
-You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
+フォームオブジェクトを引数としてコマンドに渡すには、文字列の名称の前に、任意パラメーターである * 記号を使います。 オブジェクト名には最大で255バイトまで含めることができます。
 
 例: 
 
@@ -220,13 +220,13 @@ You designate a form object by passing its name as a string, preceded by the * p
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
+**注:** フォームオブジェクト (ボタン、リストボックス、入力可能な変数など) と 4Dランゲージのオブジェクト型を混同しないようにしてください。 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
 
-## Project methods
+## プロジェクトメソッド
 
-You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
+プロジェクトメソッド (プロシージャーおよび関数) は名前によって表されます。 メソッド名は31文字以内で指定します。
 
-**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
+**注:** 結果を返さないプロジェクトメソッドはプロシージャーとも呼ばれます。 結果を返すプロジェクトメソッドを関数と呼びます。
 
 例: 
 
@@ -236,49 +236,49 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 メソッド名には大文字を使用しますが、メソッドが関数の場合には最初の文字だけを大文字にします。 このように命名することにより、数ヶ月後に保守のためデータベースを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. 例: 
+**注:** メソッドを呼び出すには、そのメソッド名を入力します。 しかし `ON EVENT CALL` など一部の 4Dのビルトインコマンドやプラグインコマンドにメソッド名を引数として渡す場合には文字列 (ダブルクォートで括る) として渡します。 例: 
 
 例: 
 
 ```4d
-    //This command expects a method (function) or formula
+    // このコマンドはメソッド (関数) またはフォーミュラを受け取ります
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    // このコマンドはメソッド (プロシージャ) またはステートメントを受け取ります
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    // このコマンドはメソッド名を文字列で受け取ります
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Project methods can accept parameters (arguments). メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号が付けられたローカル変数 ($1, $2, ...$n) に格納されます。 In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
+プロジェクトメソッドには引数を渡すことができます。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号が付けられたローカル変数 ($1, $2, ...$n) に格納されます。 さらに、複数の連続する引数は、${n}というシンタックスを用いて使用できます。nは数値で引数の番号を示します。
 
-Inside a function, the $0 local variable contains the value to be returned.
+関数の戻り値は、ローカル変数 $0 に代入することで指定します。
 
 例: 
 
 ```4d
-    //Within DROP SPACES $1 is a pointer to the field [People]Name
+    // DROP SPACES メソッド内で、$1 はフィールド [People]Name へのポインターです
 DROP SPACES(->[People]Name)
 
-    //Within Calc creator:
-    //- $1 is numeric and equal to 1
-    //- $2 is numeric and equal to 5
-    //- $3 is text or string and equal to "Nice"
-    //- The result value is assigned to $0
+    // Calc creator メソッド内で、
+    //- $1 は数値の 1
+    //- $2 は数値の 5
+    //- $3 テキストまたは文字列の "Nice"
+    //- 戻り値は $0 に代入されます
 $vsResult:=Calc creator(1;5;"Nice")
 
-    //Within Dump:
-    //- The three parameters are text or string
-    //- They can be addressed as $1, $2 or $3
-    //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
-    //- The result value is assigned to $0
+    // Dump メソッド内で、
+    //- 3つの引数はテキストまたは文字列です
+    //- これらの引数は $1, $2, $3 で参照できます
+    //- また、これらの引数を ${$vlParam} で間接的に参照することもできます ($vlParamは1, 2, 3)
+    //- 戻り値は $0 に代入されます
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Commands
+## プラグインコマンド
 
-You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
+プラグインにより定義された名前を使用して、プラグインコマンドを表します。 プラグインコマンド名は 31文字以内で指定します。
 
 例: 
 
@@ -286,139 +286,139 @@ You designate a plug-in command by using its name as defined by the plug-in. A p
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
-## Sets
+## セット
 
-From the scope point of view, there are two types of sets:
+スコープに基づき、2種類のセットがあります:
 
-- Interprocess sets
-- Process sets
+- インタープロセスセット
+- プロセスセット
 
-4D Server also includes:
+4D Server には以下もあります:
 
-- Client sets
+- クライアントセット
 
-### Interprocess Sets
+### インタープロセスセット
 
-A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+インタープロセスセットの名前は、先頭にインタープロセス記号 (<>) が付きます。
 
-An interprocess set name can contain up to 255 characters, not including the <> symbols.
+インタプロセスセット名は、インタープロセス記号 (<>) を除いて255文字以内で指定します。
 
-### Process Sets
+### プロセスセット
 
-You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
+セットの名前を表す文字列を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。 プロセスセット名は、255文字以内で指定します。
 
-### Client Sets
+### クライアントセット
 
-The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
+クライアントセット名は、先頭にドル記号 ($) を指定します。 クライアントセット名は、ドル記号を除いて255文字以内で指定します。
 
-**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
+**注:** セットはサーバーマシン上で保守されます。 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 このような場合にクライアントセットを使用します。
 
 例: 
 
 ```4d
-    //Interprocess sets
+    // インタープロセスセット
 USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Process sets
+    // プロセスセット
 USE SET("Deleted Records")
 CREATE SET([Customers];"Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Client sets
+    // クライアントセット
 USE SET("$Deleted Records")
 CREATE SET([Customers];"$Customer Orders")
 If(Records in set("$Selection"+String($i))>0)
 ```
 
-## Named Selections
+## 命名セレクション
 
-From the scope point of view, there are two types of named selections:
+スコープに基づき、2種類の命名セレクションが存在します:
 
-- Interprocess named selections
-- Process named selections.
+- インタープロセス命名セレクション
+- プロセス命名セレクション
 
-### Interprocess Named Selections
+### インタ－プロセス命名セレクション
 
-A named selection is an interprocess named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+インタープロセス命名セレクションの名前は、先頭にインタープロセス記号 (<>) が付きます。
 
-An interprocess named selection name can contain up to 255 characters, not including the <> symbols.
+インタープロセス命名セレクション名は、インタープロセス記号 (<>) を除いて255文字以内で指定します。
 
-### Process Named Selections
+### プロセス命名セレクション
 
-You denote a process named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $). A named selection name can contain up to 255 characters.
+プロセス命名セレクションの名前を表す文字列式を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。 インタプロセスセット名は255文字以内で指定します。
 
 例: 
 
 ```4d
-    //Interprocess Named Selection
+    // インタープロセス命名セレクション
 USE NAMED SELECTION([Customers];"<>ByZipcode")
-    //Process Named Selection
+    // プロセス命名セレクション
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
-## Processes
+## プロセス
 
-In the single-user version, or in Client/Server on the Client side, there are two types of processes:
+シングルユーザー版およびクライアント/サーバー版のクライアント側において、2種類のプロセスがあります:
 
-- Global processes
-- Local processes.
+- グロ－バルプロセス
+- ロ－カルプロセス
 
-### Global Processes
+### グロ－バルプロセス
 
-You denote a global process by using a string expression that represents its name (which cannot start with the dollar sign $). A process name can contain up to 255 characters.
+$記号以外から始まる文字列を使用してグローバルプロセスの名前を表します。 グローバルプロセス名は、255文字以内で指定します。
 
-### Local Processes
+### ローカルプロセス
 
-You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
+名前の前にドル記号 ($) をつけてローカルプロセスを表します。 ローカルプロセス名は、ドル記号 ($) を除いて255文字以内で指定します。
 
 例: 
 
 ```4d
-    //Starting the global process "Add Customers"
+    // グローバルプロセス "Add Customers" を開始します
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    //Starting the local process "$Follow Mouse Moves"
+    // ローカルプロセス "$Follow Mouse Moves" を開始します
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
-## Summary of Naming Conventions
+## 命名規則のまとめ
 
-The following table summarizes 4D naming conventions.
+次の表は、4Dの命名規則についてまとめています。
 
-| Identifier                   | Max. Length | 例題                         |
-| ---------------------------- | ----------- | -------------------------- |
-| テーブル                         | 31          | [Invoices]                 |
-| フィールド                        | 31          | [Employees]Last Name       |
-| Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
-| Process Variable/Array       | 31          | vsCurrentName              |
-| Local Variable/Array         | $ + 31      | $vlLocalCounter            |
-| Object attribute             | 255         | $o.myAttribute             |
-| Form                         | 31          | "My Custom Web Input"      |
-| Form object                  | 255         | "MyButton"                 |
-| Project method               | 31          | M_ADD_CUSTOMERS          |
-| Plug-in Routine              | 31          | PDF SET ROTATION           |
-| Interprocess Set             | <> + 255    | "<>Records to be Archived" |
-| Process Set                  | 255         | "Current selected records" |
-| Client Set                   | $ + 255     | "$Previous Subjects"       |
-| Named Selection              | 255         | "Employees A to Z"         |
-| Interprocess Named Selection | <> + 255    | "<>Employees Z to A"       |
-| Local Process                | $ + 255     | "$Follow Events"           |
-| Global Process               | 255         | "*P_INVOICES_MODULE*"    |
-| Semaphore                    | 255         | "mysemaphore"              |
+| 識別子              | 最大 長     | 例題                         |
+| ---------------- | -------- | -------------------------- |
+| テーブル             | 31       | [Invoices]                 |
+| フィールド            | 31       | [Employees]Last Name       |
+| インタープロセス変数/配列    | <> + 31  | <>vlNextProcessID          |
+| プロセス変数/配列        | 31       | vsCurrentName              |
+| ローカル変数/配列        | $ + 31   | $vlLocalCounter            |
+| オブジェクト属性         | 255      | $o.myAttribute             |
+| フォーム             | 31       | "My Custom Web Input"      |
+| フォームオブジェクト       | 255      | "MyButton"                 |
+| プロジェクトメソッド       | 31       | M_ADD_CUSTOMERS          |
+| プラグインコマンド        | 31       | PDF SET ROTATION           |
+| インタープロセスセット      | <> + 255 | "<>Records to be Archived" |
+| プロセスセット          | 255      | "Current selected records" |
+| クライアントセット        | $ + 255  | "$Previous Subjects"       |
+| 命名セレクション         | 255      | "Employees A to Z"         |
+| インタ－プロセス命名セレクション | <> + 255 | "<>Employees Z to A"       |
+| ローカルプロセス         | $ + 255  | "$Follow Events"           |
+| グロ－バルプロセス        | 255      | "*P_INVOICES_MODULE*"    |
+| セマフォー            | 255      | "mysemaphore"              |
 
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+**注:** 非ローマ文字 (日本語など) が識別子に使用された場合、その最大長は短かくなることがあります。
 
-## Resolving Naming Conflicts
+## 名前が重複する場合
 
-Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
+データベース内の要素に対して、ぞれぞれ重複しない名前を使用するようにしてください。 特定の要素が別タイプの要素と同じ名前を持つ場合 (たとえばフィールドが Person という名前で、変数も Person という名前の場合)、4Dは優先順位システムを使用します。
 
-4D identifies names used in procedures in the following order:
+4Dは、メソッドで使用される名前を次の順位で識別します:
 
 1. フィールド
 2. コマンド
 3. メソッド
-4. Plug-in routines
-5. Predefined constants
-6. Variables.
+4. プラグインコマンド
+5. 定義済み定数
+6. 変数
 
-For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+たとえば、4Dには `Date` というビルトインコマンドがあります。 メソッドに *Date* という名前を付けても、4Dはビルトインコマンドの `Date` として認識し、メソッドとしては認識しません。 つまり、そのメソッドの呼び出しはできないということです。 しかしながら、フィールドを "Date" と命名した場合には、4Dは `Date` コマンドの代わりにフィールドとしての使用を試みます。

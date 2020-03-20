@@ -29,20 +29,20 @@ Ein Nulldatum wird als *!00-00-00!* angegeben.
 
 ## Datumsoperatoren
 
-| Operation               | Syntax         | Ergibt  | Ausdruck                     | Wert         |
-| ----------------------- | -------------- | ------- | ---------------------------- | ------------ |
-| Datumsdifferenz         | Datum – Datum  | Zahl    | !2017-01-20! - !2017-01-01!  | 19           |
-| Datumsaddition          | Datum + Zahl   | Datum   | !2017-01-20! + 9             | !2017-01-29! |
-| Datumssubtraktion       | Datum - Zahl   | Datum   | !2017-01-20! - 9             | !2017-01-11! |
-| Gleichheit              | Datum = Datum  | Boolean | !2017-01-01! =!2017-01-01!   | Wahr         |
-|                         |                |         | !2017-01-20! = !2017-01-01!  | Falsch       |
-| Ungleichheit            | Datum # Datum  | Boolean | !2017-01-20! # !2017-01-01!  | Wahr         |
-|                         |                |         | !2017-01-20! # !2017-01-20!  | Falsch       |
-| Größer als              | Datum > Datum  | Boolean | !2017-01-20! > !2017-01-01!  | Wahr         |
-|                         |                |         | !2017-01-20! > !2017-01-20!  | Falsch       |
-| Kleiner als             | Datum > Datum  | Boolean | !2017-01-01! < !2017-01-20!  | Wahr         |
-|                         |                |         | !2017-01-20! < !2017-01-20!  | Falsch       |
-| Größer als oder gleich  | Datum >= Datum | Boolean | !2017-01-20! >=!2017-01-01!  | Wahr         |
-|                         |                |         | !2017-01-01!>=!2017-01-20!   | Falsch       |
-| Kleiner als oder gleich | Date \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | Wahr         |
-|                         |                |         | !2017-01-20!\<=!2017-01-01! | Falsch       |
+| Operation               | Syntax          | Ergibt  | Ausdruck                     | Wert         |
+| ----------------------- | --------------- | ------- | ---------------------------- | ------------ |
+| Datumsdifferenz         | Datum – Datum   | Zahl    | !2017-01-20! - !2017-01-01!  | 19           |
+| Datumsaddition          | Datum + Zahl    | Datum   | !2017-01-20! + 9             | !2017-01-29! |
+| Datumssubtraktion       | Datum - Zahl    | Datum   | !2017-01-20! - 9             | !2017-01-11! |
+| Gleichheit              | Datum = Datum   | Boolean | !2017-01-01! =!2017-01-01!   | Wahr         |
+|                         |                 |         | !2017-01-20! = !2017-01-01!  | Falsch       |
+| Ungleichheit            | Datum # Datum   | Boolean | !2017-01-20! # !2017-01-01!  | Wahr         |
+|                         |                 |         | !2017-01-20! # !2017-01-20!  | Falsch       |
+| Größer als              | Datum > Datum   | Boolean | !2017-01-20! > !2017-01-01!  | Wahr         |
+|                         |                 |         | !2017-01-20! > !2017-01-20!  | Falsch       |
+| Kleiner als             | Datum > Datum   | Boolean | !2017-01-01! < !2017-01-20!  | Wahr         |
+|                         |                 |         | !2017-01-20! < !2017-01-20!  | Falsch       |
+| Größer als oder gleich  | Datum >= Datum  | Boolean | !2017-01-20! >=!2017-01-01!  | Wahr         |
+|                         |                 |         | !2017-01-01!>=!2017-01-20!   | Falsch       |
+| Kleiner als oder gleich | Datum \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | Wahr         |
+|                         |                 |         | !2017-01-20!\<=!2017-01-01! | Falsch       |

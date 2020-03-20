@@ -17,7 +17,7 @@ title: 4D プロジェクトのアーキテクチャー
 - Sources 
     + DatabaseMethods
     + Methods
-    + Forms
+    + フォーム
     + TableForms
     + Triggers
 + DerivedData
@@ -100,7 +100,7 @@ title: 4D プロジェクトのアーキテクチャー
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
 - Methods
-- Forms
+- フォーム
 - TableForms
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
@@ -153,7 +153,7 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 - データベース変換
 - Webサーバーリクエスト
-- バックアップ/復元アクションのジャーナル (*Backup Journal\[xxx].txt*、[バックアップジャーナル](Backup/backup.md#backup-journal) 参照)
+- バックアップ/復元アクションのジャーナル (*Backup Journal\[xxx].txt*、[バックアップジャーナル](Backup/backup.md#バックアップジャーナル) 参照)
 - コマンドデバッグ
 - 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
 

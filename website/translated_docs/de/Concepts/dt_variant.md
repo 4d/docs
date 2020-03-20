@@ -12,7 +12,7 @@ A variant type variable can contain a value of the following data types:
 - collection
 - date
 - longint
-- Objekt
+- object
 - picture
 - pointer
 - real
