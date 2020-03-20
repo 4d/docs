@@ -23,8 +23,8 @@ The current selection of rows or columns is modified. In this context, the [even
 | description   | Text    | "On Selection Change"          |
 | objectName    | Text    | 4D View Pro area name          |
 | sheetName     | Text    | Name of the sheet of the event |
-| oldSelections | Objekt  | Cell range before change       |
-| newSelections | Objekt  | Cell range after change        |
+| oldSelections | object  | Cell range before change       |
+| newSelections | object  | Cell range after change        |
 
 
 #### Beispiel
