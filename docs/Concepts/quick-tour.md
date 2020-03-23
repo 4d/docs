@@ -184,6 +184,49 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
+## Classes
+
+A class allows you to define a model of object, including functions and/or properties.
+
+Add a `myClass.md` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
+
+In the `myClass` method, use the `Function` <methodName> keyword to define the *methodName* class member method. A class function can receive and return parameters like any method, and use `This` as the object instance. 
+
+```4d  
+//in the myClass.md file
+Function hello
+  C_TEXT($0;$1)
+  $0:="Hello "+$1
+```
+
+Optionally, use the `Class constructor` keyword to declare the properties of the object.
+
+```4d  
+//in the myClass.md file
+Class constructor
+C_LONGINT($1;$2)
+This.area:=$1*$2
+```
+
+To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+
+```4d
+$o:=cs.myClass.new(10;2)  
+//$o: {"area":20}
+```
+
+To call a class member function, just use the `()` operator on the object. 
+
+```4d
+$message:=$o.myClass.hello("World")  
+//$message: "Hello World"
+```
+
+A class can inherit from another class and superclasses can be called using the `Super` command. 
+
+
+
+
 
 ## Operators
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
