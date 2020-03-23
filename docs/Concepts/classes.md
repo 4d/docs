@@ -80,7 +80,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 ### Class contents
 
 Basically, a user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method.
-You will usually use specific [class keywords(#class-keywords)] in the class file.
+You will usually use specific [class keywords](#class-keywords) in the class file.
 
 Note however that, if you create an empty class file, you will instantiate empty objects of the defined class in the database code. For example, if you create the following `Empty.md` class file: 
 
@@ -102,42 +102,11 @@ $cName:=OB Class($o).name //"Empty"
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function \<ClassName>` to define member methods of the objects. 
+- `Function <ClassName>` to define member methods of the objects. 
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
-- `Class extends \<ClassName>` to define inheritance.
+- `Class extends <ClassName>` to define inheritance.
 - You can also use the `Super` command to call methods from the parent class.
 
-### Class constructor
-
-#### Syntax
-
-```
-// Class: MyClass
-Class Constructor
-// code
-```
-
-A class constructor function, which can accept parameters, can be used to define a user class. 
-
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
-
-#### Example:
-
-```
-// Class: MyClass
-// Class constructor of MyClass
-Class Constructor
-C_TEXT($1)
-This.name:=$1
-```
-
-```
-// In a project method
-// You can instantiate an object
-C_OBJECT($o)
-$o:=cs.MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
-```
 
 ### Class Function
 
@@ -161,7 +130,7 @@ In the database code, class functions are called as member methods of the object
 
 In the 4D debugger, the description of a Function can be:
 - \<\<User Function: {className}.{functionName}>> for a user class function
-- \<\<Native Function: {className}.{functionName}>> for a 4d builtin class function
+- \<\<Native Function: {className}.{functionName}>> for a 4d built-in class function
 - \<\<Formula: {formula}>> for a 4d formula
 
 
@@ -193,6 +162,39 @@ C_OBJECT($o)
 C_REAL($area)
 $o:=cs.Rectangle.new()  
 $area:=$o.getArea(50;100) //5000
+```
+
+
+### Class constructor
+
+#### Syntax
+
+```
+// Class: MyClass
+Class Constructor
+// code
+```
+
+A class constructor function, which can accept parameters, can be used to define a user class. 
+
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
+
+#### Example:
+
+```
+// Class: MyClass
+// Class constructor of MyClass
+Class Constructor
+C_TEXT($1)
+This.name:=$1
+```
+
+```
+// In a project method
+// You can instantiate an object
+C_OBJECT($o)
+$o:=cs.MyClass.new("HelloWorld")  
+// $o = {"name":"HelloWorld"}
 ```
 
 
@@ -245,7 +247,42 @@ C_LONGINT($0)
 $0:=This.height*This.width
 ```
 
+## Class commands
+
+Several commands of the 4D language allows you to handle class features.
+
+### Super
+
+#### Syntax
+
+```
+Super {( param )} {-> Object} 
+```
 
 
+The `Super` command allows calls to the `superclass`, i.e. the parent.
+
+- in a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass.
+- in a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 
+### OB Class
+
+#### Syntax
+
+```
+OB Class ( object ) -> Object | Null
+```
+
+`OB Class` returns the class of the object passed in parameter. 
+
+
+### OB Instance of
+
+#### Syntax
+
+```
+OB Instance of ( object ; class ) -> Boolean
+```
+
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
