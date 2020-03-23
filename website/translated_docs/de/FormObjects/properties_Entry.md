@@ -174,7 +174,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Name            | Datentyp | Possible Values                                                             |
         | --------------- | -------- | --------------------------------------------------------------------------- |
-        | keyboardDialect | text     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+        | keyboardDialect | Text     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
         
         #### Objects Supported
@@ -205,7 +205,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Name      | Datentyp | Possible Values                                   |
         | --------- | -------- | ------------------------------------------------- |
-        | multiline | text     | "yes", "no", "automatic" (default if not defined) |
+        | multiline | Text     | "yes", "no", "automatic" (default if not defined) |
 
         
         #### Objects Supported

@@ -97,7 +97,7 @@ Available values:
 
 | Name                | Datentyp | Possible Values                  |
 | ------------------- | -------- | -------------------------------- |
-| scrollbarHorizontal | text     | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | Text     | "visible", "hidden", "automatic" |
 
 
 #### Objects Supported
@@ -370,7 +370,7 @@ Available values:
 
 | Name              | Datentyp | Possible Values                  |
 | ----------------- | -------- | -------------------------------- |
-| scrollbarVertical | text     | "visible", "hidden", "automatic" |
+| scrollbarVertical | Text     | "visible", "hidden", "automatic" |
 
 
 #### Objects Supported

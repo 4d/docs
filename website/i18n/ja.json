@@ -81,7 +81,7 @@
         "title": "制御フロー"
       },
       "Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "識別子の命名規則"
       },
       "Concepts/interpreted-compiled": {
         "title": "インタープリターモードとコンパイル済みモード"
@@ -93,7 +93,7 @@
         "title": "引数"
       },
       "Concepts/plug-ins": {
-        "title": "Plug-ins"
+        "title": "プラグイン"
       },
       "Concepts/quick-tour": {
         "title": "概要",
@@ -289,7 +289,7 @@
         "title": "Style sheets"
       },
       "FormEditor/objectLibrary": {
-        "title": "Object libraries"
+        "title": "オブジェクトライブラリ"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -385,7 +385,7 @@
         "title": "ピクチャー"
       },
       "FormObjects/propertiesPlugIns": {
-        "title": "Plug-ins"
+        "title": "プラグイン"
       },
       "FormObjects/propertiesPrint": {
         "title": "Print"
@@ -888,7 +888,7 @@
         "title": "制御フロー"
       },
       "version-18.0-Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "識別子の命名規則"
       },
       "version-18.0-Concepts/interpreted-compiled": {
         "title": "インタープリターモードとコンパイル済みモード"
@@ -900,7 +900,7 @@
         "title": "引数"
       },
       "version-18.0-Concepts/plug-ins": {
-        "title": "Plug-ins"
+        "title": "プラグイン"
       },
       "version-18.0-Concepts/quick-tour": {
         "title": "概要",
@@ -916,7 +916,7 @@
         "title": "Style sheets"
       },
       "version-18.0-FormEditor/objectLibrary": {
-        "title": "Object libraries"
+        "title": "オブジェクトライブラリ"
       },
       "version-18.0-FormObjects/buttonOverview": {
         "title": "Button"
@@ -1012,7 +1012,7 @@
         "title": "ピクチャー"
       },
       "version-18.0-FormObjects/propertiesPlugIns": {
-        "title": "Plug-ins"
+        "title": "プラグイン"
       },
       "version-18.0-FormObjects/propertiesPrint": {
         "title": "Print"

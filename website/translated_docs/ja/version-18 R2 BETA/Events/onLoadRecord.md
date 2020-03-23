@@ -6,7 +6,7 @@ original_id: onLoadRecord
 
 | Code | Can be called by | Definition                                                          |
 | ---- | ---------------- | ------------------------------------------------------------------- |
-| 40   | Form             | During user entry in list, a record is loaded and a field is edited |
+| 40   | フォーム             | During user entry in list, a record is loaded and a field is edited |
 
 
 ## 説明

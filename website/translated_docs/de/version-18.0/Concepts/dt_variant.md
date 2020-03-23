@@ -17,7 +17,7 @@ A variant type variable can contain a value of the following data types:
 - picture
 - pointer
 - real
-- text
+- Text
 - time
 - Null
 - Undefiniert

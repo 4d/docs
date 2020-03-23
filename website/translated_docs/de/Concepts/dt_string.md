@@ -37,25 +37,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Ergibt  | Ausdruck                | Wert     |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | Wahr     |
-|                          |                  |         | "abc" = "abd"           | Falsch   |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | Wahr     |
-|                          |                  |         | "abc" # "abc"           | Falsch   |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | Wahr     |
-|                          |                  |         | "abc" > "abc"           | Falsch   |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | Wahr     |
-|                          |                  |         | "abc" < "abc"           | Falsch   |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | Wahr     |
-|                          |                  |         | "abc" >= "abd"          | Falsch   |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
-|                          |                  |         | "abd" <= "abc"          | Falsch   |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+| Operation               | Syntax           | Ergibt  | Ausdruck                | Wert     |
+| ----------------------- | ---------------- | ------- | ----------------------- | -------- |
+| Concatenation           | String + String  | String  | "abc" + "def"           | "abcdef" |
+| Repetition              | String * Number  | String  | "ab" * 3                | "ababab" |
+| Gleichheit              | String = String  | Boolean | "abc" = "abc"           | Wahr     |
+|                         |                  |         | "abc" = "abd"           | Falsch   |
+| Ungleichheit            | String # String  | Boolean | "abc" # "abd"           | Wahr     |
+|                         |                  |         | "abc" # "abc"           | Falsch   |
+| Größer als              | String > String  | Boolean | "abd" > "abc"           | Wahr     |
+|                         |                  |         | "abc" > "abc"           | Falsch   |
+| Kleiner als             | String < String  | Boolean | "abc" < "abd"           | Wahr     |
+|                         |                  |         | "abc" < "abc"           | Falsch   |
+| Größer als oder gleich  | String >= String | Boolean | "abd" >= "abc"          | Wahr     |
+|                         |                  |         | "abc" >= "abd"          | Falsch   |
+| Kleiner als oder gleich | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
+|                         |                  |         | "abd" <= "abc"          | Falsch   |
+| Contains keyword        | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
+|                         |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
+|                         | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
 
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).

@@ -29,10 +29,10 @@ The object returned by the `FORM Event` command contains:
 | Property    | Typ     | Description                                                                                         |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | Text    | "On After Edit"                                                                                     |
+| objectName  | Text    | 4D View Pro area name                                                                               |
+| sheetName   | Text    | Name of the sheet of the event                                                                      |
+| action      | Text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
@@ -86,7 +86,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         | Property | Typ    | Description         |
                                         | -------- | ------ | ------------------- |
                                         | range    | object | Cell range          |
-                                        | formula  | text   | The formula entered |
+                                        | formula  | Text   | The formula entered |
 
                                         
                                         #### action = clipboardPasted

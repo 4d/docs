@@ -68,10 +68,10 @@ The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. 
 In the following examples, all of the pictures are shown using the display format **On Background**.
 
 Here is the picture circle:
-![](assets/en/Concepts/Concepts/Circle.en.png)
+![](assets/en/Concepts/Circle.en.png)
 
 Here is the picture rectangle:
-![](assets/en/Concepts/Concepts/rectangle.en.png)
+![](assets/en/Concepts/rectangle.en.png)
 
 In the following examples, each expression is followed by its graphical representation.
 

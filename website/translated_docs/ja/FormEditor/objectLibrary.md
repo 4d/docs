@@ -1,27 +1,27 @@
 ---
 id: objectLibrary
-title: Object libraries
+title: オブジェクトライブラリ
 ---
 
 ## 概要
 
-You can use object librairies in your forms. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
+フォームの作成にあたっては、オブジェクトライブラリを利用することができます。 オブジェクトライブラリは、ドラッグ＆ドロップやコピー/ペーストするだけでフォームに追加することができる、あらかじめ設定された各種オブジェクトを提供しています。
 
-4D proposes two kinds of object libraries:
+4D では 2種類のオブジェクトライブラリを利用できます:
 
-- a standard, preconfigured object library, available in all your projects. 
-- custom object librairies, that you can use to store your favorite form objects or full project forms.
+- 標準のオブジェクトライブラリはすべてのプロジェクトに利用できます 
+- カスタムオブジェクトライブラリは、開発者自身がお気に入りのフォームオブジェクトや、あるいはプロジェクトフォームそのものをとっておくためのものです
 
-## Using the standard object library
+## 標準のオブジェクトライブラリ
 
-The standard object library is available from the Form editor: click on the last button of the toolbar:  
+標準のオブジェクトライブラリはフォームエディターからアクセスすることができます: ツールバーの右にある次のボタンをクリックします:  
 ![](assets/en/FormEditor/library1.png)
 
-The library is displayed in a separate window:
+すると、ライブラリが別ウィンドウに開きます:
 
 ![](assets/en/FormEditor/library2.png)
 
-The window has the following main features:
+このウィンドウには次の主な機能があります:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)

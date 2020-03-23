@@ -251,7 +251,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | Name | Datentyp | Possible Values |
                     | ---- | -------- | --------------- |
-                    | text | string   | any text        |
+                    | Text | string   | any text        |
 
                     
                     #### Objects Supported

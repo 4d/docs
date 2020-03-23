@@ -36,7 +36,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | Property   | Datentyp | Possible Values  |
 | ---------- | -------- | ---------------- |
-| fontWeight | text     | "normal", "bold" |
+| fontWeight | Text     | "normal", "bold" |
 
 
 #### Objects Supported

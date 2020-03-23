@@ -9,15 +9,15 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Typ    | Description                                                                                    |
-| -------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| cacheSize      | Number | Wakanda Server's cache size.                                                                   |
-| usedCache      | Number | How much of Wakanda Server's cache has been used.                                              |
-| entitySetCount | Number | Number of entity sets.                                                                         |
-| entitySet      | Array  | An array in which each object contains information about each entity set.                      |
-| ProgressInfo   | Array  | An array containing information about progress indicator information.                          |
-| sessionInfo    | Array  | An array in which each object contains information about each user session.                    |
-| jsContextInfo  | Array  | An array containing one object that returns the information about the JavaScript context pool. |
+| Property       | Typ   | Description                                                                                    |
+| -------------- | ----- | ---------------------------------------------------------------------------------------------- |
+| cacheSize      | Zahl  | Wakanda Server's cache size.                                                                   |
+| usedCache      | Zahl  | How much of Wakanda Server's cache has been used.                                              |
+| entitySetCount | Zahl  | Number of entity sets.                                                                         |
+| entitySet      | Array | An array in which each object contains information about each entity set.                      |
+| ProgressInfo   | Array | An array containing information about progress indicator information.                          |
+| sessionInfo    | Array | An array in which each object contains information about each user session.                    |
+| jsContextInfo  | Array | An array containing one object that returns the information about the JavaScript context pool. |
 
 
 ### entitySet
@@ -28,7 +28,7 @@ For each entity set currently stored in 4D Server's cache, the following informa
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String  | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | tableName     | String  | Name of the datastore class.                                                                                                                                                                                                                                        |
-| selectionSize | Number  | Number of entities in the entity set.                                                                                                                                                                                                                               |
+| selectionSize | Zahl    | Number of entities in the entity set.                                                                                                                                                                                                                               |
 | sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
 | refreshed     | Datum   | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
 | expires       | Datum   | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
@@ -49,7 +49,7 @@ For each user session, the following information is returned in the *sessionInfo
 | sessionID  | String | A UUID that references the session.                          |
 | userID     | String | A UUID that references the user who runs the session.        |
 | userName   | String | The name of the user who runs the session.                   |
-| lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
+| lifeTime   | Zahl   | The lifetime of a user session in seconds (3600 by default). |
 | expiration | Datum  | The current expiration date and time of the user session.    |
 
 
@@ -59,14 +59,14 @@ The object in the **jsContextInfo** array details the JavaScript context pool:
 
 | Property              | Typ     | Description                                                                           |
 | --------------------- | ------- | ------------------------------------------------------------------------------------- |
-| contextPoolSize       | Number  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
+| contextPoolSize       | Zahl    | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
 | activeDebugger        | Boolean | Debugger state (false by default)                                                     |
-| usedContextCount      | Number  | Number of used contexts                                                               |
-| usedContextMaxCount   | Number  | Maximum number of contexts that have been used simultaneously                         |
-| reusableContextCount  | Number  | Number of reusable contexts (both used and unused)                                    |
-| unusedContextCount    | Number  | Number of unused contexts                                                             |
-| createdContextCount   | Number  | Number of contexts created since the project was started                              |
-| destroyedContextCount | Number  | Number of contexts destroyed since the project was started                            |
+| usedContextCount      | Zahl    | Number of used contexts                                                               |
+| usedContextMaxCount   | Zahl    | Maximum number of contexts that have been used simultaneously                         |
+| reusableContextCount  | Zahl    | Number of reusable contexts (both used and unused)                                    |
+| unusedContextCount    | Zahl    | Number of unused contexts                                                             |
+| createdContextCount   | Zahl    | Number of contexts created since the project was started                              |
+| destroyedContextCount | Zahl    | Number of contexts destroyed since the project was started                            |
 
 
 ## Beispiel

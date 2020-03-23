@@ -207,8 +207,8 @@ Here are the properties for each exposed attribute that are returned:
 | scope         | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
 | indexed       | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
 | type          | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| minLength     | Number  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
-| maxLength     | Number  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
+| minLength     | Zahl    | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
+| maxLength     | Zahl    | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
 | autoComplete  | Boolean | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
 | identifying   | Boolean | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
 | multiLine     | Boolean | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |

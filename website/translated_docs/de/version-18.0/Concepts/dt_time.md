@@ -30,29 +30,29 @@ A null time is specified by ?00:00:00?
 
 ## Time operators
 
-| Operation                | Syntax         | Ergibt  | Ausdruck                | Wert       |
-| ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Zeit    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Zeit    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Zeit    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | Wahr       |
-|                          |                |         | ?01:02:03? = ?01:02:04? | Falsch     |
-| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | Wahr       |
-|                          |                |         | ?01:02:03? # ?01:02:03? | Falsch     |
-| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
-|                          |                |         | ?01:02:03? > ?01:02:03? | Falsch     |
-| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
-|                          |                |         | ?01:02:03? < ?01:02:03? | Falsch     |
-| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
-|                          |                |         | ?01:02:03? >=?01:02:04? | Falsch     |
-| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
-|                          |                |         | ?01:02:04? <=?01:02:03? | Falsch     |
+| Operation               | Syntax         | Ergibt  | Ausdruck                | Wert       |
+| ----------------------- | -------------- | ------- | ----------------------- | ---------- |
+| Addition                | Time + Time    | Zeit    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Subtraktion             | Time – Time    | Zeit    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition                | Time + Number  | Zahl    | ?02:03:04? + 65         | 7449       |
+| Subtraktion             | Time – Number  | Zahl    | ?02:03:04? – 65         | 7319       |
+| Multiplikation          | Time * Number  | Zahl    | ?02:03:04? * 2          | 14768      |
+| Division                | Time / Number  | Zahl    | ?02:03:04? / 2          | 3692       |
+| Ganzzahlige Division    | Time \ Number | Zahl    | ?02:03:04? \ 2         | 3692       |
+| Modulo                  | Time % Time    | Zeit    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                  | Time % Number  | Zahl    | ?02:03:04? % 2          | 0          |
+| Gleichheit              | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | Wahr       |
+|                         |                |         | ?01:02:03? = ?01:02:04? | Falsch     |
+| Ungleichheit            | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | Wahr       |
+|                         |                |         | ?01:02:03? # ?01:02:03? | Falsch     |
+| Größer als              | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
+|                         |                |         | ?01:02:03? > ?01:02:03? | Falsch     |
+| Kleiner als             | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
+|                         |                |         | ?01:02:03? < ?01:02:03? | Falsch     |
+| Größer als oder gleich  | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
+|                         |                |         | ?01:02:03? >=?01:02:04? | Falsch     |
+| Kleiner als oder gleich | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
+|                         |                |         | ?01:02:04? <=?01:02:03? | Falsch     |
 
 
 ### Example 1

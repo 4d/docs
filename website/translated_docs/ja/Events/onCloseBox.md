@@ -5,7 +5,7 @@ title: On Close Box
 
 | Code | Can be called by | Definition                              |
 | ---- | ---------------- | --------------------------------------- |
-| 22   | Form             | The window’s close box has been clicked |
+| 22   | フォーム             | The window’s close box has been clicked |
 
 
 ## 説明

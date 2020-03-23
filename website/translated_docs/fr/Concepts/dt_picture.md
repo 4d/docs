@@ -65,9 +65,9 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 Toutes les images qui sont affichées utilisent le format d'affichage **Image sur fond**.
 
-Voici l'image cercle : ![](assets/en/Concepts/Concepts/Circle.en.png)
+Voici l'image cercle : ![](assets/en/Concepts/Circle.en.png)
 
-Voici l'image rectangle : ![](assets/en/Concepts/Concepts/rectangle.en.png)
+Voici l'image rectangle : ![](assets/en/Concepts/rectangle.en.png)
 
 Dans les exemples ci-dessous, chaque expression est suivie de sa représentation graphique.
 

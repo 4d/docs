@@ -16,8 +16,8 @@ In the steps collection, there is an object with the following properties defini
 | Property      | Typ        | Description                                                                 |
 | ------------- | ---------- | --------------------------------------------------------------------------- |
 | description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
+| time          | Zahl       | Number of milliseconds needed to execute the query                          |
+| recordsfounds | Zahl       | Number of records found                                                     |
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
 
