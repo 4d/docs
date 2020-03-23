@@ -29,7 +29,7 @@ APPEND TO ARRAY(headerNames;"session-4D-length")
 APPEND TO ARRAY(headerNames;"hashed-password-4D")
 
 APPEND TO ARRAY(headerValues;"kind user")
-APPEND TO ARRAY(headerValues;"40")
+APPEND TO ARRAY(headerValues;"60")
 APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
 
 C_OBJECT($response)
