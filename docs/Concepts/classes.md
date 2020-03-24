@@ -14,7 +14,7 @@ The class model in 4D is similar to classes in JavaScript, and based on a chain 
 
 ### Class object
 
-A class is an object itself, of class "Class". A class object has the following properties and methods:
+A class is an object itself, of "Class" class. A class object has the following properties and methods:
 
 - `name` which must be ECMAScript compliant
 - `superclass` object (optional, null if none)
@@ -84,7 +84,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 ### Class contents
 
 A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method.
-You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
+You will usually use specific [class keywords](#class-keywords), [class commands](#class-commands), as well as the `This` keyword in the class file.
 
 For example:
 
@@ -99,9 +99,11 @@ Class constructor
 
 In a method, creating a "Person":
 
+```
 C_OBJECT($o)
 $o:=cs.Person.new("John";"Doe")  
 // $o: {firstName: "John";lastName: "Doe" }
+```
 
 Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file: 
 
@@ -126,7 +128,6 @@ Specific 4D keywords can be used in class definitions:
 - `Function <ClassName>` to define member methods of the objects. 
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
-- You can also use the `Super` command to call methods from the parent class.
 
 
 ### Class Function

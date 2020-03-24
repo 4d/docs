@@ -16,6 +16,7 @@ The Project folder typically contains the following hierarchy:
 
 - *databaseName*.4DProject file
 - Sources
+	+ Classes
 	+ DatabaseMethods
 	+ Methods
 	+ Forms
@@ -62,6 +63,13 @@ Contents|Description|Format
 Contents|Description|Format
 --------|-------|----
 *methodName*.4dm|Project methods defined in the database. One file per method|text
+
+#### Classes folder
+
+Contents|Description|Format
+--------|-------|----
+*className*.4dm|User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name|text
+
 
 #### Forms folder
 

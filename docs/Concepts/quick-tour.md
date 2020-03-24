@@ -186,7 +186,7 @@ myColl[3]  //access to 4th element of the collection
 
 ## Classes
 
-A class allows you to define an object behavior, including functions and/or properties.
+You can create object classes to associate functions to object instances.
 
 Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
 
@@ -197,7 +197,7 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function` <methodName> keyword to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance. 
+In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance. 
 
 ```4d  
 //in the myClass.4dm file
@@ -215,7 +215,7 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare the properties of the object.
+Optionally, use the `Class constructor` keyword to declare properties of the object.
 
 ```4d  
 //in the Rectangle.4dm file
