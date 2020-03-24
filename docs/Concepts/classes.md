@@ -8,7 +8,7 @@ title: Classes
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions. 
 
-Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can `extend` another class, and then inherits from its properties and functions.
+Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can `extend` another class, and then inherits from its functions.
 
 The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
@@ -114,6 +114,7 @@ Note that you could create an empty class file, and instantiate empty objects. F
 
 You could write in a method:
 
+
 ```4d
 $o:=cs.Empty.new()  
 //$o : {}
@@ -191,6 +192,7 @@ Function getArea
 // In a project method
 C_OBJECT($o)  
 C_REAL($area)
+
 $o:=cs.Rectangle.new()  
 $area:=$o.getArea(50;100) //5000
 ```

@@ -186,9 +186,7 @@ myColl[3]  //access to 4th element of the collection
 
 ## Classes
 
-You can create object classes to associate functions to object instances.
-
-Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
+The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
 
 To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
 
