@@ -135,8 +135,8 @@ Specific 4D keywords can be used in class definitions:
 
 #### Syntax
 
-```
-Function \<name>
+```js
+Function <name>
 // code
 ```
 
@@ -156,7 +156,7 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
   
-For a class function, the `Current method name` command returns: "<ClassName>.<FunctionName>", for example "MyClass.myMethod".
+For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
 In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
 
@@ -173,7 +173,7 @@ In the database code, class functions are called as member methods of the object
 
 #### Example
 
-```
+```4d
 // Class: Rectangle
 Class Constructor
 	C_LONGINT($1;$2)
@@ -188,7 +188,7 @@ Function getArea
 
 ```
 
-```
+```4d
 // In a project method
 C_OBJECT($o)  
 C_REAL($area)
@@ -202,7 +202,7 @@ $area:=$o.getArea(50;100) //5000
 
 #### Syntax
 
-```
+```js
 // Class: MyClass
 Class Constructor
 // code
@@ -212,12 +212,12 @@ A class constructor function, which can accept parameters, can be used to define
 
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns: "<ClassName>.constructor", for example "MyClass.constructor".
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
 
 #### Example:
 
-```
+```4d
 // Class: MyClass
 // Class constructor of MyClass
 Class Constructor
@@ -225,7 +225,7 @@ C_TEXT($1)
 This.name:=$1
 ```
 
-```
+```4d
 // In a project method
 // You can instantiate an object
 C_OBJECT($o)
@@ -240,9 +240,9 @@ $o:=cs.MyClass.new("HelloWorld")
 
 #### Syntax
 
-```
+```js
 // Class: ChildClass
-Class extends ParentClass
+Class extends <ParentClass>
 ```
 
 The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
@@ -289,12 +289,7 @@ Several commands of the 4D language allows you to handle class features.
 
 ### Super
 
-#### Syntax
-
-```
-Super {( param )} {-> Object} 
-```
-
+#### Super {( param )} {-> Object} 
 
 The `Super` command allows calls to the `superclass`, i.e. the parent class.
 
@@ -305,21 +300,13 @@ The `Super` command allows calls to the `superclass`, i.e. the parent class.
 
 ### OB Class
 
-#### Syntax
-
-```
-OB Class ( object ) -> Object | Null
-```
+#### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter. 
 
 
 ### OB Instance of
 
-#### Syntax
-
-```
-OB Instance of ( object ; class ) -> Boolean
-```
+#### OB Instance of ( object ; class ) -> Boolean
 
 `OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.

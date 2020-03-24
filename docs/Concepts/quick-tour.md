@@ -204,7 +204,7 @@ Function hello
   $0:="Hello "+This.who
 ```
 
-To call a class member function, just use the `()` operator on the object instance. 
+To execute a class member method, just use the `()` operator on the member method of the object instance. 
 
 ```4d
 $o:=cs.myClass.new()
