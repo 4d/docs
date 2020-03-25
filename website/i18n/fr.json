@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "Structures répétitives (ou \"boucles\")"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "Composants"
       },
@@ -519,6 +522,9 @@
       },
       "Project/developing": {
         "title": "Développer un projet"
+      },
+      "Project/documentation": {
+        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "Aperçu"
