@@ -314,7 +314,8 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
  Super.doSomething(42) //calls "doSomething" function  
 	//declared in superclasses
 ```
-#### Examples
+
+#### Example 1
 
 This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
 
@@ -352,6 +353,7 @@ This example illustrates the use of `Super` in a class constructor. The command 
  This.name:="Square"
 ```
 
+#### Example 2
 
 This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
 
@@ -384,20 +386,68 @@ Then you can write in a project method:
  $message:=$square.description() //I have 4 sides which are all equal
 ```
 
+### This
+
+#### This -> Object
+
+|Parameter|Type||Description|  
+|---|---|---|---|	
+|Result|object|<-|Current object|
+
+The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+
+In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. 
+
+When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+
+```4d
+$o:=New object("prop";42;"f";Formula(This.prop))
+$val:=$o.f() //42
+```
+
+When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+
+```4d
+  //Class: ob
+  
+Class Constructor  
+	// Create properties on This as
+	// desired by assigning to them
+	This.a:=42 
+```
+
+```4d
+	// in a 4D method  
+$o:=cs.ob.new()
+$val:=$o.a //42
+```
+
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+
+
+In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+
+```4d
+  //Class: ob
+  
+ Function f
+ 	$0:=This.a+This.b
+```
+
+Then you can write in a project method:
+
+```4d
+$o:=cs.ob.new()
+$o.a:=5
+$o.b:=3
+$val:=$o.f() //8
+```
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o. 
+
 
 ## Class commands
 
 Several commands of the 4D language allows you to handle class features.
-
-### Super
-
-#### Super {( param )} {-> Object} 
-
-The `Super` command allows calls to the `superclass`, i.e. the parent class.
-
-- in a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass.
-- in a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
-
 
 
 ### OB Class
