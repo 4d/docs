@@ -9,7 +9,7 @@ title: オブジェクトライブラリ
 
 4D では 2種類のオブジェクトライブラリを利用できます:
 
-- 標準のオブジェクトライブラリはすべてのプロジェクトに利用できます 
+- 標準の設定済みオブジェクトライブラリはすべてのプロジェクトに利用できます 
 - カスタムオブジェクトライブラリは、開発者自身がお気に入りのフォームオブジェクトや、あるいはプロジェクトフォームそのものをとっておくためのものです
 
 ## 標準のオブジェクトライブラリ
@@ -23,35 +23,35 @@ title: オブジェクトライブラリ
 
 このウィンドウには次の主な機能があります:
 
-- Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either: 
-    - right-click on an object and select **Copy** in the contextual menu
-    - or drag and drop the object from the library The object is then added to the form. 
+- Tips 付きプレビューエリア: 中央のエリアには各オブジェクトのプレビューが表示されます。 オブジェクトにマウスオーバーすると、オブジェクトに関する情報が Tips として表示されます。
+- 表示オブジェクトは **カテゴリ** メニューを使って絞り込むことができます: ![](assets/en/FormEditor/library3.png)
+- ライブラリのオブジェクトをフォーム上で使うには: 
+    - オブジェクト上で右クリックし、コンテキストメニューから **コピー** を選択してフォーム上で同様に **ペースト** するか、
+    - ライブラリからオブジェクトをフォーム上にドラッグ＆ドロップします。 すると、フォームに当該オブジェクトが追加されます。 
 
-This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
+設定済みオブジェクトライブラリは変更できません。 デフォルトオブジェクトを編集したり、設定済みオブジェクトやフォームのライブラリを独自に作るには、カスタムオブジェクトライブラリを作成します (後述参照)。
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+標準のオブジェクトライブラリにて提供されているオブジェクトについては [doc.4d.com](https://doc.4d.com/4Dv18/4D/18/Library-objects.200-4575412.ja.html) で詳しく説明されています。
 
-## Creating and using custom object libraries
+## カスタムオブジェクトライブラリの作成と使用
 
-You can create and use custom object libraries in 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects.
+4Dでカスタムオブジェクトライブラリを作成し、使用することができます。 カスタムオブジェクトライブラリとは、任意のオブジェクト (ボタン、テキスト、ピクチャー等) を格納する 4D プロジェクトです。これらのオブジェクトは別のフォームやプロジェクトにて再利用することができます。
 
-Objects are stored with all their properties, including their object methods. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
+オブジェクトはプロパティおよびオブジェクトメソッドとともに格納されます。 ライブラリはドラッグ＆ドロップや、コピー/ペースト操作で利用できます。
 
-Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
+ライブラリを使用すると、グラフィックファミリーや振る舞いごとにグループ化したフォームオブジェクトを作成できます。
 
-### Creating an object library
+### オブジェクトライブラリの作成
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+オブジェクトライブラリを作成するには、**ファイル** メニューまたはツールバーから **新規>オブジェクトライブラリー...** を選択します。 標準のファイル保存用のダイアログボックスが表示され、オブジェクトライブラリの名前と保存先を指定できます。
 
-Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
+ダイアログボックスを受け入れると、4D はディスク上に新しいオブジェクトライブラリを作成し、ウィンドウに表示します (デフォルトで空です)。
 
 ![](assets/en/FormEditor/library4.png)
 
-You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
+ライブラリは必要なだけ作成できます。 macOS上で作成されたライブラリーを Windowsで使用すること、あるいはその逆も可能です。
 
-### Opening an object library
+### オブジェクトライブラリーを開く
 
 A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database.
 
