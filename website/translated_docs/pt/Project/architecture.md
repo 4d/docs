@@ -3,9 +3,23 @@ id: architecture
 title: Architecture of a 4D project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent database folder. For example:
+A 4D project is made of several folders and files, stored within a single parent database folder (package folder). For example:
 
-![](assets/en/Project/project1.png)
+- MyProject 
+    - Components
+    - Data 
+        - Logs
+        - Settings
+    - Documentation
+    - Plugins
+    - Project 
+        - DerivedData
+        - Sources
+        - Trash
+    - Resources
+    - Settings
+    - userPreference.username
+    - WebFolder
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
@@ -15,6 +29,7 @@ The Project folder typically contains the following hierarchy:
 
 - *databaseName*.4DProject file
 - Sources 
+    + Classes
     + DatabaseMethods
     + Methods
     + Forms
@@ -60,6 +75,13 @@ Project development file, used to designate and launch the project. This file ca
 | Contents         | Description                                                  | Format |
 | ---------------- | ------------------------------------------------------------ | ------ |
 | *methodName*.4dm | Project methods defined in the database. One file per method | text   |
+
+
+#### Classes folder
+
+| Contents        | Description                                                                                                                        | Format |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text   |
 
 
 #### Forms folder
@@ -196,3 +218,13 @@ This folder contains the components to be available in the project database only
 ## Plugins folder
 
 This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+
+## Documentation folder
+
+This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+
+For more information, refer to [Documenting a project](Project/documentation.md).
+
+## WebFolder
+
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
