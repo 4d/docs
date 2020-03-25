@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "Schleifenstrukturen"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "Components"
       },
@@ -519,6 +522,9 @@
       },
       "Project/developing": {
         "title": "Developing a project"
+      },
+      "Project/documentation": {
+        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "Overview"
