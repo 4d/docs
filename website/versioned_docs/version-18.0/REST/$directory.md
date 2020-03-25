@@ -1,6 +1,7 @@
 ---
-id: directory
+id: version-18.0-directory
 title: $directory
+original_id: directory
 ---
 
 The directory handles user access through REST requests. 

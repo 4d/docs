@@ -1,6 +1,7 @@
 ---
-id: authUsers
+id: version-18.0-authUsers
 title: Users and sessions
+original_id: authUsers
 ---
 
 
