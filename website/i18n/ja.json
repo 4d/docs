@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "ループ構造"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "コンポーネント"
       },
@@ -519,6 +522,9 @@
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
+      },
+      "Project/documentation": {
+        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "概要"
