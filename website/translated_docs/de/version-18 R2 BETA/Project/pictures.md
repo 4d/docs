@@ -87,9 +87,9 @@ This resolution behavior is supported by all [4D form objects](../FormObjects/fo
 
 ## Mouse Coordinates in a Picture
 
-4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software.
+Mit 4D können Sie auch die lokalen Koordinaten der Maus bei Klicken oder Ziehen in einem Datenfeld oder einer Variablen vom Typ Bild herausfinden, selbst wenn Scrollen oder Zoomen auf das Bild angewendet wird. Dieser Vorgang ist ähnlich wie bei einem Bildmapping und lässt sich für scrollbare Schaltflächenleisten oder die Oberfläche bei kartografischer Software verwenden.
 
-The coordinates are returned in the MouseX and MouseY System Variables. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in MouseX and MouseY.
+The coordinates are returned in the MouseX and MouseY System Variables. Sie werden in Pixel angegeben, ausgehend von der oberen linken Ecke des Bildes (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in MouseX and MouseY.
 
 You can get the value of these variables as part of the On Clicked, On Double Clicked, On Mouse up, On Mouse Enter, or On Mouse Move form events.
 
