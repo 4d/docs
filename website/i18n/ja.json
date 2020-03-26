@@ -289,7 +289,7 @@
         "title": "概要"
       },
       "FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -816,7 +816,7 @@
         "sidebar_label": "Activity analysis Page"
       },
       "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
-        "title": "Pictures"
+        "title": "ピクチャー"
       },
       "version-18.0-Backup/backup": {
         "title": "Backup"
@@ -919,7 +919,7 @@
         "title": "変数"
       },
       "version-18.0-FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
       },
       "version-18.0-FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
