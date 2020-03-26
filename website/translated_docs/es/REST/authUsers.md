@@ -1,7 +1,18 @@
 ---
 id: authUsers
-title: Sessions and Users
+title: Users and sessions
 ---
+
+
+## Authenticating users
+
+As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+
+You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
+
+Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+
+The session will automatically be closed once the timeout is reached.
 
 ## Session cookie
 
@@ -72,9 +83,3 @@ $headerValues{1}:=$uuid
 COPY ARRAY($headerNames;$1->)
 COPY ARRAY($headerValues;$2->)
 ```
-
-## Authenticating users
-
-Once you have set up users and groups in your project's directory, you will need to have users log into the project to access and manipulate data.
-
-You can log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin). Once logged in, you can retrieve the user's name by using [`$directory/currentUser`]($directory.md#directorycurrentUser) and can find out if he/she belongs to a specific group by using [`$directory/currentUserBelongsTo`]($directory.md#directorycurrentuserbelongsto). To log out the current user, call [`$directory/logout`]($directory.md#directorylogout).
