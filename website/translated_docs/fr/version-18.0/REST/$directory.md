@@ -6,95 +6,6 @@ original_id: directory
 
 Le répertoire gère l'accès des utilisateurs via les requêtes REST.
 
-## Syntaxe
-
-| Syntaxe                                                               | Méthode | Description                                                               |
-| --------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------- |
-| [**$directory/currentUser**](#directorycurrentuser)                   | `GET`   | Retourne des informations sur l'utilisateur courant                       |
-| [**$directory/currentUserBelongsTo**](#directorycurrentuserbelongsto) | `POST`  | Indique si l'utilisateur courant appartient à un groupe spécifique        |
-| [**$directory/login**](#directorylogin)                               | `POST`  | Ouvre une session REST sur votre application 4D et connecte l'utilisateur |
-| [**$directory/logout**](#directorylogout)                             | `GET`   | Déconnecte l'utilisateur courant                                          |
-
-
-## $directory/currentUser
-
-Retourne des informations sur l'utilisateur courant
-
-### Description
-
-En appelant `$directory/currentUser` après la connexion d'un utilisateur, vous pouvez récupérer les informations suivantes :
-
-| Propriété | Type   | Description                                                |
-| --------- | ------ | ---------------------------------------------------------- |
-| userName  | Chaine | Nom d'utilisateur saisi pour se connecter à l'application. |
-| fullName  | Chaine | Nom complet de l'utilisateur.                              |
-| ID        | Chaine | UUID référençant l'utilisateur.                            |
-
-
-### Exemple
-
-Appelez `$directory/currentUser` pour identifier l'utilisateur courant de votre application.
-
-`GET  /rest/$directory/currentUser`
-
-**Résultat** :
-
-    {
-        "result": {
-            "userName": "jsmith", 
-            "fullName": "John Smith", 
-            "ID": "12F169764253481E89F0E4EA8C1D791A"
-        }
-    }
-    
-
-Si aucun utilisateur n'est connecté, le résultat est le suivant :
-
-    {
-        "result": null
-    }
-    
-
-## $directory/currentUserBelongsTo
-
-Indique si l'utilisateur courant appartient à un GroupID ou GroupName spécifique.
-
-### Description
-
-Pour savoir si l'utilisateur actuellement connecté appartient à un groupe spécifique, utilisez `$directory/currentUserBelongsTo`. Vous pouvez passer soit l'ID du groupe (qui correspond au numéro de référence UUID du groupe) soit son nom tel que défini dans le répertoire du datastore.
-
-Si nous voulons vérifier que l'utilisateur actuel est membre du groupe Ventes, nous devons passer *GroupID* ou *GroupName* dans le `POST`.
-
-### Exemple
-
-Vous trouverez ci-dessous un exemple de la façon de passer le GroupID ou GroupName dans les données `POST`.
-
-`POST  /rest/$directory/currentUserBelongsTo`
-
-**POST data**:
-
-`["88BAF858143D4B13B26AF48C7A5A7A68"]`
-
-ou
-
-`["Ventes"]`
-
-**Résultat** :
-
-Si l'utilisateur courant appartient au groupe spécifié dans le tableau, la réponse sera la suivante :
-
-    {
-        "result": true
-    }
-    
-
-Sinon, elle retournera :
-
-    {
-         "result": false
-    }
-    
-
 ## $directory/login
 
 Ouvre une session REST sur votre application 4D et connecte l'utilisateur.
@@ -131,36 +42,6 @@ $httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$
 **Résultat** :
 
 Si la connexion a réussi, le résultat sera le suivant :
-
-    {
-        "result": true
-    }
-    
-
-Sinon, la réponse sera la suivante :
-
-    {
-         "result": false
-    }
-    
-
-## $directory/logout
-
-Déconnecte l'utilisateur courant.
-
-### Description
-
-Pour déconnecter l'utilisateur courant de votre application, utilisez `$directory/logout`.
-
-### Exemple
-
-Vous appelez `$directory/logout` pour déconnecter l'utilisateur courant de l'application.
-
-`GET  /rest/$directory/logout`
-
-**Résultat** :
-
-Si la déconnexion a réussi, le résultat sera le suivant :
 
     {
         "result": true
