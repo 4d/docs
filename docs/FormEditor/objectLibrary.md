@@ -67,7 +67,7 @@ To open a custom object library, select **Open>Object Library...** command in th
 In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
 
 - project forms
-- first form pages
+- form pages 1
 
 
 ### Building an object library
