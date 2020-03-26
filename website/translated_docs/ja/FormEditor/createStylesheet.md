@@ -1,34 +1,34 @@
 ---
 id: stylesheets
-title: Style sheets
+title: スタイルシート
 ---
 
 ## 概要
 
-A style sheet groups together a combination of attributes for form objects — from text attributes to nearly any available object attribute.
+スタイルシートはフォームオブジェクト属性 (テキスト属性にはじまり、提供されているほぼすべてのオブジェクト属性) の組み合わせをグループ化したものです。
 
-In addition to harmonizing an application's interface, style sheets provide three major advantages:
+アプリケーションのインターフェースを調和させるのに加え、スタイルシートの利用には3つの利点があります:
 
-* Saves time during development: Each object has specific group of settings within a single operation.
-* Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-* Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
+* 開発時間の削減: オブジェクトのさまざまな属性を一括で設定できます。
+* メンテナンスの容易化: スタイルシートはそれが使用されているすべてのオブジェクトの外観を更新します。たとえば、スタイルシートでフォントサイズを変更すれば、その変更は同じスタイルシートを使用するすべてのオブジェクトに適用されます。
+* マルチプラットフォーム開発のコントロール: macOS と Windows 両用のほか、macOS 専用、Windows 専用のスタイルシートを作成することができます。 スタイルシートが適用されると、4Dは自動で適切なスタイルシートを使用します。 
 
-### Style Sheet Files
+### スタイルシートファイル
 
-4D accepts three, specific style sheet files:
+4D は次の3種のスタイルシートファイルを受け付けます:
 
-| Style Sheet             | Platform                                              |
-| ----------------------- | ----------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles     |
-| styleSheets_windows.css | For defining Windows only specific attribute styles   |
+| スタイルシート                 | プラットフォーム                             |
+| ----------------------- | ------------------------------------ |
+| styleSheets.css         | macOS と Windows 両用のデフォルトグローバルスタイルシート |
+| styleSheets_mac.css     | macOS 専用の属性スタイル定義用                   |
+| styleSheets_windows.css | Windows 専用の属性スタイル定義用                 |
 
 
-These files are stored in the project's "/SOURCES" folder.
+これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。
 
-### Style Sheet Architecture
+### スタイルシートアーキテクチャー
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+4D フォームに適合するよう調整してあるものの、プロジェクトデータベースのスタイルシートは基本的に CSS2 のシンタックスと文法に沿っています。
 
 Every style rule in a style sheet contains two parts:
 
@@ -230,14 +230,14 @@ To override this behavior, the style value must be followed with an `!important`
 
 **Example 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
+| JSON form description | スタイルシート       | 4D displays |
 | --------------------- | ------------- | ----------- |
 | `"text": "Button",`   | `text: Edit;` | `"Button"`  |
 
 
 **Example 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
+| JSON form description | スタイルシート                  | 4D displays |
 | --------------------- | ------------------------ | ----------- |
 | `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
 
