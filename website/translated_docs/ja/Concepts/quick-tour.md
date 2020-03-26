@@ -181,6 +181,62 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
 ```
 
+## Classes
+
+The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+
+To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+
+```4d
+// in a 4D method
+$o:=cs.myClass.new() 
+```
+
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+
+```4d
+//in the myClass.4dm file
+Function hello
+  C_TEXT($0)
+  $0:="Hello "+This.who
+```
+
+To execute a class member method, just use the `()` operator on the member method of the object instance.
+
+```4d
+$o:=cs.myClass.new()
+$o.who:="World"
+$message:=$o.myClass.hello()  
+//$message: "Hello World"
+```
+
+Optionally, use the `Class constructor` keyword to declare properties of the object.
+
+```4d
+//in the Rectangle.4dm file
+Class constructor
+C_LONGINT($1;$2)
+This.height:=$1
+This.width:=$2  
+This.name:="Rectangle"
+```
+
+A class can inherit from another class by using `Class inherits <ClassName>`. Superclasses can be called using the `Super` command. たとえば:
+
+```4d
+//in the Square.4dm file
+Class extends rectangle
+
+Class constructor
+C_LONGINT($1)
+
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
+Super($1;$1)
+
+This.name:="Square"
+```
+
 ## 演算子
 
 プログラミング言語を使用する際に、データのみを必要とする場合は非常に稀です。 データを加工、または何らかの目的のために使用することがほとんどです。 そういった計算は演算子を使っておこないます。 一般的に演算子とは、2つのデータをもとに処理をおこない、1つの新しいデータを生成します。 日常的に使用されている演算子も多くあります。 例えば、1 + 2 という式は加算演算子（プラス記号）を使用し、2つの数値を足し合わせて、3という結果を返します。 以下に、よく知られている 4つの演算子を示します。

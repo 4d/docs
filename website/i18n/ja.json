@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "ループ構造"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "コンポーネント"
       },
@@ -286,7 +289,7 @@
         "title": "概要"
       },
       "FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -519,6 +522,9 @@
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
+      },
+      "Project/documentation": {
+        "title": "Documenting a project"
       },
       "Project/overview": {
         "title": "概要"
@@ -810,7 +816,7 @@
         "sidebar_label": "Activity analysis Page"
       },
       "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
-        "title": "Pictures"
+        "title": "ピクチャー"
       },
       "version-18.0-Backup/backup": {
         "title": "Backup"
@@ -913,7 +919,7 @@
         "title": "変数"
       },
       "version-18.0-FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
       },
       "version-18.0-FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"

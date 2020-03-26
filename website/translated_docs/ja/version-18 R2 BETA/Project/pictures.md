@@ -1,6 +1,6 @@
 ---
 id: version-18R2_BETA-pictures
-title: Pictures
+title: ピクチャー
 original_id: pictures
 ---
 
