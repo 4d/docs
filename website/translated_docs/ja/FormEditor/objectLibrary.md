@@ -12,7 +12,7 @@ title: オブジェクトライブラリ
 - 標準の設定済みオブジェクトライブラリはすべてのプロジェクトに利用できます 
 - カスタムオブジェクトライブラリは、開発者自身がお気に入りのフォームオブジェクトや、あるいはプロジェクトフォームそのものをとっておくためのものです
 
-## 標準のオブジェクトライブラリ
+## 標準のオブジェクトライブラリの使用
 
 標準のオブジェクトライブラリはフォームエディターからアクセスすることができます: ツールバーの右にある次のボタンをクリックします:  
 ![](assets/en/FormEditor/library1.png)
@@ -43,59 +43,59 @@ title: オブジェクトライブラリ
 
 ### オブジェクトライブラリの作成
 
-オブジェクトライブラリを作成するには、**ファイル** メニューまたはツールバーから **新規>オブジェクトライブラリー...** を選択します。 標準のファイル保存用のダイアログボックスが表示され、オブジェクトライブラリの名前と保存先を指定できます。
+オブジェクトライブラリを作成するには、**ファイル** メニューまたはツールバーから **新規>オブジェクトライブラリ...** を選択します。 標準のファイル保存用のダイアログボックスが表示され、オブジェクトライブラリの名前と保存先を指定できます。
 
 ダイアログボックスを受け入れると、4D はディスク上に新しいオブジェクトライブラリを作成し、ウィンドウに表示します (デフォルトで空です)。
 
 ![](assets/en/FormEditor/library4.png)
 
-ライブラリは必要なだけ作成できます。 macOS上で作成されたライブラリーを Windowsで使用すること、あるいはその逆も可能です。
+ライブラリは必要なだけ作成できます。 macOS上で作成されたライブラリを Windowsで使用すること、あるいはその逆も可能です。
 
-### オブジェクトライブラリーを開く
+### オブジェクトライブラリを開く
 
-A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database.
+一つのオブジェクトライブラリを複数のデータベースで同時に開くことはできませんが、 一つのデータベースで複数のライブラリを開くことは可能です。
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You can select the following file types:
+カスタムのオブジェクトライブラリを開くには、**ファイル** メニューまたはツールバーから **開く>オブジェクトライブラリ...** コマンドを選択します。 標準のファイルを開くダイアログボックスが表示され、オブジェクトライブラリを選択できます。 次のファイルタイプが選択できます:
 
 - **.4dproject**
 - **.4dz**
 
-In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
+カスタムオブジェクトライブラリは、実質的には標準の 4D プロジェクトです。 プロジェクトをライブラリとして開くと、次のものが公開されます:
 
-- project forms
+- プロジェクトフォーム
 - first form pages
 
-### Building an object library
+### オブジェクトライブラリの構築
 
-Objects are placed in an object library using drag-and-drop or a cut-copy-paste operation. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+ドラッグ＆ドロップやコピー/ペースト操作で、オブジェクトをオブジェクトライブラリに配置できます。 オブジェクトは、フォームあるいは他のオブジェクトライブラリ ([標準のオブジェクトライブラリ](#標準のオブジェクトライブラリの使用) 含む) からコピーできます 。 元のオブジェクトとのリンクは保持されないため、オリジナルが編集されてもライブラリのオブジェクトには影響しません。
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> フォームからオブジェクトライブラリにドラッグ＆ドロップ操作をおこなうには、4D環境設定のフォームページにて **ドラッグ＆ドロップを開始** オプションを選択している必要があります。
 
-Basic operations are available in the context menu or the options menu of the window:
+追加・削除・名称変更などの基本操作はコンテキストメニューあるいはウィンドウのオプションメニューから行えます:
 
 ![](assets/en/FormEditor/library5.png)
 
-- **Cut** or **Copy** to the pasteboard
-- **Paste** an object from the pasteboard
-- **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library. 
+- ペーストボードへの **カット** または **コピー**
+- ペーストボードからオブジェクトを **ペースト**
+- **クリア** でライブラリからオブジェクトを削除
+- **名称変更** でダイアログが開き、オブジェクトの名前を変更することができます。 ライブラリ内のオブジェクト名は一意のものでなくてはなりません。 
 
-You can place individual objects (including subforms) or sets of objects in an object library. Each object or set is grouped into a single item:
+オブジェクトライブラリには個々のオブジェクト (サブフォーム含む) やオブジェクトグループを格納できます。 それぞれのオブジェクトは1つのアイテムとしてグループ化されます:
 
 ![](assets/en/FormEditor/library6.png)
 
-An object library can contain up to 32,000 items.
+1つのオブジェクトライブラリには32,000項目まで含めることができます。
 
-Objects are copied with all their properties, both graphic and functional, including their methods. These properties are kept in full when the item is copied into a form or another library.
+オブジェクトは、グラフィックおよび動作に関わるすべてのプロパティとメソッドともにコピーされます。 これらのプロパティはオブジェクトがフォームや他のライブラリにコピーされる際にも保持されます。
 
-#### Dependent objects
+#### 依存オブジェクト
 
-Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
+コピー/ペーストやドラッグ＆ドロップで特定のライブラリオブジェクトを使用すると、依存オブジェクトも一緒にコピーされます。 たとえば、ボタンをコピーすると、そのオブジェクトに割り当てられていたオブジェクトメソッドもコピーされます。 これらの依存オブジェクトはそれのみを直接コピーしたりドラッグ＆ドロップしたりすることはできません。
 
-The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
+メインのオブジェクトと一緒にライブラリに登録される依存オブジェクトは以下のとおりです:
 
-- Lists
-- Formats/Filters
-- Pictures
-- Help Tips (linked to a field)
-- Object methods
+- リスト
+- フォーマット/フィルター
+- ピクチャー
+- ヘルプTips (フィールドにリンク)
+- オブジェクトメソッド
