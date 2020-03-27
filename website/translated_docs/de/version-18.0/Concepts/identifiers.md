@@ -386,8 +386,8 @@ Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
 | Name                       | Max. Länge | Beispiel                   |
 | -------------------------- | ---------- | -------------------------- |
-| Table                      | 31         | [Invoices]                 |
-| Field                      | 31         | [Employees]Last Name       |
+| Tabelle                    | 31         | [Invoices]                 |
+| Datenfeld                  | 31         | [Employees]Last Name       |
 | Interprozessvariable/Array | <> + 31    | <>vlNextProcessID          |
 | Prozessvariable/Array      | 31         | vsCurrentName              |
 | Lokale Variable/Array      | $ + 31     | $vlLocalCounter            |
