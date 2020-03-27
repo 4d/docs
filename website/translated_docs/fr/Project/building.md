@@ -399,15 +399,15 @@ L'option **Signer l'application** du Générateur d’application de 4D permet d
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notarisées déployées via Internet sont bloquées par défaut.
 
-Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D. A Noter également que cela nécessite l'installation de Xcode.
+Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
 
-Pour plus d'informations sur la notarisation, veuillez vous reporter à [cette page sur le site Web du développeur Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Personnaliser les icônes de l'application
+## Customizing application icons
 
-4D associe une icône par défaut à des applications autonomes, clientes et serveur; mais vous pouvez également personnaliser l'icône pour chaque application.
+4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
-* **macOs** - Lors de la construction d'une application exécutable, 4D gère la personnalisation des icônes. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
+* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
     
     > Apple, Inc. fournit un outil spécifique de création de fichiers d'icônes *icns* (pour plus d'informations, consultez la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
     
