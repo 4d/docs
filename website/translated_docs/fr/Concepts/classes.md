@@ -51,36 +51,9 @@ $instance:=OB Instance of($poly;4D.Object)
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
 
-## Class stores
+### Class definition
 
-Available classes are accessible from their class stores. The following class stores are available:
-
-- a class store for built-in 4D classes. It is returned by the `4d` command.
-- a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
-
-For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
-
-## Creating a user class
-
-### Class file
-
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
-
-> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
-
-For example, if you want to define a class named "Polygon", you need to create the following file:
-
-- Database folder 
-    + Project 
-        * Sources 
-            - Classes 
-                + Polygon.4dm
-
-> Class files are automatically created by 4D at the appropriate location when you create a class from the 4D Developer interface (**New > Class...** from the **File** menu, **New Class...** from the Explorer contextual menu -- see XXXX).
-
-### Class contents
-
-A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords), [class commands](#class-commands), as well as the `This` keyword in the class file.
+A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
 
 Par exemple:
 
@@ -115,11 +88,74 @@ $o:=cs.Empty.new()
 $cName:=OB Class($o).name //"Empty"
 ```
 
+## Class stores
+
+Available classes are accessible from their class stores. The following class stores are available:
+
+- a class store for built-in 4D classes. It is returned by the `4d` command.
+- a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
+
+For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
+
+## Handling user classes
+
+### Class files
+
+A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+
+> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
+
+For example, if you want to define a class named "Polygon", you need to create the following file:
+
+- Database folder 
+    + Project 
+        * Sources 
+            - Classes 
+                + Polygon.4dm
+
+### 4D Developer interface
+
+Class files are automatically stored at the appropriate location when created through the 4D Developer interface, either via the **File** menu or the Explorer.
+
+#### File menu and toolbar
+
+You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+
+You can also use the **Ctrl+Shift+Alt+k** shortcut.
+
+#### Explorer
+
+In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+
+To create a new class, you can:
+
+- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
+- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
+- select **New > Class...** from the contexual menu of the Explorer's Home page. 
+
+#### Class code support
+
+In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+
+- In the code editor: 
+    - a class cannot be run
+    - a class function is a code block 
+    - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
+    - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
+- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format. 
+
+### Deleting a class
+
+To delete an existing class, you can:
+
+- on your disk, remove the .4dm class file from the "Classes" folder,
+- in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+
 ## Class keywords
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function <ClassName>` to define member methods of the objects. 
+- `Function <Name>` to define member methods of the objects. 
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
 
