@@ -108,7 +108,7 @@ When the data source is a collection, any modifications made in the list box val
 myCol:=myCol.push("new value") //display new value in list box
 ```
 
-### Supported Properties
+### プロパティ一覧
 
 Supported properties depend on the list box type.
 
