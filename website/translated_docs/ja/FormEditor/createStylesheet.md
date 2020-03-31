@@ -220,43 +220,43 @@ CSS の **属性セレクター**と同様に、フォームオブジェクト�
 
 ## 優先順位
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+4D プロジェクト内でスタイルが競合する場合には、スタイルシートよりもフォームの定義が優先されます。
 
-### JSON vs Style Sheet
+### JSON vs スタイルシート
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+フォームの JSON式記述とスタイルシートの両方において属性が定義されている場合、4D は JSON ファイルの値を採用します。
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+これをオーバーライドするには、スタイルシートの値の後に `!important` 宣言を追加します。
 
-**Example 1:**
+**例 1:**
 
-| JSON form description | スタイルシート       | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
-
-
-**Example 2:**
-
-| JSON form description | スタイルシート                  | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| JSON 式記述            | スタイルシート       | 4D の表示     |
+| ------------------- | ------------- | ---------- |
+| `"text": "Button",` | `text: Edit;` | `"Button"` |
 
 
-### Multiple Style Sheets
+**例 2:**
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+| JSON 式記述            | スタイルシート                  | 4D の表示   |
+| ------------------- | ------------------------ | -------- |
+| `"text": "Button",` | `text: Edit !important;` | `"Edit"` |
 
-1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`. 
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets\_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3. If it exists, it will then load a specific CSS file defined in the JSON form:
 
-*       a file for both platforms:
+### 複数スタイルシート
+
+ランタイムにおいて複数のスタイルシートが存在する場合、それらの優先順位は次のように決まります:
+
+1. 4D フォームはまずデフォルトの CSS ファイル `/SOURCES/styleSheets.css` を読み込みます。 
+2. 次に、カレントプラットフォーム専用の CSS ファイル `/SOURCES/styleSheets\_mac.css` または `/SOURCES/styleSheets_windows.css` がロードされます。
+3. その後、JSON フォーム内に CSS ファイルが定義されていれば、それを読み込みます:
+
+*       両プラットフォーム用のファイル:
         
     
         "css": "<path>" 
         
 
-*       or a list of files for both platforms:
+*       または、両プラットフォーム用に複数のファイル:
         
     
         "css": [
@@ -264,7 +264,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
                "<path2>" 
                 ],
 
-*       or a list of files per platform:
+*       または、プラットフォームごとのファイルリスト:
         
     
          "css": [
@@ -273,18 +273,18 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
             ],
         
 
-> Filepaths can be relative or absolute. * Relative paths are resolved relative to the JSON form description file. * For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> ファイルパスは相対パスと絶対パスが使えます。 * 相対パスの基準は JSON フォームファイルです。 * セキュリティのため、絶対パスとして使用できるのはファイルシステムパスに限られます。 (*例*: "/RESOURCES", "/DATA")
 
-## Creating or Editing Style Sheets
+## スタイルシートの作成と編集
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+スタイルシートを作成するには、任意のテキストエディターを使い、".css" 拡張子をファイル名に追加し、プロジェクトの "/SOURCES" フォルダーに保存します。
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+4D のツールボックスの **スタイル** ページでは、プラットフォーム専用のスタイルシートを作成・編集するためのショートカットが提供されています。
 
-1. Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1. デザインメニューから **ツールボックス > スタイルシート** を選択するか、ツールバーの **ツールボックス** アイコンをクリックして **スタイル** ページを開きます。
     
     ![](assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2. 作成するスタイルシートを選択し、**作成** ボタン (または **編集** ボタン) をクリックします: ![](assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.
+3. 既定のテキストエディターでスタイルシートが開かれます。
