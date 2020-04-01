@@ -442,7 +442,7 @@
       "Users/overview": {
         "title": "Overview"
       },
-      "WebServer/webServerOverview": {
+      "WebServer/webServerObject": {
         "title": "Web Server object"
       }
     },
