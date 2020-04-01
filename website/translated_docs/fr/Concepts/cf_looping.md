@@ -438,7 +438,7 @@ Par exemple:
 
 ### Conditions Until et While
 
-Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. Lorsqu'une instruction `Until(condition)` ou `While(condition)` est associée à la boucle, l'itération stoppe dès que la condition est évaluée à True.
+Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
 
 Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 

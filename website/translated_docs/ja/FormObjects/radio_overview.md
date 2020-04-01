@@ -30,13 +30,13 @@ Selecting one radio button in a group sets that button to 1 and all of the other
 
 The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
 
-## Button Styles
+## ボタンスタイル
 
 Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
 
 4D provides radio buttons in the following predefined styles:
 
-### Regular
+### 通常
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 

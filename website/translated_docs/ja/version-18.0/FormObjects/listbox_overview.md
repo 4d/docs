@@ -108,7 +108,7 @@ When the data source is a collection, any modifications made in the list box val
 myCol:=myCol.push("new value") //display new value in list box
 ```
 
-### Supported Properties
+### プロパティ一覧
 
 Supported properties depend on the list box type.
 
@@ -120,7 +120,7 @@ Supported properties depend on the list box type.
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                       |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                       |
 | [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                  | X                                       |
-| [Class](properties_Object.md#css-class)                                                      | X              | X                  | X                                       |
+| [クラス](properties_Object.md#css-class)                                                        | X              | X                  | X                                       |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)        |                | X                  | X                                       |
 | [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                   | X              | X                  | X                                       |
 | [Current item](properties_DataSource.md#current-item)                                        |                |                    | X                                       |
@@ -159,7 +159,7 @@ Supported properties depend on the list box type.
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                       |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                       |
-| [Object Name](properties_Object.md#object-name)                                              | X              | X                  | X                                       |
+| [オブジェクト名](properties_Object.md#object-name)                                                  | X              | X                  | X                                       |
 | [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                  | X                                       |
 | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                    |                                         |
 | [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                    |                                         |

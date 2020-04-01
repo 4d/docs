@@ -295,7 +295,7 @@
         "title": "オブジェクトライブラリ"
       },
       "FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "ボタン"
       },
       "FormObjects/buttonGridOverview": {
         "title": "Button Grid"
@@ -310,7 +310,7 @@
         "title": "Drop-down List"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "FormObjects/groupBox": {
         "title": "Group Box"
@@ -925,7 +925,7 @@
         "title": "オブジェクトライブラリ"
       },
       "version-18.0-FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "ボタン"
       },
       "version-18.0-FormObjects/buttonGridOverview": {
         "title": "Button Grid"
@@ -940,7 +940,7 @@
         "title": "Drop-down List"
       },
       "version-18.0-FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "version-18.0-FormObjects/groupBox": {
         "title": "Group Box"
