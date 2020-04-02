@@ -201,7 +201,7 @@ Je nach Datentyp werden die gleichen Symbole oft für verschiedene Operationen v
 | Datentyp       | Operation      | Beispiel                                                                                        |
 | -------------- | -------------- | ----------------------------------------------------------------------------------------------- |
 | Zahl           | Addition       | 1 + 2 addiert die Zahlen und ergibt 3                                                           |
-| String         | Concatenation  | "Hello " + "there" verbindet bzw. setzt die Strings zusammen und ergibt "Hello there"           |
+| String         | Zusammenfügung | "Hello " + "there" verbindet bzw. setzt die Strings zusammen und ergibt "Hello there"           |
 | Datum und Zahl | Datumsaddition | !1989-01-01! + 20 addiert 20 Tage zum Datum 1. Januar 1989 und ergibt das Datum 21. Januar 1989 |
 
 
