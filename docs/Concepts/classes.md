@@ -96,7 +96,7 @@ $cName:=OB Class($o).name //"Empty"
 
 Available classes are accessible from their class stores. The following class stores are available:
 
-- a class store for built-in 4D classes. It is returned by the `4d` command.
+- a class store for built-in 4D classes. It is returned by the `4D` command.
 - a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
 
 For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
@@ -322,11 +322,11 @@ $0:=This.height*This.width
 
 ### Super
 
-#### Super {( param )} {-> Object} 
+#### Super {( param{;...;paramN} )} {-> Object} 
 
 |Parameter|Type||Description|  
 |---|---|---|---|
-|param|mixed|->|Parameter to pass to the parent constructor	
+|param|mixed|->|Parameter(s) to pass to the parent constructor	
 |Result|object|<-|Object's parent|
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
