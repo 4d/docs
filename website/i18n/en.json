@@ -240,7 +240,10 @@
       "FormObjects/propertiesForm": {
         "title": "Forms"
       },
-      "FormObjects/propertiesWindow": {
+      "FormObjects/propertiesMenu": {
+        "title": "Menu"
+      },
+      "FormObjects/propertiesWindowSize": {
         "title": "Window Size"
       },
       "FormObjects/radiobuttonOverview": {

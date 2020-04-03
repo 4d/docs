@@ -1,5 +1,5 @@
 ---
-id: propertiesWindow
+id: propertiesWindowSize
 title: Window Size
 ---
  
@@ -16,7 +16,8 @@ If you check this option, the window height will be locked and it will not be po
 |---|---|---|
 |windowSizingX|string|"fixed", "variable"|
 
-
+#### Objects Supported
+[Forms](forms.md) 
 
 ---
 
@@ -31,6 +32,8 @@ If you check this option, the window width will be locked and it will not be pos
 |---|---|---|
 |windowSizingY|string|"fixed", "variable"|
 
+#### Objects Supported
+[Forms](forms.md) 
 
 ---
 
@@ -46,7 +49,8 @@ Designates the largest allowable height.
 |---|---|---|
 |windowMaxHeight|integer|minimum: 0|
 
-
+#### Objects Supported
+[Forms](forms.md) 
 
 ---
 
@@ -62,6 +66,8 @@ Designates the largest allowable width.
 |---|---|---|
 |windowMaxWidth|integer|minimum: 0|
 
+#### Objects Supported
+[Forms](forms.md) 
 
 ---
 
@@ -78,6 +84,9 @@ Designates the smallest allowable height.
 |---|---|---|
 |windowMinHeight|integer|minimum: 0|
 |windowMinWidth|integer	|minimum: 0|
+
+#### Objects Supported
+[Forms](forms.md) 
 
 ---
 
@@ -97,8 +106,10 @@ Designates the smallest allowable width.
 |---|---|---|
 |windowMinWidth|integer	|minimum: 0|
 
+#### Objects Supported
+[Forms](forms.md) 
 
----
+
 
 
 
