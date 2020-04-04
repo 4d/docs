@@ -14,7 +14,7 @@ original_id: buttonOverview
 
 p>
 
-## Handling buttons
+## ボタンの使用
 
 ボタンには、あらかじめ設定されている [標準アクション](properties_Action.md#standard-action) またはオブジェクトメソッドを割り当てることができます。 典型的なアクションの例は、レコードの受け入れ・削除・編集キャンセルのほか、データのコピー / ペースト、複数ページあるフォームにおけるページ移動、サブフォームのレコード操作、テキストエリアのフォント属性の操作、などです。
 
@@ -40,25 +40,25 @@ p>
 
 ![](assets/en/FormObjects/button_regular.png)
 
-通常スタイルはデフォルトで、明るいグレーの背景に中央配置のラベルが付いています。 通常ボタンの上にマウスオーバーすると、境界線色と背景色が変わり、ボタンにフォーカスがあることを示します。 In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
+通常スタイルは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 Windowsの場合は、通常ボタンの上にマウスオーバーすると、境界線色と背景色が変わり、ボタンにフォーカスがあることを示します。 また、プラットフォームによって表現が異なりますが、クリック時にも背景色が変わるなどして、物理的なボタンを模倣します。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed 
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form 
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+        "type": "button",   // オブジェクトタイプ
+        "style":"regular",  // ボタンスタイル
+        "defaultButton":"true"  // デフォルトボタン
+        "text": "OK",   // タイトル
+        "action": "Cancel", // アクション
+        "left": 60,  // フォーム上の座標 (左)
+        "top": 160, // フォーム上の座標 (上)
+        "width": 100,  // 幅
+        "height": 20 // 高さ
         }
 ```
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+[デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
 ### Flat
 
@@ -68,7 +68,7 @@ The Flat button style is a standard system button (*i.e.*, a rectangle with a de
 
 By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
 <br />    "myButton": {
@@ -84,7 +84,7 @@ By default, the Flat style has a white background with a label in the center, ro
                 }
 ```
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+[デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
 ### Toolbar
 
@@ -98,7 +98,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -126,7 +126,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -154,7 +154,7 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -182,7 +182,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -210,7 +210,7 @@ By default, the OS X Textured style appears as:
 
 - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -238,7 +238,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 - *macOS* - its background is always displayed.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -260,7 +260,7 @@ The Help button style can be used to display a standard system help button. By d
 
 ![](assets/en/FormObjects/button_help.png)
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -285,7 +285,7 @@ The Circle button style appears as a round system button. This button style is d
 
 On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
 
-#### JSON Example:
+#### JSON 例:
 
         "myButton": {
                     "type": "button",   
@@ -305,7 +305,7 @@ The Custom button style accepts a personalized background picture and allows man
 
 ![](assets/en/FormObjects/button_custom.png)
 
-#### JSON Example:
+#### JSON 例:
 
 ```code
     "myButton": {
