@@ -80,7 +80,7 @@ You can apply this filter in the following ways:
 |Object	|Syntax|	Example|
 |---|---|---|
 |Dataclass	|{dataClass}/{att1,att2...}	|/People/firstName,lastName|
-|Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a*'"|
+|Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a@'"|
 |Specific entity|	{dataClass}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
 ||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
 |Entity selection|	{dataClass}/{att1,att2...}/$entityset/{entitySetID}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
@@ -143,7 +143,7 @@ The following requests returns only the first name and last name from the People
 ````
 
 
-`GET  /rest/People/firstName,lastName/?$filter="lastName='A*'"/`
+`GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
 **Result**:
 
@@ -210,17 +210,36 @@ The following request returns only the first name and last name attributes from 
 
 #### Method Example  
 
-If you have a dataclass method, you can define which attributes to return as shown below before passing the dataclass method:
+The following example is a dataclass method that reveives parameters:
 
- `GET  /rest/People/firstName,lastName/getHighSalaries`
+```4d
+// 4D findPerson method
+C_TEXT($1;$firstname;$2;$lastname)
+$firstname:=$1
+$lastname:=$2
 
-or
+$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
+```
 
- `GET  /rest/People/getHighSalaries/firstName,lastName`
+The method properties must be configured accordingly on the 4D project side:
+
+![alt-text](assets/en/REST/methodProp_ex.png)
+
+Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+
+```4d
+C_TEXT($content)
+C_OBJECT($response)
+
+$content:="[\"Toni\",\"Dickey\"]" 
+
+$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
+```
+
 
 #### Entity Set Example  
 
-Once you have created an entity set, you can filter the information in it by defining which attributes to return:
+Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
  
