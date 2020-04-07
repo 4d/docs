@@ -91,7 +91,7 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
             "type": "checkbox", 
@@ -106,13 +106,13 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
             }
     
 
-### Flat
+### フラット
 
 The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                 "type": "checkbox", 
@@ -136,7 +136,7 @@ Example with states unchecked / checked / highlighted:
 
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                     "type": "checkbox",
@@ -161,7 +161,7 @@ Example with states unchecked / checked / highlighted:
 
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                     "type": "checkbox", 
@@ -188,7 +188,7 @@ Example on macOS:
 
 > on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myCheckBox": {
@@ -214,7 +214,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 > On Windows, this style is identical to the [Bevel](#bevel) style.
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                 "type": "checkbox", 
@@ -243,7 +243,7 @@ By default, the OS X Textured style appears as:
     
     ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                 "type": "checkbox", 
@@ -260,7 +260,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
     
@@ -270,7 +270,7 @@ The colors (highlight and background) of a button with the Office XP style are b
     
     ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                     "type": "checkbox", 
@@ -298,7 +298,7 @@ This check box style can be used to add a standard collapse/expand icon. These b
     
     ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                     "type": "checkbox", 
@@ -323,7 +323,7 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
     
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckBox": {
                     "type": "checkbox",     
@@ -346,7 +346,7 @@ The Custom check box style accepts a personalized background picture and allows 
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON Example:
+#### JSON 例:
 
         "myCheckbox": {
             "type": "checkbox",

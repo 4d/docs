@@ -45,35 +45,35 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
-### Flat
+### フラット
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
 ![](assets/en/FormObjects/radio_flat.png)
 
-By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+By default, the Flat style has a minimalist appearance. フラットボタンのグラフィック的な装飾は最小限であるため、印刷されるフォームでの使用に適しています。
 
-### Toolbar
+### ツールバー
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - the button is highlighted. 
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
-- *macOS* - the highlight of the button never appears. 
+- *macOS* - ボタンはハイライト表示されません。 
 
 ### Bevel
 
-The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - the button is highlighted.
     
     ![](assets/en/FormObjects/radio_bevel.png)
 
-- *macOS* - the highlight of the button never appears.
+- *macOS* - ボタンはハイライト表示されません。
 
 ### Rounded Bevel
 
@@ -107,7 +107,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - its background only appears when the mouse rolls over it.
     

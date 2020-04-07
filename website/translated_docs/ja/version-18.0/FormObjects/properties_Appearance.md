@@ -1,29 +1,26 @@
 ---
 id: version-18.0-propertiesAppearance
-title: Appearance
+title: アピアランス
 original_id: propertiesAppearance
 ---
 
 * * *
 
-## Default Button
+## デフォルトボタン
 
-The default button property modifies a button's appearance in order to indicate the recommended choice to the user. The difference in appearance depends on the OS.
+フォーム上のボタンのいずれにも [フォーカス可](properties_Entry.md#focusable) プロパティが設定されていない場合、デフォルトボタンプロパティが有効化されたボタンがランタイムにおいて最初のフォーカスを得ます。
 
-|                Windows                 | macOS |
-|:--------------------------------------:|:-----:|
-| The default button has a blue outline. |       |
+デフォルトボタンは、フォームページごとに一つのみ設定できます。
 
+macOS上では、デフォルトボタンプロパティによってボタンの見た目が変更され、推奨されている選択肢であることをユーザーに対して示します。 デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます:
 
-<
+![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
-p> ![](assets/en/FormObjects/property_defaultButtonWindows.en.png)|The default buttons are blue.
+> このデフォルトボタンとしての外観を得るには、ボタンの高さが 22以下に設定されている必要があります。
 
-<
+Windows上では "推奨選択肢" の概念はサポートされていないため、ランタイムにおいて異なる外観を持つのはフォーカスされているボタンのみですが、 4D フォームエディター上ではデフォルトボタンは青い枠線で表されます:
 
-p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
-
-> There can only be one default button per form page.
+![](assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
 #### JSON Grammar
 

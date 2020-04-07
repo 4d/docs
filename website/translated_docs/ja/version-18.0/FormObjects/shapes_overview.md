@@ -20,7 +20,7 @@ The design of rectangles is controlled through many properties (color, line thic
 
 ![](assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myRectangle": {
@@ -87,7 +87,7 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 ![](assets/en/FormObjects/shape_oval.png)
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myOval": {
