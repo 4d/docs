@@ -40,7 +40,7 @@ p>
 
 ![](assets/en/FormObjects/button_regular.png)
 
-通常スタイルは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 Windowsの場合は、通常ボタンの上にマウスオーバーすると、境界線色と背景色が変わり、ボタンにフォーカスがあることを示します。 また、プラットフォームによって表現が異なりますが、クリック時にも背景色が変わるなどして、物理的なボタンを模倣します。
+通常ボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 Windowsの場合は、通常ボタンの上にマウスオーバーすると、境界線色と背景色が変わります。 また、プラットフォームによって表現が異なりますが、クリック時にも背景色が変わるなどして、物理的なボタンを模倣します。
 
 #### JSON 例:
 
@@ -60,13 +60,13 @@ p>
 
 [デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
-### Flat
+### フラット
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+フラットスタイルのボタンは、標準的なシステムボタンで (長方形にラベルが付いたもの)、ユーザークリックに応じてコードを実行します。
 
 ![](assets/en/FormObjects/button_flat.png)
 
-By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+フラットボタンは、白の背景に中央配置のラベルがデフォルトで付いており、角が丸くなっています。 フラットボタンのグラフィック的な装飾は最小限であるため、印刷されるフォームでの使用に適しています。
 
 #### JSON 例:
 
@@ -86,17 +86,17 @@ By default, the Flat style has a white background with a label in the center, ro
 
 [デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
-### Toolbar
+### ツールバー
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+ツールバースタイルのボタンは、主としてツールバーで使用するためのものです。 このスタイルには、複数の選択肢を提示するためのポップアップメニュー (逆三角形で示されます) を追加するオプションがあります。
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用すると、ボタンの右側中央に三角形が表示されます。 
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
-- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -118,13 +118,13 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
-By default, the Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Bevel style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
 
 ![](assets/en/FormObjects/button_bevel.png)
 
-- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
+- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。 
 
 #### JSON 例:
 
@@ -146,13 +146,13 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
-By default, the Rounded Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Rounded Bevel style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
     
     ![](assets/en/FormObjects/button_roundedbevel.png)
 
-- *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+- *macOS* - the corners of the button are rounded. "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -174,13 +174,13 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
-By default, the OS X Gradient style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the OS X Gradient style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
-- *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+- *macOS* - the button is displayed as a two-tone system button. "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -230,7 +230,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's transparency and pop-up menu property option.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - its background only appears when the mouse rolls over it.
 
