@@ -106,7 +106,7 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
             }
     
 
-### Flat
+### フラット
 
 The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
@@ -260,7 +260,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
     
