@@ -25,9 +25,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 * * *
 
-## Button Style
+## ボタンスタイル
 
-General appearance of the button. The button style also plays a part in the availability of certain options.
+ボタンの外観を設定します。 スタイルによっては、特定のオプションが利用できなくなることもあります。
 
 #### JSON Grammar
 
