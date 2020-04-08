@@ -151,7 +151,7 @@ Example with states unchecked / checked / highlighted:
                     }
     
 
-### Bevel
+### ベベル
 
 The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -176,7 +176,7 @@ Example with states unchecked / checked / highlighted:
                     }
     
 
-### Rounded Bevel
+### 角の丸いベベル
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -204,7 +204,7 @@ Example on macOS:
                 }
 ```
 
-### OS X Gradient
+### OS Xグラデーション
 
 The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
@@ -229,17 +229,17 @@ The OS X Gradient style has a light gray background with a title and is displaye
                }
     
 
-### OS X Textured
+### OS Xテクスチャー
 
 The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-By default, the OS X Textured style appears as:
+デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
 - *Windows* - a standard system button with a light blue background with a title in the center.
     
     ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
-- *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+- *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
     
     ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -260,13 +260,13 @@ By default, the OS X Textured style appears as:
 
 The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+- *Windows* - マウスオーバー時にのみ背景が表示されます。 Example with states unchecked / checked / highlighted:
     
     ![](assets/en/FormObjects/checkbox_officexp.png)
 
-- *macOS* - its background is always displayed. Example with states unchecked / checked:
+- *macOS* - 背景は常に表示されます。 Example with states unchecked / checked:
     
     ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
