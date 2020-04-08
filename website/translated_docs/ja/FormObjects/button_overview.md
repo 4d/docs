@@ -91,11 +91,11 @@ p>
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用すると、ボタンの右側中央に三角形が表示されます。 
+- *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用ていると、ボタンの右側中央に三角形が表示されます。 
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
-- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
+- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -113,17 +113,17 @@ p>
                 }
 ```
 
-### Bevel
+### ベベル
 
-The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+ベベルスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the Bevel style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+ベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - ボタンがハイライト表示されます。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。 
 
 ![](assets/en/FormObjects/button_bevel.png)
 
-- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。 
+- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。 
 
 #### JSON 例:
 
@@ -141,17 +141,17 @@ By default, the Bevel style has a light gray background with a label in the cent
                 }
 ```
 
-### Rounded Bevel
+### 角の丸いベベル
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。 ベベルスタイルと同様に、角の丸いベベルスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the Rounded Bevel style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+角の丸いベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+- *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。
     
     ![](assets/en/FormObjects/button_roundedbevel.png)
 
-- *macOS* - the corners of the button are rounded. "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
+- *macOS* - 角が丸くなっています。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -169,17 +169,17 @@ By default, the Rounded Bevel style has a light gray background with a label in 
                 }
 ```
 
-### OS X Gradient
+### OS Xグラデーション
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xグラデーションスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the OS X Gradient style has a light gray background with a label in the center. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+OS Xグラデーションボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。 
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
-- *macOS* - the button is displayed as a two-tone system button. "ポップアップメニューあり" プロパティを使用すると、ボタンの右下部分に三角形が表示されます。
+- *macOS* - 2トーンのシステムボタンです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
@@ -197,17 +197,17 @@ By default, the OS X Gradient style has a light gray background with a label in 
                 }
 ```
 
-### OS X Textured
+### OS Xテクスチャー
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xテクスチャースタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the OS X Textured style appears as:
+デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- *Windows* - a standard system button with a light gray background with a label in the center. It has the special feature of being transparent in Vista.
+- *Windows* - 明るいグレーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
     
     ![](assets/en/FormObjects/button_osxtextured.png)
 
-- *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+- *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
 #### JSON 例:
 
@@ -227,15 +227,15 @@ By default, the OS X Textured style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's transparency and pop-up menu property option.
+ベベルスタイルと同様に、Office XPスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルの透過性を加え、ポップアップメニューを追加可能にしたものです。
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - its background only appears when the mouse rolls over it.
+- *Windows* - マウスオーバー時にのみ背景が表示されます。
 
 ![](assets/en/FormObjects/button_officexp.png)
 
-- *macOS* - its background is always displayed.
+- *macOS* - 背景は常に表示されます。
 
 #### JSON 例:
 
@@ -253,9 +253,9 @@ The colors (highlight and background) of a button with the Office XP style are b
                 }
 ```
 
-### Help
+### ヘルプ
 
-The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.
+このスタイルはシステム標準のヘルプボタンを表示するために使用します。 デフォルトで、ヘルプボタンは丸の中に表示されたハテナマーク (疑問符) です。
 
 ![](assets/en/FormObjects/button_help.png)
 
@@ -332,5 +332,5 @@ All buttons share the same set of basic properties:
 Additional specific properties are available, depending on the [button style](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
+- [デフォルトボタン](properties_Appearance.md#デフォルトボタン) (通常、フラット)
 - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
