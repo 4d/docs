@@ -15,12 +15,12 @@ This event is generated when a button receives a click and the mouse button is h
 This event can be generated for the following button styles:
 
 - [ツールバー](FormObjects/button_overview.md#toolbar)
-- [Bevel](FormObjects/button_overview.md#bevel)
-- [Rounded Bevel](FormObjects/button_overview.md#rounded-bevel)
-- [OS X Gradient](FormObjects/button_overview.md#os-x-gradient)
-- [OS X Textured](FormObjects/button_overview.md#os-x-textured)
+- [ベベル](FormObjects/button_overview.md#bevel)
+- [角の丸いベベル](FormObjects/button_overview.md#rounded-bevel)
+- [OS Xグラデーション](FormObjects/button_overview.md#os-x-gradient)
+- [OS Xテクスチャー](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
-- [Help](FormObjects/button_overview.md#help)
+- [ヘルプ](FormObjects/button_overview.md#help)
 - [Circle](FormObjects/button_overview.md#circle)
 - [Custom](FormObjects/button_overview.md#custom)
 
