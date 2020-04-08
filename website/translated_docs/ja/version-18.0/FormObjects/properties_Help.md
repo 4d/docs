@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesHelp
-title: Help
+title: ヘルプ
 original_id: propertiesHelp
 ---
 
