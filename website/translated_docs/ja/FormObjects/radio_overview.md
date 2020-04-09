@@ -126,7 +126,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
-### Custom
+### カスタム
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 
@@ -138,5 +138,5 @@ All radio buttons share the same set of basic properties:
 
 Additional specific properties are available depending on the [button style](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [背景バス名](properties_TextAndPicture.md#背景パス名) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
