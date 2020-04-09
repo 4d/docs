@@ -1,6 +1,6 @@
 ---
 id: buttonGridOverview
-title: Button Grid
+title: ボタングリッド
 ---
 
 ## 概要
