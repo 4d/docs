@@ -23,14 +23,14 @@ Naturally, the value entered must not belong to the list of [excluded values](pr
 
 When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | データタイプ  | Possible Values |
-| ------------------ | ------- | --------------- |
-| automaticInsertion | boolean | true, false     |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| automaticInsertion | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -40,15 +40,15 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ           | Possible Values                                     |
+| 名          | データタイプ           | とりうる値                                               |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
 | list       | list, collection | A list of possible values (hierarchical lists only) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -58,14 +58,14 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 List of static values to use as labels for the tab control object.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | データタイプ           | Possible Values                          |
+| 名      | データタイプ           | とりうる値                                    |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Tab Control](tabControl.md)
 
@@ -79,14 +79,14 @@ Specifies a variable or expression that will be assigned the collection element/
 
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name              | データタイプ | Possible Values   |
+| 名                 | データタイプ | とりうる値             |
 | ----------------- | ------ | ----------------- |
 | currentItemSource | string | Object expression |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box ](listbox_overview.md#overview)
 
@@ -104,14 +104,14 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                      | データタイプ | Possible Values   |
+| 名                         | データタイプ | とりうる値             |
 | ------------------------- | ------ | ----------------- |
 | currentItemPositionSource | string | Number expression |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box ](listbox_overview.md)
 
@@ -121,7 +121,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -139,14 +139,14 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 > You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | データタイプ     | Possible Values                                                  |
+| 名      | データタイプ     | とりうる値                                                            |
 | ------ | ---------- | ---------------------------------------------------------------- |
 | values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box Column (array type only)](listbox_overview.md#list-box-columns)
 
@@ -187,14 +187,14 @@ A 4D expression to be associated with a column. You can enter:
 
 If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ | Possible Values                                                         |
+| 名          | データタイプ | とりうる値                                                                   |
 | ---------- | ------ | ----------------------------------------------------------------------- |
 | dataSource | string | A 4D variable, field name, or an arbitrary complex language expression. |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -208,14 +208,14 @@ Specifies the table whose current selection will be used. This table and its cur
 
 All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name  | データタイプ | Possible Values |
-| ----- | ------ | --------------- |
-| table | number | Table number    |
+| 名     | データタイプ | とりうる値        |
+| ----- | ------ | ------------ |
+| table | number | Table number |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md#overview)
 
@@ -241,14 +241,14 @@ Using this property requires compliance with the following principles:
 - Valid and unique references must be associated with list items.
 - If you use this property for a [drop-down list](dropdownList_Overview.md), it must be associated with a field.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | データタイプ | Possible Values      |
+| 名      | データタイプ | とりうる値                |
 | ------ | ------ | -------------------- |
 | saveAs | string | "value", "reference" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -265,14 +265,14 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                | データタイプ | Possible Values       |
+| 名                   | データタイプ | とりうる値                 |
 | ------------------- | ------ | --------------------- |
 | selectedItemsSource | string | Collection expression |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box ](listbox_overview.md#overview)
 
@@ -286,13 +286,13 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 > Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | データタイプ | Possible Values      |
+| 名              | データタイプ | とりうる値                |
 | -------------- | ------ | -------------------- |
 | namedSelection | string | Named selection name |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md#overview)
