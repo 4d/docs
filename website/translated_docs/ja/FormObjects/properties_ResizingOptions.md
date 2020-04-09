@@ -31,14 +31,14 @@ The fake header and/or footer can be clicked but this does not have any effect o
 
 If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values         |
+| 名            | データタイプ | とりうる値                   |
 | ------------ | ------ | ----------------------- |
 | resizingMode | string | "rightToLeft", "legacy" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
@@ -50,23 +50,23 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                                 |
-| ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| オプション | JSON value | Result                                                                                                                 |
+| ----- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Grow  | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Move  | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
+| None  | "fixed"    | The object remains stationary when the form is resized                                                                 |
 
 
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name    | データタイプ | Possible Values         |
+| 名       | データタイプ | とりうる値                   |
 | ------- | ------ | ----------------------- |
 | sizingX | string | "grow", "move", "fixed" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
@@ -78,23 +78,23 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                               |
-| ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| オプション | JSON value | Result                                                                                                               |
+| ----- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| Grow  | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
+| Move  | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
+| None  | "fixed"    | The object remains stationary when the form is resized                                                               |
 
 
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name    | データタイプ | Possible Values         |
+| 名       | データタイプ | とりうる値                   |
 | ------- | ------ | ----------------------- |
 | sizingY | string | "grow", "move", "fixed" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
@@ -112,14 +112,14 @@ When this property is not applied to the splitter, the result is as follows:
 
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ |           Possible Values            |
+| 名            | データタイプ |                とりうる値                 |
 |:------------ |:------:|:------------------------------------:|
 | splitterMode | string | "move" (pusher), "resize" (standard) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Splitter](splitterTabControlOverview#splitters)
 
@@ -129,13 +129,13 @@ When this property is not applied to the splitter, the result is as follows:
 
 Designates if the size of the column can be modified by the user.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | データタイプ  | Possible Values |
+| 名         | データタイプ  |      とりうる値      |
 |:--------- |:-------:|:---------------:|
 | resizable | boolean | "true", "false" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box Column](listbox_overview.md#list-box-columns)
