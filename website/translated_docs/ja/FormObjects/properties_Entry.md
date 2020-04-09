@@ -11,14 +11,14 @@ title: Entry
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ  | Possible Values |
-| ---------- | ------- | --------------- |
-| spellcheck | boolean | true, false     |
+| 名          | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| spellcheck | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
 
@@ -38,14 +38,14 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | データタイプ | Possible Values                       |
+| 名           | データタイプ | とりうる値                                 |
 | ----------- | ------ | ------------------------------------- |
 | contextMenu | string | "automatic" (used if missing), "none" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
@@ -59,14 +59,14 @@ Objects are enterable by default. If you want to make a field or an object non-e
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | データタイプ  | Possible Values |
-| --------- | ------- | --------------- |
-| enterable | boolean | true, false     |
+| 名         | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| enterable | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
@@ -117,11 +117,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
 
 
-#### JSON Grammar
+#### JSON 文法
 
 - Entry filter code or 
     - Entry filter name (filter names start with &#124; )</td> </tr> </tbody> </table> 
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
         
@@ -149,14 +149,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
         
-        #### JSON Grammar
+        #### JSON 文法
         
-        | Name      | データタイプ  | Possible Values |
-        | --------- | ------- | --------------- |
-        | focusable | boolean | true, false     |
+        | 名         | データタイプ  | とりうる値       |
+        | --------- | ------- | ----------- |
+        | focusable | boolean | true, false |
 
         
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
         
@@ -170,14 +170,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         > You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
         
-        #### JSON Grammar
+        #### JSON 文法
         
-        | Name            | データタイプ | Possible Values                                                             |
+        | 名               | データタイプ | とりうる値                                                                       |
         | --------------- | ------ | --------------------------------------------------------------------------- |
         | keyboardDialect | テキスト   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
         
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
         
@@ -201,14 +201,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
         
-        #### JSON Grammar
+        #### JSON 文法
         
-        | Name      | データタイプ | Possible Values                                   |
+        | 名         | データタイプ | とりうる値                                             |
         | --------- | ------ | ------------------------------------------------- |
         | multiline | テキスト   | "yes", "no", "automatic" (default if not defined) |
 
         
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [Input](input_overview.md)
         
@@ -238,14 +238,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         > You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
         
-        #### JSON Grammar
+        #### JSON 文法
         
-        | Name        | データタイプ | Possible Values                                                              |
+        | 名           | データタイプ | とりうる値                                                                        |
         | ----------- | ------ | ---------------------------------------------------------------------------- |
         | placeholder | string | Text to be displayed (grayed out) when the object does not contain any value |
 
         
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
         
@@ -259,14 +259,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
         
-        #### JSON Grammar
+        #### JSON 文法
         
-        | Name          | データタイプ  | Possible Values |
-        | ------------- | ------- | --------------- |
-        | showSelection | boolean | true, false     |
+        | 名             | データタイプ  | とりうる値       |
+        | ------------- | ------- | ----------- |
+        | showSelection | boolean | true, false |
 
         
-        #### Objects Supported
+        #### 対象オブジェクト
         
         [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
         
@@ -284,11 +284,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
         
-        #### JSON Grammar
+        #### JSON 文法
         
         - any character key: "a", "b"...
             - [F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</td> </tr> </tbody> </table> 
-                #### Objects Supported
+                #### 対象オブジェクト
                 
                 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
                 
@@ -302,13 +302,13 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
                 
-                #### JSON Grammar
+                #### JSON 文法
                 
-                | Name            | データタイプ  | Possible Values |
-                | --------------- | ------- | --------------- |
-                | singleClickEdit | boolean | true, false     |
+                | 名               | データタイプ  | とりうる値       |
+                | --------------- | ------- | ----------- |
+                | singleClickEdit | boolean | true, false |
 
                 
-                #### Objects Supported
+                #### 対象オブジェクト
                 
                 [List Box](listbox_overview.md)
