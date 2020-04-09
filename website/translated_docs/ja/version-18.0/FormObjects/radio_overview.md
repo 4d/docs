@@ -59,47 +59,47 @@ The Toolbar radio button style is primarily intended for integration in a toolba
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is highlighted. 
+- *Windows* - ボタンがハイライト表示されます。 
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
 - *macOS* - ボタンはハイライト表示されません。 
 
-### Bevel
+### ベベル
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - the button is highlighted.
+- *Windows* - ボタンがハイライト表示されます。
     
     ![](assets/en/FormObjects/radio_bevel.png)
 
 - *macOS* - ボタンはハイライト表示されません。
 
-### Rounded Bevel
+### 角の丸いベベル
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
-
-- *Windows* - the button is identical to the [Bevel](#bevel) style.
-
-- *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
-
-### OS X Gradient
-
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
+角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。
 
 - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - the button is displayed as a two-tone system button.
+- *macOS* - 角が丸くなっています。 ![](assets/en/FormObjects/roundedBevel.png)
 
-### OS X Textured
+### OS Xグラデーション
+
+OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。
+
+- *Windows* - the button is identical to the [Bevel](#bevel) style.
+
+- *macOS* - 2トーンのシステムボタンです。
+
+### OS Xテクスチャー
 
 The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
 
-By default, the OS X Textured style appears as:
+デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
 - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
-- *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+- *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
     
     ![](assets/en/FormObjects/OSXTextured.png)
 
@@ -107,13 +107,13 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - its background only appears when the mouse rolls over it.
+- *Windows* - マウスオーバー時にのみ背景が表示されます。
     
     ![](assets/en/FormObjects/radio_xp.png)
 
-- *macOS* - its background is always displayed.
+- *macOS* - 背景は常に表示されます。
 
 ### Collapse / Expand
 
@@ -127,7 +127,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
-### Custom
+### カスタム
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 
@@ -139,5 +139,5 @@ All radio buttons share the same set of basic properties:
 
 Additional specific properties are available depending on the [button style](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [背景バス名](properties_TextAndPicture.md#背景パス名) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

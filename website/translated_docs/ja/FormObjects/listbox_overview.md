@@ -118,7 +118,7 @@ Supported properties depend on the list box type.
 | [Bold](properties_Text.md#bold)                                                              | X              | X                  | X                                       |
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                       |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                       |
-| [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                  | X                                       |
+| [下](properties_CoordinatesAndSizing.md#bottom)                                               | X              | X                  | X                                       |
 | [クラス](properties_Object.md#css-class)                                                        | X              | X                  | X                                       |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)        |                | X                  | X                                       |
 | [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                   | X              | X                  | X                                       |
@@ -149,7 +149,7 @@ Supported properties depend on the list box type.
 | [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                      | X              | X                  | X                                       |
 | [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                         | X              | X                  | X                                       |
 | [Italic](properties_Text.md#italic)                                                          | X              | X                  | X                                       |
-| [Left](properties_CoordinatesAndSizing.md#left)                                              | X              | X                  | X                                       |
+| [左](properties_CoordinatesAndSizing.md#left)                                                 | X              | X                  | X                                       |
 | [Master Table](properties_DataSource.md#table)                                               |                | X                  |                                         |
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                       |
 | [Method](properties_Action.md#method)                                                        | X              | X                  | X                                       |
@@ -159,7 +159,7 @@ Supported properties depend on the list box type.
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                       |
 | [オブジェクト名](properties_Object.md#object-name)                                                  | X              | X                  | X                                       |
-| [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                  | X                                       |
+| [右](properties_CoordinatesAndSizing.md#right)                                                | X              | X                  | X                                       |
 | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                    |                                         |
 | [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                    |                                         |
 | [Row Font Color Array](properties_Text.md#row-font-color-array)                              | X              |                    |                                         |
@@ -172,7 +172,7 @@ Supported properties depend on the list box type.
 | [Sortable](properties_Action.md#sortable)                                                    | X              | X                  | X                                       |
 | [Standard action](properties_Action.md#standard-action)                                      | X              |                    |                                         |
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
-| [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
+| [上](properties_CoordinatesAndSizing.md#top)                                                  | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
 | [型](properties_Object.md#type)                                                               | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
