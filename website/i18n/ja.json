@@ -298,7 +298,7 @@
         "title": "ボタン"
       },
       "FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "ボタングリッド"
       },
       "FormObjects/checkboxOverview": {
         "title": "Check Box"
@@ -412,7 +412,7 @@
         "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
@@ -928,7 +928,7 @@
         "title": "ボタン"
       },
       "version-18.0-FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "ボタングリッド"
       },
       "version-18.0-FormObjects/checkboxOverview": {
         "title": "Check Box"
@@ -1042,7 +1042,7 @@
         "title": "テキスト"
       },
       "version-18.0-FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "テキスト、ピクチャー"
       },
       "version-18.0-FormObjects/propertiesWebArea": {
         "title": "Web Area"
