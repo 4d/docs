@@ -21,8 +21,8 @@ This event can be generated for the following button styles:
 - [OS Xテクスチャー](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
 - [ヘルプ](FormObjects/button_overview.md#help)
-- [Circle](FormObjects/button_overview.md#circle)
-- [Custom](FormObjects/button_overview.md#custom)
+- [サークル](FormObjects/button_overview.md#circle)
+- [カスタム](FormObjects/button_overview.md#custom)
 
 This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
 
