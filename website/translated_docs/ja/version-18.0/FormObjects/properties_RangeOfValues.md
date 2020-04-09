@@ -31,14 +31,14 @@ You can use a sequence number to create a unique number for each record in the t
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ                              | Possible Values                            |
+| 名            | データタイプ                              | とりうる値                                      |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Input](input_overview.md)
 
@@ -50,14 +50,14 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values                  |
+| 名            | データタイプ | とりうる値                            |
 | ------------ | ------ | -------------------------------- |
 | excludedList | list   | A list of values to be excluded. |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -71,13 +71,13 @@ Making a list required does not automatically display the list when the field is
 
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values             |
+| 名            | データタイプ | とりうる値                       |
 | ------------ | ------ | --------------------------- |
 | requiredList | list   | A list of mandatory values. |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
