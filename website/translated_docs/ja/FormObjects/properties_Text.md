@@ -9,14 +9,14 @@ title: テキスト
 
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Property             | データタイプ  | Possible Values       |
+| Property             | データタイプ  | とりうる値                 |
 | -------------------- | ------- | --------------------- |
 | allowFontColorPicker | boolean | false (default), true |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Input](input_overview.md)
 
@@ -31,14 +31,14 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 > This is normal text.  
 > **This is bold text.**
 
-#### JSON Grammar
+#### JSON 文法
 
-| Property   | データタイプ | Possible Values  |
+| Property   | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
 | fontWeight | テキスト   | "normal", "bold" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -53,14 +53,14 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 > This is normal text.  
 > *This is text in italics.*
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | データタイプ | Possible Values    |
+| 名         | データタイプ | とりうる値              |
 | --------- | ------ | ------------------ |
 | fontStyle | string | "normal", "italic" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -73,14 +73,14 @@ Sets the text to have a line running beneath it.
 > This is normal text.  
 > This is <span style="text-decoration:underline">underlined</span> text.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | データタイプ | Possible Values       |
+| 名              | データタイプ | とりうる値                 |
 | -------------- | ------ | --------------------- |
 | textDecoration | string | "normal", "underline" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -111,14 +111,14 @@ Three font themes are available:
 
 > Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | データタイプ | Possible Values                |
+| 名         | データタイプ | とりうる値                          |
 | --------- | ------ | ------------------------------ |
 | fontTheme | string | "normal", "main", "additional" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -134,16 +134,16 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 > <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span>  
 > <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span>  
 > <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ | Possible Values      |
+| 名          | データタイプ | とりうる値                |
 | ---------- | ------ | -------------------- |
 | fontFamily | string | CSS font family name |
 
 
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -153,14 +153,14 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 Allows defining the object's font size in points.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name     | データタイプ  | Possible Values                       |
-| -------- | ------- | ------------------------------------- |
-| fontSize | integer | Font size in points. Minimum value: 0 |
+| 名        | データタイプ  | とりうる値                       |
+| -------- | ------- | --------------------------- |
+| fontSize | integer | Font size in points. 最小値: 0 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -180,14 +180,14 @@ The color can be specified by:
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | データタイプ | Possible Values                           |
+| 名      | データタイプ | とりうる値                                     |
 | ------ | ------ | ----------------------------------------- |
 | stroke | string | any css value, "transparent", "automatic" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -212,14 +212,14 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;
 Foreground color;Dark shadow color)
 ```
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name            | データタイプ | Possible Values       |
+| 名               | データタイプ | とりうる値                 |
 | --------------- | ------ | --------------------- |
 | rowStrokeSource | string | Font color expression |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md#overview)
 
@@ -243,14 +243,14 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | データタイプ | Possible Values                                 |
+| 名              | データタイプ | とりうる値                                           |
 | -------------- | ------ | ----------------------------------------------- |
 | rowStyleSource | string | Style expression to evaluate for each row/cell. |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -260,14 +260,14 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 Horizontal location of text within the area that contains it.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | データタイプ | Possible Values                                   |
+| 名         | データタイプ | とりうる値                                             |
 | --------- | ------ | ------------------------------------------------- |
 | textAlign | string | "automatic", "right", "center", "justify", "left" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
 
@@ -284,14 +284,14 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | データタイプ | Possible Values                        |
+| 名             | データタイプ | とりうる値                                  |
 | ------------- | ------ | -------------------------------------- |
 | verticalAlign | string | "automatic", "top", "middle", "bottom" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
 
@@ -311,7 +311,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
 | unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| disabled            | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
+| 無効                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
 | cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
 
@@ -346,14 +346,14 @@ $0:=Form.meta
 
 > See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ | Possible Values                                  |
+| 名          | データタイプ | とりうる値                                            |
 | ---------- | ------ | ------------------------------------------------ |
 | metaSource | string | Object expression to evaluate for each row/cell. |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
@@ -368,13 +368,13 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <h4>
-  JSON Grammar
+  JSON 文法
 </h4>
 
 <table>
   <tr>
     <th>
-      Name
+      名
     </th>
     
     <th>
@@ -382,7 +382,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      とりうる値
     </th>
   </tr>
   
@@ -402,7 +402,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <h4>
-  Objects Supported
+  対象オブジェクト
 </h4>
 
 <p>
@@ -476,13 +476,13 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <h4>
-  JSON Grammar
+  JSON 文法
 </h4>
 
 <table>
   <tr>
     <th>
-      Name
+      名
     </th>
     
     <th>
@@ -490,7 +490,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      とりうる値
     </th>
   </tr>
   
@@ -510,7 +510,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <h4>
-  Objects Supported
+  対象オブジェクト
 </h4>
 
 <p>
@@ -536,13 +536,13 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <h4>
-  JSON Grammar
+  JSON 文法
 </h4>
 
 <table>
   <tr>
     <th>
-      Name
+      名
     </th>
     
     <th>
@@ -550,7 +550,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      とりうる値
     </th>
   </tr>
   
@@ -570,7 +570,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <h4>
-  Objects Supported
+  対象オブジェクト
 </h4>
 
 <p>
@@ -596,13 +596,13 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <h4>
-  JSON Grammar
+  JSON 文法
 </h4>
 
 <table>
   <tr>
     <th>
-      Name
+      名
     </th>
     
     <th>
@@ -610,7 +610,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      とりうる値
     </th>
   </tr>
   
@@ -630,7 +630,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <h4>
-  Objects Supported
+  対象オブジェクト
 </h4>
 
 <p>
@@ -670,13 +670,13 @@ This property enables the possibility of using specific styles in the selected a
 </code></pre>
 
 <h4>
-  JSON Grammar
+  JSON 文法
 </h4>
 
 <table>
   <tr>
     <th>
-      Name
+      名
     </th>
     
     <th>
@@ -684,7 +684,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      とりうる値
     </th>
   </tr>
   
@@ -704,7 +704,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <h4>
-  Objects Supported
+  対象オブジェクト
 </h4>
 
 <p>
