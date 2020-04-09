@@ -10,14 +10,14 @@ original_id: propertiesCrop
 
 Sets the number of columns in a thumbnail table.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | データタイプ  | Possible Values |
-|:----------- |:-------:| --------------- |
-| columnCount | integer | minimum: 1      |
+| 名           | データタイプ  | とりうる値  |
+|:----------- |:-------:| ------ |
+| columnCount | integer | 最小値: 1 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
@@ -27,13 +27,13 @@ Sets the number of columns in a thumbnail table.
 
 Sets the number of rows in a thumbnail table.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name     | データタイプ  | Possible Values |
-|:-------- |:-------:| --------------- |
-| rowCount | integer | minimum: 1      |
+| 名        | データタイプ  | とりうる値  |
+|:-------- |:-------:| ------ |
+| rowCount | integer | 最小値: 1 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
