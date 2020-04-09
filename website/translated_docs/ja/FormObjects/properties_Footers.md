@@ -9,14 +9,14 @@ title: Footers
 
 This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | データタイプ  | Possible Values |
-| ----------- | ------- | --------------- |
-| showFooters | boolean | true, false     |
+| 名           | データタイプ  | とりうる値       |
+| ----------- | ------- | ----------- |
+| showFooters | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
@@ -53,14 +53,14 @@ Note that converting back and forth may lead to an end result that is different 
             }
     
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values               |
+| 名            | データタイプ | とりうる値                         |
 | ------------ | ------ | ----------------------------- |
 | footerHeight | string | positive decimal+px &#124; em |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
