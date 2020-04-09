@@ -9,14 +9,14 @@ title: Headers
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | データタイプ  | Possible Values |
-| ----------- | ------- | --------------- |
-| showHeaders | boolean | true, false     |
+| 名           | データタイプ  | とりうる値       |
+| ----------- | ------- | ----------- |
+| showHeaders | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
@@ -53,14 +53,14 @@ Note that converting back and forth may lead to an end result that is different 
             }
     
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values                 |
+| 名            | データタイプ | とりうる値                           |
 | ------------ | ------ | ------------------------------- |
 | headerHeight | string | positive decimal+px &#124; em ) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [List Box](listbox_overview.md)
 
