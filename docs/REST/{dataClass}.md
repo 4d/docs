@@ -14,7 +14,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 |[**{dataClass}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
 |[**{dataClass}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
 |[**{dataClass}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
-|[**{dataClass}/{method}**](#dataclassmethod)|`/Employee/getHighSalaries`|Returns an entity selection or a collection based on a dataclass method|
+|[**{dataClass}/{method}**](#dataclassmethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (project method must be exposed)|
 |[**{dataClass}({key})/{method}**](#dataclasskey)|`/Employee(22)/getAge`|Returns a value based on an entity method|
 
 
@@ -34,7 +34,7 @@ Here is a description of the data returned:
 |---|---|---|
 |__entityModel|	String|	Name of the datastore class.|
 |__COUNT|	Number	|Number of entities in the datastore class.|
-|__SENT|	Number|	Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`.|
+|__SENT|	Number|	Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value in `$top/$limit`.|
 |__FIRST|	Number|	Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
 |__ENTITIES	|Array|	This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
 
@@ -50,13 +50,14 @@ If you want to specify which attributes you want to return, define them using th
 
 Return all the data for a specific datastore class.
 
- `GET  /rest/Employee`
+ `GET  /rest/Company`
 
 **Result**:
 
 ````
 {
     "__entityModel": "Company",
+    "__GlobalStamp": 50,
     "__COUNT": 250,
     "__SENT": 100,
     "__FIRST": 0,
@@ -211,20 +212,6 @@ Dataclass methods must be applied to either a dataclass or an entity selection, 
 
 `POST  /rest/Employee/getHighSalaries`
 
-
-If you do not have the permissions to execute the method, you will receive the following error:
-
-```
-{
-    "__ERROR": [
-        {
-            "message": "No permission to execute method getHighSalaries in dataClass Employee",
-            "componentSignature": "dbmg",
-            "errCode": 1561
-        }
-    ]
-}
-```
 
 ### 4D Configuration
 
