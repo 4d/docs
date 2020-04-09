@@ -21,7 +21,7 @@ p>
 
 標準アクションとして提供されていない動作をボタンに実行させたい場合には、標準アクションのフィールドは空欄にしておき、ボタンのアクションを指定するオブジェクトメソッドを書きます オブジェクトメソッドの作成や割り当て方法についての詳細は [オブジェクトメソッドを使用する](https://doc.4d.com/4Dv18/4D/18/Using-object-methods.300-4575722.ja.html) を参照ください。 通常は、イベントテーマで `On Clicked` イベントを有効にして、ボタンのクリック時にのみメソッドを実行します。 どのタイプのボタンにもメソッドを割り当てることができます。
 
-ボタンに関連付けられた変数 ([variable](properties_Object.md#variable-or-expression) 属性) は、デザインモードやアプリケーションモードでフォームが初めて開かれるときに自動で **0** に初期化されます。 ボタンをクリックすると、変数の値は **1** になります。
+ボタンに関連付けられた変数 ([variable](properties_Object.md#変数あるいは式) 属性) は、デザインモードやアプリケーションモードでフォームが初めて開かれるときに自動で **0** に初期化されます。 ボタンをクリックすると、変数の値は **1** になります。
 
 > ボタンには標準アクションとメソッドの両方を割り当てることもできます。 この場合、標準アクションによってボタンが無効化されていなければ、標準アクションより先にメソッドが実行されます。
 
@@ -274,15 +274,15 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.
+> ヘルプボタンは次の基本プロパティを持ちません: [状態の数](properties_TextAndPicture.md#状態の数)、[ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)。
 
-### Circle
+### サークル
 
-The Circle button style appears as a round system button. This button style is designed for macOS.
+サークルスタイルのボタンは、円形のシステムボタンとして表示されます。 このボタンスタイルは macOS 用に用意されています。
 
 ![](assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+Windows の場合、サークルは表示されません。
 
 #### JSON 例:
 
@@ -298,9 +298,9 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
                     }
     
 
-### Custom
+### カスタム
 
-The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset.
+カスタムスタイルのボタンは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます (アイコンオフセットやマージン)。
 
 ![](assets/en/FormObjects/button_custom.png)
 
@@ -323,14 +323,14 @@ The Custom button style accepts a personalized background picture and allows man
 
 ## プロパティ一覧
 
-All buttons share the same set of basic properties:
+すべてのボタンは次の基本プロパティを共有します:
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[太字](properties_Text.md#太字) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [下](properties_CoordinatesAndSizing.md#下) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [CSSクラス](properties_Object.md#CSSクラス) - [ドロプ有効](properties_Action.md#ドロップ有効) - [フォーカス可](properties_Entry.md#フォーカス可) - [フォント](properties_Text.md#フォント) - [フォントカラー](properties_Text.md#フォントカラー) - [Font Size](properties_Text.md#font-size) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [ヘルプTips](properties_Help.md#ヘルプTips) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [イタリック](properties_Text.md#イタリック) - [左](properties_CoordinatesAndSizing.md#左) - [レンダリングしない](properties_Display.md#レンダリングしない) - [状態の数](properties_TextAndPicture.md#状態の数)(1) - [オブジェクト名](properties_Object.md#オブジェクト名) - [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(1) - [右](properties_CoordinatesAndSizing.md#右) - [ショートカット](properties_Entry.md#ショートカット) - [標準アクション](properties_Action.md#標準アクション) - [タイトル](properties_Object.md#タイトル) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(1) - [上](properties_CoordinatesAndSizing.md#上) - [タイプ](properties_Object.md#タイプ) - [下線](properties_Text.md#下線) - [変数あるいは式](properties_Object.md#変数あるいは式) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [幅](properties_CoordinatesAndSizing.md#幅)
 
-> (1) Not supported by the [Help](#help) style.
+> (1) [ヘルプ](#ヘルプ) スタイルは除外
 
-Additional specific properties are available, depending on the [button style](#button-styles):
+[ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [背景バス名](properties_TextAndPicture.md#背景パス名) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
 - [デフォルトボタン](properties_Appearance.md#デフォルトボタン) (通常、フラット)
-- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [ポップアップメニューあり](properties_TextAndPicture.md#ポップアップメニューあり) (ツールバー、ベベル、角の丸いベベル、OS X グラデーション、OS X テクスチャー、Office XP、サークル、カスタム)
