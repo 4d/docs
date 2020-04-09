@@ -1,6 +1,6 @@
 ---
 id: version-18.0-buttonGridOverview
-title: Button Grid
+title: ボタングリッド
 original_id: buttonGridOverview
 ---
 
