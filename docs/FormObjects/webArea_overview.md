@@ -36,6 +36,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 ### $4d object
 
 
+
 The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
@@ -182,7 +183,7 @@ The URLs handled by programming in web areas in macOS must begin with the protoc
 ## Access to web inspector  
 You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
-### Displaying the Web inspector  
+### Displaying the web inspector  
 To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area. 
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br>
@@ -191,12 +192,12 @@ In the case of an onscreen web area, you must have [selected the embedded web re
 
 - **Use the web area context menu**<br>
 This feature can only be used with onscreen web areas and requires that the following conditions are met:
-- the embedded web rendering engine is selected for the area
-- the [context menu](properties_Entry.md#context-menu) for the web area is enabled
-- the use of the inspector is expressly enabled in the area by means of the following statement:
-```4d
-WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
-```
+	- the embedded web rendering engine is selected for the area
+	- the [context menu](properties_Entry.md#context-menu) for the web area is enabled
+	- the use of the inspector is expressly enabled in the area by means of the following statement:
+	```4d
+	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
+	```
 
 	For more information, refer to the description of the `WA SET PREFERENCE` command.
 
