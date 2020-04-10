@@ -301,7 +301,7 @@
         "title": "ボタングリッド"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -931,7 +931,7 @@
         "title": "ボタングリッド"
       },
       "version-18.0-FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "version-18.0-FormObjects/comboBoxOverview": {
         "title": "Combo Box"
