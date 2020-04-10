@@ -1,11 +1,11 @@
 ---
 id: checkboxOverview
-title: Check Box
+title: チェックボックス
 ---
 
 ## 概要
 
-A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
+チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、3つめの状態を定義することもできます (後述参照)。
 
 ![](assets/en/FormObjects/checkbox.png)
 
