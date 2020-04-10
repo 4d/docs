@@ -34,11 +34,17 @@ Here is a description of the data returned:
 |---|---|---|
 |__entityModel|	String|	Name of the datastore class.|
 |__COUNT|	Number	|Number of entities in the datastore class.|
-|__SENT|	Number|	Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value in `$top/$limit`.|
+|__SENT|	Number|	Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
 |__FIRST|	Number|	Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
-|__ENTITIES	|Array|	This array of objects contains an object for each entity with all the Public attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
+|__ENTITIES	|Collection|	This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
 
-For each entity, there is a **__KEY** and a **__STAMP** property. The **__KEY** property contains the value of the primary key defined for the datastore class. The **__STAMP** is an internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.
+Each entity contains the following properties:
+
+|Property|	Type|	Description|
+|---|---|---|
+|__KEY|String|Value of the primary key defined for the datastore class.|
+|__TIMESTAMP|Date|Timestamp of the last modification of the entity|
+|__STAMP|Number|Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.|
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
@@ -57,13 +63,14 @@ Return all the data for a specific datastore class.
 ````
 {
     "__entityModel": "Company",
-    "__GlobalStamp": 50,
+    "__GlobalStamp": 51,
     "__COUNT": 250,
     "__SENT": 100,
     "__FIRST": 0,
     "__ENTITIES": [
         {
             "__KEY": "1",
+            "__TIMESTAMP": "2020-04-10T10:44:49.927Z",
             "__STAMP": 1,
             "ID": 1,
             "name": "Adobe",
@@ -79,6 +86,7 @@ Return all the data for a specific datastore class.
         },
         {
             "__KEY": "2",
+            "__TIMESTAMP": "2018-04-25T14:42:18.351Z",
             "__STAMP": 1,
             "ID": 2,
             "name": "Apple",
@@ -94,6 +102,7 @@ Return all the data for a specific datastore class.
         },
         {
             "__KEY": "3",
+            "__TIMESTAMP": "2018-04-23T09:03:49.021Z",
             "__STAMP": 2,
             "ID": 3,
             "name": "4D",
@@ -109,6 +118,7 @@ Return all the data for a specific datastore class.
         },
         {
             "__KEY": "4",
+            "__TIMESTAMP": "2018-03-28T14:38:07.430Z",
             "__STAMP": 1,
             "ID": 4,
             "name": "Microsoft",
@@ -158,7 +168,8 @@ The following request returns all the public data in the Company datastore class
 {
     "__entityModel": "Company",
     "__KEY": "1",
-    "__STAMP": 1,
+    "__TIMESTAMP": "2020-04-10T10:44:49.927Z",
+    "__STAMP": 2,
     "ID": 1,
     "name": "Apple",
     "address": Infinite Loop,
@@ -203,12 +214,11 @@ The following request returns all the public data of the employee named "Jones".
 
 ## {dataClass}/{method}
 
-Returns an entity selection or a collection based on a dataclass method	
+Returns an object or a collection based on a project method	
 
 ### Description   
 
-Dataclass methods must be applied to either a dataclass or an entity selection, and must return either an entity selection or a collection. When returning a collection, however, you cannot define which attributes are returned.
-
+Project methods must be applied to either a dataclass or an entity selection, and must return either an object or a collection. 
 
 `POST  /rest/Employee/getHighSalaries`
 
@@ -237,6 +247,8 @@ You can also pass parameters to a method in a POST.
 **POST data:**
 ["John","Smith"]
 
+
+############## A REVOIR
 ### Manipulating the Data Returned by a Method  
 
 You can define which attributes you want to return, by passing the following:
@@ -274,3 +286,4 @@ Result:
     ]
 }
 ```
+#########################"
