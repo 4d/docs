@@ -14,7 +14,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 
 
-## Adding, Modifying, and Deleting Entities  
+## Adding, modifying, and deleting entities  
 
 With the REST API, you can perform all the manipulations to data as you can in 4D.
 
@@ -25,13 +25,13 @@ Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7Bda
 Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 
-## Navigating Data  
+## Navigating data  
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
 
 
-## Creating and Managing Entity Set  
+## Creating and managing entity set  
 
 An entity set (aka *entity selection*) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. Using an entity set prevents you from continually querying your application for the same results. Accessing an entity set is much quicker and can improve the speed of your application.
 
@@ -56,7 +56,7 @@ A new selection of entities is returned; however, you can also create a new enti
 
 
 
-## Calculating Data  
+## Calculating data  
 
 By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. You can also compute all values with the $all keyword. 
 
@@ -69,9 +69,42 @@ To compute all values and return a JSON object:
 `/rest/Employee/salary/?$compute=$all`
 
 
+## Getting data from methods 
+
+You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+
+- an object
+- a collection
+
+The following example is a dataclass method that reveives parameters and returns an object:
+
+```4d
+// 4D findPerson method
+C_TEXT($1;$firstname;$2;$lastname)
+$firstname:=$1
+$lastname:=$2
+
+$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
+```
+
+The method properties are configured accordingly on the 4D project side:
+
+![alt-text](assets/en/REST/methodProp_ex.png)
+
+Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+
+```4d
+C_TEXT($content)
+C_OBJECT($response)
+
+$content:="[\"Toni\",\"Dickey\"]" 
+
+$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
+```
 
 
-## Selecting attributes to get
+
+## Selecting Attributes to get
 
 You can always define which attributes to return in the REST response after an initial request by passing their path in the request (*e.g.*, `Company(1)/name,revenues/`)
 
@@ -80,7 +113,7 @@ You can apply this filter in the following ways:
 |Object	|Syntax|	Example|
 |---|---|---|
 |Dataclass	|{dataClass}/{att1,att2...}	|/People/firstName,lastName|
-|Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a*'"|
+|Collection of entities	|{dataClass}/{att1,att2...}/?$filter="{filter}"|	/People/firstName,lastName/?$filter="lastName='a@'"|
 |Specific entity|	{dataClass}({ID})/{att1,att2...}	|/People(1)/firstName,lastName|  
 ||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
 |Entity selection|	{dataClass}/{att1,att2...}/$entityset/{entitySetID}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
@@ -95,7 +128,6 @@ You can apply this technique to:
 
 - Dataclasses (all or a collection of entities in a dataclass)
 - Specific entities
-- Dataclass methods
 - Entity sets
 
 #### Dataclass Example  
@@ -143,7 +175,7 @@ The following requests returns only the first name and last name from the People
 ````
 
 
-`GET  /rest/People/firstName,lastName/?$filter="lastName='A*'"/`
+`GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
 **Result**:
 
@@ -208,19 +240,9 @@ The following request returns only the first name and last name attributes from 
 }
 ````
 
-#### Method Example  
-
-If you have a dataclass method, you can define which attributes to return as shown below before passing the dataclass method:
-
- `GET  /rest/People/firstName,lastName/getHighSalaries`
-
-or
-
- `GET  /rest/People/getHighSalaries/firstName,lastName`
-
 #### Entity Set Example  
 
-Once you have created an entity set, you can filter the information in it by defining which attributes to return:
+Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
  
