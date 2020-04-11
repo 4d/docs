@@ -11,10 +11,9 @@ Ce paramètre vous permet de définir l'opération à exécuter avec l'entité o
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Supprime l'entité, collection d'entités ou sélection d'entité courante                                               |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Crée un ensemble d'entités dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/4CANUMBER?$method=release`                                            | Affiche un ensemble d'entités existant stocké dans le cache de 4D Server                                             |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Affiche un ensemble d'entités existant stocké dans le cache de 4D Server                                             |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un ensemble d'entités basé sur la collection d'entités relatives définies dans la requête REST                  |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Met à jour et/ou crée une ou plusieurs entités                                                                       |
-| [**$method=validate**](#methodvalidate)         | `POST /Employee/?$method=validate`                                                              | Valide la demande lors de l'ajout et/ou de la modification d'entités                                                 |
 
 
 ## $method=delete
@@ -177,11 +176,13 @@ Met à jour et/ou crée une ou plusieurs entités
 
 ### Description
 
-`$method=update` vous permet de mettre à jour et/ou de créer une ou plusieurs entités dans un seul **POST**. Si vous mettez à jour et/ou créez une entité, cela s'effectue dans un objet avec, pour chaque propriété, un attribut et sa valeur, par exemple `{lastName: "Smith"}`. Si vous mettez à jour et/ou créez plusieurs entités, vous devez créer un tableau d'objets.
+`$method=update` vous permet de mettre à jour et/ou de créer une ou plusieurs entités dans un seul **POST**. Si vous mettez à jour et/ou créez une entité, cela s'effectue dans un objet avec, pour chaque propriété, un attribut et sa valeur, par exemple `{lastName: "Smith"}`. If you update and/or create multiple entities, you must create a collection of objects.
+
+In any cases, you must set the **POST** data in the **body** of the request.
 
 Pour mettre à jour une entité, vous devez passer les paramètres `__KEY` et `__STAMP` dans l'objet avec tous les attributs modifiés. Si ces deux paramètres sont manquants, une entité sera ajoutée avec les valeurs de l'objet que vous envoyez dans le corps de votre **POST**.
 
-Tous les triggers, attributs calculés et événements sont exécutés immédiatement lors de la sauvegarde de l'entité sur le serveur. La réponse contient toutes les données telles qu'elles existent sur le serveur.
+Triggers are executed immediately when saving the entity to the server. La réponse contient toutes les données telles qu'elles existent sur le serveur.
 
 Vous pouvez également placer ces requêtes pour créer ou mettre à jour des entités dans une transaction en appelant `$atomic/$atonce`. Si des erreurs se produisent lors de la validation des données, aucune des entités n'est sauvegardée. Vous pouvez également utiliser $method=validate pour valider les entités avant de les créer ou de les mettre à jour.
 
@@ -249,149 +250,62 @@ Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les 
         "__KEY": "622", 
         "__STAMP": 1, 
         "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+        "__TIMESTAMP": "!!2020-04-03!!",
         "ID": 622, 
         "firstName": "John", 
-        "firstName": "Smith",
-        "fullName": "John Smith"
+        "firstName": "Smith"
     }
     
-
-> La seule raison pour laquelle l'attribut fullName est renvoyé est qu'il s'agit d'un attribut calculé à partir de firstName et lastName.
 
 Si, par exemple, le tampon n'est pas correct, l'erreur suivante est retournée :
 
     {
-        "__ENTITIES": [
-            {
-                "__KEY": "309", 
-                "__STAMP": 1, 
-                "ID": 309, 
-                "firstName": "Betty", 
-                "lastName": "Smith", 
-                "fullName": "Betty Smith", 
-                "__ERROR": [
-                    {
-                        "message": "Given stamp does not match current one for record# 308 of table Employee", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1263
-                    }, 
-                    {
-                        "message": "Cannot save record 308 in table Employee of database Widgets", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1046
-                    }, 
-                    {
-                        "message": "The entity# 308 of the datastore class \"Employee\" cannot be saved", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1517
-                    }
-                ]
-            }, 
-            {
-                "__KEY": "612", 
-                "__STAMP": 4, 
-                "uri": "http://127.0.0.1:8081/rest/Employee(612)", 
-                "ID": 612, 
-                "firstName": "Ann", 
-                "lastName": "Jones", 
-                "fullName": "Ann Jones"
-            }
-        ]
-    }
-    
-
-Si, par exemple, l'utilisateur ne dispose pas des autorisations nécessaires pour mettre à jour une entité, l'erreur suivante est retournée :
-
-    {
-        "__KEY": "2", 
-        "__STAMP": 4, 
-        "ID": 2, 
-        "firstName": "Paula", 
-        "lastName": "Miller", 
-        "fullName": "Paula Miller", 
-        "telephone": "408-555-5555", 
-        "salary": 56000, 
-        "employerName": "Adobe", 
-        "employer": {
+        "__STATUS": {
+            "status": 2,
+            "statusText": "Stamp has changed",
+            "success": false
+        },
+        "__KEY": "1",
+        "__STAMP": 12,
+        "__TIMESTAMP": "!!2020-03-31!!",
+        "ID": 1,
+        "firstname": "Denise",
+        "lastname": "O'Peters",
+        "isWoman": true,
+        "numberOfKids": 1,
+        "addressID": 1,
+        "gender": true,
+        "imageAtt": {
             "__deferred": {
-                "uri": "http://127.0.0.1:8081/rest/Company(1)", 
+                "uri": "/rest/Persons(1)/imageAtt?$imageformat=best&$version=12&$expand=imageAtt",
+                "image": true
+            }
+        },
+        "extra": {
+            "num": 1,
+            "alpha": "I am 1"
+        },
+        "address": {
+            "__deferred": {
+                "uri": "/rest/Address(1)",
                 "__KEY": "1"
             }
-        }, 
+        },
         "__ERROR": [
             {
-                "message": "No permission to update for dataClass Employee", 
-                "componentSignature": "dbmg", 
-                "errCode": 1558
-            }, 
+                "message": "Given stamp does not match current one for record# 0 of table Persons",
+                "componentSignature": "dbmg",
+                "errCode": 1263
+            },
             {
-                "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved", 
-                "componentSignature": "dbmg", 
+                "message": "Cannot save record 0 in table Persons of database remote_dataStore",
+                "componentSignature": "dbmg",
+                "errCode": 1046
+            },
+            {
+                "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+                "componentSignature": "dbmg",
                 "errCode": 1517
             }
         ]
-    }
-    
-
-## $method=validate
-
-Valide la demande lors de l'ajout et/ou de la modification d'entités
-
-### Description
-
-Avant d'enregistrer une entité nouvelle ou modifiée à l'aide de `$method=update`, vous pouvez d'abord essayer de valider les actions avec `$method=validate`.
-
-### Exemple
-
-Dans cet exemple, nous envoyons via **POST** la requête suivante à $method=validate :
-
-`POST  /rest/Employee/?$method=validate`
-
-**Données POST** :
-
-    [{
-        "__KEY": "1",
-        "__STAMP": 8,
-        "firstName": "Pete",
-        "lastName": "Jones",
-        "salary": 75000
-    }, {
-        "firstName": "Betty",
-        "lastName": "Miller",
-    }]
-    
-
-**Réponse** :
-
-Si la requête a abouti, la réponse suivante est retournée :
-
-    {
-        "ok": true
-    }
-    
-
-Sinon, vous recevez une erreur. Dans notre cas, une erreur a été retournée car notre champ "salary" doit être inférieur à 60000 :
-
-    {
-        "__ENTITIES": [
-            {
-                "__ERROR": [
-                    {
-                        "message": "Value cannot be greater than 60000", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1569
-                    }, 
-                    {
-                        "message": "Entity fails validation", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1570
-                    }, 
-                    {
-                        "message": "The new entity of the datastore class \"Employee\" cannot be saved", 
-                        "componentSignature": "dbmg", 
-                        "errCode": 1534
-                    }
-                ]
-            }
-        ]
-    }
+    }{}
