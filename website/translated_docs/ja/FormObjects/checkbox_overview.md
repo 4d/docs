@@ -9,15 +9,15 @@ title: チェックボックス
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
+チェックボックスはメソッドにより制御されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。 チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。
 
-A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+チェックボックスは小さな四角形の右側にテキストを表示します。 このテキストはチェックボックスの [タイトル](properties_Object.md#title) プロパティで設定します。 タイトルには、XLIFF参照を入れることもできます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
 
-## Using check boxes
+## チェックボックスの使用
 
-A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
+チェックボックスには整数型またはブール型の [変数または式](properties_Object.md#変数あるいは式) を設定することができます。
 
-- **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
+- **整数:** チェックボックスが選択されると、変数の値は 1 になります。 チェックボックスが選択されていない場合の値は 0 です。 チェックボックスが 3番目の状態 (後述参照) のとき、変数値は 2 になります。
 - **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`. 
 
 Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options.
