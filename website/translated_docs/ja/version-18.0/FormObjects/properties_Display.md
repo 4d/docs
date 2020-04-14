@@ -430,7 +430,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         ## Three-States
         
-        Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+        Allows a check box object to accept a third state. チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
         
         #### Three-states check boxes in list box columns
         
