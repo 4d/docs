@@ -46,7 +46,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 ## Excluded List
 
-Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
+Allows setting a list whose values cannot be entered in the object. ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
 
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
