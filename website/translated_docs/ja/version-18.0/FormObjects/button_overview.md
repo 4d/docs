@@ -204,7 +204,7 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- *Windows* - 明るいグレーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
+- *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
     
     ![](assets/en/FormObjects/button_osxtextured.png)
 
@@ -326,12 +326,12 @@ Windows の場合、サークルは表示されません。
 
 すべてのボタンは次の基本プロパティを共有します:
 
-[太字](properties_Text.md#太字) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [下](properties_CoordinatesAndSizing.md#下) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [CSSクラス](properties_Object.md#CSSクラス) - [ドロプ有効](properties_Action.md#ドロップ有効) - [フォーカス可](properties_Entry.md#フォーカス可) - [フォント](properties_Text.md#フォント) - [フォントカラー](properties_Text.md#フォントカラー) - [Font Size](properties_Text.md#font-size) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [ヘルプTips](properties_Help.md#ヘルプTips) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [イタリック](properties_Text.md#イタリック) - [左](properties_CoordinatesAndSizing.md#左) - [レンダリングしない](properties_Display.md#レンダリングしない) - [状態の数](properties_TextAndPicture.md#状態の数)(1) - [オブジェクト名](properties_Object.md#オブジェクト名) - [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(1) - [右](properties_CoordinatesAndSizing.md#右) - [ショートカット](properties_Entry.md#ショートカット) - [標準アクション](properties_Action.md#標準アクション) - [タイトル](properties_Object.md#タイトル) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(1) - [上](properties_CoordinatesAndSizing.md#上) - [タイプ](properties_Object.md#タイプ) - [下線](properties_Text.md#下線) - [変数あるいは式](properties_Object.md#変数あるいは式) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [幅](properties_CoordinatesAndSizing.md#幅)
+[太字](properties_Text.md#太字) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [下](properties_CoordinatesAndSizing.md#下) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [CSSクラス](properties_Object.md#CSSクラス) - [ドロップ有効](properties_Action.md#ドロップ有効) - [フォーカス可](properties_Entry.md#フォーカス可) - [フォント](properties_Text.md#フォント) - [フォントカラー](properties_Text.md#フォントカラー) - [Font Size](properties_Text.md#font-size) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [ヘルプTips](properties_Help.md#ヘルプTips) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [イタリック](properties_Text.md#イタリック) - [左](properties_CoordinatesAndSizing.md#左) - [レンダリングしない](properties_Display.md#レンダリングしない) - [状態の数](properties_TextAndPicture.md#状態の数)(1) - [オブジェクト名](properties_Object.md#オブジェクト名) - [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(1) - [右](properties_CoordinatesAndSizing.md#右) - [ショートカット](properties_Entry.md#ショートカット) - [標準アクション](properties_Action.md#標準アクション) - [タイトル](properties_Object.md#タイトル) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(1) - [上](properties_CoordinatesAndSizing.md#上) - [タイプ](properties_Object.md#タイプ) - [下線](properties_Text.md#下線) - [変数あるいは式](properties_Object.md#変数あるいは式) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [幅](properties_CoordinatesAndSizing.md#幅)
 
 > (1) [ヘルプ](#ヘルプ) スタイルは除外
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- [背景バス名](properties_TextAndPicture.md#背景パス名) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
+- [背景パス名](properties_TextAndPicture.md#背景パス名) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
 - [デフォルトボタン](properties_Appearance.md#デフォルトボタン) (通常、フラット)
 - [ポップアップメニューあり](properties_TextAndPicture.md#ポップアップメニューあり) (ツールバー、ベベル、角の丸いベベル、OS X グラデーション、OS X テクスチャー、Office XP、サークル、カスタム)
