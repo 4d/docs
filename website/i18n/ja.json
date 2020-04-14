@@ -304,10 +304,10 @@
         "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "FormObjects/formObjectsOverview": {
         "title": "4D フォームオブジェクトについて"
@@ -934,10 +934,10 @@
         "title": "チェックボックス"
       },
       "version-18.0-FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "version-18.0-FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "version-18.0-FormObjects/formObjectsOverview": {
         "title": "4D フォームオブジェクトについて"
