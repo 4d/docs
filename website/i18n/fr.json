@@ -605,7 +605,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions et utilisateurs"
+        "title": "Users and sessions"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
@@ -1232,7 +1232,7 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions et utilisateurs"
+        "title": "Users and sessions"
       },
       "version-18.0-REST/configuration": {
         "title": "Configuration du serveur"

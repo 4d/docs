@@ -222,7 +222,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 * * *
 
-## Save as
+## 関連付け
 
 This property is available in the following conditions:
 

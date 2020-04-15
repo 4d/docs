@@ -301,13 +301,13 @@
         "title": "ボタングリッド"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "FormObjects/formObjectsOverview": {
         "title": "4D フォームオブジェクトについて"
@@ -605,7 +605,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "REST/configuration": {
         "title": "Server Configuration"
@@ -931,13 +931,13 @@
         "title": "ボタングリッド"
       },
       "version-18.0-FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "version-18.0-FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "version-18.0-FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "version-18.0-FormObjects/formObjectsOverview": {
         "title": "4D フォームオブジェクトについて"
@@ -1232,7 +1232,7 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "version-18.0-REST/configuration": {
         "title": "Server Configuration"
