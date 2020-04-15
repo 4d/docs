@@ -7,6 +7,11 @@ title: Forms
 
 Forms provide the interface through which information is entered, modified, and printed. Users interact with the data in a database using forms and print reports using forms. In custom applications, forms can be used to create custom dialog boxes and palettes.
 
+In 4D projects, forms are handled as meta-objects having their own properties and containing specific form objects. Forms can also contain other forms through the following features:
+
+- [subform objects](subform_overview.md)
+- [inherited forms](propertiesForm.md#inherited-forms)
+
 Each table in a database generally has at least two forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications). The form listing records is called the *output form* or *list form* and the form displaying individual records is called the *input form* or *detail form*. When viewing records using the list form, you can double-click a record to view it using the current detail form.
 
 ## Form Contents   

@@ -60,7 +60,10 @@ In previous versions of 4D, when a form had the **Automatic Size** property, the
 
 ## Form Type  
 
-You can change the form type, *i.e.* its destination, depending on the form's architecture:
+The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](#markers) can only be set in list (output) forms.
+
+Each table in a database generally has at least two forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications). The form listing records is called the *output form* or *list form* and the form displaying individual records is called the *input form* or *detail form*. When viewing records using the list form, you can double-click a record to view it using the current detail form.
+
 
 |Genre|Destination Type|
 |---|---|
@@ -196,13 +199,21 @@ You can create additional control lines to set additional Break areas and Header
 
 ## Pages
 
-This property defines a collection of pages in a form.
+This property is the collection of each page of the form. Each page is a object with an "objects" property containing the list of form  
+
+- The first page is a background page (page zero) on which objects that appear on all display pages are placed. The background page can be used to place background graphics, buttons, a tab control, and other graphic objects that define the “look” of the page, such as rectangles and labels.
+- A form contains one or more pages in which fields and other enterable objects appear. If objects don’t fit on a single page, additional pages can be created. When creating a multi-page form, you can also add buttons or a tab control to allow users to move from one page to another.
+
+
+>When a multi-page table form is used as an output form (*e.g.*, when it is printed), only the first display page appears.
+
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
 |pages|collection|Page objects|
+
 
 #### Objects Supported
 [Forms](forms.md) 

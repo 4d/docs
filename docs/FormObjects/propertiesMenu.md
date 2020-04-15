@@ -27,5 +27,3 @@ If the menu bar of the form is identical to the current menu bar, it is not adde
 
 #### Objects Supported
 [Forms](forms.md) 
-
----

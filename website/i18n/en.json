@@ -111,6 +111,9 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormObjects/forms": {
+        "title": "Forms"
+      },
       "FormObjects/buttonOverview": {
         "title": "Button"
       },
@@ -128,9 +131,6 @@
       },
       "FormObjects/formObjectsOverview": {
         "title": "About 4D Form Objects"
-      },
-      "FormObjects/forms": {
-        "title": "Forms"
       },
       "FormObjects/groupBox": {
         "title": "Group Box"
