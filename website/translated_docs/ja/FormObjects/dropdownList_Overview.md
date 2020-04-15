@@ -79,13 +79,13 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 > この原理は、配列を用いてオブジェクトを初期化する方法と組み合わせることはできません。 変数あるいは式の欄にフィールド名を入力した場合は、必ず選択リストを使用します。
 
-### Save as
+### 関連付け
 
-When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved.
+ポップアップメニュー/ドロップダウンリストの式としてフィールドを、さらにデータソースに選択リストを設定した場合には、[関連付け](properties_DataSource.md#関連付け) プロパティが利用できます。"リスト項目の値" または "リスト項目の参照番号" を選択してデータの保存方式を指定することができます。 このオプションにより、保存するデータのサイズを最適化できるようになります。
 
 ## 標準アクションの使用
 
-You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+ポップアップメニュー/ドロップダウンリストには、標準アクションを割り当てることができます (プロパティリストの "[アクション](properties_Action.md#標準アクション)" テーマ)。 このオブジェクトでは、項目のサブリストを表示するアクションのみがサポートされます (例外: goto page アクション)。 For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
