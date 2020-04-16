@@ -108,12 +108,12 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Placeholder | Effect for leading or trailing zero |
-| ----------- | ----------------------------------- |
-| #           | Displays nothing                    |
-| 0           | Displays 0                          |
-| ^           | Displays a space (1)                |
-| *           | Displays an asterisk                |
+| プレースホルダー | Effect for leading or trailing zero |
+| -------- | ----------------------------------- |
+| #        | Displays nothing                    |
+| 0        | Displays 0                          |
+| ^        | Displays a space (1)                |
+| *        | Displays an asterisk                |
 
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.

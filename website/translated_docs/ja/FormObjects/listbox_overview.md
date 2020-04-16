@@ -115,7 +115,7 @@ Supported properties depend on the list box type.
 | -------------------------------------------------------------------------------------------- | -------------- | ------------------ | --------------------------------------- |
 | [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)   | X              | X                  | X                                       |
 | [Background Color](properties_BackgroundAndBorder.md#background-color)                       | X              | X                  | X                                       |
-| [Bold](properties_Text.md#bold)                                                              | X              | X                  | X                                       |
+| [太字](properties_Text.md#bold)                                                                | X              | X                  | X                                       |
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                       |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                       |
 | [下](properties_CoordinatesAndSizing.md#bottom)                                               | X              | X                  | X                                       |
@@ -131,11 +131,11 @@ Supported properties depend on the list box type.
 | [Double-click on row](properties_ListBox.md#double-click-on-row)                             |                | X                  |                                         |
 | [Draggable](properties_Action.md#droppable)                                                  | X              | X                  | X                                       |
 | [Droppable](properties_Action.md#droppable)                                                  | X              | X                  | X                                       |
-| [Focusable](properties_Entry.md#focusable)                                                   | X              | X                  | X                                       |
-| [Font](properties_Text.md#font)                                                              | X              | X                  | X                                       |
-| [Font Color](properties_Text.md#font_color)                                                  | X              | X                  | X                                       |
+| [フォーカス可](properties_Entry.md#focusable)                                                      | X              | X                  | X                                       |
+| [フォント](properties_Text.md#font)                                                              | X              | X                  | X                                       |
+| [フォントカラー](properties_Text.md#font_color)                                                     | X              | X                  | X                                       |
 | [Font Color Expression](properties_Text.md#font-color-expression)                            |                | X                  | X                                       |
-| [Font Size](properties_Text.md#font-size)                                                    | X              | X                  | X                                       |
+| [フォントサイズ](properties_Text.md#font-size)                                                      | X              | X                  | X                                       |
 | [Height (list box)](properties_CoordinatesAndSizing.md#height)                               | X              | X                  | X                                       |
 | [Height (headers)](properties_Headers.md#height)                                             | X              | X                  | X                                       |
 | [Height (footers)](properties_Footers.md#height)                                             | X              | X                  | X                                       |
@@ -144,11 +144,11 @@ Supported properties depend on the list box type.
 | [Hide selection highlight](properties_Appearance.md#hide-selection-highlight)                | X              | X                  | X                                       |
 | [Hierarchical List Box](properties_Object.md#hierarchical-list-box)                          | X              |                    |                                         |
 | [Highlight Set](properties_ListBox.md#highlight-set)                                         |                | X                  |                                         |
-| [Horizontal Alignment](properties_Text.md#horizontal-alignment)                              | X              | X                  | X                                       |
+| [横揃え](properties_Text.md#horizontal-alignment)                                               | X              | X                  | X                                       |
 | [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                       | X              | X                  | X                                       |
 | [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                      | X              | X                  | X                                       |
 | [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                         | X              | X                  | X                                       |
-| [Italic](properties_Text.md#italic)                                                          | X              | X                  | X                                       |
+| [イタリック](properties_Text.md#italic)                                                           | X              | X                  | X                                       |
 | [左](properties_CoordinatesAndSizing.md#left)                                                 | X              | X                  | X                                       |
 | [Master Table](properties_DataSource.md#table)                                               |                | X                  |                                         |
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                       |
@@ -175,7 +175,7 @@ Supported properties depend on the list box type.
 | [上](properties_CoordinatesAndSizing.md#top)                                                  | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
 | [型](properties_Object.md#type)                                                               | X              | X                  | X                                       |
-| [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
+| [下線](properties_Text.md#underline)                                                           | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
 | [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                           | X              | X                  | X                                       |
