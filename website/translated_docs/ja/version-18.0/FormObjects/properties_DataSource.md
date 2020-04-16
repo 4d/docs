@@ -6,7 +6,7 @@ original_id: propertiesDataSource
 
 * * *
 
-## Automatic Insertion
+## 自動挿入
 
 When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
 
@@ -37,7 +37,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 * * *
 
-## Choice List
+## 選択リスト
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
 
