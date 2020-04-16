@@ -18,11 +18,11 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### 対象オブジェクト
 
-[Input](input_overview.md)
+[入力](input_overview.md)
 
 * * *
 
-## Bold
+## 太字
 
 Sets the selected text to appear darker and heavier.
 
@@ -44,7 +44,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 * * *
 
-## Italic
+## イタリック
 
 Sets the selected text to slant slightly to the right.
 
@@ -66,7 +66,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 * * *
 
-## Underline
+## 下線
 
 Sets the text to have a line running beneath it.
 
@@ -86,13 +86,13 @@ Sets the text to have a line running beneath it.
 
 * * *
 
-## Font
+## フォント
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
 
 > **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
 
-### Font Theme
+### フォントテーマ
 
 The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
 
@@ -149,7 +149,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 * * *
 
-## Font Size
+## フォントサイズ
 
 Allows defining the object's font size in points.
 
@@ -166,7 +166,7 @@ Allows defining the object's font size in points.
 
 * * *
 
-## Font Color
+## フォントカラー
 
 Designates the font color.
 
@@ -256,7 +256,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 * * *
 
-## Horizontal Alignment
+## 横揃え
 
 Horizontal location of text within the area that contains it.
 
@@ -708,5 +708,5 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p>
-  <a href="input_overview.md">Input</a>
+  <a href="input_overview.md">入力</a>
 </p>
