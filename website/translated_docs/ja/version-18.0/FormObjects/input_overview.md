@@ -1,31 +1,31 @@
 ---
 id: version-18.0-inputOverview
-title: Input
+title: 入力
 original_id: inputOverview
 ---
 
 ## 概要
 
-Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+入力オブジェクトを使って、データベース[フィールド](Concepts/identifiers.md#フィールド) や [変数](Concepts/variables.md) といった式をフォーム上に追加することができます。 入力オブジェクトは文字ベースのデータ (テキスト、日付、数値など) およびピクチャー型のデータを扱えます。
 
 ![](assets/en/FormObjects/input.png)
 
-Inputs can contain [assignable or non-assignable expressions](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+入力オブジェクトには [代入可、または代入不可の式](Concepts/quick-tour.md#代入可-vs-代入不可の式) を設定することができます。
 
-In addition, inputs can be [enterable or non-enterable](properties_Entry.md#enterable). An enterable input accepts data. You can set data entry controls for the object. A non-enterable input can only display values but cannot be edited by the user.
+また、入力オブジェクトは [入力可、または不可](properties_Entry.md#入力可) に設定することができます。 入力可に設定された入力オブジェクトはデータを受け入れます。 データ入力に対しては、データ入力制御を設定できます。 入力不可に設定された入力オブジェクトは、ユーザーの編集を受け付けず、値を表示するのみです。
 
-You can manage the data with object or form [methods](Concepts/methods.md).
+データは、[オブジェクトメソッドやフォームメソッド](Concepts/methods.md)を使って管理することができます。
 
 ### JSON 例:
 
 ```4d
     "myText": {
-        "type": "input",    //define the type of object
-        "spellcheck": true, //enable spelling verification
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20        //height of the object
+        "type": "input",    // オブジェクトタイプ
+        "spellcheck": true, // 自動スペルチェック
+        "left": 60,         // フォーム上の座標 (左)
+        "top": 160,         // フォーム上の座標 (上)
+        "width": 100,       // 幅
+        "height": 20        // 高さ
         }
 ```
 
