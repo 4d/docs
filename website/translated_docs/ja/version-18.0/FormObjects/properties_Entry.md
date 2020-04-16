@@ -128,7 +128,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         * * *
         
-        ## Focusable
+        ## フォーカス可
         
         When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
         
@@ -211,11 +211,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### 対象オブジェクト
         
-        [Input](input_overview.md)
+        [入力](input_overview.md)
         
         * * *
         
-        ## Placeholder
+        ## プレースホルダー
         
         4D can display placeholder text in the fields of your forms.
         
@@ -273,7 +273,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         * * *
         
-        ## Shortcut
+        ## ショートカット
         
         This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
         
