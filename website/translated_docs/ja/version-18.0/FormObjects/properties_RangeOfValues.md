@@ -40,11 +40,11 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### 対象オブジェクト
 
-[Input](input_overview.md)
+[入力](input_overview.md)
 
 * * *
 
-## Excluded List
+## 除外リスト
 
 Allows setting a list whose values cannot be entered in the object. ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
 
