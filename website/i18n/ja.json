@@ -313,10 +313,10 @@
         "title": "4D フォームオブジェクトについて"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "FormObjects/inputOverview": {
-        "title": "Input"
+        "title": "入力"
       },
       "FormObjects/listOverview": {
         "title": "Hierarchical List"
@@ -943,10 +943,10 @@
         "title": "4D フォームオブジェクトについて"
       },
       "version-18.0-FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "version-18.0-FormObjects/inputOverview": {
-        "title": "Input"
+        "title": "入力"
       },
       "version-18.0-FormObjects/listOverview": {
         "title": "Hierarchical List"
