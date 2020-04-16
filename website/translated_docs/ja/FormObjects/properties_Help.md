@@ -47,4 +47,4 @@ When different tips are associated with the same object in several locations, th
 
 #### See also
 
-[Placeholder](properties_Entry.md#placeholder)
+[プレースホルダー](properties_Entry.md#placeholder)
