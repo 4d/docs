@@ -1,6 +1,6 @@
 ---
 id: version-18.0-listOverview
-title: Hierarchical List
+title: 階層リスト
 original_id: listOverview
 ---
 
