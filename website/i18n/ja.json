@@ -319,7 +319,7 @@
         "title": "入力"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "階層リスト"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
@@ -949,7 +949,7 @@
         "title": "入力"
       },
       "version-18.0-FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "階層リスト"
       },
       "version-18.0-FormObjects/listboxOverview": {
         "title": "List Box"
