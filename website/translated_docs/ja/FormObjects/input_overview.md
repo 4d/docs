@@ -34,10 +34,10 @@ title: 入力
 
 * * *
 
-## Input alternatives
+## 入力の代替手段
 
-You can also represent field and variable expressions in your forms using alternative objects, more particularly:
+フィールドや変数などの式は、フォーム内において入力オブジェクト以外を用いて表示することができます。具体的には以下の方法があります:
 
-* You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-* You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
-* You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+* データベースのフィールドから [セレクション型のリストボックス](listbox_overview.md) へと、データを直接表示・入力することができます。
+* [ポップアップメニュー/ドロップダウンリスト](popupMenuDropdownList_overview) と [コンボボックス](comboBox_overview.md) オブジェクトを使用することによって、リストフィールドまたは変数をフォーム内にて直接表示することができます。
+* ブール型の式は [チェックボックス](checkbox_overview.md) や [ラジオボタン](radio_overview.md) オブジェクトを用いて提示することができます。
