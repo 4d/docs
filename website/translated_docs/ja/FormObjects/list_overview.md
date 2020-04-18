@@ -1,6 +1,6 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: 階層リスト
 ---
 
 ## 概要
