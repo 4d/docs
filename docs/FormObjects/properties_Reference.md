@@ -3,9 +3,9 @@ id: propertiesReference
 title: JSON property list
 ---
 
-This page provides a comprehensive list of all object properties, sorted by their JSON name. Click on a property name to access its detailed description. 
+You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description. 
 
->In the "Form Object Properties" chapter, properties are sorted according to their names and themes in the Property List. 
+>In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes. 
 
 
 [a](#a) - 
@@ -35,7 +35,7 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |Property|Description|Possible Values|
 |---|---|---|
 |<a name="a">**a**</a>|||
-|[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action |
+|[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[allowFontColorPicker](properties_Text.md#allow-font-color-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
 |[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"|
 |[automaticInsertion](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a name="b"></a>|
@@ -44,7 +44,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[borderRadius](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[borderStyle](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[bottom](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a name="c"></a>|
-|[bottomMargin](propertiesForm.md#form-size)|Vertical margin value (in pixels)|minimum: 0<a name="c"></a>|
 |**c**|||
 |[choiceList](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
 |[class](properties_Object.md#css-class)|A list of space-separated words used as class selectors in css files.|A list of class names|
@@ -64,7 +63,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[dataSource](properties_Object.md#variable-or-expression) (objects)<br>[dataSource](properties_Subform.md#source) (subforms)<br>[dataSource](properties_Object.md#data-source) (array list box) <br> [dataSource](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br> [dataSource](properties_DataSource.md#expression) (list box column) <br> [dataSource](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
 |[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
-|[destination](propertiesForm.md#form-type)|Form type|"detailScreen", "listScreen", "detailPrinter", "listPrinter"|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[defaultValue](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
 |[deletableInList](properties_Subform.md#allow-deletion)|Specifies if the user can delete subrecords in a list subform|true, false|
@@ -90,7 +88,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[fontTheme](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
 |[fontWeight](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[footerHeight](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
-|[formSizeAnchor](propertiesForm.md#form-size)|Name of the object whose position determines the size of the form. (minimum length: 1)|Name of a 4D object|
 |[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a name="g"></a>|
 |**g**|||
 |[graduationStep](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a name="h"></a>|
@@ -107,8 +104,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[icon](properties_TextAndPicture.md#picture-pathname)|The pathname of the picture used for buttons, check boxes, radio buttons, list box headers.|Relative or filesystem path in POSIX syntax.|
 |[iconFrames](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
 |[iconPlacement](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"<a name="k"></a>|
-|[inheritedForm](propertiesForm.md#inherited-form-name)|Designates the form to inherit|Name (string) of table or project form OR a POSIX path (string) to a .json file describing the form OR an object describing the form|
-|[inheritedFormTable](propertiesForm.md#inherited-form-table)|Designates the table an inherited form will use|A table name or number|
 |**k**|||
 |[keyboardDialect](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a name="l"></a>|
 |**l**|||
@@ -122,14 +117,8 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[lockedColumnCount](properties_ListBox.md#number-of-locked-columns) |Number of columns that must stay permanently displayed in the left part of a list box. |minimum: 0|
 |[loopBackToFirstFrame](properties_Animation.md#loop-back-to-first-frame)|Pictures are displayed in a continuous loop.|true, false<a name="m"></a>|
 |**m**|||
-|[markerBody](propertiesForm.md#markers)|Detail marker position|minimum: 0 |
-|[markerBreak](propertiesForm.md#markers)|Break marker position(s)|minimum: 0 |
-|[markerFooter](propertiesForm.md#markers)|Footer marker position|minimum: 0 |
-|[markerHeader](propertiesForm.md#markers)|Header marker position(s)|integer minimum: 0; integer array minimum: 0 |
 |[max](properties_Scale.md#maximum)|The maximum allowed value. For numeric steppers, these properties represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value. |minimum: 0 (for numeric data types)|
 |[maxWidth](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest size allowed for list box columns. |minimum: 0|
-|[memorizeGeometry](propertiesForm.md#memorize-geometry)|Saves the form parameters when the form window is closed |true, false |
-|[menuBar](propertiesMenu.md#associated-menu-bar)|Typical activity to be performed |The name of a valid menu bar |
 |[metaSource](properties_Text.md#meta-info-expression)| A meta object containing style and selection settings.|An object expression|
 |[method](properties_Action.md#method)|A project method name. |The name of an existing project method|
 |[methodsAccessibility](properties_WebArea.md#access-4d-methods)|Which 4D methods can be called from a Web area|"none" (default), "all"|
@@ -141,7 +130,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[name](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[numberFormat](properties_Display.md#number-format) |Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)<a name="p"></a>|
 |**p**|||
-|[pages](propertiesForm.md#pages)|Collection of pages (each page is an object)|Page objects|
 |[picture](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax.|
 |[pictureFormat](properties_Display.md#picture-format) (input, list box column or footer)<br>[pictureFormat](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[placeholder](properties_Entry.md#placeholder)	|Grays out text when the data source value is empty.|Text to be grayed out.|
@@ -154,8 +142,7 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[requiredList](properties_RangeOfValues.md#required-list)|Allows setting a list where only certain values can be inserted. |A list of mandatory values.|
 |[resizable](properties_ResizingOptions.md#resizable)|Designates if the size of an object can be modified by the user.|"true", "false"|
 |[resizingMode](properties_ResizingOptions.md#column-auto-resizing)|Specifies if a list box column should be automatically resized | "rightToLeft", "legacy"|
-|[right](properties_CoordinatesAndSizing.md#right)|Positions an object on the right|minimum: 0|
-|[rightMargin](propertiesForm.md#form-zie)|Horizontal margin value (in pixels)|minimum: 0|
+|[right](properties_CoordinatesAndSizing.md#right)|Positions an object on the right.|minimum: 0|
 |[rowControlSource](properties_ListBox.md#row-control-array) |A 4D array defining the list box rows. |Array|
 |[rowCount](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
 |[rowFillSource](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br>[rowFillSource](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
@@ -170,8 +157,7 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |[scrollbarHorizontal](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[selectedItemsSource](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression	|
-|[selectionMode](properties_Action.md#multi-selectable) (hierarchical list)<br> [selectionMode](properties_ListBox.md#selection-mode) (list box)<br> [selectionMode](properties_Subform.md#selection-mode) (subform)|Allows the selection of multiple records/rows.|"multiple", "single", "none"|
-|[shared](propertiesForm.md#published-as-subform)|Specifies if a form can be used as a subform|true, false|
+|[selectionMode](properties_Action.md#multi-selectable) (hierarchical list)<br> [selectionMode](properties_ListBox.md#selection-mode) (list box)<br> [selectionMode](properties_Subform.md#selection-mode) (subform)|Allows the selection of multiple records/rows.|"multiple", "single", "none"
 |[shortcutAccel](properties_Entry.md#shortcut)|Specifies the system to use, Windows or Mac.|true, false|
 |[shortcutAlt](properties_Entry.md#shortcut)|Designates the Alt key|true, false|
 |[shortcutCommand](properties_Entry.md#shortcut)|Designates the Command key (macOS)|true, false|
@@ -233,13 +219,6 @@ This page provides a comprehensive list of all object properties, sorted by thei
 |**w**|||
 |[webEngine](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[width](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
-|[windowMaxHeight](propertiesWindowSize.md#maximum-height)|Designates a form window's largest allowable height|minimum: 0|
-|[windowMaxWidth](propertiesWindowSize.md#maximum-width)|Designates a form window's largest allowable width|minimum: 0|
-|[windowMinHeight](propertiesWindowSize.md#minimum-height)|Designates a form window's smallest allowable height|minimum: 0|
-|[windowMinWidth](propertiesWindowSize.md#minimum-width)|Designates a form window's smallest allowable width|minimum: 0|
-|[windowSizingX](propertiesWindowSize.md#fixed-height)|Designates a form window's vertical size|minimum: 0|
-|[windowSizingY](propertiesWindowSize.md#fixed-width)|Designates a form window's horizontal size|minimum: 0|
-|[windowTitle](propertiesForm.md#window-title)|Designates a form window's title|A name for the form window|
 |[withFormulaBar](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
 |[wordwrap](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"<a name="z"></a>|
 |**z**|||

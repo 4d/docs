@@ -108,8 +108,32 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
+      },
+      "FormEditor/action": {
+        "title": "Action"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/forms": {
         "title": "Forms"
@@ -210,9 +234,6 @@
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
       },
-      "FormObjects/propertiesPrint": {
-        "title": "Print"
-      },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
       },
@@ -237,10 +258,7 @@
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
       },
-      "FormObjects/propertiesForm": {
-        "title": "Forms"
-      },
-      "FormObjects/propertiesMenu": {
+      "FormObjects/menu": {
         "title": "Menu"
       },
       "FormObjects/propertiesWindowSize": {
@@ -462,7 +480,8 @@
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "Form Editor": "Form Editor",
+      "Forms": "Forms",
+      "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
