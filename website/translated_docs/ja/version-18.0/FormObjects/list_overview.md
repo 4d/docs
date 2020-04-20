@@ -6,11 +6,11 @@ original_id: listOverview
 
 ## 概要
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+階層リストはフォームオブジェクトの一つで、展開/折りたたみ可能な一つ以上の階層を持つリスト形式でデータを表示するのに使用できます。
 
 ![](assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+展開/折りたたみアイコンは必要に応じて項目の左に自動的に表示されます。 階層リストには、階層レベルの制限はありません。
 
 ## Hierarchical list data source
 
