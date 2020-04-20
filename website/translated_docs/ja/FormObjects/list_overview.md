@@ -1,19 +1,19 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: 階層リスト
 ---
 
 ## 概要
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+階層リストはフォームオブジェクトの一つで、展開/折りたたみ可能な一つ以上の階層を持つリスト形式でデータを表示するのに使用できます。
 
 ![](assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+展開/折りたたみアイコンは必要に応じて項目の左に自動的に表示されます。 階層リストのレベル数には、制限がありません。
 
-## Hierarchical list data source
+## 階層リストのデータソース
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+階層リストの中身は次の方法で初期化することができます:
 
 - Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode. 
 - Directly assign a hierarchical list reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object. 

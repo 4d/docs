@@ -144,7 +144,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md)
+[階層リスト](list_overview.md)
 
 * * *
 
