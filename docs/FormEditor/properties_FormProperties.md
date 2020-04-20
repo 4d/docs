@@ -31,7 +31,7 @@ This property is the name of the form itself and is used to refer to the form by
 
 #### JSON Grammar
 
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project archhitecture](Project/architecture.md#sources-folder) for more information.
+The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
 ---
 
@@ -70,7 +70,7 @@ Supported types depend on the form category:
 
 ## Inherited Form Name 
 
-This property designates the [form to inherit](form.md#inherited-forms) in the current form. 
+This property designates the [form to inherit](forms.md#inherited-forms) in the current form. 
 
 To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
 
@@ -88,7 +88,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 ## Inherited Form Table
 
-This property specifies the database table from which to [inherit a form](form.md#inherited-forms) in the current form.
+This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
 Set to **\<None>** in the Property List (or " " in JSON) to inherited from a project form.
 

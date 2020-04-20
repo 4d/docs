@@ -105,11 +105,11 @@
       "Concepts/variables": {
         "title": "Variables"
       },
-      "FormEditor/stylesheets": {
-        "title": "Style sheets"
-      },
       "FormEditor/forms": {
         "title": "About 4D Forms"
+      },
+      "FormEditor/stylesheets": {
+        "title": "Style sheets"
       },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
@@ -123,6 +123,9 @@
       "FormEditor/formSize": {
         "title": "Form Size"
       },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
       "FormEditor/markers": {
         "title": "Markers"
       },
@@ -134,9 +137,6 @@
       },
       "FormEditor/windowSize": {
         "title": "Window Size"
-      },
-      "FormObjects/forms": {
-        "title": "Forms"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -234,6 +234,9 @@
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"
       },
+      "FormObjects/propertiesPrint": {
+        "title": "Print"
+      },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
       },
@@ -257,12 +260,6 @@
       },
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
-      },
-      "FormObjects/menu": {
-        "title": "Menu"
-      },
-      "FormObjects/propertiesWindowSize": {
-        "title": "Window Size"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "Radio Button"
