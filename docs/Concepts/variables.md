@@ -16,14 +16,14 @@ Once created, you can use a variable wherever you need it in your database. For 
 
 Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Creating Variables   
+## Declaring Variables   
 
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
 - using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only). 
+- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only). 
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, to create a variable that will hold the current date plus 30 days, you can write:
+**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -36,7 +36,7 @@ You create variables by declaring them. The 4D language offers two ways to decla
 
 Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features. 
 
-To create a variable of any type with the `var` keyword, use the following syntax:
+To declare a variable of any type with the `var` keyword, use the following syntax:
 
 `	var <varName>{, <varName2>,...}{ : <varType>}`
 
@@ -110,9 +110,9 @@ var $entity : cs.EmployeeEntity
 
 ### Using a C_ directive
 
-Directives from the "Compiler" or "Arrays" theme commands allow you to declare variables of basic types. 
+> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword. 
 
-**Note:** Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+Directives from the "Compiler" theme commands allow you to declare variables of basic types. 
 
 For example, if you want to define a text variable, you write:
 
@@ -130,6 +130,9 @@ The following are some basic variable declarations:
  C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
  ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
 ```
+
+**Note:** Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+
 
 ## Assigning Data
 
