@@ -294,6 +294,30 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormEditor/action": {
+        "title": "Action"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
+      },
       "FormObjects/buttonOverview": {
         "title": "Button"
       },
@@ -528,6 +552,9 @@
       },
       "Project/overview": {
         "title": "Overview"
+      },
+      "Project/pictures": {
+        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -1260,7 +1287,8 @@
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "Form Editor": "Form Editor",
+      "Forms": "Forms",
+      "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",

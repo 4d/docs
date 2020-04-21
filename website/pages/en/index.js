@@ -39,8 +39,9 @@ class Index extends React.Component {
     var subContents={
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
       projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
-	  formEditor: <translate>Form Editor</translate>,
-	  events: <translate>Form Events</translate>,
+	  formEditor: <translate>Forms</translate>,
+	  formProperties: <translate>Form Properties</translate>,
+    events: <translate>Form Events</translate>,
 	  formObjects: <translate>Form Objects</translate>,
 	  formObjectProperties: <translate>Form Object Properties</translate>,
 	  menus: <translate>Menus</translate>,
@@ -48,11 +49,11 @@ class Index extends React.Component {
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
-	  users: <translate>Users and Groups</translate>	  
+	  users: <translate>Users and Groups</translate>
     };
 
-	
-	
+
+
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
@@ -70,7 +71,7 @@ class Index extends React.Component {
                 },
                 {
 
-                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
