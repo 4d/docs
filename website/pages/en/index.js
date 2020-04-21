@@ -53,7 +53,7 @@ class Index extends React.Component {
                   title: <translate>Getting started</translate>,
                 },
                 {
-                  content: `[<translate>Form Editor</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[<translate>Forms</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[<translate>Form Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[<translate>Form Objects</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[<translate>Form Object Properties</translate>](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[<translate>Menus</translate>](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
