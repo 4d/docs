@@ -8,36 +8,12 @@ This page provides a comprehensive list of all form properties, sorted by their 
 >In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List. 
 
 
-[a](#a) - 
-[b](#b) - 
-[c](#c) - 
-[d](#d) - 
-[e](#e) - 
-[f](#f) - 
-[g](#g) - 
-[h](#h) - 
-[i](#i) - 
-[j](#j) - 
-[k](#k) - 
-[l](#l) - 
-[m](#m) - 
-[n](#n) - 
-[p](#p) - 
-[r](#r) - 
-[s](#s) - 
-[t](#t) - 
-[u](#u) - 
-[v](#v) - 
-[w](#w) - 
-[z](#z)
-
-
 |Property|Description|Possible Values|
 |---|---|---|
 |<a name="a">**a**</a>|||
-|[bottomMargin](properties_FormSize.md#vert-margin)|Vertical margin value (in pixels)|minimum: 0|<a name="d"></a>|
+|[bottomMargin](properties_FormSize.md#vert-margin)|Vertical margin value (in pixels)|minimum: 0<a name="d"></a>|
 |**d**|||
-|[destination](properties_FormProperties.md#form-type)|Form type|"detailScreen", "listScreen", "detailPrinter", "listPrinter"|<a name="e"></a>|
+|[destination](properties_FormProperties.md#form-type)|Form type|"detailScreen", "listScreen", "detailPrinter", "listPrinter"<a name="e"></a>|
 |**e**|||
 |[events](https://doc.4d.com/4Dv18/4D/18/Form-Events.302-4504424.en.html)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].<a name="f"></a>|
 |**f**|||
@@ -54,14 +30,14 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[markerHeader](properties_Markers.md#forrm-header)|Header marker position(s)|integer minimum: 0; integer array minimum: 0 |
 |[memorizeGeometry](properties_FormProperties.md#memorize-geometry)|Saves the form parameters when the form window is closed |true, false |
 |[menuBar](properties_Menu.md#associated-menu-bar)|Menu bar to associate to the form|Name of a valid menu bar |
-|[method](properties_Action.md#method)|A project method name. |The name of an existing project method|<a name="p"></a>|
+|[method](properties_Action.md#method)|A project method name. |The name of an existing project method<a name="p"></a>|
 |**p**|||
 |[pages](properties_FormProperties.md#pages)|Collection of pages (each page is an object)|Page objects|
-|[pageFormat](properties_Print.md#settings)|object|Available print properties|<a name="r"></a>|
+|[pageFormat](properties_Print.md#settings)|object|Available print properties<a name="r"></a>|
 |**r**|||
-|[rightMargin](properties_FormSize.md#hor-margin)|Horizontal margin value (in pixels)|minimum: 0|<a name="s"></a>|
+|[rightMargin](properties_FormSize.md#hor-margin)|Horizontal margin value (in pixels)|minimum: 0<a name="s"></a>|
 |**s**|||
-|[shared](properties_FormProperties.md#published-as-subform)|Specifies if a form can be used as a subform|true, false|<a name="w"></a>|
+|[shared](properties_FormProperties.md#published-as-subform)|Specifies if a form can be used as a subform|true, false<a name="w"></a>|
 |**w**|||
 |[width](properties_FormSize.md#width)|Width of the form|minimum: 0|
 |[windowMaxHeight](properties_FormProperties.md#maximum-height)|Form window's largest allowable height|minimum: 0|

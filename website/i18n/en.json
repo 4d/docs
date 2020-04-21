@@ -291,6 +291,9 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
@@ -1296,13 +1299,15 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "REST Server ": "REST Server ",
+      "Form Editor": "Form Editor"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "Form Editor",
+    "Forms|no description given": "Forms",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "Form Objects",
     "Form Object Properties|no description given": "Form Object Properties",
