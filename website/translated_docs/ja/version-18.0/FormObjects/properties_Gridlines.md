@@ -19,7 +19,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
@@ -36,4 +36,4 @@ Defines the color of the vertical lines in a list box (gray by default).
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
