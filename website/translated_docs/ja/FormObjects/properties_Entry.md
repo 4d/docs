@@ -311,4 +311,4 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 #### 対象オブジェクト
                 
-                [List Box](listbox_overview.md)
+                [リストボックス](listbox_overview.md)
