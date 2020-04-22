@@ -1,6 +1,6 @@
 ---
 id: listboxOverview
-title: List Box
+title: リストボックス
 ---
 
 ## 概要
