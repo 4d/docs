@@ -122,7 +122,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 * * *
 
@@ -224,7 +224,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 #### See also
 
