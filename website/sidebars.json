@@ -153,7 +153,7 @@
 		},
 		{
         "type": "subcategory",
-        "label": "API (server access)",
+        "label": "API (general)",
         "ids": [
           "REST/catalog","REST/directory","REST/info","REST/upload"
 		  ]
