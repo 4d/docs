@@ -226,7 +226,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 #### See also
 
@@ -263,7 +263,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 #### See also
 
