@@ -172,7 +172,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### 対象オブジェクト
                     
-                    [List Box](listbox_overview.md)
+                    [リストボックス](listbox_overview.md)
                     
                     * * *
                     
@@ -195,7 +195,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### 対象オブジェクト
                     
-                    [List Box](listbox_overview.md)
+                    [リストボックス](listbox_overview.md)
                     
                     * * *
                     
