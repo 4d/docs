@@ -128,7 +128,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 * * *
 
@@ -166,7 +166,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
