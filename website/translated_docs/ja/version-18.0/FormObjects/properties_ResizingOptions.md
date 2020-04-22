@@ -41,7 +41,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
