@@ -224,7 +224,7 @@ Foreground color;Dark shadow color)
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 * * *
 
@@ -358,7 +358,7 @@ $0:=Form.meta
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
