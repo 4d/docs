@@ -291,8 +291,35 @@
       "FormEditor/stylesheets": {
         "title": "スタイルシート"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
+      },
+      "FormEditor/action": {
+        "title": "動作"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -322,7 +349,7 @@
         "title": "階層リスト"
       },
       "FormObjects/listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
         "title": "Picture Button"
@@ -379,7 +406,7 @@
         "title": "Hierarchy"
       },
       "FormObjects/propertiesListBox": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "FormObjects/propertiesObject": {
         "title": "Objects"
@@ -528,6 +555,9 @@
       },
       "Project/overview": {
         "title": "概要"
+      },
+      "Project/pictures": {
+        "title": "ピクチャー"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -809,7 +839,7 @@
         "title": "概要"
       },
       "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18 R2 BETA-MSC/version-18R2_BETA-analysis": {
         "title": "Activity analysis Page",
@@ -952,7 +982,7 @@
         "title": "階層リスト"
       },
       "version-18.0-FormObjects/listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18.0-FormObjects/pictureButtonOverview": {
         "title": "Picture Button"
@@ -1009,7 +1039,7 @@
         "title": "Hierarchy"
       },
       "version-18.0-FormObjects/propertiesListBox": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18.0-FormObjects/propertiesObject": {
         "title": "Objects"
@@ -1260,7 +1290,8 @@
     "categories": {
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "Form Editor",
+      "Forms": "フォーム",
+      "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
@@ -1268,13 +1299,15 @@
       "MSC": "Maintenance & Security Center",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "REST Server ": "REST Server ",
+      "Form Editor": "Form Editor"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "Form Editor",
+    "Forms|no description given": "フォーム",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "Form Objects",
     "Form Object Properties|no description given": "Form Object Properties",

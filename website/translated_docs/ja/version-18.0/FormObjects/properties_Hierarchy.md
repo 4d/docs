@@ -25,4 +25,4 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

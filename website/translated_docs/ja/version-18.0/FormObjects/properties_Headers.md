@@ -19,7 +19,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
@@ -63,7 +63,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 #### See also
 

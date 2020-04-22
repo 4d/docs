@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesListBox
-title: List Box
+title: リストボックス
 original_id: propertiesListBox
 ---
 
@@ -21,7 +21,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
@@ -43,7 +43,7 @@ The specified form is displayed:
         * Object describing the form</td> </tr> </tbody> </table> 
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -72,7 +72,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -96,7 +96,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -135,7 +135,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             ### Number of Static Columns
             
@@ -150,7 +150,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -169,7 +169,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -224,7 +224,7 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)
             
             * * *
             
@@ -245,4 +245,4 @@ The specified form is displayed:
             
             #### 対象オブジェクト
             
-            [List Box](listbox_overview.md)
+            [リストボックス](listbox_overview.md)

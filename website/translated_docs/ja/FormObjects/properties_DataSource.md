@@ -88,7 +88,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### 対象オブジェクト
 
-[List Box ](listbox_overview.md#overview)
+[リストボックス ](listbox_overview.md#overview)
 
 * * *
 
@@ -113,7 +113,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### 対象オブジェクト
 
-[List Box ](listbox_overview.md)
+[リストボックス ](listbox_overview.md)
 
 * * *
 
@@ -217,7 +217,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)
 
 * * *
 
@@ -274,7 +274,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### 対象オブジェクト
 
-[List Box ](listbox_overview.md#overview)
+[リストボックス ](listbox_overview.md#overview)
 
 * * *
 
@@ -295,4 +295,4 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#overview)

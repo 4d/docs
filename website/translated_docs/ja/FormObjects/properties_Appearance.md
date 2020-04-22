@@ -70,7 +70,7 @@ By default, this option is not enabled.
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 

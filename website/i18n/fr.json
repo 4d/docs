@@ -291,8 +291,35 @@
       "FormEditor/stylesheets": {
         "title": "Feuilles de style (style sheets)"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
+      },
+      "FormEditor/action": {
+        "title": "Action"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Imprimer"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "Bouton"
@@ -528,6 +555,9 @@
       },
       "Project/overview": {
         "title": "Aperçu"
+      },
+      "Project/pictures": {
+        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -1260,7 +1290,8 @@
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
-      "Form Editor": "Éditeur de formulaire",
+      "Forms": "Formulaires",
+      "Form Properties": "Form Properties",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
@@ -1268,13 +1299,15 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Users and Groups": "Groupes et utilisateurs",
-      "REST Server ": "Serveur REST "
+      "REST Server ": "Serveur REST ",
+      "Form Editor": "Éditeur de formulaire"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
-    "Form Editor|no description given": "Éditeur de formulaire",
+    "Forms|no description given": "Formulaires",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Evénements formulaire",
     "Form Objects|no description given": "Objets formulaires",
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
