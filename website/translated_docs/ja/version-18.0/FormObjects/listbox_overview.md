@@ -1,6 +1,6 @@
 ---
 id: version-18.0-listboxOverview
-title: List Box
+title: リストボックス
 original_id: listboxOverview
 ---
 
