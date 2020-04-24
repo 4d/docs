@@ -509,7 +509,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Visibility
+        ## 表示状態
         
         This property allows hiding by default the object in the Application environment.
         
