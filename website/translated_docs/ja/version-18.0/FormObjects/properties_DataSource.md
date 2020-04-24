@@ -1,6 +1,6 @@
 ---
 id: version-18.0-propertiesDataSource
-title: Data Source
+title: データソース
 original_id: propertiesDataSource
 ---
 
@@ -72,7 +72,7 @@ List of static values to use as labels for the tab control object.
 
 * * *
 
-## Current item
+## カレントの項目
 
 `Collection or entity selection list boxes`
 
@@ -93,7 +93,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 * * *
 
-## Current item position
+## カレントの項目の位置
 
 `Collection or entity selection list boxes`
 
@@ -201,7 +201,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 * * *
 
-## Master Table
+## マスターテーブル
 
 `Current selection list boxes`
 
@@ -255,7 +255,7 @@ Using this property requires compliance with the following principles:
 
 * * *
 
-## Selected Items
+## 選択された項目
 
 `Collection or entity selection list boxes`
 
