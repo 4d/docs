@@ -11,7 +11,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON 文法
 
-| Property             | データタイプ  | とりうる値                 |
+| プロパティ                | データタイプ  | とりうる値                 |
 | -------------------- | ------- | --------------------- |
 | allowFontColorPicker | boolean | false (default), true |
 
@@ -33,7 +33,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON 文法
 
-| Property   | データタイプ | とりうる値            |
+| プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
 | fontWeight | テキスト   | "normal", "bold" |
 
@@ -193,7 +193,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 * * *
 
-## Font Color Expression
+## フォントカラー式
 
 `Selection and collection/entity selection type list boxes`
 
@@ -225,7 +225,7 @@ Foreground color;Dark shadow color)
 
 * * *
 
-## Style Expression
+## スタイル式
 
 `Selection and collection/entity selection type list boxes`
 
@@ -273,7 +273,7 @@ Horizontal location of text within the area that contains it.
 
 * * *
 
-## Vertical Alignment
+## 縦揃え
 
 Vertical location of text within the area that contains it.
 
@@ -520,7 +520,7 @@ This property enables the possibility of using specific styles in the selected a
 <hr />
 
 <h2>
-  Row Font Color Array
+  行フォントカラー配列
 </h2>
 
 <p>
@@ -580,7 +580,7 @@ This property enables the possibility of using specific styles in the selected a
 <hr />
 
 <h2>
-  Row Style Array
+  行スタイル配列
 </h2>
 
 <p>
