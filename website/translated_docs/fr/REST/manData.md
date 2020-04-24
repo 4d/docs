@@ -92,6 +92,8 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
+Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+
 ## Selecting Attributes to get
 
 Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
