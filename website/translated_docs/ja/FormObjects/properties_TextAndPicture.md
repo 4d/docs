@@ -68,9 +68,9 @@ title: テキスト、ピクチャー
 
 * * *
 
-## Icon Location
+## アイコンの場所
 
-Designates the placement of an icon in relation to the form object.
+フォームオブジェクトに対するアイコンの配置を指定します。
 
 #### JSON 文法
 
