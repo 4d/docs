@@ -13,7 +13,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 <table>
   <tr>
     <th>
-      Property
+      プロパティ
     </th>
     
     <th>
