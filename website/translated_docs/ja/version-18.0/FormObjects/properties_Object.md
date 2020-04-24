@@ -48,7 +48,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 * * *
 
-## Variable or Expression
+## 変数あるいは式
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
@@ -97,7 +97,7 @@ There are two advantages with this mechanism:
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
-### Hierarchical List Box
+### 階層リストボックス
 
 Using a string array (collection of arrays names) as *dataSource* value for a list box column defines a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
@@ -150,7 +150,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     * * *
                     
-                    ## Collection or entity selection
+                    ## コレクションまたはエンティティセレクション
                     
                     To use collection elements or entities to define the row contents of the list box.
                     
@@ -176,7 +176,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     * * *
                     
-                    ## Data Source
+                    ## データソース
                     
                     Specify the type of list box.
                     
@@ -270,15 +270,15 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
                     | --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
-                    | Minimum               | X   |      | X  | X  | X    |      | Same as column type |
-                    | Maximum               | X   |      | X  | X  | X    |      | Same as column type |
-                    | Sum                   | X   |      | X  |    | X    |      | Same as column type |
-                    | Count                 | X   | X    | X  | X  | X    | X    | 倍長整数                |
-                    | Average               | X   |      |    | X  |      |      | 実数                  |
-                    | Standard deviation(*) | X   |      |    | X  |      |      | 実数                  |
-                    | Variance(*)           | X   |      |    | X  |      |      | 実数                  |
-                    | Sum squares(*)        | X   |      |    | X  |      |      | 実数                  |
-                    | Custom ("none")       | X   | X    | X  | X  | X    | X    | Any                 |
+                    | Minimum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
+                    | Maximum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
+                    | Sum                   | ○   |      | ○  |    | ○    |      | Same as column type |
+                    | Count                 | ○   | ○    | ○  | ○  | ○    | ○    | 倍長整数                |
+                    | Average               | ○   |      |    | ○  |      |      | 実数                  |
+                    | Standard deviation(*) | ○   |      |    | ○  |      |      | 実数                  |
+                    | Variance(*)           | ○   |      |    | ○  |      |      | 実数                  |
+                    | Sum squares(*)        | ○   |      |    | ○  |      |      | 実数                  |
+                    | Custom ("none")       | ○   | ○    | ○  | ○  | ○    | ○    | Any                 |
 
                     
                     (*) Only for array type list boxes.
