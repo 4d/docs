@@ -35,7 +35,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 * * *
 
-## Hide focus rectangle
+## フォーカスの四角を隠す
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
@@ -52,7 +52,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 * * *
 
-## Hide selection highlight
+## セレクションハイライトを非表示
 
 `Selection type list boxes`
 
@@ -75,7 +75,7 @@ By default, this option is not enabled.
 
 * * *
 
-## Horizontal Scroll Bar
+## 横スクロールバー
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
@@ -346,7 +346,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 * * *
 
-## Vertical Scroll Bar
+## 縦スクロールバー
 
 An interface tool allowing the user to move the viewing area up and down.
 
