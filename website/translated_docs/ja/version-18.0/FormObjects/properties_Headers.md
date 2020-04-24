@@ -6,7 +6,7 @@ original_id: propertiesHeaders
 
 * * *
 
-## Display Headers
+## ヘッダーを表示
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
