@@ -154,7 +154,7 @@ This property designates an object's vertical size.
 
 * * *
 
-## Width
+## 幅
 
 This property designates an object's horizontal size.
 
@@ -213,7 +213,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 * * *
 
-## Row Height
+## 行の高さ
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
 
@@ -230,11 +230,11 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### See also
 
-[Row Height Array](#row-height-array)
+[行高さ配列](#row-height-array)
 
 * * *
 
-## Row Height Array
+## 行高さ配列
 
 `4D View Pro only: This feature requires a 4D View Pro license.`
 
@@ -267,4 +267,4 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### See also
 
-[Row Height](#row-height)
+[行の高さ](#row-height)

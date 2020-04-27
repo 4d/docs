@@ -382,7 +382,7 @@
         "title": "Crop"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -1015,7 +1015,7 @@
         "title": "Crop"
       },
       "version-18.0-FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "データソース"
       },
       "version-18.0-FormObjects/propertiesDisplay": {
         "title": "Display"

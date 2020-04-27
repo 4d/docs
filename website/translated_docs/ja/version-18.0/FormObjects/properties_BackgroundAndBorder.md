@@ -6,7 +6,7 @@ original_id: propertiesBackgroundAndBorder
 
 * * *
 
-## Alternate Background Color
+## 交互に使用する背景色
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
@@ -42,11 +42,11 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### See also
 
-[Transparent](#transparent)
+[透過](#transparent)
 
 * * *
 
-## Background Color Expression
+## 背景色式
 
 `Selection and collection type list boxes`
 
@@ -69,7 +69,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 * * *
 
-## Border Line Style
+## 境界線スタイル
 
 Allows setting a standard style for the object border.
 
@@ -103,7 +103,7 @@ Describes dotted line type as a sequence of black and white points.
 
 * * *
 
-## Hide extra blank rows
+## 追加の空白の行を非表示
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
@@ -168,7 +168,7 @@ Designates the thickness of a line.
 
 * * *
 
-## Row Background Color Array
+## 行背景色配列
 
 `Array type list boxes`
 
@@ -211,7 +211,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 * * *
 
-## Transparent
+## 透過
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 

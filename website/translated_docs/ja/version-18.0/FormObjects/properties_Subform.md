@@ -1,7 +1,6 @@
 ---
-id: version-18.0-propertiesSubform
+id: propertiesSubform
 title: Subform
-original_id: propertiesSubform
 ---
 
 * * *
@@ -71,7 +70,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 * * *
 
-## Double-click on row
+## 行をダブルクリック
 
 `List subform`
 
@@ -159,7 +158,7 @@ Specifies the table that the list subform belongs to (if any).
 
 * * *
 
-## Selection Mode
+## 選択モード
 
 Designates the option for allowing users to select rows:
 

@@ -13,7 +13,7 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.  
     For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states. 
 
-| Property                   | JSON 名                 | 結果   |
+| プロパティ                      | JSON 名                 | 結果   |
 | -------------------------- | ---------------------- | ---- |
 | Rows                       | rowCount               | 1    |
 | Columns                    | columnCount            | 4    |

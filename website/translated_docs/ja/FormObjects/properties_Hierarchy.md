@@ -5,7 +5,7 @@ title: Hierarchy
 
 * * *
 
-## Hierarchical List Box
+## 階層リストボックス
 
 `Array type list boxes`
 

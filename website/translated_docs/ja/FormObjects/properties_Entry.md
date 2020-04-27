@@ -294,7 +294,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 * * *
                 
-                ## Single-Click Edit
+                ## シングルクリック編集
                 
                 Enables direct passage to edit mode in list boxes.
                 

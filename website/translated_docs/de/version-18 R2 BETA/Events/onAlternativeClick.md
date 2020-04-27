@@ -1,7 +1,6 @@
 ---
-id: version-18R2_BETA-onAlternativeClick
+id: onAlternativeClick
 title: On Alternative Click
-original_id: onAlternativeClick
 ---
 
 <table>
