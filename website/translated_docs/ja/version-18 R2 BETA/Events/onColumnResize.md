@@ -21,7 +21,7 @@ This event is generated when the width of a column in the list box is modified b
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | 型       | 説明                                                                  |
+| プロパティ       | 型       | 説明                                                                  |
 | ----------- | ------- | ------------------------------------------------------------------- |
 | code        | 倍長整数    | On Column Resize                                                    |
 | description | テキスト    | "On Column Resize"                                                  |
