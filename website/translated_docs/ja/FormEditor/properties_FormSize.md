@@ -212,7 +212,7 @@ p> You can choose this option when you want to use active objects placed in an o
               <hr />
               
               <h2>
-                Width
+                幅
               </h2>
               
               <p>
