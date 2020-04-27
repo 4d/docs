@@ -31,7 +31,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
 <table>
   <tr>
     <th>
-      Property
+      プロパティ
     </th>
     
     <th>
