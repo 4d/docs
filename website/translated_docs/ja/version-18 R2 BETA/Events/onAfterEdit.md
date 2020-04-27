@@ -26,7 +26,7 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| Property    | 型    | 説明                                                                                                  |
+| プロパティ       | 型    | 説明                                                                                                  |
 | ----------- | ---- | --------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数 | On After Edit                                                                                       |
 | description | テキスト | "On After Edit"                                                                                     |
@@ -39,7 +39,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = editChange
 
-| Property    | 型       | 説明                                |
+| プロパティ       | 型       | 説明                                |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
@@ -47,7 +47,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = valueChanged
 
-| Property | 型       | 説明                          |
+| プロパティ    | 型       | 説明                          |
 | -------- | ------- | --------------------------- |
 | range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
@@ -56,7 +56,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| Property  | 型       | 説明                                                  |
+| プロパティ     | 型       | 説明                                                  |
 | --------- | ------- | --------------------------------------------------- |
 | fromRange | object  | Range of source cell range (being dragged)          |
 | toRange   | object  | Range of the destination cell range (drop location) |
@@ -66,7 +66,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| Property  | 型      | 説明                  |
+| プロパティ     | 型      | 説明                  |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
  autoFillType|longint|Value used for the fill.
@@ -83,10 +83,10 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                     - 3: The cells below are filled| 
                                         #### action = formulaChanged
                                         
-                                        | Property | 型      | 説明                  |
-                                        | -------- | ------ | ------------------- |
-                                        | range    | object | Cell range          |
-                                        | formula  | テキスト   | The formula entered |
+                                        | プロパティ   | 型      | 説明                  |
+                                        | ------- | ------ | ------------------- |
+                                        | range   | object | Cell range          |
+                                        | formula | テキスト   | The formula entered |
 
                                         
                                         #### action = clipboardPasted
@@ -94,7 +94,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         <table>
                                           <tr>
                                             <th>
-                                              Property
+                                              プロパティ
                                             </th>
                                             
                                             <th>
