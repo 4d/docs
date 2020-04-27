@@ -15,7 +15,7 @@ This event is generated just before a cell in the list box is edited (before the
 
 When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the list box or column method.
 
-- If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively.
-- If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.
+- このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 **Tab** や **Shift+Tab** が押された後にイベントが生成された場合には、フォーカスはそれぞれ次あるいは前のセルに移動します。
+- $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。
 
 See also [Managing entry](FormObjects/listbox_overview.md#managing-entry) section.
