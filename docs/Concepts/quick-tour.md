@@ -58,7 +58,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example: 
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -67,7 +67,7 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
+You can use 4D plug-ins or 4D components that add new commands to your 4D development environment. 
 
 There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
 
@@ -124,7 +124,7 @@ A project method can call another project method with or without parameters (arg
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
-
+ 
   //Here the code of the method Do_Something
 $0:=Uppercase($1)
 ```
@@ -148,7 +148,7 @@ If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
-## Objects and collections
+## Objects and collections 
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
 
@@ -207,7 +207,7 @@ The same symbols are often used for different operations, depending on the data 
 The operators are fully defined in the chapter Operators and its subsections.
 
 
-## Expressions
+## Expressions 
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
@@ -263,9 +263,9 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable. 
 
-
+ 
 ## Pointers
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
@@ -280,18 +280,18 @@ ALERT(MyPointer->)
 
 ## Comments
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
 
 There are two ways to create comments:
 
 - `//` for single line comments
 - `/*...*/` for inline or multiline commnents.
 
-Both styles of comments can be used simultaneously.
+Both styles of comments can be used simultaneously. 
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
 
 ```4d
 //This is a comment
@@ -320,7 +320,7 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
-	/*
+	/* 
 	other comments
 	*/
 */

@@ -23,10 +23,10 @@ const users = [
 const siteConfig = {
   title: '4D Documentation' /* title for your website */,
   tagline: 'Documentation for 4D Developers',
-  url: 'https://4d.github.io/' /* your website url */,
+  url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,
-  baseUrl: '/docs/18/' /* base url for your project */,
+  baseUrl: '/docs/Rx/' /* base url for your project */,
 // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -43,7 +43,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
 
-    //{doc: 'Concepts/about', label: 'Docs'},
+    //{doc: '18.0/Concepts/about', label: 'v18'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
 
 	{href: 'https://developer.4d.com/docs', label:'v18 R3 BETA'},

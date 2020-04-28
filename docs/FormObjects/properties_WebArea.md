@@ -1,16 +1,16 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Web Area 
 ---
 
 ---
 ## Access 4D methods
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all"). 
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object). 
 
 
 
@@ -20,7 +20,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 |---|---|---|
 |methodsAccessibility|string|"none" (default), "all"|
 
-#### Objects Supported
+#### Objects Supported 
 
 [Web Area](webArea_overview.md)
 
@@ -36,7 +36,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 |---|---|---|
 |progressSource|string|Name of a Longint variable|
 
-#### Objects Supported
+#### Objects Supported 
 
 [Web Area](webArea_overview.md)
 
@@ -67,7 +67,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 |---|---|---|
 |urlSource|string |A URL.|
 
-#### Objects Supported
+#### Objects Supported 
 
 [Web Area](webArea_overview.md)
 
@@ -99,6 +99,6 @@ This means that you automatically benefit from the latest advances in Web render
 |---|---|---|
 |webEngine| string|"embedded", "system"|
 
-#### Objects Supported
+#### Objects Supported 
 
 [Web Area](webArea_overview.md)

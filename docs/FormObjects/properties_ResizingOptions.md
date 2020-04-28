@@ -1,22 +1,22 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Resizing Options 
 ---
 ---
 ## Column Auto-Resizing
 
-When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
-
+When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined. 
+ 
 When this property is disabled (`legacy` value in JSON), only the rightmost column of the list box is resized, even if its width exceeds the maximum value defined.
 
 ### How column auto-resizing works  
 
 *	As the list box width increases, its columns are enlarged, one by one, starting from right to left, until each reaches its [maximum width](properties_CoordinatesAndSizing.md#maximum-width). Only columns with the [Resizable](#resizable) property selected are resized.
-
+ 
 *	The same procedure applies when the list box width decreases, but in reverse order (*i.e.*, columns are resized starting from left to right). When each column has reached its [minimum width](properties_CoordinatesAndSizing.md#minimum-width), the horizontal scroll bar becomes active again.
-
+ 
 *	Columns are resized only when the horizontal scroll bar is not "active"; *i.e.*, all columns are fully visible in the list box at its current size. **Note**: If the horizontal scroll bar is hidden, this does not alter its state: a scroll bar may still be active, even though it is not visible.
-
+ 
 *	After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space. If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
 
 ![](assets/en/FormObjects/property_columnAutoResizing.png)
@@ -46,7 +46,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 ---
 ## Horizontal Sizing
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command. 
 
 Three options are available:
 
@@ -72,14 +72,14 @@ Three options are available:
 ---
 ## Vertical Sizing
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command. 
 
 Three options are available:
 
 |Option|JSON value|	Result|
 |---|---|---|
-|Grow|"grow"|The same percentage is applied to the object's height when the user resizes the width of the window,
-|Move|"move"|The object is moved the same amount up or down as the height increase when the user resizes the width of the window,
+|Grow|"grow"|The same percentage is applied to the object's height when the user resizes the width of the window, 
+|Move|"move"|The object is moved the same amount up or down as the height increase when the user resizes the width of the window, 
 |None|"fixed"|The object remains stationary when the form is resized
 
 >This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
@@ -99,7 +99,7 @@ Three options are available:
 ---
 ## Pusher
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop. 
 
 Here is the result of a “pusher” splitter being moved:
 ![](assets/en/FormObjects/splitter_pusher1.png)  
@@ -138,3 +138,9 @@ Designates if the size of the column can be modified by the user.
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+
+

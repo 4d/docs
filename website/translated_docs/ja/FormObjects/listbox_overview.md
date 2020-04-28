@@ -107,7 +107,7 @@ When the data source is a collection, any modifications made in the list box val
 myCol:=myCol.push("new value") //display new value in list box
 ```
 
-### Supported Properties
+### プロパティ一覧
 
 Supported properties depend on the list box type.
 
@@ -119,7 +119,7 @@ Supported properties depend on the list box type.
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                       |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                  | X                                       |
 | [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                  | X                                       |
-| [Class](properties_Object.md#css-class)                                                      | X              | X                  | X                                       |
+| [クラス](properties_Object.md#css-class)                                                        | X              | X                  | X                                       |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)        |                | X                  | X                                       |
 | [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                   | X              | X                  | X                                       |
 | [Current item](properties_DataSource.md#current-item)                                        |                |                    | X                                       |
@@ -158,7 +158,7 @@ Supported properties depend on the list box type.
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                       |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                       |
-| [Object Name](properties_Object.md#object-name)                                              | X              | X                  | X                                       |
+| [オブジェクト名](properties_Object.md#object-name)                                                  | X              | X                  | X                                       |
 | [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                  | X                                       |
 | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                    |                                         |
 | [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                    |                                         |
@@ -187,6 +187,151 @@ Supported properties depend on the list box type.
 
 > List box columns, headers and footers support specific properties.
 
+### Supported Form Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | コメント                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| On After Edit        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On After Keystroke   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On After Sort        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                | *Compound formulas cannot be sorted.   
+(e.g., This.firstName + This.lastName)* |
+| On Alternative Click | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Arrays list boxes only*                                                        |
+| On Before Data Entry | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Before Keystroke  | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Begin Drag Over   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Clicked           | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Close Detail      | - [row](#additional-properties)                                                                                                                                                 | *Current Selection & Named Selection list boxes only*                           |
+| On Collapse          | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Hierarchical list box only*                                                    |
+| On Column Moved      | - [columnName](#additional-properties)
+- [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                          |                                                                                 |
+| On Column Resize     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [newSize](#additional-properties)
+- [oldSize](#additional-properties)                               |                                                                                 |
+| On Data Change       | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Delete Action     | - [row](#additional-properties)                                                                                                                                                 |                                                                                 |
+| On Display Detail    | - [isRowSelected](#additional-properties)
+- [row](#additional-properties)                                                                                                       |                                                                                 |
+| On Double Clicked    | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Drag Over         | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                                                 |
+| On Drop              | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Expand            | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Hierarchical list box only*                                                    |
+| On Footer Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [footerName](#additional-properties)                                                                | *Arrays, Current Selection & Named Selection list boxes only*                   |
+| On Getting Focus     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Additional properties returned only when editing a cell*                       |
+| On Header Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                |                                                                                 |
+| On Load              |                                                                                                                                                                                 |                                                                                 |
+| On Losing Focus      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Additional properties returned only when editing a cell has been completed*    |
+| On Mouse Enter       | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                                                 |
+| On Mouse Leave       |                                                                                                                                                                                 |                                                                                 |
+| On Mouse Move        | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                                                 |
+| On Open Detail       | - [row](#additional-properties)                                                                                                                                                 | *Current Selection & Named Selection list boxes only*                           |
+| On Row Moved         | - [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                                                                 | *Arrays list boxes only*                                                        |
+| On Selection Change  |                                                                                                                                                                                 |                                                                                 |
+| On Scroll            | - [horizontalScroll](#additional-properties)
+- [verticalScroll](#additional-properties)                                                                                         |                                                                                 |
+| On Unload            |                                                                                                                                                                                 |                                                                                 |
+
+
+#### Additional Properties
+
+Form events on list box or list box column objects may return the following additional properties:
+
+| Property         | 型       | 説明                                                                    |
+| ---------------- | ------- | --------------------------------------------------------------------- |
+| area             | テキスト    | List box object area ("header", "footer", "cell")                     |
+| areaName         | テキスト    | Name of the area                                                      |
+| column           | 倍長整数    | Column number                                                         |
+| columnName       | テキスト    | Name of the column                                                    |
+| footerName       | テキスト    | Name of the footer                                                    |
+| headerName       | テキスト    | Name of the header                                                    |
+| horizontalScroll | 倍長整数    | Positive if scroll is towards the right, negative if towards the left |
+| isRowSelected    | boolean | True if row is selected, else False                                   |
+| newPosition      | 倍長整数    | New position of the column or row                                     |
+| newSize          | 倍長整数    | New size (in pixels) of the column or row                             |
+| oldPosition      | 倍長整数    | Previous position of the column or row                                |
+| oldSize          | 倍長整数    | Previous size (in pixels) of the column or row                        |
+| row              | 倍長整数    | Row number                                                            |
+| verticalScroll   | 倍長整数    | Positive if scroll is towards the bottom, negative if towards the top |
+
+
+> If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
+
 ## List box columns
 
 A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
@@ -200,6 +345,96 @@ You can set standard properties (text, background color, etc.) for each column o
 ### Column Specific Properties
 
 [Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+
+### Supported Form Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)                                            | コメント                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| On After Edit        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On After Keystroke   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On After Sort        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                | *Compound formulas cannot be sorted.   
+(e.g., This.firstName + This.lastName)* |
+| On Alternative Click | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Arrays list boxes only*                                                        |
+| On Before Data Entry | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Before Keystroke  | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Begin Drag Over   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Clicked           | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Column Moved      | - [columnName](#additional-properties)
+- [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                          |                                                                                 |
+| On Column Resize     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [newSize](#additional-properties)
+- [oldSize](#additional-properties)                               |                                                                                 |
+| On Data Change       | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Double Clicked    | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Drag Over         | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                                                 |
+| On Drop              | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                                                 |
+| On Footer Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [footerName](#additional-properties)                                                                | *Arrays, Current Selection & Named Selection list boxes only*                   |
+| On Getting Focus     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Additional properties returned only when editing a cell*                       |
+| On Header Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                |                                                                                 |
+| On Load              |                                                                                                                                                                                 |                                                                                 |
+| On Losing Focus      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *Additional properties returned only when editing a cell has been completed*    |
+| On Row Moved         | - [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                                                                 | *Arrays list boxes only*                                                        |
+| On Scroll            | - [horizontalScroll](#additional-properties)
+- [verticalScroll](#additional-properties)                                                                                         |                                                                                 |
+| On Unload            |                                                                                                                                                                                 |                                                                                 |
+
 
 ## List box headers
 
@@ -258,7 +493,7 @@ Here is the method of the *arrText* column:
 
 ```4d
  Case of
-    :(Form event=On Before Data Entry) // a cell gets the focus
+    :(FORM event.code=On Before Data Entry) // a cell gets the focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
   // identification of cell
        If(arrDate{$row}<Current date) // if date is earlier than today
@@ -374,7 +609,7 @@ In the object method of the list box, you can write:
 
 ```4d
  Case of
-    :(Form event=On Selection Change)
+    :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
        ARRAY LONGINT(_ListboxBackground;$n) // row background colors
        For($i;1;$n)

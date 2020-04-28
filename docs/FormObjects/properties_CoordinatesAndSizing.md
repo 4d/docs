@@ -6,7 +6,7 @@ title: Coordinates & Sizing
 ## Automatic Row Height
 `4D View Pro only: This feature requires a 4D View Pro license.`
 
-This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
+This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default. 
 
 When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
 
@@ -24,7 +24,7 @@ When this property is enabled, the height of every row is automatically calculat
 	*	hidden column contents
 	*	[Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 
->Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+>Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows. 
 
 
 
@@ -46,8 +46,8 @@ When this property is enabled, the height of every row is automatically calculat
 ---
 ## Bottom
 
-Bottom coordinate of the object in the form.
-
+Bottom coordinate of the object in the form. 
+ 
 
 #### JSON Grammar
 
@@ -81,7 +81,7 @@ Left coordinate of the object on the form.
 ---
 ## Right
 
-Right coordinate of the object in the form.
+Right coordinate of the object in the form. 
 
 #### JSON Grammar
 
@@ -99,7 +99,7 @@ Right coordinate of the object in the form.
 ---
 ## Top
 
-Top coordinate of the object in the form.
+Top coordinate of the object in the form. 
 
 #### JSON Grammar
 
@@ -121,7 +121,7 @@ Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_ov
 
 ![](assets/en/FormObjects/shape_rectangle.png)
 
-Minimum value is 0, in this case a standard non-rounded rectangle is drawn.
+Minimum value is 0, in this case a standard non-rounded rectangle is drawn. 
 Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
 You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-Get-corner-radius.301-4311357.en.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-CORNER-RADIUS.301-4311356.en.html) commands.
@@ -288,3 +288,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### See also
 [Row Height](#row-height)
+
+
+
+

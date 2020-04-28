@@ -1,6 +1,6 @@
 ---
 id: catalog
-title: $catalog
+title: $catalog 
 ---
 
 
@@ -17,14 +17,14 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass	
 
 
 ### Description   
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section. 
 
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
@@ -62,7 +62,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes
+Returns information about all of your project's dataclasses and their attributes	
 
 ### Description   
 
@@ -73,13 +73,13 @@ For more information about what is returned for each datastore class and its att
 
 ### Example  
 
-`GET  /rest/$catalog/$all`
+`GET  /rest/$catalog/$all` 
 
 **Result**:
 
 ````
 {
-
+ 
     "dataClasses": [
         {
             "name": "Company",
@@ -178,7 +178,7 @@ For more information about what is returned for each datastore class and its att
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+Returns information about a dataclass and its attributes 
 
 ### Description   
 
@@ -191,7 +191,7 @@ The information you retrieve concerns the following:
 *	Method(s) if any
 *	Primary key
 
-### DataClass
+### DataClass 
 
 The following properties are returned for an exposed dataclass:
 
@@ -226,7 +226,7 @@ Here are the properties for each exposed attribute that are returned:
 
 ### Method(s)
 
-Defines the project methods asociated to the dataclass, if any.
+Defines the project methods asociated to the dataclass, if any. 
 
 ### Primary Key  
 
@@ -334,3 +334,4 @@ You can retrieve the information regarding a specific datastore class.
     ]
 }
 ````
+

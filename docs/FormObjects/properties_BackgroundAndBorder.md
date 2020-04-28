@@ -21,7 +21,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 ---
 ## Background Color / Fill Color
 
-Defines the background color of an object.
+Defines the background color of an object. 
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
@@ -86,7 +86,7 @@ Allows setting a standard style for the object border.
 ---
 ## Dotted Line Type
 
-Describes dotted line type as a sequence of black and white points.
+Describes dotted line type as a sequence of black and white points. 
 
 #### JSON Grammar
 
@@ -128,14 +128,14 @@ You can remove these empty rows by selecting this option. The bottom of the list
 ---
 ## Line Color
 
-Designates the color of the object's lines.
+Designates the color of the object's lines. 
 The color can be specified by:
 
 * a color name - like "red"
 * a HEX value - like "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command. 
 
 #### JSON Grammar
 
@@ -143,7 +143,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 |---|---|---|
 |stroke |string |any css value, "transparent", "automatic"|
 
-> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color). 
 
 #### Objects Supported
 
@@ -218,7 +218,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 ---
 ## Transparent
 
-Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored. 
 
 #### JSON Grammar
 

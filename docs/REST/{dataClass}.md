@@ -1,6 +1,6 @@
 ---
 id: {dataClass}
-title: {dataClass}
+title: {dataClass} 
 ---
 
 
@@ -22,7 +22,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)	
 
 ### Description   
 
@@ -121,7 +121,7 @@ Return all the data for a specific datastore class.
                 }
             }
         }
-.....//more entities here
+.....//more entities here 
     ]
 }
 ````
@@ -202,7 +202,7 @@ The following request returns all the public data of the employee named "Jones".
 
 ## {dataClass}/{method}
 
-Returns an entity selection or a collection based on a dataclass method
+Returns an entity selection or a collection based on a dataclass method	
 
 ### Description   
 
@@ -233,7 +233,7 @@ To be called in a REST request, a method must:
 - have been declared as "Available through REST server" in 4D,
 - have its master table and scope defined accordingly:
 	-  **Table**:  master table
-	-  **Scope**:
+	-  **Scope**: 
 		- **Table** -for methods applied to the whole table (dataclass)
 		- **Current record** -for method applied to the current record (entity)
 		- **Current selection** -for methods applied to the current selection

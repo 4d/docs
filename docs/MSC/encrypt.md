@@ -14,10 +14,10 @@ A new folder is created each time you perform an encryption/decryption operation
 - Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that a database encryption operation always includes a compacting step.
 - Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
 
-## Encrypting data for the first time
+## Encrypting data for the first time 
 Encrypting your data for the first time using the MSC requires the following steps:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section.
+1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section. 
 2. Open the Encrypt page of the MSC.
 If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
 ![](assets/en/MSC/MSC_encrypt1.png)
@@ -33,9 +33,9 @@ The passphrase is used to generate the data encryption key. A passphrase is a mo
 The security level indicator can help you evaluate the strength of your passphrase:
 ![](assets/en/MSC/MSC_encrypt5.png)
 (deep green is the highest level)
-4. Enter to confirm your secured passphrase.
+4. Enter to confirm your secured passphrase. 
 
-The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
+The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode. 
 
 4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). You can do it at this moment or later. You can also open the encryption log file.
 
@@ -43,7 +43,7 @@ If the encryption process is successful, the Encrypt page displays Encryption ma
 
 **Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
 
-## Encryption maintenance operations
+## Encryption maintenance operations 
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios.
 ![](assets/en/MSC/MSC_encrypt6.png)
 
@@ -61,13 +61,13 @@ OR
 - connect a device such as a USB key and click the **Scan devices** button.    
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
-(2) The current passphrase is the passphrase used to generate the current encryption key.
+(2) The current passphrase is the passphrase used to generate the current encryption key. 
 
 In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
 
 ### Re-encrypt data with the current encryption key  
 
-This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
+This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status. 
 
 1. Click on **Re-encrypt data with the current encryption key**.
 2. Enter the current data encryption key.
@@ -82,10 +82,10 @@ This operation is useful when you need to change the current encryption data key
 2. Enter the current data encryption key.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice):
 ![](assets/en/MSC/MSC_encrypt9.png)
-The data file is encrypted with the new key and the confirmation message is displayed.
+The data file is encrypted with the new key and the confirmation message is displayed. 
 ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Decrypt all data
+### Decrypt all data 
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
 1. Click on **Decrypt all data**.
@@ -97,7 +97,7 @@ The data file is fully decrypted and a confirmation message is displayed:
 
 ## Saving the encryption key
 
-4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
+4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data. 
 
 You can save the encryption key each time a new passphrase has been provided:
 

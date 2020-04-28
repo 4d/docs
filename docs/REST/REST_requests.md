@@ -8,7 +8,7 @@ The following structures are supported for REST requests:
 
 |URI	|Resource	|{Subresource}|	{Querystring}|
 |---|---|---|---|
-|http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| |
+|http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| | 
 | |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/|	[{method}](%7BdataClass%7D.html#dataclassmethod)|
 | | | |[$entityset/{entitySetID}](entityset.html#entitysetentitysetid)|
 | | | |[?$filter]($filter.md)|
@@ -53,3 +53,6 @@ With each REST request, you get the status along with the response. Below are a 
 The response (in JSON format) varies depending on the request.
 
 If an error arises, it will be sent along with the response from the server or it will be the response from the server.
+
+ 
+

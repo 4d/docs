@@ -63,7 +63,7 @@ Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la comman
 Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Seules les parties suivantes d'un projet sont exposées lorsqu'il est ouvert en tant que bibliothèque :
 
 - formulaires projet
-- premières pages de formulaire
+- form pages 1
 
 ### Construire une bibliothèque d’objets
 

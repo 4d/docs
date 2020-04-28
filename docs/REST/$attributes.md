@@ -1,6 +1,6 @@
 ---
 id: attributes
-title: $attributes
+title: $attributes 
 ---
 
 Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
@@ -25,8 +25,8 @@ You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity select
 	- `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
 	- `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
 
-
-
+  
+  
 ## Example with related entities
 
 If we pass the following REST request for our Company datastore class (which has a relation attribute "employees"):
@@ -71,7 +71,7 @@ If you want to get all attributes from employees:
 If you want to get last name and job name attributes from employees:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
-
+ 
 
 ## Example with related entity
 

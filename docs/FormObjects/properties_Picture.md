@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Picture 
 ---
 ---
 ## Pathname
@@ -29,7 +29,7 @@ Two main locations can be used for static picture path:
 ## Display
 
 
-### Scaled to fit
+### Scaled to fit 
 
 `JSON grammar: "scaled"`
 
@@ -53,11 +53,11 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom. 
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
+The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom. 
 
->When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+>When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area. 
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 

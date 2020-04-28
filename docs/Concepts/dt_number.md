@@ -5,8 +5,8 @@ title: Number (Real, Longint, Integer)
 
 Number is a generic term that stands for:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1.
+- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits). 
+- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1. 
 - Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
 
 **Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
@@ -15,7 +15,7 @@ You can assign any Number data type to another; 4D does the conversion, truncati
 
 **Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
 
-
+    
 ## Number literals   
 
 A numeric literal constant is written as a real number. Here are some examples of numeric constants:
@@ -35,8 +35,8 @@ Negative numbers are specified with the minus sign (-). For example:
 -123.76
 -0.0076
 ```
-
-## Number operators
+ 
+## Number operators 
 
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ The modulo operator % divides the first number by the second number and returns 
 
 **WARNING:**
 - The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only.
+- The longint division operator \ returns significant values with integer numbers only. 
 
 ### Precedence
 

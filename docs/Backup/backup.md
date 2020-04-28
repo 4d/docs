@@ -1,7 +1,6 @@
 ---
 id: backup
 title: Backup
-original_id: backup
 ---
 
 

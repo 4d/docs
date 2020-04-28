@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulating Data
+title: Manipulating Data 
 ---
 
 All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
@@ -58,7 +58,7 @@ A new selection of entities is returned; however, you can also create a new enti
 
 ## Calculating Data  
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. You can also compute all values with the $all keyword.
+By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. You can also compute all values with the $all keyword. 
 
 For example, to get the highest salary:
 
@@ -85,7 +85,7 @@ You can apply this filter in the following ways:
 ||{dataClass}:{attribute}(value)/{att1,att2...}/|/People:firstName(Larry)/firstName,lastName/|
 |Entity selection|	{dataClass}/{att1,att2...}/$entityset/{entitySetID}|	/People/firstName/$entityset/528BF90F10894915A4290158B4281E61|
 
-The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
+The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed. 
 
 
 ### Examples
@@ -204,7 +204,7 @@ The following request returns only the first name and last name attributes from 
     },
     fullName: "Pete Marley",
     employerName: "microsoft"
-
+ 
 }
 ````
 
@@ -223,7 +223,7 @@ or
 Once you have created an entity set, you can filter the information in it by defining which attributes to return:
 
  `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
-
+ 
 
 ## Viewing an image attribute  
 
@@ -238,10 +238,12 @@ For more information about the image formats, refer to [`$imageformat`]($imagefo
 If you want to save a BLOB stored in your dataclass, you can write the following:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
-
+  
 
 ## Retrieving only one entity  
 
 You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
 
  `GET  /rest/Company:companyCode("Acme001")`
+ 
+ 

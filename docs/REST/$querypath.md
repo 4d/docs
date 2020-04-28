@@ -1,9 +1,9 @@
 ---
 id: querypath
-title: $querypath
+title: $querypath 
 ---
-
-Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
+   	
+Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)	
 
 ## Description   
 
@@ -34,7 +34,7 @@ And no entities were found, the following query path would be returned, if you w
 
 ```
 __queryPath: {
-
+ 
     steps: [
         {
             description: "AND",
@@ -60,7 +60,7 @@ __queryPath: {
             ]
         }
     ]
-
+ 
 }
 ```
 

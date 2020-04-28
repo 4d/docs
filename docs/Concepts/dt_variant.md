@@ -21,7 +21,7 @@ A variant type variable can contain a value of the following data types:
 - null
 - undefined
 
-> Arrays cannot be stored in variant variables.
+> Arrays cannot be stored in variant variables. 
 
 In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
 
@@ -60,4 +60,4 @@ Case of
 End case
 ```
 
-> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types.
+> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
