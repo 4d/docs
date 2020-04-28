@@ -9,14 +9,14 @@ title: Scale
 
 Enables the "barber shop" variant for the thermometer.
 
-#### JSON Grammar
+#### JSON 文法
 
-|      Name       | データタイプ | Possible Values                                             |
+|        名        | データタイプ | とりうる値                                                       |
 |:---------------:|:------:| ----------------------------------------------------------- |
 | [max](#maximum) | number | NOT passed = enabled; passed = disabled (basic thermometer) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Barber shop](progressIndicator.md#barber-shop)
 
@@ -26,14 +26,14 @@ Enables the "barber shop" variant for the thermometer.
 
 Displays/Hides the graduations next to the labels.
 
-#### JSON Grammar
+#### JSON 文法
 
-|      Name       | データタイプ  | Possible Values |
+|        名        | データタイプ  | とりうる値           |
 |:---------------:|:-------:| --------------- |
 | showGraduations | boolean | "true", "false" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -43,14 +43,14 @@ Displays/Hides the graduations next to the labels.
 
 Scale display measurement.
 
-#### JSON Grammar
+#### JSON 文法
 
-|      Name      | データタイプ  | Possible Values |
-|:--------------:|:-------:| --------------- |
-| graduationStep | integer | minimum: 0      |
+|       名        | データタイプ  | とりうる値  |
+|:--------------:|:-------:| ------ |
+| graduationStep | integer | 最小値: 0 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -64,14 +64,14 @@ Specifies the location of an object's displayed text.
 * Top - Displays labels to the left of or above an indicator
 * Bottom - Displays labels to the right of or below an indicator
 
-#### JSON Grammar
+#### JSON 文法
 
-|      Name       | データタイプ | Possible Values                          |
+|        名        | データタイプ | とりうる値                                    |
 |:---------------:|:------:| ---------------------------------------- |
 | labelsPlacement | string | "none", "top", "bottom", "left", "right" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -84,14 +84,14 @@ Maximum value of an indicator.
 - For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 - To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted. 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name |     データタイプ      | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| max  | string / number | minimum: 0 (for numeric data types) |
+|  名  |     データタイプ      | とりうる値                               |
+|:---:|:---------------:| ----------------------------------- |
+| max | string / number | minimum: 0 (for numeric data types) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -101,14 +101,14 @@ Maximum value of an indicator.
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name |     データタイプ      | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| min  | string / number | minimum: 0 (for numeric data types) |
+|  名  |     データタイプ      | とりうる値                               |
+|:---:|:---------------:| ----------------------------------- |
+| min | string / number | minimum: 0 (for numeric data types) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -118,13 +118,13 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name | データタイプ  | Possible Values |
-|:----:|:-------:| --------------- |
-| step | integer | minimum: 1      |
+|  名   | データタイプ  | とりうる値  |
+|:----:|:-------:| ------ |
+| step | integer | 最小値: 1 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)

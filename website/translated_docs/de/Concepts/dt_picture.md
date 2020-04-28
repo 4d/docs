@@ -54,12 +54,12 @@ Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lä
 
 **Hinweise:**
 
-- Beim Operator | müssen Bild1 und Bildt2 exakt dieselben Ausmaße haben. Haben sie unterschiedliche Ausmaße, ergibt die Operation Bild1 | Bild2 ein leeres Bild.
+- Beim Operator | müssen Bild1 und Bild2 exakt dieselben Ausmaße haben. Haben sie unterschiedliche Ausmaße, ergibt die Operation Bild1 | Bild2 ein leeres Bild.
 - Mit dem Befehl `COMBINE PICTURES` können Sie Bilder übereinanderlegen und die Merkmale jedes Ausgangsbildes im Ergebnisbild beibehalten.
 - Die Bildoperatoren geben Vektorbilder zurück, wenn beide Ausgangsbilder Vektorbilder sind. Beachten Sie jedoch, dass Bilder im Anzeigeformat Auf Hintergrund als Bitmap gedruckt werden.
-- Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+- Zusätzliche Operationen auf Bilder können Sie mit dem Befehl `TRANSFORM PICTURE` ausführen.
+- Es gibt keine Vergleichoperatoren für Bilder. 4D bietet jedoch den Befehl `Equal picture` zum Vergleichen von zwei Bildern. 
+- Mit 4D können Sie auch die lokalen Koordinaten der Maus bei Klicken oder Ziehen in einem Datenfeld oder einer Variablen vom Typ Bild herausfinden, selbst wenn Scrollen oder Zoomen auf das Bild angewendet wird. Dieser Vorgang ist ähnlich wie bei einem Bildmapping und lässt sich für scrollbare Schaltflächenleisten oder die Oberfläche bei kartografischer Software verwenden. Die Koordinaten werden in den **Systemvariablen** *MouseX* und *MouseY* zurückgegeben. Sie werden in Pixel angegeben, ausgehend von der oberen linken Ecke des Bildes (0,0). Ist die Maus außerhalb des Bildkoordinatensystems, wird -1 in *MouseX* und *MouseY* zurückgegeben. Sie erhalten den Wert dieser Variablen in den Formularereignissen **On Clicked**, **On Double Clicked**, **On Mouse Up,** **On Mouse Enter** oder **On Mouse Move**.
 
 ### Beispiele
 

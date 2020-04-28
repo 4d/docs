@@ -10,61 +10,43 @@ When you call this request for your project, you retrieve information in the fol
 
 |Property|	Type|	Description|
 |---|---|---|
-|cacheSize|	Number	|Wakanda Server's cache size.|
-|usedCache	|Number	|How much of Wakanda Server's cache has been used.|
-|entitySetCount	|Number	|Number of entity sets.|
-|entitySet	|Array|	An array in which each object contains information about each entity set.|
-|ProgressInfo|	Array	|An array containing information about progress indicator information.|
-|sessionInfo|	Array	|An array in which each object contains information about each user session.|
-|jsContextInfo|	Array|	An array containing one object that returns the information about the JavaScript context pool.|
+|cacheSize|	Number	|4D Server's cache size.|
+|usedCache	|Number	|How much of 4D Server's cache has been used.|
+|entitySetCount	|Number	|Number of entity selections.|
+|entitySet	|Collection|A collection in which each object contains information about each entity selection.|
+|ProgressInfo|	Collection	|A collection containing information about progress indicator information.|
+|sessionInfo|	Collection	|A collection in which each object contains information about each user session.|
 
 ### entitySet  
-For each entity set currently stored in 4D Server's cache, the following information is returned:
+For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
 |Property|	Type|	Description|
 |---|---|---|
 |id|String|	A UUID that references the entity set.|
-|tableName|String	|Name of the datastore class.|
-|selectionSize|	Number|	Number of entities in the entity set.|
+|dataClass|String	|Name of the datastore class.|
+|selectionSize|	Number|	Number of entities in the entity selection.|
 |sorted|Boolean|Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
 |refreshed|Date|When the entity set was created or the last time it was used.|
 |expires|Date|When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`.
 
-For information about how to create an entity set, refer to `$method=entityset`. If you want to remove the entity set from 4D Server's cache, use `$method=release`.
+For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 
->4D also creates its own entity sets for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
+>4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
 
 >**IMPORTANT**
 >If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
 
 ### sessionInfo  
 
-For each user session, the following information is returned in the *sessionInfo* array:
+For each user session, the following information is returned in the *sessionInfo* collection:
 
 |Property|	Type|	Description|
 |---|---|---|
 |sessionID|String|A UUID that references the session.|
-|userID|String|A UUID that references the user who runs the session.|
 |userName|String|The name of the user who runs the session.
 |lifeTime|Number|The lifetime of a user session in seconds (3600 by default).|
 |expiration	|Date|The current expiration date and time of the user session.|
-
-### jsContextInfo  
-
-The object in the **jsContextInfo** array details the JavaScript context pool:
-
-
-|Property|Type |Description|
-|---|---|---|
-|contextPoolSize|Number|	Maximum number of reusable contexts that can be stored in the JS pool (50 by default)|
-|activeDebugger|Boolean|	Debugger state (false by default)|
-|usedContextCount|Number|	Number of used contexts|
-|usedContextMaxCount|Number|	Maximum number of contexts that have been used simultaneously|
-|reusableContextCount|Number|	Number of reusable contexts (both used and unused)|
-|unusedContextCount	|Number|Number of unused contexts|
-|createdContextCount|Number|Number of contexts created since the project was started|
-|destroyedContextCount|Number|Number of contexts destroyed since the project was started|
 
 ## Example  
 
@@ -132,21 +114,9 @@ sessionInfo: [
         lifeTime: 3600,
         expiration: "2013-04-23T10:30:25Z"
 }
-],
-jsContextInfo: [
-    {
-        "contextPoolSize": 50,
-        "activeDebugger": false,
-        "usedContextCount": 1,
-        "usedContextMaxCount": 1,
-        "reusableContextCount": 1,
-        "unusedContextCount": 0,
-        "createdContextCount": 4,
-        "destroyedContextCount": 3
-    }
 ]
 }
 ```
 
 
->The progress indicator information listed after the entity sets is used internally by 4D.
+>The progress indicator information listed after the entity selections is used internally by 4D.

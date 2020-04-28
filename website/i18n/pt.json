@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "Looping structures"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "Components"
       },
@@ -288,8 +291,35 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
+      },
+      "FormEditor/action": {
+        "title": "Action"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -520,8 +550,14 @@
       "Project/developing": {
         "title": "Developing a project"
       },
+      "Project/documentation": {
+        "title": "Documenting a project"
+      },
       "Project/overview": {
         "title": "Overview"
+      },
+      "Project/pictures": {
+        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -599,7 +635,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "REST/configuration": {
         "title": "Server Configuration"
@@ -1226,7 +1262,7 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "version-18.0-REST/configuration": {
         "title": "Server Configuration"
@@ -1254,7 +1290,8 @@
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "Form Editor": "Form Editor",
+      "Forms": "Forms",
+      "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
@@ -1262,13 +1299,15 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "REST Server ": "REST Server ",
+      "Form Editor": "Form Editor"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "Form Editor",
+    "Forms|no description given": "Forms",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "Form Objects",
     "Form Object Properties|no description given": "Form Object Properties",

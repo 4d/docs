@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "ループ構造"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "コンポーネント"
       },
@@ -286,40 +289,67 @@
         "title": "概要"
       },
       "FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
+      },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
+      "FormEditor/action": {
+        "title": "動作"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
+      },
       "FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "ボタン"
       },
       "FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "ボタングリッド"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "FormObjects/inputOverview": {
-        "title": "Input"
+        "title": "入力"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "階層リスト"
       },
       "FormObjects/listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
         "title": "Picture Button"
@@ -340,7 +370,7 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
@@ -352,7 +382,7 @@
         "title": "Crop"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -370,13 +400,13 @@
         "title": "Headers"
       },
       "FormObjects/propertiesHelp": {
-        "title": "Help"
+        "title": "ヘルプ"
       },
       "FormObjects/propertiesHierarchy": {
         "title": "Hierarchy"
       },
       "FormObjects/propertiesListBox": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "FormObjects/propertiesObject": {
         "title": "Objects"
@@ -409,7 +439,7 @@
         "title": "テキスト"
       },
       "FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
         "title": "Web Area"
@@ -520,8 +550,14 @@
       "Project/developing": {
         "title": "プロジェクトの開発"
       },
+      "Project/documentation": {
+        "title": "Documenting a project"
+      },
       "Project/overview": {
         "title": "概要"
+      },
+      "Project/pictures": {
+        "title": "ピクチャー"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -599,7 +635,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "REST/configuration": {
         "title": "Server Configuration"
@@ -803,14 +839,14 @@
         "title": "概要"
       },
       "version-18 R2 BETA-FormObjects/version-18R2_BETA-listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18 R2 BETA-MSC/version-18R2_BETA-analysis": {
         "title": "Activity analysis Page",
         "sidebar_label": "Activity analysis Page"
       },
       "version-18 R2 BETA-Project/version-18R2_BETA-pictures": {
-        "title": "Pictures"
+        "title": "ピクチャー"
       },
       "version-18.0-Backup/backup": {
         "title": "Backup"
@@ -913,40 +949,40 @@
         "title": "変数"
       },
       "version-18.0-FormEditor/stylesheets": {
-        "title": "Style sheets"
+        "title": "スタイルシート"
       },
       "version-18.0-FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
       "version-18.0-FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "ボタン"
       },
       "version-18.0-FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "ボタングリッド"
       },
       "version-18.0-FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "チェックボックス"
       },
       "version-18.0-FormObjects/comboBoxOverview": {
-        "title": "Combo Box"
+        "title": "コンボボックス"
       },
       "version-18.0-FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "ドロップダウンリスト"
       },
       "version-18.0-FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "4D フォームオブジェクトについて"
       },
       "version-18.0-FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "グループボックス"
       },
       "version-18.0-FormObjects/inputOverview": {
-        "title": "Input"
+        "title": "入力"
       },
       "version-18.0-FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "階層リスト"
       },
       "version-18.0-FormObjects/listboxOverview": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18.0-FormObjects/pictureButtonOverview": {
         "title": "Picture Button"
@@ -967,7 +1003,7 @@
         "title": "Animation"
       },
       "version-18.0-FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "アピアランス"
       },
       "version-18.0-FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
@@ -979,7 +1015,7 @@
         "title": "Crop"
       },
       "version-18.0-FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "データソース"
       },
       "version-18.0-FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -997,13 +1033,13 @@
         "title": "Headers"
       },
       "version-18.0-FormObjects/propertiesHelp": {
-        "title": "Help"
+        "title": "ヘルプ"
       },
       "version-18.0-FormObjects/propertiesHierarchy": {
         "title": "Hierarchy"
       },
       "version-18.0-FormObjects/propertiesListBox": {
-        "title": "List Box"
+        "title": "リストボックス"
       },
       "version-18.0-FormObjects/propertiesObject": {
         "title": "Objects"
@@ -1036,7 +1072,7 @@
         "title": "テキスト"
       },
       "version-18.0-FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "テキスト、ピクチャー"
       },
       "version-18.0-FormObjects/propertiesWebArea": {
         "title": "Web Area"
@@ -1226,7 +1262,7 @@
         "title": "$version"
       },
       "version-18.0-REST/authUsers": {
-        "title": "Sessions and Users"
+        "title": "Users and sessions"
       },
       "version-18.0-REST/configuration": {
         "title": "Server Configuration"
@@ -1254,7 +1290,8 @@
     "categories": {
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "Form Editor",
+      "Forms": "フォーム",
+      "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
@@ -1262,13 +1299,15 @@
       "MSC": "Maintenance & Security Center",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "REST Server ": "REST Server ",
+      "Form Editor": "Form Editor"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "Form Editor",
+    "Forms|no description given": "フォーム",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "Form Objects",
     "Form Object Properties|no description given": "Form Object Properties",
