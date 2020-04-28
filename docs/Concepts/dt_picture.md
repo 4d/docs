@@ -5,18 +5,18 @@ title: Picture
 
 A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
 
-## Native Formats Supported 
+## Native Formats Supported
 
 4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras. 
+4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
 
 - Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO. 
+- Under macOS, 4D uses ImageIO.
 
 The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
 
-The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODE LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses. 
+The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODE LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
 
 **Note:** WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
 
@@ -58,12 +58,12 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 - The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
 - The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
 - Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
+- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
 - 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software.
 The coordinates are returned in the _MouseX_ and _MouseY_ **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and _MouseY_. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
 
-### Examples 
+### Examples
 
 In the following examples, all of the pictures are shown using the display format **On Background**.
 
@@ -109,7 +109,7 @@ rectangle+50 //Move the rectangle 50 pixels to the right
 rectangle-50 //Move the rectangle 50 pixels to the left
 ```
 ![](assets/en/Concepts/hormove.en.png)
-    
+
 Vertical move
 
 ```4d

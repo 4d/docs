@@ -27,11 +27,11 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
-| プロパティ   | 型      | 説明                                                                                |
-| ------- | ------ | --------------------------------------------------------------------------------- |
-| name    | String | Name of the dataclass.                                                            |
-| uri     | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI | String | A URI that allows you to view the data in the dataclass.                          |
+| Property | 型      | 説明                                                                                |
+| -------- | ------ | --------------------------------------------------------------------------------- |
+| name     | String | Name of the dataclass.                                                            |
+| uri      | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
+| dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
 
 
 ### 例題
@@ -62,7 +62,7 @@ Returns information about all of your project's dataclasses and their attributes
 
 ### 説明
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model.
+Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model. Remember that the scope for the datastore classes and their attributes must be **Public** for any information to be returned.
 
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
@@ -78,15 +78,13 @@ For more information about what is returned for each datastore class and its att
             {
                 "name": "Company",
                 "className": "Company",
-                "collectionName": "CompanySelection",
-                "tableNumber": 2,
+                "collectionName": "CompanyCollection",
                 "scope": "public",
                 "dataURI": "/rest/Company",
                 "attributes": [
                     {
                         "name": "ID",
                         "kind": "storage",
-                        "fieldPos": 1,
                         "scope": "public",
                         "indexed": true,
                         "type": "long",
@@ -95,23 +93,21 @@ For more information about what is returned for each datastore class and its att
                     {
                         "name": "name",
                         "kind": "storage",
-                        "fieldPos": 2,
                         "scope": "public",
                         "type": "string"
                     },
                     {
                         "name": "revenues",
                         "kind": "storage",
-                        "fieldPos": 3,
                         "scope": "public",
                         "type": "number"
                     },
                     {
                         "name": "staff",
                         "kind": "relatedEntities",
-                        "fieldPos": 4,
+                        "matchColumn": "employees,staff",
                         "scope": "public",
-                        "type": "EmployeeSelection",
+                        "type": "EmployeeCollection",
                         "reversePath": true,
                         "path": "employer"
                     },
@@ -131,8 +127,7 @@ For more information about what is returned for each datastore class and its att
             {
                 "name": "Employee",
                 "className": "Employee",
-                "collectionName": "EmployeeSelection",
-                "tableNumber": 1,
+                "collectionName": "EmployeeCollection",
                 "scope": "public",
                 "dataURI": "/rest/Employee",
                 "attributes": [
@@ -193,11 +188,10 @@ The information you retrieve concerns the following:
 
 The following properties are returned for an exposed dataclass:
 
-| プロパティ          | 型      | 説明                                                                                                 |
+| Property       | 型      | 説明                                                                                                 |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | name           | String | Name of the dataclass                                                                              |
-| collectionName | String | Name of an entity selection on the dataclass                                                       |
-| tableNumber    | 数値     | Table number in the 4D database                                                                    |
+| collectionName | String | Collection name of the dataclass                                                                   |
 | scope          | String | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
 | dataURI        | String | A URI to the data in the dataclass                                                                 |
 
@@ -206,17 +200,22 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| プロパティ       | 型      | 説明                                                                                                                                                          |
-| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String | Attribute name.                                                                                                                                             |
-| kind        | String | Attribute type (storage or relatedEntity).                                                                                                                  |
-| fieldPos    | 数値     | Position of the field in the database table).                                                                                                               |
-| scope       | String | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed     | String | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type        | String | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| identifying | ブール    | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                   |
-| path        | String | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                       |
- foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
+| Property      | 型      | 説明                                                                                                                                                          |
+| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | String | Attribute name.                                                                                                                                             |
+| kind          | String | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                             |
+| scope         | String | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
+| indexed       | String | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
+| type          | String | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
+| minLength     | 数値     | This property returns the value entered for the **Min Length** property, if one was entered.                                                                |
+| maxLength     | 数値     | This property returns the value entered for the **Max Length** property, if one was entered.                                                                |
+| autoComplete  | ブール    | This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.                                          |
+| identifying   | ブール    | This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.                                           |
+| multiLine     | ブール    | This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.                                             |
+| path          | String | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                          |
+| readOnly      | ブール    | This property is True if the attribute is of type calculated or alias.                                                                                      |
+| defaultFormat | オブジェクト | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                       |
+
 
 ### Method(s)
 
@@ -308,7 +307,6 @@ You can retrieve the information regarding a specific datastore class.
                 name: "employerName",
                 kind: "alias",
                 scope: "public",
-    
                 type: "string",
                 path: "employer.name",
                 readOnly: true

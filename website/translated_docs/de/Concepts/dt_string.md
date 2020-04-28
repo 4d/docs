@@ -3,44 +3,44 @@ id: string
 title: String
 ---
 
-String ist der Oberbegriff für:
+String is a generic term that stands for:
 
-- Textfelder bzw. -variablen: Ein Feld, eine Variable oder ein Ausdruck vom Typ Text kann 0 bis 2 GB an Text enthalten.
-- Alphanumerische Felder: Ein Datenfeld vom Typ alphanumerisch kann 0 bis 255 Zeichen enthalten (Limit wird bei der Felddefinition festgelegt).
+- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
+- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
 
-## Stringformate
+## String literals
 
-Ein Stringformat steht zwischen geraden doppelten Anführungszeichen ("..."). Hier ein paar Beispiele für Stringformate:
+A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
 
 ```4d
-"Datensätze hinzufügen"
-"Keine Datensätze gefunden."
-"Rechnung"
+"Add Records"
+"No records found."
+"Invoice"
 ```
 
-Ein leerer String wird mit Anführungszeichen ohne etwas dazwischen angegeben ("").
+An empty string is specified by two quotation marks with nothing between them ("").
 
-### Escape Sequenzen
+### Escape sequences
 
-In Strings lassen sich folgende Escape Sequenzen verwenden:
+The following escape sequences can be used within strings:
 
-| Escape Sequenz | Ersetzte Zeichen                          |
-| -------------- | ----------------------------------------- |
-| \n            | LF (Line feed - Zeilenvorschub)           |
-| \t            | HT (Tabulator)                            |
-| \r            | CR (Carriage return -Zeilenschaltung)     |
-| \\\         | \ (Backslash - umgekehrter Schrägstrich) |
-| \\"          | " (Anführungszeichen)                     |
+| Escape sequence | Character replaced   |
+| --------------- | -------------------- |
+| \n             | LF (Line feed)       |
+| \t             | HT (Tab)             |
+| \r             | CR (Carriage return) |
+| \\\          | \ (Backslash)       |
+| \\"           | " (Quotation marks)  |
 
 
-**Hinweis:** Das Zeichen \ wird unter Windows auch als Trenner in Pfadnamen verwendet. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").</p> 
+**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
-## String Operatoren
+## String operators
 
 | Operation               | Syntax           | Ergibt  | Ausdruck                | Wert     |
 | ----------------------- | ---------------- | ------- | ----------------------- | -------- |
-| Zusammenfügung          | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Wiederholung            | String * Zahl    | String  | "ab" * 3                | "ababab" |
+| Concatenation           | String + String  | String  | "abc" + "def"           | "abcdef" |
+| Repetition              | String * Number  | String  | "ab" * 3                | "ababab" |
 | Gleichheit              | String = String  | Boolean | "abc" = "abc"           | Wahr     |
 |                         |                  |         | "abc" = "abd"           | Falsch   |
 | Ungleichheit            | String # String  | Boolean | "abc" # "abd"           | Wahr     |
@@ -53,12 +53,12 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 |                         |                  |         | "abc" >= "abd"          | Falsch   |
 | Kleiner als oder gleich | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
 |                         |                  |         | "abd" <= "abc"          | Falsch   |
-| Mit Schlüsselwort       | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
+| Contains keyword        | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
 |                         |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
-|                         | Bild % String    | Boolean | Picture_expr % "Mer"    | Wahr (*) |
+|                         | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
 
 
-(*) Wenn das Schlüsselwort "Mer" dem Bild zugeordnet ist, das im Bildausdruck (Datenfeld oder Variable) gespeichert ist.
+(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
 ## String comparisons
 

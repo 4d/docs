@@ -34,13 +34,3 @@ Sets the number of rows in a thumbnail table.
 #### Objects Supported
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
-
-
-
-
-
-
-
-
-
-

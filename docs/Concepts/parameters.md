@@ -19,7 +19,7 @@ Parameters are passed to methods in the same way. For example, if a project meth
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call. 
+The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. The numbering of the local variables represents the order of the parameters.
 
@@ -53,10 +53,10 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as paramet
 - tables
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods). 
+Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 
-## Functions 
+## Functions
 
 Data can be returned from methods. A method that returns a value is called a function.
 
@@ -84,20 +84,12 @@ NewPhrase:=Uppercase4("This is good.")
 
 In this example, the variable *NewPhrase* gets “THIS is good.”
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
-
-```4d
-// Do_something
-$0:=Uppercase($1)
-ALERT($0)
-```
-
-In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, in the previous `DO SOMETHING` example, `$0` was first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
 
 
 ## Declaring parameters
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble. 
+Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
 
 In the following example, the `OneMethodAmongOthers` project method declares three parameters:
 
@@ -105,7 +97,7 @@ In the following example, the `OneMethodAmongOthers` project method declares thr
   // OneMethodAmongOthers Project Method
   // OneMethodAmongOthers ( Real ; Date { ; Long } )
   // OneMethodAmongOthers ( Amount ; Date { ; Ratio } )
- 
+
  C_REAL($1) // 1st parameter is of type Real
  C_DATE($2) // 2nd parameter is of type Date
  C_LONGINT($3) // 3rd parameter is of type Long Integer
@@ -117,7 +109,7 @@ In the following example, the `Capitalize` project method accepts a text paramet
   // Capitalize Project Method
   // Capitalize ( Text ) -> Text
   // Capitalize ( Source string ) -> Capitalized string
- 
+
  C_TEXT($0;$1)
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
@@ -144,7 +136,7 @@ C_OBJECT($3)
 
 **Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
 ```4d
- C_REAL(OneMethodAmongOthers;$1) 
+ C_REAL(OneMethodAmongOthers;$1)
 ```  
 See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
 
@@ -184,7 +176,7 @@ When you pass a parameter, 4D always evaluates the parameter expression in the c
 	//Here is some code from the method MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
- 
+
 	//Here is the code of the method DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
@@ -200,7 +192,7 @@ There are two ways to make the method `DO_SOMETHING` change the value of the fie
   //Here is some code from the method MY_METHOD
  DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
- 
+
   //Here the code of the method DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
@@ -225,7 +217,7 @@ This second technique of returning a value by a subroutine is called “using a 
 
 ### Particular cases: objects and collections
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*). 
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
 
 Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
@@ -253,9 +245,9 @@ When you execute the `CreatePerson` method, both alert boxes will read "50" sinc
 **4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
 
 
-## Named parameters 
+## Named parameters
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read. 
+Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
 
 For example, using the `CreatePerson` method:
 
@@ -309,7 +301,7 @@ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
 The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order. 
+With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
 
 
 ## Optional parameters
@@ -332,10 +324,10 @@ The following example displays a text message and can insert the text into a doc
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
- 
+
  C_TEXT($1;$2)
  C_OBJECT($3)
-  
+
  ALERT($1)
  If(Count parameters>=3)
     WP SET TEXT($3;$1;wk append)
@@ -364,17 +356,17 @@ In the following example, the project method `SEND PACKETS` accepts a time param
   //SEND PACKETS Project Method
   //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
- 
+
  C_TIME($1)
  C_TEXT(${2})
  C_LONGINT($vlPacket)
- 
+
  For($vlPacket;2;Count parameters)
     SEND PACKET($1;${$vlPacket})
  End for
 ```
 
-Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**. 
+Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
 
 For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
 

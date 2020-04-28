@@ -7,19 +7,22 @@ title: Appearance
 
 ## Default Button
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+The default button property modifies a button's appearance in order to indicate the recommended choice to the user. The difference in appearance depends on the OS.
 
-There can only be one default button per form page.
+|                Windows                 | macOS |
+|:--------------------------------------:|:-----:|
+| The default button has a blue outline. |       |
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
 
-![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)
+<
 
-> Button must have a standard height to get the default button appearance.
+p> ![](assets/en/FormObjects/property_defaultButtonWindows.en.png)|The default buttons are blue.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
+<
 
-![](assets/en/FormObjects/property_defaultButtonWindows.en.png)
+p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
+
+> There can only be one default button per form page.
 
 #### JSON Grammar
 

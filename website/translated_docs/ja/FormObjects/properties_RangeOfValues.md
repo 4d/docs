@@ -30,33 +30,33 @@ You can use a sequence number to create a unique number for each record in the t
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名            | データタイプ                              | とりうる値                                      |
+| Name         | データタイプ                              | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[入力](input_overview.md)
+[Input](input_overview.md)
 
 * * *
 
-## 除外リスト
+## Excluded List
 
-Allows setting a list whose values cannot be entered in the object. ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
+Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
 
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名            | データタイプ | とりうる値                            |
+| Name         | データタイプ | Possible Values                  |
 | ------------ | ------ | -------------------------------- |
 | excludedList | list   | A list of values to be excluded. |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -70,13 +70,13 @@ Making a list required does not automatically display the list when the field is
 
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名            | データタイプ | とりうる値                       |
+| Name         | データタイプ | Possible Values             |
 | ------------ | ------ | --------------------------- |
 | requiredList | list   | A list of mandatory values. |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)

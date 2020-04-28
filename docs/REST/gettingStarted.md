@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Getting Started 
+title: Getting Started
 ---
 
 4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
@@ -13,7 +13,7 @@ This section is intended to help familiarize you with REST functionality by mean
 
 To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
 
- 
+
 
 ## Creating and configuring the 4D database
 
@@ -24,15 +24,15 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 	- Firstname (Alpha)
 	- Salary (Longint)
 
-![](assets/en/REST/getstarted1.png) 
+![](assets/en/REST/getstarted1.png)
 
 > The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
 
 3. Create forms, then create a few employees:
 
-![](assets/en/REST/getstarted2.png) 
+![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option. 
+4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
 
 5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
 
@@ -41,15 +41,16 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 
 ## Accessing 4D data through the browser
 
-You can now read and edit data within 4D only through REST requests. 
+You can now read and edit data within 4D only through REST requests.
 
 Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
 
 ```
-http://127.0.0.1/rest/$catalog
-``` 
+http://127.0.01/rest/$catalog
+```
 
 The REST server replies:
+
 
 ```
 {
@@ -68,13 +69,13 @@ It means that the datastore contains the Employees dataclass. You can see the da
 
 ```
 /rest/$catalog/Employees
-``` 
+```
 
-If you want to get all entities of the Employee dataclass, you write: 
+If you want to get all entities of the Employee dataclass, you write:
 
 ```
 /rest/Employees
-``` 
+```
 
 **Response:**
 
@@ -121,7 +122,7 @@ You have many possibilities to filter data to receive. For example, to get only 
 
 ```
 /rest/Employees(2)/Lastname
-``` 
+```
 
 **Response:**
 

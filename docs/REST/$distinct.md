@@ -1,6 +1,6 @@
 ---
 id: distinct
-title: $distinct 
+title: $distinct
 ---
 
 
@@ -26,4 +26,3 @@ In our example below, we want to retrieve the distinct values for a company name
     "Apple"
 ]
 ````
-

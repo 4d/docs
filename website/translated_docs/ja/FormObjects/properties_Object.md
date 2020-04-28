@@ -11,20 +11,20 @@ title: Objects
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名    | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                    |
+| Name | データタイプ | Possible Values                                                                                                                                                                                                                                                                                          |
 | ---- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type | string | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 * * *
 
-## オブジェクト名
+## Object Name
 
 Each active form object is associated with an object name. Each object name must be unique.
 
@@ -34,49 +34,20 @@ When using 4D’s language, you can refer to an active form object by its object
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名    | データタイプ | とりうる値                                                                |
+| Name | データタイプ | Possible Values                                                      |
 | ---- | ------ | -------------------------------------------------------------------- |
 | name | string | Any allowed name which does not belong to an already existing object |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 * * *
 
-## 値を記憶
-
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
-
-This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
-
-Here is the list of objects whose value can be saved:
-
-| オブジェクト                                 | Saved value                                                                            |
-| -------------------------------------- | -------------------------------------------------------------------------------------- |
-| [チェックボックス](checkbox_overview.md)       | Value of associated variable (0, 1, 2)                                                 |
-| [ドロップダウンリスト](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)      | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)           | Number of selected tab                                                                 |
-
-
-#### JSON 文法
-
-| 名             | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| memorizeValue | boolean | true, false |
-
-
-#### 対象オブジェクト
-
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
-
-* * *
-
-## 変数あるいは式
+## Variable or Expression
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
@@ -125,16 +96,16 @@ There are two advantages with this mechanism:
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
-### 階層リストボックス
+### Hierarchical List Box
 
 Using a string array (collection of arrays names) as *dataSource* value for a list box column defines a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
-#### JSON 文法
+#### JSON Grammar
 
 - 4D variable, field name, or arbitrary complex language expression. 
     - Empty string for [dynamic variables](#dynamic-variables). 
         - String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</td> </tr> </tbody> </table> 
-            #### 対象オブジェクト
+            #### Objects Supported
             
             [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
             
@@ -151,11 +122,11 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
             - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
             - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
             - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
-            #### JSON 文法
+            #### JSON Grammar
             
             - **standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"
                 - **list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</td> </tr> </tbody> </table> 
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
                     [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
                     
@@ -165,20 +136,20 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     A list of space-separated words used as class selectors in css files.
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名     | データタイプ | とりうる値                                                     |
+                    | Name  | データタイプ | Possible Values                                           |
                     | ----- | ------ | --------------------------------------------------------- |
                     | class | string | One string with CSS name(s) separated by space characters |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
                     [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
                     
                     * * *
                     
-                    ## コレクションまたはエンティティセレクション
+                    ## Collection or entity selection
                     
                     To use collection elements or entities to define the row contents of the list box.
                     
@@ -191,20 +162,20 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名          | データタイプ | とりうる値                                                        |
+                    | Name       | データタイプ | Possible Values                                              |
                     | ---------- | ------ | ------------------------------------------------------------ |
                     | dataSource | string | Expression that returns a collection or an entity selection. |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
-                    [リストボックス](listbox_overview.md)
+                    [List Box](listbox_overview.md)
                     
                     * * *
                     
-                    ## データソース
+                    ## Data Source
                     
                     Specify the type of list box.
                     
@@ -214,16 +185,16 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     - **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
                     - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
                     - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property. 
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名           | データタイプ | とりうる値                                                       |
+                    | Name        | データタイプ | Possible Values                                             |
                     | ----------- | ------ | ----------------------------------------------------------- |
                     | listboxType | string | "array", "currentSelection", "namedSelection", "collection" |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
-                    [リストボックス](listbox_overview.md)
+                    [List Box](listbox_overview.md)
                     
                     * * *
                     
@@ -231,14 +202,14 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名              | データタイプ | とりうる値                                                         |
+                    | Name           | データタイプ | Possible Values                                               |
                     | -------------- | ------ | ------------------------------------------------------------- |
                     | pluginAreaKind | string | Name of the plug-in external area (starts with a % character) |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
                     [Plug-in Area](pluginArea_overview.md)
                     
@@ -248,43 +219,43 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名          | データタイプ | とりうる値            |
+                    | Name       | データタイプ | Possible Values  |
                     | ---------- | ------ | ---------------- |
                     | radioGroup | string | Radio group name |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
                     [Radio Button](radio_overview.md)
                     
                     * * *
                     
-                    ## タイトル
+                    ## Title
                     
-                    オブジェクトにラベルを追加します。 このラベルのフォントとスタイルは指定することができます。
+                    Allows inserting a label on an object. The font and the style of this label can be specified.
                     
-                    \文字 (バックスラッシュまたは円マーク) を使用すると、ラベル内で強制的に改行することができます。
+                    You can force a carriage return in the label by using the \ character (backslash).
                     
                     ![](assets/en/FormObjects/property_title.png)
                     
-                    ラベルに \ を表示したい場合は &#92;&#92; と入力します。
+                    To insert a \ in the label, enter "&#92;&#92;".
                     
-                    デフォルトでラベルはオブジェクトの中央に置かれます。 またオブジェクトにアイコンも含まれている場合、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置) プロパティを用いて、これら2 つの要素の相対位置を変更することができます。
+                    By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
                     
-                    インターフェースの翻訳の目的で、XLIFF 参照をボタンのタイトルエリアに入力することができます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
+                    For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名    | データタイプ | とりうる値     |
-                    | ---- | ------ | --------- |
-                    | テキスト | string | なんらかのテキスト |
+                    | Name | データタイプ | Possible Values |
+                    | ---- | ------ | --------------- |
+                    | テキスト | string | any text        |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
-                    [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
+                    [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
                     
                     * * *
                     
@@ -298,15 +269,15 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
                     | --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
-                    | Minimum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
-                    | Maximum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
-                    | Sum                   | ○   |      | ○  |    | ○    |      | Same as column type |
-                    | Count                 | ○   | ○    | ○  | ○  | ○    | ○    | 倍長整数                |
-                    | Average               | ○   |      |    | ○  |      |      | 実数                  |
-                    | Standard deviation(*) | ○   |      |    | ○  |      |      | 実数                  |
-                    | Variance(*)           | ○   |      |    | ○  |      |      | 実数                  |
-                    | Sum squares(*)        | ○   |      |    | ○  |      |      | 実数                  |
-                    | Custom ("none")       | ○   | ○    | ○  | ○  | ○    | ○    | Any                 |
+                    | Minimum               | X   |      | X  | X  | X    |      | Same as column type |
+                    | Maximum               | X   |      | X  | X  | X    |      | Same as column type |
+                    | Sum                   | X   |      | X  |    | X    |      | Same as column type |
+                    | Count                 | X   | X    | X  | X  | X    | X    | 倍長整数                |
+                    | Average               | X   |      |    | X  |      |      | 実数                  |
+                    | Standard deviation(*) | X   |      |    | X  |      |      | 実数                  |
+                    | Variance(*)           | X   |      |    | X  |      |      | 実数                  |
+                    | Sum squares(*)        | X   |      |    | X  |      |      | 実数                  |
+                    | Custom ("none")       | X   | X    | X  | X  | X    | X    | Any                 |
 
                     
                     (*) Only for array type list boxes.
@@ -317,13 +288,13 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     > Automatic calculations are not supported with: * footers of columns based on formulas, * footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
                     
-                    #### JSON 文法
+                    #### JSON Grammar
                     
-                    | 名                   | データタイプ | とりうる値                                                                                                 |
+                    | Name                | データタイプ | Possible Values                                                                                       |
                     | ------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
                     | variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
                     
-                    #### 対象オブジェクト
+                    #### Objects Supported
                     
                     [List Box Footer](listbox_overview.md#list-box-footers)

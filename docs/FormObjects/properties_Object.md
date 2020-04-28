@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects 
+title: Objects
 ---
 
 ---
@@ -47,39 +47,11 @@ For more information about naming rules for form objects, refer to [Identifiers]
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
----
-## Save value
-
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form. 
-
-This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window. 
-
-Here is the list of objects whose value can be saved:
-
-|Object|Saved value|
-|---|---|
-|[Check Box](checkbox_overview.md)|Value of associated variable (0, 1, 2)|
-|[Drop-down List](dropdownList_Overview.md)|Number of selected row|
-|[Radio Button](radio_overview.md)|Value of associated variable (1, 0, True or False for buttons according to their type)|
-|[Tab control](tabControl.md)|Number of selected tab|
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|memorizeValue|boolean |true, false|
-
-#### Objects Supported
-
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
-
-
 
 ---
 ## Variable or Expression
 
-> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns. 
+> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
@@ -105,7 +77,7 @@ You can leave it up to 4D to create variables associated with your form objects 
 When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed.
 In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
 
-- You can set the type using the [Expression type](#expression-type) property. 
+- You can set the type using the [Expression type](#expression-type) property.
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
 
 ```4d
@@ -124,7 +96,7 @@ In the 4D code, dynamic variables can be accessed using a pointer obtained with 
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```
- 
+
 There are two advantages with this mechanism:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
@@ -155,7 +127,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
 ---
 ## Expression Type
 
-> This property is called **Data Type** in the Property List for Selection and collection type list box columns. 
+> This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
 
 Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
@@ -203,12 +175,12 @@ A list of space-separated words used as class selectors in css files.
 
 To use collection elements or entities to define the row contents of the list box.
 
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection. 
+Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
 
 The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
 
 *	if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
-*	if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**. 
+*	if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
 
 >If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below)
 Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
@@ -235,10 +207,10 @@ Specify the type of list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(default): use array elements as the rows of the list box. 
+- **Arrays**(default): use array elements as the rows of the list box.
 - **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
 - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property. 
+- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
 
 #### JSON Grammar
 
@@ -258,7 +230,7 @@ Specify the type of list box.
 ---
 ## Plug-in Kind
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in. 
+Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
 
 #### JSON Grammar
@@ -288,7 +260,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md) 
+[Radio Button](radio_overview.md)
 
 
 
@@ -298,13 +270,13 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 Allows inserting a label on an object. The font and the style of this label can be specified.
 
-You can force a carriage return in the label by using the \ character (backslash). 
+You can force a carriage return in the label by using the \ character (backslash).
 
 ![](assets/en/FormObjects/property_title.png)
 
-To insert a \ in the label, enter "&#92;&#92;". 
+To insert a \ in the label, enter "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property. 
+By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
 For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -327,7 +299,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 ---
 ## Variable Calculation
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area. 
+This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 
 >The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
@@ -354,7 +326,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 >Automatic calculations are not supported with:
 >*	footers of columns based on formulas,
 >*	footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes.
-You need to use custom calculations. 
+You need to use custom calculations.
 
 #### JSON Grammar
 
@@ -365,12 +337,3 @@ You need to use custom calculations.
 #### Objects Supported
 
 [List Box Footer](listbox_overview.md#list-box-footers)
-
-
-
-
-
-
-
-
-

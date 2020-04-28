@@ -23,13 +23,13 @@ The print options are:
 
 > This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
 
-#### JSON 文法
+#### JSON Grammar
 
-|     名      | データタイプ | とりうる値                                               |
+|    Name    | データタイプ | Possible Values                                     |
 |:----------:|:------:| --------------------------------------------------- |
 | printFrame | string | "fixed", "variable", (subform only) "fixedMultiple" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)

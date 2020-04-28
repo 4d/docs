@@ -31,7 +31,7 @@ The following escape sequences can be used within strings:
 |\\\|\ (Backslash)|
 |\\"|" (Quotation marks)|
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt"). 
+**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
 ## String operators
 
@@ -140,8 +140,8 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 
 >**Notes:**
 >- 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries.
->- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords. 
-    
+>- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+
 ## Character Reference Symbols  
 The character reference symbols: [[...]]
 
@@ -164,7 +164,7 @@ Otherwise, if the character reference symbols appear within an expression, they 
   //...
     End if
  End if
- 
+
   //Using the character reference syntax, you would write in a simpler manner:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
@@ -173,7 +173,7 @@ Otherwise, if the character reference symbols appear within an expression, they 
  End if
 ```
 
-### Advanced note about invalid character reference 
+### Advanced note about invalid character reference
 
 When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
 
@@ -191,7 +191,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
-### Example 
+### Example
 
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
@@ -200,7 +200,7 @@ The following project method capitalizes the first character of each word of the
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

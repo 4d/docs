@@ -438,7 +438,7 @@ Beispiel:
 
 ### Bedingungen Until und While
 
-Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. Ist eine Anweisung `Until(condition)` oder `While(condition)` in der Schleife zugewiesen, stoppt der Durchlauf, sobald die Bedingung mit wahr gewertet wird.
 
 Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
 

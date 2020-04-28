@@ -33,7 +33,7 @@ Vous pouvez également utiliser la propriété params de 4D.
 
 **{attribut} {comparateur} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee datastore class.
+Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la classe de datastore "Employee".
 
 Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la documentation de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
 

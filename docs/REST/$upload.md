@@ -1,10 +1,10 @@
 ---
 id: upload
-title: $upload 
+title: $upload
 ---
 
 
-Returns an ID of the file uploaded to the server	
+Returns an ID of the file uploaded to the server
 
 ## Description   
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
@@ -16,7 +16,7 @@ To upload an image, you must first select the file object on the client using th
 
 Then, we upload the selected image to 4D Server:
 
- `POST  /rest/$upload?$rawPict=true` 
+ `POST  /rest/$upload?$rawPict=true`
 
 **Result**:
 
@@ -32,7 +32,7 @@ Then, we upload the selected image to 4D Server:
 {
     __KEY: "12",
     __STAMP: 4,
-    photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
+    photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" }
 }
 ````
 
@@ -42,11 +42,11 @@ The modified entity is returned:
 
 ````
 {
-    "__KEY": "12", 
-    "__STAMP": 5, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(12)", 
-    "ID": 12, 
-    "firstName": "John", 
+    "__KEY": "12",
+    "__STAMP": 5,
+    "uri": "http://127.0.0.1:8081/rest/Employee(12)",
+    "ID": 12,
+    "firstName": "John",
     "firstName": "Smith",
     "photo":
     {
@@ -57,4 +57,3 @@ The modified entity is returned:
         }
     },}
 ````
- 

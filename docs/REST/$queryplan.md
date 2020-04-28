@@ -1,13 +1,13 @@
 ---
 id: queryplan
-title: $queryplan 
+title: $queryplan
 ---
 
 
-Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)	
+Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 
 ## Description   
-$queryplan returns the query plan as it was passed to 4D Server. 
+$queryplan returns the query plan as it was passed to 4D Server.
 
 |Property	|Type|	Description|
 |---|---|---|

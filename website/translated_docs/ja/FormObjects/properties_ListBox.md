@@ -1,6 +1,6 @@
 ---
 id: propertiesListBox
-title: リストボックス
+title: List Box
 ---
 
 * * *
@@ -9,22 +9,22 @@ title: リストボックス
 
 Collection of columns of the list box.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名       | データタイプ                       | とりうる値                                            |
+| Name    | データタイプ                       | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[リストボックス](listbox_overview.md)
+[List Box](listbox_overview.md)
 
 * * *
 
-## 詳細フォーム名
+## Detail Form Name
 
 `Selection type list box`
 
@@ -35,18 +35,18 @@ The specified form is displayed:
 * when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 * when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
-#### JSON 文法
+#### JSON Grammar
 
 * Name (string) of table or project form
     * POSIX path (string) to a .json file describing the form
         * Object describing the form</td> </tr> </tbody> </table> 
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
-            ## 行をダブルクリック
+            ## Double-click on row
             
             `Selection type list box`
             
@@ -62,20 +62,20 @@ The specified form is displayed:
             
             For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名                      | データタイプ | とりうる値                               |
+            | Name                   | データタイプ | Possible Values                     |
             | ---------------------- | ------ | ----------------------------------- |
             | doubleClickInRowAction | string | "editSubrecord", "displaySubrecord" |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
-            ## ハイライトセット
+            ## Highlight Set
             
             `Selection type list box`
             
@@ -86,16 +86,16 @@ The specified form is displayed:
             > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent. 
             > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名            | データタイプ | とりうる値           |
+            | Name         | データタイプ | Possible Values |
             | ------------ | ------ | --------------- |
             | highlightSet | string | Name of the set |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
@@ -121,58 +121,58 @@ The specified form is displayed:
             ![](assets/en/FormObjects/property_lockedStaticColumns2.png)
             
             * You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
-            ### スクロールしない列数
+            ### Number of Locked Columns
             
             Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名                 | データタイプ  | とりうる値  |
-            | ----------------- | ------- | ------ |
-            | lockedColumnCount | integer | 最小値: 0 |
+            | Name              | データタイプ  | Possible Values |
+            | ----------------- | ------- | --------------- |
+            | lockedColumnCount | integer | minimum: 0      |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
-            ### ドラッグしない列数
+            ### Number of Static Columns
             
             Number of columns that cannot be moved during execution.
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名                 | データタイプ  | とりうる値  |
-            | ----------------- | ------- | ------ |
-            | staticColumnCount | integer | 最小値: 0 |
+            | Name              | データタイプ  | Possible Values |
+            | ----------------- | ------- | --------------- |
+            | staticColumnCount | integer | minimum: 0      |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
-            ## 列数
+            ## Number of Columns
             
             Sets the number of columns of the list box.
             
             > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名           | データタイプ  | とりうる値  |
-            | ----------- | ------- | ------ |
-            | columnCount | integer | 最小値: 1 |
+            | Name        | データタイプ  | Possible Values |
+            | ----------- | ------- | --------------- |
+            | columnCount | integer | minimum: 1      |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
-            ## 行コントロール配列
+            ## Row Control Array
             
             `Array type list box`
             
@@ -214,20 +214,20 @@ The specified form is displayed:
              //sets row 6 as disabled but selectable again
             ```
             
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名                | データタイプ | とりうる値                  |
+            | Name             | データタイプ | Possible Values        |
             | ---------------- | ------ | ---------------------- |
             | rowControlSource | string | Row control array name |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)
             
             * * *
             
-            ## 選択モード
+            ## Selection Mode
             
             Designates the option for allowing users to select rows:
             
@@ -235,13 +235,13 @@ The specified form is displayed:
             - **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
                 The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
             - **Multiple**: Several rows can be selected simultaneously in this mode. 
-            #### JSON 文法
+            #### JSON Grammar
             
-            | 名             | データタイプ | とりうる値                        |
+            | Name          | データタイプ | Possible Values              |
             | ------------- | ------ | ---------------------------- |
             | selectionMode | string | "multiple", "single", "none" |
 
             
-            #### 対象オブジェクト
+            #### Objects Supported
             
-            [リストボックス](listbox_overview.md)
+            [List Box](listbox_overview.md)

@@ -13,14 +13,14 @@ You can call 4D methods from the JavaScript code executed in a Web area and get 
 
 When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名                    | データタイプ | とりうる値                   |
+| Name                 | データタイプ | Possible Values         |
 | -------------------- | ------ | ----------------------- |
 | methodsAccessibility | string | "none" (default), "all" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Web Area](webArea_overview.md)
 
@@ -30,14 +30,14 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名              | データタイプ | とりうる値                      |
+| Name           | データタイプ | Possible Values            |
 | -------------- | ------ | -------------------------- |
 | progressSource | string | Name of a Longint variable |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Web Area](webArea_overview.md)
 
@@ -61,14 +61,14 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
 - When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名         | データタイプ | とりうる値  |
-| --------- | ------ | ------ |
-| urlSource | string | A URL. |
+| Name      | データタイプ | Possible Values |
+| --------- | ------ | --------------- |
+| urlSource | string | A URL.          |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Web Area](webArea_overview.md)
 
@@ -90,13 +90,13 @@ This option allows choosing between two rendering engines for the Web area, depe
         * `WA enable plugins`
     * When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) or one assignment to the URL variable associated to the area.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名         | データタイプ | とりうる値                |
+| Name      | データタイプ | Possible Values      |
 | --------- | ------ | -------------------- |
 | webEngine | string | "embedded", "system" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Web Area](webArea_overview.md)

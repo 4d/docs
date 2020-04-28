@@ -5,7 +5,7 @@ title: Scale
 ---
 ## Barber shop
 
-Enables the "barber shop" variant for the thermometer. 
+Enables the "barber shop" variant for the thermometer.
 
 #### JSON Grammar
 
@@ -32,14 +32,14 @@ Displays/Hides the graduations next to the labels.
 
 #### Objects Supported
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) 
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 
 
 ---
 ## Graduation step
 
-Scale display measurement.	
+Scale display measurement.
 
 #### JSON Grammar
 
@@ -50,7 +50,7 @@ Scale display measurement.
 
 #### Objects Supported
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) 
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 
 
@@ -78,10 +78,10 @@ Specifies the location of an object's displayed text.
 ---
 ## Maximum
 
-Maximum value of an indicator. 
+Maximum value of an indicator.
 
 - For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted. 
+- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
 #### JSON Grammar
 
@@ -128,9 +128,3 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 #### Objects Supported
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
-
-
-
-
-
-

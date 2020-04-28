@@ -11,7 +11,7 @@ Pour rechercher directement des données, vous pouvez utiliser la fonction [`$fi
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
-## Adding, modifying, and deleting entities
+## Ajouter, modifier et supprimer des entités
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
@@ -21,11 +21,11 @@ Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClas
 
 Avant de retourner la collection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
-## Navigating data
+## Parcourir les données
 
 Ajoutez le [`$skip`]($skip.md) (pour définir avec quelle entité commencer) et [`$top/$limit`]($top_$limit.md) (pour définir le nombre d'entités à retourner) des requêtes REST à vos requêtes ou entity selections pour parcourir la collection d'entités.
 
-## Creating and managing entity set
+## Créer et gérer un ensemble d'entités
 
 Un ensemble d'entités (également appelé *entity set* ou *entity selection*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
@@ -47,7 +47,7 @@ En utilisant [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($e
 
 Une nouvelle sélection d'entités est renvoyée; vous pouvez néanmoins créer un nouvel ensemble d'entités en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 
-## Calculating data
+## Calculer des données
 
 En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le **nombre**, le **min**, le **max** ou la **somme** pour un attribut spécifique d'une dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
 
@@ -59,42 +59,7 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 
 `/rest/Employee/salary/?$compute=$all`
 
-## Getting data from methods
-
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
-
-- an object
-- a collection
-
-The following example is a dataclass method that reveives parameters and returns an object:
-
-```4d
-// 4D findPerson method
-C_TEXT($1;$firstname;$2;$lastname)
-$firstname:=$1
-$lastname:=$2
-
-$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
-```
-
-The method properties are configured accordingly on the 4D project side:
-
-![alt-text](assets/en/REST/methodProp_ex.png)
-
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
-
-```4d
-C_TEXT($content)
-C_OBJECT($response)
-
-$content:="[\"Toni\",\"Dickey\"]" 
-
-$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
-```
-
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
-
-## Selecting Attributes to get
+## Sélectionner les attributs à obtenir
 
 Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
@@ -103,7 +68,7 @@ Vous pouvez appliquer ce filtre comme suit :
 | Objet                | Syntaxe                                             | Exemple                                                       |
 | -------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass            | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
-| Collection d'entités | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
+| Collection d'entités | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a*'"           |
 | Entité spécifique    | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |                      | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
 | Entity selection     | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
@@ -119,6 +84,7 @@ Vous pouvez appliquer cette méthode à :
 
 - Dataclass (tout ou une collection d'entités dans une dataclass)
 - Entités spécifiques
+- Méthodes dataclass
 - Entity sets
 
 #### Exemple avec une dataclass
@@ -163,7 +129,7 @@ Les requêtes suivantes retournent uniquement le prénom et le nom de la datasto
     }
     
 
-`GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
+`GET  /rest/People/firstName,lastName/?$filter="lastName='A*'"/`
 
 **Résultat** :
 
@@ -224,9 +190,19 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
     }
     
 
+#### Exemple de méthode
+
+Si vous avez une méthode dataclass, vous pouvez définir les attributs à retourner comme indiqué ci-dessous, avant de passer la méthode dataclass :
+
+`GET  /rest/People/firstName,lastName/getHighSalaries`
+
+ou
+
+`GET  /rest/People/getHighSalaries/firstName,lastName`
+
 #### Exemple d'ensemble d'entités
 
-Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
+Une fois que vous avez créé un ensemble d'entités, vous pouvez filtrer les informations qu'il contient en définissant les attributs à retourner :
 
 `GET /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
 
@@ -246,6 +222,6 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-Vous pouvez utiliser la syntaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. For example, you can write:
+Vous pouvez utiliser la syntaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
 
 `GET  /rest/Company:companyCode("Acme001")`

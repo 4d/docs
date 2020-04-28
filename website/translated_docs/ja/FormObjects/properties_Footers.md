@@ -5,20 +5,20 @@ title: Footers
 
 * * *
 
-## フッターを表示
+## Display Footers
 
 This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名           | データタイプ  | とりうる値       |
-| ----------- | ------- | ----------- |
-| showFooters | boolean | true, false |
+| Name        | データタイプ  | Possible Values |
+| ----------- | ------- | --------------- |
+| showFooters | boolean | true, false     |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[リストボックス](listbox_overview.md)
+[List Box](listbox_overview.md)
 
 * * *
 
@@ -43,7 +43,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON 例:
+#### JSON Example:
 
         "List Box": {
             "type": "listbox",
@@ -53,16 +53,16 @@ Note that converting back and forth may lead to an end result that is different 
             }
     
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名            | データタイプ | とりうる値                         |
+| Name         | データタイプ | Possible Values               |
 | ------------ | ------ | ----------------------------- |
 | footerHeight | string | positive decimal+px &#124; em |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[リストボックス](listbox_overview.md)
+[List Box](listbox_overview.md)
 
 #### See also
 

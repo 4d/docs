@@ -7,19 +7,22 @@ title: Apparence
 
 ## Default Button
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+The default button property modifies a button's appearance in order to indicate the recommended choice to the user. The difference in appearance depends on the OS.
 
-There can only be one default button per form page.
+|              Sous Windows              | macOS |
+|:--------------------------------------:|:-----:|
+| The default button has a blue outline. |       |
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
 
-![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)
+<
 
-> Button must have a standard height to get the default button appearance.
+p> ![](assets/en/FormObjects/property_defaultButtonWindows.en.png)|The default buttons are blue.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
+<
 
-![](assets/en/FormObjects/property_defaultButtonWindows.en.png)
+p>![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)|
+
+> There can only be one default button per form page.
 
 #### Grammaire JSON
 
@@ -240,7 +243,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md)
 
 * * *
 
@@ -337,7 +340,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objets pris en charge
 
-[4D View Pro area](viewProArea_overview.md)
+[Zone 4D View Pro](viewProArea_overview.md)
 
 #### Voir également
 
@@ -349,7 +352,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 An interface tool allowing the user to move the viewing area up and down.
 
-Available values:
+Valeurs :
 
 | Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
 | ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -371,7 +374,7 @@ Available values:
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -415,4 +418,4 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md)

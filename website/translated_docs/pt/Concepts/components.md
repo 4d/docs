@@ -165,7 +165,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. 
+- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. This is described in Sharing of forms.
 
 ## Use of tables and fields
 

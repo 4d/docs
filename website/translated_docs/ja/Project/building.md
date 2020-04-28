@@ -399,15 +399,15 @@ Gatekeeper とは macOS のセキュリティ機能で、インターネット�
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-signing-certificate) が更新されています。 The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
+Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-signing-certificate) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。 なお、Xcode のインストールが必須である点に注意してください。
 
-For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 
-## Customizing application icons
+## アプリケーションアイコンのカスタマイズ
 
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、各アプリケーションごとにこのアイコンをカスタマイズできます。
 
-* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
+* **macOs** - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
     
     > Apple, Inc. より、*icns* アイコンファイルを作成するツールが提供されています。(詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください。)
     

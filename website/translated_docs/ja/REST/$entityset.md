@@ -3,7 +3,7 @@ id: entityset
 title: '$entityset'
 ---
 
-After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
+After creating an entity set by using `$method=entityset`, you can then use it subsequently.
 
 ## Available syntaxes
 
@@ -19,7 +19,7 @@ Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFE
 
 ### 説明
 
-This syntax allows you to execute any operation on a defined entity set.
+This syntax allows you to execue any operation on a defined entity set.
 
 Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
 

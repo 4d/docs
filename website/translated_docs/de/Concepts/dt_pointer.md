@@ -3,80 +3,80 @@ id: pointer
 title: Zeiger
 ---
 
-Eine Variable oder ein Ausdruck vom Typ Zeiger verweist auf eine andere Variable (inkl. Arrays und Array Elemente), Tabelle, Datenfeld oder Objekt. Ein Datenfeld kann nicht vom Typ Zeiger sein.
+A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
 
-Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit einem Zeiger auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.
+Pointers provide an advanced way (in programming) to refer to data. When you use the language, you access various objects—in particular, tables, fields, variables, objects, and arrays—by simply using their names. However, it is often useful to refer to these elements and access them without knowing their names. This is what pointers let you do.
 
-Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen z. B. zu einem Freund, "Lass uns eine Fahrt mit Deinem Auto machen", anstatt "Lass uns eine Fahrt mit dem Auto mit dem Kennzeichen M123ABC machen". Sie verweisen also auf das Auto mit dem Kennzeichen M123ABC durch die Aussage "mit Deinem Auto". Die Aussage "Auto mit dem Kennzeichen M123ABC" ist sozusagen der Name eines Objekts und die Aussage "mit Deinem Auto" ist wie ein Zeiger, der auf das Objekt verweist.
+The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
 
-Die Möglichkeit, auf etwas zu verweisen, ohne die Identität exakt zu kennen, hat einige Vorteile. Ihr Freund kann ein neues Auto haben, und die Aussage "mit Deinem Auto" passt weiterhin, denn es bleibt ein Auto und gehört Ihrem Freund. Zeiger arbeiten auf dieselbe Weise. Ein Zeiger kann beispielsweise einmal auf ein numerisches Datenfeld mit Namen Alter verweisen und später auf eine numerische Variable, umbenannt in Rentenalter. In beiden Fällen zeigt der Zeiger auf numerische Daten, die sich in einer Berechnung verwenden lassen.
+Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. In both cases, the pointer references numeric data that could be used in a calculation.
 
-Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und seine Elemente, und Objekte verweisen. Folgende Tabelle zeigt ein Beispiel für jeden Datentyp:
+You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Typ           | Referenz                | Verwenden                | Zuweisen                 |
+| Typ           | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
-| Tabelle       | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | \----                    |
-| Datenfeld     | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
+| Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| Array Element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
+| Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
 | Objekt        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## Zeiger verwenden
+## Using a pointer: Basic example
 
-Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zeigt, wie Sie über einen Zeiger auf eine Variable zugreifen können. Wir erstellen zuerst eine Variable:
+It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:
 
 ```4d
 $MyVar:="Hello"
 ```
 
-$MyVar ist eine Variable mit der Zeichenkette “Hello”. Wir erstellen nun den Zeiger auf $MyVar:
+$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
 
-Das Symbol -> bedeutet “setze Zeiger auf.” Dieses Symbol ist die Kombination aus einem Bindestrich und dem Zeichen “größer als”. In diesem Fall zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.
+The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.
 
-$MyPointer ist nun eine Variable mit einem Zeiger auf $MyVar. $MyPointer enthält nicht “Hello”, den Wert von $MyVar, vielmehr erhalten Sie diesen Wert über $MyPointer. Folgender Ausdruck gibt den Wert in $MyVar zurück:
+$MyPointer is now a variable that contains a pointer to $MyVar. $MyPointer does not contain “Hello”, which is the value in $MyVar, but you can use $MyPointer to get this value. The following expression returns the value in $MyVar:
 
 ```4d
 $MyPointer->
 ```
 
-In diesem Fall gibt er die Zeichenkette “Hello” zurück. Das Symbol -> nach dem Zeiger verweist auf das Objekt, auf das gezeigt wird. Das nennt man Dereferenzierung.
+In this case, it returns the string “Hello”. The -> symbol, when it follows a pointer, references the object pointed to. This is called dereferencing.
 
-Das bedeutet, Sie können den Ausdruck $MyPointer-> überall verwenden, wo Sie auch die urspüngliche Variable $MyVar einsetzen können. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:
+It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. For example, the following line displays an alert box with the word Hello in it:
 
 ```4d
 ALERT($MyPointer->)
 ```
 
-Über $MyPointer können Sie auch den Inhalt von $MyVar ändern. Folgende Anweisung speichert die Zeichenkette "Goodbye" in der Variablen $MyVar:
+You can also use $MyPointer to change the data in $MyVar. For example, the following statement stores the string "Goodbye" in the variable $MyVar:
 
 ```4d
 $MyPointer->:="Goodbye"
 ```
 
-Wie Sie sehen, verhält sich der Ausdruck $MyPointer-> wie die Variable $MyVar. Die beiden nachfolgenden Zeilen führen dieselbe Aktion aus—beide zeigen eine Warnung mit dem aktuellen Wert der Variablen $MyVar:
+If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. In summary, the following two lines perform the same action—both display an alert box containing the current value in the variable $MyVar:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
 
-Die beiden folgenden Zeilen führen dieselbe Aktion aus—beide weisen der Variablen $MyVar die Zeichenkette "Goodbye" zu:
+The following two lines perform the same action— both assign the string "Goodbye" to $MyVar:
 
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
 ```
 
-## Zeigeroperatoren
+## Pointer operators
 
-Mit:
+With:
 
 ```4d
   ` vPtrA and vPtrB point to the same object
@@ -86,120 +86,120 @@ Mit:
  vPtrC:=->anotherObject
 ```
 
-| Operation    | Syntax          | Ergibt  | Ausdruck      | Wert   |
-| ------------ | --------------- | ------- | ------------- | ------ |
-| Gleichheit   | Zeiger = Zeiger | Boolean | vPtrA = vPtrB | Wahr   |
-|              |                 |         | vPtrA = vPtrC | Falsch |
-| Ungleichheit | Zeiger # Zeiger | Boolean | vPtrA # vPtrC | Wahr   |
-|              |                 |         | vPtrA # vPtrB | Falsch |
+| Operation    | Syntax            | Ergibt  | Ausdruck      | Wert   |
+| ------------ | ----------------- | ------- | ------------- | ------ |
+| Gleichheit   | Pointer = Pointer | Boolean | vPtrA = vPtrB | Wahr   |
+|              |                   |         | vPtrA = vPtrC | Falsch |
+| Ungleichheit | Pointer # Pointer | Boolean | vPtrA # vPtrC | Wahr   |
+|              |                   |         | vPtrA # vPtrB | Falsch |
 
 
-## Zeiger verwenden
+## Main usages
 
-### Zeiger auf Tabellen
+### Pointers to tables
 
-Überall, wo die Programmiersprache eine Tabelle erwartet, können Sie einen Zeiger erstellen, der auf die Tabelle zeigt. Sie definieren den Zeiger auf eine Tabelle folgendermaßen:
+Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:
 
 ```4d
 $TablePtr:=->[anyTable]
 ```
 
-Sie können einen Zeiger über die Funktion `Table` einrichten:
+You can also get a pointer to a table by using the `Table` command:
 
 ```4d
 $TablePtr:=Table(20)
 ```
 
-oder den dereferenzierten Zeiger in Befehlen verwenden:
+You can use the dereferenced pointer in commands, like this:
 
 ```4d
 DEFAULT TABLE($TablePtr->)
 ```
 
-### Zeiger auf Datenfelder
+### Pointers to fields
 
-Überall, wo die Programmiersprache ein Datenfeld erwartet, können Sie einen Zeiger verwenden, der das Datenfeld anspricht. Sie definieren den Zeiger auf ein Datenfeld folgendermaßen:
+Anywhere that the language expects to see a field, you can use a dereferenced pointer to reference the field. You create a pointer to a field by using a line like this:
 
 ```4d
 $FieldPtr:=->[aTable]ThisField
 ```
 
-Sie können einen Zeiger über die Funktion `Field` einrichten:
+You can also get a pointer to a field by using the `Field` command, for example:
 
 ```4d
 $FieldPtr:=Field(1;2)
 ```
 
-oder den dereferenzierten Zeiger in Befehlen verwenden:
+You can use the dereferenced pointer in commands, like this:
 
 ```4d
 OBJECT SET FONT($FieldPtr->;"Arial")
 ```
 
-### Zeiger auf lokale Variablen
+### Pointers to local variables
 
-Bei Verwendung von Zeigern auf Prozess- oder lokale Variablen müssen Sie sicherstellen, dass die Variable, auf die gezeigt wird, bereits eingerichtet ist. Beachten Sie folgendes: Lokale Variablen werden gelöscht, wenn die Ausführung der Methode, welche diese erstellt hat, beendet ist; Prozessvariablen werden mit Beenden des Prozesses gelöscht, der sie erstellt hat. Ruft ein Zeiger eine Variable auf, die nicht mehr existiert, verursacht das im interpretierten Modus einen Syntaxfehler (Variable nicht definiert), im kompilierten Modus kann dies hingegen zu einem ernsteren Fehler führen.
+When you use pointers to process or local variables, you must be sure that the variable pointed to is already set when the pointer is used. Keep in mind that local variables are deleted when the method that created them has completed its execution and process variables are deleted at the end of the process that created them. When a pointer calls a variable that no longer exists, this causes a syntax error in interpreted mode (variable not defined) but it can generate a more serious error in compiled mode.
 
-Über Zeiger auf lokale Variablen lassen sich in vielen Fällen Prozessvariablen sichern. Zeiger auf lokale Variablen lassen sich nur im gleichen Prozess verwenden. Zeigen Sie einen Zeiger auf eine lokale Variable an, die in einer anderen Methode deklariert wurde, erscheint im Debugger der ursprüngliche Methodenname nach dem Zeiger in Klammern. Schreiben Sie zum Beispiel in Method1:
+Pointers to local variables allow you to save process variables in many cases. Pointers to local variables can only be used within the same process. In the debugger, when you display a pointer to a local variable that has been declared in another method, the original method name is indicated in parentheses, after the pointer. For example, if you write in Method1:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-Zeigt der Debugger in Method2 $1 wie folgt an:
+In Method2, the debugger will display $1 as follows:
 
 | $1 | ->$MyVar (Method1) |
 | -- | ------------------ |
 |    |                    |
 
 
-Der Wert von $1 lautet:
+The value of $1 will be:
 
 | $MyVar (Method1) | "Hello world" |
 | ---------------- | ------------- |
 |                  |               |
 
 
-### Zeiger auf Array Elemente
+### Pointers to array elements
 
-Sie können einen Zeiger auf ein Array Element erstellen. Im folgenden Beispiel wird ein Array erstellt und dem ersten Element des Array ein Zeiger auf die Variable $ElemPtr zugewiesen:
+You can create a pointer to an array element. For example, the following lines create an array and assign a pointer to the first array element to a variable called $ElemPtr:
 
 ```4d
 ARRAY REAL($anArray;10) //Create an array
 $ElemPtr:=->$anArray{1} //Create a pointer to the array element
 ```
 
-Sie können den dereferenzierten Zeiger verwenden, um dem Element einen Wert zuzuweisen, z.B:
+You could use the dereferenced pointer to assign a value to the element, like this:
 
 ```4d
 $ElemPtr->:=8
 ```
 
-### Zeiger auf Arrays
+### Pointers to arrays
 
-Sie können auch einen Zeiger erstellen, der auf ein Array zeigt. Folgende Anweisung erstellt ein Array und weist dem Array einen Zeiger auf die Variable $ArrPtr zu:
+You can create a pointer to an array. For example, the following lines create an array and assign a pointer to the array to a variable called $ArrPtr:
 
 ```4d
 ARRAY REAL($anArray;10) //Create an array
 $ArrPtr:=->$anArray //Create a pointer to the array
 ```
 
-Beachten Sie, dass der Zeiger das Array anspricht und nicht ein Element dieses Arrays. Sie können den soeben angelegten Zeiger folgendermaßen einsetzen:
+It is important to understand that the pointer points to the array; it does not point to an element of the array. For example, you can use the dereferenced pointer from the preceding lines like this:
 
 ```4d
 SORT ARRAY($ArrPtr->;>) //Sort the array
 ```
 
-oder über den Zeiger das 4. Element des Arrays ansprechen:
+If you need to refer to the fourth element in the array by using the pointer, you do this:
 
 ```4d
  ArrPtr->{4}:=84
 ```
 
-### Zeiger als Parameter in Methoden
+### Pointers as parameters to methods
 
-Sie können einen Zeiger als Parameter in einer Methode übergeben. In der Methode können Sie das über den Zeiger angesprochene Objekt ändern. Zum Beispiel enthält die Methode `takeTwo` zwei Parameter in Form von Zeigern. Sie wandelt das erste angesprochene Objekt in Großbuchstaben um, das zweite in Kleinbuchstaben. Die Projektmethode lautet wie folgt:
+You can pass a pointer as a parameter to a method. Inside the method, you can modify the object referenced by the pointer. For example, the following method, `takeTwo`, takes two parameters that are pointers. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:
 
 ```4d
   //takeTwo project method
@@ -209,18 +209,18 @@ Sie können einen Zeiger als Parameter in einer Methode übergeben. In der Metho
  $2->:=Lowercase($2->)
 ```
 
-Nachfolgende Zeile wandelt über die Methode `takeTwo` ein Datenfeld in Großbuchstaben um und eine Variable in Kleinbuchstaben:
+The following line uses the `takeTwo` method to change a field to uppercase characters and to change a variable to lowercase characters:
 
     takeTwo(->[myTable]myField;->$MyVar)
     
 
-Enthält das Datenfeld [myTable]myField den String "jones", wird es umgewandelt in "JONES". Enthält die Variable $MyVar den String "HELLO", wird er umgewandelt in "Hello".
+If the field [myTable]myField contained the string "jones", it would be changed to the string "JONES". If the variable $MyVar contained the string "HELLO", it would be changed to the string "hello".
 
-Achten Sie darauf, dass in der Methode takeTwo und immer, wenn Sie Zeiger verwenden, das angesprochene Objekt vom richtigen Datentyp ist. Im vorigen Beispiel muss der Zeiger ein Objekt vom Typ String oder Text ansprechen.
+In the takeTwo method, and in fact, whenever you use pointers, it is important that the data type of the object being referenced is correct. In the previous example, the pointers must point to something that contains a string or text.
 
-### Zeiger auf Zeiger
+### Pointers to pointers
 
-Wenn Sie es komplexer machen wollen, können Sie auch Zeiger verwenden, die auf andere Zeiger verweisen. Nehmen wir dieses Beispiel:
+If you really like to complicate things, you can use pointers to reference other pointers. Consider this example:
 
 ```4d
  $MyVar:="Hello"
@@ -230,25 +230,25 @@ Wenn Sie es komplexer machen wollen, können Sie auch Zeiger verwenden, die auf 
  ALERT(($PointerTwo->)->)
 ```
 
-Es zeigt eine Meldung mit dem Inhalt “Goodbye”.
+It displays an alert box with the word “Goodbye” in it.
 
-Im folgenden werden die einzelnen Zeilen erläutert:
+Here is an explanation of each line of the example:
 
-- $MyVar:="Hello" --> Diese Zeile setzt die Zeichenkette "Hello" in die Variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne enthält nun den Zeiger auf $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (eine neue Variable) enthält einen Zeiger auf $PointerOne, der auf $MyVar zeigt.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> verweist auf den Inhalt von $PointerOne, der wiederum auf $MyVar verweist. Therefore ($PointerTwo->)-> verweist also auf den Inhalt von $MyVar. In diesem Beispiel ist also der Variablen $MyVar "Goodbye" zugewiesen.
-- ALERT (($PointerTwo->)->) --> Hier gilt das gleiche: $PointerTwo-> verweist auf den Inhalt von $PointerOne, der wiederum auf $MyVar verweist. Therefore ($PointerTwo->)-> verweist also auf den Inhalt von $MyVar. In diesem Fall zeigt die Meldung den Inhalt von $MyVar an.
+- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
+- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
+- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
+- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, $MyVar is assigned "Goodbye".
+- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, the alert box displays the contents of $MyVar.
 
-Die folgende Zeile setzt "Hello" in $MyVar:
+The following line puts "Hello" into $MyVar:
 
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
-Die folgende Zeile nimmt "Hello" aus $MyVar und setzt es in $NewVar:
+The following line gets "Hello" from $MyVar and puts it into $NewVar:
 
     $NewVar:=($PointerTwo->)->
     
 
-**Wichtig:** Bei mehrfacher Dereferenzierung müssen Sie mit Klammern arbeiten.
+**Important:** Multiple dereferencing requires parentheses.

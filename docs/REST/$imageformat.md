@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: $imageformat 
+title: $imageformat
 ---
 
 Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
@@ -26,4 +26,3 @@ If there is no image to be loaded or the format doesn't allow the image to be lo
 The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
 
 `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
-

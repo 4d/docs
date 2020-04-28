@@ -101,7 +101,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Par exemple :
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Par exemple:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -187,151 +187,6 @@ Les propriétés prises en charge dépendent du type de list box.
 
 > Les colonnes, en-têtes et pieds de list box prennent en charge des propriétés spécifiques.
 
-### Événements formulaire pris en charge
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Evénement formulaire          | Propriétés supplémentaires retournées (voir [Evénement formulaire](https://doc.4d.com/4Dv18/4D/18/FORM-Evenement.301-4522191.fr.html) pour les propriétés principales)          | Commentaires                                                                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Sur après modification        | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sue après frappe clavier      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur après tri                 | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [headerName](#additional-properties)                                                                | *Les formules composées ne peuvent pas être triées.   
-(ex : This.firstName + This.lastName)*        |
-| Sur clic alternatif           | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Listbox tableau uniquement*                                                                         |
-| Sur avant saisie              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sue avant frappe clavier      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur début survol              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur clic                      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur fermeture corps           | - [row](#additional-properties)                                                                                                                                                 | *List box Sélection courante et Sélection temporaire uniquement*                                     |
-| Sur contracter                | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *List box hiérarchiques uniquement*                                                                  |
-| Sur déplacement colonne       | - [columnName](#additional-properties)
-- [newPosition](#additional-properties)
-- [oldPosition](#additional-properties)                                                          |                                                                                                      |
-| Sur redimensionnement colonne | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [newSize](#additional-properties)
-- [oldSize](#additional-properties)                               |                                                                                                      |
-| Sur données modifiées         | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur action suppression        | - [row](#additional-properties)                                                                                                                                                 |                                                                                                      |
-| Sur affichage corps           | - [isRowSelected](#additional-properties)
-- [row](#additional-properties)                                                                                                       |                                                                                                      |
-| Sur double clic               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur glisser                   | - [area](#additional-properties)
-- [areaName](#additional-properties)
-- [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties) |                                                                                                      |
-| Sur déposer                   | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur déployer                  | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *List box hiérarchiques uniquement*                                                                  |
-| Sur clic pied                 | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [footerName](#additional-properties)                                                                | *List box Tableau, Sélection courante et Sélection temporaire uniquement*                            |
-| On Getting Focus              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Propriétés supplémentaires retournées uniquement lors de la modification d'une cellule*             |
-| Sur clic entête               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [headerName](#additional-properties)                                                                |                                                                                                      |
-| On Load                       |                                                                                                                                                                                 |                                                                                                      |
-| On Losing Focus               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Propriétés supplémentaires retournées uniquement lorsque la modification d'une cellule est achevée* |
-| Sur début survol              | - [area](#additional-properties)
-- [areaName](#additional-properties)
-- [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties) |                                                                                                      |
-| Sur fin survol                |                                                                                                                                                                                 |                                                                                                      |
-| Sur survol                    | - [area](#additional-properties)
-- [areaName](#additional-properties)
-- [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties) |                                                                                                      |
-| Sur ouverture corps           | - [row](#additional-properties)                                                                                                                                                 | *List box Sélection courante et Sélection temporaire uniquement*                                     |
-| Sur déplacement ligne         | - [newPosition](#additional-properties)
-- [oldPosition](#additional-properties)                                                                                                 | *Listbox tableau uniquement*                                                                         |
-| Sur nouvelle sélection        |                                                                                                                                                                                 |                                                                                                      |
-| Sur défilement                | - [horizontalScroll](#additional-properties)
-- [verticalScroll](#additional-properties)                                                                                         |                                                                                                      |
-| On Unload                     |                                                                                                                                                                                 |                                                                                                      |
-
-
-#### Propriétés supplémentaires
-
-Les événements formulaire sur les list box ou colonnes de list box peuvent retourner les propriétés supplémentaires suivantes :
-
-| Propriété        | Type        | Description                                                           |
-| ---------------- | ----------- | --------------------------------------------------------------------- |
-| area             | Texte       | List box object area ("header", "footer", "cell")                     |
-| areaName         | Texte       | Name of the area                                                      |
-| column           | entier long | Column number                                                         |
-| columnName       | Texte       | Name of the column                                                    |
-| footerName       | Texte       | Name of the footer                                                    |
-| headerName       | Texte       | Name of the header                                                    |
-| horizontalScroll | entier long | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | boolean     | True if row is selected, else False                                   |
-| newPosition      | entier long | New position of the column or row                                     |
-| newSize          | entier long | New size (in pixels) of the column or row                             |
-| oldPosition      | entier long | Previous position of the column or row                                |
-| oldSize          | entier long | Previous size (in pixels) of the column or row                        |
-| row              | entier long | Row number                                                            |
-| verticalScroll   | entier long | Positive if scroll is towards the bottom, negative if towards the top |
-
-
-> If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
-
 ## Colonnes de list box
 
 A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
@@ -345,96 +200,6 @@ You can set standard properties (text, background color, etc.) for each column o
 ### Propriétés spécifiques des list box
 
 [Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
-
-### Événements formulaire pris en charge
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Evénement formulaire          | Propriétés supplémentaires retournées (voir [Evénement formulaire](https://doc.4d.com/4Dv18/4D/18/FORM-Evenement.301-4522191.fr.html) pour les propriétés principales)          | Commentaires                                                                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Sur après modification        | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sue après frappe clavier      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur après tri                 | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [headerName](#additional-properties)                                                                | *Les formules composées ne peuvent pas être triées.   
-(ex : This.firstName + This.lastName)*        |
-| Sur clic alternatif           | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Listbox tableau uniquement*                                                                         |
-| Sur avant saisie              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sue avant frappe clavier      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur début survol              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur clic                      | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur déplacement colonne       | - [columnName](#additional-properties)
-- [newPosition](#additional-properties)
-- [oldPosition](#additional-properties)                                                          |                                                                                                      |
-| Sur redimensionnement colonne | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [newSize](#additional-properties)
-- [oldSize](#additional-properties)                               |                                                                                                      |
-| Sur données modifiées         | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur double clic               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur glisser                   | - [area](#additional-properties)
-- [areaName](#additional-properties)
-- [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties) |                                                                                                      |
-| Sur déposer                   | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       |                                                                                                      |
-| Sur clic pied                 | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [footerName](#additional-properties)                                                                | *List box Tableau, Sélection courante et Sélection temporaire uniquement*                            |
-| On Getting Focus              | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Propriétés supplémentaires retournées uniquement lors de la modification d'une cellule*             |
-| Sur clic entête               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [headerName](#additional-properties)                                                                |                                                                                                      |
-| On Load                       |                                                                                                                                                                                 |                                                                                                      |
-| On Losing Focus               | - [column](#additional-properties)
-- [columnName](#additional-properties)
-- [row](#additional-properties)                                                                       | *Propriétés supplémentaires retournées uniquement lorsque la modification d'une cellule est achevée* |
-| Sur déplacement ligne         | - [newPosition](#additional-properties)
-- [oldPosition](#additional-properties)                                                                                                 | *Listbox tableau uniquement*                                                                         |
-| Sur défilement                | - [horizontalScroll](#additional-properties)
-- [verticalScroll](#additional-properties)                                                                                         |                                                                                                      |
-| On Unload                     |                                                                                                                                                                                 |                                                                                                      |
-
 
 ## List box headers
 
@@ -493,7 +258,7 @@ Here is the method of the *arrText* column:
 
 ```4d
  Case of
-    :(FORM event.code=On Before Data Entry) // a cell gets the focus
+    :(Form event=On Before Data Entry) // a cell gets the focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
   // identification of cell
        If(arrDate{$row}<Current date) // if date is earlier than today
@@ -521,7 +286,7 @@ The typical sequence of events generated during data entry or modification is as
 | Its value is modified                                                           | Tous                        | Sue avant frappe clavier                                                                                                                                                                                       |
 |                                                                                 | Tous                        | Sue après frappe clavier                                                                                                                                                                                       |
 |                                                                                 | Tous                        | Sur après modification                                                                                                                                                                                         |
-| A user validates and leaves the cell                                            | Liste box sélection         | Save                                                                                                                                                                                                           |
+| A user validates and leaves the cell                                            | Selection list boxes        | Save                                                                                                                                                                                                           |
 |                                                                                 | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
 |                                                                                 | Selection list boxes        | On Data Change(*)                                                                                                                                                                                              |
 |                                                                                 | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
@@ -609,7 +374,7 @@ In the object method of the list box, you can write:
 
 ```4d
  Case of
-    :(FORM event.code=On Selection Change)
+    :(Form event=On Selection Change)
        $n:=Size of array(LB_Arrays)
        ARRAY LONGINT(_ListboxBackground;$n) // row background colors
        For($i;1;$n)
@@ -735,6 +500,7 @@ Depending of the list box type, you can use different properties to customize ro
 Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
 
 ### Preview mode
+
 
 Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
 
@@ -1009,25 +775,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | Texte | réel | entier | boolean | color | event |
-| --------------------- | --------------------------------------- | ----- | ---- | ------ | ------- | ----- | ----- |
-| *Attributs*           | *Description*                           |       |      |        |         |       |       |
-| value                 | cell value (input or output)            | x     | x    | x      |         |       |       |
-| min                   | minimum value                           |       | x    | x      |         |       |       |
-| max                   | maximum value                           |       | x    | x      |         |       |       |
-| behavior              | "threeStates" value                     |       |      | x      |         |       |       |
-| requiredList          | drop-down list defined in object        | x     | x    | x      |         |       |       |
-| choiceList            | combo box defined in object             | x     | x    | x      |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x      |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x      |         |       |       |
-| saveAs                | "reference" or "value"                  | x     | x    | x      |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x     | x    | x      |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x     | x    | x      |         |       |       |
-| unitList              | array of X elements                     | x     | x    | x      |         |       |       |
-| unitReference         | index of selected element               | x     | x    | x      |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x     | x    | x      |         |       |       |
-| unitsListName         | 4D list name for units                  | x     | x    | x      |         |       |       |
-| alternateButton       | add an alternate button                 | x     | x    | x      | x       | x     |       |
+|                       | valueType                               | Texte | réel | integer | boolean | color | event |
+| --------------------- | --------------------------------------- | ----- | ---- | ------- | ------- | ----- | ----- |
+| *Attributs*           | *Description*                           |       |      |         |         |       |       |
+| value                 | cell value (input or output)            | x     | x    | x       |         |       |       |
+| min                   | minimum value                           |       | x    | x       |         |       |       |
+| max                   | maximum value                           |       | x    | x       |         |       |       |
+| behavior              | "threeStates" value                     |       |      | x       |         |       |       |
+| requiredList          | drop-down list defined in object        | x     | x    | x       |         |       |       |
+| choiceList            | combo box defined in object             | x     | x    | x       |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |         |       |       |
+| saveAs                | "reference" or "value"                  | x     | x    | x       |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x     | x    | x       |         |       |       |
+| unitList              | array of X elements                     | x     | x    | x       |         |       |       |
+| unitReference         | index of selected element               | x     | x    | x       |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x     | x    | x       |         |       |       |
+| unitsListName         | 4D list name for units                  | x     | x    | x       |         |       |       |
+| alternateButton       | add an alternate button                 | x     | x    | x       | x       | x     |       |
 
 
 #### value
@@ -1049,6 +815,7 @@ Cell values are stored in the "value" attribute. This attribute is used for inpu
 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
+
  APPEND TO ARRAY(obColumn;$ob3)
 ```
 
@@ -1106,7 +873,7 @@ Dans les deux cas, vous pouvez utiliser un attribut "value" pour présélectionn
 
 > Les valeurs du widget sont définies via un tableau. Si vous souhaitez associer le widget à une énumération 4D existante, vous devez utiliser les attributs "requiredListReference", "requiredListName", "choiceListReference" ou "choiceListName".
 
-Exemples :
+Voici quelques exemples :
 
 * Vous voulez afficher une liste déroulante avec juste deux options, "Open" ou "Closed". "Closed" doit être présélectionné :
 
@@ -1148,7 +915,7 @@ Utilisez "requiredListName" ou "requiredListReference" en fonction de la provena
 > * Si vous souhaitez définir des valeurs d'énumération via un simple tableau, vous pouvez utiliser l'attribut "requiredList".
 > * Si la liste contient du texte représentant des valeurs réelles, le séparateur décimal doit être le point ("."), quels que soient les paramètres locaux, ex : "17.6" "1234.456".
 
-Exemples :
+Voici quelques exemples :
 
 * Vous voulez afficher une liste déroulante basée sur une énumération nommée "colors" définie dans la Boîte à outils (contenant les valeurs "bleu", "jaune" et "vert"), la stocker en tant que valeur et afficher "bleu" par défaut :
 

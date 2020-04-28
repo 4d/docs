@@ -1,6 +1,6 @@
 ---
 id: propertiesHelp
-title: ヘルプ
+title: Help
 ---
 
 * * *
@@ -21,14 +21,14 @@ You can either:
 
 > In macOS, displaying help tips is not supported in pop-up type windows.
 
-#### JSON 文法
+#### JSON Grammar
 
-|    名    | データタイプ | とりうる値                                 |
+|  Name   | データタイプ | Possible Values                       |
 |:-------:|:------:| ------------------------------------- |
 | tooltip |  テキスト  | additional information to help a user |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
 
@@ -47,4 +47,4 @@ When different tips are associated with the same object in several locations, th
 
 #### See also
 
-[プレースホルダー](properties_Entry.md#placeholder)
+[Placeholder](properties_Entry.md#placeholder)

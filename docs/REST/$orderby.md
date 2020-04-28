@@ -1,10 +1,10 @@
 ---
 id: orderby
-title: $orderby 
+title: $orderby
 ---
 
 
-Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)	
+Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
 
 ## Description   
 
@@ -48,4 +48,3 @@ The example below sorts the entity set by lastName attribute in ascending order:
     ]
 }
 ```
-

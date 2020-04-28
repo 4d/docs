@@ -1,10 +1,10 @@
 ---
 id: timeout
-title: $timeout 
+title: $timeout
 ---
 
 
-Defines the number of seconds to save an entity set in 4D Server's cache (*e.g.*, `$timeout=1800`)	
+Defines the number of seconds to save an entity set in 4D Server's cache (*e.g.*, `$timeout=1800`)
 
 ## Description   
 

@@ -12,7 +12,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 <table>
   <tr>
     <th>
-      プロパティ
+      Property
     </th>
     
     <th>
@@ -20,7 +20,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </th>
     
     <th>
-      とりうる値
+      Possible Values
     </th>
   </tr>
   
@@ -128,7 +128,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 0
+      minimum: 0
     </td>
   </tr>
   
@@ -156,7 +156,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 0<a name="c"></a>
+      minimum: 0<a name="c"></a>
     </td>
   </tr>
   
@@ -210,7 +210,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 1
+      minimum: 1
     </td>
   </tr>
   
@@ -322,7 +322,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 0
+      minimum: 0
     </td>
   </tr>
   
@@ -336,7 +336,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 0
+      minimum: 0
     </td>
   </tr>
   
@@ -350,7 +350,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      最小値: 0
+      minimum: 0
     </td>
   </tr>
   

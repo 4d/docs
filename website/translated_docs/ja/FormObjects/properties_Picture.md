@@ -14,14 +14,14 @@ Two main locations can be used for static picture path:
 - in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. In this case, the Pathname is "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
-#### JSON 文法
+#### JSON Grammar
 
-|    名    | データタイプ | とりうる値                                       |
+|  Name   | データタイプ | Possible Values                             |
 |:-------:|:------:| ------------------------------------------- |
 | picture |  テキスト  | Relative or filesystem path in POSIX syntax |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
@@ -59,13 +59,13 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名             | データタイプ | とりうる値                                                    |
+| Name          | データタイプ | Possible Values                                          |
 | ------------- | ------ | -------------------------------------------------------- |
 | pictureFormat | string | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Static Picture](staticPicture.md)

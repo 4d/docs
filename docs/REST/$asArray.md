@@ -1,6 +1,6 @@
 ---
 id: asArray
-title: $asArray 
+title: $asArray
 ---
 
 
@@ -120,5 +120,3 @@ The same data in its default JSON format:
 "__SENT": 3
 }
 ````
-
-

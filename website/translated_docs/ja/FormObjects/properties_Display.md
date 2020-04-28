@@ -41,14 +41,14 @@ and the user enters "proportion", the field displays:
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名          | データタイプ | とりうる値                                                                                |
+| Name       | データタイプ | Possible Values                                                                      |
 | ---------- | ------ | ------------------------------------------------------------------------------------ |
 | textFormat | string | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -83,14 +83,14 @@ The table below shows choices available:
 
 > Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名          | データタイプ | とりうる値                                                                                                                                                                            |
+| Name       | データタイプ | Possible Values                                                                                                                                                                  |
 | ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dateFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -108,12 +108,12 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| プレースホルダー | Effect for leading or trailing zero |
-| -------- | ----------------------------------- |
-| #        | Displays nothing                    |
-| 0        | Displays 0                          |
-| ^        | Displays a space (1)                |
-| *        | Displays an asterisk                |
+| Placeholder | Effect for leading or trailing zero |
+| ----------- | ----------------------------------- |
+| #           | Displays nothing                    |
+| 0           | Displays 0                          |
+| ^           | Displays a space (1)                |
+| *           | Displays an asterisk                |
 
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
@@ -253,14 +253,14 @@ The following table shows how different formats affect the display of numbers. T
 | &xml                               | 1234.5         | -1234.5     | 0                      |
 
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名            | データタイプ | とりうる値                                                          |
+| Name         | データタイプ | Possible Values                                                |
 | ------------ | ------ | -------------------------------------------------------------- |
 | numberFormat | string | Numbers (including a decimal point or minus sign if necessary) |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
@@ -314,14 +314,14 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名             | データタイプ | とりうる値                                                                                                 |
+| Name          | データタイプ | Possible Values                                                                                       |
 | ------------- | ------ | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | string | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -352,14 +352,14 @@ Windows: this format is the same as the System time short format                
 Windows: this format is the same as the System time short format                          | 4:30:25 AM HNEC               |
 
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名          | データタイプ | とりうる値                                                                                                                                                                                                    |
+| Name       | データタイプ | Possible Values                                                                                                                                                                                          |
 | ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timeFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -377,14 +377,14 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 - **Text when True** - the text to be displayed when the value is "true"
 - **Text when False** - the text to be displayed when the value is "false"
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名             | データタイプ | とりうる値                                                                    |
+| Name          | データタイプ | Possible Values                                                          |
 | ------------- | ------ | ------------------------------------------------------------------------ |
 | booleanFormat | string | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -398,11 +398,11 @@ Boolean and number (numeric or integer) columns can be displayed as check boxes.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
-#### JSON 文法
+#### JSON Grammar
 
 - **number columns**: "automatic" (default) or "checkbox"
     - **boolean columns**: "checkbox" (default) or "popup"</td> </tr> </tbody> </table> 
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [List Box Column](listbox_overview.md#list-box-columns)
         
@@ -414,14 +414,14 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         In particular, this property allows implementing "invisible" buttons. Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
         
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名       | データタイプ  | とりうる値       |
-        | ------- | ------- | ----------- |
-        | display | boolean | true, false |
+        | Name    | データタイプ  | Possible Values |
+        | ------- | ------- | --------------- |
+        | display | boolean | true, false     |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
         
@@ -429,7 +429,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         ## Three-States
         
-        Allows a check box object to accept a third state. チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
+        Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
         
         #### Three-states check boxes in list box columns
         
@@ -437,20 +437,20 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
         
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名          | データタイプ  | とりうる値       |
-        | ---------- | ------- | ----------- |
-        | threeState | boolean | true, false |
+        | Name       | データタイプ  | Possible Values |
+        | ---------- | ------- | --------------- |
+        | threeState | boolean | true, false     |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
         
         * * *
         
-        ## タイトル
+        ## Title
         
         This property is available for a list box column if:
         
@@ -459,14 +459,14 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         In that cases, the title of the check box can be entered using this property.
         
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名            | データタイプ | とりうる値                              |
+        | Name         | データタイプ | Possible Values                    |
         | ------------ | ------ | ---------------------------------- |
         | controlTitle | string | Any custom label for the check box |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [List Box Column](listbox_overview.md#list-box-columns)
         
@@ -496,33 +496,33 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         - For Pop-up type Boolean formats, labels are truncated with an ellipsis,
         - For Check box type Boolean formats, labels are always clipped.
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名            | データタイプ | とりうる値                  |
+        | Name         | データタイプ | Possible Values        |
         | ------------ | ------ | ---------------------- |
         | truncateMode | string | "withEllipsis", "none" |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
         
         * * *
         
-        ## 表示状態
+        ## Visibility
         
         This property allows hiding by default the object in the Application environment.
         
         You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context.
         
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名          | データタイプ | とりうる値               |
+        | Name       | データタイプ | Possible Values     |
         | ---------- | ------ | ------------------- |
         | visibility | string | "visible", "hidden" |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
         
@@ -571,13 +571,13 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         ![](assets/en/FormObjects/wordwrap1.png)
         
-        #### JSON 文法
+        #### JSON Grammar
         
-        | 名        | データタイプ | とりうる値                                              |
+        | Name     | データタイプ | Possible Values                                    |
         | -------- | ------ | -------------------------------------------------- |
         | wordwrap | string | "automatic" (excluding list box), "normal", "none" |
 
         
-        #### 対象オブジェクト
+        #### Objects Supported
         
         [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)

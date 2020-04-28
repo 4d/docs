@@ -1,6 +1,6 @@
 ---
 id: catalog
-title: $catalog 
+title: $catalog
 ---
 
 
@@ -17,14 +17,14 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass	
+Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 
 ### Description   
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section. 
+Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
 
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
@@ -62,37 +62,35 @@ Here is a description of the properties returned for each dataclass in your proj
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes	
+Returns information about all of your project's dataclasses and their attributes
 
 ### Description   
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model.
+Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model. Remember that the scope for the datastore classes and their attributes must be **Public** for any information to be returned.
 
 For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
 ### Example  
 
-`GET  /rest/$catalog/$all` 
+`GET  /rest/$catalog/$all`
 
 **Result**:
 
 ````
 {
- 
+
     "dataClasses": [
         {
             "name": "Company",
             "className": "Company",
-            "collectionName": "CompanySelection",
-            "tableNumber": 2,
+            "collectionName": "CompanyCollection",
             "scope": "public",
             "dataURI": "/rest/Company",
             "attributes": [
                 {
                     "name": "ID",
                     "kind": "storage",
-                    "fieldPos": 1,
                     "scope": "public",
                     "indexed": true,
                     "type": "long",
@@ -101,23 +99,21 @@ For more information about what is returned for each datastore class and its att
                 {
                     "name": "name",
                     "kind": "storage",
-                    "fieldPos": 2,
                     "scope": "public",
                     "type": "string"
                 },
                 {
                     "name": "revenues",
                     "kind": "storage",
-                    "fieldPos": 3,
                     "scope": "public",
                     "type": "number"
                 },
                 {
                     "name": "staff",
                     "kind": "relatedEntities",
-                    "fieldPos": 4,
+                    "matchColumn": "employees,staff",
                     "scope": "public",
-                    "type": "EmployeeSelection",
+                    "type": "EmployeeCollection",
                     "reversePath": true,
                     "path": "employer"
                 },
@@ -137,8 +133,7 @@ For more information about what is returned for each datastore class and its att
         {
             "name": "Employee",
             "className": "Employee",
-            "collectionName": "EmployeeSelection",
-            "tableNumber": 1,
+            "collectionName": "EmployeeCollection",
             "scope": "public",
             "dataURI": "/rest/Employee",
             "attributes": [
@@ -183,7 +178,7 @@ For more information about what is returned for each datastore class and its att
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes 
+Returns information about a dataclass and its attributes
 
 ### Description   
 
@@ -196,7 +191,7 @@ The information you retrieve concerns the following:
 *	Method(s) if any
 *	Primary key
 
-### DataClass 
+### DataClass
 
 The following properties are returned for an exposed dataclass:
 
@@ -204,8 +199,7 @@ The following properties are returned for an exposed dataclass:
 |Property|	Type|	Description|
 |---|---|---|
 |name|	String|	Name of the dataclass
-|collectionName	|String	|Name of an entity selection on the dataclass
-|tableNumber|Number	|Table number in the 4D database
+|collectionName	|String	|Collection name of the dataclass
 |scope|	String|	Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed)
 |dataURI|	String|	A URI to the data in the dataclass
 
@@ -217,19 +211,22 @@ Here are the properties for each exposed attribute that are returned:
 |Property	|Type	|Description|
 |---|---|---|
 |name	|String	|Attribute name.|
-|kind	|String	|Attribute type (storage or relatedEntity).|
-|fieldPos|Number|Position of the field in the database table).|
+|kind	|String	|Attribute type (storage, calculated, relatedEntity, and alias).|
 |scope|	String	|Scope of the attribute (only those attributes whose scope is Public will appear).|
 |indexed	|String|	If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.|
 |type|	String|	Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute.|
-|identifying|Boolean	|This property returns True if the attribute is the primary key. Otherwise, this property does not appear.|
-|path	|String	|Name of the relation for a relatedEntity or relateEntities attribute.|
-foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
-inverseName	|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+|minLength|	Number|	This property returns the value entered for the **Min Length** property, if one was entered.|
+|maxLength	|Number|	This property returns the value entered for the **Max Length** property, if one was entered.|
+|autoComplete	|Boolean|	This property returns True if the **Autocomplete** property was checked. Otherwise, this property does not appear.|
+|identifying|	Boolean	|This property returns True if the **Identifying** property was checked. Otherwise, this property does not appear.|
+|multiLine	|Boolean|	This property returns True if the **Multiline** property was checked. Otherwise, this property does not appear.
+|path	|String	|For an alias attribute, the type is a path (*e.g.*, employer.name)|
+|readOnly|	Boolean|	This property is True if the attribute is of type calculated or alias.|
+|defaultFormat	|Object|	If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.|
 
 ### Method(s)
 
-Defines the project methods asociated to the dataclass, if any. 
+Defines the project methods asociated to the dataclass, if any.
 
 ### Primary Key  
 
@@ -318,7 +315,6 @@ You can retrieve the information regarding a specific datastore class.
             name: "employerName",
             kind: "alias",
             scope: "public",
-
             type: "string",
             path: "employer.name",
             readOnly: true
@@ -338,4 +334,3 @@ You can retrieve the information regarding a specific datastore class.
     ]
 }
 ````
-

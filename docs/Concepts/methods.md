@@ -10,13 +10,13 @@ A method is basically a piece of code that executes one or several actions. In t
 	- Commands and functions of the 4D API, such as `ALERT` or `Current date`.
 	- Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
 	- Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
-	 
+
 	Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.  
- 
-- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). 
+
+- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods). 
+**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
 
 
 ## Calling Project Methods
@@ -24,7 +24,7 @@ The maximum size of a project method is limited to 2 GB of text or 32,000 lines 
 A project method can have one of the following roles, depending on how it is executed and used:
 
 - Subroutine and function
-- Method attached to object 
+- Method attached to object
 - Menu method
 - Process method
 - Event or Error catching method
@@ -73,13 +73,13 @@ Using subroutines, you make your code modular. This simply means dividing your c
  PRINT CHECK BOOK REPORT ` Print a checkbook report
 ```
 
-Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible. 
+Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
 ### Methods attached to objects
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods. 
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
 To execute a method stored in an object property, use the **( )** operator after the property name. For example:
 
@@ -111,7 +111,7 @@ You can encapsulate `fullName` in an object:
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
-$result:=$o.full_name("John";"Smith") 
+$result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
@@ -129,7 +129,7 @@ C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) //add the method  
 
-$result:=$o.fullName() 
+$result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
@@ -142,14 +142,14 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database. 
+A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
 
 
-### Process Methods 
+### Process Methods
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
@@ -213,7 +213,7 @@ with the recursive function `Genealogy of` listed here:
   ` Genealogy of project method
   ` Genealogy of ( String ) -> Text
   ` Genealogy of ( Name ) -> Part of sentence
- 
+
  $0:=$1
  QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
  If(Records in selection([Friends and Relatives])>0)

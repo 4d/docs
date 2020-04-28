@@ -10,7 +10,7 @@ title: On Column Resize
 
 ## 説明
 
-### リストボックス
+### List Box
 
 This event is generated when the width of a column in the list box is modified by a user. The event is triggered "live", *i.e.*, sent continuously during the event, for as long as the list box or column concerned is being resized. This resizing is performed manually by a user, or may occur as a result of the list box and its column(s) being resized along with the form window itself (whether the form is resized manually or using the `RESIZE FORM WINDOW` command).
 
@@ -20,7 +20,7 @@ This event is generated when the width of a column in the list box is modified b
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| プロパティ       | 型       | 説明                                                                  |
+| Property    | 型       | 説明                                                                  |
 | ----------- | ------- | ------------------------------------------------------------------- |
 | code        | 倍長整数    | On Column Resize                                                    |
 | description | テキスト    | "On Column Resize"                                                  |

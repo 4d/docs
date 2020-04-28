@@ -438,7 +438,7 @@ For example:
 
 ### Until and While conditions
 
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` or a `While(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to True.
 
 You can pass either keyword depending on your needs:
 
