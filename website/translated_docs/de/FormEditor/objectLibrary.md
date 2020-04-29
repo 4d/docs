@@ -9,7 +9,7 @@ You can use object librairies in your forms. An object library offers a collecti
 
 4D proposes two kinds of object libraries:
 
-- a standard, preconfigured object library, available in all your projects. 
+- a standard, preconfigured object library, available in all your projects.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 ## Using the standard object library
@@ -27,7 +27,7 @@ The window has the following main features:
 - You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
 - To use an object from the library to your form, you can either: 
     - right-click on an object and select **Copy** in the contextual menu
-    - or drag and drop the object from the library The object is then added to the form. 
+    - or drag and drop the object from the library The object is then added to the form.
 
 This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
@@ -63,7 +63,7 @@ To open a custom object library, select **Open>Object Library...** command in th
 In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
 
 - project forms
-- first form pages
+- form pages 1
 
 ### Building an object library
 
@@ -78,7 +78,7 @@ Basic operations are available in the context menu or the options menu of the wi
 - **Cut** or **Copy** to the pasteboard
 - **Paste** an object from the pasteboard
 - **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library. 
+- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library.
 
 You can place individual objects (including subforms) or sets of objects in an object library. Each object or set is grouped into a single item:
 
