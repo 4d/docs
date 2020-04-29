@@ -3,9 +3,23 @@ id: architecture
 title: 4D プロジェクトのアーキテクチャー
 ---
 
-4D プロジェクトは、一つの親プロジェクトフォルダーに格納された、複数のフォルダーやファイルから構成されています。 たとえば:
+4D プロジェクトは、一つの親プロジェクトフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
-![](assets/en/Project/project1.png)
+- MyProject 
+    - コンポーネント
+    - Data 
+        - Logs
+        - Settings
+    - Documentation
+    - Plugins
+    - Project 
+        - DerivedData
+        - Sources
+        - Trash
+    - Resources
+    - Settings
+    - userPreference.username
+    - WebFolder
 
 > バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
@@ -15,8 +29,9 @@ title: 4D プロジェクトのアーキテクチャー
 
 - *databaseName*.4DProject ファイル
 - Sources 
+    + Classes
     + DatabaseMethods
-    + Methods
+    + メソッド
     + フォーム
     + TableForms
     + Triggers
@@ -62,6 +77,13 @@ title: 4D プロジェクトのアーキテクチャー
 | *methodName*.4dm | データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。 | テキスト |
 
 
+#### Classes folder
+
+| 内容              | 説明                                                                                                                                 | 形式   |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | テキスト |
+
+
 #### Forms フォルダー
 
 | 内容                                        | 説明                                 | 形式      |
@@ -99,7 +121,7 @@ title: 4D プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- Methods
+- メソッド
 - フォーム
 - TableForms
 
