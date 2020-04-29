@@ -19,12 +19,12 @@ Un nouveau dossier est créé à chaque opération de chiffrement/déchiffrement
 
 Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vos données à l'aide du CSM :
 
-1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables". 
+1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables".
 2. Ouvrez la page Chiffrement du CSM. Si vous ouvrez la page sans paramétrer les tables comme étant **Chiffrables**, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt1.png) Sinon, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt2.png) Cela signifie que le statut **Chiffrable** défini pour au moins une table a été modifié et que le fichier de données n'a toujours pas été chiffré. **Note** : Le même message s'affiche lorsque le statut **Chiffrable** a été modifié dans un fichier de données déjà chiffré ou après le déchiffrement d'un fichier de données (voir ci-dessous).
 3. Cliquez sur le bouton de Chiffrement.  
     ![](assets/en/MSC/MSC_encrypt3.png)  
     Vous serez ensuite invité à saisir une phrase secrète pour votre fichier de données : ![](assets/fr/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de chiffrement des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. Par exemple, vous pouvez saisir une phrase secrète telle que "Nous sommes allés à Montreux" ou "Ma toute 1ère et brillante phrase secrète !!" L'indicateur du niveau de sécurité peut vous aider à évaluer la sûreté de votre phrase secrète : ![](assets/en/MSC/MSC_encrypt5.png) (la couleur vert foncé correspond au niveau de sécurité le plus élevé)
-4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée. 
+4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
 Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, la base de données est rouverte en mode maintenance.
 
