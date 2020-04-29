@@ -119,7 +119,7 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
             percent: 0
         }
     ],
-    sessionInfo: [ 
+    sessionInfo: [
         {
             sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
             userID: "36713176D42DB045B01B8E650E8FA9C6",
