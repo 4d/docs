@@ -11,7 +11,7 @@ Pour rechercher directement des données, vous pouvez utiliser la fonction [`$fi
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
-## Ajouter, modifier et supprimer des entités
+## Adding, Modifying, and Deleting Entities
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
@@ -21,11 +21,11 @@ Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClas
 
 Avant de retourner la collection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
-## Parcourir les données
+## Navigating Data
 
 Ajoutez le [`$skip`]($skip.md) (pour définir avec quelle entité commencer) et [`$top/$limit`]($top_$limit.md) (pour définir le nombre d'entités à retourner) des requêtes REST à vos requêtes ou entity selections pour parcourir la collection d'entités.
 
-## Créer et gérer un ensemble d'entités
+## Creating and Managing Entity Set
 
 Un ensemble d'entités (également appelé *entity set* ou *entity selection*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
@@ -47,7 +47,7 @@ En utilisant [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($e
 
 Une nouvelle sélection d'entités est renvoyée; vous pouvez néanmoins créer un nouvel ensemble d'entités en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 
-## Calculer des données
+## Calculating Data
 
 En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le **nombre**, le **min**, le **max** ou la **somme** pour un attribut spécifique d'une dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
 
@@ -59,7 +59,7 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 
 `/rest/Employee/salary/?$compute=$all`
 
-## Sélectionner les attributs à obtenir
+## Selecting attributes to get
 
 Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
@@ -84,7 +84,7 @@ Vous pouvez appliquer cette méthode à :
 
 - Dataclass (tout ou une collection d'entités dans une dataclass)
 - Entités spécifiques
-- Méthodes dataclass
+- Dataclass methods
 - Entity sets
 
 #### Exemple avec une dataclass
@@ -190,19 +190,19 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
     }
     
 
-#### Exemple de méthode
+#### Method Example
 
-Si vous avez une méthode dataclass, vous pouvez définir les attributs à retourner comme indiqué ci-dessous, avant de passer la méthode dataclass :
+If you have a dataclass method, you can define which attributes to return as shown below before passing the dataclass method:
 
 `GET  /rest/People/firstName,lastName/getHighSalaries`
 
-ou
+or
 
 `GET  /rest/People/getHighSalaries/firstName,lastName`
 
 #### Exemple d'ensemble d'entités
 
-Une fois que vous avez créé un ensemble d'entités, vous pouvez filtrer les informations qu'il contient en définissant les attributs à retourner :
+Once you have created an entity set, you can filter the information in it by defining which attributes to return:
 
 `GET /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
 
@@ -222,6 +222,6 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-Vous pouvez utiliser la syntaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
+Vous pouvez utiliser la syntaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. For example, you can write:
 
 `GET  /rest/Company:companyCode("Acme001")`
