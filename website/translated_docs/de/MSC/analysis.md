@@ -1,5 +1,5 @@
 ---
-id: analyse
+id: Analyse
 title: Seite Aktivität Analyse
 sidebar_label: Seite Aktivität Analyse
 ---
