@@ -8,7 +8,7 @@ Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est 
 - Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches, etc.),
 - Créer et imprimer des états et des étiquettes complexes avec les données de la base,
 - Communiquer avec d’autres systèmes d’information,
-- Envoyer des e-mails, 
+- Envoyer des e-mails,
 - Gérer des documents et des pages web,
 - Importer et exporter des données entre des bases 4D et d’autres applications,
 - Incorporer des procédures écrites dans d’autres langages que celui de 4D.
