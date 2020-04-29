@@ -23,7 +23,7 @@ Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans 
 Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :
 
 - Sous-routine et fonction
-- Méthode associée à un objet 
+- Méthode associée à un objet
 - Méthode de menu
 - Méthode de gestion de process
 - Méthode de gestion d’événements et d'erreurs
@@ -115,7 +115,7 @@ Vous pouvez encapsuler `fullName` dans un objet :
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
-$result:=$o.full_name("John";"Smith") 
+$result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
@@ -135,7 +135,7 @@ C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) //add the method  
 
-$result:=$o.fullName() 
+$result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
