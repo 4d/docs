@@ -54,7 +54,7 @@ The result is similar and *MethodB* is evaluated only if necessary.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if 
+ End if
 ```
 
 **Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
