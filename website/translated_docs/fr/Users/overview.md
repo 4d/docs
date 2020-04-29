@@ -53,7 +53,7 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 
 Ce fichier peut être stocké dans les emplacements suivants :
 
-- dans le dossier de propriétés de la base utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans la base. 
+- dans le dossier de propriétés de la base utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans la base.
 - dans le dossier de propriétés des données, c'est-à-dire dans le dossier "Settings" du dossier "Data". Si un fichier directory.json se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings de la base utilisateur. Cette fonctionnalité vous permet de définir des configurations Utilisateurs et Groupes personnalisées/locales. La configuration personnalisée ne sera pas affectée par des mises à niveau de la base. 
 
 > Si la gestion des groupes et utilisateurs est inactive, le fichier directory.json n'est pas créé.
