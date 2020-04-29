@@ -5,8 +5,8 @@ title: Numérique (Réel, Entier, Entier long)
 
 Numérique est un terme générique utilisé pour :
 
-- Les champs, variables ou expression de type Réel. Les nombres de type Réel sont compris dans l'intervalle ±1.7e±308 (13 chiffres significatifs). 
-- Les champs, variables ou expression de type Entier long. Les nombres de type Entier long (4 octets) sont compris dans l'intervalle -2^31..(2^31)-1. 
+- Les champs, variables ou expression de type Réel. Les nombres de type Réel sont compris dans l'intervalle ±1.7e±308 (13 chiffres significatifs).
+- Les champs, variables ou expression de type Entier long. Les nombres de type Entier long (4 octets) sont compris dans l'intervalle -2^31..(2^31)-1.
 - Les champs, variables ou expression de type Entier. Les nombres de type Entier (2 octets) sont compris dans l'intervalle -32 768..32 767.
 
 **Note :** Lorsqu'elles sont utilisées dans le langage 4D, les valeurs des champs de type Entier sont automatiquement converties en Entier long.
@@ -69,7 +69,7 @@ L'opérateur modulo % divise le premier nombre par le second et retourne le rest
 **ATTENTION :**
 
 - L'opérateur modulo % retourne des valeurs significatives avec des nombres appartenant à la catégorie des entiers longs (de –2^31 à +2^31 moins 1). Pour calculer le modulo de nombres qui ne sont pas dans cet intervalle, utilisez la fonction `Modulo`.
-- L'opérateur division entière \ retourne des valeurs significatives avec des nombres entiers uniquement. 
+- L'opérateur division entière \ retourne des valeurs significatives avec des nombres entiers uniquement.
 
 ### Priorité
 
