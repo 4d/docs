@@ -217,7 +217,7 @@ If you want to create an entity, you can POST the attributes using this URL:
 
 **POST data:**
 
-    { 
+    {
         firstName: "John",
         lastName: "Smith"
     }
@@ -229,13 +229,13 @@ You can also create and update multiple entities at the same time using the same
 
 **POST data:**
 
-    [{ 
+    [{
         "__KEY": "309",
         "__STAMP": 5,
         "ID": "309",
         "firstName": "Penelope",
         "lastName": "Miller"
-    }, { 
+    }, {
         "firstName": "Ann",
         "lastName": "Jones"
     }]
@@ -246,11 +246,11 @@ You can also create and update multiple entities at the same time using the same
 When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
 
     {
-        "__KEY": "622", 
-        "__STAMP": 1, 
-        "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
-        "ID": 622, 
-        "firstName": "John", 
+        "__KEY": "622",
+        "__STAMP": 1,
+        "uri": "http://127.0.0.1:8081/rest/Employee(622)",
+        "ID": 622,
+        "firstName": "John",
         "firstName": "Smith",
         "fullName": "John Smith"
     }
@@ -263,37 +263,37 @@ If, for example, the stamp is not correct, the following error is returned:
     {
         "__ENTITIES": [
             {
-                "__KEY": "309", 
-                "__STAMP": 1, 
-                "ID": 309, 
-                "firstName": "Betty", 
-                "lastName": "Smith", 
-                "fullName": "Betty Smith", 
+                "__KEY": "309",
+                "__STAMP": 1,
+                "ID": 309,
+                "firstName": "Betty",
+                "lastName": "Smith",
+                "fullName": "Betty Smith",
                 "__ERROR": [
                     {
-                        "message": "Given stamp does not match current one for record# 308 of table Employee", 
-                        "componentSignature": "dbmg", 
+                        "message": "Given stamp does not match current one for record# 308 of table Employee",
+                        "componentSignature": "dbmg",
                         "errCode": 1263
-                    }, 
+                    },
                     {
-                        "message": "Cannot save record 308 in table Employee of database Widgets", 
-                        "componentSignature": "dbmg", 
+                        "message": "Cannot save record 308 in table Employee of database Widgets",
+                        "componentSignature": "dbmg",
                         "errCode": 1046
-                    }, 
+                    },
                     {
-                        "message": "The entity# 308 of the datastore class \"Employee\" cannot be saved", 
-                        "componentSignature": "dbmg", 
+                        "message": "The entity# 308 of the datastore class \"Employee\" cannot be saved",
+                        "componentSignature": "dbmg",
                         "errCode": 1517
                     }
                 ]
-            }, 
+            },
             {
-                "__KEY": "612", 
-                "__STAMP": 4, 
-                "uri": "http://127.0.0.1:8081/rest/Employee(612)", 
-                "ID": 612, 
-                "firstName": "Ann", 
-                "lastName": "Jones", 
+                "__KEY": "612",
+                "__STAMP": 4,
+                "uri": "http://127.0.0.1:8081/rest/Employee(612)",
+                "ID": 612,
+                "firstName": "Ann",
+                "lastName": "Jones",
                 "fullName": "Ann Jones"
             }
         ]
@@ -303,30 +303,30 @@ If, for example, the stamp is not correct, the following error is returned:
 If, for example, the user does not have the appropriate permissions to update an entity, the following error is returned:
 
     {
-        "__KEY": "2", 
-        "__STAMP": 4, 
-        "ID": 2, 
-        "firstName": "Paula", 
-        "lastName": "Miller", 
-        "fullName": "Paula Miller", 
-        "telephone": "408-555-5555", 
-        "salary": 56000, 
-        "employerName": "Adobe", 
+        "__KEY": "2",
+        "__STAMP": 4,
+        "ID": 2,
+        "firstName": "Paula",
+        "lastName": "Miller",
+        "fullName": "Paula Miller",
+        "telephone": "408-555-5555",
+        "salary": 56000,
+        "employerName": "Adobe",
         "employer": {
             "__deferred": {
-                "uri": "http://127.0.0.1:8081/rest/Company(1)", 
+                "uri": "http://127.0.0.1:8081/rest/Company(1)",
                 "__KEY": "1"
             }
-        }, 
+        },
         "__ERROR": [
             {
-                "message": "No permission to update for dataClass Employee", 
-                "componentSignature": "dbmg", 
+                "message": "No permission to update for dataClass Employee",
+                "componentSignature": "dbmg",
                 "errCode": 1558
-            }, 
+            },
             {
-                "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved", 
-                "componentSignature": "dbmg", 
+                "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved",
+                "componentSignature": "dbmg",
                 "errCode": 1517
             }
         ]
@@ -377,18 +377,18 @@ Otherwise, you receive an error. In our case, we got an error because our salary
             {
                 "__ERROR": [
                     {
-                        "message": "Value cannot be greater than 60000", 
-                        "componentSignature": "dbmg", 
+                        "message": "Value cannot be greater than 60000",
+                        "componentSignature": "dbmg",
                         "errCode": 1569
-                    }, 
+                    },
                     {
-                        "message": "Entity fails validation", 
-                        "componentSignature": "dbmg", 
+                        "message": "Entity fails validation",
+                        "componentSignature": "dbmg",
                         "errCode": 1570
-                    }, 
+                    },
                     {
-                        "message": "The new entity of the datastore class \"Employee\" cannot be saved", 
-                        "componentSignature": "dbmg", 
+                        "message": "The new entity of the datastore class \"Employee\" cannot be saved",
+                        "componentSignature": "dbmg",
                         "errCode": 1534
                     }
                 ]
