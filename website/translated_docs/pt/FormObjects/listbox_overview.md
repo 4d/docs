@@ -29,10 +29,10 @@ The user can select one or more rows using the standard shortcuts: **Shift+click
 
 A list box is composed of four distinct parts:
 
-* the list box object in its entirety, 
-* columns, 
-* column headers, and 
-* column footers. 
+* the list box object in its entirety,
+* columns,
+* column headers, and
+* column footers.
 
 ![](assets/en/FormObjects/listbox_parts.png)
 
@@ -49,9 +49,9 @@ The column object method gets events that occur in its [header](#list-box-header
 
 There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
 
-- **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes). 
+- **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
-- **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection. 
+- **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
 
 > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
@@ -510,7 +510,7 @@ In this mode, the printing of list boxes is carried out by programming, via the 
 In this mode:
 
 - The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. 
+- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 ## Hierarchical list boxes
@@ -924,7 +924,7 @@ Examples:
     OB SET($ob;"valueType";"text")
     OB SET($ob;"saveAs";"value")
     OB SET($ob;"value";"blue")
-    OB SET($ob;"requiredListName";"colors") 
+    OB SET($ob;"requiredListName";"colors")
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
