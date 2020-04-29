@@ -54,7 +54,7 @@ title: 分岐構造
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("名前が入力されませんでした")
- End if 
+ End if
 ```
 
 **Tip:** 一方の条件に実行ステートメントがない分岐処理を書くこともできます。 下のようなコードはどちらも有効です:
