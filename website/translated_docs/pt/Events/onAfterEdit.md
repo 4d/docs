@@ -8,7 +8,7 @@ title: On After Edit
 | 45   | [4D View Pro area](FormObjects/viewProArea_overview) - [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
 
 
-## 説明
+## Description
 
 ### General case
 
@@ -25,20 +25,20 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| プロパティ       | 型    | 説明                                                                                                  |
-| ----------- | ---- | --------------------------------------------------------------------------------------------------- |
-| code        | 倍長整数 | On After Edit                                                                                       |
-| description | テキスト | "On After Edit"                                                                                     |
-| objectName  | テキスト | 4D View Pro area name                                                                               |
-| sheetName   | テキスト | Name of the sheet of the event                                                                      |
-| action      | テキスト | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| Property    | Type    | Description                                                                                         |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------- |
+| code        | longint | On After Edit                                                                                       |
+| description | text    | "On After Edit"                                                                                     |
+| objectName  | text    | 4D View Pro area name                                                                               |
+| sheetName   | text    | Name of the sheet of the event                                                                      |
+| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
 
-| プロパティ       | 型       | 説明                                |
+| Property    | Type    | Description                       |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
@@ -46,7 +46,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = valueChanged
 
-| プロパティ    | 型       | 説明                          |
+| Property | Type    | Description                 |
 | -------- | ------- | --------------------------- |
 | range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
@@ -55,7 +55,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| プロパティ     | 型       | 説明                                                  |
+| Property  | Type    | Description                                         |
 | --------- | ------- | --------------------------------------------------- |
 | fromRange | object  | Range of source cell range (being dragged)          |
 | toRange   | object  | Range of the destination cell range (drop location) |
@@ -65,7 +65,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| プロパティ     | 型      | 説明                  |
+| Property  | Type   | Description         |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
  autoFillType|longint|Value used for the fill.
@@ -82,10 +82,10 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                     - 3: The cells below are filled| 
                                         #### action = formulaChanged
                                         
-                                        | プロパティ   | 型      | 説明                  |
-                                        | ------- | ------ | ------------------- |
-                                        | range   | object | Cell range          |
-                                        | formula | テキスト   | The formula entered |
+                                        | Property | Type   | Description         |
+                                        | -------- | ------ | ------------------- |
+                                        | range    | object | Cell range          |
+                                        | formula  | text   | The formula entered |
 
                                         
                                         #### action = clipboardPasted
@@ -93,15 +93,15 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         <table>
                                           <tr>
                                             <th>
-                                              プロパティ
+                                              Property
                                             </th>
                                             
                                             <th>
-                                              型
+                                              Type
                                             </th>
                                             
                                             <th>
-                                              説明
+                                              Description
                                             </th>
                                           </tr>
                                           
@@ -125,7 +125,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              倍長整数
+                                              longint
                                             </td>
                                             
                                             <td>
@@ -152,7 +152,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                                               <li>
                                                                 "text" (text): The text from the clipboard<li>
                                                                   "html" (text): The HTML from the clipboard</td> </tr> </tbody> </table> <h4>
-                                                                    例題
+                                                                    Example
                                                                   </h4>
                                                                   <p>
                                                                     Here is an example handling an <code>On After Edit</code> event:
