@@ -22,13 +22,13 @@ Drop-down list objects are initialized by loading a list of values into an array
 * Before the object is displayed, execute code that assigns values to the array elements. Beispiel:
 
 ```4d
-  ARRAY TEXT($aCities;6) 
-  $aCities{1}:="Philadelphia" 
-  $aCities{2}:="Pittsburg" 
-  $aCities{3}:="Grand Blanc" 
-  $aCities{4}:="Bad Axe" 
-  $aCities{5}:="Frostbite Falls" 
-  $aCities{6}:="Green Bay" 
+  ARRAY TEXT($aCities;6)
+  $aCities{1}:="Philadelphia"
+  $aCities{2}:="Pittsburg"
+  $aCities{3}:="Grand Blanc"
+  $aCities{4}:="Bad Axe"
+  $aCities{5}:="Frostbite Falls"
+  $aCities{6}:="Green Bay"
 ```
 
 In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.

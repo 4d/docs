@@ -5,20 +5,20 @@ title: Headers
 
 * * *
 
-## Display Headers
+## ヘッダーを表示
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | データタイプ  | Possible Values |
-| ----------- | ------- | --------------- |
-| showHeaders | boolean | true, false     |
+| 名           | データタイプ  | とりうる値       |
+| ----------- | ------- | ----------- |
+| showHeaders | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
@@ -28,7 +28,7 @@ This property is used to set the row height for a list box header in **pixels** 
 
 * *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
-*     *Line* - the height is calculated while taking into account the font size of the row concerned. 
+*     *Line* - the height is calculated while taking into account the font size of the row concerned.
         
     
     * If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
@@ -43,7 +43,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON Example:
+#### JSON 例:
 
         "List Box": {
             "type": "listbox",
@@ -53,16 +53,16 @@ Note that converting back and forth may lead to an end result that is different 
             }
     
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | データタイプ | Possible Values                 |
+| 名            | データタイプ | とりうる値                           |
 | ------------ | ------ | ------------------------------- |
 | headerHeight | string | positive decimal+px &#124; em ) |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 #### See also
 

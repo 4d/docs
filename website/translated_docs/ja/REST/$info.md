@@ -9,7 +9,7 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | 型  | 説明                                                                                             |
+| プロパティ          | 型  | 説明                                                                                             |
 | -------------- | -- | ---------------------------------------------------------------------------------------------- |
 | cacheSize      | 数値 | Wakanda Server's cache size.                                                                   |
 | usedCache      | 数値 | How much of Wakanda Server's cache has been used.                                              |
@@ -24,7 +24,7 @@ When you call this request for your project, you retrieve information in the fol
 
 For each entity set currently stored in 4D Server's cache, the following information is returned:
 
-| Property      | 型      | 説明                                                                                                                                                                                                                                                                  |
+| プロパティ         | 型      | 説明                                                                                                                                                                                                                                                                  |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | tableName     | String | Name of the datastore class.                                                                                                                                                                                                                                        |
@@ -44,7 +44,7 @@ For information about how to create an entity set, refer to `$method=entityset`.
 
 For each user session, the following information is returned in the *sessionInfo* array:
 
-| Property   | 型      | 説明                                                           |
+| プロパティ      | 型      | 説明                                                           |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | String | A UUID that references the session.                          |
 | userID     | String | A UUID that references the user who runs the session.        |
@@ -57,7 +57,7 @@ For each user session, the following information is returned in the *sessionInfo
 
 The object in the **jsContextInfo** array details the JavaScript context pool:
 
-| Property              | 型   | 説明                                                                                    |
+| プロパティ                 | 型   | 説明                                                                                    |
 | --------------------- | --- | ------------------------------------------------------------------------------------- |
 | contextPoolSize       | 数値  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
 | activeDebugger        | ブール | Debugger state (false by default)                                                     |
@@ -119,7 +119,7 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
             percent: 0
         }
     ],
-    sessionInfo: [ 
+    sessionInfo: [
         {
             sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
             userID: "36713176D42DB045B01B8E650E8FA9C6",

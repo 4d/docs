@@ -37,54 +37,54 @@ Nous obtenons l'erreur suivante dans la deuxième entité ; la première entité
     {
         "__ENTITIES": [
             {
-                "__KEY": "1", 
-                "__STAMP": 5, 
-                "uri": "http://127.0.0.1:8081/rest/Employee(1)", 
-                "ID": 1, 
-                "firstName": "John", 
-                "lastName": "Smith", 
-                "fullName": "John Smith", 
-                "gender": false, 
-                "telephone": "4085551111", 
-                "salary": 45000, 
-                "employerName": "Adobe", 
+                "__KEY": "1",
+                "__STAMP": 5,
+                "uri": "http://127.0.0.1:8081/rest/Employee(1)",
+                "ID": 1,
+                "firstName": "John",
+                "lastName": "Smith",
+                "fullName": "John Smith",
+                "gender": false,
+                "telephone": "4085551111",
+                "salary": 45000,
+                "employerName": "Adobe",
                 "employer": {
                     "__deferred": {
-                        "uri": "http://127.0.0.1:8081/rest/Company(1)", 
+                        "uri": "http://127.0.0.1:8081/rest/Company(1)",
                         "__KEY": "1"
                     }
                 }
-            }, 
+            },
             {
-                "__KEY": "2", 
-                "__STAMP": 2, 
-                "ID": 2, 
-                "firstName": "Paula", 
-                "lastName": "Miller", 
-                "fullName": "Paula Miller", 
-                "telephone": "4085559999", 
-                "salary": 36000, 
-                "employerName": "Adobe", 
+                "__KEY": "2",
+                "__STAMP": 2,
+                "ID": 2,
+                "firstName": "Paula",
+                "lastName": "Miller",
+                "fullName": "Paula Miller",
+                "telephone": "4085559999",
+                "salary": 36000,
+                "employerName": "Adobe",
                 "employer": {
                     "__deferred": {
-                        "uri": "http://127.0.0.1:8081/rest/Company(1)", 
+                        "uri": "http://127.0.0.1:8081/rest/Company(1)",
                         "__KEY": "1"
                     }
-                }, 
+                },
                 "__ERROR": [
                     {
-                        "message": "Value cannot be greater than 60000", 
-                        "componentSignature": "dbmg", 
+                        "message": "Value cannot be greater than 60000",
+                        "componentSignature": "dbmg",
                         "errCode": 1569
-                    }, 
+                    },
                     {
-                        "message": "Entity fails validation", 
-                        "componentSignature": "dbmg", 
+                        "message": "Entity fails validation",
+                        "componentSignature": "dbmg",
                         "errCode": 1570
-                    }, 
+                    },
                     {
-                        "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved", 
-                        "componentSignature": "dbmg", 
+                        "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved",
+                        "componentSignature": "dbmg",
                         "errCode": 1517
                     }
                 ]

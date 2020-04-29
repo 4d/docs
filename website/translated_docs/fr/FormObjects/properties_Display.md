@@ -31,12 +31,12 @@ The field actually contains "RB17621".
 
 If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
-    (#######) 
+    (#######)
     
 
 and the user enters "proportion", the field displays:
 
-    (portion) 
+    (portion)
     
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.

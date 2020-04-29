@@ -15,7 +15,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Nom        | Type de données | Valeurs possibles |
 | ---------- | --------------- | ----------------- |
-| spellcheck | booléen         | true, false       |
+| spellcheck | boolean         | true, false       |
 
 
 #### Objets pris en charge
@@ -42,7 +42,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 | Nom         | Type de données | Valeurs possibles                     |
 | ----------- | --------------- | ------------------------------------- |
-| contextMenu | chaîne          | "automatic" (used if missing), "none" |
+| contextMenu | string          | "automatic" (used if missing), "none" |
 
 
 #### Objets pris en charge
@@ -63,7 +63,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Nom       | Type de données | Valeurs possibles |
 | --------- | --------------- | ----------------- |
-| enterable | booléen         | true, false       |
+| enterable | boolean         | true, false       |
 
 
 #### Objets pris en charge
@@ -87,7 +87,7 @@ Entry filters can also be used to display required formatting characters so that
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
 - you can directly enter a filter definition string
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|). 
+- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
@@ -153,7 +153,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom       | Type de données | Valeurs possibles |
         | --------- | --------------- | ----------------- |
-        | focusable | booléen         | true, false       |
+        | focusable | boolean         | true, false       |
 
         
         #### Objets pris en charge
@@ -189,7 +189,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### Automatic
         
-        - In single-line inputs, words located at the end of lines are truncated and there are no line returns. 
+        - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
         - In multiline inputs, 4D carries out automatic line returns:  
             ![](assets/en/FormObjects/multilineAuto.png)
         #### Non
@@ -242,14 +242,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom         | Type de données | Valeurs possibles                                                            |
         | ----------- | --------------- | ---------------------------------------------------------------------------- |
-        | placeholder | chaîne          | Text to be displayed (grayed out) when the object does not contain any value |
+        | placeholder | string          | Text to be displayed (grayed out) when the object does not contain any value |
 
         
         #### Objets pris en charge
         
         [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
         
-        #### Voir également
+        #### See also
         
         [Message d'aide](properties_Help.md)
         
@@ -263,7 +263,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom           | Type de données | Valeurs possibles |
         | ------------- | --------------- | ----------------- |
-        | showSelection | booléen         | true, false       |
+        | showSelection | boolean         | true, false       |
 
         
         #### Objets pris en charge

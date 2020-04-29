@@ -11,7 +11,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 
 * Saves time during development: Each object has specific group of settings within a single operation.
 * Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-* Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
+* Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
 ### Style Sheet Files
 
@@ -246,14 +246,14 @@ To override this behavior, the style value must be followed with an `!important`
 
 At runtime, 4D automatically prioritizes style sheets in the following order:
 
-1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`. 
+1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
 2. It will then load the CSS file for the current platform `/SOURCES/styleSheets\_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3. If it exists, it will then load a specific CSS file defined in the JSON form:
 
 *       a file for both platforms:
         
     
-        "css": "<path>" 
+        "css": "<path>"
         
 
 *       or a list of files for both platforms:
@@ -261,7 +261,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
     
         "css": [
                "<path1>",
-               "<path2>" 
+               "<path2>"
                 ],
 
 *       or a list of files per platform:

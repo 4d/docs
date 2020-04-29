@@ -45,15 +45,15 @@ Par défaut, le style Classique a un fond gris clair avec un libellé au centre.
 
 ```4d
     "myButton": {
-        "type": "button",   //définit le type d'objet
-        "style":"regular",  //définit le style du bouton
-        "defaultButton":"true"  //définit le bouton comme choix par défaut
-        "text": "OK",   //texte à faire apparaître dans le bouton
-        "action": "Annuler", //Action à exécuter
-        "left": 60,  //Position gauche dans le formulaire  
-        "top": 160, //Position supérieure dans le formulaire  
-        "width": 100,  //largeur du bouton
-        "height": 20 //hauteur du bouton
+        "type": "button",   //define the type of object
+        "style":"regular",  //define the style of the button
+        "defaultButton":"true"  //define button as the default choice
+        "text": "OK",   //text to appear on the button
+        "action": "Cancel", //action to be be performed
+        "left": 60,  //left position on the form  
+        "top": 160, //top position on the form
+        "width": 100,  //width of the button
+        "height": 20 //height of the button
         }
 ```
 
@@ -71,15 +71,15 @@ Par défaut, le style A plat a un arrière-plan avec un libellé au centre, des 
 
 ```4d
 <br />    "myButton": {
-                "type": "button",   
-                "style":"flat", 
-                "defaultButton":"true"  
-                "text": "OK",   
-                "action": "Annuler", 
+                "type": "button",
+                "style":"flat",
+                "defaultButton":"true"
+                "text": "OK",
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,         
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -91,7 +91,7 @@ Le style du bouton Barre d'outils est initialement destiné à être intégré d
 
 Par défaut, le style bouton Barre d'outils a un fond transparent avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- *Sous Windows* - le contour du bouton apparaît lorsqu’il dispose de la propriété “Avec pop-up menu”, et un triangle est affiché à droite et au centre du bouton. 
+- *Sous Windows* - le contour du bouton apparaît lorsqu’il dispose de la propriété “Avec pop-up menu”, et un triangle est affiché à droite et au centre du bouton.
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
@@ -101,11 +101,11 @@ Par défaut, le style bouton Barre d'outils a un fond transparent avec un libell
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"toolbar",  
+                "type": "button",
+                "style":"toolbar",
                 "text": "OK",       
-                "popupPlacement":"separated"    
-                "action": "Annuler",     
+                "popupPlacement":"separated"
+                "action": "Cancel",     
                 "left": 60,             
                 "top": 160,             
                 "width": 100,           
@@ -119,25 +119,25 @@ Le bouton barre d'outils combine l'apparence du style [Classique](#regular) (c'e
 
 Par défaut, le style Bevel a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- *Sous Windows* - le contour du bouton apparaît. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton. 
+- *Sous Windows* - le contour du bouton apparaît. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
 
 ![](assets/en/FormObjects/button_bevel.png)
 
-- *Sous macOS* - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton. 
+- *Sous macOS* - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
 
 #### Exemple JSON :
 
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"bevel",    
+                "style":"bevel",
                 "text": "OK",       
-                "popupPlacement":"linked"   
-                "action": "Annuler", 
+                "popupPlacement":"linked"
+                "action": "Cancel",
                 "left": 60,     
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -158,14 +158,14 @@ Par défaut, le style Bevel arrondi a un fond gris clair avec un libellé au cen
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"roundedBevel", 
-                "text": "OK",   
+                "style":"roundedBevel",
+                "text": "OK",
                 "popupPlacement":"none" /
-                "action": "Cancel", 
+                "action": "Cancel",
                 "left": 60,         
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -175,7 +175,7 @@ Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel),
 
 Par défaut, le style OS Gradient a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- *Sous Windows* - le bouton est identique au style Bevel. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton. 
+- *Sous Windows* - le bouton est identique au style Bevel. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
@@ -185,15 +185,15 @@ Par défaut, le style OS Gradient a un fond gris clair avec un libellé au centr
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"gradientBevel",
-                "text": "OK",   
+                "text": "OK",
                 "popupPlacement":"linked"
                 "action": "Cancel",     
                 "left": 60,     
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -213,15 +213,15 @@ Par défaut, le style OS X Textured apparaît comme :
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"texturedBevel",    
-                "text": "OK",   
-                "popupPlacement":"separated"    
-                "action": "Cancel", 
+                "type": "button",
+                "style":"texturedBevel",
+                "text": "OK",
+                "popupPlacement":"separated"
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -241,15 +241,15 @@ Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"office",
                 "text": "OK",
-                "popupPlacement":"none" 
-                "action": "Cancel", 
+                "popupPlacement":"none"
+                "action": "Cancel",
                 "left": 60,     
-                "top": 160, 
+                "top": 160,
                 "width": 100,
-                "height": 20    
+                "height": 20
                 }
 ```
 
@@ -265,12 +265,12 @@ Le style du bouton Aide peut être utilisé pour afficher un bouton d'aide syst�
     "myButton": {
                 "type": "button",
                 "style":"help",     
-                "text": "OK",   
-                "dropping": "custom", 
-                "left": 60, 
+                "text": "OK",
+                "dropping": "custom",
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -287,14 +287,14 @@ Sous Windows, il est identique au style «Aucun» (le cercle en arrière-plan n'
 #### Exemple JSON :
 
         "myButton": {
-                    "type": "button",   
-                    "style":"circular", 
-                    "text": "OK",   
-                    "dropping": "custom", 
-                    "left": 60, 
+                    "type": "button",
+                    "style":"circular",
+                    "text": "OK",
+                    "dropping": "custom",
+                    "left": 60,
                     "top": 160,     
                     "width": 100,
-                    "height": 20    
+                    "height": 20
                     }
     
 
@@ -308,15 +308,15 @@ Le style de bouton Personnalisé accepte une image d'arrière-plan personnalisé
 
 ```code
     "myButton": {
-                "type": "button",   
-                "style":"custom",   
-                "text": "", 
+                "type": "button",
+                "style":"custom",
+                "text": "",
                 "customBackgroundPicture": "/RESOURCES/bkgnd.png",
                 "icon": "/RESOURCES/custom.png",  
                 "textPlacement": "center",
-                "left": 60, 
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
+                "width": 100,
                 "height": 20
                 }
 ```

@@ -5,7 +5,7 @@ title: Menu item properties
 
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
 
-## Title
+## タイトル
 
 The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
 

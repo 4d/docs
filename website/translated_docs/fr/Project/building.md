@@ -18,8 +18,8 @@ Le générateur d'applications vous permet de :
 
 Générer un package de projet peut être réalisée à l'aide de :
 
-- soit la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html), 
-- soit la[ fenêtre Générateur d'application](#application-builder). 
+- soit la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
+- soit la[ fenêtre Générateur d'application](#application-builder).
 
 Pour afficher la boîte de dialogue du générateur d'application, sélectionnez **Développement** > **Générer l'application...** dans la barre de menus.
 
@@ -88,24 +88,24 @@ Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Comp
 
 p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
 
-Le dossier *MyComponent.4dbase* contient : - Un fichier *MyComponent.4DZ* - Un dossier *Resources* - toutes les Ressources sont automatiquement recopiées dans ce dossier. Les éventuels dossiers “Components” ou “Plugins” ne sont pas recopiés (un composant ne peut pas utiliser de plug-ins ni d'autres composants).
+Le dossier *MyComponent.4dbase* contient : - Un fichier *MyComponent.4DZ* - Un dossier *Resources* - toutes les Ressources sont automatiquement recopiées dans ce dossier. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
-## Page Application
+## Application page
 
-Cet onglet vous permet de générer directement une version monoposte indépendante de votre application :
+This tab allows you can build a stand-alone, single-user version of your application:
 
 ![](assets/en/Project/standaloneProj.png)
 
-### Générer une application indépendante
+### Build stand-alone Application
 
-En cochant l'option **Générer une application exécutable** et en cliquant sur **Construire**, vous générerez une application autonome (exécutable) directement depuis votre base projet.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
 
-Pour réaliser la génération, vous aurez besoin des éléments suivants :
+The following elements are required for the build:
 
-- 4D Volume Desktop (le moteur de la base 4D),
-- une[licence appropriée](#licenses) 
+- 4D Volume Desktop (the 4D database engine),
+- an [appropriate license](#licenses)
 
-Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
+On Windows, this feature creates an executable file (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
 
 Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet [4D SAS (http://www.4d.com/)](http://www.4d.com/).
 
@@ -148,17 +148,18 @@ Si vous avez défini “MonAppli” dans la zone “Nom de l’application”, v
     * Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), les dossiers Native Components et SASL Plugins, nécessaires au fonctionnement de l’application
     * Un dossier Database contenant notamment le dossier Resources et le fichier MyProject.4DZ. Ils constituent la structure compilée de la base et son dossier Resources. **Note **: Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
     * (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans la base. Pour plus d’informations sur ce point, reportez-vous à la section Page [Plugins et composants](#plugins-and-components).
-    * Un dossier Licences contenant sous forme de fichier XML la liste des numéros de licence ayant été intégrés dans l’application. Pour plus d’informations sur ce point, reportez-vous à la section [Licences & Certificat](#licenses-and-certificate). 
-    * Les éléments supplémentaires éventuellement ajoutés dans le dossier 4D Volume Desktop (cf. [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
+    * Un dossier Licences contenant sous forme de fichier XML la liste des numéros de licence ayant été intégrés dans l’application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+    * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
     
-    Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
+    All these items must be kept in the same folder in order for the executable to operate.
 
-* Sous macOS</em></p> 
-    - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins-and-components). Pour plus d’informations sur l’intégration des licences, reportez-vous à la [Page Licences & Certificat](#licenses-and-certificate). **Note **: Sous Mac Os, la commande [Fichier application](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) du langage 4D retourne le chemin d’accès du fichier NomApplication (situé dans le dossier Contents:MacOS du progiciel) et non celui du fichier .comp (dossier Contents:Resources du progiciel). 
+* *macOS*
+    
+    - A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins-and-components). Pour plus d’informations sur l’intégration des licences, reportez-vous à la [Page Licences & Certificat](#licenses-and-certificate). **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
-#### Personnaliser le dossier 4D Volume Desktop
+#### Customizing 4D Volume Desktop folder
 
-Lors de la construction de l’application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le dossier *Final Application* du dossier de destination. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
+When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
 
 * installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
 * ajouter un dossier *PlugIns* personnalisé ;
@@ -233,24 +234,24 @@ Vous devez désigner sur votre disque l’emplacement de l’application 4D Volu
 
 > Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
 
-Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Pour plus d'informations sur ce fichier, reportez-vous à la description de la commande`BUILD APPLICATION`. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. Les différents scénarios proposés sont décrits dans la section [Gestion de la connexion des applications clientes](#management-of-client-connections).
+Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Pour plus d'informations sur ce fichier, reportez-vous à la description de la commande`BUILD APPLICATION`. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
-#### Copie des applications clientes dans l'application serveur
+#### Copy of client applications in the server application
 
-Les options de cette zone permettent de mettre en place le mécanisme de mise à jour des parties clientes de vos applications client/serveur via le réseau à chaque nouvelle version de l’application générée.
+The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
 
-- **Permettre la mise à jour automatique de l’application cliente Windows** - Cochez ces options pour que votre application client/serveur Windows bénéficie du mécanisme de mise à jour automatique des parties clientes via le réseau. 
-- **Permettre la mise à jour automatique de l’application cliente Macintosh** - Cochez ces options pour que votre application client/serveur Macintosh bénéficie du mécanisme de mise à jour automatique des parties clientes via le réseau.
+- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
 
-- **Permettre la mise à jour automatique de l’application cliente Macintosh** - Si vous souhaitez créer une application cliente multi-plate-forme, vous devez en outre désigner sur votre disque l’emplacement de l’application 4D Volume Desktop correspondant à la plate-forme “concurrente” de la plate-forme de génération.
+- **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
     
-    Par exemple, si vous construisez votre application sous Windows, vous devez désigner à l’aide du bouton **[...]** l’application 4D Volume Desktop Mac Os (fournie sous forme de package).
+    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
 
-#### Comment proposer une mise à jour ?
+#### Displaying update notification
 
-Dans la pratique, la proposition de mise à jour des applications clientes découle automatiquement de la mise à jour de l’application serveur.
+The client application update notification is carried out automatically following the server application update.
 
-Le principe est le suivant : lors de la génération d’une nouvelle version de l’application client-serveur depuis le générateur d’applications, la nouvelle partie cliente est copiée sous forme compressée dans le sous-dossier **Upgrade4DClient** du dossier **NomApplication** Server (sous macOS, ces dossiers sont inclus dans le progiciel serveur). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
+It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
 
 Pour provoquer la mise à jour des applications clientes, il suffit de remplacer l’ancienne version de l’application serveur par la nouvelle puis de l’exécuter. Le reste du processus est automatique.
 
@@ -289,7 +290,7 @@ Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 * *Windows* - Chaque dossier contient le fichier exécutable de l’application, nommé *<NomApplication>Client.exe* pour la partie cliente et *<NomApplication>Server.exe* pour la partie serveur, ainsi que les fichiers .rsr correspondants. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
 * *macOS* - Chaque dossier contient uniquement le progiciel de l’application, nommé <NomApplication> Client pour la partie cliente et <NomApplication>Server pour la partie serveur. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
     
-    >     Les progiciels Mac Os générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier. 
+    >     Les progiciels Mac Os générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier.
     >     
 
 Si vous avez coché l’option “Permettre la mise à jour automatique de l’application cliente”, un sous-dossier supplémentaire nommé *Upgrade4DClient* est ajouté dans le dossier/progiciel *<NomApplication>Server*. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
@@ -304,12 +305,12 @@ Lors de la construction d'une application exécutable, 4D duplique le contenu du
 
 #### Emplacements des fichiers Web
 
-Si la partie serveur et/ou la partie cliente de votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
+Si la partie serveur et/ou la partie cliente de votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. These items are the following:
 
-- Fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont requis pour les connexions SSL ainsi que par les commandes de cryptage des données,
-- Dossier racine Web (DossierWeb) par défaut.
+- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+- Default Web root folder (WebFolder).
 
-Les éléments doivent être installés : * **Sous Windows** * **Application serveur** - dans le sous-dossier *Client Server executable\NomApplication Server\Server Database*. * **Application cliente** - dans le sous-dossier *Client Server executable\NomApplication Client*.
+Items must be installed: * **on Windows** * **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder. * **Application cliente** - dans le sous-dossier *Client Server executable\NomApplication Client*.
 
 * **Sous macOS** 
     * **Application serveur** - à côté du progiciel *NomApplication* Server.
@@ -375,13 +376,13 @@ A l’issue de la génération, un nouveau fichier de licence de déploiement es
 
 Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper d’OS X lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
 
-- Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS. 4D vérifiera la disponibilité des éléments nécessaires à la certification au moment de la génération :
+- Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-L'option est affichée sous Windows et Os X mais n’est prise en compte que pour les versions macOS.
+This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
-* **Nom du certificat** : Saisissez dans cette zone le nom de votre certificat développeur validé par Apple. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès :
+* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès :
 
 ![](assets/en/Project/certificate.png)
 
@@ -399,15 +400,15 @@ L'option **Signer l'application** du Générateur d’application de 4D permet d
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notarisées déployées via Internet sont bloquées par défaut.
 
-Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D. A Noter également que cela nécessite l'installation de Xcode.
+Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
 
-Pour plus d'informations sur la notarisation, veuillez vous reporter à [cette page sur le site Web du développeur Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Personnaliser les icônes de l'application
+## Customizing application icons
 
-4D associe une icône par défaut à des applications autonomes, clientes et serveur; mais vous pouvez également personnaliser l'icône pour chaque application.
+4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
-* **macOs** - Lors de la construction d'une application exécutable, 4D gère la personnalisation des icônes. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
+* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
     
     > Apple, Inc. fournit un outil spécifique de création de fichiers d'icônes *icns* (pour plus d'informations, consultez la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
     
@@ -533,5 +534,5 @@ Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélecti
 - **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. L'application peut uniquement quitter.  
     `ServerSelectionAllowed`: **False** ou clé omise ![](assets/en/Project/connect1.png)
 
-- **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. L'utilisateur peut accéder à la fenêtre de sélection de serveur en cliquant sur le bouton **Sélectionner...**.  
-    `ServerSelectionAllowed` : **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. The user can access the server selection window by clicking on the **Select...** button.  
+    `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)

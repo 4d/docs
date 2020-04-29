@@ -13,7 +13,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 | Nom         | Type de données | Valeurs possibles |
 | ----------- | --------------- | ----------------- |
-| showFooters | booléen         | true, false       |
+| showFooters | boolean         | true, false       |
 
 
 #### Objets pris en charge
@@ -28,7 +28,7 @@ This property is used to set the row height for a list box footer in **pixels** 
 
 * *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
-*     *Line* - the height is calculated while taking into account the font size of the row concerned. 
+*     *Line* - the height is calculated while taking into account the font size of the row concerned.
         
     
     * If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
@@ -57,13 +57,13 @@ Note that converting back and forth may lead to an end result that is different 
 
 | Nom          | Type de données | Valeurs possibles             |
 | ------------ | --------------- | ----------------------------- |
-| footerHeight | chaîne          | positive decimal+px &#124; em |
+| footerHeight | string          | positive decimal+px &#124; em |
 
 
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
 
-#### Voir également
+#### See also
 
 [Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

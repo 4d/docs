@@ -12,7 +12,7 @@ A Picture field, variable or expression can be any Windows or Macintosh picture.
 4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
 
 - Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO. 
+- Under macOS, 4D uses ImageIO.
 
 The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
 
@@ -58,7 +58,7 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 - The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
 - The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
 - Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
+- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
 - 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
 
 ### Examples

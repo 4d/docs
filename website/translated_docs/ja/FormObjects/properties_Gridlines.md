@@ -5,34 +5,34 @@ title: Gridlines
 
 * * *
 
-## Horizontal Line Color
+## 横線カラー
 
 Defines the color of the horizontal lines in a list box (gray by default).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                 | データタイプ | Possible Values                            |
+| 名                    | データタイプ | とりうる値                                      |
 | -------------------- | ------ | ------------------------------------------ |
 | horizontalLineStroke | color  | any css value, "'transparent", "automatic" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 * * *
 
-## Vertical Line Color
+## 縦線カラー
 
 Defines the color of the vertical lines in a list box (gray by default).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | データタイプ | Possible Values                            |
+| 名                  | データタイプ | とりうる値                                      |
 | ------------------ | ------ | ------------------------------------------ |
 | verticalLineStroke | color  | any css value, "'transparent", "automatic" |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

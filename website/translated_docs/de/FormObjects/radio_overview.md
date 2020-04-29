@@ -58,11 +58,11 @@ The Toolbar radio button style is primarily intended for integration in a toolba
 
 By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is highlighted. 
+- *Windows* - the button is highlighted.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
-- *macOS* - the highlight of the button never appears. 
+- *macOS* - the highlight of the button never appears.
 
 ### Bevel
 

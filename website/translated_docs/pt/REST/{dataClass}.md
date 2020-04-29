@@ -119,7 +119,7 @@ Return all the data for a specific datastore class.
                     }
                 }
             }
-    .....//more entities here 
+    .....//more entities here
         ]
     }
     

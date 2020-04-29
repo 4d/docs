@@ -12,7 +12,7 @@ Un champ, une variable ou expression de type image peut constituer une image Win
 4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 
 - Sous Windows, 4D utilise WIC (Windows Imaging Component)
-- Sous macOS, 4D utilise ImageIO. 
+- Sous macOS, 4D utilise ImageIO.
 
 Les formats d'image les plus courants sont pris en charge par les deux plates-formes : jpeg, gif, png, tiff, bmp, etc. Sous macOS, le format pdf est également disponible pour l'encodage et le décodage.
 
@@ -58,7 +58,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 - La commande `COMBINE PICTURES` permet d'effectuer des superpositions en conservant les caractéristiques de chaque image source dans l'image résultante.
 - Les opérateurs sur les images retournent des images vectorielles si les deux images sont elles aussi vectorielles (rappelez-vous qu'une image imprimée avec le format d'affichage Sur fond est imprimée en tant que bitmap).
 - Des opération supplémentaires peuvent être réalisées sur des images à l'aide de la commande `TRANSFORM PICTURE`.
-- Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images. 
+- Il n'existe pas d'opérateurs de comparaison pour les images; en revanche 4D propose d'utiliser la commande `Images egales` pour comparer deux images.
 - 4D vous permet de récupérer les coordonnées locales de la souris dans un champ ou une variable image en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie. Les coordonnées sont retournées dans les **Variables système** *MouseX* et *MouseY*. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*. Vous pouvez lire la valeur des variables MouseX et MouseY dans le contexte des événements formulaire **Sur clic**, **Sur double clic**, **Sur relâchement bouton**, **Sur début survol** et **Sur survol**.
 
 ### Exemples

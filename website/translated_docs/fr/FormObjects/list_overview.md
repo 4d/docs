@@ -15,8 +15,8 @@ Le cas échéant, l'icône déployer/contractée est automatiquement affichée �
 
 Le contenu d'un objet formulaire liste hiérarchique peut être initialisé de l'une des manières suivantes :
 
-- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement. 
-- Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire. 
+- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
+- Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
 
 In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
 
@@ -71,10 +71,10 @@ Comme pour les autres commandes de gestion des propriété d’objets, il est po
     - `Count list items`
     - `Find in list`
     - `GET LIST ITEM`
-    - `Get list item font` 
-    - `GET LIST ITEM ICON` 
-    - `GET LIST ITEM PARAMETER` 
-    - `GET LIST ITEM PROPERTIES` 
+    - `Get list item font`
+    - `GET LIST ITEM ICON`
+    - `GET LIST ITEM PARAMETER`
+    - `GET LIST ITEM PROPERTIES`
     - `List item parent`
     - `List item position`
     - `Selected list items`

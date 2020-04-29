@@ -49,9 +49,9 @@ By default, the Regular style has a light gray background with a label in the ce
         "style":"regular",  //define the style of the button
         "defaultButton":"true"  //define button as the default choice
         "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed 
+        "action": "Cancel", //action to be be performed
         "left": 60,  //left position on the form  
-        "top": 160, //top position on the form 
+        "top": 160, //top position on the form
         "width": 100,  //width of the button
         "height": 20 //height of the button
         }
@@ -71,15 +71,15 @@ By default, the Flat style has a white background with a label in the center, ro
 
 ```4d
 <br />    "myButton": {
-                "type": "button",   
-                "style":"flat", 
-                "defaultButton":"true"  
-                "text": "OK",   
-                "action": "Cancel", 
+                "type": "button",
+                "style":"flat",
+                "defaultButton":"true"
+                "text": "OK",
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,         
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -91,7 +91,7 @@ The Toolbar button style is primarily intended for integration in a toolbar. It 
 
 By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
@@ -101,10 +101,10 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"toolbar",  
+                "type": "button",
+                "style":"toolbar",
                 "text": "OK",       
-                "popupPlacement":"separated"    
+                "popupPlacement":"separated"
                 "action": "Cancel",     
                 "left": 60,             
                 "top": 160,             
@@ -119,25 +119,25 @@ The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.
 
 By default, the Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
 ![](assets/en/FormObjects/button_bevel.png)
 
-- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
+- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Example:
 
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"bevel",    
+                "style":"bevel",
                 "text": "OK",       
-                "popupPlacement":"linked"   
-                "action": "Cancel", 
+                "popupPlacement":"linked"
+                "action": "Cancel",
                 "left": 60,     
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -158,14 +158,14 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"roundedBevel", 
-                "text": "OK",   
+                "style":"roundedBevel",
+                "text": "OK",
                 "popupPlacement":"none" /
-                "action": "Cancel", 
+                "action": "Cancel",
                 "left": 60,         
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -175,7 +175,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 By default, the OS X Gradient style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+- *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
@@ -185,15 +185,15 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"gradientBevel",
-                "text": "OK",   
+                "text": "OK",
                 "popupPlacement":"linked"
                 "action": "Cancel",     
                 "left": 60,     
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -213,15 +213,15 @@ By default, the OS X Textured style appears as:
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"texturedBevel",    
-                "text": "OK",   
-                "popupPlacement":"separated"    
-                "action": "Cancel", 
+                "type": "button",
+                "style":"texturedBevel",
+                "text": "OK",
+                "popupPlacement":"separated"
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -241,15 +241,15 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"office",
                 "text": "OK",
-                "popupPlacement":"none" 
-                "action": "Cancel", 
+                "popupPlacement":"none"
+                "action": "Cancel",
                 "left": 60,     
-                "top": 160, 
+                "top": 160,
                 "width": 100,
-                "height": 20    
+                "height": 20
                 }
 ```
 
@@ -265,12 +265,12 @@ The Help button style can be used to display a standard system help button. By d
     "myButton": {
                 "type": "button",
                 "style":"help",     
-                "text": "OK",   
-                "dropping": "custom", 
-                "left": 60, 
+                "text": "OK",
+                "dropping": "custom",
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -287,14 +287,14 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 #### JSON Example:
 
         "myButton": {
-                    "type": "button",   
-                    "style":"circular", 
-                    "text": "OK",   
-                    "dropping": "custom", 
-                    "left": 60, 
+                    "type": "button",
+                    "style":"circular",
+                    "text": "OK",
+                    "dropping": "custom",
+                    "left": 60,
                     "top": 160,     
                     "width": 100,
-                    "height": 20    
+                    "height": 20
                     }
     
 
@@ -308,15 +308,15 @@ The Custom button style accepts a personalized background picture and allows man
 
 ```code
     "myButton": {
-                "type": "button",   
-                "style":"custom",   
-                "text": "", 
+                "type": "button",
+                "style":"custom",
+                "text": "",
                 "customBackgroundPicture": "/RESOURCES/bkgnd.png",
                 "icon": "/RESOURCES/custom.png",  
                 "textPlacement": "center",
-                "left": 60, 
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
+                "width": 100,
                 "height": 20
                 }
 ```

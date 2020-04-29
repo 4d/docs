@@ -23,7 +23,7 @@ title: メソッド
 その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
 
 - サブルーチンと関数
-- オブジェクトの付属メソッド 
+- オブジェクトの付属メソッド
 - メニューメソッド
 - プロセスメソッド
 - イベントまたはエラー処理メソッド
@@ -115,9 +115,9 @@ $0:=$1+" "+$2
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
-$result:=$o.full_name("John";"Smith") 
+$result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
-// $result:=fullName("param1";"param2") と同義です
+// equivalent to $result:=fullName("param1";"param2")
 ```
 
 `This` 関数と組み合わせることで、オブジェクトメソッドを利用した汎用的なコードを書くことができます。 たとえば:
@@ -133,9 +133,9 @@ $0:=This.firstName+" "+This.lastName
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) // メソッドをオブジェクトに追加します
+$o.fullName:=Formula(fullName2) //add the method  
 
-$result:=$o.fullName() 
+$result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 

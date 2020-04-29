@@ -23,11 +23,11 @@ Les structures suivantes sont prises en charge par les requêtes REST :
 
 Si toutes les requêtes REST doivent contenir les paramètres URI et Resource, la sous-ressource (qui filtre les données retournées) est facultative.
 
-Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple :
+Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
-> Vous pouvez placer toutes les valeurs entre guillemets en cas de doute. Par exemple, dans notre exemple ci-dessus, nous aurions pu saisir la valeur du nom de famille entre guillemets "Jones".
+> Vous pouvez placer toutes les valeurs entre guillemets en cas de doute. For example, in our above example, we could've put the value for the last name in quotes "Jones".
 
 Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Outre la récupération de données à l'aide des méthodes HTTP `GET`, vous pouvez également ajouter, mettre à jour et supprimer des entités d'une classe de datastore à l'aide des méthodes HTTP `POST`.
 
