@@ -36,7 +36,7 @@ Once created, you can use a variable wherever you need it in your database. For 
 The following are some basic variable declarations:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+<br /> C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
  C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
  C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
