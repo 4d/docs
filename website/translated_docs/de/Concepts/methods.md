@@ -23,7 +23,7 @@ A method is basically a piece of code that executes one or several actions. In t
 A project method can have one of the following roles, depending on how it is executed and used:
 
 - Subroutine and function
-- Method attached to object 
+- Method attached to object
 - Menu method
 - Process method
 - Event or Error catching method
@@ -115,7 +115,7 @@ You can encapsulate `fullName` in an object:
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
-$result:=$o.full_name("John";"Smith") 
+$result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
@@ -135,7 +135,7 @@ C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) //add the method  
 
-$result:=$o.fullName() 
+$result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
