@@ -2,7 +2,7 @@
 id: querypath
 title: '$querypath'
 ---
-   	
+
 Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
 
 ## 説明
@@ -13,7 +13,7 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 In the steps collection, there is an object with the following properties defining the query executed:
 
-| Property      | 型      | 説明                                                                          |
+| プロパティ         | 型      | 説明                                                                          |
 | ------------- | ------ | --------------------------------------------------------------------------- |
 | description   | String | Actual query executed or "AND" when there are multiple steps                |
 | time          | 数値     | Number of milliseconds needed to execute the query                          |
