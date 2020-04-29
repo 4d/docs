@@ -18,8 +18,8 @@ title: プロジェクトパッケージのビルド
 
 プロジェクトパッケージをビルドするには次の方法があります:
 
-- [BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを使う 
-- [アプリケーションビルド](#application-builder)ウィンドウを使う 
+- [BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを使う
+- [アプリケーションビルド](#application-builder)ウィンドウを使う
 
 このウィンドウを開くには 4D の**デザイン**メニューから**アプリケーションビルド...**を選択します。
 
@@ -88,24 +88,24 @@ title: プロジェクトパッケージのビルド
 
 *\<destination>/Components/MyComponent.4dbase/*
 
-*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこフォルダーにコピーされます。 コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
+*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこフォルダーにコピーされます。 Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
-## アプリケーションページ
+## Application page
 
-このタブでは、スタンドアロンのシングルユーザー版アプリケーションをビルドします:
+This tab allows you can build a stand-alone, single-user version of your application:
 
 ![](assets/en/Project/standaloneProj.png)
 
-### スタンドアロンアプリケーションをビルド
+### Build stand-alone Application
 
-**スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがデータベースプロジェクトをもとに作成されます。
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
 
-ビルドには次のものが必要です:
+The following elements are required for the build:
 
-- 4D Volume Desktop (4D データベースエンジン)
-- [適切なライセンス](#licenses) 
+- 4D Volume Desktop (the 4D database engine),
+- an [appropriate license](#licenses)
 
-Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
+On Windows, this feature creates an executable file (.exe). macOS においては、ソフトウェアパッケージが作成されます。
 
 この処理はコンパイル済みストラクチャーファイルと4D Volume Desktopを統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](http://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
@@ -148,18 +148,18 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
     * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
     * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resources フォルダーです。 **注**: このフォルダには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#data-file-management-in-final-applicatons)を参照してください)。
     * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components)を参照してください。
-    * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 この点に関する詳細は [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 
-    * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば)([4D Volume Desktopフォルダーのカスタマイズ](#customizing-4d-volume-desktop-folder) 参照)
+    * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+    * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
     
-    実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
+    All these items must be kept in the same folder in order for the executable to operate.
 
 * *macOS*
     
-    - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components) を参照してください。 ライセンスの統合に関しては [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 **注**: macOSでは、4D ランゲージの [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。 
+    - A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. プラグインやコンポーネントの統合に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components) を参照してください。 ライセンスの統合に関しては [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
-#### 4D Volume Desktop フォルダーのカスタマイズ 
+#### Customizing 4D Volume Desktop folder
 
-ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を *Final Application* 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
+When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
 
 * 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
 * カスタムプラグインを *Plugins* フォルダーに置く
@@ -234,24 +234,24 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 > 4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。 たとえば、4D Developer の v18 を利用していれば、4D Volume Desktop v18 が必要です。
 
-クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 詳細は [クライアントアプリケーションによる接続の管理](#management-of-client-connections) で説明されています。
+クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
-#### サーバーアプリケーション内部のクライアントアプリケーションのコピー
+#### Copy of client applications in the server application
 
-このエリアのオプションを使用して、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定できます。
+The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
 
-- **Windows クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの Windows クライアントの自動更新を有効にすることができます。 
-- **macOS クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの macOS クライアントの自動更新を有効にすることができます。
+- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
 
-- クロスプラットフォームなクライアントアプリケーションの場合には、ビルドをおこなうマシンとは別のプラットフォーム用の 4D Volume Desktop アプリケーションの場所を選択する必要があります。
+- **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
     
-    たとえば Windows 上で **[...]** ボタンをクリックし、macOS 用の 4D Volume Desktop.app フォルダーを選択します。
+    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
 
-#### 更新通知の表示
+#### Displaying update notification
 
-サーバーが更新されると、各クライアントマシン上に自動で更新通知がおこなわれます。
+The client application update notification is carried out automatically following the server application update.
 
-これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは **ApplicationName** Server フォルダー内の **Upgrade4DClient** サブフォルダーに圧縮して格納されます (macOSでは、これらのフォルダーはサーバーパッケージ内に配置されます)。 クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
+It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
 
 クライアントアプリケーションに更新を通知するには、古いサーバーアプリケーションを新しいバージョンで置き換えて起動します。 あとの処理は自動でおこなわれます。
 
@@ -290,7 +290,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 * *Windows* - 各フォルダーに*\<ApplicationName>Client.exe* (クライアント用) あるいは*\<ApplicationName>Server.exe* (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
 * *macOS* - 各フォルダーは*\<ApplicationName>Client.app* (クライアント用) と*\<ApplicationName>Server.app* (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOSではアプリケーションを実行するためにパッケージをダブルクリックします。
     
-    >     ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。 
+    >     ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。
     >     
 
 "クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
@@ -304,12 +304,12 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 #### Web ファイルの場所 
 
-サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
+サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを These items are the following:
 
-- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
-- デフォルト Web ルートフォルダー (WebFolder)
+- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+- Default Web root folder (WebFolder).
 
-インストール場所: * **Windows** * **サーバーアプリケーション** - *Client Server executable\ \<ApplicationName> Server\Server Database* サブフォルダー内にこれらの項目を配置します。 * **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName> Client* サブフォルダー内にこれらの項目を配置します。
+Items must be installed: * **on Windows** * **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder. * **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName> Client* サブフォルダー内にこれらの項目を配置します。
 
 * **macOS** 
     * **サーバーアプリケーション** - *\<ApplicationName> Server* ソフトウェアパッケージと同階層にこれらの項目を配置します。
@@ -375,13 +375,13 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D はビルドの際に、認証に必要な要素の有無をチェックします: 
+- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D will check the availability of elements required for certification when the build occurs:
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-このオプションは Windows と macOS 両方の環境で表示されますが、macOS の場合においてのみ有効です。
+This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
-* **認証名** - Apple によって有効化されたデベロッパー認証名を入力してください。 この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
+* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
 
 ![](assets/en/Project/certificate.png)
 
@@ -399,15 +399,15 @@ Gatekeeper とは macOS のセキュリティ機能で、インターネット�
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-signing-certificate) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。 なお、Xcode のインストールが必須である点に注意してください。
+Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-signing-certificate) が更新されています。 The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
 
-公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
+For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## アプリケーションアイコンのカスタマイズ
+## Customizing application icons
 
-4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、各アプリケーションごとにこのアイコンをカスタマイズできます。
+4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
-* **macOs** - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
+* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。
     
     > Apple, Inc. より、*icns* アイコンファイルを作成するツールが提供されています。(詳細については、[Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2) を参照してください。)
     
@@ -535,5 +535,5 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 - **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない** デフォルトの挙動です。 アプリケーションは終了する以外の選択肢がありません。  
     `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](assets/en/Project/connect1.png)
 
-- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** ユーザーは **選択...** ボタンをクリックする事によってサーバー選択ウィンドウにアクセスできます。  
-    `ServerSelectionAllowed`: **True**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** The user can access the server selection window by clicking on the **Select...** button.  
+    `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
