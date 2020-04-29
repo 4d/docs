@@ -12,6 +12,6 @@ In Methoden, ganz gleich, ob sie einfach oder komplex sind, verwenden Sie immer 
     - `Repeat...Until`
     - `For...End for`
     - `For each...End for each`  
-        Schleifen werden auf zwei Arten gesteuert: Sie werden entweder solange durchlaufen, bis eine Bedingung gefunden wird oder sie laufen ein- bis n-mal ab. Beide Möglichkeiten lassen sich für alle Arten von Schleifen verwenden. Jedoch eignen sich `While-` und `Repeat-`Schleifen besser für das Durchlaufen, bis eine Bedingung gefunden wird und `For-`Schleifen besser für den zahlenmäßig begrenzten Durchlauf. Mit `For each...End for each` können Sie beide Arten mischen und damit Objekte und Collections durchlaufen. 
+        Schleifen werden auf zwei Arten gesteuert: Sie werden entweder solange durchlaufen, bis eine Bedingung gefunden wird oder sie laufen ein- bis n-mal ab. Beide Möglichkeiten lassen sich für alle Arten von Schleifen verwenden. Jedoch eignen sich `While-` und `Repeat-`Schleifen besser für das Durchlaufen, bis eine Bedingung gefunden wird und `For-`Schleifen besser für den zahlenmäßig begrenzten Durchlauf. Mit `For each...End for each` können Sie beide Arten mischen und damit Objekte und Collections durchlaufen.
 
 **Hinweis:** 4D ermöglicht Programmierstrukturen bis zu einer Tiefe von 512 Ebenen einzubinden.
