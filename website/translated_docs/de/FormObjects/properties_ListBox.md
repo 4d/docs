@@ -54,7 +54,7 @@ The specified form is displayed:
             
             * **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
             * **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
-            * **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
+            * **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
             
             > Double-clicking an empty row is ignored in list boxes.
             
@@ -83,7 +83,7 @@ The specified form is displayed:
             
             4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
             
-            > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent. 
+            > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
             > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
             
             #### JSON Grammar
@@ -116,7 +116,7 @@ The specified form is displayed:
             
             ![](assets/en/FormObjects/property_lockedStaticColumns1.png)
             
-            * If you set all of the columns in the locked area as static, you cannot move these columns within the locked area. 
+            * If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
             
             ![](assets/en/FormObjects/property_lockedStaticColumns2.png)
             
@@ -208,9 +208,9 @@ The specified form is displayed:
             Note that setting properties for an element overrides any other values for this element (if not reset). Beispiel:
             
             ```4d
-             aLControlArr{6}:=lk row is disabled + lk row is not selectable 
+             aLControlArr{6}:=lk row is disabled + lk row is not selectable
              //sets row 6 as disabled AND not selectable
-             aLControlArr{6}:=lk row is disabled 
+             aLControlArr{6}:=lk row is disabled
              //sets row 6 as disabled but selectable again
             ```
             
@@ -231,7 +231,7 @@ The specified form is displayed:
             
             Designates the option for allowing users to select rows:
             
-            - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
+            - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
             - **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
                 The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
             - **Multiple**: Several rows can be selected simultaneously in this mode. 
