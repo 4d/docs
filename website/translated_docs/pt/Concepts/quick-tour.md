@@ -319,7 +319,7 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
-    /* 
+    /*
     other comments
     */
 */
