@@ -22,7 +22,7 @@
 	],
 
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/Pictures","Project/developing","Project/building"],
-	"Forms":["FormEditor/forms","FormEditor/objectLibrary","FormEditor/stylesheets"],
+	"Forms":["FormEditor/forms","FormEditor/listboxWizard","FormEditor/objectLibrary","FormEditor/stylesheets"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
@@ -143,7 +143,7 @@
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
 	"Users and Groups":["Users/overview","Users/editing"],
-	"Web Server":["WebServer/webServerObject"], 
+	"Web Server":["WebServer/webServerObject"],
 	"REST Server": [
 		{
         "type": "subcategory",
