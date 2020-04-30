@@ -1,9 +1,9 @@
 ---
 id: onRowMoved
-title: Sur déplacement ligne
+title: On Row Moved
 ---
 
-| Code | Peut être appelé par                                                                                                                                 | Définition                                            |
+| Code | Can be called by                                                                                                                                     | Definition                                            |
 | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | 34   | [List Box of the array type](FormObjects/listbox_overview.md#array-list-boxes) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box row is moved by the user via drag and drop |
 
