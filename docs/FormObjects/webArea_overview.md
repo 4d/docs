@@ -37,6 +37,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 
 
+
 The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
@@ -187,21 +188,20 @@ You can view and use a web inspector within web areas in your forms or in offscr
 To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area. 
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br>
-	This command can be used directly with onscreen (form object)and offscreen web areas. 
-In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
+	This command can be used directly with onscreen (form object) and offscreen web areas. 
+In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
 
 - **Use the web area context menu**<br>
 This feature can only be used with onscreen web areas and requires that the following conditions are met:
 	- the embedded web rendering engine is selected for the area
 	- the [context menu](properties_Entry.md#context-menu) for the web area is enabled
 	- the use of the inspector is expressly enabled in the area by means of the following statement:
-	```4d
+	
+```4d
 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
-	```
+```
 
-	For more information, refer to the description of the `WA SET PREFERENCE` command.
-
-
+For more information, refer to the description of the `WA SET PREFERENCE` command.
 
 ### Using the web inspector  
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the web inspector window is displayed.   
