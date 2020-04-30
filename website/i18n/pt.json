@@ -657,6 +657,9 @@
       },
       "Users/overview": {
         "title": "Overview"
+      },
+      "WebServer/webServerObject": {
+        "title": "Web Server object"
       }
     },
     "links": {},
@@ -672,7 +675,8 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "Web Server": "Web Server",
+      "REST Server": "REST Server"
     }
   },
   "pages-strings": {
