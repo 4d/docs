@@ -291,8 +291,8 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
-      "FormEditor/forms": {
-        "title": "About 4D Forms"
+      "FormEditor/listboxWizard": {
+        "title": "List Box Builder"
       },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
