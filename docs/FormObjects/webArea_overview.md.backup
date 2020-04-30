@@ -183,7 +183,7 @@ The URLs handled by programming in web areas in macOS must begin with the protoc
 ## Access to web inspector  
 You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
-### Displaying the web inspector  
+### Displaying the Web inspector  
 To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area. 
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br>
