@@ -21,10 +21,9 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
-	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/Pictures","Project/developing","Project/building"],
-	"Forms":["FormEditor/forms","FormEditor/listboxWizard","FormEditor/objectLibrary","FormEditor/stylesheets"],
- 	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
- "Form Objects":["FormObjects/formObjectsOverview",
+	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
+	"Form Editor":["FormEditor/objectLibrary","FormEditor/stylesheets"],
+    "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
 		  "FormObjects/buttonGridOverview",
 		  "FormObjects/checkboxOverview",
