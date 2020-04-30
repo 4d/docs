@@ -270,7 +270,7 @@ To override this behavior, the style value must be followed with an `!important`
 At runtime, 4D automatically prioritizes style sheets in the following order: 
 
 1.	The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`. 
-2.	It will then load the CSS file for the current platform `/SOURCES/styleSheets\_mac.css` or `/SOURCES/styleSheets_windows.css`.
+2.	It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3.	If it exists, it will then load a specific CSS file defined in the JSON form:
 
 	*	a file for both platforms:
