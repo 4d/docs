@@ -657,6 +657,9 @@
       },
       "Users/overview": {
         "title": "Aperçu"
+      },
+      "WebServer/webServerObject": {
+        "title": "Web Server object"
       }
     },
     "links": {},
@@ -672,7 +675,8 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Users and Groups": "Groupes et utilisateurs",
-      "REST Server ": "Serveur REST "
+      "Web Server": "Serveur Web",
+      "REST Server": "Serveur REST"
     }
   },
   "pages-strings": {
