@@ -260,8 +260,6 @@ The same symbols are often used for different operations, depending on the data 
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 
-The operators are fully defined in the chapter Operators and its subsections.
-
 ## Expressions
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
