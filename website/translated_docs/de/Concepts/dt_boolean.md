@@ -14,10 +14,10 @@ Ein Datenfeld, Ausdruck oder eine Variable vom Typ Boolean kann entweder WAHR od
 Dieses Beispiel setzt die Boolean Variable je nach Wert der Schaltfläche. Sie gibt Wahr zurück, wenn die Schaltfläche myButton angeklickt wurde und Falsch, wenn sie nicht angeklickt wurde. Ist die Schaltfläche angeklickt, hat die Variable für die Schaltfläche den Wert 1.
 
 ```4d
- If(myButton=1) ` If the button was clicked
-    myBoolean:=True ` myBoolean is set to True
- Else ` If the button was not clicked,
-    myBoolean:=False ` myBoolean is set to False
+ If(myButton=1) //If the button was clicked
+    myBoolean:=True //myBoolean is set to True
+ Else //If the button was not clicked,
+    myBoolean:=False //myBoolean is set to False
  End if
 ```
 
