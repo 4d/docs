@@ -260,8 +260,6 @@ Souvent, les mêmes symboles sont utilisés pour des opérations différentes, e
 | Date et Numérique | Addition de date | !1989-01-01! + 20 ajoute 20 jours à la date 1 janvier 1989, le résultat est la date 21 janvier 1989 |
 
 
-Les opérateurs sont détaillés dans la section Opérateurs et ses sous-sections.
-
 ## Expressions
 
 Pour parler simplement, les expressions retournent une valeur. En fait, lorsque vous programmez avec 4D, vous utilisez systématiquement des expressions et avez tendance à les manipuler uniquement à travers la valeur qu’elles représentent. Les expressions sont aussi appelées formules.
