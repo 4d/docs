@@ -260,8 +260,6 @@ Je nach Datentyp werden die gleichen Symbole oft für verschiedene Operationen v
 | Datum und Zahl | Datumsaddition | !1989-01-01! + 20 addiert 20 Tage zum Datum 1. Januar 1989 und ergibt das Datum 21. Januar 1989 |
 
 
-Weitere Informationen dazu finden Sie im Kapitel Operatoren.
-
 ## Ausdrücke
 
 Ausdrücke werden gesetzt und geben einen Wert zurück. Tatsächlich verwenden Sie in der 4D Programmiersprache andauernd Ausdrücke und betrachten sie eher als den Wert, den sie darstellen. Ausdrücke werden manchmal auch als Formeln bezeichnet.
