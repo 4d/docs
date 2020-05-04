@@ -3,9 +3,9 @@ id: configuration
 title: Server Configuration
 ---
 
-Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your database directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
+Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your database directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more. 
 
-To start using the REST features, you need to start and configure the 4D REST server.
+To start using the REST features, you need to start and configure the 4D REST server. 
 
 > - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br>
 > - On 4D single-user, you can open up to three REST sessions for testing purposes.   
@@ -15,7 +15,7 @@ To start using the REST features, you need to start and configure the 4D REST se
 
 ## Starting the REST Server
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the database settings in order for REST requests to be processed.
+For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the database settings in order for REST requests to be processed. 
 
 ![alt-text](assets/en/REST/Settings.png)
 
@@ -37,15 +37,15 @@ You can configuring REST accesses with one of the following means:
 
 ### Using the Database settings
 
-The **Read/Write** menu in the "Web/REST resource" page of the database settings specifies a group of 4D users that is authorized to establish the link to the 4D database using REST queries.
+The **Read/Write** menu in the "Web/REST resource" page of the database settings specifies a group of 4D users that is authorized to establish the link to the 4D database using REST queries. 
 
-By default, the menu displays **<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+By default, the menu displays **<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request. 
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Database Settings.
+> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Database Settings. 
 
 ### Using the On REST Authentication database method
 The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D database or you can use your own table of identifiers.
-For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html). 
 
 
 
@@ -57,9 +57,9 @@ Once REST services are enabled in the 4D database, by default a REST session can
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
 ```
-This request will return all employees whose salary field is higher than 10000.
+This request will return all employees whose salary field is higher than 10000. 
 
-> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default.
+> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default. 
 
 If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
 
@@ -78,11 +78,11 @@ To remove the REST exposure for a table:
 Do this for each table whose exposure needs to be modified.
 
 
-### Exposing fields
+### Exposing fields 
 
 By default, all 4D database fields are exposed in REST.
 
-You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field.
+You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field. 
 
 To remove the REST exposure for a field:
 

@@ -1,6 +1,6 @@
 ---
 id: compute
-title: $compute
+title: $compute 
 ---
 
 Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
@@ -8,7 +8,7 @@ Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in
 
 ## Description   
 
-This parameter allows you to do calculations on your data.
+This parameter allows you to do calculations on your data. 
 
 If you want to perform a calculation on an attribute, you write the following:
 

@@ -1,6 +1,6 @@
 ---
 id: genInfo
-title: Getting Server Information
+title: Getting Server Information 
 ---
 
 You can get several information from the REST server:
@@ -19,7 +19,7 @@ To get the collection of all exposed dataclasses along with their attributes:
 
 ## Cache info
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions. 
 
 ## queryPath and queryPlan
 

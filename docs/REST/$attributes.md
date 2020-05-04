@@ -1,6 +1,6 @@
 ---
 id: attributes
-title: $attributes
+title: $attributes 
 ---
 
 Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
@@ -13,10 +13,10 @@ When you have relation attributes in a dataclass, use `$attributes` to define th
 You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
 
 
-- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key). **Related entities** attributes are not extracted.
+- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
 
 - If `$attributes` is specified for **related entity** attributes:
-	- `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)).
+	- `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
 	- `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
 	- `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
 
@@ -25,8 +25,8 @@ You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity select
 	- `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
 	- `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
 
-
-
+  
+  
 ## Example with related entities
 
 If we pass the following REST request for our Company datastore class (which has a relation attribute "employees"):
@@ -71,7 +71,7 @@ If you want to get all attributes from employees:
 If you want to get last name and job name attributes from employees:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
-
+ 
 
 ## Example with related entity
 
