@@ -3,7 +3,7 @@ id: entityset
 title: '$entityset'
 ---
 
-After creating an entity set by using `$method=entityset`, you can then use it subsequently.
+After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5
 
 ### Description
 
-This syntax allows you to execue any operation on a defined entity set.
+This syntax allows you to execute any operation on a defined entity set.
 
 Étant donné que les ensembles d'entités sont limités par le temps (par défaut ou bien après avoir appelé `$timeout` pour définir la limite souhaitée), vous pouvez appeler `$savedfilter` et `$savedorderby` pour sauvegarder le filtre et trier par instructions lorsque vous créez un ensemble d'entités.
 
