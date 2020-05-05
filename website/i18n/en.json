@@ -300,6 +300,9 @@
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
+      "FormEditor/pictures": {
+        "title": "Pictures"
+      },
       "FormEditor/action": {
         "title": "Action"
       },
