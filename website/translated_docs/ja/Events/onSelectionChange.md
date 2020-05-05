@@ -16,7 +16,7 @@ This event can be generated in different contexts.
 
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property      | 型      | 説明                             |
+| プロパティ         | 型      | 説明                             |
 | ------------- | ------ | ------------------------------ |
 | code          | 倍長整数   | 31                             |
 | description   | テキスト   | "On Selection Change"          |
