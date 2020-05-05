@@ -22,7 +22,7 @@
 	],
 
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
-	"Forms":["FormEditor/forms","FormEditor/listboxWizard","FormEditor/objectLibrary","FormEditor/stylesheets"],
+	"Forms":["FormEditor/forms","FormEditor/listboxWizard","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/formEditor"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
