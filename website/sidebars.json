@@ -51,7 +51,8 @@
     ],
     "Form Editor": [
       "FormEditor/objectLibrary",
-      "FormEditor/stylesheets"
+      "FormEditor/stylesheets",
+	  "FormEditor/pictures"
     ],
     "Form Objects": [
       "FormObjects/formObjectsOverview",
