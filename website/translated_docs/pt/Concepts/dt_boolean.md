@@ -14,10 +14,10 @@ A boolean field, variable or expression can be either TRUE or FALSE.
 This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
 
 ```4d
- If(myButton=1) ` If the button was clicked
-    myBoolean:=True ` myBoolean is set to True
- Else ` If the button was not clicked,
-    myBoolean:=False ` myBoolean is set to False
+ If(myButton=1) //If the button was clicked
+    myBoolean:=True //myBoolean is set to True
+ Else //If the button was not clicked,
+    myBoolean:=False //myBoolean is set to False
  End if
 ```
 
