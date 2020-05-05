@@ -5,7 +5,7 @@ title: Hierarchy
 
 * * *
 
-## Hierarchical List Box
+## 階層リストボックス
 
 `Array type list boxes`
 
@@ -15,13 +15,13 @@ Additional options (**Variable 1...10**) are available when the *Hierarchical Li
 
 See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ       | Possible Values                                  |
+| 名          | データタイプ       | とりうる値                                            |
 | ---------- | ------------ | ------------------------------------------------ |
 | datasource | string array | Collection of array names defining the hierarchy |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
