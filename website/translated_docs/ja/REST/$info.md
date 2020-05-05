@@ -9,64 +9,46 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 
 When you call this request for your project, you retrieve information in the following properties:
 
-| プロパティ          | 型  | 説明                                                                                             |
-| -------------- | -- | ---------------------------------------------------------------------------------------------- |
-| cacheSize      | 数値 | Wakanda Server's cache size.                                                                   |
-| usedCache      | 数値 | How much of Wakanda Server's cache has been used.                                              |
-| entitySetCount | 数値 | Number of entity sets.                                                                         |
-| entitySet      | 配列 | An array in which each object contains information about each entity set.                      |
-| ProgressInfo   | 配列 | An array containing information about progress indicator information.                          |
-| sessionInfo    | 配列 | An array in which each object contains information about each user session.                    |
-| jsContextInfo  | 配列 | An array containing one object that returns the information about the JavaScript context pool. |
+| プロパティ          | 型      | 説明                                                                                  |
+| -------------- | ------ | ----------------------------------------------------------------------------------- |
+| cacheSize      | 数値     | 4D Server's cache size.                                                             |
+| usedCache      | 数値     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | 数値     | Number of entity selections.                                                        |
+| entitySet      | コレクション | A collection in which each object contains information about each entity selection. |
+| ProgressInfo   | コレクション | A collection containing information about progress indicator information.           |
+| sessionInfo    | コレクション | A collection in which each object contains information about each user session.     |
 
 
 ### entitySet
 
-For each entity set currently stored in 4D Server's cache, the following information is returned:
+For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 | プロパティ         | 型      | 説明                                                                                                                                                                                                                                                                  |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| tableName     | String | Name of the datastore class.                                                                                                                                                                                                                                        |
-| selectionSize | 数値     | Number of entities in the entity set.                                                                                                                                                                                                                               |
+| dataClass     | String | Name of the datastore class.                                                                                                                                                                                                                                        |
+| selectionSize | 数値     | Number of entities in the entity selection.                                                                                                                                                                                                                         |
 | sorted        | ブール    | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
 | refreshed     | 日付     | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
 | expires       | 日付     | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
 
 
-For information about how to create an entity set, refer to `$method=entityset`. If you want to remove the entity set from 4D Server's cache, use `$method=release`.
+For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 
-> 4D also creates its own entity sets for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
+> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
 > 
 > **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* array:
+For each user session, the following information is returned in the *sessionInfo* collection:
 
 | プロパティ      | 型      | 説明                                                           |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | String | A UUID that references the session.                          |
-| userID     | String | A UUID that references the user who runs the session.        |
 | userName   | String | The name of the user who runs the session.                   |
 | lifeTime   | 数値     | The lifetime of a user session in seconds (3600 by default). |
 | expiration | 日付     | The current expiration date and time of the user session.    |
-
-
-### jsContextInfo
-
-The object in the **jsContextInfo** array details the JavaScript context pool:
-
-| プロパティ                 | 型   | 説明                                                                                    |
-| --------------------- | --- | ------------------------------------------------------------------------------------- |
-| contextPoolSize       | 数値  | Maximum number of reusable contexts that can be stored in the JS pool (50 by default) |
-| activeDebugger        | ブール | Debugger state (false by default)                                                     |
-| usedContextCount      | 数値  | Number of used contexts                                                               |
-| usedContextMaxCount   | 数値  | Maximum number of contexts that have been used simultaneously                         |
-| reusableContextCount  | 数値  | Number of reusable contexts (both used and unused)                                    |
-| unusedContextCount    | 数値  | Number of unused contexts                                                             |
-| createdContextCount   | 数値  | Number of contexts created since the project was started                              |
-| destroyedContextCount | 数値  | Number of contexts destroyed since the project was started                            |
 
 
 ## 例題
@@ -119,7 +101,7 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
             percent: 0
         }
     ],
-    sessionInfo: [
+    sessionInfo: [ 
         {
             sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
             userID: "36713176D42DB045B01B8E650E8FA9C6",
@@ -134,20 +116,8 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
             lifeTime: 3600,
             expiration: "2013-04-23T10:30:25Z"
     }
-    ],
-    jsContextInfo: [
-        {
-            "contextPoolSize": 50,
-            "activeDebugger": false,
-            "usedContextCount": 1,
-            "usedContextMaxCount": 1,
-            "reusableContextCount": 1,
-            "unusedContextCount": 0,
-            "createdContextCount": 4,
-            "destroyedContextCount": 3
-        }
     ]
     }
     
 
-> The progress indicator information listed after the entity sets is used internally by 4D.
+> The progress indicator information listed after the entity selections is used internally by 4D.
