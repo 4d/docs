@@ -9,14 +9,14 @@ title: Animation
 
 Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                 | データタイプ  | Possible Values |
-| -------------------- | ------- | --------------- |
-| loopBackToFirstFrame | boolean | true, false     |
+| 名                    | データタイプ  | とりうる値       |
+| -------------------- | ------- | ----------- |
+| loopBackToFirstFrame | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
 
@@ -26,14 +26,14 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                   | データタイプ  | Possible Values |
-| ---------------------- | ------- | --------------- |
-| switchBackWhenReleased | boolean | true, false     |
+| 名                      | データタイプ  | とりうる値       |
+| ---------------------- | ------- | ----------- |
+| switchBackWhenReleased | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
 
@@ -43,14 +43,14 @@ Displays the first picture all the time except when the user clicks the button. 
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | データタイプ  | Possible Values |
-| ------------------ | ------- | --------------- |
-| switchContinuously | boolean | true, false     |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| switchContinuously | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
 
@@ -60,14 +60,14 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | データタイプ  | Possible Values |
-| ---------- | ------- | --------------- |
-| frameDelay | integer | minimum: 0      |
+| 名          | データタイプ  | とりうる値  |
+| ---------- | ------- | ------ |
+| frameDelay | integer | 最小値: 0 |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
 
@@ -77,14 +77,14 @@ Enables cycling through the contents of the picture button at the specified spee
 
 Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | データタイプ  | Possible Values |
-| ------------------ | ------- | --------------- |
-| switchWhenRollover | boolean | true, false     |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| switchWhenRollover | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
 
@@ -94,13 +94,13 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                   | データタイプ  | Possible Values |
-|:---------------------- | ------- | --------------- |
-| useLastFrameAsDisabled | boolean | true, false     |
+| 名                      | データタイプ  | とりうる値       |
+|:---------------------- | ------- | ----------- |
+| useLastFrameAsDisabled | boolean | true, false |
 
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Picture Button](pictureButton_overview.md)
