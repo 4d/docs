@@ -9,64 +9,46 @@ Renvoie des informations sur les ensembles d'entités stockés couramment dans l
 
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Propriété      | Type      | Description                                                                                  |
-| -------------- | --------- | -------------------------------------------------------------------------------------------- |
-| cacheSize      | Numérique | Taille du cache du serveur Wakanda.                                                          |
-| usedCache      | Numérique | La quantité de cache du serveur Wakanda utilisée.                                            |
-| entitySetCount | Numérique | Nombre d'ensembles d'entités.                                                                |
-| entitySet      | Tableau   | Un tableau dans lequel chaque objet contient des informations sur chaque ensemble d'entités. |
-| ProgressInfo   | Tableau   | Tableau contenant des informations sur les indicateurs de progression.                       |
-| sessionInfo    | Tableau   | Tableau dans lequel chaque objet contient des informations sur chaque session utilisateur.   |
-| jsContextInfo  | Tableau   | Un tableau contenant un objet qui retourne les informations sur le contexte JavaScript.      |
+| Propriété      | Type       | Description                                                                         |
+| -------------- | ---------- | ----------------------------------------------------------------------------------- |
+| cacheSize      | Nombre     | 4D Server's cache size.                                                             |
+| usedCache      | Nombre     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Nombre     | Number of entity selections.                                                        |
+| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
+| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
+| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
 
 
 ### entitySet
 
-Pour chaque ensemble d'entités stocké dans le cache de 4D Server, les informations retournées sont les suivantes :
+For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                   |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | Chaine  | Un UUID qui référence l'ensemble d'entités.                                                                                                                                                                                                                                                                                   |
-| tableName     | Chaine  | Nom de la classe du datastore.                                                                                                                                                                                                                                                                                                |
-| selectionSize | Nombre  | Nombre d'entités dans l'ensemble d'entités.                                                                                                                                                                                                                                                                                   |
+| dataClass     | Chaine  | Nom de la classe du datastore.                                                                                                                                                                                                                                                                                                |
+| selectionSize | Nombre  | Number of entities in the entity selection.                                                                                                                                                                                                                                                                                   |
 | sorted        | Booléen | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                                                  |
 | refreshed     | Date    | Date de création de l'ensemble d'entités ou de la dernière utilisation.                                                                                                                                                                                                                                                       |
 | expires       | Date    | Date d'expiration de l'ensemble d'entités (cette date/heure change chaque fois que l'ensemble d'entités est actualisé). La différence entre actualisé et expire est le timeout d'un ensemble d'entités. Cette valeur correspond soit à deux heures par défaut, soit à la valeur que vous avez définie à l'aide de `$timeout`. |
 
 
-Pour plus d'informations sur la création d'un ensemble d'entités, reportez-vous à `$method=entityset`. Si vous souhaitez supprimer l'ensemble d'entités du cache de 4D Server, utilisez `$method=release`.
+For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 
-> 4D crée également ses propres ensembles d'entités à des fins d'optimisation, de sorte que ceux que vous créez avec `$method=entityset` ne soient pas les seuls à être retournés.
+> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
 > 
 > **IMPORTANT** Si votre projet est en **mode d'accès administrateur contrôlé**, vous devez d'abord vous connecter au projet en tant qu'utilisateur du groupe Admin.
 
 ### sessionInfo
 
-Pour chaque session utilisateur, les informations suivantes sont retournées dans le tableau *sessionInfo* :
+For each user session, the following information is returned in the *sessionInfo* collection:
 
-| Propriété  | Type      | Description                                                       |
-| ---------- | --------- | ----------------------------------------------------------------- |
-| sessionID  | Chaine    | Un UUID qui référence la session.                                 |
-| userID     | Chaine    | Un UUID qui référence l'utilisateur qui lance la session.         |
-| userName   | Chaine    | Nom de l'utilisateur qui lance la session.                        |
-| lifeTime   | Numérique | La durée d'une session utilisateur en secondes (3600 par défaut). |
-| expiration | Date      | Date et heure d'expiration courante de la session utilisateur.    |
-
-
-### jsContextInfo
-
-L'objet du tableau **jsContextInfo** détaille le contexte JavaScript :
-
-| Propriété             | Type      | Description                                                                                    |
-| --------------------- | --------- | ---------------------------------------------------------------------------------------------- |
-| contextPoolSize       | Nombre    | Nombre maximum de contextes réutilisables pouvant être stockés dans le pool JS (50 par défaut) |
-| activeDebugger        | Booléen   | Etat du débogueur (faux par défaut)                                                            |
-| usedContextCount      | Numérique | Nombre de contextes utilisés                                                                   |
-| usedContextMaxCount   | Numérique | Nombre maximum de contextes qui ont été utilisés simultanément                                 |
-| reusableContextCount  | Numérique | Nombre de contextes réutilisables (utilisés et non utilisés)                                   |
-| unusedContextCount    | Numérique | Nombre de contextes inutilisés                                                                 |
-| createdContextCount   | Numérique | Nombre de contextes créés depuis le démarrage du projet                                        |
-| destroyedContextCount | Numérique | Nombre de contextes détruits depuis le démarrage du projet                                     |
+| Propriété  | Type   | Description                                                       |
+| ---------- | ------ | ----------------------------------------------------------------- |
+| sessionID  | Chaine | Un UUID qui référence la session.                                 |
+| userName   | Chaine | Nom de l'utilisateur qui lance la session.                        |
+| lifeTime   | Nombre | La durée d'une session utilisateur en secondes (3600 par défaut). |
+| expiration | Date   | Date et heure d'expiration courante de la session utilisateur.    |
 
 
 ## Exemple
@@ -134,20 +116,8 @@ Retourne des informations sur les ensembles d'entités stockés couramment dans 
             lifeTime: 3600,
             expiration: "2013-04-23T10:30:25Z"
     }
-    ],
-    jsContextInfo: [
-        {
-            "contextPoolSize": 50,
-            "activeDebugger": false,
-            "usedContextCount": 1,
-            "usedContextMaxCount": 1,
-            "reusableContextCount": 1,
-            "unusedContextCount": 0,
-            "createdContextCount": 4,
-            "destroyedContextCount": 3
-        }
     ]
     }
     
 
-> Les informations de l'indicateur de progression répertoriées après les ensembles d'entités sont utilisées en interne par 4D.
+> The progress indicator information listed after the entity selections is used internally by 4D.

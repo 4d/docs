@@ -3,7 +3,7 @@ id: entityset
 title: '$entityset'
 ---
 
-Après avoir créé un ensemble d'entités à l'aide de `$method=entityset`, vous pouvez ensuite l'utiliser ultérieurement.
+After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5
 
 ### Description
 
-Cette syntaxe vos permet d'exécuter toute opération sur un ensemble d'entités défini.
+This syntax allows you to execute any operation on a defined entity set.
 
 Étant donné que les ensembles d'entités sont limités par le temps (par défaut ou bien après avoir appelé `$timeout` pour définir la limite souhaitée), vous pouvez appeler `$savedfilter` et `$savedorderby` pour sauvegarder le filtre et trier par instructions lorsque vous créez un ensemble d'entités.
 
@@ -52,7 +52,7 @@ Voici les opérateurs logiques :
 | Opérateur | Description                                                                                                                                                                         |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Retourne les entités communes aux deux ensembles d'entités                                                                                                                          |
-| OR        | Retourne les entités contenues dans les deux ensembles d'entités                                                                                                                    |
+| OU        | Retourne les entités contenues dans les deux ensembles d'entités                                                                                                                    |
 | EXCEPT    | Retourne les entités de l'ensemble d'entités #1 moins celles de l'ensemble d'entités #2                                                                                             |
 | INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux ensembles d'entités (ce qui signifie qu'au moins une entité est commune aux deux ensembles d'entités) |
 

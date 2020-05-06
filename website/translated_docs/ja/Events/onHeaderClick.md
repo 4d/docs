@@ -10,7 +10,7 @@ title: On Header Click
 
 ## 説明
 
-### List Box
+### リストボックス
 
 This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
 
@@ -30,7 +30,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
 <table>
   <tr>
     <th>
-      Property
+      プロパティ
     </th>
     
     <th>
