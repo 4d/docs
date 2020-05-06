@@ -20,14 +20,12 @@ We call the following REST request in a transaction.
 
     [
     {
-        "__KEY": "1",
-        "__STAMP": 5,
-        "salary": 45000
+        "__KEY": "200",
+        "firstname": "John"
     },
     {
-        "__KEY": "2",
-        "__STAMP": 10,
-        "salary": 99000
+        "__KEY": "201",
+        "firstname": "Harry"
     }
     ]
     
@@ -35,59 +33,31 @@ We call the following REST request in a transaction.
 We get the following error in the second entity and therefore the first entity is not saved either:
 
     {
-        "__ENTITIES": [
+        "__STATUS": {
+            "success": true
+        },
+        "__KEY": "200",
+        "__STAMP": 1,
+        "uri": "/rest/Employee(200)",
+        "__TIMESTAMP": "!!2020-04-03!!",
+        "ID": 200,
+        "firstname": "John",
+        "lastname": "Keeling",
+        "isWoman": false,
+        "numberOfKids": 2,
+        "addressID": 200,
+        "gender": false,
+        "address": {
+            "__deferred": {
+                "uri": "/rest/Address(200)",
+                "__KEY": "200"
+            }
+        },
+        "__ERROR": [
             {
-                "__KEY": "1",
-                "__STAMP": 5,
-                "uri": "http://127.0.0.1:8081/rest/Employee(1)",
-                "ID": 1,
-                "firstName": "John",
-                "lastName": "Smith",
-                "fullName": "John Smith",
-                "gender": false,
-                "telephone": "4085551111",
-                "salary": 45000,
-                "employerName": "Adobe",
-                "employer": {
-                    "__deferred": {
-                        "uri": "http://127.0.0.1:8081/rest/Company(1)",
-                        "__KEY": "1"
-                    }
-                }
-            },
-            {
-                "__KEY": "2",
-                "__STAMP": 2,
-                "ID": 2,
-                "firstName": "Paula",
-                "lastName": "Miller",
-                "fullName": "Paula Miller",
-                "telephone": "4085559999",
-                "salary": 36000,
-                "employerName": "Adobe",
-                "employer": {
-                    "__deferred": {
-                        "uri": "http://127.0.0.1:8081/rest/Company(1)",
-                        "__KEY": "1"
-                    }
-                },
-                "__ERROR": [
-                    {
-                        "message": "Value cannot be greater than 60000",
-                        "componentSignature": "dbmg",
-                        "errCode": 1569
-                    },
-                    {
-                        "message": "Entity fails validation",
-                        "componentSignature": "dbmg",
-                        "errCode": 1570
-                    },
-                    {
-                        "message": "The entity# 1 of the datastore class \"Employee\" cannot be saved",
-                        "componentSignature": "dbmg",
-                        "errCode": 1517
-                    }
-                ]
+                "message": "Cannot find entity with \"201\" key in the \"Employee\" datastore class",
+                "componentSignature": "dbmg",
+                "errCode": 1542
             }
         ]
     }

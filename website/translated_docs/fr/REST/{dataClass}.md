@@ -11,13 +11,13 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 ## Syntaxe
 
-| Syntaxe                                                        | Exemple                     | Description                                                                            |
-| -------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                  | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
-| [**{dataClass}({clé})**](#dataclasskey)                        | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue) | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
-| [**{dataClass}/{méthode}**](#dataclassmethod)                  | `/Employee/getHighSalaries` | Returns an entity selection or a collection based on a dataclass method                |
-| [**{dataClass}({key})/{method}**](#dataclasskey)               | `/Employee(22)/getAge`      | Returns a value based on an entity method                                              |
+| Syntaxe                                                                    | Exemple                     | Description                                                                                          |
+| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                    |
+| [**{dataClass}({clé})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass               |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                   |
+| [**{dataClass}/{méthode}**](#dataclassmethod-and-dataclasskeymethod)       | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
 
 
 ## {dataClass}
@@ -30,16 +30,23 @@ Lorsque vous appelez ce paramètre dans votre requête REST, les 100 premières 
 
 Voici une description des données retournées :
 
-| Propriété     | Type    | Description                                                                                                                                                                                                                                                   |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | Chaine  | Nom de la classe du datastore.                                                                                                                                                                                                                                |
-| __COUNT       | Nombre  | Nombre d'entités dans la classe du datastore.                                                                                                                                                                                                                 |
-| __SENT        | Nombre  | Number of entities sent by the REST request.This number can be the total number of entities if it is less than the value defined in the Default Top Size property (in the Properties for the datastore class) or `$top/$limit` or the value in `$top/$limit`. |
-| __FIRST       | Nombre  | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                                                                  |
-| __ENTITIES    | Tableau | This array of objects contains an object for each entity with all the Public attributes. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent.                                      |
+| Propriété     | Type       | Description                                                                                                                                                                                                            |
+| ------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                         |
+| __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                          |
+| __SENT        | Nombre     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                                                    |
+| __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                           |
+| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
 
 
-For each entity, there is a **__KEY** and a **__STAMP** property. The **__KEY** property contains the value of the primary key defined for the datastore class. The **__STAMP** is an internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.
+Each entity contains the following properties:
+
+| Propriété   | Type   | Description                                                                                                |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
+| __KEY       | Chaine | Value of the primary key defined for the datastore class.                                                  |
+| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
+| __STAMP     | Nombre | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+
 
 Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
 
@@ -49,18 +56,20 @@ Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide
 
 Renvoie toutes les données d'une classe de datastore spécifique.
 
-`GET  /rest/Employee`
+`GET  /rest/Company`
 
 **Résultat** :
 
     {
         "__entityModel": "Company",
+        "__GlobalStamp": 51,
         "__COUNT": 250,
         "__SENT": 100,
         "__FIRST": 0,
         "__ENTITIES": [
             {
                 "__KEY": "1",
+                "__TIMESTAMP": "2020-04-10T10:44:49.927Z",
                 "__STAMP": 1,
                 "ID": 1,
                 "name": "Adobe",
@@ -76,6 +85,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
             },
             {
                 "__KEY": "2",
+                "__TIMESTAMP": "2018-04-25T14:42:18.351Z",
                 "__STAMP": 1,
                 "ID": 2,
                 "name": "Apple",
@@ -91,6 +101,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
             },
             {
                 "__KEY": "3",
+                "__TIMESTAMP": "2018-04-23T09:03:49.021Z",
                 "__STAMP": 2,
                 "ID": 3,
                 "name": "4D",
@@ -106,6 +117,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
             },
             {
                 "__KEY": "4",
+                "__TIMESTAMP": "2018-03-28T14:38:07.430Z",
                 "__STAMP": 1,
                 "ID": 4,
                 "name": "Microsoft",
@@ -119,7 +131,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
                     }
                 }
             }
-    .....//more entities here
+    .....//more entities here 
         ]
     }
     
@@ -153,7 +165,8 @@ La requête suivante retourne toutes les données publiques de la classe de data
     {
         "__entityModel": "Company",
         "__KEY": "1",
-        "__STAMP": 1,
+        "__TIMESTAMP": "2020-04-10T10:44:49.927Z",
+        "__STAMP": 2,
         "ID": 1,
         "name": "Apple",
         "address": Infinite Loop,
@@ -193,28 +206,17 @@ La requête suivante retourne toutes les données publiques de l'employé nommé
 
 `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{méthode}
+## {dataClass}/{method} and {dataClass}({key})/{method}
 
-Returns an entity selection or a collection based on a dataclass method
+Returns an object or a collection based on a project method.
 
 ### Description
 
-Dataclass methods must be applied to either a dataclass or an entity selection, and must return either an entity selection or a collection. When returning a collection, however, you cannot define which attributes are returned.
+Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
 
 `POST  /rest/Employee/getHighSalaries`
 
-If you do not have the permissions to execute the method, you will receive the following error:
-
-    {
-        "__ERROR": [
-            {
-                "message": "No permission to execute method getHighSalaries in dataClass Employee",
-                "componentSignature": "dbmg",
-                "errCode": 1561
-            }
-        ]
-    }
-    
+`POST  /rest/Employee(52)/getFullName`
 
 ### 4D Configuration
 
@@ -222,10 +224,10 @@ To be called in a REST request, a method must:
 
 - have been declared as "Available through REST server" in 4D,
 - have its master table and scope defined accordingly: 
-    - **Table**: master table
-    - **Scope**: 
+    - **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
+    - **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side. 
         - **Table** -for methods applied to the whole table (dataclass)
-        - **Current record** -for method applied to the current record (entity)
+        - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax. 
         - **Current selection** -for methods applied to the current selection
 
 ![alt-text](assets/en/REST/MethodProp.png)
@@ -236,38 +238,90 @@ You can also pass parameters to a method in a POST.
 
 `POST  /rest/Employee/addEmployee`
 
-**POST data:** ["John","Smith"]
+You can POST data in the body part of the request, for example:
 
-### Manipulating the Data Returned by a Method
+["John","Smith"]
 
-You can define which attributes you want to return, by passing the following:
+### Exemples
 
-`POST /rest/Employee/getEmployees?$attributes=lastName,firstName`
+#### Table scope
 
-You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md). In this case, the method applies to an entity selection. Par exemple:
+Call of a `getAverage` method:
 
-`POST /rest/Employee/getEmployees?$attributes=lastName,firstName&$filter=salary>20000`
+- on [Employee] table
+- with **Table** scope
 
-### Exemple
+```4d
+    //getAverage  
+ALL RECORDS([Employee])
+$0:=New object("ageAverage";Average([Employee]age))
+```
 
-In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:
-
-POST /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
-
-If you want to retrieve an attribute and an extended relation attribute, you can write the following REST request:
-
-`POST  /rest/Employee/getHighSalaries?$attributes=lastName,employer&$expand=employer`
-
-In the example below, the getCities dataclass method returns a collection of cities:
-
-`POST  /rest/Employee/getCities`
+`POST  /rest/Employee/getAverage`
 
 Résultat :
 
     {
-        "result": [
-            "Paris",
-            "Florence",
-            "New York"
-        ]
+        "result": {
+            "ageAverage": 44.125
+        }
+    }
+    
+
+#### Current record scope
+
+Call of a `getFullName` method:
+
+- on [Employee] table
+- with **Current record** scope
+
+```4d
+    //getFullName  
+$0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
+```
+
+`POST  /rest/Employee(3)/getFullName`
+
+Résultat :
+
+    {
+        "result": {
+            "fullName": "John Smith"
+        }
+    }
+    
+
+#### Current selection scope
+
+Call of a `updateSalary` method:
+
+- on [Employee] table
+- with **Current selection** scope
+
+```4d
+    //updateSalary  
+C_REAL($1;$vCount)
+READ WRITE([Employee])
+$vCount:=0
+FIRST RECORD([Employee])
+While (Not(End selection([Employee]))  
+    [Employee]salary:=[Employee]salary * $1
+    SAVE RECORD([Employee])
+    $vCount:=$vCount+1
+    NEXT RECORD([Employee])
+End while 
+UNLOAD RECORD([Employee])
+$0:=New object("updates";$vCount)
+```
+
+`POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
+
+POST data (in the request body): [1.5]
+
+Résultat :
+
+    {
+        "result": {
+            "updated": 42
+        }
     }

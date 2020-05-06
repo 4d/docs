@@ -62,7 +62,7 @@ Retourne des informations sur toutes les dataclasse de votre projet et leurs att
 
 ### Description
 
-En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des classes du datastore du modèle courant de votre projet. Remember that the scope for the datastore classes and their attributes must be **Public** for any information to be returned.
+En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des classes du datastore du modèle courant de votre projet.
 
 Pour plus d'informations sur ce qui est retourné pour chaque classe du datastore et ses attributs, utilisez [`$catalog/{dataClass}`](#catalogdataClass).
 
@@ -78,13 +78,15 @@ Pour plus d'informations sur ce qui est retourné pour chaque classe du datastor
             {
                 "name": "Company",
                 "className": "Company",
-                "collectionName": "CompanyCollection",
+                "collectionName": "CompanySelection",
+                "tableNumber": 2,
                 "scope": "public",
                 "dataURI": "/rest/Company",
                 "attributes": [
                     {
                         "name": "ID",
                         "kind": "storage",
+                        "fieldPos": 1,
                         "scope": "public",
                         "indexed": true,
                         "type": "long",
@@ -93,21 +95,23 @@ Pour plus d'informations sur ce qui est retourné pour chaque classe du datastor
                     {
                         "name": "name",
                         "kind": "storage",
+                        "fieldPos": 2,
                         "scope": "public",
                         "type": "string"
                     },
                     {
                         "name": "revenues",
                         "kind": "storage",
+                        "fieldPos": 3,
                         "scope": "public",
                         "type": "number"
                     },
                     {
                         "name": "staff",
                         "kind": "relatedEntities",
-                        "matchColumn": "employees,staff",
+                        "fieldPos": 4,
                         "scope": "public",
-                        "type": "EmployeeCollection",
+                        "type": "EmployeeSelection",
                         "reversePath": true,
                         "path": "employer"
                     },
@@ -127,7 +131,8 @@ Pour plus d'informations sur ce qui est retourné pour chaque classe du datastor
             {
                 "name": "Employee",
                 "className": "Employee",
-                "collectionName": "EmployeeCollection",
+                "collectionName": "EmployeeSelection",
+                "tableNumber": 1,
                 "scope": "public",
                 "dataURI": "/rest/Employee",
                 "attributes": [
@@ -191,7 +196,8 @@ Les propriétés suivantes sont retournées pour une dataclass exposée :
 | Propriété      | Type   | Description                                                                                                      |
 | -------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
 | name           | Chaine | Nom de la dataclass                                                                                              |
-| collectionName | Chaine | Collection name of the dataclass                                                                                 |
+| collectionName | Chaine | Name of an entity selection on the dataclass                                                                     |
+| tableNumber    | Nombre | Table number in the 4D database                                                                                  |
 | scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont l'étendue est publique sont affichées) |
 | dataURI        | Chaine | Un URI aux données de la dataclass                                                                               |
 
@@ -200,22 +206,17 @@ Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 Voici les propriétés de chaque attribut exposé qui sont retournées :
 
-| Propriété     | Type    | Description                                                                                                                                                                      |
-| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
-| kind          | Chaine  | Attribute type (storage, calculated, relatedEntity, and alias).                                                                                                                  |
-| scope         | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
-| indexed       | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
-| type          | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
-| minLength     | Nombre  | This property returns the value entered for the **Min Length** property, if one was entered.                                                                                     |
-| maxLength     | Nombre  | This property returns the value entered for the **Max Length** property, if one was entered.                                                                                     |
-| autoComplete  | Booléen | This property returns True if the **Autocomplete** property was checked. Sinon, cette propriété n'apparaîtra pas.                                                                |
-| identifying   | Booléen | This property returns True if the **Identifying** property was checked. Sinon, cette propriété n'apparaîtra pas.                                                                 |
-| multiLine     | Booléen | This property returns True if the **Multiline** property was checked. Sinon, cette propriété n'apparaîtra pas.                                                                   |
-| path          | Chaine  | For an alias attribute, the type is a path (*e.g.*, employer.name)                                                                                                               |
-| readOnly      | Booléen | This property is True if the attribute is of type calculated or alias.                                                                                                           |
-| defaultFormat | Objet   | If you define a format for the attribute in the **Default Format** property, it will appear in the "format" property.                                                            |
-
+| Propriété   | Type    | Description                                                                                                                                                                      |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
+| kind        | Chaine  | Attribute type (storage or relatedEntity).                                                                                                                                       |
+| fieldPos    | Nombre  | Position of the field in the database table).                                                                                                                                    |
+| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
+| indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
+| type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
+| identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                                         |
+| path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
+ foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
 
 ### Méthode(s)
 
@@ -307,6 +308,7 @@ Vous pouvez récupérer les informations concernant une classe de datastore spé
                 name: "employerName",
                 kind: "alias",
                 scope: "public",
+    
                 type: "string",
                 path: "employer.name",
                 readOnly: true

@@ -4,7 +4,7 @@ title: '$filter'
 ---
 
 
-
+ 
 Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Description
@@ -33,7 +33,7 @@ You can also use 4D's params property.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` where firstName and salary are attributes in the Employee datastore class.
+For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee datastore class.
 
 For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation.
 
