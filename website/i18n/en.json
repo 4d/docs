@@ -288,6 +288,9 @@
       "FormEditor/stylesheets": {
         "title": "Style sheets"
       },
+      "FormEditor/formEditor": {
+        "title": "Form Editor"
+      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
