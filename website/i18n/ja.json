@@ -33,7 +33,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "Classes"
+        "title": "クラス"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -69,7 +69,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -291,14 +291,17 @@
       "FormEditor/stylesheets": {
         "title": "スタイルシート"
       },
+      "FormEditor/formEditor": {
+        "title": "フォームエディター"
+      },
       "FormEditor/forms": {
         "title": "About 4D Forms"
       },
-      "FormEditor/listboxWizard": {
-        "title": "List Box Builder"
-      },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
+      },
+      "FormEditor/pictures": {
+        "title": "ピクチャー"
       },
       "FormEditor/action": {
         "title": "動作"
@@ -671,7 +674,7 @@
       "Project Databases": "プロジェクトデータベース",
       "Forms": "フォーム",
       "Form Properties": "Form Properties",
-      "Form Objects": "Form Objects",
+      "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
@@ -688,7 +691,7 @@
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
-    "Form Objects|no description given": "Form Objects",
+    "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "Form Object Properties",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",

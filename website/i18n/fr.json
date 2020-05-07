@@ -291,14 +291,17 @@
       "FormEditor/stylesheets": {
         "title": "Feuilles de style (style sheets)"
       },
+      "FormEditor/formEditor": {
+        "title": "Éditeur de formulaire"
+      },
       "FormEditor/forms": {
         "title": "About 4D Forms"
       },
-      "FormEditor/listboxWizard": {
-        "title": "List Box Builder"
-      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
+      },
+      "FormEditor/pictures": {
+        "title": "Images"
       },
       "FormEditor/action": {
         "title": "Action"

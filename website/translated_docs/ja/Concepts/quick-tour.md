@@ -35,19 +35,26 @@ $myHour:=?08:12:55? // 時間リテラルを代入します
 
 ## 変数
 
-4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型付けのされた変数は `C_XXX` コマンドを使って作成します。 たとえば、日付型の変数を作成するには、次のように書くことができます:
+4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 You create a typed variable using the `var` keyword. たとえば、日付型の変数を作成するには、次のように書くことができます:
 
 ```4d
-C_DATE(MyDate) // MyDate 変数を日付型として宣言
+var MyDate : Date 
 ```
 
-推奨はされませんが、変数を使用することで作成することもできます。フィールドとは異なり、変数は必ずしも正式に宣言する必要はありません。 たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:
+The `var` keyword allows declaring object variables of a defined class type, for example:
+
+```4d
+var myPerson : cs.Person 
+//variable of the Person user class
+```
+
+Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
+The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
 ## コマンド
 
@@ -181,7 +188,7 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
 ```
 
-## Classes
+## クラス
 
 The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
 
@@ -256,7 +263,7 @@ This.name:="Square"
 | データタイプ | 演算子      | 例題                                                        |
 | ------ | -------- | --------------------------------------------------------- |
 | 数値     | 加算 (足し算) | 1 + 2 は数値を加算し、結果は 3 です。                                   |
-| String | 連結 (結合)  | "みなさん" + "こんにちは" は文字を連結 (結合) し、結果は "みなさんこんにちは" です。        |
+| 文字列    | 連結 (結合)  | "みなさん" + "こんにちは" は文字を連結 (結合) し、結果は "みなさんこんにちは" です。        |
 | 日付と数値  | 日付の加算    | !2006/12/4! + 20 は、2006年12月4日に 20日を加算し、結果は 2006年12月24日です。 |
 
 
@@ -280,10 +287,10 @@ This.name:="Square"
 
 | 式                           | 型           | 説明                                                                              |
 | --------------------------- | ----------- | ------------------------------------------------------------------------------- |
-| "こんにちは"                     | String      | これは文字列定数 "こんにちは" です。 文字列定数であることを表すために二重引用符が必要です。                                |
-| "みなさん" + "こんにちは"            | String      | 2つの文字列 "みなさん" と "こんにちは" が + 演算子により結合され、 "みなさんこんにちは" を返します。                      |
-| [People]Name + "様"          | String      | 2つの文字列の結合です。 [People]Name フィールドと文字列 "様" が結合されます。 フィールドの値が "小林" の場合、"小林様" を返します。 |
-| Uppercase ("smith")         | String      | この式は `Uppercase` コマンドを使用して、文字列 "smith" を英大文字に変換します。 そして "SMITH" を返します。          |
+| "こんにちは"                     | 文字列         | これは文字列定数 "こんにちは" です。 文字列定数であることを表すために二重引用符が必要です。                                |
+| "みなさん" + "こんにちは"            | 文字列         | 2つの文字列 "みなさん" と "こんにちは" が + 演算子により結合され、 "みなさんこんにちは" を返します。                      |
+| [People]Name + "様"          | 文字列         | 2つの文字列の結合です。 [People]Name フィールドと文字列 "様" が結合されます。 フィールドの値が "小林" の場合、"小林様" を返します。 |
+| Uppercase ("smith")         | 文字列         | この式は `Uppercase` コマンドを使用して、文字列 "smith" を英大文字に変換します。 そして "SMITH" を返します。          |
 | 4                           | 数値          | これは数値定数 4です。                                                                    |
 | 4 * 2                       | 数値          | 2つの数値、4 と 2 の乗算です。乗算演算子の (*) を使用しています。 数値の 8を返します。                              |
 | myButton                    | 数値          | これはボタンに紐づけられた変数です。 ボタンの現在の値を返します: クリックされた場合に 1、それ以外は 0 を返します。                   |
