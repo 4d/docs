@@ -57,7 +57,7 @@ Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht e
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
-Here is another example: you want to initialize a form object with a text value but without setting a default value. Hierfür können Sie das Element Null des Array verwenden:
+Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisieren, jedoch ohne Setzen eines Standardwerts. Hierfür können Sie das Element Null des Array verwenden:
 
 ```4d
   // method for a combo box or drop-down list  
