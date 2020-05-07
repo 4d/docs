@@ -29,7 +29,7 @@ title: 4D プロジェクトのアーキテクチャー
 
 - *databaseName*.4DProject ファイル
 - Sources 
-    + Classes
+    + クラス
     + DatabaseMethods
     + メソッド
     + フォーム
@@ -77,7 +77,7 @@ title: 4D プロジェクトのアーキテクチャー
 | *methodName*.4dm | データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。 | テキスト |
 
 
-#### Classes folder
+#### Classes フォルダー
 
 | 内容              | 説明                                                                                                                                 | 形式   |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -220,7 +220,7 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 プロジェクトデータベースが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-## Documentation folder
+## Documentation フォルダー
 
 This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
 
