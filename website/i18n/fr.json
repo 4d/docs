@@ -111,6 +111,9 @@
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
+      "FormEditor/pictures": {
+        "title": "Images"
+      },
       "FormObjects/buttonOverview": {
         "title": "Bouton"
       },
@@ -444,7 +447,9 @@
       }
     },
     "links": {
-      "v18 R2 BETA": "v18 R2 BETA"
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
     },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
@@ -456,7 +461,7 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Users and Groups": "Groupes et utilisateurs",
-      "REST Server ": "Serveur REST "
+      "REST Server": "Serveur REST"
     }
   },
   "pages-strings": {
