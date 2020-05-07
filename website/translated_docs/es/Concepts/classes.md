@@ -178,6 +178,8 @@ Class functions are properties of the prototype object of the owner class. They 
 
 In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be ECMAScript compliant.
 
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+
 Within a class function, the `This` is used as the object instance. For example:
 
 ```4d
@@ -195,12 +197,18 @@ For a class function, the `Current method name` command returns: "*\<ClassName>.
 In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example `myObject.methodName("hello")`.
-- use of a "Function" class member methods 
+- use of a "Function" class member method 
     - `apply()`
     - `call()`
 
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> - the compiler does not generate any error (which is different compared to regular methods),
+
+<
+
+p>
+
+> - an error is thrown by 4D only at runtime.
 
 #### Example
 
