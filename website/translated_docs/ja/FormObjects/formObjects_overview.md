@@ -16,11 +16,11 @@ title: 4D フォームオブジェクトについて
 
 4D フォームオブジェクトの追加や編集は次の方法でおこなえます:
 
-* **フォームエディター:** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。 フォームに配置したら、そのオブジェクトのプロパティをプロパティリストから編集できます。詳細については [フォームの作成](https://doc.4d.com/4Dv18/4D/18/Building-forms.200-4575447.ja.html) を参照ください。
+* **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。 フォームに配置したら、そのオブジェクトのプロパティをプロパティリストから編集できます。詳細については [フォームの作成](https://doc.4d.com/4Dv18/4D/18/Building-forms.200-4575447.ja.html) を参照ください。
 
 * **4D ランゲージ**: [オブジェクト(フォーム)](https://doc.4d.com/4Dv18/4D/18/Objects-Forms.201-4504342.ja.html) テーマのコマンド (`OBJECT DUPLICATE` や `OBJECT SET FONT STYLE` など) を使って、フィームオブジェクトを作成・定義することができます。
 
-* **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他の [プロパティ](properties_Reference.md) のうち必要なものを設定します。 次はボタンオブジェクトの例です:
+* **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 Use the [type](properties_Object.md#type) property to define the object type, then set its [available properties](properties_Reference.md). Example for a button object:
 
         {
             "type": "button", 

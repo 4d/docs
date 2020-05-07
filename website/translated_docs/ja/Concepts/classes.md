@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 
@@ -108,7 +108,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 - Database folder 
     + Project 
         * Sources 
-            - Classes 
+            - クラス 
                 + Polygon.4dm
 
 ### Class names

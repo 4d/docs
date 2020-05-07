@@ -11,13 +11,13 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 ## Available syntaxes
 
-| シンタックス                                                         | 例題                          | 説明                                                                                               |
-| -------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
-| [**{dataClass}**](#dataClass)                                  | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                       |
-| [**{dataClass}({key})**](#dataclasskey)                        | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                  |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue) | `/Employee:firstName(John)` | Returns the data for one entity in which the attribute's value is defined                        |
-| [**{dataClass}/{method}**](#dataclassmethod)                   | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (project method must be exposed) |
-| [**{dataClass}({key})/{method}**](#dataclasskey)               | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                        |
+| シンタックス                                                                     | 例題                          | 説明                                                                                                   |
+| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                           |
+| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                      |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Returns the data for one entity in which the attribute's value is defined                            |
+| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
 
 
 ## {dataClass}
@@ -30,9 +30,9 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| Property      | 型      | 説明                                                                                                                                                                                              |
+| プロパティ         | 型      | 説明                                                                                                                                                                                              |
 | ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String | Name of the datastore class.                                                                                                                                                                    |
+| __entityModel | 文字列    | Name of the datastore class.                                                                                                                                                                    |
 | __COUNT       | 数値     | Number of entities in the datastore class.                                                                                                                                                      |
 | __SENT        | 数値     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
 | __FIRST       | 数値     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
@@ -41,11 +41,11 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| Property    | 型      | 説明                                                                                                         |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
-| __TIMESTAMP | 日付     | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | 数値     | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| プロパティ       | 型   | 説明                                                                                                         |
+| ----------- | --- | ---------------------------------------------------------------------------------------------------------- |
+| __KEY       | 文字列 | Value of the primary key defined for the datastore class.                                                  |
+| __TIMESTAMP | 日付  | Timestamp of the last modification of the entity                                                           |
+| __STAMP     | 数値  | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
 
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
@@ -206,15 +206,17 @@ The following request returns all the public data of the employee named "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method}
+## {dataClass}/{method} and {dataClass}({key})/{method}
 
-Returns an object or a collection based on a project method
+Returns an object or a collection based on a project method.
 
 ### 説明
 
-Project methods must be applied to either a dataclass or an entity selection, and must return either an object or a collection.
+Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
 
 `POST  /rest/Employee/getHighSalaries`
+
+`POST  /rest/Employee(52)/getFullName`
 
 ### 4D Configuration
 
@@ -222,10 +224,10 @@ To be called in a REST request, a method must:
 
 - have been declared as "Available through REST server" in 4D,
 - have its master table and scope defined accordingly: 
-    - **Table**: master table
-    - **Scope**: 
+    - **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
+    - **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side. 
         - **Table** -for methods applied to the whole table (dataclass)
-        - **Current record** -for method applied to the current record (entity)
+        - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax. 
         - **Current selection** -for methods applied to the current selection
 
 ![alt-text](assets/en/REST/MethodProp.png)
@@ -236,43 +238,90 @@ You can also pass parameters to a method in a POST.
 
 `POST  /rest/Employee/addEmployee`
 
-**POST data:** ["John","Smith"]
+You can POST data in the body part of the request, for example:
 
-###### ######## A REVOIR
-
-### Manipulating the Data Returned by a Method
-
-You can define which attributes you want to return, by passing the following:
-
-`POST /rest/Employee/getEmployees?$attributes=lastName,firstName`
-
-You can also apply any of the following functions to a method: [$filter]($filter.md), [$orderby]($orderby.md), [$skip]($skip.md), [$expand]($expand.md), and [$top/$limit]($top_$limit.md). In this case, the method applies to an entity selection. たとえば:
-
-`POST /rest/Employee/getEmployees?$attributes=lastName,firstName&$filter=salary>20000`
+["John","Smith"]
 
 ### 例題
 
-In the example below, we call our method, but also browse through the collection by returning the next ten entities from the sixth one:
+#### Table scope
 
-POST /rest/Employee/getHighSalaries?$attributes=lastName,employer.name&$top=10&$skip=1`
+Call of a `getAverage` method:
 
-If you want to retrieve an attribute and an extended relation attribute, you can write the following REST request:
+- on [Employee] table
+- with **Table** scope
 
-`POST  /rest/Employee/getHighSalaries?$attributes=lastName,employer&$expand=employer`
+```4d
+    //getAverage  
+ALL RECORDS([Employee])
+$0:=New object("ageAverage";Average([Employee]age))
+```
 
-In the example below, the getCities dataclass method returns a collection of cities:
-
-`POST  /rest/Employee/getCities`
+`POST  /rest/Employee/getAverage`
 
 Result:
 
     {
-        "result": [
-            "Paris",
-            "Florence",
-            "New York"
-        ]
+        "result": {
+            "ageAverage": 44.125
+        }
     }
     
 
-###### ###################"
+#### Current record scope
+
+Call of a `getFullName` method:
+
+- on [Employee] table
+- with **Current record** scope
+
+```4d
+    //getFullName  
+$0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
+```
+
+`POST  /rest/Employee(3)/getFullName`
+
+Result:
+
+    {
+        "result": {
+            "fullName": "John Smith"
+        }
+    }
+    
+
+#### Current selection scope
+
+Call of a `updateSalary` method:
+
+- on [Employee] table
+- with **Current selection** scope
+
+```4d
+    //updateSalary  
+C_REAL($1;$vCount)
+READ WRITE([Employee])
+$vCount:=0
+FIRST RECORD([Employee])
+While (Not(End selection([Employee]))  
+    [Employee]salary:=[Employee]salary * $1
+    SAVE RECORD([Employee])
+    $vCount:=$vCount+1
+    NEXT RECORD([Employee])
+End while 
+UNLOAD RECORD([Employee])
+$0:=New object("updates";$vCount)
+```
+
+`POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
+
+POST data (in the request body): [1.5]
+
+Result:
+
+    {
+        "result": {
+            "updated": 42
+        }
+    }

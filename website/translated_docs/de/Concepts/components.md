@@ -1,54 +1,54 @@
 ---
 id: components
-title: Components
+title: Komponenten
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different databases. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D databases.
+Eine 4D Komponente besteht aus einer Reihe von 4D Methoden und Formularen mit einer oder mehreren Funktionalitäten, die sich in verschiedenen Anwendungen installieren lassen. Sie können z.B. eine 4D E-Mail Komponente entwickeln, die alle Aspekte von Versenden, Empfangen und Speichern von E-Mails in 4D Anwendungen verwaltet.
 
-Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+4D Komponenten werden direkt aus 4D erstellt und installiert. Komponenten werden ähnlich wie [ Plug-Ins](Concepts/plug-ins.md) verwaltet. Es gelten folgende Regeln:
 
-- A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
-- To install a component in a database, you simply need to copy it into the "Components" folder of the database, placed next to the structure file or next to the 4D executable application.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
-- You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands. 
+- Eine Komponente besteht aus einer gängigen Strukturdatei (kompiliert oder nicht) mit der Standardarchitektur oder in Form eines Pakets (siehe .4dbase Extension).
+- Um eine Komponente in einer Anwendung zu installieren, genügt es, diese in den Ordner "Components" der Anwendung zu kopieren, der neben der Strukturdatei oder dem ausführbaren 4D Programm liegt.
+- Eine Komponente kann die meisten der 4D Elemente aufrufen: Projektmethoden, Projektformulare, Menüleisten, Auswahllisten, Bilder aus der Objektbibliothiek, usw. Sie kann keine Datenbankmethoden und Trigger aufrufen.
+- In 4D Komponenten können Sie weder Standardtabellen noch Datendateien verwenden. Eine Komponente kann jedoch Tabellen, Felder und Datendateien über Operationen externer Anwendungen erstellen bzw. verwenden. Dies sind separate 4D Anwendungen, in denen Sie mit SQL Befehlen arbeiten. 
 
-## Definitions
+## Definitionen
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bedeutung:
 
-- **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. A matrix database forms a single component. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
-- **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases. 
+- **Matrix Datenbank**: 4D Datenbank zum Entwickeln der Komponente. Die Matrix Datenbank ist eine Standarddatenbank ohne spezifische Attribute. Sie dient zum Erstellen einer einzelnen Komponente. Die Matrix Datenbank wird kompiliert oder unkompiliert in den Ordner "Components" der Datenbank kopiert, welche die Komponente verwendet. Das ist die Host Datenbank.
+- Host Datenbank: Datenbank, in der eine Komponente installiert und verwendet wird.
+- **Komponente**: Matrix Datenbank, kompiliert oder nicht, die in den Ordner "Components" der 4D Anwendung oder der Host Datenbank kopiert wird und deren Inhalt in der Host Datenbank verwendet wird. 
 
-It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
+Beachten Sie, dass eine Datenbank sowohl vom Typ “matrix” als auch “host” sein kann, d.h. eine Matrix Datenbank kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
 
-### Protection of components: compilation
+### Komponenten durch Kompilieren schützen
 
-By default, all the project methods of a matrix database installed as a component are potentially visible from the host database. In particular:
+Standardmäßig sind alle Projektmethoden einer Matrix Datenbank, die als Komponente installiert ist, potentiell von der Host Datenbank aus sichtbar. Das bedeutet im einzelnen:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host database. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
-- The other project methods of the matrix database do not appear in the Explorer but they too can be viewed in the debugger of the host database. 
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden der Host Datenbank aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
+- Andere Projektmethoden der Matrix Datenbank erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger der Host Datenbank sichtbar. 
 
-To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). When a compiled matrix database is installed as a component:
+Um Projektmethoden einer Komponente effektiv zu schützen, müssen Sie lediglich die Matrix Datenbank kompilieren und in Form einer .4dc Datei (kompilierte Datenbank, die keinen interpretierten Code enthält) zur Verfügung stellen. Wird eine kompilierte Matrix Datenbank dann als Komponente installiert, gilt folgendes:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
-- The other project methods of the matrix database will never appear. 
+- Die gemeinsam genutzten Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden der Host Datenbank aufrufen. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
+- Die anderen Projektmethoden der Matrix Datenbank erscheinen nie. 
 
-## Sharing of project methods
+## Projektmethoden gemeinsam nutzen
 
-All the project methods of a matrix database are by definition included in the component (the database is the component), which means that they can be called and executed by the component.
+Per Definition werden alle Projektmethoden in die Komponente integriert (die Datenbank ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host database. In the matrix database, you must explicitly designate the methods that you want to share with the host database. These project methods can be called in the code of the host database (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
+Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in der Host Datenbank auch nicht aufrufen. In der Matrix Datenbank müssen Sie die Methoden, die Sie mit der Host Datenbank teilen wollen, explizit freigeben. Diese Projektmethoden sind dann im Explorer auf der Seite Methoden sichtbar und lassen sich im Code der Host Datenbank aufrufen. Sie lassen sich jedoch im Methodeneditor der Host Datenbank nicht verändern. Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In certain cases, you may need to allow a component to access the project methods of your host database. To do this, you must explicitly designate the project methods of the host database that you want to make accessible to the components.
+**Hinweis:** Aus Sicherheitsgründen kann die Komponente standardmäßig keine Projektmethoden ausführen, die zur Host Datenbank gehören. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihrer Host Datenbank zugreifen kann. Dazu müssen Sie die Projektmethode explizit der Host Datenbank zuweisen, die Sie für die Komponente zugänglich machen wollen.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-## Passing variables
+## Variablen übergeben
 
-The local, process and interprocess variables are not shared between components and host databases. The only way to access component variables from the host database and vice versa is using pointers.
+Lokale, Prozess- und Interprozess Variablen werden nicht von Komponenten und Host Datenbanken gemeinsam genutzt. Die einzige Möglichkeit, aus der Host Datenbank auf Variablen von Komponenten zuzugreifen und umgekehrt, sind Zeiger.
 
-Example using an array:
+Beispiel mit Array:
 
 ```4d
 //In the host database:
@@ -59,7 +59,7 @@ Example using an array:
      APPEND TO ARRAY($1->;2)
 ```
 
-Examples using variables:
+Beispiele mit Variablen:
 
 ```4d
  C_TEXT(myvariable)
@@ -68,15 +68,15 @@ Examples using variables:
  $p:=component_method2(...)
 ```
 
-When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:
+Über Zeiger können Komponenten und Host Datenbank miteinander kommunizieren. Dabei müssen Sie folgendes berücksichtigen:
 
-- The `Get pointer` command will not return a pointer to a variable of the host database if it is called from a component and vice versa.
+- Die 4D Funktion `Get pointer` gibt keinen Zeiger auf eine Variable der Host Datenbank zurück, wenn sie von einer Komponenten aus aufgerufen wird und umgekehrt.
 
-- The component architecture allows the coexistence, within the same interpreted database, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled database). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host database.
+- Die Architektur für Komponenten lässt zu, dass dieselbe interpretierte Datenbank sowohl interpretierte als auch kompilierte Komponenten enthalten kann. In einer kompilierten Datenbank können dagegen nur kompilierte Komponenten verwendet werden. Für diesen Fall gilt folgende Regelung für Zeiger: Der Interpreter kann einen im kompilierten Modus erstellten Zeiger auflösen. Er kann jedoch im kompilierten Modus keinen Zeiger auflösen, der im interpretierten Modus erstellt wurde. Dieses Prinzip wollen wir an folgendem Beispiel erläutern: Wir gehen von den beiden Komponenten C (kompiliert) und I (interpretiert) aus, die in derselben Host Datenbank installiert sind.
     
- - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
- - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error. 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+ - Definiert Komponente C die Variable `myCvar`, kann Komponente I über den Zeiger `->myCvar` auf diese Variable zugreifen.
+ - Definiert Komponente I die Variable `myIvar` variable, kann Komponente C über den Zeiger` ->myIvar` nicht auf diese Variable zugreifen. Diese Syntax verursacht einen Ausführungsfehler. 
+- Wir raten davon ab, Zeiger bei Komponenten über den 4D Befehl `RESOLVE POINTER` miteinander zu vergleichen, da durch die Partitionierung von Variablen gleichnamige Variablen nebeneinander existieren können, die jedoch in einer Komponente ganz anderen Inhalt haben können als in der Host Datenbank bzw. einer anderen Komponenten. Auch der Variablentyp kann in beiden Kontexten unterschiedlich sein. Zeigen z. B. `myptr1` und `myptr2` jeweils auf eine Variable, kann der folgende Vergleich ein inkorrektes Ergebnis zurückgeben:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -85,22 +85,22 @@ When you use pointers to allow components and the host database to communicate, 
       //This test returns True even though the variables are different
 ```
 
-In this case, it is necessary to use the comparison of pointers:
+In diesem Fall müssen Sie die Zeiger miteinander vergleichen:
 
 ```4d
      If(myptr1=myptr2) //This test returns False
 ```
 
-## Access to tables of the host database
+## Auf Tabellen der Host Datenbank zugreifen
 
-Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:
+Auch wenn Komponenten keine Tabellen verwenden können, können Host Datenbanken und Komponenten über Zeiger miteinander kommunizieren. Hier sehen Sie beispielsweise eine Methode, die sich in einer Komponente aufrufen lässt:
 
 ```4d
 // calling a component method
 methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 ```
 
-Within the component, the code of the `methCreateRec` method:
+Der Code von `methCreateRec` in der Komponente lautet:
 
 ```4d
 C_POINTER($1) //Pointer on a table in host database
@@ -115,24 +115,24 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
-## Scope of language commands
+## Reichweite der Befehle der Programmiersprache
 
-Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
+Eine Komponente kann jeden Befehl der 4D Programmiersprache verwenden, außer er gehört zur Liste der [ nicht erlaubten Befehle](#unusable-commands).
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host database (a component does not have its own users and groups).
+Von einer Komponente aufgerufene Befehle laufen im Kontext dieser Komponente, außer für den Befehl `EXECUTE METHOD`. Dieser verwendet den Kontext der durch den Befehl angegebenen Methode. Eine Komponente kann auch die Lesebefehle des Kapitels “Benutzer und Gruppen” verwenden. Die Befehle lesen jedoch die Benutzer und Gruppen der Host Datenbank, da eine Komponente keine eigenen Benutzer und Gruppen hat.
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the database. When these commands are called from a component, they are applied to the host database.
+Die Befehle `SET DATABASE PARAMETER` und `Get database parameter` bilden hier eine Ausnahme. Sie gelten global für die Datenbank. Ruft eine Komponente diese Befehle auf, werden sie auf die Host Datenbank angewendet.
 
-Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
+Darüberhinaus wurden spezifische Maßnahmen für die 4D Funktionen `Structure file` und `Get 4D folder` definiert, wenn sie im Rahmen von Komponenten verwendet werden.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
+Über den Befehl `COMPONENT LIST` erhalten Sie die Liste der Komponenten, die von der Host Datenbank geladen werden.
 
-### Unusable commands
+### Nicht verwendbare Befehle
 
-The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+Die folgenden Befehle eignen sich nicht zur Verwendung in einer Komponenten, da sie die Strukturdatei verändern — die im Nur-Lesen Modus geöffnet ist. Bei Ausführen in einer Komponente wird der Fehler -10511 generiert: "Der Befehl "{command_name}" kann von einer Komponente nicht aufgerufen werden".
 
 - `ON EVENT CALL`
-- `Method called on event`
+- `In einem Ereignis aufgerufene Methode`
 - `SET PICTURE TO LIBRARY`
 - `REMOVE PICTURE FROM LIBRARY`
 - `SAVE LIST`

@@ -22,7 +22,7 @@ Les structures suivantes sont prises en charge par les requêtes REST :
 
 Si toutes les requêtes REST doivent contenir les paramètres URI et Resource, la sous-ressource (qui filtre les données retournées) est facultative.
 
-Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple :
+Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 

@@ -7,7 +7,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 
 > In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
 
-| Property                                                                 | 説明                                                                                     | とりうる値                                                                                                                                |
+| プロパティ                                                                    | 説明                                                                                     | とりうる値                                                                                                                                |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | <a name="a"><strong>a</strong></a>                                       |                                                                                        |                                                                                                                                      |
 | [bottomMargin](properties_FormSize.md#vert-margin)                       | Vertical margin value (in pixels)                                                      | 最小値: 0<a name="d"></a>                                                                                                               |

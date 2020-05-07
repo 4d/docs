@@ -4,7 +4,7 @@ title: 動作
 ---
 
 
-## Method
+## メソッド
 
 Reference of a method attached to the form. フォームメソッドを使用してデータとオブジェクトを管理することができます。ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。 See [Specialized methods](Concepts/methods.md#specialized-methods).
 
