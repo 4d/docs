@@ -48,7 +48,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      longint
+      Lange Ganzzahl
     </td>
     
     <td>
@@ -118,7 +118,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      longint
+      Lange Ganzzahl
     </td>
     
     <td>
