@@ -539,18 +539,18 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 選択行の管理は、リストボックスのタイプが配列か、レコードのセレクションか、あるいはコレクション/エンティティセレクションかによって異なります。
 
-- **セレクションリストボックス**: 選択行は、デフォルトで `$ListboxSetX` と呼ばれる変更可能なセットにより管理されます (X は 0 から始まり、フォーム内のリストボックスの数に応じて一つずつ増加していきます)。 This set is [defined in the properties](properties_ListBox.md#highlight-set) of the list box. It is automatically maintained by 4D: If the user selects one or more rows in the list box, the set is immediately updated. On the other hand, it is also possible to use the commands of the "Sets" theme in order to modify the selection of the list box via programming.
+- **セレクションリストボックス**: 選択行は、デフォルトで `$ListboxSetX` と呼ばれる変更可能なセットにより管理されます (X は 0 から始まり、フォーム内のリストボックスの数に応じて一つずつ増加していきます)。 このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。
 
-- **Collection/Entity selection list box**: Selections are managed through dedicated list box properties:
+- **コレクション/エンティティセレクションリストボックス**: 選択項目は、専用のリストボックスプロパティを通して管理されます。
     
-    - [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
-    - [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
-    - [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
-- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
+    - [カレントの項目](properties_DataSource.md#カレントの項目) は、選択された要素/エンティティを受け取るオブジェクトです。
+    - [選択された項目](properties_DataSource.md#選択された項目) は、選択された項目のコレクションです。
+    - [カレントの項目の位置](properties_DataSource.md#カレントの項目の位置) は、選択された要素あるいはエンティティの位置を返します。
+- **配列リストボックス**: `LISTBOX SELECT ROW` コマンドを使用して、プログラムからリストボックスの行を選択できます。 [リストボックスオブジェクトにリンクされた変数](properties_Object.md#変数あるいは式) は、行選択の取得、設定、保存に使用します。 この変数はブール配列で、4Dが自動的に作成・管理します。 この配列のサイズは、リストボックスのサイズにより決定されます。つまり、各列に関連付けられた配列のうち、最も小さな配列と同じ数の要素を持ちます。 この配列の各要素には、対応する行が選択された場合には `True` が、それ以外の場合は `False` が設定されます。 4D は、ユーザーの動作に応じてこの配列の内容を更新します。 これとは逆に、この配列要素の値を変更して、リストボックス中の選択行を変更することができます。 他方、この配列への要素の挿入や削除はできず、行のタイプ変更もできません。 `Count in array` コマンドを使用して、選択された行の数を調べることができます。 たとえば、以下のメソッドは配列タイプのリストボックスで、最初の行の選択を切り替えます:
 
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
-  //tBListBox is the name of the list box variable in the form
+  // tBListBox はフォーム内にあるリストボックス変数の名前です
  If(tBListBox{1}=True)
     tBListBox{1}:=False
  Else
@@ -558,63 +558,63 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
  End if
 ```
 
-> The `OBJECT SET SCROLL POSITION` command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> `OBJECT SET SCROLL POSITION` コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
 
-### Customizing appearance of selected rows
+### 選択行の見た目のカスタマイズ
 
-When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Since selections are still fully managed by 4D, this means:
+リストボックスの [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) プロパティにチェックを入れている場合には、他のインターフェースオプションを活用してリストボックスの選択行を可視化する必要があります。 ハイライトが非表示になっていても選択行は引き続き 4D によって管理されています。つまり:
 
-- For array type list boxes, you must parse the Boolean array variable associated with the list box to determine which rows are selected or not.
-- For selection type list boxes, you have to check whether the current record (row) belongs to the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box.
+- 配列タイプのリストボックスの場合、当該リストボックスにリンクしているブール配列変数から選択行を割り出します。
+- セレクションタイプのリストボックスの場合、特定行 (レコード) がリストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定しているセットに含まれているかを調べます。
 
-You can then define specific background colors, font colors and/or font styles by programming to customize the appearance of selected rows. This can be done using arrays or expressions, depending on the type of list box being displayed (see the following sections).
+特定された選択行は、それらの背景色やフォントカラー、フォントスタイルなどをプログラムによって調整することで、選択行を独自の方法で可視化することが可能です。 リストボックスのタイプによって、表示の管理は配列や式を使用しておこないます (後述参照)。
 
-> You can use the `lk inherited` constant to mimic the current appearance of the list box (e.g., font color, background color, font style, etc.).
+> リストボックスの現アピアランス (フォントカラー、背景色、フォントスタイル等) を使うには `lk inherited` 定数が使用できます。
 
 #### セレクションリストボックス
 
-To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
+選択行を特定するには、リストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定されているセットに対象行が含まれているかを調べます: 選択行のアピアランスを定義するには、プロパティリストにて [カラー式またはスタイル式プロパティ](#配列と式の使用) を 1つ以上使います。
 
-Keep in mind that expressions are automatically re-evaluated each time the:
+次の場合には式が自動的に再評価されることに留意ください:
 
-- list box selection changes.
-- list box gets or loses the focus.
-- form window containing the list box becomes, or ceases to be, the frontmost window.
+- リストボックスのセレクションが変わった場合
+- リストボックスがフォーカスを得た、あるいは失った場合
+- リストボックスが設置されたフォームウィンドウが最前面になった、あるいは最前面ではなくなった場合
 
 #### 配列リストボックス
 
-You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected.
+選択行を特定するには、当該リストボックスにリンクしているブール配列 [変数](properties_Object.md#変数あるいは式) を調べます:
 
-You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
+選択行のアピアランスを定義するには、プロパティリストにて [行カラー配列または行スタイル配列プロパティ](#配列と式の使用) を 1つ以上使います。
 
-Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
+選択行のアピアランスを定義するリストボックス配列は、`On Selection Change` フォームイベント内で再計算する必要があることに留意が必要です。また、フォーカスの有無を選択行の表示に反映させるには、次のフォームイベント内でもこれらの配列を変更することができます:
 
-- `On Getting Focus` (list box property)
-- `On Losing Focus` (list box property)
-- `On Activate` (form property)
-- `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
+- `On Getting Focus` (リストボックスプロパティ)
+- `On Losing Focus` (リストボックスプロパティ)
+- `On Activate` (フォームプロパティ)
+- `On Deactivate` (フォームプロパティ)
 
 ##### 例題
 
-You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
+システムのハイライトを非表示にして、リストボックスの選択行を緑の背景色で表しました:
 
 ![](assets/en/FormObjects/listbox_styles7.png)
 
-For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:
+配列タイプのリストボックスの場合、[行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) をプログラムにより更新する必要があります。 JSON フォームにおいて、リストボックスに次の行背景色配列を定義した場合:
 
         "rowFillSource": "_ListboxBackground",
     
 
-In the object method of the list box, you can write:
+リストボックスのオブジェクトメソッドに次のように書けます:
 
 ```4d
  Case of
     :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // 行背景色配列
        For($i;1;$n)
           If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
+             _ListboxBackground{$i}:=0x0080C080 // 背景色を緑にします
           Else // not selected
              _ListboxBackground{$i}:=lk inherited
           End if
@@ -622,19 +622,19 @@ In the object method of the list box, you can write:
  End case
 ```
 
-For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property.
+セレクションタイプのリストボックスで同じ効果を得るには、[ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定されたセットに応じて [背景色式](properties_BackgroundAndBorder.md#背景色式) が更新されるよう、メソッドを利用します。
 
-For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:
+JSON フォームにおいて、リストボックスに次のハイライトセットおよび背景色式を定義した場合:
 
         "highlightSet": "$SampleSet",
         "rowFillSource": "UI_SetColor",
     
 
-You can write in the *UI_SetColor* method:
+*UI_SetColor* メソッドに次のように書けます:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 // 背景色を緑にします
  Else
     $color:=lk inherited
  End if
@@ -642,113 +642,113 @@ You can write in the *UI_SetColor* method:
  $0:=$color
 ```
 
-> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
+> 階層リストボックスにおいては、[セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) オプションをチェックした場合には、ブレーク行をハイライトすることができません。 同階層のヘッダーの色は個別指定することができないため、任意のブレーク行だけをプログラムでハイライト表示する方法はありません。
 
-## Managing sorts
+## ソートの管理
 
-By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.
+ヘッダーがクリックされると、リストボックスはデフォルトで標準的なカラムの並べ替えを自動的におこないます。 標準的な並べ替えとは、列の値を英数字順に並べ替え、続けてクリックされると昇順/降順を交互に切り替えます。 すべての列は常に自動で同期されます。
 
-You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
+リストボックスの [ソート可](properties_Action.md#ソート可) プロパティの選択を解除すると、ユーザーによる標準の並べ替えを禁止することができます。
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+開発者は、`LISTBOX SORT COLUMNS` コマンドを使用するか、または `On Header Click` と `On After Sort` フォームイベント (`FORM Event`コマンド参照) を 4D の配列管理コマンドを組み合わせて、独自の並べ替えを設定することができます。
 
-> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
+> [ソート可](properties_Action.md#ソート可) プロパティは、ユーザーによる標準の並べ替えにのみ影響します。`LISTBOX SORT COLUMNS` コマンドは、このプロパティを考慮しません。
 
-The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
+[列ヘッダー変数](properties_Object.md#変数あるいは式)の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。
 
-- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
+- 変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません;  
     ![](assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
+- 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています;  
     ![](assets/en/FormObjects/sorticon1.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
+- 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。  
     ![](assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> `OBJECT SET FORMAT` コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
 
-## Managing row colors, styles, and display
+## スタイルとカラー、表示の管理
 
-There are several different ways to set background colors, font colors and font styles for list boxes:
+リストボックスの背景色、フォントカラー、そしてフォントスタイルを設定するためにはいくつかの方法があります:
 
-- at the level of the [list box object properties](#list-box-objects),
-- at the level of the [column properties](#list-box-columns),
-- using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
-- at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
+- [リストボックスオブジェクト](#リストボックスオブジェクト) のプロパティリストを使用
+- [列](#リストボックス列) のプロパティリストを使用
+- リストボックスまたは列ごとの [配列や式](#配列と式の使用) プロパティを使用
+- セルごとのテキストにて定義 ([マルチスタイルテキスト](properties_Text.md#マルチスタイル) の場合)
 
-### Priority & inheritance
+### 優先順位と継承
 
-Priority and inheritance principles are observed when the same property is set at more than one level.
+優先順位や継承の原理は、複数のレベルにわたって同じプロパティに異なる値が指定された場合に適用されます。
 
-| Priority level | Setting location                                                     |
-| -------------- | -------------------------------------------------------------------- |
-| high priority  | Cell (if multi-style text)                                           |
-|                | Column arrays/methods                                                |
-|                | List box arrays/methods                                              |
-|                | Column properties                                                    |
-|                | List box properties                                                  |
-| low priority   | Meta Info expression (for collection or entity selection list boxes) |
+| 優先度  | 設定場所                                    |
+| ---- | --------------------------------------- |
+| 優先度高 | セル単位 (マルチスタイル使用時)                       |
+|      | 列の配列/メソッド                               |
+|      | リストボックスの配列/メソッド                         |
+|      | 列のプロパティ                                 |
+|      | リストボックスのプロパティ                           |
+| 優先度低 | メタ情報式 (コレクションまたはエンティティセレクションリストボックスの場合) |
 
 
-For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
+例として、リストボックスのプロパティにてフォントスタイルを設定しながら、列には行スタイル配列を使用して異なるスタイルを設定した場合、後者が有効となります。
 
-For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
+それぞれの属性 (スタイル、カラー、背景色) について、デフォルトの値を使用した場合、属性の **継承** がおこなわれます:
 
-- for cell attributes: attribute values of rows
-- for row attributes: attribute values of columns
-- for column attributes: attribute values of the list box
+- セル属性について: 行の属性値を受け継ぎます
+- 行属性について: 列の属性値を受け継ぎます
+- 列属性について: リストボックスの属性値を受け継ぎます
 
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors: ![](assets/en/FormObjects/listbox_styles3.png)
+このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます: ![](assets/en/FormObjects/listbox_styles3.png)
 
-You perform the following modifications:
+以下の変更を加えます:
 
-- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
-- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
-- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
-- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+- リストボックスオブジェクトの [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) プロパティを使用して、2行目の背景色を赤に変更します。
+- リストボックスオブジェクトの [行スタイル配列](properties_Text.md#行スタイル配列) を使用して、4 行目のスタイルをイタリックに変更します。
+- 5 列目の列オブジェクトの [行スタイル配列](properties_Text.md#行スタイル配列) を使用して、5 列目の二つの要素を太字に変更します。
+- 1、2 列目の列オブジェクトの [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) を使用して、両列から一つずつ、計二つの背景色を濃い青に変更します:
 
 ![](assets/en/FormObjects/listbox_styles3.png)
 
-To restore the original appearance of the list box, you can:
+リストボックスを元の状態に戻すには、以下の手順でおこないます:
 
-- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
-- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
-- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
-- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
+- 1、2 列目の行背景色配列の要素 2 に定数 `lk inherited` 定数を渡します。これにより行の赤の背景色を継承します。
+- 5 列目の行スタイル配列の要素 3 と 4 に定数 `lk inherited` を渡します。これにより、要素 4 を除いて標準のスタイルを継承します (要素 4 はリストボックスの行スタイル配列にて指定されたイタリックの属性を継承します)。
+- リストボックスの行スタイル配列の要素 4 に定数 `lk inherited` を渡します。これにより、4 行目のイタリックのスタイルが除去されます。
+- リストボックスの行背景色配列の要素 2 に定数 `lk inherited` を渡します。これにより元の、背景色が交互に変わるリストボックスの状態に戻すことができます。
 
-### Using arrays and expressions
+### 配列と式の使用
 
-Depending of the list box type, you can use different properties to customize row colors, styles and display:
+リストボックスのタイプに応じて、行のカラーやスタイル、表示について使用できるプロパティが異なります:
 
-| プロパティ            | 配列リストボックス                                                              | セレクションリストボックス                                                         | コレクションまたはエンティティセレクションリストボックス                                                                                                                                    |
-| ---------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Background color | [行背景色配列](properties_BackgroundAndBorder.md#row-background-color-array) | [背景色式](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Font color       | [行フォントカラー配列](properties_Text.md#row-font-color-array)                  | [フォントカラー式](properties_Text.md#font-color-expression)                  | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
- Font style|
+| プロパティ   | 配列リストボックス                                                              | セレクションリストボックス                                                         | コレクションまたはエンティティセレクションリストボックス                                                          |
+| ------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 背景色     | [行背景色配列](properties_BackgroundAndBorder.md#row-background-color-array) | [背景色式](properties_BackgroundAndBorder.md#background-color-expression) | [背景色式"](properties_BackgroundAndBorder.md#背景色式) または [メタ情報式](properties_Text.md#メタ情報式) |
+| フォントカラー | [行フォントカラー配列](properties_Text.md#row-font-color-array)                  | [フォントカラー式](properties_Text.md#font-color-expression)                  | [フォントカラー式](properties_Text.md#フォントカラー式) または [メタ情報式](properties_Text.md#メタ情報式)         |
+ フォントスタイル|
 
-[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-| 
+[行スタイル配列](properties_Text.md#行スタイル配列)|[スタイル式](properties_Text.md#スタイル式)|[スタイル式](properties_Text.md#スタイル式) または [メタ情報式](properties_Text.md#メタ情報式)| 表示|[行コントロール配列](properties_ListBox.md#行コントロール配列)|-|-| 
 
-## Printing list boxes
+## リストボックスの印刷
 
-Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
+リストボックスの印刷には 2つの印刷モードがあります: フォームオブジェクトのようにリストボックスを印刷する **プレビューモード** と、フォーム内でリストボックスオブジェクトの印刷方法を制御できる **詳細モード** があります。 フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。
 
-### Preview mode
+### プレビューモード
 
-Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
+プレビューモードでのリストボックスの印刷は、標準の印刷コマンドや **印刷** メニューを使用して、リストボックスを含むフォームをそのまま出力します。 リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。とくに、表示されている以上の行を印刷することはできません。
 
-### Advanced mode
+### 詳細モード
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
+このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 `LISTBOX GET PRINT INFORMATION` コマンドを使用してオブジェクトの印刷を制御できます。
 
-In this mode:
+このモードでは:
 
-- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. 
-- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
+- オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されるオブジェクトのサイズは `LISTBOX GET PRINT INFORMATION` コマンドで取得できます。
+- リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。印刷を実行する前に `OBJECT SET SCROLL POSITION` を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。 
+- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 `LISTBOX GET PRINT INFORMATION` コマンドを使用して、印刷がおこなわれている間の状態をチェックできます。
 
-## Hierarchical list boxes
+## 階層リストボックス
 
 A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
 
