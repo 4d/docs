@@ -66,7 +66,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -110,6 +110,9 @@
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
+      },
+      "FormEditor/pictures": {
+        "title": "ピクチャー"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -444,27 +447,29 @@
       }
     },
     "links": {
-      "v18 R2 BETA": "v18 R2 BETA"
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
     },
     "categories": {
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "Form Editor",
-      "Form Objects": "Form Objects",
+      "Form Editor": "フォームエディター",
+      "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
       "Menus": "Menus",
       "MSC": "Maintenance & Security Center",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "REST Server ": "REST Server "
+      "REST Server": "REST Server"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "Form Editor",
+    "Form Editor|no description given": "フォームエディター",
     "Form Events|no description given": "Form Events",
-    "Form Objects|no description given": "Form Objects",
+    "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "Form Object Properties",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",

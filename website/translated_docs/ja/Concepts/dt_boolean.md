@@ -14,10 +14,10 @@ title: ブール
 ボタンの値に基づいて、ブール変数に値を設定します。 myButton ボタンがクリックされたら myBoolean に True を、クリックされていなければ False を設定します。 ボタンがクリックされるとボタン変数の値は1になります。
 
 ```4d
- If(myButton=1) //If the button was clicked
-    myBoolean:=True //myBoolean is set to True
- Else //If the button was not clicked,
-    myBoolean:=False //myBoolean is set to False
+ If(myButton=1) // ボタンがクリックされたら
+    myBoolean:=True // myBoolean を True に設定
+ Else // ボタンがクリックされていなければ
+    myBoolean:=False // myBoolean を False に設定
  End if
 ```
 
