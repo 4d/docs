@@ -58,10 +58,10 @@ The following table summarizes how object and form methods are called for each e
 | Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
-| Sur activation                | Jamais                             | Oui                | Aucun                       |
-| On Deactivate                 | Jamais                             | Oui                | Aucun                       |
-| On Outside Call               | Jamais                             | Oui                | Aucun                       |
-| On Page Change                | Jamais                             | Oui                | Aucun                       |
+| Sur activation                | Jamais                             | Oui                | None                        |
+| On Deactivate                 | Jamais                             | Oui                | None                        |
+| On Outside Call               | Jamais                             | Oui                | None                        |
+| On Page Change                | Jamais                             | Oui                | None                        |
 | Sur début survol              | Oui                                | Oui                | Objets concernés uniquement |
 | Sur déposer                   | Oui                                | Oui                | Objets concernés uniquement |
 | Sur glisser                   | Oui                                | Jamais             | Objets concernés uniquement |
@@ -69,15 +69,15 @@ The following table summarizes how object and form methods are called for each e
 | Sur survol                    | Oui                                | Oui                | Tous les objets             |
 | Sur fin survol                | Oui                                | Oui                | Tous les objets             |
 | On Mouse Up                   | Oui                                | Jamais             | Objets concernés uniquement |
-| On Menu Selected              | Jamais                             | Oui                | Aucun                       |
-| On Bound variable change      | Jamais                             | Oui                | Aucun                       |
+| On Menu Selected              | Jamais                             | Oui                | None                        |
+| On Bound variable change      | Jamais                             | Oui                | None                        |
 | Sur données modifiées         | Oui                                | Oui                | Objets concernés uniquement |
 | On Plug in Area               | Oui                                | Oui                | Objets concernés uniquement |
 | On Header                     | Oui                                | Oui                | Tous les objets             |
 | On Printing Detail            | Oui                                | Oui                | Tous les objets             |
 | On Printing Break             | Oui                                | Oui                | Tous les objets             |
 | On Printing Footer            | Oui                                | Oui                | Tous les objets             |
-| On Close Box                  | Jamais                             | Oui                | Aucun                       |
+| On Close Box                  | Jamais                             | Oui                | None                        |
 | Sur affichage corps           | Oui                                | Oui                | Tous les objets             |
 | Sur ouverture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
 | Sur fermeture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
