@@ -3,39 +3,27 @@ id: picture
 title: Picture
 ---
 
-A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D or Plug-In commands.
-
-## Native Formats Supported
-
-4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D: library pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as `READ PICTURE FILE`.
 
 4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
 
-- Under Windows, 4D uses WIC (Windows Imaging Component)
-- Under macOS, 4D uses ImageIO. 
+* on Windows, 4D uses WIC (Windows Imaging Component). 
+* on macOS, 4D uses ImageIO.
 
-The most common picture formats are supported of both platforms: jpeg, gif, png, tiff, bmp, etc. On macOS, the pdf format is also available for encoding and decoding.
+WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
 
-The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODE LIST` command. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
+## Picture Codec IDs
 
-**Note:** WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
+4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg.
 
-### Picture Codec IDs
+Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs. They can be returned in the following forms:
 
-Picture formats recognized by 4D are returned by the `PICTURE CODE LIST` command as picture Codec IDs. They can be returned in the following forms:
+* As an extension (for example “.gif”)
+* As a MIME type (for example “image/jpeg”)
 
-- As an extension (for example “.gif”)
-- As a Mime type (for example “image/jpeg”)
+The form returned for each format will depend on the way the Codec is recorded at the operating system level. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
 
-The form returned for each format will depend on the way the Codec is recorded at the operating system level. Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODE LIST` command.
-
-### Unavailable picture format
-
-A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon. The icon is automatically used wherever the picture is meant to be displayed:
-
-![](assets/en/Concepts/missingpict.en.png)
-
-This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for instance, for PDF pictures on Windows, or for old pictures based on PICT.
+Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command.
 
 ## Picture operators
 
@@ -56,20 +44,10 @@ This icon indicates that the picture cannot be displayed or manipulated locally 
 
 - In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
 - The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
-- The picture operators return vectorial pictures if the two source pictures are vectorial. Remember, however, that pictures printed by the display format On Background are printed bitmapped.
 - Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures. 
-- 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software. The coordinates are returned in the *MouseX* and *MouseY* **System Variables**. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*. You can get the value of these variables as part of the **On Clicked**, **On Double Clicked**, **On Mouse up**, **On Mouse Enter**, or **On Mouse Move** form events.
+- There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
 
 ### Examples
-
-In the following examples, all of the pictures are shown using the display format **On Background**.
-
-Here is the picture circle: ![](assets/en/Concepts/Circle.en.png)
-
-Here is the picture rectangle: ![](assets/en/Concepts/rectangle.en.png)
-
-In the following examples, each expression is followed by its graphical representation.
 
 Horizontal concatenation
 
