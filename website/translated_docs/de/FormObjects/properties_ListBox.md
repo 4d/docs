@@ -1,7 +1,6 @@
 ---
-id: version-18.0-propertiesListBox
+id: propertiesListBox
 title: List Box
-original_id: propertiesListBox
 ---
 
 * * *
@@ -12,7 +11,7 @@ Collection of columns of the list box.
 
 #### JSON Grammar
 
-| Name    | Data Type                    | Possible Values                                  |
+| Name    | Datentyp                     | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -65,9 +64,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name                   | Data Type | Possible Values                     |
-            | ---------------------- | --------- | ----------------------------------- |
-            | doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+            | Name                   | Datentyp | Possible Values                     |
+            | ---------------------- | -------- | ----------------------------------- |
+            | doubleClickInRowAction | string   | "editSubrecord", "displaySubrecord" |
 
             
             #### Objects Supported
@@ -89,9 +88,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name         | Data Type | Possible Values |
-            | ------------ | --------- | --------------- |
-            | highlightSet | string    | Name of the set |
+            | Name         | Datentyp | Possible Values |
+            | ------------ | -------- | --------------- |
+            | highlightSet | string   | Name of the set |
 
             
             #### Objects Supported
@@ -128,9 +127,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name              | Data Type | Possible Values |
-            | ----------------- | --------- | --------------- |
-            | lockedColumnCount | integer   | minimum: 0      |
+            | Name              | Datentyp | Possible Values |
+            | ----------------- | -------- | --------------- |
+            | lockedColumnCount | integer  | minimum: 0      |
 
             
             #### Objects Supported
@@ -143,9 +142,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name              | Data Type | Possible Values |
-            | ----------------- | --------- | --------------- |
-            | staticColumnCount | integer   | minimum: 0      |
+            | Name              | Datentyp | Possible Values |
+            | ----------------- | -------- | --------------- |
+            | staticColumnCount | integer  | minimum: 0      |
 
             
             #### Objects Supported
@@ -162,9 +161,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name        | Data Type | Possible Values |
-            | ----------- | --------- | --------------- |
-            | columnCount | integer   | minimum: 1      |
+            | Name        | Datentyp | Possible Values |
+            | ----------- | -------- | --------------- |
+            | columnCount | integer  | minimum: 1      |
 
             
             #### Objects Supported
@@ -183,11 +182,11 @@ The specified form is displayed:
             
             The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
             
-            | Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-            | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-            | lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-            | lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
-            | lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                        |
+            | Constant                 | Wert | Kommentar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+            | ------------------------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+            | lk row is disabled       | 2    | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+            | lk row is hidden         | 1    | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
+            | lk row is not selectable | 4    | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                        |
 
             
             To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
@@ -206,7 +205,7 @@ The specified form is displayed:
             
             ![](assets/en/FormObjects/listbox_styles6.png)
             
-            Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+            Note that setting properties for an element overrides any other values for this element (if not reset). Beispiel:
             
             ```4d
              aLControlArr{6}:=lk row is disabled + lk row is not selectable 
@@ -217,9 +216,9 @@ The specified form is displayed:
             
             #### JSON Grammar
             
-            | Name             | Data Type | Possible Values        |
-            | ---------------- | --------- | ---------------------- |
-            | rowControlSource | string    | Row control array name |
+            | Name             | Datentyp | Possible Values        |
+            | ---------------- | -------- | ---------------------- |
+            | rowControlSource | string   | Row control array name |
 
             
             #### Objects Supported
@@ -238,9 +237,9 @@ The specified form is displayed:
             - **Multiple**: Several rows can be selected simultaneously in this mode. 
             #### JSON Grammar
             
-            | Name          | Data Type | Possible Values              |
-            | ------------- | --------- | ---------------------------- |
-            | selectionMode | string    | "multiple", "single", "none" |
+            | Name          | Datentyp | Possible Values              |
+            | ------------- | -------- | ---------------------------- |
+            | selectionMode | string   | "multiple", "single", "none" |
 
             
             #### Objects Supported
