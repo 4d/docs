@@ -312,22 +312,22 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Typ     | Description                                                           |
-| ---------------- | ------- | --------------------------------------------------------------------- |
-| area             | Text    | List box object area ("header", "footer", "cell")                     |
-| areaName         | Text    | Name of the area                                                      |
-| column           | longint | Column number                                                         |
-| columnName       | Text    | Name of the column                                                    |
-| footerName       | Text    | Name of the footer                                                    |
-| headerName       | Text    | Name of the header                                                    |
-| horizontalScroll | longint | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | boolean | True if row is selected, else False                                   |
-| newPosition      | longint | New position of the column or row                                     |
-| newSize          | longint | New size (in pixels) of the column or row                             |
-| oldPosition      | longint | Previous position of the column or row                                |
-| oldSize          | longint | Previous size (in pixels) of the column or row                        |
-| row              | longint | Row number                                                            |
-| verticalScroll   | longint | Positive if scroll is towards the bottom, negative if towards the top |
+| Property         | Typ            | Description                                                           |
+| ---------------- | -------------- | --------------------------------------------------------------------- |
+| area             | Text           | List box object area ("header", "footer", "cell")                     |
+| areaName         | Text           | Name of the area                                                      |
+| column           | Lange Ganzzahl | Column number                                                         |
+| columnName       | Text           | Name of the column                                                    |
+| footerName       | Text           | Name of the footer                                                    |
+| headerName       | Text           | Name of the header                                                    |
+| horizontalScroll | Lange Ganzzahl | Positive if scroll is towards the right, negative if towards the left |
+| isRowSelected    | boolean        | True if row is selected, else False                                   |
+| newPosition      | Lange Ganzzahl | New position of the column or row                                     |
+| newSize          | Lange Ganzzahl | New size (in pixels) of the column or row                             |
+| oldPosition      | Lange Ganzzahl | Previous position of the column or row                                |
+| oldSize          | Lange Ganzzahl | Previous size (in pixels) of the column or row                        |
+| row              | Lange Ganzzahl | Row number                                                            |
+| verticalScroll   | Lange Ganzzahl | Positive if scroll is towards the bottom, negative if towards the top |
 
 
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
@@ -977,7 +977,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
-| real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
+| Zahl      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | Text                                                                                           |
@@ -994,7 +994,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
 | Text       | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
+| Zahl       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
@@ -1009,7 +1009,7 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | Text | real | integer | boolean | color | event |
+|                       | valueType                               | Text | Zahl | integer | boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
 | *Attributes*          | *Description*                           |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
