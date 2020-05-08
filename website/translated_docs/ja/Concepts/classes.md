@@ -6,35 +6,35 @@ title: クラス
 
 ## 概要
 
-The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
+4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語でクラスを利用すると、属性や関数などを持つ特定のオブジェクトを定義することができます。
 
-Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can `extend` another class, and then inherits from its functions.
+クラスが定義されていると、そのクラスのオブジェクトをコードの中で **インスタンス化** することができます。 各オブジェクトは、それが属するクラスのインスタンスです。 クラスは別のクラスを継承することで、それらの機能を受け継ぐことができます。
 
-The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
+4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
-### Class object
+### Class オブジェクト
 
-A class is an object itself, of "Class" class. A class object has the following properties and methods:
+クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
-- `name` which must be ECMAScript compliant
-- `superclass` object (optional, null if none)
-- `new()` method, allowing to instantiate class objects.
+- `name`: ECMAScript に準拠している必要があります
+- `superclass` オブジェクト (任意で、無ければ null)
+- `new()` メソッド: Class オブジェクトをインスタンス化します
 
-In addtion, a class object can reference:
+さらに、Class オブジェクトは次を参照できます:
 
-- a `constructor` object (optional)
-- a `prototype` object, containing named function objects (optional).
+- `constructor` オブジェクト (任意)
+- `prototype` オブジェクト: 名前付き関数オブジェクトを格納します (任意)
 
-A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスより同時にアクセスすることができます。
 
-### Property lookup and prototype
+### プロパティ検索とプロトタイプ
 
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continue searching in the prototype object of its superclass, and so on until there is no more superclass.
+4D のすべてのオブジェクトは、なんらかのクラスオブジェクトに内部的にリンクしています。 オブジェクト内にプロパティが見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。
 
-All objects inherit from the class "Object" as their inheritance tree top class.
+すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
 ```4d
-  //Class: Polygon
+  // クラス: Polygon
 Class constructor
 C_LONGINT($1;$2)
 This.area:=$1*$2
@@ -49,106 +49,106 @@ $instance:=OB Instance of($poly;4D.Object)
  // true 
 ```
 
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
+オブジェクトのプロパティを列挙する際には、当該クラスのプロトタイプは列挙されません。 したがって、`For each` ステートメントや `JSON Stringify` コマンドは、クラスプロトタイプオブジェクトのプロパティを返しません。 クラスのプロトタイプオブジェクトプロパティは、内部的な隠れプロパティです。
 
-### Class definition
+### クラス定義
 
-A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
+ユーザークラスファイルは、オブジェクトのひな形を定義します。このオブジェクトは `new()` クラスメンバーメソッドを呼び出すことでインスタンス化することができます。 クラスファイル内では、専用の [クラスキーワード](#クラスキーワード) や [クラスコマンド](#クラスコマンド) を使用します。
 
 たとえば:
 
 ```4d
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor
-  C_TEXT($1) // FirstName
-  C_TEXT($2) // LastName
+  C_TEXT($1) // 名前
+  C_TEXT($2) // 名字
   This.firstName:=$1
   This.lastName:=$2
 ```
 
-In a method, creating a "Person":
+メソッド内で "Person" のインスタンスを作成します:
 
     C_OBJECT($o)
     $o:=cs.Person.new("John";"Doe")  
     // $o: {firstName: "John";lastName: "Doe" }
     
 
-Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
+空のクラスファイルを作成し、空のオブジェクトをインスタンス化することも可能です。 たとえば、次の `Empty.4dm` クラスファイルを作成します:
 
 ```4d
-//Empty.4dm class file
-//Nothing
+// Empty.4dm クラスファイル
+// 空です
 ```
 
-You could write in a method:
+メソッドでは次のように書けます:
 
 ```4d
 $o:=cs.Empty.new()  
-//$o : {}
-$cName:=OB Class($o).name //"Empty"
+// $o : {}
+$cName:=OB Class($o).name // "Empty"
 ```
 
-## Class stores
+## クラスストア
 
-Available classes are accessible from their class stores. The following class stores are available:
+提供されているクラスはクラスストアよりアクセスすることができます。 クラスストアには次のものが存在します:
 
-- a class store for built-in 4D classes. It is returned by the `4D` command.
-- a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
+- ビルトイン 4Dクラス専用のクラスストア: `4D` コマンドによって返されます。
+- 開かれている各データベースおよびコンポーネントのクラスストア: `cs` コマンドによって返されます。 "ユーザークラス" ともいいます。
 
-For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
+たとえば、`cs.myClass.new()` ステートメント (`cs` は *クラスストア (classstore)* を意味します) と使って myClass のオブジェクトインスタンスを新規作成できます。
 
-## Handling user classes
+## ユーザークラス
 
-### Class files
+### クラスファイル
 
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+4D においてユーザークラスとは、`/Project/Sources/Classes/` フォルダーに保存された専用のメソッドファイル (.4dm) によって定義されます。 ファイル名がクラス名になります。
 
-For example, if you want to define a class named "Polygon", you need to create the following file:
+たとえば、"Polygon" という名前のクラスを定義するには、次のファイルを作成する必要があります:
 
-- Database folder 
+- データベースフォルダー 
     + Project 
         * Sources 
             - クラス 
                 + Polygon.4dm
 
-### Class names
+### クラス名
 
-When naming classes, you should keep in mind the following rules:
+クラスを命名する際には、次のルールに留意してください:
 
-- A class name must be ECMAScript compliant. 
-- Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
+- ECMAScript に準拠した名前であること 
+- 大文字と小文字が区別されること
+- 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
 
-### 4D Developer interface
+### 4D 開発インターフェース
 
-Class files are automatically stored at the appropriate location when created through the 4D Developer interface, either via the **File** menu or the Explorer.
+**ファイル** メニューまたはエクスプローラーなど、4D 開発インターフェースを介してクラスを作成した場合には、クラスファイルは自動的に適切な場所に保存されます。
 
-#### File menu and toolbar
+#### ファイルメニューとツールバー
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+4D 開発の **ファイル** メニューまたはツールバーより **新規 > クラス...** を選択することで、開いているプロジェクトのクラスファイルを新規作成することができます。
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+**Ctrl+Shift+Alt+k** ショートカットも使用できます。
 
-#### Explorer
+#### エクスプローラー
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+エクスプローラーの **メソッド** ページにおいて、クラスは **クラス** カテゴリに分類されています。
 
-To create a new class, you can:
+クラスを新規作成するには次の方法があります:
 
-- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
-- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page. 
+- **クラス** カテゴリを選択し、![](assets/en/Users/PlussNew.png) ボタンをクリックします。
+- エクスプローラーウィンドウの下部にあるアクションメニュー、またはクラスグループのコンテキストメニューから **新規クラス...** を選択します。 ![](assets/en/Concepts/newClass.png)
+- エクスプローラーのホームページのコンテキストメニューより **新規 > クラス...** を選択します。 
 
-#### Class code support
+#### クラスコードサポート
 
-In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+各種 4D 開発ウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
-- In the code editor: 
-    - a class cannot be run
-    - a class function is a code block 
-    - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
-    - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format. 
+- コードエディター: 
+    - クラスは実行できません
+    - クラス関数はコードのブロックです 
+    - オブジェクトメンバーに対する **定義に移動** 操作はクラス関数宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+    - クラス関数宣言に対する **参照箇所を検索** 操作は、その関数がオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+- ランタイムエクスプローラーおよびデバッガーにおいて、クラス関数は \<ClassName> コンストラクターまたは \<ClassName>.\<FunctionName> 形式で表示されます。
 
 ### Deleting a class
 
