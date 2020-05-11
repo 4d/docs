@@ -33,7 +33,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 | \\"          | " (Anführungszeichen)                     |
 
 
-**Hinweis:** Das Zeichen \ wird unter Windows auch als Trenner in Pfadnamen verwendet. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").</p> 
+**Hinweis:** Das Zeichen \ wird unter Windows auch als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").</p> 
 
 ## String Operatoren
 
@@ -60,16 +60,16 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 
 (*) Wenn das Schlüsselwort "Mer" dem Bild zugeordnet ist, das im Bildausdruck (Datenfeld oder Variable) gespeichert ist.
 
-## String comparisons
+## String Vergleiche
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
+- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach href="dt_string.md#keywords">Schlüsselwort</a>, siehe unten).
+- Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen nicht berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -78,23 +78,23 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // and so on
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist nicht immer dasselbe wie die Sprache, die für das System definiert wurde.
 
-### Wilcard character (@)
+### Joker Zeichen (@)
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+Sie können das Jokerzeichen nur für den zweiten Operanden (der String auf der rechten Seite) einsetzen. Demnach ergibt folgender Ausdruck `FALSE`, da @ im ersten Operanden lediglich als 1 Zeichen gewertet wird:
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
+Das Jokerzeichen bedeutet "ein Zeichen, viele Zeichen oder gar kein Zeichen". Demnach ergeben folgende Ausdrücke `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -104,32 +104,32 @@ The wildcard means "one or more characters or nothing". The following expression
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+Zwei aufeinanderfolgende Jokerzeichen werden dagegen nicht erkannt. Hier gibt der Ausdruck `FALSE` zurück:
 
 ```4d
 "abcdefghij"="abc@@fg"
 ```
 
-When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
+Enthält der Vergleichsoperator ein < oder > Zeichen, wird nur der Vergleich mit einem Joker am Ende des Operanden unterstützt:
 
 ```4d
      "abcd"<="abc@" // Valid comparison
      "abcd"<="abc@ef" //Not a valid comparison
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
+Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung `Character code (At sign)` verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer `TRUE`, außer $vsValue ist leer.:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+Der folgende Ausdruck wird korrekt interpretiert:
 
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Hinweis:**In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
 ### Keywords
 
