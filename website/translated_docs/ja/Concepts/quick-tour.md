@@ -35,26 +35,26 @@ $myHour:=?08:12:55? // 時間リテラルを代入します
 
 ## 変数
 
-4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 You create a typed variable using the `var` keyword. たとえば、日付型の変数を作成するには、次のように書くことができます:
+4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型指定の変数を作成するには `var` キーワードを使います。 たとえば、日付型の変数を作成するには、次のように書くことができます:
 
 ```4d
 var MyDate : Date 
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+`var` キーワードを使って、定義されているクラス型のオブジェクト変数を宣言することができます。例:
 
 ```4d
 var myPerson : cs.Person 
-//variable of the Person user class
+// Person ユーザークラスの変数
 ```
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:
+推奨はされませんが、変数を使用することで宣言することもでき、必ずしも正式に宣言する必要はありません。 たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。この1行で変数が宣言され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって宣言された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `var` によって宣言された変数はデータ型を変化させることはできません。 [コンパイルモード](interpreted.md) においては、その宣言方法にかかわらず、変数のデータ型は変更できません。
 
 ## コマンド
 
@@ -190,25 +190,25 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 
 ## クラス
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+4D ランゲージではオブジェクトクラスがサポートされています。 "myClass" という名称のクラスを作成するには、プロジェクトの Project/Sources/Classes フォルダーに `myClass.4dm` ファイルを追加します。
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+あるメソッドにおいて、クラスのオブジェクトをインスタンス化するには、*クラスストア* (`cs`) よりユーザークラスを呼び出して、`new()` メンバー関数を使います。 引数を渡すこともできます。
 
 ```4d
-// in a 4D method
+// 4D メソッド内
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+`myClass` クラスメソッド内では、*methodName* クラスメンバーメソッドを宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d
-//in the myClass.4dm file
+// myClass.4dm ファイル内
 Function hello
   C_TEXT($0)
   $0:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに `()` 演算子を使います。
 
 ```4d
 $o:=cs.myClass.new()
@@ -217,10 +217,10 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+`Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d
-//in the Rectangle.4dm file
+// Rectangle.4dm ファイル内
 Class constructor
 C_LONGINT($1;$2)
 This.height:=$1
@@ -228,17 +228,17 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can inherit from another class by using `Class inherits <ClassName>`. Superclasses can be called using the `Super` command. たとえば:
+クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 たとえば:
 
 ```4d
-//in the Square.4dm file
-Class extends rectangle
+// Square.4dm ファイル内
+Class extends Rectangle
 
 Class constructor
 C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // 親クラスのコンストラクターを呼び出します
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($1;$1)
 
 This.name:="Square"

@@ -17,47 +17,47 @@ title: 変数
 
 ## 変数の宣言
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+変数は宣言によって作成されます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only). 
+- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合)
+- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (廃止予定、クラシックランゲージのみ) 
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
+**注:** この方法は推奨されませんが、単純に使用することによって変数を宣言することもできます。正式にそれらを定義することは必須ではありません。 たとえば、今日の日付に30日足した値を格納した変数を宣言するには、次のように書くことができます:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //  MyDateを作成します
+ // これは日付型の変数であると 4D は推測します 
+ // 30日後の日付が代入されます
 ```
 
-### Using the `var` keyword
+### `var` キーワードによる宣言
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+オブジェクト変数をクラスに紐づけることができるため、`var` キーワードを使った変数宣言が推奨されます。 このシンタックスはコードエディターの自動補完機能を強化します。
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+`var` キーワードを使って変数を宣言するには、次のシンタックスを用います:
 
 `var <varName>{, <varName2>,...}{ : <varType>}`
 
 たとえば:
 
 ```4d
-var $myText : Text  //a text variable
-var myDate1, myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
-var $myVar //a variant variable
+var $myText : Text  // テキスト変数
+var myDate1, myDate2 : Date  // 複数の日付変数
+var $myFile : 4D.File  // File クラスオブジェクト変数
+var $myVar // バリアント型変数
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。  
+このシンタックスは [ロカール変数とプロセス変数](#local-process-and-interprocess-variables) の宣言のみサポートしています。[インタープロセス変数](#interprocess-variables) および [配列](Concepts/arrays.md) には使用できません。
 
-`varType` can be:
+`varType` には次が指定できます:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- [基本のデータ型](Concepts/data-types.md): 変数には、宣言された型の値が格納されます 
+- [クラス参照](Concepts/classes.md) (4Dクラスまたはユーザークラス): 変数には、定義されたクラスのオブジェクトへの参照が格納されます
 
-If `varType` is omitted, a variable of the **variant** type is created.
+`varType` を省略すると、**variant** 型の変数が作成されます。
 
-The following table lists all supported `varType` values:
+サポートされている `varType` 値の一覧です:
 
 <table>
   <tr>
@@ -76,7 +76,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Text value
+      テキスト値
     </td>
   </tr>
   
@@ -86,7 +86,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Date value
+      日付値
     </td>
   </tr>
   
@@ -96,7 +96,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Time value
+      時間値
     </td>
   </tr>
   
@@ -106,7 +106,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Boolean value
+      ブール値
     </td>
   </tr>
   
@@ -116,7 +116,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Long integer value
+      倍長整数値
     </td>
   </tr>
   
@@ -126,7 +126,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Real value
+      実数値
     </td>
   </tr>
   
@@ -136,7 +136,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Pointer value
+      ポインター値
     </td>
   </tr>
   
@@ -146,7 +146,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Picture value
+      ピクチャー値
     </td>
   </tr>
   
@@ -156,7 +156,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      BLOB value
+      BLOB値
     </td>
   </tr>
   
@@ -166,7 +166,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Collection value
+      コレクション値
     </td>
   </tr>
   
@@ -176,7 +176,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Variant value
+      バリアント値
     </td>
   </tr>
   
@@ -186,7 +186,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object with default class (4D.Object)
+      デフォルトクラス (4D.Object) のオブジェクト
     </td>
   </tr>
   
@@ -196,7 +196,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the 4D class name
+      4Dクラス名のオブジェクト
     </td>
   </tr>
   
@@ -206,33 +206,33 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the user class name
+      ユーザークラス名のオブジェクト
     </td>
   </tr>
 </table>
 
 #### 例題
 
-- To declare local and process basic variables:
+- 基本のデータ型の、ローカル変数およびプロセス変数の宣言:
 
 ```4d
 var $myText, myText, $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+// 次と同義です:
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+// C_OBJECT($o) とも同義です
 ```
 
-- To declare object variables of 4D class:
+- 4Dクラス型のオブジェクト変数の宣言:
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- ユーザークラス型のオブジェクト変数の宣言:
 
 ```4d
 var $myClass : cs.MyClass
@@ -240,11 +240,11 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-### Using a C_ directive
+### C_ 指示子による宣言
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+> **互換性に関する注記:** 4D v18 R3 以降は廃止予定となっています。 [var](#using-the-var-keyword) キーワードの使用が推奨されます。
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+"コンパイラー" テーマコマンドの指示子を使って、基本のデータ型の変数を宣言することができます。
 
 たとえば、テキスト変数を宣言するには次のように書きます:
 
@@ -277,7 +277,7 @@ MyNumber:=3
 
 は変数 *MyNumber* を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> [データ型の宣言](#creating-variables) をせずに変数を作成することは通常推奨されません。
 
 もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに *MyNumber* 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
