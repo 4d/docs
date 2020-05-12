@@ -6,9 +6,9 @@ title: クラス
 
 ## 概要
 
-4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語でクラスを利用すると、属性や関数などを持つ特定のオブジェクトを定義することができます。
+4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性や関数などを持つ特定のオブジェクト種を定義することができます。
 
-クラスが定義されていると、そのクラスのオブジェクトをコードの中で **インスタンス化** することができます。 各オブジェクトは、それが属するクラスのインスタンスです。 クラスは別のクラスを継承することで、それらの機能を受け継ぐことができます。
+クラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを継承することで、それらの機能を受け継ぐことができます。
 
 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
@@ -17,7 +17,7 @@ title: クラス
 クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
 - `name`: ECMAScript に準拠している必要があります
-- `superclass` オブジェクト (任意で、無ければ null)
+- `superclass` オブジェクト (任意。無ければ null)
 - `new()` メソッド: Class オブジェクトをインスタンス化します
 
 さらに、Class オブジェクトは次を参照できます:
@@ -25,11 +25,11 @@ title: クラス
 - `constructor` オブジェクト (任意)
 - `prototype` オブジェクト: 名前付き関数オブジェクトを格納します (任意)
 
-Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスより同時にアクセスすることができます。
+Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスから同時にアクセスすることができます。
 
 ### プロパティ検索とプロトタイプ
 
-4D のすべてのオブジェクトは、なんらかのクラスオブジェクトに内部的にリンクしています。 オブジェクト内にプロパティが見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。
+4D のすべてのオブジェクトは、なんらかのクラスオブジェクトに内部的にリンクしています。 オブジェクト内にあるプロパティが見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。
 
 すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
@@ -53,7 +53,7 @@ $instance:=OB Instance of($poly;4D.Object)
 
 ### クラス定義
 
-ユーザークラスファイルは、オブジェクトのひな形を定義します。このオブジェクトは `new()` クラスメンバーメソッドを呼び出すことでインスタンス化することができます。 クラスファイル内では、専用の [クラスキーワード](#クラスキーワード) や [クラスコマンド](#クラスコマンド) を使用します。
+ユーザークラスファイルは、オブジェクトのひな形を定義します。`new()` クラスメンバーメソッドを呼び出すことで、このひな形に基づいたオブジェクトをインスタンス化することができます。 クラスファイル内では、専用の [クラスキーワード](#クラスキーワード) や [クラスコマンド](#クラスコマンド) を使用します。
 
 たとえば:
 
@@ -90,12 +90,12 @@ $cName:=OB Class($o).name // "Empty"
 
 ## クラスストア
 
-提供されているクラスはクラスストアよりアクセスすることができます。 クラスストアには次のものが存在します:
+利用可能なクラスは、クラスストアよりアクセスすることができます。 クラスストアには次のものが存在します:
 
 - ビルトイン 4Dクラス専用のクラスストア: `4D` コマンドによって返されます。
 - 開かれている各データベースおよびコンポーネントのクラスストア: `cs` コマンドによって返されます。 "ユーザークラス" ともいいます。
 
-たとえば、`cs.myClass.new()` ステートメント (`cs` は *クラスストア (classstore)* を意味します) と使って myClass のオブジェクトインスタンスを新規作成できます。
+たとえば、`cs.myClass.new()` ステートメント (`cs` は *クラスストア (classstore)* を意味します) を使って myClass のオブジェクトインスタンスを新規作成できます。
 
 ## ユーザークラス
 
@@ -146,39 +146,39 @@ $cName:=OB Class($o).name // "Empty"
 - コードエディター: 
     - クラスは実行できません
     - クラス関数はコードのブロックです 
-    - オブジェクトメンバーに対する **定義に移動** 操作はクラス関数宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
-    - クラス関数宣言に対する **参照箇所を検索** 操作は、その関数がオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+    - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+    - クラスの関数宣言に対する **参照箇所を検索** 操作は、その関数がオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラス関数は \<ClassName> コンストラクターまたは \<ClassName>.\<FunctionName> 形式で表示されます。
 
-### Deleting a class
+### クラスの削除
 
-To delete an existing class, you can:
+既存のクラスを削除するには:
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
-- in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- ディスク上で "Classes" フォルダーより .4dm クラスファイルを削除します。
+- エクスプローラーでは、クラスを選択した状態で ![](assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動 > ゴミ箱** を選択します。 
 
-## Class keywords
+## クラスキーワード
 
-Specific 4D keywords can be used in class definitions:
+クラス定義内では、専用の 4Dキーワードが使用できます:
 
-- `Function <Name>` to define member methods of the objects. 
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
-- `Class extends <ClassName>` to define inheritance.
+- `Function <Name>`: オブジェクトのメンバーメソッドを定義します。 
+- `Class constructor`: オブジェクトのプロパティを定義します (プロトタイプ定義)。
+- `Class extends <ClassName>`: 継承を定義します。
 
-### Class Function
+### クラス関数
 
 #### シンタックス
 
 ```js
 Function <name>
-// code
+// コード
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
+クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be ECMAScript compliant.
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して関数宣言をおこないます。 このとき、関数名は ECMAScript に準拠している必要があります。
 
-Within a class function, the `This` is used as the object instance. たとえば:
+クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
 
 ```4d
 Function getFullName
@@ -190,11 +190,11 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、引数を受け取ることができます。 次のシンタックスがサポートされています:
 
-- use of the `()` operator. For example `myObject.methodName("hello")`.
+- `()` 演算子の使用 For example `myObject.methodName("hello")`.
 - use of a "Function" class member methods 
     - `apply()`
     - `call()`
@@ -271,37 +271,37 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. この子クラスは、親クラスのすべての機能を継承します。
 
-Class extension must respect the following rules:
+クラス継承は次のルールに沿っている必要があります:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another database or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
+- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- ユーザークラスは、別のデータベースやコンポーネントのユーザークラスを継承できません。
+- ユーザークラスは、自身を継承することはできません。
+- 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+派生クラスは、[`Super`](#super) コマンドを使って親クラスのコンストラクターを呼び出すことができます。
 
-#### Example
+#### 例題
 
-This example creates a class called `Square` from a class called `Polygon`.
+`Polygon` クラスを継承した `Square` クラスを作成します。
 
 ```4d
-  //Class: Square
-  //path: Classes/Square.4dm 
+  // クラス: Square
+  // パス: Classes/Square.4dm 
 
  Class extends Polygon
 
  Class constructor
  C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths
-  // provided for the Polygon's width and height
+  // 親クラスのコンストラクターを呼び出します
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($1;$1)
-  // In derived classes, Super must be called before you
-  // can use 'This'
+  // 派生クラスにおいては、'This' を使用するより先に
+  // Super を呼び出しておく必要があります
  This.name:="Square"
 
 Function getArea
@@ -313,41 +313,41 @@ $0:=This.height*This.width
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                    |
-| --------- | ------ | -- | ---------------------------------------------- |
-| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
-| Result    | object | <- | Object's parent                                |
+| 引数    | 型      |    | 説明               |
+| ----- | ------ | -- | ---------------- |
+| param | 混合     | -> | 親コンストラクターに受け渡す引数 |
+| 戻り値   | Object | <- | 親オブジェクト          |
 
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+`Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
 
-`Super` serves two different purposes:
+`Super` は次の2つの目的のために使います:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used. 
-    - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid. 
-    - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated. 
-    - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+- [コンストラクターコード](#クラスコンストラクター) 内において、 `Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。 
+    - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。 
+    - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。 
+    - `Super` を、オブジェクトのスコープ外で呼び出した場合、または、すでにスーパークラスがコンストラクトされたオブジェクトを対象に呼び出した場合には、エラー -10746 が生成されます。
 
 ```4d
-  // inside myClass constructor
+  // myClass コンストラクター
  C_TEXT($1;$2)
- Super($1) //calls superclass constructor with a text param
- This.param:=$2 // use second param
+ Super($1) // テキスト型引数をスーパークラスコンストラクターに渡します
+ This.param:=$2 // 2番目の引数を使用します
 ```
 
-- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+- [クラスメンバー関数](#クラス関数) 内において、`Super` はスーパークラスのプロトタイプを指し、スーパークラス階層の関数を呼び出すために使用します。
 
 ```4d
- Super.doSomething(42) //calls "doSomething" function  
-    //declared in superclasses
+ Super.doSomething(42) // スーパークラスにて宣言されている
+    // "doSomething" 関数を呼び出します
 ```
 
-#### Example 1
+#### 例題 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
 
 ```4d
-  //Class: Rectangle
+  // クラス: Rectangle
 
  Class constructor
  C_LONGINT($1;$2)
@@ -364,38 +364,38 @@ This example illustrates the use of `Super` in a class constructor. The command 
 ```
 
 ```4d
-  //Class: Square
+  // クラス: Square
 
  Class extends Rectangle
 
  Class constructor
  C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths
-  // provided for the Rectangle's width and height
+  // 親クラスのコンストラクターを呼び出します
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
  Super($1;$1)
 
-  // In derived classes, Super must be called before you
-  // can use 'This'
+  // 派生クラスにおいては、'This' を使用するより先に
+  // Super を呼び出しておく必要があります
  This.name:="Square"
 ```
 
-#### Example 2
+#### 例題 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+クラスメンバーメソッド内で `Super` を使う例です。 関数を持つ `Rectangle` クラスを作成します:
 
 ```4d
-  //Class: Rectangle
+  // クラス: Rectangle
 
  Function nbSides
  C_TEXT($0)
  $0:="I have 4 sides"
 ```
 
-You also created the `Square` class with a function calling the superclass function:
+`Square` クラスには、スーパークラス関数を呼び出す関数を定義します:
 
 ```4d
-  //Class: Square
+  // クラス: Square
 
  Class extends Rectangle
 
@@ -404,64 +404,64 @@ You also created the `Square` class with a function calling the superclass funct
  $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+すると、プロジェクトメソッド内には次のように書けます:
 
 ```4d
  C_OBJECT($square)
  C_TEXT($message)
  $square:=cs.Square.new()
- $message:=$square.description() //I have 4 sides which are all equal
+ $message:=$square.description() // I have 4 sides which are all equal
 ```
 
 ### This
 
 #### This -> Object
 
-| Parameter | Type   |    | Description    |
-| --------- | ------ | -- | -------------- |
-| Result    | object | <- | Current object |
+| 引数  | 型      |    | 説明         |
+| --- | ------ | -- | ---------- |
+| 戻り値 | Object | <- | カレントオブジェクト |
 
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+`This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+[クラスコンストラクター](#クラスコンストラクター) 関数が `new()` キーワードで使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-  //Class: ob
+  // クラス: ob
 
 Class Constructor  
-    // Create properties on This as
-    // desired by assigning to them
+    // This のプロパティを
+    // 代入によって作成します
     This.a:=42 
 ```
 
 ```4d
-    // in a 4D method  
+    // 4D メソッド
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` よりも先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 [こちらの例題](#例題-1) を参照ください。
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
 ```4d
-  //Class: ob
+  // クラス: ob
 
  Function f
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+この場合、プロジェクトメソッドには次のように書けます:
 
 ```4d
 $o:=cs.ob.new()
@@ -470,20 +470,20 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+この例では、変数 $o に代入されたオブジェクトは *f* プロパティを持たないため、これをクラスより継承します。 *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
 
-## Class commands
+## クラスコマンド
 
-Several commands of the 4D language allows you to handle class features.
+4D ランゲージには、クラス機能を扱う複数のコマンドがあります。
 
 ### OB Class
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` は引数として渡したオブジェクトのクラスを返します。
 
 ### OB Instance of
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`object` が `class`、またはその子クラスに属していれば、`OB Instance of` は `true` を返します。それ以外の場合は `false` を返します。
