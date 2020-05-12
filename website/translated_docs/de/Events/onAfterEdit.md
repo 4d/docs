@@ -25,13 +25,13 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| Property    | Typ     | Description                                                                                         |
-| ----------- | ------- | --------------------------------------------------------------------------------------------------- |
-| code        | longint | On After Edit                                                                                       |
-| description | Text    | "On After Edit"                                                                                     |
-| objectName  | Text    | 4D View Pro area name                                                                               |
-| sheetName   | Text    | Name of the sheet of the event                                                                      |
-| action      | Text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| Property    | Typ            | Description                                                                                         |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------- |
+| code        | Lange Ganzzahl | On After Edit                                                                                       |
+| description | Text           | "On After Edit"                                                                                     |
+| objectName  | Text           | 4D View Pro area name                                                                               |
+| sheetName   | Text           | Name of the sheet of the event                                                                      |
+| action      | Text           | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
@@ -125,7 +125,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              longint
+                                              Lange Ganzzahl
                                             </td>
                                             
                                             <td>

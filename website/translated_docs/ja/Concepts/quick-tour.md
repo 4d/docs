@@ -183,25 +183,25 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 
 ## クラス
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+4D ランゲージではオブジェクトクラスがサポートされています。 "myClass" という名称のクラスを作成するには、プロジェクトの Project/Sources/Classes フォルダーに `myClass.4dm` ファイルを追加します。
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+あるメソッドにおいて、クラスのオブジェクトをインスタンス化するには、*クラスストア* (`cs`) よりユーザークラスを呼び出して、`new()` メンバー関数を使います。 引数を渡すこともできます。
 
 ```4d
-// in a 4D method
+// 4D メソッド内
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+`myClass` クラスメソッド内では、*methodName* クラスメンバーメソッドを宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d
-//in the myClass.4dm file
+// myClass.4dm ファイル内
 Function hello
   C_TEXT($0)
   $0:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに `()` 演算子を使います。
 
 ```4d
 $o:=cs.myClass.new()
@@ -210,10 +210,10 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+`Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d
-//in the Rectangle.4dm file
+// Rectangle.4dm ファイル内
 Class constructor
 C_LONGINT($1;$2)
 This.height:=$1
@@ -221,17 +221,17 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can inherit from another class by using `Class inherits <ClassName>`. Superclasses can be called using the `Super` command. たとえば:
+クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 たとえば:
 
 ```4d
-//in the Square.4dm file
-Class extends rectangle
+// Square.4dm ファイル内
+Class extends Rectangle
 
 Class constructor
 C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // 親クラスのコンストラクターを呼び出します
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($1;$1)
 
 This.name:="Square"

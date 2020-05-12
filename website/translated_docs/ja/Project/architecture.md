@@ -79,9 +79,9 @@ title: 4D プロジェクトのアーキテクチャー
 
 #### Classes フォルダー
 
-| 内容              | 説明                                                                                                                                 | 形式   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | テキスト |
+| 内容              | 説明                                                                    | 形式   |
+| --------------- | --------------------------------------------------------------------- | ---- |
+| *className*.4dm | 特定のオブジェクトをインスタンス化するための、ユーザークラス用の定義メソッド。 1クラスにつき1ファイル。ファイル名がクラス名になります。 | テキスト |
 
 
 #### Forms フォルダー
@@ -228,4 +228,4 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 ## WebFolder
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。
