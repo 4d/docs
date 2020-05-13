@@ -7,8 +7,6 @@ title: Coordinates & Sizing
 
 ## Automatic Row Height
 
-`4D View Pro only: This feature requires a 4D View Pro license.`
-
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
 
 When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
@@ -234,8 +232,6 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 * * *
 
 ## Tableau hauteurs des lignes
-
-`4D View Pro only: This feature requires a 4D View Pro license.`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 
