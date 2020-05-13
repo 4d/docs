@@ -72,7 +72,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      テキスト
+      Text
     </td>
     
     <td>
@@ -82,7 +82,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      日付
+      Date
     </td>
     
     <td>
@@ -92,7 +92,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      時間
+      Time
     </td>
     
     <td>
@@ -102,7 +102,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      ブール
+      Boolean
     </td>
     
     <td>
@@ -112,7 +112,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      整数
+      Integer
     </td>
     
     <td>
@@ -122,7 +122,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      実数
+      Real
     </td>
     
     <td>
@@ -132,7 +132,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      ポインター
+      Pointer
     </td>
     
     <td>
@@ -142,7 +142,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      ピクチャー
+      Picture
     </td>
     
     <td>
@@ -162,7 +162,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      コレクション
+      Collection
     </td>
     
     <td>
@@ -172,7 +172,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      バリアント
+      Variant
     </td>
     
     <td>
@@ -182,7 +182,7 @@ var $myVar // バリアント型変数
   
   <tr>
     <td>
-      オブジェクト
+      Object
     </td>
     
     <td>
