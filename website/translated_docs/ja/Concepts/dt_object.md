@@ -158,7 +158,7 @@ title: Objects
 
 オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の式を読み込んだ、または割り当てようとしたときに 4D は通常、エラーを生成します。 ただし以下の場合には生成されません:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
+- 未定義のオブジェクトやプロパティ値を読み込むと未定義 (undefined) が返されます。未定義の値を (配列を除く) 変数に割り当てることは、`CLEAR VARIABLE` コマンドを使うのと同じ効果があります:
 
 ```4d
      C_OBJECT($o)
