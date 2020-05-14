@@ -222,9 +222,9 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 ## Documentation フォルダー
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+このフォルダーには、クラス・メソッド・フォームなどのプロジェクト要素について作成されたドキュメンテーションファイル (.md) がすべて格納されます。 ドキュメンテーションファイルは、4D エクスプローラーにて表示・管理されます。
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+詳細については [プロジェクトのドキュメンテーション](Project/documentation.md) を参照ください。
 
 ## WebFolder
 
