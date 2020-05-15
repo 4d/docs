@@ -60,7 +60,9 @@ const siteConfig = {
   algolia: {
     apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
     indexName: '4d',
-    algoliaOptions: {}, // Optional, if provided by Algolia
+    algoliaOptions: {
+      facetFilters: ['language:LANGUAGE', 'version:VERSION'],
+    },
 	lineheight: '30px'
   },
 
