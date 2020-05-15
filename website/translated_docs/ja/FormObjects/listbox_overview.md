@@ -340,7 +340,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスの各列毎に標準のプロパティ (テキスト、背景色など) を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
 
-> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。 オブジェクト配列を使用するためには、4D View Pro ライセンスが必要になります ([カラム内でのオブジェクト配列の使用 (4D View Pro)](#カラム内でのオブジェクト配列の使用-4d-view-pro)参照)。
+> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。
 
 ### 列特有のプロパティ
 
@@ -927,15 +927,13 @@ In this case, you must fill and empty arrays through the code. The principles to
 
 - When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
 
-## Object arrays in columns (4D View Pro)
+## Object arrays in columns
 
 List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
 
 The following list box was designed using an object array:
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
-
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
 
 ### Configuring an object array column
 
