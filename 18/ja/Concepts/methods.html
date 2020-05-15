@@ -142,8 +142,8 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"full_name"</span>;<span class="hljs-function">Formula</span>(fullName))
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.<span class="hljs-function">full_name</span>(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Smith"</span>)
-<span class="hljs-comment">//$result = "John Smith"</span>
-<span class="hljs-comment">// equivalent to $result:=fullName("param1";"param2")</span>
+<span class="hljs-comment">// $result = "John Smith"</span>
+<span class="hljs-comment">// $result:=fullName("param1";"param2") と同義です</span>
 </code></pre>
 <p><code>This</code> 関数と組み合わせることで、オブジェクトメソッドを利用した汎用的なコードを書くことができます。 たとえば:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName2 メソッド</span>
@@ -153,10 +153,10 @@
 <p>このメソッドをオブジェクトに格納すると、オブジェクトの新しい計算属性のように使えます:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"Jim"</span>;<span class="hljs-string">"lastName"</span>;<span class="hljs-string">"Wesson"</span>)
-<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName2) <span class="hljs-comment">//add the method  </span>
+<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName2) <span class="hljs-comment">// メソッドをオブジェクトに追加します</span>
 
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.<span class="hljs-function">fullName</span>()
-<span class="hljs-comment">//$result = "Jim Wesson"</span>
+<span class="hljs-comment">// $result = "Jim Wesson"</span>
 </code></pre>
 <p>たとえ引数を受け取らなかったとしても、オブジェクトメソッドを実行するためにはカッコ () をつけて呼び出す必要があるという点に注意してください。 オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=<span class="hljs-variable">$f</span>.message <span class="hljs-comment">// $o にはフォーミュラオブジェクトが返されます</span>
