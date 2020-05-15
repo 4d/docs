@@ -13,7 +13,7 @@ title: グループボックス
 
         "myGroup": {
             "type": "groupBox",
-            "title": "Employee Info"
+            "title": "Employee Info",
             "left": 60,
             "top": 160,
             "width": 100,
