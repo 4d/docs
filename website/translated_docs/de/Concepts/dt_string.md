@@ -69,7 +69,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
-- Bei String Vergleichen werden diakritische Zeichen nicht berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen, wie z. B. Akzente ignoriert, Umlaute, wie ä, ö, ü werden dagegen berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -117,7 +117,7 @@ Enthält der Vergleichsoperator ein < oder > Zeichen, wird nur der Vergleich mit
      "abcd"<="abc@ef" //Not a valid comparison
 ```
 
-Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung `Character code (At sign)` verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer `TRUE`, außer $vsValue ist leer.:
+Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung `Character code (At sign)` verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer `TRUE`, außer $vsValue ist leer:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
