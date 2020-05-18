@@ -165,7 +165,7 @@ $cName:=OB Class($o).name // "Empty"
 - `Class constructor`: オブジェクトのプロパティを定義します (プロトタイプ定義)。
 - `Class extends <ClassName>`: 継承を定義します。
 
-### クラスメソッド
+### Function
 
 #### シンタックス
 
@@ -236,7 +236,7 @@ $o:=cs.Rectangle.new()
 $area:=$o.getArea(50;100) //5000
 ```
 
-### クラスコンストラクター
+### Class constructor
 
 #### シンタックス
 
@@ -270,7 +270,7 @@ $o:=cs.MyClass.new("HelloWorld")
 // $o = {"name":"HelloWorld"}
 ```
 
-### クラス継承
+### Class extends
 
 #### シンタックス
 
