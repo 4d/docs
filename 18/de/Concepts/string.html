@@ -127,7 +127,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function">Character code</span>(<span class="hljs-string">"A"</span>)=<span class="hljs-function">Character code</span>(<span class="hljs-string">"a"</span>) <span class="hljs-comment">// because 65 is not equal to 97</span>
 </code></pre>
 <ul>
-<li>Bei String Vergleichen werden diakritische Zeichen nicht berücksichtigt. So ergibt z. B. folgender Ausdruck <code>TRUE</code>:</li>
+<li>Bei String Vergleichen werden diakritische Zeichen, wie z. B. Akzente ignoriert, Umlaute, wie ä, ö, ü werden dagegen berücksichtigt. So ergibt z. B. folgender Ausdruck <code>TRUE</code>:</li>
 </ul>
 <pre><code class="hljs css language-4d">     <span class="hljs-string">"n"</span>=<span class="hljs-string">"ñ"</span>
      <span class="hljs-string">"n"</span>=<span class="hljs-string">"Ñ"</span>
@@ -156,7 +156,7 @@
 <pre><code class="hljs css language-4d">     <span class="hljs-string">"abcd"</span>&lt;=<span class="hljs-string">"abc@"</span> <span class="hljs-comment">// Valid comparison</span>
      <span class="hljs-string">"abcd"</span>&lt;=<span class="hljs-string">"abc@ef"</span> <span class="hljs-comment">//Not a valid comparison</span>
 </code></pre>
-<p>Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung <code>Character code (At sign)</code> verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer <code>TRUE</code>, außer $vsValue ist leer.:</p>
+<p>Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung <code>Character code (At sign)</code> verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer <code>TRUE</code>, außer $vsValue ist leer:</p>
 <pre><code class="hljs css language-4d">(<span class="hljs-variable">$vsValue</span><span class="hljs-variable">[[Length($vsValue)]]</span>=<span class="hljs-string">"@"</span>)
 </code></pre>
 <p>Der folgende Ausdruck wird korrekt interpretiert:</p>
