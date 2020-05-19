@@ -1,6 +1,6 @@
 ---
 id: onTimer
-title: On Timer
+title: Sur minuteur
 ---
 
 | Code | Peut être appelé par | Définition                                                        |
