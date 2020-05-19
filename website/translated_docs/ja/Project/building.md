@@ -88,24 +88,24 @@ title: プロジェクトパッケージのビルド
 
 *\<destination>/Components/MyComponent.4dbase/*
 
-*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこフォルダーにコピーされます。 Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
+*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこフォルダーにコピーされます。 コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
-## Application page
+## アプリケーションページ
 
-This tab allows you can build a stand-alone, single-user version of your application:
+このタブでは、スタンドアロンのシングルユーザー版アプリケーションをビルドします:
 
 ![](assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### スタンドアロンアプリケーションをビルド
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+**スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがデータベースプロジェクトをもとに作成されます。
 
-The following elements are required for the build:
+ビルドには次のものが必要です:
 
-- 4D Volume Desktop (the 4D database engine),
-- an [appropriate license](#licenses)
+- 4D Volume Desktop (4D データベースエンジン)
+- [適切なライセンス](#ライセンス証明書ページ)
 
-On Windows, this feature creates an executable file (.exe). macOS においては、ソフトウェアパッケージが作成されます。
+Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
 
 この処理はコンパイル済みストラクチャーファイルと4D Volume Desktopを統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](http://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
@@ -134,7 +134,7 @@ On Windows, this feature creates an executable file (.exe). macOS において�
 
 * **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 
 
-データリンクモードについての詳細は [最後に開いたデータファイル](#last-data-file-opened) を参照してください。
+データリンクモードについての詳細は [最後に開かれたデータファイル](#最後に開かれたデータファイル) を参照してください。
 
 #### 生成されるファイル
 
@@ -146,20 +146,20 @@ On Windows, this feature creates an executable file (.exe). macOS において�
     
     * MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
     * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
-    * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resources フォルダーです。 **注**: このフォルダには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#data-file-management-in-final-applicatons)を参照してください)。
-    * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components)を参照してください。
-    * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
-    * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
+    * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resources フォルダーです。 **注**: このフォルダには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
+    * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン ＆ コンポーネントページ](#プラグインコンポーネントページ)を参照してください。
+    * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 この点に関する詳細は [ライセンス & 証明書ページ](#ライセンス証明書ページ) を参照してください。
+    * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば)([4D Volume Desktop フォルダーのカスタマイズ](#4D-Volume-Desktop-フォルダーのカスタマイズ) 参照)
     
-    All these items must be kept in the same folder in order for the executable to operate.
+    実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
 
 * *macOS*
     
-    - A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. プラグインやコンポーネントの統合に関する詳細は [プラグイン & コンポーネントページ](#plugins-and-components) を参照してください。 ライセンスの統合に関しては [ライセンス & 証明書ページ](#licenses-and-certificate) を参照してください。 **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
+    - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン ＆コンポーネントページ](#プラグインコンポーネントページ) を参照してください。 ライセンスの統合に関しては [ライセンス & 証明書ページ](#ライセンス証明書ページ) を参照してください。 **注**: macOSでは、4D ランゲージの [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。
 
-#### Customizing 4D Volume Desktop folder
+#### 4D Volume Desktop フォルダーのカスタマイズ 
 
-When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
+ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を *Final Application* 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば:
 
 * 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
 * カスタムプラグインを *Plugins* フォルダーに置く
@@ -198,8 +198,8 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 ビルドされたクライアント/サーバーアプリケーションは起動や接続処理が簡易です:
 
 - サーバーを起動するには、サーバーアプリケーションをダブルクリックします。 データベースを選択する必要はありません。
-- クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。これについては [クライアントアプリケーションによる接続の管理](#management-of-client-connections) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4D アプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
-- クライアント側をネットワーク越しに自動更新するようにクライアント/サーバーアプリケーションを設定することも可能です。この点については [サーバーアプリケーション内部のクライアントアプリケーションのコピー](#copy-of-client-applications-in-the-server-application) を参照ください。
+- クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。これについては [クライアント接続の管理](#クライアント接続の管理) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4D アプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
+- クライアント側をネットワーク越しに自動更新するようにクライアント/サーバーアプリケーションを設定することも可能です。この点については [サーバーアプリケーション内部のクライアントアプリケーションのコピー](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) を参照ください。
 - また、ランゲージコマンド ([SET UPDATE FOLDER](https://doc.4d.com/4Dv18/4D/18/SET-UPDATE-FOLDER.301-4505379.ja.html)、および [RESTART 4D](https://doc.4d.com/4Dv18/4D/18/RESTART-4D.301-4505382.ja.html)) を使用して、サーバーアプリケーションの更新を自動化することも可能です
 
 ### サーバーアプリケーションをビルド
@@ -212,7 +212,7 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 
 #### 現在のバージョン
 
-生成されるアプリケーションのバージョン番号を指定します。 このバージョン番号をもとに、クライアントアプリケーションからの接続を受け入れたり拒否したりできます。 クライアントとサーバーアプリケーションで互換性のある番号の範囲は [XML キー](#build-application-settings) で設定します。
+生成されるアプリケーションのバージョン番号を指定します。 このバージョン番号をもとに、クライアントアプリケーションからの接続を受け入れたり拒否したりできます。 クライアントとサーバーアプリケーションで互換性のある番号の範囲は [XML キー](#アプリケーションビルド設定) で設定します。
 
 #### データリンクモードの基準
 
@@ -222,7 +222,7 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 
 * **アプリケーションパス** - このモードでは、組み込み 4D アプリケーションは自身に紐づいている *lastDataPath.xml* ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。 
 
-データリンクモードについての詳細は [最後に開いたデータファイル](#last-data-file-opened) を参照してください。
+データリンクモードについての詳細は [最後に開かれたデータファイル](#最後に開かれたデータファイル) を参照してください。
 
 ### クライアントアプリケーションをビルド
 
@@ -230,28 +230,28 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 
 #### 4D Volume Desktop の場所
 
-ビルドに使用する 4D Volume Desktop アプリケーションの場所を選択する必要があります。 この 4D Volume Desktop はビルドをおこなうプラットフォームに対応していなければなりません。 異なるプラットフォーム用のクライアントアプリケーションをビルドするには、そのプラットフォームで 4D アプリケーションを実行し、追加のビルド処理をしなければなりません。 これはクライアントアプリケーションの最初のバージョンをビルドするときのみ必要です。自動アップデート機構を利用することで、それ以降のアップデートは同じプラットフォーム上から管理することができます。 詳細については [4D Serverや4Dクライアントフォルダーのカスタマイズ](#customizing-4d-server-and-or-4d-client-folders) を参照ください。
+ビルドに使用する 4D Volume Desktop アプリケーションの場所を選択する必要があります。 この 4D Volume Desktop はビルドをおこなうプラットフォームに対応していなければなりません。 異なるプラットフォーム用のクライアントアプリケーションをビルドするには、そのプラットフォームで 4D アプリケーションを実行し、追加のビルド処理をしなければなりません。 これはクライアントアプリケーションの最初のバージョンをビルドするときのみ必要です。自動アップデート機構を利用することで、それ以降のアップデートは同じプラットフォーム上から管理することができます。 詳細については [サーバーやクライアントフォルダーのカスタマイズ](#サーバーやクライアントフォルダーのカスタマイズ) を参照ください。
 
 > 4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。 たとえば、4D Developer の v18 を利用していれば、4D Volume Desktop v18 が必要です。
 
-クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 詳細は [クライアント接続の管理](#クライアント接続の管理) で説明されています。
 
-#### Copy of client applications in the server application
+#### サーバーアプリケーション内部のクライアントアプリケーションのコピー
 
-The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
+このエリアのオプションを使用して、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定できます。
 
-- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
-- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Windows クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの Windows クライアントの自動更新を有効にすることができます。
+- **macOS クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの macOS クライアントの自動更新を有効にすることができます。
 
-- **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
+- クロスプラットフォームなクライアントアプリケーションの場合には、ビルドをおこなうマシンとは別のプラットフォーム用の 4D Volume Desktop アプリケーションの場所を選択する必要があります。
     
-    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
+    たとえば Windows 上で **[...]** ボタンをクリックし、macOS 用の 4D Volume Desktop.app フォルダーを選択します。
 
-#### Displaying update notification
+#### 更新通知の表示
 
-The client application update notification is carried out automatically following the server application update.
+サーバーが更新されると、各クライアントマシン上に自動で更新通知がおこなわれます。
 
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
+これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは **ApplicationName** Server フォルダー内の **Upgrade4DClient** サブフォルダーに圧縮して格納されます (macOSでは、これらのフォルダーはサーバーパッケージ内に配置されます)。 クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
 
 クライアントアプリケーションに更新を通知するには、古いサーバーアプリケーションを新しいバージョンで置き換えて起動します。 あとの処理は自動でおこなわれます。
 
@@ -266,7 +266,7 @@ It works as follows: when a new version of the client/server application is buil
 
 更新を強制するには、サーバーアプリケーションと互換性のあるバージョン番号の範囲からクライアントアプリケーションの現バージョン番号を除外します。 すると、未更新クライアントからの接続は更新メカニズムによって拒否されます。 たとえば、クライアントサーバーアプリケーションの新しいバージョン番号がの 6 の場合、バージョン番号が 5 以下のクライアントアプリケーションを許可しないようにできます。
 
-[現在のバージョン](build-server-application) はアプリケーションビルドダイアログのクライアント/サーバーページで設定できます (前述)。 接続を許可するバージョン番号の範囲は [XML キー](#build-application-settings) で設定します。
+[現在のバージョン](build-server-application) はアプリケーションビルドダイアログのクライアント/サーバーページで設定できます (前述)。 接続を許可するバージョン番号の範囲は [XML キー](#アプリケーションビルド設定) で設定します。
 
 #### エラーが発生する場合
 
@@ -281,7 +281,7 @@ It works as follows: when a new version of the client/server application is buil
 
 クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 *\<ApplicationName> Client* と *\<ApplicationName> Server* があります。
 
-> エラーが発生した場合これらのフォルダーは作成されません。 そのような場合はエラーの原因を特定するために [ログファイル](#log-file) の内容を確認してください。
+> エラーが発生した場合これらのフォルダーは作成されません。 そのような場合はエラーの原因を特定するために [ログファイル](#ログファイル) の内容を確認してください。
 
 *\<ApplicationName> Client* フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 *\<ApplicationName> Server* フォルダーはサーバーアプリケーションを格納します。
 
@@ -304,12 +304,12 @@ It works as follows: when a new version of the client/server application is buil
 
 #### Web ファイルの場所 
 
-サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを These items are the following:
+サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
+- デフォルト Web ルートフォルダー (WebFolder)
 
-Items must be installed: * **on Windows** * **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder. * **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName> Client* サブフォルダー内にこれらの項目を配置します。
+インストール場所: * **Windows** * **サーバーアプリケーション** - *Client Server executable\ \<ApplicationName> Server\Server Database* サブフォルダー内にこれらの項目を配置します。 * **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName> Client* サブフォルダー内にこれらの項目を配置します。
 
 * **macOS** 
     * **サーバーアプリケーション** - *\<ApplicationName> Server* ソフトウェアパッケージと同階層にこれらの項目を配置します。
@@ -331,7 +331,7 @@ Items must be installed: * **on Windows** * **Server application** - in the *Cli
 
 * **タイプ** 列 - その要素がプラグインであるかコンポーネントであるかが表示されます。
 
-アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#customizing-4d-volume-desktop-folder) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
+アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#4D-Volume-Desktop-フォルダーのカスタマイズ) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
 
 同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 他方、同じコンポーネントが両方にインストールされていた場合は、アプリケーションを開くことはできません。
 
@@ -375,13 +375,13 @@ Items must be installed: * **on Windows** * **Server application** - in the *Cli
 
 アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D will check the availability of elements required for certification when the build occurs:
+- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D はビルドの際に、認証に必要な要素の有無をチェックします:
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
+このオプションは Windows と macOS 両方の環境で表示されますが、macOS の場合においてのみ有効です。
 
-* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
+* **認証名** - Apple によって有効化されたデベロッパー認証名を入力してください。 この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
 
 ![](assets/en/Project/certificate.png)
 
@@ -399,7 +399,7 @@ Gatekeeper とは macOS のセキュリティ機能で、インターネット�
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-signing-certificate) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証の手順については 4Dの [ブログ記事](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や [テクニカルノート](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
+Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-署名に使用する証明書) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証の手順については 4Dの [ブログ記事](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や [テクニカルノート](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
 
 公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 
@@ -436,7 +436,7 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 組み込みアプリ起動時のオープニングシーケンスは以下のようになっています:
 
-1. 4D は最後に開かれたデータファイルを開こうとします。詳しくは [後述の説明](#last-data-file-opened) を参照ください (これは初回起動時には適用されません)。
+1. 4D は最後に開かれたデータファイルを開こうとします。詳しくは [後述の説明](#最後に開かれたデータファイル) を参照ください (これは初回起動時には適用されません)。
 2. 見つからない場合、4D は .4DZ ファイルと同階層の Default Data フォルダー内にあるデータファイルを、読み込み専用モードで開こうとします。
 3. これも見つからない場合、4D は標準のデフォルトデータファイルを開こうとします(.4DZ ファイルと同じ場所にある、同じ名前のファイル)。
 4. これも見つからない場合、4D は "データファイルを開く" ダイアログボックスを表示します。
@@ -475,12 +475,12 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 このデータリンクモードはアプリケーションビルドの際に選択することができます。 次の二つから選択可能です:
 
-- アプリケーションビルダーの [アプリケーションページ](#application) または [クライアント/サーバーページ](#client-server) を使用する。
+- アプリケーションビルダーの [アプリケーションページ](#アプリケーションページ) または [クライアント/サーバーページ](#client-server) を使用する。
 - シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
 ### デフォルトのデータフォルダーを定義する
 
-4D では、アプリケーションビルド時にデフォルトのデータファイルを指定することができます。 アプリケーションの初回起動時に、開くべきローカルデータファイルが見つからなかった場合 (前述の [オープニングシーケンス](#opening-the-data-file)参照)、デフォルトのデータファイルが読み込み専用モードで自動的に開かれます。 この機能を使って、組み込みアプリを初回起動したときのデータファイル作成・選択の操作をより制御することができます。
+4D では、アプリケーションビルド時にデフォルトのデータファイルを指定することができます。 アプリケーションの初回起動時に、開くべきローカルデータファイルが見つからなかった場合 (前述の [オープニングシーケンス](#データファイルを開く)参照)、デフォルトのデータファイルが読み込み専用モードで自動的に開かれます。 この機能を使って、組み込みアプリを初回起動したときのデータファイル作成・選択の操作をより制御することができます。
 
 具体的には、次のような場合に対応できます:
 
@@ -535,5 +535,5 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 - **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない** デフォルトの挙動です。 アプリケーションは終了する以外の選択肢がありません。  
     `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](assets/en/Project/connect1.png)
 
-- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** The user can access the server selection window by clicking on the **Select...** button.  
-    `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** ユーザーは **選択...** ボタンをクリックする事によってサーバー選択ウィンドウにアクセスできます。  
+    `ServerSelectionAllowed`: **True**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
