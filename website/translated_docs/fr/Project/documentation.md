@@ -1,19 +1,19 @@
 ---
 id: documentation
-title: Documenting a project
+title: Documenter un projet
 ---
 
 ## Aperçu
 
-In project databases, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database.
+Dans les bases projet, vous pouvez documenter vos méthodes ainsi que vos formulaires, vos tables ou vos champs. La création d'une documentation est particulièrement appropriée pour les bases de données développées par plusieurs programmeurs et constitue généralement une bonne pratique en matière de programmation. La documentation peut contenir une description d'un élément ainsi que toute information nécessaire à la compréhension du fonctionnement de cet élément d'une base de données.
 
-The following project elements accept documentation:
+Les éléments de projet suivants acceptent la documentation :
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
+- Méthodes (méthodes base, méthodes composant, méthodes projet, méthodes formulaire, méthodes 4D Mobile, triggers et classes)
 - Formulaires
-- Tables and Fields
+- Tables et champs
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
+Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. They are stored as independant files within your project folder.
 
 Documentation is displayed in the preview area (right-side panel) of the Explorer:
 
