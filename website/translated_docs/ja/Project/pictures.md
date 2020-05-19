@@ -5,33 +5,33 @@ title: ピクチャー
 
 ## サポートされるネイティブフォーマット
 
-4Dはピクチャーフォーマットのネイティブ管理を統合しています。 これは、ピクチャーが変換されることなく、元のフォーマットのまま 4D で格納、表示されることを意味します。 (シェイドや透過など) フォーマットにより異なる特定の機能はコピー・ペーストされる際にも保持され、改変なく表示されます。 This native support is valid for all pictures stored in 4D: static pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.
+4Dはピクチャーフォーマットのネイティブ管理を統合しています。 これは、ピクチャーが変換されることなく、元のフォーマットのまま 4D で格納、表示されることを意味します。 (シェイドや透過など) フォーマットにより異なる特定の機能はコピー・ペーストされる際にも保持され、改変なく表示されます。 このネイティブサポートは 4D に格納されるすべてのピクチャー (スタティックピクチャー、デザインモードでフォームにペーストされたピクチャー、アプリケーションモードでフィールドや変数にペーストされたピクチャーなど) に対して有効です。
 
 4D は Windows と macOS の両方においてネイティブな API を使用してフィールドや変数のピクチャーをエンコード (書き込み) およびデコード (読み込み) します。 これらの実装は現在デジタルカメラで使用されている RAW フォーマット含め、数多くのネイティブなフォーマットへのアクセスを提供します。
 
-* Windows, 4D uses WIC (Windows Imaging Component). 
-* macOS, 4D uses ImageIO.
+* Windows では、4DはWIC (Windows Imaging Component) を使用します。 
+* macOS では、4D は ImageIO を使用します。
 
-The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding.
+もっとも一般的なフォーマット (例: jpeg、gif、png、tiff、bmp、等) はどちらのフォーマットでもサポートされます。 macOS では、PDF フォーマットのエンコーディング/デコーディングも可能です。
 
-サポートされるフォーマットの完全なリストは OS や、マシンにインストールされているカスタムコーデックによって異なります。 To find out which codecs are available, you must use the `PICTURE CODEC LIST` command. エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
+サポートされるフォーマットの完全なリストは OS や、マシンにインストールされているカスタムコーデックによって異なります。 どのコーデックが利用可能かを調べるためには、`PICTURE CODEC LIST` コマンドを使用してください。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
-> WIC and ImageIO permit the use of metadata in pictures. `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
+> WIC および ImageIO はピクチャー内のメタデータの書き込みを許可しています。 `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
 
 ### ピクチャー Codec ID
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs. これは以下の形式で返されます:
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。 これは以下の形式で返されます:
 
 * 拡張子 (例: “.gif”)
-* As a MIME type (for example “image/jpeg”)
+* MIME タイプ (例: “image/jpeg”)
 
 それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。
 
-多くの 4Dピクチャー管理コマンドは Codec ID を引数として受けとることができます。 It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command.
+多くの 4Dピクチャー管理コマンドは Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 
 ### 利用不可能なピクチャーフォーマット
 
-マシン上で利用できないフォーマットのピクチャーに対しては、専用のアイコンが表示されます。 The extension of the missing format is shown at the bottom of the icon:
+マシン上で利用できないフォーマットのピクチャーに対しては、専用のアイコンが表示されます。 アイコンの下部にその拡張子が表示されます。
 
 ![](assets/en/Project/picNoFormat.png)
 
@@ -39,17 +39,17 @@ Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` comman
 
 ![](assets/en/Project/picNoFormat2.png)
 
-このアイコンは、そのピクチャーがローカルでは表示も編集もできないことを意味します。ですが、中身を改変することなく保存し、他のマシンで表示することは可能です。 This is the case, for example, for PDF pictures on Windows, or for PICT format pictures.
+このアイコンは、そのピクチャーがローカルでは表示も編集もできないことを意味します。ですが、中身を改変することなく保存し、他のマシンで表示することは可能です。 たとえば、Windows での PDF ピクチャーや、PICT フォーマットのピクチャーなどが該当します。
 
-### Picture Resolution
+### ピクチャーの解像度
 
-4D supports high resolution displays on both macOS and Windows platforms for the following:
+macOS および Windows の両方で高解像度表示がサポートされているピクチャーは次のとおりです:
 
-* Static pictures
-* 3D buttons/radio/check boxes
-* Picture buttons/pop-ups
-* Tab controls
-* Menu icons
+* スタティックピクチャー
+* 3D ボタン / ラジオ / チェックボックス
+* ピクチャーボタン / ポップアップ
+* タブコントロール
+* メニューアイコン
 * リストボックスヘッダー
 
 High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.).
@@ -93,14 +93,14 @@ When using high resolution pictures, the scale factor is specified by adding "@n
 
 This resolution behavior is supported for project databases by all [4D form objects](../FormObjects/formObjectsOverview.html) which support images.
 
-## Mouse Coordinates in a Picture
+## ピクチャー上のマウス座標
 
 4D ではピクチャーフィールドや変数をクリック、またはホバーした際のマウスのローカル座標を取得できます。これはスクロールやズーム処理がおこなわれている場合でも可能です。 このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。
 
-The coordinates are returned in the *MouseX* and *MouseY* [System Variables](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。
+座標は *MouseX* と *MouseY* [システム変数](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html) に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。
 
-You can get the value of these variables as part of the `On Clicked`, `On Double Clicked`, `On Mouse up`, `On Mouse Enter`, or `On Mouse Move` form events.
+これらの値は、`On Clicked`、`On Double Clicked`、`On Mouse up`、`On Mouse Enter`、あるいは `On Mouse Move` フォームイベントの一部として取得することができます。
 
-## Picture Operators
+## ピクチャー演算子
 
-4D allows you to carry out **operations** on 4D pictures, such as concatenation, superimposing, etc. This point is covered in the *Picture Operators* section of the *4D Language Reference*.
+4Dではピクチャーの連結や重ね合わせなどのピクチャー **演算** をおこなうことができます。 これは *4Dランゲージリファレンス* の *ピクチャー演算子* の章で説明されています。

@@ -13,9 +13,9 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Grammaire JSON
 
-| Nom                     | Type de données | Valeurs possibles                                                                                            |
-| ----------------------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string          | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Nom                     | Type de données | Valeurs possibles                                                                                        |
+| ----------------------- | --------------- | -------------------------------------------------------------------------------------------------------- |
+| customBackgroundPicture | string          | Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style". |
 
 
 #### Objets pris en charge

@@ -50,7 +50,7 @@ The following table summarizes how object and form methods are called for each e
 | ----------------------------- | ---------------------------------- | ------------------ | --------------------------- |
 | On Load                       | Oui                                | Oui                | Tous les objets             |
 | On Unload                     | Oui                                | Oui                | Tous les objets             |
-| On Validate                   | Oui                                | Oui                | Tous les objets             |
+| Sur validation                | Oui                                | Oui                | Tous les objets             |
 | Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
 | Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
 | Sue avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
@@ -60,8 +60,8 @@ The following table summarizes how object and form methods are called for each e
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
 | Sur activation                | Jamais                             | Oui                | None                        |
 | On Deactivate                 | Jamais                             | Oui                | None                        |
-| On Outside Call               | Jamais                             | Oui                | None                        |
-| On Page Change                | Jamais                             | Oui                | None                        |
+| Sur appel extérieur           | Jamais                             | Oui                | None                        |
+| Sur changement page           | Jamais                             | Oui                | None                        |
 | Sur début survol              | Oui                                | Oui                | Objets concernés uniquement |
 | Sur déposer                   | Oui                                | Oui                | Objets concernés uniquement |
 | Sur glisser                   | Oui                                | Jamais             | Objets concernés uniquement |
@@ -69,11 +69,11 @@ The following table summarizes how object and form methods are called for each e
 | Sur survol                    | Oui                                | Oui                | Tous les objets             |
 | Sur fin survol                | Oui                                | Oui                | Tous les objets             |
 | On Mouse Up                   | Oui                                | Jamais             | Objets concernés uniquement |
-| On Menu Selected              | Jamais                             | Oui                | None                        |
+| Sur menu sélectionné          | Jamais                             | Oui                | None                        |
 | On Bound variable change      | Jamais                             | Oui                | None                        |
 | Sur données modifiées         | Oui                                | Oui                | Objets concernés uniquement |
-| On Plug in Area               | Oui                                | Oui                | Objets concernés uniquement |
-| On Header                     | Oui                                | Oui                | Tous les objets             |
+| Sur appel zone du plug in     | Oui                                | Oui                | Objets concernés uniquement |
+| Sur entête                    | Oui                                | Oui                | Tous les objets             |
 | On Printing Detail            | Oui                                | Oui                | Tous les objets             |
 | On Printing Break             | Oui                                | Oui                | Tous les objets             |
 | On Printing Footer            | Oui                                | Oui                | Tous les objets             |
@@ -81,10 +81,10 @@ The following table summarizes how object and form methods are called for each e
 | Sur affichage corps           | Oui                                | Oui                | Tous les objets             |
 | Sur ouverture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
 | Sur fermeture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
-| On Resize                     | Jamais                             | Oui                | None                        |
+| Sur redimensionnement         | Jamais                             | Oui                | None                        |
 | Sur nouvelle sélection        | Oui                                | Oui                | Objets concernés uniquement |
-| On Load Record                | Jamais                             | Oui                | None                        |
-| On Timer                      | Jamais                             | Oui                | None                        |
+| Sur chargement ligne          | Jamais                             | Oui                | None                        |
+| Sur minuteur                  | Jamais                             | Oui                | None                        |
 | Sur défilement                | Oui                                | Jamais             | Objets concernés uniquement |
 | Sur avant saisie              | Oui (List box)                     | Jamais             | Objets concernés uniquement |
 | Sur déplacement colonne       | Oui (List box)                     | Jamais             | Objets concernés uniquement |
@@ -93,7 +93,7 @@ The following table summarizes how object and form methods are called for each e
 | Sur clic entête               | Oui (List box et Zone 4D View Pro) | Jamais             | Objets concernés uniquement |
 | Sur clic pied                 | Oui (List box)                     | Jamais             | Objets concernés uniquement |
 | Sur après tri                 | Oui (List box)                     | Jamais             | Objets concernés uniquement |
-| On Long Click                 | Oui (Bouton)                       | Oui                | Objets concernés uniquement |
+| Sur clic long                 | Oui (Bouton)                       | Oui                | Objets concernés uniquement |
 | Sur clic alternatif           | Oui (Bouton et List box)           | Jamais             | Objets concernés uniquement |
 | Sur déployer                  | Yes (Hier. list and list box)      | Jamais             | Objets concernés uniquement |
 | Sur contracter                | Yes (Hier. list and list box)      | Jamais             | Objets concernés uniquement |

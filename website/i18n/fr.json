@@ -187,10 +187,10 @@
         "title": "Sur clic pied"
       },
       "Events/onGettingFocus": {
-        "title": "On Getting focus"
+        "title": "On getting focus"
       },
       "Events/onHeader": {
-        "title": "On Header"
+        "title": "Sur entête"
       },
       "Events/onHeaderClick": {
         "title": "Sur clic entête"
@@ -199,16 +199,16 @@
         "title": "On Load"
       },
       "Events/onLoadRecord": {
-        "title": "On Load Record"
+        "title": "Sur chargement ligne"
       },
       "Events/onLongClick": {
-        "title": "On Long Click"
+        "title": "Sur clic long"
       },
       "Events/onLosingFocus": {
-        "title": "On Losing focus"
+        "title": "Sur perte focus"
       },
       "Events/onMenuSelected": {
-        "title": "On Menu Selected"
+        "title": "Sur menu sélectionné"
       },
       "Events/onMouseEnter": {
         "title": "Sur début survol"
@@ -229,13 +229,13 @@
         "title": "On Open External Link"
       },
       "Events/onOutsideCall": {
-        "title": "On Outside Call"
+        "title": "Sur appel extérieur"
       },
       "Events/onPageChange": {
-        "title": "On Page Change"
+        "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "On Plug in Area"
+        "title": "Sur appel zone du plug in\t"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -247,7 +247,7 @@
         "title": "On Printing Footer"
       },
       "Events/onResize": {
-        "title": "On Resize"
+        "title": "Sur redimensionnement"
       },
       "Events/onRowMoved": {
         "title": "Sur déplacement ligne"
@@ -262,7 +262,7 @@
         "title": "Sur nouvelle sélection"
       },
       "Events/onTimer": {
-        "title": "On Timer"
+        "title": "Sur minuteur"
       },
       "Events/onUnload": {
         "title": "On Unload"
@@ -277,7 +277,7 @@
         "title": "On URL Resource Loading"
       },
       "Events/onValidate": {
-        "title": "On Validate"
+        "title": "Sur validation"
       },
       "Events/onVpReady": {
         "title": "On VP Ready"
@@ -295,7 +295,7 @@
         "title": "Éditeur de formulaire"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "A propos des formulaires 4D"
       },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
@@ -307,13 +307,13 @@
         "title": "Action"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "Propriétés des formulaires"
       },
       "FormEditor/formSize": {
         "title": "Form Size"
       },
       "FormEditor/jsonReference": {
-        "title": "JSON property list"
+        "title": "Liste de propriétés JSON"
       },
       "FormEditor/markers": {
         "title": "Markers"
@@ -430,7 +430,7 @@
         "title": "Plage de valeurs"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "Liste de propriétés JSON"
       },
       "FormObjects/propertiesResizingOptions": {
         "title": "Options de redimensionnement"
@@ -557,7 +557,7 @@
         "title": "Développer un projet"
       },
       "Project/documentation": {
-        "title": "Documenting a project"
+        "title": "Documenter un projet"
       },
       "Project/overview": {
         "title": "Aperçu"
@@ -665,7 +665,7 @@
         "title": "Aperçu"
       },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Objet Serveur Web"
       }
     },
     "links": {
@@ -677,7 +677,7 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
       "Forms": "Formulaires",
-      "Form Properties": "Form Properties",
+      "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
@@ -693,7 +693,7 @@
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
     "Forms|no description given": "Formulaires",
-    "Form Properties|no description given": "Form Properties",
+    "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
     "Form Objects|no description given": "Objets formulaires",
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
