@@ -45,15 +45,15 @@ p>
 
 ```4d
     "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+        "type": "button",   // オブジェクトタイプ
+        "style":"regular",  // ボタンスタイル
+        "defaultButton":"true"  // デフォルトボタン
+        "text": "OK",   // タイトル
+        "action": "Cancel", // アクション
+        "left": 60,  // フォーム上の座標 (左)
+        "top": 160, // フォーム上の座標 (上)
+        "width": 100,  // 幅
+        "height": 20 // 高さ
         }
 ```
 
@@ -104,7 +104,7 @@ p>
                 "type": "button",
                 "style":"toolbar",
                 "text": "OK",       
-                "popupPlacement":"separated"
+                "popupPlacement":"separated",
                 "action": "Cancel",     
                 "left": 60,             
                 "top": 160,             
@@ -132,7 +132,7 @@ p>
                 "type": "button",
                 "style":"bevel",
                 "text": "OK",       
-                "popupPlacement":"linked"
+                "popupPlacement":"linked",
                 "action": "Cancel",
                 "left": 60,     
                 "top": 160,     
@@ -160,7 +160,7 @@ p>
                 "type": "button",
                 "style":"roundedBevel",
                 "text": "OK",
-                "popupPlacement":"none" /
+                "popupPlacement":"none",
                 "action": "Cancel",
                 "left": 60,         
                 "top": 160,
@@ -188,7 +188,7 @@ OS Xグラデーションボタンは、明るいグレーの背景に中央配�
                 "type": "button",
                 "style":"gradientBevel",
                 "text": "OK",
-                "popupPlacement":"linked"
+                "popupPlacement":"linked",
                 "action": "Cancel",     
                 "left": 60,     
                 "top": 160,
@@ -216,7 +216,7 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
                 "type": "button",
                 "style":"texturedBevel",
                 "text": "OK",
-                "popupPlacement":"separated"
+                "popupPlacement":"separated",
                 "action": "Cancel",
                 "left": 60,         
                 "top": 160,     
@@ -244,7 +244,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                 "type": "button",
                 "style":"office",
                 "text": "OK",
-                "popupPlacement":"none"
+                "popupPlacement":"none",
                 "action": "Cancel",
                 "left": 60,     
                 "top": 160,

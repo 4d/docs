@@ -100,7 +100,7 @@ true/false ステータスで表すことのできるアクション ("checkable
             "left": 60,         
             "top": 160,     
             "width": 100,           
-            "height": 20        
+            "height": 20,
             "dataSourceTypeHint":"boolean"
             }
     
@@ -120,8 +120,8 @@ true/false ステータスで表すことのできるアクション ("checkable
                 "action": "cancel",
                 "left": 60,     
                 "top": 160,
-                "width": 100,           
-                "height": 20            
+                "width": 100,
+                "height": 20
                 }
     
 
@@ -142,11 +142,11 @@ true/false ステータスで表すことのできるアクション ("checkable
                     "style":"toolbar",
                     "text": "Checkbox",
                     "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4
+                    "iconFrames": 4,
                     "left": 60,
                     "top": 160,
-                    "width": 100,                   
-                    "height": 20                    
+                    "width": 100,
+                    "height": 20
                     }
     
 
@@ -167,7 +167,7 @@ true/false ステータスで表すことのできるアクション ("checkable
                     "style":"bevel",
                     "text": "Checkbox",  
                     "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4
+                    "iconFrames": 4,
                     "left": 60,
                     "top": 160,
                     "width": 100,               
@@ -185,7 +185,7 @@ macOS の例:
 
 ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Windows 上では、角の丸いベベルスタイルは [ベベル](#bevel) スタイルと同じです。
+> Windows 上では、角の丸いベベルスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 #### JSON 例:
 
@@ -195,7 +195,7 @@ macOS の例:
                 "style":"roundedBevel",  
                 "text": "Checkbox",
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4
+                "iconFrames": 4,
                 "left": 60,
                 "top": 160,
                 "width": 100,           
@@ -211,7 +211,7 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
 
 ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> Windows 上では、このスタイルは [ベベル](#bevel) スタイルと同じです。
+> Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 #### JSON 例:
 
@@ -220,7 +220,7 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
                 "style":"gradientBevel",
                 "text": "Checkbox",
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4
+                "iconFrames": 4,
                 "left": 60,     
                 "top": 160,     
                 "width": 100,               
@@ -250,8 +250,8 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
                 "text": "Checkbox",
                 "left": 60,
                 "top": 160,
-                "width": 100,                   
-                "height": 20                    
+                "width": 100,
+                "height": 20
                 }
     
 
@@ -277,7 +277,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                     "text": "Checkbox",  
                     "action": "fontBold",
                     "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4     
+                    "iconFrames": 4,
                    "left": 60,
                     "top": 160,     
                     "width": 100,           
@@ -354,10 +354,10 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
             "icon": "/RESOURCES/smiley.jpg",
             "iconFrame": 4,
             "customBackgroundPicture": "/RESOURCES/paper.jpg",
-            "iconOffset": 5, //custom icon offset when clicked
+            "iconOffset": 5, // クリック時のアイコンオフセット
             "left": 60,
             "top": 160,
-            "width": 100,       
+            "width": 100,
             "height": 20,
             "customBorderX": 20,
             "customBorderY": 5
@@ -368,7 +368,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 すべてのチェックボックスは次の基本プロパティを共有します:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
