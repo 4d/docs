@@ -184,10 +184,10 @@
         "title": "Sur clic pied"
       },
       "Events/onGettingFocus": {
-        "title": "On Getting focus"
+        "title": "On getting focus"
       },
       "Events/onHeader": {
-        "title": "On Header"
+        "title": "Sur entête"
       },
       "Events/onHeaderClick": {
         "title": "Sur clic entête"
@@ -196,16 +196,16 @@
         "title": "On Load"
       },
       "Events/onLoadRecord": {
-        "title": "On Load Record"
+        "title": "Sur chargement ligne"
       },
       "Events/onLongClick": {
-        "title": "On Long Click"
+        "title": "Sur clic long"
       },
       "Events/onLosingFocus": {
-        "title": "On Losing focus"
+        "title": "Sur perte focus"
       },
       "Events/onMenuSelected": {
-        "title": "On Menu Selected"
+        "title": "Sur menu sélectionné"
       },
       "Events/onMouseEnter": {
         "title": "Sur début survol"
@@ -226,13 +226,13 @@
         "title": "On Open External Link"
       },
       "Events/onOutsideCall": {
-        "title": "On Outside Call"
+        "title": "Sur appel extérieur"
       },
       "Events/onPageChange": {
-        "title": "On Page Change"
+        "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "On Plug in Area"
+        "title": "Sur appel zone du plug in\t"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -244,7 +244,7 @@
         "title": "On Printing Footer"
       },
       "Events/onResize": {
-        "title": "On Resize"
+        "title": "Sur redimensionnement"
       },
       "Events/onRowMoved": {
         "title": "Sur déplacement ligne"
@@ -259,7 +259,7 @@
         "title": "Sur nouvelle sélection"
       },
       "Events/onTimer": {
-        "title": "On Timer"
+        "title": "Sur minuteur"
       },
       "Events/onUnload": {
         "title": "On Unload"
@@ -274,7 +274,7 @@
         "title": "On URL Resource Loading"
       },
       "Events/onValidate": {
-        "title": "On Validate"
+        "title": "Sur validation"
       },
       "Events/onVpReady": {
         "title": "On VP Ready"
@@ -400,7 +400,7 @@
         "title": "Plage de valeurs"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "Liste de propriétés JSON"
       },
       "FormObjects/propertiesResizingOptions": {
         "title": "Options de redimensionnement"
