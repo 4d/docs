@@ -10,20 +10,20 @@ title: ピクチャー
 * Windows では、4DはWIC (Windows Imaging Component) を使用します。 
 * macOS では、4D は ImageIO を使用します。
 
-WIC and ImageIO permit the use of metadata in pictures. `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
+WIC および ImageIO はピクチャー内のメタデータの書き込みを許可しています。 `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
 
 ## ピクチャー Codec ID
 
 4D は多様な [ピクチャーフォーマット](FormEditor/pictures.md#native-formats-supported) をネイティブにサポートします: .jpeg, .png, .svg 等。
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs. これは以下の形式で返されます:
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。 これは以下の形式で返されます:
 
 * 拡張子 (例: “.gif”)
-* As a MIME type (for example “image/jpeg”)
+* MIME タイプ (例: “image/jpeg”)
 
 それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
-多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。
+多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。
 
 ## ピクチャー演算子
 
