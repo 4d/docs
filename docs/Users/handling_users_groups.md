@@ -140,7 +140,7 @@ You can assign a group privileges to any plug-ins installed in the database. Thi
  
 Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
 
-You can also restrict the use of the 4D Client Web server and SOAP server via the plug-in access area. 
+> Used licenses remain attached to 4D user accounts in the group for the whole 4D session. 
 
 The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option. 
 

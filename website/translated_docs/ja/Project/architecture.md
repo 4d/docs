@@ -29,7 +29,7 @@ title: 4D プロジェクトのアーキテクチャー
 
 - *databaseName*.4DProject ファイル
 - Sources 
-    + Classes
+    + クラス
     + DatabaseMethods
     + メソッド
     + フォーム
@@ -77,11 +77,11 @@ title: 4D プロジェクトのアーキテクチャー
 | *methodName*.4dm | データベース内で定義されているプロジェクトメソッド (1つのメソッドにつき1ファイル)。 | テキスト |
 
 
-#### Classes folder
+#### Classes フォルダー
 
-| 内容              | 説明                                                                                                                                 | 形式   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | テキスト |
+| 内容              | 説明                                                                    | 形式   |
+| --------------- | --------------------------------------------------------------------- | ---- |
+| *className*.4dm | 特定のオブジェクトをインスタンス化するための、ユーザークラス用の定義メソッド。 1クラスにつき1ファイル。ファイル名がクラス名になります。 | テキスト |
 
 
 #### Forms フォルダー
@@ -185,7 +185,7 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 このフォルダーにはデータベースの管理に使用される **ユーザー設定** ファイルが格納されます。 必要に応じてこのフォルダーにファイルが追加されます。
 
-> [Data フォルダー](#settings-folder)の Setting フォルダー内にデータファイル用のユーザー設定ファイルがある場合には、そちらが優先されます。
+> [Data フォルダー](#settings-フォルダー)の Setting フォルダー内にデータファイル用のユーザー設定ファイルがある場合には、そちらが優先されます。
 
 | 内容                  | 説明                                                                                                                                                                                                                                                              | 形式   |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -220,12 +220,12 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 プロジェクトデータベースが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-## Documentation folder
+## Documentation フォルダー
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+このフォルダーには、クラス・メソッド・フォームなどのプロジェクト要素について作成されたドキュメンテーションファイル (.md) がすべて格納されます。 ドキュメンテーションファイルは、4D エクスプローラーにて表示・管理されます。
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+詳細については [プロジェクトのドキュメンテーション](Project/documentation.md) を参照ください。
 
 ## WebFolder
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。

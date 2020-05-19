@@ -1,6 +1,6 @@
 ---
 id: onLongClick
-title: On Long Click
+title: Sur clic long
 ---
 
 | Code | Peut être appelé par                     | Définition                                                                           |

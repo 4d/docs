@@ -35,19 +35,26 @@ Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er komb
 
 ## Variablen
 
-Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem `C_XXX` Befehl. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. You create a typed variable using the `var` keyword. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
-C_DATE(MyDate) //Date type for MyDate variable
+var MyDate : Date 
 ```
 
-Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+The `var` keyword allows declaring object variables of a defined class type, for example:
+
+```4d
+var myPerson : cs.Person 
+//variable of the Person user class
+```
+
+Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-Der Code liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile erstellt eine Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
 ## Befehle
 

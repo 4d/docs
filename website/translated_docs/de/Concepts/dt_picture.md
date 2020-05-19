@@ -3,39 +3,27 @@ id: picture
 title: Bild
 ---
 
-Datenfelder, Variablen oder Ausdrücke vom Typ Bild können im Windows- oder im Macintosh-Format sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit Befehlen von 4D bzw. Plug-Ins von der Festplatte lesen können.
-
-## Native Unterstützung von Formaten
-
-4D enthält die native Verwaltung von Bildformaten, d. h. die Bilder werden in ihrem Originalformat angezeigt und gespeichert, ohne jegliche Interpretation durch 4D. Die spezifischen Merkmale der verschiedenen Formate, wie Schatten, transparente Bereiche, o. ä. werden beim Kopieren und Einsetzen beibehalten und ohne Veränderung angezeigt. Die native Verwaltung gilt für alle in 4D gespeicherten Bilder: Bilder aus der Objektbibliothek, im Designmodus in Formulare eingefügte Bilder, im Anwendungsmodus in Datenfelder oder Variablen eingefügte Bilder, etc.
+Datenfelder, Variablen oder Ausdrücke vom Typ Bild können im Windows- oder im Macintosh-Format sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit 4D Befehlen wie `READ PICTURE FILE` von der Festplatte lesen können.
 
 4D verwendet native APIs, um Felder und Variablen vom Typ Bild unter Windows und auf macOS zu codieren (schreiben) bzw. decodieren (lesen). Dies bietet Zugriff auf zahlreiche native Formate, inkl. RAW, dem gängigen Format für Digitalkameras.
 
-- Unter Windows verwendet 4D WIC (Windows Imaging Component)
-- Auf macOS verwendet 4D ImageIO. 
+* Unter Windows verwendet 4D WIC (Windows Imaging Component). 
+* Auf MacOS verwendet 4D ImageIO.
 
-Die gängigsten Bildformate werden auf beiden Plattformen unterstützt: jpeg, gif, png, tiff, bmp, etc. Auf macOS ist auch das Format pdf zum Codieren und Decodieren verfügbar.
+WIC and ImageIO permit the use of metadata in pictures. Für diesen Zweck können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
 
-Die unterstützten Formate variieren unter Windows und auf macOS je nach Betriebssystem und den eigenen Codecs, die auf den Rechnern installiert sind. Um herauszufinden, welche Codecs verfügbar sind, müssen Sie den Befehl `PICTURE CODEC LIST` einsetzen. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
+## Bild Codec Kennung
 
-**Hinweis:** Mit WIC und ImageIO lassen sich auch Metadaten in Bildern verwenden. Für diesen Zweck können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
+4D unterstützt nativ ein breites Spektrum an [Bildformaten](FormEditor/pictures.md#native-formats-supported), wie .jpeg, .png oder .svg.
 
-### Bild Codec Kennung
+Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs. Es gibt folgende Formen:
 
-Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate als Codec Kennung für Bilder zurück. Es gibt folgende Formen:
+* Als Endung (zum Beispiel “.gif”)
+* As a MIME type (for example “image/jpeg”)
 
-- Als Endung (zum Beispiel “.gif”)
-- Als Mime Typ (zum Beispiel “image/jpeg”)
+Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
 
-Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist. Die meisten 4D Befehle zur Bildverwaltung können eine Codec Kennung als Parameter empfangen. Deshalb muss unbedingt die vom Befehl `PICTURE CODEC LIST` zurückgegebene ID des Systems verwendet werden.
-
-### Nicht verfügbares Bildformat
-
-Für Bildformate, die auf dem verwendeten Rechner nicht verfügbar sind, erscheint ein spezifischer Icon. Die Endung des fehlenden Bildformats wird darunter angezeigt. Dieser Icon erscheint automatisch beim Anzeigen der betroffenen Bilder:
-
-![](assets/en/Concepts/missingpict.en.png)
-
-Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lässt sich aber speichern und ggf. auf anderen Rechnern anzeigen. Das ist z. B. bei PDF Bildern auf Windows oder veralteten Bildern im PICT-Format der Fall.
+Die meisten [4D Befehle zur Bildverwaltung](https://doc.4d.com/4Dv18/4D/18/Bilder.201-4504337.de.html) können eine Codec ID als Parameter empfangen. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate zurück.
 
 ## Bildoperatoren
 
@@ -56,20 +44,10 @@ Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lä
 
 - Beim Operator | müssen Bild1 und Bild2 exakt dieselben Ausmaße haben. Haben sie unterschiedliche Ausmaße, ergibt die Operation Bild1 | Bild2 ein leeres Bild.
 - Mit dem Befehl `COMBINE PICTURES` können Sie Bilder übereinanderlegen und die Merkmale jedes Ausgangsbildes im Ergebnisbild beibehalten.
-- Die Bildoperatoren geben Vektorbilder zurück, wenn beide Ausgangsbilder Vektorbilder sind. Beachten Sie jedoch, dass Bilder im Anzeigeformat Auf Hintergrund als Bitmap gedruckt werden.
 - Zusätzliche Operationen auf Bilder können Sie mit dem Befehl `TRANSFORM PICTURE` ausführen.
-- Es gibt keine Vergleichoperatoren für Bilder. 4D bietet jedoch den Befehl `Equal picture` zum Vergleichen von zwei Bildern. 
-- Mit 4D können Sie auch die lokalen Koordinaten der Maus bei Klicken oder Ziehen in einem Datenfeld oder einer Variablen vom Typ Bild herausfinden, selbst wenn Scrollen oder Zoomen auf das Bild angewendet wird. Dieser Vorgang ist ähnlich wie bei einem Bildmapping und lässt sich für scrollbare Schaltflächenleisten oder die Oberfläche bei kartografischer Software verwenden. Die Koordinaten werden in den **Systemvariablen** *MouseX* und *MouseY* zurückgegeben. Sie werden in Pixel angegeben, ausgehend von der oberen linken Ecke des Bildes (0,0). Ist die Maus außerhalb des Bildkoordinatensystems, wird -1 in *MouseX* und *MouseY* zurückgegeben. Sie erhalten den Wert dieser Variablen in den Formularereignissen **On Clicked**, **On Double Clicked**, **On Mouse Up,** **On Mouse Enter** oder **On Mouse Move**.
+- Es gibt keine Vergleichoperatoren für Bilder. 4D bietet jedoch den Befehl `Equal picture` zum Vergleichen von zwei Bildern.
 
 ### Beispiele
-
-Folgende Beispiele zeigen alle Bilder im Format **Auf Hintergrund**.
-
-Bild 1 ist ein Kreis: ![](assets/en/Concepts/Circle.en.png)
-
-Bild 2 ist ein Rechteck: ![](assets/en/Concepts/rectangle.en.png)
-
-Nachfolgend sehen Sie die Syntax für die jeweilige Operation und die entsprechende grafische Darstellung.
 
 Horizontal Aneinanderfügen
 
