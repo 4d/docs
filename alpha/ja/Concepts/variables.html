@@ -94,7 +94,7 @@ var <span class="hljs-variable">$myFile</span> : <span class="hljs-number">4</sp
 var <span class="hljs-variable">$myVar</span> <span class="hljs-comment">// バリアント型変数</span>
 </code></pre>
 <p><code>varName</code> に指定する変数名は 4Dの <a href="/docs/alpha/ja/Concepts/identifiers.html">識別子の命名規則</a> に従う必要があります。<br>
-このシンタックスは <a href="#local-process-and-interprocess-variables">ロカール変数とプロセス変数</a> の宣言のみサポートしています。<a href="#interprocess-variables">インタープロセス変数</a> および <a href="/docs/alpha/ja/Concepts/arrays.html">配列</a> には使用できません。</p>
+このシンタックスは <a href="#ローカル変数とプロセス変数">ローカル変数とプロセス変数</a> の宣言のみサポートしています。<a href="#インタープロセス変数">インタープロセス変数</a> および <a href="/docs/alpha/ja/Concepts/arrays.html">配列</a> には使用できません。</p>
 <p><code>varType</code> には次が指定できます:</p>
 <ul>
 <li><a href="/docs/alpha/ja/Concepts/data-types.html">基本のデータ型</a>: 変数には、宣言された型の値が格納されます</li>
@@ -288,7 +288,7 @@ var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
 </code></pre>
 <p>は変数 <em>MyNumber</em> を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。</p>
 <blockquote>
-<p><a href="#creating-variables">データ型の宣言</a> をせずに変数を作成することは通常推奨されません。</p>
+<p><a href="#変数の作成">データ型の宣言</a> をせずに変数を作成することは通常推奨されません。</p>
 </blockquote>
 <p>もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに <em>MyNumber</em> 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:</p>
 <pre><code class="hljs css language-4d">[Products]Size:=MyNumber

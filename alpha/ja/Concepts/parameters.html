@@ -90,7 +90,7 @@
 <span class="hljs-comment">// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し</span>
 <span class="hljs-comment">// その際に引数として日付リテラル !05/05/10! を渡します</span>
 </code></pre>
-<p><strong>注:</strong> よりよいコード実行のため、サブルーチンが受け取る引数 <code>$1</code>, <code>$2</code>... が正確に宣言されていることを確認してください (<a href="#declaring-parameters">パラメーターの宣言</a> 参照)</p>
+<p><strong>注:</strong> よりよいコード実行のため、サブルーチンが受け取る引数 <code>$1</code>, <code>$2</code>... が正確に宣言されていることを確認してください (<a href="#パラメーターの宣言">パラメーターの宣言</a> 参照)</p>
 <h3><a class="anchor" aria-hidden="true" id="引数としてサポートされている式"></a><a href="#引数としてサポートされている式" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引数としてサポートされている式</h3>
 <p>引数はあらゆる <a href="/docs/alpha/ja/Concepts/quick-tour.html#式のタイプ">式</a> の形で渡すことができますが、例外があります:</p>
 <ul>
@@ -178,7 +178,7 @@
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="引数の渡し方-値か参照か"></a><a href="#引数の渡し方-値か参照か" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引数の渡し方: 値か参照か</h2>
-<p>引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、<strong>結果の値</strong> をサブルーチンのローカル変数である $1, $2 ... に渡します (<a href="#using-parameters">引数について</a> 参照)。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:</p>
+<p>引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、<strong>結果の値</strong> をサブルーチンのローカル変数である $1, $2 ... に渡します (<a href="#引数について">引数について</a> 参照)。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">// MY_METHOD メソッド</span>
 <span class="hljs-function">DO_SOMETHING</span>([People]Name) <span class="hljs-comment">// [People]Name の値が "williams" だとします</span>
 <span class="hljs-function">ALERT</span>([People]Name)
@@ -247,7 +247,7 @@
  <span class="hljs-variable">$para</span>.Age:=<span class="hljs-variable">$para</span>.Age+<span class="hljs-number">10</span>
  <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$para</span>.Name+<span class="hljs-string">" は "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" 歳です。"</span>)
 </code></pre>
-<p>これは <a href="#optional-parameters">任意パラメーター</a> を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:</p>
+<p>これは <a href="#任意パラメーター">任意パラメーター</a> を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:</p>
 <ul>
 <li><code>Null</code> 値と比較することで、必要な引数がすべて提供されているかをチェックします</li>
 <li>引数の値をプリセットします</li>
@@ -283,7 +283,7 @@ End if</span>
 </code></pre>
 <p>プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。</p>
 <blockquote>
-<p>任意パラメーターが必要な場合、<a href="#named-parameters">名前付き引数</a> を利用すると型の制限がなく、柔軟で便利です。</p>
+<p>任意パラメーターが必要な場合、<a href="#名前付き引数">名前付き引数</a> を利用すると型の制限がなく、柔軟で便利です。</p>
 </blockquote>
 <p><code>Count parameters</code> コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。</p>
 <p>次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。</p>
