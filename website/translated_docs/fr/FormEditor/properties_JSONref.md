@@ -1,9 +1,9 @@
 ---
 id: jsonReference
-title: JSON property list
+title: Liste de propriétés JSON
 ---
 
-This page provides a comprehensive list of all form properties, sorted by their JSON name. Click on a property name to access its detailed description.
+This page provides a comprehensive list of all form properties, sorted by their JSON name. Cliquez sur un nom de propriété pour accéder à sa description détaillée.
 
 > In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
 
