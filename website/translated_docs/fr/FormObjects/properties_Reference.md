@@ -1,11 +1,11 @@
 ---
 id: propertiesReference
-title: JSON property list
+title: Liste de propriétés JSON
 ---
 
-You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
+Vous trouverez dans cette page une liste complète de toutes les propriétés d'objets triées selon leur nom JSON. Cliquez sur un nom de propriété pour accéder à sa description détaillée.
 
-> In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
+> Dans le chapitre "Propriétés des objets de formulaire", les propriétés sont triées en fonction des noms et des thèmes de la liste des propriétés.
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [p](#p) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [z](#z)
 
@@ -42,11 +42,11 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Typical activity to be performed.
+      Une action à exécuter.
     </td>
     
     <td>
-      The name of a valid standard action.
+      Nom d'une action standard valide.
     </td>
   </tr>
   
@@ -56,11 +56,11 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Allows displaying system font picker or color picker to edit object attributes
+      Permet d'afficher le sélecteur de polices système ou le sélecteur de couleurs pour modifier les attributs d'un objet
     </td>
     
     <td>
-      true, false (default)
+      true, false (par défaut)
     </td>
   </tr>
   
@@ -74,7 +74,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Any CSS value; "transparent"; "automatic"
+      Toute valeur CSS; "transparent"; "automatic"
     </td>
   </tr>
   
@@ -84,7 +84,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.
+      Permet d'ajouter automatiquement une valeur à une liste lorsqu'un utilisateur saisit une valeur qui ne se trouve pas dans l'énumération associée à l'objet.
     </td>
     
     <td>
@@ -110,7 +110,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Specifies only two possible values.
+      Indique seulement deux valeurs possibles.
     </td>
     
     <td>
@@ -124,7 +124,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      The radius value for round rectangles.
+      La valeur du rayon d'arrondi pour les rectangles à coins arrondis.
     </td>
     
     <td>
@@ -152,7 +152,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Positions an object at the bottom (centered).
+      Positionne un objet en bas (centré).
     </td>
     
     <td>
@@ -178,11 +178,11 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      A list of choices associated with an object
+      Associe une énumération à un objet
     </td>
     
     <td>
-      A list of choices
+      Une énumération
     </td>
   </tr>
   
@@ -196,7 +196,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      A list of class names
+      Une liste de noms de classes
     </td>
   </tr>
   
@@ -224,7 +224,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Collection of column objects with defined column properties
+      Collection d'objets colonne avec des propriétés de colonnes définies
     </td>
   </tr>
   
@@ -266,7 +266,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      "input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)
+      "input", "checkbox" (pour les colonnes booléen / numérique), "automatic", "popup" (uniquement pour les colonnes booléens)
     </td>
   </tr>
   
@@ -308,7 +308,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.
+      Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style".
     </td>
   </tr>
   
@@ -364,7 +364,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      JSON string or base64 encoded string<a name="d"></a>
+      Chaîne JSON ou chaîne encodée en base64<a name="d"></a>
     </td>
   </tr>
   
