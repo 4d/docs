@@ -1,6 +1,6 @@
 ---
 id: onPageChange
-title: On Page Change
+title: Sur changement page
 ---
 
 | Code | Peut être appelé par | Définition                              |

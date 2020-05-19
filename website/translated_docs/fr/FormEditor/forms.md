@@ -1,6 +1,6 @@
 ---
 id: forms
-title: About 4D Forms
+title: A propos des formulaires 4D
 ---
 
 ## Aperçu

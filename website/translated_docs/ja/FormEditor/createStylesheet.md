@@ -247,7 +247,7 @@ CSS の **属性セレクター**と同様に、フォームオブジェクト�
 ランタイムにおいて複数のスタイルシートが存在する場合、それらの優先順位は次のように決まります:
 
 1. 4D フォームはまずデフォルトの CSS ファイル `/SOURCES/styleSheets.css` を読み込みます。 
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
+2. 次に、カレントプラットフォーム専用の CSS ファイル `/SOURCES/styleSheets_mac.css` または `/SOURCES/styleSheets_windows.css` がロードされます。
 3. その後、JSON フォーム内に CSS ファイルが定義されていれば、それを読み込みます:
 
 *       両プラットフォーム用のファイル:
