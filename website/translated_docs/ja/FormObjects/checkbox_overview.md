@@ -185,7 +185,7 @@ macOS の例:
 
 ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Windows 上では、角の丸いベベルスタイルは [ベベル](#bevel) スタイルと同じです。
+> Windows 上では、角の丸いベベルスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 #### JSON 例:
 
@@ -211,7 +211,7 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
 
 ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> Windows 上では、このスタイルは [ベベル](#bevel) スタイルと同じです。
+> Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 #### JSON 例:
 
