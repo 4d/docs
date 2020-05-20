@@ -32,9 +32,6 @@
       "Concepts/looping": {
         "title": "Schleifenstrukturen"
       },
-      "Concepts/classes": {
-        "title": "Classes"
-      },
       "Concepts/components": {
         "title": "Komponenten"
       },
@@ -294,38 +291,11 @@
       "FormEditor/formEditor": {
         "title": "Form Editor"
       },
-      "FormEditor/forms": {
-        "title": "About 4D Forms"
-      },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
         "title": "Pictures"
-      },
-      "FormEditor/action": {
-        "title": "Aktion"
-      },
-      "FormEditor/propertiesForm": {
-        "title": "Form Properties"
-      },
-      "FormEditor/formSize": {
-        "title": "Form Size"
-      },
-      "FormEditor/jsonReference": {
-        "title": "JSON property list"
-      },
-      "FormEditor/markers": {
-        "title": "Markers"
-      },
-      "FormEditor/menu": {
-        "title": "Menu"
-      },
-      "FormEditor/print": {
-        "title": "Print"
-      },
-      "FormEditor/windowSize": {
-        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -556,14 +526,8 @@
       "Project/developing": {
         "title": "Developing a project"
       },
-      "Project/documentation": {
-        "title": "Documenting a project"
-      },
       "Project/overview": {
         "title": "Overview"
-      },
-      "Project/pictures": {
-        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -663,9 +627,6 @@
       },
       "Users/overview": {
         "title": "Overview"
-      },
-      "WebServer/webServerObject": {
-        "title": "Web Server object"
       }
     },
     "links": {
@@ -676,8 +637,7 @@
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "Forms": "Formulare",
-      "Form Properties": "Form Properties",
+      "Form Editor": "Form Editor",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
@@ -685,15 +645,13 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
       "REST Server": "REST Server"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Forms|no description given": "Formulare",
-    "Form Properties|no description given": "Form Properties",
+    "Form Editor|no description given": "Form Editor",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "Form Objects",
     "Form Object Properties|no description given": "Form Object Properties",

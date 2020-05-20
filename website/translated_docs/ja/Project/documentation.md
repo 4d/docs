@@ -1,43 +1,43 @@
 ---
 id: documentation
-title: プロジェクトのドキュメンテーション
+title: Documenting a project
 ---
 
 ## 概要
 
-プロジェクトデータベースにおいては、メソッドやフォーム、テーブル、フィールドに関するドキュメンテーションを作成することができます。 複数のプログラマーによってデータベータを開発している場合などに、ドキュメンテーションの作成はとくに適しています。また、一般的に良いプログラミングの作法としても推奨されます。 ドキュメンテーションには、要素の説明だけでなく、データベースにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
+In project databases, you can document your methods as well as your forms, tables, or fields. Creating a documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database.
 
-ドキュメントすることができるプロジェクト要素は次のとおりです:
+The following project elements accept documentation:
 
-- メソッド (データベースメソッド、コンポーネントメソッド、プロジェクトメソッド、フォームメソッド、4D Mobile メソッド、トリガー、クラス)
+- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - フォーム
-- テーブルとフィールド
+- Tables and Fields
 
-ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
+Your documentation files are written in markdown syntax (.md files) using any editor that supports markdown. They are stored as independant files within your project folder.
 
-ドキュメントされた内容は、エクスプローラーの右側にあるプレビューエリアに表示されます:
+Documentation is displayed in the right-side pane of the Explorer:
 
 ![](assets/en/Project/explorer_Doc.png)
 
-また、[コードエディターのヘルプTip](#コードエディターでドキュメンテーションを表示する) として部分的に表示することもできます。
+It can also be exposed partially as [code editor tips](#viewing-documentation-in-the-code-editor).
 
-## ドキュメンテーションファイル
+## Documentation files
 
-### ドキュメンテーションファイル名
+### Documentation file name
 
-ドキュメンテーションファイルには、ドキュメントの対象である要素と同じファイル名が付き、拡張子は ".md" です。 たとえば、`myMethod.4dm` プロジェクトメソッドに付随するドキュメンテーションファイルの名前は `myMethod.md` です。
+Documentation files get the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
-エクスプローラー上では、選択した要素と同じファイル名のドキュメンテーションが自動的に表示されます (後述参照)。
+In the Explorer, 4D will automatically display the documentation file with the same name as the selected element (see below).
 
-### ドキュメンテーションファイルのアーキテクチャー
+### Documentation file architecture
 
-ドキュメンテーションファイルはすべて、データベースフォルダーのルートにある `Documentation` フォルダーに格納されます。
+All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
 
-`Documentation` フォルダーのアーキテクチャーは次のとおりです:
+The `Documentation` folder architecture is the following:
 
 - **Documentation**
     
-    + **クラス** 
+    + **Classes** 
         * myClass.md
     * **DatabaseMethods** 
         * onStartup.md
@@ -56,64 +56,65 @@ title: プロジェクトのドキュメンテーション
     - **Triggers** 
         * table1.md
         * ...
-* プロジェクトフォームとそのプロジェクトフォームメソッドは、同じドキュメンテーションファイルをフォームとメソッドの両方について共有します。
+* A project form and its project form method share the same documentation file for form and method.
 
-* テーブルフォームとそのテーブルフォームメソッドは、同じドキュメンテーションファイルをフォームとメソッドの両方について共有します。
+* A table form and its table form method share the same documentation file for form and method. 
 
-> ドキュメントされているプロジェクト要素を名称変更したり、削除したりすると、その要素に紐づいている Markdown ファイルも自動で名称変更、または削除されます。
+> Renaming or deleting a documented element in your project will result in renaming or deleting the associated markdown file.
 
-## エクスプローラーとドキュメンテーション
+## Documentation in the Explorer
 
-### ドキュメンテーションの表示
+### Viewing documentation
 
-エクスプローラーウィンドウにドキュメンテーションを表示させるには:
+To view a documentation in the Explorer window:
 
-1. プレビューエリアが表示されていることを確認します。
-2. エクスプローラーリストより、ドキュメントされている要素を選択します。
-3. プレビューエリアの下にある **ドキュメンテーション** ボタンをクリックします。
+1. Make sure the right side panel is displayed.
+2. Select the documented element in the Explorer list.
+3. Click the **Documentation** button located below the preview area.
 
 ![](assets/en/Project/comments-explo2.png)
 
-- 選択要素のドキュメンテーションファイルが見つからなかった場合には、**作成する** ボタンが表示されます。
+- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
 
-- 選択要素のドキュメンテーションファイルが存在すれば、その内容がエリア内に表示されます。 なお、エリアに表示されている内容は直接編集することはできません。
+- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
 
-### ドキュメンテーションファイルの編集
+### Editing documentation file
 
-選択要素の Markdown ドキュメンテーションファイルはエクスプローラーより作成・編集することができます。
+You can create and/or edit a markdown documentation file from the Explorer window for the selected element.
 
-選択要素のドキュメンテーションファイルが存在しなければ:
+If there is no documentation file for the selected element, you can:
 
-- `Documentation` ペインにある **作成する** ボタンをクリックするか、
-- エクスプローラーのオプションメニューまたはコンテキストメニューより **ドキュメンテーションを編集...** を選択します。
+- click on the **Create** button in the `Documentation` pane or,
+- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
 ![](assets/en/Project/comments-explo3.png)
 
-テンプレートを使い、適切な場所・名称で自動作成された .md ファイルは、デフォルトの Markdown エディターで開かれます。
+4D automatically creates a .md file with a basic template at appropriate name and location and opens it with your default markdown editor.
 
-選択要素のドキュメンテーションファイルが存在していれば、エクスプローラーのオプションメニューまたはコンテキストメニューより **ドキュメンテーションを編集...** を選択することで、Markdown エディターに開くことができます。
+If a documentation file already exists for the selected element, you can open it with your markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
-## コードエディターでドキュメンテーションを表示する
+## Viewing documentation in the code editor
 
-4D のコードエディターは、メソッドのドキュメンテーションの一部をヘルプTip として表示します。
+The 4D code editor displays a part of the documentation of a method in its help tip.
 
 ![](assets/en/Project/codeEditor_Comments.png)
 
-"\<MethodName>.md" ファイルが "\<package>/documentation" フォルダーに存在する場合、コードエディターは次の優先順位でヘルプTip を表示します:
+If a file named "<MethodName>.md" exists in "<package>/documentation" folder, the code editor displays, by priority:
 
-- Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (*\<!-- コマンドの説明 -->*)
+- Any text entered in a html `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 
-- HTML のコメントタグが使用されていなければ、Markdown ファイルの `## Description` タグ後の最初の文章。 この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
+- Or, if no html `comment` tag is used, the first sentence after a `# Description` tag of the markdown file.  
+    In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
 
-> それ以外の場合には、[メソッドコードの先頭のコメントブロック](https://doc.4d.com/4Dv18R3/4D/18-R3/Writing-a-method.300-4919495.ja.html#4618226) がコードエディターに表示されます。
+> Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
-## ドキュメンテーションファイルの定義
+## Documentation file definition
 
-4D はテンプレートを用いて新規のドキュメンテーションファイルを作成します。 このテンプレートは、[コードエディターでドキュメンテーションを表示する](#コードエディターでドキュメンテーションを表示する) のに利用できる項目が提供しています。
+4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
 
-それ以外の [サポートされている Markdown](#サポートされている-Markdown) タグも利用することができます。
+However, you can use any [supported markdown tags](#supported-markdown).
 
-新規作成されたドキュメンテーションファイルには、次のデフォルト項目が含まれています:
+New documentation files are created with this default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
@@ -130,11 +131,11 @@ title: プロジェクトのドキュメンテーション
   
   <tr>
     <td>
-      \<!-- Type your summary here -->
+      \<!-- Type here your summary -->
     </td>
     
     <td>
-      HTML コメントタグ。 メソッドの説明として優先的に <a href="#コードエディターでドキュメンテーションを表示する">コードエディターTip</a> に表示されます。
+      HTML comment. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
     </td>
   </tr>
   
@@ -144,7 +145,7 @@ title: プロジェクトのドキュメンテーション
     </td>
     
     <td>
-      Markdown のレベル2 見出しタグ。 HTML コメントタグが使用されていない場合、このタグ後の最初の文章がメソッドの説明としてコードエディターTip に表示されます。
+      Heading level 2 in markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used
     </td>
   </tr>
   
@@ -154,39 +155,39 @@ title: プロジェクトのドキュメンテーション
     </td>
     
     <td>
-      レベル2 見出しタグ。サンプルコードの記述に使用できます。
+      Heading level 2, you can use this area to propose example code
     </td>
   </tr>
   
   <tr>
     <td>
-      ```4D <br>Type your example here ```
+      ```4D <br>Type here your example ```
     </td>
     
     <td>
-      4D サンプルコードのフォーマットに使います (highlight.js ライブラリを使用)。
+      Used to format 4D code examples (uses highlight.js library)
     </td>
   </tr>
 </table>
 
-### サポートされている Markdown
+### Supported Markdown
 
-- 見出しタグ:
+- The title tag is supported:
 
-    # 見出し 1
-    ## 見出し 2
-    ### 見出し 3
+    # Title 1
+    ## Title 2
+    ### Title 3
     
 
-- スタイルタグ (イタリック、太字、取り消し線) :
+- The style tags (italic, bold, strike-through) are supported:
 
-    _イタリック_
-    **太字**
-    **_太字/イタリック_**
-    ~~取り消し線~~
+    _italic_
+    **bold**
+    **_bold/italic_**
+    ~~strikethrough~~
     
 
-- 4D コードハイライトが付くコードブロックタグ (```4d ...```) :
+- The code block tag (```4d ...```) is supported with 4D code highlight:
     
     \
     
@@ -195,69 +196,69 @@ title: プロジェクトのドキュメンテーション
           $txt:="Hello world!"  
           \
 
-- テーブルタグ:
+- The table tag is supported:
 
-    | 引数 | 型   | 説明  |
+    | Parameter | Type   | Description  |
     | --------- | ------ | ------------ |
-    | wpArea    | 文字列 |Write pro エリア|
-    | toolbar   | 文字列 |ツールバー名  |
+    | wpArea    | String |Write pro area|
+    | toolbar   | String |Toolbar name  |
     
 
-- リンクタグ:
+- The link tag is supported:
 
-    // 例 1
-    コマンドの [ドキュメンテーション](https://doc.4d.com) は ...
+    // Case 1
+    The [documentation](https://doc.4d.com) of the command ....
     
-    // 例 2
-    [4D ブログ][1]
+    // Case 2
+    [4D blog][1]
     
     [1]: https://blog.4d.com
     
 
-- 画像タグ:
+- The image tags are supported:
 
-    ![画像の説明](pictures/image.png)
+    ![image info](pictures/image.png)
     
-    ![4D ロゴ](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
+    ![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
     
-    [![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+    [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
     
 
-[![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> 詳細については [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
+> For more information, see the [GitHug markdown guide](https://guides.github.com/features/mastering-markdown/).
 
 ## 例題
 
-`WP SwitchToolbar.md` ファイルに、次のように書くことができます:
+In the `WP SwitchToolbar.md` file, you can write:
 
 ```4d
-<!-- size 引数に応じて、異なるロゴを返します -->
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
 
 
-| 引数 | 型   | in/out | 説明 |
+| Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | 倍長整数 | in | ロゴスタイルセレクター (1 から 5)  |
-| logo      | ピクチャー | out | 選択されたロゴ |
+| size      | Longint | in | Logo style selector (1 to 5)  |
+| logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-このメソッドは、*size* 引数の値に応じて、特定サイズのロゴを返します。
-1 = 最小値, 5 = 最大値
+This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+1 = smallest size, 5 = largest size. 
 
 ## Example
 
 C_PICTURE($logo)
 C_LONGINT($size)
 
-// 最大ロゴを取得します
+//Get the largest logo
 $logo:=GetLogo(5)
 ```
 
-- エクスプローラーの表示: ![](assets/en/Project/explorer_Doc.png)
+- Explorer view: ![](assets/en/Project/explorer_Doc.png)
 
-- コードエディターの表示: ![](assets/en/Project/comments-explo5.png)
+- Code editor view: ![](assets/en/Project/comments-explo5.png)

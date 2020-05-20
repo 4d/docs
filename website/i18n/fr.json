@@ -32,9 +32,6 @@
       "Concepts/looping": {
         "title": "Structures répétitives (ou \"boucles\")"
       },
-      "Concepts/classes": {
-        "title": "Classes"
-      },
       "Concepts/components": {
         "title": "Composants"
       },
@@ -294,38 +291,11 @@
       "FormEditor/formEditor": {
         "title": "Éditeur de formulaire"
       },
-      "FormEditor/forms": {
-        "title": "A propos des formulaires 4D"
-      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
       "FormEditor/pictures": {
         "title": "Images"
-      },
-      "FormEditor/action": {
-        "title": "Action"
-      },
-      "FormEditor/propertiesForm": {
-        "title": "Propriétés des formulaires"
-      },
-      "FormEditor/formSize": {
-        "title": "Form Size"
-      },
-      "FormEditor/jsonReference": {
-        "title": "Liste de propriétés JSON"
-      },
-      "FormEditor/markers": {
-        "title": "Markers"
-      },
-      "FormEditor/menu": {
-        "title": "Menu"
-      },
-      "FormEditor/print": {
-        "title": "Imprimer"
-      },
-      "FormEditor/windowSize": {
-        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "Bouton"
@@ -556,14 +526,8 @@
       "Project/developing": {
         "title": "Développer un projet"
       },
-      "Project/documentation": {
-        "title": "Documenter un projet"
-      },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "Project/pictures": {
-        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -663,9 +627,6 @@
       },
       "Users/overview": {
         "title": "Aperçu"
-      },
-      "WebServer/webServerObject": {
-        "title": "Objet Serveur Web"
       }
     },
     "links": {
@@ -676,8 +637,7 @@
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
-      "Forms": "Formulaires",
-      "Form Properties": "Propriétés des formulaires",
+      "Form Editor": "Éditeur de formulaire",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
@@ -685,15 +645,13 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Users and Groups": "Groupes et utilisateurs",
-      "Web Server": "Serveur Web",
       "REST Server": "Serveur REST"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
-    "Forms|no description given": "Formulaires",
-    "Form Properties|no description given": "Propriétés des formulaires",
+    "Form Editor|no description given": "Éditeur de formulaire",
     "Form Events|no description given": "Evénements formulaire",
     "Form Objects|no description given": "Objets formulaires",
     "Form Object Properties|no description given": "Propriétés des objets formulaire",

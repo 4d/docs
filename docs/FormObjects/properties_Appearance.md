@@ -19,7 +19,6 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 ![](assets/en/FormObjects/property_defaultButtonWindows.en.png) 
 
-
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
