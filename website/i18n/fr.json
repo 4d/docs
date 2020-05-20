@@ -668,7 +668,11 @@
         "title": "Objet Serveur Web"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
+    },
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
