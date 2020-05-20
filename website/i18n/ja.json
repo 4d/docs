@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "ループ構造"
       },
+      "Concepts/classes": {
+        "title": "クラス"
+      },
       "Concepts/components": {
         "title": "コンポーネント"
       },
@@ -291,11 +294,38 @@
       "FormEditor/formEditor": {
         "title": "フォームエディター"
       },
+      "FormEditor/forms": {
+        "title": "About 4D Forms"
+      },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
       "FormEditor/pictures": {
         "title": "ピクチャー"
+      },
+      "FormEditor/action": {
+        "title": "動作"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Form Properties"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "JSON property list"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Print"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -526,8 +556,14 @@
       "Project/developing": {
         "title": "プロジェクトの開発"
       },
+      "Project/documentation": {
+        "title": "プロジェクトのドキュメンテーション"
+      },
       "Project/overview": {
         "title": "概要"
+      },
+      "Project/pictures": {
+        "title": "ピクチャー"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -627,6 +663,9 @@
       },
       "Users/overview": {
         "title": "概要"
+      },
+      "WebServer/webServerObject": {
+        "title": "Web Server object"
       }
     },
     "links": {
@@ -637,7 +676,8 @@
     "categories": {
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "Form Editor": "フォームエディター",
+      "Forms": "フォーム",
+      "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
@@ -645,13 +685,15 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Users and Groups": "Users and Groups",
+      "Web Server": "Web Server",
       "REST Server": "REST Server"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
-    "Form Editor|no description given": "フォームエディター",
+    "Forms|no description given": "フォーム",
+    "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "Form Object Properties",

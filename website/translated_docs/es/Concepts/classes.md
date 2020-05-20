@@ -92,7 +92,7 @@ $cName:=OB Class($o).name //"Empty"
 
 Available classes are accessible from their class stores. The following class stores are available:
 
-- a class store for built-in 4D classes. It is returned by the `4d` command.
+- a class store for built-in 4D classes. It is returned by the `4D` command.
 - a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
 
 For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
@@ -103,8 +103,6 @@ For example, you create a new instance of an object of myClass using the `cs.myC
 
 A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
 
-> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
-
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
 - Database folder 
@@ -112,6 +110,14 @@ For example, if you want to define a class named "Polygon", you need to create t
         * Sources 
             - Classes 
                 + Polygon.4dm
+
+### Class names
+
+When naming classes, you should keep in mind the following rules:
+
+- A class name must be ECMAScript compliant. 
+- Class names are case sensitive.
+- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
 ### 4D Developer interface
 
@@ -305,12 +311,12 @@ $0:=This.height*This.width
 
 ### Super
 
-#### Super {( param )} {-> Object}
+#### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                 |
-| --------- | ------ | -- | ------------------------------------------- |
-| param     | mixed  | -> | Parameter to pass to the parent constructor |
-| Result    | object | <- | Object's parent                             |
+| Parameter | Type   |    | Description                                    |
+| --------- | ------ | -- | ---------------------------------------------- |
+| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
+| Result    | object | <- | Object's parent                                |
 
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
