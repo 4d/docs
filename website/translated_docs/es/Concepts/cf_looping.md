@@ -306,7 +306,7 @@ The following table compares the three types of `For each...End for each`:
 - The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
 - The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords: 
     - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required.
+    - within the loop when only some elements/properties need to be modified and no integrity management is required. 
 
 ### Loop through collections
 
@@ -409,7 +409,7 @@ You can define bounds to the iteration using the optional begin and end paramete
 **Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
 
 - In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
 
 If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 
@@ -417,7 +417,7 @@ For example:
 
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
 
 #### Example
 

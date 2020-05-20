@@ -64,5 +64,5 @@ When the form is executed, the object is not animated. You manage the animation 
 
 ## See also
 
-- [rulers](ruler.md)
+- [rulers](ruler.md) 
 - [steppers](stepper.md)

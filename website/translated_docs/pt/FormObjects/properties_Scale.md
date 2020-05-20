@@ -82,7 +82,7 @@ Specifies the location of an object's displayed text.
 Maximum value of an indicator.
 
 - For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted. 
 
 #### JSON Grammar
 

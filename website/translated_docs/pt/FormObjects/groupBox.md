@@ -12,7 +12,7 @@ A group box is a static object that allows you to visually assemble multiple for
 #### JSON Example:
 
         "myGroup": {
-            "type": "groupBox",
+            "type": "groupBox", 
             "title": "Employee Info"
             "left": 60,
             "top": 160,

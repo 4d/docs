@@ -1,6 +1,6 @@
 ---
 id: propertiesDataSource
-title: Data Source
+title: Data Source 
 ---
 ---
 ## Automatic Insertion
@@ -36,7 +36,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 ---
 ## Choice List
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values. 
 
 #### JSON Grammar
 
@@ -48,7 +48,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### Objects Supported
 
-[Drop-down List](dropdownList_Overview.md) -
+[Drop-down List](dropdownList_Overview.md) - 
 [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
@@ -56,7 +56,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 ---
 ## Choice List (static list)
 
-List of static values to use as labels for the tab control object.
+List of static values to use as labels for the tab control object. 
 
 #### JSON Grammar
 
@@ -135,13 +135,13 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records. 
 
 You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
 ![](assets/en/FormObjects/defaultValues.png)
 
-> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows. 
 
 #### JSON Grammar
 
@@ -183,14 +183,14 @@ The following expression types are supported:
 	*	Date
 	*	Picture
 	*	Boolean
-
+  
 	For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 	When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
-	If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
+	If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression. 
 
 	If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
 
-If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
+If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property. 
 
 
 #### JSON Grammar
@@ -212,8 +212,8 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 `Current selection list boxes`
 
 Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
-
-All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
+ 
+All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form). 
 
 #### JSON Grammar
 

@@ -23,7 +23,7 @@ title: メソッド
 その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
 
 - サブルーチンと関数
-- オブジェクトの付属メソッド
+- オブジェクトの付属メソッド 
 - メニューメソッド
 - プロセスメソッド
 - イベントまたはエラー処理メソッド
@@ -115,8 +115,8 @@ $0:=$1+" "+$2
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
-$result:=$o.full_name("John";"Smith")
-// $result = "John Smith"
+$result:=$o.full_name("John";"Smith") 
+//$result = "John Smith"
 // $result:=fullName("param1";"param2") と同義です
 ```
 
@@ -135,8 +135,8 @@ C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) // メソッドをオブジェクトに追加します
 
-$result:=$o.fullName()
-// $result = "Jim Wesson"
+$result:=$o.fullName() 
+//$result = "Jim Wesson"
 ```
 
 たとえ引数を受け取らなかったとしても、オブジェクトメソッドを実行するためにはカッコ () をつけて呼び出す必要があるという点に注意してください。 オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):

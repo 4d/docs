@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 - MyProject
 	- Components
-	- Data
+	- Data 
 		- Logs
 		- Settings
 	- Documentation
@@ -114,7 +114,7 @@ Contents|Description|Format
 table_*n*.4dm|Trigger methods defined in the database. One trigger file per table (n is the table number)|text
 
 **Note:**
-The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
+The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
 
 
 ### Trash folder
@@ -125,12 +125,12 @@ The Trash folder contains methods and forms that were deleted from the project (
 - Forms
 - TableForms
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
+Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder. 
 
 
 ### DerivedData folder
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder. 
 
 
 ## Resources folder
@@ -161,7 +161,7 @@ data.match|(internal) UUID matching table number|XML
 
 This folder contains **user settings files for data** used for database administration.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files. 
 
 Contents|Description|Format|
 ----|----|---|
@@ -185,9 +185,9 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 ## Settings folder
 
-This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
+This folder contains **user settings files** used for database administration. File are added to the folder when necessary. 
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file. 
 
 Contents|Description|Format|
 ----|----|---|
@@ -217,9 +217,20 @@ This folder contains the components to be available in the project database only
 
 > A project database can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host database.
-> - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
+> - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database. 
 
 
 ## Plugins folder
 
 This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+
+
+## Documentation folder
+
+This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer. 
+
+For more information, refer to [Documenting a project](Project/documentation.md). 
+
+## WebFolder
+
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 

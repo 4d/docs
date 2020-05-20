@@ -87,7 +87,7 @@ Entry filters can also be used to display required formatting characters so that
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
 - you can directly enter a filter definition string
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
+- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|). 
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
@@ -189,7 +189,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### Automatic
         
-        - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+        - In single-line inputs, words located at the end of lines are truncated and there are no line returns. 
         - In multiline inputs, 4D carries out automatic line returns:  
             ![](assets/en/FormObjects/multilineAuto.png)
         #### Nein

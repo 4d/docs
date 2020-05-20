@@ -16,9 +16,9 @@ Der linke Bereich enthält die vorhandenen Backups der Datenbank. Sie können au
 
 Wählen Sie hier ein Backup aus, erscheinen im rechten Teil des Fensters Informationen über dieses Backup:
 
-- **Pfad**: Vollständiger Pfadname der gewählten Backup-Datei. Mit der Schaltfläche Anzeigen öffnen Sie die Backup-Datei in einem Systemfenster.
+- **Pfad**: Vollständiger Pfadname der gewählten Backup-Datei. Mit der Schaltfläche Anzeigen öffnen Sie die Backup-Datei in einem Systemfenster. 
 - **Datum und Zeit**: Datum und Uhrzeit des Backup.
-- **Inhalt**: Inhalt der Backup-Datei. Neben jedem Eintrag in der Liste gibt es ein Ankreuzfeld, über das Sie angeben, ob er wiederhergestellt werden soll. Sie können auch die Schaltflächen** Alles aktivieren** oder **Nichts aktivieren** verwenden, um die Liste der Einträge zusammenzustellen, die Sie wiederherstellen wollen.
+- **Inhalt**: Inhalt der Backup-Datei. Neben jedem Eintrag in der Liste gibt es ein Ankreuzfeld, über das Sie angeben, ob er wiederhergestellt werden soll. Sie können auch die Schaltflächen** Alles aktivieren** oder **Nichts aktivieren** verwenden, um die Liste der Einträge zusammenzustellen, die Sie wiederherstellen wollen. 
 - **Zielordner für wiederherstellte Dateien auswählen**: Ordner, in dem die wiederhergestellten Dateien abgelegt werden. 4D legt die wiederhergestellten Dateien standardmäßig in einem Ordner mit Namen "Archivname" (ohne Endung) ab, der neben der Strukturdatei der Datenbank liegt. Wollen Sie das Ziel ändern, klicken Sie unter dem Bereich auf die Schaltfläche **[...]** und geben einen anderen Ordner an.
 
 Die Schaltfläche **Wiederherstellen** startet die manuelle Wiederherstellung der gewählten Elemente.
@@ -36,7 +36,7 @@ Beachten Sie, dass sich der Verschlüsselungscode (Passphrase) bei mehreren Vers
 Beim Wiederherstellen eines Backup und Integration des aktuellen Logbuchs in eine verschlüsselte Anwendung gilt folgendes:
 
 - Stellen Sie ein Backup mit einer alten Passphrase her, ist diese Passphrase beim nächsten Starten der Anwendung erforderlich.
-- Nach dem Verschlüsseln läuft beim Öffnen einer verschlüsselten Datendatei ein Backup und es wird ein neues Logbuch erstellt. Deshalb ist es nicht möglich, eine Datei .4BK, die einen Verschlüsselungscode hat, wiederherzustellen und .4BL Dateien, die einen anderen Verschlüsselungscode haben, zu integrieren.
+- Nach dem Verschlüsseln läuft beim Öffnen einer verschlüsselten Datendatei ein Backup und es wird ein neues Logbuch erstellt. Deshalb ist es nicht möglich, eine Datei .4BK, die einen Verschlüsselungscode hat, wiederherzustellen und .4BL Dateien, die einen anderen Verschlüsselungscode haben, zu integrieren. 
 
 Nachfolgende Übersicht zeigt die Vorgehensweise bei einer Operation Backup/Wiederherstellen mit mehreren Schlüsseln:
 

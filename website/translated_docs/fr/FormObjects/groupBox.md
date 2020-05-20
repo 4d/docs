@@ -12,7 +12,7 @@ Une zone de groupe est un objet statique qui vous permet de rassembler visuellem
 #### Exemple JSON :
 
         "myGroup": {
-            "type": "groupBox",
+            "type": "groupBox", 
             "title": "Employee Info"
             "left": 60,
             "top": 160,

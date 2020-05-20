@@ -20,7 +20,7 @@ Ainsi, chaque opération effectuée par un utilisateur provoque deux actions sim
 - Ajouts d’enregistrements et de BLOBs,
 - Modifications d’enregistrements,
 - Suppressions d’enregistrements,
-- Créations et fermetures de transactions.
+- Créations et fermetures de transactions. 
 
 Pour plus d’informations sur ces actions, reportez-vous à la section [Page Analyse d'activités](MSC/analysis.md) du CSM.
 

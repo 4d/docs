@@ -11,7 +11,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 
 * Gain de temps en développement : pour chaque objet, vous définissez en une seule opération un ensemble de paramétrages.
 * Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
-* Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
+* Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée. 
 
 ### Fichiers feuilles de style
 
@@ -246,14 +246,14 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 
 A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ordre suivant :
 
-1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
+1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`. 
 2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3. S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
 
 *       un fichier pour les deux plateformes :
         
     
-        "css": "<path>"
+        "css": "<path>" 
         
 
 *       ou une liste de fichiers pour les deux plateformes :
@@ -261,7 +261,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
     
         "css": [
                "<path1>",
-               "<path2>"
+               "<path2>" 
                 ],
 
 *       ou une liste de fichiers par plateforme :

@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objets
+title: Objet
 ---
 
 Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets "natifs" 4D est basée sur le principe classique des paires "propriété/valeur" (aussi appelées "attribut/valeur). La syntaxe de ces objets s’inspire du JSON :
@@ -46,7 +46,7 @@ Exemple :
 
 Vous pouvez créer deux types d'objets :
 
-- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process. 
 - partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
 
 ## Principes de syntaxe
@@ -158,7 +158,7 @@ Pour plus d'informations, veuillez vous reporter à la description de la command
 
 L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous : 
 
-- La lecture d'une propriété d'un objet ou d'une valeur indéfini(e) renvoie Indéfini ; l'affectation d'une valeur indéfinie à des variables (hors tableaux) a le même effet qu'appeler EFFACER VARIABLE avec elles :
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
 
 ```4d
      C_OBJET($o)
@@ -277,7 +277,7 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- Vous pouvez accéder aux propriétés d'objets via des chaînes grâce à l'opérateur [ ]
+- Vous pouvez accéder aux propriétés d'objets via des chaînes grâce à l'opérateur [ ] 
 
 ```4d
  $Emp["city"]:="Berlin" //modification de la propriété city

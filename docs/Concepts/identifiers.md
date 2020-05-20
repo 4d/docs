@@ -2,7 +2,7 @@
 id: identifiers
 title: Identifiers
 ---
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.). 
 
 
 ## Basic Rules
@@ -24,7 +24,7 @@ The following rules apply for all 4D frameworks.
 ### Additional rules for SQL
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
 - Names must not include any SQL keywords (command, attribute, etc.).
-
+ 
 **Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.  
 
 
@@ -134,12 +134,12 @@ Examples:
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
-
+ 
 	//Addressing an element of a process array
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
-
+ 
 	//Addressing an element of a local array
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
@@ -155,12 +155,12 @@ Examples:
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
-
+ 
 	//Addressing an element of a two-dimensional process array
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
-
+ 
 	//Addressing an element of a two-dimensional local array
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -201,7 +201,7 @@ OBJECT SET FONT(*;"Binfo";"Times")
 
 **Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
 
-## Project methods
+## Project methods 
 
 You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
 
@@ -236,14 +236,14 @@ Examples:
 ```4d
 	//Within DROP SPACES $1 is a pointer to the field [People]Name
 DROP SPACES(->[People]Name)
-
+ 
 	//Within Calc creator:
 	//- $1 is numeric and equal to 1
 	//- $2 is numeric and equal to 5
 	//- $3 is text or string and equal to "Nice"
 	//- The result value is assigned to $0
 $vsResult:=Calc creator(1;5;"Nice")
-
+ 
 	//Within Dump:
 	//- The three parameters are text or string
 	//- They can be addressed as $1, $2 or $3
@@ -386,3 +386,4 @@ Be sure to use unique names for the different elements in your database. If a pa
 6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+

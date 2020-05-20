@@ -218,3 +218,13 @@ This folder contains the components to be available in the project database only
 ## Plugins folder
 
 This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+
+## Documentation folder
+
+This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+
+For more information, refer to [Documenting a project](Project/documentation.md).
+
+## WebFolder
+
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.

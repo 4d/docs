@@ -18,7 +18,7 @@ Une image d’accueil personnalisée peut provenir de toute application graphiqu
 L'image d'accueil peut être uniquement paramétrée dans l'éditeur de menus : sélectionnez la barre de menus à laquelle vous souhaitez associer une image d’accueil personnalisée. Notez la zone "Image de fond" à droite de la fenêtre. Pour ouvrir directement une image stockée sur votre disque, cliquez sur le bouton **Ouvrir** ou cliquez dans la zone “Image de fond”. Un pop up menu apparaît :
 
 - Pour coller une image se trouvant dans le Presse-papiers, choisissez la commande **Coller**.
-- Pour ouvrir une image stockée dans un fichier disque, choisissez la commande **Ouvrir**. Si vous avez choisi la commande Ouvrir, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de sélectionner le fichier image à utiliser. Une fois définie, l’image s’affiche en taille réduite dans la zone. Elle est alors associée à la barre de menus.
+- Pour ouvrir une image stockée dans un fichier disque, choisissez la commande **Ouvrir**. Si vous avez choisi la commande Ouvrir, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de sélectionner le fichier image à utiliser. Une fois définie, l’image s’affiche en taille réduite dans la zone. Elle est alors associée à la barre de menus. 
 
 ![](assets/en/Menus/splash2.png)
 

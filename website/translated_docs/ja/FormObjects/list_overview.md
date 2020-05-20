@@ -15,8 +15,8 @@ title: 階層リスト
 
 階層リストの中身は次の方法で初期化することができます:
 
-- 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
-- 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。
+- 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。 
+- 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。 
 
 ランタイムにおいては、4D ランゲージの [階層リスト](https://doc.4d.com/4Dv18/4D/18/Hierarchical-Lists.201-4504360.ja.html) コマンドを使って階層リストを管理しますが、その際には対象となるリストの *ListRef* 参照を用います。
 
@@ -71,10 +71,10 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
     - `Count list items`
     - `Find in list`
     - `GET LIST ITEM`
-    - `Get list item font`
-    - `GET LIST ITEM ICON`
-    - `GET LIST ITEM PARAMETER`
-    - `GET LIST ITEM PROPERTIES`
+    - `Get list item font` 
+    - `GET LIST ITEM ICON` 
+    - `GET LIST ITEM PARAMETER` 
+    - `GET LIST ITEM PROPERTIES` 
     - `List item parent`
     - `List item position`
     - `Selected list items`

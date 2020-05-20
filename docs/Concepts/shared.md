@@ -3,7 +3,7 @@ id: shared
 title: Shared objects and collections
 ---
 
-## Overview
+## Overview 
 **Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
 
 Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
@@ -15,7 +15,7 @@ Shared objects and shared collections can be stored in variables declared with s
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections.
+A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections. 
 
 ## Using shared objects or collections
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
@@ -41,11 +41,11 @@ Assigning shared objects/collections to properties or elements of other shared o
 
 - Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
 - A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
-- Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked.
+- Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked. 
 
 Please refer to example 2 for an illustration of shared group rules.
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
+**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide. 
 
 ### Read
 Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
@@ -78,11 +78,11 @@ Shared objects and shared collections are designed to allow communication betwee
 - Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
 - The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
 - If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
+- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated. 
 - The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
-- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
+- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed. 
 
-**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
+**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed. 
 
 
 ## Example 1
@@ -98,7 +98,7 @@ You want to launch several processes that perform an inventory task on different
  Use($inventory)
     $inventory.nbItems:=$nbItems
  End use
-
+ 
   //Create processes
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
@@ -115,7 +115,7 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
  C_OBJECT($inventory)
  $what:=$1 //for better readability
  $inventory:=$2
-
+ 
  $count:=CountMethod($what) //method to count products
  Use($inventory) //use shared object
     $inventory[$what]:=$count  //save the results for this item
@@ -132,23 +132,23 @@ The following examples highlight specific rules when handling shared groups:
  Use($ob1)
     $ob1.a:=$ob2  //group 1 is created
  End use
-
+ 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
     $ob3.a:=$ob4  //group 2 is created
  End use
-
+ 
  Use($ob1) //use an object from group 1
     $ob1.b:=$ob4  //ERROR
   //$ob4 already belongs to another group
   //assignment is not allowed
  End use
-
+ 
  Use($ob3)
     $ob3.a:=Null //remove any reference to $ob4 from group 2
  End use
-
+ 
  Use($ob1) //use an object from group 1
     $ob1.b:=$ob4  //ERROR
   //$ob4 still belongs to group 2

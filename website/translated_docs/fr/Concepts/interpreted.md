@@ -14,7 +14,7 @@ Les avantages procurés par le compilateur sont les suivants :
 - **Vérification du code** : la cohérence interne du code de votre application de base de données est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
 - **Protection :** une fois votre base compilée, vous pouvez en supprimer le code interprété. Alors, la base compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
 - **Application indépendantes "double-cliquables" **: une base compilée peut également être transformée en application indépendante (sous Windows, des fichiers ".EXE") comportant sa propre icône.
-- **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif.
+- **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif. 
 
 ## Différences entre le code interprété et le code compilé
 

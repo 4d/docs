@@ -29,10 +29,10 @@ title: リストボックス
 
 リストボックスオブジェクトは、以下4つの項目で構成されます:
 
-* リストボックスオブジェクトの全体
-* 列
-* 列ヘッダー
-* 列フッター
+* リストボックスオブジェクトの全体 
+* 列 
+* 列ヘッダー 
+* 列フッター 
 
 ![](assets/en/FormObjects/listbox_parts.png)
 
@@ -49,9 +49,9 @@ title: リストボックス
 
 リストボックスには複数のタイプがあり、動作やプロパティの点で異なります。 リストボックスの型は [データソースプロパティ](properties_Object.md#データソース) で定義します:
 
-- **配列**: 各列に 4D 配列を割り当てます。 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。
+- **配列**: 各列に 4D 配列を割り当てます。 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。 
 - **セレクション** (**カレントセレクション** または **命名セレクション**): 各列に式 (たとえばフィールド) を割り当てます。それぞれの行はセレクションのレコードを基に評価されます。
-- **コレクションまたはエンティティセレクション**: 各列に式を割り当てます。各行の中身はコレクションの要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
+- **コレクションまたはエンティティセレクション**: 各列に式を割り当てます。各行の中身はコレクションの要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。 
 
 > 1つのリストボックス内に複数のデータソースタイプを組み合わせて指定することはできません。 データソースは、リストボックス作成時に定義され、 プログラムによって後から変更することはできません。
 
@@ -187,6 +187,151 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 > リストボックスの列、ヘッダーおよびフッターにもそれぞれ固有のプロパティがあります。
 
+### フォームイベント
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| フォームイベント             | 取得される追加プロパティ (メインプロパティについては[Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.ja.html) 参照)                                                                      | コメント                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| On After Edit        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On After Keystroke   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On After Sort        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                | *複合フォーミュラはソート不可   
+(例: This.firstName + This.lastName)* |
+| On Alternative Click | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *配列リストボックスのみ*                                           |
+| On Before Data Entry | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Before Keystroke  | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Begin Drag Over   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Clicked           | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Close Detail      | - [row](#additional-properties)                                                                                                                                                 | *カレントセレクション&命名セレクションリストボックスのみ*                          |
+| On Collapse          | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *階層リストボックスのみ*                                           |
+| On Column Moved      | - [columnName](#additional-properties)
+- [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                          |                                                         |
+| On Column Resize     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [newSize](#additional-properties)
+- [oldSize](#additional-properties)                               |                                                         |
+| On Data Change       | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Delete Action     | - [row](#additional-properties)                                                                                                                                                 |                                                         |
+| On Display Detail    | - [isRowSelected](#additional-properties)
+- [row](#additional-properties)                                                                                                       |                                                         |
+| On Double Clicked    | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Drag Over         | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                         |
+| On Drop              | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Expand            | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *階層リストボックスのみ*                                           |
+| On Footer Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [footerName](#additional-properties)                                                                | *配列、カレントセレクション&命名セレクションリストボックスのみ*                       |
+| On Getting Focus     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *追加プロパティの取得はセル編集時のみ*                                    |
+| On Header Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                |                                                         |
+| On Load              |                                                                                                                                                                                 |                                                         |
+| On Losing Focus      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *追加プロパティの取得はセル編集完了時のみ*                                  |
+| On Mouse Enter       | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                         |
+| On Mouse Leave       |                                                                                                                                                                                 |                                                         |
+| On Mouse Move        | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                         |
+| On Open Detail       | - [row](#additional-properties)                                                                                                                                                 | *カレントセレクション&命名セレクションリストボックスのみ*                          |
+| On Row Moved         | - [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                                                                 | *配列リストボックスのみ*                                           |
+| On Selection Change  |                                                                                                                                                                                 |                                                         |
+| On Scroll            | - [horizontalScroll](#additional-properties)
+- [verticalScroll](#additional-properties)                                                                                         |                                                         |
+| On Unload            |                                                                                                                                                                                 |                                                         |
+
+
+#### 追加プロパティ
+
+リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
+
+| プロパティ            | 型       | 説明                                            |
+| ---------------- | ------- | --------------------------------------------- |
+| area             | テキスト    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
+| areaName         | テキスト    | エリアの名称                                        |
+| column           | 倍長整数    | 列番号                                           |
+| columnName       | テキスト    | 列の名称                                          |
+| footerName       | テキスト    | フッターの名称                                       |
+| headerName       | テキスト    | ヘッダーの名称                                       |
+| horizontalScroll | 倍長整数    | 右方向スクロールの場合は正の数値、左方向の場合は負の数値                  |
+| isRowSelected    | boolean | 行が選択されていれば True、でなければ False                   |
+| newPosition      | 倍長整数    | 列あるいは行の変更後の位置                                 |
+| newSize          | 倍長整数    | 列または行の変更後のサイズ (ピクセル単位)                        |
+| oldPosition      | 倍長整数    | 列あるいは行の変更前の位置                                 |
+| oldSize          | 倍長整数    | 列または行の変更前のサイズ (ピクセル単位)                        |
+| row              | 倍長整数    | 行番号                                           |
+| verticalScroll   | 倍長整数    | 下方向スクロールの場合は正の数値、上方向の場合は負の数値                  |
+
+
+> "偽" カラムや存在しないカラムにてイベントが発生した場合には、主に空の文字列が返されます。
+
 ## リストボックス列
 
 リストボックスは、それぞれ固有のプロパティを持つ 1つ以上の列オブジェクトから構成されています。 列を選択するには、フォームエディターでリストボックスオブジェクトが選択されているときに任意の列をクリックします:
@@ -200,6 +345,96 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ### 列特有のプロパティ
 
 [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式タイプ) - [CSSクラス](properties_Object.md#CSSクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-(True時)-テキスト-(False時)) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+
+### フォームイベント
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| フォームイベント             | 取得される追加プロパティ (メインプロパティについては[Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.ja.html) 参照)                                                                      | コメント                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| On After Edit        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On After Keystroke   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On After Sort        | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                | *複合フォーミュラはソート不可   
+(例: This.firstName + This.lastName)* |
+| On Alternative Click | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *配列リストボックスのみ*                                           |
+| On Before Data Entry | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Before Keystroke  | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Begin Drag Over   | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Clicked           | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Column Moved      | - [columnName](#additional-properties)
+- [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                          |                                                         |
+| On Column Resize     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [newSize](#additional-properties)
+- [oldSize](#additional-properties)                               |                                                         |
+| On Data Change       | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Double Clicked    | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Drag Over         | - [area](#additional-properties)
+- [areaName](#additional-properties)
+- [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties) |                                                         |
+| On Drop              | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       |                                                         |
+| On Footer Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [footerName](#additional-properties)                                                                | *配列、カレントセレクション&命名セレクションリストボックスのみ*                       |
+| On Getting Focus     | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *追加プロパティの取得はセル編集時のみ*                                    |
+| On Header Click      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [headerName](#additional-properties)                                                                |                                                         |
+| On Load              |                                                                                                                                                                                 |                                                         |
+| On Losing Focus      | - [column](#additional-properties)
+- [columnName](#additional-properties)
+- [row](#additional-properties)                                                                       | *追加プロパティの取得はセル編集完了時のみ*                                  |
+| On Row Moved         | - [newPosition](#additional-properties)
+- [oldPosition](#additional-properties)                                                                                                 | *配列リストボックスのみ*                                           |
+| On Scroll            | - [horizontalScroll](#additional-properties)
+- [verticalScroll](#additional-properties)                                                                                         |                                                         |
+| On Unload            |                                                                                                                                                                                 |                                                         |
+
 
 ## リストボックスヘッダー
 
@@ -258,13 +493,13 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ```4d
  Case of
-    :(Form event=On Before Data Entry) // a cell gets the focus
+    :(FORM event.code=On Before Data Entry) // セルがフォーカスを得たとき
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
-  // identification of cell
-       If(arrDate{$row}<Current date) // if date is earlier than today
-          $0:=-1 // cell is NOT enterable
+  // セルの特定
+       If(arrDate{$row}<Current date) // 過去の日付なら
+          $0:=-1 // セルは入力不可
        Else
-  // otherwise, cell is enterable
+  // そうでなければ入力可
        End if
  End case
 ```
@@ -374,12 +609,12 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ```4d
  Case of
-    :(Form event=On Selection Change)
+    :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // 行背景色配列
        For($i;1;$n)
           If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
+             _ListboxBackground{$i}:=0x0080C080 // 背景色を緑にします
           Else // not selected
              _ListboxBackground{$i}:=lk inherited
           End if
@@ -510,7 +745,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 このモードでは:
 
 - オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されるオブジェクトのサイズは `LISTBOX GET PRINT INFORMATION` コマンドで取得できます。
-- リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。印刷を実行する前に `OBJECT SET SCROLL POSITION` を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
+- リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。印刷を実行する前に `OBJECT SET SCROLL POSITION` を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。 
 - 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 `LISTBOX GET PRINT INFORMATION` コマンドを使用して、印刷がおこなわれている間の状態をチェックできます。
 
 ## 階層リストボックス
@@ -924,7 +1159,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
     OB SET($ob;"valueType";"text")
     OB SET($ob;"saveAs";"value")
     OB SET($ob;"value";"blue")
-    OB SET($ob;"requiredListName";"colors")
+    OB SET($ob;"requiredListName";"colors") 
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)

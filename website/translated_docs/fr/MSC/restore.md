@@ -16,9 +16,9 @@ La liste située dans la partie gauche de la fenêtre affiche les sauvegardes ex
 
 Lorsque vous sélectionnez une sauvegarde dans cette liste, la partie droite de la fenêtre affiche les informations relatives à cette sauvegarde :
 
-- **Chemin d’accès** : chemin d’accès complet du fichier de sauvegarde sélectionné. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système.
+- **Chemin d’accès** : chemin d’accès complet du fichier de sauvegarde sélectionné. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système. 
 - **Date et heure** : date et heure de la sauvegarde.
-- **Contenu** : contenu du fichier de sauvegarde. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. Vous pouvez utiliser les boutons **Tout sélectionner** ou **Tout désélectionner** pour paramétrer la liste des éléments à restituer.
+- **Contenu** : contenu du fichier de sauvegarde. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. Vous pouvez utiliser les boutons **Tout sélectionner** ou **Tout désélectionner** pour paramétrer la liste des éléments à restituer. 
 - **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. Par défaut, 4D restitue les fichiers dans un dossier nommé “Nomarchive” (sans extension) placé à côté du fichier de structure de la base. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
 
 Le bouton **Restituer** lance la restitution manuelle des éléments sélectionnés.
@@ -36,7 +36,7 @@ Souvenez-vous que la clé de chiffrement des données (phrase secrète) a peut-�
 Au moment de restituer une sauvegarde et d'intégrer le fichier d'historique courant dans une base chiffrée :
 
 - Si vous restituez une sauvegarde à l'aide d'une ancienne phrase secrète, cette dernière sera demandée au prochain démarrage de la base.
-- Après un chiffrement, à l'ouverture du fichier de données chiffrées, une sauvegarde est exécutée et un nouveau fichier journal est créé. Ainsi, il n'est pas possible de restituer un fichier chiffré .4BK avec une clé et d'intégrer les fichiers chiffrés .4BL avec une autre clé.
+- Après un chiffrement, à l'ouverture du fichier de données chiffrées, une sauvegarde est exécutée et un nouveau fichier journal est créé. Ainsi, il n'est pas possible de restituer un fichier chiffré .4BK avec une clé et d'intégrer les fichiers chiffrés .4BL avec une autre clé. 
 
 La séquence suivante illustre les principes d'une opération de clé multiple de sauvegarde/restitution :
 

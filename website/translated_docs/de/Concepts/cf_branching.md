@@ -54,7 +54,7 @@ Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if
+ End if 
 ```
 
 **Tipp:** Für bestimmte Fälle können Sie Abfragen auch ohne Befehlsfolge ausführen. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:

@@ -25,7 +25,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 - **Never**: The scheduled backup feature is disabled.
 - **Every Hour**: Programs an automatic backup every hour, starting with the next hour.
-- **Every Day**: Programs an automatic backup every day. You can then enter the time when the backup should start.
+- **Every Day**: Programs an automatic backup every day. You can then enter the time when the backup should start. 
 - **Every Week**: Programs an automatic backup every week. Two additional entry areas let you indicate the day and time when the backup should start.
 - **Every Month**: Programs an automatic backup every month. Two additional entry areas let you indicate the day of the month and the time when the backup should start.
 - **Personalized**: Used to configure "tailormade" automatic backups. When you select this option, several additional entry areas appear:  
@@ -48,7 +48,7 @@ This area allows you to set which files and/or folders to copy during the next b
 - **Data**: Database data file. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
 - **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
 - **User Structure File (only for binary database)**: *deprecated feature*
-- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
+- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area. 
 	- **Delete**: Removes the selected file from the list of attached files.
 	- **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. You can select any folder or volume connected to the machine, with the exception of the folder containing the database files.
 	- **Add file...**: Displays a dialog box that allows you to select a file to add to the backup.
@@ -56,15 +56,15 @@ This area allows you to set which files and/or folders to copy during the next b
 
 ### Backup File Destination Folder
 
-This area lets you view and change the location where backup files as well as log backup files (where applicable) will be stored.
+This area lets you view and change the location where backup files as well as log backup files (where applicable) will be stored. 
 
-To view the location of the files, click in the area in order to display their pathname as a pop-up menu.
+To view the location of the files, click in the area in order to display their pathname as a pop-up menu. 
 
 To modify the location where these files are stored, click the **...** button. A selection dialog box appears, which allows you to select a folder or disk where the backups will be placed. The "Used Space" and "Free Space" areas are updated automatically and indicate the remaining space on the disk of the selected folder.
 
 ### Log management  
 
-The **Use Log** option, when checked, indicates that the database uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the database without a log file.
+The **Use Log** option, when checked, indicates that the database uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the database without a log file. 
 
 By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
 
@@ -80,7 +80,7 @@ Modifying backup and restore options is optional. Their default values correspon
 ### General settings
 
 - **Keep only the last X backup files**: This parameter activates and configures the mechanism used to delete the oldest backup files, which avoids the risk of saturating the disk drive. This feature works as follows: Once the current backup is complete, 4D deletes the oldest archive if it is found in the same location as the archive being backed up and has the same name (you can request that the oldest archive be deleted before the backup in order to save space).
-If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets.
+If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets. 
 To disable the mechanism, simply deselect the option.
 >This parameter concerns both database and log file backups.
 
@@ -89,16 +89,16 @@ To disable the mechanism, simply deselect the option.
 
 - **Delete oldest backup file before/after backup**: This option is only used if the "Keep only the last X backup files" option is checked. It specifies whether 4D should start by deleting the oldest archive before starting the backup (**before** option) or whether the deletion should take place once the backup is completed (**after** option). In order for this mechanism to work, the oldest archive must not have been renamed or moved.
 
-- **If backup fails**: This option allows setting the mechanism used to handle failed backups (backup impossible). When a backup cannot be performed, 4D lets you carry out a new attempt.
+- **If backup fails**: This option allows setting the mechanism used to handle failed backups (backup impossible). When a backup cannot be performed, 4D lets you carry out a new attempt. 
 	-  **Retry at the next scheduled date and time**: This option only makes sense when working with scheduled automatic backups. It amounts to cancelling the failed backup. An error is generated.
 	- **Retry after X second(s), minute(s) or hour(s)**: When this option is checked, a new backup attempt is executed after the wait period. This mechanism allows anticipating certain circumstances that may block the backup. You can set a wait period in seconds, minutes or hours using the corresponding menu. If the new attempt also fails, an error is generated and the failure is noted in the status area of the last backup and in the backup journal file.
-	- **Cancel the operation after X attempts**: This parameter is used to set the maximum number of failed backup attempts. If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully.
+	- **Cancel the operation after X attempts**: This parameter is used to set the maximum number of failed backup attempts. If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully. 
 This parameter is useful in order to avoid a case where an extended problem (requiring human intervention) that prevented a backup from being carried out would have led to the application repeatedly attempting the backup to the detriment of its overall performance. By default, this parameter is not checked.
 
 > 4D considers a backup as failed if the database was not launched at the time when the scheduled automatic backup was set to be carried out.
 
 ### Archive
-These options apply to main backup files and to log backup files.
+These options apply to main backup files and to log backup files. 
 
 - **Segment Size (Mb)**
 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.). During restore, 4D will automatically merge the segments. Each segment is called MyDatabase[xxxx-yyyy].4BK, where xxxx is the backup number and yyyy is the segment number. For example, the three segments of the MyDatabase database backup are called MyDatabase[0006-0001].4BK, MyDatabase[0006-0002].4BK and MyDatabase[0006-0003].4BK.
@@ -116,7 +116,7 @@ By default, 4D compresses backups to help save disk space. However, the file com
 	- **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
 
 
-### Automatic Restore
+### Automatic Restore 
 
 - **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
 > In the case of an automatic restore, only the data file is restored. If you wish to get the attached files or the project files, you must perform a manual restore.

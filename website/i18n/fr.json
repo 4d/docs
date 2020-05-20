@@ -32,6 +32,9 @@
       "Concepts/looping": {
         "title": "Structures répétitives (ou \"boucles\")"
       },
+      "Concepts/classes": {
+        "title": "Classes"
+      },
       "Concepts/components": {
         "title": "Composants"
       },
@@ -57,7 +60,7 @@
         "title": "Numérique (Réel, Entier, Entier long)"
       },
       "Concepts/object": {
-        "title": "Objets"
+        "title": "Objet"
       },
       "Concepts/picture": {
         "title": "Image"
@@ -105,14 +108,224 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Events/onActivate": {
+        "title": "Sur activation"
+      },
+      "Events/onAfterEdit": {
+        "title": "Sur après modification"
+      },
+      "Events/onAfterKeystroke": {
+        "title": "Sue après frappe clavier"
+      },
+      "Events/onAfterSort": {
+        "title": "Sur après tri"
+      },
+      "Events/onAlternativeClick": {
+        "title": "Sur clic alternatif"
+      },
+      "Events/onBeforeDataEntry": {
+        "title": "Sur avant saisie"
+      },
+      "Events/onBeforeKeystroke": {
+        "title": "Sue avant frappe clavier"
+      },
+      "Events/onBeginDragOver": {
+        "title": "Sur début survol"
+      },
+      "Events/onBeginUrlLoading": {
+        "title": "On Begin URL Loading"
+      },
+      "Events/onBoundVariableChange": {
+        "title": "On Bound Variable Change"
+      },
+      "Events/onClicked": {
+        "title": "Sur clic"
+      },
+      "Events/onCloseBox": {
+        "title": "On Close Box"
+      },
+      "Events/onCloseDetail": {
+        "title": "Sur fermeture corps"
+      },
+      "Events/onCollapse": {
+        "title": "Sur contracter"
+      },
+      "Events/onColumnMoved": {
+        "title": "Sur déplacement colonne"
+      },
+      "Events/onColumnResize": {
+        "title": "Sur redimensionnement colonne"
+      },
+      "Events/onDataChange": {
+        "title": "Sur données modifiées"
+      },
+      "Events/onDeactivate": {
+        "title": "On Deactivate"
+      },
+      "Events/onDeleteAction": {
+        "title": "Sur action suppression"
+      },
+      "Events/onDisplayDetail": {
+        "title": "Sur affichage corps"
+      },
+      "Events/onDoubleClicked": {
+        "title": "Sur double clic"
+      },
+      "Events/onDragOver": {
+        "title": "Sur glisser"
+      },
+      "Events/onDrop": {
+        "title": "Sur déposer"
+      },
+      "Events/onEndUrlLoading": {
+        "title": "On End URL Loading"
+      },
+      "Events/onExpand": {
+        "title": "Sur déployer"
+      },
+      "Events/onFooterClick": {
+        "title": "Sur clic pied"
+      },
+      "Events/onGettingFocus": {
+        "title": "On getting focus"
+      },
+      "Events/onHeader": {
+        "title": "Sur entête"
+      },
+      "Events/onHeaderClick": {
+        "title": "Sur clic entête"
+      },
+      "Events/onLoad": {
+        "title": "On Load"
+      },
+      "Events/onLoadRecord": {
+        "title": "Sur chargement ligne"
+      },
+      "Events/onLongClick": {
+        "title": "Sur clic long"
+      },
+      "Events/onLosingFocus": {
+        "title": "Sur perte focus"
+      },
+      "Events/onMenuSelected": {
+        "title": "Sur menu sélectionné"
+      },
+      "Events/onMouseEnter": {
+        "title": "Sur début survol"
+      },
+      "Events/onMouseLeave": {
+        "title": "Sur fin survol"
+      },
+      "Events/onMouseMove": {
+        "title": "Sur survol"
+      },
+      "Events/onMouseUp": {
+        "title": "On Mouse Up"
+      },
+      "Events/onOpenDetail": {
+        "title": "Sur ouverture corps"
+      },
+      "Events/onOpenExternalLink": {
+        "title": "On Open External Link"
+      },
+      "Events/onOutsideCall": {
+        "title": "Sur appel extérieur"
+      },
+      "Events/onPageChange": {
+        "title": "Sur changement page"
+      },
+      "Events/onPlugInArea": {
+        "title": "Sur appel zone du plug in\t"
+      },
+      "Events/onPrintingBreak": {
+        "title": "On Printing Break"
+      },
+      "Events/onPrintingDetail": {
+        "title": "On Printing Detail"
+      },
+      "Events/onPrintingFooter": {
+        "title": "On Printing Footer"
+      },
+      "Events/onResize": {
+        "title": "Sur redimensionnement"
+      },
+      "Events/onRowMoved": {
+        "title": "Sur déplacement ligne"
+      },
+      "Events/onRowResize": {
+        "title": "On Row Resize"
+      },
+      "Events/onScroll": {
+        "title": "Sur défilement"
+      },
+      "Events/onSelectionChange": {
+        "title": "Sur nouvelle sélection"
+      },
+      "Events/onTimer": {
+        "title": "Sur minuteur"
+      },
+      "Events/onUnload": {
+        "title": "On Unload"
+      },
+      "Events/onUrlFiltering": {
+        "title": "On URL Filtering"
+      },
+      "Events/onUrlLoadingError": {
+        "title": "On URL Loading Error"
+      },
+      "Events/onUrlResourceLoading": {
+        "title": "On URL Resource Loading"
+      },
+      "Events/onValidate": {
+        "title": "Sur validation"
+      },
+      "Events/onVpReady": {
+        "title": "On VP Ready"
+      },
+      "Events/onWindowOpeningDenied": {
+        "title": "On Window Opening Denied"
+      },
+      "Events/overview": {
+        "title": "Aperçu"
+      },
       "FormEditor/stylesheets": {
         "title": "Feuilles de style (style sheets)"
+      },
+      "FormEditor/formEditor": {
+        "title": "Éditeur de formulaire"
+      },
+      "FormEditor/forms": {
+        "title": "A propos des formulaires 4D"
       },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
       "FormEditor/pictures": {
         "title": "Images"
+      },
+      "FormEditor/action": {
+        "title": "Action"
+      },
+      "FormEditor/propertiesForm": {
+        "title": "Propriétés des formulaires"
+      },
+      "FormEditor/formSize": {
+        "title": "Form Size"
+      },
+      "FormEditor/jsonReference": {
+        "title": "Liste de propriétés JSON"
+      },
+      "FormEditor/markers": {
+        "title": "Markers"
+      },
+      "FormEditor/menu": {
+        "title": "Menu"
+      },
+      "FormEditor/print": {
+        "title": "Imprimer"
+      },
+      "FormEditor/windowSize": {
+        "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
         "title": "Bouton"
@@ -343,8 +556,14 @@
       "Project/developing": {
         "title": "Développer un projet"
       },
+      "Project/documentation": {
+        "title": "Documenter un projet"
+      },
       "Project/overview": {
         "title": "Aperçu"
+      },
+      "Project/pictures": {
+        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -444,6 +663,9 @@
       },
       "Users/overview": {
         "title": "Aperçu"
+      },
+      "WebServer/webServerObject": {
+        "title": "Objet Serveur Web"
       }
     },
     "links": {
@@ -454,20 +676,24 @@
     "categories": {
       "4D Language Concepts": "Concepts du langage 4D",
       "Project Databases": "Bases projet",
-      "Form Editor": "Éditeur de formulaire",
+      "Forms": "Formulaires",
+      "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
+      "Form Events": "Evénements formulaire",
       "Menus": "Menus",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Users and Groups": "Groupes et utilisateurs",
+      "Web Server": "Serveur Web",
       "REST Server": "Serveur REST"
     }
   },
   "pages-strings": {
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
-    "Form Editor|no description given": "Éditeur de formulaire",
+    "Forms|no description given": "Formulaires",
+    "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
     "Form Objects|no description given": "Objets formulaires",
     "Form Object Properties|no description given": "Propriétés des objets formulaire",

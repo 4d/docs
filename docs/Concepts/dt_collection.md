@@ -40,7 +40,7 @@ If you assign an element's index that surpasses the last existing element of the
   //myCol[4]=null
 ```
 
-## Initialization
+## Initialization 
 
 Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
@@ -54,8 +54,8 @@ Example:
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes.
-- shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures.
+- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes. 
+- shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures. 
 For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Collection methods  
@@ -81,7 +81,7 @@ Some methods return the original collection after modification, so that you can 
 ```
 
 
-### propertyPath parameter
+### propertyPath parameter 
 
 
 Several methods accept a _propertyPath_ as parameter. This parameter stands for:

@@ -25,7 +25,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 - **Never**: The scheduled backup feature is disabled.
 - **Every Hour**: Programs an automatic backup every hour, starting with the next hour.
-- **Every Day**: Programs an automatic backup every day. You can then enter the time when the backup should start.
+- **Every Day**: Programs an automatic backup every day. You can then enter the time when the backup should start. 
 - **Every Week**: Programs an automatic backup every week. Two additional entry areas let you indicate the day and time when the backup should start.
 - **Every Month**: Programs an automatic backup every month. Two additional entry areas let you indicate the day of the month and the time when the backup should start.
 - **Personalized**: Used to configure "tailormade" automatic backups. When you select this option, several additional entry areas appear:  

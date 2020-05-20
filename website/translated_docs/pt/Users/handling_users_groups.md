@@ -10,17 +10,17 @@ title: Managing 4D users and groups
 The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. The Designer can:
 
 - access all database servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
+- create users and groups, 
+- assign access privileges to groups, 
 - access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog. Access to Design environment is read-only.
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 The Administrator can:
 
-- create users and groups,
-- access the 4D Server Administration window and monitor
-- access the MSC window to monitor backup, restore, or server.
+- create users and groups, 
+- access the 4D Server Administration window and monitor 
+- access the MSC window to monitor backup, restore, or server. 
 
 The Administrator cannot:
 
@@ -48,7 +48,7 @@ You use the users editor to create user accounts, set their properties and assig
 
 To add a user from the Toolbox :
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor. 
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 

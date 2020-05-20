@@ -14,10 +14,10 @@ The advantages of the compilation are:
 - **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
 - **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
 - **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Preemptive mode**: only compiled code can be executed in preemptive processes. 
 
 ## Differences between interpreted and compiled code
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
+Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler. 
 
 |Compiled|Interpreted|
 |---|---|
@@ -34,7 +34,7 @@ Although application will work the same way in interpreted and compiled modes, t
 
 Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
+Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes. 
 
 For example, if you write:
 
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //assigns a number value
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Imagine a function that returns the length (number of charaters) of values that can be of any type. 
 
 ```4d
   // Calc_Length (how many characters)

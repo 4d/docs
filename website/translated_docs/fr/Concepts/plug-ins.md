@@ -25,9 +25,9 @@ Habituellement, un plug-in fait des choses :
 
 Un plug-in contient généralement un ensemble de routines données au développeur 4D. Il peut gérer une zone externe et exécuter un processus externe.
 
-- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action.
+- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action. 
 - Une **zone externe** est une partie d'un formulaire pouvant presque tout afficher et interagir avec l'utilisateur si nécessaire.
-- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
+- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process. 
 
 ### Note importante
 
@@ -51,8 +51,8 @@ Vous pouvez placer les dossiers PlugIns et Components à deux endroits :
 - Au niveau de l’application 4D exécutable, c'est-à-dire .: 
   - Sous Windows : à côté du fichier .exe
   - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.  
-    Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application.
-- Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement.
+    Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application. 
+- Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement. 
 
 Le choix de l’emplacement dépend de votre mode d’utilisation du plug-in ou du composant.
 

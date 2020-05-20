@@ -55,7 +55,7 @@ Example:
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes.
+- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes. 
 - shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Collection methods

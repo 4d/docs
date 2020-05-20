@@ -8,7 +8,7 @@ Die in 4D integrierte Sprache mit mehr als 1300 Befehlen macht 4D zu einem leist
 - Den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
 - Komplexe Berichte und Etiketten mit den Informationen aus der Datenbank erstellen und drucken,
 - mit anderen Geräten kommunizieren,
-- E-Mails senden,
+- E-Mails senden, 
 - Dokumente und Web Seiten verwalten,
 - Daten zwischen 4D Datenbanken und anderen Applikationen importieren und exportieren,
 - Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren.

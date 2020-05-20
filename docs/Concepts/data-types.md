@@ -27,15 +27,15 @@ Although they are usually equivalent, some data types available at the database 
 |[Collection](Concepts/dt_collection.md)	|-	|Yes|`C_COLLECTION`  
 |[Variant](Concepts/dt_variant.md)(2)	|-	|Yes|`C_VARIANT`|
 
-(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description. 
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type. 
 
 ## Default values
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned. 
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
+The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings: 
 
 - Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
 - Local variables are set:
@@ -43,7 +43,7 @@ The default value depends on the variable type and category, its execution conte
 	- in compiled mode, depending on the **Initialize local variables** option of the Database settings:
 		- "to zero": to zero (see above),
 		- "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-		- "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables.
+		- "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. 
 **Note:** 4D recommends to use "to zero".
 
 The following table illustrates these default values:

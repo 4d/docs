@@ -20,7 +20,7 @@ As such, each operation performed by a user causes two simultaneous actions: the
 - Adding of records or BLOBs,
 - Modifying of records,
 - Deleting of records,
-- Creating and closing of transactions.
+- Creating and closing of transactions. 
 
 For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page of the MSC.
 

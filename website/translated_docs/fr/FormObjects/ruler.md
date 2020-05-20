@@ -19,5 +19,5 @@ Pour plus d'informations, veuillez vous reporter à la section [Utiliser des ind
 
 ## See also
 
-- [indicateurs de progression](progressIndicator.md)
+- [indicateurs de progression](progressIndicator.md) 
 - [stepper](stepper.md)

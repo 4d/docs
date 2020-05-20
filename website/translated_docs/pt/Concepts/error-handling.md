@@ -8,7 +8,7 @@ Error handling is the process of anticipating and responding to errors that migh
 Error handling meets two main needs:
 
 - finding out and fixing potential errors and bugs in your code during the development phase,
-- catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface.
+- catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface. 
 
 > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine, and could log errors in a dedicated file for further analyses.
 
@@ -55,11 +55,11 @@ Within the custom error method, you have access to several information that will
   - `Error` (longint): error code
   - `Error method` (text): name of the method that triggered the error
   - `Error line` (longint): line number in the method that triggered the error
-  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error.
+  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error. 
 
 (*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
 
-- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
+- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application. 
 
 #### Example
 

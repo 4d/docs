@@ -54,7 +54,7 @@ Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if
+ End if 
 ```
 
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :

@@ -14,6 +14,6 @@ This page consists of the following three areas:
 - **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
 - **Contents of the backup file**: lists the files and folders included in the backup file.
 
-The **Backup** button is used to launch a manual backup.
+The **Backup** button is used to launch a manual backup. 
 
 This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.

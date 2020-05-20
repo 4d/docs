@@ -18,7 +18,7 @@ title: チェックボックス
 チェックボックスには整数型またはブール型の [変数あるいは式](properties_Object.md#変数あるいは式) を設定することができます。
 
 - **整数型:** チェックボックスが選択されると、変数の値は 1 になります。 チェックボックスが選択されていない場合の値は 0 です。 チェックボックスが 3番目の状態 (後述参照) のとき、変数値は 2 になります。
-- **ブール型:** チェックボックスが選択されると、変数の値は `True` になります。 チェックボックスが選択されていない場合の値は `False` です。
+- **ブール型:** チェックボックスが選択されると、変数の値は `True` になります。 チェックボックスが選択されていない場合の値は `False` です。 
 
 フォーム上のすべてのチェックボックスは選択/未選択のいずれかの状態にすることができます。 チェックボックスのグループを使用すると、複数の候補を選択できるようになります。
 
@@ -93,14 +93,14 @@ true/false ステータスで表すことのできるアクション ("checkable
 #### JSON 例:
 
         "myCheckBox": {
-            "type": "checkbox",
+            "type": "checkbox", 
             "style":"regular",
-            "text": "Cancel",
+            "text": "Cancel",   
             "action": "Cancel",     
             "left": 60,         
             "top": 160,     
             "width": 100,           
-            "height": 20,
+            "height": 20        
             "dataSourceTypeHint":"boolean"
             }
     
@@ -114,14 +114,14 @@ true/false ステータスで表すことのできるアクション ("checkable
 #### JSON 例:
 
         "myCheckBox": {
-                "type": "checkbox",
+                "type": "checkbox", 
                 "style":"flat",
-                "text": "Cancel",
-                "action": "cancel",
+                "text": "Cancel",   
+                "action": "cancel", 
                 "left": 60,     
-                "top": 160,
-                "width": 100,
-                "height": 20
+                "top": 160, 
+                "width": 100,           
+                "height": 20            
                 }
     
 
@@ -139,14 +139,14 @@ true/false ステータスで表すことのできるアクション ("checkable
 
         "myCheckBox": {
                     "type": "checkbox",
-                    "style":"toolbar",
+                    "style":"toolbar",  
                     "text": "Checkbox",
-                    "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4,
-                    "left": 60,
-                    "top": 160,
-                    "width": 100,
-                    "height": 20
+                    "icon": "/RESOURCES/File.png", 
+                    "iconFrames": 4 
+                    "left": 60, 
+                    "top": 160, 
+                    "width": 100,                   
+                    "height": 20                    
                     }
     
 
@@ -163,13 +163,13 @@ true/false ステータスで表すことのできるアクション ("checkable
 #### JSON 例:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"bevel",
                     "text": "Checkbox",  
-                    "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4,
-                    "left": 60,
-                    "top": 160,
+                    "icon": "/RESOURCES/File.png", 
+                    "iconFrames": 4 
+                    "left": 60, 
+                    "top": 160, 
                     "width": 100,               
                     "height": 20                
                     }
@@ -191,13 +191,13 @@ macOS の例:
 
 ```4d
     "myCheckBox": {
-                "type": "checkbox",
+                "type": "checkbox", 
                 "style":"roundedBevel",  
-                "text": "Checkbox",
-                "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
-                "left": 60,
-                "top": 160,
+                "text": "Checkbox", 
+                "icon": "/RESOURCES/File.png", 
+                "iconFrames": 4 
+                "left": 60, 
+                "top": 160, 
                 "width": 100,           
                 "height": 20            
                 }
@@ -216,11 +216,11 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
 #### JSON 例:
 
         "myCheckBox": {
-                "type": "checkbox",
-                "style":"gradientBevel",
-                "text": "Checkbox",
+                "type": "checkbox", 
+                "style":"gradientBevel", 
+                "text": "Checkbox", 
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
+                "iconFrames": 4
                 "left": 60,     
                 "top": 160,     
                 "width": 100,               
@@ -245,13 +245,13 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 #### JSON 例:
 
         "myCheckBox": {
-                "type": "checkbox",
-                "style":"texturedBevel",
-                "text": "Checkbox",
-                "left": 60,
-                "top": 160,
-                "width": 100,
-                "height": 20
+                "type": "checkbox", 
+                "style":"texturedBevel", 
+                "text": "Checkbox", 
+                "left": 60, 
+                "top": 160, 
+                "width": 100,                   
+                "height": 20                    
                 }
     
 
@@ -272,13 +272,13 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 #### JSON 例:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"office",
                     "text": "Checkbox",  
                     "action": "fontBold",
-                    "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4,
-                   "left": 60,
+                    "icon": "/RESOURCES/File.png", 
+                    "iconFrames": 4     
+                   "left": 60,  
                     "top": 160,     
                     "width": 100,           
                     "height": 20            
@@ -300,11 +300,11 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 #### JSON 例:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"disclosure",
                     "method": "m_collapse",
-                    "left": 60,
-                    "top": 160,
+                    "left": 60, 
+                    "top": 160, 
                     "width": 100,           
                     "height": 20            
                     }
@@ -326,10 +326,10 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
         "myCheckBox": {
                     "type": "checkbox",     
-                    "style":"roundedDisclosure",
+                    "style":"roundedDisclosure",    
                     "method": "m_disclose",
                     "left": 60,     
-                    "top": 160,
+                    "top": 160, 
                     "width": 100,           
                     "height": 20            
                     }
@@ -350,14 +350,14 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
         "myCheckbox": {
             "type": "checkbox",
             "style":"custom",
-            "text": "OK",
-            "icon": "/RESOURCES/smiley.jpg",
-            "iconFrame": 4,
-            "customBackgroundPicture": "/RESOURCES/paper.jpg",
+            "text": "OK", 
+            "icon": "/RESOURCES/smiley.jpg", 
+            "iconFrame": 4, 
+            "customBackgroundPicture": "/RESOURCES/paper.jpg", 
             "iconOffset": 5, // クリック時のアイコンオフセット
-            "left": 60,
-            "top": 160,
-            "width": 100,
+            "left": 60, 
+            "top": 160, 
+            "width": 100,       
             "height": 20,
             "customBorderX": 20,
             "customBorderY": 5
@@ -368,7 +368,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 すべてのチェックボックスは次の基本プロパティを共有します:
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 

@@ -18,7 +18,7 @@ A check box displays text next to a small square. This text is set in the [Title
 A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
 
 - **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
-- **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`.
+- **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`. 
 
 Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options.
 
@@ -93,9 +93,9 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 #### JSON Example:
 
         "myCheckBox": {
-            "type": "checkbox",
+            "type": "checkbox", 
             "style":"regular",
-            "text": "Cancel",
+            "text": "Cancel",   
             "action": "Cancel",     
             "left": 60,         
             "top": 160,     
@@ -114,12 +114,12 @@ The Flat check box style is a minimalist appearance. The Flat style's graphic na
 #### JSON Example:
 
         "myCheckBox": {
-                "type": "checkbox",
+                "type": "checkbox", 
                 "style":"flat",
-                "text": "Cancel",
-                "action": "cancel",
+                "text": "Cancel",   
+                "action": "cancel", 
                 "left": 60,     
-                "top": 160,
+                "top": 160, 
                 "width": 100,           
                 "height": 20            
                 }
@@ -139,12 +139,12 @@ Example with states unchecked / checked / highlighted:
 
         "myCheckBox": {
                     "type": "checkbox",
-                    "style":"toolbar",
+                    "style":"toolbar",  
                     "text": "Checkbox",
-                    "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4
-                    "left": 60,
-                    "top": 160,
+                    "icon": "/RESOURCES/File.png", 
+                    "iconFrames": 4 
+                    "left": 60, 
+                    "top": 160, 
                     "width": 100,                   
                     "height": 20                    
                     }
@@ -163,13 +163,13 @@ Example with states unchecked / checked / highlighted:
 #### JSON Example:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"bevel",
                     "text": "Checkbox",  
-                    "icon": "/RESOURCES/File.png",
-                    "iconFrames": 4
-                    "left": 60,
-                    "top": 160,
+                    "icon": "/RESOURCES/File.png", 
+                    "iconFrames": 4 
+                    "left": 60, 
+                    "top": 160, 
                     "width": 100,               
                     "height": 20                
                     }
@@ -191,13 +191,13 @@ Example on macOS:
 
 ```4d
     "myCheckBox": {
-                "type": "checkbox",
+                "type": "checkbox", 
                 "style":"roundedBevel",  
-                "text": "Checkbox",
-                "icon": "/RESOURCES/File.png",
-                "iconFrames": 4
-                "left": 60,
-                "top": 160,
+                "text": "Checkbox", 
+                "icon": "/RESOURCES/File.png", 
+                "iconFrames": 4 
+                "left": 60, 
+                "top": 160, 
                 "width": 100,           
                 "height": 20            
                 }
@@ -216,9 +216,9 @@ The OS X Gradient style has a light gray background with a title and is displaye
 #### JSON Example:
 
         "myCheckBox": {
-                "type": "checkbox",
-                "style":"gradientBevel",
-                "text": "Checkbox",
+                "type": "checkbox", 
+                "style":"gradientBevel", 
+                "text": "Checkbox", 
                 "icon": "/RESOURCES/File.png",
                 "iconFrames": 4
                 "left": 60,     
@@ -245,11 +245,11 @@ By default, the OS X Textured style appears as:
 #### JSON Example:
 
         "myCheckBox": {
-                "type": "checkbox",
-                "style":"texturedBevel",
-                "text": "Checkbox",
-                "left": 60,
-                "top": 160,
+                "type": "checkbox", 
+                "style":"texturedBevel", 
+                "text": "Checkbox", 
+                "left": 60, 
+                "top": 160, 
                 "width": 100,                   
                 "height": 20                    
                 }
@@ -272,13 +272,13 @@ The colors (highlight and background) of a button with the Office XP style are b
 #### JSON Example:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"office",
                     "text": "Checkbox",  
                     "action": "fontBold",
-                    "icon": "/RESOURCES/File.png",
+                    "icon": "/RESOURCES/File.png", 
                     "iconFrames": 4     
-                   "left": 60,
+                   "left": 60,  
                     "top": 160,     
                     "width": 100,           
                     "height": 20            
@@ -300,11 +300,11 @@ This check box style can be used to add a standard collapse/expand icon. These b
 #### JSON Example:
 
         "myCheckBox": {
-                    "type": "checkbox",
+                    "type": "checkbox", 
                     "style":"disclosure",
                     "method": "m_collapse",
-                    "left": 60,
-                    "top": 160,
+                    "left": 60, 
+                    "top": 160, 
                     "width": 100,           
                     "height": 20            
                     }
@@ -326,10 +326,10 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
 
         "myCheckBox": {
                     "type": "checkbox",     
-                    "style":"roundedDisclosure",
+                    "style":"roundedDisclosure",    
                     "method": "m_disclose",
                     "left": 60,     
-                    "top": 160,
+                    "top": 160, 
                     "width": 100,           
                     "height": 20            
                     }
@@ -350,13 +350,13 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
         "myCheckbox": {
             "type": "checkbox",
             "style":"custom",
-            "text": "OK",
-            "icon": "/RESOURCES/smiley.jpg",
-            "iconFrame": 4,
-            "customBackgroundPicture": "/RESOURCES/paper.jpg",
+            "text": "OK", 
+            "icon": "/RESOURCES/smiley.jpg", 
+            "iconFrame": 4, 
+            "customBackgroundPicture": "/RESOURCES/paper.jpg", 
             "iconOffset": 5, //custom icon offset when clicked
-            "left": 60,
-            "top": 160,
+            "left": 60, 
+            "top": 160, 
             "width": 100,       
             "height": 20,
             "customBorderX": 20,
@@ -368,7 +368,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 All check boxes share the same set of basic properties:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 Additional specific properties are available, depending on the [button style](#button-styles):
 

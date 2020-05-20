@@ -15,8 +15,8 @@ Where appropriate, the expand/collapse icon is automatically displayed to the le
 
 The contents of a hierarchical list form object can be initialized in one of the following ways:
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode.
-- Directly assign a hierarchical list reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode. 
+- Directly assign a hierarchical list reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object. 
 
 In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
 
@@ -71,10 +71,10 @@ As with other object property management commands, it is possible to use the “
     - `Count list items`
     - `Find in list`
     - `GET LIST ITEM`
-    - `Get list item font`
-    - `GET LIST ITEM ICON`
-    - `GET LIST ITEM PARAMETER`
-    - `GET LIST ITEM PROPERTIES`
+    - `Get list item font` 
+    - `GET LIST ITEM ICON` 
+    - `GET LIST ITEM PARAMETER` 
+    - `GET LIST ITEM PROPERTIES` 
     - `List item parent`
     - `List item position`
     - `Selected list items`

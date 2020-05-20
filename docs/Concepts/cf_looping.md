@@ -46,16 +46,16 @@ A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileen
 
 The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 
-### Example
+### Example 
 Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
 
 ```4d
  Repeat
     ADD RECORD([aTable])
  Until(OK=0)
-```
+``` 
 
-## For...End for
+## For...End for 
 The formal syntax of the `For...End for` control flow structure is:
 
 ```4d
@@ -120,7 +120,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples.
+Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples. 
 
 ### Decrementing variable counter
 
@@ -292,9 +292,9 @@ The following table compares the three types of `For each...End for each`:
 - The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
 - The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
 	- before entering the loop, if items should be modified together for integrity reasons, or
-	- within the loop when only some elements/properties need to be modified and no integrity management is required.
+	- within the loop when only some elements/properties need to be modified and no integrity management is required. 
 
-### Loop through collections
+### Loop through collections 
 
 When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
 
@@ -353,7 +353,7 @@ You want to raise the salary of all British employees in an entity selection:
 
 ### Loop through object properties
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property. 
 
 The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
 
@@ -389,7 +389,7 @@ You can define bounds to the iteration using the optional begin and end paramete
 **Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
 
 - In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
 
 If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included).
 If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*.
@@ -400,7 +400,7 @@ If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 For example:
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
 
 #### Example
 
@@ -426,20 +426,21 @@ You can pass either keyword depending on your needs:
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
-#### Example
+#### Example 
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
-
+ 
  $total:=0
  For each($num;$colNum)While($total<30) //tested at the beginning
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
-
+ 
  $total:=1000
  For each($num;$colNum)Until($total>30) //tested at the end
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
+

@@ -85,7 +85,7 @@ Here is another example: you want to initialize a form object with a text value 
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+<br /><br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Two-dimensional arrays are essentially language objects; you can neither display nor print them.
