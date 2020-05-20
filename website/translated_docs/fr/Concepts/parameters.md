@@ -83,15 +83,7 @@ NouvellePhrase:=Majuscules4("Bien joué.")
 
 Dans ce cas, la variable *NouvellePhrase* prend la valeur “BIEN joué.”
 
-Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. For example, you can write:
-
-```4d
-// Do_something
-$0:=Uppercase($1)
-ALERT($0)
-```
-
-In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne sa valeur finale `$0` (sa valeur courante au moment où la sous-routine se termine) à la méthode appelée.
+Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, dans le cas de la méthode `FAIRE QUELQUE CHOSE` utilisée précédemment, `$0` recevait d'abord la valeur de `$1`, puis était utilisée en tant que paramètre de la commande `ALERT`. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne sa valeur finale `$0` (sa valeur courante au moment où la sous-routine se termine) à la méthode appelée.
 
 ## Déclaration des paramètres
 
@@ -143,7 +135,7 @@ C_OBJECT($3)
 **Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 
 ```4d
- C_REAL(OneMethodAmongOthers;$1) 
+ C_REAL(OneMethodAmongOthers;$1)
 ```
 
 Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).

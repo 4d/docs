@@ -71,15 +71,15 @@ p>
 
 ```4d
 <br />    "myButton": {
-                "type": "button",   
-                "style":"flat", 
-                "defaultButton":"true"  
-                "text": "OK",   
-                "action": "Cancel", 
+                "type": "button",
+                "style":"flat",
+                "defaultButton":"true"
+                "text": "OK",
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,         
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -91,7 +91,7 @@ p>
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用ていると、ボタンの右側中央に三角形が表示されます。 
+- *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用ていると、ボタンの右側中央に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
@@ -101,10 +101,10 @@ p>
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"toolbar",  
+                "type": "button",
+                "style":"toolbar",
                 "text": "OK",       
-                "popupPlacement":"separated"    
+                "popupPlacement":"separated",
                 "action": "Cancel",     
                 "left": 60,             
                 "top": 160,             
@@ -119,25 +119,25 @@ p>
 
 ベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ボタンがハイライト表示されます。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。 
+- *Windows* - ボタンがハイライト表示されます。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_bevel.png)
 
-- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。 
+- *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下部分に三角形が表示されます。
 
 #### JSON 例:
 
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"bevel",    
+                "style":"bevel",
                 "text": "OK",       
-                "popupPlacement":"linked"   
-                "action": "Cancel", 
+                "popupPlacement":"linked",
+                "action": "Cancel",
                 "left": 60,     
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -158,14 +158,14 @@ p>
 ```4d
     "myButton": {
                 "type": "button",
-                "style":"roundedBevel", 
-                "text": "OK",   
-                "popupPlacement":"none" /
-                "action": "Cancel", 
+                "style":"roundedBevel",
+                "text": "OK",
+                "popupPlacement":"none",
+                "action": "Cancel",
                 "left": 60,         
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -175,7 +175,7 @@ OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルと
 
 OS Xグラデーションボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。 
+- *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右下に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
@@ -185,15 +185,15 @@ OS Xグラデーションボタンは、明るいグレーの背景に中央配�
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"gradientBevel",
-                "text": "OK",   
-                "popupPlacement":"linked"
+                "text": "OK",
+                "popupPlacement":"linked",
                 "action": "Cancel",     
                 "left": 60,     
-                "top": 160, 
-                "width": 100,   
-                "height": 20    
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -213,15 +213,15 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 ```4d
     "myButton": {
-                "type": "button",   
-                "style":"texturedBevel",    
-                "text": "OK",   
-                "popupPlacement":"separated"    
-                "action": "Cancel", 
+                "type": "button",
+                "style":"texturedBevel",
+                "text": "OK",
+                "popupPlacement":"separated",
+                "action": "Cancel",
                 "left": 60,         
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -241,15 +241,15 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ```4d
     "myButton": {
-                "type": "button",   
+                "type": "button",
                 "style":"office",
                 "text": "OK",
-                "popupPlacement":"none" 
-                "action": "Cancel", 
+                "popupPlacement":"none",
+                "action": "Cancel",
                 "left": 60,     
-                "top": 160, 
+                "top": 160,
                 "width": 100,
-                "height": 20    
+                "height": 20
                 }
 ```
 
@@ -265,12 +265,12 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
     "myButton": {
                 "type": "button",
                 "style":"help",     
-                "text": "OK",   
-                "dropping": "custom", 
-                "left": 60, 
+                "text": "OK",
+                "dropping": "custom",
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
-                "height": 20    
+                "width": 100,
+                "height": 20
                 }
 ```
 
@@ -287,14 +287,14 @@ Windows の場合、サークルは表示されません。
 #### JSON 例:
 
         "myButton": {
-                    "type": "button",   
-                    "style":"circular", 
-                    "text": "OK",   
-                    "dropping": "custom", 
-                    "left": 60, 
+                    "type": "button",
+                    "style":"circular",
+                    "text": "OK",
+                    "dropping": "custom",
+                    "left": 60,
                     "top": 160,     
                     "width": 100,
-                    "height": 20    
+                    "height": 20
                     }
     
 
@@ -308,15 +308,15 @@ Windows の場合、サークルは表示されません。
 
 ```code
     "myButton": {
-                "type": "button",   
-                "style":"custom",   
-                "text": "", 
+                "type": "button",
+                "style":"custom",
+                "text": "",
                 "customBackgroundPicture": "/RESOURCES/bkgnd.png",
                 "icon": "/RESOURCES/custom.png",  
                 "textPlacement": "center",
-                "left": 60, 
+                "left": 60,
                 "top": 160,     
-                "width": 100,   
+                "width": 100,
                 "height": 20
                 }
 ```

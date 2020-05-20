@@ -3,32 +3,32 @@ id: propertiesReference
 title: JSON property list
 ---
 
-You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description. 
+You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
 
->In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes. 
+>In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
 
 
-[a](#a) - 
-[b](#b) - 
-[c](#c) - 
-[d](#d) - 
-[e](#e) - 
-[f](#f) - 
-[g](#g) - 
-[h](#h) - 
-[i](#i) - 
-[j](#j) - 
-[k](#k) - 
-[l](#l) - 
-[m](#m) - 
-[n](#n) - 
-[p](#p) - 
-[r](#r) - 
-[s](#s) - 
-[t](#t) - 
-[u](#u) - 
-[v](#v) - 
-[w](#w) - 
+[a](#a) -
+[b](#b) -
+[c](#c) -
+[d](#d) -
+[e](#e) -
+[f](#f) -
+[g](#g) -
+[h](#h) -
+[i](#i) -
+[j](#j) -
+[k](#k) -
+[l](#l) -
+[m](#m) -
+[n](#n) -
+[p](#p) -
+[r](#r) -
+[s](#s) -
+[t](#t) -
+[u](#u) -
+[v](#v) -
+[w](#w) -
 [z](#z)
 
 
@@ -54,7 +54,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[controlType](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
 |[currentItemSource](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[currentItemPositionSource](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
-|[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.| 
+|[customBackgroundPicture](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.|
 |[customBorderX](properties_TextAndPicture.md#horizontal-margin)|Sets the size (in pixels) of the internal horizontal margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customBorderY](properties_TextAndPicture.md#vertical-margin)|Sets the size (in pixels) of the internal vertical margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[customOffset](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
@@ -83,9 +83,9 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[focusable](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[fontFamily](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
-|[fontSize](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
-|[fontStyle](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"| 
-|[fontTheme](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
+|[fontSize](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0|
+|[fontStyle](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"|
+|[fontTheme](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"|
 |[fontWeight](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[footerHeight](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
 |[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a name="g"></a>|

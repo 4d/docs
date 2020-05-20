@@ -9,7 +9,7 @@ Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibli
 
 4D propose deux types de bibliothèques d'objets :
 
-- une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets. 
+- une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
 - des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
 
 ## Utilisation de la bibliothèque d'objets standard
@@ -27,7 +27,7 @@ La fenêtre présente les caractéristiques principales suivantes :
 - Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** : ![](assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit : 
     - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-    - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire. 
+    - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
@@ -78,7 +78,7 @@ Les principales opérations sont accessibles via le menu contextuel ou le menu d
 - **Couper ** ou **Copier** vers le conteneur de données
 - **Coller** un objet à partir du conteneur de données
 - **Effacer** - supprime l'objet de la bibliothèque
-- **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque. 
+- **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque.
 
 Vous pouvez placer dans la bibliothèque des objets individuels (y compris des sous-formulaires) ou des ensembles d’objets. Chaque objet ou ensemble d’objets est regroupé en un seul élément :
 

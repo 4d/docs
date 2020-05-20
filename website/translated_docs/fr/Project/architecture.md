@@ -219,13 +219,3 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
     ## Dossier Plugins
     
     Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
-    
-    ## Documentation folder
-    
-    This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
-    
-    For more information, refer to [Documenting a project](Project/documentation.md).
-    
-    ## WebFolder
-    
-    Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.

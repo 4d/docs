@@ -5,13 +5,13 @@ title: Style sheets
 
 ## Overview
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute. 
+A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
 
 In addition to harmonizing an application's interface, style sheets provide three major advantages:
 
 *	Saves time during development: Each object has specific group of settings within a single operation.
 *	Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-*	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet. 
+*	Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
 ### Style Sheet Files
 
@@ -30,26 +30,26 @@ These files are stored in the project's "/SOURCES" folder.
 
 While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
 
-Every style rule in a style sheet contains two parts: 
+Every style rule in a style sheet contains two parts:
 
-*	a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors. 
- 
-*	a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces. 
+*	a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors.
+
+*	a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.
 
 
 
 ## Style Sheet Selectors
 
 
-### Object Type 
+### Object Type
 
-Corresponding to the CSS element selector, the object type defines the type of object to style. 
+Corresponding to the CSS element selector, the object type defines the type of object to style.
 
-Specify the object type, then in curly braces, declare the style(s) to apply. 
+Specify the object type, then in curly braces, declare the style(s) to apply.
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects. 
+> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels: 
+In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
 
 ```
 button {
@@ -67,13 +67,13 @@ text, input {
 }
 ```
 
-### Object Name 
+### Object Name
 
 Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
 
 Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels: 
+In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
 
 ```
 #okButton {
@@ -84,11 +84,11 @@ In the following example, the text of the object with the name "okButton" will b
 
 
 
-### Class 
+### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute. 
+Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply. 
+You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
 
 In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
 
@@ -100,7 +100,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 }
 ```
 
-To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply. 
+To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
 
 ```
 text.center {
@@ -115,14 +115,14 @@ In the 4D form description, you associate a class name to an object using the `c
 class: "okButtons important"    		 
 ```
 
- 
-### All Objects 
+
+### All Objects
 
 Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
 
 Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
 
-In the following example, all objects will have a gray fill: 
+In the following example, all objects will have a gray fill:
 
 ```
 * {
@@ -131,9 +131,9 @@ In the following example, all objects will have a gray fill:
 ```
 
 
-### Specific Attribute 
+### Specific Attribute
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute. 
+Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
 
 Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
 
@@ -195,7 +195,7 @@ The majority of form object attributes can be defined within a style sheet, exce
 	- "class"
 	- "event"
 	- choiceList, excludedList, labels, list, requiredList (list type)
-	
+
 Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
 
 ### Attribute Mapping
@@ -246,7 +246,7 @@ icon: url("edit.png"); /* relative path to the form file */
 
 ### JSON vs Style Sheet
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file. 
+If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
 
 To override this behavior, the style value must be followed with an `!important` declaration.
 
@@ -267,16 +267,16 @@ To override this behavior, the style value must be followed with an `!important`
 
 ### Multiple Style Sheets
 
-At runtime, 4D automatically prioritizes style sheets in the following order: 
+At runtime, 4D automatically prioritizes style sheets in the following order:
 
-1.	The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`. 
+1.	The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
 2.	It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3.	If it exists, it will then load a specific CSS file defined in the JSON form:
 
 	*	a file for both platforms:
-	
+
 	```
-	"css": "<path>" 
+	"css": "<path>"
 	```
 
 	*	or a list of files for both platforms:
@@ -284,7 +284,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 	```
 	"css": [
 	     "<path1>",
-	     "<path2>" 
+	     "<path2>"
 	      ],
 	```
 
@@ -310,14 +310,14 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 ## Creating or Editing Style Sheets
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder. 
+You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets. 
+The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
 
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
 	![](assets/en/FormEditor/stylesheets.png)
-	
+
 2.	Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
 
 3. The style sheet will open in your default text editor.  

@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objekt
+title: Objects
 ---
 
 Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von "native" 4D Objekten basiert auf dem klassischen Prinzip von "Eigenschaft/Wert" bzw. "Attribut/Wert" Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:
@@ -46,7 +46,7 @@ Beispiel:
 
 Sie können zwei Arten von Objekten erstellen:
 
-- regular (non-shared) objects mit dem Befehl `New object`. Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen. 
+- regular (non-shared) objects mit dem Befehl `New object`. Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
 - shared objects mit dem Befehl `New shared object`. Diese Objekte lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Objekte wird über `Use...End use` Strukturen gesteuert. Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
 ## Grundlagen der Syntax
@@ -158,7 +158,7 @@ Weitere Informationen dazu finden Sie unter dem Befehl `Null`.
 
 Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert ergeben. Wenn Sie versuchen, undefinierte Ausdrücke zu lesen oder zuzuweisen, generiert 4D normalerweise Fehler. Das passiert jedoch nicht in folgenden Fällen:
 
-- Lesen der Eigenschaft eines undefinierten Objekts oder Werts gibt undefiniert zurück; Variablen (außer Arrays) einen undefinierten Wert zuweisen hat dieselbe Wirkung, wie `CLEAR VARIABLE` aufrufen:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
 
 ```4d
      C_OBJECT($o)
@@ -277,7 +277,7 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- Mit dem Operator [ ] können Sie auf Eigenschaften als String zugreifen 
+- Mit dem Operator [ ] können Sie auf Eigenschaften als String zugreifen
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

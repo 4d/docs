@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title: Appearance 
+title: Appearance
 ---
 ---
 ## Default Button
@@ -18,7 +18,6 @@ In addition, on macOS, the default button property modifies the button's appeara
 On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline: 
 
 ![](assets/en/FormObjects/property_defaultButtonWindows.en.png) 
-
 
 #### JSON Grammar
 
@@ -46,7 +45,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md) 
+[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
 
 
 
@@ -56,7 +55,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 This property is used to disable the selection highlight in list boxes.
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows). 
+When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 By default, this option is not enabled.
 
@@ -77,13 +76,13 @@ By default, this option is not enabled.
 ---
 ## Horizontal Scroll Bar  
 
-An interface tool allowing the user to move the viewing area to the left or right. 
+An interface tool allowing the user to move the viewing area to the left or right.
 
 Available values:
 
 |Property List|JSON value|Description|
 |---|----|---|
-|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).| 
+|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).|
 |No|"hidden"|The scrollbar is never visible|
 |Automatic|"automatic"|The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width|
 
@@ -123,7 +122,7 @@ dpi|number|0=automatic, 72, 96 |
 
 
 ---
-## Show background 
+## Show background
 
 Displays/hides both background images and background color.
 
@@ -139,7 +138,7 @@ showBackground|boolean|true (default), false|
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Show footers 
+## Show footers
 
 Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
@@ -156,11 +155,11 @@ showFooters|boolean|true (default), false|
 
 
 ---
-## Show Formula Bar 
+## Show Formula Bar
 
 When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
 
-> This property is available only for the [Toolbar](#user-interface) interface. 
+> This property is available only for the [Toolbar](#user-interface) interface.
 
 
 #### JSON Grammar
@@ -174,7 +173,7 @@ withFormulaBar|boolean|true (default), false|
 [4D View Pro area](viewProArea_overview.md)
 
 ---
-## Show headers 
+## Show headers
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
@@ -192,7 +191,7 @@ showHeaders|boolean|true (default), false|
 
 
 ---
-## Show hidden characters 
+## Show hidden characters
 
 Displays/hides invisible characters
 
@@ -211,7 +210,7 @@ showHiddenChars|boolean|true (default), false|
 ---
 ## Show horizontal ruler
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode). 
+Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
 
 
 #### JSON Grammar
@@ -229,7 +228,7 @@ showHorizontalRuler|boolean|true (default), false|
 
 
 ---
-## Show HTML WYSYWIG 
+## Show HTML WYSYWIG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -245,7 +244,7 @@ showHTMLWysiwyg|boolean|true, false (default)|
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Show page frame 
+## Show page frame
 
 Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
 
@@ -263,18 +262,18 @@ showPageFrames|boolean|true, false|
 
 
 ---
-## Show references 
+## Show references
 
 Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
 
 For example, you have inserted the current date along with a format, the date is displayed:
- 
+
 ![](assets/en/FormObjects/writePro1.png)
- 
+
 With the Show references property on, the reference is displayed:
 
 ![](assets/en/FormObjects/writeProExpr.png)
- 
+
 > 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
 
 
@@ -291,7 +290,7 @@ showReferences|boolean|true, false (default)|
 ---
 ## Show vertical ruler
 
-Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode). 
+Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
 
 
 #### JSON Grammar
@@ -326,7 +325,7 @@ labelsPlacement|boolean|"top", "bottom" |
 ---
 ## User Interface
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**. 
+You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
 
 #### JSON Grammar
 
@@ -348,11 +347,11 @@ userInterface|text|"none" (default), "ribbon", "toolbar" |
 
 An interface tool allowing the user to move the viewing area up and down.
 
-Available values: 
+Available values:
 
 |Property List|JSON value|Description|
 |---|----|---|
-|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).| 
+|Yes|"visible"|The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).|
 |No|"hidden"|The scrollbar is never visible|
 |Automatic|"automatic"|The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)|
 
@@ -414,5 +413,3 @@ zoom|number|minimum = 0 |
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
-
-

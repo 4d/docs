@@ -40,7 +40,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Propriété   | Type    | Description                       |
 | ----------- | ------- | --------------------------------- |
-| range       | object  | Cell range                        |
+| range       | objet   | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 
@@ -48,7 +48,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Propriété | Type    | Description                 |
 | --------- | ------- | --------------------------- |
-| range     | object  | Cell range                  |
+| range     | objet   | Cell range                  |
 | oldValue  | variant | Value of cell before change |
 | newValue  | variant | Value of cell after change  |
 
@@ -57,17 +57,17 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Propriété | Type    | Description                                         |
 | --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
-| copy      | boolean | Specifies if the source range is copied or not      |
-| insert    | boolean | Specifies if the source range is inserted or not    |
+| fromRange | objet   | Range of source cell range (being dragged)          |
+| toRange   | objet   | Range of the destination cell range (drop location) |
+| copy      | booléen | Specifies if the source range is copied or not      |
+| insert    | booléen | Specifies if the source range is inserted or not    |
 
 
 #### action = DragFillBlock
 
-| Propriété | Type   | Description         |
-| --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
+| Propriété | Type  | Description         |
+| --------- | ----- | ------------------- |
+| fillRange | objet | Range used for fill |
  autoFillType|longint|Value used for the fill.
 
 - 0: Cells are filled with all data (values, formatting, and formulas)
@@ -82,10 +82,10 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                     - 3: The cells below are filled| 
                                         #### action = formulaChanged
                                         
-                                        | Propriété | Type   | Description         |
-                                        | --------- | ------ | ------------------- |
-                                        | range     | object | Cell range          |
-                                        | formula   | Texte  | The formula entered |
+                                        | Propriété | Type  | Description         |
+                                        | --------- | ----- | ------------------- |
+                                        | range     | objet | Cell range          |
+                                        | formula   | Texte | The formula entered |
 
                                         
                                         #### action = clipboardPasted
@@ -111,7 +111,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              object
+                                              objet
                                             </td>
                                             
                                             <td>
@@ -143,7 +143,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                                             </td>
                                                             
                                                             <td>
-                                                              object
+                                                              objet
                                                             </td>
                                                             
                                                             <td>

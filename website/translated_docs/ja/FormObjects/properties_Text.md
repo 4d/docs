@@ -109,7 +109,7 @@ Three font themes are available:
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 #### JSON 文法
 
@@ -150,6 +150,8 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 * * *
 
 ## フォントサイズ
+
+> This property is only available when no [font theme](#font-theme) is selected.
 
 Allows defining the object's font size in points.
 
@@ -279,7 +281,7 @@ Vertical location of text within the area that contains it.
 
 The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
 
-- `bottom` for all data (except pictures) and 
+- `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.

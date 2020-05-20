@@ -8,7 +8,7 @@ Fehlerverwaltung bedeutet das Vorwegnehmen und Reagieren auf Fehler, die in Ihre
 Die Fehlerverwaltung erfüllt zwei Hauptanforderungen:
 
 - potenzielle Fehler und Bugs in Ihrem Code während der Entwicklungsphase herausfinden und beheben,
-- Unerwartete Fehler in Anwendungen im Einsatz abfangen und beseitigen; insbesondere können Sie Fehlermeldungen des Systems (Festplatte voll, fehlende Datei usw.) durch Ihre eigene Oberfläche ersetzen. 
+- Unerwartete Fehler in Anwendungen im Einsatz abfangen und beseitigen; insbesondere können Sie Fehlermeldungen des Systems (Festplatte voll, fehlende Datei usw.) durch Ihre eigene Oberfläche ersetzen.
 
 > Es wird dringend empfohlen, auf 4D Server eine Fehlerverwaltungsmethode für den gesamten auf dem Server laufenden Code zu installieren. Denn solch eine Methode kann vermeiden, dass unerwartete Dialogfenster auf dem Serverrechner erscheinen, und außerdem Fehler in einer speziellen Datei für weitere Analysen protokollieren.
 
@@ -55,11 +55,11 @@ In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identi
   - `Error` (Lange Ganzzahl): Fehlernummer
   - `Error method` (Text): Namen der Methode, die den Fehler ausgelöst hat
   - `Error line` (Lange Ganzzahl): Zeilennummer in der Methode, die den Fehler ausgelöst hat.
-  - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat. 
+  - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat.
 
 (*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p> 
 
-- Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück. 
+- Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
 
 #### Beispiel
 

@@ -58,7 +58,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example: 
+Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -67,7 +67,7 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment. 
+You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
 
 There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
 
@@ -124,7 +124,7 @@ A project method can call another project method with or without parameters (arg
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
- 
+
   //Here the code of the method Do_Something
 $0:=Uppercase($1)
 ```
@@ -148,7 +148,7 @@ If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
-## Objects and collections 
+## Objects and collections
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
 
@@ -184,63 +184,6 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Classes
-
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
-
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
-
-```4d  
-// in a 4D method
-$o:=cs.myClass.new() 
-```
-
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance. 
-
-```4d  
-//in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
-```
-
-To execute a class member method, just use the `()` operator on the member method of the object instance. 
-
-```4d
-$o:=cs.myClass.new()
-$o.who:="World"
-$message:=$o.myClass.hello()  
-//$message: "Hello World"
-```
-
-Optionally, use the `Class constructor` keyword to declare properties of the object.
-
-```4d  
-//in the Rectangle.4dm file
-Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
-This.name:="Rectangle"
-```
-
-A class can inherit from another class by using `Class inherits <ClassName>`. Superclasses can be called using the `Super` command. For example:
-
-```4d  
-//in the Square.4dm file
-Class extends rectangle
- 
-Class constructor
-C_LONGINT($1)
- 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
-Super($1;$1)
-
-This.name:="Square"
-```
-
-
 ## Operators
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
@@ -262,7 +205,7 @@ The same symbols are often used for different operations, depending on the data 
 |Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
 
 
-## Expressions 
+## Expressions
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
@@ -318,9 +261,9 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable. 
+In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
- 
+
 ## Pointers
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
@@ -335,18 +278,18 @@ ALERT(MyPointer->)
 
 ## Comments
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
+Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
 There are two ways to create comments:
 
 - `//` for single line comments
 - `/*...*/` for inline or multiline commnents.
 
-Both styles of comments can be used simultaneously. 
+Both styles of comments can be used simultaneously.
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
 
 ```4d
 //This is a comment
@@ -375,7 +318,7 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
-	/* 
+	/*
 	other comments
 	*/
 */

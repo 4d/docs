@@ -4,7 +4,7 @@ title: Progress Indicator
 ---
 ## Overview
 
-A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically. 
+A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
 
 ![](assets/en/FormObjects/progress1.png)
 
@@ -17,14 +17,14 @@ The variable associated with the indicator controls the display. You place value
 ```4d
  $vTherm:=[Employees]Salary
 ```
- 
+
 This method assigns the value of the Salary field to the $vTherm variable. This method would be attached to the Salary field.
 
 Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. In this case the method becomes:
 
 ```4d
  [Employees]Salary:=$vTherm
-``` 
+```
 
 The method assigns the value of the indicator to the Salary field. As the user drags the indicator, the value in the Salary field changes.
 
@@ -33,9 +33,9 @@ The method assigns the value of the indicator to the Salary field. As the user d
 
 ![](assets/en/FormObjects/indicator_progressBar.png)
 
-The thermometer is the basic progress indicator. 
+The thermometer is the basic progress indicator.
 
-You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw. 
+You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
 
 Multiple graphical options are available: minimum/maximum values, graduations, steps.
 
@@ -49,7 +49,7 @@ Multiple graphical options are available: minimum/maximum values, graduations, s
 
 **Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
 
->In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant. 
+>In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
 
 Barber shop displays a continuous animation, like the [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.
 
@@ -60,8 +60,8 @@ When the form is executed, the object is not animated. You manage the animation 
 
 ### Supported Properties
 [Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
- 
+
 
 ## See also
-- [rulers](ruler.md) 
+- [rulers](ruler.md)
 - [steppers](stepper.md)

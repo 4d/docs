@@ -22,7 +22,7 @@ You can manage the data with object or form [methods](Concepts/methods.md).
         "type": "input",    //define the type of object
         "spellcheck": true, //enable spelling verification
         "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
+        "top": 160,         //top position on the form
         "width": 100,       //width of the object
         "height": 20        //height of the object
         }

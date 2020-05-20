@@ -11,7 +11,7 @@ Variables are language objects; you can create and use variables that will never
 
 ## Creating Variables   
 
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands. 
+You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
 
 **Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
 
@@ -36,6 +36,7 @@ Once created, you can use a variable wherever you need it in your database. For 
 The following are some basic variable declarations:
 
 ```4d
+
  C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
  C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
@@ -119,12 +120,10 @@ For more information, see the chapter **Processes** and the description of these
 
 ### Interprocess variables
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes. 
+Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 
 The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
-
-

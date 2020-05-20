@@ -4,7 +4,7 @@ title: Combo Box
 ---
 ## Overview
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options. 
+A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options.
 
 ![](assets/en/FormObjects/combo_box.png)
 
@@ -14,7 +14,7 @@ Use the `On Data Change` event to manage entries into the enterable area, as you
 
 ## Options for combo boxes
 
-Combo box type objects accept two specific options concerning choice lists associated with them: 
+Combo box type objects accept two specific options concerning choice lists associated with them:
 
 - [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to a list stored in memory when a user enters a value that is not found in the choice list associated with the combo box.
 - [Excluded List](properties_RangeOfValues.md#excluded-list) (list of excluded values): allows setting a list whose values cannot be entered in the combo box. If an excluded value is entered, it is not accepted and an error message is displayed.

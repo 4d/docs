@@ -36,7 +36,7 @@ Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par
 Voici quelques déclarations de variables simples :
 
 ```4d
- C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
+<br /> C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
  C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
  C_C_LONGINT(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
  C_OBJECT($vObj) // La variable locale $vObj est déclarée comme variable de type Objet

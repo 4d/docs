@@ -19,5 +19,5 @@ For more information, please refer to [Using indicators](progressIndicator.md#us
 
 ## See also
 
-- [progress indicators](progressIndicator.md) 
+- [progress indicators](progressIndicator.md)
 - [steppers](stepper.md)

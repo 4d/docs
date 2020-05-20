@@ -306,7 +306,7 @@ Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
 - Über die optionalen Parameter *begin* und *end* lassen sich in Collections und Entity-Selections Grenzen für die Schleife definieren.
 - Die Schleife `For each...End for each` lässt sich für eine **shared collection** oder ein **shared object** verwenden. Muss Ihr Code ein oder mehrere Elemente der Collection oder Objekteigenschaften ändern, müssen Sie `Use...End use` verwenden. Sie können `Use...End use` je nach Bedarf wie folgt aufrufen: 
     - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsman geändert werden sollen, oder
-    - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist. 
+    - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist.
 
 ### Schleife durch Collections
 
@@ -409,7 +409,7 @@ Mit den optionalen Parametern begin und end können Sie Grenzen für die Wiederh
 **Hinweis:** Die Parameter *begin* und *end* sind nur für Schleifen in Collections und Entity-Selections möglich, in Objekteigenschaften werden sie ignoriert.
 
 - Im Parameter *begin* übergeben Sie die Position des Elements in *Expression*, bei der der Durchlauf startet (inkl. *begin*).
-- Im Parameter *end* übergeben Sie die Position des Elements in *Expression*, bei der Durchlauf stoppt (exkl. *end*). 
+- Im Parameter *end* übergeben Sie die Position des Elements in *Expression*, bei der Durchlauf stoppt (exkl. *end*).
 
 Wird *end* weggelassen oder ist *end* größer als die Anzahl Elemente in *Expression*, werden Elemente ab *begin* bis zum letzten Element einschließlich durchlaufen. Sind die Parameter *begin* und *end* positive Werte, geben sie die aktuellen Positionen der Elemente in *Expression* an. Ist *begin* ein negativer Wert, wird er als `begin:=begin+Expression size` berechnet (=Versatz vom Ende der *Expression*). Ist der berechnete Wert negativ, wird *begin* auf 0 gesetzt. **Hinweis:** Auch wenn *begin* negativ ist, erfolgt der Durchlauf in der standardmäßigen Reihenfolge. Ist *end* ein negativer Wert, wird er berechnet als `end:=end+Expression size`
 
@@ -417,7 +417,7 @@ Beispiel:
 
 - Eine Collection enthält 10 Elemente (nummeriert von 0 bis 9)
 - begin=-4 -> begin=-4+10=6 -> der Durchlauf startet mit dem 6. Element (#5)
-- end=-2 -> end=-2+10=8 -> der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element. 
+- end=-2 -> end=-2+10=8 -> der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element.
 
 #### Beispiel
 

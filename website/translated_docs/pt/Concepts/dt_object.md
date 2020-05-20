@@ -1,6 +1,6 @@
 ---
 id: object
-title: Object
+title: Objects
 ---
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
@@ -46,7 +46,7 @@ Example:
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
+- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
 - shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Syntax basics
@@ -158,7 +158,7 @@ For more information, please refer to the `Null` command description.
 
 Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
 
 ```4d
      C_OBJECT($o)
@@ -277,7 +277,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- You can access properties as strings using the [ ] operator 
+- You can access properties as strings using the [ ] operator
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

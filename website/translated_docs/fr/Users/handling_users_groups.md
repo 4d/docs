@@ -10,17 +10,17 @@ title: Gestion des groupes et utilisateurs 4D
 L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de la base de données n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :
 
 - accéder à tous les serveurs de la base sans restrictions,
-- créer des utilisateurs et des groupes, 
-- affecter des privilèges d’accès aux groupes, 
+- créer des utilisateurs et des groupes,
+- affecter des privilèges d’accès aux groupes,
 - utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion. L'accès au mode Développement est en lecture seule.
 
 Après le Super_Utilisateur, le second plus puissant utilisateur est **l’Administrateur**, qui est en général responsable de la gestion du système d’accès et des fonctionnalités d'administration.
 
 L'Administrateur peut :
 
-- créer des utilisateurs et des groupes, 
-- accéder au moniteur et à la fenêtre d'administration de 4D Server 
-- accéder à la fenêtre CSM pour gérer les sauvegardes, restitutions ou le serveur. 
+- créer des utilisateurs et des groupes,
+- accéder au moniteur et à la fenêtre d'administration de 4D Server
+- accéder à la fenêtre CSM pour gérer les sauvegardes, restitutions ou le serveur.
 
 L'Administrateur ne peut pas :
 
@@ -48,7 +48,7 @@ Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs
 
 Pour ajouter un utilisateur depuis la boite à outils :
 
-1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs. 
+1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs.
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 

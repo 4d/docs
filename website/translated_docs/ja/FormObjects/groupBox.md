@@ -12,8 +12,8 @@ title: グループボックス
 #### JSON 例:
 
         "myGroup": {
-            "type": "groupBox", 
-            "title": "Employee Info"
+            "type": "groupBox",
+            "title": "Employee Info",
             "left": 60,
             "top": 160,
             "width": 100,

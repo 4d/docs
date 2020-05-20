@@ -10,31 +10,31 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 ![](assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. 
+You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties.
 Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as "RB-1762-1". 
-	
+For example, consider a part number with a format such as "RB-1762-1".
+
 The alpha format would be:
 
 	##-####-#
-	
+
 When the user enters "RB17621," the field displays:
 
 	RB-1762-1
-	
+
 The field actually contains "RB17621".
 
-If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is: 
+If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
-	(#######) 
-	
+	(#######)
+
 and the user enters "proportion", the field displays:
 
-	(portion) 
-	
+	(portion)
+
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
 #### JSON Grammar
@@ -72,14 +72,14 @@ The table below shows choices available:
 |System date short|- (default)|03/25/20					|
 |System date abbreviated *(1)*|systemMedium|Wed, Mar 25, 2020		|
 |System date long|systemLong|Wednesday, March 25, 2020	|
-|RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT	| 
+|RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT	|
 |Short Century|shortCentury	|03/25/20 but 04/25/2032 *(2)*|
 |Internal date long|long		|March 25, 2020	|
 |Internal date abbreviated *(1)*|abbreviated|Mar 25, 2020|
 |Internal date short|short		|03/25/2020	|
 |ISO Date Time *(3)*|iso8601	|2020-03-25T00:00:00|
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D. 
+*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
 *(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
@@ -107,11 +107,11 @@ The table below shows choices available:
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
 
-4D provides various default number formats. 
+4D provides various default number formats.
 
 ### Placeholders  
 
-In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display. 
+In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
 |Placeholder	|Effect for leading or trailing zero|
 |---|---|
@@ -137,18 +137,18 @@ Suppose you use the format ##0 to display three digits. If the user enters nothi
 
 ### Separator characters  
 
-The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #. 
+The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
 
->On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: 
+>On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
 >	*	in a Real type field, using this key will insert the decimal separator defined in the system,
 >	*	in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
 
-### Decimal points and other display characters 
+### Decimal points and other display characters
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format: 
+You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
 
 	$##0
 
@@ -210,7 +210,7 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 ### Displaying a number as a time  
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu. 
+You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
 For example, the format:
 
@@ -227,8 +227,8 @@ The following table shows how different formats affect the display of numbers. T
 |Format Entered	|Positive|	Negative	|Zero|
 |---|---|---|---|
 |###			|	<<<		|	<<<		| 		|
-|####			|	1234	|<<<<		|		| 
-|#######		|	1234	|-1234		|		| 
+|####			|	1234	|<<<<		|		|
+|#######		|	1234	|-1234		|		|
 |#####.##		|	1234.5	|-1234.5	|		|
 |####0.00		|1234.50	|-1234.50	|0.00	|
 |#####0			|1234		|-1234		|	0	|
@@ -276,7 +276,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit 
+### Scaled to fit
 
 `JSON grammar: "scaled"`
 
@@ -288,11 +288,11 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom. 
+The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom. 
+The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 
->When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area. 
+>When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -336,7 +336,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 ---
 ## Time Format
 
-Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen. 
+Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
 
 >Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
 
@@ -397,9 +397,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 ---
 ## Display Type
 
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes). 
+Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined. 
+Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
@@ -420,7 +420,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 ---
 ## Not rendered
 
-When this property is enabled, the object is not drawn on the form, however it can still be activated. 
+When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
 In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
 
@@ -433,7 +433,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md) 
+[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
 
 
 
@@ -470,7 +470,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Objects Supported
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) 
+[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -516,7 +516,7 @@ This option is available for columns with any type of contents, except pictures 
 	![](assets/en/FormObjects/property_truncate2.png)
 
 The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
-	
+
 
 > When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
 
@@ -543,9 +543,9 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 ---
 ## Visibility
 
-This property allows hiding by default the object in the Application environment. 
+This property allows hiding by default the object in the Application environment.
 
-You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context. 
+You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context.
 
 
 
@@ -567,14 +567,14 @@ You can handle the Visible property for most form objects. This property simplif
 ---
 ## Wordwrap
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" . 
+> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
 
 Manages the display of contents when it exceeds the width of the object.
 
 #### Checked for list box/Yes for input
-`JSON grammar: "normal"` 
+`JSON grammar: "normal"`
 
-When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it. 
+When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
 - In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
 
@@ -585,7 +585,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 
 #### Unchecked for list box/No for input
-`JSON grammar: "none"` 
+`JSON grammar: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 
@@ -618,9 +618,3 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 #### Objects Supported
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
-
-
-
-
-
-

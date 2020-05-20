@@ -44,7 +44,7 @@ L'assignation d'objets/collections partagé(e) s à des propriétés ou élémen
 
 - L'appel de `Use` avec un objet/une collection partagé(e) appartenant à un groupe provoquera le verrouillage des propriétés/éléments de tous les objets/collections du groupe.
 - Un objet ou une collection partagé(e) peut appartenir à un seul groupe partagé. Une erreur est générée si vous tentez d'assigner un objet ou une collection appartenant déjà à un groupe à un groupe différent.
-- Les objets/collections groupé(e) s ne peuvent plus être dégroupé(e) s. Une fois inclus dans un groupe partagé, un objet ou une collection partagé(e) est lié(e) définitivement au groupe pendant toute la durée de la session. Même si toutes les références de l'objet/la collection sont supprimé(e) s des objets/collections parent(e) s, ils resteront liés. 
+- Les objets/collections groupé(e) s ne peuvent plus être dégroupé(e) s. Une fois inclus dans un groupe partagé, un objet ou une collection partagé(e) est lié(e) définitivement au groupe pendant toute la durée de la session. Même si toutes les références de l'objet/la collection sont supprimé(e) s des objets/collections parent(e) s, ils resteront liés.
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
@@ -85,9 +85,9 @@ Les objets partagés et les collections partagées permettent d'établir des com
 - Une fois que la ligne **Use/Utiliser** est exécutée avec succès, toutes les propriétés/éléments de *Objet_partagé_ou_Collection_partagée* sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne `End use/Fin` utiliser correspondante soit éxécutée.
 - La séquence *d'instructions* peut alors effectuer toute modification dans les propriétés/éléments de Objet_partagé_ou_Collection_partagée sans risque d'accès concurrent.
 - Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre *Objet_partagé_ou_Collection_partagée*, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).
-- Si un autre process tente d'accéder à une propriété de *Objet_partagé_ou_Collection_partagée* ou une propriété connectée alors qu'une séquence **Utiliser...Fin** utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée. 
+- Si un autre process tente d'accéder à une propriété de *Objet_partagé_ou_Collection_partagée* ou une propriété connectée alors qu'une séquence **Utiliser...Fin** utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.
 - La ligne **End use/Fin** utiliser déverrouille les propriétés de *Objet_partagé_ou_Collection_partagée* et tous les objets qui partagent le même locking identifier.
-- Plusieurs structures **Utiliser...Fin** utiliser peuvent être imbriquées dans le code 4D. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté. 
+- Plusieurs structures **Utiliser...Fin** utiliser peuvent être imbriquées dans le code 4D. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté.
 
 **Note :** Si une fonction membre d'une collection modifie une collection partagée, un **Utiliser** interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.
 

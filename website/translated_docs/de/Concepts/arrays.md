@@ -85,7 +85,7 @@ Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisier
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
-<br /><br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+ ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
