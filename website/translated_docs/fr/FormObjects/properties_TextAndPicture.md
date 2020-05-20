@@ -15,7 +15,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 | Nom                     | Type de données | Valeurs possibles                                                                                        |
 | ----------------------- | --------------- | -------------------------------------------------------------------------------------------------------- |
-| customBackgroundPicture | string          | Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style". |
+| customBackgroundPicture | chaîne          | Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style". |
 
 
 #### Objets pris en charge
@@ -59,7 +59,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 
 | Nom           | Type de données | Valeurs possibles                                    |
 | ------------- | --------------- | ---------------------------------------------------- |
-| customBorderX | number          | A utiliser avec le style "personnalisé". Minimum : 0 |
+| customBorderX | numérique       | A utiliser avec le style "personnalisé". Minimum : 0 |
 
 
 #### Objets pris en charge
@@ -76,7 +76,7 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 | Nom           | Type de données | Valeurs possibles           |
 | ------------- | --------------- | --------------------------- |
-| iconPlacement | string          | "aucun", "gauche", "droite" |
+| iconPlacement | chaîne          | "aucun", "gauche", "droite" |
 
 
 #### Objets pris en charge

@@ -176,7 +176,7 @@ Pour plus d'informations sur ce qui est retourné pour chaque classe du datastor
 
 ## $catalog/{dataClass}
 
-Renvoie des informations sur une dataclass et ses attributs
+Retourne des informations sur une dataclass et ses attributs
 
 ### Description
 

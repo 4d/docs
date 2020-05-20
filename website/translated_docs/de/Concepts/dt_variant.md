@@ -8,16 +8,16 @@ Variant ist ein Variablentyp, um Daten von beliebigem festen Typ in eine Variabl
 Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
 - BLOB
-- boolean
-- collection
-- date
+- Boolean
+- Collection
+- Datum
 - Lange Ganzzahl
-- object
-- picture
-- pointer
+- Objekt
+- Bild
+- Zeiger
 - Zahl
 - Text
-- time
+- Zeit
 - Null
 - Undefiniert
 

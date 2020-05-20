@@ -13,7 +13,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 | Nom         | Type de données | Valeurs possibles |
 | ----------- | --------------- | ----------------- |
-| showFooters | boolean         | true, false       |
+| showFooters | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -57,13 +57,13 @@ Note that converting back and forth may lead to an end result that is different 
 
 | Nom          | Type de données | Valeurs possibles             |
 | ------------ | --------------- | ----------------------------- |
-| footerHeight | string          | positive decimal+px &#124; em |
+| footerHeight | chaîne          | positive decimal+px &#124; em |
 
 
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
 
-#### See also
+#### Voir également
 
 [Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

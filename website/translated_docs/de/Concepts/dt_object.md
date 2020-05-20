@@ -17,7 +17,7 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
     - Datum (Datumstyp oder ISO Datumsformat)
     - Objekt (Objekte können in mehrere Stufen verschachtelt sein)
     - Bild (*)
-    - collection
+    - Collection
 
 (*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
 

@@ -86,7 +86,7 @@ Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel),
 
 Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, avoir deux tons.
 
-- *Sous Windows* - le bouton est identique au style [Bevel](#bevel).
+- *Sous Windows* - ce bouton est identique au style [Bevel](#bevel).
 
 - *Sous macOs* - le bouton s'affiche comme un bouton à deux tons.
 

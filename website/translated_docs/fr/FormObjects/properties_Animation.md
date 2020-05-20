@@ -13,7 +13,7 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 | Nom                  | Type de données | Valeurs possibles |
 | -------------------- | --------------- | ----------------- |
-| loopBackToFirstFrame | boolean         | true, false       |
+| loopBackToFirstFrame | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -30,7 +30,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 | Nom                    | Type de données | Valeurs possibles |
 | ---------------------- | --------------- | ----------------- |
-| switchBackWhenReleased | boolean         | true, false       |
+| switchBackWhenReleased | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -47,7 +47,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 | Nom                | Type de données | Valeurs possibles |
 | ------------------ | --------------- | ----------------- |
-| switchContinuously | boolean         | true, false       |
+| switchContinuously | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -64,7 +64,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 | Nom        | Type de données | Valeurs possibles |
 | ---------- | --------------- | ----------------- |
-| frameDelay | integer         | minimum : 0       |
+| frameDelay | entier          | minimum : 0       |
 
 
 #### Objets pris en charge
@@ -81,7 +81,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 | Nom                | Type de données | Valeurs possibles |
 | ------------------ | --------------- | ----------------- |
-| switchWhenRollover | boolean         | true, false       |
+| switchWhenRollover | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -98,7 +98,7 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 | Nom                    | Type de données | Valeurs possibles |
 |:---------------------- | --------------- | ----------------- |
-| useLastFrameAsDisabled | boolean         | true, false       |
+| useLastFrameAsDisabled | booléen         | true, false       |
 
 
 #### Objets pris en charge

@@ -668,11 +668,7 @@
         "title": "Web Server object"
       }
     },
-    "links": {
-      "v18 R3 BETA": "v18 R3 BETA",
-      "v18 R2": "v18 R2",
-      "v18": "v18"
-    },
+    "links": {},
     "categories": {
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",

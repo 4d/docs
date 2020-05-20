@@ -31,7 +31,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 [Zones 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md) - [Liste hiérarchique](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de plug-in](pluginArea_overview.md#overview)
 
-#### See also
+#### Voir également
 
 [Déposable](#droppable)
 
@@ -122,7 +122,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 | Nom         | Type de données | Valeurs possibles |
 | ----------- | --------------- | ----------------- |
-| movableRows | boolean         | true, false       |
+| movableRows | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -144,7 +144,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md)
+[Liste hiérarchique](list_overview.md)
 
 * * *
 
@@ -160,7 +160,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 | Nom      | Type de données | Valeurs possibles |
 | -------- | --------------- | ----------------- |
-| sortable | boolean         | true, false       |
+| sortable | booléen         | true, false       |
 
 
 #### Objets pris en charge

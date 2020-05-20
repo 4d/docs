@@ -15,7 +15,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Nom        | Type de données | Valeurs possibles |
 | ---------- | --------------- | ----------------- |
-| spellcheck | boolean         | true, false       |
+| spellcheck | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -42,7 +42,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 | Nom         | Type de données | Valeurs possibles                     |
 | ----------- | --------------- | ------------------------------------- |
-| contextMenu | string          | "automatic" (used if missing), "none" |
+| contextMenu | chaîne          | "automatic" (used if missing), "none" |
 
 
 #### Objets pris en charge
@@ -63,7 +63,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Nom       | Type de données | Valeurs possibles |
 | --------- | --------------- | ----------------- |
-| enterable | boolean         | true, false       |
+| enterable | booléen         | true, false       |
 
 
 #### Objets pris en charge
@@ -153,7 +153,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom       | Type de données | Valeurs possibles |
         | --------- | --------------- | ----------------- |
-        | focusable | boolean         | true, false       |
+        | focusable | booléen         | true, false       |
 
         
         #### Objets pris en charge
@@ -242,14 +242,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom         | Type de données | Valeurs possibles                                                            |
         | ----------- | --------------- | ---------------------------------------------------------------------------- |
-        | placeholder | string          | Text to be displayed (grayed out) when the object does not contain any value |
+        | placeholder | chaîne          | Text to be displayed (grayed out) when the object does not contain any value |
 
         
         #### Objets pris en charge
         
         [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
         
-        #### See also
+        #### Voir également
         
         [Message d'aide](properties_Help.md)
         
@@ -263,7 +263,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | Nom           | Type de données | Valeurs possibles |
         | ------------- | --------------- | ----------------- |
-        | showSelection | boolean         | true, false       |
+        | showSelection | booléen         | true, false       |
 
         
         #### Objets pris en charge

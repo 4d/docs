@@ -16,8 +16,8 @@ Dans la collection d'étapes, il existe un objet avec les propriétés suivantes
 | Propriété     | Type       | Description                                                                       |
 | ------------- | ---------- | --------------------------------------------------------------------------------- |
 | description   | Chaine     | Requête exécutée ou "AND" lorsqu'il existe plusieurs étapes                       |
-| time          | Nombre     | Nombre de millisecondes nécessaires pour exécuter la requête                      |
-| recordsfounds | Nombre     | Nombre d'enregistrements trouvés                                                  |
+| time          | Numérique  | Nombre de millisecondes nécessaires pour exécuter la requête                      |
+| recordsfounds | Numérique  | Nombre d'enregistrements trouvés                                                  |
 | steps         | Collection | Une collection avec un objet définissant l'étape suivante du chemin de la requête |
 
 
