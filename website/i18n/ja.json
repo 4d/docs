@@ -465,8 +465,8 @@
     }
   },
   "pages-strings": {
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
+    "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
