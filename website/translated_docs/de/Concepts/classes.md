@@ -20,7 +20,7 @@ A class is an object itself, of "Class" class. A class object has the following 
 - `superclass` object (optional, null if none)
 - `new()` method, allowing to instantiate class objects.
 
-In addtion, a class object can reference:
+In addition, a class object can reference:
 
 - a `constructor` object (optional)
 - a `prototype` object, containing named function objects (optional).
@@ -29,7 +29,7 @@ A class object is a shared object and can therefore be accessed from different 4
 
 ### Property lookup and prototype
 
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continue searching in the prototype object of its superclass, and so on until there is no more superclass.
+All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
 
 All objects inherit from the class "Object" as their inheritance tree top class.
 
@@ -248,7 +248,7 @@ Class Constructor
 
 A class constructor function, which can accept parameters, can be used to define a user class.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
