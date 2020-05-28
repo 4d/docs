@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "API/ordaClasses": {
+        "title": "ORDA User Classes"
+      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -489,6 +492,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation and activation"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -674,8 +680,10 @@
       "v18": "v18"
     },
     "categories": {
+      "Getting Started": "Getting Started",
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
+      "ORDA": "ORDA",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
@@ -690,8 +698,10 @@
     }
   },
   "pages-strings": {
+    "Installation and activation|in index page Getting started": "Installation and activation",
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
+    "ORDA|in index page Getting started": "ORDA",
     "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
