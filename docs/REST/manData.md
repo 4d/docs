@@ -69,7 +69,80 @@ To compute all values and return a JSON object:
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods 
+
+## Calling ORDA class functions
+
+You can call ORDA Data Model [user class functions](API/ordaClasses.md) through REST requests, so that you can benefit from the exposed API of the targeted application.
+
+Functions are simply called in requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+
+`/rest/City/getCity`
+
+with data in the body of the request: `["Aguada"]`
+
+### Basic rules
+
+#### POST requests
+
+Functions must be called using REST POST requests, otherwise errors are returned.
+
+#### Parameters
+
+You can send parameters to functions defined in ORDA user classes. The following rules apply:
+
+- Parameters must be passed in the body of the POST request
+- Parameters must be enclosed within a collection (JSON format)
+- All data types supported in JSON collections can be used as parameters. 
+- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET (see example 2).
+
+- Example 1
+A simple function `getCities()` receiving text parameters:
+`/rest/City/getCities`  
+
+**Parameters in body:** ["Aguada","Paris"]
+
+
+- Example 2
+An `applyData()` function in a Students dataclass class that receives an entity and saves it:
+`/rest/Students/applyData`
+
+**Parameters in body:**   
+[{
+"__DATACLASS":"Students",
+"__ENTITY":true,
+"firstname":"Ann",
+"lastname":"Brown" 
+}]
+
+
+### Function calls
+
+Functions are called on the corresponding object on the server datastore. 
+
+|Class function|Syntax|Comment|
+|---|----|----|
+|[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`||
+|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/DataClassName/dataClassClassFunction`|(1)|
+|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/DataClassName/EntitySelectionClassFunction`|(1)|
+||`/rest/DataClassName/$entityset/entitySetNumber/EntitySelectionClassFunction`||
+||[`$filter`]($filter.md)||
+||[`$orderby`]($orderby.md)||
+|[entity class](API/ordaClasses.md#entity-class)|`/rest/dataclassName(key)EntityClassFunction/`||
+
+
+> (1) `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
+The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be☻ executed.
+
+
+
+## Calling 4D methods (deprecated)
+
+Calls to 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration) is now deprecated. See how to migrate your 4D Mobile code to ORDA functions calls. 
+
+
+
+
+ 
 
 You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
 
