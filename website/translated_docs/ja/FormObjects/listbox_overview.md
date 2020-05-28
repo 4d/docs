@@ -1007,30 +1007,30 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
 
-|                       | valueType                       | テキスト | 実数 | integer | boolean | color | event |
-| --------------------- | ------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
-| *属性*                  | *説明*                            |      |    |         |         |       |       |
-| value                 | セルの値 (入力または出力)                  | ○    | ○  | ○       |         |       |       |
-| min                   | 最小値                             |      | ○  | ○       |         |       |       |
-| max                   | 最大値                             |      | ○  | ○       |         |       |       |
-| behavior              | "スリーステート" の値                    |      |    | ○       |         |       |       |
-| requiredList          | オブジェクト内で定義されたドロップダウンリスト         | ○    | ○  | ○       |         |       |       |
-| choiceList            | オブジェクト内で定義されたコンボボックス            | ○    | ○  | ○       |         |       |       |
-| requiredListReference | 4D リスト参照 ("saveAs"の値による)        | ○    | ○  | ○       |         |       |       |
-| requiredListName      | 4D リスト名 ("saveAs"の値による)         | ○    | ○  | ○       |         |       |       |
-| saveAs                | "reference" または "value"         | ○    | ○  | ○       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box  | ○    | ○  | ○       |         |       |       |
-| choiceListName        | 4D list name, display combo box | ○    | ○  | ○       |         |       |       |
-| unitList              | array of X elements             | ○    | ○  | ○       |         |       |       |
-| unitReference         | index of selected element       | ○    | ○  | ○       |         |       |       |
-| unitsListReference    | 4D list ref for units           | ○    | ○  | ○       |         |       |       |
-| unitsListName         | 4D list name for units          | ○    | ○  | ○       |         |       |       |
-| alternateButton       | add an alternate button         | ○    | ○  | ○       | ○       | ○     |       |
+|                       | valueType                | テキスト | 実数 | integer | boolean | color | event |
+| --------------------- | ------------------------ | ---- | -- | ------- | ------- | ----- | ----- |
+| *属性*                  | *説明*                     |      |    |         |         |       |       |
+| value                 | セルの値 (入力または出力)           | ○    | ○  | ○       |         |       |       |
+| min                   | 最小値                      |      | ○  | ○       |         |       |       |
+| max                   | 最大値                      |      | ○  | ○       |         |       |       |
+| behavior              | "スリーステート" の値             |      |    | ○       |         |       |       |
+| requiredList          | オブジェクト内で定義されたドロップダウンリスト  | ○    | ○  | ○       |         |       |       |
+| choiceList            | オブジェクト内で定義されたコンボボックス     | ○    | ○  | ○       |         |       |       |
+| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○  | ○       |         |       |       |
+| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○  | ○       |         |       |       |
+| saveAs                | "reference" または "value"  | ○    | ○  | ○       |         |       |       |
+| choiceListReference   | 4D リスト参照、コンボボックスを表示      | ○    | ○  | ○       |         |       |       |
+| choiceListName        | 4D リスト名、コンボボックスを表示       | ○    | ○  | ○       |         |       |       |
+| unitList              | X要素の配列                   | ○    | ○  | ○       |         |       |       |
+| unitReference         | 選択された要素のインデックス           | ○    | ○  | ○       |         |       |       |
+| unitsListReference    | 単位の4D リスト参照              | ○    | ○  | ○       |         |       |       |
+| unitsListName         | 単位の4D リスト名               | ○    | ○  | ○       |         |       |       |
+| alternateButton       | 切り替えボタンを追加               | ○    | ○  | ○       | ○       | ○     |       |
 
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
  ARRAY OBJECT(obColumn;0) //column array
