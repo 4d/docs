@@ -1033,11 +1033,11 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) // カラム配列
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、 編集された値は$entry に格納されます
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -1054,11 +1054,11 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 > null 値はサポートされており、空のセルとして表示されます。
 
-#### min and max
+#### min と max
 
-When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
+"valueType" が"real" または "integer" であるとき、min と max 属性もオブジェクトに設定できます (値は適切な範囲で、かつ、valueType と同じ型である必要があります)。
 
-These attributes can be used to control the range of input values. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
+これらの属性を使用すると入力値の範囲を管理することができます。 セルが評価されたとき (フォーカスを失ったとき)、入力された値が min の値より低い場合、または max の値より大きい場合には、その値は拒否されます。 この場合、入力をする前の値が保持され、tip として説明が表示されます。
 
 ```4d
  C_OBJECT($ob3)
@@ -1073,7 +1073,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 In 4D v15, a single variation is proposed:
 
 | Attribute | Available value(s) | valueType(s) | 説明                                                                                                                                                                                   |
 | --------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
