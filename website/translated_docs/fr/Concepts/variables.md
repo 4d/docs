@@ -76,7 +76,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Text value
+      Valeur texte
     </td>
   </tr>
   
@@ -86,7 +86,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Date value
+      Valeur date
     </td>
   </tr>
   
@@ -96,7 +96,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Time value
+      Valeur Heure
     </td>
   </tr>
   
@@ -106,7 +106,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Boolean value
+      Valeur booléen
     </td>
   </tr>
   
