@@ -151,7 +151,7 @@
         "type": "subcategory",
         "label": "Guides",
         "ids": [
-          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/REST_requests"
+          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/classFunctions","REST/REST_requests"
 		  ]
 		},
 		{
