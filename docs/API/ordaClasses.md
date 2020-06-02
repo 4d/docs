@@ -65,7 +65,7 @@ All ORDA classes are exposed as properties of the **`cs`** class store. The foll
 (*)dbName is the .4DProject file name.
 
 
-> ORDA user classes are stored as regular class files (.4dm) in the [Classes subfolder](#support-in-4d-project) of the project.  
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).  
 
 
 

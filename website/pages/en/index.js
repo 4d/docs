@@ -39,7 +39,7 @@ class Index extends React.Component {
     var subContents={
       installation: <translate desc="in index page Getting started">Installation and activation</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
-	projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
+	projectDatabases: <translate desc="in index page Getting started">Project Databases</translate>,
 	ORDA: <translate desc="in index page Getting started">ORDA</translate>,
 	  formEditor: <translate>Forms</translate>,
 	  formProperties: <translate>Form Properties</translate>,
