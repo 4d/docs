@@ -135,7 +135,7 @@ New documentation files are created with the following default contents:
     </td>
     
     <td>
-      HTML comment. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
+      Commentaire HTML. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
     </td>
   </tr>
   
