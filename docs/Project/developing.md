@@ -5,28 +5,21 @@ title: Developing a project
 
 ## Overview
 
-You develop 4D database projects using the **4D Developer** application. 
-
-4D Developer provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project. 
+You develop 4D database projects using the **4D Developer** application. 4D Developer provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project. 
 
 > You can also work in 4D project files with any text editor since most of them are text files. Concurrent file access is handled via a file access manager (see below).
 
-Project files must be available to the 4D Developer application. Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications. 
-
-4D Developer can open local project databases but also remote project databases opened by 4D Server. 
-
-### Opening a local project with 4D Developer
-
-To open a local project with 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Project files can be put in a standard source control tool repository to benefit from branching, code sharing, or backup features. 
+Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications. 
 
 
-### Opening a 4D Server project with 4D Developer
+## Development configurations
 
-You can open a *databaseName.4DProject* project with 4D Server. Two different configurations are supported:
+You can open interpreted projects (*databaseName.4DProject* (see [Architecture of a 4D project](architecture.md))) in the following configurations:
 
-- 4D Developer connection from a **remote machine**. In this case, 4D Server sends a .4dz version of the project ([zipped format](building.md#build-compiled-structure)). As a consequence, all structure files are read-only. This feature is useful for testing purposes. 
-- 4D Developer connection from the **same machine as 4D Server**. In this case, development is supported just like with local projects. This feature allows you to develop a client/server application in the same context as the deployment context; it is [detailed below](#developing-projects-with-4d-server). 
- 
+- 4D Developer opening **local project files** - in this case, all aspects of the project are available to the developer. Project files can be created, modified, compiled... The result of the development can be tested at any moment by running the **Test application** menu command from 4D Developer or using the integrated Web server. 
+- - 4D Developer connection from the **same machine as 4D Server** - in this case, development is supported just like with local projects. This feature allows you to develop a client/server application in the same context as the deployment context; it is [detailed below](#developing-projects-with-4d-server). 
+- 4D Developer connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([zipped format](building.md#build-compiled-structure)) to 4D Developer. As a consequence, all structure files are read-only. This feature is useful for testing purposes. 
+
 
 
 ## Project file access
