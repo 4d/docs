@@ -3,24 +3,41 @@ id: developing
 title: Developing a project
 ---
 
-## Development tools
+## Overview
+
+You develop 4D database projects using the **4D Developer** application. 
+
+4D Developer provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project. 
+
+> You can also work in 4D project files with any text editor since most of them are text files. Concurrent file access is handled via a file access manager (see below).
+
+Project files must be available to the 4D Developer application. Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications. 
+
+4D Developer can open local project databases but also remote project databases opened by 4D Server. 
+
+### Opening a local project with 4D Developer
+
+To open a local project with 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Project files can be put in a standard source control tool repository to benefit from branching, code sharing, or backup features. 
 
 
-4D database projects are created locally, using the **4D Developer** application. To open a project from 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Note that you can also work with any text editor since most of the 4D project files are text files. Concurrent file access is handled via a file access manager (see below). 
+### Opening a 4D Server project with 4D Developer
 
-4D Server can open *databaseName.4DProject* files for testing purposes: remote 4D machines can connect and use the database, but all database structure files are read-only. 
+You can open a *databaseName.4DProject* project with 4D Server. Two different configurations are supported:
 
-Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications. 
-
+- 4D Developer connection from a **remote machine**. In this case, 4D Server sends a .4dz version of the project ([zipped format](building.md#build-compiled-structure)). As a consequence, all structure files are read-only. This feature is useful for testing purposes. 
+- 4D Developer connection from the **same machine as 4D Server**. In this case, development is supported just like with local projects. This feature allows you to develop a client/server application in the same context as the deployment context; it is [detailed below](#developing-projects-with-4d-server). 
+ 
 
 
 ## Project file access
 
-When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus. 
+
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 The 4D Developer framework includes a file access manager to control concurrent access:
 
-- if an open file which is read-only at the OS level, a locked icon is displayed in the editor:   
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
 ![](assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:
 ![](assets/en/Project/projectReload.png)  
@@ -28,10 +45,37 @@ The 4D Developer framework includes a file access manager to control concurrent 
 	- **No**: save changes and overwrite the other version
 	- **Cancel**: do not save
 
-This feature is enabled for all built-in editors:
+This feature is enabled for all built-in editors (Structure, Form, Method, Settings, and Toolbox).
 
-- Structure editor
-- Form editor
-- Method editor
-- Settings editor
-- Toolbox editor
+
+## Developing projects with 4D Server
+
+### Updating the files on the server
+
+Developing a 4D Server project is based upon the following principles:
+
+- You create, test, and modify the project features in a local version of the files using 4D Developer. To work directly with 4D Server, you can [use 4D Developer on the same machine as the server](#using-4d-developer-on-the-same-machine).  
+
+> It is recommended to use a standard source control tool like Git, to work with branches, to save projects at different steps, and/or to revert changes if necessary. 
+
+- 4D Server can run the *.4DProject* project file (non packed) in interpreted mode, so that remote 4D can connect and test the features. For this purpose, 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the project. 
+
+- An updated .4dz version of the project is automatically produced when necessary, i.e. when the project has been modified and reloaded by 4D Server. The project is reloaded:
+	- automatically, when the 4D Server application window comes to the front of the OS or when the 4D Developer application on the same machine saves a modification (see below). 
+	- when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project fron the Github platform. 
+ 
+
+### Using 4D Developer on the same machine
+
+When 4D Developer connects to a 4D Server on the same machine, the application acts as 4D in single user mode and the design environment allows to edit project files. Each time 4D Developer performs a **Save all** action from the design environment, explicitely from **File** menu or implicitely by switching to application mode for example, 4D Server synchronously reloads project files. 4D Developer waits for 4D Server to finish reloading the project files before to continue.
+
+However, you need to pay attention to the following behaviour differences compared to [standard project architecture](architecture.md):
+
+- the userPreferences.{username} folder used by 4D Developer is not the one used by 4D Server in database folder but is instead a dedicated one, named "userPreferences", stored in the database system folder (same location as when opening a .4DZ project).
+- the folder used by 4D Developer for derived data is not the one name "DerivedData" in project folder but is instead a dedicated one named "DerivedDataRemote" located in the database system folder.
+- the catalog.4DCatalog file is not edited by 4D Developer but by 4D Server. Catalog information is synchronised using client/server requests
+- the directory.json file is not edited by 4D Developer but by 4D Server. Directory information is synchronised using client/server requests
+- 4D Developer use its own internal components and plug-ins instead of those inside 4D Server. 
+
+> It is not recommended to install plug-ins or components inside 4D or 4D Server applications.
+
