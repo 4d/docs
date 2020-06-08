@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "API/cryptoClass": {
+        "title": "CrypoKey Class"
+      },
       "API/ordaClasses": {
         "title": "ORDA User Classes"
       },
