@@ -45,10 +45,10 @@ The Backup/Configuration page of the Database Settings lets you set the backup f
 ### Content  
 This area allows you to set which files and/or folders to copy during the next backup.
 
-- **Data**: Database data file. When this option is checked, the following elements are automatically backep up at the same time as the data:
+- **Data**: Database data file. When this option is checked, the following elements are automatically backed up at the same time as the data:
 	- the current log file of the database (if it exists),
-	- the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists). 
-- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
+	- the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*. 
+- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file. When this option is checked, the full `Settings` folder located [at the same level as the data folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up. 
 - **User Structure File (only for binary database)**: *deprecated feature*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area. 
 	- **Delete**: Removes the selected file from the list of attached files.
@@ -129,10 +129,10 @@ By default, 4D compresses backups to help save disk space. However, the file com
 The user does not see any dialog box; the operation is completely automatic. The goal is to make use as easy as possible. The operation is logged in the backup journal.
 
 > In the case of an automatic restore, only the following elements are restored:
->	- 4DD file
->	- 4DIndx file
->	- 4DSyncData file
->	- 4DSyncHeader file
->	- External Data folder (if it exists)
+>	- .4DD file
+>	- .4DIndx file
+>	- .4DSyncData file
+>	- .4DSyncHeader file
+>	- External Data folder
 >
 > If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).
