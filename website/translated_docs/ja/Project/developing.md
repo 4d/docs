@@ -15,7 +15,7 @@ title: プロジェクトの開発
 
 インタープリター版のプロジェクトファイル (*databaseName.4DProject* ([4D プロジェクトのアーキテクチャー](architecture.md) 参照)) は次の開発環境で開くことができます:
 
-- 4D Developer opening **local project files** - in this case, all aspects of the project are available to the developer. Project files can be created, modified, compiled... The result of the development can be tested at any moment by running the **Test application** menu command from 4D Developer or using the integrated Web server. 
+- 4D Developer を使い、**ローカルなプロジェクトファイル** を開きます - この場合、プロジェクトのすべての要素が開発者に提供されます。 プロジェクトファイルを作成・編集・コンパイルすることができます。 また、4D Developer にて **Test application** メニューコマンドを実行するか、統合された Web サーバーを使用することで、開発の成果をいつでもテストすることができます。 
 - - 4D Developer connection from the **same machine as 4D Server** - in this case, development is supported just like with local projects. This feature allows you to develop a client/server application in the same context as the deployment context; it is [detailed below](#developing-projects-with-4d-server). 
 - 4D Developer connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([zipped format](building.md#build-compiled-structure)) to 4D Developer. As a consequence, all structure files are read-only. This feature is useful for testing purposes. 
 
