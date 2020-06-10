@@ -5,15 +5,15 @@ title: プロジェクトの開発
 
 ## 概要
 
-You develop 4D database projects using the **4D Developer** application. 4D Developer provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project.
+4D データベースプロジェクトは **4D Developer** アプリケーションを使って開発します。 4D Developer は 4D プロジェクト用の統合開発環境 (IDE) およびアプリケーションランタイムを提供し、プロジェクトの開発・テスト・デバッグに使います。
 
-> You can also work in 4D project files with any text editor since most of them are text files. ファイルへの同時アクセスはファイルアクセスマネージャーによって管理されます (後述参照)。
+> 4D プロジェクトファイルの大多数はテキストファイルなため、任意のテキストエディターを使って作業することも可能です。 ファイルへの同時アクセスはファイルアクセスマネージャーによって管理されます (後述参照)。
 
 マルチユーザー開発は標準的なソース管理ツールを使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
-## Development configurations
+## 開発環境
 
-You can open interpreted projects (*databaseName.4DProject* (see [Architecture of a 4D project](architecture.md))) in the following configurations:
+インタープリター版のプロジェクトファイル (*databaseName.4DProject* ([4D プロジェクトのアーキテクチャー](architecture.md) 参照)) は次の開発環境で開くことができます:
 
 - 4D Developer opening **local project files** - in this case, all aspects of the project are available to the developer. Project files can be created, modified, compiled... The result of the development can be tested at any moment by running the **Test application** menu command from 4D Developer or using the integrated Web server. 
 - - 4D Developer connection from the **same machine as 4D Server** - in this case, development is supported just like with local projects. This feature allows you to develop a client/server application in the same context as the deployment context; it is [detailed below](#developing-projects-with-4d-server). 
@@ -21,19 +21,19 @@ You can open interpreted projects (*databaseName.4DProject* (see [Architecture o
 
 ## プロジェクトファイルアクセス
 
-4D Developer でプロジェクトを開発するにあたって、ストラクチャー要素やメソッド、フォームの作成・変更・保存には 4D のビルトインエディターを利用することができます。 Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+4D Developer でプロジェクトを開発するにあたって、ストラクチャー要素やメソッド、フォームの作成・変更・保存には 4D のビルトインエディターを利用することができます。 **保存** メニューを選択するか、エディターウィンドウがフォーカスを得た/失ったときに、編集内容がディスクに保存されます。
 
 このエディターの作業対象はディスク上のファイルなため、同じファイルが同時に編集されていたり削除されていたりといった場合には競合が発生します。 たとえば、一つのメソッドをメソッドエディターで編集しつつ、標準のテキストエディターでも開いて変更した場合に競合が起こりえます。
 
 4D Developer のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:
 
-- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- 開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます: ![](assets/en/Project/lockicon.png)
 - 開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します: ![](assets/en/Project/projectReload.png)  
     - **はい**: 編集内容を破棄してリロードします
     - **いいえ**: 編集内容で上書き保存します
     - **キャンセル**: 保存しません
 
-This feature is enabled for all built-in editors (Structure, Form, Method, Settings, and Toolbox).
+この機能はすべてのビルトインエディター (ストラクチャー、フォーム、メソッド、設定、ツールボックス) において有効化されています).
 
 ## Developing projects with 4D Server
 
