@@ -3,11 +3,11 @@ id: creating
 title: 4D プロジェクトの作成
 ---
 
-## Basics
+## 最初に
 
-New 4D projects can be created from **4D Developer** or **4D Server** (see [Developing a project](developing.md)).
+新規の 4D プロジェクトを作成できるのは **4D Developer** または **4D Server** アプリケーションです ([プロジェクトの開発](developing.md) 参照)。
 
-Development can only be done locally with 4D Developer (or any text-based tool). Projects opened by 4D Server are available in read-only mode to remote 4D Developer applications, for testing purposes only (except when the [4D Developer and the 4D Server are on the same machine](developing.md#using-4d-developer-on-the-same-machine)).
+開発は、4D Developer (または他のテキスト編集ツール) を使ってローカルにおこないます。 Projects opened by 4D Server are available in read-only mode to remote 4D Developer applications, for testing purposes only (except when the [4D Developer and the 4D Server are on the same machine](developing.md#using-4d-developer-on-the-same-machine)).
 
 運用するにあたっては、4D プロジェクトは .4dz ファイル (圧縮ファイル) の形で提供されます。 詳細については [プロジェクトパッケージのビルド](building.md) を参照ください。
 
