@@ -119,7 +119,7 @@ See examples for [creating](#creating-an-entity-with-a-related-entity) or [updat
 
 ### Entity selection parameter
 
-The entity selection must have been defined beforehand using [$method=entityset](method.md#methodentityset)
+The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset)
 
 The entity selection must then be sent as a JSON object with specific properties:
 
