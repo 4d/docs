@@ -3,7 +3,7 @@ id: manData
 title: Manipulating Data 
 ---
 
-All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
+All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
 
 ## Querying data  
 
@@ -20,9 +20,9 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 
 ## Navigating data  
@@ -69,113 +69,17 @@ To compute all values and return a JSON object:
 `/rest/Employee/salary/?$compute=$all`
 
 
+## Calling Data model class functions
 
-## Calling ORDA class functions
-
-You can call ORDA Data Model [user class functions](API/ordaClasses.md) through REST requests, so that you can benefit from the exposed API of the targeted application.
-
-Functions are simply called in requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Aguada"]`
-
-### Basic rules
-
-#### POST requests
-
-Functions must be called using REST POST requests, otherwise errors are returned.
-
-#### Parameters
-
-You can send parameters to functions defined in ORDA user classes. The following rules apply:
-
-- Parameters must be passed in the body of the POST request
-- Parameters must be enclosed within a collection (JSON format)
-- All data types supported in JSON collections can be used as parameters. 
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET (see example 2).
-
-- Example 1
-A simple function `getCities()` receiving text parameters:
-`/rest/City/getCities`  
-
-**Parameters in body:** ["Aguada","Paris"]
+with data in the body of the request: `["Paris"]`
 
 
-- Example 2
-An `applyData()` function in a Students dataclass class that receives an entity and saves it:
-`/rest/Students/applyData`
+> Calls to 4D project methods that are exposed as REST Service is still supported but is deprecated. 
 
-**Parameters in body:**   
-[{
-"__DATACLASS":"Students",
-"__ENTITY":true,
-"firstname":"Ann",
-"lastname":"Brown" 
-}]
-
-
-### Function calls
-
-Functions are called on the corresponding object on the server datastore. 
-
-|Class function|Syntax|Comment|
-|---|----|----|
-|[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`||
-|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/DataClassName/dataClassClassFunction`|(1)|
-|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/DataClassName/EntitySelectionClassFunction`|(1)|
-||`/rest/DataClassName/$entityset/entitySetNumber/EntitySelectionClassFunction`||
-||[`$filter`]($filter.md)||
-||[`$orderby`]($orderby.md)||
-|[entity class](API/ordaClasses.md#entity-class)|`/rest/dataclassName(key)EntityClassFunction/`||
-
-
-> (1) `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
-The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be☻ executed.
-
-
-
-## Calling 4D methods (deprecated)
-
-Calls to 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration) is now deprecated. See how to migrate your 4D Mobile code to ORDA functions calls. 
-
-
-
-
- 
-
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
-
-- an object
-- a collection
-
-The following example is a dataclass method that reveives parameters and returns an object:
-
-```4d
-// 4D findPerson method
-C_TEXT($1;$firstname;$2;$lastname)
-$firstname:=$1
-$lastname:=$2
-
-$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
-```
-
-The method properties are configured accordingly on the 4D project side:
-
-![alt-text](assets/en/REST/methodProp_ex.png)
-
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
-
-```4d
-C_TEXT($content)
-C_OBJECT($response)
-
-$content:="[\"Toni\",\"Dickey\"]" 
-
-$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
-```
-
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section. 
 
 ## Selecting Attributes to get
 
@@ -271,6 +175,7 @@ The following requests returns only the first name and last name from the People
 
 
 #### Entity Example  
+
 The following request returns only the first name and last name attributes from a specific entity in the People dataclass:
 
  `GET  /rest/People(3)/firstName,lastName/`

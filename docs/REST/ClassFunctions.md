@@ -24,44 +24,55 @@ You can send parameters to functions defined in ORDA user classes. The following
 - Parameters must be passed in the body of the POST request
 - Parameters must be enclosed within a collection (JSON format)
 - All data types supported in JSON collections can be used as parameters. 
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET (see example 2).
+- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET (see example 2 below).
 
-- Example 1
+#### Example 1
 A simple function `getCities()` receiving text parameters:
-`/rest/City/getCities`  
 
-**Parameters in body:** ["Aguada","Paris"]
+```
+/rest/City/getCities
+``` 
+
+*Parameters in body:*
+
+["Aguada","Paris"]
 
 
-- Example 2
+#### Example 2
 An `applyData()` function in a Students dataclass class that receives an entity and saves it:
-`/rest/Students/applyData`
 
-**Parameters in body:**   
+```
+/rest/Students/applyData
+```
+
+
+*Parameters in body:*
+```
 [{
 "__DATACLASS":"Students",
 "__ENTITY":true,
 "firstname":"Ann",
 "lastname":"Brown" 
 }]
-
+```
+See also [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
 
 ## Function calls
 
 Functions are called on the corresponding object on the server datastore. 
 
-|Class function|Syntax|Comment|
-|---|----|----|
-|[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`||
-|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/DataClassName/dataClassClassFunction`|(1)|
-|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/DataClassName/EntitySelectionClassFunction`|(1)|
-||`/rest/DataClassName/$entityset/entitySetNumber/EntitySelectionClassFunction`||
-||[`$filter`]($filter.md)||
-||[`$orderby`]($orderby.md)||
-|[entity class](API/ordaClasses.md#entity-class)|`/rest/dataclassName(key)EntityClassFunction/`||
+|Class function|Syntax|
+|---|----|
+|[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`|
+|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/DataClassName/dataClassClassFunction`|
+|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/DataClassName/EntitySelectionClassFunction`|
+||`/rest/DataClassName/EntitySelectionClassFunction/$entityset/entitySetNumber`|
+||`/rest/DataClassName/EntitySelectionClassFunction/$filter`|
+||`/rest/DataClassName/EntitySelectionClassFunction/$orderby`|
+|[entity class](API/ordaClasses.md#entity-class)|`/rest/DataclassName(key)/EntityClassFunction/`|
 
 
-> (1) `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
+> `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
@@ -97,13 +108,13 @@ The entity must be sent as a JSON object with specific properties:
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes 
 
-See example XXX 
+See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
 
 ### Related entity parameter
 
 Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
 
-See example XXX 
+See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
 
 
 ### Entity selection parameter
@@ -118,21 +129,21 @@ The entity selection must then be sent as a JSON object with specific properties
 |__DATASET|String|Mandatory - entitySetID (UUID) of the entity selection|
 |__ENTITIES|Boolean|Mandatory - True to indicate to the server that the parameter is an entity selection|
 
-See example XXX 
+See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
 
-## Examples
+## Request examples
 
 This database is exposed as a remote datastore on localhost (port 8111):
 
 ![alt-text](assets/en/REST/ordastructure.png)
 
-### Request using a datastore class function
+### Using a datastore class function
 
-The Datastore class `US_CitiesDataStore` provides an API:
+The US_Cities `DataStore` class provides an API:
 
 ```  
-// US_CitiesDataStore class
+// DataStore class
 
 Class extends DataStore
 
@@ -152,7 +163,7 @@ You can then run this request:
 }
 ```
 
-### Request using a dataclass class function
+### Using a dataclass class function
 
 The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
 
@@ -170,7 +181,8 @@ Function getCity()
 
 You can then run this request:  
 
-**POST** `127.0.0.1:8111/rest/$catalog/getCity`   
+**POST** `127.0.0.1:8111/rest/City/getCity` 
+
 Body of the request: ["Aguada"]
 
 #### Result
@@ -200,7 +212,7 @@ The result is an entity:
 }
 ```
 
-### Request using an entity class function
+### Using an entity class function
 
 The Entity class `CityEntity` provides an API:
 
@@ -226,7 +238,7 @@ You can then run this request:
 ```
 
 
-### Request using an entitySelection class function
+### Using an entitySelection class function
 
 The EntitySelection class `CitySelection` provides an API:
 
@@ -251,7 +263,7 @@ You can then run this request:
 }
 ```
 
-### Request using an entitySelection class function and an entitySet
+### Using an entitySelection class function and an entitySet
 
 The `StudentsSelection` class has a `getAgeAverage` function:
 
@@ -283,12 +295,13 @@ Once you have created an entityset, you can run this request:
 }
 ```
 
-### Request using an entitySelection class function and an orderBy
+### Using an entitySelection class function and an orderBy
 
 The `StudentsSelection` class has a `getLastSummary` function:
 
 ```  
 // StudentsSelection Class
+
 
 Class extends EntitySelection
 
@@ -314,10 +327,10 @@ You can then run this request:
 ```
 
 
-### Request receiving an entity as parameter
+### Creating an entity 
 
 
-- Example 1: The Dataclass class `Students` has the function `applyData()` receiving an entity and saving it.
+The Dataclass class `Students` has the function `applyData()` receiving an entity and saving it.
 
 ```
 // Students Class
@@ -360,7 +373,9 @@ Since no `__KEY` is given, a new Students entity is created with the given attri
 }
 ```
 
-- Example 2: Same as above but with a __KEY attribute 
+### Updating an entity
+
+Same as above but with a __KEY attribute 
 
 You run this request:
 
@@ -387,11 +402,14 @@ Since `__KEY` is given, the Students entity with primary key 1 is loaded with th
 }
 ```
 
-- Example 3: In this example, we create a new Students entity with the Schools entity having primary key 2.
+### Creating an entity with a related entity
+
+In this example, we create a new Students entity with the Schools entity having primary key 2.
 
 You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/applyData`
+
 Body of the request:
 ```
 [{
@@ -413,7 +431,10 @@ Body of the request:
 }
 ```
 
-- Example 4: In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
+
+### Updating an entity with a related entity
+
+In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
 
 ```
 // StudentsEntity class
@@ -455,7 +476,7 @@ Body of the request:
 ```
 
 
-### Request receiving an entity selection as parameter
+### Receiving an entity selection as parameter
 
 In the `Students` Dataclass class, a function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2).
 
@@ -497,7 +518,9 @@ An entity set is first created with this request:
 Then you can run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
+
 Body of the request:
+
 ```
 [
 {
