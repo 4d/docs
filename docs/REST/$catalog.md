@@ -14,6 +14,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 |[**$catalog**](#catalog)|`/$catalog`|Returns a list of the dataclasses in your project along with two URIs|
 |[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns information about all of your project's dataclasses and their attributes|
 |[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
+|[**$catalog/datastoreClassFunction**](classFunctions.md)|`/$catalog/getName`|Calls the `getName()` [datastore class function](API/ordaClasses.md#datastore-class)|
 
 
 ## $catalog
@@ -227,9 +228,6 @@ Here are the properties for each exposed attribute that are returned:
 foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
 inverseName	|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any. 
 
 ### Primary Key  
 
