@@ -7,7 +7,7 @@ title: 4D プロジェクトの作成
 
 新規の 4D プロジェクトを作成できるのは **4D Developer** または **4D Server** アプリケーションです ([プロジェクトの開発](developing.md) 参照)。
 
-開発は、4D Developer (または他のテキスト編集ツール) を使ってローカルにおこないます。 Projects opened by 4D Server are available in read-only mode to remote 4D Developer applications, for testing purposes only (except when the [4D Developer and the 4D Server are on the same machine](developing.md#using-4d-developer-on-the-same-machine)).
+開発は、4D Developer (または他のテキスト編集ツール) を使ってローカルにおこないます。 4D Server で開かれたプロジェクトは読み取り専用モードとなり、テスト目的でのみ提供されます (例外: [サーバーマシン上で 4D Developer を使って開発する場合](developing.md#サーバーマシン上での開発))。
 
 運用するにあたっては、4D プロジェクトは .4dz ファイル (圧縮ファイル) の形で提供されます。 詳細については [プロジェクトパッケージのビルド](building.md) を参照ください。
 
@@ -17,9 +17,11 @@ title: 4D プロジェクトの作成
 
 新規データベースプロジェクトを作成するには:
 
-1. Launch a 4D Developer or a 4D Server application.
-2. Select **New > Database Project...** from the **File** menu: ![](assets/en/Project/project-create1.png) OR (4D Developer only) Select **Database Project...** from the **New** toolbar button: ![](assets/en/Project/projectCreate2.png)  
-    A standard **Save** dialog box appears so that you can choose the name and location of the 4D database project main folder.
+1. 4D Developer または 4D Server アプリケーションを起動します。
+2. **ファイル**メニューから**新規 ＞ データベースプロジェクト...**を選択します: ![](assets/en/Project/project-create1.png)  
+    または  
+    (4D Developer のみ) ツールバーの**新規**ボタンの矢印をクリックして**データベースプロジェクト...**を選択します: ![](assets/en/Project/projectCreate2.png)  
+    標準の**保存**ダイアログが開き、4D データベースプロジェクトを格納するフォルダーの名称と場所が指定できます。
 3. プロジェクトフォルダー名を入力したら、**保存**をクリックします。 この名称はつぎの場所に使用されます: 
     - プロジェクトを格納するフォルダーの名称 ([4D プロジェクトのアーキテクチャー](Project/architecture.md) で紹介している例では "MyFirstProject")
     - "Project" フォルダーの中にある .4DProject ファイルの名称  
