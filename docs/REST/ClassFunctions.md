@@ -350,6 +350,7 @@ Function applyData
 You run this request:
 	
 **POST** `http://127.0.0.1:8044/rest/Students/applyData`
+
 Body of the request: 
 
 ```
@@ -380,6 +381,7 @@ Same as above but with a __KEY attribute
 You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/applyData`
+
 Body of the request:
 ```
 [{
