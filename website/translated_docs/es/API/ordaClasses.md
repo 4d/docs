@@ -87,6 +87,8 @@ $class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity
 
 ## APIs
 
+> **Warning**: Keep in mind that ORDA functions are always executed on the server, thus calling a function do generate a request to the server.
+
 ### DataStore Class
 
 A 4D database exposes its own DataStore class in the `cs` class store.
@@ -263,8 +265,6 @@ Then, you can run this kind of query:
 ```4d
 $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ```
-
-> **Warning**: Keep in mind that ORDA functions are always executed on the server, thus calling a function do generate a request to the server.
 
 ## Support in 4D projects
 
