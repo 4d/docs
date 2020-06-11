@@ -13,7 +13,7 @@ Le catalogue décrit toutes les dataclass et les attributs disponibles dans le d
 | [**$catalog**](#catalog)                                 | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
 | [**$catalog/$all**](#catalogall)                         | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
 | [**$catalog/{dataClass}**](#catalogdataclass)            | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
-| [**$catalog/datastoreClassFunction**](classFunctions.md) | `/$catalog/getName`  | Calls the `getName()` [datastore class function](API/ordaClasses.md#datastore-class)   |
+| [**$catalog/datastoreClassFunction**](ClassFunctions.md) | `/$catalog/getName`  | Calls the `getName()` [datastore class function](API/ordaClasses.md#datastore-class)   |
 
 
 ## $catalog
