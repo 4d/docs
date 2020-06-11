@@ -16,12 +16,12 @@ Dataclass names can be used directly in the REST requests to work with entities 
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
 | [**{dataClass}({clé})**](#dataclasskey)                                            | `/Employee(22)`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
-| [**{dataClass}/{dataClassClassFunction}**](classFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                                    |
-| [**{dataClass}({EntitySelectionClassFunction}**](classFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                            |
-| [**{dataClass}({key})/{EntityClassFunction}**](classFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                                      |
+| [**{dataClass}/{dataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                                    |
+| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                            |
+| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                                      |
 
 
-> Function calls are detailed in the [Calling ORDA class functions](classFunctions.md) section.
+> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
 
 ## {dataClass}
 
