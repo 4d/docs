@@ -37,8 +37,10 @@ class Index extends React.Component {
     const {config: siteConfig, language = 'en'} = this.props;
     const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
     var subContents={
+      installation: <translate desc="in index page Getting started">Installation and activation</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
-      projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
+	projectDatabases: <translate desc="in index page Getting started">Project Databases</translate>,
+	ORDA: <translate desc="in index page Getting started">ORDA</translate>,
 	  formEditor: <translate>Forms</translate>,
 	  formProperties: <translate>Form Properties</translate>,
     events: <translate>Form Events</translate>,
@@ -63,7 +65,7 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
+                  content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>[${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/API/ordaClasses.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',

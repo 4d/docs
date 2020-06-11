@@ -38,10 +38,15 @@ You can also click on the **[...]** button to specify a different location.
 3. Click on the **Restore** button. 
 4D extracts all backup files from the specified location. 
 If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)).
+
 4.(Optional) Click **OK** to integrate the log file into the restored database. 
 If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
 5. Click **OK**. 
+
 The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
+
+> Any content related to the data file (files and `Settings` folder) are automatically restored in a `Data` subfolder within the destination folder.
+
 
 ## Manually restoring a backup (MSC)  
 

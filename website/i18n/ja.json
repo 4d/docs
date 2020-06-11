@@ -5,6 +5,9 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
+      "API/ordaClasses": {
+        "title": "ORDA User Classes"
+      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -319,7 +322,7 @@
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "メニュー"
       },
       "FormEditor/print": {
         "title": "Print"
@@ -489,6 +492,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation and activation"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -557,7 +563,7 @@
         "title": "プロジェクトの開発"
       },
       "Project/documentation": {
-        "title": "プロジェクトのドキュメンテーション"
+        "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
@@ -668,10 +674,16 @@
         "title": "Web Server object"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
+    },
     "categories": {
+      "Getting Started": "はじめに",
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
+      "ORDA": "ORDA",
       "Forms": "フォーム",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
@@ -686,8 +698,10 @@
     }
   },
   "pages-strings": {
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
+    "Project Databases|in index page Getting started": "プロジェクトデータベース",
+    "ORDA|in index page Getting started": "ORDA",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",

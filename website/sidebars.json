@@ -1,6 +1,7 @@
 {
   "docs": {
-    "4D Language Concepts":
+    "Getting Started":["GettingStarted/installation"],
+	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
         "type": "subcategory",
@@ -22,6 +23,7 @@
 	],
 
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
+    "ORDA":["API/ordaClasses"],
 	"Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
@@ -149,7 +151,7 @@
         "type": "subcategory",
         "label": "Guides",
         "ids": [
-          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/REST_requests"
+          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/classFunctions","REST/REST_requests"
 		  ]
 		},
 		{

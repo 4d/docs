@@ -14,11 +14,19 @@ title: Sue après frappe clavier
 
 After the [`On Before Keystroke`](onBeforeKeystroke.md) and `On After Keystroke` event properties are selected for an object, you can detect and handle the keystrokes within the object, using the `FORM event` command that will return `On Before Keystroke` and then `On After Keystroke` (for more information, please refer to the description of the `Get edited text` command).
 
-These events are also activated by language commands that simulate a user action like `POST KEY`.
+> These events are also activated by language commands that simulate a user action like `POST KEY`.
 
-Keep in mind that user modifications that are not carried out using the keyboard (paste, drag-drop, etc.) are not taken into account. To process these events, you must use [`On After Edit`](onAfterEdit.md).
+The `On After Keystroke` event is not generated:
 
-> The [`On Before Keystroke`](onBeforeKeystroke.md) and `On After Keystroke` events are not generated when using an input method. An input method (or IME, Input Method Editor) is a program or a system component that can be used to enter complex characters or symbols (for example, Japanese or Chinese) using a Western keyboard.
+- in a [list box column](FormObjects/listbox_overview.md#list-box-columns) method while a cell is being edited,
+- when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use [`On After Edit`](onAfterEdit.md).
+
+### Keystroke sequence
+
+When an entry requires a sequence of keystrokes, the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are generated only when the entry is fully validaded by the user. The `Keystroke` command returns the validated character. This case mainly occurs:
+
+- when using "dead" keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. "ê" or ñ),
+- when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated. 
 
 ### See also
 
