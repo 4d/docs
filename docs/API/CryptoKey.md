@@ -3,10 +3,39 @@ id: cryptoClass
 title: CryptoKey Class
 ---
 
+## Overview
+
 The `CryptoKey` class in the 4D language encapsulates the openssl `EVP_PKey` structure that handles an encryption key pair. 
 
 This class is available from the `4D` class store.
 
+### `cryptoKey` object properties
+
+A `cryptoKey` object is instanciated by the [4D.CryptoKey.new(#4dcryptokeynew)] method. It has the following properties. All are read-only.
+
+|Property|Type|Description|
+|---|---|---|
+|type|text|Name of the key type. For example: "ECDSA" or "RSA".|
+|size|integer|Defined only for RSA keys: the size of the key in bits. Typically 2048|
+|curve|text|Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1"|
+
+### Example
+
+
+The following example signs and verifies a message using a new ECDSA key pair. In order to make a ES256 JSON Web token, the message should be `base64url(tokenHeader)+"."+base64url(tokenPayload)`. In addition, the signature should be converted from base64 to base64url.
+
+```4d
+ // Generate a new ECDSA key pair
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Get signature as base64
+$message:="hello world" 
+$signature:=$key.sign($message;New object("hash";"HASH256"))
+
+  // Verify signature
+$status:=$key.verify($message;$signature;New object("hash";"HASH256"))
+ASSERT($status.success)
+```
 
 ## 4D.CryptoKey.new()
 
@@ -193,7 +222,4 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 The method returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
 
 In case the `message` couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
-
-
-
 
