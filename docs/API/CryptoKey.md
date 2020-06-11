@@ -1,6 +1,6 @@
 ---
 id: cryptoClass
-title: CrypoKey Class
+title: CryptoKey Class
 ---
 
 The `CryptoKey` class in the 4D language encapsulates the openssl `EVP_PKey` structure that handles an encryption key pair. 
@@ -19,7 +19,7 @@ This class is available from the `4D` class store.
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |settings||object|->|Settings to generate or load a key pair|  
 ||type|text||Type of the key: "RSA", "ECDSA", or "PEM" (see below)|
@@ -51,7 +51,7 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 ||||||
 |privateKey||text|<-|Private key in PEM format|
@@ -70,7 +70,7 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 
 #### cryptoKey.getPublicKey() -> publicKey
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 ||||||
 |publicKey||text|<-|Public key in PEM format|
@@ -89,7 +89,7 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 
 #### cryptoKey.sign(message;options) -> signature
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to sign|  
 |options||object|->|Signing options|  
@@ -114,7 +114,7 @@ The `cryptoKey` must contain a valid **private** key.
 
 #### cryptoKey.verify(message;signature;options) -> status
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string that was used to produce the signature|  
 |signature||text|->|Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option|
@@ -146,7 +146,7 @@ The `cryptoKey` must contain a valid **public** key.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to be encoded using options.encodingDecrypted and encrypted.|  
 |options||object|->|Encoding options|
@@ -173,7 +173,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### cryptoKey.decrypt(message;options) -> status
 
-|Parameter|Attribute|Type||Description|
+|Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to be decoded using options.encodingEncrypted and decrypted.|  
 |options||object|->|Decoding options|
