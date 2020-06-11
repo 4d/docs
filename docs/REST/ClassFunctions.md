@@ -3,7 +3,7 @@ id: classFunctions
 title: Calling ORDA class functions 
 ---
 
-You can call [user class functions](API/ordaClasses.md) from the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+You can call [user class functions](API/ordaClasses.md) defined in the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
 Functions are simply called in requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
