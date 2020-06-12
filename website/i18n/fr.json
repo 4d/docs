@@ -649,6 +649,9 @@
       "REST/authUsers": {
         "title": "Users and sessions"
       },
+      "REST/classFunctions": {
+        "title": "Calling ORDA class functions"
+      },
       "REST/configuration": {
         "title": "Configuration du serveur"
       },

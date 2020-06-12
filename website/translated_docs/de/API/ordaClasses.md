@@ -46,7 +46,7 @@ Object instances from generic classes have specific properties and functions, do
 
 #### User Class Store (cs)
 
-Object instances from ORDA user classes benefit from their parent's properties and functions. For example, an entity class object can call functions from the [ORDA's Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
+Object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an entity class object can call functions from the [ORDA's Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
 
 In addition, the 4D developer can add custom functions to create a business-oriented API exposing only necessary features.
 
@@ -54,24 +54,22 @@ All ORDA classes are exposed as properties of the **`cs`** class store. The foll
 
 | ORDA object                        | Class                       | Instanciated by                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| datastore                          | cs.*dbName*DataStore(*)     | `ds` command                                                                                                                                                                                                                                                                                                                                                                      |
+| datastore                          | cs.DataStore                | `ds` command                                                                                                                                                                                                                                                                                                                                                                      |
 | dataClassName                      | cs.*DataClassName*          | `dataStore.DataClassName`, `dataStore[DataClassName]`                                                                                                                                                                                                                                                                                                                             |
 | entity from DataClassName          | cs.*DataClassName*Entity    | `dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`                                                                                                                                                                                              |
-| entitySelection from dataClassName | cs.*dataClassName*Selection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
+| entitySelection from dataClassName | cs.*DataClassName*Selection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
 
-
-(*)dbName is the .4DProject file name.
 
 > ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).
 
 ### Inheritance
 
-Given a database named EmpComp containing Employee and Company tables, the following examples show inheritance rules:
+Given a project containing Employee and Company tables, the following examples show inheritance rules:
 
 ```4d
-$i:=OB Instance of(ds;4D.DataStore) //True
-$i:=OB Instance of(ds;cs.EmpCompDataStore) //True  
-$class:=OB Class(ds) //$class=cs.EmpCompDataStore  
+$i:=OB Instance of(ds;4D.DataStoreImplementation) //True
+$i:=OB Instance of(ds;cs.DataStore) //True  
+$class:=OB Class(ds) //$class=cs.DataStore  
 
 $i:=OB Instance of(ds.Employee;4D.DataClass) //True
 $i:=OB Instance of(ds.Employee;cs.Employee) //True  
@@ -89,27 +87,29 @@ $class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity
 
 ## APIs
 
+> **Warning**: Keep in mind that ORDA functions are always executed on the server, thus calling a function do generate a request to the server.
+
 ### DataStore Class
 
 A 4D database exposes its own DataStore class in the `cs` class store.
 
-- **Extends**: 4D.DataStore 
-- **Exposed name**: *dbName*DataStore (where *dbName* is the .4DProject file name)
-- **Class file name**: *dbName*DataStore.4dm
+- **Extends**: 4D.DataStoreImplementation 
+- **Exposed name**: DataStore
+- **Class file name**: DataStore.4dm
 
-| Database file name | DataStore class name | Class file name       |
-| ------------------ | -------------------- | --------------------- |
-| Employee.4DProject | cs.EmployeeDataStore | EmployeeDataStore.4dm |
+| Database file name | DataStore class name | Class file name |
+| ------------------ | -------------------- | --------------- |
+| Employee.4DProject | cs.DataStore         | DataStore.4dm   |
 
 
-You can create functions in the *dbName*DataStore class, that will be available through the `ds` object.
+You can create functions in the DataStore class, that will be available through the `ds` object.
 
 #### Beispiel
 
 ```4d
-// cs.EmployeeDataStore class
+// cs.DataStore class
 
-Class extends DataStore
+Class extends DataStoreImplementation
 
 Function getDesc
   $0:="Database exposing employees and their companies"
@@ -266,21 +266,15 @@ Then, you can run this kind of query:
 $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ```
 
-> **Warning**: Keep in mind that ORDA functions are always executed on the server, thus calling a function do generate a request to the server.
-
 ## Support in 4D projects
 
-ORDA user class files must be stored at the [same location as regular class files](Concepts/classes.md#class-files), i.e. in the `/Sources/Classes` folder of the project folder.
+ORDA data model user class files must be stored at the [same location as regular class files](Concepts/classes.md#class-files), i.e. in the `/Sources/Classes` folder of the project folder.
 
 ### Creating classes
 
 You create an ORDA user class by adding a corresponding file in the Classes folder. For example, to create an entity class for the `Utilities` dataclass, you need to create a `UtilitiesEntity.4dm` file.
 
-A class file can be created by a simple double-click in the Classes theme of the Explorer.
-
-> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/API/showClass.png)
-
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+A class file can be created by a simple double-click in the Classes theme of the 4D Explorer. ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
 
 ![](assets/en/API/classORDA2.png)
 
@@ -292,6 +286,8 @@ Double-click on a class name. 4D creates the ORDA class file and add the `extend
 Once a class is defined, its name is no longer dimmed in the Explorer:
 
 ![](assets/en/API/classORDA3.png)
+
+> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/API/showClass.png)
 
 ### Editing classes
 

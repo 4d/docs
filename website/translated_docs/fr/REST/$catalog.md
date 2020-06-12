@@ -8,11 +8,12 @@ Le catalogue décrit toutes les dataclass et les attributs disponibles dans le d
 
 ## Syntaxe
 
-| Syntaxe                                       | Exemple              | Description                                                                            |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
+| Syntaxe                                                  | Exemple              | Description                                                                            |
+| -------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                 | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
+| [**$catalog/$all**](#catalogall)                         | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
+| [**$catalog/{dataClass}**](#catalogdataclass)            | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
+| [**$catalog/datastoreClassFunction**](ClassFunctions.md) | `/$catalog/getName`  | Calls the `getName()` [datastore class function](API/ordaClasses.md#datastore-class)   |
 
 
 ## $catalog
@@ -217,10 +218,6 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                                         |
 | path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
  foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
-
-### Méthode(s)
-
-Définit les méthodes projet associées à la dataclass, le cas échéant.
 
 ### Clé primaire
 

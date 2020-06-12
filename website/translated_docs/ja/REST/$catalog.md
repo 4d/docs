@@ -8,11 +8,12 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| シンタックス                                        | 例題                   | 説明                                                                               |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Returns information about a dataclass and its attributes                         |
+| シンタックス                                                   | 例題                   | 説明                                                                                   |
+| -------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
+| [**$catalog**](#catalog)                                 | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs                |
+| [**$catalog/$all**](#catalogall)                         | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes     |
+| [**$catalog/{dataClass}**](#catalogdataclass)            | `/$catalog/Employee` | Returns information about a dataclass and its attributes                             |
+| [**$catalog/datastoreClassFunction**](ClassFunctions.md) | `/$catalog/getName`  | Calls the `getName()` [datastore class function](API/ordaClasses.md#datastore-class) |
 
 
 ## $catalog
@@ -217,10 +218,6 @@ Here are the properties for each exposed attribute that are returned:
 | identifying | ブール | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                   |
 | path        | 文字列 | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                       |
  foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
-
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any.
 
 ### Primary Key
 
