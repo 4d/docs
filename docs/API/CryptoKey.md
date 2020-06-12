@@ -11,7 +11,7 @@ This class is available from the `4D` class store.
 
 ### `cryptoKey` object properties
 
-A `cryptoKey` object is instanciated by the [4D.CryptoKey.new(#4dcryptokeynew)] method. It has the following properties. All are read-only.
+A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties. All are read-only.
 
 |Property|Type|Description|
 |---|---|---|
@@ -122,6 +122,7 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 |---|---|----|---|---|
 |message||text|->|Message string to sign|  
 |options||object|->|Signing options|  
+
 ||hash|text||Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
 ||pss|boolean||Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm|
 ||encoding|text||Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".|
