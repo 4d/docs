@@ -1,11 +1,11 @@
 ---
 id: ordaClasses
-title: ORDA User Classes
+title: ORDA Data Model Classes
 ---
 
 ## Overview
 
-ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastores, dataclasses, entity selections, and entities are all available as class objects that can contain functions. 
+ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions. 
 
 For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple to call as:
 
@@ -30,71 +30,22 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 ![](assets/en/API/api.png)
 
 
-## Architecture
+In addition, 4D Developer automatically creates the classes for each available data model object. For example, consider this simple database containing a single `[Students]` table. You can see that 4D has automatically created the classes:
 
-ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+![](assets/en/API/ORDA_Classes-3.png)
 
-![](assets/en/API/ClassDiagramImage.png)
-
-### Class Stores
-
-#### 4D Class Store  
-
-Object instances from generic classes have specific properties and functions (documented in the *4D Language Reference* manual):
-
-- [datastore](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataStore.201-4900375.en.html)
-- [dataclass](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataClass.201-4900376.en.html)
-- [entity selection](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-EntitySelection.201-4900360.en.html)
-- [entity](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html)
-
-
-#### User Class Store (cs)
-
-Object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
-
-In addition, the 4D developer can add custom functions to create a business-oriented API and expose only the necessary features. 
-
-All ORDA classes are exposed as properties of the **`cs`** class store. The following ORDA class objects are available:
-
-|ORDA object|Class|Instanciated by|
-|---|---|---|
-|datastore|cs.DataStore|`ds` command|
-|dataClassName|cs.*DataClassName*|`dataStore.DataClassName`, `dataStore[DataClassName]`|
-|entity from DataClassName|cs.*DataClassName*Entity|`dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`|
-|entitySelection from dataClassName|cs.*DataClassName*Selection|`dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection`|
-
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).  
+- DataStore - class for the datastore
+- Students - class for the Students dataclass
+- StudentsEntity - class for the Students entities
+- StudentsSelection - class for the Students entity selections
 
 
 
-### Inheritance
 
-Given a project containing *Employee* and *Company* tables, the following examples show inheritance rules:
-
-```4d
-$i:=OB Instance of(ds;4D.DataStoreImplementation) //True
-$i:=OB Instance of(ds;cs.DataStore) //True  
-$class:=OB Class(ds) //$class=cs.DataStore  
-
-$i:=OB Instance of(ds.Employee;4D.DataClass) //True
-$i:=OB Instance of(ds.Employee;cs.Employee) //True  
-$class:=OB Class(ds.Employee) //$class=cs.Employee 
-
-$i:=OB Instance of(ds.Employee.all();4D.EntitySelection) //True
-$i:=OB Instance of(ds.Employee.all();cs.EmployeeSelection) //True  
-$class:=OB Class(ds.Employee.all()) //$class=cs.EmployeeSelection
-
-$i:=OB Instance of(ds.Employee.all().first();4D.Entity) //True
-$i:=OB Instance of(ds.Employee.all().first();cs.EmployeeEntity) //True  
-$class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity 
-
-```  
+## Class Description
 
 
-## APIs
-
-
-> **Warning**: Keep in mind that ORDA functions are always executed on the server. Thus, calling a function generates a request to the server. 
+> **Note**: Keep in mind that ORDA data model functions are always executed on the server. Thus, calling a function generates a request to the server. 
 
 
 ### DataStore Class
@@ -103,14 +54,8 @@ $class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity
 A 4D database exposes its own DataStore class in the `cs` class store. 
 
 - **Extends**: 4D.DataStoreImplementation 
-- **Exposed name**: DataStore
-- **Class file name**: DataStore.4dm
+- **Class name**: cs.DataStore
 
-
-|Database file name|DataStore class name|Class file name
-|---|---|---|
-|Employee.4DProject|cs.DataStore|DataStore.4dm
- 
 You can create functions in the DataStore class that will be available through the `ds` object. 
 
 #### Example
@@ -137,12 +82,8 @@ $desc:=ds.getDesc() //"Database exposing..."
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
 - **Extends**: 4D.DataClass 
-- **Exposed name**: *DataClassName* (where *DataClassName* is the table name)
-- **Class file name**: *DataClassName*.4dm
-
-|Table name|DataClass class name|Class file name
-|---|---|---|
-|Employee|cs.Employee|Employee.4dm
+- **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
+- **Example name**: cs.Employee
 
 
 > If a DataClass class name enters in conflict with a [user class name](Concepts/classes.md#class-names), the constructor of the user class becomes unusable (a warning is returned by the compiler). 
@@ -218,12 +159,8 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
 - **Extends**: 4D.EntitySelection 
-- **Exposed name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Class file name**: *DataClassName*Selection.4dm
-
-|Table name|EntitySelection class name|Class file name
-|---|---|---|
-|Employee|cs.EmployeeSelection|EmployeeSelection.4dm
+- **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
+- **Example name**: cs.EmployeeSelection
 
 
 #### Example
@@ -253,12 +190,8 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
 - **Extends**: 4D.Entity 
-- **Exposed name**: *DataClassName*Entity (where *DataClassName* is the table name)
-- **Class file name**: *DataClassName*Entity.4dm
-
-|Table name|Entity class name|Class file name
-|---|---|---|
-|City|cs.CityEntity|CityEntity.4dm
+- **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
+- **Example name**: cs.CityEntity
 
 #### Example
 
@@ -278,6 +211,68 @@ Then, you can run this kind of query:
 ```4d
 $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ```
+
+
+## Architecture
+
+ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+
+![](assets/en/API/ClassDiagramImage.png)
+
+### Class Stores
+
+#### 4D Class Store  
+
+Object instances from generic classes have specific properties and functions (documented in the *4D Language Reference* manual):
+
+- [datastore](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataStore.201-4900375.en.html)
+- [dataclass](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataClass.201-4900376.en.html)
+- [entity selection](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-EntitySelection.201-4900360.en.html)
+- [entity](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html)
+
+
+#### User Class Store (cs)
+
+Object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
+
+In addition, the 4D developer can add custom functions to create a business-oriented API and expose only the necessary features. 
+
+All ORDA classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+
+|Class|Example name|Instanciated by|
+|---|---|---|
+|cs.DataStore|cs.DataStore|`ds` command|
+|cs.*DataClassName*|cs.Employee|`dataStore.DataClassName`, `dataStore[DataClassName]`|
+|cs.*DataClassName*Entity|cs.EmployeeEntity|`dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`|
+|cs.*DataClassName*Selection|cs.EmployeeSelection|`dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection`|
+
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).  
+
+
+
+### Inheritance
+
+Given a project containing *Employee* and *Company* tables, the following examples show inheritance rules:
+
+```4d
+$i:=OB Instance of(ds;4D.DataStoreImplementation) //True
+$i:=OB Instance of(ds;cs.DataStore) //True  
+$class:=OB Class(ds) //$class=cs.DataStore  
+
+$i:=OB Instance of(ds.Employee;4D.DataClass) //True
+$i:=OB Instance of(ds.Employee;cs.Employee) //True  
+$class:=OB Class(ds.Employee) //$class=cs.Employee 
+
+$i:=OB Instance of(ds.Employee.all();4D.EntitySelection) //True
+$i:=OB Instance of(ds.Employee.all();cs.EmployeeSelection) //True  
+$class:=OB Class(ds.Employee.all()) //$class=cs.EmployeeSelection
+
+$i:=OB Instance of(ds.Employee.all().first();4D.Entity) //True
+$i:=OB Instance of(ds.Employee.all().first();cs.EmployeeEntity) //True  
+$class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity 
+
+```  
+
 
 
 ## Support in 4D projects
