@@ -50,7 +50,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
-|Class|Example name|Instanciated by|
+|Class|Example name|Instantiated by|
 |---|---|---|
 |cs.DataStore|cs.DataStore|`ds` command|
 |cs.*DataClassName*|cs.Employee|`dataStore.DataClassName`, `dataStore[DataClassName]`|
@@ -232,6 +232,19 @@ Then, you can run this kind of query:
 $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ```
 
+## Definition Rules
+
+When creating or editing data model classes, you must pay attention to the rules described below.
+
+- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D table names must be compliant in order to avoid any conflict in the **cs** namespace. In particular:
+	- Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler). 
+	- Do not use a reserved name for a 4D table (e.g. "DataClass").
+
+- When defining a DataClass class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the name of the 4D table (naming is case sensitive). 
+
+- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular [instantiation method](#architecture).
+
+- You cannot override a native ORDA class method from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
 
 
@@ -239,6 +252,9 @@ $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ## Support in 4D projects
 
 ORDA data model user class files must be stored at the [same location as regular class files](Concepts/classes.md#class-files), *i.e.* in the `/Sources/Classes` folder of the project folder.
+
+
+
 
 ### Creating classes
 

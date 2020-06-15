@@ -29,16 +29,16 @@ Functions are called on the corresponding object on the server datastore.
 |Class function|Syntax|
 |---|----|
 |[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`|
-|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/DataClassName/dataClassClassFunction`|
-|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/DataClassName/EntitySelectionClassFunction`|
-||`/rest/DataClassName/EntitySelectionClassFunction/$entityset/entitySetNumber`|
-||`/rest/DataClassName/EntitySelectionClassFunction/$filter`|
-||`/rest/DataClassName/EntitySelectionClassFunction/$orderby`|
-|[entity class](API/ordaClasses.md#entity-class)|`/rest/DataclassName(key)/EntityClassFunction/`|
+|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/dataClassClassFunction`|
+|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
+||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
+|[entity class](API/ordaClasses.md#entity-class)|`/rest/{dataClass}(key)/EntityClassFunction/`|
 
 
 
-> `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
+> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
