@@ -67,7 +67,7 @@ You can call ORDA Data Model [user class functions](classFunctions.md) through P
 
 with data in the body of the request: `["Paris"]`
 
-> Calls to 4D project methods that are exposed as REST Service is still supported but is deprecated.
+> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated.
 
 ## Selecting Attributes to get
 
@@ -203,7 +203,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
-`GET /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
+`GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 ## Affichage d'un attribut d'image
 
