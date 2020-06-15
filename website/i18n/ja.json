@@ -6,7 +6,7 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "API/ordaClasses": {
-        "title": "ORDA User Classes"
+        "title": "ORDA Data Model Classes"
       },
       "Backup/backup": {
         "title": "Backup"
