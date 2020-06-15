@@ -6,7 +6,7 @@ title: About REST Requests
 
 The following structures are supported for REST requests:
 
-|URI	|Resource	|{Subresource}|	{Querystring}|
+|URI	|Input	|{Subresource}|	{Querystring}|
 |---|---|---|---|
 |http://{servername}:{port}/rest/	|[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/	| | 
 | |[{dataClass}](%7BdataClass%7D.html)/|	[{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/|[?$filter]($filter.md)|

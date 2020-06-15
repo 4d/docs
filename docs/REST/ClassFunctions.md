@@ -3,61 +3,26 @@ id: classFunctions
 title: Calling ORDA class functions 
 ---
 
+## Overview
+
 You can call [user class functions](API/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
-Functions are simply called in requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Aguada"]`
+with data in the body of the POST request: `["Aguada"]`
 
-## Overview
+In 4D language, this call is equivalent to, :
 
-### POST requests
-
-Functions must be called using REST POST requests (a GET request will receive an error).
-
-### Parameters
-
-You can send parameters to functions defined in ORDA user classes. The following rules apply:
-
-- Parameters must be passed in the body of the POST request
-- Parameters must be enclosed within a collection (JSON format)
-- All data types supported in JSON collections can be used as parameters. 
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET (see example 2 below).
-
-#### Example 1
-A simple function `getCities()` receiving text parameters:
-
-```
-/rest/City/getCities
+```4d
+$city:=ds.City.getCity("Aguada")
 ``` 
 
-*Parameters in body:*
-
-["Aguada","Paris"]
-
-
-#### Example 2
-An `applyData()` function in a Students dataclass class that receives an entity and saves it:
-
-```
-/rest/Students/applyData
-```
-
-
-*Parameters in body:*
-```
-[{
-"__DATACLASS":"Students",
-"__ENTITY":true,
-"firstname":"Ann",
-"lastname":"Brown" 
-}]
-```
-See also [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
 
 ## Function calls
+
+Functions must always be called using REST **POST** requests (a GET request will receive an error).
 
 Functions are called on the corresponding object on the server datastore. 
 
@@ -72,6 +37,7 @@ Functions are called on the corresponding object on the server datastore.
 |[entity class](API/ordaClasses.md#entity-class)|`/rest/DataclassName(key)/EntityClassFunction/`|
 
 
+
 > `/rest/DataClassName/Function` can be used to call either a dataclass or an entity selection function (`/rest/DataClassName` returns all entities of the DataClass as an entity selection).   
 The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
@@ -84,7 +50,11 @@ The following rules apply:
 
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)
-- All data types supported in JSON collections can be used as parameters, including entity and entity selection objects (in which case the JSON object must contain specific attributes, see below).
+- All scalar data types supported in JSON collections can be passed as parameters. 
+- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+
+See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+
 
 ### Scalar value parameter
 
@@ -96,7 +66,11 @@ Parameter(s) must simply be enclosed in a collection defined in the body. For ex
 
 ### Entity parameter
 
-The entity must be sent as a JSON object with specific properties:
+Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. 
+You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
+
+> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server. 
+
 
 |Properties|Type|Description|
 |---|---|---|
@@ -110,7 +84,7 @@ The entity must be sent as a JSON object with specific properties:
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
 
-### Related entity parameter
+#### Related entity parameter
 
 Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
 
@@ -119,9 +93,10 @@ See examples for [creating](#creating-an-entity-with-a-related-entity) or [updat
 
 ### Entity selection parameter
 
-The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset)
+The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
 
-The entity selection must then be sent as a JSON object with specific properties:
+> If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection. 
+
 
 |Properties|Type|Description|
 |---|---|---|

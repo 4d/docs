@@ -42,6 +42,26 @@ In addition, 4D Developer automatically creates the classes for each available d
 
 
 
+## Architecture
+
+ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+
+![](assets/en/API/ClassDiagramImage.png)
+
+All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+
+|Class|Example name|Instanciated by|
+|---|---|---|
+|cs.DataStore|cs.DataStore|`ds` command|
+|cs.*DataClassName*|cs.Employee|`dataStore.DataClassName`, `dataStore[DataClassName]`|
+|cs.*DataClassName*Entity|cs.EmployeeEntity|`dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`|
+|cs.*DataClassName*Selection|cs.EmployeeSelection|`dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection`|
+
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).  
+
+In addition, object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an Entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
+
+
 ## Class Description
 
 
@@ -132,7 +152,7 @@ Function getCityName()
 	var $0 : Text
 
 	$zipcode:=$1
-	$zip:=ds.ZipCode.get($1)
+	$zip:=ds.ZipCode.get($zipcode)
 	$0:="" 
 
 	If ($zip#Null)
@@ -213,65 +233,6 @@ $cities:=ds.City.query(Formula(This.getPopulation() > 500000))
 ```
 
 
-## Architecture
-
-ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
-
-![](assets/en/API/ClassDiagramImage.png)
-
-### Class Stores
-
-#### 4D Class Store  
-
-Object instances from generic classes have specific properties and functions (documented in the *4D Language Reference* manual):
-
-- [datastore](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataStore.201-4900375.en.html)
-- [dataclass](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-DataClass.201-4900376.en.html)
-- [entity selection](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-EntitySelection.201-4900360.en.html)
-- [entity](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html)
-
-
-#### User Class Store (cs)
-
-Object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
-
-In addition, the 4D developer can add custom functions to create a business-oriented API and expose only the necessary features. 
-
-All ORDA classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
-
-|Class|Example name|Instanciated by|
-|---|---|---|
-|cs.DataStore|cs.DataStore|`ds` command|
-|cs.*DataClassName*|cs.Employee|`dataStore.DataClassName`, `dataStore[DataClassName]`|
-|cs.*DataClassName*Entity|cs.EmployeeEntity|`dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`|
-|cs.*DataClassName*Selection|cs.EmployeeSelection|`dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection`|
-
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).  
-
-
-
-### Inheritance
-
-Given a project containing *Employee* and *Company* tables, the following examples show inheritance rules:
-
-```4d
-$i:=OB Instance of(ds;4D.DataStoreImplementation) //True
-$i:=OB Instance of(ds;cs.DataStore) //True  
-$class:=OB Class(ds) //$class=cs.DataStore  
-
-$i:=OB Instance of(ds.Employee;4D.DataClass) //True
-$i:=OB Instance of(ds.Employee;cs.Employee) //True  
-$class:=OB Class(ds.Employee) //$class=cs.Employee 
-
-$i:=OB Instance of(ds.Employee.all();4D.EntitySelection) //True
-$i:=OB Instance of(ds.Employee.all();cs.EmployeeSelection) //True  
-$class:=OB Class(ds.Employee.all()) //$class=cs.EmployeeSelection
-
-$i:=OB Instance of(ds.Employee.all().first();4D.Entity) //True
-$i:=OB Instance of(ds.Employee.all().first();cs.EmployeeEntity) //True  
-$class:=OB Class(ds.Employee.all().first()) //$class=cs.EmployeeEntity 
-
-```  
 
 
 
@@ -291,7 +252,7 @@ A class file can be created by a simple double-click in the Classes theme of the
 Double-click on a class name. 4D creates the ORDA class file and add the `extends` code. Example for an Entity class:
 
 ```
-Class extends entity
+Class extends Entity
 ``` 
 
 Once a class is defined, its name is no longer dimmed in the Explorer:
