@@ -6,7 +6,7 @@
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
       "API/ordaClasses": {
-        "title": "ORDA User Classes"
+        "title": "ORDA Data Model Classes"
       },
       "Backup/backup": {
         "title": "Sauvegarde"
