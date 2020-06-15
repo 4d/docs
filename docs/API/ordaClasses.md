@@ -240,7 +240,7 @@ When creating or editing data model classes, you must pay attention to the rules
 	- Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler). 
 	- Do not use a reserved name for a 4D table (e.g. "DataClass").
 
-- When defining a DataClass class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the name of the 4D table (naming is case sensitive). 
+- When defining a DataClass class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the name of the 4D table (case sensitive). 
 
 - You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular [instantiation method](#architecture).
 
