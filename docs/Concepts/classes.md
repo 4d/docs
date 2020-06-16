@@ -213,7 +213,7 @@ In the database code, class functions are called as member methods of the object
 
 
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods),<p>
+> - the compiler does not generate any error (which is different compared to regular methods),
 > - an error is thrown by 4D only at runtime.
 
 
