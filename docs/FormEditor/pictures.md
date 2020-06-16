@@ -39,8 +39,8 @@ When using high resolution pictures, you can specify the scale factor by adding 
 
 |Display Type| Scale Factor|Example
 |---|---|---|
-|Standard Resolution|1:1 pixel density.| **1x**<br>![](assets/en/FormEditor/pictureScale1.png)<br>*circle.png*
-|High Resolution| Pixel density increased by a factor of 2 or 3.|<table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)<br>*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>
+|Standard Resolution|1:1 pixel density.| **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png*|
+|High Resolution| Pixel density increased by a factor of 2 or 3.|<table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>
 
 
 
@@ -68,8 +68,8 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 
 |Operation |Behavior|
 |---|---|
-|Drop or Paste|If the picture has:<p><ul><li>**72dpi or 96dpi** -  The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.<p></li>|
-|[Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu)|If the picture's display format  is:<p><ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
+|Drop or Paste|If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li>|
+|[Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu)|If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
