@@ -5,8 +5,11 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "API/ordaClasses": {
-        "title": "ORDA User Classes"
+        "title": "ORDA Data Model Classes"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -686,7 +689,7 @@
       "Getting Started": "Getting Started",
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
-      "ORDA": "ORDA",
+      "API": "API",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",

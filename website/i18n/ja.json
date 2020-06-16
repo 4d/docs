@@ -5,8 +5,11 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "API/ordaClasses": {
-        "title": "ORDA User Classes"
+        "title": "ORDA Data Model Classes"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -686,7 +689,7 @@
       "Getting Started": "はじめに",
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
-      "ORDA": "ORDA",
+      "API": "API",
       "Forms": "フォーム",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
