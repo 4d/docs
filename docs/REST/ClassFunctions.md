@@ -63,6 +63,8 @@ Parameter(s) must simply be enclosed in a collection defined in the body. For ex
 
 **Parameters in body:** ["Aguada","Paris"]
 
+All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
+
 
 ### Entity parameter
 
@@ -302,29 +304,37 @@ You can then run this request:
 ```
 
 
-### Creating an entity 
+### Using an entity to be created on the server
 
 
-The Dataclass class `Students` has the function `applyData()` receiving an entity and saving it.
+The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
 
 ```
 // Students Class
 
 Class extends DataClass
 
-Function applyData
-	C_OBJECT($1;$entity;$status;$0)
+Function pushData
+	var $1, $entity, $status, $0 : Object
 
 	$entity:=$1
 
-	$entity.lastname:=Uppercase($entity.lastname)
-	$status:=$entity.save()
+	$status:=checkData($entity) // $status is an object with a success boolean property
+
 	$0:=$status
+
+	If ($status.success)
+	    $status:=$entity.save()
+ 	   If ($status.success)
+ 	       $0:=$entity
+  	  End if 
+	End if
+
 ```
 
 You run this request:
 	
-**POST** `http://127.0.0.1:8044/rest/Students/applyData`
+**POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
 Body of the request: 
 
@@ -337,19 +347,27 @@ Body of the request:
 }]
 ```
 
-Since no `__KEY` is given, a new Students entity is created with the given attributes.
+Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
+
 
 #### Result
 
 ```
 {
-    "result": {
-        "success": true
-    }
+    "__entityModel": "Students",
+    "__DATACLASS": "Students",
+    "__KEY": "55",
+    "__TIMESTAMP": "2020-06-16T10:54:41.805Z",
+    "__STAMP": 1,
+    "ID": 55,
+    "firstname": "Ann",
+    "lastname": "BROWN",
+    "schoolID": null,
+    "school": null
 }
 ```
 
-### Updating an entity
+### Using an entity to be updated on the server
 
 Same as above but with a __KEY attribute 
 
@@ -363,19 +381,26 @@ Body of the request:
 "__DATACLASS":"Students",
 "__ENTITY":true,
 "lastname":"Brownie",
-"__KEY":1
+"__KEY":55
 }]
 ```
 
-Since `__KEY` is given, the Students entity with primary key 1 is loaded with the lastname value received. Because the function runs a `save()`, the entity is updated.
+Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
 
 #### Result
 
 ``` 
 {
-    "result": {
-        "success": true
-    }
+    "__entityModel": "Students",
+    "__DATACLASS": "Students",
+    "__KEY": "55",
+    "__TIMESTAMP": "2020-06-16T11:10:21.679Z",
+    "__STAMP": 3,
+    "ID": 55,
+    "firstname": "Ann",
+    "lastname": "BROWNIE",
+    "schoolID": null,
+    "school": null 
 }
 ```
 
@@ -419,7 +444,7 @@ In this example, we associate an existing school to a Students entity. The `Stud
 Class extends Entity
 
 Function putToSchool()
-	C_OBJECT($1;$school;$0;$status)
+	var $1, $school , $0, $status : Object
 
 		//$1 is a Schools entity
 	$school:=$1
@@ -455,7 +480,7 @@ Body of the request:
 
 ### Receiving an entity selection as parameter
 
-In the `Students` Dataclass class, a function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2).
+In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
 
 ```
 // Students class
@@ -464,10 +489,10 @@ Class extends DataClass
 
 Function setFinalExam()
 
-    C_OBJECT($1;$es;$student;$status)
-    C_TEXT($2;$examResult)
+    var $1, $es, $student, $status : Object
+    var $2, $examResult : Text
 
-    C_COLLECTION($keys;$0)
+    var $keys, $0 : Collection
 
       //Entity selection
     $es:=$1
@@ -511,6 +536,8 @@ Body of the request:
 
 #### Result
 
+The entities with primary keys 1 and 2 have been updated.
+
 ```
 {
     "result": [
@@ -518,4 +545,25 @@ Body of the request:
         2
     ]
 }
+```
+
+### Using an entity selection updated on the client
+
+Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).  
+
+```4d
+var $remoteDS, $newStudent, $students : Object
+var $ageAverage : Integer
+
+$remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
+
+// $newStudent is a student entity to procees
+$newStudent:=...
+$students:=$remoteDS.Students.query("school.name = :1";"Math school")
+// We add an entity to the $students entity selection on the client
+$students.add($newStudent) 
+
+// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
+// The function is executed on the server on the updated $students entity selection which included the student added from the client
+$ageAverage:=$students.getAgeAverage()
 ```
