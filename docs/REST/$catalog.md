@@ -225,7 +225,7 @@ Here are the properties for each exposed attribute that are returned:
 |identifying|Boolean	|This property returns True if the attribute is the primary key. Otherwise, this property does not appear.|
 |path	|String	|Name of the relation for a relatedEntity or relateEntities attribute.|
 |foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
-|inverseName	|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+|inverseName|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
 ### Method(s)
 
