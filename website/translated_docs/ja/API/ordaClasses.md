@@ -209,12 +209,24 @@ Class extends Entity
 Function getPopulation()
     $0:=This.zips.sum("population")
 
+
+Function isBigCity
+C_BOOLEAN($0)
+// The function getPopulation() is usable inside the class
+$0:=This.getPopulation()>50000
 ```
 
-Then, you can run this kind of query:
+Then, you can call this code:
 
 ```4d
-$cities:=ds.City.query(Formula(This.getPopulation() > 500000))
+var $cityManager, $city : Object
+
+$cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
+$city:=$cityManager.City.getCity("Caguas")
+
+If ($city.isBigCity())
+    ALERT($city.name + " is a big city")
+End if
 ```
 
 ## Definition Rules
