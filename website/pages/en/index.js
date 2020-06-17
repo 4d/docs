@@ -75,21 +75,21 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/API/ordaClasses.html)<br>
-                  [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/cryptoClass.html)`,
+                  [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/cryptoClass.html)<br>
+                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Core.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
                   title: <translate>Core Development</translate>,
                 },
                 {
-                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
-                  //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
-                  image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
-				  imageAlign: 'top',
-                  imageAlt: 'Desktop',
-                  title: <translate>Desktop applications</translate>,
+                  content: `[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
+                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)`,
+                  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
+                  imageAlign: 'top',
+                  imageAlt: 'Admin',
+                  title: <translate>Administration</translate>,
                 },
               ]}
               layout="threeColumn"
@@ -114,12 +114,12 @@ class Index extends React.Component {
                   title: <translate>Mobile applications</translate>,
                 },
                 {
-                  content: `[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
-                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)`,
-                  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
-                  imageAlign: 'top',
-                  imageAlt: 'Admin',
-                  title: <translate>Administration</translate>,
+                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
+                  image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
+				  imageAlign: 'top',
+                  imageAlt: 'Desktop',
+                  title: <translate>Desktop applications</translate>,
                 },
 				{},
               ]}

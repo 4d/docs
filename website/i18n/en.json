@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
       "API/cryptoClass": {
         "title": "CryptoKey Class"
       },
@@ -496,7 +499,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -567,6 +570,9 @@
       },
       "Project/documentation": {
         "title": "Documenting a project"
+      },
+      "Project/licenses": {
+        "title": "Managing 4D Licenses"
       },
       "Project/overview": {
         "title": "Overview"
@@ -687,20 +693,21 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
+      "Project Overview": "Project Overview",
       "4D Language Concepts": "4D Language Concepts",
-      "Project Databases": "Project Databases",
-      "API": "API",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Menus": "Menus",
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Web Server": "Web Server",
+      "REST Server": "REST Server",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
-      "Form Events": "Form Events",
-      "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Form Events": "Form Events"
     }
   },
   "pages-strings": {
@@ -722,10 +729,10 @@
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
-    "Desktop applications|no description given": "Desktop applications",
+    "Administration|no description given": "Administration",
     "Web applications|no description given": "Web applications",
     "Mobile applications|no description given": "Mobile applications",
-    "Administration|no description given": "Administration",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
