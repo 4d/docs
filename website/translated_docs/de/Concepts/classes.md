@@ -8,7 +8,7 @@ title: Klassen
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
-Ist eine Klasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz der dazugehörigen Klasse. Eine Klasse kann eine andere Klasse `erweitern` und erbt dann von deren Funktionen.
+Ist eine Klasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse `erweitern` und erbt dann von deren Funktionen.
 
 Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
 
@@ -16,13 +16,13 @@ Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf ei
 
 Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
 
-- `name`, der die Regeln von ECMAScript einhalten muss
+- `name` (konform mit den Regeln von ECMAScript)
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
 In addition, a class object can reference:
 
-- a `constructor` object (optional)
+- Ein Objekt `constructor` (optional)
 - a `prototype` object, containing named function objects (optional).
 
 A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
