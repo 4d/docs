@@ -5,7 +5,7 @@ title: Calling ORDA class functions
 
 ## Overview
 
-You can call [user class functions](API/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+You can call [user class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
 Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
@@ -28,13 +28,13 @@ Functions are called on the corresponding object on the server datastore.
 
 |Class function|Syntax|
 |---|----|
-|[datastore class](API/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`|
-|[dataclass class](API/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/dataClassClassFunction`|
-|[entitySelection class](API/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
+|[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/datastoreClassFunction`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/dataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
-|[entity class](API/ordaClasses.md#entity-class)|`/rest/{dataClass}(key)/EntityClassFunction/`|
+|[entity class](ORDA/ordaClasses.md#entity-class)|`/rest/{dataClass}(key)/EntityClassFunction/`|
 
 
 
