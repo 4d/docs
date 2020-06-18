@@ -3,7 +3,7 @@ id: licenses
 title: Managing 4D Licenses
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/installation.md) in the Welcome Wizard. 
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard. 
 
 However, in specific cases you could need to activate your licenses manually, for example if:
 
