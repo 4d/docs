@@ -1,40 +1,26 @@
 ---
 id: licenses
-title: Managing 4D licenses
+title: Managing 4D Licenses
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [signed in using your 4D account](GettingStarted/installation.md) in the Welcome Wizard. 
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/installation.md) in the Welcome Wizard. 
 
-However, in specific cases, for example if you work offline, you could need to activate your licenses manually. You also need to activate any additional licenses you obtain. 
+However, in specific cases you could need to activate your licenses manually, for example if:
+
+- your configuration does not allow the automatic activation,
+- you have purchased additional licenses. 
 
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
 - 4D used in local mode with an interpreted database with no access to the Design environment.
 
-> You must have an Internet connection and an e-mail account in order to activate your products. 
 
+## First activation
 
-## Activate 4D
+With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
 
-1. Launch the 4D application.
-2. Select the **License Manager...** command from the **Help** menu.
-
-![](assets/en/getStart/helpMenu.png)
-
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
-
-> When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
-
-## Activate 4D Server
-
-1. Launch the 4D Server application.
-The dialog box for choosing the [activation mode](#activation-mode) appears.
-
-![](assets/en/getStart/helpMenu.png)
-
-
-## 4D Activation mode
+![](assets/en/getStart/server1.png)
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
@@ -160,7 +146,3 @@ For the UK:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
 - Telephone: 01625 536178
-
-
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
-

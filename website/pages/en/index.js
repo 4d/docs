@@ -52,6 +52,7 @@ class Index extends React.Component {
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
+    licenses: <translate>License Management</translate>,
 	  users: <translate>Access Rights</translate>
     };
 
@@ -75,7 +76,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-                  [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/API/ordaClasses.html)<br>
+                  [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/ordaClasses.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/cryptoClass.html)<br>
                   [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Core.png`,
@@ -84,7 +85,8 @@ class Index extends React.Component {
                   title: <translate>Core Development</translate>,
                 },
                 {
-                  content: `[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
+                  content: `[${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
+                  [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
                   [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',

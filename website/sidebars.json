@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Overview":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building","Project/licenses"],
+    "Project Overview":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -23,10 +23,10 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
-  "ORDA":["API/ordaClasses"],
+  "ORDA":["ORDA/ordaClasses"],
   "Class API Reference":["API/cryptoClass"],
   "Access Rights":["Users/overview","Users/editing"],
-  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
+  "License Management":["Admin/licenses"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServerObject"],
@@ -169,7 +169,8 @@
 			"Events/onUrlResourceLoading",
 			"Events/onValidate",
 			"Events/onVpReady",
-			"Events/onWindowOpeningDenied"]
+			"Events/onWindowOpeningDenied"],
+  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]
 
   }
 }

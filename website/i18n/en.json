@@ -11,9 +11,6 @@
       "API/cryptoClass": {
         "title": "CryptoKey Class"
       },
-      "API/ordaClasses": {
-        "title": "ORDA Data Model Classes"
-      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -556,6 +553,9 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
+      "ORDA/ordaClasses": {
+        "title": "ORDA Data Model Classes"
+      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
@@ -698,7 +698,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Access Rights": "Access Rights",
-      "Menus": "Menus",
+      "License Management": "License Management",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
@@ -707,7 +707,8 @@
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
-      "Form Events": "Form Events"
+      "Form Events": "Form Events",
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
@@ -726,6 +727,7 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
+    "License Management|no description given": "License Management",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
