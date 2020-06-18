@@ -5,11 +5,11 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
       "API/cryptoClass": {
         "title": "CryptoKey Class"
-      },
-      "API/ordaClasses": {
-        "title": "ORDA Data Model Classes"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -496,7 +496,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -553,6 +553,9 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
+      "ORDA/ordaClasses": {
+        "title": "ORDA Data Model Classes"
+      },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
       },
@@ -567,6 +570,9 @@
       },
       "Project/documentation": {
         "title": "Documenting a project"
+      },
+      "Project/licenses": {
+        "title": "Managing 4D Licenses"
       },
       "Project/overview": {
         "title": "Overview"
@@ -687,27 +693,30 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
+      "Project Overview": "Project Overview",
       "4D Language Concepts": "4D Language Concepts",
-      "Project Databases": "Project Databases",
-      "API": "API",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Administration": "Administration",
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Web Server": "Web Server",
+      "REST Server": "REST Server",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation|in index page Getting started": "Installation",
     "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project Databases|in index page Getting started": "Project Databases",
+    "Project Overview|in index page Getting started": "Project Overview",
     "ORDA|in index page Getting started": "ORDA",
+    "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
@@ -718,12 +727,14 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "License Management|no description given": "License Management",
+    "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
+    "Web applications|no description given": "Web applications",
+    "Mobile applications|no description given": "Mobile applications",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"
