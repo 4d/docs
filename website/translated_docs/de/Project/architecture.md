@@ -29,7 +29,7 @@ The Project folder typically contains the following hierarchy:
 
 - *databaseName*.4DProject file
 - Sources 
-    + Classes
+    + Klassen
     + DatabaseMethods
     + Methoden
     + Formulare
