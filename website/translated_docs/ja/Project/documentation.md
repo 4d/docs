@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: プロジェクトのドキュメンテーション
+title: ドキュメンテーション
 ---
 
 ## 概要
@@ -37,15 +37,15 @@ title: プロジェクトのドキュメンテーション
 
 - **Documentation**
     
-    + **クラス** 
+    + **Classes** 
         * myClass.md
     * **DatabaseMethods** 
         * onStartup.md
         * ...
-    * **フォーム** 
+    * **Forms** 
         * loginDial.md
         * ...
-    * **メソッド** 
+    * **Methods** 
         * myMethod.md
         * ...
     * **TableForms** 

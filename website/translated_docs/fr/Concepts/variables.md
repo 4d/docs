@@ -57,7 +57,7 @@ This syntax only supports [local and process variables](#local-process-and-inter
 
 If `varType` is omitted, a variable of the **variant** type is created.
 
-The following table lists all supported `varType` values:
+Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
 <table>
   <tr>
@@ -76,7 +76,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Text value
+      Valeur texte
     </td>
   </tr>
   
@@ -86,7 +86,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Date value
+      Valeur date
     </td>
   </tr>
   
@@ -96,7 +96,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Time value
+      Valeur Heure
     </td>
   </tr>
   
@@ -106,7 +106,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Boolean value
+      Valeur booléen
     </td>
   </tr>
   
@@ -116,7 +116,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Long integer value
+      Valeur entier long
     </td>
   </tr>
   
@@ -126,7 +126,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Real value
+      Valeur réel
     </td>
   </tr>
   
@@ -136,7 +136,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Pointer value
+      Valeur pointeur
     </td>
   </tr>
   
@@ -146,7 +146,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Picture value
+      Valeur image
     </td>
   </tr>
   
@@ -156,7 +156,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      BLOB value
+      Valeur BLOB
     </td>
   </tr>
   
@@ -166,7 +166,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Collection value
+      Valeur collection
     </td>
   </tr>
   
@@ -176,7 +176,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Variant value
+      Valeur variant
     </td>
   </tr>
   
@@ -186,7 +186,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object with default class (4D.Object)
+      Objet avec classe par défaut (4D.object)
     </td>
   </tr>
   
@@ -196,7 +196,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the 4D class name
+      Objet du nom de la classe 4D
     </td>
   </tr>
   
@@ -206,7 +206,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the user class name
+      Objet du nom de la classe utilisateur
     </td>
   </tr>
 </table>

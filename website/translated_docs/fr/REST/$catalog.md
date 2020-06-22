@@ -218,10 +218,6 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
  foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
 
-### Méthode(s)
-
-Définit les méthodes projet associées à la dataclass, le cas échéant.
-
 ### Clé primaire
 
 L'objet clé retourne le nom de l'attribut (**name**) défini comme **clé primaire** pour la classe du datastore.

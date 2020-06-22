@@ -750,294 +750,294 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ## 階層リストボックス
 
-A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
+4D ではリストボックスを階層表示にするよう指定することができます。 階層リストボックスは左の列が階層状に表示されます。このタイプの表示方法は、繰り返される値や、階層に依存するデータの表示などに適用できます (国/地域/都市など)。
 
-> Only [array type list boxes](#array-list-boxes) can be hierarchical.
+> [配列タイプ](#配列リストボックス) のリストボックスのみを階層にできます。
 
-Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
+階層リストボックスはデータを表示する特別な方法ですが、データの構造 (配列) は変更しません。 階層リストボックスは通常のリストボックスとまったく同じ方法で管理されます。
 
-### Defining the hierarchy
+### 階層の指定
 
-To specify a hierarchical list box, there are several possibilities:
+階層リストボックスとして指定するには、3つの方法があります:
 
-* Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
-* Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-* Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
+* フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
+* フォームエディターのリストボックス管理メニューを使用して階層を生成する。
+* [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (*4D ランゲージリファレンス* 参照)。
 
-#### Hierarchical List Box property
+#### "階層リストボックス" プロパティによる階層化
 
-This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、[*dataSource* プロパティの値が array であるときに](properties_Object.md#階層リストボックス)、この機能が利用可能になります。
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
+*階層リストボックス* オプションが選択されると、追加オプションである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース (*dataSource*) 配列を指定します。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
-The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. For example: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. For example: regions. Beginning with the third field, each variable depends on the one preceding it. For example: counties, cities, and so on. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.
+Variable 1 は常に、リストボックスの先頭列の変数名に対応します (この 2つの値は自動でバインドされます)。 Variable 1欄は常に表示され、入力できます。 例: country。 Variable 2 も常に表示され、入力できます。これは二番目の階層レベルを指定します。 例: regions。 三番目以降の欄は、その前の番号の欄が入力されると表示されます。 例えば: counties、cities等。 最大10レベルまで指定できます。 ある階層レベルの値を削除すると、その後の階層レベルが繰り上がります。
 
-The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
+最後の変数に複数の同じ値が存在しても、この変数が階層になることはありません。 たとえば、arr1 に A A A B B B、arr2 に 1 1 1 2 2 2、そしてarr3 に X X Y Y Y Z が値として設定されている場合、A、B、1、そして 2 は階層で表示できますが、X と Y は階層になりません:
 
 ![](assets/en/FormObjects/property_hierarchicalListBox.png)
 
-This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped.
+この原則は階層がひとつだけ設定されている場合には適用されません。この場合、同じ値はグループ化されます。
 
-> If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see below), the unnecessary columns are automatically removed from the list box.
+> 既存のリストボックスで階層を設定した場合、(最初のものを除き) これらの列を削除または非表示にしなければなりません。でないと、それらはリストボックス中で重複して表示されます。 エディターのポップアップメニューを使用して階層を設定すると (階層リストボックス参照)、不要な列は自動でリストボックスから取り除かれます。
 
-#### Create hierarchy using the contextual menu
+#### コンテキストメニューを使用した階層化
 
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
+フォームエディター内で配列タイプのリストボックスオブジェクトの一番目から任意の数の列を選択すると、**階層を作成** コマンドがコンテキストメニューから利用できるようになります:
 
 ![](assets/en/FormObjects/listbox_hierarchy1.png)
 
-This command is a shortcut to define a hierarchy. When it is selected, the following actions are carried out:
+このコマンドは階層化のショートカットです。 このコマンドを選択すると、以下のアクションが実行されます:
 
-* The **Hierarchical list box** option is checked for the object in the Property List.
-* The variables of the columns are used to specify the hierarchy. They replace any variables already specified.
-* The columns selected no longer appear in the list box (except for the title of the first one).
+* そのオブジェクトのプロパティリストで **階層リストボックス** オプションが選択されます。
+* その列の変数が階層を指定するために使用されます。 既に設定されていた変数は置き換えられます。
+* (先頭列を除き) 選択された列はリストボックス内に表示されなくなります。
 
-Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 国、地域、都市が (下図の通り) 選択され、コンテキストメニューから **階層を作成** を選択すると、先頭列に3レベルの階層が作成され、二番目と三番目の列は取り除かれます。人口列が二番目になります:
 
 ![](assets/en/FormObjects/listbox_hierarchy2.png)
 
-##### Cancel hierarchy
+##### 階層をキャンセル
 
-When the first column is selected and already specified as hierarchical, you can use the **Cancel hierarchy** command. When you choose this command, the following actions are carried out:
+階層リストボックスとして定義されたリストボックスで先頭列を選択すると、**階層をキャンセル** コマンドを使用できます。 このコマンドを選択すると以下のアクションが実行されます:
 
-* The **Hierarchical list box** option is deselected for the object,
-* The hierarchical levels 2 to X are removed and transformed into columns added to the list box.
+* そのオブジェクトの **階層リストボックス** オプションの選択が解除されます。
+* 2番目以降の階層レベルが削除され、通常の列としてリストボックスに追加されます。
 
-### How it works
+### 動作
 
-When a form containing a hierarchical list box is opened for the first time, by default all the rows are expanded.
+階層リストボックスを含むフォームが最初に開かれる際、デフォルトですべての行が展開されています。
 
-A break row and a hierarchical "node" are automatically added in the list box when values are repeated in the arrays. For example, imagine a list box containing four arrays specifying cities, each city being characterized by its country, its region, its name and its number of inhabitants:
+配列中で値が繰り返されていると、ブレーク行と階層 "ノード" がリストボックスに自動で追加されます。 たとえば、リストボックスに都市に関する 4つの配列が含まれていて、それぞれ国、地域、都市名、人口データが含まれているとします:
 
 ![](assets/en/FormObjects/hierarch1.png)
 
-If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:
+リストボックスが階層形式で表示されると (先頭3つの配列が階層化されている場合)、以下のように表示されます:
 
 ![](assets/en/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
+階層を正しく構築するためには、事前に配列をソートしなければなりません。 たとえば、配列中にデータが AAABBAACC の順で含まれていると、階層は以下のようになります:
 
 > A B A C
 
-To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
+階層 "ノード" を展開したり折りたたんだりするには、ノード上をクリックします。 ノード上を **Alt+クリック** (Windows) または **Option+クリック** (macOS) すると、すべてのサブ要素が同時に展開されたり折りたたまれたりします。 これらの動作は `LISTBOX EXPAND` および `LISTBOX COLLAPSE` コマンドを使用することでプログラミングでも実行可能です。
 
-When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.
+階層リストボックスに日付や時間型の値を表示する際、それらは Short system format で表示されます。
 
-#### Sorts in hierarchical list boxes
+#### ソートの管理
 
-In a list box in hierarchical mode, a standard sort (carried out by clicking on the header of a list box column) is always constructed as follows:
+階層モードのリストボックスにおいて、(リストボックス列のヘッダーをクリックして実行される) 標準の並べ替えは常に以下のようにおこなわれます:
 
-- In the first place, all the levels of the hierarchical column (first column) are automatically sorted by ascending order.
-- The sort is then carried out by ascending or descending order (according to the user action) on the values of the column that was clicked.
-- All the columns are synchronized. 
-- During subsequent sorts carried out on non-hierarchical columns of the list box, only the last level of the first column is sorted. It is possible to modify the sorting of this column by clicking on its header.
+- まず階層列 (一番目の列) のすべてのレベルが自動で昇順にソートされます。
+- 次にクリックされた列の値を使用して、昇順または降順にソートが実行されます。
+- すべての列が同期されます。 
+- その後の非階層列のソート時には、階層列の最後のレベルのみがソートされます。 この列のソートはそのヘッダーをクリックすることでおこなえます。
 
-Given for example the following list box, in which no specific sort is specified:
+例として、まだソートされていない以下のリストボックスがあります:
 
 ![](assets/en/FormObjects/hierarch3.png)
 
-If you click on the "Population" header to sort the populations by ascending (or alternately descending) order, the data appear as follows:
+"Population" ヘッダーをクリックして人口に基づき昇順あるいは降順でソートを行おこなうと、データは以下のように表示されます:
 
 ![](assets/en/FormObjects/hierarch4.png)
 
-As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
+通常のリストボックスと同様、リストボックスの [ソート可](properties_Action.md#ソート可) オプションの選択を解除することで標準のソートメカニズムを無効にし、プログラムでソートを管理できます。
 
-#### Selections and positions in hierarchical list boxes
+#### 選択行とその位置の管理
 
-A hierarchical list box displays a variable number of rows on screen according to the expanded/collapsed state of the hierarchical nodes. This does not however mean that the number of rows of the arrays vary. Only the display is modified, not the data. It is important to understand this principle because programmed management of hierarchical list boxes is always based on the data of the arrays, not on the displayed data. In particular, the break rows added automatically are not taken into account in the display options arrays (see below).
+階層リストボックスは、ノードの展開 / 折りたたみ状態により、スクリーン上に表示される行数が変わります。 しかし配列の行数が変わるわけではありません。 表示が変わるだけでデータに変更はありません。 この原則を理解することは重要です。階層リストボックスに対するプログラムによる管理は常に配列データに対しておこなわれるのであり、表示されたデータに対しておこなわれるわけではないからです。 とくに、自動で追加されるブレーク行は、表示オプション配列では考慮されません (後述参照)。
 
-Let’s look at the following arrays for example:
+例として以下の配列を見てみましょう:
 
 ![](assets/en/FormObjects/hierarch5.png)
 
-If these arrays are represented hierarchically, the row "Quimper" will not be displayed on the second row, but on the fourth, because of the two break rows that are added:
+これらの配列が階層的に表示されると、2つのブレーク行が追加されるため、"Quimper" 行は 2行目ではなく 4行目に表示されます:
 
 ![](assets/en/FormObjects/hierarch6.png)
 
-Regardless of how the data are displayed in the list box (hierarchically or not), if you want to change the row containing "Quimper" to bold, you must use the statement Style{2} = bold. Only the position of the row in the arrays is taken into account.
+階層であってもなくても、リストボックスにどのようにデータが表示されているかにかかわらず、"Quimper" が含まれる行を太字にしたい場合はステートメント Style{2} = bold を使用しなければなりません。 配列中の行の位置のみが考慮されます。
 
-This principle is implemented for internal arrays that can be used to manage:
+この原則は以下のものを管理する内部的な配列に適用されます:
 
-- colors
-- background colors
-- styles
-- hidden rows
-- selections
+- カラー
+- 背景色
+- スタイル
+- 非表示行
+- 選択行
 
-For example, if you want to select the row containing Rennes, you must pass:
+たとえば、Rennes を含む行を選択するには、以下のように書きます:
 
 ```4d
  ->MyListbox{3}:=True
 ```
 
-Non-hierarchical representation: ![](assets/en/FormObjects/hierarch7.png) Hierarchical representation: ![](assets/en/FormObjects/hierarch8.png)
+非階層表示: ![](assets/en/FormObjects/hierarch7.png) 階層表示: ![](assets/en/FormObjects/hierarch8.png)
 
-> If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected.
+> 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
-As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
+選択と同様に、`LISTBOX GET CELL POSITION` コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、`LISTBOX GET CELL POSITION` は同じ位置 (3;2) を返します。
 
-*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch9.png)
+*非階層表示:* ![](assets/en/FormObjects/hierarch9.png)
 
-*Hierarchical representation:* ![](assets/en/FormObjects/hierarch10.png)
+*階層表示:* ![](assets/en/FormObjects/hierarch10.png)
 
-When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
+サブ階層のすべての行が隠されているとき、ブレーク行は自動で隠されます。 先の例題で 1から 3行目までが隠されていると、"Brittany" のブレーク行は表示されません。
 
-#### Break rows
+#### ブレーク行の管理
 
-If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case:
+ユーザーがブレーク行を選択すると、`LISTBOX GET CELL POSITION` は対応する配列の最初のオカレンスを返します。 以下のケースで:
 
 ![](assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
+... `LISTBOX GET CELL POSITION` は (2;4) を返します。 プログラムでブレーク行を選択するには `LISTBOX SELECT BREAK` コマンドを使用する必要があります。
 
-Break rows are not taken into account in the internal arrays used to manage the graphic appearance of list boxes (styles and colors). It is however possible to modify these characteristics for break rows via the graphic management commands for objects. You simply need to execute the appropriate commands on the arrays that constitute the hierarchy.
+ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
-Given for example the following list box (the names of the associated arrays are specified in parentheses):
+以下のリストボックスを例題とします (割り当てた配列名は括弧内に記載しています):
 
-*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch12.png)
+*非階層表示:* ![](assets/en/FormObjects/hierarch12.png)
 
-*Hierarchical representation:* ![](assets/en/FormObjects/hierarch13.png)
+*階層表示:* ![](assets/en/FormObjects/hierarch13.png)
 
-In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
+階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
  OBJECT SET FONT STYLE(T2;Bold)
 ```
 
-> In this context, only the syntax using the array variable can function with the object property commands because the arrays do not have any associated object.
+> このコンテキストでは、配列に割り当てられたオブジェクトがないため、オブジェクトプロパティコマンドで動作するのは、配列変数を使用したシンタックスのみです。
 
-Result:
+結果:
 
 ![](assets/en/FormObjects/hierarch14.png)
 
-#### Optimized management of expand/collapse
+#### 展開/折りたたみ管理の最適化
 
-You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events.
+`On Expand` や `On Collapse` フォームイベントを使用して階層リストボックスの表示を最適化できます。
 
-A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
+階層リストボックスはその配列の内容から構築されます。そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから (`SELECTION TO ARRAY` コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
-Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
+`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、`LISTBOX GET CELL POSITION` コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
-In this case, you must fill and empty arrays through the code. The principles to be implemented are:
+この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
-- When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons: ![](assets/en/FormObjects/hierarch15.png)
+- リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません: ![](assets/en/FormObjects/hierarch15.png)
 
-- When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command. ![](assets/en/FormObjects/hierarch16.png)
+- ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には `SELECTION TO ARRAY` コマンドから得られる値を設定します。そして`LISTBOX INSERT ROWS` コマンドを使用して必要なだけ行を挿入します。 ![](assets/en/FormObjects/hierarch16.png)
 
-- When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
+- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、 `LISTBOX DELETE ROWS` コマンドを使用してリストボックスから必要なだけ行を削除します。
 
-## Object arrays in columns
+## オブジェクト配列の使用
 
-List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
+リストボックスのカラムはオブジェクト配列を扱えます。 オブジェクト配列は異なる種類のデータを格納できるので、この強力な機能を使用すれば、単一のカラム内の行ごとに異なる入力タイプを混ぜたり、様々なウィジェットを表示したりといったことができるようになります。 たとえば、最初の行にテキスト入力を挿入し、二行目にチェックボックスを、そして産業目にドロップダウンを挿入する、と言ったことが可能になります。 また、オブジェクト配列は、ボタンやカラーピッカーと言った新しいウィジェットへのアクセスも可能にします。
 
-The following list box was designed using an object array:
+以下のリストボックスはオブジェクト配列を使用してデザインされました:
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
 
-### Configuring an object array column
+### オブジェクト配列カラムの設定
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
+オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_config.png)
 
-Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.
+オブジェクトカラムに対しては、座標、サイズ、スタイルなどに関連した標準のプロパティが使用可能です。 プロパティリストを使用して定義する方法のほかにも、オブジェクト型のリストボックスカラムのそれぞれの行に対してスタイル、フォントカラー、背景色、表示状態をプログラムで定義することもできます。 これらのタイプのカラムは非表示にすることも可能です。
 
-However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
+しかしながら、データソーステーマは、オブジェクト型のリストボックスカラムに対しては選択できません。 実際、カラムの各セルの中身は、それに対応するオブジェクト配列の要素の属性に基づいています。 配列の各オブジェクト要素には、以下を定義できます:
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
+値の型 (必須): テキスト、カラー、イベント、他 値そのもの (任意): 入力/出力に使用 セルの内容表示 (任意): ボタン、リスト、他 追加の設定 (任意): 値の型によります これらのプロパティを定義するには、適切な属性をオブジェクト内に設定する必要があります (使用可能な属性は以下に一覧としてまとめてあります)。 たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
 
 ```4d
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) // カラム配列
+ C_OBJECT($ob) // 第一要素
+ OB SET($ob;"valueType";"text") // 値の型を定義 (必須)
+ OB SET($ob;"value";"Hello World!") // 値を定義
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
 
-> Display format and entry filters cannot be set for an object column. They automatically depend on the value type.
+> 表示フォーマットと入力フィルターはオブジェクトカラムに対しては設定できません。 これらは値の型に応じて自動的に変わるからです。
 
-#### valueType and data display
+#### valueTypeとデータ表示
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
+リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。 次の valueType の値がサポートされています:
 
-* "text": for a text value
-* "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
-* "integer": for an integer value
-* "boolean": for a True/False value
-* "color": to define a background color
-* "event": to display a button with a label.
+* "text": テキスト値
+* "real": セパレーターを含む数値。セパレーターの例: \<space>, <.>, <,>
+* "integer": 整数値
+* "boolean": True/False 値
+* "color": 背景色を定義
+* "event": ラベル付ボタンを表示
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
+4D は "valueType" の値に応じたデフォルトのウィジェットを使用します (つまり、"text" と設定すればテキスト入力ウィジェットが表示され、"boolean" と設定すればチェックボックスが表示されます)。しかし、オプションを使用することによって表示方法の選択が可能な場合もあります (たとえば、"real" と設定した場合、ドロップダウンメニューとしても表示できます)。 以下の一覧はそれぞれの値の型に対してのデフォルトの表示方法と、他に選択可能な表示方の一覧を表しています:
 
-| valueType | Default widget                                 | Alternative widget(s)                                                                          |
-| --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| テキスト      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
-| 実数        | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | check box                                      | drop-down menu (required list)                                                                 |
-| color     | background color                               | テキスト                                                                                           |
-| event     | button with label                              |                                                                                                |
-|           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
-
-
-You set the cell display and options using specific attributes in each object (see below).
-
-#### Display formats and entry filters
-
-You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
-
-| Value type | Default format                                             | Entry control           |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| テキスト       | same as defined in object                                  | any (no control)        |
-| 実数         | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
-|            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" and "-"           |
-|            |                                                            | "0-9" if min>=0         |
-| ブール        | check box                                                  | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| event      | N/A                                                        | N/A                     |
+| valueType | デフォルトのウィジェット            | 他に選択可能なウィジェット                                             |
+| --------- | ----------------------- | --------------------------------------------------------- |
+| テキスト      | テキスト入力                  | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
+| 実数        | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
+| integer   | 管理されたテキスト入力 (数字のみ)      | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス |
+| boolean   | チェックボックス                | ドロップダウンメニュー (指定リスト)                                       |
+| color     | 背景色                     | テキスト                                                      |
+| event     | ラベル付ボタン                 |                                                           |
+|           |                         | すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます      |
 
 
-### Attributes
+セルの表示とオプションは、オブジェクト内の特定の属性を使用することによって設定できます (以下を参照ください)。
 
-Each element of the object array is an object that can contain one or more attributes that will define the cell contents and data display (see example above).
+#### 表示フォーマットと入力フィルター
 
-The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
+オブジェクト型のリストボックスのカラムにおいては、表示フォーマットと入力フィルターを設定することはできません。 これらは値の型に応じて自動的に定義されます。 どのように定義されるかについては、以下一覧にまとめてあります:
 
-|                       | valueType                               | テキスト | 実数 | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *説明*                                    |      |    |         |         |       |       |
-| value                 | cell value (input or output)            | x    | x  | x       |         |       |       |
-| min                   | minimum value                           |      | x  | x       |         |       |       |
-| max                   | maximum value                           |      | x  | x       |         |       |       |
-| behavior              | "threeStates" value                     |      |    | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x  | x       |         |       |       |
-| choiceList            | combo box defined in object             | x    | x  | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x  | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x  | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x  | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x  | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x  | x       |         |       |       |
-| unitList              | array of X elements                     | x    | x  | x       |         |       |       |
-| unitReference         | index of selected element               | x    | x  | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x  | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x  | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x  | x       | x       | x     |       |
+| 値の型     | デフォルトのフォーマット                             | 入力コントロール               |
+| ------- | ---------------------------------------- | ---------------------- |
+| テキスト    | オブジェクト内で定義されているものと同じ                     | 制限なし                   |
+| 実数      | オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用) | "0-9" と "." と "-"      |
+|         |                                          | min>=0 の場合、"0-9" と "." |
+| integer | オブジェクト内で定義されているものと同じ                     | "0-9" と "-"            |
+|         |                                          | min>=0 の場合、"0-9"       |
+| ブール     | チェックボックス                                 | N/A                    |
+| color   | N/A                                      | N/A                    |
+| event   | N/A                                      | N/A                    |
+
+
+### 属性
+
+オブジェクト配列の各要素は、セルの中身とデータ表示を定義する一つ以上の属性を格納するオブジェクトです (上記の例を参照ください)。
+
+唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
+
+|                       | valueType                | テキスト | 実数 | integer | boolean | color | event |
+| --------------------- | ------------------------ | ---- | -- | ------- | ------- | ----- | ----- |
+| *属性*                  | *説明*                     |      |    |         |         |       |       |
+| value                 | セルの値 (入力または出力)           | ○    | ○  | ○       |         |       |       |
+| min                   | 最小値                      |      | ○  | ○       |         |       |       |
+| max                   | 最大値                      |      | ○  | ○       |         |       |       |
+| behavior              | "スリーステート" の値             |      |    | ○       |         |       |       |
+| requiredList          | オブジェクト内で定義されたドロップダウンリスト  | ○    | ○  | ○       |         |       |       |
+| choiceList            | オブジェクト内で定義されたコンボボックス     | ○    | ○  | ○       |         |       |       |
+| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○  | ○       |         |       |       |
+| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○  | ○       |         |       |       |
+| saveAs                | "reference" または "value"  | ○    | ○  | ○       |         |       |       |
+| choiceListReference   | 4D リスト参照、コンボボックスを表示      | ○    | ○  | ○       |         |       |       |
+| choiceListName        | 4D リスト名、コンボボックスを表示       | ○    | ○  | ○       |         |       |       |
+| unitList              | X要素の配列                   | ○    | ○  | ○       |         |       |       |
+| unitReference         | 選択された要素のインデックス           | ○    | ○  | ○       |         |       |       |
+| unitsListReference    | 単位の4D リスト参照              | ○    | ○  | ○       |         |       |       |
+| unitsListName         | 単位の4D リスト名               | ○    | ○  | ○       |         |       |       |
+| alternateButton       | 切り替えボタンを追加               | ○    | ○  | ○       | ○       | ○     |       |
 
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) // カラム配列
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、 編集された値は$entry に格納されます
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -1052,13 +1052,13 @@ Cell values are stored in the "value" attribute. This attribute is used for inpu
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 
-> Null values are supported and result in an empty cell.
+> null 値はサポートされており、空のセルとして表示されます。
 
-#### min and max
+#### min と max
 
-When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
+"valueType" が"real" または "integer" であるとき、min と max 属性もオブジェクトに設定できます (値は適切な範囲で、かつ、valueType と同じ型である必要があります)。
 
-These attributes can be used to control the range of input values. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
+これらの属性を使用すると入力値の範囲を管理することができます。 セルが評価されたとき (フォーカスを失ったとき)、入力された値が min の値より低い場合、または max の値より大きい場合には、その値は拒否されます。 この場合、入力をする前の値が保持され、tip として説明が表示されます。
 
 ```4d
  C_OBJECT($ob3)
@@ -1073,7 +1073,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 In 4D v15, a single variation is proposed:
 
 | Attribute | Available value(s) | valueType(s) | 説明                                                                                                                                                                                   |
 | --------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

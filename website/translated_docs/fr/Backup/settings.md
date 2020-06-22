@@ -46,8 +46,10 @@ La Page Sauvegarde/Configuration des Propriétés de la base permet de désigner
 
 Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la prochaine sauvegarde.
 
-- **Fichier de données** : fichier de données de la base. Lorsque cette option est cochée, le fichier d’historique courant de la base, s’il existe, est sauvegardé en même temps que les données.
-- **Fichier de structure** : fichiers et dossiers de la base. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz.
+- **Fichier de données** : fichier de données de la base. When this option is checked, the following elements are automatically backed up at the same time as the data: 
+    - the current log file of the database (if it exists),
+    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*. 
+- **Fichier de structure** : fichiers et dossiers de la base. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up. 
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*f
 - **Fichiers joints** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que la base. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”. 
     - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
@@ -116,8 +118,6 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 ### Restitution automatique
 
 - **Restituer la dernière sauvegarde si la base est endommagée** : lorsque cette option est cochée, le programme déclenche automatiquement la restitution du fichier de données de la dernière sauvegarde valide de la base s’il détecte une anomalie (fichier corrompu par exemple) lors du lancement de la base. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
-    
-    > En cas de restitution automatique, seul le fichier de données est restitué. Si vous souhaitez récupérer les fichiers joints ou le fichier de structure, vous devez effectuer une restitution manuelle.
 
 - **Intégrer le dernier historique si la base est incomplète** : lorsque cette option est cochée, le programme intègre automatiquement l’historique lors de l’ouverture ou de la restitution de la base de données.
     
@@ -125,3 +125,7 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
     - Lors de la restitution de la base, si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme l’intègre automatiquement.
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
+
+> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> 
+> If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).

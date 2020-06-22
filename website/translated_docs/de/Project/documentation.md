@@ -37,7 +37,7 @@ The `Documentation` folder architecture is the following:
 
 - **Documentation**
     
-    + **Classes** 
+    + **Klassen** 
         * myClass.md
     * **DatabaseMethods** 
         * onStartup.md

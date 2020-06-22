@@ -5,6 +5,12 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -319,7 +325,7 @@
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "メニュー"
       },
       "FormEditor/print": {
         "title": "Print"
@@ -489,6 +495,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -544,6 +553,9 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
+      "ORDA/ordaClasses": {
+        "title": "ORDA Data Model Classes"
+      },
       "Project/architecture": {
         "title": "4D プロジェクトのアーキテクチャー"
       },
@@ -557,7 +569,10 @@
         "title": "プロジェクトの開発"
       },
       "Project/documentation": {
-        "title": "プロジェクトのドキュメンテーション"
+        "title": "ドキュメンテーション"
+      },
+      "Project/licenses": {
+        "title": "Managing 4D Licenses"
       },
       "Project/overview": {
         "title": "概要"
@@ -643,6 +658,9 @@
       "REST/authUsers": {
         "title": "Users and sessions"
       },
+      "REST/classFunctions": {
+        "title": "Calling ORDA class functions"
+      },
       "REST/configuration": {
         "title": "Server Configuration"
       },
@@ -668,26 +686,37 @@
         "title": "Web Server object"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
+    },
     "categories": {
+      "Getting Started": "はじめに",
+      "Project Overview": "Project Overview",
       "4D Language Concepts": "ランゲージのコンセプト",
-      "Project Databases": "プロジェクトデータベース",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Administration": "データベース管理",
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Web Server": "Web Server",
+      "REST Server": "REST Server",
       "Forms": "フォーム",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Installation|in index page Getting started": "Installation",
+    "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
+    "Project Overview|in index page Getting started": "Project Overview",
+    "ORDA|in index page Getting started": "ORDA",
+    "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
@@ -698,12 +727,14 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "License Management|no description given": "License Management",
+    "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
-    "Developing a Web application|no description given": "Web アプリの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリの開発",
+    "Core Development|no description given": "Core Development",
     "Administration|no description given": "データベース管理",
+    "Web applications|no description given": "Web applications",
+    "Mobile applications|no description given": "Mobile applications",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

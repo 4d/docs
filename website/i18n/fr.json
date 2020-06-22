@@ -5,6 +5,12 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "Backup/backup": {
         "title": "Sauvegarde"
       },
@@ -489,6 +495,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation"
+      },
       "Menus/bars": {
         "title": "Barres de menus"
       },
@@ -544,6 +553,9 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "ORDA/ordaClasses": {
+        "title": "ORDA Data Model Classes"
+      },
       "Project/architecture": {
         "title": "Architecture d'un projet 4D"
       },
@@ -558,6 +570,9 @@
       },
       "Project/documentation": {
         "title": "Documenter un projet"
+      },
+      "Project/licenses": {
+        "title": "Managing 4D Licenses"
       },
       "Project/overview": {
         "title": "Aperçu"
@@ -643,6 +658,9 @@
       "REST/authUsers": {
         "title": "Users and sessions"
       },
+      "REST/classFunctions": {
+        "title": "Calling ORDA class functions"
+      },
       "REST/configuration": {
         "title": "Configuration du serveur"
       },
@@ -668,26 +686,37 @@
         "title": "Objet Serveur Web"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R3 BETA": "v18 R3 BETA",
+      "v18 R2": "v18 R2",
+      "v18": "v18"
+    },
     "categories": {
+      "Getting Started": "Prise en main",
+      "Project Overview": "Project Overview",
       "4D Language Concepts": "Concepts du langage 4D",
-      "Project Databases": "Bases projet",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Administration": "Administration",
+      "MSC": "CSM",
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Web Server": "Serveur Web",
+      "REST Server": "Serveur REST",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
-      "Menus": "Menus",
-      "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution",
-      "Users and Groups": "Groupes et utilisateurs",
-      "Web Server": "Serveur Web",
-      "REST Server": "Serveur REST"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
+    "Installation|in index page Getting started": "Installation",
     "Language Concepts|in index page Getting started": "Concepts du langage",
-    "Project databases|in index page Getting started": "Bases projets",
+    "Project Overview|in index page Getting started": "Project Overview",
+    "ORDA|in index page Getting started": "ORDA",
+    "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "Formulaires",
     "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
@@ -698,12 +727,14 @@
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
-    "Users and Groups|no description given": "Groupes et utilisateurs",
+    "License Management|no description given": "License Management",
+    "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Prise en main",
-    "Developing a Desktop application|no description given": "Développer une application Desktop",
-    "Developing a Web application|no description given": "Développer une application web",
-    "Developing a Mobile application|no description given": "Développer une application mobile",
+    "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
+    "Web applications|no description given": "Web applications",
+    "Mobile applications|no description given": "Mobile applications",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

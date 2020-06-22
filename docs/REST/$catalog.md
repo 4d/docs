@@ -227,9 +227,6 @@ Here are the properties for each exposed attribute that are returned:
 |foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
 |inverseName|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any. 
 
 ### Primary Key  
 

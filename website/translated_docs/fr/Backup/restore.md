@@ -30,8 +30,15 @@ Pour restituer manuellement une sauvegarde via une boîte de dialogue standard :
 
 Vous pouvez également cliquer sur le bouton **[...]** et indiquer un autre emplacement.
 
-3. Cliquez sur le bouton **Restituer**. 4D extrait tous les fichiers de la sauvegarde à l’emplacement défini. Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. L’intégration est effectuée automatiquement si l’option **d’intégration automatique de l’historique** est cochée (cf. paragraphe [Restitution automatique](settings.md#automatic-restore)). (Facultatif) Cliquez sur **OK** pour intégrer le fichier d’historique dans la base restituée. Si la restitution et l’intégration se sont déroulées correctement, 4D affiche une boîte de dialogue indiquant que l’opération a réussi.
-4. Cliquez sur **OK**. Le dossier d’arrivée est affiché. Lors de la restitution, 4D place tous les fichiers sauvegardés dans ce dossier, quelle que soit la position des fichiers originaux sur le disque au moment de la sauvegarde. De cette façon, vous retrouverez plus facilement vos fichiers.
+3. Cliquez sur le bouton **Restituer**. 4D extrait tous les fichiers de la sauvegarde à l’emplacement défini. Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. L’intégration est effectuée automatiquement si l’option **d’intégration automatique de l’historique** est cochée (cf. paragraphe [Restitution automatique](settings.md#automatic-restore)).
+
+(Facultatif) Cliquez sur **OK** pour intégrer le fichier d’historique dans la base restituée. Si la restitution et l’intégration se sont déroulées correctement, 4D affiche une boîte de dialogue indiquant que l’opération a réussi.
+
+5. Cliquez sur **OK**. 
+
+Le dossier d’arrivée est affiché. Lors de la restitution, 4D place tous les fichiers sauvegardés dans ce dossier, quelle que soit la position des fichiers originaux sur le disque au moment de la sauvegarde. De cette façon, vous retrouverez plus facilement vos fichiers.
+
+> Any content related to the data file (files and `Settings` folder) are automatically restored in a `Data` subfolder within the destination folder.
 
 ## Restitution manuelle d’une sauvegarde (CSM)
 
