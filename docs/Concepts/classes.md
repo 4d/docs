@@ -34,18 +34,18 @@ All objects in 4D are internally linked to a class object. When 4D does not find
 All objects inherit from the class "Object" as their inheritance tree top class.
 
 ```4d
-/Class: Polygon
+//Class: Polygon
 Class constructor($width:Integer;$height:Integer)
-This.area:=$width*$height
+	This.area:=$width*$height
 
-//var $poly : Object
-var $instance:Boolean
-$poly:=cs.Polygon.new(4;3)
+	//var $poly : Object
+	var $instance:Boolean
+	$poly:=cs.Polygon.new(4;3)
 
-$instance:=OB Instance of($poly;cs.Polygon)
-// true
-$instance:=OB Instance of($poly;4D.Object)
-// true
+	$instance:=OB Instance of($poly;cs.Polygon)
+	// true
+	$instance:=OB Instance of($poly;4D.Object)
+	// true
 ```
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
@@ -58,9 +58,10 @@ You will usually use specific [class keywords](#class-keywords) and [class comma
 For example:
 
 ```4d  
+//Class: Person.4dm
 Class constructor($firstname:Text;lastname:Text)
-This.firstName:=$firstname
-This.lastName:=$lastname
+	This.firstName:=$firstname
+	This.lastName:=$lastname
 ```
 
 In a method, creating a "Person":
@@ -176,7 +177,7 @@ Specific 4D keywords can be used in class definitions:
 #### Syntax
 
 ```js
-Function <name>
+Function <name>({parameterName:type;...})
 // code
 ```
 
@@ -186,7 +187,7 @@ In the class definition file, function declarations use the `Function` keyword, 
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
-Immediately following the function name, parameters for the function can be declared with an assigned name and data type. The parameter name must be ECMAScript compliant. Note that the return parameter ($0) is not supported when defining class function parameters. Parameter names and their data types are separated by colons (:). Multiple parameters are separated by semicolons (;). For example:
+Immediately following the function name, parameters for the function can be declared with an assigned name and data type. See [Class Function parameters](#class-function-parameters).
 
 ```code4d
 Function setFullName($firstname:Text;$lastname:Text)
@@ -198,12 +199,12 @@ Within a class function, the `This` command is used as the object instance. For 
 
 ```4d  
 Function setFullname($firstname:Text;$lastname:Text)
-This.firstName:=$firstname
-This.lastName:=$lastname
+	This.firstName:=$firstname
+	This.lastName:=$lastname
 
 Function getFullname
-var $0 : Text
-$0:=This.firstName+" "+Uppercase(This.lastName)
+	var $0 : Text
+	$0:=This.firstName + " " + Uppercase(This.lastName)
 ```
   
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
@@ -219,46 +220,32 @@ In the database code, class functions are called as member methods of the object
 
 #### Class function parameters
 
-Function parameters are composed of the parameter name and the parameter type, separated by colon. The parameter name must be ECMA compliant. Multiple parameters (and types) are separated by semicolons (;). 
+Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be ECMA compliant. Multiple parameters (and types) are separated by semicolons (;). 
 
->If the type is not defined, the parameter shall be defined as variant.
+>If the type is not defined, the parameter will be defined as variant.
 
 
 
-Syntax examples:
+**Syntax** 
 
 ```4d  
-function add($x ; $y : Integer ; $z : Integer ; $o : Object)
+Function add($x ; $y : Variant ; $z : Integer ; $xy : Object)
 ``` 
  
-or
-
-```4d
-function add
-  var $1
-  var $2 : Integer
-  var $3 : Integer
-  var $4 : Object
-``` 
-
-or
-
-```4d
-function add
-  var $1 : Variant
-  var $2,$3  : Integer
-  var $4 : Object
-``` 
   
->The return parameter ($0) is not supported.
+>The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. For example:
+>```4d
+>Function add($x : Variant ; $y: Integer)
+>	var $0 : Text
+>```
 
-The name of the parameter can be used as an alias. For example:
+
+The classic 4D syntax for method parameters can be used in conjunction with the class function parameter syntax. For example:
 
 ```4d
-function paramAlias($x : integer ; $y: integer)
-  // both syntaxes are possibles
-  $2:=12 
-  $y:=12
+Function add($x : Integer)
+	var $0,$2 : Integer
+	$0:=$x+$2
 ```
   
  
@@ -273,14 +260,14 @@ function paramAlias($x : integer ; $y: integer)
 ```4d
 // Class: Rectangle
 Class constructor($width : Integer;$height : Integer)
-This.name:="Rectangle"
-This.height:=$height
-This.width:=$width
+	This.name:="Rectangle"
+	This.height:=$height
+	This.width:=$width
 
 // Function definition
 Function getArea
-var $0 : Integer
-$0:=(This.height)*(This.width)
+	var $0 : Integer
+	$0:=(This.height)*(This.width)
 ```
 
 ```4d
@@ -303,55 +290,12 @@ Class Constructor
 // code
 ```
 
-A class constructor function, which can accept parameters, can be used to define a user class. (see [Class constructor parameters](#class-constructor-function-parameters)) 
+A class constructor function, which can accept parameters, can be used to define a user class. (see [Class function parameters](#class-function-parameters)) 
 
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
-#### Class constructor function parameters
-
-Class constructor function parameters are composed of the parameter name and the parameter type, separated by colon. The parameter name must be ECMA compliant. Multiple parameters (and types) are separated by semicolons (;). 
-
->If the type is not defined, the parameter shall be defined as variant.
-
-
-
-Syntax examples:
-
-```4d  
-function add($x ; $y : Integer ; $z : Integer ; $o : Object)
-``` 
- 
-or
-
-```4d
-function add
-  var $1
-  var $2 : Integer
-  var $3 : Integer
-  var $4 : Object
-``` 
-
-or
-
-```4d
-function add
-  var $1 : Variant
-  var $2,$3  : Integer
-  var $4 : Object
-``` 
-  
->The return parameter ($0) is not supported.
-
-The name of the parameter can be used as an alias. For example:
-
-```4d
-function paramAlias($x : integer ; $y: integer)
-  // both syntaxes are possibles
-  $2:=12 
-  $y:=12
-```
   
 
 #### Example:
@@ -360,7 +304,7 @@ function paramAlias($x : integer ; $y: integer)
 // Class: MyClass
 // Class constructor of MyClass
 Class Constructor ($name:Text)
-This.name:=$name
+	This.name:=$name
 ```
 
 ```4d
@@ -411,13 +355,13 @@ Class constructor ($side:Integer)
 // It calls the parent class's constructor with lengths
 // provided for the Polygon's width and height
 Super($side;$side)
-// In derived classes, Super must be called before you
-// can use 'This'
-This.name:="Square"
+	// In derived classes, Super must be called before you
+	// can use 'This'
+	This.name:="Square"
 
 Function getArea
-C_LONGINT($0)
-$0:=This.height*This.width
+	C_LONGINT($0)
+	$0:=This.height*This.width
 ```
 
 ### Super
@@ -443,7 +387,7 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 // inside myClass constructor
 var $text1,$text2 : Text
 Super($text1) //calls superclass constructor with a text param
-This.param:=$text2 // use second param
+	This.param:=$text2 // use second param
 ```
 
 - inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
@@ -460,18 +404,18 @@ This example illustrates the use of `Super` in a class constructor. The command 
 ```4d
 // Class: Rectangle
 Class constructor($width : Integer;$height : Integer)
-This.name:="Rectangle"
-This.height:=$height
-This.width:=$width
+	This.name:="Rectangle"
+	This.height:=$height
+	This.width:=$width
 
  
 Function sayName
-ALERT("Hi, I am a "+This.name+".")
+	ALERT("Hi, I am a "+This.name+".")
  
 // Function definition
 Function getArea
-var $0 : Integer
-$0:=(This.height)*(This.width)
+	var $0 : Integer
+	$0:=(This.height)*(This.width)
 ```
 
 ```4d
@@ -484,13 +428,13 @@ Class constructor ($side:Integer)
 // It calls the parent class's constructor with lengths
 // provided for the Rectangle's width and height
 Super($side;$side)
-// In derived classes, Super must be called before you
-// can use 'This'
- This.name:="Square"
+	// In derived classes, Super must be called before you
+	// can use 'This'
+	This.name:="Square"
 
 Function getArea
-C_LONGINT($0)
-$0:=This.height*This.width
+	C_LONGINT($0)
+	$0:=This.height*This.width
 ```
 
 #### Example 2
@@ -501,8 +445,8 @@ This example illustrates the use of `Super` in a class member method. You create
 //Class: Rectangle
  
 Function nbSides
-var $0 : Text
-$0:="I have 4 sides"
+	var $0 : Text
+	$0:="I have 4 sides"
 ```
  
 You also created the `Square` class with a function calling the superclass function:
@@ -513,8 +457,8 @@ You also created the `Square` class with a function calling the superclass funct
 Class extends Rectangle
  
 Function description
-var $0 : Text
-$0:=Super.nbSides()+" which are all equal"
+	var $0 : Text
+	$0:=Super.nbSides()+" which are all equal"
 ```
  
 Then you can write in a project method:
@@ -552,9 +496,9 @@ When a [class constructor](#class-constructor) function is used (with the `new()
   
 Class Constructor  
 	
-// Create properties on This as
-// desired by assigning to them
-This.a:=42 
+	// Create properties on This as
+	// desired by assigning to them
+	This.a:=42 
 ```
 
 ```4d
@@ -572,7 +516,7 @@ In any cases, `This` refers to the object the method was called on, as if the me
 //Class: ob
   
 Function f
-$0:=This.a+This.b
+	$0:=This.a+This.b
 ```
 
 Then you can write in a project method:
