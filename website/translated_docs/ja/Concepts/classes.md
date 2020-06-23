@@ -183,8 +183,6 @@ Immediately following the function name, [parameters](#class-function-parameters
 Function setFullName($firstname : Text;$lastname : Text)
 ```
 
-> If a data type is not defined for a parameter, it is defined as `Variant` by default.
-
 Within a class function, the `This` command is used as the object instance. たとえば:
 
 ```4d
