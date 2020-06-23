@@ -25,13 +25,13 @@ In addition, a class object can reference:
 - Ein Objekt `constructor` (optional)
 - a `prototype` object, containing named function objects (optional).
 
-A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
-### Property lookup and prototype
+### Eigenschaft lookup und prototype
 
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
+Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
 
-All objects inherit from the class "Object" as their inheritance tree top class.
+Alle Objekte erben von der Klasse "Object" als ihrer obersten Klasse im Vererbungsbaum.
 
 ```4d
   //Class: Polygon
@@ -49,7 +49,7 @@ $instance:=OB Instance of($poly;4D.Object)
  // true 
 ```
 
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
+Beim Aufzählen der Eigenschaften eines Objekts wird der Prototyp seiner Klasse nicht mitgezählt. Demzufolge geben die Anweisung `For each` und der Befehl `JSON Stringify` nicht Eigenschaften des Objekts prototype der Klasse zurück. Die Eigenschaft des Objekts prototype einer Klasse ist eine interne ausgeblendete Eigenschaft.
 
 ### Class definition
 
