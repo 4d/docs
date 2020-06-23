@@ -44,6 +44,7 @@ The function is searched in the entity selection class first. If not found, it i
 
 ## Parameters
 
+
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters. 
 
 The following rules apply:
@@ -373,7 +374,7 @@ Same as above but with a __KEY attribute
 
 You run this request:
 
-**POST:**`http://127.0.0.1:8044/rest/Students/applyData`
+**POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
 Body of the request:
 ```
@@ -410,7 +411,7 @@ In this example, we create a new Students entity with the Schools entity having 
 
 You run this request:
 
-**POST:**`http://127.0.0.1:8044/rest/Students/applyData`
+**POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
 Body of the request:
 ```
@@ -427,8 +428,20 @@ Body of the request:
 
 ```
 {
-    "result": {
-        "success": true
+    "__entityModel": "Students",
+    "__DATACLASS": "Students",
+    "__KEY": "56",
+    "__TIMESTAMP": "2020-06-16T11:16:47.601Z",
+    "__STAMP": 1,
+    "ID": 56,
+    "firstname": "John",
+    "lastname": "SMITH",
+    "schoolID": 2,
+       "school": {
+        "__deferred": {
+            "uri": "/rest/Schools(2)",
+            "__KEY": "2" 
+        }
     }
 }
 ```

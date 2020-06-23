@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Overview":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -26,7 +26,7 @@
   "ORDA":["ORDA/ordaClasses"],
   "Class API Reference":["API/cryptoClass"],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/licenses"],
+  "Administration":["Admin/licenses","Admin/building"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServerObject"],

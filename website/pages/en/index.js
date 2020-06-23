@@ -38,8 +38,9 @@ class Index extends React.Component {
     const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
     var subContents={
       installation: <translate desc="in index page Getting started">Installation</translate>,
+      start: <translate desc="in index page Getting started">Starting 4D</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
-	projectDatabases: <translate desc="in index page Getting started">Project Overview</translate>,
+	projectDatabases: <translate desc="in index page Getting started">Project Management</translate>,
 	ORDA: <translate desc="in index page Getting started">ORDA</translate>,
   class: <translate>Class API Reference</translate>,
     formEditor: <translate>Forms</translate>,
@@ -53,6 +54,7 @@ class Index extends React.Component {
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
     licenses: <translate>License Management</translate>,
+    buildApp: <translate>Build Application</translate>,
 	  users: <translate>Access Rights</translate>
     };
 
@@ -87,7 +89,8 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
                   [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
-                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)`,
+                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
+                  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Admin/building.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
