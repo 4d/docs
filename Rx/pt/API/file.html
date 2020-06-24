@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="18 R2"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>File · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="inherit from : [Document](/docs/Rx/pt/API/document.html)"/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="File · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/Rx/index.html"/><meta property="og:description" content="inherit from : [Document](/docs/Rx/pt/API/document.html)"/><meta property="og:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><link rel="shortcut icon" href="/docs/Rx/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/Rx/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/Rx/css/main.css"/><script src="/docs/Rx/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/Rx/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v18 R3 BETA</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/Rx" target="_self">v18 R2</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/Rx/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/Rx/en/API/file.html">English</a></li><li><a href="/docs/Rx/ja/API/file.html">日本語</a></li><li><a href="/docs/Rx/de/API/file.html">Deutsch</a></li><li><a href="/docs/Rx/es/API/file.html">Español</a></li><li><a href="/docs/Rx/fr/API/file.html">Français</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/API/File.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">File</h1></header><article><div><span><p>inherit from : <a href="/docs/Rx/pt/API/document.html">Document</a></p>
+<h2><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h2>
+<table>
+<thead>
+<tr><th>name</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="">creationDate</a></td><td>returns the creation date of the file.</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs">                                                                                 |
+</code></pre>
+<p>| <a href="">creationTime</a>                                                                    |  returns the creation time of the file (expressed as a number of seconds beginning at 00:00).</p>
+<pre><code class="hljs">                           |
+</code></pre>
+<p>| <a href="">exists</a>                                                                          |  returns true if the file exists on disk, and false otherwise.</p>
+<pre><code class="hljs">                                                                |
+</code></pre>
+<p>| <a href="">extension</a>                                                                       | returns the creation date of the file.</p>
+<pre><code class="hljs">                                                                                     |
+</code></pre>
+<p>| <a href="">fullName</a>                                                                        |  returns the full name of the file, including its extension (if any).</p>
+<pre><code class="hljs">                                                        |
+</code></pre>
+<p>| <a href="">hidden</a>                                                                          |  returns true if the file is set as &quot;hidden&quot; at the system level, and false otherwise.</p>
+<pre><code class="hljs">                                        |
+</code></pre>
+<p>| <a href="">isAlias</a>                                                                         | returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise.</p>
+<pre><code class="hljs">                                    |
+</code></pre>
+<p>| <a href="">isFile</a>                                                                          | always returns true for a file.</p>
+<pre><code class="hljs">                                                                                                |
+</code></pre>
+<p>| <a href="">isFolder</a>                                                                        | returns always false for a file.</p>
+<pre><code class="hljs">                                                                                             |
+</code></pre>
+<p>| <a href="">isWritable</a>                                                                      | returns true if the file exists on disk and is writable.</p>
+<pre><code class="hljs">                                                                   |
+</code></pre>
+<p>| <a href="">modificationDate</a>                                                                |  returns the date of the file's last modification.</p>
+<pre><code class="hljs">                                                                   |
+</code></pre>
+<p>| <a href="">modificationTime</a>                                                                | returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00).</p>
+<pre><code class="hljs">              |
+</code></pre>
+<p>| <a href="">name</a>                                                                            |  returns the name of the file, without extension (if any).</p>
+<pre><code class="hljs">                                                                      |
+</code></pre>
+<p>| <a href="">orignial</a>                                                                        |  returns the target element for an alias, a shortcut, or a symbolic link file.</p>
+<pre><code class="hljs">                                              |
+</code></pre>
+<p>| <a href="">parent</a>                                                                          |  returns the parent folder object of the file. If the path represents a system path (e.g., &quot;/DATA/&quot;), the system path is returned.</p>
+<p>|
+| <a href="">path</a>                                                                            |  returns the POSIX path of the file. If the path represents a filesystem (e.g., &quot;/DATA/&quot;), the filesystem is returned.</p>
+<pre><code class="hljs">           |
+</code></pre>
+<p>| <a href="https://doc.4d.com/4Dv18/4D/18/fileplatformPath.303-4506073.en.html">platformPath</a> | returns the path of the file expressed with the current platform syntax.</p>
+<pre><code class="hljs">                                                |
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="methods-summary"></a><a href="#methods-summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods summary</h2>
+<table>
+<thead>
+<tr><th>name</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td></td></tr>
+<tr><td><a href="#getcontent">getContent()</a></td><td>a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</td></tr>
+</tbody>
+</table>
+<p>|
+|                               |
+<strong>getContent</strong> → Result   |
+| <a href="#copyto">copyTo()</a>           | a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<pre><code class="hljs"> |
+</code></pre>
+<p>|                               |
+<strong>copyTo</strong> (<em>destinationFolder</em>{;{<em>newName}</em>{;<em>overwrite</em>} ) → Result       |
+| <a href="#gettext">getText()</a>         | a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<pre><code class="hljs">|
+</code></pre>
+<p>|                               |
+<strong>getText</strong> → Result      |
+| <a href="#geticone">getIcone()</a>       | a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p>|
+|                               |
+<strong>getIcone</strong> → Result     |</p>
+<p>|                                           |
+| <a href="#create">create()</a>               |creates a file on disk according to the properties of the file object.</p>
+<p>|
+|                                   |
+<strong>create</strong> → boolean|
+| <a href="#createalias">createAlias()</a>     |creates an alias (macOS) or a shortcut (Windows) to the file with the specified aliasName name in the folder designated by the destinationFolder object</p>
+<p>|
+|                                   |
+<strong>file.createAlias</strong> (<em>destinationFolder</em> ; <em>aliasName</em> {; <em>aliasType</em>} ) → Result|
+| <a href="#delete">delete()</a>               |deletes the file.|
+|                                   |file.delete ()|
+| <a href="#moveto">moveTo()</a>               |moves or renames the File object into the specified destinationFolder.</p>
+<p>|
+|                                   |
+<strong>moveTo</strong> ( <em>destinationFolder</em> {; <em>newName</em>}) → Result|
+| <a href="#rename">rename()</a>               |enames the file with the name you passed in newName and returns the renamed File object.|
+|                                   | <strong>rename</strong> ( newName ) → Result|
+| <a href="#setcontent">setContent()</a>       |rewrites the entire content of the file using the data stored in the content BLOB. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p>|
+|                                   |
+<strong>file.setContent (content)</strong> |
+| <a href="#settext">setText()</a>             |writes text as the new contents of the file.|
+|                                   | <strong>setText</strong> ( text {; charSet {;breakMode}}) → blob|</p>
+<h2><a class="anchor" aria-hidden="true" id="getcontent"></a><a href="#getcontent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getContent()</h2>
+<p><strong>getContent</strong> → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>BLOB</td><td>File content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.getContent( ) method returns a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p><em>Returned value</em></p>
+<p>The file.getContent( ) method returns a BLOB.</p>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>To save a document contents in a BLOB field:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$vPath</span>)
+<span class="hljs-variable">$vPath</span><span class="hljs-function">:=Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
+If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//If a document has been chosen</span>
+   <span class="hljs-function">[aTable]aBlobField:=File($vPath;fk platform path).getContent</span>()<span class="hljs-keyword">
+End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="copyto"></a><a href="#copyto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>copyTo()</h2>
+<p><strong>copyTo</strong> (<em>destinationFolder</em>{;{<em>newName}</em>{;<em>overwrite</em>} ) → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>BLOB</td><td>File content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.getContent( ) method returns a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p><em>Returned value</em></p>
+<p>The file.getContent( ) method returns a BLOB.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>To save a document contents in a BLOB field:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$vPath</span>)
+<span class="hljs-variable">$vPath</span><span class="hljs-function">:=Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
+If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//If a document has been chosen</span>
+   <span class="hljs-function">[aTable]aBlobField:=File($vPath;fk platform path).getContent</span>()<span class="hljs-keyword">
+End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gettext"></a><a href="#gettext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getText()</h2>
+<p><strong>getText</strong> → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>BLOB</td><td>File content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.getContent( ) method returns a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p><em>Returned value</em></p>
+<p>The file.getContent( ) method returns a BLOB.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>To save a document contents in a BLOB field:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$vPath</span>)
+<span class="hljs-variable">$vPath</span><span class="hljs-function">:=Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
+If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//If a document has been chosen</span>
+   <span class="hljs-function">[aTable]aBlobField:=File($vPath;fk platform path).getContent</span>()<span class="hljs-keyword">
+End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="geticone"></a><a href="#geticone" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getIcone()</h2>
+<p><strong>getIcone</strong> → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>BLOB</td><td>File content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.getContent( ) method returns a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<p><em>Returned value</em></p>
+<p>The file.getContent( ) method returns a BLOB.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>To save a document contents in a BLOB field:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$vPath</span>)
+<span class="hljs-variable">$vPath</span><span class="hljs-function">:=Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
+If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//If a document has been chosen</span>
+   <span class="hljs-function">[aTable]aBlobField:=File($vPath;fk platform path).getContent</span>()<span class="hljs-keyword">
+End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="create"></a><a href="#create" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>create()</h2>
+<p><strong>create</strong> → boolean</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>Boolean</td><td>True if the file was created successfully, false otherwise</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.create( ) method creates a file on disk according to the properties of the file object.
+If necessary, the function creates the folder hierachy as described in the file.platformPath or file.path properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
+<p>Returned value</p>
+<p>true if the file is created successfully; false if a file with the same name already exists or if an error occured.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Creation of a preferences file in the database folder:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_BOOLEAN</span>(<span class="hljs-variable">$created</span>)
+<span class="hljs-variable">$created</span><span class="hljs-function">:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create</span>()
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="createalias"></a><a href="#createalias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>createAlias()</h2>
+<p><strong>file.createAlias</strong> (<em>destinationFolder</em> ; <em>aliasName</em> {; <em>aliasType</em>} ) → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>destinationFolder</td><td>Object</td><td>Destination folder for the alias or shortcut</td></tr>
+<tr><td>aliasName</td><td>Text</td><td>Name of the alias or shortcut</td></tr>
+<tr><td>aliasType</td><td>Longint</td><td>Type of the alias link</td></tr>
+<tr><td>Result</td><td>Object</td><td>Alias or shortcut file reference</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.createAlias( ) method creates an alias (macOS) or a shortcut (Windows) to the file with the specified aliasName name in the folder designated by the destinationFolder object.</p>
+<p>Pass the name of the alias or shortcut to create in the aliasName parameter.</p>
+<p>By default on macOS, the method creates a standard alias. You can also create a symbolic link by using the aliasType parameter. The following constants are available:</p>
+<table>
+<thead>
+<tr><th>Constant</th><th>Value</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>fk alias link</td><td>0</td><td>Alias link (macOS only)(default)</td></tr>
+<tr><td>fk symbolic link</td><td>1</td><td>Symbolic link (macOS only)</td></tr>
+</tbody>
+</table>
+<p>On Windows, a shortcut (.lnk file) is always created (the aliasType parameter is ignored).</p>
+<p>Returned object</p>
+<p>The file.createAlias( ) method returns a File object with the file.isAlias property set to true.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You want to create an alias to a file in your database folder:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span><span class="hljs-function">:=Folder(fk documents folder).file</span>(<span class="hljs-string">"Archives/ReadMe.txt"</span>)
+ <span class="hljs-variable">$aliasFile</span><span class="hljs-function">:=$myFile.createAlias(File</span>(<span class="hljs-string">"/PACKAGE"</span>);<span class="hljs-string">"ReadMe"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="delete"></a><a href="#delete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>delete()</h2>
+<p><strong>file.delete()</strong></p>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.delete( ) method deletes the file.
+If the file is currently open, an error is generated.</p>
+<p>If the file does not exist on disk, the method does nothing (no error is generated).</p>
+<p>WARNING: file.delete( ) can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. file.delete( ) should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-6"></a><a href="#example-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You want to delete a specific file in the database folder:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$tempo</span><span class="hljs-function">:=File</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs/"</span>+Current user+<span class="hljs-string">".prefs"</span>)<span class="hljs-keyword">
+If</span>(<span class="hljs-variable">$tempo</span>.exists)
+   <span class="hljs-variable">$tempo</span><span class="hljs-function">.delete</span>()
+   <span class="hljs-function">ALERT</span>(<span class="hljs-string">"User preference file deleted."</span>)<span class="hljs-keyword">
+End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="moveto"></a><a href="#moveto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>moveTo()</h2>
+<p><strong>moveTo</strong> ( <em>destinationFolder</em> {; <em>newName</em>})  → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>destinationFolder</td><td>Object</td><td>Destination folder</td></tr>
+<tr><td>newName</td><td>Text</td><td>Full name for the moved file</td></tr>
+<tr><td>Result</td><td>Object</td><td>Moved file</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.moveTo( ) method moves or renames the File object into the specified destinationFolder.
+The destinationFolder must exist on disk, otherwise an error is generated.</p>
+<p>By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the newName parameter. The new name must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned.</p>
+<p>Returned object</p>
+<p>The method returns the moved File object.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You want to create an alias to a file in your database folder:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$myFile</span><span class="hljs-function">:=Folder(fk documents folder).file</span>(<span class="hljs-string">"Archives/ReadMe.txt"</span>)
+<span class="hljs-variable">$aliasFile</span><span class="hljs-function">:=$myFile.createAlias(File</span>(<span class="hljs-string">"/PACKAGE"</span>);<span class="hljs-string">"ReadMe"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="rename"></a><a href="#rename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rename()</h2>
+<p><strong>rename</strong> ( newName ) → Result</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>newName</td><td>Text</td><td>New full name for the file</td></tr>
+<tr><td>Result</td><td>Object</td><td>Renamed file</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.rename( ) method enames the file with the name you passed in newName and returns the renamed File object.
+The newName parameter must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.</p>
+<p>Note that the method modifies the full name of the file, i.e. if you do not pass an extension in newName, the file will have a name without an extension.</p>
+<p>Returned object</p>
+<p>The method returns the renamed File object.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-8"></a><a href="#example-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You want to rename &quot;ReadMe.txt&quot; in &quot;ReadMe_new.txt&quot;:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$toRename</span><span class="hljs-function">:=File</span>(<span class="hljs-string">"C:\\Documents\\Archives\\ReadMe.txt"</span>;fk platform path)
+<span class="hljs-variable">$newName</span><span class="hljs-function">:=$toRename.rename</span>(<span class="hljs-variable">$toRename</span>.name+<span class="hljs-string">"_new"</span>+<span class="hljs-variable">$toRename</span>.extension)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setcontent"></a><a href="#setcontent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setContent()</h2>
+<p><strong>file.setContent (content)</strong></p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>content</td><td>BLOB</td><td>New contents for the file</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The file.setContent( ) method rewrites the entire content of the file using the data stored in the content BLOB. For information on BLOBs, please refer to the BLOB Commands section.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-9"></a><a href="#example-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$myFile</span><span class="hljs-function">:=Folder(fk documents folder).file</span>(<span class="hljs-string">"Archives/data.txt"</span>)
+<span class="hljs-variable">$myFile</span><span class="hljs-function">.setContent</span>([aTable]aBlobField)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="settext"></a><a href="#settext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setText()</h2>
+<p><strong>setText</strong> ( text {; charSet {;breakMode}}) → blob</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>text</td><td>Text</td><td>Text to store in the file</td></tr>
+<tr><td>charSet</td><td>Text, Longint</td><td>Name or number of character set</td></tr>
+<tr><td>breakMode</td><td>Longint</td><td>Processing mode for line breaks</td></tr>
+<tr><td>#### Description</td></tr>
+</tbody>
+</table>
+<p>The file.setText( ) method writes text as the new contents of the file.
+If the file referenced in the File object does not exist on the disk, it is created by the method. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.</p>
+<p>In text, pass the text to write to the file. It can be a literal (&quot;my text&quot;), or a 4D text field or variable.</p>
+<p>In charSet, pass the character set to be used for writing the contents. You can pass a string containing the standard character set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the CONVERT FROM TEXT command.  If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the &quot;UTF-8&quot; character set and a BOM.</p>
+<p>In breakMode, you can pass a longint indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the &quot;System Documents&quot; theme are available:</p>
+<table>
+<thead>
+<tr><th>Constant</th><th>Type</th><th>Value</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>Document unchanged</td><td>Longint</td><td>0</td><td>No processing</td></tr>
+<tr><td>Document with native format</td><td>Longint</td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows</td></tr>
+<tr><td>Document with CRLF</td><td>Longint</td><td>2</td><td>Line breaks are converted to Windows format: CRLF (carriage return + line feed)</td></tr>
+<tr><td>Document with CR</td><td>Longint</td><td>3</td><td>Line breaks are converted to OS X format: CR (carriage return)</td></tr>
+<tr><td>Document with LF</td><td>Longint</td><td>4</td><td>Line breaks are converted to Unix format: LF (line feed)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-10"></a><a href="#example-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$myFile</span><span class="hljs-function">:=File</span>(<span class="hljs-string">"C:\\Documents\\Hello.txt"</span>;fk platform path)
+<span class="hljs-variable">$myFile</span><span class="hljs-function">.setText</span>(<span class="hljs-string">"Hello world"</span>)
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#properties">Properties</a></li><li><a href="#methods-summary">Methods summary</a></li><li><a href="#getcontent">getContent()</a></li><li><a href="#copyto">copyTo()</a></li><li><a href="#gettext">getText()</a></li><li><a href="#geticone">getIcone()</a></li><li><a href="#create">create()</a></li><li><a href="#createalias">createAlias()</a></li><li><a href="#delete">delete()</a></li><li><a href="#moveto">moveTo()</a></li><li><a href="#rename">rename()</a></li><li><a href="#setcontent">setContent()</a></li><li><a href="#settext">setText()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:pt","version:18 R2"]}
+              });
+            </script></body></html>
