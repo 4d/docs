@@ -46,19 +46,19 @@
 <li>メニューアイコン</li>
 <li>リストボックスヘッダー</li>
 </ul>
-<p>High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the <em>scale factor</em> (<em>i.e.</em>, two times larger, three times larger, etc.).</p>
-<p>The following table demonstrates the difference between display resolution and picture pixel density.</p>
+<p>従来の標準的なディスプレイと比較して、高解像度ディスプレイは高い画素密度を持ちます。 これらの高解像度ディスプレイにおいてピクチャーが正しく表示されるには、適用する <em>スケール係数</em> (例: 2倍、3倍など) に応じてその画素数を増やす必要があります。</p>
+<p>次のテーブルは、ディスプレイの解像度とピクチャーのピクセル密度の違いをまとめています。</p>
 <table>
 <thead>
-<tr><th>Display Type</th><th>Scale Factor</th><th>例題</th></tr>
+<tr><th>Display Type</th><th>スケール係数</th><th>例題</th></tr>
 </thead>
 <tbody>
-<tr><td>Standard Resolution</td><td>1:1 pixel density.</td><td><strong>1x</strong></td></tr>
+<tr><td>標準解像度</td><td>1:1 ピクセル密度</td><td><strong>1x</strong></td></tr>
 </tbody>
 </table>
 <p><img src="/docs/assets/en/Project/pictureScale1.png" alt="">  <br>
 <em>circle.png</em> |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. |                                                                  |</p>
+| 高解像度         | ピクセル密度は2、または3の係数で増加 |                                                                  |</p>
 <table>
   <th>
     2x
@@ -76,13 +76,13 @@
 </code></pre>
   </tr>
 </table>
-<p>When using high resolution pictures, the scale factor is specified by adding &quot;@nx&quot; in the picture's name (<em>n</em> designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, <em>circle@2x.png</em> and <em>circle@3x.png</em>.</p>
-<p>4D automatically prioritizes pictures with the highest resolution. <br />  <br>
-<strong>Example</strong>: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Even if a command or property specifies <em>circle.png</em>, <em>circle@3x.png</em> will be used (if it exists).</p>
+<p>高解像度のピクチャーを使う場合、ピクチャー名に &quot;@nx&quot; (<em>n</em>: スケール係数) を付けてスケール係数を指定します。 上のテーブルの例でも、高解像度ピクチャーの名前に、<em>circle@2x.png</em>、<em>circle@3x.png</em> といった形でスケール係数が指定されています。</p>
+<p>4D は自動的に最高解像度のピクチャーを優先します。 <br />  <br>
+<strong>例</strong>: 標準解像度と高解像度の２つのディスプレイを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが <em>circle.png</em> を指定していたとしても、<em>circle@3x.png</em> があれば、それを使用します。</p>
 <blockquote>
-<p>Note that this prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.</p>
+<p>この優先順位付けはディスプレイ上のピクチャー表示にのみ適用され、印刷に関しては自動適用されないことに留意が必要です。</p>
 </blockquote>
-<p>This resolution behavior is supported for project databases by all <a href="../FormObjects/formObjectsOverview.html">4D form objects</a> which support images.</p>
+<p>この解像度に関する自動機能は、プロジェクトデータベースにおいてピクチャーを扱うすべての <a href="../FormObjects/formObjectsOverview.html">4D フォームオブジェクト</a> に対して適用されます。</p>
 <h2><a class="anchor" aria-hidden="true" id="ピクチャー上のマウス座標"></a><a href="#ピクチャー上のマウス座標" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ピクチャー上のマウス座標</h2>
 <p>4D ではピクチャーフィールドや変数をクリック、またはホバーした際のマウスのローカル座標を取得できます。これはスクロールやズーム処理がおこなわれている場合でも可能です。 このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。</p>
 <p>座標は <em>MouseX</em> と <em>MouseY</em> <a href="https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html">システム変数</a> に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、<em>MouseX</em> と <em>MouseY</em> には-1が返されます。</p>
