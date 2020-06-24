@@ -23,7 +23,7 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
 Zusätzlich kann ein Objekt Klasse verweisen auf:
 
 - Ein Objekt `constructor` (optional)
-- a `prototype` object, containing named function objects (optional).
+- Ein Objekt `prototype` mit Objekten "named function" (optional).
 
 Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
@@ -51,9 +51,9 @@ $instance:=OB Instance of($poly;4D.Object)
 
 Beim Aufzählen der Eigenschaften eines Objekts wird der Prototyp seiner Klasse nicht mitgezählt. Demzufolge geben die Anweisung `For each` und der Befehl `JSON Stringify` nicht Eigenschaften des Objekts prototype der Klasse zurück. Die Eigenschaft des Objekts prototype einer Klasse ist eine interne ausgeblendete Eigenschaft.
 
-### Class definition
+### Definition einer Klasse
 
-A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
+Eine Datei Benutzerklasse definiert ein Objektmodell, auf das sich über die Class Member Method `new()` im Code der Anwendung eine Instanz setzen lässt. In der Datei Klasse verwenden Sie in der Regel spezifische [Class Keywords](#class-keywords) und [Class Befehle](#class-commands).
 
 Beispiel:
 
@@ -66,14 +66,14 @@ Class constructor
   This.lastName:=$2
 ```
 
-In a method, creating a "Person":
+In einer Methode erstellen Sie eine "Person":
 
     C_OBJECT($o)
     $o:=cs.Person.new("John";"Doe")  
     // $o: {firstName: "John";lastName: "Doe" }
     
 
-Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
+Sie könnten auch eine leere Datei Klasse erstellen und Instanzen auf leere Objekte setzen. For example, if you create the following `Empty.4dm` class file:
 
 ```4d
 //Empty.4dm class file
