@@ -5,6 +5,9 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
+      "Admin/building": {
+        "title": "Générer un package projet"
+      },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
@@ -557,13 +560,10 @@
         "title": "ORDA Data Model Classes"
       },
       "Project/architecture": {
-        "title": "Architecture d'un projet 4D"
-      },
-      "Project/building": {
-        "title": "Générer un package projet"
+        "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Créer un projet 4D"
+        "title": "Creating or opening a project"
       },
       "Project/developing": {
         "title": "Développer un projet"
@@ -571,14 +571,8 @@
       "Project/documentation": {
         "title": "Documenter un projet"
       },
-      "Project/licenses": {
-        "title": "Managing 4D Licenses"
-      },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "Project/pictures": {
-        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -693,7 +687,7 @@
     },
     "categories": {
       "Getting Started": "Prise en main",
-      "Project Overview": "Project Overview",
+      "Project Management": "Project Management",
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
@@ -713,8 +707,9 @@
   },
   "pages-strings": {
     "Installation|in index page Getting started": "Installation",
+    "Starting 4D|in index page Getting started": "Starting 4D",
     "Language Concepts|in index page Getting started": "Concepts du langage",
-    "Project Overview|in index page Getting started": "Project Overview",
+    "Project Management|in index page Getting started": "Project Management",
     "ORDA|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "Formulaires",
@@ -728,6 +723,7 @@
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "License Management",
+    "Build Application|no description given": "Build Application",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Core Development",
