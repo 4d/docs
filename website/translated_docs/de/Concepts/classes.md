@@ -20,7 +20,7 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
-In addition, a class object can reference:
+Zusätzlich kann ein Objekt Klasse verweisen auf:
 
 - Ein Objekt `constructor` (optional)
 - a `prototype` object, containing named function objects (optional).
@@ -29,7 +29,7 @@ Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 
 
 ### Eigenschaft lookup und prototype
 
-Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
+Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt Prototyp seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
 
 Alle Objekte erben von der Klasse "Object" als ihrer obersten Klasse im Vererbungsbaum.
 
