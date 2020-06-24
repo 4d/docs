@@ -459,6 +459,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation and activation"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -635,6 +638,7 @@
       "v18": "v18"
     },
     "categories": {
+      "Getting Started": "Getting Started",
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Project Databases",
       "Form Editor": "Form Editor",
@@ -649,6 +653,7 @@
     }
   },
   "pages-strings": {
+    "Installation and activation|in index page Getting started": "Installation and activation",
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
     "Form Editor|no description given": "Form Editor",
