@@ -224,7 +224,7 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
 
 ## Identifiants de propriétés d'objets
 
-Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. Ces noms doivent être conformes à la JavaScript Identifier Grammar (voir ECMA Script standard), notamment :
+Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),
 - les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),
