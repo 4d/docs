@@ -319,7 +319,7 @@
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "メニュー"
       },
       "FormEditor/print": {
         "title": "Print"
@@ -489,6 +489,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
+      "GettingStarted/installation": {
+        "title": "Installation and activation"
+      },
       "Menus/bars": {
         "title": "Menu bar features"
       },
@@ -557,7 +560,7 @@
         "title": "プロジェクトの開発"
       },
       "Project/documentation": {
-        "title": "プロジェクトのドキュメンテーション"
+        "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
@@ -674,6 +677,7 @@
       "v18": "v18"
     },
     "categories": {
+      "Getting Started": "はじめに",
       "4D Language Concepts": "ランゲージのコンセプト",
       "Project Databases": "プロジェクトデータベース",
       "Forms": "フォーム",
@@ -690,8 +694,9 @@
     }
   },
   "pages-strings": {
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
+    "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",

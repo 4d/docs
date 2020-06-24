@@ -47,6 +47,8 @@ You can create two types of objects:
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
 - shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
 For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+
+
 ## Syntax basics
 
 Object notation can be used to access object property values through a chain of tokens.
@@ -220,7 +222,7 @@ When expressions of a given type are expected in your 4D code, you can make sure
 
 ## Object property identifiers
 
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see ECMA Script standard):
+Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - the first character must be a letter, an underscore (_), or a dollar sign ($),
 - subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),

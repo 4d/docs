@@ -107,13 +107,13 @@ If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, 
 
 > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
-## Documentation file definition
+## Définition du fichier de documentation
 
-4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
+4D utilise un modèle de base pour créer de nouveaux fichiers de documentation. Ce modèle propose des fonctionnalités spécifiques qui vous permettent [d'afficher des informations dans l'éditeur de code](#viewing-documentation-in-the-code-editor).
 
-However, you can use any [supported Markdown tags](#supported-markdown).
+Cependant, vous pouvez utiliser toutes les [balises Markdown prises en charge](#supported-markdown).
 
-New documentation files are created with the following default contents:
+De nouveaux fichiers de documentation sont créés avec les contenus par défaut suivants :
 
 ![](assets/en/Project/comments-explo4.png)
 
@@ -134,7 +134,7 @@ New documentation files are created with the following default contents:
     </td>
     
     <td>
-      HTML comment. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
+      Commentaire HTML. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
     </td>
   </tr>
   

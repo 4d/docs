@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: プロジェクトのドキュメンテーション
+title: ドキュメンテーション
 ---
 
 ## 概要

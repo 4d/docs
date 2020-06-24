@@ -181,7 +181,7 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Classes
+## Klassen
 
 The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
 

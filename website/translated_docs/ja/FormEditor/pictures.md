@@ -29,16 +29,16 @@ title: ピクチャー
 
 ### Scale factor (macOS only)
 
-High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.).
+従来の標準的なディスプレイと比較して、高解像度ディスプレイは高い画素密度を持ちます。 これらの高解像度ディスプレイにおいてピクチャーが正しく表示されるには、適用する *スケール係数* (例: 2倍、3倍など) に応じてその画素数を増やす必要があります。
 
 When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
 
-| Display Type        | Scale Factor                                   | 例題                                                                  |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------- |
-| Standard Resolution | 1:1 pixel density.                             | **1x**  
+| Display Type | スケール係数              | 例題                                                                  |
+| ------------ | ------------------- | ------------------------------------------------------------------- |
+| 標準解像度        | 1:1 ピクセル密度          | **1x**  
 ![](assets/en/FormEditor/pictureScale1.png)  
 *circle.png* |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. |                                                                     |
+| 高解像度         | ピクセル密度は2、または3の係数で増加 |                                                                     |
 
 
 <table>
@@ -70,8 +70,8 @@ High resolution pictures with the @nx convention can be used in the following ob
 * [リストボックスヘッダー](FormObjects/listbox_overview.md#list-box-headers)
 * [メニューアイコン](Menus/properties.md#item-icon)
 
-4D automatically prioritizes pictures with the highest resolution. <br />  
-**Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
+4D は自動的に最高解像度のピクチャーを優先します。 <br />  
+**例**: 標準解像度と高解像度の２つのディスプレイを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。
 
 > Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.
 

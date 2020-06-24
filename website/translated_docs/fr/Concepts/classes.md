@@ -20,7 +20,7 @@ Une classe est un objet de classe "Class". Un objet de classe a les propriétés
 - un objet `superclass` (facultatif, nul s'il n'y en a aucun)
 - une méthode `new()` permettant d'instancier des objets de classe.
 
-De plus, un objet de classe peut référencer :
+In addition, a class object can reference:
 
 - un objet `constructeur` (facultatif)
 - un objet `prototype`, contenant des objets de fonction nommés (facultatif).
@@ -29,7 +29,7 @@ Un objet de classe est un objet partagé et est donc accessible simultanément �
 
 ### Recherche et prototype des propriétés
 
-Tous les objets de 4D sont liés en interne à un objet de classe. Lorsque 4D ne trouve pas de propriété dans un objet, il effectue un recherche dans l'objet prototype de sa classe; s'il ne la trouve pas, 4D poursuit sa recherche dans l'objet prototype de sa classe mère (superclass), et ainsi de suite jusqu'à ce qu'il n'y ait plus de superclass.
+Tous les objets de 4D sont liés en interne à un objet de classe. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
 
 Tous les objets héritent de la classe "Object" comme classe supérieure d'arbre d'héritage.
 
@@ -240,7 +240,7 @@ Class Constructor
 
 A class constructor function, which can accept parameters, can be used to define a user class.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
@@ -280,7 +280,7 @@ Class extension must respect the following rules:
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
