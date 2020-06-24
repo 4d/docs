@@ -4,7 +4,7 @@ title: Parameters
 ---
 
 
-## Using parameters
+## Passing parameters
 
 You'll often find that you need to pass data to your methods. This is easily done with parameters.
 
@@ -56,13 +56,9 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as paramet
 Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods). 
 
 
-## Functions 
+## Returning values
 
-Data can be returned from methods. A method that returns a value is called a function.
-
-4D or 4D Plug-in commands that return a value are also called functions.
-
-For example, the following line is a statement that uses the built-in function, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Data can be returned from methods. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -70,21 +66,21 @@ MyLength:=Length("How did I get here?")
 
 Any subroutine can return a value. The value to be returned is put into the local variable `$0`.
 
-For example, the following function, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 function:
+The following is an example that uses the Uppercase4 method:
 
 ```4d
-NewPhrase:=Uppercase4("This is good.")
+$NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *NewPhrase* gets “THIS is good.”
+In this example, the variable *$NewPhrase* gets “THIS is good.”
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
+The returned value, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
 
 ```4d
 // Do_something
