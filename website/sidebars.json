@@ -1,8 +1,8 @@
 {
   "docs": {
-    "4D Language Concepts": [
-      "Concepts/about",
-      "Concepts/quick-tour",
+    "Getting Started":["GettingStarted/installation"],
+	"4D Language Concepts":
+	["Concepts/about","Concepts/quick-tour",
       {
         "type": "subcategory",
         "label": "Data Types",

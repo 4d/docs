@@ -37,6 +37,7 @@ class Index extends React.Component {
     const {config: siteConfig, language = 'en'} = this.props;
     const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
     var subContents={
+      installation: <translate desc="in index page Getting started">Installation and activation</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
       projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
 	  formEditor: <translate>Form Editor</translate>,
@@ -48,11 +49,11 @@ class Index extends React.Component {
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
-	  users: <translate>Users and Groups</translate>	  
+	  users: <translate>Users and Groups</translate>
     };
 
-	
-	
+
+
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
@@ -62,7 +63,7 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
+                  content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',
