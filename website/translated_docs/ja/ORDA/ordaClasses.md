@@ -26,11 +26,11 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - if the physical structure evolves, you simply to adapt function code and client applications will continue to call them transparently.
 
-![](assets/en/API/api.png)
+![](assets/en/ORDA/api.png)
 
 In addition, 4D Developer automatically creates the classes for each available data model object. For example, consider this simple database containing a single `[Students]` table. You can see that 4D has automatically created the classes:
 
-![](assets/en/API/ORDA_Classes-3.png)
+![](assets/en/ORDA/ORDA_Classes-3.png)
 
 - DataStore - class for the datastore
 - Students - class for the Students dataclass
@@ -41,7 +41,7 @@ In addition, 4D Developer automatically creates the classes for each available d
 
 ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
 
-![](assets/en/API/ClassDiagramImage.png)
+![](assets/en/ORDA/ClassDiagramImage.png)
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
@@ -95,8 +95,6 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
 - **Example name**: cs.Employee
 
-> If a DataClass class name enters in conflict with a [user class name](Concepts/classes.md#class-names), the constructor of the user class becomes unusable (a warning is returned by the compiler).
-
 #### 例題
 
 ```4D
@@ -124,7 +122,7 @@ Then, you can get an entity selection of the "best" companies by executing:
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
-![](assets/en/API/Orda_example.png)
+![](assets/en/ORDA/Orda_example.png)
 
 The `City Class` provides an API:
 
@@ -237,7 +235,7 @@ When creating or editing data model classes, you must pay attention to the rules
     
     - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler). 
     - Do not use a reserved name for a 4D table (e.g. "DataClass").
-- When defining a DataClass class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the name of the 4D table (case sensitive).
+- When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the parent class (case sensitive) name. For example, `Class extends EntitySelection` for an entity selection class.
 
 - You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular [instantiation method](#architecture).
 
@@ -253,31 +251,29 @@ You create an ORDA user class by adding a corresponding file in the *Classes* fo
 
 A class file can be created by a simple double-click in the Classes theme of the 4D Explorer. ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
 
-![](assets/en/API/classORDA2.png)
+![](assets/en/ORDA/classORDA2.png)
 
 Double-click on a class name. 4D creates the ORDA class file and add the `extends` code. Example for an Entity class:
 
     Class extends Entity
     
 
-Once a class is defined, its name is no longer dimmed in the Explorer:
+Once a class is defined, its name is no longer dimmed in the Explorer.
 
-![](assets/en/API/classORDA3.png)
-
-> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/API/showClass.png)
+> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
 ### Editing classes
 
 To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window (like for any class):
 
-![](assets/en/API/classORDA4.png)
+![](assets/en/ORDA/classORDA4.png)
 
 For ORDA classes based upon the local datastore (ds), you can directly access the class code from the 4D Structure window:
 
-![](assets/en/API/classORDA5.png)
+![](assets/en/ORDA/classORDA5.png)
 
 ### メソッドエディター
 
 In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
 
-![](assets/en/API/AutoCompletionEntity.png)
+![](assets/en/ORDA/AutoCompletionEntity.png)

@@ -223,7 +223,7 @@ title: オブジェクト
 
 ## オブジェクトプロパティ識別子
 
-トークンメンバー名 (つまり、オブジェクト記法を使用してアクセスしたオブジェクトプロパティ名) には、標準の 4Dオブジェクト名より厳格な規制があります。 プロパティ名は JavaScriptの字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照):
+トークンメンバー名 (つまり、オブジェクト記法を使用してアクセスしたオブジェクトプロパティ名) には、標準の 4Dオブジェクト名より厳格な規制があります。 They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
 - その後の文字には、文字、数字、アンダースコア、またはドル記号を使用することができます (スペース文字は使用することはできません)。

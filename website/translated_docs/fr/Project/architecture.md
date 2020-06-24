@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Architecture d'un projet 4D
+title: Architecture of a project
 ---
 
 A 4D project is made of several folders and files, stored within a single parent database folder (package folder). Par exemple:
