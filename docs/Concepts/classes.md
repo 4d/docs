@@ -224,7 +224,7 @@ In the database code, class functions are called as member methods of the object
 
 #### Class function parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be ECMA compliant. Multiple parameters (and types) are separated by semicolons (;). 
+Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;). 
 
 ```4d  
 Function add($x;$y : Variant;$z : Integer;$xy : Object)
