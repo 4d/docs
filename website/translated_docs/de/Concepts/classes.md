@@ -190,11 +190,11 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Der Befehl `Current method name` gibt für eine Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+Im Code der Anwendung werden Functions der Klasse als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- use of the `()` operator. For example `myObject.methodName("hello")`.
+- Verwendung des Operators `()` For example `myObject.methodName("hello")`.
 - use of a "Function" class member methods 
     - `apply()`
     - `call()`
