@@ -36,12 +36,12 @@ Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwend
 Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 ```4d
-<br /> C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
+<br /> C_BLOB(vxMyBlob) // Die Prozessvariable vxMyBlob ist als eine Variable vom Typ BLOB deklariert
+ C_DATE($vdCurDate) // Die lokale Variable $vdCurDate ist als eine Variable vom Typ Datum deklariert
+ C_LONGINT(vg1;vg2;vg3) // Die 3 Prozessvariablen vg1, vg2 und vg3 sind als Variablen vom Type Lange Ganzzahl deklariert  
+ C_OBJECT($vObj) // Die lokale Variable $vObj ist als eine Variable vom Typ Objekt deklariert
+ C_COLLECTION($vCol) // Die lokale Variable $vCol ist als eine Variable vom Typ Collection deklariert
+ ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Eementen deklariert
 ```
 
 ## Assigning Data
