@@ -178,7 +178,7 @@ Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eige
 
 In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
 
-Within a class function, the `This` is used as the object instance. Beispiel:
+Innerhalb einer Function wird `This` als Instanz des Objekts verwendet. Beispiel:
 
 ```4d
 Function getFullName
