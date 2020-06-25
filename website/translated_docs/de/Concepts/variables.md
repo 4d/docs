@@ -13,27 +13,27 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 
 Sie erstellen Variablen durch Deklarieren über einen Befehl im Kapitel "Compiler" oder "Arrays".
 
-**Hinweis:** Arrays sind ein besonderer Variablentyp. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
-For example, if you want to define a text variable, you write:
+Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 
 ```4d
  C_TEXT(myText)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
+**Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
 ```
 
-Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z.B. eine Textvariable in einem Feld vom gleichen Typ speichern:
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
-The following are some basic variable declarations:
+Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 ```4d
 <br /> C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
