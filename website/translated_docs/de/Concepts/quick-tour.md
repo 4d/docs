@@ -35,26 +35,26 @@ Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er komb
 
 ## Variablen
 
-Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. You create a typed variable using the `var` keyword. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit dem Schlüsselwort `var`. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
 var MyDate : Date 
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+Mit dem Schlüsselwort `var` können Sie Variablen vom Typ Objekt einer definierten Klasse deklarieren, wie z. B:
 
 ```4d
 var myPerson : cs.Person 
 //variable of the Person user class
 ```
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach über ihre Verwendung deklarieren; Sie müssen sie nicht unbedingt förmlich definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+Die Code-Zeile liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile deklariert die Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
 
 ## Befehle
 
@@ -190,16 +190,16 @@ myColl[3]  //access to 4th element of the collection
 
 ## Klassen
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+Die 4D Programmiersprache unterstützt Objekt Klassen. Um eine Klasse mit Name "myClass" zu erstellen, fügen Sie im Ordner Project/Sources/Classes eines Projekts die Datei `myClass.4dm<code> hinzu.</p>
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+<p>Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie die Benutzerklasse aus dem <em>Store der Klassen</em> auf (<code>cs`) und verwenden die Member Function `new()`. Sie können Parameter übergeben.
 
 ```4d
 // in a 4D method
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
 
 ```4d
 //in the myClass.4dm file
@@ -208,7 +208,7 @@ Function hello
   $0:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+Um eine Member Method der Klasse auszuführen, setzen Sie den Operator `()` für die Member Method der Instanz des Objekts.
 
 ```4d
 $o:=cs.myClass.new()
@@ -217,7 +217,7 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+Optional können Sie das Schlüsselwort `Class constructor` zum Deklarieren von Eigenschaften des Objekts verwenden.
 
 ```4d
 //in the Rectangle.4dm file
@@ -228,7 +228,7 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can inherit from another class by using `Class inherits <ClassName>`. Superclasses can be called using the `Super` command. Beispiel:
+Eine Klasse kann über `Class inherits <ClassName>` von einer anderen Klasse erben. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
 
 ```4d
 //in the Square.4dm file

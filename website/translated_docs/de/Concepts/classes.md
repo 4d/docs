@@ -27,7 +27,7 @@ Zusätzlich kann ein Objekt Klasse verweisen auf:
 
 Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
-### Eigenschaft lookup und prototype
+### Nach Eigenschaft suchen und prototype
 
 Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt Prototyp seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
 
@@ -88,12 +88,12 @@ $o:=cs.Empty.new()
 $cName:=OB Class($o).name //"Empty"
 ```
 
-## Class Stores
+## Stores für Klassen
 
-Klassen sind über ihre Class Stores verfügbar. Es gibt folgende Class Stores:
+Klassen sind über Stores für Klassen verfügbar. Es gibt folgende Stores für Klassen:
 
-- Ein Class Store für eingebaute 4D Klassen. Er wird über den Befehl `4D` zurückgegeben.
-- Ein Class Store pro geöffneter Anwendung oder Komponente. Er wird über den Befehl `cs` zurückgegeben. Das sind "Benutzerklassen".
+- Ein Store für in 4D integrierte Klassen. Er wird über den Befehl `4D` zurückgegeben.
+- Ein Store für Klassen pro geöffneter Anwendung oder Komponente. Er wird über den Befehl `cs` zurückgegeben. Das sind "Benutzerklassen".
 
 Sie können z.B. für ein Objekt von myClass mit der Anweisung `cs.myClass.new()` eine neue Instanz erstellen (`cs` bedeutet *classtore*).
 
@@ -111,12 +111,12 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
             - Classes 
                 + Polygon.4dm
 
-### Klassename
+### Klassennamen
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
 - Der Klassenname muss mit den Regeln von ECMAScript konform sein. 
-- Bei den Namen wird zwischen Groß- und Kleinschreibung unterschieden.
+- Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle der Anwendung nicht denselben Namen verwenden. 
 
 ### 4D Entwickleroberfläche
@@ -125,7 +125,7 @@ Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatis
 
 #### Menü Datei/Ablage und Werkzeugleiste
 
-Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder das **Icon Neu** in der Werkzeugleiste.
+Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder über das **Icon Neu** in der Werkzeugleiste.
 
 Sie können auch die Tastenkombination **Strg+Shift+Alt+k** verwenden.
 
@@ -135,8 +135,8 @@ Im Explorer werden Klassen auf der Seite **Methoden** in der Kategorie **Klassen
 
 Um eine neue Klasse zu erstellen:
 
-- wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche ![](assets/en/Users/PlussNew.png).
-- Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Gruppe Klassen den Eintrag **Neue Klasse**. ![](assets/en/Concepts/newClass.png)
+- Wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche ![](assets/en/Users/PlussNew.png).
+- Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag **Neue Klasse**. ![](assets/en/Concepts/newClass.png)
 - Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag **Neu > Klasse...**. 
 
 #### Unterstützung von Code für Klassen
@@ -148,24 +148,24 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
     - Eine Klassenfunktion ist ein Code Block 
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format<ClassName> Constructor oder \.\ angezeigt.<ClassName>.\<FunctionName> format. 
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> 
 
-### Deleting a class
+### Eine Klasse löschen
 
-To delete an existing class, you can:
+Um eine vorhandene Klasse zu löschen, können Sie:
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
-- in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
+- Die Klasse im Explorer auswählen und am unteren Rand auf das Icon ![](assets/en/Users/MinussNew.png) klicken oder im Kontextmenü den Eintrag **In Papierkorb verschieben** wählen. 
 
-## Class keywords
+## Schlüsselwörter für Klassen
 
-Specific 4D keywords can be used in class definitions:
+In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
-- `Function <Name>` to define member methods of the objects. 
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
+- `Function <Name>` zum Definieren von Member Methods der Objekte. 
+- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
 - `Class extends <ClassName>` to define inheritance.
 
-### Class Function
+### Function der Klasse
 
 #### Syntax
 
@@ -174,11 +174,11 @@ Function <name>
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
+Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be ECMAScript compliant.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
 
-Within a class function, the `This` is used as the object instance. Beispiel:
+Innerhalb einer Function wird `This` als Instanz des Objekts verwendet. Beispiel:
 
 ```4d
 Function getFullName
@@ -190,11 +190,11 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Der Befehl `Current method name` gibt für eine Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+Im Code der Anwendung werden Functions der Klasse als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- use of the `()` operator. For example `myObject.methodName("hello")`.
+- Verwendung des Operators `()` For example `myObject.methodName("hello")`.
 - use of a "Function" class member methods 
     - `apply()`
     - `call()`
