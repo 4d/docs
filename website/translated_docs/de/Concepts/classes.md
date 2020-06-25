@@ -27,7 +27,7 @@ Zusätzlich kann ein Objekt Klasse verweisen auf:
 
 Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
-### Eigenschaft lookup und prototype
+### Nach Eigenschaft suchen und prototype
 
 Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt Prototyp seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
 
@@ -125,7 +125,7 @@ Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatis
 
 #### Menü Datei/Ablage und Werkzeugleiste
 
-Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder das **Icon Neu** in der Werkzeugleiste.
+Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder über das **Icon Neu** in der Werkzeugleiste.
 
 Sie können auch die Tastenkombination **Strg+Shift+Alt+k** verwenden.
 
@@ -148,13 +148,13 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
     - Eine Klassenfunktion ist ein Code Block 
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format<ClassName> Constructor oder \.\ angezeigt.<ClassName>.\<FunctionName> format. 
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> 
 
-### Deleting a class
+### Eine Klasse löschen
 
-To delete an existing class, you can:
+Um eine vorhandene Klasse zu löschen, können Sie:
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
+- Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
 - in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
 ## Class keywords
