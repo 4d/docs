@@ -11,9 +11,9 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 
 ## Variablen erstellen
 
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
+Sie erstellen Variablen durch Deklarieren über einen Befehl im Kapitel "Compiler" oder "Arrays".
 
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 For example, if you want to define a text variable, you write:
 
