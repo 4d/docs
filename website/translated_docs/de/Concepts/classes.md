@@ -165,7 +165,7 @@ In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwe
 - `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
 - `Class extends <ClassName>` to define inheritance.
 
-### Class Function
+### Function der Klasse
 
 #### Syntax
 
@@ -174,9 +174,9 @@ Function <name>
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
+Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be ECMAScript compliant.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
 
 Within a class function, the `This` is used as the object instance. Beispiel:
 
