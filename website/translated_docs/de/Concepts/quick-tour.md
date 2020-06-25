@@ -35,7 +35,7 @@ Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er komb
 
 ## Variablen
 
-Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. You create a typed variable using the `var` keyword. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit dem Schlüsselwort `var`. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
 var MyDate : Date 
