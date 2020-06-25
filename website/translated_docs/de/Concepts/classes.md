@@ -88,11 +88,11 @@ $o:=cs.Empty.new()
 $cName:=OB Class($o).name //"Empty"
 ```
 
-## Class Stores
+## Stores für Klassen
 
-Klassen sind über ihre Class Stores verfügbar. Es gibt folgende Class Stores:
+Klassen sind über Stores für Klassen verfügbar. Es gibt folgende Stores für Klassen:
 
-- Ein Class Store für eingebaute 4D Klassen. Er wird über den Befehl `4D` zurückgegeben.
+- Ein Store für in 4D integrierte Klassen. Er wird über den Befehl `4D` zurückgegeben.
 - Ein Class Store pro geöffneter Anwendung oder Komponente. Er wird über den Befehl `cs` zurückgegeben. Das sind "Benutzerklassen".
 
 Sie können z.B. für ein Objekt von myClass mit der Anweisung `cs.myClass.new()` eine neue Instanz erstellen (`cs` bedeutet *classtore*).
@@ -155,14 +155,14 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
 Um eine vorhandene Klasse zu löschen, können Sie:
 
 - Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
-- in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- Die Klasse im Explorer auswählen und am unteren Rand auf das Icon ![](assets/en/Users/MinussNew.png) klicken oder im Kontextmenü den Eintrag **In Papierkorb verschieben**. 
 
-## Class keywords
+## Schlüsselwörter für Klassen
 
-Specific 4D keywords can be used in class definitions:
+In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
-- `Function <Name>` to define member methods of the objects. 
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
+- `Function <Name>` zum Definieren von Member Methods der Objekte. 
+- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
 - `Class extends <ClassName>` to define inheritance.
 
 ### Class Function
