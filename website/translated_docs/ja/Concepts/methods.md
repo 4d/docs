@@ -8,11 +8,11 @@ title: メソッド
 
 メソッドとは、1つ以上の動作を実行するコードのことです。 メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。 各ステートメントは常に 1行ですが最大 32,000文字まで使用することができます。
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+メソッドは最大 2GBのテキストまたは、32000行まで記述できます。
 
-## Method Types
+## メソッドタイプ
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+4D ランゲージにおいて、数種類のメソッドが存在します。 その呼び出し方によって、メソッドは区別されます:
 
 | 型                        | 自動呼び出しのコンテキスト                                                                                               | 引数の受け取り | 説明                                                                                                                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,17 +29,17 @@ In the 4D Language, there are several categories of methods. The category depend
 
 その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
 
-- Subroutine
-- Object formula 
+- サブルーチン
+- オブジェクトフォーミュラ 
 - メニューメソッド
 - プロセスメソッド
 - イベントまたはエラー処理メソッド
 
-### Subroutines
+### サブルーチン
 
 サブルーチンは、処理の下請け的なプロジェクトメソッドです。 他のメソッドから呼ばれて、要求された処理を実行します。 関数は、呼び出し元のメソッドに値を返すサブルーチンのことです。
 
-When you create a project method, it becomes part of the language of the project in which you create it. You can then call the project method from another method (project method, object method...) in the same way that you call 4D’s built-in commands. このように使用されるプロジェクトメソッドをサブルーチンと呼びます。
+プロジェクトメソッドを作成すると、それは同データベースのランゲージの一部となります。 You can then call the project method from another method (project method, object method...) in the same way that you call 4D’s built-in commands. このように使用されるプロジェクトメソッドをサブルーチンと呼びます。
 
 サブルーチンは、以下のような目的で使います:
 
