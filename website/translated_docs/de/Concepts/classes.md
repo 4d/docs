@@ -177,11 +177,13 @@ In der Datei mit der Definition der Klasse verwenden Function Deklarationen das 
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
-Immediately following the function name, [parameters](#class-function-parameters) for the function can be declared with an assigned name and data type. Beispiel:
+Immediately following the function name, [parameters](parameters.md#named-parameters-class-functions) for the function can be declared with an assigned name and data type. Beispiel:
 
 ```code4d
 Function setFullName($firstname : Text;$lastname : Text)
 ```
+
+> [Sequential parameters](parameters.md#sequential-parameters) ($1, $2...) can be also used in class functions.
 
 Within a class function, the `This` command is used as the object instance. Beispiel:
 
@@ -264,7 +266,7 @@ $area:=$o.getArea(50;100) //5000
 
 ```js
 // Class: MyClass
-Class Constructor
+Class Constructor({parameterName : type;...})
 // code
 ```
 
