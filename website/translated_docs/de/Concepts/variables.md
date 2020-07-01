@@ -332,17 +332,17 @@ Der Name der Prozessvariable hat kein vorangestelltes Zeichen. Der Name der Proz
 
 Im interpretierten Modus werden Variablen dynamisch verwaltet; sie werden nach Bedarf im Speicher gehalten und entfernt. Im kompilierten Modus nutzen alle Prozesse, die Sie anlegen (Benutzerprozesse) gemeinsam dieselbe Definition der Prozessvariablen, aber jeder Prozess hat pro Variable eine andere Instanz. So ist die Variable myVar eine Variable im Prozess P_1 und eine andere im Prozess P_2.
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIABLE` Prozessvariablen aus einem anderen Prozess "erspähen und anstoßen". Es ist eine gute Programmierpraxis, diese Befehle nur für die Situation anzuwenden, für die sie in 4D hinzugefügt wurden:
 
-- Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- Kommunikation auf Interprozessebene an spezifischen Stellen in Ihrem Code
+- Verwalten von Drag-and-Drop auf Interprozessebene
+- Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Interprozessvariablen
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.
+Interprozessvariablen sind in der gesamten Anwendung verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
 
