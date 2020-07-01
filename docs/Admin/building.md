@@ -379,8 +379,7 @@ The Licences & Certificate page can be used to:
 *	designate the license number(s) that you want to integrate into your single-user stand-alone application
 *	sign the application by means of a certificate in macOS.
 
-
-![](assets/en/Project/buildapplicenseProj.png)
+![](assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
@@ -414,7 +413,7 @@ The application builder can sign merged 4D applications under macOS (single-user
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs: 
 
-![](assets/en/Project/buildapposxcertProj.png)
+![](assets/en/Admin/buildapposxcertProj.png)
 
 This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
@@ -425,6 +424,13 @@ This option is displayed under both Windows and macOS, but it is only taken into
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
 >This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
+
+* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. <p>In the "Certificate Assistant", be sure to select the appropriate options:
+![](assets/en/Admin/Cert1.png)
+![](assets/en/Admin/Cert2.png)
+
+> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below). 
+
 
 
 #### About Gatekeeper  
