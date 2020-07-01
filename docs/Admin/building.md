@@ -37,7 +37,7 @@ Building can only be carried out once the database is compiled. If you select th
 
 ### Build application settings
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
+Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
@@ -45,11 +45,17 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Log file
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. The log file stores the following information for each build:
+
 - The start and end of building of targets,
 - The name and full access path of the files generated,
 - The date and time of the build,
-- Any errors that occurred.
+- Any errors that occurred,
+- Any signing issues (e.g. a non-signed plug-in).
+
+Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application. 
+
+> Use the `Get 4D file(Build application log file)` command to get the log file location. 
 
 
 
