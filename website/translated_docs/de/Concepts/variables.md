@@ -86,9 +86,9 @@ Sie verwenden eine lokale Variable, um:
 
 Der Name einer lokalen Variable startet immer mit dem Dollarzeichen ($) und kann bis zu 31 zusätzliche Zeichen enthalten. Falls Sie einen längeren Namen eingeben, kürzt 4D ihn auf die passende Länge.
 
-In einer Anwendung mit vielen Methoden und Variablen erkennen Sie oft, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+In einer Anwendung mit vielen Methoden und Variablen erkennen Sie oft, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. Sie können eine lokale Variable in der Methode anlegen bzw. verwenden und müssen sich keine Gedanken machen, ob Sie den gleichen Variablennamen bereits irgendwo anders verwendet haben.
 
-Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
+Häufig benötigt eine Anwendung nur Detailinformationen vom Benutzer. Dafür gibt es den Befehl `Request`. Er zeigt ein Dialogfenster mit einer Meldung, die den Benutzer zu einer Antwort auffordert. Gibt der Benutzer die Antwort ein, gibt der Befehl diese Angaben zurück. In der Regel müssen Sie diese Angaben nicht sehr lange in Ihren Methoden halten. Dies ist ein typischer Anwendungsbereich für eine lokale Variable. Hier ein Beispiel:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
@@ -97,7 +97,7 @@ Frequently, in a database, small pieces of information are needed from the user.
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+Diese Methode fordert den Benutzer auf, eine ID einzugeben. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
