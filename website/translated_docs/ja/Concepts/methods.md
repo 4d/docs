@@ -8,11 +8,11 @@ title: メソッド
 
 メソッドとは、1つ以上の動作を実行するコードのことです。 メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。 各ステートメントは常に 1行ですが最大 32,000文字まで使用することができます。
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+メソッドは最大 2GBのテキストまたは、32000行まで記述できます。
 
-## Method Types
+## メソッドタイプ
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+4D ランゲージにおいて、数種類のメソッドが存在します。 その呼び出し方によって、メソッドは区別されます:
 
 | 型                        | 自動呼び出しのコンテキスト                                                                                               | 引数の受け取り | 説明                                                                                                                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,17 +29,17 @@ In the 4D Language, there are several categories of methods. The category depend
 
 その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
 
-- Subroutine
-- Object formula 
+- サブルーチン
+- オブジェクトフォーミュラ 
 - メニューメソッド
 - プロセスメソッド
 - イベントまたはエラー処理メソッド
 
-### Subroutines
+### サブルーチン
 
 サブルーチンは、処理の下請け的なプロジェクトメソッドです。 他のメソッドから呼ばれて、要求された処理を実行します。 関数は、呼び出し元のメソッドに値を返すサブルーチンのことです。
 
-When you create a project method, it becomes part of the language of the project in which you create it. You can then call the project method from another method (project method, object method...) in the same way that you call 4D’s built-in commands. このように使用されるプロジェクトメソッドをサブルーチンと呼びます。
+プロジェクトメソッドを作成すると、それは同データベースのランゲージの一部となります。 プロジェクトメソッドは、4Dのビルトインコマンドと同様に、ほかのメソッド (プロジェクトメソッドやオブジェクトメソッド) から呼び出すことができます。 このように使用されるプロジェクトメソッドをサブルーチンと呼びます。
 
 サブルーチンは、以下のような目的で使います:
 
@@ -48,7 +48,7 @@ When you create a project method, it becomes part of the language of the project
 - メソッド改変の容易化
 - コードのモジュール化
 
-For example, let’s say you have a project of customers. As you customize the project, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. そのコーディングは以下のようになっています:
+たとえば、顧客データベースがあるとします。 プロジェクトをカスタマイズしていくうちに、顧客を検索してレコードを修正するという一連の作業を繰り返しおこなっていることに気づいたとします。 そのコーディングは以下のようになっています:
 
 ```4d
   // 顧客を検索します
@@ -59,30 +59,30 @@ For example, let’s say you have a project of customers. As you customize the p
  MODIFY RECORD([Customers])
 ```
 
-サブルーチンを使用しなければ、顧客レコード修正のたびにコードを作成しなければなりません。 If there are ten places in your project where you need to do this, you will have to write the code ten times. サブルーチンを使用すれば 1回コーディングするだけですみます。 これがコーディングの重複を減らすというサブルーチンの第一の利点です。
+サブルーチンを使用しなければ、顧客レコード修正のたびにコードを作成しなければなりません。 プロジェクトの 10箇所で同じ処理が必要であれば、同じコーディングを 10回も書かねばなりません。 サブルーチンを使用すれば 1回コーディングするだけですみます。 これがコーディングの重複を減らすというサブルーチンの第一の利点です。
 
-If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:
+先ほど説明したコードが `MODIFY_CUSTOMER` と呼ばれるメソッドであるとすれば、他のメソッド内でそのメソッド名を使うことで実行できます。 たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:
 
 ```4d
  MODIFY_CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-この機能はメソッドを劇的にに簡素化します。 In the example, you do not need to know how the `MODIFY_CUSTOMER` method works, just what it does. これはメソッドをサブルーチン化することの2番目の理由、役割の明確化です。 このように、作成されたメソッドは 4Dランゲージを拡張します。
+この機能はメソッドを劇的にに簡素化します。 さきほどの例で言えば、`MODIFY_CUSTOMER` メソッドがどのように動作するかは知る必要がなく、何をおこなうかだけ知っていればよいのです。 これはメソッドをサブルーチン化することの2番目の理由、役割の明確化です。 このように、作成されたメソッドは 4Dランゲージを拡張します。
 
-If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. これがサブルーチンを使うもう一つの理由、改変の容易化です。
+このプロジェクトの例で顧客の検索方法を変える場合、10箇所ではなく、たった1つのメソッドを変更するだけですみます。 これがサブルーチンを使うもう一つの理由、改変の容易化です。
 
-また、サブルーチンの利用はコードをモジュール化します。 これはコードをモジュール (サブルーチン) に分割することを意味し、それぞれは論理的な処理を実行します。 Consider the following code from a checking account project:
+また、サブルーチンの利用はコードをモジュール化します。 これはコードをモジュール (サブルーチン) に分割することを意味し、それぞれは論理的な処理を実行します。 小切手振り出し口座のプロジェクトから、以下のコードを見てみましょう:
 
 ```4d
- FIND_CLEARED_CHECKS //Find the cleared checks
- RECONCILE_ACCOUNT //Reconcile the account
- PRINT_CHECK_BOOK_REPORT //Print a checkbook report
+ FIND_CLEARED_CHECKS // 決済された小切手の検索
+ RECONCILE_ACCOUNT // 口座の照合
+ PRINT_CHECK_BOOK_REPORT // レポートの印刷
 ```
 
-Even for someone who doesn’t know the project, it is clear what this code does. 各サブルーチンの処理手順を知る必要はありません。 各サブルーチンは長く、複雑な処理で構成されていることもありますが、それらが何を実行するのかだけを知っていれば十分なのです。 プログラムを論理的な処理単位やモジュールにできるだけ分割することをお勧めします。
+プロジェクトの詳細を知らない人でも、このプログラムが何をしているかはわかります。 各サブルーチンの処理手順を知る必要はありません。 各サブルーチンは長く、複雑な処理で構成されていることもありますが、それらが何を実行するのかだけを知っていれば十分なのです。 プログラムを論理的な処理単位やモジュールにできるだけ分割することをお勧めします。
 
-### Object formulas
+### オブジェクトフォーミュラ
 
 プロジェクトメソッドは、**フォーミュラ** オブジェクトにカプセル化して、オブジェクトから呼び出すことができます。
 
@@ -154,11 +154,11 @@ $o:=$f.message // $o にはフォーミュラオブジェクトが返されま�
 
 ### メニューメソッド
 
-メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 メニューエディターまたは "メニュー" テーマのコマンドを使用して、メニューにメソッドを割り当てます。 メニューが選択されると、それに対応するメニューメソッドが実行されます。 By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
+メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 メニューエディターまたは "メニュー" テーマのコマンドを使用して、メニューにメソッドを割り当てます。 メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
 
 メニューメソッドにより、単一または複数の処理を実行することができます。 たとえば、データ入力のメニューに、以下の2つの処理を実行するメソッドを割り当てられます。まず適切な入力フォームを表示し、次にユーザーがキャンセルするまでの間 `ADD RECORD` コマンドによるデータ入力を繰り返します。
 
-連続した処理の自動化は、プログラミング言語の強力な機能の 1つです。 Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
+連続した処理の自動化は、プログラミング言語の強力な機能の 1つです。 カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
 
 ### プロセスメソッド
 
