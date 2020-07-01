@@ -56,13 +56,13 @@ MyNumber:=3
 
 erstellt die Variable * MyNumber* und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie * MyNumber* auf die rechte Seite des Zuweisungsoperators:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+In diesem Fall ist *[Products]Size* gleich 3. Dieses Beispiel ist ganz einfach, aber es zeigt, wie Daten über Programmierung von einer Stelle an eine andere übertragen werden.
 
 You assign data to array elements by using curly braces ({...}):
 
