@@ -76,17 +76,17 @@ Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interpro
 
 ### Lokale Variable
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Die lokale Zuordnung zu einer Methode heißt formell "Lokale Reichweite". Lokale Variablen dienen zur Einschränkung einer Variablen, so dass sie nur innerhalb der Methode funktioniert.
 
-You may want to use a local variable to:
+Sie verwenden eine lokale Variable, um:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
-- Reduce the number of process variables
+- Namenskonflikte mit anderen Variablen zu vermeiden
+- Daten temporär zu verwenden
+- Die Anzahl der Prozessvariablen zu verringern
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+Der Name einer lokalen Variable startet immer mit dem Dollarzeichen ($) und kann bis zu 31 zusätzliche Zeichen enthalten. Falls Sie einen längeren Namen eingeben, kürzt 4D ihn auf die passende Länge.
 
-When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+In einer Anwendung mit vielen Methoden und Variablen erkennen Sie oft, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
 Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
 
