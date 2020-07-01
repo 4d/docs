@@ -309,9 +309,9 @@ Sie verwenden eine lokale Variable, um:
 
 Der Name einer lokalen Variable startet immer mit dem Dollarzeichen ($) und kann bis zu 31 zusätzliche Zeichen enthalten. Falls Sie einen längeren Namen eingeben, kürzt 4D ihn auf die passende Länge.
 
-In einer Anwendung mit vielen Methoden und Variablen erkennen Sie oft, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. Sie können eine lokale Variable in der Methode anlegen bzw. verwenden und müssen sich keine Gedanken machen, ob Sie den gleichen Variablennamen bereits irgendwo anders verwendet haben.
+In einer Anwendung mit vielen Methoden und Variablen kommt es oft vor, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. Sie können eine lokale Variable in der Methode anlegen bzw. verwenden und müssen sich keine Gedanken machen, ob Sie den gleichen Variablennamen bereits irgendwo anders verwendet haben.
 
-Häufig benötigt eine Anwendung nur Detailinformationen vom Benutzer. Dafür gibt es den Befehl `Request`. Er zeigt ein Dialogfenster mit einer Meldung, die den Benutzer zu einer Antwort auffordert. Gibt der Benutzer die Antwort ein, gibt der Befehl diese Angaben zurück. In der Regel müssen Sie diese Angaben nicht sehr lange in Ihren Methoden halten. Dies ist ein typischer Anwendungsbereich für eine lokale Variable. Hier ein Beispiel:
+Häufig benötigt eine Anwendung nur eine kurze Info vom Benutzer. Dafür gibt es den Befehl `Request`. Er zeigt ein Dialogfenster mit einer Meldung, die den Benutzer zu einer Antwort auffordert. Gibt der Benutzer die Antwort ein, gibt der Befehl diese Angaben zurück. In der Regel müssen Sie diese Angaben nicht sehr lange in Ihren Methoden halten. Dies ist ein typischer Anwendungsbereich für eine lokale Variable. Hier ein Beispiel:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
@@ -324,9 +324,9 @@ Diese Methode fordert den Benutzer auf, eine ID einzugeben. Sie setzt die Antwor
 
 **Hinweis:** Die Parameter $1, $2... in Methoden sind lokale Variablen. Weitere Informationen dazu finden Sie unter [Parameter](Concepts/parameters.md).
 
-### Process variables
+### Prozessvariablen
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+Eine Prozessvariable ist nur innerhalb eines Prozesses verfügbar. It is accessible to the process method and any other method called from within the process.
 
 A process variable does not have a prefix before its name. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
 
