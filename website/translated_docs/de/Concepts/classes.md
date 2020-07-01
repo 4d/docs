@@ -4,7 +4,7 @@ title: Klassen
 ---
 
 
-## Overview
+## Überblick
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
@@ -27,11 +27,11 @@ Zusätzlich kann ein Objekt Klasse verweisen auf:
 
 Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
-### Nach Eigenschaft suchen und prototype
+### Nach Eigenschaft suchen und Prototyp
 
 Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt Prototyp seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
 
-Alle Objekte erben von der Klasse "Object" als ihrer obersten Klasse im Vererbungsbaum.
+Alle Objekte erben vom Objekt Klasse als ihrer obersten Klasse im Vererbungsbaum.
 
 ```4d
 //Class: Polygon
@@ -160,7 +160,7 @@ In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwe
 
 - `Function <Name>` zum Definieren von Member Methods der Objekte. 
 - `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
-- `Class extends <ClassName>` to define inheritance.
+- `Class extends <ClassName>` zum Definieren der Vererbung.
 
 ### Function der Klasse
 
