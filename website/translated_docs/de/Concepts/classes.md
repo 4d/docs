@@ -175,7 +175,7 @@ Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eige
 
 In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tipp**Beginnt der Name von Function mit einem Unterstrich ("_"), wird er von den Features für Autocomplete ausgeschlossen. Schreiben Sie z.B. `Function _myPrivateFunction` in MyClass, wird sie im Code-Editor nicht vorgeschlagen, wenn Sie `"cs.MyClass eingeben. `.
 
 Immediately following the function name, [parameters](parameters.md#named-parameters-class-functions) for the function can be declared with an assigned name and data type. Beispiel:
 
