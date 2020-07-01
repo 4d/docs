@@ -295,7 +295,7 @@ atNames{1}:="Richard"
 
 ## Local, Process, and Interprocess variables
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied zwischen den Typen sind ihre Reichweite oder die Objekte, für die sie verfügbar sind.
 
 ### Local variables
 
