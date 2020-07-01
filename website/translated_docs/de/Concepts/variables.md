@@ -342,7 +342,7 @@ For more information, see the chapter **Processes** and the description of these
 
 ### Interprozessvariablen
 
-Interprozessvariablen sind in der gesamten Anwendung verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. They are primarily used to share information between processes.
+Interprozessvariablen sind in der gesamten Anwendung verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. Sie dienen hauptsächlich dazu, Information in verschiedenen Prozessen gemeinsam zu nutzen.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
 
