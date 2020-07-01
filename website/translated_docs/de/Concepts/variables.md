@@ -101,7 +101,7 @@ Diese Methode fordert den Benutzer auf, eine ID einzugeben. Sie setzt die Antwor
 
 **Hinweis:** Die Parameter $1, $2... in Methoden sind lokale Variablen. Weitere Informationen dazu finden Sie unter [Parameter](Concepts/parameters.md).
 
-### Process variables
+### Prozessvariablen
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
