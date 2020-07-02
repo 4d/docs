@@ -33,7 +33,7 @@ title: プロジェクトパッケージのビルド
 
 ### アプリケーションビルド設定
 
-アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、"buildApp.4DSettings" という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはデータベースの Settings フォルダーに配置されます。
+Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
@@ -41,12 +41,17 @@ title: プロジェクトパッケージのビルド
 
 ### ログファイル
 
-アプリケーションをビルドすると、4D はログファイルを生成して **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
+When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. ログファイルにはビルド毎に以下の情報が書き込まれます:
 
 - ターゲットビルドの開始と終了
 - 生成されたファイルの名称とフルパス
 - ビルドの日付と時刻
-- 発生したエラー
+- Any errors that occurred,
+- Any signing issues (e.g. a non-signed plug-in).
+
+Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
+
+> Use the `Get 4D file(Build application log file)` command to get the log file location.
 
 ## アプリケーション名と保存先フォルダー
 
@@ -329,22 +334,22 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#4D-Volume-Desktop-フォルダーのカスタマイズ) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
 
-同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 他方、同じコンポーネントが両方にインストールされていた場合は、アプリケーションを開くことはできません。
+同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 However, if there are two instances of the same component, the application will not open.
 
-> 配布するアプリケーションでプラグインやコンポーネントを使用するには、それぞれ適切なライセンスが必要です。
+> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
 
-## ライセンス&証明書ページ
+## Licenses & Certificate page
 
-ライセンス&証明書のページでは、次のようなことができます:
+The Licences & Certificate page can be used to:
 
-* シングルユーザーのスタンドアロンアプリケーションに統合するライセンス番号を指定します。
-* macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
+* designate the license number(s) that you want to integrate into your single-user stand-alone application
+* sign the application by means of a certificate in macOS.
 
-![](assets/en/Project/buildapplicenseProj.png)
+![](assets/en/Admin/buildappCertif.png)
 
-### ライセンスリスト
+### Licenses
 
-アプリケーションに統合するのに使用できる配付ライセンスの一覧を表示します。 デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 
+This tab displays the list of available deployment licenses that you can integrate into your application. デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
@@ -371,23 +376,31 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D はビルドの際に、認証に必要な要素の有無をチェックします: 
+- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D will check the availability of elements required for certification when the build occurs: 
 
-![](assets/en/Project/buildapposxcertProj.png)
+![](assets/en/Admin/buildapposxcertProj.png)
 
-このオプションは Windows と macOS 両方の環境で表示されますが、macOS の場合においてのみ有効です。
+This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
-* **認証名** - Apple によって有効化されたデベロッパー認証名を入力してください。 この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
+* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
 
 ![](assets/en/Project/certificate.png)
 
 Apple からデベロッパ認証を取得するためには、キーチェーンアクセスのメニューのコマンドを使用するか、次のリンクへ移動してください: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>
 
-> この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/codesign” フォルダーにあります。 エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。
+> この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/codesign” フォルダーにあります。 If an error occurs, make sure that this utility is present on your disk.
 
-#### Gatekeeper について
+* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. 
 
-Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
+<
+
+p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
+
+> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
+
+#### About Gatekeeper
+
+Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションとデフォルトで互換性のあるアプリケーションを生成することができます。
 
