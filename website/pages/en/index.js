@@ -81,7 +81,7 @@ class Index extends React.Component {
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/ordaClasses.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/cryptoClass.html)<br>
                   [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
-                  image: `${siteConfig.baseUrl}img/illu_Core.png`,
+                  image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
                   title: <translate>Core Development</translate>,
