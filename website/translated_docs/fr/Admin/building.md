@@ -33,7 +33,7 @@ La génération ne peut s'effectuer qu'une fois la base de données compilée. S
 
 ### Paramètres du générateur d'application
 
-Chaque paramètre de générateur d'application est stocké en tant que clé XML dans le fichier de l'application nommé "buildApp.4DSettings", situé dans le dossier Settings de la base de données.
+Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
 
 Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
@@ -41,12 +41,17 @@ Les clés XML fournissent des options supplémentaires à celles affichées dans
 
 ### Fichier d'historique
 
-Lors de la génération d’une application, 4D génère un fichier d'historique dans le dossier **Logs**. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. Le fichier d'historique stocke les informations suivantes pour chaque génération :
 
 - Le début et la fin de la génération des cibles,
 - Le nom et le chemin d'accès complet des fichiers générés,
 - La date et l'heure de la génération,
-- Toutes les erreurs qui se sont produites.
+- Any errors that occurred,
+- Any signing issues (e.g. a non-signed plug-in).
+
+Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
+
+> Use the `Get 4D file(Build application log file)` command to get the log file location.
 
 ## Nom de l'application et dossier de destination
 
@@ -329,22 +334,22 @@ La page liste les éléments chargés par l’application 4D courante :
 
 Si vous souhaitez intégrer d’autres plug-ins ou composants dans l’application exécutable, il vous suffit de les placer dans un dossier **PlugIns** ou **Components** à côté de l’application 4D Volume Desktop ou de l’application 4D Server. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
 
-En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. En revanche, la présence de deux instances d’un même composant empêchera l’ouverture de l’application.
+En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
 
-> L’utilisation de plug-ins et de composants compilés dans une version de déploiement nécessite des numéros de licence adéquats.
+> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
 
-## Page Licences & Certificat
+## Licenses & Certificate page
 
-La page Licences & Certificat vous permet de :
+The Licences & Certificate page can be used to:
 
-* spécifier le ou les numéro(s) de licence que vous souhaitez intégrer dans votre application exécutable monoposte
-* signer l'application à l'aide d'un certificat sous macOS.
+* designate the license number(s) that you want to integrate into your single-user stand-alone application
+* sign the application by means of a certificate in macOS.
 
-![](assets/en/Project/buildapplicenseProj.png)
+![](assets/en/Admin/buildappCertif.png)
 
-### Licences
+### Licenses
 
-La page affiche la liste des licences de déploiement disponibles que vous pouvez intégrer dans votre application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
+This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
 
 Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre.
 
@@ -371,23 +376,31 @@ A l’issue de la génération, un nouveau fichier de licence de déploiement es
 
 Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper d’OS X lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
 
-- Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS. 4D vérifiera la disponibilité des éléments nécessaires à la certification au moment de la génération :
+- Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS. 4D will check the availability of elements required for certification when the build occurs: 
 
-![](assets/en/Project/buildapposxcertProj.png)
+![](assets/en/Admin/buildapposxcertProj.png)
 
-L'option est affichée sous Windows et Os X mais n’est prise en compte que pour les versions macOS.
+This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
-* **Nom du certificat** : Saisissez dans cette zone le nom de votre certificat développeur validé par Apple. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès :
+* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. Le nom d’un certificat est généralement le nom du certificat dans l’utilitaire Trousseau d’accès :
 
 ![](assets/en/Project/certificate.png)
 
 Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez utiliser les commandes du menu Trousseaux d’accès ou vous connecter à la page suivante :[ http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
-> Le certificat requiert la présence de l’utilitaire codesign d’Apple. Cet utilitaire est fourni par défaut et se trouve généralement dans le dossier "/usr/bin/". En cas d’erreur, vérifiez que cet utilitaire est présent sur votre disque.
+> Le certificat requiert la présence de l’utilitaire codesign d’Apple. Cet utilitaire est fourni par défaut et se trouve généralement dans le dossier "/usr/bin/". If an error occurs, make sure that this utility is present on your disk.
 
-#### A propos de Gatekeeper
+* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. 
 
-Gatekeeper est une fonction de sécurité d’OS X permettant de contrôler l’exécution des applications téléchargées depuis Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
+<
+
+p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
+
+> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
+
+#### About Gatekeeper
+
+Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
 L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
 
