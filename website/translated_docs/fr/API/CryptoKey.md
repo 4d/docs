@@ -1,23 +1,23 @@
 ---
 id: cryptoClass
-title: CryptoKey Class
+title: Classe CryptoKey
 ---
 
 ## Aperçu
 
-The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair.
+La classe `CryptoKey` du langage 4D contient une paire de clés de chiffrement asymétrique.
 
-This class is available from the `4D` class store.
+Cette classe est disponible depuis le "class store" de `4D`.
 
-### `cryptoKey` object properties
+### Propriétés de l'objet `cryptoKey`
 
-A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties (all are read-only):
+Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcryptokeynew). Ses propriétés sont les suivantes (en lecture seule) :
 
-| Propriété | Type    | Description                                                                                                              |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| type      | Texte   | Name of the key type. For example: "ECDSA" or "RSA".                                                                     |
-| size      | integer | Defined only for RSA keys: the size of the key in bits. Typically 2048                                                   |
-| curve     | Texte   | Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1" |
+| Propriété | Type   | Description                                                                                                               |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| type      | Texte  | Nom du type de clé. Par exemple : "ECDSA" ou "RSA".                                                                       |
+| size      | entier | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                       |
+| curve     | Texte  | Defined only for ECDSA keys: the normalised curve name of the key. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
 
 
 ### Exemple
@@ -39,24 +39,24 @@ ASSERT($status.success)
 
 ## 4D.CryptoKey.new()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-| Paramètres | Propriété | Type    |    | Description                                                                                                                    |
-| ---------- | --------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------ |
-| settings   |           | object  | -> | Settings to generate or load a key pair                                                                                        |
-|            | type      | Texte   |    | Type of the key: "RSA", "ECDSA", or "PEM" (see below)                                                                          |
-|            | size      | integer |    | Size of RSA key in bits. 2048 by default                                                                                       |
-|            | curve     | Texte   |    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
-|            | pem       | Texte   |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
-|            |           |         |    |                                                                                                                                |
-| keyPair    |           | object  | <- | Object encapsulating an encryption key pair                                                                                    |
+| Paramètres | Propriété | Type   |    | Description                                                                                                                    |
+| ---------- | --------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------ |
+| settings   |           | objet  | -> | Paramètres pour générer ou charger une paire de clés                                                                           |
+|            | type      | Texte  |    | Type de clé : "RSA", "ECDSA", ou "PEM" (voir ci-dessous)                                                                       |
+|            | size      | entier |    | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
+|            | curve     | Texte  |    | nom de la courbe ECDSA. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                 |
+|            | pem       | Texte  |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+|            |           |        |    |                                                                                                                                |
+| keyPair    |           | object | <- | Object encapsulating an encryption key pair                                                                                    |
 
 
 This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -71,11 +71,11 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 
 ## cryptoKey.getPrivateKey()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.getPrivateKey() -> privateKey
@@ -90,11 +90,11 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 
 ## cryptoKey.getPublicKey()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.getPublicKey() -> publicKey
@@ -109,11 +109,11 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 
 ## cryptoKey.sign()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.sign(message;options) -> signature
@@ -135,11 +135,11 @@ The `cryptoKey` must contain a valid **private** key.
 
 ## cryptoKey.verify()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.verify(message;signature;options) -> status
@@ -168,11 +168,11 @@ The `cryptoKey` must contain a valid **public** key.
 
 ## cryptoKey.encrypt()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.encrypt(message;options) -> result
@@ -194,11 +194,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 ## cryptoKey.decrypt()
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R4  | Ajoutées      |
 </details> 
 
 #### cryptoKey.decrypt(message;options) -> status
