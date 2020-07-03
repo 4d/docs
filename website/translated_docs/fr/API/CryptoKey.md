@@ -22,17 +22,17 @@ Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcrypto
 
 ### Exemple
 
-The following example signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+L'exemple suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
 
 ```4d
- // Generate a new ECDSA key pair
+ // Générer une nouvelle paire de clés ECDSA
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
-  // Get signature as base64
+  // Obtenir une signature en base64
 $message:="hello world" 
 $signature:=$key.sign($message;New object("hash";"HASH256"))
 
-  // Verify signature
+  // Vérifier la signature
 $status:=$key.verify($message;$signature;New object("hash";"HASH256"))
 ASSERT($status.success)
 ```
@@ -53,21 +53,21 @@ ASSERT($status.success)
 | settings   |           | objet  | -> | Paramètres pour générer ou charger une paire de clés                                                                           |
 |            | type      | Texte  |    | Type de clé : "RSA", "ECDSA", ou "PEM" (voir ci-dessous)                                                                       |
 |            | size      | entier |    | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
-|            | curve     | Texte  |    | nom de la courbe ECDSA. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                 |
-|            | pem       | Texte  |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+|            | curve     | Texte  |    | nom de la courbe ECDSA. Généralement "prime256v1" pour ES256 (par défaut), "secp384r1" pour ES384, "secp521r1" pour ES512      |
+|            | pem       | Texte  |    | Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. |
 |            |           |        |    |                                                                                                                                |
-| keyPair    |           | object | <- | Object encapsulating an encryption key pair                                                                                    |
+| keyPair    |           | object | <- | Objet contenant une paire de clés de chiffrement                                                                               |
 
 
-This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+Cette méthode crée un nouvel objet contenant une paire de clés de chiffrement, fondée sur le paramètre `settings`. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
-Pass the type of key in the `type` property of the `settings` parameter:
+Passez le type de clé dans la propriété `type` du paramètre `settings` :
 
-- "RSA": generates an RSA key pair, using `settings.size` as size.
-- "ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as curve. Note that ECDSA keys cannot be used for encryption but only for signature.
-- "PEM": loads a key pair definition in PEM format, using `settings.pem`.
+- "RSA" : génère une paire de clés RSA, à l'aide de `settings.size` pour la taille.
+- "ECDSA": génère une paire de clés Elliptic Curve Digital Signature Algorithm, à l'aide de `settings.curve` pour la propriété curve. A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
+- "PEM" : charge une définition de paire de clés au format PEM, à l'aide de `settings.pem`.
 
-The resulting `keyPair` object is a shared object and can therefore be used by multiple 4D processes simultaneously.
+L'objet `keyPair` qui en résulte est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
 
 ## cryptoKey.getPrivateKey()
 
@@ -80,13 +80,13 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
-| Paramètres | Propriété | Type  |    | Description               |
-| ---------- | --------- | ----- | -- | ------------------------- |
-|            |           |       |    |                           |
-| privateKey |           | Texte | <- | Private key in PEM format |
+| Paramètres | Propriété | Type  |    | Description                |
+| ---------- | --------- | ----- | -- | -------------------------- |
+|            |           |       |    |                            |
+| privateKey |           | Texte | <- | Clé primaire au format PEM |
 
 
-This method returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+Cette méthode retourne la clé privée de l'objet `cryptoKey` au format PEM, ou une chaine vide si aucune n'est disponible.
 
 ## cryptoKey.getPublicKey()
 
@@ -99,13 +99,13 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 
 #### cryptoKey.getPublicKey() -> publicKey
 
-| Paramètres | Propriété | Type  |    | Description              |
-| ---------- | --------- | ----- | -- | ------------------------ |
-|            |           |       |    |                          |
-| publicKey  |           | Texte | <- | Public key in PEM format |
+| Paramètres | Propriété | Type  |    | Description                |
+| ---------- | --------- | ----- | -- | -------------------------- |
+|            |           |       |    |                            |
+| publicKey  |           | Texte | <- | Clé publique au format PEM |
 
 
-This method returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, ou une chaine vide si aucune n'est disponible.
 
 ## cryptoKey.sign()
 
