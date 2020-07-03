@@ -33,7 +33,7 @@ Building can only be carried out once the database is compiled. If you select th
 
 ### Build application settings
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
+Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
@@ -41,12 +41,17 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Logbuch
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. The log file stores the following information for each build:
 
 - The start and end of building of targets,
 - The name and full access path of the files generated,
 - The date and time of the build,
-- Any errors that occurred.
+- Any errors that occurred,
+- Any signing issues (e.g. a non-signed plug-in).
+
+Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
+
+> Use the `Get 4D file(Build application log file)` command to get the log file location.
 
 ## Application name and destination folder
 
@@ -341,7 +346,7 @@ The Licences & Certificate page can be used to:
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
 * sign the application by means of a certificate in macOS.
 
-![](assets/en/Project/buildapplicenseProj.png)
+![](assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
@@ -374,7 +379,7 @@ The application builder can sign merged 4D applications under macOS (single-user
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs: 
 
-![](assets/en/Project/buildapposxcertProj.png)
+![](assets/en/Admin/buildapposxcertProj.png)
 
 This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
@@ -385,6 +390,14 @@ This option is displayed under both Windows and macOS, but it is only taken into
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>.
 
 > This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
+
+* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. 
+
+<
+
+p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
+
+> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
 #### About Gatekeeper
 
