@@ -41,7 +41,7 @@ class Index extends React.Component {
       start: <translate desc="in index page Getting started">Starting 4D</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
 	projectDatabases: <translate desc="in index page Getting started">Project Management</translate>,
-	ORDA: <translate desc="in index page Getting started">ORDA</translate>,
+	ORDA: <translate desc="in index page Getting started">Object Relational Data Access (ORDA)</translate>,
   class: <translate>Class API Reference</translate>,
     formEditor: <translate>Forms</translate>,
 	  formProperties: <translate>Form Properties</translate>,
