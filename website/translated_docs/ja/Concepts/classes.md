@@ -175,7 +175,7 @@ Function <name>({parameterName : type;...})
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
 
-> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は自動補完機能から除外されます。 たとえば、MyClass に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、このメンバーメソッドは候補として提示されません。
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は自動補完機能から除外されます。 たとえば、MyClass に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
 関数名のすぐ後に、名前とデータ型を指定して [引数](parameters.md#名前付き引数-クラス関数) を宣言します。 たとえば:
 
@@ -185,7 +185,7 @@ Function setFullName($firstname : Text;$lastname : Text)
 
 > [Sequential parameters](parameters.md#sequential-parameters) ($1, $2...) can be also used in class functions.
 
-Within a class function, the `This` command is used as the object instance. たとえば:
+クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
 
 ```4d
 Function setFullname($firstname : Text;$lastname : Text)
@@ -197,23 +197,23 @@ Function getFullname()
     $0:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラスメソッドの場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
+クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-データベースのコード内では、クラスメソッドはオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
+データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- `()` 演算子の使用 For example, `myObject.methodName("hello")`
+- `()` 演算子の使用 例: `myObject.methodName("hello")`
 
-- use of a "Function" class member method:
+- "Function" クラスメンバーメソッドの使用:
     
     - `apply()`
     - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **スレッドセーフに関する警告:** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合:  
+> - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 - ランタイムにおいてのみ、4D はエラーを生成します。
 
-#### Class function parameters
+#### クラス関数の引数
 
-Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x;$y : Variant;$z : Integer;$xy : Object)
