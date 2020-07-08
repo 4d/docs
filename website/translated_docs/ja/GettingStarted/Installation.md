@@ -3,15 +3,15 @@ id: installation
 title: インストールとアクティベーション
 ---
 
-Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
+4D へようこそ！ You will find below all necessary information about how to install and register your 4D application.
 
-## Required configuration
+## 最低動作環境
 
 Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
 
 All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
 
-## Installation on disk
+## ディスクへのインストール
 
 4D products are installed from the 4D Web site:
 
