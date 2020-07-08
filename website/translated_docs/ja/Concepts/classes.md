@@ -213,22 +213,22 @@ Function getFullname()
 
 #### クラス関数の引数
 
-関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数の引数がある場合、それらはセミコロン (;) で区切ります。
 
 ```4d
 Function add($x;$y : Variant;$z : Integer;$xy : Object)
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> 引数のデータ型を指定しない場合、その引数は `バリアント型` として定義されます。
 
-The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. For example:
+戻り値 ($0) は、名前付き引数のリスト内で宣言することができません。 そのため、関数のコード内にて宣言する必要があります。 例:
 
 ```4d
 Function add($x : Variant;$y : Integer)
     var $0 : Text
 ```
 
-> The classic 4D syntax for method parameters can be used in conjunction with the class function parameter syntax. For example:
+> メソッド内の引数宣言に使用される従来の 4D シンタックスは、クラス関数用のシンタックスと組み合わせて使うことができます。 For example:
 > 
 > ```4d
 Function add($x : Integer)
