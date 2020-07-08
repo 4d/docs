@@ -3,40 +3,40 @@ id: installation
 title: インストールとアクティベーション
 ---
 
-4D へようこそ！ You will find below all necessary information about how to install and register your 4D application.
+4D へようこそ！ このページでは、4D 製品のインストールとアクティベーションについて必要な情報をまとめています。
 
 ## 最低動作環境
 
-Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
+4D 製品の macOS / Windows における最小動作環境については、4D Webサイトの [製品ダウンロード](https://jp.4d.com/product-download) ページを参照してください。
 
-All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
+追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/) にてご確認いただけます。
 
 ## ディスクへのインストール
 
-4D products are installed from the 4D Web site:
+4D 製品のインストーラーは 4D の Web サイトから入手していただけます:
 
-1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
-2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+1. 4D Web サイトに接続し、[製品ダウンロード](https://jp.4d.com/product-download) ページを開きます。
+2. 必要な製品バージョンのダウンロードリンクをクリックして、インストーラーをダウンロードします。インストールにあたっては、画面に表示される指示に従ってください。
 
-## Activation of a product
+## 製品のアクティベーション
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. You also need to activate any additional licenses you obtain.
+ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 また、追加のライセンスを入手した際にもアクティベーションをおこなう必要があります。
 
-No activation is required for the following uses:
+以下の利用モードの場合には、アクティベーションは必要はありません:
 
-- 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- リモートモードで利用される 4D (4D Serverへの接続)
+- インタープリターモードのデータベースを開く場合で、デザインモードへはアクセスしないローカルモードの4D
 
-**Important:** You must have an Internet connection and an e-mail account in order to activate your products.
+**重要:** 製品のアクティベーションには、インターネットへの接続および電子メールアカウントが必要です。
 
-### Activate 4D
+### 4D のアクティベーション
 
-1. Launch the 4D application.
-2. Select the **License Manager...** command from the **Help** menu.
+1. 4D アプリケーションを起動します。
+2. **ヘルプ** メニューから **ライセンスマネージャー...** を選択します。
 
 ![](assets/en/getStart/helpMenu.png)
 
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
+**ライセンスマネージャー** ダイアログボックスが表示されます (デフォルトではオンラインアクティベーションのページが選択されています)。 次のアクティベーションモードの章を参照してください。
 
 > When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
 
