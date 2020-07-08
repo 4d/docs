@@ -34,7 +34,7 @@ Class オブジェクトは共有オブジェクトです。したがって、�
 すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
 ```4d
-//Class: Polygon
+// クラス: Polygon
 Class constructor($width : Integer;$height : Integer)
     This.area:=$width*$height
 
@@ -57,7 +57,7 @@ Class constructor($width : Integer;$height : Integer)
 たとえば:
 
 ```4d
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text;$lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -168,10 +168,10 @@ $cName:=OB Class($o).name // "Empty"
 
 ```js
 Function <name>({parameterName : type;...})
-// code
+// コード
 ```
 
-クラスメソッドとは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラスメソッドは "Function" クラスのオブジェクトでもあります。
+クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
 クラス定義ファイルでは、`Function` キーワードとメンバーメソッド名を使用してメンバーメソッド宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
 
@@ -197,11 +197,11 @@ Function getFullname()
     $0:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+クラスメソッドの場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+データベースのコード内では、クラスメソッドはオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- `()` 演算子の使用 For example, `myObject.methodName("hello")`
 
 - use of a "Function" class member method:
     
