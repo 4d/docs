@@ -1,6 +1,6 @@
 ---
 id: installation
-title: Installation and activation
+title: インストールとアクティベーション
 ---
 
 Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
