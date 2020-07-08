@@ -27,7 +27,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in named variables (class functions only) or sequentially numbered variables (methods and class functions).
 
-## Named parameters (class functions)
+## 名前付き引数 (クラス関数)
 
 Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. Multiple parameters (and types) are separated by semicolons (;).
 
