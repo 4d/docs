@@ -13,11 +13,11 @@ title: インストール
 
 ## ディスクへのインストール
 
-4D products are installed from the 4D website:
+4D 製品のインストーラーは 4D の Web サイトから入手していただけます:
 
-1. Connect to the 4D website and go to the [Downloads](https://us.4d.com/product-download) page.
+1. 4D Web サイトに接続し、[製品ダウンロード](https://jp.4d.com/product-download) ページを開きます。
 
-2. Click on the download link for your 4D product and follow the on-screen instructions.
+2. 必要な製品バージョンのダウンロードリンクをクリックして、インストーラーをダウンロードします。インストールにあたっては、画面に表示される指示に従ってください。
 
 ## Sign in
 
