@@ -173,11 +173,11 @@ Function <name>({parameterName : type;...})
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードとメンバーメソッド名を使用してメンバーメソッド宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は自動補完機能から除外されます。 たとえば、MyClass に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、このメンバーメソッドは候補として提示されません。
 
-Immediately following the function name, [parameters](parameters.md#named-parameters-class-functions) for the function can be declared with an assigned name and data type. たとえば:
+関数名のすぐ後に、名前とデータ型を指定して [引数](parameters.md#名前付き引数-クラス関数) を宣言します。 たとえば:
 
 ```code4d
 Function setFullName($firstname : Text;$lastname : Text)
