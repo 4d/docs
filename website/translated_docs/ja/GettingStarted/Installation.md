@@ -38,9 +38,9 @@ title: インストールとアクティベーション
 
 **ライセンスマネージャー** ダイアログボックスが表示されます (デフォルトではオンラインアクティベーションのページが選択されています)。 次のアクティベーションモードの章を参照してください。
 
-> When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
+> アクティベーションされていない 4D Developer Edition を使って、インタープリターモードのローカルデータベースを開く、または新規作成すると、自動アクティベーション機構が作動します。 ダイアログボックスが表示され、お使いの 4D が私たちのカスタマーデータベースに接続し、ライセンスをアクティベーションすることを知らせます (ご利用の 4Dアカウントのパスワードを入力する必要があります)。
 
-### Activate 4D Server
+### 4D Server のアクティベーション
 
 1. Launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
 
