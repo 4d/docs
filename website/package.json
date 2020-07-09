@@ -5,15 +5,14 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
-    "build": "doc_preprocess --path ../docs/ --output ../docs/ && doc_preprocess --path 'translated_docs/*' --output translated_docs/ && docusaurus-build",
+    "build": "docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "@gkotulski/doc_preprocessing": "^1.0.8",
     "docusaurus": "^1.14.4",
-    "highlightjs-4d": "^1.0.3"
+    "highlightjs-4d": "^1.0.0"
   }
 }

@@ -14,20 +14,6 @@ const GridBlock = CompLibrary.GridBlock;
 //const Showcase = require(`${process.cwd()}/core/Showcase.js`);
 const translate = require('../../server/translate.js').translate;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
-
-const PromoSection = props => (
-  <div className="section promoSection">
-    <div className="promoRow">
-      <div className="pluginRowBlock">{props.children}</div>
-    </div>
-  </div>
-);
-
-function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
-}
-
 function HomeSplash(props) {
   const {siteConfig, language} = props;
 
@@ -42,36 +28,10 @@ function HomeSplash(props) {
           />
 			{siteConfig.tagline}
         </h1>
-
       </div>
     </div>
   );
 }
-		// juste en dessous /h1 <div className="inner">
-         //  <PromoSection>
-          //  <Button href="https://developer.4d.com/docs/18/">v18</Button>
-           // <Button href="https://developer.4d.com/docs/18Rx/">v18 R2 BETA</Button>
-          //  <Button href="https://developer.4d.com/docs/18RxBETA/">v18 R3</Button>
-       //   </PromoSection>
-      //  </div>
-
-class Button extends React.Component {
-  render() {
-    return (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
-          {this.props.children}
-        </a>
-      </div>
-    );
-  }
-}
-
-Button.defaultProps = {
-  target: '_self',
-};
-
-
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = 'en'} = this.props;
@@ -79,9 +39,10 @@ class Index extends React.Component {
     var subContents={
       installation: <translate desc="in index page Getting started">Installation and activation</translate>,
       languageConcepts: <translate desc="in index page Getting started">Language Concepts</translate>,
-      projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
-	  formEditor: <translate>Form Editor</translate>,
-	  events: <translate>Form Events</translate>,
+	projectDatabases: <translate desc="in index page Getting started">Project databases</translate>,
+	  formEditor: <translate>Forms</translate>,
+	  formProperties: <translate>Form Properties</translate>,
+    events: <translate>Form Events</translate>,
 	  formObjects: <translate>Form Objects</translate>,
 	  formObjectProperties: <translate>Form Object Properties</translate>,
 	  menus: <translate>Menus</translate>,
@@ -111,7 +72,7 @@ class Index extends React.Component {
                 },
                 {
 
-                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/objectLibrary.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -119,7 +80,7 @@ class Index extends React.Component {
                   title: <translate>Developing a Desktop application</translate>,
                 },
                 {
-                  content: `[${subContents.webServer}](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.${this.props.language}.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
+                  content: `[${subContents.webServer}](${siteConfig.baseUrl}${this.props.language}/WebServer/webServerObject.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',

@@ -47,6 +47,35 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 * * *
 
+## Save value
+
+This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
+
+This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
+
+Here is the list of objects whose value can be saved:
+
+| Object                                     | Saved value                                                                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------- |
+| [Check Box](checkbox_overview.md)          | Value of associated variable (0, 1, 2)                                                 |
+| [Drop-down List](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Radio Button](radio_overview.md)          | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Tab control](tabControl.md)               | Number of selected tab                                                                 |
+
+
+#### JSON Grammar
+
+| Name          | Data Type | Possible Values |
+| ------------- | --------- | --------------- |
+| memorizeValue | boolean   | true, false     |
+
+
+#### Objects Supported
+
+[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+
+* * *
+
 ## Variable or Expression
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.

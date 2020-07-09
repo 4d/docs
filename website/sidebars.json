@@ -11,7 +11,7 @@
 		  "Concepts/number","Concepts/object","Concepts/picture","Concepts/pointer","Concepts/string","Concepts/time","Concepts/variant"
         ]
       },
-	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared",
+	"Concepts/variables","Concepts/arrays","Concepts/methods","Concepts/parameters","Concepts/shared","Concepts/classes",
 	     {
         "type": "subcategory",
         "label": "Control Flow",
@@ -23,7 +23,8 @@
 	],
 
 	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
-	"Form Editor":["FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
+	"Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
+ 	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
     "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
 		  "FormObjects/buttonGridOverview",
@@ -62,6 +63,7 @@
 			"FormObjects/propertiesDisplay",
 			"FormObjects/propertiesEntry",
 			"FormObjects/propertiesFooters",
+			"FormObjects/propertiesForm",
 			"FormObjects/propertiesGridlines",
 			"FormObjects/propertiesHeaders",
 			"FormObjects/propertiesHelp",
@@ -137,11 +139,12 @@
 			"Events/onUrlResourceLoading",
 			"Events/onValidate",
 			"Events/onVpReady",
-			"Events/onWindowOpeningDenied"],			
+			"Events/onWindowOpeningDenied"],
 	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
 	"Users and Groups":["Users/overview","Users/editing"],
+	"Web Server":["WebServer/webServerObject"],
 	"REST Server": [
 		{
         "type": "subcategory",

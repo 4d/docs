@@ -6,32 +6,32 @@ title: Classes
 
 ## Aperçu
 
-The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
+Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can `extend` another class, and then inherits from its functions.
+Une fois qu'une classe est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut `s'étendre` à une autre classe, puis hériter de ses fonctions.
 
-The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
+Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
-### Class object
+### L'objet classe
 
-A class is an object itself, of "Class" class. A class object has the following properties and methods:
+Une classe est un objet de classe "Class". Un objet de classe a les propriétés et méthodes suivantes :
 
-- `name` which must be ECMAScript compliant
-- `superclass` object (optional, null if none)
-- `new()` method, allowing to instantiate class objects.
+- `name` qui doit être conforme à ECMAScript
+- un objet `superclass` (facultatif, nul s'il n'y en a aucun)
+- une méthode `new()` permettant d'instancier des objets de classe.
 
-In addtion, a class object can reference:
+In addition, a class object can reference:
 
-- a `constructor` object (optional)
-- a `prototype` object, containing named function objects (optional).
+- un objet `constructeur` (facultatif)
+- un objet `prototype`, contenant des objets de fonction nommés (facultatif).
 
-A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+Un objet de classe est un objet partagé et est donc accessible simultanément à partir de différents processus 4D.
 
-### Property lookup and prototype
+### Recherche et prototype des propriétés
 
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continue searching in the prototype object of its superclass, and so on until there is no more superclass.
+Tous les objets de 4D sont liés en interne à un objet de classe. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
 
-All objects inherit from the class "Object" as their inheritance tree top class.
+Tous les objets héritent de la classe "Object" comme classe supérieure d'arbre d'héritage.
 
 ```4d
   //Class: Polygon
@@ -76,8 +76,8 @@ In a method, creating a "Person":
 Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
 
 ```4d
-//Empty.4dm class file
-//Nothing
+//Fichier classe Empty.4dm
+//Rien
 ```
 
 You could write in a method:
@@ -92,7 +92,7 @@ $cName:=OB Class($o).name //"Empty"
 
 Available classes are accessible from their class stores. The following class stores are available:
 
-- a class store for built-in 4D classes. It is returned by the `4d` command.
+- a class store for built-in 4D classes. It is returned by the `4D` command.
 - a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
 
 For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
@@ -103,8 +103,6 @@ For example, you create a new instance of an object of myClass using the `cs.myC
 
 A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
 
-> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
-
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
 - Database folder 
@@ -112,6 +110,14 @@ For example, if you want to define a class named "Polygon", you need to create t
         * Sources 
             - Classes 
                 + Polygon.4dm
+
+### Class names
+
+When naming classes, you should keep in mind the following rules:
+
+- A class name must be ECMAScript compliant. 
+- Class names are case sensitive.
+- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
 ### 4D Developer interface
 
@@ -234,7 +240,7 @@ Class Constructor
 
 A class constructor function, which can accept parameters, can be used to define a user class.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
@@ -274,7 +280,7 @@ Class extension must respect the following rules:
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
@@ -305,12 +311,12 @@ $0:=This.height*This.width
 
 ### Super
 
-#### Super {( param )} {-> Object}
+#### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                 |
-| --------- | ------ | -- | ------------------------------------------- |
-| param     | mixed  | -> | Parameter to pass to the parent constructor |
-| Result    | object | <- | Object's parent                             |
+| Parameter | Type   |    | Description                                    |
+| --------- | ------ | -- | ---------------------------------------------- |
+| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
+| Result    | object | <- | Object's parent                                |
 
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
@@ -464,20 +470,20 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Si *f* est appelé comme méthide de $o, son `This` se réfère à $o.
 
-## Class commands
+## Commandes Class
 
-Several commands of the 4D language allows you to handle class features.
+Plusieurs commandes du langage 4D vous permettent de gérer les fonctionnalités de classe.
 
 ### OB Class
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` retourne la classe de l'objet passé en paramètreed in parameter.
 
 ### OB Instance of
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### OB Instance of ( objet ; classe ) -> Booléen
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Instance of` retourne `true` si `objet` appartient à `class` ou à l'une de ses classes héritées, et sinon `false`.

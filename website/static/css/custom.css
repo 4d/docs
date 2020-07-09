@@ -25,10 +25,6 @@ color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 }
 
 
-.button{
-color: white;
-border-color: white; 
-}
 
 
 .copyright{
@@ -129,7 +125,6 @@ color: #fff;
   }
 }
 
-
 .index-hero-logo {
   animation-duration: 2s;
   animation-name: jackInTheBox;
@@ -205,5 +200,4 @@ color: #fff;
   max-width: 400px;
 
 }
-
 }

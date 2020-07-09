@@ -47,6 +47,34 @@ For more information about naming rules for form objects, refer to [Identifiers]
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
+---
+## Save value
+
+This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form. 
+
+This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window. 
+
+Here is the list of objects whose value can be saved:
+
+|Object|Saved value|
+|---|---|
+|[Check Box](checkbox_overview.md)|Value of associated variable (0, 1, 2)|
+|[Drop-down List](dropdownList_Overview.md)|Number of selected row|
+|[Radio Button](radio_overview.md)|Value of associated variable (1, 0, True or False for buttons according to their type)|
+|[Tab control](tabControl.md)|Number of selected tab|
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|memorizeValue|boolean |true, false|
+
+#### Objects Supported
+
+[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+
+
 
 ---
 ## Variable or Expression

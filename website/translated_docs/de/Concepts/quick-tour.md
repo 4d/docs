@@ -181,6 +181,62 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
+## Klassen
+
+Die 4D Programmiersprache unterstützt Objekt Klassen. Um eine Klasse mit Name "myClass" zu erstellen, fügen Sie im Ordner Project/Sources/Classes eines Projekts die Datei `myClass.4dm` hinzu.
+
+Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie die Benutzerklasse aus dem *Store der Klassen* auf (`cs`) und verwenden die Member Function `new()`. Sie können Parameter übergeben.
+
+```4d
+// in a 4D method
+$o:=cs.myClass.new() 
+```
+
+In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
+
+```4d
+//in the myClass.4dm file
+Function hello
+  C_TEXT($0)
+  $0:="Hello "+This.who
+```
+
+Um eine Member Method der Klasse auszuführen, setzen Sie den Operator `()` für die Member Method der Instanz des Objekts.
+
+```4d
+$o:=cs.myClass.new()
+$o.who:="World"
+$message:=$o.myClass.hello()  
+//$message: "Hello World"
+```
+
+Optional können Sie das Schlüsselwort `Class constructor` zum Deklarieren von Eigenschaften des Objekts verwenden.
+
+```4d
+//in the Rectangle.4dm file
+Class constructor
+C_LONGINT($1;$2)
+This.height:=$1
+This.width:=$2  
+This.name:="Rectangle"
+```
+
+Eine Klasse kann über `Class inherits <ClassName>` von einer anderen Klasse erben. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
+
+```4d
+//in the Square.4dm file
+Class extends rectangle
+
+Class constructor
+C_LONGINT($1)
+
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
+Super($1;$1)
+
+This.name:="Square"
+```
+
 ## Operatoren
 
 In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil wollen. Es ist eher so, dass Sie etwas für oder mit diesen Daten durchführen wollen. Dafür verwenden Sie Operatoren. Operatoren führen in der Regel mit 2 Teilen von Daten eine Operation aus, die ein neues Datenteil ergeben. Sie kennen bereits viele Operatoren. Zum Beispiel verwendet 1 + 2 den Operator für Addition (oder Pluszeichen), um zwei Zahlen zusammenzählen. Das Ergebnis ist 3. Diese Übersicht zeigt die gängigen numerischen Operatoren:

@@ -5,7 +5,7 @@ title: Documenting a project
 
 ## Overview
 
-In project databases, you can document your methods as well as your forms, tables, or fields. Creating a documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database.
+In project databases, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database.
 
 The following project elements accept documentation:
 
@@ -13,21 +13,21 @@ The following project elements accept documentation:
 - Formulare
 - Tables and Fields
 
-Your documentation files are written in markdown syntax (.md files) using any editor that supports markdown. They are stored as independant files within your project folder.
+Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
-Documentation is displayed in the right-side pane of the Explorer:
+Documentation is displayed in the preview area (right-side panel) of the Explorer:
 
 ![](assets/en/Project/explorer_Doc.png)
 
-It can also be exposed partially as [code editor tips](#viewing-documentation-in-the-code-editor).
+It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
 ## Documentation files
 
 ### Documentation file name
 
-Documentation files get the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
-In the Explorer, 4D will automatically display the documentation file with the same name as the selected element (see below).
+In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
 
 ### Documentation file architecture
 
@@ -37,7 +37,7 @@ The `Documentation` folder architecture is the following:
 
 - **Documentation**
     
-    + **Classes** 
+    + **Klassen** 
         * myClass.md
     * **DatabaseMethods** 
         * onStartup.md
@@ -58,17 +58,17 @@ The `Documentation` folder architecture is the following:
         * ...
 * A project form and its project form method share the same documentation file for form and method.
 
-* A table form and its table form method share the same documentation file for form and method. 
+* A table form and its table form method share the same documentation file for form and method.
 
-> Renaming or deleting a documented element in your project will result in renaming or deleting the associated markdown file.
+> Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
 
 ## Documentation in the Explorer
 
 ### Viewing documentation
 
-To view a documentation in the Explorer window:
+To view documentation in the Explorer window:
 
-1. Make sure the right side panel is displayed.
+1. Make sure the preview area is displayed.
 2. Select the documented element in the Explorer list.
 3. Click the **Documentation** button located below the preview area.
 
@@ -80,7 +80,7 @@ To view a documentation in the Explorer window:
 
 ### Editing documentation file
 
-You can create and/or edit a markdown documentation file from the Explorer window for the selected element.
+You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
 
 If there is no documentation file for the selected element, you can:
 
@@ -89,22 +89,21 @@ If there is no documentation file for the selected element, you can:
 
 ![](assets/en/Project/comments-explo3.png)
 
-4D automatically creates a .md file with a basic template at appropriate name and location and opens it with your default markdown editor.
+4D automatically creates an appropriately named .md file with a basic template at the relevant location and opens it with your default Markdown editor.
 
-If a documentation file already exists for the selected element, you can open it with your markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
 ## Viewing documentation in the code editor
 
-The 4D code editor displays a part of the documentation of a method in its help tip.
+The 4D code editor displays a part of a method's documentation in its help tip.
 
 ![](assets/en/Project/codeEditor_Comments.png)
 
-If a file named "<MethodName>.md" exists in "<package>/documentation" folder, the code editor displays, by priority:
+If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, the code editor displays (by priority):
 
-- Any text entered in a html `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 
-- Or, if no html `comment` tag is used, the first sentence after a `# Description` tag of the markdown file.  
-    In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
+- Or if no HTML `comment` tag is used, the first sentence after a `# Description` tag of the Markdown file. In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
 
 > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
@@ -112,9 +111,9 @@ If a file named "<MethodName>.md" exists in "<package>/documentation" folder, th
 
 4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
 
-However, you can use any [supported markdown tags](#supported-markdown).
+However, you can use any [supported Markdown tags](#supported-markdown).
 
-New documentation files are created with this default contents:
+New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
@@ -131,7 +130,7 @@ New documentation files are created with this default contents:
   
   <tr>
     <td>
-      \<!-- Type here your summary -->
+      \<!-- Type your summary here -->
     </td>
     
     <td>
@@ -145,7 +144,7 @@ New documentation files are created with this default contents:
     </td>
     
     <td>
-      Heading level 2 in markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used
+      Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used
     </td>
   </tr>
   
@@ -155,13 +154,13 @@ New documentation files are created with this default contents:
     </td>
     
     <td>
-      Heading level 2, you can use this area to propose example code
+      Heading level 2, you can use this area to show sample code
     </td>
   </tr>
   
   <tr>
     <td>
-      ```4D <br>Type here your example ```
+      ```4D <br>Type your example here ```
     </td>
     
     <td>
@@ -179,7 +178,7 @@ New documentation files are created with this default contents:
     ### Title 3
     
 
-- The style tags (italic, bold, strike-through) are supported:
+- The style tags (italic, bold, strikethrough) are supported:
 
     _italic_
     **bold**
@@ -226,7 +225,7 @@ New documentation files are created with this default contents:
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> For more information, see the [GitHug markdown guide](https://guides.github.com/features/mastering-markdown/).
+> For more information, see the [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/).
 
 ## Beispiel
 
@@ -248,7 +247,7 @@ GetLogo (size) -> logo
 ## Description
 
 This method returns a logo of a specific size, depending on the value of the *size* parameter value.
-1 = smallest size, 5 = largest size. 
+1 = smallest size, 5 = largest size.
 
 ## Example
 

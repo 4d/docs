@@ -20,7 +20,7 @@ A class is an object itself, of "Class" class. A class object has the following 
 - `superclass` object (optional, null if none)
 - `new()` method, allowing to instantiate class objects.
 
-In addtion, a class object can reference:
+In addition, a class object can reference:
 
 - a `constructor` object (optional)
 - a `prototype` object, containing named function objects (optional).
@@ -29,7 +29,7 @@ A class object is a shared object and can therefore be accessed from different 4
 
 ### Property lookup and prototype
 
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continue searching in the prototype object of its superclass, and so on until there is no more superclass.
+All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
 
 All objects inherit from the class "Object" as their inheritance tree top class.
 
@@ -92,7 +92,7 @@ $cName:=OB Class($o).name //"Empty"
 
 Available classes are accessible from their class stores. The following class stores are available:
 
-- a class store for built-in 4D classes. It is returned by the `4d` command.
+- a class store for built-in 4D classes. It is returned by the `4D` command.
 - a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
 
 For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
@@ -103,8 +103,6 @@ For example, you create a new instance of an object of myClass using the `cs.myC
 
 A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
 
-> The class file name must be ECMAScript compliant. **Class names are case sensitive**.
-
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
 - Database folder 
@@ -112,6 +110,14 @@ For example, if you want to define a class named "Polygon", you need to create t
         * Sources 
             - Classes 
                 + Polygon.4dm
+
+### Class names
+
+When naming classes, you should keep in mind the following rules:
+
+- A class name must be ECMAScript compliant. 
+- Class names are case sensitive.
+- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
 ### 4D Developer interface
 
@@ -234,7 +240,7 @@ Class Constructor
 
 A class constructor function, which can accept parameters, can be used to define a user class.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionnally passed to the `new()` function.
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
@@ -274,7 +280,7 @@ Class extension must respect the following rules:
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
@@ -305,12 +311,12 @@ $0:=This.height*This.width
 
 ### Super
 
-#### Super {( param )} {-> Object}
+#### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                 |
-| --------- | ------ | -- | ------------------------------------------- |
-| param     | mixed  | -> | Parameter to pass to the parent constructor |
-| Result    | object | <- | Object's parent                             |
+| Parameter | Type   |    | Description                                    |
+| --------- | ------ | -- | ---------------------------------------------- |
+| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
+| Result    | object | <- | Object's parent                                |
 
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.

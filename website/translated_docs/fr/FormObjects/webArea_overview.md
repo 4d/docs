@@ -5,38 +5,38 @@ title: Zone Web
 
 ## Aperçu
 
-Les zones Web (Web Areas) peuvent afficher tout type de contenu Web(*) à l’intérieur de vos formulaires : pages HTML au contenu statique ou dynamique, fichiers, images, JavaScript, etc. Le moteur de rendu de la zone Web dépend de la plate-forme d’exécution de l’application et de [l'option de moteur de rendu](properties_WebArea.md#use-embedded-web-rendering-engine) sélectionnée.
+Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-Il est possible de créer plusieurs zones Web dans un même formulaire. A noter cependant que l'insertion de zones Web est soumis à [quelques limitations](#web-areas-rules).
+It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
 
-Plusieurs [actions standard](#standard-actions), de nombreuses [commandes de langage](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) et [événements formulaires](#form-events) génériques et dédiés permettent au développeur de contrôler le fonctionnement des zones Web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
+Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 
-> (*) L'usage de plugins Web et d'applets Java est toutefois déconseillé dans les zones Web car ils peuvent déstabiliser une opération menée par 4D, notamment au niveau de la gestion d'événement.
+> The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 ## Propriétés spécifiques
 
 ### Variables associées
 
-Deux variables spécifiques sont automatiquement associées à chaque zone Web :
+Two specific variables can be associated with each web area:
 
-- [`URL`](properties_WebArea.md#url) -- pour contrôler l’URL affiché par la zone Web
-- [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone Web. 
+- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the web area
+- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area. 
 
 ### Moteur de rendu Web
 
-Vous pouvez choisir entre [deux moteurs de rendus](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone Web, en fonction des spécificités de votre application.
+You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the web area, depending on the specifics of your application.
 
-Le moteur de rendu Web vous permet d'appeler des méthodes 4D à partir de la zone Web.
+Selecting the embedded web rendering engine allows you to call 4D methods from the web area.
 
 ### Accéder aux méthodes 4D
 
-Lorsque la propriété [Accès méthodes 4D](properties_WebArea.md#access-4d-methods) est cochée, vous pouvez appeler des méthodes 4D à partir d'une zone Web.
+When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
 
-> Cette option n’apparaît que si l’option [Utiliser le moteur de rendu Web intégré](#use-embedded-web-rendering-engine) est cochée.
+> This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
 
 ### Objet $4d
 
-Le [moteur de rendu Web intégré 4D](#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
+The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
@@ -71,13 +71,13 @@ Code 4D de la méthode `today` :
  $0:=String(Current date;System date long)
 ```
 
-Dans la zone Web, la méthode 4D peut être appelée avec la syntaxe suivante :
+In the web area, the 4D method can be called with the following syntax:
 
 ```js
 $4d.today()
 ```
 
-La méthode 4D ne reçoit aucun paramètre mais elle retourne la valeur $0 à la fonction callback appelée par 4D après avoir exécuté la méthode. Nous souhaitons afficher la date dans la page HTML qui est chargée par la zone Web.
+La méthode 4D ne reçoit aucun paramètre mais elle retourne la valeur $0 à la fonction callback appelée par 4D après avoir exécuté la méthode. We want to display the date in the HTML page that is loaded by the web area.
 
 Voici le code de la page HTML :
 
@@ -114,7 +114,7 @@ Code 4D de la méthode `calcSum` :
  End for
 ```
 
-Le code d'exécution JavaScript dans la zone Web est le suivant :
+The JavaScript code run in the web area is:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
@@ -125,11 +125,11 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## Actions standard
 
-Quatre actions standard sont disponibles pour gérer automatiquement les zones Web : `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 ## Evénements formulaire
 
-Des événements formulaire spécifiques sont destinés à la gestion programmée des zones Web, concernant notamment l'activation des liens :
+Specific form events are intended for programmed management of web areas, more particularly concerning the activation of links:
 
 - `On Begin URL Loading`
 - `On URL Resource Loading`
@@ -139,7 +139,7 @@ Des événements formulaire spécifiques sont destinés à la gestion programmé
 - `On Open External Link`
 - `On Window Opening Denied`
 
-En outre, les zones Web prennent en charge les événements formulaire génériques suivants :
+In addition, web areas support the following generic form events:
 
 - `On Load`
 - `On Unload`
@@ -150,54 +150,62 @@ En outre, les zones Web prennent en charge les événements formulaire génériq
 
 ### Interface utilisateur
 
-Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’interface standard des navigateurs dans la zone Web, ce qui lui permet d’interagir avec les autres zones du formulaire :
+When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
 
-- **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties. Pour des raisons de sécurité, le changement du contenu d'une zone Web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur de la souris affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). La possibilité de déposer des URL ou des fichiers dans la zone doit être explicitement autorisée à l'aide de la commande `WA SET PREFERENCE`.
+- **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
+- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
+- **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
 
 ### Sous-formulaires
 
-Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insertion d'une zone Web dans un sous-formulaire est soumise aux contraintes suivantes :
+For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 
 - Le sous-formulaire ne doit pas pouvoir défiler,
-- Les limites de la zone Web ne doivent pas dépasser de la zone du sous-formulaire
+- The limits of the web area must not exceed the size of the subform
 
-> La superposition d'une zone Web au dessus ou en-dessous d'autres objets formulaires n'est pas prise en charge.
+> Superimposing a web area on top of or beneath other form objects is not supported.
 
 ### Conflit Zone Web et serveur Web (Windows)
 
-Sous Windows, il est déconseillé d’accéder via une zone Web au serveur Web de l’application 4D contenant la zone car cette configuration peut provoquer un conflit paralysant l’application. Bien entendu, un 4D distant peut accéder au serveur Web du 4D Server, mais pas à son propre serveur Web.
+In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
 
 ### Plugins Web et applets Java
 
-(*) L'usage de plugins Web et d'applets Java est toutefois déconseillé dans les zones Web car ils peuvent déstabiliser une opération menée par 4D, notamment au niveau de la gestion d'événement.
+The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 ### Insertion du protocole (macOS)
 
-Les URLs manipulés par programmation dans les zones Web sous Mac OS doivent débuter par le protocole. Par exemple, vous devez passer la chaîne "http://www.monsite.fr" et non uniquement "www.monsite.fr".
+The URLs handled by programming in web areas in macOS must begin with the protocol. Par exemple, vous devez passer la chaîne "http://www.monsite.fr" et non uniquement "www.monsite.fr".
 
-## Accès à l’inspecteur Web
+## Access to web inspector
 
-Il est possible d’afficher et d’utiliser un inspecteur Web au sein des zones Web de vos formulaires. L’inspecteur Web est un débogueur, proposé par le moteur de rendu Web intégré. Il permet d’analyser le code et les flux d’information des pages Web.
+You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
-### Afficher l’inspecteur Web
+### Displaying the web inspector
 
-Pour que vous puissiez afficher l’inspecteur Web dans une zone Web, les conditions suivantes doivent être réunies :
+To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
 
-- [Le moteur de rendu Web intégré doit être sélectionné](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone (l’inspecteur Web n’est disponible que dans cette configuration).
-- [Le menu contextuel](properties_Entry.md#context-menu) de la zone doit être activé (l’appel de l’inspecteur est effectué via ce menu)
-- L’usage de l’inspecteur doit être expressément autorisé pour la zone à l’aide de l’instruction suivante :
+- **Execute the `WA OPEN WEB INSPECTOR` command**  
+    This command can be used directly with onscreen (form object) and offscreen web areas. In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
+
+- **Use the web area context menu**  
+    This feature can only be used with onscreen web areas and requires that the following conditions are met:
+    
+    - the embedded web rendering engine is selected for the area
+    - the [context menu](properties_Entry.md#context-menu) for the web area is enabled
+    - the use of the inspector is expressly enabled in the area by means of the following statement:
 
 ```4d
- WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
+    WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-### Utilisation de l’Inspecteur Web
+For more information, refer to the description of the `WA SET PREFERENCE` command.
 
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Lorsque vous sélectionnez cette option, le débogueur de la zone Web est alors affiché.
+### Using the web inspector
 
-> L’inspecteur Web est inclus dans le moteur de rendu intégré. Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu Web utilisé.
+When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the web inspector window is displayed.
+
+> The web inspector is included in the embedded web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the web rendering engine.
 
 ## Propriétés prises en charge
 
