@@ -63,25 +63,25 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Méthodes du serveur web
 
-A web server object contains the following member methods:
+Un objet serveur Web contient les méthodes membres suivantes :
 
-| Méthode   | Paramètres        | Return value    | Description           |
-| --------- | ----------------- | --------------- | --------------------- |
-| `start()` | settings (object) | status (object) | Starts the web server |
-| `stop()`  | -                 | -               | Stops the web server  |
+| Méthode   | Paramètres       | Valeur retournée | Description            |
+| --------- | ---------------- | ---------------- | ---------------------- |
+| `start()` | settings (objet) | status (object)  | Démarre le serveur web |
+| `stop()`  | -                | -                | Stoppe le serveur web  |
 
 
-To start and stop a web server, just call the `start()` and `stop()` member methods of the web server object:
+Pour démarrer et arrêter un serveur Web, il suffit d'appeler les méthodes membres `start()` et `stop()` de l'objet serveur Web :
 
 ```4d
 C_OBJECT($status)
-    //to start a web server with default settings
+    //pour démarrer un serveur web avec les paramètres par défaut
 $status:=webServer.start()
-    //to start the web server with custom settings  
-    //$settings object contains web server properties
+    //pour démarrer un serveur web avec des paramètres personnalisés   
+    //objet $settings contenant des propriétés du serveur web
 webServer.start($settings)
 
-    //to stop the web server
+    //pour stopper le serveur web
 $status:=webServer.stop()
 ```
 
@@ -281,11 +281,11 @@ Jeu de caractères devant être utilisé par 4D Web Server pour communiquer avec
             
             > *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the `start()` method.
             
-            ## Scope of the 4D Web commands
+            ## Portée des commandes 4D Web
             
             The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
             
-            | Command                         | Scope                                |
+            | Commande                        | Portée                               |
             | ------------------------------- | ------------------------------------ |
             | `SET DATABASE PARAMETER`        | Host database web server             |
             | `WEB CLOSE SESSION`             | Web server that received the request |
