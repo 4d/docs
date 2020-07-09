@@ -707,7 +707,7 @@
   },
   "pages-strings": {
     "Installation|in index page Getting started": "Installation",
-    "Starting 4D|in index page Getting started": "Starting 4D",
+    "Starting 4D|in index page Getting started": "Démarrer 4D",
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project Management|in index page Getting started": "Project Management",
     "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
@@ -728,9 +728,9 @@
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
-    "Web applications|no description given": "Web applications",
-    "Mobile applications|no description given": "Mobile applications",
-    "Desktop applications|no description given": "Desktop applications",
+    "Web applications|no description given": "Applications Web",
+    "Mobile applications|no description given": "Applications Mobile",
+    "Desktop applications|no description given": "Applications Desktop",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"
