@@ -3,21 +3,21 @@ id: licenses
 title: Managing 4D Licenses
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
 
 However, in specific cases you could need to activate your licenses manually, for example if:
 
 - your configuration does not allow the automatic activation,
 - you have purchased additional licenses. 
 
-No activation is required for the following uses:
+以下の利用モードの場合には、アクティベーションは必要はありません:
 
-- 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- リモートモードで利用される 4D (4D Serverへの接続)
+- インタープリターモードのデータベースを開く場合で、デザインモードへはアクセスしないローカルモードの4D
 
 ## First activation
 
-With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. [アクティベーションモード](#アクティベーションモード) を選択するダイアログボックスが表示されます。
 
 ![](assets/en/getStart/server1.png)
 

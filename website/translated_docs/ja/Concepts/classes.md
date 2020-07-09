@@ -34,7 +34,7 @@ Class オブジェクトは共有オブジェクトです。したがって、�
 すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
 ```4d
-//Class: Polygon
+// クラス: Polygon
 Class constructor($width : Integer;$height : Integer)
     This.area:=$width*$height
 
@@ -57,7 +57,7 @@ Class constructor($width : Integer;$height : Integer)
 たとえば:
 
 ```4d
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text;$lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -168,16 +168,16 @@ $cName:=OB Class($o).name // "Empty"
 
 ```js
 Function <name>({parameterName : type;...})
-// code
+// コード
 ```
 
-クラスメソッドとは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラスメソッドは "Function" クラスのオブジェクトでもあります。
+クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードとメンバーメソッド名を使用してメンバーメソッド宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features. For example, if you declare `Function _myPrivateFunction` in MyClass, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は自動補完機能から除外されます。 たとえば、MyClass に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
-Immediately following the function name, [parameters](parameters.md#named-parameters-class-functions) for the function can be declared with an assigned name and data type. たとえば:
+関数名のすぐ後に、名前とデータ型を指定して [引数](parameters.md#名前付き引数-クラス関数) を宣言します。 たとえば:
 
 ```code4d
 Function setFullName($firstname : Text;$lastname : Text)
@@ -185,7 +185,7 @@ Function setFullName($firstname : Text;$lastname : Text)
 
 > [Sequential parameters](parameters.md#sequential-parameters) ($1, $2...) can be also used in class functions.
 
-Within a class function, the `This` command is used as the object instance. たとえば:
+クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
 
 ```4d
 Function setFullname($firstname : Text;$lastname : Text)
@@ -197,38 +197,38 @@ Function getFullname()
     $0:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- `()` 演算子の使用 例: `myObject.methodName("hello")`
 
-- use of a "Function" class member method:
+- "Function" クラスメンバーメソッドの使用:
     
     - `apply()`
     - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **スレッドセーフに関する警告:** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合:  
+> - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 - ランタイムにおいてのみ、4D はエラーを生成します。
 
-#### Class function parameters
+#### クラス関数の引数
 
-Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数の引数がある場合、それらはセミコロン (;) で区切ります。
 
 ```4d
 Function add($x;$y : Variant;$z : Integer;$xy : Object)
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> 引数のデータ型を指定しない場合、その引数は `バリアント型` として定義されます。
 
-The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. For example:
+戻り値 ($0) は、名前付き引数のリスト内で宣言することができません。 そのため、関数のコード内にて宣言する必要があります。 例:
 
 ```4d
 Function add($x : Variant;$y : Integer)
     var $0 : Text
 ```
 
-> The classic 4D syntax for method parameters can be used in conjunction with the class function parameter syntax. For example:
+> メソッド内の引数宣言に使用される従来の 4D シンタックスは、クラス関数用のシンタックスと組み合わせて使うことができます。 For example:
 > 
 > ```4d
 Function add($x : Integer)

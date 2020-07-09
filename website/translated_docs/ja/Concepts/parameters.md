@@ -27,9 +27,9 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in named variables (class functions only) or sequentially numbered variables (methods and class functions).
 
-## Named parameters (class functions)
+## 名前付き引数 (クラス関数)
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. Multiple parameters (and types) are separated by semicolons (;).
 
 For example, when you call a `getArea()` function with two parameters:
 
@@ -311,7 +311,7 @@ MyLength:=Length("How did I get here?")
 
 どのようなサブルーチンでも値を返すことができます。 返す値は、ローカル変数 `$0` に格納します。
 
-The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. たとえば:
+The return parameter ($0) is not supported in the named parameter list. そのため、関数のコード内にて宣言する必要があります。 たとえば:
 
 ```4d
 Function add($x : Variant;$y : Integer)

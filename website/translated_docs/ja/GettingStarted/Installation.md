@@ -1,23 +1,23 @@
 ---
 id: installation
-title: Installation
+title: インストール
 ---
 
-Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
+4D へようこそ！ このページでは、4D 製品のインストールと起動について必要な情報をまとめています。
 
-## Required configuration
+## 最低動作環境
 
-The [Product Download](https://us.4d.com/product-download) page on the 4D website provides information about the minimum macOS / Windows system requirements for your 4D series.
+4D 製品の macOS / Windows における最小動作環境については、4D Webサイトの [製品ダウンロード](https://jp.4d.com/product-download) ページを参照してください。
 
-Additional technical details are available on the 4D website's [Resources page](https://us.4d.com/resources/feature-release).
+追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/) にてご確認いただけます。
 
-## Installation on disk
+## ディスクへのインストール
 
-4D products are installed from the 4D website:
+4D 製品のインストーラーは 4D の Web サイトから入手していただけます:
 
-1. Connect to the 4D website and go to the [Downloads](https://us.4d.com/product-download) page.
+1. 4D Web サイトに接続し、[製品ダウンロード](https://jp.4d.com/product-download) ページを開きます。
 
-2. Click on the download link for your 4D product and follow the on-screen instructions.
+2. 必要な製品バージョンのダウンロードリンクをクリックして、インストーラーをダウンロードします。インストールにあたっては、画面に表示される指示に従ってください。
 
 ## Sign in
 
