@@ -27,7 +27,7 @@ Each web server (host database or component) can be used in its own separate con
 
 This feature allows you to develop independant components and features that come with their own web interfaces.
 
-## Instantiating a web server object
+## Instancier un objet serveur web
 
 The web server object of the host database (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created database:
 
@@ -61,7 +61,7 @@ webServer:=WEB Server(Web server host database)
 webServer:=WEB Server(Web server receiving request)  
 ```
 
-## Web server methods
+## Méthodes du serveur web
 
 A web server object contains the following member methods:
 
@@ -85,11 +85,11 @@ webServer.start($settings)
 $status:=webServer.stop()
 ```
 
-## Web server properties
+## Propriétés du serveur web
 
-A web server object contains the following properties.
+Un objet serveur Web contient les propriétés suivantes.
 
-Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: 
+Jeu de caractères devant être utilisé par 4D Web Server pour communiquer avec les navigateurs connectés à la base. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: 
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -253,7 +253,7 @@ Character set that the 4D Web Server should use to communicate with browsers con
             
             <
             
-            p>If modified, the server must be restarted to use the new value.| |*name*|text|Name of the web server database| |*openSSLVersion*|text|Version of the OpenSSL library used| |*perfectForwardSecrecy*|boolean|PFS availability on the server| |rootFolder|text|Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.| |sessionCookieDomain|text|"domain" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.| |sessionCookieName|text|Name of the cookie used for storing the session ID.
+            p>If modified, the server must be restarted to use the new value.| |*name*|text|Name of the web server database| |*openSSLVersion*|text|Version of the OpenSSL library used| |*perfectForwardSecrecy*|boolean|PFS availability on the server| |rootFolder|text|Path of web server root folder. Format POSIX du chemin d'accès complet à l'aide de filesystem. When using this property in the `settings` parameter, it can be a `Folder` object.| |sessionCookieDomain|text|"domain" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.| |sessionCookieName|text|Name of the cookie used for storing the session ID.
             
             <
             
