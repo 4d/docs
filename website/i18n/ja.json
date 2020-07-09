@@ -277,7 +277,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "インストールとアクティベーション"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -469,7 +469,7 @@
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation and activation|in index page Getting started": "インストールとアクティベーション",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
