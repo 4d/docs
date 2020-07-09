@@ -3,19 +3,15 @@ id: overview
 title: 概要
 ---
 
-データベースストラクチャーからユーザーインターフェース (フォームやメニュー、ユーザー設定、その他必要なリソース含む) まで、4D データベースアプリケーションのすべてのソースコードが 4D プロジェクトには格納されています。 4D プロジェクトは主にテキストファイルによって構成されています。
-
-4D プロジェクトは 4D Developer アプリケーションを使って作成・編集します。 プロジェクトファイルをもとにビルドしたアプリケーション運用ファイルは、4D Server や 4D Volume ライセンスで開くことができます (組み込みアプリケーション)。
+A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. 4D プロジェクトは主にテキストファイルによって構成されています。
 
 ## プロジェクトファイル
 
-4D プロジェクトファイルは 4D で開いて編集します。 ストラクチャーエディター、メソッドエディター、フォームエディター、メニューエディターなど、機能の充実したエディターを使ってファイルを扱うことができます。
+4D project files are open and edited using regular 4D platform applications (4D or 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
 
-また、人間にも解読可能なテキストファイル (JSON、XML等) 形式で提供されているため、プロジェクトの読み書きは任意のコードエディターでおこなうことも可能です。
+Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
 
-## ソース管理
-
-4D プロジェクトファイルによって、汎用的なコーディング、アプリケーションテンプレートの作成や、コードシェアリングが容易になります。
+In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
 
 4D プロジェクト開発の柔軟性が一番顕著になるのは、複数のデベロッパーがアプリケーションの同じ部分で同時に作業しなければならないときです。 4D プロジェクトファイルの管理には、Perforce、Git、SVNなどの**ソース管理**リポジトリがとくに適しており、これらによって開発チームはつぎのような機能を活用できます:
 
@@ -23,13 +19,19 @@ title: 概要
 - リビジョン比較
 - ロールバック
 
-## プロジェクトで開発する
+## Development
 
-4D データベースプロジェクトを作成する方法は二つあります:
+Your 4D application can open projects **locally** or **remotely**:
 
-- まっさらなプロジェクトを新規作成する -- [4D プロジェクトの作成](creating.md) 参照 
-- 既存の 4D バイナリデータベースをプロジェクトへと変換する -- doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照 
+- **[locally](creating.md#opening-a-local-project)** - project files are stored on the same machine as the 4D application; they are executed and edited by a single 4D application. 
+- **[remotely](creating.md#opening-a-remote-project)** - project files are stored on the 4D Server machine; 4D applications connect to the server and open the project in read-only mode, usually for testing purposes. However, a project opened by 4D Server is editable by 4D if [both applications are on the same machine](Project/developing.md#using-4d-developer-on-the-same-machine). 
 
-プロジェクトの開発は 4D Developer アプリケーションを用いて、ローカルにおこないます -- [プロジェクトの開発](developing.md) 参照。 チーム開発によるソースの管理にはソース管理ツールを使います。
+![](assets/en/getStart/localremote.png)
 
-4D プロジェクトはコンパイルして圧縮し、シングルユーザーまたはクライアントサーバーアプリケーションとして簡単に運用することができます -- [プロジェクトパッケージのビルド](building.md) 参照。
+When you select the project to open, you also select the mode to be used.
+
+## Deployment
+
+Project files can be compiled and easily deployed for your web, mobile, or desktop (client-server or single-user) application.
+
+Final application deployment files are generated during the building process, using the [4D build manager](Admin/building.md). Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.

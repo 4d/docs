@@ -33,12 +33,11 @@ High resolution displays have a higher pixel density than traditional standard d
 
 When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
 
-| Display Type        | Facteur d'échelle                              | Exemple                                                             |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------- |
+| Display Type        | Facteur d'échelle                              | Exemple                                                           |
+| ------------------- | ---------------------------------------------- | ----------------------------------------------------------------- |
 | Résolution standard | 1:1 pixel density.                             | **1x**  
-![](assets/en/FormEditor/pictureScale1.png)  
-*circle.png* |
-| Haute résolution    | Pixel density increased by a factor of 2 or 3. |                                                                     |
+![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
+| Haute résolution    | Pixel density increased by a factor of 2 or 3. |                                                                   |
 
 
 <table>
@@ -52,7 +51,7 @@ When using high resolution pictures, you can specify the scale factor by adding 
   
   <tr>
     <td>
-      ![](assets/en/FormEditor/pictureScale2.png)<br />*circle@2x.png*
+      ![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*
     </td>
     
     <td>
@@ -86,36 +85,26 @@ While 4D automatically prioritizes the highest resolution, there are, however, s
 
 <
 
-p>
-
-<
-
 ul>
 
 * **72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.
 * **Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)
-* **No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</p> 
-    <
-    
-    p></li>| |[Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu)|If the picture's display format is:
-    
-    <
-    
-    p>
-    
-    * **\[Scaled\](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) 
-    * **Not scaled** - The object containing the picture has the same number of pixels as the picture.
-    
-    <
-    
-    p>|
-    
-    *(*) Typically, macOS = 72dpi, Windows = 96dpi*
-    
-    ## Coordonnées de la souris dans une image
-    
-    4D lets you retrieve the local coordinates of the mouse in an [input object](FormObjects/input_overview.md) associated with a [picture expression](FormObjects/properties_Object.md#expression-type), in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie.
-    
-    The coordinates are returned in the *MouseX* and *MouseY* [System Variables](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
-    
-    You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.
+* **No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.| |
+[Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu)|If the picture's display format is:
+
+* **\[Scaled\](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) 
+* **Not scaled** - The object containing the picture has the same number of pixels as the picture.
+
+<
+
+p>|
+
+*(*) Typically, macOS = 72dpi, Windows = 96dpi*
+
+## Coordonnées de la souris dans une image
+
+4D lets you retrieve the local coordinates of the mouse in an [input object](FormObjects/input_overview.md) associated with a [picture expression](FormObjects/properties_Object.md#expression-type), in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie.
+
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
+
+You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.

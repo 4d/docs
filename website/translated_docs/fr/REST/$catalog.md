@@ -216,11 +216,9 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
 | identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                                         |
 | path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
- foreignKey|String |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.| 
+| foreignKey  | Chaine  | For a relatedEntity attribute, name of the related attribute.                                                                                                                    |
+| inverseName | Chaine  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                                   |
 
-### Méthode(s)
-
-Définit les méthodes projet associées à la dataclass, le cas échéant.
 
 ### Clé primaire
 

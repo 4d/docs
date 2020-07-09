@@ -103,9 +103,10 @@ title: ドキュメンテーション
 
 - Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (*\<!-- コマンドの説明 -->*)
 
-- HTML のコメントタグが使用されていなければ、Markdown ファイルの `## Description` タグ後の最初の文章。 この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
-
-> それ以外の場合には、[メソッドコードの先頭のコメントブロック](https://doc.4d.com/4Dv18R3/4D/18-R3/Writing-a-method.300-4919495.ja.html#4618226) がコードエディターに表示されます。
+- HTML のコメントタグが使用されていなければ、Markdown ファイルの `# Description` タグ後の最初の文章  
+    この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
+    
+    > それ以外の場合には、[メソッドコードの先頭のコメントブロック](https://doc.4d.com/4Dv18R3/4D/18-R3/Writing-a-method.300-4919495.ja.html#4618226) がコードエディターに表示されます。
 
 ## ドキュメンテーションファイルの定義
 
@@ -225,7 +226,7 @@ title: ドキュメンテーション
 
 [![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> 詳細については [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
+> 詳細については [GitHug Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
 
 ## 例題
 

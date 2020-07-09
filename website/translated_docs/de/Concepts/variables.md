@@ -7,64 +7,287 @@ Data in 4D is stored in two fundamentally different ways. **Fields** store data 
 
 When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
 
-Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
-
-## Creating Variables
-
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
-
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
-
-For example, if you want to define a text variable, you write:
-
-```4d
- C_TEXT(myText)
-```
-
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
-
-```4d
- MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
-```
-
-Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. For example, you might need to store a text variable in a field of same type:
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
-The following are some basic variable declarations:
+Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen und verwenden, die nie auf dem Bildschirm erscheinen. In Ihren Formularen können Sie Variablen (außer Zeiger und BLOB) auf dem Bildschirm anzeigen, Daten in sie eingeben und sie in Berichten drucken. Auf diese Weise verhalten sich eingebbare und nicht-eingebbare Variablenbereiche wie Felder und haben dieselben integrierten Kontrollen beim Erstellen. Variablen in Formularen können auch Schaltflächen, Listboxen, rollbare Bereiche, Bildschaltflächen, usw. steuern oder Ergebnisse von Berechnungen anzeigen, die nicht gesichert werden müssen.
+
+## Declaring Variables
+
+You create variables by declaring them. The 4D language offers two ways to declare variables:
+
+- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only). 
+
+**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
+ MyDate:=Current date+30 //MyDate is created  
+ // 4D guesses it is of date type  
+ // and assigns the current date plus 30 days
 ```
+
+### Using the `var` keyword
+
+Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+
+To declare a variable of any type with the `var` keyword, use the following syntax:
+
+`var <varName>{, <varName2>,...}{ : <varType>}`
+
+Beispiel:
+
+```4d
+var $myText : Text  //a text variable
+var myDate1, myDate2 : Date  //several date variables
+var $myFile : 4D.File  //a file class object variable
+var $myVar //a variant variable
+```
+
+`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+
+`varType` can be:
+
+- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
+- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+
+If `varType` is omitted, a variable of the **variant** type is created.
+
+The following table lists all supported `varType` values:
+
+<table>
+  <tr>
+    <th>
+      varType
+    </th>
+    
+    <th>
+      Contents
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      Text
+    </td>
+    
+    <td>
+      Text value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Datum
+    </td>
+    
+    <td>
+      Date value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Zeit
+    </td>
+    
+    <td>
+      Time value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Boolean
+    </td>
+    
+    <td>
+      Boolean value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Ganzzahl
+    </td>
+    
+    <td>
+      Long integer value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Zahl
+    </td>
+    
+    <td>
+      Real value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Zeiger
+    </td>
+    
+    <td>
+      Pointer value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Bild
+    </td>
+    
+    <td>
+      Picture value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Blob
+    </td>
+    
+    <td>
+      BLOB value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Collection
+    </td>
+    
+    <td>
+      Collection value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Variant
+    </td>
+    
+    <td>
+      Variant value
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Objekt
+    </td>
+    
+    <td>
+      Object with default class (4D.Object)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      4D.\<className>
+    </td>
+    
+    <td>
+      Object of the 4D class name
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      cs.\<className>
+    </td>
+    
+    <td>
+      Object of the user class name
+    </td>
+  </tr>
+</table>
+
+#### Beispiele
+
+- To declare local and process basic variables:
+
+```4d
+var $myText, myText, $vt : Text
+var myVar //variant
+
+var $o : Object    
+//equivalent to:  
+var $o : 4D.Object
+//also equivalent to C_OBJECT($o)
+```
+
+- To declare object variables of 4D class:
+
+```4d
+var $myFolder : 4D.Folder
+var $myFile : 4D.File
+```
+
+- To declare object variables of user class:
+
+```4d
+var $myClass : cs.MyClass
+var $dataclass : cs.Employee
+var $entity : cs.EmployeeEntity
+```
+
+### Using a C_ directive
+
+> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+
+Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+
+Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
+
+```4d
+ C_TEXT(myText)
+```
+
+Hier sehen Sie einige grundlegende Variablendeklarationen:
+
+```4d
+ C_BLOB(vxMyBlob) // Die Prozessvariable vxMyBlob ist als eine Variable vom Typ BLOB deklariert
+ C_DATE($vdCurDate) // Die lokale Variable $vdCurDate ist als eine Variable vom Typ Datum deklariert
+ C_LONGINT(vg1;vg2;vg3) // Die 3 Prozessvariablen vg1, vg2 und vg3 sind als Variablen vom Type Lange Ganzzahl deklariert  
+ C_OBJECT($vObj) // Die lokale Variable $vObj ist als eine Variable vom Typ Objekt deklariert
+ C_COLLECTION($vCol) // Die lokale Variable $vCol ist als eine Variable vom Typ Collection deklariert
+ ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
+```
+
+**Note:** Arrays are a particular type of variables. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
 ## Assigning Data
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Beispiel:
+The assignment operator is a primary way to create a variable and to put data into it. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
 
 ```4d
 MyNumber:=3
 ```
 
-creates the variable *MyNumber* and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+erstellt die Variable * MyNumber* und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+
+Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie * MyNumber* auf die rechte Seite des Zuweisungsoperators:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+In diesem Fall ist *[Products]Size* gleich 3. Dieses Beispiel ist ganz einfach, aber es zeigt, wie Daten über Programmierung von einer Stelle an eine andere übertragen werden.
 
-You assign data to array elements by using curly braces ({...}):
+Daten an Elemente eines Array weisen Sie über geschweifte Klammern zu, also {...}:
 
 ```4d
 atNames{1}:="Richard"
@@ -72,23 +295,23 @@ atNames{1}:="Richard"
 
 ## Local, Process, and Interprocess variables
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
 
-### Local variables
+### Lokale Variable
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Wie schon der Name sagt, gilt sie lokal für eine Methode, d. h. sie ist nur in der Methode verfügbar, wo sie erstellt wurde. Außerhalb dieser Methode ist sie nicht zugänglich. Die lokale Zuordnung zu einer Methode heißt formell "Lokale Reichweite". Lokale Variablen dienen zur Einschränkung einer Variablen, so dass sie nur innerhalb der Methode funktioniert.
 
-You may want to use a local variable to:
+Sie verwenden eine lokale Variable, um:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
-- Reduce the number of process variables
+- Namenskonflikte mit anderen Variablen zu vermeiden
+- Daten temporär zu verwenden
+- Die Anzahl der Prozessvariablen zu verringern
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+Der Name einer lokalen Variable startet immer mit dem Dollarzeichen ($) und kann bis zu 31 zusätzliche Zeichen enthalten. Geben Sie einen längeren Namen ein, kürzt 4D ihn auf die passende Länge.
 
-When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+In einer Anwendung mit vielen Methoden und Variablen kommt es oft vor, dass Sie eine Variable nur in der Methode benötigen, in der Sie arbeiten. Sie können eine lokale Variable in der Methode anlegen bzw. verwenden und müssen sich keine Gedanken machen, ob Sie den gleichen Variablennamen bereits irgendwo anders verwendet haben.
 
-Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Hier ein Beispiel:
+Häufig benötigt eine Anwendung nur eine kurze Info vom Benutzer. Dafür gibt es den Befehl `Request`. Er zeigt ein Dialogfenster mit einer Meldung, die den Benutzer zu einer Antwort auffordert. Gibt der Benutzer die Antwort ein, gibt der Befehl diese Angaben zurück. In der Regel müssen Sie diese Angaben nicht sehr lange in Ihren Methoden halten. Dies ist ein typischer Anwendungsbereich für eine lokale Variable. Hier ein Beispiel:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
@@ -97,32 +320,32 @@ Frequently, in a database, small pieces of information are needed from the user.
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+Diese Methode fordert den Benutzer auf, eine ID einzugeben. Sie setzt die Antwort in eine lokale Variable $vsID und sucht dann nach der ID, die der Benutzer eingegeben hat. Ist die Methode abgeschlossen, wird die lokale Variable $vsID aus dem Speicher entfernt. Das ist gut so, denn die Variable wird nur einmal und nur in dieser Methode benötigt.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Hinweis:** Die Parameter $1, $2... in Methoden sind lokale Variablen. Weitere Informationen dazu finden Sie unter [Parameter](Concepts/parameters.md).
 
-### Process variables
+### Prozessvariablen
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+Eine Prozessvariable ist nur innerhalb eines Prozesses verfügbar. Sie ist in der Prozessmethode oder einer anderen Methode innerhalb des Prozesses verfügbar.
 
-A process variable does not have a prefix before its name. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
+Der Name der Prozessvariable hat kein vorangestelltes Zeichen. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
+Im interpretierten Modus werden Variablen dynamisch verwaltet; sie werden nach Bedarf im Speicher gehalten und entfernt. Im kompilierten Modus nutzen alle Prozesse, die Sie anlegen (Benutzerprozesse) gemeinsam dieselbe Definition der Prozessvariablen, aber jeder Prozess hat pro Variable eine andere Instanz. So ist die Variable myVar eine Variable im Prozess P_1 und eine andere im Prozess P_2.
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIABLE` Prozessvariablen aus einem anderen Prozess "erspähen und anstoßen". Es ist eine gute Programmierpraxis, diese Befehle nur für die Situation anzuwenden, für die sie in 4D hinzugefügt wurden:
 
-- Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- Kommunikation auf Interprozessebene an spezifischen Stellen in Ihrem Code
+- Verwalten von Drag-and-Drop auf Interprozessebene
+- Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Interprozessvariablen
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.
+Interprozessvariablen sind in der gesamten Anwendung verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. Sie dienen hauptsächlich dazu, Information in verschiedenen Prozessen gemeinsam zu nutzen.
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> Die Verwendung von Interprozessvariablen wird nicht empfohlen, da sie in preemptive Prozessen nicht verfügbar sind und u.U. die Verwaltung des Code erschweren können.
 
-The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+Der Name einer Interprozessvariablen beginnt mit den Symbolen <> — ein Zeichen “kleiner als” gefolgt von einem Zeichen “größer als” — und kann bis zu 31 zusätzliche Zeichen enthalten.
 
-In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+Im Client-/Server-Betrieb kann jeder Rechner (Client oder Server) dieselbe Definition von Interprozessvariablen gemeinsam nutzen, jedoch hat jeder Rechner pro Variable eine andere Instanz.

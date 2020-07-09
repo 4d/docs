@@ -124,7 +124,7 @@ Vous pouvez affecter un groupe d’accès à tout plug-in 4D installé dans votr
 
 Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.
 
-Vous pouvez également contrôler l’utilisation du serveur Web et du serveur SOAP de 4D en mode distant via la zone d’accès aux plug-ins.
+> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
 
 La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les plug-ins chargés par l’application 4D. Pour affecter un groupe à un plug-in, il suffit de cocher l’option correspondante.
 

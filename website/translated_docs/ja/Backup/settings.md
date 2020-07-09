@@ -46,8 +46,10 @@ The Backup/Configuration page of the Database Settings lets you set the backup f
 
 This area allows you to set which files and/or folders to copy during the next backup.
 
-- **Data**: Database data file. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
-- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
+- **Data**: Database data file. When this option is checked, the following elements are automatically backed up at the same time as the data: 
+    - the current log file of the database (if it exists),
+    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*. 
+- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up. 
 - **User Structure File (only for binary database)**: *deprecated feature*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area. 
     - **Delete**: Removes the selected file from the list of attached files.
@@ -116,8 +118,6 @@ These options apply to main backup files and to log backup files.
 ### Automatic Restore
 
 - **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
-    
-    > In the case of an automatic restore, only the data file is restored. If you wish to get the attached files or the project files, you must perform a manual restore.
 
 - **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the database.
     
@@ -125,3 +125,7 @@ These options apply to main backup files and to log backup files.
     - When restoring a database, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
 
 The user does not see any dialog box; the operation is completely automatic. The goal is to make use as easy as possible. The operation is logged in the backup journal.
+
+> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> 
+> If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).

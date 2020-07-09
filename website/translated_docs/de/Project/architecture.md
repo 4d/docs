@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Architecture of a 4D project
+title: Architecture of a project
 ---
 
 A 4D project is made of several folders and files, stored within a single parent database folder (package folder). Beispiel:
@@ -162,11 +162,11 @@ This folder contains **user settings files for data** used for database administ
 
 > These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
 
-| Contents            | Description                                                                                                                                                                                                          | Format |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
-| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                               | JSON   |
+| Contents            | Description                                                                                                                                                                                                         | Format |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
+| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                         | XML    |
+| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                              | JSON   |
 
 
 ### Logs folder

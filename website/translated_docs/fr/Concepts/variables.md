@@ -7,30 +7,249 @@ Fondamentalement, dans 4D, les données peuvent être stockées de deux manière
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
+Une fois créée, vous pouvez utiliser une variable partout dans votre base. For example, you might need to store a text variable in a field of same type:
+
+```4d
+ [MaTable]MonChamp:=MonTexte
+```
+
 Les variables sont des objets du langage; vous pouvez créer et utiliser des variables qui n’apparaîtront jamais à l'écran. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
 
-## Créer des variables
+## Declaring Variables
 
-Vous pouvez créer des variables en les déclarant à l'aide de l'une des commandes des thèmes "Tableaux" ou "Compilateur".
+You create variables by declaring them. The 4D language offers two ways to declare variables:
 
-**Note :**Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only). 
+
+**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
+
+```4d
+ MyDate:=Current date+30 //MyDate is created  
+ // 4D guesses it is of date type  
+ // and assigns the current date plus 30 days
+```
+
+### Using the `var` keyword
+
+Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+
+To declare a variable of any type with the `var` keyword, use the following syntax:
+
+`var <varName>{, <varName2>,...}{ : <varType>}`
+
+Par exemple:
+
+```4d
+var $myText : Text  //a text variable
+var myDate1, myDate2 : Date  //several date variables
+var $myFile : 4D.File  //a file class object variable
+var $myVar //a variant variable
+```
+
+`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+
+`varType` can be:
+
+- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
+- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+
+If `varType` is omitted, a variable of the **variant** type is created.
+
+Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
+
+<table>
+  <tr>
+    <th>
+      varType
+    </th>
+    
+    <th>
+      Contenu
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      Texte
+    </td>
+    
+    <td>
+      Valeur texte
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Date
+    </td>
+    
+    <td>
+      Valeur date
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Heure
+    </td>
+    
+    <td>
+      Valeur Heure
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Booléen
+    </td>
+    
+    <td>
+      Valeur booléen
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Entier long
+    </td>
+    
+    <td>
+      Valeur entier long
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Réel
+    </td>
+    
+    <td>
+      Valeur réel
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Pointeur
+    </td>
+    
+    <td>
+      Valeur pointeur
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Image
+    </td>
+    
+    <td>
+      Valeur image
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Blob
+    </td>
+    
+    <td>
+      Valeur BLOB
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Collection
+    </td>
+    
+    <td>
+      Valeur collection
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Variant
+    </td>
+    
+    <td>
+      Valeur variant
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Objet
+    </td>
+    
+    <td>
+      Objet avec classe par défaut (4D.object)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      4D.\<className>
+    </td>
+    
+    <td>
+      Objet du nom de la classe 4D
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      cs.\<className>
+    </td>
+    
+    <td>
+      Objet du nom de la classe utilisateur
+    </td>
+  </tr>
+</table>
+
+#### Exemples
+
+- To declare local and process basic variables:
+
+```4d
+var $myText, myText, $vt : Text
+var myVar //variant
+
+var $o : Object    
+//equivalent to:  
+var $o : 4D.Object
+//also equivalent to C_OBJECT($o)
+```
+
+- To declare object variables of 4D class:
+
+```4d
+var $myFolder : 4D.Folder
+var $myFile : 4D.File
+```
+
+- To declare object variables of user class:
+
+```4d
+var $myClass : cs.MyClass
+var $dataclass : cs.Employee
+var $entity : cs.EmployeeEntity
+```
+
+### Using a C_ directive
+
+> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+
+Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
 Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
 ```4d
  C_TEXT(monTexte)
-```
-
-**Note :**Vous pouvez également créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
-
-```4d
- MaDate:=Current date+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
-```
-
-Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par exemple, vous pouvez la stocker dans un champ du même type :
-
-```4d
- [MaTable]MonChamp:=MonTexte
 ```
 
 Voici quelques déclarations de variables simples :
@@ -44,17 +263,21 @@ Voici quelques déclarations de variables simples :
 ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
 ```
 
+**Note:** Arrays are a particular type of variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
-L’opérateur d’assignation est le premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
+The assignment operator is a primary way to create a variable and to put data into it. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
 
 ```4d
 MonNombre:=3
 ```
 
 crée la variable *MonNombre* et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
+
+> It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer *MonNombre* à droite de l’opérateur d’assignation :
 

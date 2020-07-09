@@ -5,6 +5,15 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
+      "Admin/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -490,7 +499,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -547,14 +556,14 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
-      "Project/architecture": {
-        "title": "4D プロジェクトのアーキテクチャー"
+      "ORDA/ordaClasses": {
+        "title": "ORDA Data Model Classes"
       },
-      "Project/building": {
-        "title": "プロジェクトパッケージのビルド"
+      "Project/architecture": {
+        "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "4D プロジェクトの作成"
+        "title": "Creating or opening a project"
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
@@ -564,9 +573,6 @@
       },
       "Project/overview": {
         "title": "概要"
-      },
-      "Project/pictures": {
-        "title": "ピクチャー"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -646,6 +652,9 @@
       "REST/authUsers": {
         "title": "Users and sessions"
       },
+      "REST/classFunctions": {
+        "title": "Calling ORDA class functions"
+      },
       "REST/configuration": {
         "title": "Server Configuration"
       },
@@ -672,31 +681,37 @@
       }
     },
     "links": {
-      "v18 R3 BETA": "v18 R3 BETA",
-      "v18 R2": "v18 R2",
+      "v18 R4 BETA": "v18 R4 BETA",
+      "v18 R3": "v18 R3",
       "v18": "v18"
     },
     "categories": {
       "Getting Started": "はじめに",
+      "Project Management": "Project Management",
       "4D Language Concepts": "ランゲージのコンセプト",
-      "Project Databases": "プロジェクトデータベース",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Administration": "データベース管理",
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Web Server": "Web Server",
+      "REST Server": "REST Server",
       "Forms": "フォーム",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation|in index page Getting started": "Installation",
+    "Starting 4D|in index page Getting started": "Starting 4D",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
-    "Project databases|in index page Getting started": "プロジェクトデータベース",
+    "Project Management|in index page Getting started": "Project Management",
+    "ORDA|in index page Getting started": "ORDA",
+    "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
@@ -707,12 +722,15 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "License Management|no description given": "License Management",
+    "Build Application|no description given": "Build Application",
+    "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
-    "Developing a Web application|no description given": "Web アプリの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリの開発",
+    "Core Development|no description given": "Core Development",
     "Administration|no description given": "データベース管理",
+    "Web applications|no description given": "Web applications",
+    "Mobile applications|no description given": "Mobile applications",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

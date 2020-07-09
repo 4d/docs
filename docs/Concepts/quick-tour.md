@@ -36,19 +36,27 @@ You MUST distinguish the assignment operator := from the other operators. Rather
 
 ## Variables
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a `C_XXX` command. For example, to create a variable of the date type, you can write:
+The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using the `var` keyword. For example, to create a variable of the date type, you can write:
 
 ```4d
-C_DATE(MyDate) //Date type for MyDate variable
+var MyDate : Date 
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+The `var` keyword allows declaring object variables of a defined class type, for example:
+
+```4d
+var myPerson : cs.Person 
+//variable of the Person user class
+```
+
+
+Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
 ## Commands
 

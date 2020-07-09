@@ -224,12 +224,9 @@ Here are the properties for each exposed attribute that are returned:
 |type|	String|	Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute.|
 |identifying|Boolean	|This property returns True if the attribute is the primary key. Otherwise, this property does not appear.|
 |path	|String	|Name of the relation for a relatedEntity or relateEntities attribute.|
-foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
-inverseName	|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+|foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
+|inverseName|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any. 
 
 ### Primary Key  
 
