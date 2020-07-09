@@ -3,35 +3,35 @@ id: licenses
 title: Gestion des licences 4D
 ---
 
-Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
 
-However, in specific cases you could need to activate your licenses manually, for example if:
+Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 
-- your configuration does not allow the automatic activation,
-- you have purchased additional licenses. 
+- votre configuration ne permet pas l'activation automatique,
+- vous avez acheté des licences supplémentaires. 
 
-No activation is required for the following uses:
+Aucune activation n’est requise pour les usages suivants :
 
-- 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D utilisé en mode distant (connexion à un 4D Server)
+- 4D utilisé en mode local avec une base interprétée sans accès au mode Développement.
 
-## First activation
+## Première activation
 
-With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. La boîte de dialogue de choix du [mode d'activation](#activation-mode) apparaît.
 
 ![](assets/en/getStart/server1.png)
 
-4D offers three activation modes. We recommend **Instant Activation**.
+4D vous propose trois modes d’activation. **L'activation immédiate** est recommandée.
 
-### Instant Activation
+### Activation immédiate
 
-Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
+Saisissez votre identifiant utilisateur (e-mail ou compte 4D) ainsi que votre mot de passe. Si vous n'avez pas encore de compte client chez 4D, vous devez en créer un à l'adresse suivante :
 
 [https://account.4d.com/us/login.shtml]()
 
 ![](assets/en/getStart/activ1.png)
 
-Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
+Entrez ensuite le numéro de licence du produit à activer. Ce numéro se trouve dans l'e-mail de livraison ou le certificat d'authenticité reçu par courrier.
 
 ![](assets/en/getStart/activ2.png)
 
@@ -39,30 +39,30 @@ Then enter the license number of the product you want to activate. This number i
 
 Si vous ne pouvez pas utiliser [l'activation immédiate](#instant-activation) parce que votre ordinateur n'a pas d'accès Internet, vous pouvez effectuer une activation différée comme décrit dans les étapes suivantes.
 
-1. In the License Manager window, select the **Deferred Activation** tab.
-2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
+1. Dans la fenêtre du Gestionnaire de licences de 4D accessible depuis le menu Aide, sélectionnez l'onglet **Activation différée**.
+2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (*reg.txt*).
 
 ![](assets/en/getStart/activ3.png)
 
-3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
-4. On the machine with internet access, login to <https://activation.4d.com>.
-5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
-6. Download the serial file(s).
+3. Enregistrez le fichier *reg.txt* sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
+4. Depuis la machine qui a un accès Internet, connectez-vous sur <https://activation.4d.com>.
+5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier *reg.txt* généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
+6. Téléchargez le(s) fichier(s) de licence.
 
 ![](assets/en/getStart/activ4.png)
 
-7. Save the *license4d* file(s) on a shared media and transfer them back to the 4D machine from step 1.
-8. Now back on the machine with 4D, still on the **Deferred Activation** page, click **Next**; then click the **Load...** button and select a *license4d* file from the shared media from step 7.
+7. Enregistrez le ou les fichier(s) *license4d* sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
+8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier *license4d* depuis le media partagé utilisé à l'étape 7.
 
 ![](assets/en/getStart/activ5.png)
 
-With the license file loaded, click on **Next**.
+Une fois le fichier de licence chargé, cliquez sur le bouton **Suivant**.
 
 ![](assets/en/getStart/activ6.png)
 
-9. Click on the **Add N°** button to add another license. Repeat these steps until all licenses from step 6 have been integrated.
+9. Cliquez sur le bouton **Ajouter N°** pour ajouter une autre licence. Répétez ces étapes jusqu'à ce que toutes les licences téléchargées à l'étape 6 aient été intégrées.
 
-Your 4D application is now activated.
+Votre application 4D est désormais activée.
 
 ### Activation d’urgence
 
