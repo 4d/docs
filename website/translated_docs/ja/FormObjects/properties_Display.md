@@ -296,23 +296,23 @@ title: 表示フォーマット
 
 `JSON 文法では: "proportionalTopLeft" / "proportionalCenter"`
 
-When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
+**スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (中央合わせ・プロポーショナル)** オプションも同様ですが、ピクチャーはエリアの中央に配置されます。
 
-If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.
+ピクチャーがエリアよりも小さい場合、サイズは変更されません。 ピクチャーがエリアよりも大きい場合、そのエリア内に全体が表示されるよう、比率を保ったままサイズが小さくなります。 比率が保たれるため、ピクチャーは歪むことなく表示されます。
 
-If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
+**中央合わせ** を選択した場合、画像はエリアの中央に配置されます:
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
-### Replicated
+### 繰り返し
 
-`JSON grammar: "tiled"`
+`JSON 文法では: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+**繰り返し** フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+フィールドがオリジナルのピクチャーよりも小さいサイズにされた場合、ピクチャーはトランケート (中央合わせなし) されます。
 
 #### JSON 文法
 
@@ -323,7 +323,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 * * *
 
@@ -390,7 +390,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 * * *
 
-## Display Type
+## 表示タイプ
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -408,7 +408,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Not rendered
+        ## 非表示
         
         When this property is enabled, the object is not drawn on the form, however it can still be activated.
         
@@ -427,7 +427,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Three-States
+        ## スリーステート
         
         Allows a check box object to accept a third state. チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
         
@@ -472,7 +472,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Truncate with ellipsis
+        ## エリプシスを使用して省略
         
         Controls the display of values when list box columns are too narrow to show their full contents.
         
@@ -528,7 +528,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Wordwrap
+        ## ワードラップ
         
         > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
         
@@ -580,4 +580,4 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         #### 対象オブジェクト
         
-        [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+        [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
