@@ -39,7 +39,7 @@ and the user enters "proportion", the field displays:
     (portion) 
     
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. データが失われることはありません。
 
 #### JSON 文法
 
@@ -122,46 +122,46 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
 
-> 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 No information is lost.
+> 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。
 
-各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
+各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
 
-Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
+たとえば ##0 というフォーマットを使用して 3桁の数字を表示するものとします。 ユーザーがフィールドに何も入力しないと、フィールドには 0 が表示されます。 26 と入力すると、フィールドには 26 と表示されます。
 
-### Separator characters
+### 区切り文字
 
-The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
+数値表示フォーマット (科学的記数法を除く) は自動でシステムの地域パラメーターに基づきます。 4D は OS に定義された小数点と千の位区切り文字を使用して “.” と “,” 文字をそれぞれ置き換えます。 0 や # に続くピリオドとコンマはプレースホルダー文字として扱われます。
 
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: * in a Real type field, using this key will insert the decimal separator defined in the system, * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> Windows 環境下で、テンキーの小数点キーを使用した際、4Dはカーソルが位置しているフィールドの型に応じて挙動が変化します: * 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。 * それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。
 
-### Decimal points and other display characters
+### 小数点とその他の表示文字
 
-You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+表示フォーマット内では 1つの小数点を使用することができます。 ユーザーが小数点を入力するかどうかに関係なく、小数点を表示したい場合、ゼロの間に小数点を置かなければなりません。
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
+フォーマット内で他の文字を使用することもできます。 文字を単独で使用したりプレースホルダーの前後に配置すると、その文字が常に表示されます。 たとえば次のようなフォーマットの場合:
 
-    $##0
+    ￥##0
     
 
-a dollar sign always appears because it is placed before the placeholders.
+円記号はプレースホルダーの前に置かれているため、常に表示されます。
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
+文字がプレースホルダーの間に置かれている場合、両側に数字が表示される場合のみ、その文字が表示されます。 たとえばフォーマットを次のように指定したとき:
 
     ###.##0
     
 
-the point appears only if the user enters at least four digits.
+ドットは、ユーザが少なくとも4桁以上の数値を入力した場合にのみ表示されます。
 
-Spaces are treated as characters in number display formats.
+数値表示フォーマットにおいて、スペースは文字として扱われます。
 
-### Formats for positive, negative, and zero
+### 正数、負数、ゼロのフォーマット
 
-A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
+数値表示フォーマットは最大で 3つの部分に分けられ、それぞれ正数、負数、ゼロの値に対応する表示フォーマットを指定できます。 それぞれの部分は以下のように並び、セミコロンで区切られます:
 
-    Positive;Negative;Zero
+    正数;負数;ゼロ
     
 
-You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+3つの部分すべてを指定する必要はありません。 1つの部分だけを使用する場合、4Dはすべての数値に対してそのフォーマットを使用し、負の数の先頭にマイナス記号を配置します。
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
 
