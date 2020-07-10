@@ -64,9 +64,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 | フォーマット                          | JSON 文字列     | 例                             |
 | ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (デフォルト)    | 2020/03/25                    |
-| System date abbreviated         | systemMedium | 2020年3月25日                    |
-| System date long                | systemLong   | 2020年3月25日                    |
+| System date short               | - (デフォルト)    | 20/03/25                      |
+| System date abbreviated         | systemMedium | 2020/03/25                    |
+| System date long                | systemLong   | 2020年3月25日 水曜日                |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
 | Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
