@@ -64,9 +64,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 | フォーマット                          | JSON 文字列     | 例                             |
 | ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (デフォルト)    | 2020/03/25                    |
-| System date abbreviated *(1)*   | systemMedium | 2020年3月25日                    |
-| System date long                | systemLong   | 2020年3月25日                    |
+| System date short               | - (デフォルト)    | 20/03/25                      |
+| System date abbreviated         | systemMedium | 2020/03/25                    |
+| System date long                | systemLong   | 2020年3月25日 水曜日                |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
 | Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
@@ -77,7 +77,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
-*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
 
 *(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
 
