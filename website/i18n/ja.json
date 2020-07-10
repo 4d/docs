@@ -9,7 +9,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Admin/licenses": {
-        "title": "Managing 4D Licenses"
+        "title": "4D ライセンスの管理"
       },
       "API/cryptoClass": {
         "title": "CryptoKey Class"
