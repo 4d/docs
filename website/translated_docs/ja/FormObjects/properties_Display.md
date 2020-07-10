@@ -138,77 +138,77 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 表示フォーマット内では 1つの小数点を使用することができます。 ユーザーが小数点を入力するかどうかに関係なく、小数点を表示したい場合、ゼロの間に小数点を置かなければなりません。
 
-フォーマット内で他の文字を使用することもできます。 文字を単独で使用したりプレースホルダーの前後に配置すると、その文字が常に表示されます。 For example, if you use the following format:
+フォーマット内で他の文字を使用することもできます。 文字を単独で使用したりプレースホルダーの前後に配置すると、その文字が常に表示されます。 たとえば次のようなフォーマットの場合:
 
-    $##0
+    ￥##0
     
 
-a dollar sign always appears because it is placed before the placeholders.
+円記号はプレースホルダーの前に置かれているため、常に表示されます。
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
+文字がプレースホルダーの間に置かれている場合、両側に数字が表示される場合のみ、その文字が表示されます。 たとえばフォーマットを次のように指定したとき:
 
     ###.##0
     
 
-the point appears only if the user enters at least four digits.
+ポイント (点) は、ユーザが少なくとも4桁以上の数値を入力した場合にのみ表示されます。
 
-Spaces are treated as characters in number display formats.
+数値表示フォーマットにおいて、スペースは文字として扱われます。
 
-### Formats for positive, negative, and zero
+### 正数、負数、ゼロのフォーマット
 
-A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
+数値表示フォーマットは最大で 3つの部分に分けられ、それぞれ正数、負数、ゼロの値に対応する表示フォーマットを指定できます。 それぞれの部分は以下のように並び、セミコロンで区切られます:
 
-    Positive;Negative;Zero
+    正数;負数;ゼロ
     
 
-You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+3つの部分すべてを指定する必要はありません。 1つの部分だけを使用する場合、4Dはすべての数値に対してそのフォーマットを使用し、負の数の先頭にマイナス記号を配置します。
 
-If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
+2つの部分を指定する場合、4D は 1番目のフォーマットを正数とゼロに対して使用し、負数には 2番目のフォーマットを使用します。 3つの部分をすべて指定すると、1番目のフォーマットを正数、2 番目を負数、3 番目をゼロに使用します。
 
-> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
+> 3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 `###;###;#` と指定した場合、ゼロ値は "#" と表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。
 
-Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
+次の数値表示フォーマットの例は、円記号とカンマを表示し、負の数値はカッコ内に入れ、ゼロを表示しません:
 
-    $###,##0.00;($###,##0.00);
+    ￥###,##0.00;(￥###,##0.00);
     
 
-Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
+2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
 
-    $###,##0.00;($###,##0.00)
+    ￥###,##0.00;(￥###,##0.00)
     
 
-In this case, the display for zero would be $0.00.
+この場合、ゼロは “￥0.00” と表示されます。
 
-### Scientific notation
+### 科学的記数法
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:
 
     &3
     
 
-would display 759.62 as:
+759.62 は以下のように表示されます:
 
     7.60e+2
     
 
-The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
+科学的記数法フォーマットは、表示される数値を自動的に丸める唯一のフォーマットです。 前述の例では、数値が 7.59e+2 と切り捨てられずに 7.60e+2 に丸められている点に注意してください。
 
-### Hexadecimal formats
+### 16進フォーマット
 
-You can display a number in hexadecimal using the following display formats:
+次の表示フォーマットを使用して、数値を 16進表記で表示することができます:
 
-* `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-* `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+* `&x`: このフォーマットでは 16進数が “0xFFFF” 形式で表示されます。
+* `&$`: このフォーマットでは 16進数が “$FFFF” 形式で表示されます。
 
-### XML notation
+### XML記法
 
-The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
+`&xml` フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
 
-### Displaying a number as a time
+### 数値を時間として表示する
 
 You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
-For example, the format:
+たとえば次のフォーマットを指定すると:
 
     &/5
     
