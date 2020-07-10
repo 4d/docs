@@ -335,21 +335,21 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 次の表は、時間フィールドの表示フォーマットとそれぞれのフォーマットの例を示しています:
 
-| フォーマット                       | JSON 文字列     | コメント                                                                                                                                             | 04:30:25 の例                   |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 hours 30 minutes            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (デフォルト)    | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system.   
-Windows: this format is the same as the System time short format                   | 4•30•25 AM                    |
+| フォーマット                       | JSON 文字列     | コメント                                                                                          | 04:30:25 の例         |
+| ---------------------------- | ------------ | --------------------------------------------------------------------------------------------- | ------------------- |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                               | 04:30:25            |
+| HH:MM                        | hh_mm        |                                                                                               | 04:30               |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                               | 4 時 30 分 25 秒       |
+| Hour Min                     | HH_MM        |                                                                                               | 4 時 30 分            |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                               | 4:30 AM             |
+| MM SS                        | mm_ss        | 00:00:00からの経過時間                                                                               | 270:25              |
+| Min Sec                      | MM_SS        | 00:00:00からの経過時間                                                                               | 270 分 25 秒          |
+| ISO Date Time                | iso8601      | 時間に関連する XML 標準表現に対応。 主に XML フォーマットでのデータのやり取りに使用します。                                           | 0000-00-00T04:30:25 |
+| System time short            | - (デフォルト)    | システムに定義された標準の時間フォーマット                                                                         | 04:30:25            |
+| System time long abbreviated | systemMedium | macOSのみ: システムに定義された時間フォーマットの短縮型。   
+Windows では System time short フォーマットと同じ                    | 4•30•25 AM          |
 | System time long             | systemLong   | macOS only: Long time format defined in the system.   
-Windows: this format is the same as the System time short format                          | 4:30:25 AM HNEC               |
+Windows では System time short フォーマットと同じ | 4:30:25 AM HNEC     |
 
 
 #### JSON 文法
