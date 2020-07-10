@@ -266,7 +266,7 @@ title: 表示フォーマット
 
 * * *
 
-## Picture Format
+## ピクチャーフォーマット
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
@@ -386,7 +386,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
 * * *
 
