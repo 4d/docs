@@ -163,11 +163,11 @@ title: インストールとアクティベーション
 日本にお住まいの方:
 
 - Web: <https://jp.4d.com/technical-support>
-- Telephone: 1-408-557-4600
+- Tel: 03-4400-1789
 
-For the UK:
 
-- Web: <https://uk.4d.com/4d-technical-support>
-- Telephone: 01625 536178
 
-Find the 4D developer community on line here: <https://discuss.4d.com>.
+- 
+- 
+
+4Dデベロッパーのオンラインコミュニティは以下のWeb サイトで見つけることができます: <https://discuss.4d.com>
