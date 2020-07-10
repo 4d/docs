@@ -37,15 +37,15 @@ Two main locations can be used for static picture path:
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Replicated
+### 繰り返し
 
-`JSON grammar: "tiled"`
+`JSON 文法では: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+**繰り返し** フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+フィールドがオリジナルのピクチャーよりも小さいサイズにされた場合、ピクチャーはトランケート (中央合わせなし) されます。
 
 ### Center / Truncated (non-centered)
 
