@@ -29,11 +29,11 @@ Two main locations can be used for static picture path:
 
 ## 表示フォーマット
 
-### Scaled to fit
+### スケーリング
 
-`JSON grammar: "scaled"`
+`JSON 文法では: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+**スケーリング** を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -49,9 +49,9 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ### Center / Truncated (non-centered)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 上下、および左右のはみ出し量は同じになります。
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 
