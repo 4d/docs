@@ -11,7 +11,7 @@ title: 表示フォーマット
 
 ![](assets/en/FormObjects/property_alphaFormat.png)
 
-このリストからフォーマットを選択するか、コンボボックスに入力すことができます。 The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+このリストからフォーマットを選択するか、コンボボックスに入力すことができます。 フォーマットポップアップメニューには、主に使用される文字フォーマット (電話番号等) が用意されています。 また、ツールボックスのフィルターとフォーマットで設定したカスタムフォーマットを選択することもできます。 この場合、そのフォーマットをオブジェクトプロパティで変更することはできません。 開発者が作成したカスタムフォーマットやフィルターはリストの先頭に表示されます。
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
