@@ -390,7 +390,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 * * *
 
-## Display Type
+## 表示タイプ
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -408,7 +408,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         * * *
         
-        ## Not rendered
+        ## 非表示
         
         When this property is enabled, the object is not drawn on the form, however it can still be activated.
         
