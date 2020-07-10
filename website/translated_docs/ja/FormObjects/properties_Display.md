@@ -329,11 +329,11 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ## 時間フォーマット
 
-Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
+時間フォーマットは、表示や印刷時に時間を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は 24時間制の “HH:MM:SS” フォーマット、または 12時間制の “HH:MM:SS AM/PM” フォーマットで時間を入力します。
 
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
+> [文字](#文字フォーマット) や [数値](#数値フォーマット) の表示フォーマットとは異なり、時間の表示フォ－マットはフォーマットポップアップメニューから選択しなければなりません。
 
-The table below shows the Time field display formats and gives examples:
+次の表は、時間フィールドの表示フォーマットとそれぞれのフォーマットの例を示しています:
 
 | フォーマット                       | JSON string  | コメント                                                                                                                                             | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
