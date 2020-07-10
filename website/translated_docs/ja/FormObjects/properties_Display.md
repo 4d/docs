@@ -5,7 +5,7 @@ title: 表示フォーマット
 
 * * *
 
-## Alpha Format
+## 文字フォ－マット
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
 
@@ -56,19 +56,19 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 ## 日付フォーマット
 
-日付フォーマットは、表示や印刷時に日付を表示する方法を制御します。 For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
+日付フォーマットは、表示や印刷時に日付を表示する方法を制御します。 データ入力の際は選択した表示フォーマットとは関係なく、YYYY/MM/DD 形式で日付を入力します。
 
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
+> [数値フォーマット](#数値フォーマット) や [文字フォ－マット](#文字フォ－マット) と異なり、日付表示フォ－マットは4Dの組み込みフォーマットのなかから選択しなければなりません。
 
-The table below shows choices available:
+利用可能な日付表示フォーマットは以下のとおりです:
 
-| Format name                     | JSON String  | Example (US system)           |
+| フォーマット                          | JSON 文字列     | 例                             |
 | ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (default)  | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
-| System date long                | systemLong   | Wednesday, March 25, 2020     |
+| System date short               | - (デフォルト)    | 2020/03/25                    |
+| System date abbreviated *(1)*   | systemMedium | 2020年3月25日                    |
+| System date long                | systemLong   | 2020年3月25日                    |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
+| Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
@@ -77,7 +77,7 @@ The table below shows choices available:
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
 *(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
 
@@ -96,7 +96,7 @@ The table below shows choices available:
 
 * * *
 
-## Number Format
+## 数値フォーマット
 
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
@@ -335,7 +335,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | コメント                                                                                                                                             | Example for 04:30:25          |
+| フォーマット                       | JSON string  | コメント                                                                                                                                             | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -345,7 +345,7 @@ The table below shows the Time field display formats and gives examples:
 | MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
 | Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
+| System time short            | - (デフォルト)    | Standard time format defined in the system                                                                                                       | 04:30:25                      |
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system.   
 Windows: this format is the same as the System time short format                   | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system.   
