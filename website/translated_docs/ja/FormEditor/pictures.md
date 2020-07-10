@@ -23,15 +23,15 @@ title: ピクチャー
 
 このアイコンは、そのピクチャーがローカルでは表示も編集もできないことを意味します。ですが、中身を改変することなく保存し、他のマシンで表示することは可能です。 たとえば、Windows での PDF ピクチャーや、PICT フォーマットのピクチャーなどが該当します。
 
-## High Resolution Pictures
+## 高解像度ピクチャー
 
-4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either scale factor or dpi.
+4D は macOS および Windows の両方で高解像度ピクチャーの表示をサポートしています。 高解像度ピクチャーは、スケール係数または dpi によって定義されます。
 
-### Scale factor (macOS only)
+### スケール係数 (macOS のみ)
 
 従来の標準的なディスプレイと比較して、高解像度ディスプレイは高い画素密度を持ちます。 これらの高解像度ディスプレイにおいてピクチャーが正しく表示されるには、適用する *スケール係数* (例: 2倍、3倍など) に応じてその画素数を増やす必要があります。
 
-When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
+高解像度のピクチャーを使う場合、ピクチャー名に "@nx" (*n*: スケール係数) を付けてスケール係数を指定することができます。 下のテーブルの例でも、高解像度ピクチャーの名前に、*circle@2x.png*、*circle@3x.png* といった形でスケール係数が指定されています。
 
 | Display Type | スケール係数              | 例題                                                                |
 | ------------ | ------------------- | ----------------------------------------------------------------- |
@@ -60,11 +60,11 @@ When using high resolution pictures, you can specify the scale factor by adding 
   </tr>
 </table>
 
-High resolution pictures with the @nx convention can be used in the following objects:
+"@nx" で定義された高解像度ピクチャーは、次のオブジェクトで使用できます。
 
 * [スタティックピクチャー](FormObjects/staticPicture.md)
-* [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
-* [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
+* [ボタン](FormObjects/button_overview.md)/[ラジオボタン](FormObjects/radio_overview.md)/[チェックボックス](FormObjects/checkbox_overview.md)
+* [ピクチャーボタン](FormObjects/pictureButton_overview.md)/[ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md)
 * [タブコントロール](FormObjects/tabControl.md)
 * [リストボックスヘッダー](FormObjects/listbox_overview.md#list-box-headers)
 * [メニューアイコン](Menus/properties.md#item-icon)
@@ -72,9 +72,9 @@ High resolution pictures with the @nx convention can be used in the following ob
 4D は自動的に最高解像度のピクチャーを優先します。 <br />  
 **例**: 標準解像度と高解像度の２つのディスプレイを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。
 
-> Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.
+> 解像度の優先順位付けはディスプレイ上のピクチャー表示にのみ適用され、印刷に関しては自動適用されないことに留意が必要です。
 
-### DPI (macOs and Windows)
+### DPI (macOs および Windows)
 
 While 4D automatically prioritizes the highest resolution, there are, however, some behavioral differences depending on screen and image dpi*(*)*, and picture format:
 
