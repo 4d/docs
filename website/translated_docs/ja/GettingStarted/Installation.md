@@ -58,32 +58,32 @@ title: インストールとアクティベーション
 
 ![](assets/en/getStart/activ1.png)
 
-Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
+その後、アクティベーションする製品のプロダクト番号を入力します。 このプロダクト番号は製品購入後にメールまたは郵送で提供されています。
 
 ![](assets/en/getStart/activ2.png)
 
-### Deferred Activation
+### オフラインアクティベーション
 
-If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
+コンピューターからインターネットへのアクセスがないために [オンラインアクティベーション](#オンラインアクティベーション) が出来ない場合、以下の手順を踏んでオフラインアクティベーションへと進んで下さい。
 
-1. In the License Manager window, select the **Deferred Activation** tab.
-2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
+1. ヘルプメニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
+2. ライセンス番号とメールアドレスを入力し、**ファイルを生成** をクリックして IDファイル (*reg.txt*) を作成します。
 
 ![](assets/en/getStart/activ3.png)
 
-3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
-4. On the machine with internet access, login to <https://activation.4d.com>.
-5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
-6. Download the serial file(s).
+3. 生成された *reg.txt* ファイルを USBドライブへと保存し、インターネット環境があるコンピューターへと移動させます。
+4. インターネット環境のあるマシンから、<https://store.4d.com/jp/activation.shtml> にログインします。
+5. Web ページ上にて、**ファイルを選択...** ボタンをクリックし、手順3と4で生成した *reg.txt* ファイルを選択し、**Activate** ボタンをクリックします。
+6. シリアルファイルをダウンロードします。
 
 ![](assets/en/getStart/activ4.png)
 
-7. Save the *license4d* file(s) on a shared media and transfer them back to the 4D machine from step 1.
-8. Now back on the machine with 4D, still on the **Deferred Activation** page, click **Next**; then click the **Load...** button and select a *license4d* file from the shared media from step 7.
+7. *license4d* ファイルを、何らかの共有メディアに保存し、手順1で使用している4Dマシンへと移動させます。
+8. **"オフラインアクティベーション"** 画面のままになっている、4D をインストールしたマシン上にて、画面上の **次へ** をクリックし、次に 読み込み...</strong> ボタンをクリックして、手順7の共有メディアにある *license4d* ファイルを選択します。
 
 ![](assets/en/getStart/activ5.png)
 
-With the license file loaded, click on **Next**.
+ライセンスファイルが読み込まれた状態で、**次へ** をクリックします。
 
 ![](assets/en/getStart/activ6.png)
 
