@@ -98,27 +98,27 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 ## 数値フォーマット
 
-> Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
+> 数値フィールドには整数、倍長整数、整数64bit、実数、そしてフロート型が含まれます。
 
-Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
+数値フォーマットは表示や印刷時に数値を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は数値だけを (必要に応じ小数点やマイナス記号も) 入力します。
 
-4D provides various default number formats.
+4Dは様々なデフォルトの数値表示フォーマットを提供しています。
 
-### Placeholders
+### プレースホルダー
 
-In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
+それぞれの数値表示フォーマットでは、数値記号 (#)、ゼロ (0)、キャレット (^)、アスタリスク (*) をプレースホルダーとして使用します。 表示しようとする各桁に対して 1つのプレースホルダーを使用し、独自の数値表示フォーマットを作成できます。
 
-| プレースホルダー | Effect for leading or trailing zero |
-| -------- | ----------------------------------- |
-| #        | Displays nothing                    |
-| 0        | Displays 0                          |
-| ^        | Displays a space (1)                |
-| *        | Displays an asterisk                |
+| プレースホルダー | 千項及び末尾のゼロ   |
+| -------- | ----------- |
+| #        | 何も表示しない     |
+| 0        | 0を表示        |
+| ^        | スペースを表示 (1) |
+| *        | アスタリスクを表示   |
 
 
-(1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
+(1) キャレット (^) は、ほとんどのフォントの数字と同じ幅を占めるスペースを生成します。
 
-For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
 
@@ -335,28 +335,28 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 次の表は、時間フィールドの表示フォーマットとそれぞれのフォーマットの例を示しています:
 
-| フォーマット                       | JSON 文字列     | コメント                                                                                          | 04:30:25 の例         |
-| ---------------------------- | ------------ | --------------------------------------------------------------------------------------------- | ------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                               | 04:30:25            |
-| HH:MM                        | hh_mm        |                                                                                               | 04:30               |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                               | 4 時 30 分 25 秒       |
-| Hour Min                     | HH_MM        |                                                                                               | 4 時 30 分            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                               | 4:30 AM             |
-| MM SS                        | mm_ss        | 00:00:00からの経過時間                                                                               | 270:25              |
-| Min Sec                      | MM_SS        | 00:00:00からの経過時間                                                                               | 270 分 25 秒          |
-| ISO Date Time                | iso8601      | 時間に関連する XML 標準表現に対応。 主に XML フォーマットでのデータのやり取りに使用します。                                           | 0000-00-00T04:30:25 |
-| System time short            | - (デフォルト)    | システムに定義された標準の時間フォーマット                                                                         | 04:30:25            |
+| フォーマット                       | JSON 文字列     | コメント                                                                       | 04:30:25 の例         |
+| ---------------------------- | ------------ | -------------------------------------------------------------------------- | ------------------- |
+| HH:MM:SS                     | hh_mm_ss   |                                                                            | 04:30:25            |
+| HH:MM                        | hh_mm        |                                                                            | 04:30               |
+| Hour Min Sec                 | HH_MM_SS   |                                                                            | 4 時 30 分 25 秒       |
+| Hour Min                     | HH_MM        |                                                                            | 4 時 30 分            |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                            | 4:30 AM             |
+| MM SS                        | mm_ss        | 00:00:00からの経過時間                                                            | 270:25              |
+| Min Sec                      | MM_SS        | 00:00:00からの経過時間                                                            | 270 分 25 秒          |
+| ISO Date Time                | iso8601      | 時間に関連する XML 標準表現に対応。 主に XML フォーマットでのデータのやり取りに使用します。                        | 0000-00-00T04:30:25 |
+| System time short            | - (デフォルト)    | システムに定義された標準の時間フォーマット                                                      | 04:30:25            |
 | System time long abbreviated | systemMedium | macOSのみ: システムに定義された時間フォーマットの短縮型。   
-Windows では System time short フォーマットと同じ                    | 4•30•25 AM          |
-| System time long             | systemLong   | macOS only: Long time format defined in the system.   
-Windows では System time short フォーマットと同じ | 4:30:25 AM HNEC     |
+Windows では System time short フォーマットと同じ | 04:30:25            |
+| System time long             | systemLong   | macOSのみ: システムに定義された時間フォーマット。   
+Windows では System time short フォーマットと同じ     | 04:30:25 JST        |
 
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                                                                                                                                                    |
-| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| 名          | データタイプ | とりうる値                                                                                                                                                                       |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (他の値と組み合わせることができます) |
 
 
 #### 対象オブジェクト
