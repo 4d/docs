@@ -39,7 +39,7 @@ With 4D, select the **License Manager...** command from the **Help** menu of the
 
 コンピューターからインターネットへのアクセスがないために [オンラインアクティベーション](#オンラインアクティベーション) が出来ない場合、以下の手順を踏んでオフラインアクティベーションへと進んで下さい。
 
-1. ヘルプメニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
+1. **ヘルプ** メニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
 2. ライセンス番号とメールアドレスを入力し、**ファイルを生成** をクリックして IDファイル (*reg.txt*) を作成します。
 
 ![](assets/en/getStart/activ3.png)
@@ -70,15 +70,15 @@ With 4D, select the **License Manager...** command from the **Help** menu of the
 
 ## ライセンスの追加
 
-You can add new licenses, for example to extend the capacities of your application, at any time.
+アプリケーションの拡張ライセンスは、いつでも追加することができます。
 
-Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
+4D または 4D Server アプリケーションの **ヘルプ** メニューから **ライセンスマネージャー...** を選択し、**更新** ボタンをクリックしてください:
 
 ![](assets/en/getStart/licens1.png)
 
-This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). You will just be prompted for your user account and password.
+このボタンを押すと 4D カスタマーデータベースに接続し、利用中のライセンスに紐付いている新しい、あるいは更新されたライセンスの自動アクティベーションがおこなわれます (利用中のライセンスは "有効なライセンス" 一覧内で **太字** で表示されているものです)。 その際、4D アカウントとパスワードの入力が必要です。
 
-- If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
+- 4D Server に追加のエクスパンションを購入した場合、ライセンス番号は一切入力する必要がありません。**更新** ボタンをクリックすれば、すべて完了します。
 - At the first activation of a 4D Server, you just need to enter the server number and all the purchased expansions are automatically assigned.
 
 You can use the **Refresh** button in the following contexts:
