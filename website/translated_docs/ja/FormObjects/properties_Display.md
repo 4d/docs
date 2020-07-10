@@ -268,23 +268,23 @@ title: 表示フォーマット
 
 ## ピクチャーフォーマット
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+ピクチャーフォーマットはピクチャーが表示あるいは印刷される際の表示方法を制御します。 データ入力時はフォーマットに関わらず、ユーザーはクリップボードからのペーストやドラッグ＆ドロップでピクチャーを入力します。
 
-The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
+トランケートとスケーリングオプションを選択しても、ピクチャーが変更されることはなく、 ピクチャーフィールドのデータは失われません。 ピクチャー表示フォーマットはピクチャーの表示にのみ影響します。
 
-### Scaled to fit
+### スケーリング
 
-`JSON grammar: "scaled"`
+`JSON 文法では: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+**スケーリング** を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Truncated (centered and non-centered)
+### トランケート (中央合わせ/中央合わせしない)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+**トランケート (中央合わせ)** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 
