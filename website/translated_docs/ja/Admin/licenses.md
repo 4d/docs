@@ -1,11 +1,11 @@
 ---
 id: licenses
-title: Managing 4D Licenses
+title: 4D ライセンスの管理
 ---
 
-ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 [4D アカウントでサインイン](GettingStarted/Installation.md) した場合、アクティベーションは自動的におこなわれます。
 
-However, in specific cases you could need to activate your licenses manually, for example if:
+しかし、場合によってはライセンスを手動でアクティベーションする必要があります。たとえば:
 
 - your configuration does not allow the automatic activation,
 - you have purchased additional licenses. 
