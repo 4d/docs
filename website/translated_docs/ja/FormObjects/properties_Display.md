@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: Display
+title: 表示フォーマット
 ---
 
 * * *
@@ -54,9 +54,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 * * *
 
-## Date Format
+## 日付フォーマット
 
-Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
+日付フォーマットは、表示や印刷時に日付を表示する方法を制御します。 For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
 
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
 
