@@ -406,7 +406,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p>
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
+  <a href="listbox_overview.md#リストボックス列">リストボックス列</a> - <a href="input_overview.md">入力</a>
 </p>
 
 <hr />
