@@ -76,11 +76,11 @@ title: ピクチャー
 
 ### DPI (macOS および Windows)
 
-While 4D automatically prioritizes the highest resolution, there are, however, some behavioral differences depending on screen and image dpi*(*)*, and picture format:
+高解像度が自動的に優先されますが、ディスプレイやピクチャーの dpi *(*)*、およびピクチャー形式によって、動作に違いが生じることがあります:
 
-| 演算子           | Behavior            |
-| ------------- | ------------------- |
-| Drop or Paste | If the picture has: |
+| 演算子       | 動作        |
+| --------- | --------- |
+| ドロップ、ペースト | ピクチャーの設定: |
 
 
 <
