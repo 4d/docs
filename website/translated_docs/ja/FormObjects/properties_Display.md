@@ -13,44 +13,44 @@ title: 表示フォーマット
 
 このリストからフォーマットを選択するか、コンボボックスに入力すことができます。 フォーマットポップアップメニューには、主に使用される文字フォーマット (電話番号等) が用意されています。 また、ツールボックスのフィルターとフォーマットで設定したカスタムフォーマットを選択することもできます。 この場合、そのフォーマットをオブジェクトプロパティで変更することはできません。 開発者が作成したカスタムフォーマットやフィルターはリストの先頭に表示されます。
 
-The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
+シャープ (#) は文字表示フォーマットのプレースホルダーです。 ハイフンやスペース、その他の句読点を表示したい場所に挿入できます。 表示したい実際の句読点と、文字データを表示する場所には # を置きます。
 
-For example, consider a part number with a format such as "RB-1762-1".
+たとえば部品番号が "RB-1762-1" のようなフォーマットの時、
 
-The alpha format would be:
+文字フォーマットを以下のように書けます:
 
     ##-####-#
     
 
-When the user enters "RB17621," the field displays:
+ユーザーが “RB17621” と入力すると、フィールドには以下の通りに表示されます:
 
     RB-1762-1
     
 
-The field actually contains "RB17621".
+フィールドに実際に格納される値は “RB17621” です。
 
-If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
+フォーマットが許可するよりも多くの文字が入力されると、4Dは最後の文字を表示します。 たとえばフォーマットが以下の時:
 
     (#######)
     
 
-and the user enters "proportion", the field displays:
+そしてユーザーが “proportion” と入力すると、フィールドには以下のように表示されます:
 
     (portion)
     
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. データが失われることはありません。
+フィールドには “proportion” が格納されます。 表示フォーマットにかかわらず、4Dは入力された文字を受け入れ、格納します。 データが失われることはありません。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                                |
-| ---------- | ------ | ------------------------------------------------------------------------------------ |
-| textFormat | string | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| 名          | データタイプ | とりうる値                                                                            |
+| ---------- | ------ | -------------------------------------------------------------------------------- |
+| textFormat | string | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", カスタムフォーマット |
 
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 * * *
 
@@ -365,14 +365,14 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 * * *
 
-## Text when False/Text when True
+## テキスト (True時)/テキスト (False時)
 
-When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+[ブール式](properties_Object.md#式の型) を次のフォームオブジェクトで表示した場合:
 
-- a text in an [input object](input_overview.md)
-- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+- [入力オブジェクト](input_overview.md) にテキストとして
+- [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-... you can select the text to display for each value:
+... 値の代わりに表示するテキストを指定することができます:
 
 - **Text when True** - the text to be displayed when the value is "true"
 - **Text when False** - the text to be displayed when the value is "false"
