@@ -27,7 +27,7 @@ Two main locations can be used for static picture path:
 
 * * *
 
-## Display
+## 表示フォーマット
 
 ### Scaled to fit
 
