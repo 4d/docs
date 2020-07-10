@@ -266,7 +266,7 @@ title: 表示フォーマット
 
 * * *
 
-## Picture Format
+## ピクチャーフォーマット
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
@@ -374,19 +374,19 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 ... 値の代わりに表示するテキストを指定することができます:
 
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
+- **テキスト (True時)** - 値が "true" の時に表示するテキスト
+- **テキスト (False時)** - 値が "false" の時に表示するテキスト
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                                                    |
-| ------------- | ------ | ------------------------------------------------------------------------ |
-| booleanFormat | string | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| 名             | データタイプ | とりうる値                                                       |
+| ------------- | ------ | ----------------------------------------------------------- |
+| booleanFormat | string | "\<*テキスト (True時)*\>;\<*テキスト (False時)*\>", 例: "済み;未処理" / |
 
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
 * * *
 
