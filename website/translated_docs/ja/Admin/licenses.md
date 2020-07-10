@@ -21,23 +21,23 @@ With 4D, select the **License Manager...** command from the **Help** menu of the
 
 ![](assets/en/getStart/server1.png)
 
-4D offers three activation modes. We recommend **Instant Activation**.
+4D は 3つのアクティベーションモードを用意しています。 推奨されるのは **オンラインアクティベーション** です。
 
-### Instant Activation
+### オンラインアクティベーション
 
-Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
+ユーザーID (メールアドレスまたは 4Dアカウント) とパスワードを入力します。 既存のユーザーアカウントが無い場合、まず以下のアドレスから作成する必要があります:
 
 <https://account.4d.com/us/login.shtml>
 
 ![](assets/en/getStart/activ1.png)
 
-Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
+その後、アクティベーションする製品のプロダクト番号を入力します。 このプロダクト番号は製品購入後にメールまたは郵送で提供されています。
 
 ![](assets/en/getStart/activ2.png)
 
-### Deferred Activation
+### オフラインアクティベーション
 
-If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
+コンピューターからインターネットへのアクセスがないために [オンラインアクティベーション](#オンラインアクティベーション) が出来ない場合、以下の手順を踏んでオフラインアクティベーションへと進んで下さい。
 
 1. In the License Manager window, select the **Deferred Activation** tab.
 2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
