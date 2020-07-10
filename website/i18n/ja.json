@@ -178,7 +178,7 @@
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
         "title": "Entry"
