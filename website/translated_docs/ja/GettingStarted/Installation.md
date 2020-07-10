@@ -66,7 +66,7 @@ title: インストールとアクティベーション
 
 コンピューターからインターネットへのアクセスがないために [オンラインアクティベーション](#オンラインアクティベーション) が出来ない場合、以下の手順を踏んでオフラインアクティベーションへと進んで下さい。
 
-1. ヘルプメニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
+1. **ヘルプ** メニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
 2. ライセンス番号とメールアドレスを入力し、**ファイルを生成** をクリックして IDファイル (*reg.txt*) を作成します。
 
 ![](assets/en/getStart/activ3.png)
@@ -79,7 +79,7 @@ title: インストールとアクティベーション
 ![](assets/en/getStart/activ4.png)
 
 7. *license4d* ファイルを、何らかの共有メディアに保存し、手順1で使用している4Dマシンへと移動させます。
-8. **"オフラインアクティベーション"** 画面のままになっている、4D をインストールしたマシン上にて、画面上の **次へ** をクリックし、次に 読み込み...</strong> ボタンをクリックして、手順7の共有メディアにある *license4d* ファイルを選択します。
+8. **"オフラインアクティベーション"** 画面のままになっている、4D をインストールしたマシン上にて、画面上の **次へ** をクリックし、次に **読み込み...** ボタンをクリックして、手順7の共有メディアにある *license4d* ファイルを選択します。
 
 ![](assets/en/getStart/activ5.png)
 
@@ -87,19 +87,19 @@ title: インストールとアクティベーション
 
 ![](assets/en/getStart/activ6.png)
 
-9. Click on the **Add N°** button to add another license. Repeat these steps until all licenses from step 6 have been integrated.
+9. 他のライセンスを追加するためには **番号追加** ボタンをクリックします。 これらの手順を、手順6のライセンスがすべて追加されるまで繰り返します。
 
-Your 4D application is now activated.
+これで、お使いの4Dアプリケーションのアクティベーションが完了しました。
 
-### Emergency Activation
+### 緊急アクティベーション
 
-This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
+このモードは、特別に一時的な4Dのアクティベーションをおこなうために使用します。このアクティベーションを行うと、4Dインターネットサイトに接続せずに、最大5日間4Dを利用できます。 このアクティベーションは一回のみ使用することができます。
 
-## Adding licenses
+## ライセンスの追加
 
-You can add new licenses, for example to extend the capacities of your application, at any time.
+アプリケーションの拡張ライセンスは、いつでも追加することができます。
 
-Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
+4D または 4D Server アプリケーションの **ヘルプ** メニューから **ライセンスマネージャー...** を選択し、**更新** ボタンをクリックしてください:
 
 ![](assets/en/getStart/licens1.png)
 
