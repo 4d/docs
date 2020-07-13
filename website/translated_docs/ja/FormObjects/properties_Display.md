@@ -538,7 +538,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         `JSON 文法では: "normal"`
         
-        When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
+        このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
         
         - In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
         
