@@ -87,9 +87,9 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 コンポーネントは特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを他の 4D データベース (ホストデータベース) にインストールすると、ホストデータベースはその機能を利用できるようになります。 コンポーネントに関する詳細は [4D コンポーネントの開発とインストール](https://doc.4d.com/4Dv18/4D/18/Developing-and-installing-4D-components.200-4575436.ja.html) を参照してください。
 
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: *\<destination>/Components/name.4dbase/\<name>.4DZ*.
+アプリケーション名を *MyComponent* に指定した場合、4D は Components フォルダーを作成し、その中に*MyComponent.4dbase* フォルダーを生成します: *\<destination>/Components/name.4dbase/\<name>.4DZ*
 
-The *MyComponent.4dbase* folder contains: - *MyComponent.4DZ* file - A *Resources* folder - any associated Resources are automatically copied into this folder. コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
+*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
 ## アプリケーションページ
 
