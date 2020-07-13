@@ -532,11 +532,11 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         > [入力](input_overview.md) オブジェクトにおいては、[複数行](properties_Entry.md#複数行) プロパティが "はい"に設定されている場合にのみ、このプロパティは表示されます。
         
-        Manages the display of contents when it exceeds the width of the object.
+        このオプションは、表示する内容がオブジェクトの幅を超えたときの表示を管理します。
         
-        #### Checked for list box/Yes for input
+        #### リストボックスにてチェック / 入力オブジェクトで "はい" に設定
         
-        `JSON grammar: "normal"`
+        `JSON 文法では: "normal"`
         
         When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
         
