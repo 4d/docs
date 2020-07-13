@@ -392,9 +392,9 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 ## 表示タイプ
 
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
+列のデータに表示フォーマットを割り当てるために使用します。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。
 
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
+ブール式および数値式の列はチェックボックスとして表示することができます。 In this case, the [Title](#title) property can be defined.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
