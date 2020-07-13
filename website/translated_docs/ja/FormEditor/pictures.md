@@ -87,7 +87,7 @@ title: ピクチャー
 
 ul>
 
-* **72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.
+* **72dpi または 96dpi** - ピクチャーは "[中央](FormObjects/properties_Picture.md#中央)" 表示され、ピクチャーを表示しているオブジェクトは同じピクセル数です。
 * **Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)
 * **No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.| |
 [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu)|If the picture's display format is:
