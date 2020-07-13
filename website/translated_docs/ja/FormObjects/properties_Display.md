@@ -408,11 +408,11 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         * * *
         
-        ## 非表示
+        ## レンダリングしない
         
-        このプロパティが選択されていると、アプリケーションモードでオブジェクトが非表示になります (あとから表示させることができます)。
+        このプロパティが選択されていると、アプリケーションモードでオブジェクトが描画されません (あとから描画することができます)。
         
-        このプロパティは、”透明” ボタンの実装を可能にします。 非表示のボタンは、描画オブジェクトの上に配置することができます。 非表示のボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
+        このプロパティは、”透明” ボタンの実装を可能にします。 レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
         
         #### JSON 文法
         
@@ -511,9 +511,9 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         ## 表示状態
         
-        This property allows hiding by default the object in the Application environment.
+        このプロパティが選択されていると、アプリケーションモードでオブジェクトがデフォルトで非表示になります。
         
-        You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context.
+        大部分のオブジェクトに対して、表示状態プロパティを指定することができます。 このプロパティを使用すると、ダイナミックなインターフェースを容易に開発できるようになります。 インターフェースを開発するとき、多くの場合はフォームの `On Load` イベント中にプログラムからオブジェクトを非表示にした後で、一部のオブジェクトを再度表示する必要性が頻繁に生じます。 表示状態プロパティを使用すると、特定オブジェクトをあらかじめ非表示にしておくことにより、このロジックを逆に働かせることができます。 この後、状況に応じて `OBJECT SET VISIBLE` コマンドを使用し、これらのオブジェクトを表示するようプログラミングすることができます。
         
         #### JSON 文法
         
