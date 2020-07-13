@@ -478,19 +478,19 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         このオプションは、どのような型の中身に対しても利用可能です(ただしピクチャーとオブジェクトを除く)。
         
-        * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+        * このオプションがチェックされているとき (デフォルト)、リストボックスセルの中身がカラムの幅を超えた場合、それらは省略され、エリプシスが表示されます:
             
             ![](assets/en/FormObjects/property_truncate1.png)
         
-        > The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+        > エリプシスの位置はOSによって変わります。 上記の例 (Windows) では、テキストの右側に表示されます (テキストの後半が省略されます)。 macOS 上では、テキストの真ん中に表示されます (テキストの中盤が省略されます)。
         
-        * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+        * このオプションのチェックが外れているとき、セルの中身がカラムの幅を超えていた場合、収まりきらない部分は表示されず、エリプシスも表示されません:
             
             ![](assets/en/FormObjects/property_truncate2.png)
         
-        The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
+        エリプシスで省略オプションはデフォルトではチェックされており、配列、セレクション、コレクション型のリストボックスに対して指定可能です。
         
-        > When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+        > テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは [ワードラップ](#ワードラップ) オプションがチェックされていない場合にのみ使用可能です。 When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
         
         The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
         
