@@ -476,7 +476,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         リストボックスのカラムが、中身をすべて表示するのには狭すぎる場合の値の表示を管理します。
         
-        This option is available for columns with any type of contents, except pictures and objects.
+        このオプションは、どのような型の中身に対しても利用可能です(ただしピクチャーとオブジェクトを除く)。
         
         * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
             
