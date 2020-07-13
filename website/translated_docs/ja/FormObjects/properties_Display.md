@@ -132,7 +132,7 @@ title: 表示フォーマット
 
 数値表示フォーマット (科学的記数法を除く) は自動でシステムの地域パラメーターに基づきます。 4D は OS に定義された小数点と千の位区切り文字を使用して “.” と “,” 文字をそれぞれ置き換えます。 0 や # に続くピリオドとコンマはプレースホルダー文字として扱われます。
 
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: * in a Real type field, using this key will insert the decimal separator defined in the system, * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> Windows 環境下で、テンキーの小数点キーを使用した際、4Dはカーソルが位置しているフィールドの型に応じて挙動が変化します: * 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。 * それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。
 
 ### 小数点とその他の表示文字
 
