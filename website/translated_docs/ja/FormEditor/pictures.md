@@ -107,4 +107,4 @@ p>|
 
 座標は *MouseX* と *MouseY* [システム変数](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html) に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。
 
-You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.
+これらの値は、[`On Clicked`](Events/onClicked.md)、[`On Double Clicked`](Events/onDoubleClicked.md)、[`On Mouse up`](Events/onMouseUp.md)、[`On Mouse Enter`](Events/onMouseEnter.md)、あるいは [`On Mouse Move`](Events/onMouseMove.md) フォームイベントの一部として取得することができます。
