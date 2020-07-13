@@ -490,12 +490,12 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         エリプシスで省略オプションはデフォルトではチェックされており、配列、セレクション、コレクション型のリストボックスに対して指定可能です。
         
-        > テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは [ワードラップ](#ワードラップ) オプションがチェックされていない場合にのみ使用可能です。 When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+        > テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは [ワードラップ](#ワードラップ) オプションがチェックされていない場合にのみ使用可能です。 ワードラップオプションがチェックされていた場合、セル内を超えたコンテンツについてはワードラップ機能によって管理されますので、エリプシスで省略オプションは使用できません。
         
-        The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+        エリプシスで省略オプションはブール型のカラムに対しても適用可能です。しかしながら、[セルのフォーマット](#表示タイプ)によって表示される結果は異なります:
         
-        - For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-        - For Check box type Boolean formats, labels are always clipped.
+        - 表示タイプがポップアップに設定されている場合は、エリプシスでラベルが省略されます。
+        - 表示タイプがチェックボックスに設定されている場合は、ラベルは常に見切れます (エリプシスで省略されません)。
         #### JSON 文法
         
         | 名            | データタイプ | とりうる値                  |
@@ -505,7 +505,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### 対象オブジェクト
         
-        [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+        [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
         
         * * *
         
