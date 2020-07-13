@@ -433,9 +433,9 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### リストボックス列におけるスリーステートチェックボックス
         
-        [式タイプ](properties_Object.md#式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます: * 0 = チェックされていない * 1 = チェックされている * 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。 * -1 = invisible check box, * -2 = unchecked box, not enterable, * -3 = checked box, not enterable, * -4 = semi-checked box, not enterable
+        [式タイプ](properties_Object.md#式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます: * 0 = チェックされていない * 1 = チェックされている * 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。 * -1 = 非表示チェックボックス * -2 = チェックされていない、入力不可 * -3 = チェックされている、入力不可 * -4 = セミチェックボックス、入力不可
         
-        In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
+        スリーステートチェックボックスの場合も、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
         
         #### JSON 文法
         
@@ -446,7 +446,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### 対象オブジェクト
         
-        [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+        [チェックボックス](checkbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
         
         * * *
         
