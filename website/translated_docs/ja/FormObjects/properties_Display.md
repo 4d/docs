@@ -540,42 +540,42 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
         
-        - In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+        - 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。下矢印キーを押すことで、エリアの内容をスクロールできます。
         
-        - In multiline columns/areas, 4D carries out automatic line returns.
+        - 複数行のカラムやエリアの場合、4Dは自動改行を実行します。
         
         ![](assets/en/FormObjects/wordwrap2.png)
         
-        #### Unchecked for list box/No for input
+        #### リストボックスにてチェックなし / 入力オブジェクトで "いいえ" に設定
         
-        `JSON grammar: "none"`
+        `JSON 文法では: "none"`
         
-        When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
+        このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
         
         ![](assets/en/FormObjects/wordwrap3.png)
         
-        In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+        リストボックスの場合、長すぎるテキストは切り落とされ、省略記号 (...) が表示されます。 以下の例では、左の列ではワードラップのオプションがチェックされていて、右の列ではされていません:
         
         ![](assets/en/FormObjects/property_wordwrap1.png)
         
-        Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+        ワードラップの オプションの値に関わらず、行の高さは変化しないことに注意してください。 改行を含むテキストがカラムの中に表示しきれないとき、表示しきれない部分は 切り落とされ、省略記号も表示されません。 単一の行を表示するリストボックスの場合、テキストの最初の行のみ表示されます:
         
         ![](assets/en/FormObjects/property_wordwrap2.png)
         
-        #### Automatic for input (default option)
+        #### 入力オブジェクトで "自動" に設定 (デフォルト)
         
-        `JSON grammar: "automatic"`
+        `JSON 文法では: "automatic"`
         
-        - In single-line areas, words located at the end of lines are truncated and there are no line returns.
-        - In multiline areas, 4D carries out automatic line returns.
+        - 一行のエリアの場合、行の最後に表示される単語は切り落とされ、改行はされません。
+        - 複数行のエリアの場合、4Dは自動改行を実行します。
         
         ![](assets/en/FormObjects/wordwrap1.png)
         
         #### JSON 文法
         
-        | 名        | データタイプ | とりうる値                                              |
-        | -------- | ------ | -------------------------------------------------- |
-        | wordwrap | string | "automatic" (excluding list box), "normal", "none" |
+        | 名        | データタイプ | とりうる値                                      |
+        | -------- | ------ | ------------------------------------------ |
+        | wordwrap | string | "automatic" (リストボックスを除く), "normal", "none" |
 
         
         #### 対象オブジェクト
