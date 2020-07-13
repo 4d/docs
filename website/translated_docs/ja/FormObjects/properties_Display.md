@@ -412,7 +412,7 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         このプロパティが選択されていると、アプリケーションモードでオブジェクトが非表示になります (あとから表示させることができます)。
         
-        In particular, this property allows implementing "invisible" buttons. Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+        このプロパティは、”透明” ボタンの実装を可能にします。 非表示のボタンは、描画オブジェクトの上に配置することができます。 非表示のボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
         
         #### JSON 文法
         
@@ -423,17 +423,17 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### 対象オブジェクト
         
-        [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+        [ボタン](button_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md)
         
         * * *
         
         ## スリーステート
         
-        Allows a check box object to accept a third state. チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
+        チェックボックスオブジェクトに、3 番目の状態を付加します。 チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
         
-        #### Three-states check boxes in list box columns
+        #### リストボックス列におけるスリーステートチェックボックス
         
-        List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed: * 0 = unchecked box, * 1 = checked box, * 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2. * -1 = invisible check box, * -2 = unchecked box, not enterable, * -3 = checked box, not enterable, * -4 = semi-checked box, not enterable
+        [式タイプ](properties_Object.md#式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます: * 0 = チェックされていない * 1 = チェックされている * 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。 * -1 = invisible check box, * -2 = unchecked box, not enterable, * -3 = checked box, not enterable, * -4 = semi-checked box, not enterable
         
         In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
         
