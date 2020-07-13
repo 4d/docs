@@ -394,14 +394,14 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
 
 列のデータに表示フォーマットを割り当てるために使用します。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。
 
-ブール式および数値式の列はチェックボックスとして表示することができます。 In this case, the [Title](#title) property can be defined.
+ブール式および数値式の列はチェックボックスとして表示することができます。 表示タイプにチェックボックスを選択すると、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
 
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+ブール式の列はポップアップメニューとしても表示することができます。 この場合には、[テキスト (True時) とテキスト (False時)](#テキスト-True時-テキスト-False時) プロパティが表示され、ポップアップメニューの対応するタイトルを設定できます。
 
 #### JSON 文法
 
-- **number columns**: "automatic" (default) or "checkbox"
-    - **boolean columns**: "checkbox" (default) or "popup"</td> </tr> </tbody> </table> 
+- **数値列**: "automatic" (デフォルト) または "checkbox"
+    - **ブール列**: "checkbox" (デフォルト) または "popup"</td> </tr> </tbody> </table> 
         #### 対象オブジェクト
         
         [List Box Column](listbox_overview.md#list-box-columns)
@@ -410,7 +410,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
         
         ## 非表示
         
-        When this property is enabled, the object is not drawn on the form, however it can still be activated.
+        このプロパティが選択されていると、アプリケーションモードでオブジェクトが非表示になります (あとから表示させることができます)。
         
         In particular, this property allows implementing "invisible" buttons. Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
         
