@@ -58,7 +58,7 @@ title: アニメーション
 
 ## アニメーション間隔 (tick)
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
+このモードを使用すると、一定のスピードで (tick 単位) ピクチャーボタンの内容が繰り返し表示されます。 このモードでは、他のすべてのオプションが無視されます。
 
 #### JSON 文法
 
@@ -73,9 +73,9 @@ Enables cycling through the contents of the picture button at the specified spee
 
 * * *
 
-## Switch when roll over
+## ロールオーバー効果
 
-Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
+マウスカーソルが通過すると、ピクチャーボタンの内容が変わります。 カーソルがボタンエリアを離れると、最初のピクチャーが再度表示されます。
 
 #### JSON 文法
 
@@ -92,7 +92,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 ## 無効時に最終フレームを使用
 
-Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
+ボタンが無効な場合に表示するサムネールとして、最後のサムネールを使用します。 ボタンが使用不可の場合に用いられるサムネールは、4Dにより別に処理されます。このオプションと ”マウス押下中は自動更新” および ”先頭フレームへ戻る” オプションを組み合わせると、最終ピクチャーはボタンに割り当てられた順序から外され、無効時にのみ表示されるようになります。
 
 #### JSON 文法
 
