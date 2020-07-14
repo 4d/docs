@@ -1287,13 +1287,13 @@ OB SET($ob;"label";"Edit...")
 
 ### イベント管理
 
-Several events can be handled while using an object list box array:
+オブジェクトリストボックス配列を使用している際には、複数のイベントを管理することができます:
 
-* **On Data Change**: An `On Data Change` event is triggered when any value has been modified either: 
-    * in a text input zone
-    * in a drop-down list
-    * in a combo box area
-    * in a unit button (switch from value x to value x+1)
-    * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **On Data Change**: 以下の場所において、どんな値でも変更された場合には `On Data Change` イベントがトリガーされます: 
+    * テキスト入力
+    * ドロップダウンリスト
+    * コンボボックスエリア
+    * 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
+    * チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
+* **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+* **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。
