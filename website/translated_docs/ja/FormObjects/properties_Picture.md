@@ -12,18 +12,18 @@ title: ピクチャー
 ピクチャーパスに指定できる場所は次の 2箇所です:
 
 - プロジェクトデータベースの **Resources** フォルダー。 アプリケーション内の複数のフォームで画像を共有する場合に適切です。 この場合、パス名は "/RESOURCES/\<picture path\>" となります。
-- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は: "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
+- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
 
 #### JSON 文法
 
-|    名    | データタイプ | とりうる値                                       |
-|:-------:|:------:| ------------------------------------------- |
-| picture |  テキスト  | Relative or filesystem path in POSIX syntax |
+|    名    | データタイプ | とりうる値                           |
+|:-------:|:------:| ------------------------------- |
+| picture |  テキスト  | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
 
 #### 対象オブジェクト
 
-[Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [スタティックピクチャー](staticPicture.md)
 
 * * *
 
@@ -51,7 +51,7 @@ title: ピクチャー
 
 `JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 上下、および左右のはみ出し量は同じになります。
+**中央合わせ** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
 
 **トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。
 
