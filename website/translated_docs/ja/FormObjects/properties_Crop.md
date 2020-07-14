@@ -1,13 +1,13 @@
 ---
 id: propertiesCrop
-title: Crop
+title: 行列数
 ---
 
 * * *
 
 ## 列
 
-Sets the number of columns in a thumbnail table.
+サムネールテーブルを構成する行数を指定します。
 
 #### JSON 文法
 
@@ -18,13 +18,13 @@ Sets the number of columns in a thumbnail table.
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
 
 * * *
 
 ## 行
 
-Sets the number of rows in a thumbnail table.
+サムネールテーブルを構成する列数を指定します。
 
 #### JSON 文法
 
@@ -35,4 +35,4 @@ Sets the number of rows in a thumbnail table.
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
