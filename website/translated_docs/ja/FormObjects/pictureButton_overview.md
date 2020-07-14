@@ -9,8 +9,8 @@ title: ピクチャーボタン
 
 ピクチャーボタンは、次の 2つの方法で使用します:
 
-* フォーム上のコマンドボタンとして。 In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.  
-    For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states. 
+* フォーム上のコマンドボタンとして。 この場合、ピクチャーボタンには通常 4種類の状態があります (有効、無効、クリック、ロールオーバー)。  
+    たとえば、1行 4列からなるサムネールテーブルの場合、各サムネールはデフォルト、クリック、ロールオーバー、無効という状態に対応しています。 
 
 | プロパティ                      | JSON 名                 | 結果   |
 | -------------------------- | ---------------------- | ---- |
