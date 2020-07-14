@@ -1,11 +1,11 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: ピクチャーボタン
 ---
 
 ## 概要
 
-A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
+ピクチャーボタンは [標準のボタン](button_overview.md) と似ていますが、 However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
 
 Picture buttons can be used in two ways:
 
