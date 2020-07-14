@@ -7,7 +7,7 @@ title: アニメーション
 
 ## 先頭フレームに戻る
 
-Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+ピクチャーを連続的に表示し続けます。 最後のピクチャーに到達して再度クリックすると、最初のピクチャーが表示されます。
 
 #### JSON 文法
 
@@ -22,9 +22,9 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 * * *
 
-## Switch back when released
+## マウスアップで戻る
 
-Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+ユーザーがボタンをクリックしているとき以外は、一番目のピクチャーが常に表示されます。 ボタンがクリックされると、マウスボタンが放されるまで二番目のピクチャーが表示されます。 このモードを使用すると、それぞれの状態 (アイドルとクリック) ごとに異なるピクチャーを使用した動作ボタンを作成することができます。 このモードを使って 3D 効果を作成したり、ボタンの動作を表現するピクチャーを表示することができます。
 
 #### JSON 文法
 
@@ -41,7 +41,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 ## マウス押下中は自動更新
 
-Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
+ユーザーがマウスボタンを押している間は、各ピクチャーが連続的に (アニメーションのように) 表示されます。 最後のピクチャーに達しても、オブジェクトは最初のピクチャーに戻りません。
 
 #### JSON 文法
 
@@ -56,7 +56,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 * * *
 
-## Switch every x ticks
+## アニメーション間隔 (tick)
 
 Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
 
