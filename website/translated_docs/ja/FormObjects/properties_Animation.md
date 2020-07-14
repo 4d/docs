@@ -22,9 +22,9 @@ title: アニメーション
 
 * * *
 
-## Switch back when released
+## マウスアップで戻る
 
-Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+ユーザーがボタンをクリックしているとき以外は、一番目のピクチャーが常に表示されます。 ボタンがクリックされると、マウスボタンが放されるまで二番目のピクチャーが表示されます。 このモードを使用すると、それぞれの状態 (アイドルとクリック) ごとに異なるピクチャーを使用した動作ボタンを作成することができます。 このモードを使って 3D 効果を作成したり、ボタンの動作を表現するピクチャーを表示することができます。
 
 #### JSON 文法
 
@@ -41,7 +41,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 ## マウス押下中は自動更新
 
-Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
+ユーザーがマウスボタンを押している間は、各ピクチャーが連続的に (アニメーションのように) 表示されます。 最後のピクチャーに達しても、オブジェクトは最初のピクチャーに戻りません。
 
 #### JSON 文法
 
@@ -56,9 +56,9 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 * * *
 
-## Switch every x ticks
+## アニメーション間隔 (tick)
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
+このモードを使用すると、一定のスピードで (tick 単位) ピクチャーボタンの内容が繰り返し表示されます。 このモードでは、他のすべてのオプションが無視されます。
 
 #### JSON 文法
 
@@ -73,9 +73,9 @@ Enables cycling through the contents of the picture button at the specified spee
 
 * * *
 
-## Switch when roll over
+## ロールオーバー効果
 
-Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
+マウスカーソルが通過すると、ピクチャーボタンの内容が変わります。 カーソルがボタンエリアを離れると、最初のピクチャーが再度表示されます。
 
 #### JSON 文法
 
@@ -92,7 +92,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 ## 無効時に最終フレームを使用
 
-Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
+ボタンが無効な場合に表示するサムネールとして、最後のサムネールを使用します。 ボタンが使用不可の場合に用いられるサムネールは、4Dにより別に処理されます。このオプションと ”マウス押下中は自動更新” および ”先頭フレームへ戻る” オプションを組み合わせると、最終ピクチャーはボタンに割り当てられた順序から外され、無効時にのみ表示されるようになります。
 
 #### JSON 文法
 
