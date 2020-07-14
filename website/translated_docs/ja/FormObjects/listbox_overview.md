@@ -864,16 +864,16 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 "choiceList" または "requiredList" 属性がオブジェクト内に存在しているとき、テキスト入力は以下の属性に応じて、ドロップダウンリストまたはコンボボックスで置き換えられます:
 
-* If the attribute is "choiceList", the cell is displayed as a combo box. This means that the user can select or type a value.
-* If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
+* 属性が "choiceList" の場合、セルはコンボボックスとして表示されます。 これはつまり、ユーザーは値を選択、または入力できるということです。
+* 属性が "requiredList" の場合、セルはドロップダウンリストとして表示されます。これはつまり、ユーザーはリストに提供されている値からどれか一つを選択するしかないということです。
 
-In both cases, a "value" attribute can be used to preselect a value in the widget.
+どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> ウィジェットの値は配列を通して定義されます。 既存の 4Dリストをウィジェットに割り当てたい場合、"requiredListReference"、"requiredListName"、"choiceListReference"、または "choiceListName" 属性を使用する必要があります。
 
 例: 
 
-* You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
+* 選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。 デフォルトでは "Closed" が選択された状態にしたいとします:
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -887,7 +887,7 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-* You want to accept any integer value, but display a combo box to suggest the most common values:
+* 整数値であればすべて受け入れ可能な状態にしておいた上で、もっとも一般的な値を提示するためにコンボボックスを表示したい場合を考えます:
 
 ```4d
     ARRAY LONGINT($ChoiceList;0)
@@ -898,19 +898,19 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
     APPEND TO ARRAY($ChoiceList;100)
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
-    OB SET($ob;"value";10) //10 as default value
+    OB SET($ob;"value";10) // 10 をデフォルト値として使用
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName と requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+"requiredListName" と "requiredListReference" 属性を使用すると、リストボックスセル内において、デザインモード (ツールボックス内) において、またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストを使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
 
-Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+"requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡します。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
+> * これらの値を単純な配列を通して定義したい場合は、"requiredList" 属性を使用する必要があります。
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
 例: 
@@ -951,7 +951,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 
 The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
 
-Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
 > * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
