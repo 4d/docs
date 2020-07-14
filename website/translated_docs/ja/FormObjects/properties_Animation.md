@@ -5,7 +5,7 @@ title: Animation
 
 * * *
 
-## Loop back to first frame
+## 先頭フレームに戻る
 
 Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
 
@@ -39,7 +39,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 * * *
 
-## Switch continuously on clicks
+## マウス押下中は自動更新
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 
