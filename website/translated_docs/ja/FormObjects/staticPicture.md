@@ -19,7 +19,7 @@ The original picture must be stored in a format managed natively by 4D (4D recog
 
 ピクチャーパスに指定できる場所は次の 2箇所です:
 
-- プロジェクトデータベースの **Resources** フォルダー。 アプリケーション内の複数のフォームで画像を共有する場合に適切です。 In this case, the Pathname is in the "/RESOURCES/\<picture path\>".
+- プロジェクトデータベースの **Resources** フォルダー。 アプリケーション内の複数のフォームで画像を共有する場合に適切です。 In this case, the Pathname is in the "/RESOURCES/\<picture path\>" となります。
 - フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 Appropriate when the static pictures are used only in the form and/or yon want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "<\picture path\>" and is resolved from the root of the form folder.
 
 ## プロパティ一覧
