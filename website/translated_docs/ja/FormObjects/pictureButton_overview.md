@@ -12,21 +12,21 @@ title: ピクチャーボタン
 * フォーム上のコマンドボタンとして。 この場合、ピクチャーボタンには通常 4種類の状態があります (有効、無効、クリック、ロールオーバー)。  
     たとえば、1行 4列からなるサムネールテーブルの場合、各サムネールはデフォルト、クリック、ロールオーバー、無効という状態に対応しています。 
 
-| プロパティ                      | JSON 名                 | 結果   |
-| -------------------------- | ---------------------- | ---- |
-| Rows                       | rowCount               | 1    |
-| Columns                    | columnCount            | 4    |
-| Switch back when Released  | switchBackWhenReleased | true |
-| Switch when Roll Over      | switchWhenRollover     | true |
-| Use Last Frame as Disabled | useLastFrameAsDisabled | true |
+| プロパティ         | JSON 名                 | 結果   |
+| ------------- | ---------------------- | ---- |
+| 行             | rowCount               | 1    |
+| 列             | columnCount            | 4    |
+| マウスアップで戻る     | switchBackWhenReleased | true |
+| ロールオーバー効果     | switchWhenRollover     | true |
+| 無効時に最終フレームを使用 | useLastFrameAsDisabled | true |
 
 
-* As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).  
-    Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
+* 複数の選択項目の中からユーザーに選ばせるためのピクチャーボタンとして。 この場合、ピクチャーボタンをポップアップピクチャーメニューの代わりに使用することができます。 [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) ではすべての選択肢が (ポップアップメニューの項目として) 同時に表示されます。他方ピクチャーボタンは、選択候補を連続的に表示します (ボタンをクリックする度に変わります)。  
+    次に示すのは、ピクチャーボタンの例です。 たとえば、カスタムアプリケーションのユーザーに、アプリケーションのインタフェース言語を選ばせたいものとします。 そこで下図のように、選択候補をピクチャーボタンとしてカスタムプロパティダイアログボックスに組み込みます:
 
 ![](assets/en/FormObjects/button_pictureButton.png)
 
-Clicking the object changes the picture.
+オブジェクトをクリックするとピクチャーが変わります。
 
 ## Using picture buttons
 
@@ -52,11 +52,11 @@ In addition to the standard positioning and appearance settings, you can set som
 
 The following other modes are available:
 
-- [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
-- [Switch back when Released](properties_Animation.md#switch-back-when-released)
-- [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
-- [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
+- [先頭フレームに戻る](properties_Animation.md#loopBackToFirstFrame)
+- [マウスアップで戻る](properties_Animation.md#switch-back-when-released)
+- [ロールオーバー効果](properties_Animation.md#switch-when-roll-over)
+- [マウス押下中は自動更新](properties_Animation.md#switch-continuously-on-clicks)
+- [無効時に最終フレームを使用](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
 
 > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
