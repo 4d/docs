@@ -7,12 +7,12 @@ title: ピクチャー
 
 ## パス名
 
-[ピクチャーボタン](pictureButton_overview.md)、[ピクチャーポップアップメニュー](picturePopupMenu_overview.md)、または [スタティックピクチャー](staticPicture.md) に表示させるピクチャーのパス名です。 You must use the POSIX syntax.
+[ピクチャーボタン](pictureButton_overview.md)、[ピクチャーポップアップメニュー](picturePopupMenu_overview.md)、または [スタティックピクチャー](staticPicture.md) に表示させるピクチャーのパス名です。 POSIX シンタックスを使用します。
 
-Two main locations can be used for static picture path:
+ピクチャーパスに指定できる場所は次の 2箇所です:
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- プロジェクトデータベースの **Resources** フォルダー。 アプリケーション内の複数のフォームで画像を共有する場合に適切です。 この場合、パス名は "/RESOURCES/\<picture path\>" となります。
+- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は: "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
 
 #### JSON 文法
 
