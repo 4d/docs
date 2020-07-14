@@ -1006,7 +1006,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に True の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。
 
-このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては "Event management" の章を参照ください)。
+このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては [イベント管理](#イベント管理) の章を参照ください)。
 
 例: 
 
@@ -1022,9 +1022,9 @@ OB SET($ob;"value";$entry)
 
 #### color valueType
 
-The "color" valueType allows you to display either a color or a text.
+"color" valueType を使用すると、色、または色を表すテキストを表示することができます。
 
-* If the value is a number, a colored rectangle is drawn inside the cell. 例: 
+* 値が数字の場合、色付けされた長方形がセル内に表示されます。 例: 
     
     ```4d
     C_OBJECT($ob4)
@@ -1034,13 +1034,13 @@ The "color" valueType allows you to display either a color or a text.
     
     ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-* If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+* 値がテキストの場合、そのテキストが表示されます (*例*: "value";"Automatic")。
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。 データまたは値を渡す/返すことはできません。
 
-Optionally, you can pass a "label" attribute.
+オプションとして、"label" 属性を渡すことができます。
 
 例: 
 
@@ -1052,15 +1052,15 @@ OB SET($ob;"label";"Edit...")
 
 ![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
-### Event management
+### イベント管理
 
-Several events can be handled while using an object list box array:
+オブジェクトリストボックス配列を使用している際には、複数のイベントを管理することができます:
 
-* **On Data Change**: An `On Data Change` event is triggered when any value has been modified either: 
-    * in a text input zone
-    * in a drop-down list
-    * in a combo box area
-    * in a unit button (switch from value x to value x+1)
-    * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **On Data Change**: 以下の場所において、どんな値でも変更された場合には `On Data Change` イベントがトリガーされます: 
+    * テキスト入力
+    * ドロップダウンリスト
+    * コンボボックスエリア
+    * 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
+    * チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
+* **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+* **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。
