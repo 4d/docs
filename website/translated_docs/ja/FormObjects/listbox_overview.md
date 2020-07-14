@@ -906,16 +906,16 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 #### requiredListName と requiredListReference
 
-"requiredListName" と "requiredListReference" 属性を使用すると、リストボックスセル内において、デザインモード (ツールボックス内) において、またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストを使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
+"requiredListName" と "requiredListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
 
 "requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡します。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
 > * これらの値を単純な配列を通して定義したい場合は、"requiredList" 属性を使用する必要があります。
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
 例: 
 
-* You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
+* ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "blue" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -929,7 +929,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-* You want to display a drop-down list based on a list defined by programming and save it as a reference:
+* プログラミングによって定義されたリストに基づいたドロップダウンリストを表示し、参照として保存したい場合を考えます:
 
 ```4d
     <>List:=New list
@@ -940,25 +940,25 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
     OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
+    OB SET($ob;"value";2) // デフォルトでLondonを表示
     OB SET($ob;"requiredListReference";<>List)
 ```
 
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
     
 
-#### choiceListName and choiceListReference
+#### choiceListName と choiceListReference
 
-The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
+"choiceListName" と "choiceListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはコンボボックスとして表示されるようになります。これはつまり、ユーザーは値を選択、または入力できるということを意味します。
 
-Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
+"choiceListName" または "choiceListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡しま す。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * これらの値を単純な配列を通して定義したい場合は、"choiceList" 属性を使用する必要があります。
+> * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
 例: 
 
-You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
+ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "green" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -971,23 +971,23 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-#### unitsList, unitsListName, unitsListReference and unitReference
+#### unitsList、unitsListName、 unitsListReference と unitReference
 
-You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). To define the unit list, you can use one of the following attributes:
+特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
-* "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Use this attribute to define units within the object.
-* "unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
-* "unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
+* "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
+* "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+* "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
-Regardless of the way the unit list is defined, it can be associated with the following attribute:
+単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
 
-* "unitReference": a single value that contains the index (from 1 to x) of the selected item in the "unitList", "unitsListReference" or "unitsListName" values list.
+* "unitReference": "unitList"、"unitsListReference" または "unitsListName" の値リスト内で選択された項目へのインデックス (1からx) を格納する単一の値。
 
-The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
+カレントの単位は、ボタンとして表示されます。このボタンは、クリックするたびに "unitList"、"unitsListReference" または "unitsListName" の値を切り替えていきます (例: "pixels" -> "rows" -> "cm" -> "pixels" -> 等)。
 
 例: 
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+数値の入力と、その後に可能性のある二つの単位 ("lines" または "pixels") を続けて表示したい場合を考えます。 カレントの値は "2" + "lines" と、 オブジェクト内で直接定義された値 ("unitsList" 属性) を使用するものとします:
 
 ```4d
 ARRAY TEXT($_units;0)
@@ -1004,9 +1004,9 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. The button will be displayed in the cell automatically.
+セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に True の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。
 
-When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
+このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては "Event management" の章を参照ください)。
 
 例: 
 
