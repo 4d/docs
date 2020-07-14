@@ -31,23 +31,23 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
-For example, when you call a `getArea()` function with two parameters:
+たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
     $area:=$o.getArea(50;100)
     
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width: Integer; $height : Integer)
     var $0 : Integer
     $0:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 > 
-> Sequential parameters can be used in conjunction with named parameters. たとえば:
+> 位置引数と名前付き引数は組み合わせて使えます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -55,7 +55,7 @@ Function add($x : Integer)
   $0:=$x+$2
 ```
 
-### Supported data types
+### サポートされているデータ型
 
 With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including for example:
 
@@ -101,7 +101,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
-### Supported data types
+### サポートされているデータ型
 
 You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
 
