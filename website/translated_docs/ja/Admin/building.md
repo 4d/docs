@@ -33,7 +33,7 @@ title: プロジェクトパッケージのビルド
 
 ### アプリケーションビルド設定
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
+アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、"buildApp.4DSettings" という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはプロジェクトの Settings フォルダーに配置されます。
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
@@ -41,13 +41,13 @@ Each build application parameter is stored as an XML key in the application proj
 
 ### ログファイル
 
-When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. ログファイルにはビルド毎に以下の情報が書き込まれます:
+アプリケーションをビルドすると、4D はログファイル (*BuildApp.log.xml*) を生成して、プロジェクトの **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
 
 - ターゲットビルドの開始と終了
 - 生成されたファイルの名称とフルパス
 - ビルドの日付と時刻
-- Any errors that occurred,
-- Any signing issues (e.g. a non-signed plug-in).
+- 発生したエラー
+- 署名の問題 (例: 署名されていないプラグイン)
 
 Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
 
