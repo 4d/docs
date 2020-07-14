@@ -183,7 +183,7 @@ Function <name>({parameterName : type;...})
 Function setFullName($firstname : Text;$lastname : Text)
 ```
 
-> [Sequential parameters](parameters.md#sequential-parameters) ($1, $2...) can be also used in class functions.
+> クラス関数では、[位置引数](parameters.md#位置引数) ($1, $2...) を使うこともできます。
 
 クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
 
