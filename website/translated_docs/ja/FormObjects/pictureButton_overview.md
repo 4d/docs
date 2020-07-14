@@ -42,9 +42,9 @@ title: ピクチャーボタン
 
 3. 画像の [行と列](properties_Crop.md) プロパティを設定します。
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. 画像の切り替え条件を [アニメーション](properties_Animation.md) テーマのプロパティから選択します。
 
-## Animation
+## アニメーション
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 
