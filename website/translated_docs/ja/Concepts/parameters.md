@@ -14,22 +14,22 @@ title: 引数
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+メソッドやクラス関数に引数を渡す場合も同様におこないます。 たとえば、`getArea()` クラス関数が 2つの引数を受け取る場合、このクラス関数を呼び出すには以下のように書きます:
 
     $area:=$o.getArea(50;100)
     
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+また、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in named variables (class functions only) or sequentially numbered variables (methods and class functions).
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内でローカル変数に格納されます。このローカル変数は、名前付き変数 (クラス関数のみ) の場合と受け渡し順に番号が付けられた変数 (メソッドおよびクラス関数) の場合があります。
 
 ## 名前付き引数 (クラス関数)
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. Multiple parameters (and types) are separated by semicolons (;).
+呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
 For example, when you call a `getArea()` function with two parameters:
 
