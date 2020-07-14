@@ -1,27 +1,27 @@
 ---
 id: picturePopupMenuOverview
-title: Picture Pop-up Menu
+title: ピクチャーポップアップメニュー
 ---
 
 ## 概要
 
-A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used instead of a [picture button](pictureButton_overview.md). The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. The concept is the same as for [button grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
+ピクチャーポップアップメニューは、画像の二次元配列を表示するポップアップメニューです。 ピクチャーポップアップメニューを使用して、[ピクチャー ボタン](pictureButton_overview.md) を置き換えることができます。 ピクチャーポップアップメニューで使用するピクチャーの作成方法は、ピクチャーボタン用のピクチャーと似ています。 その概念は [ボタングリッド](buttonGrid_overview.md) と同じですが、グラフィックがフォームオブジェクトではなくポップアップメニューとして使用される点が異なります。
 
-## Using picture pop-up menus
+## ピクチャーポップアップメニューの使用
 
-To create a picture pop-up menu, you need to [refer to a picture](properties_Picture.md#pathname). The following example allows you to select the interface language by selecting it from a picture pop-up menu. Each language is represented by the corresponding flag:
+ピクチャーポップアップメニューを作成するには、[画像を参照](properties_Picture.md#パス名) する必要があります。 次の例は、ピクチャーポップアップメニューからインタフェース言語を選ぶことができます。 各言語は対応する国旗で表わされています:
 
 ![](assets/en/FormObjects/picturePopupMenu_example.png)
 
-### Programming
+### プログラミング
 
-You can manage picture pop-up menus using methods. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. If no element is selected, the value is 0. Elements are numbered, row by row, from left to right starting with the top row.
+ピクチャーポップアップメニューは、メソッドを使用して管理できます。 [ボタングリッド](buttonGrid_overview.md) と同様、ピクチャーポップアップメニューに割り当てられた変数に、選択された要素の値が代入されます。 項目が選択されなければ、この値は 0 になります。 各ピクチャーには上の行から順に左から右へと番号が振られます。
 
 ### ページ指定アクション
 
-You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
+ピクチャーポップアップメニューにページ指定 (`gotoPage`) [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) を割り当てることができます。 このアクションを選択すると、4D はピクチャー配列で選択されたピクチャー位置に相当するフォームのページを自動的に表示します。 要素は左から右、上から下に向かって番号が割り当てられます。
 
-For example, if the user selects the 3rd element, 4D will display the third page of the current form (if it exists). If you want to manage the effect of a click yourself, select `No action`.
+たとえば、ユーザーが3番目の要素をクリックすると、4D はカレントフォームの 3ページ目 (存在する場合) を表示します。 If you want to manage the effect of a click yourself, select `No action`.
 
 ## プロパティ一覧
 
