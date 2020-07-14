@@ -90,7 +90,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 * * *
 
-## Use Last frame as disabled
+## 無効時に最終フレームを使用
 
 Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
 
