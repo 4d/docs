@@ -57,42 +57,42 @@ Function add($x : Integer)
 
 ### サポートされているデータ型
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including for example:
+名前付き引数の場合、[`var` キーワードでサポートされている](variables.md#var-キーワードによる宣言) データ型を使用できます。たとえば:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
 
-## Sequential parameters
+## 位置引数
 
-You can declare methods or class function parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
+メソッドやクラス関数の引数は、受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use named parameters syntax.
+> このシンタックスはメソッドとクラス関数でサポートされています。 しかしながら、クラス関数の場合は名前付き引数を使ったシンタックスが推奨されます。
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+呼び出されるメソッドにおいて、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます:
 
 ```4d
-  //Code of the method DO_SOMETHING
-  //Assuming all parameters are of the text type
+  // DO_SOMETHING メソッド
+  // すべての引数はテキスト型です
  C_TEXT($1;$2;$3)
- ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+ ALERT($1+" と "+$2+" と "+$3+" を受け取りました。")
+  //$1 には $WithThis の値が代入されます
+  //$2 には $AndThat の値が代入されます
+  //$3 には $ThisWay の値が代入されます
 ```
 
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! SetCalendarDate を実行し
-// その際に引数として日付リテラル !05/05/10! を渡します
+// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
