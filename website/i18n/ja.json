@@ -394,7 +394,7 @@
         "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "行列数"
       },
       "FormObjects/propertiesDataSource": {
         "title": "データソース"
