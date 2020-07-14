@@ -87,7 +87,7 @@ title: ピクチャー
 
 ul>
 
-* **72dpi または 96dpi** - ピクチャーは "[中央](FormObjects/properties_Picture.md#中央)" 表示され、ピクチャーを表示しているオブジェクトは同じピクセル数です。
+* **72dpi または 96dpi** - ピクチャーは "[中央合わせ](FormObjects/properties_Picture.md#中央合わせ-トランケート-中央合わせしない)" 表示され、ピクチャーを表示しているオブジェクトは同じピクセル数です。
 * **その他の dpi** - ピクチャーは "[スケーリング](FormObjects/properties_Picture.md#スケーリング)" 表示され、ピクチャーを表示しているオブジェクトのピクセル数は (ピクチャーのピクセル数 / ピクチャーの dpi) * (スクリーンの dpi) です。
 * **dpi なし** - ピクチャーは "[スケーリング](FormObjects/properties_Picture.md#スケーリング)" 表示されます。| |
 [自動サイズ](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.ja.html#148057) (フォームエディターのコンテキストメニュー)|ピクチャーの表示が:
