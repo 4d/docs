@@ -36,15 +36,15 @@ title: ピクチャーボタン
     
     ![](assets/en/FormObjects/pictureButton_grid.png)
 
-ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。 ピクチャーを格子状に並べた場合、各ピクチャーには左から右へ 1 行ずつ、0から始まる番号が振られます。 For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
+ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。 ピクチャーを格子状に並べた場合、各ピクチャーには左から右へ 1 行ずつ、0から始まる番号が振られます。 たとえば、4行と 3列で構成される格子において、2行目の 2番目の画像の番号は 4 になります (上の例では英国旗)。
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. プロジェクトの Resouces フォルダーに画像があるのを確認し、そのファイルパスを [パス名](properties_TextAndPicture.md#ピクチャーパス名) プロパティに入力します。
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. 画像の [行と列](properties_Crop.md) プロパティを設定します。
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. 画像の切り替え条件を [アニメーション](properties_Animation.md) テーマのプロパティから選択します。
 
-## Animation
+## アニメーション
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 
