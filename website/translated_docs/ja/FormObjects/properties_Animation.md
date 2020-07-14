@@ -7,7 +7,7 @@ title: アニメーション
 
 ## 先頭フレームに戻る
 
-Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+ピクチャーを連続的に表示し続けます。 最後のピクチャーに到達して再度クリックすると、最初のピクチャーが表示されます。
 
 #### JSON 文法
 
