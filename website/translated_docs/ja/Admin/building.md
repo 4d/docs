@@ -392,15 +392,15 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 * **自己署名証明書の生成** - 自己署名証明書を生成するための "証明書アシスタント" を実行します。 Apple 社のデベロッパー認証を持たない場合には、自己署名証明書を提供する必要があります。 この証明書を使うと、アプリケーションを内部的に運用する場合に警告が表示されません。 アプリケーションを外部で運用する場合 (http やメールを介した場合) には、アプリケーションの開発者が不明であるという警告が macOS での起動時に表示されます。 その場合でもユーザーはアプリケーションを "強制的" に起動することができます。 
 
-<
 
-p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
 
-> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
+"証明書アシスタント" では、オプションを適切に選択します: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
 
-#### About Gatekeeper
+> Apple Developer Program に加入し、アプリケーションの公証 (後述参照) に必要なデベロッパー認証を取得することが推奨されます。
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
+#### Gatekeeper について
+
+Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションとデフォルトで互換性のあるアプリケーションを生成することができます。
 
