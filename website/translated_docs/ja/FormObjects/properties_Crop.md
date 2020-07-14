@@ -5,7 +5,7 @@ title: Crop
 
 * * *
 
-## Columns
+## 列
 
 Sets the number of columns in a thumbnail table.
 
@@ -22,7 +22,7 @@ Sets the number of columns in a thumbnail table.
 
 * * *
 
-## Rows
+## 行
 
 Sets the number of rows in a thumbnail table.
 
