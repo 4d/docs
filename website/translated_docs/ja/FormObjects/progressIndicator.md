@@ -49,14 +49,14 @@ title: 進捗インジケーター
 
 **バーバーショップ** はデフォルトサーモメーターの一種です。 このバリエーションを選択するには [バーバーショップ](properties_Scale.md#バーバーショップ) プロパティをチェックします。
 
-> In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
+> JSON コードにおいては、デフォルトサーモメーターのオブジェクトから "max" プロパティを取り除くだけで、インジケーターがバーバーショップになります。
 
-Barber shop displays a continuous animation, like the [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.
+バーバーショップは [スピナー](spinner.md) のように連続したアニメーションを表示します。 このタイプのサーモメーターは通常プログラムが何らかの処理を行っていて、それが終了する時間が予測できない場合、そのことをユーザーに通知するために使用します。 このバリエーションが選択されるとプロパティリストの [スケール](properties_Scale.md) テーマは非表示になります。
 
-When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+フォームが実行されたとき、オブジェクトのアニメーションは開始されません。 [割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
 
-* 1 (or any value other than 0) = Start animation,
-* 0 = Stop animation.
+* 非 0 値 = アニメーション開始
+* 0 = アニメーション停止
 
 ### プロパティ一覧
 
