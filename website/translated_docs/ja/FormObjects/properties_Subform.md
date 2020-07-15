@@ -64,7 +64,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 [Subform](subform_overview.md)
 
-#### See also
+#### 参照
 
 [Double click on row](#double-click-on-row)
 
@@ -95,7 +95,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 [Subform](subform_overview.md)
 
-#### See also
+#### 参照
 
 [Double click on empty row](#double-click-on-empty-row)
 
