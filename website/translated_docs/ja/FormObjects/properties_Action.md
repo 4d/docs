@@ -31,7 +31,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
-#### See also
+#### 参照
 
 [ドロップ有効](#droppable)
 
@@ -60,7 +60,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
-#### See also
+#### 参照
 
 [ドラッグ有効](#draggable)
 
