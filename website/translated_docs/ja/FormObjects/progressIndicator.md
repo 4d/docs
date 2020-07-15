@@ -29,13 +29,13 @@ title: 進捗インジケーター
 
 このメソッドはインジケーターの値を Salary フィールドに代入します。 ユーザーがインジケーターをドラッグすると、Salary フィールドの値が変わります。
 
-## 進捗インジケーター (サーモメーター)
+## デフォルトのサーモメーター
 
 ![](assets/en/FormObjects/indicator_progressBar.png)
 
 サーモメーターはデフォルトの進捗インジケーターです。
 
-You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
+縦または横のサーモメーターバーを表示できます。 どちらになるかはフォームエディター上に描かれたオブジェクトの形により決定されます。
 
 Multiple graphical options are available: minimum/maximum values, graduations, steps.
 
