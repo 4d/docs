@@ -15,17 +15,17 @@ title: プラグインエリア
 
 作成したプラグインエリアが小さすぎる場合、4Dはエリアをボタンとして表示し、エリアに割り当てられた変数名がそのタイトルに使用されます。 実行時ユーザーはこのボタンをクリックしてプラグインを表示するためのウィンドウを開くことができます。
 
-### Advanced properties
+### 詳細オプション
 
-If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+プラグインの作成者が詳細オプションを提供していると、プロパティリストの **プラグイン** テーマ内に [**詳細設定**](properties_Plugins.md) ボタンが使用可能になることがあります。 この場合ボタンをクリックすると、プラグインの制作元によるカスタムダイアログにてそれらのオプションを設定することができます。
 
 ## プラグインのインストール
 
-To add a plug-in in your 4D environment, you first need to quit 4D. Plug-ins are loaded when you launch 4D. For more information about the installation of plug-ins, refer to [Installing plugins or components](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
+プラグインを 4D環境にインストールするには、まず 4Dを終了する必要があります。 4Dは起動時にプラグインをロードします。 プラグインのインストールに関する詳細は [プラグインやコンポーネントのインストール](https://doc.4d.com/4Dv18/4D/18/Installing-plugins-or-components.300-4575696.ja.html) を参照してください。
 
-## Creating plug-ins
+## プラグインの利用
 
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D provides a [complete kit (on github)](https://github.com/4d/4D-Plugin-SDK) to help you write custom plug-ins.
+独自にプラグインを作成したい場合、オープンソースのプラグイン制作キットを使用することができます。 このキットの入手およびプラグイン作成に関する情報は [(github上にある) 完全なキット](https://github.com/4d/4D-Plugin-SDK) を参照してください。
 
 ## プロパティ一覧
 
