@@ -13,7 +13,7 @@ You use this type of object to indicate that an operation such as establishing a
 
 フォームが実行されたとき、オブジェクトのアニメーションは開始されません。 [割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
 
-* 1 (or any value other than 0) = Start animation,
+* 非 0 値 = アニメーション開始
 * 0 = Stop animation
 
 ### プロパティ一覧
