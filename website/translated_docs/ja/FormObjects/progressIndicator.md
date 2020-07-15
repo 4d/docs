@@ -37,7 +37,7 @@ title: 進捗インジケーター
 
 縦または横のサーモメーターバーを表示できます。 どちらになるかはフォームエディター上に描かれたオブジェクトの形により決定されます。
 
-Multiple graphical options are available: minimum/maximum values, graduations, steps.
+描画に関するプロパティをいくつか設定することができます: 最小/最大値、目盛りの単位、ステップ、その他の表示オプションなどです。
 
 ### プロパティ一覧
 
