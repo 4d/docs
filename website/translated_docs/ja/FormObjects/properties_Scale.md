@@ -5,7 +5,7 @@ title: Scale
 
 * * *
 
-## Barber shop
+## バーバーショップ
 
 Enables the "barber shop" variant for the thermometer.
 
@@ -18,7 +18,7 @@ Enables the "barber shop" variant for the thermometer.
 
 #### 対象オブジェクト
 
-[Barber shop](progressIndicator.md#barber-shop)
+[バーバーショップ](progressIndicator.md#barber-shop)
 
 * * *
 
