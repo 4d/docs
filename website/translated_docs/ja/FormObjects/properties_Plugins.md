@@ -7,7 +7,7 @@ title: プラグイン
 
 ## Advanced Properties
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. この場合ボタンをクリックすると、プラグインの制作元によるカスタムダイアログにてそれらのオプションを設定することができます。
 
 Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
 
@@ -20,4 +20,4 @@ Because the Advanced properties feature is under the control of the author of th
 
 #### 対象オブジェクト
 
-[Plug-in Area](pluginArea_overview.md)
+[プラグインエリア](pluginArea_overview.md)
