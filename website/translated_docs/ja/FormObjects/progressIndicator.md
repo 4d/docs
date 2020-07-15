@@ -1,39 +1,39 @@
 ---
 id: progressIndicator
-title: Progress Indicator
+title: 進捗インジケーター
 ---
 
 ## 概要
 
-A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
+進捗インジケーター (または "サーモメーター") は図形を用いて値を表示するオブジェクトです。
 
 ![](assets/en/FormObjects/progress1.png)
 
-### Using indicators
+### インジケーターの使用
 
-You can use indicators either to display or set values. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
+インジケーターを使用して値の表示や設定ができます。 たとえば、メソッドを用いてサーモメーターに値を指定すると、その値が表示されます。 ユーザーがインジケーターポイントをドラッグすると、その値が変更されます。 この値はフィールド、入力可オブジェクト、入力不可オブジェクト等の他のオブジェクトで使用することができます。
 
-The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
+インジケーターに関連付けた変数により、その表示を管理します。 メソッドを用いて、この変数に値を代入したり、またはインジケーターの値を使用したりします。 たとえば、フィールドまたは入力可オブジェクトのメソッドを使用して、サーモメーターを管理できます:
 
 ```4d
  $vTherm:=[Employees]Salary
 ```
 
-This method assigns the value of the Salary field to the $vTherm variable. This method would be attached to the Salary field.
+このメソッドは Salary フィールドの値を $vTherm 変数に代入します。 このメソッドは、たとえばフォーム上で Salary フィールドのオブジェクトメソッドとして記述できます。
 
-Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. In this case the method becomes:
+逆にインジケーターを使用してフィールドの値を管理することも可能です。 ユーザーはインジケーターをドラッグして値を設定します。 このメソッドは次の通りです:
 
 ```4d
  [Employees]Salary:=$vTherm
 ```
 
-The method assigns the value of the indicator to the Salary field. As the user drags the indicator, the value in the Salary field changes.
+このメソッドはインジケーターの値を Salary フィールドに代入します。 ユーザーがインジケーターをドラッグすると、Salary フィールドの値が変わります。
 
-## Default thermometer
+## 進捗インジケーター (サーモメーター)
 
 ![](assets/en/FormObjects/indicator_progressBar.png)
 
-The thermometer is the basic progress indicator.
+サーモメーターはデフォルトの進捗インジケーターです。
 
 You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
 
