@@ -15,13 +15,13 @@ title: ステッパー
 
 ステッパーには数値、時間、日付変数を割り当てることができます。
 
-* 時間型の値では最小、最大、ステッププロパティは秒を表します。 たとえば、ステッパーを 8:00 から 18:00 まで 10分のステップで設定するには: 
-    * [minimum](properties_Scale.md#minium) = 28 800 (8*60*60)
-    * [maximum](properties_Scale.md#maximum) = 64 800 (18*60*60)
-    * [step](properties_Scale.md#step) = 600 (10*60)
-* For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. The Minimum and Maximum properties are ignored.
+* 時間型の値では最小、最大、[ステップ](properties_Scale.md#ステップ) プロパティは秒を表します。 たとえば、ステッパーを 8:00 から 18:00 まで 10分のステップで設定するには: 
+    * [最小](properties_Scale.md#最小) = 28,800 (8*60*60)
+    * [最大](properties_Scale.md#最大) = 64,800 (18*60*60)
+    * [ステップ](properties_Scale.md#ステップ) = 600 (10*60)
+* 日付タイプの値では [ステップ](properties_Scale.md#ステップ) プロパティに入力された値が日数を表します。 最小と最大プロパティは無視されます。
 
-> For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
+> ステッパーを時間や日付変数に対して動作させるためには、プロパティリストで型を設定するだけでなく、[C_TIME](https://doc.4d.com/4Dv18/4D/18/C-TIME.301-4505778.ja.html) または [C_DATE](https://doc.4d.com/4Dv18/4D/18/C-DATE.301-4505791.ja.html) コマンドで明示的に宣言する必要があります。
 
 詳細については [インジケーターの使用](progressIndicator.md#インジケーターの使用) を参照ください。
 
