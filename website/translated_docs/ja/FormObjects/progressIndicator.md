@@ -19,7 +19,7 @@ title: 進捗インジケーター
  $vTherm:=[Employees]Salary
 ```
 
-このメソッドは Salary フィールドの値を $vTherm 変数に代入します。 このメソッドはフォーム上で Salary フィールドのオブジェクトメソッドとして記述できます。
+このメソッドは Salary フィールドの値を $vTherm 変数に代入します。 このメソッドは、たとえばフォーム上で Salary フィールドのオブジェクトメソッドとして記述できます。
 
 逆にインジケーターを使用してフィールドの値を管理することも可能です。 ユーザーはインジケーターをドラッグして値を設定します。 このメソッドは次の通りです:
 
@@ -29,13 +29,13 @@ title: 進捗インジケーター
 
 このメソッドはインジケーターの値を Salary フィールドに代入します。 ユーザーがインジケーターをドラッグすると、Salary フィールドの値が変わります。
 
-## Default thermometer
+## デフォルトのサーモメーター
 
 ![](assets/en/FormObjects/indicator_progressBar.png)
 
-The thermometer is the basic progress indicator.
+サーモメーターはデフォルトの進捗インジケーターです。
 
-You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
+縦または横のサーモメーターバーを表示できます。 どちらになるかはフォームエディター上に描かれたオブジェクトの形により決定されます。
 
 Multiple graphical options are available: minimum/maximum values, graduations, steps.
 
