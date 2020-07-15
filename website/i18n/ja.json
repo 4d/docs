@@ -370,13 +370,13 @@
         "title": "ピクチャーボタン"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "動作"
@@ -463,7 +463,7 @@
         "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -478,7 +478,7 @@
         "title": "Static picture"
       },
       "FormObjects/stepper": {
-        "title": "Stepper"
+        "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
         "title": "Subform"
