@@ -76,7 +76,7 @@ Allows setting a standard style for the object border.
 
 | 名           | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 
 #### 対象オブジェクト
@@ -218,7 +218,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | 名    | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | テキスト   | "transparent" |
+| fill | text   | "transparent" |
 
 
 #### 対象オブジェクト
