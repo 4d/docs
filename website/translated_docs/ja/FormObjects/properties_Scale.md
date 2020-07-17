@@ -35,13 +35,13 @@ title: Scale
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
-## Graduation step
+## 目盛りのステップ
 
-Scale display measurement.
+目盛の表示単位です。
 
 #### JSON 文法
 
@@ -52,16 +52,16 @@ Scale display measurement.
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
-## Label Location
+## ラベル位置
 
-Specifies the location of an object's displayed text.
+ラベルが表示される際の位置です。
 
-* None - no label is displayed
-* Top - Displays labels to the left of or above an indicator
+* なし - ラベルは表示されません。
+* 上 - インジケーターの上または左にラベルを表示します。
 * Bottom - Displays labels to the right of or below an indicator
 
 #### JSON 文法
@@ -73,7 +73,7 @@ Specifies the location of an object's displayed text.
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
