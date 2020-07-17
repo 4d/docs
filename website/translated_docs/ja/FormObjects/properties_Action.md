@@ -24,7 +24,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dragging | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### 対象オブジェクト
@@ -53,7 +53,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dropping | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### 対象オブジェクト
@@ -103,7 +103,7 @@ Several types of method references are supported:
 
 | 名      | データタイプ | とりうる値                                                              |
 | ------ | ------ | ------------------------------------------------------------------ |
-| method | テキスト   | Object method standard or custom file path, or project method name |
+| method | text   | Object method standard or custom file path, or project method name |
 
 
 #### 対象オブジェクト
@@ -139,7 +139,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | 名             | データタイプ | とりうる値                        |
 | ------------- | ------ | ---------------------------- |
-| selectionMode | テキスト   | "multiple", "single", "none" |
+| selectionMode | text   | "multiple", "single", "none" |
 
 
 #### 対象オブジェクト
