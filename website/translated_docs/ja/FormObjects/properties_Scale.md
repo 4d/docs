@@ -24,7 +24,7 @@ title: Scale
 
 ## 目盛りを表示
 
-Displays/Hides the graduations next to the labels.
+ラベルの隣に目盛を表示、または非表示にします。
 
 #### JSON 文法
 
@@ -35,11 +35,11 @@ Displays/Hides the graduations next to the labels.
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
-## Graduation step
+## 目盛りのステップ
 
 Scale display measurement.
 
@@ -52,7 +52,7 @@ Scale display measurement.
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
@@ -73,7 +73,7 @@ Specifies the location of an object's displayed text.
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 * * *
 
