@@ -7,13 +7,13 @@ title: Scale
 
 ## バーバーショップ
 
-Enables the "barber shop" variant for the thermometer.
+このプロパティは、サーモメーターの "バーバーショップ" バリエーションを有効にします。
 
 #### JSON 文法
 
-|        名        | データタイプ | とりうる値                                                       |
-|:---------------:|:------:| ----------------------------------------------------------- |
-| [max](#maximum) | number | NOT passed = enabled; passed = disabled (basic thermometer) |
+|        名        | データタイプ | とりうる値                                      |
+|:---------------:|:------:| ------------------------------------------ |
+| [max](#maximum) | number | プロパティが存在しない = 有効; 存在する = 無効 (デフォルトサーモメーター) |
 
 
 #### 対象オブジェクト
@@ -22,9 +22,9 @@ Enables the "barber shop" variant for the thermometer.
 
 * * *
 
-## Display graduation
+## 目盛りを表示
 
-Displays/Hides the graduations next to the labels.
+ラベルの隣に目盛を表示、または非表示にします。
 
 #### JSON 文法
 
