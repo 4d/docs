@@ -60,7 +60,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      true, false (default)
+      true, false (デフォルト)
     </td>
   </tr>
   
