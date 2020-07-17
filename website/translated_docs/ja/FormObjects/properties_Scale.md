@@ -41,7 +41,7 @@ title: Scale
 
 ## 目盛りのステップ
 
-Scale display measurement.
+目盛の表示単位です。
 
 #### JSON 文法
 
@@ -56,13 +56,13 @@ Scale display measurement.
 
 * * *
 
-## Label Location
+## ラベル位置
 
-Specifies the location of an object's displayed text.
+ラベルが表示される際の位置です。
 
-* None - no label is displayed
-* Top - Displays labels to the left of or above an indicator
-* Bottom - Displays labels to the right of or below an indicator
+* なし - ラベルは表示されません。
+* 上 - インジケーターの上または左にラベルを表示します。
+* 下 - インジケーターの下または右にラベルを表示します。
 
 #### JSON 文法
 
@@ -77,12 +77,12 @@ Specifies the location of an object's displayed text.
 
 * * *
 
-## Maximum
+## 最大
 
-Maximum value of an indicator.
+インジケーターの最大値です。
 
-- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+- 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
+- [バーバーショップサーモメーター](progressIndicator.md#バーバーショップ) を有効にするには、このプロパティを取り除きます。
 
 #### JSON 文法
 
@@ -97,9 +97,9 @@ Maximum value of an indicator.
 
 * * *
 
-## Minimum
+## 最小
 
-Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+インジケーターの最小値です。 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
 
 #### JSON 文法
 
