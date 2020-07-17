@@ -62,7 +62,7 @@ title: Scale
 
 * なし - ラベルは表示されません。
 * 上 - インジケーターの上または左にラベルを表示します。
-* Bottom - Displays labels to the right of or below an indicator
+* 下 - インジケーターの下または右にラベルを表示します。
 
 #### JSON 文法
 
@@ -77,12 +77,12 @@ title: Scale
 
 * * *
 
-## Maximum
+## 最大
 
-Maximum value of an indicator.
+インジケーターの最大値です。
 
-- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted. 
+- 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
+- [バーバーショップサーモメーター](progressIndicator.md#バーバーショップ) を有効にするには、このプロパティを取り除きます。 
 
 #### JSON 文法
 
@@ -97,9 +97,9 @@ Maximum value of an indicator.
 
 * * *
 
-## Minimum
+## 最小
 
-Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+インジケーターの最小値です。 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
 
 #### JSON 文法
 
