@@ -36,7 +36,7 @@ title: ピクチャーボタン
     
     ![](assets/en/FormObjects/pictureButton_grid.png)
 
-ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。 ピクチャーを格子状に並べた場合、各ピクチャーには左から右へ 1 行ずつ、0から始まる番号が振られます。 たとえば、4行と 3列で構成される格子において、2行目の 2番目の画像の番号は 4 になります (上の例では英国旗)。
+ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。 ピクチャーを格子状に並べた場合、各ピクチャーには上の行から順に左から右へと、0から始まる番号が振られます。 たとえば、4行と 3列で構成される格子において、2行目の 2番目の画像の番号は 4 になります (上の例では英国旗)。
 
 2. プロジェクトの Resouces フォルダーに画像があるのを確認し、そのファイルパスを [パス名](properties_Picture.md#パス名) プロパティに入力します。
 
@@ -52,12 +52,12 @@ title: ピクチャーボタン
 
 次のモードを選択することができます:
 
-- [先頭フレームに戻る](properties_Animation.md#loopBackToFirstFrame)
-- [マウスアップで戻る](properties_Animation.md#switch-back-when-released)
-- [ロールオーバー効果](properties_Animation.md#switch-when-roll-over)
-- [マウス押下中は自動更新](properties_Animation.md#switch-continuously-on-clicks)
-- [無効時に最終フレームを使用](properties_Animation.md#use-last-frame-as-disabled)
-- [無効時に最終フレームを使用](properties_Animation.md#use-last-frame-as-disabled)
+- [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る)
+- [マウスアップで戻る](properties_Animation.md#マウスアップで戻る)
+- [ロールオーバー効果](properties_Animation.md#ロールオーバー効果)
+- [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新)
+- [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
+- [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。 このテーブル内のピクチャー番号は 0 から始まります。
 
