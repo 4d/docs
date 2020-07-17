@@ -1,6 +1,6 @@
 ---
 id: propertiesScale
-title: Scale
+title: スケール
 ---
 
 * * *
@@ -114,9 +114,9 @@ title: Scale
 
 * * *
 
-## Step
+## ステップ
 
-Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
+使用時に各値の間にあけることができる最小の間隔です。 時間型のステッパーの場合、このプロパティは秒を表します。日付型のステッパーでは日数を表します。
 
 #### JSON 文法
 
