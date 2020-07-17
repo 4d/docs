@@ -93,7 +93,7 @@ title: Scale
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 * * *
 
@@ -110,7 +110,7 @@ title: Scale
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 * * *
 
@@ -127,4 +127,4 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
