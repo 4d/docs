@@ -11,9 +11,9 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### JSON 文法
 
-| 名               | データタイプ  | とりうる値                       |
-| --------------- | ------- | --------------------------- |
-| deletableInList | boolean | true, false (default: true) |
+| 名               | データタイプ  | とりうる値                     |
+| --------------- | ------- | ------------------------- |
+| deletableInList | boolean | true, false (デフォルトは true) |
 
 
 #### 対象オブジェクト
