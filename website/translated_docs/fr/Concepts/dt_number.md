@@ -25,7 +25,7 @@ Une constante littérale numérique s’écrit comme un nombre réel. Voici quel
 0.0076
 ```
 
-> The default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
+> Le séparateur décimal est par défaut le point (.), quelle que soit la langue du système. Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" dans la Page Méthodes des Préférences, vous devez utiliser le séparateur défini dans votre système.
 
 Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 
