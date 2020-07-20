@@ -49,7 +49,7 @@ Lorsqu'une application est créée, 4D génère un fichier journal nommé *Build
 - Toutes les erreurs qui se sont produites,
 - Tout problème de signature (par exemple, un plug-in non signé).
 
-Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
+La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application.
 
 > Use the `Get 4D file(Build application log file)` command to get the log file location.
 
