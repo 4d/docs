@@ -1,6 +1,6 @@
 ---
 id: ordaClasses
-title: ORDA Data Model Classes
+title: Classes ORDA du modèle de données
 ---
 
 ## Preview feature
