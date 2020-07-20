@@ -177,15 +177,15 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| Paramètres | Propriété         | Type  |    | Description                                                                                                                                                   |
-| ---------- | ----------------- | ----- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message    |                   | Texte | -> | Chaine message à chiffrer à l'aide de options.encodingDecrypted et encrypted.                                                                                 |
-| options    |                   | objet | -> | Options de chiffrement                                                                                                                                        |
-|            | hash              | Texte |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                           |
-|            | encodingEncrypted | Texte |    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".    |
-|            | encodingDecrypted | Texte |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
-|            |                   |       |    |                                                                                                                                                               |
-| result     |                   | Texte | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                           |
+| Paramètres | Propriété         | Type  |    | Description                                                                                                                                                                   |
+| ---------- | ----------------- | ----- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message    |                   | Texte | -> | Chaine message à chiffrer à l'aide de options.encodingDecrypted et encrypted.                                                                                                 |
+| options    |                   | objet | -> | Options de chiffrement                                                                                                                                                        |
+|            | hash              | Texte |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                           |
+|            | encodingEncrypted | Texte |    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
+|            | encodingDecrypted | Texte |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
+|            |                   |       |    |                                                                                                                                                                               |
+| result     |                   | Texte | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
 
 Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
@@ -203,18 +203,18 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### cryptoKey.decrypt(message;options) -> status
 
-| Paramètres | Propriété         | Type       |    | Description                                                                                                                                                    |
-| ---------- | ----------------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message    |                   | Texte      | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                                    |
-| options    |                   | objet      | -> | Decoding options                                                                                                                                               |
-|            | hash              | Texte      |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                            |
-|            | encodingEncrypted | Texte      |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". La valeur par défaut est "Base64". |
-|            | encodingDecrypted | Texte      |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".                    |
-|            |                   |            |    |                                                                                                                                                                |
-| status     |                   | objet      | <- | Result                                                                                                                                                         |
-|            | success           | booléen    |    | True if the message has been successfully decrypted                                                                                                            |
-|            | result            | Texte      |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                                            |
-|            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                    |
+| Paramètres | Propriété         | Type       |    | Description                                                                                                                                                             |
+| ---------- | ----------------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message    |                   | Texte      | -> | Chaine message à décoder à l'aide de options.encodingEncrypted et decrypted.                                                                                            |
+| options    |                   | objet      | -> | Options de décodage                                                                                                                                                     |
+|            | hash              | Texte      |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                     |
+|            | encodingEncrypted | Texte      |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
+|            | encodingDecrypted | Texte      |    | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
+|            |                   |            |    |                                                                                                                                                                         |
+| status     |                   | objet      | <- | Résultat                                                                                                                                                                |
+|            | success           | booléen    |    | True si le message a été déchiffré avec succès                                                                                                                          |
+|            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
+|            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 
 
 Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
