@@ -445,7 +445,7 @@
         "title": "Resizing Options"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -460,7 +460,7 @@
         "title": "Web Area"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "ラジオボタン"
       },
       "FormObjects/ruler": {
         "title": "ルーラー"
