@@ -51,7 +51,7 @@ Lorsqu'une application est créée, 4D génère un fichier journal nommé *Build
 
 La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application.
 
-> Use the `Get 4D file(Build application log file)` command to get the log file location.
+> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal.
 
 ## Nom de l'application et dossier de destination
 
@@ -87,9 +87,9 @@ Génère un composant compilé à partir de la structure.
 
 Un composant est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Une fois le composant configuré et installé dans une autre base 4D (la base hôte), ses fonctionnalités sont accessibles depuis la base hôte. Pour plus d’informations sur les composants, reportez-vous au chapitre "Développer et installer des composants 4D".
 
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: *\<destination>/Components/name.4dbase/\<name>.4DZ*.
+Si vous avez nommé votre application, *MyComponent*, 4D créera un dossier Composants contenant le dossier *MyComponent.4dbase* : *\<destination>/Components/name.4dbase/\<name>.4DZ*.
 
-The *MyComponent.4dbase* folder contains: - *MyComponent.4DZ* file - A *Resources* folder - any associated Resources are automatically copied into this folder. Les éventuels dossiers “Components” ou “Plugins” ne sont pas recopiés (un composant ne peut pas utiliser de plug-ins ni d'autres composants).
+Le dossier *MyComponent.4dbase* contient : - un fichier *MyComponent.4DZ* - un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les éventuels dossiers “Components” ou “Plugins” ne sont pas recopiés (un composant ne peut pas utiliser de plug-ins ni d'autres composants).
 
 ## Page Application
 
@@ -388,75 +388,73 @@ L'option est affichée sous Windows et Os X mais n’est prise en compte que pou
 
 Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez utiliser les commandes du menu Trousseaux d’accès ou vous connecter à la page suivante :[ http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
-> Le certificat requiert la présence de l’utilitaire codesign d’Apple. Cet utilitaire est fourni par défaut et se trouve généralement dans le dossier "/usr/bin/". If an error occurs, make sure that this utility is present on your disk.
+> Le certificat requiert la présence de l’utilitaire codesign d’Apple. Cet utilitaire est fourni par défaut et se trouve généralement dans le dossier "/usr/bin/". Si une erreur est générée, assurez-vous que cet utilitaire est présent sur votre disque.
 
-* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. 
+* **Générer un certificat auto-signé** - exécute l '«Assistant de certificat» qui vous permet de générer un certificat auto-signé. Si vous ne disposez pas d'un certificat de développeur Apple, vous devez fournir un certificat auto-signé. Avec ce certificat, aucun message d'alerte ne s'affiche si l'application est déployée en interne. Si l'application est déployée en externe (c'est-à-dire via http ou e-mail), au lancement, macOS affiche un message d'alerte indiquant que le développeur de l'application n'est pas identifié. L'utilisateur peut "forcer" l'ouverture de l'application.  Dans l '«Assistant certificat», veillez à sélectionner les options appropriées : 
 
-<
+![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png) 
 
-p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
-
-> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
-
-#### About Gatekeeper
-
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
-
-L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
-
-#### A propos de la notarisation
-
-La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notarisées déployées via Internet sont bloquées par défaut.
-
-Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
-
-For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
-
-## Customizing application icons
-
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
-
-* **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
-    
-    > Apple, Inc. fournit un outil spécifique de création de fichiers d'icônes *icns* (pour plus d'informations, consultez la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
-    
-    Votre fichier d'icône doit avoir le même nom que le fichier de projet et inclure l'extension *.icns*. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable (le fichier *.icns* est renommé *NomApplication.icns * et copié dans le dossier Resources; l'entrée *CFBundleFileIcon* du fichier *info.plist* est mise à jour). 
-
-* **Windows** - Lors de la création d'une application exécutable, 4D gère la personnalisation de son icône. Pour ce faire, vous devez créer un fichier d’icône (extension *.ico*) avant de créer le fichier d’application et le placer à côté du dossier du projet.
-    
-    Votre fichier d'icône doit porter le même nom que le fichier de projet et inclure l'extension *.ico *. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
-
-Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
-
-- RuntimeVLIconWinPath
-- RuntimeVLIconMacPath
-- ServerIconWinPath
-- ServerIconMacPath
-- ClientMacIconForMacPath
-- ClientWinIconForMacPath
-- ClientMacIconForWinPath
-- ClientWinIconForWinPath
-
-## Gestion du fichier de données
-
-### Ouverture du fichier de données 
-
-Lorsqu'un utilisateur lance une application fusionnée ou une mise à jour (applications monopostes ou applications client-serveur), 4D va tenter d'ouvrir un fichier de données valide. Plusieurs emplacements sont successivement examinés par l'application.
-
-La séquence de lancement d'une application fusionnée est la suivante :
-
-1. 4D tente d'ouvrir le Dernier fichier de données ouvert, comme décrit ci-dessous (non applicable lors du lancement initial).
-2. S'il n'est pas trouvé, 4D tente d'ouvrir en mode lecture seule le fichier de données situé dans le dossier de données par défaut au même niveau que le fichier .4DZ
-3. S'il n'est pas trouvé, 4D tente d'ouvrir le fichier de données par défaut standard (même nom et même emplacement que le fichier .4DZ).
-4. S'il n'est pas trouvé, 4D affiche une boîte de dialogue standard de sélection/création de fichier de données.
-
-### Dernier fichier de données ouvert
-
-#### Chemin d'accès du dernier fichier de données
-
-Toute application autonome ou serveur générée avec 4D stocke le chemin d'accès du dernier fichier de données ouvert dans le dossier de préférences de l'utilisateur de l'application.
-
-```4d
+> 4D recommande de souscrire au programme Apple Developer Program pour accéder aux certificats de développeur nécessaires à la notarisation des applications (voir ci-dessous).
+> 
+> #### À propos de Gatekeeper
+> 
+> Gatekeeper est une fonction de sécurité d'OS X qui contrôle l'exécution des applications téléchargées sur Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
+> 
+> L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
+> 
+> #### A propos de la notarisation
+> 
+> La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notarisées déployées via Internet sont bloquées par défaut.
+> 
+> Dans 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple afin de permettre l'utilisation du service de notarisation d'Apple. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
+> 
+> For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+> 
+> ## Customizing application icons
+> 
+> 4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+> 
+> * **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. Pour ce faire, vous devez créer un fichier d'icône (type icns) avant de générer le fichier d'application et le placer à côté du dossier du projet.
+>     
+>     > Apple, Inc. fournit un outil spécifique de création de fichiers d'icônes *icns* (pour plus d'informations, consultez la [documentation d'Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+>     
+>     Votre fichier d'icône doit avoir le même nom que le fichier de projet et inclure l'extension *.icns*. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable (le fichier *.icns* est renommé *NomApplication.icns * et copié dans le dossier Resources; l'entrée *CFBundleFileIcon* du fichier *info.plist* est mise à jour). 
+> 
+> * **Windows** - Lors de la création d'une application exécutable, 4D gère la personnalisation de son icône. Pour ce faire, vous devez créer un fichier d’icône (extension *.ico*) avant de créer le fichier d’application et le placer à côté du dossier du projet.
+>     
+>     Votre fichier d'icône doit porter le même nom que le fichier de projet et inclure l'extension *.ico *. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
+> 
+> Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
+> 
+> - RuntimeVLIconWinPath
+> - RuntimeVLIconMacPath
+> - ServerIconWinPath
+> - ServerIconMacPath
+> - ClientMacIconForMacPath
+> - ClientWinIconForMacPath
+> - ClientMacIconForWinPath
+> - ClientWinIconForWinPath
+> 
+> ## Gestion du fichier de données
+> 
+> ### Ouverture du fichier de données 
+> 
+> Lorsqu'un utilisateur lance une application fusionnée ou une mise à jour (applications monopostes ou applications client-serveur), 4D va tenter d'ouvrir un fichier de données valide. Plusieurs emplacements sont successivement examinés par l'application.
+> 
+> La séquence de lancement d'une application fusionnée est la suivante :
+> 
+> 1. 4D tente d'ouvrir le Dernier fichier de données ouvert, comme décrit ci-dessous (non applicable lors du lancement initial).
+> 2. S'il n'est pas trouvé, 4D tente d'ouvrir en mode lecture seule le fichier de données situé dans le dossier de données par défaut au même niveau que le fichier .4DZ
+> 3. S'il n'est pas trouvé, 4D tente d'ouvrir le fichier de données par défaut standard (même nom et même emplacement que le fichier .4DZ).
+> 4. S'il n'est pas trouvé, 4D affiche une boîte de dialogue standard de sélection/création de fichier de données.
+> 
+> ### Dernier fichier de données ouvert
+> 
+> #### Chemin d'accès du dernier fichier de données
+> 
+> Toute application autonome ou serveur générée avec 4D stocke le chemin d'accès du dernier fichier de données ouvert dans le dossier de préférences de l'utilisateur de l'application.
+> 
+> ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 

@@ -31,7 +31,7 @@ The Welcome Wizard then appears:
 
 - If you want to discover and explore 4D, click on the **free trial** link. You will only be asked to sign in or to create a 4D account.
 
-- If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already purchased 4D licenses are automatically downloaded and installed on your machine.
+- If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already registered 4D licenses are automatically updated (or additional expansion packs loaded) on your machine.
 
 Expand the **Open or create project application** area and select the action you want to perform:
 
