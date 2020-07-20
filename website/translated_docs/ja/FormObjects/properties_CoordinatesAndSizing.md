@@ -227,7 +227,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 [リストボックス](listbox_overview.md#overview)
 
-#### See also
+#### 参照
 
 [行高さ配列](#row-height-array)
 
@@ -264,6 +264,6 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 [リストボックス](listbox_overview.md#overview)
 
-#### See also
+#### 参照
 
 [行の高さ](#row-height)

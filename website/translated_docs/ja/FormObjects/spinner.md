@@ -11,9 +11,9 @@ The spinner is a circular indicator that displays a continuous animation, like t
 
 You use this type of object to indicate that an operation such as establishing a network connection or a performing a calculation is underway. When this indicator is selected, [graphical Scale properties](properties_Scale.md) are not available.
 
-When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+フォームが実行されたとき、オブジェクトのアニメーションは開始されません。 [割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
 
-* 1 (or any value other than 0) = Start animation,
+* 非 0 値 = アニメーション開始
 * 0 = Stop animation
 
 ### プロパティ一覧
