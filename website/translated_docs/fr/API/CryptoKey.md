@@ -13,11 +13,11 @@ Cette classe est disponible depuis le "class store" de `4D`.
 
 Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcryptokeynew). Ses propriétés sont les suivantes (en lecture seule) :
 
-| Propriété | Type   | Description                                                                                                               |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| type      | Texte  | Nom du type de clé. Par exemple : "ECDSA" ou "RSA".                                                                       |
-| size      | entier | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                       |
-| curve     | Texte  | Defined only for ECDSA keys: the normalised curve name of the key. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
+| Propriété | Type   | Description                                                                                                                           |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| type      | Texte  | Nom du type de clé. Par exemple : "ECDSA" ou "RSA".                                                                                   |
+| size      | entier | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                                   |
+| curve     | Texte  | Définie uniquement pour les clés ECDSA : le nom de courbe normalisé de la clé. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
 
 
 ### Exemple
@@ -120,10 +120,10 @@ Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, o
 
 | Paramètres | Propriété | Type    |    | Description                                                                                                                                                             |
 | ---------- | --------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message    |           | Texte   | -> | Message string to sign                                                                                                                                                  |
-| options    |           | object  | -> | Signing options                                                                                                                                                         |
+| message    |           | Texte   | -> | Chaîne message à signer                                                                                                                                                 |
+| options    |           | objet   | -> | Options de signature                                                                                                                                                    |
 |            | hash      | Texte   |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|            | pss       | boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                      |
+|            | pss       | booléen |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                      |
 |            | encoding  | Texte   |    | Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                          |
 |            |           |         |    |                                                                                                                                                                         |
 | signature  |           | Texte   | <- | Resulting signature in Base64 or Base64URL representation, depending on "encoding" option                                                                               |
@@ -148,17 +148,17 @@ The `cryptoKey` must contain a valid **private** key.
 | ---------- | --------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message    |           | Texte      | -> | Message string that was used to produce the signature                                                                                                                   |
 | signature  |           | Texte      | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                              |
-| options    |           | object     | -> | Signing options                                                                                                                                                         |
+| options    |           | objet      | -> | Options de signature                                                                                                                                                    |
 |            | hash      | Texte      |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|            | pss       | boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                      |
+|            | pss       | booléen    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                      |
 |            | encoding  | Texte      |    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                                 |
 |            |           |            |    |                                                                                                                                                                         |
-| status     |           | object     | <- | Result of the verification                                                                                                                                              |
-|            | success   | boolean    |    | True if the signature matches the message                                                                                                                               |
+| status     |           | objet      | <- | Result of the verification                                                                                                                                              |
+|            | success   | booléen    |    | True if the signature matches the message                                                                                                                               |
 |            | errors    | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                             |
 
 
-This method verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`.
+Cette méthode vérifie et compare la signature base64 par rapport à la représentation utf8 du `message` à l'aide des clés d'objet `cryptoKey` et des `options` fournies.
 
 The method returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
 
@@ -177,15 +177,15 @@ The `cryptoKey` must contain a valid **public** key.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| Paramètres | Propriété         | Type   |    | Description                                                                                                                                               |
-| ---------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message    |                   | Texte  | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
-| options    |                   | object | -> | Encoding options                                                                                                                                          |
-|            | hash              | Texte  |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                                 |
-|            | encodingEncrypted | Texte  |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
-|            | encodingDecrypted | Texte  |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
-|            |                   |        |    |                                                                                                                                                           |
-| result     |                   | Texte  | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
+| Paramètres | Propriété         | Type  |    | Description                                                                                                                                               |
+| ---------- | ----------------- | ----- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message    |                   | Texte | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
+| options    |                   | objet | -> | Encoding options                                                                                                                                          |
+|            | hash              | Texte |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                                 |
+|            | encodingEncrypted | Texte |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
+|            | encodingDecrypted | Texte |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
+|            |                   |       |    |                                                                                                                                                           |
+| result     |                   | Texte | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
 
 
 This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
@@ -206,21 +206,21 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | Paramètres | Propriété         | Type       |    | Description                                                                                                                                      |
 | ---------- | ----------------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | message    |                   | Texte      | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                      |
-| options    |                   | object     | -> | Decoding options                                                                                                                                 |
+| options    |                   | objet      | -> | Decoding options                                                                                                                                 |
 |            | hash              | Texte      |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                        |
 |            | encodingEncrypted | Texte      |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 |            | encodingDecrypted | Texte      |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
 |            |                   |            |    |                                                                                                                                                  |
-| status     |                   | object     | <- | Result                                                                                                                                           |
-|            | success           | boolean    |    | True if the message has been successfully decrypted                                                                                              |
+| status     |                   | objet      | <- | Result                                                                                                                                           |
+|            | success           | booléen    |    | True if the message has been successfully decrypted                                                                                              |
 |            | result            | Texte      |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
 |            | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |
 
 
-This method decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
+Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
 
-The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-The method returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
+La méthode renvoie un objet "status" avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès.
 
-In case the `message` couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Si le `message` n'a pas pu être déchiffré car il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
