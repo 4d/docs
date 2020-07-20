@@ -24,14 +24,14 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dragging | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
-#### See also
+#### 参照
 
 [ドロップ有効](#droppable)
 
@@ -53,14 +53,14 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dropping | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
-#### See also
+#### 参照
 
 [ドラッグ有効](#draggable)
 
@@ -103,7 +103,7 @@ Several types of method references are supported:
 
 | 名      | データタイプ | とりうる値                                                              |
 | ------ | ------ | ------------------------------------------------------------------ |
-| method | テキスト   | Object method standard or custom file path, or project method name |
+| method | text   | Object method standard or custom file path, or project method name |
 
 
 #### 対象オブジェクト
@@ -139,7 +139,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | 名             | データタイプ | とりうる値                        |
 | ------------- | ------ | ---------------------------- |
-| selectionMode | テキスト   | "multiple", "single", "none" |
+| selectionMode | text   | "multiple", "single", "none" |
 
 
 #### 対象オブジェクト

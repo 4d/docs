@@ -39,7 +39,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
-#### See also
+#### 参照
 
 [透過](#transparent)
 
@@ -76,7 +76,7 @@ Allows setting a standard style for the object border.
 
 | 名           | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 
 #### 対象オブジェクト
@@ -218,13 +218,13 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | 名    | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | テキスト   | "transparent" |
+| fill | text   | "transparent" |
 
 
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md#overview)
 
-#### See also
+#### 参照
 
 [Background Color / Fill Color](#background-color-fill-color)

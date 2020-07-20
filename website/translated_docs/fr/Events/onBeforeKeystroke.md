@@ -12,12 +12,12 @@ title: Sue avant frappe clavier
 
 After the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are selected for an object, you can detect and handle the keystrokes within the object, using the `Form event code` command that will return `On Before Keystroke` and then [`On After Keystroke event`](onAfterKeystroke.md) (for more information, please refer to the description of the `Get edited text` command). Within the `On Before Keystroke` event, the `FILTER KEYSTROKE` command can be used to filter typed chars.
 
-> These events are also activated by language commands that simulate a user action like `POST KEY`.
+> Ces événements sont également activés par des commandes de langage qui simulent une action utilisateur telle que `POST KEY`.
 
 The `On Before Keystroke` event is not generated:
 
 - in a [list box column](FormObjects/listbox_overview.md#list-box-columns) method while a cell is being edited,
-- when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use [`On After Edit`](onAfterEdit.md).
+- when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
 
 ### Non-enterable objects
 

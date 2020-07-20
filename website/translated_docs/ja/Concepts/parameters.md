@@ -14,40 +14,40 @@ title: 引数
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+メソッドやクラス関数に引数を渡す場合も同様におこないます。 たとえば、`getArea()` クラス関数が 2つの引数を受け取る場合、このクラス関数を呼び出すには以下のように書きます:
 
     $area:=$o.getArea(50;100)
     
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+また、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in named variables (class functions only) or sequentially numbered variables (methods and class functions).
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内でローカル変数に格納されます。このローカル変数は、名前付き変数 (クラス関数のみ) の場合と受け渡し順に番号が付けられた変数 (メソッドおよびクラス関数) の場合があります。
 
 ## 名前付き引数 (クラス関数)
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. Multiple parameters (and types) are separated by semicolons (;).
+呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
-For example, when you call a `getArea()` function with two parameters:
+たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
     $area:=$o.getArea(50;100)
     
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width: Integer; $height : Integer)
     var $0 : Integer
     $0:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 > 
-> Sequential parameters can be used in conjunction with named parameters. たとえば:
+> 位置引数と名前付き引数は組み合わせて使えます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -55,44 +55,44 @@ Function add($x : Integer)
   $0:=$x+$2
 ```
 
-### Supported data types
+### サポートされているデータ型
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including for example:
+名前付き引数の場合、[`var` キーワードでサポートされている](variables.md#var-キーワードによる宣言) データ型を使用できます。たとえば:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
 
-## Sequential parameters
+## 位置引数
 
-You can declare methods or class function parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
+メソッドやクラス関数の引数は、受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use named parameters syntax.
+> このシンタックスはメソッドとクラス関数でサポートされています。 しかしながら、クラス関数の場合は名前付き引数を使ったシンタックスが推奨されます。
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+呼び出されるメソッドにおいて、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます:
 
 ```4d
-  //Code of the method DO_SOMETHING
-  //Assuming all parameters are of the text type
+  // DO_SOMETHING メソッド
+  // すべての引数はテキスト型です
  C_TEXT($1;$2;$3)
- ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+ ALERT($1+" と "+$2+" と "+$3+" を受け取りました。")
+  //$1 には $WithThis の値が代入されます
+  //$2 には $AndThat の値が代入されます
+  //$3 には $ThisWay の値が代入されます
 ```
 
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! SetCalendarDate を実行し
-// その際に引数として日付リテラル !05/05/10! を渡します
+// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
@@ -101,7 +101,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
-### Supported data types
+### サポートされているデータ型
 
 You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
 

@@ -23,7 +23,7 @@ title: メソッド
 | **データベースメソッド**           | 作業セッションのイベント発生時に                                          | ○ (既定)  | 4D には 16のデータベースメソッドがあります。 詳細はデータベースメソッドの項を参照ください。                                                |
 
 
-> 4D ランゲージは **クラス関数** もサポートしています。クラス関数は、オブジェクトインスタンスのコンテキストにおいて呼び出されます。 Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
+> 4D ランゲージは **クラス関数** もサポートしています。クラス関数は、オブジェクトインスタンスのコンテキストにおいて呼び出されます。 クラス関数にはビルトインのものと (*例: * `collection.orderBy()` や `entity.save()`)、[開発者によって作成されるもの](classes.md#function)があります。
 
 ## プロジェクトメソッドの呼び出し
 

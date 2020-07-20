@@ -33,7 +33,7 @@ title: プロジェクトパッケージのビルド
 
 ### アプリケーションビルド設定
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the project.
+アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、"buildApp.4DSettings" という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはプロジェクトの Settings フォルダーに配置されます。
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
@@ -41,17 +41,17 @@ Each build application parameter is stored as an XML key in the application proj
 
 ### ログファイル
 
-When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. ログファイルにはビルド毎に以下の情報が書き込まれます:
+アプリケーションをビルドすると、4D はログファイル (*BuildApp.log.xml*) を生成して、プロジェクトの **Logs** フォルダーに保存します。 ログファイルにはビルド毎に以下の情報が書き込まれます:
 
 - ターゲットビルドの開始と終了
 - 生成されたファイルの名称とフルパス
 - ビルドの日付と時刻
-- Any errors that occurred,
-- Any signing issues (e.g. a non-signed plug-in).
+- 発生したエラー
+- 署名の問題 (例: 署名されていないプラグイン)
 
-Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
+アプリケーションを公証する場合などは、このファイルを確認することで、後の運用手順で時間を節約できることがあります。
 
-> Use the `Get 4D file(Build application log file)` command to get the log file location.
+> `Get 4D file(Build application log file)` コマンドを使って、ログファイルの場所を取得します。
 
 ## アプリケーション名と保存先フォルダー
 
@@ -87,9 +87,9 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 コンポーネントは特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを他の 4D データベース (ホストデータベース) にインストールすると、ホストデータベースはその機能を利用できるようになります。 コンポーネントに関する詳細は [4D コンポーネントの開発とインストール](https://doc.4d.com/4Dv18/4D/18/Developing-and-installing-4D-components.200-4575436.ja.html) を参照してください。
 
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: *\<destination>/Components/name.4dbase/\<name>.4DZ*.
+アプリケーション名を *MyComponent* に指定した場合、4D は Components フォルダーを作成し、その中に*MyComponent.4dbase* フォルダーを生成します: *\<destination>/Components/name.4dbase/\<name>.4DZ*
 
-The *MyComponent.4dbase* folder contains: - *MyComponent.4DZ* file - A *Resources* folder - any associated Resources are automatically copied into this folder. コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
+*MyComponent.4dbase* フォルダーには次のファイルが含まれます: - *MyComponent.4DZ* ファイル - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
 ## アプリケーションページ
 
@@ -334,22 +334,22 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#4D-Volume-Desktop-フォルダーのカスタマイズ) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
 
-同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 However, if there are two instances of the same component, the application will not open.
+同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 他方、同じコンポーネントが両方にインストールされていた場合は、アプリケーションを開くことはできません。
 
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
+> 配布するアプリケーションでプラグインやコンポーネントを使用するには、それぞれ適切なライセンスが必要です。
 
-## Licenses & Certificate page
+## ライセンス&証明書ページ
 
-The Licences & Certificate page can be used to:
+ライセンス&証明書のページでは、次のようなことができます:
 
-* designate the license number(s) that you want to integrate into your single-user stand-alone application
-* sign the application by means of a certificate in macOS.
+* シングルユーザーのスタンドアロンアプリケーションに統合するライセンス番号を指定します。
+* macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](assets/en/Admin/buildappCertif.png)
 
-### Licenses
+### ライセンスリスト
 
-This tab displays the list of available deployment licenses that you can integrate into your application. デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 
+アプリケーションに統合するのに使用できる配付ライセンスの一覧を表示します。 デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
@@ -376,31 +376,31 @@ This tab displays the list of available deployment licenses that you can integra
 
 アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 アプリケーションを署名することにより、 macOS において「Mac App Store と確認済みの開発元からのアプリケーションを許可」のオプションが選択されているときに Gatekeeper の機能を使用してアプリケーションを実行することが可能になります (後述の "Gatekeeper について" を参照ください)。
 
-- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D will check the availability of elements required for certification when the build occurs: 
+- **アプリケーションに署名** オプションにチェックをすると、macOS のアプリケーションビルド処理に認証が含まれます。 4D はビルドの際に、認証に必要な要素の有無をチェックします: 
 
 ![](assets/en/Admin/buildapposxcertProj.png)
 
-This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
+このオプションは Windows と macOS 両方の環境で表示されますが、macOS の場合においてのみ有効です。
 
-* **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
+* **認証名** - Apple によって有効化されたデベロッパー認証名を入力してください。 この認証名は通常、キーチェーンアクセスユーティリティ内の証明書の名前と一緒です:
 
 ![](assets/en/Project/certificate.png)
 
-Apple からデベロッパ認証を取得するためには、キーチェーンアクセスのメニューのコマンドを使用するか、次のリンクへ移動してください: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>
+Apple からデベロッパー認証を取得するためには、キーチェーンアクセスのメニューのコマンドを使用するか、次のリンクへ移動してください: <http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html>
 
-> この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/codesign” フォルダーにあります。 If an error occurs, make sure that this utility is present on your disk.
+> この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/codesign” フォルダーにあります。 エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。
 
-* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. 
+* **自己署名証明書の生成** - 自己署名証明書を生成するための "証明書アシスタント" を実行します。 Apple 社のデベロッパー認証を持たない場合には、自己署名証明書を提供する必要があります。 この証明書を使うと、アプリケーションを内部的に運用する場合に警告が表示されません。 アプリケーションを外部で運用する場合 (http やメールを介した場合) には、アプリケーションの開発者が不明であるという警告が macOS での起動時に表示されます。 その場合でもユーザーはアプリケーションを "強制的" に起動することができます。 
 
-<
 
-p>In the "Certificate Assistant", be sure to select the appropriate options: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
 
-> 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
+"証明書アシスタント" では、オプションを適切に選択します: ![](assets/en/Admin/Cert1.png) ![](assets/en/Admin/Cert2.png)
 
-#### About Gatekeeper
+> Apple Developer Program に加入し、アプリケーションの公証 (後述参照) に必要なデベロッパー認証を取得することが推奨されます。
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
+#### Gatekeeper について
+
+Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションとデフォルトで互換性のあるアプリケーションを生成することができます。
 

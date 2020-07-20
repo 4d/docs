@@ -9,7 +9,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Admin/licenses": {
-        "title": "Managing 4D Licenses"
+        "title": "4D ライセンスの管理"
       },
       "API/cryptoClass": {
         "title": "CryptoKey Class"
@@ -367,22 +367,22 @@
         "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
-        "title": "Picture Button"
+        "title": "ピクチャーボタン"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
-        "title": "Animation"
+        "title": "アニメーション"
       },
       "FormObjects/propertiesAppearance": {
         "title": "アピアランス"
@@ -394,13 +394,13 @@
         "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "行列数"
       },
       "FormObjects/propertiesDataSource": {
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
         "title": "Entry"
@@ -463,7 +463,7 @@
         "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -478,7 +478,7 @@
         "title": "Static picture"
       },
       "FormObjects/stepper": {
-        "title": "Stepper"
+        "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
         "title": "Subform"
@@ -722,7 +722,7 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "License Management|no description given": "License Management",
+    "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",
