@@ -57,24 +57,24 @@ Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Ch
 
 Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.
 
-Here is another example: you want to initialize a form object with a text value but without setting a default value. You can use the element zero of the array:
+Voici un autre exemple : vous souhaitez initialiser un objet de formulaire avec une valeur texte mais sans définir de valeur par défaut. Vous pouvez utiliser l'élément zéro du tableau :
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // // méthode pour une combo box ou une liste déroulante  
+  // liée au tableau de variables atName
  Case of
-    :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+    : Form event code=On Load)
+  // Initialise le tableau (comme indiqué ci-dessus)
+  // Mais utilise l'élément zéro
         ARRAY TEXT(atName;5)
-        atName{0}:=Please select an item"
+        atName{0}:=Veuillez sélectionner un élément"
         atName{1}:="Text1"
         atName{2}:="Text2"
         atName{3}:="Text3"
         atName{4}:="Text4"
         atName{5}:="Text5"
-    // Position the array to element 0
-        atName:=0
+    // Positionne le tableau sur l'élément 0
+        atName: = 0
  End case
 ```
 
@@ -95,8 +95,8 @@ Dans l'exemple prédédent :
 - atTopics est un tableau à deux dimensions
 - atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne
 - atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` retourne 100, qui est le nombre de lignes
+- `Size of array(atTopics{17})` retourne 50, qui est le nombre de colonnes de la 17e ligne
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
