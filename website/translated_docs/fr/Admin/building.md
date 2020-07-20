@@ -51,7 +51,7 @@ Lorsqu'une application est créée, 4D génère un fichier journal nommé *Build
 
 La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application.
 
-> Use the `Get 4D file(Build application log file)` command to get the log file location.
+> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal.
 
 ## Nom de l'application et dossier de destination
 
