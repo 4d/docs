@@ -44,11 +44,11 @@ title: 図形
 
 ### startPoint プロパティ
 
-The `startPoint` JSON property defines from which coordinate to draw the line (see example).
+`startPoint` JSON プロパティは、線の始点を定義します (JSON例参照)。
 
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+> フォームエディター上では線の始点があきらかなため、プロパティリストにおいて `startPoint` プロパティは非表示です。
 
-#### JSON Examples:
+#### JSON 例:
 
         "myLine": {
             "type": "line",                
