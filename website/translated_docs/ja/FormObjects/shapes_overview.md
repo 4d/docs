@@ -15,7 +15,7 @@ title: 図形
 
 フォーム上に四角を配置することで、視覚的な効果が得られます。 四角で描画できるのは長方形に限られます。
 
-The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+四角のグラフィック属性 (線カラー、線幅、点線タイプ等) やリサイズオプションはプロパティリストにて指定できます。 角の [丸み](properties_CoordinatesAndSizing.md#角の半径) を指定することもできます。
 
 ![](assets/en/FormObjects/shapes_rectangle2.png)
 
@@ -23,12 +23,12 @@ The design of rectangles is controlled through many properties (color, line thic
 
 ```4d
     "myRectangle": {
-        "type": "rectangle",    //define the type of object
-        "left": 60,             //left position on the form  
-        "top": 160,             //top position on the form 
-        "width": 100,           //width of the object
-        "height": 20,           //height of the object
-        "borderRadius": 20      //define the roundness of the corners
+        "type": "rectangle",    // オブジェクトタイプ
+        "left": 60,             // フォーム上の座標 (左)
+        "top": 160,             // フォーム上の座標 (上)
+        "width": 100,           // 幅
+        "height": 20,           // 高さ
+        "borderRadius": 20      // 角の半径 (丸み)
                 }
 ```
 
