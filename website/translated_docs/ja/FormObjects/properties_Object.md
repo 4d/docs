@@ -228,7 +228,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### 対象オブジェクト
                     
-                    [Radio Button](radio_overview.md)
+                    [ラジオボタン](radio_overview.md)
                     
                     * * *
                     
