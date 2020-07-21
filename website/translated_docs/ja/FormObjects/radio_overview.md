@@ -1,26 +1,26 @@
 ---
 id: radiobuttonOverview
-title: Radio Button
+title: ラジオボタン
 ---
 
 ## 概要
 
-Radio buttons are objects that allow the user to select one of a group of buttons.
+ラジオボタンは、ボタングループの中から1つを選択することができるオブジェクトです。
 
-Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).
+ラジオボタンは通常、小さな目玉状の円とテキストを表示します。 しかし、ラジオボタンに [それ以外の外観](#ボタンスタイル) を設定することもできます。
 
 ![](assets/en/FormObjects/radio1.png)
 
-A radio button is selected:
+ラジオボタンを選択するには二つの方法があります:
 
-- when the user clicks on it
-- when it has the focus and the user presses the **Space bar** key.
+- ラジオボタンをクリックする
+- ラジオボタンにフォーカスがあるときに **スペース** キーを押す
 
-## Configuring radio buttons
+## ラジオボタンの設定
 
-Radio buttons are used in coordinated sets: only one button at a time can be selected in the set. In order to operate in a coordinated manner, a set of radio buttons must share the same [Radio Group](properties_Object.md#radio-group) property.
+ラジオボタンは組織的な集合の中で使用されます。その集合のなかから一度にひとつのボタンしか選択できません。 一連のラジオボタンが連携した状態で動作するためには、それらには同じ [ラジオグループ](properties_Object.md#ラジオグループ) プロパティが設定されていなくてはなりません。
 
-Radio buttons are controlled with methods. Like all buttons, a radio button is set to 0 when the form is first opened. A method associated with a radio button executes when the button is selected. The following is an example of a group of radio buttons used in a video collection database to enter the speed of the recording (SP, LP, or EP):
+ラジオボタンの結果はメソッドを用いて管理します。 あらゆるボタンと同様に、フォームが初めて開かれる時ラジオボタンは 0 に初期化されています。 ラジオボタンが選択されると、ラジオボタンに割り当てられたメソッドが実行されます。 The following is an example of a group of radio buttons used in a video collection database to enter the speed of the recording (SP, LP, or EP):
 
 ![](assets/en/FormObjects/radio2.png)
 
