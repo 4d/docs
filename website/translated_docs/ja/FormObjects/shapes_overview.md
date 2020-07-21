@@ -23,12 +23,12 @@ title: 図形
 
 ```4d
     "myRectangle": {
-        "type": "rectangle",    //define the type of object
-        "left": 60,             //left position on the form  
-        "top": 160,             //top position on the form 
-        "width": 100,           //width of the object
-        "height": 20,           //height of the object
-        "borderRadius": 20      //define the roundness of the corners
+        "type": "rectangle",    // オブジェクトタイプ
+        "left": 60,             // フォーム上の座標 (左)
+        "top": 160,             // フォーム上の座標 (上)
+        "width": 100,           // 幅
+        "height": 20,           // 高さ
+        "borderRadius": 20      // 角の半径 (丸み)
                 }
 ```
 
