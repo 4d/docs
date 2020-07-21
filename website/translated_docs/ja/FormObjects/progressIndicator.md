@@ -16,7 +16,7 @@ title: 進捗インジケーター
 インジケーターに関連付けた変数により、その表示を管理します。 メソッドを用いて、この変数に値を代入したり、またはインジケーターの値を使用したりします。 たとえば、フィールドまたは入力可オブジェクトのメソッドを使用して、サーモメーターを管理できます:
 
 ```4d
- $vTherm:=[Employees]Salary
+ vTherm:=[Employees]Salary
 ```
 
 このメソッドは Salary フィールドの値を $vTherm 変数に代入します。 このメソッドは、たとえばフォーム上で Salary フィールドのオブジェクトメソッドとして記述できます。
@@ -24,7 +24,7 @@ title: 進捗インジケーター
 逆にインジケーターを使用してフィールドの値を管理することも可能です。 ユーザーはインジケーターをドラッグして値を設定します。 このメソッドは次の通りです:
 
 ```4d
- [Employees]Salary:=$vTherm
+ [Employees]Salary:=vTherm
 ```
 
 このメソッドはインジケーターの値を Salary フィールドに代入します。 ユーザーがインジケーターをドラッグすると、Salary フィールドの値が変わります。
@@ -41,7 +41,7 @@ title: 進捗インジケーター
 
 ### プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) ("整数", "数値", "日付", "時間" のみ) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#CSSクラス) - [最小](properties_Scale.md#最小) - [最大](properties_Scale.md#最大) - [目盛りのステップ](properties_Scale.md#目盛りのステップ) - [ステップ](properties_Scale.md#ステップ) - [ラベル位置](properties_Scale.md#ラベル位置) - [目盛りを表示](properties_Scale.md#目盛りを表示) - [バーバーショップ](properties_Scale.md#バーバーショップ) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [数値フォーマット](properties_Display.md#数値フォーマット) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [太字](properties_Text.md#太字) - [ヘルプTips](properties_Help.md#ヘルプTips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) - [CSSクラス](properties_Object.md#CSSクラス) - [最小](properties_Scale.md#最小) - [最大](properties_Scale.md#最大) - [目盛りのステップ](properties_Scale.md#目盛りのステップ) - [ステップ](properties_Scale.md#ステップ) - [ラベル位置](properties_Scale.md#ラベル位置) - [目盛りを表示](properties_Scale.md#目盛りを表示) - [バーバーショップ](properties_Scale.md#バーバーショップ) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [数値フォーマット](properties_Display.md#数値フォーマット) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [太字](properties_Text.md#太字) - [ヘルプTips](properties_Help.md#ヘルプTips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
 ## バーバーショップ
 
@@ -60,7 +60,7 @@ title: 進捗インジケーター
 
 ### プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) ("整数", "数値", "日付", "時間" のみ) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#CSSクラス) - [バーバーショップ](properties_Scale.md#バーバーショップ) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [太字](properties_Text.md#太字) - [ヘルプTips](properties_Help.md#ヘルプTips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) - [CSSクラス](properties_Object.md#CSSクラス) - [バーバーショップ](properties_Scale.md#バーバーショップ) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [太字](properties_Text.md#太字) - [ヘルプTips](properties_Help.md#ヘルプTips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
 ## 参照
 
