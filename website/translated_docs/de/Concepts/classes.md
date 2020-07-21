@@ -16,7 +16,7 @@ Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf ei
 
 Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
 
-- `name` (konform mit den Regeln von ECMAScript)
+- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
@@ -35,7 +35,7 @@ Alle Objekte erben vom Objekt Klasse als ihrer obersten Klasse im Vererbungsbaum
 
 ```4d
 //Class: Polygon
-Class constructor($width : Integer;$height : Integer)
+Class constructor($width : Integer; $height : Integer)
     This.area:=$width*$height
 
     //var $poly : Object
@@ -58,16 +58,16 @@ Beispiel:
 
 ```4d
 //Class: Person.4dm
-Class constructor($firstname : Text;$lastname : Text)
+Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 ```
 
 In einer Methode erstellen Sie eine "Person":
 
-    var $o:Object
+    var $o : Object
     $o:=cs.Person.new("John";"Doe")
-    // $o:{firstName: "John";lastName: "Doe" }
+    // $o:{firstName: "John"; lastName: "Doe" }
     
 
 Sie könnten auch eine leere Datei Klasse erstellen und Instanzen auf leere Objekte setzen. Legen Sie z.B. die Datei Klasse `Empty.4dm` wie folgt an:
@@ -112,7 +112,7 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
-- Der Klassenname muss mit den Regeln von ECMAScript konform sein. 
+- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
 - Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle der Anwendung nicht denselben Namen verwenden. 
 
@@ -166,111 +166,112 @@ In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwe
 
 #### Syntax
 
-```js
-Function <name>({parameterName : type;...})
+```4d
+Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
 Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
 
-> **Tipp**Beginnt der Name von Function mit einem Unterstrich ("_"), wird er von den Features für Autocomplete ausgeschlossen. Schreiben Sie z.B. `Function _myPrivateFunction` in MyClass, wird sie im Code-Editor nicht vorgeschlagen, wenn Sie `"cs.MyClass eingeben. `.
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. `.
 
-Immediately following the function name, [parameters](parameters.md#named-parameters-class-functions) for the function can be declared with an assigned name and data type. Beispiel:
+Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Beispiel:
 
-```code4d
-Function setFullName($firstname : Text;$lastname : Text)
+```4d
+Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
-
-> [Sequential parameters](parameters.md#sequential-parameters) ($1, $2...) can be also used in class functions.
 
 Within a class function, the `This` command is used as the object instance. Beispiel:
 
 ```4d
-Function setFullname($firstname : Text;$lastname : Text)
+Function setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
-Function getFullname()
-    var $0 : Text
-    $0:=This.firstName+" "+Uppercase(This.lastName)
+Function getFullname()->$fullname : Text
+    $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Folgende Syntaxarten werden unterstützt
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
-
-- use of a "Function" class member method:
-    
+- Verwendung des Operators `()` For example, `myObject.methodName("hello")`
+- use of a "Function" class member method: 
     - `apply()`
     - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
-#### Class function parameters
+#### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
-
-```4d
-Function add($x;$y : Variant;$z : Integer;$xy : Object)
-```
-
-> If the type is not defined, the parameter will be defined as `Variant`.
-
-The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. For example:
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
-Function add($x : Variant;$y : Integer)
-    var $0 : Text
+Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-> The classic 4D syntax for method parameters can be used in conjunction with the class function parameter syntax. For example:
+> If the type is not stated, the parameter will be defined as `Variant`.
+
+You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)->$result : Integer
+```
+
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    $0:=$x+$y
+```
+
+> The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
 Function add($x : Integer)
-  var $0,$2 : Integer
-  $0:=$x+$2
+  var $2,$value : Integer
+  var $0 : Text
+  $value:=$x+$2
+  $0:=String($value)
 ```
 
 #### Example
 
 ```4d
 // Class: Rectangle
-Class constructor($width : Integer;$height : Integer)
+Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
 // Function definition
-Function getArea()
-    var $0 : Integer
-    $0:=(This.height)*(This.width)
+Function getArea()->$result : Integer
+    $result:=(This.height)*(This.width)
 ```
 
 ```4d
 // In a project method
-C_OBJECT($o)  
-C_REAL($area)
+var $rect : cs.Rectangle
+var $area : Real
 
-$o:=cs.Rectangle.new()  
-$area:=$o.getArea(50;100) //5000
+$rect:=cs.Rectangle.new()  
+$area:=$rect.getArea(50;100) //5000
 ```
 
 ### Class constructor
 
 #### Syntax
 
-```js
+```4d
 // Class: MyClass
-Class Constructor({parameterName : type;...})
+Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function, which can accept [parameters](#class-function-parameters), can be used to define a user class.
+A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
 
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
@@ -288,7 +289,7 @@ Class Constructor ($name : Text)
 ```4d
 // In a project method
 // You can instantiate an object
-C_OBJECT($o)
+var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
 ```
@@ -297,7 +298,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 #### Syntax
 
-```js
+```4d
 // Class: ChildClass
 Class extends <ParentClass>
 ```
@@ -311,7 +312,7 @@ Class extension must respect the following rules:
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
@@ -380,7 +381,7 @@ This example illustrates the use of `Super` in a class constructor. The command 
 
 ```4d
 // Class: Rectangle
-Class constructor($width : Integer;$height : Integer)
+Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
