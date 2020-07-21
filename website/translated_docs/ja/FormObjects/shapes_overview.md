@@ -1,21 +1,21 @@
 ---
 id: shapesOverview
-title: Shapes
+title: 図形
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+図形は、4D フォームに設置することのできる [スタティックオブジェクト](formObjects_overview.md#アクティブオブジェクトとスタティックオブジェクト) です。
 
-4D forms support the following basic shapes:
+次の基本の図形が提供されています:
 
-- rectangles
-- lines
-- ovals
+- 四角
+- 線
+- 楕円
 
-## Rectangle
+## 四角
 
-A static rectangle is a decorative object for forms. Rectangles are constrained to squared shapes.
+フォーム上に四角を配置することで、視覚的な効果が得られます。 四角で描画できるのは長方形に限られます。
 
-The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+四角のグラフィック属性 (線カラー、線幅、点線タイプ等) やリサイズオプションはプロパティリストにて指定できます。 角の [丸み](properties_CoordinatesAndSizing.md#角の半径) を指定することもできます。
 
 ![](assets/en/FormObjects/shapes_rectangle2.png)
 
