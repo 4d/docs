@@ -130,7 +130,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### 対象オブジェクト
 
-[Rectangle](shapes_overview.md#rectangle)
+[四角](shapes_overview.md#rectangle)
 
 * * *
 
