@@ -66,7 +66,7 @@ title: ラジオボタン
 
 ### ベベル
 
-The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. ボタンにマウスオーバーしたときの表示は OS によって異なります:
+ベベルスタイルは [ツールバー](#ツールバー) スタイルと似た動作をしますが、薄いグレーの背景にグレーの枠が描画されます。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
 - *Windows* - ボタンがハイライト表示されます。
     
@@ -78,7 +78,7 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
 角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。
 
-- *Windows* - the button is identical to the [Bevel](#bevel) style.
+- Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 - *macOS* - 角が丸くなっています。 ![](assets/en/FormObjects/roundedBevel.png)
 
@@ -86,17 +86,17 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
 OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。
 
-- *Windows* - the button is identical to the [Bevel](#bevel) style.
+- Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
 - *macOS* - 2トーンのシステムボタンです。
 
 ### OS Xテクスチャー
 
-The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
+OS Xテクスチャースタイルは [ツールバー](#ツールバー) スタイルとほぼ同一ですが、OSによってはマウスオーバー時の変化がないほか、外観の異なる点があります。
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+- *Windows* - ツールバースタイルのようなボタンに中央配置のラベルが付き、背景は常に表示されます。
 
 - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
     
@@ -104,7 +104,7 @@ The OS X Textured radio button style is nearly identical to the [Toolbar](#toolb
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+Office XPスタイルは [ベベル](#ベベル) ボタンような外観に、[ツールバーボタン](#ツールバーボタン) スタイルの動作を組み合わせたものです。
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
