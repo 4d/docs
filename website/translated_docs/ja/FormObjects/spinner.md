@@ -1,11 +1,11 @@
 ---
 id: spinner
-title: Spinner
+title: スピナー
 ---
 
 ## 概要
 
-The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
+スピナーは円形のインジケーターで、[バーバーショップ](progressIndicator.md#barber-shop) のように連続したアニメーションを表示します。
 
 ![](assets/en/FormObjects/spinner.gif)
 
