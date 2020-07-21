@@ -15,10 +15,10 @@ title: スプリッター
 
 * あらゆるタイプのフォーム上にスプリッターを必要なだけ設置可能であり、一つのフォーム上で水平と垂直のスプリッターを一緒に使用することができます。
 * スプリッターはオブジェクトを横切ることができます (オーバーラップ)。 スプリッターを動かすと、このオブジェクトのサイズが変更されます。
-* フォーム上で移動されたオブジェクトが完全に表示されたままになるように、また別のスプリッターを超えないように、スプリッターの停止位置が計算されます。 [以降のオブジェクトを移動する](properties_ResizingOptions.md#pusher) (プッシャー) プロパティをスプリッターに割り当てると、スプリッターを右方向または下方向へ動かしても停止することはありません。
-* If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
+* フォーム上で移動されたオブジェクトが完全に表示されたままになるように、また別のスプリッターを超えないように、スプリッターの停止位置が計算されます。 [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) (プッシャー) プロパティをスプリッターに割り当てると、スプリッターを右方向または下方向へ動かしても停止することはありません。
+* スプリッターを使用するフォームのサイズを変更すると、フォームが表示されている間だけ、フォームの新しいサイズが保存されます。 フォームを閉じると、最初の大きさに戻ります。
 
-Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
+スプリッターは挿入されると線として表示されます。 その [線のスタイル](properties_BackgroundAndBorder.md#境界線スタイル) を変更してさらに細い線に設定したり、線の種類によっては [線の色](properties_BackgroundAndBorder.md#線カラー) を設定したりすることができます。
 
 #### JSON 例:
 
@@ -29,23 +29,23 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
     "top": 160,   
     "width": 100,  
     "height": 20,  
-    "splitterMode": "move"  //pusher
+    "splitterMode": "move"  // プッシャー
     }
 ```
 
 ### プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Title](properties_Object.md#title) -[Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#CSSクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - [ヘルプTips](properties_Help.md#ヘルプTips)
 
-## Interaction with the properties of neighboring objects
+## 隣接するオブジェクトのプロパティとの相互作用
 
-In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
+フォーム上では、スプリッター周辺にある各オブジェクトのリサイズオプションに基づいて、スプリッターとこれらのオブジェクトとが作用しあいます:
 
-| Resizing options for the object(s) | Object(s) above an horizontal splitter or to the left of a vertical splitter (1)    | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                              | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                           |
-| ---------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| None                               | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
-| サイズ変更                              | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
-| Move                               | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
+| オブジェクトのリサイズオプション | 水平スプリッターの上、または垂直スプリッターの左にあるオブジェクト(1) | 水平スプリッターの下、または垂直スプリッターの右にあるオブジェクト (非 "プッシャー" の場合)                                  | 水平スプリッターの下、または垂直スプリッターの右にあるオブジェクト ("プッシャー" の場合)          |
+| ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| None             | そのまま変わらない                            | 次に停止するまでスプリッターとともに移動 (スプリッターとの相対的な位置は変更されない)。 下または右への移動時の停止位置はウインドウの境界または別のスプリッター。 | 無制限にスプリッターとともに移動 (スプリッターとの相対的な位置は変更されない)。 停止しない (次節を参照)。 |
+| 拡大               | 元の位置のままだが、スプリッターの新しい位置に基づいてサイズが調整される |                                                                                    |                                                          |
+| Move             | Are moved with the splitter          |                                                                                    |                                                          |
 
 
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
