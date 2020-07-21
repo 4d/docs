@@ -44,24 +44,11 @@ title: 図形
 
 ### startPoint プロパティ
 
-`startPoint` JSON プロパティは、線の始点を定義します (例題参照)。
+`startPoint` JSON プロパティは、線の始点を定義します (JSON例参照)。
 
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+> フォームエディター上では線の始点があきらかなため、プロパティリストにおいて `startPoint` プロパティは非表示です。
 
-#### JSON Examples:
-
-        "myLine": {
-            "type": "line",                
-            "left": 20,
-            "top": 40,
-            "width": 100,
-            "height": 80,
-            "startPoint": "topLeft", //first direction
-            "strokeDashArray": "6 2" //dashed
-            }
-    
-
-Result: ![](assets/en/FormObjects/shape_line1.png)
+#### JSON 例:
 
         "myLine": {
             "type": "line",                
@@ -69,12 +56,25 @@ Result: ![](assets/en/FormObjects/shape_line1.png)
             "top": 40,
             "width": 100,
             "height": 80,
-            "startPoint": "bottomLeft", //2nd direction
-            "strokeDashArray": "6 2" //dashed
+            "startPoint": "topLeft", // 第一の方向
+            "strokeDashArray": "6 2" // 破線
             }
     
 
-Result: ![](assets/en/FormObjects/shape_line2.png)
+結果: ![](assets/en/FormObjects/shape_line1.png)
+
+        "myLine": {
+            "type": "line",                
+            "left": 20,
+            "top": 40,
+            "width": 100,
+            "height": 80,
+            "startPoint": "bottomLeft", // 第二の方向
+            "strokeDashArray": "6 2" // 破線
+            }
+    
+
+結果: ![](assets/en/FormObjects/shape_line2.png)
 
 #### プロパティ一覧
 
