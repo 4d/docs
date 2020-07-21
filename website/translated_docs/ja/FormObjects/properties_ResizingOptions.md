@@ -121,7 +121,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### 対象オブジェクト
 
-[Splitter](splitterTabControlOverview#splitters)
+[スプリッター](splitterTabControlOverview#splitters)
 
 * * *
 
