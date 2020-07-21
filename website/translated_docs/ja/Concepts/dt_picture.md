@@ -101,7 +101,7 @@ rectangle/-20 // rectangle を上に 20ピクセル移動します。
 
 ![](assets/en/Concepts/vertmove.en.png)![](assets/en/Concepts/vertmove2.en.png)
 
-サイズ変更
+拡大
 
 ```4d
 rectangle*1.5 // rectangle を 50%拡大します。

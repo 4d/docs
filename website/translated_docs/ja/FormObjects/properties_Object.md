@@ -59,7 +59,7 @@ Here is the list of objects whose value can be saved:
 | -------------------------------------- | -------------------------------------------------------------------------------------- |
 | [チェックボックス](checkbox_overview.md)       | Value of associated variable (0, 1, 2)                                                 |
 | [ドロップダウンリスト](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)      | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [ラジオボタン](radio_overview.md)            | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)           | Number of selected tab                                                                 |
 
 
@@ -257,7 +257,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### 対象オブジェクト
                     
-                    [Radio Button](radio_overview.md)
+                    [ラジオボタン](radio_overview.md)
                     
                     * * *
                     

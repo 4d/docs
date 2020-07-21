@@ -16,7 +16,7 @@ title: クラス
 
 クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
-- `name`: ECMAScript に準拠している必要があります
+- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
 - `superclass` オブジェクト (任意。無ければ null)
 - `new()` メソッド: Class オブジェクトをインスタンス化します
 
@@ -34,8 +34,8 @@ Class オブジェクトは共有オブジェクトです。したがって、�
 すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
 ```4d
-// クラス: Polygon
-Class constructor($width : Integer;$height : Integer)
+//Class: Polygon
+Class constructor($width : Integer; $height : Integer)
     This.area:=$width*$height
 
     //var $poly : Object
@@ -57,17 +57,17 @@ Class constructor($width : Integer;$height : Integer)
 たとえば:
 
 ```4d
-// クラス: Person.4dm
-Class constructor($firstname : Text;$lastname : Text)
+//Class: Person.4dm
+Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 ```
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
-    var $o:Object
+    var $o : Object
     $o:=cs.Person.new("John";"Doe")
-    // $o:{firstName: "John";lastName: "Doe" }
+    // $o:{firstName: "John"; lastName: "Doe" }
     
 
 空のクラスファイルを作成し、空のオブジェクトをインスタンス化することも可能です。 たとえば、次の `Empty.4dm` クラスファイルを作成します:
@@ -112,7 +112,7 @@ $cName:=OB Class($o).name // "Empty"
 
 クラスを命名する際には、次のルールに留意してください:
 
-- ECMAScript に準拠した名前であること 
+- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
 - 大文字と小文字が区別されること
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
 
@@ -166,111 +166,112 @@ $cName:=OB Class($o).name // "Empty"
 
 #### シンタックス
 
-```js
-Function <name>({parameterName : type;...})
-// コード
+```4d
+Function <name>({$parameterName : type; ...}){->$parameterName : type}
+// code
 ```
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 このとき、メンバーメソッド名は ECMAScript に準拠している必要があります。
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
 
-> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は自動補完機能から除外されます。 たとえば、MyClass に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "` とタイプしても、この関数は候補として提示されません。
 
-関数名のすぐ後に、名前とデータ型を指定して [引数](parameters.md#名前付き引数-クラス関数) を宣言します。 たとえば:
+Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). たとえば:
 
-```code4d
-Function setFullName($firstname : Text;$lastname : Text)
+```4d
+Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
-
-> クラス関数では、[位置引数](parameters.md#位置引数) ($1, $2...) を使うこともできます。
 
 クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
 
 ```4d
-Function setFullname($firstname : Text;$lastname : Text)
+Function setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
-Function getFullname()
-    var $0 : Text
-    $0:=This.firstName+" "+Uppercase(This.lastName)
+Function getFullname()->$fullname : Text
+    $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
 クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
 データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- `()` 演算子の使用 例: `myObject.methodName("hello")`
-
-- "Function" クラスメンバーメソッドの使用:
-    
+- `()` 演算子の使用 For example, `myObject.methodName("hello")`
+- use of a "Function" class member method: 
     - `apply()`
     - `call()`
 
-> **スレッドセーフに関する警告:** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合:  
-> - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 - ランタイムにおいてのみ、4D はエラーを生成します。
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
-#### クラス関数の引数
+#### Parameters
 
-関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数の引数がある場合、それらはセミコロン (;) で区切ります。
-
-```4d
-Function add($x;$y : Variant;$z : Integer;$xy : Object)
-```
-
-> 引数のデータ型を指定しない場合、その引数は `バリアント型` として定義されます。
-
-戻り値 ($0) は、名前付き引数のリスト内で宣言することができません。 そのため、関数のコード内にて宣言する必要があります。 例:
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
-Function add($x : Variant;$y : Integer)
-    var $0 : Text
+Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-> メソッド内の引数宣言に使用される従来の 4D シンタックスは、クラス関数用のシンタックスと組み合わせて使うことができます。 For example:
+> If the type is not stated, the parameter will be defined as `Variant`.
+
+You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)->$result : Integer
+```
+
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    $0:=$x+$y
+```
+
+> The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
 Function add($x : Integer)
-  var $0,$2 : Integer
-  $0:=$x+$2
+  var $2,$value : Integer
+  var $0 : Text
+  $value:=$x+$2
+  $0:=String($value)
 ```
 
 #### Example
 
 ```4d
 // Class: Rectangle
-Class constructor($width : Integer;$height : Integer)
+Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
 // Function definition
-Function getArea()
-    var $0 : Integer
-    $0:=(This.height)*(This.width)
+Function getArea()->$result : Integer
+    $result:=(This.height)*(This.width)
 ```
 
 ```4d
 // In a project method
-C_OBJECT($o)  
-C_REAL($area)
+var $rect : cs.Rectangle
+var $area : Real
 
-$o:=cs.Rectangle.new()  
-$area:=$o.getArea(50;100) //5000
+$rect:=cs.Rectangle.new()  
+$area:=$rect.getArea(50;100) //5000
 ```
 
 ### Class constructor
 
 #### Syntax
 
-```js
+```4d
 // Class: MyClass
-Class Constructor({parameterName : type;...})
+Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function, which can accept [parameters](#class-function-parameters), can be used to define a user class.
+A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
 
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
@@ -288,7 +289,7 @@ Class Constructor ($name : Text)
 ```4d
 // In a project method
 // You can instantiate an object
-C_OBJECT($o)
+var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
 ```
@@ -297,7 +298,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 #### Syntax
 
-```js
+```4d
 // Class: ChildClass
 Class extends <ParentClass>
 ```
@@ -311,7 +312,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 - ユーザークラスは、自身を継承することはできません。
 - 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。 
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax' will throw an error in this case.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
@@ -380,7 +381,7 @@ This example illustrates the use of `Super` in a class constructor. The command 
 
 ```4d
 // Class: Rectangle
-Class constructor($width : Integer;$height : Integer)
+Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
