@@ -46,7 +46,7 @@ For more information regarding how to query data in 4D, refer to the [dataClass.
 >         
 >         If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`</blockquote> 
 >         
->         ## Attribute
+>         ## 属性
 >         
 >         If the attribute is in the same dataclass, you can just pass it directly (*e.g.*, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (*e.g.*, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
 >         

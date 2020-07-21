@@ -211,7 +211,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     #### 対象オブジェクト
                     
-                    [Plug-in Area](pluginArea_overview.md)
+                    [プラグインエリア](pluginArea_overview.md)
                     
                     * * *
                     
@@ -250,7 +250,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | 名    | データタイプ | とりうる値     |
                     | ---- | ------ | --------- |
-                    | テキスト | string | なんらかのテキスト |
+                    | text | string | なんらかのテキスト |
 
                     
                     #### 対象オブジェクト
@@ -269,8 +269,8 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
                     | --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
-                    | Minimum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
-                    | Maximum               | ○   |      | ○  | ○  | ○    |      | Same as column type |
+                    | 最小                    | ○   |      | ○  | ○  | ○    |      | Same as column type |
+                    | 最大                    | ○   |      | ○  | ○  | ○    |      | Same as column type |
                     | Sum                   | ○   |      | ○  |    | ○    |      | Same as column type |
                     | Count                 | ○   | ○    | ○  | ○  | ○    | ○    | 倍長整数                |
                     | Average               | ○   |      |    | ○  |      |      | 実数                  |

@@ -64,6 +64,6 @@ Note that converting back and forth may lead to an end result that is different 
 
 [リストボックス](listbox_overview.md)
 
-#### See also
+#### 参照
 
 [Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)

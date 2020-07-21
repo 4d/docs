@@ -840,12 +840,12 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 #### behavior
 
-behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 In 4D v15, a single variation is proposed:
+behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 4D v15では、一つだけ他の表示方法が用意されています:
 
-| Attribute | Available value(s) | valueType(s) | 説明                                                                                                                                                                                   |
-| --------- | ------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.  
-2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| 属性       | 使用可能な値      | valueType | 説明                                                                                                        |
+| -------- | ----------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates | integer   | スリーステートチェックボックスを数値として表現します。  
+2=セミチェック、1=チェック、0=チェックされていない、-1=非表示、-2=チェックなしが無効化、-3=チェックが無効化、-4=セミチェックが無効化 |
 
 
 ```4d
@@ -860,20 +860,20 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_behavior.png)
 
-#### requiredList and choiceList
+#### requiredList と choiceList
 
-When a "choiceList" or a "requiredList" attribute is present inside the object, the text input is replaced by a drop-down list or a combo box, depending of the attribute:
+"choiceList" または "requiredList" 属性がオブジェクト内に存在しているとき、テキスト入力は以下の属性に応じて、ドロップダウンリストまたはコンボボックスで置き換えられます:
 
-* If the attribute is "choiceList", the cell is displayed as a combo box. This means that the user can select or type a value.
-* If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
+* 属性が "choiceList" の場合、セルはコンボボックスとして表示されます。 これはつまり、ユーザーは値を選択、または入力できるということです。
+* 属性が "requiredList" の場合、セルはドロップダウンリストとして表示されます。これはつまり、ユーザーはリストに提供されている値からどれか一つを選択するしかないということです。
 
-In both cases, a "value" attribute can be used to preselect a value in the widget.
+どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> ウィジェットの値は配列を通して定義されます。 既存の 4Dリストをウィジェットに割り当てたい場合、"requiredListReference"、"requiredListName"、"choiceListReference"、または "choiceListName" 属性を使用する必要があります。
 
 例: 
 
-* You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
+* 選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。 デフォルトでは "Closed" が選択された状態にしたいとします:
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -887,7 +887,7 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-* You want to accept any integer value, but display a combo box to suggest the most common values:
+* 整数値であればすべて受け入れ可能な状態にしておいた上で、もっとも一般的な値を提示するためにコンボボックスを表示したい場合を考えます:
 
 ```4d
     ARRAY LONGINT($ChoiceList;0)
@@ -898,24 +898,24 @@ In both cases, a "value" attribute can be used to preselect a value in the widge
     APPEND TO ARRAY($ChoiceList;100)
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
-    OB SET($ob;"value";10) //10 as default value
+    OB SET($ob;"value";10) // 10 をデフォルト値として使用
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName と requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+"requiredListName" と "requiredListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
 
-Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+"requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡します。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * これらの値を単純な配列を通して定義したい場合は、"requiredList" 属性を使用する必要があります。
+> * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
 例: 
 
-* You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
+* ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "blue" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -929,7 +929,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-* You want to display a drop-down list based on a list defined by programming and save it as a reference:
+* プログラミングによって定義されたリストに基づいたドロップダウンリストを表示し、参照として保存したい場合を考えます:
 
 ```4d
     <>List:=New list
@@ -940,25 +940,25 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
     OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
+    OB SET($ob;"value";2) // デフォルトでLondonを表示
     OB SET($ob;"requiredListReference";<>List)
 ```
 
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
     
 
-#### choiceListName and choiceListReference
+#### choiceListName と choiceListReference
 
-The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
+"choiceListName" と "choiceListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはコンボボックスとして表示されるようになります。これはつまり、ユーザーは値を選択、または入力できるということを意味します。
 
-Use "choiceListName" or "choiceListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
+"choiceListName" または "choiceListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡しま す。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
-> * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
+> * これらの値を単純な配列を通して定義したい場合は、"choiceList" 属性を使用する必要があります。
+> * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
 例: 
 
-You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
+ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "green" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -971,23 +971,23 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-#### unitsList, unitsListName, unitsListReference and unitReference
+#### unitsList、unitsListName、 unitsListReference と unitReference
 
-You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). To define the unit list, you can use one of the following attributes:
+特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
-* "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Use this attribute to define units within the object.
-* "unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
-* "unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
+* "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
+* "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+* "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
-Regardless of the way the unit list is defined, it can be associated with the following attribute:
+単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
 
-* "unitReference": a single value that contains the index (from 1 to x) of the selected item in the "unitList", "unitsListReference" or "unitsListName" values list.
+* "unitReference": "unitList"、"unitsListReference" または "unitsListName" の値リスト内で選択された項目へのインデックス (1からx) を格納する単一の値。
 
-The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
+カレントの単位は、ボタンとして表示されます。このボタンは、クリックするたびに "unitList"、"unitsListReference" または "unitsListName" の値を切り替えていきます (例: "pixels" -> "rows" -> "cm" -> "pixels" -> 等)。
 
 例: 
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+数値の入力と、その後に可能性のある二つの単位 ("lines" または "pixels") を続けて表示したい場合を考えます。 カレントの値は "2" + "lines" と、 オブジェクト内で直接定義された値 ("unitsList" 属性) を使用するものとします:
 
 ```4d
 ARRAY TEXT($_units;0)
@@ -1004,9 +1004,9 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. The button will be displayed in the cell automatically.
+セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に True の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。
 
-When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
+このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては [イベント管理](#イベント管理) の章を参照ください)。
 
 例: 
 
@@ -1022,9 +1022,9 @@ OB SET($ob;"value";$entry)
 
 #### color valueType
 
-The "color" valueType allows you to display either a color or a text.
+"color" valueType を使用すると、色、または色を表すテキストを表示することができます。
 
-* If the value is a number, a colored rectangle is drawn inside the cell. 例: 
+* 値が数字の場合、色付けされた長方形がセル内に表示されます。 例: 
     
     ```4d
     C_OBJECT($ob4)
@@ -1034,13 +1034,13 @@ The "color" valueType allows you to display either a color or a text.
     
     ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-* If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+* 値がテキストの場合、そのテキストが表示されます (*例*: "value";"Automatic")。
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。 データまたは値を渡す/返すことはできません。
 
-Optionally, you can pass a "label" attribute.
+オプションとして、"label" 属性を渡すことができます。
 
 例: 
 
@@ -1052,15 +1052,15 @@ OB SET($ob;"label";"Edit...")
 
 ![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
-### Event management
+### イベント管理
 
-Several events can be handled while using an object list box array:
+オブジェクトリストボックス配列を使用している際には、複数のイベントを管理することができます:
 
-* **On Data Change**: An `On Data Change` event is triggered when any value has been modified either: 
-    * in a text input zone
-    * in a drop-down list
-    * in a combo box area
-    * in a unit button (switch from value x to value x+1)
-    * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **On Data Change**: 以下の場所において、どんな値でも変更された場合には `On Data Change` イベントがトリガーされます: 
+    * テキスト入力
+    * ドロップダウンリスト
+    * コンボボックスエリア
+    * 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
+    * チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
+* **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+* **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。

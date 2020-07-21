@@ -39,9 +39,9 @@ DO SOMETHING(WithThis;AndThat;ThisWay)
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
+EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
 // サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
-// その際に引数として日付リテラル !05/05/10! を渡します
+// その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)

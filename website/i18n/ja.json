@@ -145,22 +145,22 @@
         "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
-        "title": "Picture Button"
+        "title": "ピクチャーボタン"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
-        "title": "Animation"
+        "title": "アニメーション"
       },
       "FormObjects/propertiesAppearance": {
         "title": "アピアランス"
@@ -172,13 +172,13 @@
         "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "行列数"
       },
       "FormObjects/propertiesDataSource": {
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
         "title": "Entry"
@@ -241,7 +241,7 @@
         "title": "Radio Button"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
         "title": "Shapes"
@@ -256,7 +256,7 @@
         "title": "Static picture"
       },
       "FormObjects/stepper": {
-        "title": "Stepper"
+        "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
         "title": "Subform"
@@ -277,7 +277,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "インストールとアクティベーション"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -469,7 +469,7 @@
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation and activation|in index page Getting started": "インストールとアクティベーション",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
