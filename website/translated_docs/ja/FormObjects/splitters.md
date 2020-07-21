@@ -1,20 +1,20 @@
 ---
 id: splitters
-title: Splitter
+title: スプリッター
 ---
 
 ## 概要
 
-A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your database’s interface. A splitter may or may not be a “pusher.”
+スプリッターはフォームを2つのエリアに分割します。ユーザーはいずれかの方向へスプリッターを移動してエリアを拡げたり縮めたりすることができます。 水平方向または垂直方向のスプリッターを作成できます。 スプリッターでは各オブジェクトのサイズ調整プロパティが考慮されます。つまり作成するデータベースのインタフェースをすべてカスタマイズすることができます。 また、スプリッターは “プッシャー” (押し込みタイプ) にすることも可能です。
 
-Splitter are used for example in output forms so that columns can be resized:
+たとえば、スプリッターは列のサイズを変更できるよう、リストフォームで使用されます:
 
 ![](assets/en/FormObjects/split1.png)
 
-Some of the splitter’s general characteristics:
+スプリッターの一般的な特徴をいくつか次に説明します:
 
-* You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
-* A splitter can cross (overlap) an object. This object will be resized when the splitter is moved.
+* あらゆるタイプのフォーム上にスプリッターを必要なだけ設置可能であり、一つのフォーム上で水平と垂直のスプリッターを一緒に使用することができます。
+* スプリッターはオブジェクトを横切ることができます (オーバーラップ)。 スプリッターを動かすと、このオブジェクトのサイズが変更されます。
 * Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
 * If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
 
