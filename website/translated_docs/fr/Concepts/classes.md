@@ -16,7 +16,7 @@ Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basé
 
 Une classe est un objet de classe "Class". Un objet de classe a les propriétés et méthodes suivantes :
 
-- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
+- `name` which must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers)
 - un objet `superclass` (facultatif, nul s'il n'y en a aucun)
 - une méthode `new()` permettant d'instancier des objets de classe.
 
@@ -112,7 +112,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 
 When naming classes, you should keep in mind the following rules:
 
-- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
+- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
 - Class names are case sensitive.
 - Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
@@ -162,7 +162,7 @@ Specific 4D keywords can be used in class definitions:
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
 
-### Class Function
+### Function
 
 #### Syntaxe
 
@@ -173,7 +173,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
+In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
@@ -207,7 +207,7 @@ In the database code, class functions are called as member methods of the object
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
