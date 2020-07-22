@@ -195,7 +195,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
+**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
 
 ## フォーム
 
@@ -349,7 +349,7 @@ If(Records in set("$Selection"+String($i))>0)
 例: 
 
 ```4d
-    // インタープロセス命名セレクション
+<br />    // インタープロセス命名セレクション
 USE NAMED SELECTION([Customers];"<>ByZipcode")
     // プロセス命名セレクション
 USE NAMED SELECTION([Customers];"<>ByZipcode")
