@@ -177,7 +177,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 ## Forms
 
@@ -318,6 +318,7 @@ You denote a process named selection by using a string expression that represent
 
 Examples:
 ```4d
+
 	//Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 	//Process Named Selection
