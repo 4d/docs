@@ -16,7 +16,7 @@ title: クラス
 
 クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
-- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
+- `name` which must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers)
 - `superclass` オブジェクト (任意。無ければ null)
 - `new()` メソッド: Class オブジェクトをインスタンス化します
 
@@ -112,7 +112,7 @@ $cName:=OB Class($o).name // "Empty"
 
 クラスを命名する際には、次のルールに留意してください:
 
-- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
+- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
 - 大文字と小文字が区別されること
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
 
@@ -173,7 +173,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "` とタイプしても、この関数は候補として提示されません。
 
@@ -207,7 +207,7 @@ Function getFullname()->$fullname : Text
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
