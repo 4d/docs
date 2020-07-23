@@ -8,11 +8,11 @@ title: Klassen
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Jedes Objekt ist eine Instanz seiner Klasse. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Ist eine Benutzerklasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse [erweitern](#class-extends-classname) und erbt dann von deren Funktionen.
 
 > Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
 
-For example, you could create a `Person` class with the following definition:
+Sie können z. B. eine Klasse `Person` mit folgender Definition erstellen:
 
 ```4d
 //Class: Person.4dm
@@ -28,7 +28,7 @@ In einer Methode erstellen Sie eine "Person":
     // $o:{firstName: "John"; lastName: "Doe" }
     
 
-## Managing classes
+## Klassen verwalten
 
 ### Definition einer Klasse
 
@@ -36,7 +36,7 @@ Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) defin
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
-- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein. 
 - Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden. 
 
@@ -53,11 +53,11 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 Um eine vorhandene Klasse zu löschen, können Sie:
 
 - Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- Die Klasse im Explorer auswählen und am unteren Rand auf das Icon ![](assets/en/Users/MinussNew.png) klicken oder im Kontextmenü den Eintrag **In Papierkorb verschieben** wählen. 
 
-### Using 4D interface
+### 4D Oberfläche verwenden
 
-Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
+Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatisch an der passenden Stelle gespeichert, entweder über das Menü **Datei/Ablage** oder über den Explorer.
 
 #### Menü Datei/Ablage und Werkzeugleiste
 
