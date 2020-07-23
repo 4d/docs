@@ -222,14 +222,14 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     Function add($x : Variant; $y : Integer)->$result : Integer
     ```
     
-    Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Dann ist er automatisch über $0 verfügbar. For example:
+    Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Dann ist er automatisch über $0 verfügbar. Zum Beispiel:
     
     ```4d
     Function add($x : Variant; $y : Integer): Integer
         $0:=$x+$y
     ```
     
-    > The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+    > Mit der klassischen 4D Syntax für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
     > 
     > ```4d
     > Function add($x : Integer)
@@ -239,7 +239,7 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     >   $0:=String($value)
     > ```
     
-    #### Example
+    #### Beispiel
     
     ```4d
     // Class: Rectangle
@@ -313,19 +313,19 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     - A user class cannot extend itself.
     - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
     
-    Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+    Code-Editor oder Interpreter machen solch einen Verstoß gegen die Regel nicht ausfindig, in diesem Fall geben nur der Compiler und die `check Syntaxprüfung` einen Fehler aus.
     
-    An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+    Mit dem Befehl [`Super`](#super)kann eine erweiterte Klasse den Konstruktor ihrer übergeordneten Klasse aufrufen.
     
-    #### Example
+    #### Beispiel
     
-    This example creates a class called `Square` from a class called `Polygon`.
+    Eine Klasse mit Namen `Square` aus der Klasse mit Namen `Polygon` erstellen.
     
     ```4d
     //Class: Square
     //path: Classes/Square.4dm 
     
-    Class extends Polygon
+    Class erweitert Polygon
     
     Class constructor ($side : Integer)
     
@@ -351,11 +351,11 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     | Result    | object | <- | Object's parent                                |
 
     
-    The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+    Über`Super` lässt sich die `superclass` aufrufen, z.B. die übergeordnete Klasse.
     
-    `Super` serves two different purposes:
+    `Super` dient zwei unterschiedlichen Zwecken:
     
-    - inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
+    - inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. In einem Konstruktor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
         
         - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid. 
         - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
