@@ -213,7 +213,7 @@ Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
 #### Beispiele
 
-- To declare local and process basic variables:
+- Einfache lokale Variable bzw. Prozessvariable deklarieren:
 
 ```4d
 var $myText, myText, $vt : Text
@@ -225,14 +225,14 @@ var $o : 4D.Object
 //also equivalent to C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Objektvariablen der 4D Klasse deklarieren:
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- Objektvariablen der Benutzerklasse deklarieren:
 
 ```4d
 var $myClass : cs.MyClass
@@ -240,11 +240,11 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-### Using a C_ directive
+### Eine C_Direktive verwenden
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
 Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 
@@ -263,13 +263,13 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
  ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
 ```
 
-**Note:** Arrays are a particular type of variables. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
-## Assigning Data
+## Daten zuweisen
 
 Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
 
-The assignment operator is a primary way to create a variable and to put data into it. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
+Der Zuweisungsoperator ist wesentlich, um eine Variable zu erstellen und Daten in sie einzusetzen. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
 
 ```4d
 MyNumber:=3
@@ -277,7 +277,7 @@ MyNumber:=3
 
 erstellt die Variable * MyNumber* und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#creating-variables) zu erstellen.
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie * MyNumber* auf die rechte Seite des Zuweisungsoperators:
 
@@ -293,7 +293,7 @@ Daten an Elemente eines Array weisen Sie über geschweifte Klammern zu, also {..
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Lokale, Prozess- und Interprozessvariablen
 
 Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
 
