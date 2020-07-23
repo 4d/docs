@@ -8,54 +8,11 @@ title: Classes
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions. 
 
-Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can `extend` another class, and then inherits from its functions.
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
 
-The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
+> The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
-### Class object
-
-A class is an object itself, of "Class" class. A class object has the following properties and methods:
-
-- `name` which must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers)
-- `superclass` object (optional, null if none)
-- `new()` method, allowing to instantiate class objects.
-
-In addition, a class object can reference: 
-- a `constructor` object (optional)
-- a `prototype` object, containing named function objects (optional).
-
-A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
-
-
-### Property lookup and prototype
-
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
-
-All objects inherit from the class "Object" as their inheritance tree top class.
-
-```4d
-//Class: Polygon
-Class constructor($width : Integer; $height : Integer)
-	This.area:=$width*$height
-
-	//var $poly : Object
-	var $instance : Boolean
-	$poly:=cs.Polygon.new(4;3)
-
-	$instance:=OB Instance of($poly;cs.Polygon)
-	// true
-	$instance:=OB Instance of($poly;4D.Object)
-	// true
-```
-
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
-
-### Class definition
-
-A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method.
-You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
-
-For example:
+For example, you could create a `Person` class with the following definition: 
 
 ```4d  
 //Class: Person.4dm
@@ -67,43 +24,24 @@ Class constructor($firstname : Text; $lastname : Text)
 In a method, creating a "Person":
 
 ```
-var $o : Object
+var $o : cs.Person //object of Person class
 $o:=cs.Person.new("John";"Doe")
 // $o:{firstName: "John"; lastName: "Doe" }
 ```
 
-Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file: 
-
-```4d  
-//Empty.4dm class file
-//Nothing
-```
-
-You could write in a method:
 
 
-```4d
-$o:=cs.Empty.new()  
-//$o : {}
-$cName:=OB Class($o).name //"Empty"
-```
+## Managing classes
 
+### Class definition
 
-## Class stores
+A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name. 
 
-Available classes are accessible from their class stores. The following class stores are available:
+When naming classes, you should keep in mind the following rules:
 
-- a class store for built-in 4D classes. It is returned by the `4D` command.
-- a class store for each opened database or component. It is returned by the `cs` command. These are "user classes".
-
-For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
-
-
-## Handling user classes
-
-### Class files
-
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- Class names are case sensitive.
+- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
@@ -113,18 +51,17 @@ For example, if you want to define a class named "Polygon", you need to create t
 			- Classes
 				+ Polygon.4dm
 
-### Class names
+### Deleting a class
 
-When naming classes, you should keep in mind the following rules:
+To delete an existing class, you can:
 
-- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
-- Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
+- on your disk, remove the .4dm class file from the "Classes" folder,
+- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
 
-### 4D Developer interface
+### Using 4D interface
 
-Class files are automatically stored at the appropriate location when created through the 4D Developer interface, either via the **File** menu or the Explorer. 
+Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer. 
 
 #### File menu and toolbar
 
@@ -154,13 +91,131 @@ In the various 4D Developer windows (code editor, compiler, debugger, runtime ex
 	- **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
 - In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format. 
  
+## Class stores
 
-### Deleting a class
+Available classes are accessible from their class stores. Two class stores are available:
 
-To delete an existing class, you can:
+- `cs` for user class store
+- `4D` for built-in class store
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
-- in the Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+ 
+### cs 
+
+#### cs -> classStore
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|object|<-|User class store for the project or component|
+
+The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available. 
+
+#### Example
+
+You want to create a new instance of an object of `myClass`:
+
+```4d
+$instance:=cs.myClass.new()
+```
+
+### 4D
+
+#### 4D -> classStore
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|object|<-|4D class store|
+
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoClass.md).
+
+#### Example
+
+You want to create a new key in the `CryptoKey ` class:
+
+```4d
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+
+
+## Using classes in your code
+
+
+### Class object
+
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class. A class object has the following properties and methods:
+
+- `name` string
+- `superclass` object (optional, null if none)
+- `new()` method, allowing to instantiate class objects.
+
+In addition, a class object can reference: 
+- a [`constructor`](#class-constructor) object (optional),
+- a `prototype` object, containing named [function](#function) objects (optional).
+
+A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+
+
+
+### new() method
+
+#### cs.\<ClassName>.new() -> classObject
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|classObject|object|<-|New object of the \<ClassName> class|
+
+The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores). 
+
+If it is called on a non-existing class, an error is returned. 
+
+#### Example
+
+To create a new instance of the Person class:
+
+```4d
+var $person : cs.Person //for accurate autocompletion  
+$person:=cs.Person.new() //create the new instance  
+//$Person contains functions of the class
+```
+
+Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file: 
+
+```4d  
+//Empty.4dm class file
+//Nothing
+```
+
+You could write in a method:
+
+```4d
+$o:=cs.Empty.new()  
+//$o : {}
+$cName:=OB Class($o).name //"Empty"
+```
+
+### Property lookup and prototype
+
+All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
+
+All objects inherit from the class "Object" as their inheritance tree top class.
+
+```4d
+//Class: Polygon
+Class constructor($width : Integer; $height : Integer)
+	This.area:=$width*$height
+
+	//var $poly : Object
+	var $instance : Boolean
+	$poly:=cs.Polygon.new(4;3)
+
+	$instance:=OB Instance of($poly;cs.Polygon)
+	// true
+	$instance:=OB Instance of($poly;4D.Object)
+	// true
+```
+
+When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
+
 
 
 ## Class keywords
@@ -231,7 +286,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 >If the type is not stated, the parameter will be defined as `Variant`. 
 
-You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -245,7 +300,7 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
->The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+>The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 >
 >```4d
 >Function add($x : Integer)
