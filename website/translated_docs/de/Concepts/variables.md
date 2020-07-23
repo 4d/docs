@@ -47,10 +47,10 @@ var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.  
+Diese Syntax unterstützt nur [Deklarationen für lokale und Prozessvariablen](#local-process-and-interprocess-variables), d.h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
-`varType` can be:
+`varTyp` kann folgendes sein:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
