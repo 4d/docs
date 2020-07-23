@@ -7,7 +7,7 @@ Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder**
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
-Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. For example, you might need to store a text variable in a field of same type:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z. B. eine Textvariable in einem Feld vom gleichen Typ speichern:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -20,7 +20,7 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache bietet zwei Wege zum Deklarieren von Variablen:
 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
-- Über Befehle in den Kapiteln "Compiler" oder "Arrays" der 4D Programmiersprache (überholt, nur in der klassischen Programmiersprache). 
+- Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache). 
 
 **Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
@@ -30,9 +30,9 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
  // and assigns the current date plus 30 days
 ```
 
-### Using the `var` keyword
+### Das Schlüsselwort `var` verwenden
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sich mit dieser Syntax Objektvariablen mit Klassen verbinden lassen. Diese Syntax verbessert die Vorschläge und type-ahead Features im Code-Editor.
 
 To declare a variable of any type with the `var` keyword, use the following syntax:
 
