@@ -25,7 +25,7 @@ You can either:
 
 |    名    | データタイプ | とりうる値                                 |
 |:-------:|:------:| ------------------------------------- |
-| tooltip |  テキスト  | additional information to help a user |
+| tooltip |  text  | additional information to help a user |
 
 
 #### 対象オブジェクト

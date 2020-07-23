@@ -44,7 +44,7 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
  ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
 ```
 
-## Assigning Data
+## Daten zuweisen
 
 Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
 
@@ -70,7 +70,7 @@ Daten an Elemente eines Array weisen Sie über geschweifte Klammern zu, also {..
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Lokale, Prozess- und Interprozessvariablen
 
 Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
 
@@ -115,7 +115,7 @@ Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIA
 - Verwalten von Drag-and-Drop auf Interprozessebene
 - Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
-For more information, see the chapter **Processes** and the description of these commands.
+Weitere Informationen dazu finden Sie im Kapitel **Prozesse** und in der Beschreibung dieser Befehle.
 
 ### Interprozessvariablen
 
