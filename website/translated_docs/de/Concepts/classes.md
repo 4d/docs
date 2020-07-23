@@ -115,7 +115,7 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     
     - Ein Klassenname muss mit den Schreibregeln für Eigenschaftsnamen [ konform sein](Concepts/dt_object.md#object-property-identifiers). 
     - Es wird zwischen Groß- und Kleinschreibung unterschieden.
-    - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle der Anwendung nicht denselben Namen verwenden. 
+    - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden. 
     
     ### 4D Entwickleroberfläche
     
@@ -133,18 +133,18 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     
     Um eine neue Klasse zu erstellen:
     
-    - Wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche ![](assets/en/Users/PlussNew.png).
+    - Wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche![](assets/en/Users/PlussNew.png).
     - Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag **Neue Klasse**. ![](assets/en/Concepts/newClass.png)
     - Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag **Neu > Klasse...**. 
     
     #### Unterstützung von Code für Klassen
     
-    In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode verwaltet mit einigen spezifischen Merkmalen:
+    In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
     
     - Im Code-Editor gilt folgendes: 
         - Es kann keine Klasse laufen
         - Eine Klassenfunktion ist ein Code Block 
-        - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
+        - **Goto definition** auf ein Object Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
         - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
     - Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> 
     
@@ -174,9 +174,9 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     
     Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
     
-    In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den Schreibregeln für Eigenschaftsnamen [ konform sein](Concepts/dt_object.md#object-property-identifiers).
+    In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
     
-    > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. `.
+    > **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im Code-Editor nicht berücksichtigt. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. `.
     
     Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Beispiel:
     
