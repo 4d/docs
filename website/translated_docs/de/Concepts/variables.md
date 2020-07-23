@@ -3,7 +3,7 @@ id: variables
 title: Variablen
 ---
 
-Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen**speichern Daten temporär im Speicher.
+Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen** speichern Daten temporär im Speicher.
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
@@ -22,7 +22,7 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
 - Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache). 
 
-**Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+**Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -55,7 +55,7 @@ Diese Syntax unterstützt nur [Deklarationen für lokale und Prozessvariablen](#
 - [Datentyp](Concepts/data-types.md), dann enthält die Variable einen Wert vom deklarierten Typ 
 - [Referenz auf eine Klasse](Concepts/classes.md) (4D Klasse oder Benutzerklasse), dann enthält die Variable die Referenz auf ein Objekt der definierten Klasse.
 
-Ohne `varTyp` wird eine Variable vom Typ **variant** erstellt.
+Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
 Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
@@ -338,7 +338,7 @@ Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIA
 - Verwalten von Drag-and-Drop auf Interprozessebene
 - Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
-For more information, see the chapter **Processes** and the description of these commands.
+Weitere Informationen dazu finden Sie im Kapitel **Prozesse** und in der Beschreibung dieser Befehle.
 
 ### Interprozessvariablen
 
