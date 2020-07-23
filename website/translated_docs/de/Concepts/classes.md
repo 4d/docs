@@ -208,21 +208,21 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     
     #### Parameter Der Parametername muss mit den Schreibregeln für Eigenschaftsnamen 
     
-    [ konform sein](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).</p> 
+    [ konform sein](Concepts/dt_object.md#object-property-identifiers). Mehrere Parameter (und Typen) werden durch Strichpunkt (;) voneinander getrennt.</p> 
     
     ```4d
     Function add($x; $y : Variant; $z : Integer; $xy : Object)
     ```
     
-    > If the type is not stated, the parameter will be defined as `Variant`.
+    > Ist kein Typ angegeben, erhält der Parameter den Typ `Variant`.
     
-    You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+    Optional können Sie den Rückgabeparameter definieren. Dazu setzen Sie ans Ende der Parameterliste einen Pfeil (->) mit Definition, wie zum Beispiel:
     
     ```4d
     Function add($x : Variant; $y : Integer)->$result : Integer
     ```
     
-    You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+    Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Dann ist er automatisch über $0 verfügbar. For example:
     
     ```4d
     Function add($x : Variant; $y : Integer): Integer
