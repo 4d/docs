@@ -224,7 +224,7 @@ Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen
 
 ## Identifier für Objekteigenschaft
 
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than [standard 4D object names](identifiers.md). Sie müssen die Regeln für JavaScript Identifier berücksichtigen (siehe [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Die Namensvergabe für Token Member, z.B. Namen von Objekteigenschaften, auf die über Objektnotation zugegriffen wird, ist restriktiver als für standardmäßige 4D Objektnamen. Sie müssen die Regeln für JavaScript Identifier berücksichtigen (siehe [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - Das erste Zeichen muss ein Buchstabe, ein Unterstrich (_) oder ein Dollarzeichen sein ($),
 - Nachfolgende Zeichen können ein Buchstabe, Digit, Unterstrich oder Dollarzeichen sein. Leerzeichen sind NICHT erlaubt.
@@ -233,7 +233,7 @@ Token member names (i.e., object property names accessed using the object notati
 **Hinweis:**
 
 - Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
-- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. For example, the `$o["My Att"]` attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation and autocomplete features with this attribute.
+- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut `$o["My Att"]` ist in 4D auch trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation und Autocomplete Features verwenden.
 
 ## Beispiele
 
