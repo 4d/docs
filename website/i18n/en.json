@@ -14,6 +14,18 @@
       "API/cryptoClass": {
         "title": "CryptoKey Class"
       },
+      "API/document": {
+        "title": "Document"
+      },
+      "API/file": {
+        "title": "File"
+      },
+      "API/fileMethods": {
+        "title": "File and Folder Methods"
+      },
+      "API/fileProperties": {
+        "title": "File and Folder Properties"
+      },
       "Backup/backup": {
         "title": "Backup"
       },

@@ -4,7 +4,7 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
+    "start": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/ && docusaurus-start",
     "build": "docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
@@ -12,7 +12,8 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
+    "@4dsas/doc_preprocessing": "^1.0.5",
     "docusaurus": "^1.14.4",
-    "highlightjs-4d": "^1.0.0"
+    "highlightjs-4d": "^1.0.6"
   }
 }
