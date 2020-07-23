@@ -34,7 +34,7 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
 
 Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sich mit dieser Syntax Objektvariablen mit Klassen verbinden lassen. Diese Syntax verbessert die Vorschläge und type-ahead Features im Code-Editor.
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+Für eine Variable von beliebigem Typ verwenden Sie folgende Syntax:
 
 `var <varName>{, <varName2>,...}{ : <varType>}`
 
