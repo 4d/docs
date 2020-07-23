@@ -195,7 +195,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulare
 
