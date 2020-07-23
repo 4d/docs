@@ -199,16 +199,16 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
     
     Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#class-function-parameters) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
     
-    - Verwendung des Operators `()` For example, `myObject.methodName("hello")`
-    - use of a "Function" class member method: 
+    - Verwendung des Operators `()` Beispiel: `myObject.methodName("hello")`
+    - verwendet eine "Function" Class member Method: 
         - `apply()`
         - `call()`
     
-    > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+    > **Hinweis zu thread-safe:** Ist eine Class Function nicht thread-safe und wird von einer Methode mit der Definition "Als preemptive Prozess starten" aufgerufen, gilt folgendes: - Der Compiler erzeugt keinen Fehler (im Unterschied zu regulären Methoden) - 4D meldet einen Fehler nur im laufenden Betrieb.
     
-    #### Parameters
+    #### Parameter Der Parametername muss mit den Schreibregeln für Eigenschaftsnamen 
     
-    Function parameters are declared using the parameter name and the parameter type, separated by a colon. Der Parametername muss mit den Schreibregeln für Eigenschaftsnamen [ konform sein](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
+    [ konform sein](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).</p> 
     
     ```4d
     Function add($x; $y : Variant; $z : Integer; $xy : Object)
