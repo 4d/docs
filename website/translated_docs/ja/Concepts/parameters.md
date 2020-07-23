@@ -25,11 +25,16 @@ ALERT("Hello")
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内でローカル変数に格納されます。このローカル変数は、名前付き変数 (クラス関数のみ) の場合と受け渡し順に番号が付けられた変数 (メソッドおよびクラス関数) の場合があります。
+引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+
+- [named variables](#named-parameters-class-functions) (class functions only), or
+- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
 
 ## 名前付き引数 (クラス関数)
 
-呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 引数名は [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) に準拠している必要があります. 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
+呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
+
+> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
 
 たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
@@ -39,15 +44,14 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// クラス: Polygon
-Function getArea($width: Integer; $height : Integer)
-    var $0 : Integer
-    $0:=$width*$height
+// Class: Polygon
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+    $area:=$width*$height
 ```
 
-> パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
+> If the type is not defined, the parameter will be defined as `Variant`.
 > 
-> 位置引数と名前付き引数は組み合わせて使えます。 たとえば:
+> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -65,9 +69,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## 位置引数
 
-メソッドやクラス関数の引数は、受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
+You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
 
-> このシンタックスはメソッドとクラス関数でサポートされています。 しかしながら、クラス関数の場合は名前付き引数を使ったシンタックスが推奨されます。
+> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
 
 たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
@@ -112,7 +116,7 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as sequent
 
 ### Using objects properties as named parameters
 
-引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
+Using objects as parameters allow you to handle **named parameters**, even with methods. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
 たとえば、`CreatePerson` メソッドを例にとると:
 
@@ -309,14 +313,31 @@ Data can be returned from methods and class functions. For example, the followin
 MyLength:=Length("How did I get here?")
 ```
 
-どのようなサブルーチンでも値を返すことができます。 返す値は、ローカル変数 `$0` に格納します。
+どのようなサブルーチンでも値を返すことができます。 Only one single return parameter can be declared per method or class function.
 
-The return parameter ($0) is not supported in the named parameter list. そのため、関数のコード内にて宣言する必要があります。 たとえば:
+Like for [input parameters](#named-parameters-class-functions), return parameters can be declared using:
+
+- the named syntax (class functions only), or
+- the sequential syntax (methods and class functions).
+
+### Named syntax (class functions)
+
+You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. たとえば:
 
 ```4d
-Function add($x : Variant;$y : Integer)
-    var $0 : Text
+Function add($x : Variant; $y : Integer)->$result : Integer
 ```
+
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#sequential-syntax)). たとえば:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    $0:=$x+$y
+```
+
+### Sequential syntax
+
+The value to be returned is automatically put into the local variable `$0`.
 
 For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 

@@ -8,24 +8,183 @@ title: Klassen
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
-Ist eine Klasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse `erweitern` und erbt dann von deren Funktionen.
+Ist eine Benutzerklasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse [erweitern](#class-extends-classname) und erbt dann von deren Funktionen.
 
-Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
+> Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
+
+Sie können z. B. eine Klasse `Person` mit folgender Definition erstellen:
+
+```4d
+//Class: Person.4dm
+Class constructor($firstname : Text; $lastname : Text)
+    This.firstName:=$firstname
+    This.lastName:=$lastname
+```
+
+In einer Methode erstellen Sie eine "Person":
+
+    var $o : cs.Person //object of Person class
+    $o:=cs.Person.new("John";"Doe")
+    // $o:{firstName: "John"; lastName: "Doe" }
+    
+
+## Klassen verwalten
+
+### Definition einer Klasse
+
+Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
+
+Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
+
+- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein. 
+- Es wird zwischen Groß- und Kleinschreibung unterschieden.
+- Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden. 
+
+Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
+
+- Ordner der Anwendung 
+    + Project 
+        * Sources 
+            - Klassen 
+                + Polygon.4dm
+
+### Eine Klasse löschen
+
+Um eine vorhandene Klasse zu löschen, können Sie:
+
+- Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
+- Die Klasse im Explorer auswählen und am unteren Rand auf das Icon ![](assets/en/Users/MinussNew.png) klicken oder im Kontextmenü den Eintrag **In Papierkorb verschieben** wählen. 
+
+### 4D Oberfläche verwenden
+
+Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatisch an der passenden Stelle gespeichert, entweder über das Menü **Datei/Ablage** oder über den Explorer.
+
+#### Menü Datei/Ablage und Werkzeugleiste
+
+Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder über das **Icon Neu** in der Werkzeugleiste.
+
+Sie können auch die Tastenkombination **Strg+Shift+Alt+k** verwenden.
+
+#### Explorer
+
+Im Explorer werden Klassen auf der Seite **Methoden** in der Kategorie **Klassen** gruppiert.
+
+Um eine neue Klasse zu erstellen:
+
+- Wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche![](assets/en/Users/PlussNew.png).
+- Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag **Neue Klasse**. ![](assets/en/Concepts/newClass.png)
+- Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag **Neu > Klasse...**. 
+
+#### Unterstützung von Code für Klassen
+
+In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
+
+- Im Code-Editor gilt folgendes: 
+    - Es kann keine Klasse laufen
+    - Eine Klassenfunktion ist ein Code Block 
+    - **Goto definition** auf ein Object Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
+    - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> 
+
+## Stores für Klassen
+
+Klassen sind über Stores für Klassen verfügbar. Two class stores are available:
+
+- `cs` for user class store
+- `4D` for built-in class store
+
+### cs
+
+#### cs -> classStore
+
+| Parameter  | Typ    |    | Description                                   |
+| ---------- | ------ | -- | --------------------------------------------- |
+| classStore | object | <- | User class store for the project or component |
+
+
+The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+
+#### Beispiel
+
+You want to create a new instance of an object of `myClass`:
+
+```4d
+$instance:=cs.myClass.new()
+```
+
+### 4D
+
+#### 4D -> classStore
+
+| Parameter  | Typ    |    | Description    |
+| ---------- | ------ | -- | -------------- |
+| classStore | object | <- | 4D class store |
+
+
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoClass.md).
+
+#### Beispiel
+
+You want to create a new key in the `CryptoKey` class:
+
+```4d
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+## Using classes in your code
 
 ### Objekt Klasse
 
-Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
 
-- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
+- `name` string
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
 Zusätzlich kann ein Objekt Klasse verweisen auf:
 
-- Ein Objekt `constructor` (optional)
-- Ein Objekt `prototype` mit Objekten "named function" (optional).
+- a [`constructor`](#class-constructor) object (optional),
+- a `prototype` object, containing named [function](#function) objects (optional).
 
 Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+
+### new() method
+
+#### cs.\<ClassName>.new() -> classObject
+
+| Parameter   | Typ    |    | Description                           |
+| ----------- | ------ | -- | ------------------------------------- |
+| classObject | object | <- | New object of the \<ClassName> class |
+
+
+The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
+
+If it is called on a non-existing class, an error is returned.
+
+#### Beispiel
+
+To create a new instance of the Person class:
+
+```4d
+var $person : cs.Person //for accurate autocompletion  
+$person:=cs.Person.new() //create the new instance  
+//$Person contains functions of the class
+```
+
+Note that you can instantiate empty objects. Legen Sie z.B. die Datei Klasse `Empty.4dm` wie folgt an:
+
+```4d
+//Empty.4dm class file
+//Nothing
+```
+
+Können Sie in einer Methode wie folgt schreiben:
+
+```4d
+$o:=cs.Empty.new()  
+//$o : {}
+$cName:=OB Class($o).name //"Empty"
+```
 
 ### Nach Eigenschaft suchen und Prototyp
 
@@ -50,110 +209,6 @@ Class constructor($width : Integer; $height : Integer)
 
 Beim Aufzählen der Eigenschaften eines Objekts wird der Prototyp seiner Klasse nicht mitgezählt. Demzufolge geben die Anweisung `For each` und der Befehl `JSON Stringify` nicht Eigenschaften des Objekts prototype der Klasse zurück. Die Eigenschaft des Objekts prototype einer Klasse ist eine interne ausgeblendete Eigenschaft.
 
-### Definition einer Klasse
-
-Eine Datei Benutzerklasse definiert ein Objektmodell, auf das sich über die Class Member Method `new()` im Code der Anwendung eine Instanz setzen lässt. In der Datei Klasse verwenden Sie in der Regel spezifische [Class Keywords](#class-keywords) und [Class Befehle](#class-commands).
-
-Beispiel:
-
-```4d
-//Class: Person.4dm
-Class constructor($firstname : Text; $lastname : Text)
-    This.firstName:=$firstname
-    This.lastName:=$lastname
-```
-
-In einer Methode erstellen Sie eine "Person":
-
-    var $o : Object
-    $o:=cs.Person.new("John";"Doe")
-    // $o:{firstName: "John"; lastName: "Doe" }
-    
-
-Sie könnten auch eine leere Datei Klasse erstellen und Instanzen auf leere Objekte setzen. Legen Sie z.B. die Datei Klasse `Empty.4dm` wie folgt an:
-
-```4d
-//Empty.4dm class file
-//Nothing
-```
-
-Können Sie in einer Methode wie folgt schreiben:
-
-```4d
-$o:=cs.Empty.new()  
-//$o : {}
-$cName:=OB Class($o).name //"Empty"
-```
-
-## Stores für Klassen
-
-Klassen sind über Stores für Klassen verfügbar. Es gibt folgende Stores für Klassen:
-
-- Ein Store für in 4D integrierte Klassen. Er wird über den Befehl `4D` zurückgegeben.
-- Ein Store für Klassen pro geöffneter Anwendung oder Komponente. Er wird über den Befehl `cs` zurückgegeben. Das sind "Benutzerklassen".
-
-Sie können z.B. für ein Objekt von myClass mit der Anweisung `cs.myClass.new()` eine neue Instanz erstellen (`cs` bedeutet *classtore*).
-
-## Benutzerklassen verwalten
-
-### Datei Klasse
-
-Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
-
-Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
-
-- Ordner der Anwendung 
-    + Project 
-        * Sources 
-            - Classes 
-                + Polygon.4dm
-
-### Klassennamen
-
-Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
-
-- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
-- Es wird zwischen Groß- und Kleinschreibung unterschieden.
-- Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle der Anwendung nicht denselben Namen verwenden. 
-
-### 4D Entwickleroberfläche
-
-Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatisch an der passenden Stelle gespeichert, entweder über das Menü **Datei/Ablage** oder über den Explorer.
-
-#### Menü Datei/Ablage und Werkzeugleiste
-
-Sie erstellen eine Datei Klasse für das Projekt über den Eintrag **Neu > Klasse** im Menü **Datei/Ablage** oder über das **Icon Neu** in der Werkzeugleiste.
-
-Sie können auch die Tastenkombination **Strg+Shift+Alt+k** verwenden.
-
-#### Explorer
-
-Im Explorer werden Klassen auf der Seite **Methoden** in der Kategorie **Klassen** gruppiert.
-
-Um eine neue Klasse zu erstellen:
-
-- Wählen Sie die Kategorie **Klassen** und klicken auf die Schaltfläche ![](assets/en/Users/PlussNew.png).
-- Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag **Neue Klasse**. ![](assets/en/Concepts/newClass.png)
-- Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag **Neu > Klasse...**. 
-
-#### Unterstützung von Code für Klassen
-
-In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode verwaltet mit einigen spezifischen Merkmalen:
-
-- Im Code-Editor gilt folgendes: 
-    - Es kann keine Klasse laufen
-    - Eine Klassenfunktion ist ein Code Block 
-    - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
-    - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> 
-
-### Eine Klasse löschen
-
-Um eine vorhandene Klasse zu löschen, können Sie:
-
-- Auf Ihrer Festplatte im Ordner "Classes" die Klassendatei .4dm löschen,
-- Die Klasse im Explorer auswählen und am unteren Rand auf das Icon ![](assets/en/Users/MinussNew.png) klicken oder im Kontextmenü den Eintrag **In Papierkorb verschieben** wählen. 
-
 ## Schlüsselwörter für Klassen
 
 In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
@@ -162,7 +217,7 @@ In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwe
 - `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
-### Function der Klasse
+### Function
 
 #### Syntax
 
@@ -173,9 +228,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Functions der Klasse sind Eigenschaften des Objekts prototye der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. `.
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Beispiel:
 
@@ -207,7 +262,7 @@ In the database code, class functions are called as member methods of the object
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -215,7 +270,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 > If the type is not stated, the parameter will be defined as `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -228,7 +283,7 @@ Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
-> The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
 Function add($x : Integer)

@@ -3,11 +3,11 @@ id: variables
 title: Variablen
 ---
 
-Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen**speichern Daten temporär im Speicher.
+Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen** speichern Daten temporär im Speicher.
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
-Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. For example, you might need to store a text variable in a field of same type:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z. B. eine Textvariable in einem Feld vom gleichen Typ speichern:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -20,9 +20,9 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache bietet zwei Wege zum Deklarieren von Variablen:
 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
-- Über Befehle in den Kapiteln "Compiler" oder "Arrays" der 4D Programmiersprache (überholt, nur in der klassischen Programmiersprache). 
+- Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache). 
 
-**Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+**Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -30,11 +30,11 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
  // and assigns the current date plus 30 days
 ```
 
-### Using the `var` keyword
+### Das Schlüsselwort `var` verwenden
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sich mit dieser Syntax Objektvariablen mit Klassen verbinden lassen. Diese Syntax verbessert die Vorschläge und type-ahead Features im Code-Editor.
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+Für eine Variable von beliebigem Typ verwenden Sie folgende Syntax:
 
 `var <varName>{, <varName2>,...}{ : <varType>}`
 
@@ -47,22 +47,22 @@ var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.  
+Diese Syntax unterstützt nur [Deklarationen für lokale und Prozessvariablen](#local-process-and-interprocess-variables), d.h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
-`varType` can be:
+`varTyp` kann folgendes sein:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- [Datentyp](Concepts/data-types.md), dann enthält die Variable einen Wert vom deklarierten Typ 
+- [Referenz auf eine Klasse](Concepts/classes.md) (4D Klasse oder Benutzerklasse), dann enthält die Variable die Referenz auf ein Objekt der definierten Klasse.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
-The following table lists all supported `varType` values:
+Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
 <table>
   <tr>
     <th>
-      varType
+      varTyp
     </th>
     
     <th>
@@ -76,7 +76,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Text value
+      Textwert
     </td>
   </tr>
   
@@ -86,7 +86,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Date value
+      Datumswert
     </td>
   </tr>
   
@@ -96,7 +96,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Time value
+      Zeitwert
     </td>
   </tr>
   
@@ -106,7 +106,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Boolean value
+      Boolean Wert
     </td>
   </tr>
   
@@ -116,7 +116,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Long integer value
+      Wert Lange Ganzzahl
     </td>
   </tr>
   
@@ -126,7 +126,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Real value
+      Zahlenwert
     </td>
   </tr>
   
@@ -136,7 +136,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Pointer value
+      Zeigerwert
     </td>
   </tr>
   
@@ -146,7 +146,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Picture value
+      Bildwert
     </td>
   </tr>
   
@@ -156,7 +156,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      BLOB value
+      BLOB Wert
     </td>
   </tr>
   
@@ -166,7 +166,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Collection value
+      Collection Wert
     </td>
   </tr>
   
@@ -176,7 +176,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Variant value
+      Variant Wert
     </td>
   </tr>
   
@@ -186,7 +186,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object with default class (4D.Object)
+      Objekt mit Standardklasse (4D.Objekt)
     </td>
   </tr>
   
@@ -196,7 +196,7 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the 4D class name
+      Objekt des 4D Klassennamens
     </td>
   </tr>
   
@@ -206,14 +206,14 @@ The following table lists all supported `varType` values:
     </td>
     
     <td>
-      Object of the user class name
+      Objekt des Benutzerklassennamens
     </td>
   </tr>
 </table>
 
 #### Beispiele
 
-- To declare local and process basic variables:
+- Einfache lokale Variable bzw. Prozessvariable deklarieren:
 
 ```4d
 var $myText, myText, $vt : Text
@@ -225,14 +225,14 @@ var $o : 4D.Object
 //also equivalent to C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Objektvariablen der 4D Klasse deklarieren:
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- Objektvariablen der Benutzerklasse deklarieren:
 
 ```4d
 var $myClass : cs.MyClass
@@ -240,11 +240,11 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-### Using a C_ directive
+### Eine C_Direktive verwenden
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
 Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 
@@ -263,13 +263,13 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
  ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
 ```
 
-**Note:** Arrays are a particular type of variables. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
-## Assigning Data
+## Daten zuweisen
 
 Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
 
-The assignment operator is a primary way to create a variable and to put data into it. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
+Der Zuweisungsoperator ist wesentlich, um eine Variable zu erstellen und Daten in sie einzusetzen. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
 
 ```4d
 MyNumber:=3
@@ -277,7 +277,7 @@ MyNumber:=3
 
 erstellt die Variable * MyNumber* und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#creating-variables) zu erstellen.
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie * MyNumber* auf die rechte Seite des Zuweisungsoperators:
 
@@ -293,7 +293,7 @@ Daten an Elemente eines Array weisen Sie über geschweifte Klammern zu, also {..
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Lokale, Prozess- und Interprozessvariablen
 
 Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
 
@@ -338,7 +338,7 @@ Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIA
 - Verwalten von Drag-and-Drop auf Interprozessebene
 - Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
-For more information, see the chapter **Processes** and the description of these commands.
+Weitere Informationen dazu finden Sie im Kapitel **Prozesse** und in der Beschreibung dieser Befehle.
 
 ### Interprozessvariablen
 

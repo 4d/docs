@@ -224,7 +224,7 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
 
 ## Identifiants de propriétés d'objets
 
-Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Token member names (i.e., object property names accessed using the object notation) are more restrictive than [standard 4D object names](identifiers.md). They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),
 - les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),
@@ -233,7 +233,7 @@ Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on 
 **Notes :**
 
 - L'utilisation d'un champ comme indice de collection, par exemple a.b[[Table1]Id], n'est pas autorisé. Vous devez utiliser une variable intermédiaire.
-- La création d'attributs d'objets à l'aide d'une chaîne entre crochets permet de s'affranchir des règles d'ECMA Script. Par exemple, l'attribut $o["Mon Att. nom"] est valide dans 4D, malgré l'espace. Dans ce cas cependant, il ne sera pas possible d'utiliser la notation à points avec cet attribut.
+- La création d'attributs d'objets à l'aide d'une chaîne entre crochets permet de s'affranchir des règles d'ECMA Script. For example, the `$o["My Att"]` attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation and autocomplete features with this attribute.
 
 ## Exemples
 

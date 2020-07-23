@@ -223,7 +223,7 @@ title: オブジェクト
 
 ## オブジェクトプロパティ識別子
 
-トークンメンバー名 (つまり、オブジェクト記法を使用してアクセスしたオブジェクトプロパティ名) には、標準の 4Dオブジェクト名より厳格な規制があります。 プロパティ名は JavaScriptの字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照):
+Token member names (i.e., object property names accessed using the object notation) are more restrictive than [standard 4D object names](identifiers.md). プロパティ名は JavaScriptの字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照):
 
 - 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
 - その後の文字には、文字、数字、アンダースコア、またはドル記号を使用することができます (スペース文字は使用することはできません)。
@@ -232,7 +232,7 @@ title: オブジェクト
 **注:**
 
 - テーブルフィールドをコレクションインデックスとして使用すること (例: a.b[[Table1]Id] ) は許可されていません。 この場合には媒介として変数を使用する必要があります。
-- 大カッコでくくった文字列を使用してオブジェクト属性を作成すると、ECMAスクリプトのルールを無視することができます。 たとえば、$o["My Att.name"] という属性はスペースを含みますが、4D において有効です。 しかしながらこの場合、この属性に対してドット記法を使用することは不可能です。
+- 大カッコでくくった文字列を使用してオブジェクト属性を作成すると、ECMAスクリプトのルールを無視することができます。 For example, the `$o["My Att"]` attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation and autocomplete features with this attribute.
 
 ## 例題
 

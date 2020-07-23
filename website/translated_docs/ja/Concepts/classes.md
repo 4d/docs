@@ -8,53 +8,11 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-クラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを継承することで、それらの機能を受け継ぐことができます。
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. 各オブジェクトは、それ自身が属するクラスのインスタンスです。 A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
 
-4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
+> 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
-### Class オブジェクト
-
-クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
-
-- `name` which must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant
-- `superclass` オブジェクト (任意。無ければ null)
-- `new()` メソッド: Class オブジェクトをインスタンス化します
-
-さらに、Class オブジェクトは次を参照できます:
-
-- `constructor` オブジェクト (任意)
-- `prototype` オブジェクト: 名前付きのメソッドオブジェクトを格納します (任意)
-
-Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスから同時にアクセスすることができます。
-
-### プロパティ検索とプロトタイプ
-
-4D のすべてのオブジェクトは、なんらかの Class オブジェクトに内部的にリンクしています。 あるプロパティがオブジェクト内で見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。
-
-すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
-
-```4d
-//Class: Polygon
-Class constructor($width : Integer; $height : Integer)
-    This.area:=$width*$height
-
-    //var $poly : Object
-    var $instance : Boolean
-    $poly:=cs.Polygon.new(4;3)
-
-    $instance:=OB Instance of($poly;cs.Polygon)
-    // true
-    $instance:=OB Instance of($poly;4D.Object)
-    // true
-```
-
-オブジェクトのプロパティを列挙する際には、当該クラスのプロトタイプは列挙されません。 したがって、`For each` ステートメントや `JSON Stringify` コマンドは、クラスプロトタイプオブジェクトのプロパティを返しません。 クラスのプロトタイプオブジェクトプロパティは、内部的な隠れプロパティです。
-
-### クラス定義
-
-ユーザークラスファイルによって、特定のオブジェクト種のひな形を定義します。`new()` クラスメンバーメソッドを呼び出すことで、このひな形に基づいたオブジェクトをインスタンス化することができます。 クラスファイル内では、専用の [クラスキーワード](#クラスキーワード) や [クラスコマンド](#クラスコマンド) を使用します。
-
-たとえば:
+For example, you could create a `Person` class with the following definition:
 
 ```4d
 //Class: Person.4dm
@@ -65,60 +23,41 @@ Class constructor($firstname : Text; $lastname : Text)
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
-    var $o : Object
+    var $o : cs.Person //object of Person class
     $o:=cs.Person.new("John";"Doe")
     // $o:{firstName: "John"; lastName: "Doe" }
     
 
-空のクラスファイルを作成し、空のオブジェクトをインスタンス化することも可能です。 たとえば、次の `Empty.4dm` クラスファイルを作成します:
+## Managing classes
 
-```4d
-// Empty.4dm クラスファイル
-// 空です
-```
-
-メソッドでは次のように書けます:
-
-```4d
-$o:=cs.Empty.new()  
-// $o : {}
-$cName:=OB Class($o).name // "Empty"
-```
-
-## クラスストア
-
-定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次のものが存在します:
-
-- ビルトイン 4Dクラス専用のクラスストア: `4D` コマンドによって返されます。
-- 開かれている各データベースおよびコンポーネントのクラスストア: `cs` コマンドによって返されます。 "ユーザークラス" ともいいます。
-
-たとえば、`cs.myClass.new()` ステートメント (`cs` は *クラスストア (classstore)* を意味します) を使って myClass のオブジェクトインスタンスを新規作成できます。
-
-## ユーザークラス
-
-### クラスファイル
+### クラス定義
 
 4D においてユーザークラスとは、`/Project/Sources/Classes/` フォルダーに保存された専用のメソッドファイル (.4dm) によって定義されます。 ファイル名がクラス名になります。
+
+クラスを命名する際には、次のルールに留意してください:
+
+- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- 大文字と小文字が区別されること
+- 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
 
 たとえば、"Polygon" という名前のクラスを定義するには、次のファイルを作成する必要があります:
 
 - データベースフォルダー 
     + Project 
         * Sources 
-            - Classes 
+            - クラス 
                 + Polygon.4dm
 
-### クラス名
+### クラスの削除
 
-クラスを命名する際には、次のルールに留意してください:
+既存のクラスを削除するには:
 
-- A class name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. 
-- 大文字と小文字が区別されること
-- 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
+- ディスク上で "Classes" フォルダーより .4dm クラスファイルを削除します。
+- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
-### 4D 開発インターフェース
+### Using 4D interface
 
-**ファイル** メニューまたはエクスプローラーなど、4D 開発インターフェースを介してクラスを作成した場合には、クラスファイルは自動的に適切な場所に保存されます。
+Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
 #### ファイルメニューとツールバー
 
@@ -147,12 +86,128 @@ $cName:=OB Class($o).name // "Empty"
     - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは \<ClassName> コンストラクターまたは \<ClassName>.\<FunctionName> 形式で表示されます。
 
-### クラスの削除
+## クラスストア
 
-既存のクラスを削除するには:
+定義されたクラスには、クラスストアよりアクセスすることができます。 Two class stores are available:
 
-- ディスク上で "Classes" フォルダーより .4dm クラスファイルを削除します。
-- エクスプローラーでは、クラスを選択した状態で ![](assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動 > ゴミ箱** を選択します。 
+- `cs` for user class store
+- `4D` for built-in class store
+
+### cs
+
+#### cs -> classStore
+
+| Parameter  | 型      |    | 説明                                            |
+| ---------- | ------ | -- | --------------------------------------------- |
+| classStore | object | <- | User class store for the project or component |
+
+
+The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+
+#### 例題
+
+You want to create a new instance of an object of `myClass`:
+
+```4d
+$instance:=cs.myClass.new()
+```
+
+### 4D
+
+#### 4D -> classStore
+
+| Parameter  | 型      |    | 説明             |
+| ---------- | ------ | -- | -------------- |
+| classStore | object | <- | 4D class store |
+
+
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoClass.md).
+
+#### 例題
+
+You want to create a new key in the `CryptoKey` class:
+
+```4d
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+## Using classes in your code
+
+### Class オブジェクト
+
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
+
+- `name` string
+- `superclass` オブジェクト (任意。無ければ null)
+- `new()` メソッド: Class オブジェクトをインスタンス化します
+
+さらに、Class オブジェクトは次を参照できます:
+
+- a [`constructor`](#class-constructor) object (optional),
+- a `prototype` object, containing named [function](#function) objects (optional).
+
+Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスから同時にアクセスすることができます。
+
+### new() method
+
+#### cs.\<ClassName>.new() -> classObject
+
+| Parameter   | 型      |    | 説明                                    |
+| ----------- | ------ | -- | ------------------------------------- |
+| classObject | object | <- | New object of the \<ClassName> class |
+
+
+The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
+
+If it is called on a non-existing class, an error is returned.
+
+#### 例題
+
+To create a new instance of the Person class:
+
+```4d
+var $person : cs.Person //for accurate autocompletion  
+$person:=cs.Person.new() //create the new instance  
+//$Person contains functions of the class
+```
+
+Note that you can instantiate empty objects. たとえば、次の `Empty.4dm` クラスファイルを作成します:
+
+```4d
+// Empty.4dm クラスファイル
+// 空です
+```
+
+メソッドでは次のように書けます:
+
+```4d
+$o:=cs.Empty.new()  
+// $o : {}
+$cName:=OB Class($o).name // "Empty"
+```
+
+### プロパティ検索とプロトタイプ
+
+4D のすべてのオブジェクトは、なんらかの Class オブジェクトに内部的にリンクしています。 あるプロパティがオブジェクト内で見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。
+
+すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
+
+```4d
+//Class: Polygon
+Class constructor($width : Integer; $height : Integer)
+    This.area:=$width*$height
+
+    //var $poly : Object
+    var $instance : Boolean
+    $poly:=cs.Polygon.new(4;3)
+
+    $instance:=OB Instance of($poly;cs.Polygon)
+    // true
+    $instance:=OB Instance of($poly;4D.Object)
+    // true
+```
+
+オブジェクトのプロパティを列挙する際には、当該クラスのプロトタイプは列挙されません。 したがって、`For each` ステートメントや `JSON Stringify` コマンドは、クラスプロトタイプオブジェクトのプロパティを返しません。 クラスのプロトタイプオブジェクトプロパティは、内部的な隠れプロパティです。
 
 ## クラスキーワード
 
@@ -173,9 +228,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant.
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "` とタイプしても、この関数は候補として提示されません。
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). たとえば:
 
@@ -183,7 +238,7 @@ Immediately following the function name, [parameters](#parameters) for the funct
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-クラス関数内でオブジェクトインスタンスを参照するには `This` を使います。 たとえば:
+Within a class function, the `This` command is used as the object instance. たとえば:
 
 ```4d
 Function setFullname($firstname : Text; $lastname : Text)
@@ -194,9 +249,9 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
+For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
+In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. 次のシンタックスがサポートされています:
 
 - `()` 演算子の使用 For example, `myObject.methodName("hello")`
 - use of a "Function" class member method: 
@@ -207,7 +262,7 @@ Function getFullname()->$fullname : Text
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be [ECMAScript](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -215,7 +270,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 > If the type is not stated, the parameter will be defined as `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (->) and its definition after the parameter list. For example:
+You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -228,7 +283,7 @@ Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
-> The classic 4D syntax for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
 Function add($x : Integer)

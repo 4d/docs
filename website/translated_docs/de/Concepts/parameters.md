@@ -25,11 +25,16 @@ Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The parameters are separated by semicolons (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in named variables (class functions only) or sequentially numbered variables (methods and class functions).
+The parameters are separated by semicolons (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+
+- [named variables](#named-parameters-class-functions) (class functions only), or
+- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
 
 ## Named parameters (class functions)
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. The parameter name must be [ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) compliant. Multiple parameters (and types) are separated by semicolons (;).
+Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
+
+> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
 
 For example, when you call a `getArea()` function with two parameters:
 
@@ -40,14 +45,13 @@ In the class function code, the value of each parameter is copied into the corre
 
 ```4d
 // Class: Polygon
-Function getArea($width: Integer; $height : Integer)
-    var $0 : Integer
-    $0:=$width*$height
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+    $area:=$width*$height
 ```
 
 > If the type is not defined, the parameter will be defined as `Variant`.
 > 
-> Sequential parameters can be used in conjunction with named parameters. Beispiel:
+> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. Beispiel:
 > 
 > ```4d
 Function add($x : Integer)
@@ -65,9 +69,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Sequential parameters
 
-You can declare methods or class function parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
+You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use named parameters syntax.
+> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
 
 For example, when you call a `DO_SOMETHING` project method with three parameters:
 
@@ -112,7 +116,7 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ### Using objects properties as named parameters
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
+Using objects as parameters allow you to handle **named parameters**, even with methods. This programming style is simple, flexible, and easy to read.
 
 For example, using the `CreatePerson` method:
 
@@ -309,14 +313,31 @@ Data can be returned from methods and class functions. For example, the followin
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. The value to be returned is put into the local variable `$0`.
+Any subroutine can return a value. Only one single return parameter can be declared per method or class function.
 
-The return parameter ($0) is not supported in the named parameter list. It must be declared inside the function code. Beispiel:
+Like for [input parameters](#named-parameters-class-functions), return parameters can be declared using:
+
+- the named syntax (class functions only), or
+- the sequential syntax (methods and class functions).
+
+### Named syntax (class functions)
+
+You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Beispiel:
 
 ```4d
-Function add($x : Variant;$y : Integer)
-    var $0 : Text
+Function add($x : Variant; $y : Integer)->$result : Integer
 ```
+
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#sequential-syntax)). Beispiel:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    $0:=$x+$y
+```
+
+### Sequential syntax
+
+The value to be returned is automatically put into the local variable `$0`.
 
 For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 

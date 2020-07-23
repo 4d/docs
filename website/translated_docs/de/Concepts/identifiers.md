@@ -195,7 +195,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Hinweis:** Für Namen von Objektattributen gelten zusätzlich die Schreibregeln für JavaScript (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulare
 
@@ -349,7 +349,7 @@ Eine temporäre Prozessauswahl kennzeichnen Sie durch einen String Ausdruck, der
 Beispiele:
 
 ```4d
-    //Interprocess Named Selection
+<br />    //Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
     //Process Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
