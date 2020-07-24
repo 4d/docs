@@ -156,7 +156,7 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <ul>
 <li>Der Klassenname muss mit den Regeln von ECMAScript konform sein.</li>
 <li>Es wird zwischen Groß- und Kleinschreibung unterschieden.</li>
-<li>Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle der Anwendung nicht denselben Namen verwenden.</li>
+<li>Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="4d-entwickleroberfläche"></a><a href="#4d-entwickleroberfläche" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D Entwickleroberfläche</h3>
 <p>Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatisch an der passenden Stelle gespeichert, entweder über das Menü <strong>Datei/Ablage</strong> oder über den Explorer.</p>
@@ -167,18 +167,18 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <p>Im Explorer werden Klassen auf der Seite <strong>Methoden</strong> in der Kategorie <strong>Klassen</strong> gruppiert.</p>
 <p>Um eine neue Klasse zu erstellen:</p>
 <ul>
-<li>Wählen Sie die Kategorie <strong>Klassen</strong> und klicken auf die Schaltfläche <img src="/docs/assets/en/Users/PlussNew.png" alt="">.</li>
+<li>Wählen Sie die Kategorie <strong>Klassen</strong> und klicken auf die Schaltfläche<img src="/docs/assets/en/Users/PlussNew.png" alt="">.</li>
 <li>Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag <strong>Neue Klasse</strong>. <img src="/docs/assets/en/Concepts/newClass.png" alt=""></li>
 <li>Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag <strong>Neu &gt; Klasse...</strong>.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="unterstützung-von-code-für-klassen"></a><a href="#unterstützung-von-code-für-klassen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unterstützung von Code für Klassen</h4>
-<p>In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode verwaltet mit einigen spezifischen Merkmalen:</p>
+<p>In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:</p>
 <ul>
 <li>Im Code-Editor gilt folgendes:
 <ul>
 <li>Es kann keine Klasse laufen</li>
 <li>Eine Klassenfunktion ist ein Code Block</li>
-<li><strong>Goto definition</strong> auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: &quot;$o.f()&quot; findet &quot;Function f&quot;.</li>
+<li><strong>Goto definition</strong> auf ein Object Member sucht nach Deklarationen der Class Function; Beispiel: &quot;$o.f()&quot; findet &quot;Function f&quot;.</li>
 <li><strong>Search references</strong> auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: &quot;Function f&quot; findet &quot;$o.f()&quot;.</li>
 </ul></li>
 <li>Im Runtime-Explorer und Debugger werden Class Functions mit dem Format &lt;ClassName&gt; Constructor oder .\ angezeigt.<ClassName> <FunctionName></li>
