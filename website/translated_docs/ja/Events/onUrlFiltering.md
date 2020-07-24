@@ -14,6 +14,6 @@ This event is generated when the loading of a URL is blocked by the Web area bec
 
 You can find out the blocked URL using the `WA Get last filtered URL` command.
 
-### See also
+### 参照
 
 [`On Open External Link`](onOpenExternalLink.md)

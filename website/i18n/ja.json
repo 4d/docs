@@ -9,7 +9,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Admin/licenses": {
-        "title": "Managing 4D Licenses"
+        "title": "4D ライセンスの管理"
       },
       "API/cryptoClass": {
         "title": "CryptoKey Class"
@@ -367,22 +367,22 @@
         "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
-        "title": "Picture Button"
+        "title": "ピクチャーボタン"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
-        "title": "Animation"
+        "title": "アニメーション"
       },
       "FormObjects/propertiesAppearance": {
         "title": "アピアランス"
@@ -394,13 +394,13 @@
         "title": "Coordinates & Sizing"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "行列数"
       },
       "FormObjects/propertiesDataSource": {
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
         "title": "Entry"
@@ -445,7 +445,7 @@
         "title": "Resizing Options"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -460,25 +460,25 @@
         "title": "Web Area"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "ラジオボタン"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "図形"
       },
       "FormObjects/spinner": {
-        "title": "Spinner"
+        "title": "スピナー"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "スプリッター"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "スタティックピクチャー"
       },
       "FormObjects/stepper": {
-        "title": "Stepper"
+        "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
         "title": "Subform"
@@ -499,7 +499,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation"
+        "title": "インストール"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -560,7 +560,7 @@
         "title": "ORDA Data Model Classes"
       },
       "Project/architecture": {
-        "title": "Architecture of a project"
+        "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
         "title": "Creating or opening a project"
@@ -691,7 +691,7 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
-      "Access Rights": "Access Rights",
+      "Access Rights": "アクセス権限",
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
@@ -706,8 +706,8 @@
     }
   },
   "pages-strings": {
-    "Installation|in index page Getting started": "Installation",
-    "Starting 4D|in index page Getting started": "Starting 4D",
+    "Installation|in index page Getting started": "インストール",
+    "Starting 4D|in index page Getting started": "4D を始める",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project Management|in index page Getting started": "Project Management",
     "ORDA|in index page Getting started": "ORDA",
@@ -722,15 +722,15 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "License Management|no description given": "License Management",
-    "Build Application|no description given": "Build Application",
-    "Access Rights|no description given": "Access Rights",
+    "License Management|no description given": "ライセンス管理",
+    "Build Application|no description given": "アプリケーションビルド",
+    "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "データベース管理",
     "Web applications|no description given": "Web applications",
-    "Mobile applications|no description given": "Mobile applications",
-    "Desktop applications|no description given": "Desktop applications",
+    "Mobile applications|no description given": "モバイルアプリ",
+    "Desktop applications|no description given": "デスクトップアプリ",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

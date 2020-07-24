@@ -174,7 +174,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | 名               | データタイプ | とりうる値                                                                       |
         | --------------- | ------ | --------------------------------------------------------------------------- |
-        | keyboardDialect | テキスト   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+        | keyboardDialect | text   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
         
         #### 対象オブジェクト
@@ -205,7 +205,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         | 名         | データタイプ | とりうる値                                             |
         | --------- | ------ | ------------------------------------------------- |
-        | multiline | テキスト   | "yes", "no", "automatic" (default if not defined) |
+        | multiline | text   | "yes", "no", "automatic" (default if not defined) |
 
         
         #### 対象オブジェクト
@@ -249,7 +249,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
         
-        #### See also
+        #### 参照
         
         [Help tip](properties_Help.md)
         

@@ -28,10 +28,10 @@ The object returned by the `FORM Event` command contains:
 | プロパティ       | 型    | 説明                                                                                                  |
 | ----------- | ---- | --------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数 | On After Edit                                                                                       |
-| description | テキスト | "On After Edit"                                                                                     |
-| objectName  | テキスト | 4D View Pro area name                                                                               |
-| sheetName   | テキスト | Name of the sheet of the event                                                                      |
-| action      | テキスト | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | text | "On After Edit"                                                                                     |
+| objectName  | text | 4D View Pro area name                                                                               |
+| sheetName   | text | Name of the sheet of the event                                                                      |
+| action      | text | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
@@ -85,7 +85,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         | プロパティ   | 型      | 説明                  |
                                         | ------- | ------ | ------------------- |
                                         | range   | object | Cell range          |
-                                        | formula | テキスト   | The formula entered |
+                                        | formula | text   | The formula entered |
 
                                         
                                         #### action = clipboardPasted

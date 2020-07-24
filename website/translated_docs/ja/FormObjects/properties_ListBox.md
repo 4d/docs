@@ -5,7 +5,7 @@ title: リストボックス
 
 * * *
 
-## Columns
+## 列
 
 Collection of columns of the list box.
 

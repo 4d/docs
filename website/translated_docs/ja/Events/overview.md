@@ -58,10 +58,10 @@ The following table summarizes how object and form methods are called for each e
 | On After Edit            | ◯                                   | ◯           | Involved object only   |
 | On Getting Focus         | ◯                                   | ◯           | Involved object only   |
 | On Losing Focus          | ◯                                   | ◯           | Involved object only   |
-| On Activate              | Never                               | ◯           | None                   |
-| On Deactivate            | Never                               | ◯           | None                   |
-| On Outside Call          | Never                               | ◯           | None                   |
-| On Page Change           | Never                               | ◯           | None                   |
+| On Activate              | Never                               | ◯           | なし                     |
+| On Deactivate            | Never                               | ◯           | なし                     |
+| On Outside Call          | Never                               | ◯           | なし                     |
+| On Page Change           | Never                               | ◯           | なし                     |
 | On Begin Drag Over       | ◯                                   | ◯           | Involved object only   |
 | On Drop                  | ◯                                   | ◯           | Involved object only   |
 | On Drag Over             | ◯                                   | Never       | Involved object only   |
@@ -69,22 +69,22 @@ The following table summarizes how object and form methods are called for each e
 | On Mouse Move            | ◯                                   | ◯           | All objects            |
 | On Mouse Leave           | ◯                                   | ◯           | All objects            |
 | On Mouse Up              | ◯                                   | Never       | Involved object only   |
-| On Menu Selected         | Never                               | ◯           | None                   |
-| On Bound variable change | Never                               | ◯           | None                   |
+| On Menu Selected         | Never                               | ◯           | なし                     |
+| On Bound variable change | Never                               | ◯           | なし                     |
 | On Data Change           | ◯                                   | ◯           | Involved object only   |
 | On Plug in Area          | ◯                                   | ◯           | Involved object only   |
 | On Header                | ◯                                   | ◯           | All objects            |
 | On Printing Detail       | ◯                                   | ◯           | All objects            |
 | On Printing Break        | ◯                                   | ◯           | All objects            |
 | On Printing Footer       | ◯                                   | ◯           | All objects            |
-| On Close Box             | Never                               | ◯           | None                   |
+| On Close Box             | Never                               | ◯           | なし                     |
 | On Display Detail        | ◯                                   | ◯           | All objects            |
 | On Open Detail           | Yes (List box)                      | ◯           | None except List boxes |
 | On Close Detail          | Yes (List box)                      | ◯           | None except List boxes |
-| On Resize                | Never                               | ◯           | None                   |
+| On Resize                | Never                               | ◯           | なし                     |
 | On Selection Change      | ◯                                   | ◯           | Involved object only   |
-| On Load Record           | Never                               | ◯           | None                   |
-| On Timer                 | Never                               | ◯           | None                   |
+| On Load Record           | Never                               | ◯           | なし                     |
+| On Timer                 | Never                               | ◯           | なし                     |
 | On Scroll                | ◯                                   | Never       | Involved object only   |
 | On Before Data Entry     | Yes (List box)                      | Never       | Involved object only   |
 | On Column Moved          | Yes (List box)                      | Never       | Involved object only   |

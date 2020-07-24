@@ -20,18 +20,18 @@ ALERT("Hello")
 DO SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 Their [value is evaluated](#values-or-references) at the moment of the call.
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) されます。
 
 サブルーチン (呼び出されるメソッド) 内で、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます。 ローカル変数の番号は、引数の順序を表わします。
 
 ```4d
-  //Code of the method DO SOMETHING
-  //Assuming all parameters are of the text type
+  // DO SOMETHING メソッド
+  // すべての引数がテキスト型とします
  C_TEXT($1;$2;$3)
  ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+  // $1 には $WithThis 引数が入ります
+  // $2 には $AndThat 引数が入ります
+  // $3 には $ThisWay 引数が入ります
 ```
 
 これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
@@ -39,9 +39,9 @@ DO SOMETHING($WithThis;$AndThat;$ThisWay)
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
+EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
 // サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
-// その際に引数として日付リテラル !05/05/10! を渡します
+// その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
@@ -351,7 +351,7 @@ ALERT([People]Name)
 
 **4D Server:** "サーバー上で実行" オプションが使用された場合など、同じマシン上で実行されないメソッド間で引数が渡される場合、参照渡しは利用できません。 このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。
 
-### Object named parameters
+### オブジェクトを使った名前付き引数
 
 引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
