@@ -160,7 +160,7 @@ Function</span><span class="hljs-function"> GetBestOnes</span>()
 Class extends</span> DataClass<span class="hljs-keyword">
 
 Function</span><span class="hljs-function"> getCityName</span>()<span class="hljs-keyword">
-    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$zipcode </span>: Integer<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>; <span class="hljs-variable">$zipcode </span>: Integer<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$zip </span>: 4D.Entity<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$0 </span>: Text
 
@@ -225,7 +225,7 @@ Function</span> isBigCity
 <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">getPopulation</span>()&gt;<span class="hljs-number">50000</span>
 </code></pre>
 <p>Then, you can call this code:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$cityManager</span>, <span class="hljs-variable">$city </span>: Object
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$cityManager</span>; <span class="hljs-variable">$city </span>: Object
 
 <span class="hljs-variable">$cityManager</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"127.0.0.1:8111"</span>);<span class="hljs-string">"CityManager"</span>)
 <span class="hljs-variable">$city</span>:=<span class="hljs-variable">$cityManager</span>.City.<span class="hljs-function">getCity</span>(<span class="hljs-string">"Caguas"</span>)<span class="hljs-keyword">

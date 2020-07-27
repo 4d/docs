@@ -86,10 +86,10 @@
 <h3><a class="anchor" aria-hidden="true" id="using-the-var-keyword"></a><a href="#using-the-var-keyword" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the <code>var</code> keyword</h3>
 <p>Declaring variables using the <code>var</code> keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.</p>
 <p>To declare a variable of any type with the <code>var</code> keyword, use the following syntax:</p>
-<p><code>var &lt;varName&gt;{, &lt;varName2&gt;,...}{ : &lt;varType&gt;}</code></p>
+<p><code>var &lt;varName&gt;{; &lt;varName2&gt;;...}{ : &lt;varType&gt;}</code></p>
 <p>For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText </span>: Text  <span class="hljs-comment">//a text variable</span><span class="hljs-keyword">
-var</span> myDate1, myDate2 : Date  <span class="hljs-comment">//several date variables</span><span class="hljs-keyword">
+var</span> myDate1; myDate2 : Date  <span class="hljs-comment">//several date variables</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$myFile </span>: 4D.File  <span class="hljs-comment">//a file class object variable</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$myVar </span><span class="hljs-comment">//a variant variable</span>
 </code></pre>
@@ -127,7 +127,7 @@ This syntax only supports <a href="#local-process-and-interprocess-variables">lo
 <ul>
 <li>To declare local and process basic variables:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText</span>, myText, <span class="hljs-variable">$vt </span>: Text<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText</span>; myText; <span class="hljs-variable">$vt </span>: Text<span class="hljs-keyword">
 var</span> myVar <span class="hljs-comment">//variant</span><span class="hljs-keyword">
 
 var</span> <span class="hljs-variable">$o </span>: Object    
