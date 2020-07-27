@@ -287,7 +287,7 @@ Function add($x : Variant; $y : Integer): Integer
 > 
 > ```4d
 Function add($x : Integer)
-  var $2,$value : Integer
+  var $2; $value : Integer
   var $0 : Text
   $value:=$x+$2
   $0:=String($value)
@@ -418,7 +418,7 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
 ```4d
 // inside myClass constructor
-var $text1,$text2 : Text
+var $text1; $text2 : Text
 Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
