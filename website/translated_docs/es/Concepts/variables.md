@@ -36,13 +36,13 @@ Declaring variables using the `var` keyword is recommended since this syntax all
 
 To declare a variable of any type with the `var` keyword, use the following syntax:
 
-`var <varName>{, <varName2>,...}{ : <varType>}`
+`var <varName>{; <varName2>;...}{ : <varType>}`
 
 For example:
 
 ```4d
 var $myText : Text  //a text variable
-var myDate1, myDate2 : Date  //several date variables
+var myDate1; myDate2 : Date  //several date variables
 var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
@@ -216,7 +216,7 @@ The following table lists all supported `varType` values:
 - To declare local and process basic variables:
 
 ```4d
-var $myText, myText, $vt : Text
+var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    

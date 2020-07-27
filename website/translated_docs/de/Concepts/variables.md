@@ -36,13 +36,13 @@ Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sic
 
 Für eine Variable von beliebigem Typ verwenden Sie folgende Syntax:
 
-`var <varName>{, <varName2>,...}{ : <varType>}`
+`var <varName>{; <varName2>;...}{ : <varType>}`
 
 Beispiel:
 
 ```4d
 var $myText : Text  //a text variable
-var myDate1, myDate2 : Date  //several date variables
+var myDate1; myDate2 : Date  //several date variables
 var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
@@ -216,7 +216,7 @@ Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 - Einfache lokale Variable bzw. Prozessvariable deklarieren:
 
 ```4d
-var $myText, myText, $vt : Text
+var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    

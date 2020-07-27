@@ -36,15 +36,15 @@ title: 変数
 
 `var` キーワードを使って変数を宣言するには、次のシンタックスを用います:
 
-`var <varName>{, <varName2>,...}{ : <varType>}`
+`var <varName>{; <varName2>;...}{ : <varType>}`
 
 たとえば:
 
 ```4d
-var $myText : Text  // テキスト変数
-var myDate1, myDate2 : Date  // 複数の日付変数
-var $myFile : 4D.File  // File クラスオブジェクト変数
-var $myVar // バリアント型変数
+var $myText : Text  //a text variable
+var myDate1; myDate2 : Date  //several date variables
+var $myFile : 4D.File  //a file class object variable
+var $myVar //a variant variable
 ```
 
 `varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。  
@@ -216,13 +216,13 @@ var $myVar // バリアント型変数
 - 基本のデータ型の、ローカル変数およびプロセス変数の宣言:
 
 ```4d
-var $myText, myText, $vt : Text
+var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-// 次と同義です:
+//equivalent to:  
 var $o : 4D.Object
-// C_OBJECT($o) とも同義です
+//also equivalent to C_OBJECT($o)
 ```
 
 - 4Dクラス型のオブジェクト変数の宣言:
