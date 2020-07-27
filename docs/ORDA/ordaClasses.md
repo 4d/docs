@@ -141,7 +141,7 @@ The `City Class` provides an API:
 Class extends DataClass
 
 Function getCityName()
-	var $1, $zipcode : Integer
+	var $1; $zipcode : Integer
 	var $zip : 4D.Entity
 	var $0 : Text
 
@@ -228,7 +228,7 @@ $0:=This.getPopulation()>50000
 Then, you can call this code: 
 
 ```4d
-var $cityManager, $city : Object
+var $cityManager; $city : Object
 
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
 $city:=$cityManager.City.getCity("Caguas")

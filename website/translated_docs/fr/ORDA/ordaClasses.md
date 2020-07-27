@@ -32,14 +32,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 ![](assets/en/ORDA/api.png)
 
-In addition, 4D Developer automatically creates the classes for each available data model object. For example, consider this simple database containing a single `[Students]` table. You can see that 4D has automatically created the classes:
-
-![](assets/en/ORDA/ORDA_Classes-3.png)
-
-- DataStore - class for the datastore
-- Students - class for the Students dataclass
-- StudentsEntity - class for the Students entities
-- StudentsSelection - class for the Students entity selections
+In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object.
 
 ## Architecture
 
@@ -57,7 +50,7 @@ All ORDA data model classes are exposed as properties of the **`cs`** class stor
 | cs.*DataClassName*Selection | cs.EmployeeSelection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
 
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#support-in-4d-projects).
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).
 
 In addition, object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an Entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
 
@@ -118,7 +111,7 @@ Function GetBestOnes()
 Then, you can get an entity selection of the "best" companies by executing:
 
 ```4d
-    var $best : cs.Company 
+    var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
@@ -247,24 +240,28 @@ When creating or editing data model classes, you must pay attention to the rules
 
 ## Support in 4D projects
 
-ORDA data model user class files must be stored at the [same location as regular class files](Concepts/classes.md#class-files), *i.e.* in the `/Sources/Classes` folder of the project folder.
+### Class files
+
+An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
 
 ### Creating classes
 
-You create an ORDA user class by adding a corresponding file in the *Classes* folder. For example, to create an entity class for the `Utilities` dataclass, you need to create a `UtilitiesEntity.4dm` file.
+4D automatically pre-creates empty classes in memory for each available data model object.
 
-A class file can be created by a simple double-click in the Classes theme of the 4D Explorer. ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+![](assets/en/ORDA/ORDA_Classes-3.png)
+
+> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
+
+ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
 
 ![](assets/en/ORDA/classORDA2.png)
 
-Double-click on a class name. 4D creates the ORDA class file and add the `extends` code. Example for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
 
     Class extends Entity
     
 
 Once a class is defined, its name is no longer dimmed in the Explorer.
-
-> By default, empty ORDA classes are not displayed in the Explorer. You need to show them by selecting **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
 ### Editing classes
 
