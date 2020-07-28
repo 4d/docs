@@ -41,10 +41,10 @@ title: 変数
 たとえば:
 
 ```4d
-var $myText : Text  //a text variable
-var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
-var $myVar //a variant variable
+var $myText : Text  // テキスト変数
+var myDate1; myDate2 : Date  // 複数の日付変数
+var $myFile : 4D.File  // File クラスオブジェクト変数
+var $myVar // バリアント型変数
 ```
 
 `varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。  
@@ -220,9 +220,9 @@ var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+// 次と同義です:
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+// C_OBJECT($o) とも同義です
 ```
 
 - 4Dクラス型のオブジェクト変数の宣言:
