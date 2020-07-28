@@ -8,11 +8,11 @@ title: Méthodes
 
 Une méthode est un morceau de code qui exécute une ou plusieurs actions. Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes de code.
 
-## Method Types
+## Types de méthodes
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+Dans le langage 4D, il existe plusieurs catégories de méthodes : La catégorie dépend de la façon dont elle a été appelée :
 
 | Type                             | Contexte d'appel                                                                                            | Accepte les paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
