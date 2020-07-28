@@ -149,11 +149,11 @@ Voici la table du ET logique :
                             - 0 &#124; 0 --> 0</p> 
                                 <
                                 
-                                p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.
+                                En résumé, le résultat vaut 1 si au moins un des deux bits opérandes vaut 1, sinon le bit résultant vaut 0.| |OU (exclusif)|Chaque bit retourné est le résultat de l'opération OU exclusif logique appliquée aux deux bits opérandes.
                                 
                                 <
                                 
-                                p>Here is the logical XOR table:
+                                Voici la table du OU exclusif logique :
                                 
                                 - 1 \^&#124; 1 --> 0
                                     - 0 \^&#124; 1 --> 1
@@ -161,15 +161,15 @@ Voici la table du ET logique :
                                             - 0 \^&#124; 0 --> 0</p> 
                                                 <
                                                 
-                                                p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0.
+                                                Donc, le résultat vaut 1 si un seul des deux bits opérandes vaut 1 (et pas l'autre), dans tous les autres cas le bit résultant vaut 0.| |Décaler bits à gauche|La valeur retournée correspond au premier opérande dont la valeur est décalée vers la gauche du nombre de bits spécifié par le second opérande. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0.
                                                 
                                                 <
                                                 
-                                                p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.
+                                                **Note :** En ne tenant compte que des valeurs positives, un décalage vers la gauche de N bits revient à multiplier la valeur par 2^N.| |Décaler bits à droite|La valeur retournée correspond au premier opérande dont la valeur est décalée vers la droite du nombre de bits spécifié par le second opérande. Les bits auparavant situés à droite sont perdus et les nouveaux bits situés à gauche ont la valeur 0.
                                                 
                                                 <
                                                 
-                                                p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.| |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.| |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.|
+                                                **Note :** En ne tenant compte que des valeurs positives, un décalage vers la droite de N bits revient à diviser la valeur par 2^N.| |Mettre bit à 1|La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 1. Les autres bits sont inchangés.| |Mettre bit à 0|La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 0. Les autres bits sont inchangés.| |Tester bit|Retourne Vrai si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.|
                                                 
                                                 ### Exemples
                                                 
