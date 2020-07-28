@@ -336,24 +336,24 @@ MyLength:=Length("How did I get here?")
 - 名前付きシンタックス (クラス関数のみ)
 - 受け渡し順シンタックス (メソッドおよびクラス関数)
 
-### Named syntax (class functions)
+### 名前付きシンタックス (クラス関数)
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. たとえば:
+関数の戻り値は、入力パラメーターリストに矢印 (->) を追加し、それに続けて宣言します。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#sequential-syntax)). たとえば:
+矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定した場合は、自動的に `$0` が使用されます。([受け渡し順シンタックス](#受け渡し順シンタックス) 参照)。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
-### Sequential syntax
+### 受け渡し順シンタックス
 
-The value to be returned is automatically put into the local variable `$0`.
+戻り値は自動的に、ローカル変数 `$0` に格納します。
 
 たとえば、`Uppercase4` という以下のメソッドは、始めの 4文字を大文字に変換した文字列を返します:
 
@@ -391,7 +391,7 @@ ALERT("Time is over") // 1つの引数
 
 プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> 任意パラメーターが必要な場合、[オブジェクトプロパティを名前付き引数として使用する](#オブジェクトプロパティを名前付き引数として使用する) と型の制限がなく、柔軟で便利です。
 
 `Count parameters` コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。
 
@@ -425,7 +425,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 
 ## 引数の渡し方: 値か参照か
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. たとえば:
+引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をクラス関数またはサブルーチンのローカル変数に格納します。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、クラス関数 / サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
 
 ```4d
     // MY_METHOD メソッド
@@ -467,7 +467,7 @@ ALERT([People]Name)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。詳細については [戻り値](#戻り値) の章を参照ください。
 
 ### 特殊ケース: オブジェクトやコレクションの場合
 
