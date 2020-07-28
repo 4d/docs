@@ -15,7 +15,7 @@ Once a user class is defined, you can **instantiate** objects of this class anyw
 For example, you could create a `Person` class with the following definition:
 
 ```4d
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -23,12 +23,12 @@ Class constructor($firstname : Text; $lastname : Text)
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
-    var $o : cs.Person //object of Person class
+    var $o : cs.Person // Person クラスのオブジェクト
     $o:=cs.Person.new("John";"Doe")
     // $o:{firstName: "John"; lastName: "Doe" }
     
 
-## Managing classes
+## クラスの管理
 
 ### クラス定義
 
@@ -53,11 +53,11 @@ Class constructor($firstname : Text; $lastname : Text)
 既存のクラスを削除するには:
 
 - ディスク上で "Classes" フォルダーより .4dm クラスファイルを削除します。
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- 4D エクスプローラーでは、クラスを選択した状態で ![](assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動 > ゴミ箱** を選択します。 
 
-### Using 4D interface
+### 4D インターフェースの使用
 
-Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
+**ファイル** メニューまたはエクスプローラーなど、4D インターフェースを介してクラスを作成した場合には、クラスファイルは自動的に適切な場所に保存されます。
 
 #### ファイルメニューとツールバー
 
@@ -88,7 +88,7 @@ Class files are automatically stored at the appropriate location when created th
 
 ## クラスストア
 
-定義されたクラスには、クラスストアよりアクセスすることができます。 Two class stores are available:
+定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
 - `cs` for user class store
 - `4D` for built-in class store
