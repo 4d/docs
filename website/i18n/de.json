@@ -556,9 +556,6 @@
         "title": "Seite Prüfen",
         "sidebar_label": "Seite Prüfen"
       },
-      "ORDA/datastores": {
-        "title": "Using a remote datastore"
-      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
