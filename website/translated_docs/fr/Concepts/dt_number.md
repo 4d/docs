@@ -95,41 +95,41 @@ Des parenthèses peuvent être incluses dans d'autres parenthèses. Assurez-vous
 
 Les opérateurs sur les bits s'appliquent à des expressions ou valeurs de type **Entier long**.
 
-> If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.
+> Si vous passez une valeur de type Entier ou Réel à un opérateur sur les bits, 4D la convertit en Entier long avant de calculer le résultat de l'expression.
 
-While using the bitwise operators, you must think about a Long Integer value as an array of 32 bits. The bits are numbered from 0 to 31, from right to left.
+Lorsque vous employez des opérateurs sur les bits, vous devez considérer une valeur de type Entier long comme un tableau de 32 bits. Les bits sont numérotés de 0 à 31, de droite à gauche.
 
-Because each bit can equal 0 or 1, you can also think about a Long Integer value as a value where you can store 32 Boolean values. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une valeur de type Entier long comme une expression dans laquelle vous pouvez stocker 32 valeurs de type Booléen. Lorsque le bit vaut 1, la valeur est **Vrai** et lorsque le bit vaut 0, la valeur est **Faux**.
 
-An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
+Une expression utilisant un opérateur sur les bits retourne une valeur de type Entier long, à l'exception de l'opérateur Tester bit avec lequel l'expression retournée est du type Booléen. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération              | Opérateur | Syntaxe             | Retourne             |
-| ---------------------- | --------- | ------------------- | -------------------- |
-| Bitwise AND            | &         | Long & Long         | Long                 |
-| Bitwise OR (inclusive) | &#124;    | Long &#124; Long    | Long                 |
-| Bitwise OR (exclusive) | \^&#124; | Long \^&#124; Long | Long                 |
-| Left Bit Shift         | <<        | Long << Long        | Long (see note 1)    |
-| Right Bit Shift        | >>        | Long >> Long        | Long (see note 1)    |
-| Bit Set                | ?+        | Long ?+ Long        | Long (see note 2)    |
-| Bit Clear              | ?-        | Long ?- Long        | Long (see note 2)    |
-| Bit Test               | ??        | Long ?? Long        | Boolean (see note 2) |
+| Opération             | Opérateur | Syntaxe                   | Retourne                |
+| --------------------- | --------- | ------------------------- | ----------------------- |
+| ET                    | &         | E. long & E. long         | E. long                 |
+| OU (inclusif)         | &#124;    | E. long &#124; E. long    | E. long                 |
+| OU (exclusif)         | \^&#124; | E. long \^&#124; E. long | E. long                 |
+| Décaler bits à gauche | <<        | E. long << E. long        | E. long (voir note n°1) |
+| Décaler bits à droite | >>        | E. long >> E. long        | E. long (voir note n°1) |
+| Mettre bit à 1        | ?+        | E. long ?+ E. long        | E. long (voir note n°2) |
+| Mettre bit à 0        | ?-        | E. long ?- E. long        | E. long (voir note n°2) |
+| Tester bit            | ??        | E. long ?? E. long        | Booléen (voir note n°2) |
 
 
 #### Notes
 
-1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.
-2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.
+1. Dans les opérations utilisant `Décaler bits à gauche` et `Décaler bits à droite`, le second opérande indique le nombre de décalages de bits du premier opérande à effectuer dans la valeur retournée. Par conséquent, ce second opérande doit être compris entre 0 et 31. Notez qu'un décalage de 0 retourne une valeur inchangée et qu'un décalage de plus de 31 bits retourne 0x00000000 car tous les bits sont perdus. Si vous passez une autre valeur en tant que second opérande, le résultat sera non significatif.
+2. Dans les opérations utilisant `Mettre bit à 1`, `Mettre bit à 0` et `Tester bit`, le second opérande indique le numéro du bit sur lequel agir. Par conséquent, ce second opérande doit être compris entre 0 et 31, sinon le résultat de l'expression sera non significatif.
 
-The following table lists the bitwise operators and their effects:
+Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effets :
 
-| Opération   | Description                                                            |
-| ----------- | ---------------------------------------------------------------------- |
-| Bitwise AND | Each resulting bit is the logical AND of the bits in the two operands. |
+| Opération | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| ET        | Chaque bit retourné est le résultat de l'opération ET logique appliquée aux deux bits opérandes. |
 
 
 <
 
-p>Here is the logical AND table:
+Voici la table du ET logique :
 
 - 1 & 1 --> 1
     - 0 & 1 --> 0
@@ -137,11 +137,11 @@ p>Here is the logical AND table:
             - 0 & 0 --> 0</p> 
                 <
                 
-                p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.
+                En résumé, le résultat vaut 1 si les deux bits opérandes valent 1; dans tous les autres cas, le bit résultant vaut 0.| |OU (inclusif)|Chaque bit retourné est le résultat de l'opération OU inclusif logique appliquée aux deux bits opérandes.
                 
                 <
                 
-                p>Here is the logical OR table:
+                Voici la table du OU inclusif logique :
                 
                 - 1 &#124; 1 --> 1
                     - 0 &#124; 1 --> 1
@@ -173,13 +173,13 @@ p>Here is the logical AND table:
                                                 
                                                 ### Exemples
                                                 
-                                                | Opération              | Exemple                                    | Result     |
-                                                | ---------------------- | ------------------------------------------ | ---------- |
-                                                | Bitwise AND            | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
-                                                | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
-                                                | Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 0xFF0000FF |            |
-                                                | Left Bit Shift         | 0x0000FFFF << 8                            | 0x00FFFF00 |
-                                                | Right Bit Shift        | 0x0000FFFF >> 8                            | 0x000000FF |
-                                                | Bit Set                | 0x00000000 ?+ 16                           | 0x00010000 |
-                                                | Bit Clear              | 0x00010000 ?- 16                           | 0x00000000 |
-                                                | Bit Test               | 0x00010000 ?? 16                           | Vrai       |
+                                                | Opération             | Exemple                                    | Result     |
+                                                | --------------------- | ------------------------------------------ | ---------- |
+                                                | ET                    | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
+                                                | OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
+                                                | OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00 0xFF0000FF |            |
+                                                | Décaler bits à gauche | 0x0000FFFF << 8                            | 0x00FFFF00 |
+                                                | Décaler bits à droite | 0x0000FFFF >> 8                            | 0x000000FF |
+                                                | Mettre bit à 1        | 0x00000000 ?+ 16                           | 0x00010000 |
+                                                | Mettre bit à 0        | 0x00010000 ?- 16                           | 0x00000000 |
+                                                | Tester bit            | 0x00010000 ?? 16                           | Vrai       |
