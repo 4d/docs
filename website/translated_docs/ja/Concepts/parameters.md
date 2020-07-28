@@ -25,16 +25,16 @@ ALERT("Hello")
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内で、次のいずれかのローカル変数に格納されます:
 
-- [named variables](#named-parameters-class-functions) (class functions only), or
-- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
+- [名前付き変数](#名前付き引数-クラス関数) (クラス関数のみ)
+- [受け渡し順に番号が付けられた変数](#位置引数) (メソッドおよびクラス関数) 
 
 ## 名前付き引数 (クラス関数)
 
 呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
-> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
+> このシンタックスはメソッドではサポートされていません。 [位置引数](#位置引数) 参照。
 
 たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
@@ -44,14 +44,14 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 > 
-> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. たとえば:
+> クラス関数では、パラメーターの定義に [位置引数シンタックス](位置引数) を使うこともできます。 Both syntaxes can be mixed. たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -69,9 +69,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## 位置引数
 
-You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
+メソッドの引数は、受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
+> このシンタックスはメソッドとクラス関数でサポートされています。 しかしながら、クラス関数の場合は [名前付き引数](#名前付き引数-クラス関数) を使ったシンタックスが推奨されます。
 
 たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
@@ -101,22 +101,22 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
 
-### Input/Output variables
+### 入力 / 出力変数
 
 これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
 ### サポートされているデータ型
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+位置引数には、あらゆる [式](Concepts/quick-tour.md#式のタイプ) の形が使用できますが、例外があります:
 
 - テーブル
 - arrays
 
 テーブルや配列の式は [ポインターを介した参照として](Concepts/dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
-### Using objects properties as named parameters
+### オブジェクトプロパティを名前付き引数として使用する
 
-Using objects as parameters allow you to handle **named parameters**, even with methods. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
+引数としてオブジェクトを渡すことによって、メソッドでも **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
 たとえば、`CreatePerson` メソッドを例にとると:
 
@@ -176,9 +176,9 @@ ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 
 名前付き引数を使うと、すべてのパラメーターを任意にすることができます。 上の例ではすべてのパラメーターが任意で、いずれを指定しても順序はありません。
 
-### Declaring variables for sequential parameters
+### 位置引数用の変数を宣言する
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each sequential variable in the called methods to prevent any trouble.
+[インタープリターモード](Concepts/interpreted.md) では必須ではないものの、問題を避けるにはメソッドの各位置変数を宣言しておくべきでしょう。
 
 次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
 
@@ -211,7 +211,7 @@ C_OBJECT($3)
 ...
 ```
 
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
+> プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、"Compiler" で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
 
 ```4d
  // Compiler_method
@@ -222,16 +222,16 @@ C_OBJECT($3)
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
+- データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数 $1 〜 $6 を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. 定義する場合は、トリガーの中でおこなう必要があります。
+- トリガー - トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
+- `On Drag Over` フォームイベントを受け入れるフォームオブジェクト - `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
 
 ```4d
  C_LONGINT($0)
@@ -245,11 +245,11 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ````
 
-### Parameter indirection
+### 引数の間接参照
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを <strong>引数の間接参照</strong> といいます。 同じ型の不定数の引数を受け取るメソッドの場合、<code>Count parameters</code> コマンドと組み合わせることで、これらの引数を <code>For...End for</code> ループと引数関節参照シンタックスで操作することができます。
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+次の例では <code>SEND PACKETS</code> プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
 
 ```4d
   //SEND PACKETS Project Method
@@ -263,7 +263,23 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  For($vlPacket;2;Count parameters)
     SEND PACKET($1;${$vlPacket})
  End for
-```
+``` コマンドと組み合わせることで、これらの引数を For...End for ループと引数関節参照シンタックスで操作することができます。
+
+次の例では SEND PACKETS プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
+
+```4d
+  //SEND PACKETS Project Method
+  //SEND PACKETS ( Time ; Text { ; Text2... ; テキストN } )
+  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
+
+ C_TIME($1)
+ C_TEXT(${2})
+ C_LONGINT($vlPacket)
+
+ For($vlPacket;2;Count parameters)
+    SEND PACKET($1;${$vlPacket})
+ End for
+</code>
 
 引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i}を **ジェネリックパラメータ** (generic parameter) と呼びます。
 
@@ -303,58 +319,58 @@ In the following example, the project method `SEND PACKETS` accepts a time param
 
 このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
 
-> The number in the declaration has to be a constant and not a variable.
+> 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
 
-## Returning values
+## 戻り値
 
-Data can be returned from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
+メソッドやクラス関数からデータを返すこともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-どのようなサブルーチンでも値を返すことができます。 Only one single return parameter can be declared per method or class function.
+どのようなサブルーチンでも値を返すことができます。 各メソッドやクラス関数につき、定義できる戻り値は一つだけです。
 
-Like for [input parameters](#named-parameters-class-functions), return parameters can be declared using:
+[入力引数](#名前付き引数-クラス関数) と同様に、戻り値は次の方法で宣言できます:
 
-- the named syntax (class functions only), or
-- the sequential syntax (methods and class functions).
+- 名前付きシンタックス (クラス関数のみ)
+- 受け渡し順シンタックス (メソッドおよびクラス関数)
 
-### Named syntax (class functions)
+### 名前付きシンタックス (クラス関数)
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. たとえば:
+関数の戻り値は、入力パラメーターリストに矢印 (->) を追加し、それに続けて宣言します。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#sequential-syntax)). たとえば:
+矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定した場合は、自動的に `$0` が使用されます。([受け渡し順シンタックス](#受け渡し順シンタックス) 参照)。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
-### Sequential syntax
+### 受け渡し順シンタックス
 
-The value to be returned is automatically put into the local variable `$0`.
+戻り値は自動的に、ローカル変数 `$0` に格納します。
 
-For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+たとえば、`Uppercase4` という以下のメソッドは、始めの 4文字を大文字に変換した文字列を返します:
 
 ```4d
 // Uppercase4 メソッド
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 method:
+以下は、Uppercase4 をメソッドとして使用する例です:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
+変数 *$NewPhrase* には“THIS is good.” が格納されます。
 
-The returned value, `$0`, is a local variable within the subroutine. したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば:
+戻り値 `$0` はサブルーチン内のローカル変数です。 したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば:
 
 ```4d
 // Do_something メソッド
@@ -375,7 +391,7 @@ ALERT("Time is over") // 1つの引数
 
 プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> 任意パラメーターが必要な場合、[オブジェクトプロパティを名前付き引数として使用する](#オブジェクトプロパティを名前付き引数として使用する) と型の制限がなく、柔軟で便利です。
 
 `Count parameters` コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。
 
@@ -409,7 +425,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 
 ## 引数の渡し方: 値か参照か
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. たとえば:
+引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をクラス関数またはサブルーチンのローカル変数に格納します。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、クラス関数 / サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
 
 ```4d
     // MY_METHOD メソッド
@@ -451,7 +467,7 @@ ALERT([People]Name)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。詳細については [戻り値](#戻り値) の章を参照ください。
 
 ### 特殊ケース: オブジェクトやコレクションの場合
 

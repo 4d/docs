@@ -8,14 +8,14 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. 各オブジェクトは、それ自身が属するクラスのインスタンスです。 A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) を受け継ぐことができます。
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
 For example, you could create a `Person` class with the following definition:
 
 ```4d
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -23,12 +23,12 @@ Class constructor($firstname : Text; $lastname : Text)
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
-    var $o : cs.Person //object of Person class
+    var $o : cs.Person // Person クラスのオブジェクト
     $o:=cs.Person.new("John";"Doe")
     // $o:{firstName: "John"; lastName: "Doe" }
     
 
-## Managing classes
+## クラスの管理
 
 ### クラス定義
 
@@ -53,11 +53,11 @@ Class constructor($firstname : Text; $lastname : Text)
 既存のクラスを削除するには:
 
 - ディスク上で "Classes" フォルダーより .4dm クラスファイルを削除します。
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- 4D エクスプローラーでは、クラスを選択した状態で ![](assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動 > ゴミ箱** を選択します。 
 
-### Using 4D interface
+### 4D インターフェースの使用
 
-Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
+**ファイル** メニューまたはエクスプローラーなど、4D インターフェースを介してクラスを作成した場合には、クラスファイルは自動的に適切な場所に保存されます。
 
 #### ファイルメニューとツールバー
 
@@ -88,7 +88,7 @@ Class files are automatically stored at the appropriate location when created th
 
 ## クラスストア
 
-定義されたクラスには、クラスストアよりアクセスすることができます。 Two class stores are available:
+定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
 - `cs` for user class store
 - `4D` for built-in class store
@@ -137,18 +137,18 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
-- `name` string
+- `name` 文字列
 - `superclass` オブジェクト (任意。無ければ null)
 - `new()` メソッド: Class オブジェクトをインスタンス化します
 
 さらに、Class オブジェクトは次を参照できます:
 
-- a [`constructor`](#class-constructor) object (optional),
-- a `prototype` object, containing named [function](#function) objects (optional).
+- [`constructor`](#class-constructor) オブジェクト (任意),
+- `prototype` オブジェクト: 名前付きの [関数](#function) オブジェクトを格納します (任意)
 
 Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスから同時にアクセスすることができます。
 
-### new() method
+### new() メソッド
 
 #### cs.\<ClassName>.new() -> classObject
 
@@ -193,7 +193,7 @@ $cName:=OB Class($o).name // "Empty"
 すべてのオブジェクトは、継承ツリーの頂点である "Object" クラスを継承します。
 
 ```4d
-//Class: Polygon
+// クラス: Polygon
 Class constructor($width : Integer; $height : Integer)
     This.area:=$width*$height
 
@@ -223,14 +223,14 @@ Class constructor($width : Integer; $height : Integer)
 
 ```4d
 Function <name>({$parameterName : type; ...}){->$parameterName : type}
-// code
+// コード
 ```
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). たとえば:
 
@@ -238,7 +238,7 @@ Immediately following the function name, [parameters](#parameters) for the funct
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-Within a class function, the `This` command is used as the object instance. たとえば:
+クラスメソッド内でオブジェクトインスタンスを参照するには `This` コマンドを使います。 たとえば:
 
 ```4d
 Function setFullname($firstname : Text; $lastname : Text)
@@ -249,20 +249,20 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. 次のシンタックスがサポートされています:
+データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数) を受け取ることができます。 次のシンタックスがサポートされています:
 
-- `()` 演算子の使用 For example, `myObject.methodName("hello")`
-- use of a "Function" class member method: 
+- `()` 演算子の使用 例: `myObject.methodName("hello")`
+- "Function" クラスメンバーメソッドの使用: 
     - `apply()`
     - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **スレッドセーフに関する警告:** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合: - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 - ランタイムにおいてのみ、4D はエラーを生成します。
 
-#### Parameters
+#### 引数
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
+関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
