@@ -141,7 +141,7 @@ Voici la table du ET logique :
                 
                 <
                 
-                p>Here is the logical OR table:
+                Voici la table du OU inclusif logique :
                 
                 - 1 &#124; 1 --> 1
                     - 0 &#124; 1 --> 1
