@@ -556,9 +556,6 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
-      "ORDA/datastores": {
-        "title": "Using a remote datastore"
-      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
