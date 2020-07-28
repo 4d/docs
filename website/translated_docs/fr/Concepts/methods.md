@@ -72,12 +72,12 @@ Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-des
 
 Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.
 
-Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Consider the following code from a checking account project:
+Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’un projet de gestion de compte courant :
 
 ```4d
- FIND_CLEARED_CHECKS //Find the cleared checks
- RECONCILE_ACCOUNT //Reconcile the account
- PRINT_CHECK_BOOK_REPORT //Print a checkbook report
+ FIND_CLEARED _CHECKS // Rechercher les chèques émis
+ RECONCILE_ACCOUNT // Rapprocher le compte
+PRINT_CHECK_BOOK_REPORT // Imprimer un relevé
 ```
 
 Même pour quelqu’un qui ne connaît pas le projet, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.
