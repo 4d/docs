@@ -1,9 +1,9 @@
 ---
-id: datastores
+id: remoteDatastore
 title: Using a remote datastore
 ---
 
-A [datastore](overview.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
+A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**. 
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**. 
