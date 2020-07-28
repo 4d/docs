@@ -250,7 +250,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     | 名    | データタイプ | とりうる値     |
                     | ---- | ------ | --------- |
-                    | text | string | なんらかのテキスト |
+                    | テキスト | string | なんらかのテキスト |
 
                     
                     #### 対象オブジェクト
