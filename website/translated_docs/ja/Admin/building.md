@@ -294,18 +294,11 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
     >     ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。 
     >     
 
-"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
+"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 This file is used during the automatic client application update.
 
-#### サーバーやクライアントフォルダーのカスタマイズ
+#### Location of Web files
 
-クライアント/サーバーアプリケーションのビルド中に、4D Server フォルダーの内容は Server サブフォルダーに、4D Volume Desktop フォルダーの内容は Client サブフォルダーにコピーされます。 元の 4D Server と 4D Volume Desktop の内容は必要に応じてカスタマイズできます。 たとえば、次のようなことが可能です
-
-- 特定の言語に対応した4D Serverをインストールする
-- Plugins フォルダーにプラグインを追加する
-
-#### Web ファイルの場所 
-
-サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
+If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. 特定の場所に配置しなければなりません:
 
 - *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
 - デフォルト Web ルートフォルダー (WebFolder)
