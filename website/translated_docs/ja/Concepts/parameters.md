@@ -114,9 +114,9 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 テーブルや配列の式は [ポインターを介した参照として](Concepts/dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
-### Using objects properties as named parameters
+### オブジェクトプロパティを名前付き引数として使用する
 
-Using objects as parameters allow you to handle **named parameters**, even with methods. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
+引数としてオブジェクトを渡すことによって、メソッドでも **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
 たとえば、`CreatePerson` メソッドを例にとると:
 
@@ -176,9 +176,9 @@ ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 
 名前付き引数を使うと、すべてのパラメーターを任意にすることができます。 上の例ではすべてのパラメーターが任意で、いずれを指定しても順序はありません。
 
-### Declaring variables for sequential parameters
+### 位置引数用の変数を宣言する
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each sequential variable in the called methods to prevent any trouble.
+[インタープリターモード](Concepts/interpreted.md) では必須ではないものの、問題を避けるにはメソッドの各位置変数を宣言しておくべきでしょう。
 
 次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
 
@@ -211,7 +211,7 @@ C_OBJECT($3)
 ...
 ```
 
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
+> プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、"Compiler" で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
 
 ```4d
  // Compiler_method
@@ -245,11 +245,11 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ````
 
-### Parameter indirection
+### 引数の間接参照
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを <strong>引数の間接参照</strong> といいます。 同じ型の不定数の引数を受け取るメソッドの場合、<code>Count parameters</code> コマンドと組み合わせることで、これらの引数を <code>For...End for</code> ループと引数関節参照シンタックスで操作することができます。
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+次の例では <code>SEND PACKETS</code> プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
 
 ```4d
   //SEND PACKETS Project Method
@@ -263,7 +263,23 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  For($vlPacket;2;Count parameters)
     SEND PACKET($1;${$vlPacket})
  End for
-```
+``` コマンドと組み合わせることで、これらの引数を For...End for ループと引数関節参照シンタックスで操作することができます。
+
+次の例では SEND PACKETS プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
+
+```4d
+  //SEND PACKETS Project Method
+  //SEND PACKETS ( Time ; Text { ; Text2... ; テキストN } )
+  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
+
+ C_TIME($1)
+ C_TEXT(${2})
+ C_LONGINT($vlPacket)
+
+ For($vlPacket;2;Count parameters)
+    SEND PACKET($1;${$vlPacket})
+ End for
+</code>
 
 引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i}を **ジェネリックパラメータ** (generic parameter) と呼びます。
 
