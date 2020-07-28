@@ -21,9 +21,9 @@ Documentation is displayed in the preview area (right-side panel) of the Explore
 
 It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
-## Documentation files
+## Fichiers documentation
 
-### Documentation file name
+### Nom de fichier documentation
 
 Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
@@ -161,7 +161,7 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
   
   <tr>
     <td>
-      ```4D <br>Type your example here ```
+      ```4D <br>Saisissez votre exemple ici ```
     </td>
     
     <td>
