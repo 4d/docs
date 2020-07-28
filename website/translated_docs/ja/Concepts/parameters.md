@@ -25,16 +25,16 @@ ALERT("Hello")
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-引数は、セミコロン (;) で区切ります。 Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内で、次のいずれかのローカル変数に格納されます:
 
-- [named variables](#named-parameters-class-functions) (class functions only), or
-- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
+- [名前付き変数](#名前付き引数-クラス関数) (クラス関数のみ)
+- [受け渡し順に番号が付けられた変数](#位置引数) (メソッドおよびクラス関数) 
 
 ## 名前付き引数 (クラス関数)
 
 呼び出されたクラス関数において、引数の値はローカル変数に代入されます。 クラス関数の引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。 The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
-> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
+> このシンタックスはメソッドではサポートされていません。 [位置引数](#位置引数) 参照。
 
 たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
@@ -44,14 +44,14 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 > 
-> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. たとえば:
+> クラス関数では、パラメーターの定義に [位置引数シンタックス](位置引数) を使うこともできます。 Both syntaxes can be mixed. たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -69,9 +69,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## 位置引数
 
-You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
+メソッドの引数は、受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
+> このシンタックスはメソッドとクラス関数でサポートされています。 しかしながら、クラス関数の場合は [名前付き引数](#名前付き引数-クラス関数) を使ったシンタックスが推奨されます。
 
 たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
@@ -101,13 +101,13 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 **注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
 
-### Input/Output variables
+### 入力 / 出力変数
 
 これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
 ### サポートされているデータ型
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+位置引数には、あらゆる [式](Concepts/quick-tour.md#式のタイプ) の形が使用できますが、例外があります:
 
 - テーブル
 - arrays
