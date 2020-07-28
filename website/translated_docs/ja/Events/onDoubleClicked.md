@@ -23,9 +23,9 @@ This event is generated when the user doubl-clicks anywhere on a 4D View Pro doc
 | プロパティ       | 型      | 説明                             |
 | ----------- | ------ | ------------------------------ |
 | code        | 倍長整数   | 13                             |
-| description | text   | "On Double Clicked"            |
-| objectName  | text   | 4D View Pro area name          |
-| sheetName   | text   | Name of the sheet of the event |
+| description | テキスト   | "On Double Clicked"            |
+| objectName  | テキスト   | 4D View Pro area name          |
+| sheetName   | テキスト   | Name of the sheet of the event |
 | range       | object | Cell range                     |
 
 
