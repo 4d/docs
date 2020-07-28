@@ -37,25 +37,25 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe                   | Retourne | Expression              | Valeur   |
-| ------------------- | ------------------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne           | Chaine   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne * Nombre           | Chaine   | "ab" * 3                | "ababab" |
-| Egalité             | Chaîne = Chaîne           | Booléen  | "abc" = "abc"           | Vrai     |
-|                     |                           |          | "abc" = "abd"           | Faux     |
-| Inégalité           | Chaîne # Chaîne           | Booléen  | "abc" # "abd"           | Vrai     |
-|                     |                           |          | "abc" # "abc"           | Faux     |
-| Supérieur à         | Chaîne > Chaîne           | Booléen  | "abd" > "abc"           | Vrai     |
-|                     |                           |          | "abc" > "abc"           | Faux     |
-| Inférieur à         | Chaîne < Chaîne           | Booléen  | "abc" < "abd"           | Vrai     |
-|                     |                           |          | "abc" < "abc"           | Faux     |
-| Supérieur ou égal à | Chaîne >= Chaîne          | Booléen  | "abd" >= "abc"          | Vrai     |
-|                     |                           |          | "abc" >= "abd"          | Faux     |
-| Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | Vrai     |
-|                     |                           |          | "abd" <= "abc"<= "abc"  | Faux     |
-| Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
-|                     |                           |          | "Alpha Bravo" % "ravo"  | Faux     |
-|                     | Image % Chaîne            | Booléen  | Expr_image % "Mer"      | True (*) |
+| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
+| ------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne  | Chaine   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne * Nombre  | Chaine   | "ab" * 3                | "ababab" |
+| Egalité             | Chaîne = Chaîne  | Booléen  | "abc" = "abc"           | Vrai     |
+|                     |                  |          | "abc" = "abd"           | Faux     |
+| Inégalité           | Chaîne # Chaîne  | Booléen  | "abc" # "abd"           | Vrai     |
+|                     |                  |          | "abc" # "abc"           | Faux     |
+| Supérieur à         | Chaîne > Chaîne  | Booléen  | "abd" > "abc"           | Vrai     |
+|                     |                  |          | "abc" > "abc"           | Faux     |
+| Inférieur à         | Chaîne < Chaîne  | Booléen  | "abc" < "abd"           | Vrai     |
+|                     |                  |          | "abc" < "abc"           | Faux     |
+| Supérieur ou égal à | Chaîne >= Chaîne | Booléen  | "abd" >= "abc"          | Vrai     |
+|                     |                  |          | "abc" >= "abd"          | Faux     |
+| Inférieur ou égal à | Chaîne <= String | Booléen  | "abc" <= "abd"          | Vrai     |
+|                     |                  |          | "abd" <= "abc"          | Faux     |
+| Contient mot-clé    | Chaîne % Chaîne  | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
+|                     |                  |          | "Alpha Bravo" % "ravo"  | Faux     |
+|                     | Image % Chaîne   | Booléen  | Expr_image % "Mer"      | True (*) |
 
 
 (*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
