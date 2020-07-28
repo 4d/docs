@@ -93,7 +93,7 @@ Des parenthèses peuvent être incluses dans d'autres parenthèses. Assurez-vous
 
 ## Opérateurs sur les bits
 
-The bitwise operators operates on **Long Integer** expressions or values.
+Les opérateurs sur les bits s'appliquent à des expressions ou valeurs de type **Entier long**.
 
 > If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.
 
