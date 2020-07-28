@@ -222,16 +222,16 @@ C_OBJECT($3)
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
+- データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数 $1 〜 $6 を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. 定義する場合は、トリガーの中でおこなう必要があります。
+- トリガー - トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
+- `On Drag Over` フォームイベントを受け入れるフォームオブジェクト - `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
 
 ```4d
  C_LONGINT($0)
@@ -319,22 +319,22 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
 
-> The number in the declaration has to be a constant and not a variable.
+> 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
 
-## Returning values
+## 戻り値
 
-Data can be returned from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
+メソッドやクラス関数からデータを返すこともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-どのようなサブルーチンでも値を返すことができます。 Only one single return parameter can be declared per method or class function.
+どのようなサブルーチンでも値を返すことができます。 各メソッドやクラス関数につき、定義できる戻り値は一つだけです。
 
-Like for [input parameters](#named-parameters-class-functions), return parameters can be declared using:
+[入力引数](#名前付き引数-クラス関数) と同様に、戻り値は次の方法で宣言できます:
 
-- the named syntax (class functions only), or
-- the sequential syntax (methods and class functions).
+- 名前付きシンタックス (クラス関数のみ)
+- 受け渡し順シンタックス (メソッドおよびクラス関数)
 
 ### Named syntax (class functions)
 
@@ -355,22 +355,22 @@ Function add($x : Variant; $y : Integer): Integer
 
 The value to be returned is automatically put into the local variable `$0`.
 
-For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+たとえば、`Uppercase4` という以下のメソッドは、始めの 4文字を大文字に変換した文字列を返します:
 
 ```4d
 // Uppercase4 メソッド
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 method:
+以下は、Uppercase4 をメソッドとして使用する例です:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
+変数 *$NewPhrase* には“THIS is good.” が格納されます。
 
-The returned value, `$0`, is a local variable within the subroutine. したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば:
+戻り値 `$0` はサブルーチン内のローカル変数です。 したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば:
 
 ```4d
 // Do_something メソッド
