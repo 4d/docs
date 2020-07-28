@@ -16,7 +16,7 @@ title: バリアント
 - picture
 - pointer
 - 実数
-- text
+- テキスト
 - time
 - null
 - 未定義
