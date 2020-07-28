@@ -12,7 +12,7 @@ title: クラス
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
-For example, you could create a `Person` class with the following definition:
+たとえば、次のように `Person` クラスを定義した場合:
 
 ```4d
 // クラス: Person.4dm
@@ -36,7 +36,7 @@ Class constructor($firstname : Text; $lastname : Text)
 
 クラスを命名する際には、次のルールに留意してください:
 
-- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- クラス名は [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。 
 - 大文字と小文字が区別されること
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと 
 
@@ -90,8 +90,8 @@ Class constructor($firstname : Text; $lastname : Text)
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- `cs` for user class store
-- `4D` for built-in class store
+- `cs` - ユーザークラスストア
+- `4D` - ビルトインクラスストア
 
 ### cs
 
