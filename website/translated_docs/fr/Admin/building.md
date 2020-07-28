@@ -293,19 +293,11 @@ Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
     >     Les progiciels Mac Os générés contiennent les mêmes éléments que les sous-dossiers Windows. Pour les visualiser, vous devrez tout d’abord afficher leur contenu (effectuez Control+clic sur leur icône) afin de pouvoir les modifier. 
     >     
 
-Si vous avez coché l’option “Permettre la mise à jour automatique de l’application cliente”, un sous-dossier supplémentaire nommé *Upgrade4DClient* est ajouté dans le dossier/progiciel *<NomApplication>Server*. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
+Si vous avez coché l’option “Permettre la mise à jour automatique de l’application cliente”, un sous-dossier supplémentaire nommé *Upgrade4DClient* est ajouté dans le dossier/progiciel *<NomApplication>Server*. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. This file is used during the automatic client application update.
 
-#### Personnaliser le dossier 4D Volume Desktop
+#### Location of Web files
 
-Lors de la construction d'une application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le sous-dossier Final Application du dossier de destination. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
-
-- Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
-- Ajouter un dossier PlugIns ;
-- Personnaliser le contenu du dossier Resources.
-
-#### Emplacements des fichiers Web
-
-Si la partie serveur et/ou la partie cliente de votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
+If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Ces éléments sont les suivants :
 
 - Fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont requis pour les connexions SSL ainsi que par les commandes de cryptage des données,
 - Dossier racine Web (DossierWeb) par défaut.

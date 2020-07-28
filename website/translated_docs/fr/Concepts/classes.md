@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Chaque objet est une instance de sa classe. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`s'étendre`](#class-extends-classname) à une autre classe, puis hériter de ses [fonctions](#function).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -28,7 +28,7 @@ In a method, creating a "Person":
     // $o:{firstName: "John"; lastName: "Doe" }
     
 
-## Managing classes
+## Gestion des classes
 
 ### Class definition
 
@@ -55,7 +55,7 @@ To delete an existing class, you can:
 - on your disk, remove the .4dm class file from the "Classes" folder,
 - in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
-### Using 4D interface
+### Utiliser l'interface 4D
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
@@ -97,9 +97,9 @@ Available classes are accessible from their class stores. Two class stores are a
 
 #### cs -> classStore
 
-| Paramètres | Type   |    | Description                                   |
-| ---------- | ------ | -- | --------------------------------------------- |
-| classStore | object | <- | User class store for the project or component |
+| Paramètres | Type  |    | Description                                   |
+| ---------- | ----- | -- | --------------------------------------------- |
+| classStore | objet | <- | User class store for the project or component |
 
 
 The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
@@ -131,30 +131,30 @@ You want to create a new key in the `CryptoKey` class:
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## Using classes in your code
+## Utiliser des classes dans votre code
 
 ### L'objet classe
 
 When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. Une classe est un objet de classe "Class". Un objet de classe a les propriétés et méthodes suivantes :
 
-- `name` string
+- une chaîne `name`
 - un objet `superclass` (facultatif, nul s'il n'y en a aucun)
 - une méthode `new()` permettant d'instancier des objets de classe.
 
 In addition, a class object can reference:
 
-- a [`constructor`](#class-constructor) object (optional),
-- a `prototype` object, containing named [function](#function) objects (optional).
+- un objet [`constructeur`](#class-constructor) (facultatif),
+- un objet `prototype`, contenant des objets de [fonction](#function) nommés (facultatif).
 
 Un objet de classe est un objet partagé et est donc accessible simultanément à partir de différents processus 4D.
 
-### new() method
+### méthode new()
 
 #### cs.\<ClassName>.new() -> classObject
 
-| Paramètres  | Type   |    | Description                           |
-| ----------- | ------ | -- | ------------------------------------- |
-| classObject | object | <- | New object of the \<ClassName> class |
+| Paramètres  | Type  |    | Description                           |
+| ----------- | ----- | -- | ------------------------------------- |
+| classObject | objet | <- | New object of the \<ClassName> class |
 
 
 The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
@@ -202,9 +202,9 @@ Class constructor($width : Integer; $height : Integer)
     $poly:=cs.Polygon.new(4;3)
 
     $instance:=OB Instance of($poly;cs.Polygon)
-    // true
+    // vrai
     $instance:=OB Instance of($poly;4D.Object)
-    // true
+    // vrai
 ```
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.

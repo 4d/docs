@@ -14,10 +14,10 @@ Les fonctions booléennes de 4D traitent des valeurs telles que `Vrai`, `Faux` e
 L'exemple suivant retourne Vrai dans la variable monBooléen si l'utilisateur a cliqué sur le bouton monBouton et Faux s'il n'a pas cliqué dessus. . Lorsqu'un bouton reçoit un clic, la variable du bouton prend la valeur 1.
 
 ```4d
- If(myButton=1) //If the button was clicked
-    myBoolean:=True //myBoolean is set to True
- Else //If the button was not clicked,
-    myBoolean:=False //myBoolean is set to False
+ If(monBouton=1) // Si le bouton a reçu un clic
+    monBooléen:=True// monBooléen prend la valeur True
+ Else // Si le bouton n'a pas reçu de clic,
+    monBooléen:=False //monBooléen prend la valeur False
  End if
 ```
 

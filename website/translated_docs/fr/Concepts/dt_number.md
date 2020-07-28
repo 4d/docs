@@ -91,9 +91,9 @@ retourne 23 car l'expression (4 * 5) est évaluée en premier lieu. Le résultat
 
 Des parenthèses peuvent être incluses dans d'autres parenthèses. Assurez-vous qu'il y ait une parenthèse fermante pour chaque parenthèse ouverte. Une parenthèse manquante ou placée à un mauvais endroit peut soit donner un résultat erroné, soit renvoyer une expression invalide. De plus, si vous avez l'intention de compiler vos applications, vous devez vous assurer d'une bonne utilisation des parenthèses. Le compilateur interprètera toute parenthèse manquante ou superflue comme une erreur de syntaxe.
 
-## Bitwise operators
+## Opérateurs sur les bits
 
-The bitwise operators operates on **Long Integer** expressions or values.
+Les opérateurs sur les bits s'appliquent à des expressions ou valeurs de type **Entier long**.
 
 > If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.
 

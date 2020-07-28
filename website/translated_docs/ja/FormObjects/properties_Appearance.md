@@ -93,7 +93,7 @@ Available values:
 
 | 名                   | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
 
 
 #### 対象オブジェクト
@@ -366,7 +366,7 @@ Available values:
 
 | 名                 | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | text   | "visible", "hidden", "automatic" |
+| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
 
 
 #### 対象オブジェクト
