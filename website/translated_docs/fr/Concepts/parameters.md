@@ -247,7 +247,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ### Parameter indirection
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+4D project methods accept a variable number of parameters of the same type, starting from the right. Ce principe est appelé **l'indirection des paramètres**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
