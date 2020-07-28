@@ -205,10 +205,10 @@ Dans la méthode de classe `myClass`, utilisez l'instruction `Function <methodNa
 // dans le fichier myClass.4dm
 Fonction bonjour
   C_TEXT (0 $)
-  $0: = "Bonjour" + This.who
+  $0: = "Hello" + This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+Pour exécuter une méthode membre de classe, utilisez simplement l'opérateur `()` sur la méthode membre de l'instance d'objet.
 
 ```4d
 $o:=cs.myClass.new()
