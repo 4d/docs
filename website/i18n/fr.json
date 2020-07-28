@@ -556,8 +556,29 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "ORDA/datastores": {
+        "title": "Using a remote datastore"
+      },
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
+      },
+      "ORDA/entities": {
+        "title": "Working with data"
+      },
+      "ORDA/glossary": {
+        "title": "Glossary"
+      },
       "ORDA/ordaClasses": {
-        "title": "Classes ORDA du modèle de données"
+        "title": "Data Model Classes"
+      },
+      "ORDA/overview": {
+        "title": "Aperçu"
+      },
+      "ORDA/quickTour": {
+        "title": "A Quick Tour in ORDA"
+      },
+      "ORDA/remoteDatastore": {
+        "title": "Using a remote datastore"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
