@@ -35,7 +35,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | text   | "normal", "bold" |
+| fontWeight | テキスト   | "normal", "bold" |
 
 
 #### 対象オブジェクト
