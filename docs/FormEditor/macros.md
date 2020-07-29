@@ -1,28 +1,24 @@
 ---
 id: macros
-title: About 4D Macros
+title: Form Editor Macros
 ---
 
 ## Overview
 
-A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s). Macros are most often used to automate repetitive tasks, making them less tedious and reducing the likelihood of mistakes. 
+The 4D Form editor supports dedicated macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s). 
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically change the color. 
+For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:  
 
-You can create macros for the 4D Form editor that can:  
-
-*	Create and execute 4D code / methods
+*	Create and execute 4D code
 *	Display dialogs
 *	Select form objects
-*	Add / delete / modify forms and form objects 
-*	Add / delete / modify forms and form object properties
+*	Add / delete / modify forms, form objects as well as their properties
 *	Modify project files (update, delete)
 
+Macros can been defined for the host project or for components within your project.
 
-In addition to creating macros for your host database, you can also create macros for components within your project.
 
-
->It's important to be aware that any previously specified behaviors are overridden by macros (e.g., entry order, etc.)
+nt to be aware that any previously specified behaviors are overridden by macros (e.g., entry order, etc.)
 
 
 
@@ -123,6 +119,7 @@ The `onInvoke` function executes the macro on the designated *macroTarget*.
 |currentSelection | Collection | (optional) pass the currentSelection is changed by macro|
 |formProperties | Object |(optional) pass the formProperties is changed by macro|
 |editor.groups | Object | (optional) pass the group info, if groups are changed by macro|
+
 |editor.views | Object | (optional) pass the view info, if views are changed by macro|
 |editor.activeLayer | String | (optional) Active view name|
 
