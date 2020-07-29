@@ -294,11 +294,11 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
     >     ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。 
     >     
 
-"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 This file is used during the automatic client application update.
+"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
-#### Location of Web files
+#### Web ファイルの場所 
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. 特定の場所に配置しなければなりません:
+サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
 
 - *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
 - デフォルト Web ルートフォルダー (WebFolder)
