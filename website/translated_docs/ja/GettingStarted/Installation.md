@@ -29,7 +29,7 @@ title: インストール
 
 ![](assets/en/getStart/welcome2.png)
 
-- 4D を試用するには、"初めて 4D をお使いですか？" の下にある、**無料体験版を開始するにはここをクリック** から先に進みます。 4D アカウントでログイン、またはアカウントを新規作成する必要があります。
+- 4D を試用するには、"初めて 4D をお使いですか？" の下にある、**無料体験版を開始するにはここをクリック** から先に進みます (4D アカウントでログイン、またはアカウントを新規作成する必要があります)。
 
 - If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already registered 4D licenses are automatically updated (or additional expansion packs loaded) on your machine.
 
