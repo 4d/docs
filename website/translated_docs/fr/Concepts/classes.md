@@ -217,7 +217,7 @@ Specific 4D keywords can be used in class definitions:
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
 
-### Function
+### Fonction
 
 #### Syntaxe
 
@@ -228,20 +228,20 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+In the class definition file, function declarations use the `Function` keyword, and the name of the function. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Par exemple:
+Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
-Function computeArea($width : Integer; $height : Integer)->$area : Integer
+Fonction computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
 Within a class function, the `This` command is used as the object instance. Par exemple:
 
 ```4d
-Function setFullname($firstname : Text; $lastname : Text)
+Fonction setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
