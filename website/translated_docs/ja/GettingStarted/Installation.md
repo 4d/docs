@@ -19,17 +19,17 @@ title: インストール
 
 2. 必要な製品バージョンのダウンロードリンクをクリックして、インストーラーをダウンロードします。インストールにあたっては、画面に表示される指示に従ってください。
 
-## Sign in
+## ログイン
 
-Once you have completed the installation, you can start 4D and sign in. To do so, double-click on the 4D product icon.
+インストールが完了すると、4D を起動し、ログインすることができます。 起動するには、4D 製品のアイコンをダブルクリックします。
 
 ![](assets/en/getStart/logo4d.png)
 
-The Welcome Wizard then appears:
+すると、Welcome ウィザードが表示されます:
 
 ![](assets/en/getStart/welcome2.png)
 
-- If you want to discover and explore 4D, click on the **free trial** link. You will only be asked to sign in or to create a 4D account.
+- 4D を試用するには、"初めて 4D をお使いですか？" の下にある、**無料体験版を開始するにはここをクリック** から先に進みます。 4D アカウントでログイン、またはアカウントを新規作成する必要があります。
 
 - If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already registered 4D licenses are automatically updated (or additional expansion packs loaded) on your machine.
 
