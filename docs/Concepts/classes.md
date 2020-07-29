@@ -125,7 +125,7 @@ $instance:=cs.myClass.new()
 |---|---|---|---|
 |classStore|object|<-|4D class store|
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoClass.md).
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
 
 #### Example
 

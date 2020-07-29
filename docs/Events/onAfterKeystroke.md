@@ -7,6 +7,13 @@ title: On After Keystroke
 |---|---|---|
 |28|[4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character.|
 
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v18 R5|- Support in non-enterable list boxes<p>- The event is now triggered after IME validation
+</details>
+
 
 ## Description
 
@@ -18,13 +25,13 @@ After the [`On Before Keystroke`](onBeforeKeystroke.md) and `On After Keystroke`
 
 The `On After Keystroke` event is not generated:
 
-- in a [list box column](FormObjects/listbox_overview.md#list-box-columns) method while a cell is being edited,
+- in [list box columns](FormObjects/listbox_overview.md#list-box-columns) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use [`On After Edit`](onAfterEdit.md).
 
 
 ### Keystroke sequence
 
-When an entry requires a sequence of keystrokes, the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are generated only when the entry is fully validaded by the user. The `Keystroke` command returns the validated character. This case mainly occurs:
+When an entry requires a sequence of keystrokes, the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke event`] events are generated only when the entry is fully validaded by the user. The `Keystroke` command returns the validated character. This case mainly occurs:
 
 - when using "dead" keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. "ê" or ñ),
 - when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated. 
