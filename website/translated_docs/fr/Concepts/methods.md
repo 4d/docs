@@ -93,7 +93,7 @@ ALERT("Hello world!")
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() //displays "Hello world!"
+$o.custom_Alert() //affiche "Hello world!"
 ```
 
 La syntaxe avec des crochets est également prise en charge :
