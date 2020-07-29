@@ -190,25 +190,25 @@ myColl[3]  //accède au 4ème élément de la collection
 
 ## Classes
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+Le langage 4D prend en charge les classes d'objets. Ajoutez un fichier `myClass.4dm` dans le dossier Project/Sources/Classes d'un projet pour créer une classe nommée "myClass".
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+Pour instancier un objet de la classe dans une méthode, appelez la classe utilisateur à partir du *class store* (`cs`) et utilisez la fonction membre `new()`. Vous pouvez passer des paramètres.
 
 ```4d
-// in a 4D method
+// dans une méthode 4D
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+Dans la méthode de classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la méthode membre de classe *methodName*. Une méthode membre de classe peut recevoir et retourner des paramètres comme n'importe quelle méthode, et utiliser `This` comme instance d'objet.
 
 ```4d
-//in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+// dans le fichier myClass.4dm
+Fonction bonjour
+  C_TEXT (0 $)
+  $0: = "Hello" + This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+Pour exécuter une méthode membre de classe, utilisez simplement l'opérateur `()` sur la méthode membre de l'instance d'objet.
 
 ```4d
 $o:=cs.myClass.new()
