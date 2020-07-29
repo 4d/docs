@@ -121,7 +121,7 @@ $instance:=cs.myClass.new()
 | classStore | object | <- | 4D class store |
 
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoClass.md).
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
 
 #### Exemple
 
@@ -217,7 +217,7 @@ Specific 4D keywords can be used in class definitions:
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
 
-### Function
+### Fonction
 
 #### Syntaxe
 
@@ -228,20 +228,20 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+In the class definition file, function declarations use the `Function` keyword, and the name of the function. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Par exemple:
+Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
-Function computeArea($width : Integer; $height : Integer)->$area : Integer
+Fonction computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
 Within a class function, the `This` command is used as the object instance. Par exemple:
 
 ```4d
-Function setFullname($firstname : Text; $lastname : Text)
+Fonction setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
@@ -249,9 +249,9 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Pour une fonction de classe, la commande `Current method name` retourne: "*\<ClassName>.\<FunctionName>*", par exemple "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+Dans le code de la base de données, les fonctions de classe sont appelées en tant que méthodes membres de l'instance d'objet et peuvent recevoir des [paramètres](#class-function-parameters) le cas échéant. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "Function" class member method: 
@@ -262,28 +262,28 @@ In the database code, class functions are called as member methods of the object
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 ```4d
-Function add($x; $y : Variant; $z : Integer; $xy : Object)
+Fonction add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-> If the type is not stated, the parameter will be defined as `Variant`.
+> Si le type n'est pas indiqué, le paramètre sera défini comme `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
+Vous déclarez le paramètre de retour (facultatif) en ajoutant une flèche (->) et la définition du paramètre de retour après la liste de(s) paramètre(s) d'entrée. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
+Fonction add ($x : Variant; $y : Integer)->$result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+Vous pouvez également déclarer le paramètre de retour uniquement en ajoutant `: type`, auquel cas il sera automatiquement disponible via $0. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer): Integer
-    $0:=$x+$y
+Fonction add ($x : Variant; $y : Integer): Integer
+     $0:=$x+$y
 ```
 
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+> La [syntaxe 4D classique](parameters.md#sequential-parameters) des paramètres de méthode peut être utilisée pour déclarer les paramètres de fonction de classe. Les deux syntaxes peuvent être mélangées. For example:
 > 
 > ```4d
 Function add($x : Integer)

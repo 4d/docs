@@ -13,27 +13,27 @@ Les éléments de projet suivants acceptent la documentation :
 - Formulaires
 - Tables et champs
 
-Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. They are stored as independant files within your project folder.
+Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. Ils sont stockés en tant que fichiers indépendants dans votre dossier Project.
 
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
+La documentation s'affiche dans la zone d'aperçu (panneau de droite) de l'Explorateur :
 
 ![](assets/en/Project/explorer_Doc.png)
 
-It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
+Il peut également être partiellement exposé en tant que [conseils de l'éditeur de code](#viewing-documentation-in-the-code-editor).
 
 ## Fichiers documentation
 
-### Nom de fichier documentation
+### Nom du fichier de documentation
 
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Les fichiers de documentation ont le même nom que l'élément auquel ils sont rattachés, avec l'extension ".md". Par exemple, le fichier de documentation rattaché à la méthode projet `myMethod.4dm` sera nommé `myMethod.md`.
 
-In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
+Dans l'Explorateur, 4D affiche automatiquement le fichier de documentation avec le même nom que l'élément sélectionné (voir ci-dessous).
 
-### Documentation file architecture
+### Architecture des fichiers de documentation
 
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
+Tous les fichiers de documentation sont stockés dans le dossier `Documentation`, situé au premier niveau du dossier Package.
 
-The `Documentation` folder architecture is the following:
+L'architecture du dossier `Documentation` est la suivante :
 
 - **Documentation**
     
@@ -42,10 +42,10 @@ The `Documentation` folder architecture is the following:
     * **DatabaseMethods** 
         * onStartup.md
         * ...
-    * **Formulaires** 
+    * **Forms** 
         * loginDial.md
         * ...
-    * **Méthodes** 
+    * **Methods** 
         * myMethod.md
         * ...
     * **TableForms** 
@@ -56,35 +56,35 @@ The `Documentation` folder architecture is the following:
     - **Triggers** 
         * table1.md
         * ...
-* A project form and its project form method share the same documentation file for form and method.
+* Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
 
-* A table form and its table form method share the same documentation file for form and method.
+* Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
 
-> Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
+> Renommer ou supprimer un élément documenté dans votre projet renomme ou supprime également le fichier Markdown associé à l'élément.
 
-## Documentation in the Explorer
+## Documentation dans l'Explorateur
 
-### Viewing documentation
+### Visualiser la documentation
 
-To view documentation in the Explorer window:
+Pour afficher la documentation dans la fenêtre de l'Explorateur :
 
-1. Make sure the preview area is displayed.
-2. Select the documented element in the Explorer list.
-3. Click the **Documentation** button located below the preview area.
+1. Assurez-vous que la zone d'aperçu est affichée.
+2. Sélectionnez l'élément documenté dans la liste de l'Explorateur.
+3. Cliquez sur le bouton **Documentation** situé sous la zone d'aperçu.
 
 ![](assets/en/Project/comments-explo2.png)
 
-- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
+- Si aucun fichier de documentation n'a été trouvé pour l'élément sélectionné, un bouton **Créer** s'affiche (voir ci-dessous).
 
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
+- Sinon, s'il existe un fichier de documentation pour l'élément sélectionné, le contenu est affiché dans la zone. Le contenu n'est pas directement modifiable dans le volet.
 
-### Editing documentation file
+### Modifier le fichier documentation
 
-You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
+Vous pouvez créer et/ou modifier un fichier de documentation Markdown à partir de la fenêtre de l'Explorateur pour l'élément sélectionné.
 
-If there is no documentation file for the selected element, you can:
+S'il n'y a pas de fichier de documentation pour l'élément sélectionné, vous pouvez :
 
-- click on the **Create** button in the `Documentation` pane or,
+- cliquez sur le bouton **Créer** dans le volet `Documentation` ou,
 - choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
 ![](assets/en/Project/comments-explo3.png)
@@ -93,20 +93,20 @@ If there is no documentation file for the selected element, you can:
 
 If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
-## Viewing documentation in the code editor
+## Visualiser la documentation dans l'éditeur de code
 
-The 4D code editor displays a part of a method's documentation in its help tip.
+L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans son info-bulle.
 
 ![](assets/en/Project/codeEditor_Comments.png)
 
-If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, the code editor displays (by priority):
+Si un fichier nommé "\<MethodName>.md" existe dans le dossier "\<package>/documentation", l'éditeur de code affiche (par priorité) :
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Tout texte saisi dans une balise de `commentaire` HTML (*\<!-- commande documentation -->*) en haut du fichier markdown.
 
-- Or, if no html `comment` tag is used, the first sentence after a `# Description` tag of the markdown file.  
-    In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
+- Ou, si aucune balise de `commentaire` html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.  
+    Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par le parseur du code 4D.
     
-    > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
+    > Sinon, l'éditeur de code affiche [le bloc de commentaire en haut du code de la méthode](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
 ## Définition du fichier de documentation
 
@@ -170,7 +170,7 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
   </tr>
 </table>
 
-### Supported Markdown
+### Prise en charge du markdown
 
 - The title tag is supported:
 
