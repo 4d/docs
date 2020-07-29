@@ -82,9 +82,9 @@ Pour afficher la documentation dans la fenêtre de l'Explorateur :
 
 Vous pouvez créer et/ou modifier un fichier de documentation Markdown à partir de la fenêtre de l'Explorateur pour l'élément sélectionné.
 
-If there is no documentation file for the selected element, you can:
+S'il n'y a pas de fichier de documentation pour l'élément sélectionné, vous pouvez :
 
-- click on the **Create** button in the `Documentation` pane or,
+- cliquez sur le bouton **Créer** dans le volet `Documentation` ou,
 - choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
 ![](assets/en/Project/comments-explo3.png)
