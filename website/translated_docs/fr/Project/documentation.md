@@ -25,11 +25,11 @@ Il peut également être partiellement exposé en tant que [conseils de l'édite
 
 ### Nom du fichier de documentation
 
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Les fichiers de documentation ont le même nom que l'élément auquel ils sont rattachés, avec l'extension ".md". Par exemple, le fichier de documentation rattaché à la méthode projet `myMethod.4dm` sera nommé `myMethod.md`.
 
-In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
+Dans l'Explorateur, 4D affiche automatiquement le fichier de documentation avec le même nom que l'élément sélectionné (voir ci-dessous).
 
-### Documentation file architecture
+### Architecture des fichiers de documentation
 
 All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
 
