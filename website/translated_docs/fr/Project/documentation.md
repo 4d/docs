@@ -68,19 +68,19 @@ L'architecture du dossier `Documentation` est la suivante :
 
 Pour afficher la documentation dans la fenêtre de l'Explorateur :
 
-1. Make sure the preview area is displayed.
-2. Select the documented element in the Explorer list.
-3. Click the **Documentation** button located below the preview area.
+1. Assurez-vous que la zone d'aperçu est affichée.
+2. Sélectionnez l'élément documenté dans la liste de l'Explorateur.
+3. Cliquez sur le bouton **Documentation** situé sous la zone d'aperçu.
 
 ![](assets/en/Project/comments-explo2.png)
 
-- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
+- Si aucun fichier de documentation n'a été trouvé pour l'élément sélectionné, un bouton **Créer** s'affiche (voir ci-dessous).
 
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
+- Sinon, s'il existe un fichier de documentation pour l'élément sélectionné, le contenu est affiché dans la zone. Le contenu n'est pas directement modifiable dans le volet.
 
 ### Modifier le fichier documentation
 
-You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
+Vous pouvez créer et/ou modifier un fichier de documentation Markdown à partir de la fenêtre de l'Explorateur pour l'élément sélectionné.
 
 If there is no documentation file for the selected element, you can:
 
