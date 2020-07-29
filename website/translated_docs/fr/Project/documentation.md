@@ -31,9 +31,9 @@ Dans l'Explorateur, 4D affiche automatiquement le fichier de documentation avec 
 
 ### Architecture des fichiers de documentation
 
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
+Tous les fichiers de documentation sont stockés dans le dossier `Documentation`, situé au premier niveau du dossier Package.
 
-The `Documentation` folder architecture is the following:
+L'architecture du dossier `Documentation` est la suivante :
 
 - **Documentation**
     
@@ -42,10 +42,10 @@ The `Documentation` folder architecture is the following:
     * **DatabaseMethods** 
         * onStartup.md
         * ...
-    * **Formulaires** 
+    * **Forms** 
         * loginDial.md
         * ...
-    * **Méthodes** 
+    * **Methods** 
         * myMethod.md
         * ...
     * **TableForms** 
@@ -56,17 +56,17 @@ The `Documentation` folder architecture is the following:
     - **Triggers** 
         * table1.md
         * ...
-* A project form and its project form method share the same documentation file for form and method.
+* Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
 
-* A table form and its table form method share the same documentation file for form and method.
+* Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
 
-> Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
+> Renommer ou supprimer un élément documenté dans votre projet renomme ou supprime également le fichier Markdown associé à l'élément.
 
 ## Documentation dans l'Explorateur
 
 ### Visualiser la documentation
 
-To view documentation in the Explorer window:
+Pour afficher la documentation dans la fenêtre de l'Explorateur :
 
 1. Make sure the preview area is displayed.
 2. Select the documented element in the Explorer list.
