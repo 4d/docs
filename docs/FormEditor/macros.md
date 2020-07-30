@@ -21,7 +21,7 @@ Macros code supports [class functions](Concepts/classes.md) and [form object pro
 
 When called, a macro overrides any previously specified behaviors, including when the form is executed (e.g. entry order).
 
-## Quick tour
+## Hands-on example
 
 In this very short example, you'll see how to create and call a macro that adds a button in the top left corner of your form, which will display "Hello World!" when clicked. 
 
