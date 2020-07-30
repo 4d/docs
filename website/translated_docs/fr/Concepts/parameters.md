@@ -51,7 +51,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 
 > If the type is not defined, the parameter will be defined as `Variant`.
 > 
-> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. Par exemple:
+> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. Par exemple:
 > 
 > ```4d
 Function add($x : Integer)

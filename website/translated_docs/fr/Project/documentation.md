@@ -85,7 +85,7 @@ Vous pouvez créer et/ou modifier un fichier de documentation Markdown à partir
 S'il n'y a pas de fichier de documentation pour l'élément sélectionné, vous pouvez :
 
 - cliquez sur le bouton **Créer** dans le volet `Documentation` ou,
-- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+- choisissez l'option **Modifier la documentation...** dans le menu contextuel ou le menu d'options de l'Explorateur.
 
 ![](assets/en/Project/comments-explo3.png)
 
