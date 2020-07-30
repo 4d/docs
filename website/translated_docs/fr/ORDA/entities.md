@@ -115,33 +115,33 @@ Vous pouvez accéder aux données via le ou les objets associé(s) :
  $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
-Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le manager du manager d'un employé, vous pouvez simplement écrire :
 
 ```code4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Assigner des valeurs aux attributs de relation
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+Dans l'architecture ORDA, les attributs de relation contiennent directement des données liées aux entités :
 
-* An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-* A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+* Un attribut de relation de type N-> 1 (type **relatedEntity**) contient une entité
+* Un attribut de relation de type 1-> N (type **relatedEntities**) contient une sélection d'entité
 
-Let's look at the following (simplified) structure:
+Regardons la structure (simplifiée) suivante :
 
 ![](assets/en/Orda/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
+Dans cet exemple, une entité de la dataclass "Employee" contient un objet de type Entité dans l'attribut "employer" (ou une valeur nulle). Une entité de la dataclass "Company" contient un objet de type EntitySelection dans l'attribut "staff" (ou une valeur nulle).
 
-> In ORDA, the Automatic or Manual property of relations has no effect.
+> Dans ORDA, la propriété Automatic ou Manual des relations ne produit aucun effet.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Par exemple:
+Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company". Par exemple :
 
 ```code4d
  $emp:=ds.Employee.new() // create an employee
@@ -205,7 +205,7 @@ This code returns in *localEmails* a collection of email addresses as strings.
 
 ### Entity selections and Relation attributes
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
