@@ -23,7 +23,7 @@ When called, a macro overrides any previously specified behaviors, including whe
 
 ## Hands-on example
 
-In this very short example, you'll see how to create and call a macro that adds a button in the top left corner of your form, which will display "Hello World!" when clicked. 
+In this very short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form. 
 
 1. In the `FormMacros.json` file within the `Project/Sources` folder, you write:
 
