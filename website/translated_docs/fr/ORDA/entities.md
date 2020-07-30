@@ -84,31 +84,31 @@ Et la méthode est :
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
+Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
 
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [Lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [chargement différé](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
-## Using entity attributes
+## Utilisation des attributs d'entités
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Les attributs d'entité stockent les données et mappent les champs correspondants dans la table correspondante. Les attributs d'entité du type de stockage peuvent être définis ou obtenus sous forme de propriétés simples de l'objet entité, tandis que l'entité de type **relatedEntity** ou **relatedEntities** renverra une entité ou une sélection d'entité.
 
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+> Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [Attributs de stockage et de relation](dsMapping.md#storage-and-relation-attributes).
 
-For example, to set a storage attribute:
+Par exemple, pour définir un attribut de stockage :
 
 ```code4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=entity.lastname //get the employee name, e.g. "Smith"
- entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
+ $name:=entity.lastname //obtenir le nom de l'employé, par exemple "Dupont"
+ entity.lastname:="Jones" //définir le nom de l'employé
 ```
 
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
 ![](assets/en/Orda/entityAttributes.png)
 
-You can access data through the related object(s):
+Vous pouvez accéder aux données via le ou les objets associé(s) :
 
 ```code4d
  $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
