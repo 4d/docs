@@ -144,26 +144,26 @@ Dans cet exemple, une entité de la dataclass "Employee" contient un objet de ty
 Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company". Par exemple :
 
 ```code4d
- $emp:=ds.Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // créer un employé
+ $emp.lastname:="Smith" // attribuer une valeur à un attribut
+ $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //attribuer une entité de "company"
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Par exemple:
+4D fournit une fonctionnalité supplémentaire pour saisir un attribut de relation pour une entité N liée à une entité "1": vous passez directement la clé primaire de l'entité "1" lors de l'attribution d'une valeur à l'attribut de relation. Pour que cela fonctionne, passez des données de type Numérique ou Texte (la valeur de la clé primaire) à l'attribut de relation. 4D se charge alors automatiquement de rechercher l'entité correspondante dans la dataclass. Par exemple :
 
 ```code4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // assign a primary key to the relation attribute
-  //4D looks for the company whose primary key (in this case, its ID) is 2
-  //and assigns it to the employee
+ $emp.employer:=2 // attribuer une clé primaire à l'attribut relation
+  //4D recherche l'entreprise dont la clé primaire (dans ce cas, son ID) est 2
+  //et l'attribue à l'employé
  $emp.save()
 ```
 
-This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
+Ceci est particulièrement utile lorsque vous importez un grand nombre de données à partir d'une base de données relationnelle. Ce type d'import contient généralement une colonne "ID", qui référence une clé primaire que vous pouvez ensuite affecter directement à un attribut de relation.
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
+Cela signifie également que vous pouvez attribuer des clés primaires dans les N entités sans que les entités correspondantes aient déjà été créées dans la 1e classe de datastore. Si vous affectez une clé primaire qui n'existe pas dans la classe de datastore associée, elle est néanmoins stockée et affectée par 4D dès que cette entité "1" est créée.
 
 You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
 
