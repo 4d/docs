@@ -15,17 +15,17 @@ For example if you have a recurring report with specific formatting (e.g., certa
 *	Add / delete / modify forms, form objects as well as their properties
 *	Modify project files (update, delete)
 
-Macros can been defined for the host project or for components within the project.
-
 Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor. 
 
-When called, a macro overrides any previously specified behaviors, including when the form is executed (e.g. entry order).
+Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development. 
+
+When called, a macro overrides any previously specified behaviors.
 
 ## Hands-on example
 
-In this very short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form. 
+In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form. 
 
-1. In the `FormMacros.json` file within the `Project/Sources` folder, you write:
+1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
 
 ```
 {
@@ -78,14 +78,16 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `FormMacros.json` [macro definition file(s)](#location-of-macros), in the order they are defined in the file. It contains:
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macros items are sorted in the order macro objects are defined in the file. 
 
-1. host application macros
+When macros exist at both the project and component levels, the following order is applied: 
+
+1. project macros
 2. component macros
 
 This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro. 
 
-Several macros can be sequentially called. The standard **Undo** feature of the Form editor can be used to reverse macro operations. 
+A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally. 
 
 ## Location of macro file
 
@@ -99,14 +101,14 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 ## Declaring macros
 
-The structure of the `FormMacros.json` file is the following:
+The structure of the `formMacros.json` file is the following:
 
-```
+```js
 {
     "macros": {
-            "macroName": {
-                "class": "className" 
-                "myParam": "Hello"
+            <macroName>: {
+                "class": <className>,
+                <customProperty> : <value>
         }
     }
 }
@@ -119,38 +121,38 @@ Here is the description of the JSON file contents:
 |macros|||object|list of defined macros|
 ||\<macroName>||object|macro definition|
 |||class|string|macro class name|
-|||\<customProperty>|any|custom value to retrieve in the constructor
+|||\<customProperty>|any|(optional) custom value to retrieve in the constructor
 
-Custom attributes can be added (named `myParam` in the above example). They will be passed to the [constructor](#class-constructor) function of the macro.
+Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
-### Example of FormMacros.json file 
+### Example 
 
-> The order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.  
-
-```
+```js
 {
    "macros": {
-     "0- Open Macros file": {
+     "Open Macros file": {
        "class": "OpenMacro"
      },
-     "1- Align to Right on Target Object": {
+     "Align to Right on Target Object": {
        "class": "AlignOnTarget",
-       "type": "right"
+       "myParam": "right"
      },
-     "2- Align to Left on Target Object": {
+     "Align to Left on Target Object": {
        "class": "AlignOnTarget",
-       "type": "left"
+       "myParam": "left"
      }
    }
 }
 ```
+
+> Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.  
 
 
 ## Instantiating macros in 4D
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md). 
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `FormMacros.json` file. 
+The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file. 
 
 Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes. 
 
@@ -159,7 +161,7 @@ Macros are instantiated at application startup. Consequently, if you modify the 
 
 ## Macro Functions
 
-Every macro class can contain a class constructor and two functions: `OnInvoke()` and `OnError()`.
+Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 
 
 ### Class constructor
@@ -168,82 +170,83 @@ Every macro class can contain a class constructor and two functions: `OnInvoke()
 
 |Parameter|Type|Description|
 |---|---|---|
-|$macro|Object|Macro declaration object (in the `FormMacros.json` file)|
+|$macro|Object|Macro declaration object (in the `formMacros.json` file)|
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists. 
 
-The class constructor is called once during class instantiation, which occurs at application startup. Consequently, any modification applied to this function would require that you restart the application. 
+The class constructor is called once during class instantiation, which occurs at application startup. 
 
-Custom attributes added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
 
 
 #### Example
 
-In the `FormMacros.json` file:
+In the `formMacros.json` file:
 
-```
+```js
 {
-    "macros": {
-            "My macro": {
-                "class": "MyMacroClass" 
-                "myParam": "Hello"
-        }
-    }
+   "macros": {
+     "Align to Left on Target Object": {
+       "class": "AlignOnTarget",
+       "myParam": "left"
+     }
+   }
 }
 ```
 
 You can write: 
 
 ```code4d  
-// Class "MyMacroClass"
+// Class "AlignOnTarget"
 Class constructor($macro : Object)
-    This.myParameter:=$macro.myParam //Hello
+    This.myParameter:=$macro.myParam //left
     ...
 ```
 
 
 ### onInvoke()
 
-#### onInvoke($editor : object) -> result : object
+#### onInvoke($editor : object) -> $result : object
 
 |Parameter|Type|Description|
 |---|---|---|
-|$editor|Object|Form elements to be modified by the macro|
-|result|Object|Form elements modified by the macro|
+|$editor|Object|Form properties|
+|$result|Object|Form properties modified by the macro (optional)|
 
-The `onInvoke` function is automatically executed each time the macro is called.
+The `onInvoke` function is automatically executed each time the macro is called. 
 
-Properties of the `$editor` object:
+When the function is called, it receives all the elements of the form with their current values in the `$editor` parameter. You can then execute any operation on these properties. 
+
+Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply operations. Obviously, the less properties you return, the faster parsing will be. 
+
+All objects passed to macros through the `$result` parameter are copies. Modifications made by macros are saved in memory only. 
+
+Here are the properties of the `$editor` object:
 
 |Property|Type|Description|
 |---|---|---|
-|$editor.form|Object|The entire form - All modifications in this object are ignored.
+|$editor.form|Object|The entire form
 |$editor.file|File|File object of the form file|
 |$editor.name|String|Name of the form|
 |$editor.table|number|Table number of the form, 0 for project form|
 |$editor.currentPageNumber|number|The number of the current page|
-|$editor.currentPage|Object|The current page - All modifications in this object are applied to the form|
-|$editor.currentSelection|Collection|Collection of names of selected objects - If the list is modified, the selection in the form is changed according the list.|
-|$editor.formProperties|Object|Properties of the current form. All modifications in this object are applied to the form.|
+|$editor.currentPage|Object|The current page, containing all the form objects and the entry order of the page, including groups|
+|$editor.currentSelection|Collection|Collection of names of selected objects|
+|$editor.formProperties|Object|Properties of the current form|
 |$editor.target|string|Name of the object under the mouse when clicked on a macro|
 
-**Result**
+Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
 |Property|Type|Description|
 |---|---|---|
-|currentPage |Object |(optional) pass the currentPage is changed by macro|
-|currentSelection |Collection |(optional) pass the currentSelection is changed by macro|
-|formProperties |Object |(optional) pass the formProperties is changed by macro|
-|editor.groups |Object |(optional) pass the group info, if groups are changed by macro|
-|editor.views |Object |(optional) pass the view info, if views are changed by macro|
-|editor.activeView |String |(optional) Active view name|
+|currentPage |Object |currentPage including objects modified by the macro, if any|
+|currentSelection |Collection |currentSelection if modified by the macro|
+|formProperties |Object |formProperties if modified by the macro|
+|editor.groups |Object |group info, if groups are modified by the macro|
+|editor.views |Object |view info, if views are modified by the macro|
+|editor.activeView |String |Active view name|
 
 
-When the function is called, it receives all the properties with their current values in the `$editor` parameter. The function can do any operation on these properties. 
-
-Once operations are done, pass the modified or edited values in `Result`. For optimization, it is recommended to return only edited elements.  
-
-> All objects passed to macros through the `Result` parameter are copies. Any modifications made by macros are saved in memory only. 
 
 
 #### `method` attribute
@@ -260,6 +263,14 @@ source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.  
 
+#### `$4dId` property in `currentPage` objects
+
+The `$4dId` property is a unique ID for all objects in the `currentPage` property. This key is used by the macro processor to control changes in `$result.currentPage`. 
+
+- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
+- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
+- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+ 
 
 #### Example
 
