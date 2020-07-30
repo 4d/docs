@@ -17,7 +17,60 @@ For example if you have a recurring report with specific formatting (e.g., certa
 
 Macros can been defined for the host project or for components within the project.
 
-Once enabled, macros override any previously specified behaviors, including when the form is executed (e.g. entry order).
+Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor. 
+
+When called, a macro overrides any previously specified behaviors, including when the form is executed (e.g. entry order).
+
+## Quick tour
+
+In this very short example, you'll see how to create and call a macro that adds a button in the top left corner of your form, which will display "Hello World!" when clicked. 
+
+1. In the `FormMacros.json` file within the `Project/Sources` folder, you write:
+
+```
+{
+   "macros": {
+      "Add Hello World button": {
+       "class": "AddButton"
+     }
+   }
+}
+```
+
+2. Create a 4D class named `AddButton`.
+
+3. Within the `AddButton` class, write the following function:
+
+```code4d
+Function onInvoke($editor : Object)->$result : Object
+	
+	var $btnHello : Object
+	
+	// Create a "Hello" button
+	$btnHello:=New object("type"; "button"; \
+	"text"; "Hello World!"; \
+	"method"; New object("source"; "ALERT(\"Hello World!\")"); \
+	"events"; New collection("onClick"); \
+	"width"; 120; \
+	"height"; 20; \
+	"top"; 0; \
+	"left"; 0)	
+	
+	// Add button in the current page
+	$editor.editor.currentPage.objects.btnHello:=$btnHello	
+	
+	// Select the new button in the form editor
+	$editor.editor.currentSelection.clear() //unselect elements
+	$editor.editor.currentSelection.push("btnHello")	
+	
+	// Notify the modification to the 4D Form editor
+	$result:=New object("currentSelection"; $editor.editor.currentSelection; "currentPage"; $editor.editor.currentPage)
+```
+
+You can then call the macro:
+![](assets/en/FormEditor/macroex1.png)
+![](assets/en/FormEditor/macroex2.png)
+ 
 
 ## Calling macros in the Form editor
 
@@ -25,11 +78,16 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 ![](assets/en/FormEditor/macroSelect.png)
 
+This menu is built upon the `FormMacros.json` [macro definition file(s)](#location-of-macros), in the order they are defined in the file. It contains:
+
+1. host application macros
+2. component macros
+
 This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro. 
 
 Several macros can be sequentially called. The standard **Undo** feature of the Form editor can be used to reverse macro operations. 
 
-## Location of macros
+## Location of macro file
 
 All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`. 
 
@@ -67,6 +125,8 @@ Custom attributes can be added (named `myParam` in the above example). They will
 
 ### Example of FormMacros.json file 
 
+> The order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.  
+
 ```
 {
    "macros": {
@@ -92,7 +152,8 @@ Each macro you want to instantiate in your project or component must be declared
 
 The class name must match the name defined using the [class](#creating-macros) attribute of the `FormMacros.json` file. 
 
-![](assets/en/FormEditor/macroStructure.png)
+Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes. 
+
 
 
 
@@ -103,15 +164,42 @@ Every macro class can contain a class constructor and two functions: `OnInvoke()
 
 ### Class constructor
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function.
+#### Class constructor($macro : object)
+
+|Parameter|Type|Description|
+|---|---|---|
+|$macro|Object|Macro declaration object (in the `FormMacros.json` file)|
+
+Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists. 
+
+The class constructor is called once during class instantiation, which occurs at application startup. Consequently, any modification applied to this function would require that you restart the application. 
+
+Custom attributes added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
 
 
-```code4d
-Class constructor
-    This.myParameter:=$1.myParam
+#### Example
+
+In the `FormMacros.json` file:
+
+```
+{
+    "macros": {
+            "My macro": {
+                "class": "MyMacroClass" 
+                "myParam": "Hello"
+        }
+    }
+}
 ```
 
-Custom attributes added to the [macro declaration](#declaring-macros) are returned in $1, $2... in the class contructor function in the order they are defined in the macro.
+You can write: 
+
+```code4d  
+// Class "MyMacroClass"
+Class constructor($macro : Object)
+    This.myParameter:=$macro.myParam //Hello
+    ...
+```
 
 
 ### onInvoke()
@@ -148,7 +236,7 @@ Properties of the `$editor` object:
 |formProperties |Object |(optional) pass the formProperties is changed by macro|
 |editor.groups |Object |(optional) pass the group info, if groups are changed by macro|
 |editor.views |Object |(optional) pass the view info, if views are changed by macro|
-|editor.activeLayer |String |(optional) Active view name|
+|editor.activeView |String |(optional) Active view name|
 
 
 When the function is called, it receives all the properties with their current values in the `$editor` parameter. The function can do any operation on these properties. 
@@ -158,56 +246,43 @@ Once operations are done, pass the modified or edited values in `Result`. For op
 > All objects passed to macros through the `Result` parameter are copies. Any modifications made by macros are saved in memory only. 
 
 
+#### `method` attribute
 
-#### Hello World Example
+When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
-You want to add a "Hello world" button in your forms.
+- Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
 
-1. In the `FormMacros.json` file, you write:
+- Using an object with the following structure:
 
-```
-{
-   "macros": {
-      "Add Hello World button": {
-       "class": "AddButton"
-     }
-   }
-}
-```
+|Property|Type|Description|
+|---|---|---|
+source|String|method code|
 
-2. Create a 4D class named `AddButton`.
+4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.  
 
-3. Within the `AddButton` class, write the following function:
+
+#### Example
+
+You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
 ```code4d
 Function onInvoke($editor : Object)->$result : Object
+	var $name : Text
 	
-	var $btnHello : Object
+	If ($editor.editor.currentSelection.length>0)		
+		// Set stroke to red and style to italic for each selected object
+		For each ($name; $editor.editor.currentSelection)
+			$editor.editor.currentPage.objects[$name].stroke:="red"
+			$editor.editor.currentPage.objects[$name].fontStyle:="italic"
+		End for each 
+		
+	Else 
+		ALERT("Please select a form object.")
+	End if 
 	
-	// Create a "Hello" button
-	$btnHello:=New object("type"; "button"; \
-	"text"; "Hello World!"; \
-	"method"; New object("source"; "ALERT(\"coucou\")"); \
-	"events"; New collection("onClick"); \
-	"width"; 120; \
-	"height"; 20; \
-	"top"; 0; \
-	"left"; 0)	
-	
-	// Add button in the current page
-	$editor.editor.currentPage.objects.btnHello:=$btnHello	
-	
-	// Select the new button in the form editor
-	$editor.editor.currentSelection.clear() //unselect elements
-	$editor.editor.currentSelection.push("btnHello")	
-	
-	// Notify the modification to the 4D Form editor
-	$result:=New object("currentSelection"; $editor.editor.currentSelection; "currentPage"; $editor.editor.currentPage)
+	// Notify to 4D the modification
+	$result:=New object("currentPage"; $editor.editor.currentPage)
 ```
-
-You can then call the macro:
-![](assets/en/FormEditor/macroex1.png)
-![](assets/en/FormEditor/macroex2.png)
 
 
 ### onError()
