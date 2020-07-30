@@ -54,18 +54,18 @@ Maintenant, si vous exécutez :
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //la variable $e1 contient une référence vers une entité
+  //variable $e2 contient une autre référence vers une autre entité
+  //$e2.name contient "smith"
 ```
 
 Ceci est illustré par le graphique suivant :
 
 ![](assets/en/Orda/entityRef2.png)
 
-Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
-In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It means that you can pass it directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Par exemple:
+De fait, $e1 et $e2 ne sont pas l'entité elle-même, mais une référence à l'entité. Cela signifie que vous pouvez la passer directement à n'importe quelle fonction ou méthode, et qu'elle agira comme un pointeur, et plus rapidement qu'un pointeur 4D. Par exemple :
 
 ```code4d
  For each($entity;$selection)
@@ -73,7 +73,7 @@ In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It
  End for each
 ```
 
-And the method is:
+Et la méthode est :
 
 ```code4d
  $entity:=$1
