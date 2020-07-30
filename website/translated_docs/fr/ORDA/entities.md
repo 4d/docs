@@ -111,8 +111,8 @@ L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec l
 Vous pouvez accéder aux données via le ou les objets associé(s) :
 
 ```code4d
- $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
- $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
+ $entity:=ds.Project.all().first().theClient //récupérer l'entité Company associée au projet
+ $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
 Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
