@@ -1,53 +1,53 @@
 ---
 id: entities
-title: Working with data
+title: Travailler avec des données
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
 
-## Creating an entity
+## Créer une entité
 
-There are two ways to create a new entity in a dataclass:
+Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-* Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-* You can also create an entity using the `dataClass.new( )` method.
+* Les entités étant des références à des enregistrements de base de données, vous pouvez créer des entités en créant des enregistrements en utilisant le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
+* Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter à la banque de données, vous devez appeler la méthode `entity.save ()`.
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous à [Utilisation des attributs d'entité](#using-entity-attributes).
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+Par exemple, nous voulons créer une nouvelle entité dans la dataclass "Employee" dans le datastore courant avec "John" et "Dupont" affectés aux attributs de prénom et de nom :
 
 ```code4d
 var $myEntity : cs.EmployeeEntity
-$myEntity:=ds.Employee.new() //Create a new object of the entity type
-$myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
-$myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
-$myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() //Créer un nouvel objet de type entité
+$myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
+$myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
+$myEntity.save() //sauvegarder l'entité
 ```
 
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
 
-## Entities and references
+## Entités et références
 
-An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+Une entité contient une référence à un enregistrement 4D. Différentes entités peuvent référencer le même enregistrement 4D. De plus, comme une entité peut être stockée dans une variable objet 4D, différentes variables peuvent contenir une référence à la même entité.
 
-If you execute the following code:
+Si vous exécutez le code suivant :
 
 ```code4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) //accéder à l'employé avec ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //les variables $e1 et $e2 partagent la référence à la même entité
+  //$e2.name contient "Hammer"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](assets/en/Orda/entityRef1.png)
 
-Now if you execute:
+Maintenant, si vous exécutez :
 
 ```code4d
  var $e1; $e2 : cs.EmployeeEntity
@@ -59,7 +59,7 @@ Now if you execute:
   //$e2.name contains "smith"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](assets/en/Orda/entityRef2.png)
 
