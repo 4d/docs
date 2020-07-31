@@ -165,16 +165,16 @@ Ceci est particulièrement utile lorsque vous importez un grand nombre de donné
 
 Cela signifie également que vous pouvez attribuer des clés primaires dans les N entités sans que les entités correspondantes aient déjà été créées dans la 1e classe de datastore. Si vous affectez une clé primaire qui n'existe pas dans la classe de datastore associée, elle est néanmoins stockée et affectée par 4D dès que cette entité "1" est créée.
 
-You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
+Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associée "1" à partir de la dataclass "N" directement via l'attribut associé. Par exemple, si vous souhaitez modifier l'attribut de nom d'une entité "Company" associée d'une entité "Employee", vous pouvez écrire :
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) // charger l'entité Employee avec la clé primaire 2
+ $emp.employer.name:="4D, Inc." //modifier l'attribut "name" de nom de la société (Company) liée
+ $emp.employer.save() //sauvegarde l'attribut associé
+  //l'entité associée est mise à jour
 ```
 
-## Creating an entity selection
+## Créer une sélection d'entité (entity selection)
 
 You can create an object of type entity selection as follows:
 
