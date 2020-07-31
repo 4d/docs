@@ -205,19 +205,19 @@ Ce code retourne dans *localEmails* une collection d'adresses e-mail sous forme 
 
 ### Sélections d'entités et attributs de relation
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Par exemple, considérons la structure suivante :
+Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
 ```code4d
-myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+myParts:=ds.Part.query("ID < 100") //Retourne les parties dont l'ID est inférieur à 100
  $myInvoices:=myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in myParts
+  //Toutes les factures avec au moins un élément de ligne lié à une partie de myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
+La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité, le résultat est toujours une autre sélection d'entité, même si une seule entité est retournée. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité et qu'aucune entité n'est retournée, le résultat est une sélection d'entité vide et non nulle.
 
-## Entity Locking
+## Verrouillage d'une entité
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
 
