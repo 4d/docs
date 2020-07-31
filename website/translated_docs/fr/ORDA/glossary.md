@@ -1,9 +1,9 @@
 ---
 id: glossary
-title: Glossary
+title: Glossaire
 ---
 
-## Main concepts at a glance
+## Aperçu des principaux concepts
 
 ![](assets/en/Orda/mainConcepts.png)
 
