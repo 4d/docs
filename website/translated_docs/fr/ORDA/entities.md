@@ -176,34 +176,34 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associée "1
 
 ## Créer une sélection d'entité (entity selection)
 
-You can create an object of type entity selection as follows:
+Vous pouvez créer un objet de type sélection d'entité comme suit :
 
-* Querying the entities in a dataclass (see the `dataClass.query()` method);
-* Using the `dataClass.all( )` method to select all the entities in a dataclass;
-* Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
+* Recherchez les entités d'une dataclass (voir la méthode `dataClass.query()`);
+* Utilisez la méthode `dataClass.all()` pour sélectionner toutes les entités d'une dataclass;
+* Utilisez la commande `Create entity selection` ou la méthode `dataClass.newSelection()` pour créer un objet de collection d'entités (entity collection) vide;
 
-* Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
+* Utilisez l'une des diverses méthodes du thème **ORDA - EntitySelection** qui retourne une nouvelle sélection d'entité, telle que `entitySelection.or()`;
 
-* Using a relation attribute of type "related entities" (see below).
+* Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
+Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
-> An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
+> Une sélection d'entité n'est définie que dans le process où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une sélection d'entité dans une variable interprocess et l'utiliser dans un autre process.
 
-## Entity selections and attributes
+## Sélections d'entités et attributs
 
-### Entity selections and Storage attributes
+### Sélections d'entités et attributs de stockage
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Par exemple:
+Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
 ```code4d
- locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- localEmails:=locals.emailAddress //collection of email addresses (strings)
+ locals:=ds.Person.query("city =: 1"; "San Jose") // sélection d'entité de personnes
+ localEmails:=locals.emailAddress // collection d'adresses e-mail (chaînes)
 ```
 
-This code returns in *localEmails* a collection of email addresses as strings.
+Ce code retourne dans *localEmails* une collection d'adresses e-mail sous forme de chaînes.
 
-### Entity selections and Relation attributes
+### Sélections d'entités et attributs de relation
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Par exemple, considérons la structure suivante :
 
