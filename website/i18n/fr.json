@@ -306,6 +306,9 @@
       "FormEditor/forms": {
         "title": "A propos des formulaires 4D"
       },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
+      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
