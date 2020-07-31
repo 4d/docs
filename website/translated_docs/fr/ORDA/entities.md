@@ -1,71 +1,71 @@
 ---
 id: entities
-title: Working with data
+title: Travailler avec des données
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
 
-## Creating an entity
+## Créer une entité
 
-There are two ways to create a new entity in a dataclass:
+Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-* Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-* You can also create an entity using the `dataClass.new( )` method.
+* Les entités étant des références à des enregistrements de base de données, vous pouvez créer des entités en créant des enregistrements en utilisant le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
+* Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter à la banque de données, vous devez appeler la méthode `entity.save ()`.
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous à [Utilisation des attributs d'entité](#using-entity-attributes).
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+Par exemple, nous voulons créer une nouvelle entité dans la dataclass "Employee" dans le datastore courant avec "John" et "Dupont" affectés aux attributs de prénom et de nom :
 
 ```code4d
 var $myEntity : cs.EmployeeEntity
-$myEntity:=ds.Employee.new() //Create a new object of the entity type
-$myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
-$myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
-$myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() //Créer un nouvel objet de type entité
+$myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
+$myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
+$myEntity.save() //sauvegarder l'entité
 ```
 
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
 
-## Entities and references
+## Entités et références
 
-An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+Une entité contient une référence à un enregistrement 4D. Différentes entités peuvent référencer le même enregistrement 4D. De plus, comme une entité peut être stockée dans une variable objet 4D, différentes variables peuvent contenir une référence à la même entité.
 
-If you execute the following code:
+Si vous exécutez le code suivant :
 
 ```code4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) //accéder à l'employé avec ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //les variables $e1 et $e2 partagent la référence à la même entité
+  //$e2.name contient "Hammer"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](assets/en/Orda/entityRef1.png)
 
-Now if you execute:
+Maintenant, si vous exécutez :
 
 ```code4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //la variable $e1 contient une référence vers une entité
+  //variable $e2 contient une autre référence vers une autre entité
+  //$e2.name contient "smith"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](assets/en/Orda/entityRef2.png)
 
-Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
-In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It means that you can pass it directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Par exemple:
+De fait, $e1 et $e2 ne sont pas l'entité elle-même, mais une référence à l'entité. Cela signifie que vous pouvez la passer directement à n'importe quelle fonction ou méthode, et qu'elle agira comme un pointeur, et plus rapidement qu'un pointeur 4D. Par exemple :
 
 ```code4d
  For each($entity;$selection)
@@ -73,7 +73,7 @@ In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It
  End for each
 ```
 
-And the method is:
+Et la méthode est :
 
 ```code4d
  $entity:=$1
@@ -84,128 +84,128 @@ And the method is:
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
+Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
 
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [Lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [chargement différé](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
-## Using entity attributes
+## Utilisation des attributs d'entités
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Les attributs d'entité stockent les données et mappent les champs correspondants dans la table correspondante. Les attributs d'entité du type de stockage peuvent être définis ou obtenus sous forme de propriétés simples de l'objet entité, tandis que l'entité de type **relatedEntity** ou **relatedEntities** renverra une entité ou une sélection d'entité.
 
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+> Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [Attributs de stockage et de relation](dsMapping.md#storage-and-relation-attributes).
 
-For example, to set a storage attribute:
+Par exemple, pour définir un attribut de stockage :
 
 ```code4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=entity.lastname //get the employee name, e.g. "Smith"
- entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
+ $name:=entity.lastname //obtenir le nom de l'employé, par exemple "Dupont"
+ entity.lastname:="Jones" //définir le nom de l'employé
 ```
 
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
 ![](assets/en/Orda/entityAttributes.png)
 
-You can access data through the related object(s):
+Vous pouvez accéder aux données via le ou les objets associé(s) :
 
 ```code4d
- $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
- $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
+ $entity:=ds.Project.all().first().theClient //récupérer l'entité Company associée au projet
+ $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le manager du manager d'un employé, vous pouvez simplement écrire :
 
 ```code4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Assigner des valeurs aux attributs de relation
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+Dans l'architecture ORDA, les attributs de relation contiennent directement des données liées aux entités :
 
-* An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-* A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+* Un attribut de relation de type N-> 1 (type **relatedEntity**) contient une entité
+* Un attribut de relation de type 1-> N (type **relatedEntities**) contient une sélection d'entité
 
-Let's look at the following (simplified) structure:
+Regardons la structure (simplifiée) suivante :
 
 ![](assets/en/Orda/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
+Dans cet exemple, une entité de la dataclass "Employee" contient un objet de type Entité dans l'attribut "employer" (ou une valeur nulle). Une entité de la dataclass "Company" contient un objet de type EntitySelection dans l'attribut "staff" (ou une valeur nulle).
 
-> In ORDA, the Automatic or Manual property of relations has no effect.
+> Dans ORDA, la propriété Automatic ou Manual des relations ne produit aucun effet.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Par exemple:
+Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company". Par exemple :
 
 ```code4d
- $emp:=ds.Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // créer un employé
+ $emp.lastname:="Smith" // attribuer une valeur à un attribut
+ $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //attribuer une entité de "company"
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Par exemple:
+4D fournit une fonctionnalité supplémentaire pour saisir un attribut de relation pour une entité N liée à une entité "1": vous passez directement la clé primaire de l'entité "1" lors de l'attribution d'une valeur à l'attribut de relation. Pour que cela fonctionne, passez des données de type Numérique ou Texte (la valeur de la clé primaire) à l'attribut de relation. 4D se charge alors automatiquement de rechercher l'entité correspondante dans la dataclass. Par exemple :
 
 ```code4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // assign a primary key to the relation attribute
-  //4D looks for the company whose primary key (in this case, its ID) is 2
-  //and assigns it to the employee
+ $emp.employer:=2 // attribuer une clé primaire à l'attribut relation
+  //4D recherche l'entreprise dont la clé primaire (dans ce cas, son ID) est 2
+  //et l'attribue à l'employé
  $emp.save()
 ```
 
-This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
+Ceci est particulièrement utile lorsque vous importez un grand nombre de données à partir d'une base de données relationnelle. Ce type d'import contient généralement une colonne "ID", qui référence une clé primaire que vous pouvez ensuite affecter directement à un attribut de relation.
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
+Cela signifie également que vous pouvez attribuer des clés primaires dans les N entités sans que les entités correspondantes aient déjà été créées dans la 1e classe de datastore. Si vous affectez une clé primaire qui n'existe pas dans la classe de datastore associée, elle est néanmoins stockée et affectée par 4D dès que cette entité "1" est créée.
 
-You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
-
-```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
-```
-
-## Creating an entity selection
-
-You can create an object of type entity selection as follows:
-
-* Querying the entities in a dataclass (see the `dataClass.query()` method);
-* Using the `dataClass.all( )` method to select all the entities in a dataclass;
-* Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
-
-* Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
-
-* Using a relation attribute of type "related entities" (see below).
-
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
-
-> An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
-
-## Entity selections and attributes
-
-### Entity selections and Storage attributes
-
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Par exemple:
+Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associée "1" à partir de la dataclass "N" directement via l'attribut associé. Par exemple, si vous souhaitez modifier l'attribut de nom d'une entité "Company" associée d'une entité "Employee", vous pouvez écrire :
 
 ```code4d
- locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- localEmails:=locals.emailAddress //collection of email addresses (strings)
+ $emp:=ds.Employee.get(2) // charger l'entité Employee avec la clé primaire 2
+ $emp.employer.name:="4D, Inc." //modifier l'attribut "name" de nom de la société (Company) liée
+ $emp.employer.save() //sauvegarde l'attribut associé
+  //l'entité associée est mise à jour
 ```
 
-This code returns in *localEmails* a collection of email addresses as strings.
+## Créer une sélection d'entité (entity selection)
 
-### Entity selections and Relation attributes
+Vous pouvez créer un objet de type sélection d'entité comme suit :
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+* Recherchez les entités d'une dataclass (voir la méthode `dataClass.query()`);
+* Utilisez la méthode `dataClass.all()` pour sélectionner toutes les entités d'une dataclass;
+* Utilisez la commande `Create entity selection` ou la méthode `dataClass.newSelection()` pour créer un objet de collection d'entités (entity collection) vide;
+
+* Utilisez l'une des diverses méthodes du thème **ORDA - EntitySelection** qui retourne une nouvelle sélection d'entité, telle que `entitySelection.or()`;
+
+* Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
+
+Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
+
+> Une sélection d'entité n'est définie que dans le process où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une sélection d'entité dans une variable interprocess et l'utiliser dans un autre process.
+
+## Sélections d'entités et attributs
+
+### Sélections d'entités et attributs de stockage
+
+Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
+
+```code4d
+ locals:=ds.Person.query("city =: 1"; "San Jose") // sélection d'entité de personnes
+ localEmails:=locals.emailAddress // collection d'adresses e-mail (chaînes)
+```
+
+Ce code retourne dans *localEmails* une collection d'adresses e-mail sous forme de chaînes.
+
+### Sélections d'entités et attributs de relation
+
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
