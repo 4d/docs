@@ -215,11 +215,9 @@ Class constructor($macro : Object)
 
 The `onInvoke` function is automatically executed each time the macro is called. 
 
-When the function is called, it receives all the elements of the form with their current values in the `$editor` parameter. You can then execute any operation on these properties. 
+When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties. 
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply operations. Obviously, the less properties you return, the faster parsing will be. 
-
-All objects passed to macros through the `$result` parameter are copies. Modifications made by macros are saved in memory only. 
+Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require. 
 
 Here are the properties of the `$editor` object:
 
@@ -263,9 +261,9 @@ source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.  
 
-#### `$4dId` property in `currentPage` objects
+#### `$4dId` property in `currentPage.objects`
 
-The `$4dId` property is a unique ID for all objects in the `currentPage` property. This key is used by the macro processor to control changes in `$result.currentPage`. 
+The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`: 
 
 - if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
 - if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
