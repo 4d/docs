@@ -53,7 +53,7 @@
 		  ]
 		}
 	],
-  "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
+  "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/macros","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
