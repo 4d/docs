@@ -226,27 +226,27 @@ ORDA vous propose deux modes de verrouillage d'entité :
 - un mode automatique "optimiste", adapté à la plupart des applications,
 - un mode "pessimiste" permettant de verrouiller les entités avant d'y accéder.
 
-### Automatic optimistic lock
+### Verrouillage optimiste automatique
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" qui est particulièrement adapté aux problématiques des applications web. Ce concept se caractérise par les principes de fonctionnement suivants :
 
-* All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-* Each entity has an internal locking stamp that is incremented each time it is saved.
-* When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification): 
-    * When the values match, the entity is saved and the internal stamp value is incremented.
-    * When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+* Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
+* Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
+* Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) : 
+    * Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
+    * Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
 
-The following diagram illustrates optimistic locking:
+Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Two processes load the same entity.  
+1. Deux process chargent la même entité.  
       
     ![](assets/en/Orda/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.  
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.  
       
     ![](assets/en/Orda/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.  
+3. The second process also modifies the loaded entity and validates its changes. La méthode `entity.save()` est appelée. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.  
       
     ![](assets/en/Orda/optimisticLock3.png)
 
