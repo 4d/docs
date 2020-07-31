@@ -182,7 +182,7 @@ Otherwise, the picture variable will not be displayed correctly (only in interpr
 ---
 ## CSS Class
 
-A list of space-separated words used as class selectors in css files.
+A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
 
 
 #### JSON Grammar
