@@ -32,7 +32,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ![](assets/en/ORDA/api.png)
 
-In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object.
+各データモデルオブジェクトに関わるクラスは、4D Developer によって [あらかじめ自動的に作成](#クラスの作成) されます。
 
 ## アーキテクチャー
 
