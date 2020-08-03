@@ -15,11 +15,11 @@ To create a new project:
 
 <
 
-p>![](assets/en/getStart/projectCreate1.png)
+![](assets/en/getStart/projectCreate1.png)
 
 <
 
-p>OR
+
 
 <
 
@@ -27,7 +27,7 @@ p>(4D only) Select **Project...** from the **New** toolbar button:
 
 <
 
-p>![](assets/en/getStart/projectCreate2.png)
+![](assets/en/getStart/projectCreate2.png)
 
 <
 
@@ -54,7 +54,7 @@ To open an existing project locally from 4D:
 
 <
 
-p>OR
+
 
 <
 
@@ -94,7 +94,7 @@ To connect remotely to a 4D Server project:
 
 <
 
-p>OR
+
 
 <
 
