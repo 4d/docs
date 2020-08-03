@@ -17,14 +17,14 @@ ORDA を使用して、データモデル上に高レベルクラス関数を作
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 ```
 
-これらの関数はローカルデータストアーだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます ([例題](#リモートデータストアの例) を参照ください):
+これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます ([リモートデータストアの例](#リモートデータストアの例) を参照ください):
 
 ```4d
- //$cityManager is the reference of a remote datastore
+ //$cityManager はリモートデータストアへの参照です
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
-Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained or reused:
+この機能により、4D アプルケーションのビジネスロジックをまるごと独立したレイヤーに保存し、簡単に管理・利用することができます:
 
 - it allows you to "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions.
 
