@@ -65,7 +65,7 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 - **親クラス**: 4D.DataStoreImplementation 
 - **クラス名**: cs.DataStore
 
-You can create functions in the DataStore class that will be available through the `ds` object.
+DataStore クラス内には、`ds` オブジェクトを介して使用する関数を作成することができます。
 
 #### 例題
 
@@ -78,7 +78,7 @@ Function getDesc
   $0:="社員と会社を公開するデータベース"
 ```
 
-This function can then be called:
+この関数は次のように使えます:
 
 ```4d
 $desc:=ds.getDesc() //"社員と会社を..."
@@ -86,11 +86,11 @@ $desc:=ds.getDesc() //"社員と会社を..."
 
 ### DataClass クラス
 
-Each table exposed with ORDA offers a DataClass class in the `cs` class store.
+ORDA で公開されるテーブル毎に、DataClass クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.DataClass 
-- **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
-- **Example name**: cs.Employee
+- **親クラス**: 4D.DataClass 
+- **クラス名**: cs.*DataClassName* (*DataClassName* はテーブル名です)
+- **例**: cs.Employee
 
 #### 例題
 
@@ -108,7 +108,7 @@ Function GetBestOnes()
     $0:=$sel
 ```
 
-Then, you can get an entity selection of the "best" companies by executing:
+全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
 ```4d
     var $best : cs.CompanySelection
@@ -117,14 +117,14 @@ Then, you can get an entity selection of the "best" companies by executing:
 
 #### リモートデータストアの例
 
-The following *City* catalog is exposed in a remote datastore (partial view):
+次の *City* カタログをリモートデータストアとして公開しています:
 
 ![](assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+`City クラス` は API を提供しています:
 
 ```4d
-// cs.City class
+// cs.City クラス
 
 Class extends DataClass
 
@@ -142,7 +142,7 @@ Function getCityName()
     End if
 ```
 
-The client application opens a session on the remote datastore:
+クライアントはまず、リモートデータストアのセッションを開始します:
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
