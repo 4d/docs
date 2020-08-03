@@ -13,7 +13,7 @@ Si vous souhaitez effectuer un calcul avec un attribut, saisissez ce qui suit :
 
 `GET  /rest/Employee/salary/?$compute=$all`
 
-Si vous souhaitez passer un attribut Objet, vous devez passer l'une de ses propriétés. Par exemple :
+Si vous souhaitez passer un attribut Objet, vous devez passer l'une de ses propriétés. Par exemple:
 
 `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
