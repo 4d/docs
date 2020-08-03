@@ -148,7 +148,7 @@ Function getCityName()
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
 ```
 
-Then a client application can use the API to get the city matching a zip code (for example) from a form:
+クライアントアプリケーションは API を使い、たとえばフォームに入力された郵便番号 (zipcode) に合致する都市を取得することができます:
 
 ```4d
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
@@ -157,11 +157,11 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ### EntitySelection クラス
 
-Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
+ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.EntitySelection 
-- **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs.EmployeeSelection
+- **親クラス**: 4D.EntitySelection 
+- **クラス名**: *DataClassName*Selection (*DataClassName* はテーブル名です)
+- **例**: cs.EmployeeSelection
 
 #### 例題
 
