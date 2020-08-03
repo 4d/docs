@@ -79,21 +79,21 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 Une entité est un objet qui correspond à un modèle de base de données. Une entité contient les mêmes attributs que la dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
+Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-For more information, see Entities.
+Pour plus d'informations, voir le chapitre Entités.
 
-## Entity selection
+## Sélection d'entités (entity selection)
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
 
-An entity selection contains:
+Une sélection d'entités contient :
 
-* a set of 0 to X entity references,
-* a length property (always),
-* queryPlan and queryPath properties (if asked while querying).
+* un ensemble de 0 à X références d'entités
+* une propriété length (toujours),
+* les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
-An entity selection can also be empty.
+Une sélection d'entités peut également être vide.
 
 ## Generic class
 
@@ -101,34 +101,34 @@ Built-in class for ORDA objects such as entities, or dataclasses. Functions and 
 
 ## Lazy loading
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
+Commes les entités sont gérées comme des références, les données sont chargées uniquement lorsque cela est nécessaire, c'est-à-dire lorsqu'on y accède dans le code ou via des widgets d'interface. Ce principe d'optimisation est appelé lazy loading.
 
-## Main datastore
+## Datastore principal
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
+L'objet Datastore correspondant à la base 4D ouverte (autonome ou client/serveur). Le datastore principal est retourné par la commande ds.
 
 ## Méthode
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
+Les objets ORDA tels que les "datastores", "dataclasses", "entity selections" et "entities" définissent les classes d'objets. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
 
-For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+Par exemple, la méthode `query()` est une "member function" de dataclass. Si vous avez stocké un objet dataclass dans la variable `$myClass`, vous pouvez écrire :
 
 ```code4d
 $myClass.query("name = smith")
 ```
 
-## Mixed data type
+## Type de données "Mixte"
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Par exemple :
+Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Cela inclut :
 
-* number
-* Texte
+* nombre
+* texte
 * null
-* boolean
+* booléen
 * date
-* object
+* objet
 * collection
-* picture(\*)
+* image(\*)
 
 *(*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
