@@ -163,7 +163,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
                     
                     ## CSS Class
                     
-                    A list of space-separated words used as class selectors in css files.
+                    A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
                     
                     #### JSON 文法
                     

@@ -306,6 +306,9 @@
       "FormEditor/forms": {
         "title": "About 4D Forms"
       },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
+      },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
       },
