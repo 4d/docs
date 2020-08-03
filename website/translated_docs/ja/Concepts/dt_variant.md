@@ -8,16 +8,16 @@ title: バリアント
 バリアント型の変数は以下のデータタイプの値を格納することができます:
 
 - BLOB
-- ブール
-- コレクション
-- 日付
+- boolean
+- collection
+- date
 - 倍長整数
-- オブジェクト
-- ピクチャー
-- ポインター
+- object
+- picture
+- pointer
 - 実数
 - テキスト
-- 時間
+- time
 - null
 - 未定義
 
