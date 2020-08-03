@@ -80,15 +80,15 @@ Dans certaines stratégies de sauvegarde (par exemple, dans le cas où de nombre
 
 ## backupHistory.json
 
-All information regarding the latest backup and restore operations are stored in the database's **backupHistory.json** file. It logs the path of each saved file (including attachments) as well as number, date, time, duration, and status of each operation. To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+Toutes les informations concernant les dernières opérations de sauvegarde et de restitution sont stockées dans le fichier **backupHistory.json** de la base. Ce dernier enregistre le chemin de chaque fichier sauvegardé (y compris les pièces jointes) ainsi que le numéro, la date, l'heure, la durée et le statut de chaque opération. Afin de limiter la taille du fichier, le nombre d'opérations enregistrées et le nombre de sauvegardes disponibles ("Keep only the last X backup files") définies dans les propriétés de sauvegarde est identique.
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+Le fichier **backupHistory.json** se situe dans le dossier de destination de sauvegarde courant. Vous pouvez obtenir le chemin de ce fichier à l'aide de la déclaration suivante :
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
 
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
+> **ATTENTION**  
+> La suppression ou le déplacement du fichier **backupHistory.json** entraînera la réinitialisation du prochain numéro de sauvegarde.
 > 
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate.
+> Le fichier **backupHistory.json** est formaté afin d'être utilisé par l'application 4D. Si vous recherchez un état lisible sur les opérations de sauvegarde, le journal de sauvegarde sera plus précis.
