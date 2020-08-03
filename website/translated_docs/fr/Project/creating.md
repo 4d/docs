@@ -15,7 +15,7 @@ To create a new project:
 
 <
 
-![](assets/en/getStart/projectCreate1.png)
+p>![](assets/en/getStart/projectCreate1.png)
 
 <
 
@@ -27,7 +27,7 @@ p>(4D only) Select **Project...** from the **New** toolbar button:
 
 <
 
-![](assets/en/getStart/projectCreate2.png)
+p>![](assets/en/getStart/projectCreate2.png)
 
 <
 
