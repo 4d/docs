@@ -75,15 +75,15 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 `ds` est la commande de langage 4D qui retourne une référence d'objet du [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
-## Entité (entity)
+## Entity
 
 Une entité est un objet qui correspond à un modèle de base de données. Une entité contient les mêmes attributs que la dataclass.
 
-Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
+Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. The purpose of the entity is to manage data (create, update, delete).
 
 Pour plus d'informations, voir le chapitre Entités.
 
-## Sélection d'entités (entity selection)
+## Entity selection
 
 Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
 
@@ -119,14 +119,14 @@ $myClass.query("name = smith")
 
 ## Type de données "Mixte"
 
-Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Cela inclut :
+Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Par exemple :
 
-* nombre
-* texte
+* number
+* Texte
 * null
-* booléen
+* boolean
 * date
-* objet
+* object
 * collection
 * image(\*)
 
