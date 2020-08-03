@@ -9,16 +9,16 @@ title: Glossaire
 
 ## Attribut
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
+Un attribut est la plus petite cellule de stockage dans une base de données relationnelle (voir aussi [Attribut relationnel](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
 
-* In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-* In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
+* Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
+* Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
 
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [propertyPath](#propertyPath).
 
 ## Class code
 
@@ -38,9 +38,9 @@ Function of an ORDA data model class.
 
 ## Dataclass
 
-A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
+Une dataclass est un objet qui décrit les données. Les tables de la base de données fournies par le datastore sont gérées via des dataclasses. Chaque table de la base de données fournie par le datastore possède une dataclass correspondante et portant le même nom. Chaque champ de la table est un attribut de la dataclass.
 
-A dataclass is related to a single datastore.
+Une dataclass est reliée à un seul datastore.
 
 ## DataClass class
 
@@ -48,12 +48,12 @@ Class for specific dataclass objects, in which you can add custom functions.
 
 ## Datastore
 
-A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
+Un datastore est l'objet d'interface fourni par ORDA pour référencer une base de données et accéder à ses données. La base de données principale, retournée par la commande `ds`, est disponible en tant que datastore (le datastore principal).
 
-A datastore provides:
+Un datastore fournit :
 
-* a connection to the 4D database
-* a set of dataclasses to work with the database
+* une connexion à la base de données 4D
+* un ensemble de dataclasses pour travailler avec la base de données
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
@@ -144,7 +144,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 
 See [Attribute](#attribute).
 
-> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 
