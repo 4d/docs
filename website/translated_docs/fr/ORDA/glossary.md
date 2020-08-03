@@ -55,9 +55,9 @@ Un datastore fournit :
 * une connexion à la base de données 4D
 * un ensemble de dataclasses pour travailler avec la base de données
 
-The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
+La base peut être une base locale 4D (le datastore principal), ou une base 4D Server exposée en ressource REST (un datastore distant).
 
-A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
+Un datastore ne référence qu'une seule base de données. Il est toutefois possible d'ouvrir plusieurs datastores pour accéder à plusieurs bases.
 
 ## DataStore class
 
@@ -67,17 +67,17 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy
+## Copie profonde
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+Une copie profonde (deep copy) duplique un objet et toutes les références qu'il contient. Après une deep copy, une collection copiée contient des éléments dupliqués et donc de nouvelles références de tous les éléments originaux. Voir aussi Copie superficielle.
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` est la commande de langage 4D qui retourne une référence d'objet du [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
-## Entity
+## Entité (entity)
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+Une entité est un objet qui correspond à un modèle de base de données. Une entité contient les mêmes attributs que la dataclass.
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
