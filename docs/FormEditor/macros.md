@@ -64,7 +64,8 @@ Function onInvoke($editor : Object)->$result : Object
 	$editor.editor.currentSelection.push("btnHello")	
 	
 	// Notify the modification to the 4D Form editor
-	$result:=New object("currentSelection"; $editor.editor.currentSelection; "currentPage"; $editor.editor.currentPage)
+	$result:=New object("currentSelection"; $editor.editor.currentSelection;\  
+		"currentPage"; $editor.editor.currentPage)
 ```
 
 You can then call the macro:
@@ -228,7 +229,7 @@ Here are the properties of the `$editor` object:
 |$editor.name|String|Name of the form|
 |$editor.table|number|Table number of the form, 0 for project form|
 |$editor.currentPageNumber|number|The number of the current page|
-|$editor.currentPage|Object|The current page, containing all the form objects and the entry order of the page, including groups|
+|$editor.currentPage|Object|The current page, containing all the form objects and the entry order of the page|
 |$editor.currentSelection|Collection|Collection of names of selected objects|
 |$editor.formProperties|Object|Properties of the current form|
 |$editor.target|string|Name of the object under the mouse when clicked on a macro|
