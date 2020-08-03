@@ -179,7 +179,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-Then, you can get employees with a salary greater than the average in any entity selection by executing:
+任意の社員エンティティセレクションより、給与が平均以上の社員を取得するには:
 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
@@ -187,11 +187,11 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 ### Entity クラス
 
-Each table exposed with ORDA offers an Entity class in the `cs` class store.
+ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラスストアに公開されます。
 
-- **Extends**: 4D.Entity 
-- **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
-- **Example name**: cs.CityEntity
+- **親クラス**: 4D.Entity 
+- **クラス名**: *DataClassName*Entity (*DataClassName* はテーブル名です)
+- **例**: cs.CityEntity
 
 #### 例題
 
@@ -211,7 +211,7 @@ C_BOOLEAN($0)
 $0:=This.getPopulation()>50000
 ```
 
-Then, you can call this code:
+次のように関数を呼び出すことができます:
 
 ```4d
 var $cityManager; $city : Object
@@ -220,7 +220,7 @@ $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManage
 $city:=$cityManager.City.getCity("Caguas")
 
 If ($city.isBigCity())
-    ALERT($city.name + " is a big city")
+    ALERT($city.name + " は大きな町です。")
 End if
 ```
 
