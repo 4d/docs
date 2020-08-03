@@ -42,9 +42,9 @@ Chaque règle de style d'une feuille de style contient deux parties :
 
 Le type d'objet définit le type d'objet à styler et correspond au sélecteur d'élément CSS.
 
-Specify the object type, then in curly braces, declare the style(s) to apply.
+Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+> Le type d'objet correspond à la propriété JSON [ type ](FormObjects/properties_Object.md#type) des objets de formulaire.
 
 Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
@@ -54,7 +54,7 @@ Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte da
     }
     
 
-To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
+Pour appliquer le même style à plusieurs types d’objets, spécifiez les types d'objets séparés par un "," puis, entre accolades, déclarez le(s) style(s) à appliquer :
 
     text, input {
       text-align: left;
@@ -247,7 +247,7 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ordre suivant :
 
 1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
+2. Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
 3. S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
 
 *       un fichier pour les deux plateformes :
