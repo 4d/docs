@@ -247,7 +247,7 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ordre suivant :
 
 1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`. 
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
+2. Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
 3. S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
 
 *       un fichier pour les deux plateformes :
