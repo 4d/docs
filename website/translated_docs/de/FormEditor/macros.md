@@ -63,7 +63,8 @@ Function onInvoke($editor : Object)->$result : Object
     $editor.editor.currentSelection.push("btnHello")    
 
     // Notify the modification to the 4D Form editor
-    $result:=New object("currentSelection"; $editor.editor.currentSelection; "currentPage"; $editor.editor.currentPage)
+    $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
+        "currentPage"; $editor.editor.currentPage)
 ```
 
 You can then call the macro: ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
@@ -305,17 +306,17 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties of the `$editor` object:
 
-| Property                  | Typ        | Description                                                                                         |
-| ------------------------- | ---------- | --------------------------------------------------------------------------------------------------- |
-| $editor.form              | Objekt     | The entire form                                                                                     |
-| $editor.file              | File       | File object of the form file                                                                        |
-| $editor.name              | String     | Name of the form                                                                                    |
-| $editor.table             | number     | Table number of the form, 0 for project form                                                        |
-| $editor.currentPageNumber | number     | The number of the current page                                                                      |
-| $editor.currentPage       | Objekt     | The current page, containing all the form objects and the entry order of the page, including groups |
-| $editor.currentSelection  | Collection | Collection of names of selected objects                                                             |
-| $editor.formProperties    | Objekt     | Properties of the current form                                                                      |
-| $editor.target            | string     | Name of the object under the mouse when clicked on a macro                                          |
+| Property                  | Typ        | Description                                                                       |
+| ------------------------- | ---------- | --------------------------------------------------------------------------------- |
+| $editor.form              | Objekt     | The entire form                                                                   |
+| $editor.file              | File       | File object of the form file                                                      |
+| $editor.name              | String     | Name of the form                                                                  |
+| $editor.table             | number     | Table number of the form, 0 for project form                                      |
+| $editor.currentPageNumber | number     | The number of the current page                                                    |
+| $editor.currentPage       | Objekt     | The current page, containing all the form objects and the entry order of the page |
+| $editor.currentSelection  | Collection | Collection of names of selected objects                                           |
+| $editor.formProperties    | Objekt     | Properties of the current form                                                    |
+| $editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
