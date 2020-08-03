@@ -16,7 +16,7 @@ Les structures suivantes sont prises en charge par les requêtes REST :
 
 While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 
-Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple :
+Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple:
 
 `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 
