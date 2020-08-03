@@ -173,7 +173,7 @@ Voici la table du ET logique :
                                                 
                                                 ### Exemples
                                                 
-                                                | Opération             | Exemple                                    | Résultat   |
+                                                | Opération             | Exemple                                    | Result     |
                                                 | --------------------- | ------------------------------------------ | ---------- |
                                                 | ET                    | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
                                                 | OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
