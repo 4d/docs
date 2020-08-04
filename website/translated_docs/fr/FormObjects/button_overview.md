@@ -45,15 +45,15 @@ Par défaut, le style Classique a un fond gris clair avec un libellé au centre.
 
 ```4d
     "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+        "type": "button",   //définit le type d'objet
+        "style":"regular",  //définit le style du bouton
+        "defaultButton":"true"  //définit le bouton comme choix par défaut
+        "text": "OK",   //texte à faire apparaître dans le bouton
+        "action": "Annuler", //Action à exécuter
+        "left": 60,  //Position gauche dans le formulaire  
+        "top": 160, //Position supérieure dans le formulaire  
+        "width": 100,  //largeur du bouton
+        "height": 20 //hauteur du bouton
         }
 ```
 
@@ -71,15 +71,15 @@ Par défaut, le style A plat a un arrière-plan avec un libellé au centre, des 
 
 ```4d
 <br />    "myButton": {
-                "type": "button",
-                "style":"flat",
-                "defaultButton":"true"
-                "text": "OK",
-                "action": "Cancel",
+                "type": "button",   
+                "style":"flat", 
+                "defaultButton":"true"  
+                "text": "OK",   
+                "action": "Annuler", 
                 "left": 60,         
                 "top": 160,         
-                "width": 100,
-                "height": 20
+                "width": 100,   
+                "height": 20    
                 }
 ```
 
