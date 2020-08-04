@@ -16,7 +16,7 @@ Les formulaires 4D prennent en charge un grand nombre d'objets **actifs** et **s
 
 Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 
-* **[Form Editor](FormEditor/formEditor.md):** Drag an object from the Form Editor toolbar onto the form. Utilisez ensuite la liste des propriétés pour indiquer les propriétés de l'objet.  
+* **[Éditeur de formulaire](FormEditor/formEditor.md) :** en glissant un objet de la barre d'outils de l'éditeur de formulaire vers le formulaire. Utilisez ensuite la liste des propriétés pour indiquer les propriétés de l'objet.  
     Pour plus d'informations, reportez-vous au chapitre [Construction de formulaires](https://doc.4d.com/4Dv17/4D/17.3/Construction-des-formulaires.200-4639689.fr.html).
 
 * **Langage 4D** : Commandes du thème [Objets (Formulaires)](https://doc.4d.com/4Dv17/4D/17.3/Objets-Formulaires.201-4620222.fr.html) telles que `OBJECT DUPLICATE` ou `OBJECT SET FONT STYLE` permettent de créer et de définir des objets de formulaire.

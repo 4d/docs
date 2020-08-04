@@ -231,7 +231,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
+- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 
 ```4d
  C_LONGINT($0)
@@ -353,7 +353,7 @@ $NewPhrase:=Uppercase4("This is good.")
 
 In this example, the variable *$NewPhrase* gets “THIS is good.”
 
-The returned value, `$0`, is a local variable within the subroutine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. For example, you can write:
+The returned value, `$0`, is a local variable within the subroutine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
 
 ```4d
 // Faire_quelque chose
