@@ -42,9 +42,9 @@ Chaque règle de style d'une feuille de style contient deux parties :
 
 Le type d'objet définit le type d'objet à styler et correspond au sélecteur d'élément CSS.
 
-Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
+Specify the object type, then in curly braces, declare the style(s) to apply.
 
-> Le type d'objet correspond à la propriété JSON [ type ](FormObjects/properties_Object.md#type) des objets de formulaire.
+> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
 
 Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
@@ -54,7 +54,7 @@ Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte da
     }
     
 
-Pour appliquer le même style à plusieurs types d’objets, spécifiez les types d'objets séparés par un "," puis, entre accolades, déclarez le(s) style(s) à appliquer :
+To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
 
     text, input {
       text-align: left;
