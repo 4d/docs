@@ -79,7 +79,7 @@ Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’es
 
 Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
-The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
+Les commandes `Formula` ou `Formula from string` vous permettent de créer des objet formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
 
 Pour exécuter une méthode stockée dans une propriété objet, utilisez l'opérateur **( )** après un nom de la propriété, comme suit : Par exemple:
 
@@ -117,7 +117,7 @@ C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
-// equivalent to $result:=fullName("param1";"param2")
+// équivalent à $result:=fullName("param1";"param2")
 ```
 
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
@@ -133,7 +133,7 @@ La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajout�
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //ajouter la méthode  
 
 $result:=$o.fullName()
 //$result = "Jim Wesson"
