@@ -14,6 +14,6 @@ If the window of a form was the frontmost window, this event is called when the 
 
 Cet événement s'applique au formulaire dans son ensemble et non à un objet particulier. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
 
-### See also
+### Voir également
 
 [Sur activation](onActivate.md)
