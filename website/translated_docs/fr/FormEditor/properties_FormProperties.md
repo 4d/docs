@@ -128,7 +128,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | memorizeGeometry | boolean         | true, false       |
 
 
-#### See also
+#### Voir également
 
 [**Save Value**](FormObjects/properties_Object.md#save-value)
 
