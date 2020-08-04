@@ -19,7 +19,7 @@ p>![](assets/en/getStart/projectCreate1.png)
 
 <
 
-p>OR
+
 
 <
 
@@ -54,7 +54,7 @@ To open an existing project locally from 4D:
 
 <
 
-p>OR
+
 
 <
 
@@ -94,7 +94,7 @@ To connect remotely to a 4D Server project:
 
 <
 
-p>OR
+
 
 <
 

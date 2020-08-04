@@ -13,11 +13,11 @@ Cette classe est disponible depuis le "class store" de `4D`.
 
 Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcryptokeynew). Ses propriétés sont les suivantes (en lecture seule) :
 
-| Propriété | Type   | Description                                                                                                                           |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | Texte  | Nom du type de clé. Par exemple : "ECDSA" ou "RSA".                                                                                   |
-| size      | entier | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                                   |
-| curve     | Texte  | Définie uniquement pour les clés ECDSA : le nom de courbe normalisé de la clé. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
+| Propriété | Type    | Description                                                                                                                           |
+| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| type      | Texte   | Nom du type de clé. Par exemple : "ECDSA" ou "RSA".                                                                                   |
+| size      | integer | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                                   |
+| curve     | Texte   | Définie uniquement pour les clés ECDSA : le nom de courbe normalisé de la clé. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
 
 
 ### Exemple
@@ -48,15 +48,15 @@ ASSERT($status.success)
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-| Paramètres | Propriété | Type   |    | Description                                                                                                                    |
-| ---------- | --------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------ |
-| settings   |           | objet  | -> | Paramètres pour générer ou charger une paire de clés                                                                           |
-|            | type      | Texte  |    | Type de clé : "RSA", "ECDSA", ou "PEM" (voir ci-dessous)                                                                       |
-|            | size      | entier |    | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
-|            | curve     | Texte  |    | nom de la courbe ECDSA. Généralement "prime256v1" pour ES256 (par défaut), "secp384r1" pour ES384, "secp521r1" pour ES512      |
-|            | pem       | Texte  |    | Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. |
-|            |           |        |    |                                                                                                                                |
-| keyPair    |           | object | <- | Objet contenant une paire de clés de chiffrement                                                                               |
+| Paramètres | Propriété | Type    |    | Description                                                                                                                    |
+| ---------- | --------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------ |
+| settings   |           | object  | -> | Paramètres pour générer ou charger une paire de clés                                                                           |
+|            | type      | Texte   |    | Type de clé : "RSA", "ECDSA", ou "PEM" (voir ci-dessous)                                                                       |
+|            | size      | integer |    | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
+|            | curve     | Texte   |    | nom de la courbe ECDSA. Généralement "prime256v1" pour ES256 (par défaut), "secp384r1" pour ES384, "secp521r1" pour ES512      |
+|            | pem       | Texte   |    | Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. |
+|            |           |         |    |                                                                                                                                |
+| keyPair    |           | object  | <- | Objet contenant une paire de clés de chiffrement                                                                               |
 
 
 Cette méthode crée un nouvel objet contenant une paire de clés de chiffrement, fondée sur le paramètre `settings`. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
@@ -121,9 +121,9 @@ Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, o
 | Paramètres | Propriété | Type    |    | Description                                                                                                                                                                                                                |
 | ---------- | --------- | ------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message    |           | Texte   | -> | Chaîne message à signer                                                                                                                                                                                                    |
-| options    |           | objet   | -> | Options de signature                                                                                                                                                                                                       |
+| options    |           | object  | -> | Options de signature                                                                                                                                                                                                       |
 |            | hash      | Texte   |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
-|            | pss       | booléen |    | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                                |
+|            | pss       | boolean |    | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                                |
 |            | encoding  | Texte   |    | Représentation à utiliser pour la signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                               |
 |            |           |         |    |                                                                                                                                                                                                                            |
 | signature  |           | Texte   | <- | Signature résultante en représentation Base64 ou Base64URL, selon l'option "encoding"                                                                                                                                      |
@@ -148,13 +148,13 @@ La `cryptoKey` doit contenir une clé **privée** valide.
 | ---------- | --------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message    |           | Texte      | -> | Chaîne message utilisée pour générer la signature                                                                                                                                                                          |
 | signature  |           | Texte      | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon l'option "encoding"                                                                                                                                     |
-| options    |           | objet      | -> | Options de signature                                                                                                                                                                                                       |
+| options    |           | object     | -> | Options de signature                                                                                                                                                                                                       |
 |            | hash      | Texte      |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
-|            | pss       | booléen    |    | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                              |
+|            | pss       | boolean    |    | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                              |
 |            | encoding  | Texte      |    | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                    |
 |            |           |            |    |                                                                                                                                                                                                                            |
-| status     |           | objet      | <- | Résultat de la vérification                                                                                                                                                                                                |
-|            | success   | booléen    |    | True si la signature correspond au message                                                                                                                                                                                 |
+| status     |           | object     | <- | Résultat de la vérification                                                                                                                                                                                                |
+|            | success   | boolean    |    | True si la signature correspond au message                                                                                                                                                                                 |
 |            | errors    | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                                                                                |
 
 
@@ -177,15 +177,15 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| Paramètres | Propriété         | Type  |    | Description                                                                                                                                                                   |
-| ---------- | ----------------- | ----- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message    |                   | Texte | -> | Chaine message à chiffrer à l'aide de options.encodingDecrypted et encrypted.                                                                                                 |
-| options    |                   | objet | -> | Options de chiffrement                                                                                                                                                        |
-|            | hash              | Texte |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                           |
-|            | encodingEncrypted | Texte |    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
-|            | encodingDecrypted | Texte |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
-|            |                   |       |    |                                                                                                                                                                               |
-| result     |                   | Texte | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
+| Paramètres | Propriété         | Type   |    | Description                                                                                                                                                                   |
+| ---------- | ----------------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message    |                   | Texte  | -> | Chaine message à chiffrer à l'aide de options.encodingDecrypted et encrypted.                                                                                                 |
+| options    |                   | object | -> | Options de chiffrement                                                                                                                                                        |
+|            | hash              | Texte  |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                           |
+|            | encodingEncrypted | Texte  |    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
+|            | encodingDecrypted | Texte  |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
+|            |                   |        |    |                                                                                                                                                                               |
+| result     |                   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
 
 Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
@@ -206,13 +206,13 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | Paramètres | Propriété         | Type       |    | Description                                                                                                                                                             |
 | ---------- | ----------------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message    |                   | Texte      | -> | Chaine message à décoder à l'aide de options.encodingEncrypted et decrypted.                                                                                            |
-| options    |                   | objet      | -> | Options de décodage                                                                                                                                                     |
+| options    |                   | object     | -> | Options de décodage                                                                                                                                                     |
 |            | hash              | Texte      |    | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                     |
 |            | encodingEncrypted | Texte      |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
 |            | encodingDecrypted | Texte      |    | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 |            |                   |            |    |                                                                                                                                                                         |
-| status     |                   | objet      | <- | Résultat                                                                                                                                                                |
-|            | success           | booléen    |    | True si le message a été déchiffré avec succès                                                                                                                          |
+| status     |                   | object     | <- | Result                                                                                                                                                                  |
+|            | success           | boolean    |    | True si le message a été déchiffré avec succès                                                                                                                          |
 |            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
 |            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 

@@ -3,140 +3,140 @@ id: licenses
 title: Gestion des licences 4D
 ---
 
-Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
 
 Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 
 - votre configuration ne permet pas l'activation automatique,
 - vous avez acheté des licences supplémentaires. 
 
-Aucune activation n’est requise pour les usages suivants :
+No activation is required for the following uses:
 
-- 4D utilisé en mode distant (connexion à un 4D Server)
-- 4D utilisé en mode local avec une base interprétée sans accès au mode Développement.
+- 4D used in remote mode (connection to a 4D Server)
+- 4D used in local mode with an interpreted database with no access to the Design environment.
 
 ## Première activation
 
-Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. La boîte de dialogue de choix du [mode d'activation](#activation-mode) apparaît.
+Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. The dialog box for choosing the [activation mode](#activation-mode) appears.
 
 ![](assets/en/getStart/server1.png)
 
-4D vous propose trois modes d’activation. **L'activation immédiate** est recommandée.
+4D offers three activation modes. We recommend **Instant Activation**.
 
-### Activation immédiate
+### Instant Activation
 
-Saisissez votre identifiant utilisateur (e-mail ou compte 4D) ainsi que votre mot de passe. Si vous n'avez pas encore de compte client chez 4D, vous devez en créer un à l'adresse suivante :
+Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
 
-[https://account.4d.com/us/login.shtml]()
+<https://account.4d.com/us/login.shtml>
 
 ![](assets/en/getStart/activ1.png)
 
-Entrez ensuite le numéro de licence du produit à activer. Ce numéro se trouve dans l'e-mail de livraison ou le certificat d'authenticité reçu par courrier.
+Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
 
 ![](assets/en/getStart/activ2.png)
 
-### Activation différée
+### Deferred Activation
 
-Si vous ne pouvez pas utiliser [l'activation immédiate](#instant-activation) parce que votre ordinateur n'a pas d'accès Internet, vous pouvez effectuer une activation différée comme décrit dans les étapes suivantes.
+If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
 
-1. Dans la fenêtre du Gestionnaire de licences de 4D accessible depuis le menu Aide, sélectionnez l'onglet **Activation différée**.
-2. Entrez votre Numéro de licence ainsi que votre adresse E-mail, puis cliquez sur **Générer le fichier...** afin de créer le fichier d'ID (*reg.txt*).
+1. In the License Manager window, select the **Deferred Activation** tab.
+2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
 
 ![](assets/en/getStart/activ3.png)
 
-3. Enregistrez le fichier *reg.txt* sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
-4. Depuis la machine qui a un accès Internet, connectez-vous sur <https://activation.4d.com>.
-5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier *reg.txt* généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
-6. Téléchargez le(s) fichier(s) de licence.
+3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
+4. On the machine with internet access, login to <https://activation.4d.com>.
+5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
+6. Download the serial file(s).
 
 ![](assets/en/getStart/activ4.png)
 
-7. Enregistrez le ou les fichier(s) *license4d* sur un support partagé et transférez-le(s) sur la machine 4D utilisée lors de l'étape 1.
-8. De retour sur la machine avec 4D, toujours dans l'écran **Activation différée**, cliquez sur le bouton **Suivant** ; puis cliquez sur le bouton **Charger...** et sélectionnez un fichier *license4d* depuis le media partagé utilisé à l'étape 7.
+7. Save the *license4d* file(s) on a shared media and transfer them back to the 4D machine from step 1.
+8. Now back on the machine with 4D, still on the **Deferred Activation** page, click **Next**; then click the **Load...** button and select a *license4d* file from the shared media from step 7.
 
 ![](assets/en/getStart/activ5.png)
 
-Une fois le fichier de licence chargé, cliquez sur le bouton **Suivant**.
+With the license file loaded, click on **Next**.
 
 ![](assets/en/getStart/activ6.png)
 
-9. Cliquez sur le bouton **Ajouter N°** pour ajouter une autre licence. Répétez ces étapes jusqu'à ce que toutes les licences téléchargées à l'étape 6 aient été intégrées.
+9. Click on the **Add N°** button to add another license. Repeat these steps until all licenses from step 6 have been integrated.
 
-Votre application 4D est désormais activée.
+Your 4D application is now activated.
 
-### Activation d’urgence
+### Emergency Activation
 
-Ce mode permet l’activation exceptionnelle et temporaire de l’application 4D (5 jours maximum) sans connexion au site Internet de 4D. Cette activation ne peut être utilisée qu’une seule fois.
+This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
-## Ajouter des licences
+## Adding licenses
 
-Vous pouvez à tout moment ajouter de nouvelles licences, par exemple pour étendre les capacités de votre application.
+You can add new licenses, for example to extend the capacities of your application, at any time.
 
-Choisissez la commande **Gestionnaire de licences...** dans le menu **Aide** de l’application 4D ou 4D Server puis cliquez sur le bouton **Actualiser** :
+Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
 
 ![](assets/en/getStart/licens1.png)
 
-Ce bouton vous connecte à notre base clients et active automatiquement toutes les licences nouvelles ou mises à jour liées à la licence courante (la licence courante est affichée en **gras** dans la liste des Licences actives). Vous devrez simplement saisir vos identifiants 4D (compte et mot de passe). Vous devrez simplement saisir vos identifiants 4D (compte et mot de passe).
+This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). You will just be prompted for your user account and password.
 
-- Si vous avez acheté des expansions supplémentaires pour un 4D Server, vous n'avez pas besoin de saisir de numéro -- cliquez simplement sur **Actualiser**.
-- A la première activation d'un 4D Server, vous devez uniquement saisir le numéro du serveur et toutes les licences d'expansion associées sont automatiquement affectées.
+- If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
+- At the first activation of a 4D Server, you just need to enter the server number and all the purchased expansions are automatically assigned.
 
-Vous pouvez utiliser le bouton **Actualiser** dans les contextes suivants :
+You can use the **Refresh** button in the following contexts:
 
-- Lorsque vous avez acquis une expansion supplémentaire et souhaitez l'activer,
-- Lorsque vous voulez mettre à jour un numéro de licence temporaire ayant expiré (Partenaires ou évolutions).
+- When you have purchased an additional expansion and want to activate it,
+- When you need to update an expired temporary number (Partners or evolutions).
 
 ## 4D Online Store
 
-Sur le site web 4D Store, vous pouvez commander, mettre à jour, étendre et gérer vos produits 4D. Vous pouvez vous connecter au store à l'adresse suivante : [https://store.4d.com/fr/](https://store.4d.com/us/) (veuillez sélectionner votre pays).
+In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can reach the store at the following address: <https://store.4d.com/us/> (you will need to select your country).
 
-Cliquez sur **Se connecter** pour vous identifier à l'aide de votre compte existant ou sur **Nouveau compte** pour en créer un nouveau, puis suivez les instructions à l'écran.
+Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
-### Gestion des licences
+### License Management
 
-Après vous être identifié, vous pouvez cliquer sur le lien **Liste de mes licences** en haut de la partie droite de la fenêtre :
+After you log in, you can click on **License list** at the top right of the page:
 
 ![](assets/en/getStart/licens2.png)
 
-Vous pouvez ensuite gérer vos licences en les affectant à des projets.
+Here you can manage your licenses by assigning them to projects.
 
-Sélectionnez la licence que vous souhaitez dans la liste, puis cliquez sur **Lier à un projet... **:
+Select the appropriate license from the list then click **Link to a project... >**:
 
 ![](assets/en/getStart/licens3.png)
 
-Vous pouvez sélectionner un projet existant ou créer un nouveau :
+You can either select an existing project or create a new one:
 
 ![](assets/en/getStart/licens4.png)
 
 ![](assets/en/getStart/licens5.png)
 
-Les projets vous permettent d'organiser vos licences comme vous le souhaitez :
+You can use projects to organize your licenses according to your needs:
 
 ![](assets/en/getStart/licens6.png)
 
-## Dépannage
+## Troubleshooting
 
-En cas d’échec du processus d’installation ou d’activation, veuillez consulter le tableau suivant, présentant les causes de dysfonctionnements les plus fréquentes :
+If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Symptômes                                                               | Causes possibles                                | Solution(s)                                                                                                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Impossible de télécharger le produit depuis le site Internet de 4D      | Site Internet indisponible, antivirus, firewall | 1- Réessayez ultérieurement OU 2- Désactivez temporairement votre antivirus ou votre firewall.                                                          |
-| Impossible d’installer le produit sur le disque (installation refusée). | Droits d’accès utilisateur insuffisants         | Ouvrez une session avec des droits d’accès permettant l’installation d’applications (accès administrateur)                                              |
-| Echec de l’activation en ligne                                          | Antivirus, firewall, proxy                      | 1- Désactivez temporairement votre antivirus ou votre firewall OU 2- Utilisez l’activation différée (non disponible avec les licences des versions "R") |
+| Symptoms                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
+| Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
+| Failure of on-line activation                                 | Antivirus application, firewall, proxy                     | 1- Temporarily disable your antivirus application or your firewall OR 2- Use deferred activation (not available with licenses for "R" versions) |
 
 
-Si ces informations ne vous permettent pas de résoudre votre problème, veuillez contacter 4D ou votre distributeur local.
+If this information does not help you resolve your problem, please contact 4D or your local distributor.
 
 ## Contacts
 
-Pour toute question relative à l’installation ou l’activation de votre produit, veuillez contacter 4D Sas ou votre distributeur local. 
+For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
-Pour la France :
+For the US:
 
-- Web : [http://www.4d.com/fr/](https://us.4d.com/4d-technical-support)
-- Téléphone : 0892 68 09 97 (0,34 Euro TTC/Min)
+- Web: <https://us.4d.com/4d-technical-support>
+- Telephone: 1-408-557-4600
 
-Retrouvez également en ligne la communauté des développeurs 4D à l’adresse : http://forums.4d.fr
+For the UK:
 
-- 
--
+- Web: <https://uk.4d.com/4d-technical-support>
+- Telephone: 01625 536178

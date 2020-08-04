@@ -27,7 +27,7 @@ title: 4D ライセンスの管理
 
 ユーザーID (メールアドレスまたは 4Dアカウント) とパスワードを入力します。 既存のユーザーアカウントが無い場合、まず以下のアドレスから作成する必要があります:
 
-[https://account.4d.com/ja/login.shtml](https://account.4d.com/us/login.shtml)
+<https://account.4d.com/us/login.shtml>
 
 ![](assets/en/getStart/activ1.png)
 

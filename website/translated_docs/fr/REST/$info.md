@@ -11,9 +11,9 @@ En appelant cette requête pour votre projet, vous récupérez des informations 
 
 | Propriété      | Type       | Description                                                                         |
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Numérique  | 4D Server's cache size.                                                             |
-| usedCache      | Numérique  | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Numérique  | Number of entity selections.                                                        |
+| cacheSize      | Nombre     | 4D Server's cache size.                                                             |
+| usedCache      | Nombre     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Nombre     | Number of entity selections.                                                        |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |
 | ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
 | sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
