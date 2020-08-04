@@ -249,7 +249,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
         
-        #### See also
+        #### Voir également
         
         [Message d'aide](properties_Help.md)
         
