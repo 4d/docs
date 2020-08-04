@@ -64,6 +64,6 @@ Note that converting back and forth may lead to an end result that is different 
 
 [List Box](listbox_overview.md)
 
-#### See also
+#### Voir également
 
 [Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

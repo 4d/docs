@@ -227,7 +227,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 [List Box](listbox_overview.md#overview)
 
-#### See also
+#### Voir également
 
 [Tableau hauteurs des lignes](#row-height-array)
 
@@ -241,7 +241,7 @@ This property is used to specify the name of a row height array that you want to
 
 When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
 
-For example, you can write:
+Par exemple, vous pouvez écrire :
 
 ```4d
 ARRAY LONGINT(RowHeights;20)
@@ -264,6 +264,6 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 [List Box](listbox_overview.md#overview)
 
-#### See also
+#### Voir également
 
 [Hauteur des lignes](#row-height)
