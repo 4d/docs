@@ -306,6 +306,9 @@
       "FormEditor/forms": {
         "title": "A propos des formulaires 4D"
       },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
+      },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
       },
@@ -563,7 +566,7 @@
         "title": "Travailler avec des données"
       },
       "ORDA/glossary": {
-        "title": "Glossary"
+        "title": "Glossaire"
       },
       "ORDA/ordaClasses": {
         "title": "Data Model Classes"

@@ -28,7 +28,7 @@ Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant [`$method=upd
 
 `POST  /rest/Employee/?$method=update`
 
-**Data POST** :
+**POST data**:
 
     {
         __KEY: "12",

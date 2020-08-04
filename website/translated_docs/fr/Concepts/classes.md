@@ -97,9 +97,9 @@ Available classes are accessible from their class stores. Two class stores are a
 
 #### cs -> classStore
 
-| Paramètres | Type  |    | Description                                   |
-| ---------- | ----- | -- | --------------------------------------------- |
-| classStore | objet | <- | User class store for the project or component |
+| Paramètres | Type   |    | Description                                   |
+| ---------- | ------ | -- | --------------------------------------------- |
+| classStore | object | <- | User class store for the project or component |
 
 
 The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
@@ -152,9 +152,9 @@ Un objet de classe est un objet partagé et est donc accessible simultanément �
 
 #### cs.\<ClassName>.new() -> classObject
 
-| Paramètres  | Type  |    | Description                           |
-| ----------- | ----- | -- | ------------------------------------- |
-| classObject | objet | <- | New object of the \<ClassName> class |
+| Paramètres  | Type   |    | Description                           |
+| ----------- | ------ | -- | ------------------------------------- |
+| classObject | object | <- | New object of the \<ClassName> class |
 
 
 The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
@@ -232,7 +232,7 @@ In the class definition file, function declarations use the `Function` keyword, 
 
 > **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
+Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple:
 
 ```4d
 Fonction computeArea($width : Integer; $height : Integer)->$area : Integer

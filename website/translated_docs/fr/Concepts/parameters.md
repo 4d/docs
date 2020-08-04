@@ -339,19 +339,19 @@ Function add($x : Variant; $y : Integer): Integer
 
 La valeur à retourner est automatiquement placée dans la variable locale `$0`.
 
-Par exemple, la méthode suivante, appelée `Majuscules4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
+For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-Voici un exemple qui utilise la méthode Majuscules4 :
+The following is an example that uses the Uppercase4 method:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-Dans ce cas, la variable *$NewPhrase* prend la valeur “BIEN joué.”
+In this example, the variable *$NewPhrase* gets “THIS is good.”
 
 The returned value, `$0`, is a local variable within the subroutine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. For example, you can write:
 

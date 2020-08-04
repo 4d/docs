@@ -101,7 +101,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Par exemple :
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Par exemple:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -521,7 +521,7 @@ The typical sequence of events generated during data entry or modification is as
 | Its value is modified                                                           | Tous                        | Sue avant frappe clavier                                                                                                                                                                                       |
 |                                                                                 | Tous                        | Sue après frappe clavier                                                                                                                                                                                       |
 |                                                                                 | Tous                        | Sur après modification                                                                                                                                                                                         |
-| A user validates and leaves the cell                                            | Liste box sélection         | Save                                                                                                                                                                                                           |
+| A user validates and leaves the cell                                            | Selection list boxes        | Save                                                                                                                                                                                                           |
 |                                                                                 | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
 |                                                                                 | Selection list boxes        | On Data Change(*)                                                                                                                                                                                              |
 |                                                                                 | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
@@ -1007,25 +1007,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | Texte | réel | entier | boolean | color | event |
-| --------------------- | --------------------------------------- | ----- | ---- | ------ | ------- | ----- | ----- |
-| *Attributs*           | *Description*                           |       |      |        |         |       |       |
-| value                 | cell value (input or output)            | x     | x    | x      |         |       |       |
-| min                   | minimum value                           |       | x    | x      |         |       |       |
-| max                   | maximum value                           |       | x    | x      |         |       |       |
-| behavior              | "threeStates" value                     |       |      | x      |         |       |       |
-| requiredList          | drop-down list defined in object        | x     | x    | x      |         |       |       |
-| choiceList            | combo box defined in object             | x     | x    | x      |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x      |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x      |         |       |       |
-| saveAs                | "reference" or "value"                  | x     | x    | x      |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x     | x    | x      |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x     | x    | x      |         |       |       |
-| unitList              | array of X elements                     | x     | x    | x      |         |       |       |
-| unitReference         | index of selected element               | x     | x    | x      |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x     | x    | x      |         |       |       |
-| unitsListName         | 4D list name for units                  | x     | x    | x      |         |       |       |
-| alternateButton       | add an alternate button                 | x     | x    | x      | x       | x     |       |
+|                       | valueType                               | Texte | réel | integer | boolean | color | event |
+| --------------------- | --------------------------------------- | ----- | ---- | ------- | ------- | ----- | ----- |
+| *Attributs*           | *Description*                           |       |      |         |         |       |       |
+| value                 | cell value (input or output)            | x     | x    | x       |         |       |       |
+| min                   | minimum value                           |       | x    | x       |         |       |       |
+| max                   | maximum value                           |       | x    | x       |         |       |       |
+| behavior              | "threeStates" value                     |       |      | x       |         |       |       |
+| requiredList          | drop-down list defined in object        | x     | x    | x       |         |       |       |
+| choiceList            | combo box defined in object             | x     | x    | x       |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |         |       |       |
+| saveAs                | "reference" or "value"                  | x     | x    | x       |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x     | x    | x       |         |       |       |
+| unitList              | array of X elements                     | x     | x    | x       |         |       |       |
+| unitReference         | index of selected element               | x     | x    | x       |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x     | x    | x       |         |       |       |
+| unitsListName         | 4D list name for units                  | x     | x    | x       |         |       |       |
+| alternateButton       | add an alternate button                 | x     | x    | x       | x       | x     |       |
 
 
 #### value
@@ -1104,7 +1104,7 @@ Dans les deux cas, vous pouvez utiliser un attribut "value" pour présélectionn
 
 > Les valeurs du widget sont définies via un tableau. Si vous souhaitez associer le widget à une énumération 4D existante, vous devez utiliser les attributs "requiredListReference", "requiredListName", "choiceListReference" ou "choiceListName".
 
-Exemples :
+Voici quelques exemples :
 
 * Vous voulez afficher une liste déroulante avec juste deux options, "Open" ou "Closed". "Closed" doit être présélectionné :
 
@@ -1146,7 +1146,7 @@ Utilisez "requiredListName" ou "requiredListReference" en fonction de la provena
 > * Si vous souhaitez définir des valeurs d'énumération via un simple tableau, vous pouvez utiliser l'attribut "requiredList".
 > * Si la liste contient du texte représentant des valeurs réelles, le séparateur décimal doit être le point ("."), quels que soient les paramètres locaux, ex : "17.6" "1234.456".
 
-Exemples :
+Voici quelques exemples :
 
 * Vous voulez afficher une liste déroulante basée sur une énumération nommée "colors" définie dans la Boîte à outils (contenant les valeurs "bleu", "jaune" et "vert"), la stocker en tant que valeur et afficher "bleu" par défaut :
 
