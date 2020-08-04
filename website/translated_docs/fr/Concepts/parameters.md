@@ -14,15 +14,15 @@ Vous aurez souvent besoin de fournir des valeurs à vos méthodes. Vous pouvez f
 ALERT("Bonjour")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+Les paramètres sont passés de la même manière aux méthodes ou aux fonctions de classe (class functions). For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
 
     $area:=$o.getArea(50;100)
     
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+Ou si la méthode `FAIRE QUELQUE CHOSE` accepte trois paramètres, l'appel à cette méthode pourrait être de la forme suivante :
 
 ```4d
-DO_SOMETHING($WithThis;$AndThat;$ThisWay)
+FAIRE QUELQUE CHOSE(AvecCeci; EtCela; CommeCeci)
 ```
 
 Les paramètres sont séparés par des points-virgules (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
@@ -76,7 +76,7 @@ You can declare methods parameters using sequentially numbered variables: **$1**
 For example, when you call a `DO_SOMETHING` project method with three parameters:
 
 ```4d
-DO_SOMETHING($WithThis;$AndThat;$ThisWay)
+FAIRE QUELQUE CHOSE(AvecCeci; EtCela; CommeCeci)
 ```
 
 In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
@@ -335,17 +335,17 @@ Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
-### Sequential syntax
+### Syntaxe séquentielle
 
 La valeur à retourner est automatiquement placée dans la variable locale `$0`.
 
-For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+Par exemple, la méthode suivante, appelée `Uppercase4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 method:
+Voici un exemple qui utilise la méthode Uppercase4 :
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
