@@ -79,23 +79,23 @@ Par exemple, lorsque vous appelez une méthode projet `FAIRE QUELQUE CHOSE` avec
 FAIRE QUELQUE CHOSE(AvecCeci; EtCela; CommeCeci)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+Dans le code de la méthode, la valeur de chaque paramètre est automatiquement copiée dans des variables $1, $2, $3 :
 
 ```4d
-  //Code of the method DO_SOMETHING
-  //Assuming all parameters are of the text type
+  //Code de la méthode FAIRE QUELQUE CHOSE
+  //Supposons que tous les paramètres sont de type texte
  C_TEXT($1;$2;$3)
- ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+ ALERT("J'ai reçu "+$1+" et "+$2+" et aussi "+$3)
+  //$1 contient le paramètre $AvecCeci
+  //$2 contient le paramètre $EtCela
+  //$3 contient le paramètre $CommeCeci
 ```
 
 Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des commandes consacrées, comme par exemple :
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! comme paramètre de SetCalendarDate
+//passez la date !05/05/20! comme paramètre de SetCalendarDate
 // dans le contexte d'un sous-formulaire
 ```
 
@@ -107,10 +107,10 @@ A l'intérieur de la sous-routine, vous pouvez utiliser les paramètres $1, $2..
 
 ### Type de données pris en charge
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+Vous pouvez utiliser n'importe quelle [expression](Concepts/quick-tour.md#expression-types) comme paramètre séquentiel, à l'exception des :
 
 - tables
-- arrays
+- tableaux
 
 Les expressions de tables ou de tableaux peuvent être passées uniquement [comme une référence utilisant un pointeur](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
@@ -222,16 +222,16 @@ Pour plus d'informations, consultez la page [Modes interprété et compilé](Con
 
 La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
+- Méthodes base - Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
 // Sur connexion Web
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
+- Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 
 ```4d
  C_LONGINT($0)
@@ -303,7 +303,7 @@ De même que pour les autres variables locales, la déclaration du paramètre g�
 
 La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type Entier long. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type Entier long, même si pour vous, par exemple, il était de type Réel.
 
-> The number in the declaration has to be a constant and not a variable.
+> Le nombre, dans la déclaration, doit toujours être une constante et jamais une variable.
 
 ## Valeurs retournées
 
