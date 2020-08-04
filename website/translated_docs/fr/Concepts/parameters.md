@@ -14,7 +14,7 @@ Vous aurez souvent besoin de fournir des valeurs à vos méthodes. Vous pouvez f
 ALERT("Bonjour")
 ```
 
-Les paramètres sont passés de la même manière aux méthodes ou aux fonctions de classe (class functions). For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+Les paramètres sont passés de la même manière aux méthodes ou aux fonctions de classe (class functions). Par exemple, si une fonction de classe nommée `getArea()` accepte deux paramètres, voilà) à quoi pourrait ressembler un appel à la fonction de classe :
 
     $area:=$o.getArea(50;100)
     
@@ -25,55 +25,55 @@ Ou si la méthode `FAIRE QUELQUE CHOSE` accepte trois paramètres, l'appel à ce
 FAIRE QUELQUE CHOSE(AvecCeci; EtCela; CommeCeci)
 ```
 
-Les paramètres sont séparés par des points-virgules (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+Les paramètres sont séparés par des points-virgules (;). Leur valeur est [évaluée](#values-or-references) au moment de l'appel et copiée dans les variables locales au sein de la fonction de classe ou de la méthode appelée, ou bien dans :
 
-- [named variables](#named-parameters-class-functions) (class functions only), or
-- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
+- [variables nommées](#named-parameters-class-functions) (fonctions de classe uniquement), ou
+- [variables numérotées séquentiellement](#sequential-parameters) (méthodes et fonctions de classe). 
 
-## Named parameters (class functions)
+## Paramètres nommés (fonctions de classe ou class functions)
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
+Dans les fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. Vous pouvez déclarer des paramètres de fonction de classe en utilisant un **nom de paramètre** avec un **type de paramètre**, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
-> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
+> Cette syntaxe n'est pas prise en charge avec les méthodes. Voir [Paramètres séquentiels](#sequential-parameters).
 
-For example, when you call a `getArea()` function with two parameters:
+Par exemple, lorsque vous appelez une fonction `getArea()` avec deux paramètres :
 
     $area:=$o.getArea(50;100)
     
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+Dans le code de la fonction de classe, la valeur de chaque paramètre est copiée dans le paramètre déclaré correspondant :
 
 ```4d
-// Class: Polygon
-Function getArea($width : Integer; $height : Integer)-> $area : Integer
+// Classe : Polygon
+Fonction getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as `Variant`.
+> Si le type n'est pas défini, le paramètre sera défini comme `Variant`.
 > 
-> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. Par exemple:
+> [La syntaxe des paramètres séquentiels](#sequential-parameters) peut être utilisée pour déclarer des paramètres de fonction de classe. Les deux syntaxes peuvent être mélangées. Par exemple:
 > 
 > ```4d
-Function add($x : Integer)
+Fonction add($x : Integer)
   var $0,$2 : Integer
   $0:=$x+$2
 ```
 
-### Supported data types
+### Type de données pris en charge
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including for example:
+Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#using-the-var-keyword), y compris par exemple :
 
 ```4d
-Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
+Fonction saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
 
-## Sequential parameters
+## Paramètres séquentiels
 
-You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. La numérotation des variables locales représente l’ordre des paramètres.
+Vous pouvez déclarer des paramètres de méthodes à l'aide de variables numérotées séquentiellement : **$1**, **$2**, **$3**, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
+> Cette syntaxe est prise en charge pour les méthodes et les fonctions de classe. Cependant, pour les fonctions de classe, il est recommandé d'utiliser la syntaxe des [paramètres nommés](#named-parameters-class-functions).
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+Par exemple, lorsque vous appelez une méthode projet `FAIRE QUELQUE CHOSE` avec trois paramètres :
 
 ```4d
 FAIRE QUELQUE CHOSE(AvecCeci; EtCela; CommeCeci)
@@ -101,11 +101,11 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 **Note :** Pour une bonne exécution du code, assurez-vous que tous les paramètres `$1`, `$2`... sont correctement déclarés dans les méthodes appelées (voir [Déclaration des paramètres](#declaring-parameters) ci-dessous).
 
-### Input/Output variables
+### Variables d'entrée/de sortie
 
 A l'intérieur de la sous-routine, vous pouvez utiliser les paramètres $1, $2... de la même manière que vous utilisez les autres variables locales. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
 
-### Supported data types
+### Type de données pris en charge
 
 You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
 
@@ -305,9 +305,9 @@ La commande ci-dessus signifie que tous les paramètres à partir du quatrième 
 
 > The number in the declaration has to be a constant and not a variable.
 
-## Returning values
+## Valeurs retournées
 
-Data can be returned from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur* : 
+Data can be returned from methods and class functions. Par exemple, la ligne d’instruction suivante utilise une commande intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur* : 
 
 ```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
@@ -351,9 +351,9 @@ Voici un exemple qui utilise la méthode Uppercase4 :
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
+Dans ce cas, la variable *$NewPhrase* prend la valeur “THIS is good.”
 
-The returned value, `$0`, is a local variable within the subroutine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
+La valeur retournée, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
 
 ```4d
 // Faire_quelque chose
