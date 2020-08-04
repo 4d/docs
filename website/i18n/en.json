@@ -20,7 +20,7 @@
       "API/file": {
         "title": "File"
       },
-      "API/fileMethods": {
+      "API/fileMethodsandPropertiesandProperties": {
         "title": "File and Folder Methods"
       },
       "API/fileProperties": {

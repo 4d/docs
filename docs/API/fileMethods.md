@@ -1,83 +1,30 @@
 ---
-id: fileMethods
+id: fileMethodsandPropertiesandProperties
 title: File and Folder Methods
 ---
 
 
 ## Methods
 
-|Name|Syntax|Description|
+|Name|Description|
 |----|----|---|
-|<!-- REF fileMethods.copyTo -->[copyTo()](#copyto)<!-- END REF -->|<!--INCLUDE fileMethods.copyTo.Syntax -->|<!-- INCLUDE fileMethods.copyTo.Summary -->|
-|<!-- REF fileMethods.create -->[create()](#create)<!-- END REF -->|<!--INCLUDE fileMethods.create.Syntax --> |<!-- INCLUDE fileMethods.create.Summary --> |
-|<!-- REF fileMethods.createAlias -->[createAlias()](#createalias)<!-- END REF -->|<!--INCLUDE fileMethods.createAlias.Syntax --> |<!-- INCLUDE fileMethods.createAlias.Summary --> |
-|<!-- REF fileMethods.delete -->[delete()](#delete)<!-- END REF -->|<!--INCLUDE fileMethods.delete.Syntax --> |<!-- INCLUDE fileMethods.delete.Summary --> |
-|<!-- REF fileMethods.getContent -->[getContent()](#getcontent)<!-- END REF -->|<!--INCLUDE fileMethods.getContent.Syntax -->|<!-- INCLUDE fileMethods.getContent.Summary -->|
-|<!-- REF fileMethods.getIcon -->[getIcon()](#geticon)<!-- END REF -->|<!--INCLUDE fileMethods.getIcon.Syntax -->|<!-- INCLUDE fileMethods.getIcon.Summary -->|
-|<!-- REF fileMethods.getText -->[getText()](#gettext)<!-- END REF -->|<!--INCLUDE fileMethods.getText.Syntax -->|<!-- INCLUDE fileMethods.getText.Summary -->|
-|<!-- REF fileMethods.moveTo -->[moveTo()](#moveto)<!-- END REF -->|<!--INCLUDE fileMethods.moveTo.Syntax -->|<!-- INCLUDE fileMethods.moveTo.Summary -->|
-|<!-- REF fileMethods.rename -->[rename()](#rename)<!-- END REF -->|<!--INCLUDE fileMethods.rename.Syntax -->|<!-- INCLUDE fileMethods.rename.Summary -->|
-|<!-- REF fileMethods.setContent -->[setContent()](#setcontent)<!-- END REF -->| <!--INCLUDE fileMethods.setContent.Syntax -->|<!-- INCLUDE fileMethods.setContent.Summary -->|
-|<!-- REF fileMethods.setText -->[setText()](#settext)<!-- END REF -->|<!--INCLUDE fileMethods.setText.Syntax -->|<!-- INCLUDE fileMethods.setText.Summary -->|
-
-
-
-<!-- REF fileMethods.copyTo.Info -->
-### copyTo()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-<!-- REF fileMethods.copyTo.Syntax -->
-**copyTo** (*destinationFolder*{;{*newName}*{;*overwrite*} ) &rarr; Result<!-- END REF -->
-
-<!-- REF fileMethods.copyTo.Parameters -->
-|Parameter|Type|Description|
-|---------|--- |-----------|
-|Result | BLOB |File content|
-<!-- END REF -->
-
-<!-- REF fileMethods.copyTo.Desc -->
-##### Description
-The file.<!-- REF fileMethods.copyTo.method -->copyTo( )<!-- END REF  --> method  <!-- REF fileMethods.copyTo.Summary -->copies the `File` object (source file) into the specified *destinationFolder*. <!-- END REF -->
-
-The *destinationFolder* must exist on disk, otherwise an error is generated.  
-
-By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
-
-If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
-
-|Constant|Value|Comment|
-|---|---|---|
-|fk overwrite|4|Overwrite existing elements, if any|
-
-
-*Returned value*
-
-The file.getContent( ) method returns a BLOB.
-
-##### Example
-The method returns the copied `File` object.
-
-```4d
- C_TEXT($vPath)
- $vPath:=Select document("";"*";"Select a document";0)
- If(OK=1) //If a document has been chosen
-    [aTable]aBlobField:=File($vPath;fk platform path).getContent()
- End if
-```
-
- <!-- END REF -->
- <!-- END REF -->
+|<!-- REF #Document.copyTo -->[copyTo()](#copyto)<!-- END REF -->|<!-- INCLUDE #Document.copyTo().Summary -->|
+|<!-- REF #fileMethodsandProperties.create -->[create()](#create)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.create().Summary --> |
+|<!-- REF #fileMethodsandProperties.createAlias -->[createAlias()](#createalias)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.createAlias().Summary --> |
+|<!-- REF #fileMethodsandProperties.delete -->[delete()](#delete)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.delete().Summary --> |
+|<!-- REF #Document.getContent -->[getContent()](#getcontent)<!-- END REF -->|<!-- INCLUDE #Document.getContent().Summary -->|
+|<!-- REF #Document.getIcon -->[getIcon()](#geticon)<!-- END REF -->|<!-- INCLUDE #Document.getIcon().Summary -->|
+|<!-- REF #Document.getText -->[getText()](#gettext)<!-- END REF -->|<!-- INCLUDE #Document.getText().Summary -->|
+|<!-- REF #fileMethodsandProperties.moveTo -->[moveTo()](#moveto)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.moveTo().Summary -->|
+|<!-- REF #fileMethodsandProperties.rename -->[rename()](#rename)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.rename().Summary -->|
+|<!-- REF #fileMethodsandProperties.setContent -->[setContent()](#setcontent)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.setContent().Summary -->|
+|<!-- REF #fileMethodsandProperties.setText -->[setText()](#settext)<!-- END REF -->|<!-- INCLUDE #fileMethodsandProperties.setText().Summary -->|
 
 
 
 
-<!-- REF fileMethods.create.Info -->
-### create()
+<!-- REF #fileMethodsandProperties.create().Info -->
+### .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -86,40 +33,43 @@ The method returns the copied `File` object.
 </details>
 
 
-<!--REF fileMethods.create.Syntax -->
-**create** &rarr; boolean<!-- END REF -->
+<!--REF #fileMethodsandProperties.create().Syntax -->
+**.create( )** -> boolean<!-- END REF -->
 
-<!--REF fileMethods.create.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|Result|Boolean|True if the file was created successfully, false otherwise|
+<!--REF #fileMethodsandProperties.create().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
 <!-- END REF -->
 
 
-<!-- REF fileMethods.create.Desc -->
+<!-- REF #fileMethodsandProperties.create().Desc -->
 #### Description
 
-The file.<!-- REF fileMethods.create.method -->create( )<!-- END REF --> method <!-- REF fileMethods.create.Summary -->creates a file on disk according to the properties of the file object.<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.create().method -->`.create( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.create().Summary -->creates a file on disk according to the properties of the file object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the file.platformPath or file.path properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE #fileMethodsandProperties.platformPath -->](#platformpath) or [<!-- INCLUDE #fileMethodsandProperties.path -->](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-Returned value
+**Returned value**
 
-true if the file is created successfully;
-false if a file with the same name already exists or if an error occured.
+*	**True** if the file is created successfully;
+*	**False** if a file with the same name already exists or if an error occured.
 
 ##### Example
+
 Creation of a preferences file in the database folder:
- ```4d
+
+```4d
  C_BOOLEAN($created)
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
- ```
+```
+
 <!-- END REF -->
 <!-- END REF -->
 
 
-<!-- REF fileMethods.createAlias.Info -->
-### createAlias()
+<!-- REF #fileMethodsandProperties.createAlias().Info -->
+### .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -127,50 +77,53 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-<!--REF fileMethods.createAlias.Syntax -->
- **file.createAlias** (*destinationFolder* ; *aliasName* {; *aliasType*} ) &rarr; Result<!-- END REF -->
+<!--REF #fileMethodsandProperties.createAlias().Syntax -->
+**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> Result<!-- END REF -->
 
- <!--REF fileMethods.createAlias.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|destinationFolder|Object|Destination folder for the alias or shortcut|
-|aliasName|Text|Name of the alias or shortcut|
-|aliasType|Longint|Type of the alias link|
-|Result|Object|Alias or shortcut file reference|
+<!--REF #fileMethodsandProperties.createAlias().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|destinationFolder|Object|->|Destination folder for the alias or shortcut|
+|aliasName|Text|->|Name of the alias or shortcut|
+|aliasType|Longint|->|Type of the alias link|
+|Result|Object|<-|>Alias or shortcut file reference|
 <!-- END REF -->
 
-<!-- REF fileMethods.createAlias.Desc -->
+<!-- REF #fileMethodsandProperties.createAlias().Desc -->
 ##### Description
-The file.<!-- REF fileMethods.createAlias.method -->createAlias( )<!-- END REF --> method <!-- REF fileMethods.createAlias.Summary -->creates an alias (macOS) or a shortcut (Windows) to the file with the specified aliasName name in the folder designated by the destinationFolder object<!-- END REF -->.
+The <!-- REF #fileMethodsandProperties.createAlias().mehtod -->`.createAlias( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
 
-Pass the name of the alias or shortcut to create in the aliasName parameter.
+Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-By default on macOS, the method creates a standard alias. You can also create a symbolic link by using the aliasType parameter. The following constants are available:
+By default on macOS, the method creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+
 |Constant|Value|Comment|
 |--------|-----|-------|
-|fk alias link|0|Alias link (macOS only)(default)|
-|fk symbolic link|1|Symbolic link (macOS only)|
+|`fk alias link`|0|Alias link (macOS only)(default)|
+|`fk symbolic link`|1|Symbolic link (macOS only)|
 
-On Windows, a shortcut (.lnk file) is always created (the aliasType parameter is ignored).
+On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-Returned object
+**Returned object**
 
-The file.createAlias( ) method returns a File object with the file.isAlias property set to true.
+A `File` object with the `isAlias` property set to true.
 
 ##### Example
+
 You want to create an alias to a file in your database folder:
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
+
 <!-- END REF -->
 <!-- END REF -->
 
 
 
-<!-- REF fileMethods.delete.Info -->
-### delete()
+<!-- REF #fileMethodsandProperties.delete().Info -->
+### .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -178,20 +131,28 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-<!--REF fileMethods.delete.Syntax -->
-**file.delete()**<!-- END REF -->
+<!--REF #fileMethodsandProperties.delete().Syntax -->
+**.delete( )**<!-- END REF -->
 
-<!-- REF fileMethods.delete.Desc -->
+
+<!-- REF #Document.delete().Params -->
+|Parameter|Type||Description|
+|---|----|---|---|
+| |  ||Does not require any parameters|
+<!-- END REF -->
+
+<!-- REF #fileMethodsandProperties.delete().Desc -->
 ##### Description
-The file.<!-- REF fileMethods.delete.method -->delete( )<!-- END REF --> method <!-- REF fileMethods.delete.Summary -->deletes the file.<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.delete().mehtod -->`.delete( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.delete().Summary -->deletes the file<!-- END REF -->.
 
 If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the method does nothing (no error is generated).
 
->WARNING: file.delete( ) can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. file.delete( ) should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+>**WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
 ##### Example
+
 You want to delete a specific file in the database folder:
 
 ```4d
@@ -201,17 +162,14 @@ You want to delete a specific file in the database folder:
     ALERT("User preference file deleted.")
  End if
 ``` 
+
  <!-- END REF -->
  <!-- END REF -->
-
-
-
-
-
-
-  
-<!-- REF fileMethods.getContent.Info -->
-### getContent()
+ 
+ 
+ 
+<!-- REF #fileMethodsandProperties.moveTo().Info -->
+### .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -219,172 +177,46 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-<!-- REF fileMethods.getContent.Syntax -->
-**getContent** &rarr; Result<!-- END REF -->
+<!--REF #fileMethodsandProperties.moveTo().Syntax -->
+**.moveTo**( *destinationFolder* { ; *newName*} )  -> Result<!-- END REF -->
 
-<!-- REF fileMethods.getContent.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|Result | BLOB |File content|
+<!--REF #fileMethodsandProperties.moveTo().Params -->
+|Parameter|Type||Description|
+|---|----|---|---|
+|destinationFolder|Object|->|Destination folder|
+|newName|Text|->|Full name for the moved file|
+|Result|Object|<-|Moved file|
 <!-- END REF -->
 
-
+<!-- REF #fileMethodsandProperties.moveTo().Desc -->
 ##### Description
-The file.<!-- REF fileMethods.getContent.method -->getContent()<!-- END REF --> method  <!-- REF fileMethods.getContent.Summary -->returns a BLOB containing the entire content of the file. For information on BLOBs, please refer to the BLOB Commands section.<!-- END REF -->
-
-*Returned value*
-
-The file.getContent( ) method returns a BLOB.
-
-##### Example
-To save a document contents in a BLOB field:
-
-```4d
- C_TEXT($vPath)
- $vPath:=Select document("";"*";"Select a document";0)
- If(OK=1) //If a document has been chosen
-    [aTable]aBlobField:=File($vPath;fk platform path).getContent()
- End if
-```
-<!-- END REF -->
- <!-- END REF -->
-
-
-
-
-
-
-<!-- REF fileMethods.getIcon.Info -->
-### getIcon()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-<!-- REF fileMethods.getIcon.Syntax -->
-**getIcon** &rarr; Result<!-- END REF -->
-
-<!-- REF fileMethods.getIcon.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|Result|BLOB|File content|
-<!-- END REF -->
-
-<!-- REF fileMethods.getIcon.Desc -->
-##### Description
-The file.<!-- REF fileMethods.getIcon.method -->getContent( )<!-- END REF --> method returns <!-- REF fileMethods.getIcon.Summary -->the icon of the `File` object.<!-- END REF -->
-
-*Returned value*
-
-The file.getIcon( ) method returns a Picture.
- <!-- END REF -->
- <!-- END REF -->
-
-
-
-
-<!-- REF fileMethods.getText.Info -->
-### getText()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-<!-- REF fileMethods.getText.Syntax -->
-**getText** &rarr; Result<!-- END REF -->
-
-<!-- REF fileMethods.getText.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|Result | BLOB |File content|
-<!-- END REF -->
-
-<!-- REF fileMethods.getText.Desc -->
-##### Description
-The file.getContent( ) method <!-- REF fileMethods.getText.Summary -->returns the contents of the file as text. <!-- END REF -->
-
-*Returned value*
-
-The file.getText( ) method returns Text of the file.
-
-##### Example
-Given the following text document (fields are separated by tabs):
-
- ```
-id name price vat
-3 thé 1.06€ 19.6
-2 café 1.05€ 19.6
-When you execute this code:
- ```
-
- ```4d
- $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
- $txt:=$myFile.getText()
-... you get:
-
-  // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
-  // \t = tab
-  // \r = CR
- ```
- 
- <!-- END REF -->
- <!-- END REF -->
- 
- 
- 
- 
-<!-- REF fileMethods.moveTo.Info -->
-### moveTo()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-<!--REF fileMethods.moveTo.Syntax -->
- **moveTo** ( *destinationFolder* {; *newName*})  &rarr; Result<!-- END REF -->
-
-<!--REF fileMethods.moveTo.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|destinationFolder|Object|Destination folder|
-|newName|Text|Full name for the moved file|
-|Result|Object|Moved file|
-<!-- END REF -->
-
-<!-- REF fileMethods.moveTo.Desc -->
-##### Description
-The file.moveTo( ) method <!-- REF fileMethods.moveTo.Summary -->moves or renames the File object into the specified destinationFolder.<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.moveTo().mehtod -->`.moveTo( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the newName parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
-Returned object
+**Returned object**
 
-The method returns the moved `File` object.
+The moved `File` object.
 
 ##### Example
-You want to create an alias to a file in your database folder:
+
 
 ```4d
- $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
- $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
+$DocFolder:=Folder(fk documents folder)
+$myFile:=$DocFolder.file("Current/Infos.txt")
+$myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 
 <!-- END REF -->
- <!-- END REF -->
+<!-- END REF -->
  
  
  
  
-<!-- REF fileMethods.rename.Info --> 
-### rename()
+<!-- REF #fileMethodsandProperties.rename().Info --> 
+### .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -392,21 +224,21 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-<!--REF fileMethods.rename.Syntax -->
- **rename** ( newName ) &rarr; Result<!-- END REF -->
+<!--REF #fileMethodsandProperties.rename().Syntax -->
+**.rename**( *newName* ) -> Result<!-- END REF -->
 
-<!--REF fileMethods.rename.Parameters -->
-|Parameter|Type|Description|
-|----|-----------|-----------|
-|newName|Text|New full name for the file|
-|Result|Object|Renamed file|
+<!--REF #fileMethodsandProperties.rename().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|newName|Text|->|New full name for the file|
+|Result|Object|<-|Renamed file|
 <!-- END REF -->
 
-<!-- REF fileMethods.rename.Desc -->
+<!-- REF #fileMethodsandProperties.rename().Desc -->
 
 ##### Description
 
-The file.rename( ) method <!-- REF fileMethods.rename.Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object.<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.rename().mehtod -->`.rename( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -414,7 +246,7 @@ Note that the method modifies the full name of the file, i.e. if you do not pass
 
 **Returned object**
 
-The method returns the renamed `File` object.
+The renamed `File` object.
 
 ##### Example
 You want to rename "ReadMe.txt" in "ReadMe_new.txt":
@@ -428,10 +260,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- END REF -->
 
 
-
-
-<!-- REF fileMethods.setContent.Info --> 
-### setContent()
+<!-- REF #fileMethodsandProperties.setContent().Info --> 
+### .setContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -439,34 +269,34 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
-<!--REF fileMethods.setContent.Syntax -->
-**file.setContent (content)** <!-- END REF -->
+<!--REF #fileMethodsandProperties.setContent().Syntax -->
+**.setContent** ( *content* ) <!-- END REF -->
 
-<!--REF fileMethods.setContent.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|content|BLOB|New contents for the file|
+<!--REF #fileMethodsandProperties.setContent().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|content|BLOB|->|New contents for the file|
 <!-- END REF -->
 
-<!-- REF fileMethods.setContent.Desc -->
+<!-- REF #fileMethodsandProperties.setContent().Desc -->
 ##### Description
-The file.setContent( ) method <!-- REF fileMethods.setContent.Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the BLOB Commands section.
-<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.setContent().mehtod -->`.setContent( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+
 
 ##### Example
 
- ```4d
+```4d
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
  $myFile.setContent([aTable]aBlobField)
- ```
+```
+
 <!-- END REF -->
 <!-- END REF -->
 
 
 
-
-<!-- REF fileMethods.setText.Info --> 
-### setText()
+<!-- REF #fileMethodsandProperties.setText().Info --> 
+### .setText( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -474,35 +304,37 @@ The file.setContent( ) method <!-- REF fileMethods.setContent.Summary -->rewrite
 |v17 R5|Added
 </details>
 
-<!--REF fileMethods.setText.Syntax -->
- **setText** ( text {; charSet {;breakMode}}) &rarr; blob<!-- END REF -->
+<!--REF #fileMethodsandProperties.setText().Syntax -->
+**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) <!-- END REF -->
 
-<!--REF fileMethods.setText.Parameters -->
-|Parameter|Type|Description|
-|---------|----|-----------|
-|text|Text|Text to store in the file|
-|charSet|Text, Longint|Name or number of character set|
-|breakMode|Longint|Processing mode for line breaks|<!-- END REF -->
+<!--REF #fileMethodsandProperties.setText().Params -->
+|Parameter|Type||Description|
+|---------|----|---|--------|
+|text|Text|->|Text to store in the file|
+|charSet|Text, Longint|->|Name or number of character set|
+|breakMode|Longint|->|Processing mode for line breaks|<!-- END REF -->
 
-<!-- REF fileMethods.setText.Desc -->
+<!-- REF #fileMethodsandProperties.setText().Desc -->
 ##### Description
-The file.setText( ) method <!-- REF fileMethods.setText.Summary -->writes text as the new contents of the file.<!-- END REF -->
+The <!-- REF #fileMethodsandProperties.setText().mehtod -->`.setText( )`<!-- END REF --> method <!-- REF #fileMethodsandProperties.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the method. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-In charSet, pass the character set to be used for writing the contents. You can pass a string containing the standard character set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.  If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
+In *charSet*, pass the character set to be used for writing the contents. You can pass a string containing the standard character set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.  If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
 
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the "System Documents" theme are available:
+In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 
 |Constant|Type|Value|Comment|
 |--------|----|-----|-------|
-|Document unchanged|Longint|0|No processing|
-|Document with native format|Longint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
-|Document with CRLF|Longint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|Document with CR|Longint|3|Line breaks are converted to OS X format: CR (carriage return)|
-|Document with LF|Longint|4|Line breaks are converted to Unix format: LF (line feed)|
+|`Document unchanged`|Longint|0|No processing|
+|`Document with native format`|Longint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
+|`Document with CRLF`|Longint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
+|`Document with CR`|Longint|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with LF`|Longint|4|Line breaks are converted to Unix format: LF (line feed)|
+
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
 ##### Example
 
@@ -511,4 +343,29 @@ $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
 <!-- END REF -->
+<!-- END REF -->
+
+## Properties
+
+<!-- REF #fileMethodsandProperties.properties -->
+|Property|Type|Description|
+|----|----|-----------|
+|<!-- REF #fileMethodsandProperties.creationDate -->creationDate<!-- END REF -->|<!-- REF #fileMethodsandProperties.creationDatetype -->Date<!-- END REF --> |<!-- REF #fileMethodsandProperties.creationDate.Summary -->Returns the creation date of the file. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.creationTime -->creationTime<!-- END REF -->| <!-- REF #fileMethodsandProperties.creationTimetype -->Time<!-- END REF -->|<!-- REF #fileMethodsandProperties.creationTime.Summary -->Returns the creation time of the file (expressed as a number of seconds beginning at 00:00). This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.exists -->exists<!-- END REF -->|<!-- REF #fileMethodsandProperties.existstype -->Boolean<!-- END REF -->|<!-- REF #fileMethodsandProperties.exists.Summary --> Returns **true** if the file exists on disk, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.extension -->extension<!-- END REF -->|<!-- REF #fileMethodsandProperties.extensiontype -->Text<!-- END REF --> |<!-- REF #fileMethodsandProperties.extension.Summary -->Returns the extension of the file name. An extension always starts with ".". The property returns an empty string if the file name does not have an extension. This property is **read-only**.<!-- END REF -->| 
+|<!-- REF #fileMethodsandProperties.fullName -->fullName<!-- END REF -->|<!-- REF #fileMethodsandProperties.fullNametype -->Text<!-- END REF -->|<!-- REF #fileMethodsandProperties.fullName.Summary -->Returns the full name of the file, including its extension (if any). This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.hidden -->hidden <!-- END REF -->|<!-- REF #fileMethodsandProperties.hiddentype -->Boolean<!-- END REF --> |<!-- REF #fileMethodsandProperties.hidden.Summary -->  Returns **true** if the file is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.isAlias -->isAlias<!-- END REF -->|<!-- REF #fileMethodsandProperties.isAliastype -->Boolean<!-- END REF --> |<!-- REF #fileMethodsandProperties.isAlias.Summary -->Returns **true** if the file is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.isFile -->isFile <!-- END REF -->|<!-- REF #fileMethodsandProperties.isFiletype -->Boolean<!-- END REF --> |<!-- REF #fileMethodsandProperties.isFile.Summary -->Always returns **true** for a file. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.isFolder -->isFolder<!-- END REF -->|<!-- REF #fileMethodsandProperties.isFoldertype -->Boolean<!-- END REF --> |<!-- REF #fileMethodsandProperties.isFolder.Summary -->Always returns **false** for a file. This property is **read-only**.<!-- END REF -->| 
+|<!-- REF #fileMethodsandProperties.isWritable -->isWritable<!-- END REF -->|<!-- REF #fileMethodsandProperties.isWritabletype -->Boolean<!-- END REF --> |<!-- REF #fileMethodsandProperties.isWritable.Summary -->Returns **true** if the file exists on disk and is writable. **Note**: The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. This property is **read-only**.<!-- END REF -->| 
+|<!-- REF #fileMethodsandProperties.modificationDate -->modificationDate<!-- END REF -->|<!-- REF #fileMethodsandProperties.modificationDatetype -->Date<!-- END REF -->|<!-- REF #fileMethodsandProperties.modificationDate.Summary --> Returns the date of the file's last modification. This property is **read-only**.<!-- END REF -->| 
+|<!-- REF #fileMethodsandProperties.modificationTime -->modificationTime<!-- END REF -->|<!-- REF #fileMethodsandProperties.modificationTimetype -->Time<!-- END REF --> |<!-- REF #fileMethodsandProperties.modificationTime.Summary -->Returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.name -->name<!-- END REF -->|<!-- REF #fileMethodsandProperties.nametype -->Text<!-- END REF --> |<!-- REF #fileMethodsandProperties.name.Summary --> Returns the name of the file, without extension (if any). This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.original -->orignial <!-- END REF -->|<!-- REF #fileMethodsandProperties.originaltype -->Object<!-- END REF --> |<!-- REF #fileMethodsandProperties.original.Summary -->Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.parent -->parent<!-- END REF -->|<!-- REF #fileMethodsandProperties.parenttype -->Object<!-- END REF --> |<!-- REF #fileMethodsandProperties.parent.Summary -->Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.path -->path<!-- END REF -->|<!-- REF #fileMethodsandProperties.pathtype -->Text<!-- END REF --> |<!-- REF #fileMethodsandProperties.path.Summary -->Returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.platformPath -->platformPath<!-- END REF -->|<!-- REF #fileMethodsandProperties.platformPathtype -->Text<!-- END REF -->  |<!-- REF #fileMethodsandProperties.platformPath.Summary -->Returns the path of the file expressed with the current platform syntax. This property is **read-only**.<!-- END REF -->|
+|<!-- REF #fileMethodsandProperties.size -->size<!-- END REF -->|<!-- REF #fileMethodsandProperties.sizetype -->Number<!-- END REF -->  |<!-- REF #fileMethodsandProperties.size.Summary-->Returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0. This property is **read-only**.<!-- END REF -->|
 <!-- END REF -->
