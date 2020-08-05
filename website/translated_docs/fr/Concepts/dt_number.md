@@ -9,11 +9,11 @@ Numérique est un terme générique utilisé pour :
 - Les champs, variables ou expression de type Entier long. Les nombres de type Entier long (4 octets) sont compris dans l'intervalle -2^31..(2^31)-1.
 - Les champs, variables ou expression de type Entier. Les nombres de type Entier (2 octets) sont compris dans l'intervalle -32 768..32 767.
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+**Note :** Lorsqu'elles sont utilisées dans le langage 4D, les valeurs des champs de type Entier sont automatiquement converties en Entier long.
 
 Vous pouvez assigner tout nombre d'un type numérique à un nombre d'un autre type numérique, 4D effectue automatiquement la conversion, en tronquant ou en arrondissant les valeurs si nécessaire. Notez cependant que lorsqu'une valeur est située en-dehors de l'intervalle du type de destination, 4D ne pourra la convertir. Vous pouvez mélanger tous les types de numériques au sein d'une même expression.
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+**Note :** Dans ce manuel de référence du langage 4D, quel que soit le type précis des données, les paramètres de type Réel, Entier et Entier long dans les descriptions des commandes sont appelés numériques, sauf spécification explicite.
 
 
 ## Constantes littérales numériques
@@ -51,13 +51,13 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple:
 |                     |                  |          | 10 = 11    | Faux   |
 | Inégalité           | Nombre # Nombre  | Booléen  | 10 #11     | Vrai   |
 |                     |                  |          | 10 # 10    | Faux   |
-| Supérieur à         | Number > Number  | Booléen  | 11 > 10    | Vrai   |
+| Supérieur à         | Nombre > Nombre  | Booléen  | 11 > 10    | Vrai   |
 |                     |                  |          | 10 > 11    | Faux   |
-| Inférieur à         | Number < Number  | Booléen  | 10 < 11    | Vrai   |
+| Inférieur à         | Nombre < Nombre  | Booléen  | 10 < 11    | Vrai   |
 |                     |                  |          | 11 < 10    | Faux   |
-| Supérieur ou égal à | Number >= Number | Booléen  | 11 >= 10   | Vrai   |
+| Supérieur ou égal à | Nombre >= Nombre | Booléen  | 11 >= 10   | Vrai   |
 |                     |                  |          | 10 >= 11   | Faux   |
-| Inférieur ou égal à | Number <= Number | Booléen  | 10 <= 11   | Vrai   |
+| Inférieur ou égal à | Nombre <= Nombre | Booléen  | 10 <= 11   | Vrai   |
 |                     |                  |          | 11 <= 10   | Faux   |
 
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
@@ -93,13 +93,13 @@ Des parenthèses peuvent être incluses dans d'autres parenthèses. Assurez-vous
 
 ## Opérateurs sur les bits
 
-The bitwise operators operates on **Long Integer** expressions or values.
+Les opérateurs sur les bits s'appliquent à des expressions ou valeurs de type **Entier long**.
 
 > Si vous passez une valeur de type Entier ou Réel à un opérateur sur les bits, 4D la convertit en Entier long avant de calculer le résultat de l'expression.
 
 Lorsque vous employez des opérateurs sur les bits, vous devez considérer une valeur de type Entier long comme un tableau de 32 bits. Les bits sont numérotés de 0 à 31, de droite à gauche.
 
-Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une valeur de type Entier long comme une expression dans laquelle vous pouvez stocker 32 valeurs de type Booléen. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une valeur de type Entier long comme une expression dans laquelle vous pouvez stocker 32 valeurs de type Booléen. Lorsque le bit vaut 1, la valeur est **Vrai** et lorsque le bit vaut 0, la valeur est **Faux**.
 
 Une expression utilisant un opérateur sur les bits retourne une valeur de type Entier long, à l'exception de l'opérateur Tester bit avec lequel l'expression retournée est du type Booléen. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
@@ -108,8 +108,8 @@ Une expression utilisant un opérateur sur les bits retourne une valeur de type 
 | ET                    | &         | E. long & E. long         | E. long                 |
 | OU (inclusif)         | &#124;    | E. long &#124; E. long    | E. long                 |
 | OU (exclusif)         | \^&#124; | E. long \^&#124; E. long | E. long                 |
-| Décaler bits à gauche | <<        | Long << Long              | E. long (voir note n°1) |
-| Décaler bits à droite | >>        | Long >> Long              | E. long (voir note n°1) |
+| Décaler bits à gauche | <<        | E. Long << E. Long        | E. long (voir note n°1) |
+| Décaler bits à droite | >>        | E. Long >> E. Long        | E. long (voir note n°1) |
 | Mettre bit à 1        | ?+        | E. long ?+ E. long        | E. long (voir note n°2) |
 | Mettre bit à 0        | ?-        | E. long ?- E. long        | E. long (voir note n°2) |
 | Tester bit            | ??        | E. long ?? E. long        | Booléen (voir note n°2) |
@@ -123,20 +123,20 @@ Une expression utilisant un opérateur sur les bits retourne une valeur de type 
 
 Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effets :
 
-| Opération             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ET                    | Chaque bit retourné est le résultat de l'opération ET logique appliquée aux deux bits opérandes. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                 |
-| OU (inclusif)         | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
-| OU (exclusif)         | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
-| Décaler bits à gauche | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                       |
-| Décaler bits à droite | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. Les bits auparavant situés à droite sont perdus et les nouveaux bits situés à gauche ont la valeur 0.<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                          |
-| Mettre bit à 1        | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Mettre bit à 0        | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Tester bit            | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
+| Opération             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ET                    | Chaque bit retourné est le résultat de l'opération ET logique appliquée aux deux bits opérandes. <p>Voici la table du ET logique :<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>En d'autres termes, le bit résultant est 1 si les deux bits d'opérande sont 1; sinon, le bit résultant est 0.                                                  |
+| OU (inclusif)         | Chaque bit retourné est le résultat de l'opération OU logique appliquée aux deux bits opérandes.<p>Voici la table du OU inclusif logique :<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>En d'autres termes, le bit résultant est 1 si au moins l'un des deux bits d'opérande est 1; sinon, le bit résultant est 0.         |
+| OU (exclusif)         | Chaque bit retourné est le résultat de l'opération OU logique appliquée aux deux bits opérandes.<p>Voici la table du OU exclusif logique :<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>En d'autres termes, le bit résultant est 1 si seul l'un des deux bits d'opérande est 1; sinon, le bit résultant est 0. |
+| Décaler bits à gauche | La valeur résultante est définie sur la première valeur d'opérande, puis les bits résultants sont décalés vers la gauche du nombre de positions indiqué par le deuxième opérande. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. <p>**Note:** en ne tenant compte que des valeurs positives, le décalage vers la gauche de N bits équivaut à multiplier par 2 ^ N.                                                      |
+| Décaler bits à droite | La valeur résultante est définie sur la première valeur d'opérande, puis les bits résultants sont décalés vers la droite du nombre de positions indiqué par le deuxième opérande. Les bits auparavant situés à droite sont perdus et les nouveaux bits situés à gauche ont la valeur 0.<p>**Note:** en ne tenant compte que des valeurs positives, le décalage vers la droite de N bits équivaut à diviser par 2^N.                                                            |
+| Mettre bit à 1        | La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 0. Les autres bits demeurent inchangés.                                                                                                                                                                                                                                                                                                                  |
+| Mettre bit à 0        | La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 0. Les autres bits demeurent inchangés.                                                                                                                                                                                                                                                                                                                  |
+| Tester bit            | Retourne Vrai si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.                                                                                                                                                                                                                                                                             |
 
 ### Exemples
 
-| Opération             | Exemple                                     | Result     |
+| Opération             | Exemple                                     | Résultat   |
 | --------------------- | ------------------------------------------- | ---------- |
 | ET                    | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
 | OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
