@@ -9,7 +9,7 @@ Les paramètres de sauvegarde sont définis sur trois pages dans la boîte de di
 - les fichiers à inclure dans chaque sauvegarde
 - les fonctionnalités avancées permettant d'exécuter des tâches automatiques
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-folder).
+> Les propriétés définies dans cette boîte de dialogue sont écrits dans le fichier *Backup.4DSettings*, stocké dans le [dossier Settings](Project/architecture.md#settings-folder).
 
 ## Sauvegardes périodiques
 
@@ -17,22 +17,22 @@ Vous pouvez automatiser les sauvegardes de vos bases ouvertes avec 4D ou 4D Serv
 
 Si l’application n’était pas lancée au moment théorique de la sauvegarde, 4D considère au lancement suivant que la sauvegarde a échoué et applique les paramétrages adéquats, définis dans les Propriétés de la base (cf. paragraphe [En cas de problème au cours de la sauvegarde](backup.md#handling-backup-issues)).
 
-The scheduler backup settings are defined on the **Backup/Scheduler** page of the Database Settings:
+Les paramètres des sauvegardes périodiques sont définis dans la Page **Sauvegarde/Périodicité** des Propriétés de la base :
 
 ![](assets/en/Backup/backup02.png)
 
-Les options regroupées dans cet onglet permettent de définir et de paramétrer des sauvegardes périodiques automatiques de la base. Vous pouvez choisir un paramétrage standard rapide ou personnaliser entièrement la périodicité. Various options appear depending on the choice made in the **Automatic Backup** menu:
+Les options regroupées dans cet onglet permettent de définir et de paramétrer des sauvegardes périodiques automatiques de la base. Vous pouvez choisir un paramétrage standard rapide ou personnaliser entièrement la périodicité. Diverses options apparaissent en fonction de la valeur définie dans le menu **Sauvegarde automatique** :
 
-- **Never**: The scheduled backup feature is disabled.
-- **Every Hour**: Programs an automatic backup every hour, starting with the next hour.
-- **Every Day**: Programs an automatic backup every day. Une zone de saisie vous permet d'indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
-- **Every Week**: Programs an automatic backup every week. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour et l'heure de la sauvegarde.
-- **Every Month**: Programs an automatic backup every month. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour du mois et l'heure de la sauvegarde.
-- **Personalized**: Used to configure "tailormade" automatic backups. Lorsque vous sélectionnez cette, plusieurs zones de saisie supplémentaires apparaissent :
-    + **Every X hour(s)**: Allows programming backups on an hourly basis. Vous pouvez saisir une valeur comprise entre 1 et 24.
-    - **Every X day(s) at x**: Allows programming backups on a daily basis. Saisissez par exemple 1 si vous souhaitez une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
-    - **Every X week(s) day at x**: Allows programming backups on a weekly basis. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jour(s) de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
-    - **Every X month(s), Xth Day at x**: Allows programming backups on a monthly basis. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
+- **Jamais** : la fonction de sauvegarde périodique est inactivée.
+- **Toutes les heures** : programme une sauvegarde automatique par heure, à partir de la prochaine heure.
+- **Tous les jours** : programme une sauvegarde automatique par jour. Une zone de saisie vous permet d'indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+- **Toutes les semaines** : programme une sauvegarde automatique par semaine. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour et l'heure de la sauvegarde.
+- **Tous les mois** : programme une sauvegarde automatique par mois. Deux zones de saisie supplémentaires vous permettent d'indiquer le jour du mois et l'heure de la sauvegarde.
+- **Personnalisée** : permet de configurer des sauvegardes périodiques "sur-mesure". Lorsque vous sélectionnez cette, plusieurs zones de saisie supplémentaires apparaissent :
+    + **Toutes les N heure(s)** : permet de programmer des sauvegardes sur une base horaire. Vous pouvez saisir une valeur comprise entre 1 et 24.
+    - **Tous les N jour(s) à N** : permet de programmer des sauvegardes sur une base journalière. Saisissez par exemple 1 si vous souhaitez une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+    - **Toutes les N semaine(s), jour à N** : permet de programmer des sauvegardes sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jour(s) de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
+    - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 
 ## Configuration
 
@@ -40,12 +40,12 @@ La Page Sauvegarde/Configuration des Propriétés de la base permet de désigner
 
 ![](assets/en/Backup/backup03.png)
 
-> **4D Server:** These parameters can only be set from the 4D Server machine.
+> **4D Server** : Ces paramètres peuvent être définis depuis le poste 4D Server uniquement.
 
 ### Contenu
 Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la prochaine sauvegarde.
 
-- **Data**: Database data file. Lorsque cette option est cochée, le fichier d’historique courant de la base, s’il existe, est sauvegardé en même temps que les données.
+- **Fichier de données** : fichier de données de la base. Lorsque cette option est cochée, le fichier d’historique courant de la base, s’il existe, est sauvegardé en même temps que les données.
 - **Structure**: Database project folders and files. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz.
 - **User Structure File (only for binary database)**: *deprecated feature*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
@@ -66,7 +66,7 @@ To modify the location where these files are stored, click the **...** button. U
 
 The **Use Log** option, when checked, indicates that the database uses a log file. Son chemin d’accès est précisé au-dessous de l’option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir la base sans fichier d’historique.
 
-By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
+By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
 > L’activation d’un nouveau fichier d’historique nécessite que les données de la base soient auparavant sauvegardées. Lorsque vous cochez cette option, un message vous informe qu’une sauvegarde est nécessaire. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de la base.
 
