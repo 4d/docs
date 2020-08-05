@@ -104,7 +104,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
     </td>
     
     <td>
-      object
+      オブジェクト
     </td>
     
     <td>
