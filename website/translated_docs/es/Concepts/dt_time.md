@@ -53,7 +53,6 @@ A null time is specified by ?00:00:00?
 | Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
 |                          |                |         | ?01:02:04? <=?01:02:03? | False      |
 
-
 ### Example 1
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
