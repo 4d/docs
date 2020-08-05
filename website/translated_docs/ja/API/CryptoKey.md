@@ -129,9 +129,9 @@ ASSERT($status.success)
 | signature |          | テキスト   | <- | "encoding" オプションに応じて、Base64 あるいは Base64URL でエンコードされた署名。                                                                         |
 
 
-このメソッドは、`cryptoKey` オブジェクトキーおよび指定された `options` を使って、utf8 形式の `message` 文字列を署名します。 It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+このメソッドは、`cryptoKey` オブジェクトキーおよび指定された `options` を使って、utf8 形式の `message` 文字列を署名します。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
-The `cryptoKey` must contain a valid **private** key.
+`cryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
 ## cryptoKey.verify()
 
@@ -146,8 +146,8 @@ The `cryptoKey` must contain a valid **private** key.
 
 | 引数        | プロパティ    | 型          |    | 説明                                                                                                                              |
 | --------- | -------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------- |
-| message   |          | テキスト       | -> | Message string that was used to produce the signature                                                                           |
-| signature |          | テキスト       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                      |
+| message   |          | テキスト       | -> | 署名生成時に使われたメッセージ文字列                                                                                                              |
+| signature |          | テキスト       | -> | 検証の対象である、"encoding" オプションに応じて Base64 または Base64URL 形式の署名                                                                        |
 | options   |          | オブジェクト     | -> | 署名オプション                                                                                                                         |
 |           | hash     | テキスト       |    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 |           | pss      | ブール        |    | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 Pass `true` when verifying a JWT for PS@ algorithm                                   |
