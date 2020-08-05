@@ -40,9 +40,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON 文法
 
-| 名             | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| hideFocusRing | boolean | true, false |
+| 名             | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| hideFocusRing | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -63,9 +63,9 @@ By default, this option is not enabled.
 
 #### JSON 文法
 
-| 名                   | データタイプ  | とりうる値       |
-| ------------------- | ------- | ----------- |
-| hideSystemHighlight | boolean | true, false |
+| 名                   | データタイプ | とりうる値       |
+| ------------------- | ------ | ----------- |
+| hideSystemHighlight | ブール    | true, false |
 
 
 #### 対象オブジェクト
