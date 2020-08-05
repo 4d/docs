@@ -1,6 +1,6 @@
 ---
 id: cryptoClass
-title: CryptoKey Class
+title: CryptoKey クラス
 ---
 
 ## 概要
