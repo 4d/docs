@@ -65,9 +65,9 @@ Here is the list of objects whose value can be saved:
 
 #### JSON 文法
 
-| 名             | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| memorizeValue | boolean | true, false |
+| 名             | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| memorizeValue | ブール    | true, false |
 
 
 #### 対象オブジェクト
