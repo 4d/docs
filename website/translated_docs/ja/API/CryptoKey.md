@@ -188,9 +188,9 @@ ASSERT($status.success)
 | result  |                   | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ                                                |
 
 
-This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
+このメソッドは **公開** 鍵を使って `message` を暗号化します。 使用されるアルゴリズムはキーの種類に依存します。
 
-The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
 ## cryptoKey.decrypt()
 
@@ -205,8 +205,8 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 | 引数      | プロパティ             | 型      |    | 説明                                                                                                                                           |
 | ------- | ----------------- | ------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| message |                   | テキスト   | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                  |
-| options |                   | オブジェクト | -> | Decoding options                                                                                                                             |
+| message |                   | テキスト   | -> | options.encodingEncrypted を使ってデコードし復号するメッセージ文字列                                                                                              |
+| options |                   | オブジェクト | -> | デコーディングオプション                                                                                                                                 |
 |         | hash              | テキスト   |    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                                                                      |
 |         | encodingEncrypted | テキスト   |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". デフォルト値: "Base64" |
 |         | encodingDecrypted | テキスト   |    | Encoding used to convert the binary decrypted message into the result string. 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8"       |
@@ -217,9 +217,9 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 |         | errors            | コレクション |    | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。                                                                                            |
 
 
-This method decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
+This method decrypts the `message` parameter using the **private** key. 使用されるアルゴリズムはキーの種類に依存します。
 
-The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
 The method returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
 
