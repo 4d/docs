@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON 文法
 
-| 名          | データタイプ  | とりうる値       |
-| ---------- | ------- | ----------- |
-| spellcheck | boolean | true, false |
+| 名          | データタイプ | とりうる値       |
+| ---------- | ------ | ----------- |
+| spellcheck | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -61,9 +61,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON 文法
 
-| 名         | データタイプ  | とりうる値       |
-| --------- | ------- | ----------- |
-| enterable | boolean | true, false |
+| 名         | データタイプ | とりうる値       |
+| --------- | ------ | ----------- |
+| enterable | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -151,9 +151,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON 文法
         
-        | 名         | データタイプ  | とりうる値       |
-        | --------- | ------- | ----------- |
-        | focusable | boolean | true, false |
+        | 名         | データタイプ | とりうる値       |
+        | --------- | ------ | ----------- |
+        | focusable | ブール    | true, false |
 
         
         #### 対象オブジェクト
@@ -261,9 +261,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
         
         #### JSON 文法
         
-        | 名             | データタイプ  | とりうる値       |
-        | ------------- | ------- | ----------- |
-        | showSelection | boolean | true, false |
+        | 名             | データタイプ | とりうる値       |
+        | ------------- | ------ | ----------- |
+        | showSelection | ブール    | true, false |
 
         
         #### 対象オブジェクト
@@ -304,9 +304,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
                 
                 #### JSON 文法
                 
-                | 名               | データタイプ  | とりうる値       |
-                | --------------- | ------- | ----------- |
-                | singleClickEdit | boolean | true, false |
+                | 名               | データタイプ | とりうる値       |
+                | --------------- | ------ | ----------- |
+                | singleClickEdit | ブール    | true, false |
 
                 
                 #### 対象オブジェクト
