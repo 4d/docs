@@ -13,11 +13,11 @@ title: ループ構造
  End while
 ```
 
-`While...End while` ループは、ブール式が TRUE である限り、ループ内のステートメントを実行し続けます。 ループの始めにブール式を評価し、ブール式が FALSE の場合にはループをおこないません。
+`While...End while` ループは、ブール式が true である限り、ループ内のステートメントを実行し続けます。 ループの始めにブール式を評価し、ブール式が FALSE の場合にはループをおこないません。
 
-一般に、`While...End while` ループに入る手前で、ブール式で判定する値を初期化しておきます。 通常はブール式が TRUE になるように設定してからループに入ります。
+一般に、`While...End while` ループに入る手前で、ブール式で判定する値を初期化しておきます。 通常はブール式が true になるように設定してからループに入ります。
 
-ブール式は、ループ内の要素を使って設定されなければなりません。そうでなければ、ループは永久に続くでしょう。 以下の例では、*NeverStop* がいつも TRUE であるので、ループは永久に続きます。
+ブール式は、ループ内の要素を使って設定されなければなりません。そうでなければ、ループは永久に続くでしょう。 以下の例では、*NeverStop* がいつも true であるので、ループは永久に続きます。
 
 ```4d
  NeverStop:=True
@@ -50,7 +50,7 @@ title: ループ構造
 
 `Repeat...Until` ループは、[While...End while](flow-control#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 つまり、`Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
 
-もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が TRUE になるまでループを続行することです。
+もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
 ### 例題
 
@@ -438,7 +438,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 
 ### Until と While 条件
 
-`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が TRUE に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が FALSE になるとループが停止します。
+`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が true に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が false になるとループが停止します。
 
 使用する条件は状況に応じて選べます:
 
