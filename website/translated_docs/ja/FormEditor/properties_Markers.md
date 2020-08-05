@@ -38,9 +38,9 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 #### JSON 文法
 
-| 名          | データタイプ  | とりうる値                          |
-| ---------- | ------- | ------------------------------ |
-| markerBody | integer | Detail marker position. 最小値: 0 |
+| 名          | データタイプ | とりうる値                          |
+| ---------- | ------ | ------------------------------ |
+| markerBody | 整数     | Detail marker position. 最小値: 0 |
 
 
 * * *
@@ -59,9 +59,9 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 #### JSON 文法
 
-| 名            | データタイプ  | とりうる値  |
-| ------------ | ------- | ------ |
-| markerFooter | integer | 最小値: 0 |
+| 名            | データタイプ | とりうる値  |
+| ------------ | ------ | ------ |
+| markerFooter | 整数     | 最小値: 0 |
 
 
 * * *
