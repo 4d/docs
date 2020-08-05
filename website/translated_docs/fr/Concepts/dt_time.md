@@ -7,7 +7,7 @@ title: Heure
 - Les heures sont stockées dans un format de 24 heures.
 - Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
-**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
+**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
 ## Constantes littérales de type heure
 
@@ -25,7 +25,7 @@ Voici quelques exemples de constantes littérales de type heure :
 
 Une heure nulle s’écrit ?00:00:00?
 
-**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour saisir une heure nulle. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
+**Tip:** The Method Editor includes a shortcut for entering a null time. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
 
 ## Opérateurs sur les heures
 
@@ -53,7 +53,6 @@ Une heure nulle s’écrit ?00:00:00?
 | Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
 |                     |                |          | ?01:02:04? <=?01:02:03? | Faux       |
 
-
 ### Exemple 1
 
 Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions `Time` et `Time string`.
@@ -79,8 +78,8 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // il est 23h
-     //on souhaite ajouter 2 heures 30
- $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? , il est bien 1h30 le lendemain
+$t1:=?23:00:00? // It is 23:00 p.m.
+  // We want to add 2 and a half hours
+$t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? and it is 1:30 a.m. the next morning
 ```

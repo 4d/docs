@@ -14,7 +14,6 @@ title: BLOB
 ポインターを使用して、BLOB をメソッドに渡すことも出来ます。その場合は BLOB へのポインターを定義し、そのポインターをパラメーターとして渡します。
 
 **例: **
-
 ```4d
   // BLOB タイプの変数を定義します
  C_BLOB(anyBlobVar)
@@ -32,15 +31,13 @@ title: BLOB
 // BLOB のポインターをメソッドに渡します
  COMPUTE BLOB(->anyBlobVar)
 ```
-
-**プラグイン開発にあたっての注意:** BLOB 引数は “&O” (数字の0ではなく、アルファベットの"O") として宣言します。
+**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
 ## 代入
 
 BLOB は相互に代入することができます。
 
 **例: **
-
 ```4d
   // BLOB 型の変数を二つ宣言します
  C_BLOB(vBlobA;vBlobB)
@@ -54,8 +51,7 @@ BLOB は相互に代入することができます。
 
 ## BLOB のアドレス指定
 
-中カッコ {...} を使用し、BLOB の各バイトを個別にアドレス指定することができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。N は BLOB のサイズです。 例: 
-
+中カッコ {...} を使用し、BLOB の各バイトを個別にアドレス指定することができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。N は BLOB のサイズです。 例:
 ```4d
   // BLOB を定義します
  C_BLOB(vBlob)
@@ -66,5 +62,4 @@ BLOB は相互に代入することができます。
     vBlob{vByte}:=0
  End for
 ```
-
 BLOB の各バイトはすべて個別にアドレス指定できるため、BLOB フィールドまたは変数には実際のところ何でも格納できます。

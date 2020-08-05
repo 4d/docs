@@ -14,7 +14,6 @@ Les BLOBs dans 4D peuvent être passés comme paramètres aux commandes 4D ou au
 Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un pointeur vers le BLOB et passer le pointeur comme paramètre.
 
 **Voici quelques exemples :**
-
 ```4d
   // Déclarer une variable de type BLOB
  C_BLOB(touteVarBLOB)
@@ -28,15 +27,13 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
   // Un pointeur vers le BLOB est passé comme paramètre à une de vos méthodes
  COMPUTE BLOB(->touteVarBLOB)
 ```
-
-**Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
+**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
 ## Assignation
 
 Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant.
 
 **Exemple :**
-
 ```4d
   // Déclarer deux variables de type BLOB
  C_BLOB(vBlobA;vBlobB)
@@ -51,7 +48,6 @@ En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOB.
 ## Adresser le contenu d'un BLOB
 
 Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accolades {...}. Dans un BLOB, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB. Exemple :
-
 ```4d
   // Déclarer une variable de type BLOB
  C_BLOB(vBlob)
@@ -62,5 +58,4 @@ Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accol
     vBlob{vOctet}:=0
  Fin de boucle
 ```
-
 Comme vous pouvez adresser individuellement tous les octets d'un BLOB, vous pouvez littéralement stocker tout ce que vous voulez dans une variable ou un champ de type BLOB.

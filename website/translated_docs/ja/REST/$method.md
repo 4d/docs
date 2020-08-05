@@ -16,9 +16,13 @@ This parameter allows you to define the operation to execute with the returned e
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Updates and/or creates one or more entities                                                                |
 
 
+
+
+
 ## $method=delete
 
 Deletes the current entity, entity collection, or entity selection (created through REST)
+
 
 ### 説明
 
@@ -27,25 +31,27 @@ With `$method=delete`, you can delete an entity or an entire entity collection. 
 You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
 ## 例題
-
 You can then write the following REST request to delete the entity whose key is 22:
 
-`POST  /rest/Employee(22)/?$method=delete`
+ `POST  /rest/Employee(22)/?$method=delete`
 
 You can also do a query as well using $filter:
 
-`POST  /rest/Employee?$filter="ID=11"&$method=delete`
+ `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
 You can also delete an entity set using $entityset/{entitySetID}:
 
-`POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
+ `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
 Response:
 
-    {
-        "ok": true
-    }
-    
+```
+{
+    "ok": true
+}
+```
+
+
 
 ## $method=entityset
 
@@ -61,19 +67,21 @@ If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$fi
 
 To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
 
-`GET  /rest/People/?$filter="ID>320"&$method=entityset`
+ `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
 You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
 
-`GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
+ `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
 You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
-
 > `$skip` and `$top/$limit` are not taken into consideration when saving an entity set.
 
 After you create an entity set, the first element, `__ENTITYSET`, is added to the object returned and indicates the URI to use to access the entity set:
 
 `__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+
+
+
 
 ## $method=release
 
@@ -93,25 +101,28 @@ Release an existing entity set:
 
 If the request was successful, the following response is returned:
 
-    {
-        "ok": true
-    }
-    If the entity set wasn't found, an error is returned:
-    
-    {
-        "__ERROR": [
-            {
-                 "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-                "componentSignature": "dbmg",
-                "errCode": 1802
-            }
-        ]
-    }
-    
+```
+{
+    "ok": true
+}
+If the entity set wasn't found, an error is returned:
+
+{
+    "__ERROR": [
+        {
+             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+            "componentSignature": "dbmg",
+            "errCode": 1802
+        }
+    ]
+}
+```
+
 
 ## $method=subentityset
 
 Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request
+
 
 ### 説明
 
@@ -129,48 +140,51 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 #### Response:
 
-    {
-    
-        "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
-        "__entityModel": "Employee",
-        "__COUNT": 2,
-        "__SENT": 2,
-        "__FIRST": 0,
-        "__ENTITIES": [
-            {
-                "__KEY": "4",
-                "__STAMP": 1,
-                "ID": 4,
-                "firstName": "Linda",
-                "lastName": "Jones",
-                "birthday": "1970-10-05T14:23:00Z",
-                "employer": {
-                    "__deferred": {
-                        "uri": "/rest/Company(1)",
-                        "__KEY": "1"
-                    }
-                }
-            },
-            {
-                "__KEY": "1",
-                "__STAMP": 3,
-                "ID": 1,
-                "firstName": "John",
-                "lastName": "Smith",
-                "birthday": "1985-11-01T15:23:00Z",
-                "employer": {
-                    "__deferred": {
-                        "uri": "/rest/Company(1)",
-                        "__KEY": "1"
-                    }
+```
+{
+
+    "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
+    "__entityModel": "Employee",
+    "__COUNT": 2,
+    "__SENT": 2,
+    "__FIRST": 0,
+    "__ENTITIES": [
+        {
+            "__KEY": "4",
+            "__STAMP": 1,
+            "ID": 4,
+            "firstName": "Linda",
+            "lastName": "Jones",
+            "birthday": "1970-10-05T14:23:00Z",
+            "employer": {
+                "__deferred": {
+                    "uri": "/rest/Company(1)",
+                    "__KEY": "1"
                 }
             }
-        ]
-    
-    }
-    
+        },
+        {
+            "__KEY": "1",
+            "__STAMP": 3,
+            "ID": 1,
+            "firstName": "John",
+            "lastName": "Smith",
+            "birthday": "1985-11-01T15:23:00Z",
+            "employer": {
+                "__deferred": {
+                    "uri": "/rest/Company(1)",
+                    "__KEY": "1"
+                }
+            }
+        }
+    ]
+
+}
+```
+
 
 ## $method=update
+
 
 Updates and/or creates one or more entities
 
@@ -187,7 +201,6 @@ Triggers are executed immediately when saving the entity to the server. The resp
 You can also put these requests to create or update entities in a transaction by calling `$atomic/$atonce`. If any errors occur during data validation, none of the entities are saved. You can also use $method=validate to validate the entities before creating or updating them.
 
 If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
-
 > Notes for specific attribute types:
 > 
 > * **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
@@ -198,114 +211,121 @@ If a problem arises while adding or modifying an entity, an error will be return
 
 To update a specific entity, you use the following URL:
 
-`POST  /rest/Person/?$method=update`
+ `POST  /rest/Person/?$method=update`
 
 **POST data:**
 
-    {
-        __KEY: "340",
-        __STAMP: 2,
-        firstName: "Pete",
-        lastName: "Miller"
-    }
-    
+```
+{
+    __KEY: "340",
+    __STAMP: 2,
+    firstName: "Pete",
+    lastName: "Miller"
+}
+```
 
 The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.
 
 If you want to create an entity, you can POST the attributes using this URL:
 
-`POST  /rest/Person/?$method=update`
+ `POST  /rest/Person/?$method=update`
 
 **POST data:**
 
-    { 
-        firstName: "John",
-        lastName: "Smith"
-    }
-    
+```
+{ 
+    firstName: "John",
+    lastName: "Smith"
+}
+```
 
 You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:
 
-`POST  /rest/Person/?$method=update`
+ `POST  /rest/Person/?$method=update`
 
 **POST data:**
 
-    [{ 
-        "__KEY": "309",
-        "__STAMP": 5,
-        "ID": "309",
-        "firstName": "Penelope",
-        "lastName": "Miller"
-    }, { 
-        "firstName": "Ann",
-        "lastName": "Jones"
-    }]
-    
+```
+[{ 
+    "__KEY": "309",
+    "__STAMP": 5,
+    "ID": "309",
+    "firstName": "Penelope",
+    "lastName": "Miller"
+}, { 
+    "firstName": "Ann",
+    "lastName": "Jones"
+}]
+```
 
 **Response:**
 
 When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
 
-    {
-        "__KEY": "622", 
-        "__STAMP": 1, 
-        "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
-        "__TIMESTAMP": "!!2020-04-03!!",
-        "ID": 622, 
-        "firstName": "John", 
-        "firstName": "Smith"
-    }
-    
+```
+{
+    "__KEY": "622", 
+    "__STAMP": 1, 
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__TIMESTAMP": "!!2020-04-03!!",
+    "ID": 622, 
+    "firstName": "John", 
+    "firstName": "Smith"
+}
+```
 
 If, for example, the stamp is not correct, the following error is returned:
 
-    {
-        "__STATUS": {
-            "status": 2,
-            "statusText": "Stamp has changed",
-            "success": false
+```
+{
+    "__STATUS": {
+        "status": 2,
+        "statusText": "Stamp has changed",
+        "success": false
+    },
+    "__KEY": "1",
+    "__STAMP": 12,
+    "__TIMESTAMP": "!!2020-03-31!!",
+    "ID": 1,
+    "firstname": "Denise",
+    "lastname": "O'Peters",
+    "isWoman": true,
+    "numberOfKids": 1,
+    "addressID": 1,
+    "gender": true,
+    "imageAtt": {
+        "__deferred": {
+            "uri": "/rest/Persons(1)/imageAtt?$imageformat=best&$version=12&$expand=imageAtt",
+            "image": true
+        }
+    },
+    "extra": {
+        "num": 1,
+        "alpha": "I am 1"
+    },
+    "address": {
+        "__deferred": {
+            "uri": "/rest/Address(1)",
+            "__KEY": "1"
+        }
+    },
+    "__ERROR": [
+        {
+            "message": "Given stamp does not match current one for record# 0 of table Persons",
+            "componentSignature": "dbmg",
+            "errCode": 1263
         },
-        "__KEY": "1",
-        "__STAMP": 12,
-        "__TIMESTAMP": "!!2020-03-31!!",
-        "ID": 1,
-        "firstname": "Denise",
-        "lastname": "O'Peters",
-        "isWoman": true,
-        "numberOfKids": 1,
-        "addressID": 1,
-        "gender": true,
-        "imageAtt": {
-            "__deferred": {
-                "uri": "/rest/Persons(1)/imageAtt?$imageformat=best&$version=12&$expand=imageAtt",
-                "image": true
-            }
+        {
+            "message": "Cannot save record 0 in table Persons of database remote_dataStore",
+            "componentSignature": "dbmg",
+            "errCode": 1046
         },
-        "extra": {
-            "num": 1,
-            "alpha": "I am 1"
-        },
-        "address": {
-            "__deferred": {
-                "uri": "/rest/Address(1)",
-                "__KEY": "1"
-            }
-        },
-        "__ERROR": [
-            {
-                "message": "Given stamp does not match current one for record# 0 of table Persons",
-                "componentSignature": "dbmg",
-                "errCode": 1263
-            },
-            {
-                "message": "Cannot save record 0 in table Persons of database remote_dataStore",
-                "componentSignature": "dbmg",
-                "errCode": 1046
-            },
-            {
-                "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
-                "componentSignature": "dbmg",
-                "errCode": 1517
-            }
-        ]
-    }{}
+        {
+            "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+            "componentSignature": "dbmg",
+            "errCode": 1517
+        }
+    ]
+}{}
+
+```

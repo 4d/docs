@@ -7,7 +7,7 @@ Ein Datenfeld, Ausdruck oder eine Variable vom Typ Boolean kann entweder WAHR od
 
 ## Boolean Funktionen
 
-4D bietet die Boolean Funktionen `True`, `False` und `Not`. Weitere Informationen dazu finden Sie in der Beschreibung dieser Befehle.
+4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. Weitere Informationen dazu finden Sie in der Beschreibung dieser Befehle.
 
 ### Beispiel
 
@@ -40,7 +40,6 @@ myBoolean:=(myButton=1)
 |           |                        |         | ("A" = "B") &#124; (15 # 3) | Wahr   |
 |           |                        |         | ("A" = "B") &#124; (15 # 3) | Falsch |
 
-
 Für das logische UND gilt:
 
 | Expr1  | Expr2  | Expr1 & Expr2 |
@@ -49,7 +48,6 @@ Für das logische UND gilt:
 | Wahr   | Falsch | Falsch        |
 | Falsch | Wahr   | Falsch        |
 | Falsch | Falsch | Falsch        |
-
 
 Für das logische ODER gilt:
 
@@ -60,8 +58,7 @@ Für das logische ODER gilt:
 | Falsch | Wahr   | Wahr               |
 | Falsch | Falsch | Falsch             |
 
-
-**Tipp:** Zum Berechnen eines ausschließenden ODER zwischen Expr1 and Expr2 schreiben Sie:
+**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  

@@ -27,10 +27,9 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 | [Collection](Concepts/dt_collection.md)         | -                           | Ja                               | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)            | -                           | Ja                               | `C_VARIANT`                  |
 
-
 (1) Beachten Sie, dass ORDA die Datenfelder über Objekte (entities) verwaltet und deshalb nur Datentypen unterstützt, die für diese Objekte verfügbar sind. Weitere Informationen dazu finden Sie unter [Objekt](Concepts/dt_object.md).
 
-(2) Variant ist derzeit kein *Daten-*, sondern ein *Variablentyp*, der den Wert eines anderen Datentyps enthalten kann.
+(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
 
 ## Standardwerte
 
@@ -39,12 +38,12 @@ Werden Variablen über eine Compiler Direktive typisiert, empfangen sie einen St
 Der Standardwert richtet sich nach Typ und Kategorie der Variablen, der Kontext seiner Ausführung (interpretiert oder kompiliert), sowie im kompilierten Modus die Optionen, die auf der Seite Compiler der Datenbank-Eigenschaften definiert wurden:
 
 - Prozess- und Interprozessvariablen werden immer "auf Null" gesetzt, d.h. "0" ist je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), etc.
-- Lokale Variablen werden wie folgt gesetzt: 
+- Lokale Variablen werden wie folgt gesetzt:
     - Im interpretierten Modus: auf Null (siehe oben)
-    - Im kompilierten Modus je nach der Option **Lokale Variablen initialisieren** auf der Seite Compiler der Einstellungen: 
+    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
         - "auf Null": auf Null (siehe oben)
         - " auf zufälligen Wert": 0x72677267 für Zahlen und Uhrzeiten, immer Wahr für Boolean, dasselbe wie "auf Null" für die anderen
-        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Hinweis:** 4D empfiehlt, " auf Null" zu verwenden.
+        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Note:** 4D recommends to use "to zero".
 
 Nachfolgende Übersicht erläutert diese Standardwerte:
 
@@ -78,9 +77,8 @@ Nachfolgende Liste zeigt die wichtigsten Datentypen, in welchen Typ sie konverti
 | Zeit                      | String    |         |          |         | Bool       |
 | Boolean                   |           | Num     |          |         |            |
 
-
 (1) In JSON formatierte Strings lassen sich über die Funktion `JSON Parse` in skalare Daten, Objekte oder Collections konvertieren.
 
 (2) Werte vom Typ Zeit lassen sich wie Zahlen behandeln.
 
-**Hinweis:** Durch Kombinieren von Operatoren und anderen Befehlen erreichen Sie auch komplexere Datenkonvertierungen.
+**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.

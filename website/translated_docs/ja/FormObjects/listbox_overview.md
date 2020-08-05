@@ -17,22 +17,23 @@ title: リストボックス
 
 ![](assets/en/FormObjects/listbox_edit.png)
 
-リストボックスのセルには、複数行のテキストを入力・表示できます。 セル内で改行するには、**Ctrl+Return** (Windows) または **Command+Return** (macOS) を押します。
+リストボックスのセルには、複数行のテキストを入力・表示できます。 To add a line break, press **Ctrl+Carriage return** on Windows or **Option+Carriage return** on macOS.
 
 セルにはブールやピクチャー、日付、時間、数値も表示することができます。 ヘッダーをクリックすると、列の値をソートできます ([標準ソート](ソートの管理))。 すべての列が自動で同期されます。
 
 またそれぞれの列幅を変更できるほか、ユーザーはマウスを使用して [列](properties_ListBox.md#locked-columns-and-static-columns) や [行](properties_Action.md#movable-rows) の順番を (そのアクションが許可されていれば) 入れ替えることもできます。 リストボックスは [階層モード](#階層リストボックス) で使用することもできます。
 
-ユーザーは標準のショートカットを使用して 1つ以上の行を選択できます。**Shift+クリック** で連続した行を、**Ctrl+クリック** (Windows) や **Command+クリック** (macOS) で非連続行を選択できます。
+The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
+
 
 ### リストボックスの構成要素
 
 リストボックスオブジェクトは、以下4つの項目で構成されます:
 
-* リストボックスオブジェクトの全体
-* 列
-* 列ヘッダー
-* 列フッター
+*   リストボックスオブジェクトの全体
+*   列
+*   列ヘッダー
+*   列フッター
 
 ![](assets/en/FormObjects/listbox_parts.png)
 
@@ -45,21 +46,25 @@ title: リストボックス
 
 [ヘッダー](#リストボックスヘッダー) と [フッター](#リストボックスフッター) で発生したイベントは、その列のオブジェクトメソッドが受け取ります。
 
+
+
 ### リストボックスの型
 
 リストボックスには複数のタイプがあり、動作やプロパティの点で異なります。 リストボックスの型は [データソースプロパティ](properties_Object.md#データソース) で定義します:
 
-- **配列**: 各列に 4D 配列を割り当てます。 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。
-- **セレクション** (**カレントセレクション** または **命名セレクション**): 各列に式 (たとえばフィールド) を割り当てます。それぞれの行はセレクションのレコードを基に評価されます。
-- **コレクションまたはエンティティセレクション**: 各列に式を割り当てます。各行の中身はコレクションの要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
-
+- **Arrays**: each column is bound to a 4D array. 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。
+- **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
+- **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
 > 1つのリストボックス内に複数のデータソースタイプを組み合わせて指定することはできません。 データソースは、リストボックス作成時に定義され、 プログラムによって後から変更することはできません。
+
 
 ### リストボックスの管理
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細については *4D ランゲージリファレンスマニュアル* の[リストボックスコマンド一覧](https://doc.4d.com/4Dv18/4D/18/List-Box-Commands-Summary.300-4505230.ja.html)を参照してください。
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) page of the *4D Language reference* for more information.
+
+
 
 ## リストボックスオブジェクト
 
@@ -68,7 +73,6 @@ title: リストボックス
 配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。ポインター配列を除きすべてのタイプの配列を使用できま す。 行数は配列の要素数により決定されます。
 
 デフォルトで 4D は各列に “ColumnX” という名前の配列変数を割り当てます。 この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます。 列ごとの表示フォーマットを指定するには、`OBJECT SET FORMAT` コマンドも使用できます。
-
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
 配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。 リストボックスのハイレベルコマンド (`LISTBOX INSERT ROWS` や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
@@ -82,16 +86,19 @@ ARRAY TEXT(ColumnName;size)
 ```4d
 LIST TO ARRAY("ListName";ColumnName)
 ```
+> **Warning**: When a list box contains several columns of different sizes, only the number of items of the smallest array (column) will be displayed. そのため、各配列の要素数は同じにしなければなりません。 リストボックスの列が一つでも空の場合 (ランゲージにより配列が正しく定義またはサイズ設定されなかったときに発生します)、リストボックスは何も表示しません。
 
-> **警告**: 異なる配列サイズの列がリストボックスに含まれる場合、もっとも小さい配列サイズの数だけを表示します。 そのため、各配列の要素数は同じにしなければなりません。 リストボックスの列が一つでも空の場合 (ランゲージにより配列が正しく定義またはサイズ設定されなかったときに発生します)、リストボックスは何も表示しません。
+
+
 
 ### セレクションリストボックス
 
 このタイプのリストボックスでは、列ごとにフィールド (例: `[Employees]LastName`) や式を割り当てます。 式は 1つ以上のフィールド (たとえば `[Employees]FirstName+“ ”[Employees]LastName`) または単にフォーミュラ (たとえば `String(Milliseconds)`) を使用できます。 式にはプロジェクトメソッド、変数、あるいは配列項目も指定できます。 カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
 
-それぞれの行はセレクションのレコードを基に評価されます。セレクションは **カレントセレクション** または **命名セレクション**です。
+The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
 
 デー タソースがカレントセレクションである場合、データベースに対しておこなわれた変更はリストボックスに自動で反映され、またリストボックスへの変更も自動で データベースに適用されます。 つまりカレントセレクションは常に両方で同じです。
+
 
 ### コレクションまたはエンティティセレクションリストボックス
 
@@ -101,15 +108,18 @@ LIST TO ARRAY("ListName";ColumnName)
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
-データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば *コレクション* テーマの様々なメソッドを使用して変更をおこなった場合、コレクション変数を自らに再代入することで明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 たとえば:
+データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. たとえば:
 
 ```4d
 myCol:=myCol.push("new value") // リストボックスに new value を表示
 ```
 
+
+
 ### プロパティ一覧
 
 提供されるプロパティはリストボックスのタイプに依存します。
+
 
 | プロパティ                                                                        | 配列リストボックス | セレクションリストボックス | コレクションまたはエンティティセレクションリストボックス |
 | ---------------------------------------------------------------------------- | --------- | ------------- | ---------------------------- |
@@ -187,6 +197,10 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 > リストボックスの列、ヘッダーおよびフッターにもそれぞれ固有のプロパティがあります。
 
+
+
+
+
 ## リストボックス列
 
 リストボックスは、それぞれ固有のプロパティを持つ 1つ以上の列オブジェクトから構成されています。 列を選択するには、フォームエディターでリストボックスオブジェクトが選択されているときに任意の列をクリックします:
@@ -194,12 +208,13 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ![](assets/en/FormObjects/listbox_column.png)
 
 リストボックスの各列毎に標準のプロパティ (テキスト、背景色など) を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
-
 > 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。 オブジェクト配列を使用するためには、4D View Pro ライセンスが必要になります ([カラム内でのオブジェクト配列の使用 (4D View Pro)](#カラム内でのオブジェクト配列の使用-4d-view-pro)参照)。
+
 
 ### 列特有のプロパティ
 
 [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式タイプ) - [CSSクラス](properties_Object.md#CSSクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-(True時)-テキスト-(False時)) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+
 
 ## リストボックスヘッダー
 
@@ -217,14 +232,17 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてヘッダーで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
 
-ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
+ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
 
 ### ヘッダー特有のプロパティ
 
 [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#CSSクラス) - [パス名](properties_TextAndPicture.md#ピクチャーパス名) - [アイコンの場所](properties_TextAndPicture.md#アイコンの場所) - [幅](properties_CoordinatesAndSizing.md#幅) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプTips)
 
-## リストボックスフッター
 
+
+
+
+## リストボックスフッター
 > リストボックスのフッタープロパティにアクセスするためには、リストボックスのプロパティリストで [フッターを表示](properties_Footers.md#フッターを表示) オプションが選択されていなければなりません。
 
 リストボックスは、追加の情報を表示するための入力を受け付けない "フッター" を持つことができます。 表形式で表示されるデータについて、合計や平均などの計算値を表示するためにフッターは通常使用されます。
@@ -237,24 +255,26 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてフッターで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
 
-フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
+フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which *footer3* belongs and not simply this footer.
 
 ### フッター特有のプロパティ
 
+
 [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#CSSクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプTips)
+
 
 ## 入力の管理
 
 リストボックスのセルが入力可能であるには、以下の条件を満たす必要があります:
 
 - セルが属する列が [入力可](properties_Entry.md#入力可) に設定されている (でなければ、その列のセルには入力できません)。
-- `On Before Data Entry` イベントで $0 が -1 を返さない。 カーソルがセルに入ると、その列のメソッドで `On Before Data Entry` イベントが生成されます。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 **Tab** や **Shift+Tab** が押された後にイベントが生成された場合には、フォーカスはそれぞれ次あるいは前のセルに移動します。 $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。
+- `On Before Data Entry` イベントで $0 が -1 を返さない。 カーソルがセルに入ると、その列のメソッドで `On Before Data Entry` イベントが生成されます。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively. $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。
 
 2つの配列で構築されるリストボックスを考えてみましょう。1つは日付でもう 1つはテキストです。 日付配列は入力不可ですが、テキスト配列は日付が過去でない場合に入力可とします。
 
 ![](assets/en/FormObjects/listbox_entry.png)
 
-*arrText* 列のメソッドは以下の通りです:
+Here is the method of the *arrText* column:
 
 ```4d
  Case of
@@ -292,27 +312,26 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 |                                                | エンティティセレクションリストボックス | エンティティはオートマージオプション、オプティミスティック・ロックモードで保存されます (entity.save( ) を参照ください)。 正常に保存できた場合には、エンティティは更新され最新の状態が表示されます。 保存処理が失敗した場合、エラーが表示されます。 |
 |                                                | すべて                 | On Losing Focus                                                                                                                     |
 
-
 (*) エンティティセレクションリストボックスでの `On Data Change` イベントの場合:
-
 - [カレントの項目](properties_DataSource.md#カレントの項目) オブジェクトには編集前の値が格納されます。
 - `This` オブジェクトには、編集後の値が格納されます。
 
 > コレクション/エンティティセレクション型では、式が null に評価される場合にリストボックスでのデータ入力に制約があります。 この場合、セル内の null 値を編集・削除することはできません。
 
+
+
 ## 選択行の管理
 
 選択行の管理は、リストボックスのタイプが配列か、レコードのセレクションか、あるいはコレクション/エンティティセレクションかによって異なります。
 
-- **セレクションリストボックス**: 選択行は、デフォルトで `$ListboxSetX` と呼ばれる変更可能なセットにより管理されます (X は 0 から始まり、フォーム内のリストボックスの数に応じて一つずつ増加していきます)。 このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。
+- **Selection list box**: Selections are managed by a set, which you can modify if necessary, called `$ListboxSetX` by default (where X starts at 0 and is incremented based on the number of list boxes in the form). このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。
 
-- **コレクション/エンティティセレクションリストボックス**: 選択項目は、専用のリストボックスプロパティを通して管理されます。
-    
+- **Collection/Entity selection list box**: Selections are managed through dedicated list box properties:
     - [カレントの項目](properties_DataSource.md#カレントの項目) は、選択された要素/エンティティを受け取るオブジェクトです。
     - [選択された項目](properties_DataSource.md#選択された項目) は、選択された項目のコレクションです。
     - [カレントの項目の位置](properties_DataSource.md#カレントの項目の位置) は、選択された要素あるいはエンティティの位置を返します。
-- **配列リストボックス**: `LISTBOX SELECT ROW` コマンドを使用して、プログラムからリストボックスの行を選択できます。 [リストボックスオブジェクトにリンクされた変数](properties_Object.md#変数あるいは式) は、行選択の取得、設定、保存に使用します。 この変数はブール配列で、4Dが自動的に作成・管理します。 この配列のサイズは、リストボックスのサイズにより決定されます。つまり、各列に関連付けられた配列のうち、最も小さな配列と同じ数の要素を持ちます。 この配列の各要素には、対応する行が選択された場合には `true` が、それ以外の場合は `false` が設定されます。 4D は、ユーザーの動作に応じてこの配列の内容を更新します。 これとは逆に、この配列要素の値を変更して、リストボックス中の選択行を変更することができます。 他方、この配列への要素の挿入や削除はできず、行のタイプ変更もできません。 `Count in array` コマンドを使用して、選択された行の数を調べることができます。 たとえば、以下のメソッドは配列タイプのリストボックスで、最初の行の選択を切り替えます:
 
+- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. [リストボックスオブジェクトにリンクされた変数](properties_Object.md#変数あるいは式) は、行選択の取得、設定、保存に使用します。 この変数はブール配列で、4Dが自動的に作成・管理します。 この配列のサイズは、リストボックスのサイズにより決定されます。つまり、各列に関連付けられた配列のうち、最も小さな配列と同じ数の要素を持ちます。 この配列の各要素には、対応する行が選択された場合には `true` が、それ以外の場合は `false` が設定されます。 4D は、ユーザーの動作に応じてこの配列の内容を更新します。 これとは逆に、この配列要素の値を変更して、リストボックス中の選択行を変更することができます。 他方、この配列への要素の挿入や削除はできず、行のタイプ変更もできません。 `Count in array` コマンドを使用して、選択された行の数を調べることができます。 たとえば、以下のメソッドは配列タイプのリストボックスで、最初の行の選択を切り替えます:
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
   // tBListBox はフォーム内にあるリストボックス変数の名前です
@@ -324,6 +343,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ```
 
 > `OBJECT SET SCROLL POSITION` コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
+
 
 ### 選択行の見た目のカスタマイズ
 
@@ -341,19 +361,17 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 選択行を特定するには、リストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定されているセットに対象行が含まれているかを調べます: 選択行のアピアランスを定義するには、プロパティリストにて [カラー式またはスタイル式プロパティ](#配列と式の使用) を 1つ以上使います。
 
 次の場合には式が自動的に再評価されることに留意ください:
-
 - リストボックスのセレクションが変わった場合
 - リストボックスがフォーカスを得た、あるいは失った場合
 - リストボックスが設置されたフォームウィンドウが最前面になった、あるいは最前面ではなくなった場合
 
-#### 配列リストボックス
 
+#### 配列リストボックス
 選択行を特定するには、当該リストボックスにリンクしているブール配列 [変数](properties_Object.md#変数あるいは式) を調べます:
 
 選択行のアピアランスを定義するには、プロパティリストにて [行カラー配列または行スタイル配列プロパティ](#配列と式の使用) を 1つ以上使います。
 
 選択行のアピアランスを定義するリストボックス配列は、`On Selection Change` フォームイベント内で再計算する必要があることに留意が必要です。また、フォーカスの有無を選択行の表示に反映させるには、次のフォームイベント内でもこれらの配列を変更することができます:
-
 - `On Getting Focus` (リストボックスプロパティ)
 - `On Losing Focus` (リストボックスプロパティ)
 - `On Activate` (フォームプロパティ)
@@ -367,8 +385,9 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 配列タイプのリストボックスの場合、[行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) をプログラムにより更新する必要があります。 JSON フォームにおいて、リストボックスに次の行背景色配列を定義した場合:
 
-        "rowFillSource": "_ListboxBackground",
-    
+```
+    "rowFillSource": "_ListboxBackground",
+```
 
 リストボックスのオブジェクトメソッドに次のように書けます:
 
@@ -391,11 +410,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 JSON フォームにおいて、リストボックスに次のハイライトセットおよび背景色式を定義した場合:
 
-        "highlightSet": "$SampleSet",
-        "rowFillSource": "UI_SetColor",
-    
-
-*UI_SetColor* メソッドに次のように書けます:
+```
+    "highlightSet": "$SampleSet",
+    "rowFillSource": "UI_SetColor",
+```
+You can write in the *UI_SetColor* method:
 
 ```4d
  If(Is in set("$SampleSet"))
@@ -408,6 +427,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 ```
 
 > 階層リストボックスにおいては、[セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) オプションをチェックした場合には、ブレーク行をハイライトすることができません。 同階層のヘッダーの色は個別指定することができないため、任意のブレーク行だけをプログラムでハイライト表示する方法はありません。
+
 
 ## ソートの管理
 
@@ -422,17 +442,18 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 [列ヘッダー変数](properties_Object.md#変数あるいは式)の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。
 
 - 変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません;  
-    ![](assets/en/FormObjects/sorticon0.png)
+  ![](assets/en/FormObjects/sorticon0.png)
 
 - 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています;  
-    ![](assets/en/FormObjects/sorticon1.png)
+  ![](assets/en/FormObjects/sorticon1.png)
 
 - 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。  
-    ![](assets/en/FormObjects/sorticon2.png)
+  ![](assets/en/FormObjects/sorticon2.png)
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
 > `OBJECT SET FORMAT` コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+
 
 ## スタイルとカラー、表示の管理
 
@@ -442,6 +463,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 - [列](#リストボックス列) のプロパティリストを使用
 - リストボックスまたは列ごとの [配列や式](#配列と式の使用) プロパティを使用
 - セルごとのテキストにて定義 ([マルチスタイルテキスト](properties_Text.md#マルチスタイル) の場合)
+
 
 ### 優先順位と継承
 
@@ -456,10 +478,9 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 |      | リストボックスのプロパティ                           |
 | 優先度低 | メタ情報式 (コレクションまたはエンティティセレクションリストボックスの場合) |
 
-
 例として、リストボックスのプロパティにてフォントスタイルを設定しながら、列には行スタイル配列を使用して異なるスタイルを設定した場合、後者が有効となります。
 
-それぞれの属性 (スタイル、カラー、背景色) について、デフォルトの値を使用した場合、属性の **継承** がおこなわれます:
+For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
 
 - セル属性について: 行の属性値を受け継ぎます
 - 行属性について: 列の属性値を受け継ぎます
@@ -483,6 +504,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 - リストボックスの行スタイル配列の要素 4 に定数 `lk inherited` を渡します。これにより、4 行目のイタリックのスタイルが除去されます。
 - リストボックスの行背景色配列の要素 2 に定数 `lk inherited` を渡します。これにより元の、背景色が交互に変わるリストボックスの状態に戻すことができます。
 
+
 ### 配列と式の使用
 
 リストボックスのタイプに応じて、行のカラーやスタイル、表示について使用できるプロパティが異なります:
@@ -493,15 +515,18 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 | フォントカラー | [行フォントカラー配列](properties_Text.md#row-font-color-array)                  | [フォントカラー式](properties_Text.md#font-color-expression)                  | [フォントカラー式](properties_Text.md#フォントカラー式) または [メタ情報式](properties_Text.md#メタ情報式)         |
  フォントスタイル|
 
-[行スタイル配列](properties_Text.md#行スタイル配列)|[スタイル式](properties_Text.md#スタイル式)|[スタイル式](properties_Text.md#スタイル式) または [メタ情報式](properties_Text.md#メタ情報式)| 表示|[行コントロール配列](properties_ListBox.md#行コントロール配列)|-|-| 
+[行スタイル配列](properties_Text.md#行スタイル配列)|[スタイル式](properties_Text.md#スタイル式)|[スタイル式](properties_Text.md#スタイル式) または [メタ情報式](properties_Text.md#メタ情報式)| 表示|[行コントロール配列](properties_ListBox.md#行コントロール配列)|-|-|
+
+
+
 
 ## リストボックスの印刷
 
-リストボックスの印刷には 2つの印刷モードがあります: フォームオブジェクトのようにリストボックスを印刷する **プレビューモード** と、フォーム内でリストボックスオブジェクトの印刷方法を制御できる **詳細モード** があります。 フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。
+Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。
 
 ### プレビューモード
 
-プレビューモードでのリストボックスの印刷は、標準の印刷コマンドや **印刷** メニューを使用して、リストボックスを含むフォームをそのまま出力します。 リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。とくに、表示されている以上の行を印刷することはできません。
+Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。とくに、表示されている以上の行を印刷することはできません。
 
 ### 詳細モード
 
@@ -513,6 +538,10 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 - リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。印刷を実行する前に `OBJECT SET SCROLL POSITION` を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
 - 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 `LISTBOX GET PRINT INFORMATION` コマンドを使用して、印刷がおこなわれている間の状態をチェックできます。
 
+
+
+
+
 ## 階層リストボックス
 
 4D ではリストボックスを階層表示にするよう指定することができます。 階層リストボックスは左の列が階層状に表示されます。このタイプの表示方法は、繰り返される値や、階層に依存するデータの表示などに適用できます (国/地域/都市など)。
@@ -521,19 +550,21 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 階層リストボックスはデータを表示する特別な方法ですが、データの構造 (配列) は変更しません。 階層リストボックスは通常のリストボックスとまったく同じ方法で管理されます。
 
+
 ### 階層の指定
 
 階層リストボックスとして指定するには、3つの方法があります:
 
-* フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
-* フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-* [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (*4D ランゲージリファレンス* 参照)。
+*   フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
+*   フォームエディターのリストボックス管理メニューを使用して階層を生成する。
+*   Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
+
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、[*dataSource* プロパティの値が array であるときに](properties_Object.md#階層リストボックス)、この機能が利用可能になります。
+このプロパティを使用してリストボックスの階層表示を設定します。 In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 
-*階層リストボックス* オプションが選択されると、追加オプションである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース (*dataSource*) 配列を指定します。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
+Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
 Variable 1 は常に、リストボックスの先頭列の変数名に対応します (この 2つの値は自動でバインドされます)。 Variable 1欄は常に表示され、入力できます。 例: country。 Variable 2 も常に表示され、入力できます。これは二番目の階層レベルを指定します。 例: regions。 三番目以降の欄は、その前の番号の欄が入力されると表示されます。 例えば: counties、cities等。 最大10レベルまで指定できます。 ある階層レベルの値を削除すると、その後の階層レベルが繰り上がります。
 
@@ -542,31 +573,31 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 ![](assets/en/FormObjects/property_hierarchicalListBox.png)
 
 この原則は階層がひとつだけ設定されている場合には適用されません。この場合、同じ値はグループ化されます。
-
 > 既存のリストボックスで階層を設定した場合、(最初のものを除き) これらの列を削除または非表示にしなければなりません。でないと、それらはリストボックス中で重複して表示されます。 エディターのポップアップメニューを使用して階層を設定すると (階層リストボックス参照)、不要な列は自動でリストボックスから取り除かれます。
+
 
 #### コンテキストメニューを使用した階層化
 
-フォームエディター内で配列タイプのリストボックスオブジェクトの一番目から任意の数の列を選択すると、**階層を作成** コマンドがコンテキストメニューから利用できるようになります:
+When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
 
 ![](assets/en/FormObjects/listbox_hierarchy1.png)
 
 このコマンドは階層化のショートカットです。 このコマンドを選択すると、以下のアクションが実行されます:
 
-* そのオブジェクトのプロパティリストで **階層リストボックス** オプションが選択されます。
-* その列の変数が階層を指定するために使用されます。 既に設定されていた変数は置き換えられます。
-* (先頭列を除き) 選択された列はリストボックス内に表示されなくなります。
+*   The **Hierarchical list box** option is checked for the object in the Property List.
+*   その列の変数が階層を指定するために使用されます。 既に設定されていた変数は置き換えられます。
+*   (先頭列を除き) 選択された列はリストボックス内に表示されなくなります。
 
-例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 国、地域、都市が (下図の通り) 選択され、コンテキストメニューから **階層を作成** を選択すると、先頭列に3レベルの階層が作成され、二番目と三番目の列は取り除かれます。人口列が二番目になります:
+例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
 
 ![](assets/en/FormObjects/listbox_hierarchy2.png)
 
 ##### 階層をキャンセル
+When the first column is selected and already specified as hierarchical, you can use the **Cancel hierarchy** command. このコマンドを選択すると以下のアクションが実行されます:
 
-階層リストボックスとして定義されたリストボックスで先頭列を選択すると、**階層をキャンセル** コマンドを使用できます。 このコマンドを選択すると以下のアクションが実行されます:
+*   The **Hierarchical list box** option is deselected for the object,
+*   2番目以降の階層レベルが削除され、通常の列としてリストボックスに追加されます。
 
-* そのオブジェクトの **階層リストボックス** オプションの選択が解除されます。
-* 2番目以降の階層レベルが削除され、通常の列としてリストボックスに追加されます。
 
 ### 動作
 
@@ -582,9 +613,9 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 階層を正しく構築するためには、事前に配列をソートしなければなりません。 たとえば、配列中にデータが AAABBAACC の順で含まれていると、階層は以下のようになります:
 
-> A B A C
+    > A B A C
 
-階層 "ノード" を展開したり折りたたんだりするには、ノード上をクリックします。 ノード上を **Alt+クリック** (Windows) または **Option+クリック** (macOS) すると、すべてのサブ要素が同時に展開されたり折りたたまれたりします。 これらの動作は `LISTBOX EXPAND` および `LISTBOX COLLAPSE` コマンドを使用することでプログラミングでも実行可能です。
+階層 "ノード" を展開したり折りたたんだりするには、ノード上をクリックします。 If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. これらの動作は `LISTBOX EXPAND` および `LISTBOX COLLAPSE` コマンドを使用することでプログラミングでも実行可能です。
 
 階層リストボックスに日付や時間型の値を表示する際、それらは Short system format で表示されます。
 
@@ -594,7 +625,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 - まず階層列 (一番目の列) のすべてのレベルが自動で昇順にソートされます。
 - 次にクリックされた列の値を使用して、昇順または降順にソートが実行されます。
-- すべての列が同期されます。 
+- すべての列が同期されます。
 - その後の非階層列のソート時には、階層列の最後のレベルのみがソートされます。 この列のソートはそのヘッダーをクリックすることでおこなえます。
 
 例として、まだソートされていない以下のリストボックスがあります:
@@ -606,6 +637,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 ![](assets/en/FormObjects/hierarch4.png)
 
 通常のリストボックスと同様、リストボックスの [ソート可](properties_Action.md#ソート可) オプションの選択を解除することで標準のソートメカニズムを無効にし、プログラムでソートを管理できます。
+
 
 #### 選択行とその位置の管理
 
@@ -641,9 +673,9 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 選択と同様に、`LISTBOX GET CELL POSITION` コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、`LISTBOX GET CELL POSITION` は同じ位置 (3;2) を返します。
 
-*非階層表示:* ![](assets/en/FormObjects/hierarch9.png)
+*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch9.png)
 
-*階層表示:* ![](assets/en/FormObjects/hierarch10.png)
+*Hierarchical representation:* ![](assets/en/FormObjects/hierarch10.png)
 
 サブ階層のすべての行が隠されているとき、ブレーク行は自動で隠されます。 先の例題で 1から 3行目までが隠されていると、"Brittany" のブレーク行は表示されません。
 
@@ -653,15 +685,16 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 ![](assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` は (2;4) を返します。 プログラムでブレーク行を選択するには `LISTBOX SELECT BREAK` コマンドを使用する必要があります。
+
+... `LISTBOX GET CELL POSITION` returns (2;4). プログラムでブレーク行を選択するには `LISTBOX SELECT BREAK` コマンドを使用する必要があります。
 
 ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
 以下のリストボックスを例題とします (割り当てた配列名は括弧内に記載しています):
 
-*非階層表示:* ![](assets/en/FormObjects/hierarch12.png)
+*Non-hierarchical representation:* ![](assets/en/FormObjects/hierarch12.png)
 
-*階層表示:* ![](assets/en/FormObjects/hierarch13.png)
+*Hierarchical representation:* ![](assets/en/FormObjects/hierarch13.png)
 
 階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
 
@@ -669,12 +702,12 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
  OBJECT SET FONT STYLE(T2;Bold)
 ```
-
 > このコンテキストでは、配列に割り当てられたオブジェクトがないため、オブジェクトプロパティコマンドで動作するのは、配列変数を使用したシンタックスのみです。
 
 結果:
 
 ![](assets/en/FormObjects/hierarch14.png)
+
 
 #### 展開/折りたたみ管理の最適化
 
@@ -685,12 +718,13 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 `On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、`LISTBOX GET CELL POSITION` コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
-
 - リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません: ![](assets/en/FormObjects/hierarch15.png)
 
 - ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には `SELECTION TO ARRAY` コマンドから得られる値を設定します。そして`LISTBOX INSERT ROWS` コマンドを使用して必要なだけ行を挿入します。 ![](assets/en/FormObjects/hierarch16.png)
 
 - ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、 `LISTBOX DELETE ROWS` コマンドを使用してリストボックスから必要なだけ行を削除します。
+
+
 
 ## オブジェクト配列の使用 (4D View Pro)
 
@@ -699,8 +733,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 以下のリストボックスはオブジェクト配列を使用してデザインされました:
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
-
-> **ライセンスについての注意**: リストボックス内でのオブジェクト配列の使用は、"4D View Pro" ツールを使います。 この機能を使用するためには、有効な 4D View Pro ライセンスが必要になります。 詳細な情報に関しては、4D Web サイトを参照ください。
+> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. この機能を使用するためには、有効な 4D View Pro ライセンスが必要になります。 詳細な情報に関しては、4D Web サイトを参照ください。
 
 ### オブジェクト配列カラムの設定
 
@@ -712,32 +745,31 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 しかしながら、データソーステーマは、オブジェクト型のリストボックスカラムに対しては選択できません。 実際、カラムの各セルの中身は、それに対応するオブジェクト配列の要素の属性に基づいています。 配列の各オブジェクト要素には、以下を定義できます:
 
-値の型 (必須): テキスト、カラー、イベント、他 値そのもの (任意): 入力/出力に使用 セルの内容表示 (任意): ボタン、リスト、他 追加の設定 (任意): 値の型によります これらのプロパティを定義するには、適切な属性をオブジェクト内に設定する必要があります (使用可能な属性は以下に一覧としてまとめてあります)。 たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
+the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
 
-```4d
-ARRAY OBJECT(obColumn;0) // カラム配列
- C_OBJECT($ob) // 第一要素
- OB SET($ob;"valueType";"text") // 値の型を定義 (必須)
- OB SET($ob;"value";"Hello World!") // 値を定義
+```4d  
+ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
-
 > 表示フォーマットと入力フィルターはオブジェクトカラムに対しては設定できません。 これらは値の型に応じて自動的に変わるからです。
 
 #### valueTypeとデータ表示
 
 リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。 次の valueType の値がサポートされています:
 
-* "text": テキスト値
-* "real": セパレーターを含む数値。セパレーターの例: \<space>, <.>, <,>
-* "integer": 整数値
-* "boolean": true/false 値
-* "color": 背景色を定義
-* "event": ラベル付ボタンを表示
+*   "text": テキスト値
+*   "real": セパレーターを含む数値。セパレーターの例: \<space>, <.>,  <,>
+*   "integer": 整数値
+*   "boolean": true/false 値
+*   "color": 背景色を定義
+*   "event": ラベル付ボタンを表示
 
-4D は "valueType" の値に応じたデフォルトのウィジェットを使用します (つまり、"text" と設定すればテキスト入力ウィジェットが表示され、"boolean" と設定すればチェックボックスが表示されます)。しかし、オプションを使用することによって表示方法の選択が可能な場合もあります (たとえば、"real" と設定した場合、ドロップダウンメニューとしても表示できます)。 以下の一覧はそれぞれの値の型に対してのデフォルトの表示方法と、他に選択可能な表示方の一覧を表しています:
+4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). 以下の一覧はそれぞれの値の型に対してのデフォルトの表示方法と、他に選択可能な表示方の一覧を表しています:
 
 | valueType | デフォルトのウィジェット            | 他に選択可能なウィジェット                                             |
 | --------- | ----------------------- | --------------------------------------------------------- |
@@ -749,24 +781,22 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 | event     | ラベル付ボタン                 |                                                           |
 |           |                         | すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます      |
 
-
 セルの表示とオプションは、オブジェクト内の特定の属性を使用することによって設定できます (以下を参照ください)。
 
 #### 表示フォーマットと入力フィルター
 
 オブジェクト型のリストボックスのカラムにおいては、表示フォーマットと入力フィルターを設定することはできません。 これらは値の型に応じて自動的に定義されます。 どのように定義されるかについては、以下一覧にまとめてあります:
 
-| 値の型   | デフォルトのフォーマット                             | 入力コントロール               |
-| ----- | ---------------------------------------- | ---------------------- |
-| テキスト  | オブジェクト内で定義されているものと同じ                     | 制限なし                   |
-| 実数    | オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用) | "0-9" と "." と "-"      |
-|       |                                          | min>=0 の場合、"0-9" と "." |
-| 整数    | オブジェクト内で定義されているものと同じ                     | "0-9" と "-"            |
-|       |                                          | min>=0 の場合、"0-9"       |
-| ブール   | チェックボックス                                 | N/A                    |
-| color | N/A                                      | N/A                    |
-| event | N/A                                      | N/A                    |
-
+| 値の型   | デフォルトのフォーマット                             | 入力コントロール                |
+| ----- | ---------------------------------------- | ----------------------- |
+| テキスト  | オブジェクト内で定義されているものと同じ                     | 制限なし                    |
+| 実数    | オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用) | "0-9" と "." と "-"       |
+|       |                                          | "0-9" and "." if min>=0 |
+| 整数    | オブジェクト内で定義されているものと同じ                     | "0-9" と "-"             |
+|       |                                          | "0-9" if min>=0         |
+| ブール   | チェックボックス                                 | N/A                     |
+| color | N/A                                      | N/A                     |
+| event | N/A                                      | N/A                     |
 
 ### 属性
 
@@ -794,17 +824,16 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 | unitsListName         | 単位の4D リスト名               | ○    | ○  | ○  |     |       |       |
 | alternateButton       | 切り替えボタンを追加               | ○    | ○  | ○  | ○   | ○     |       |
 
-
 #### value
 
 セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
-```4d
- ARRAY OBJECT(obColumn;0) // カラム配列
+````4d
+ ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、 編集された値は$entry に格納されます
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -815,10 +844,9 @@ ARRAY OBJECT(obColumn;0) // カラム配列
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
  APPEND TO ARRAY(obColumn;$ob3)
-```
+````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
-
 > null 値はサポートされており、空のセルとして表示されます。
 
 #### min と max
@@ -827,14 +855,14 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 これらの属性を使用すると入力値の範囲を管理することができます。 セルが評価されたとき (フォーカスを失ったとき)、入力された値が min の値より低い場合、または max の値より大きい場合には、その値は拒否されます。 この場合、入力をする前の値が保持され、tip として説明が表示されます。
 
-```4d
+````4d
  C_OBJECT($ob3)
  $entry3:=2015
  OB SET($ob3;"valueType";"integer")
  OB SET($ob3;"value";$entry3)
  OB SET($ob3;"min";2000)
  OB SET($ob3;"max";3000)
-```
+````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_minMax.png)
 
@@ -842,11 +870,9 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 4D v15では、一つだけ他の表示方法が用意されています:
 
-| 属性       | 使用可能な値      | valueType | 説明                                                                                                        |
-| -------- | ----------- | --------- | --------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates | 整数        | スリーステートチェックボックスを数値として表現します。  
-2=セミチェック、1=チェック、0=チェックされていない、-1=非表示、-2=チェックなしが無効化、-3=チェックが無効化、-4=セミチェックが無効化 |
-
+| 属性       | 使用可能な値      | valueType | 説明                                                                                                               |
+| -------- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates | 整数        | スリーステートチェックボックスを数値として表現します。<br>2=セミチェック、1=チェック、0=チェックされていない、-1=非表示、-2=チェックなしが無効化、-3=チェックが無効化、-4=セミチェックが無効化 |
 
 ```4d
  C_OBJECT($ob3)
@@ -864,16 +890,15 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 "choiceList" または "requiredList" 属性がオブジェクト内に存在しているとき、テキスト入力は以下の属性に応じて、ドロップダウンリストまたはコンボボックスで置き換えられます:
 
-* 属性が "choiceList" の場合、セルはコンボボックスとして表示されます。 これはつまり、ユーザーは値を選択、または入力できるということです。
-* 属性が "requiredList" の場合、セルはドロップダウンリストとして表示されます。これはつまり、ユーザーはリストに提供されている値からどれか一つを選択するしかないということです。
+*   属性が "choiceList" の場合、セルはコンボボックスとして表示されます。 これはつまり、ユーザーは値を選択、または入力できるということです。
+*   属性が "requiredList" の場合、セルはドロップダウンリストとして表示されます。これはつまり、ユーザーはリストに提供されている値からどれか一つを選択するしかないということです。
 
 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
-
 > ウィジェットの値は配列を通して定義されます。 既存の 4Dリストをウィジェットに割り当てたい場合、"requiredListReference"、"requiredListName"、"choiceListReference"、または "choiceListName" 属性を使用する必要があります。
 
-例: 
+例:
 
-* 選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。 デフォルトでは "Closed" が選択された状態にしたいとします:
+*   選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。 デフォルトでは "Closed" が選択された状態にしたいとします:
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -884,10 +909,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     OB SET($ob;"value";"Closed")
     OB SET ARRAY($ob;"requiredList";$RequiredList)
 ```
-
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-* 整数値であればすべて受け入れ可能な状態にしておいた上で、もっとも一般的な値を提示するためにコンボボックスを表示したい場合を考えます:
+*   整数値であればすべて受け入れ可能な状態にしておいた上で、もっとも一般的な値を提示するためにコンボボックスを表示したい場合を考えます:
 
 ```4d
     ARRAY LONGINT($ChoiceList;0)
@@ -901,7 +925,6 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     OB SET($ob;"value";10) // 10 をデフォルト値として使用
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
-
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
 #### requiredListName と requiredListReference
@@ -909,13 +932,12 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 "requiredListName" と "requiredListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
 
 "requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡します。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
-
 > * これらの値を単純な配列を通して定義したい場合は、"requiredList" 属性を使用する必要があります。
 > * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
-例: 
+例:
 
-* ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "blue" にしたい場合を考えます:
+*   ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "blue" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -926,10 +948,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     OB SET($ob;"value";"blue")
     OB SET($ob;"requiredListName";"colors")
 ```
-
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-* プログラミングによって定義されたリストに基づいたドロップダウンリストを表示し、参照として保存したい場合を考えます:
+*   プログラミングによって定義されたリストに基づいたドロップダウンリストを表示し、参照として保存したい場合を考えます:
 
 ```4d
     <>List:=New list
@@ -944,52 +965,52 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     OB SET($ob;"requiredListReference";<>List)
 ```
 
+
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
-    
 
 #### choiceListName と choiceListReference
 
 "choiceListName" と "choiceListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (`New list` コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはコンボボックスとして表示されるようになります。これはつまり、ユーザーは値を選択、または入力できるということを意味します。
 
 "choiceListName" または "choiceListReference" は、リストの作成元に応じて使い分けます。リストがツールボックスで作成された場合、リスト名を渡しま す。リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
-
 > * これらの値を単純な配列を通して定義したい場合は、"choiceList" 属性を使用する必要があります。
 > * リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。例: "17.6" "1234.456"
 
-例: 
+例:
 
 ツールボックスで定義された "colors" リスト ("blue"、"yellow"、そして "green" の値を格納) に基づいたドロップダウンリストを表示し、値として保存し、デフォルトの表示は "green" にしたい場合を考えます:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
-```4d
+````4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
  OB SET($ob;"value";"blue")
  OB SET($ob;"choiceListName";"colors")
-```
+````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
+
 #### unitsList、unitsListName、 unitsListReference と unitReference
 
-特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:
+You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
-* "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
-* "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
-* "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
+*   "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
+*   "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+*   "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
 
-* "unitReference": "unitList"、"unitsListReference" または "unitsListName" の値リスト内で選択された項目へのインデックス (1からx) を格納する単一の値。
+*   "unitReference": "unitList"、"unitsListReference" または "unitsListName" の値リスト内で選択された項目へのインデックス (1からx) を格納する単一の値。
 
-カレントの単位は、ボタンとして表示されます。このボタンは、クリックするたびに "unitList"、"unitsListReference" または "unitsListName" の値を切り替えていきます (例: "pixels" -> "rows" -> "cm" -> "pixels" -> 等)。
+The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
-例: 
+例:
 
 数値の入力と、その後に可能性のある二つの単位 ("lines" または "pixels") を続けて表示したい場合を考えます。 カレントの値は "2" + "lines" と、 オブジェクト内で直接定義された値 ("unitsList" 属性) を使用するものとします:
 
-```4d
+````4d
 ARRAY TEXT($_units;0)
 APPEND TO ARRAY($_units;"lines")
 APPEND TO ARRAY($_units;"pixels")
@@ -998,7 +1019,7 @@ OB SET($ob;"valueType";"integer")
 OB SET($ob;"value";2) // 2 "units"
 OB SET($ob;"unitReference";1) //"lines"
 OB SET ARRAY($ob;"unitsList";$_units)
-```
+````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_unitList.png)
 
@@ -1008,7 +1029,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては [イベント管理](#イベント管理) の章を参照ください)。
 
-例: 
+例:
 
 ```4d
 C_OBJECT($ob1)
@@ -1020,21 +1041,23 @@ OB SET($ob;"value";$entry)
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
+
 #### color valueType
 
 "color" valueType を使用すると、色、または色を表すテキストを表示することができます。
 
-* 値が数字の場合、色付けされた長方形がセル内に表示されます。 例: 
-    
-    ```4d
+*   値が数字の場合、色付けされた長方形がセル内に表示されます。 例:
+
+    ````4d
     C_OBJECT($ob4)
     OB SET($ob4;"valueType";"color")
     OB SET($ob4;"value";0x00FF0000)
-    ```
-    
-    ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
+    ````
+![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-* 値がテキストの場合、そのテキストが表示されます (*例*: "value";"Automatic")。
+
+*   If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+
 
 #### event valueType
 
@@ -1042,25 +1065,25 @@ OB SET($ob;"value";$entry)
 
 オプションとして、"label" 属性を渡すことができます。
 
-例: 
+例:
 
-```4d
+````4d
 C_OBJECT($ob)
 OB SET($ob;"valueType";"event")
 OB SET($ob;"label";"Edit...")
-```
+````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
-### イベント管理
 
+### イベント管理
 オブジェクトリストボックス配列を使用している際には、複数のイベントを管理することができます:
 
-* **On Data Change**: 以下の場所において、どんな値でも変更された場合には `On Data Change` イベントがトリガーされます: 
-    * テキスト入力
-    * ドロップダウンリスト
-    * コンボボックスエリア
-    * 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
-    * チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
-* **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
-* **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+*   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
+    *   テキスト入力
+    *   ドロップダウンリスト
+    *   コンボボックスエリア
+    *   単位ボタン (値 x が値 x+1 へとスイッチしたとき)
+    *   チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
+*   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. このイベントはプログラマーによって管理されます。
+*   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. このイベントはプログラマーによって管理されます。

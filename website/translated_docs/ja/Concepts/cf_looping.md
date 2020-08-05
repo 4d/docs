@@ -4,21 +4,17 @@ title: ループ構造
 ---
 
 ## While...End while
-
 `While...End while` による制御フロー構造の正式な構文は以下のようになります:
-
 ```4d
  While(Boolean_Expression)
     statement(s)
  End while
 ```
+`While...End while` ループは、ブール式が true である限り、ループ内のステートメントを実行し続けます。 ループの始めにブール式を評価し、ブール式が FALSE の場合にはループをおこないません。
 
-`While...End while` ループは、ブール式が TRUE である限り、ループ内のステートメントを実行し続けます。 ループの始めにブール式を評価し、ブール式が FALSE の場合にはループをおこないません。
+一般に、`While...End while` ループに入る手前で、ブール式で判定する値を初期化しておきます。 通常はブール式が true になるように設定してからループに入ります。
 
-一般に、`While...End while` ループに入る手前で、ブール式で判定する値を初期化しておきます。 通常はブール式が TRUE になるように設定してからループに入ります。
-
-ブール式は、ループ内の要素を使って設定されなければなりません。そうでなければ、ループは永久に続くでしょう。 以下の例では、*NeverStop* がいつも TRUE であるので、ループは永久に続きます。
-
+ブール式は、ループ内の要素を使って設定されなければなりません。そうでなければ、ループは永久に続くでしょう。 The following loop continues forever because _NeverStop_ is always TRUE:
 ```4d
  NeverStop:=True
  While(NeverStop)
@@ -30,30 +26,27 @@ title: ループ構造
 ### 例題
 
 ```4d
- CONFIRM("新規にレコード追加しますか？") // ユーザーに確認します
+ CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) // 利用者が望む限りループします
     ADD RECORD([aTable]) // 新規にレコードを追加します
  End while // ループは必ず End while によって終わります
 ```
 
-この例では、まずループに入る前に `CONFIRM` コマンドによりシステム変数 `OK` がセットされます。 ユーザーがダイアログボックスで **OK** ボタンをクリックすると、システム変数 `OK` に1がセットされ、ループを開始します。 それ以外の場合はシステム変数 `OK` に0が設定され、ループをスキップします。 ループに入ると、`ADD RECORD` コマンドはループを続けます。これは、ユーザーがレコードを保存した時点で、システム変数 `OK` に1が設定されるからです。 ユーザーが最後のレコードを取り消した (保存しない) 時点で、システム変数 `OK` に0がセットされ、ループは終了します。
+この例では、まずループに入る前に `CONFIRM` コマンドによりシステム変数 `OK` がセットされます。 If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. それ以外の場合はシステム変数 `OK` に0が設定され、ループをスキップします。 ループに入ると、`ADD RECORD` コマンドはループを続けます。これは、ユーザーがレコードを保存した時点で、システム変数 `OK` に1が設定されるからです。 ユーザーが最後のレコードを取り消した (保存しない) 時点で、システム変数 `OK` に0がセットされ、ループは終了します。
 
 ## Repeat...Until
 
 `Repeat...Until` による制御フロー構造の正式な構文は以下のようになります:
-
 ```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
 ```
-
 `Repeat...Until` ループは、[While...End while](flow-control#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 つまり、`Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
 
-もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が TRUE になるまでループを続行することです。
+もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
 ### 例題
-
 以下の例を、`While...End while` ループの例と比較してください。 ブール式を、初期化しておく必要がない点に注目してください。システム変数　`OK` を初期化する `CONFIRM` コマンドはありません。
 
 ```4d
@@ -63,7 +56,6 @@ title: ループ構造
 ```
 
 ## For...End for
-
 `For...End for` による制御フロー構造の正式な構文は以下のようになります:
 
 ```4d
@@ -74,20 +66,19 @@ title: ループ構造
 
 `For...End for` ループは、カウンター変数によりループを制御します:
 
-- カウンター変数 *Counter_Variable* は、数値変数 (実数または倍長整数) で、*Start_Expression* に指定した値に初期化されます。
-- ループを実行するたびに、任意の引数である *Increment_Expression* の値がカウンター変数に加算されます。 *Increment_Expression* を指定しない場合、増分値は1になります。
-- カウンターが *End_Expression* の値を超えた時点で、ループを停止します。
+- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
+- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
+- When the counter variable passes the *End_Expression* value, the loop stops.
 
-**重要:** *Start_Expression*、*End_Expression*、*Increment_Expression* の値は、ループの始めに一度だけ評価されます。 これらの数値が変数で指定されている場合、ループ内でその変数の値を変更してもループは影響を受けません。
+**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. これらの数値が変数で指定されている場合、ループ内でその変数の値を変更してもループは影響を受けません。
 
-**Tip:** 特別な目的のために、カウンター変数 *Counter_Variable* の値を変更することができます。ループ内でカウンター変数を変更すると、ループはその影響を受けます。
+**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
 
-- 通常、*Start_Expression* は *End_Expression* より小さい。
-- *Start_Expression* と *End_Expression* が等しい場合、1回だけループがおこなわれます。
-- *Start_Expression* が *End_Expression* より大きい場合、*Increment_Expression* に負の値を指定しない限り、ループはおこなわれません。 次に例を示します。
+- Usually *Start_Expression* is less than *End_Expression*.
+- If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
+- If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. 次に例を示します。
 
 ### 基本的な使用例
-
 1. 以下の例は、100回の繰り返しをおこないます:
 
 ```4d
@@ -133,7 +124,7 @@ title: ループ構造
 
 ### カウンター変数の減算
 
-ループに際してカウンター変数を増加させるのではなく、減少させたい場合があります。 その場合、*Start_Expression* に *End_Expression* より大きい値を設定し、*Increment_Expression* に負の数を指定する必要があります。 次に挙げる例題は、前述の例と同じ処理を逆の順序でおこないます:
+ループに際してカウンター変数を増加させるのではなく、減少させたい場合があります。 To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. 次に挙げる例題は、前述の例と同じ処理を逆の順序でおこないます:
 
 5. 以下の例は、100回の繰り返しをおこないます:
 
@@ -178,7 +169,7 @@ title: ループ構造
 
 ### 1より大きな値によるカウンター変数の増加
 
-必要に応じて、*Increment_Expression* (正または負の値) に、その絶対値が1より大きな値を指定できます。
+If you need to, you can use an *Increment_Expression* (positive or negative) whose absolute value is greater than one.
 
 9. 以下の例は、配列 anArray の偶数要素について処理を行います:
 
@@ -189,10 +180,10 @@ title: ループ構造
  End for
 ```
 
+
 ### ループ構造の比較
 
 `For...End for` ループの例をもう一度見てみましょう。 以下の例は、100回の繰り返しをおこないます:
-
 ```4d
  For(vCounter;1;100)
   // なんらかの処理
@@ -200,7 +191,6 @@ title: ループ構造
 ```
 
 `While...End while` ループと `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 以下は、同じ処理を実行する `While...End while` ループです:
-
 ```4d
  $i:=1 // カウンターの初期化
  While($i<=100) // 100回のループ
@@ -210,7 +200,6 @@ title: ループ構造
 ```
 
 同じことを `Repeat...Until` ループで記述すると以下のようになります:
-
 ```4d
  $i:=1 // カウンターの初期化
  Repeat
@@ -218,8 +207,7 @@ title: ループ構造
     $i:=$i+1 // カウンターの増分が必要
  Until($i=100) // 100回のループ
 ```
-
-**Tip:** `For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは4Dが内部的にカウンター変数のテストおよび増加を行うからです。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
+**Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 ### For...End for ループの最適化
 
@@ -276,7 +264,6 @@ title: ループ構造
 ```
 
 ## For each...End for each
-
 `For each...End for each` による制御フロー構造の正式な構文は以下のようになります:
 
 ```4d
@@ -285,7 +272,7 @@ title: ループ構造
  End for each
 ```
 
-`For each...End for each` 構造は、*Expression* に含まれるすべての*Current_item* に対して処理を繰り返します。 *Current_item* の型は *Expression* の型に依存します。 `For each...End for each` ループは3種類の *Expression * を対象に反復処理をおこなうことができます:
+The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
 
 - コレクション: コレクションの各要素をループします
 - エンティティセレクション: 各エンティティをループします
@@ -300,30 +287,28 @@ title: ループ構造
 | ループ数 (デフォルト)            | コレクションの要素数         | セレクション内のエンティティ数   | オブジェクトのプロパティ数 |
 | begin / end パラメーターのサポート | ◯                  | ◯                 | ×             |
 
-
 - ループの数は開始時に評価され、処理中に変化することはありません。 ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
-- デフォルトでは、内部の *statement(s)* 部の処理は、*Expression* の各項目に対して実行されます。 しかしながら、ループの先頭 (`While`) あるいはループの終わり (`Until`) で条件をテストすることで、ループを抜け出すことは可能です。
-- 任意の *begin* および *end* パラメーターを指定することで、コレクションおよびエンティティセレクションに対してループの範囲を定義することができます。
-- `For each...End for each` ループは **共有コレクション** や **共有オブジェクト** に対して使用することもできます。 コレクションの要素またはオブジェクトのプロパティを変更する場合は、`Use...End use` 構文も追加で必要です。 `Use...End use` 構文の使い方は、つぎのように状況に応じて異なります: 
+- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. しかしながら、ループの先頭 (`While`) あるいはループの終わり (`Until`) で条件をテストすることで、ループを抜け出すことは可能です。
+- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
+- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. コレクションの要素またはオブジェクトのプロパティを変更する場合は、`Use...End use` 構文も追加で必要です。 `Use...End use` 構文の使い方は、つぎのように状況に応じて異なります:
     - 整合性のため要素やプロパティを一括で処理しなくてはならない場合には、ループに入る前 (外側) に使います。
     - 要素やプロパティを個々に変更して差し支えない場合は、ループの中で使います。
 
 ### コレクション内のループ
 
-`For each...End for each` が *Collection* 型の *Expression* に対して使用された場合、*Current_Item* はコレクション要素と同じ型の変数です。 デフォルトでは、ループの回数はコレクションの要素数に基づいています。
+When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. デフォルトでは、ループの回数はコレクションの要素数に基づいています。
 
-コレクションの要素はすべて同じ型でなくてはなりません。そうでない場合には、*Current_Item* 変数に別の型の値が代入されたときにエラーが生成されます。
+The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
 
-各ループの繰り返しにおいて、*Current_Item* 変数には、合致するコレクションの要素が自動的に代入されます。 このとき、以下の点に注意する必要があります:
+At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. このとき、以下の点に注意する必要があります:
 
-- *Current_Item* 変数がオブジェクト型あるいはコレクション型であった場合 (つまり *Expression* がオブジェクトのコレクション、あるいはコレクションのコレクションであった場合)、この変数を変更すると自動的にコレクションの対応する要素も変更されます (オブジェクトとコレクションは同じ参照を共有しているからです)。 変数がスカラー型である場合、変数のみが変更されます。
-- *Current_Item* 変数は、コレクション要素の型と合致している必要があります。 コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
-- コレクションが **Null** 値の要素を格納していたとき、*Current_Item* 変数の型が **Null** 値をサポートしない型 (倍長整数変数など) であった場合にはエラーが生成されます。 
+- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). 変数がスカラー型である場合、変数のみが変更されます。
+- The _Current_Item_ variable must be of the same type as the collection elements. コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
+- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
 #### 例題
 
 数値のコレクションを対象に、統計情報を計算します:
-
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -347,18 +332,17 @@ title: ループ構造
 
 ### エンティティセレクション内のループ
 
-`For each...End for each` が *Entity selection* 型の *Expression* に対して使用された場合、*Current_Item* は現在処理中のエンティティです。
+When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
 
-ループの回数はエンティティセレクション内のエンティティの数に基づきます。 各ループの繰り返しにおいて、*Current_Item* には、処理の対象であるエンティティセレクション内のエンティティが自動的に代入されます。
+ループの回数はエンティティセレクション内のエンティティの数に基づきます。 On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
 
-**注:** エンティティセレクション内のエンティティが、途中で他のプロセスによって削除された場合、そのエンティティはループにおいて自動的にスキップされます。
+**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
 
 カレントエンティティに対して適用された変更は、`entity.save( )` で明示的に保存する必要があることに注意してください。
 
 #### 例題
 
 Employees データクラスの中から、英国の従業員の給与を引き上げます:
-
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -369,14 +353,13 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 
 ### オブジェクト内のループ
 
-`For each...End for each` が Object 型の *Expression* に対して使用された場合、*Current_Item* は現在処理中のプロパティ名が自動代入されたテキスト変数です。
+When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
 
 オブジェクトのプロパティは作成順に処理されていきます。 ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
 
 #### 例題
 
 下のオブジェクトに格納されている名前に関したプロパティの値をすべて大文字に変えます:
-
 ```4d
 {
     "firstname": "gregory",
@@ -384,9 +367,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
     "age": 20
 }
 ```
-
 以下のように書くことができます:
-
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -394,30 +375,28 @@ Employees データクラスの中から、英国の従業員の給与を引き�
     End if
  End for each
 ```
-
-    {
-        "firstname": "GREGORY",
-        "lastname": "BADIKORA",
-        "age": 20
-    }
-    
-
+```
+{
+    "firstname": "GREGORY",
+    "lastname": "BADIKORA",
+    "age": 20
+}
+```
 ### begin / end パラメーター
 
 任意の begin と end パラメーターを指定することで、繰り返しの範囲を定義することができます。
 
-**注:** *begin* と *end* パラメーターは、コレクションおよびエンティティセレクション型に対するループにおいてのみ使用することができます (オブジェクト型のときは無視されます)。
+**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
 
-- *begin* には、*Expression* においてループを開始したい要素位置を渡します (このとき *begin* の値が指す要素はループに含まれます)。
-- *end* には、*Expression* においてループを終了する要素位置を渡します (このとき *end* の値が指す要素はループに含まれません)。
+- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
+- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
 
-*end* が省略されている、あるいは *end* が *Expression* の要素数より大きい場合、*begin* 引数の位置から最後の要素まで (含まれる) をループします。 *begin* と *end* が正の値の場合、それらは *Expression* 内の要素の実際の位置を表します。 *begin* 引数が負の値の場合、それは `begin:=begin+Expression のサイズ` として再計算されます (つまり、*Expression* の終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*begin* は0に設定されます。 **注:** *begin* が負の値だったとしても、繰り返しそのものは標準の順番で実行されます。 *end* が負の値だった場合、それは `end:=end+Expression のサイズ` として再計算されます。
+If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 
 たとえば:
-
 - コレクションには 10の要素が格納されています (ナンバリングは #0から#9)
-- begin=-4 -> begin=-4+10=6 -> ループは6番目の要素 (#5) から開始されます
-- end=-2 -> end=-2+10=8 -> 繰り返しは8番目の要素 (#7) の前に終了します、つまり7番目 (#6) の要素の処理が最後のループとなります。
+- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
+- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
 
 #### 例題
 
@@ -435,14 +414,12 @@ Employees データクラスの中から、英国の従業員の給与を引き�
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
-
 ### Until と While 条件
-
-`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が TRUE に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が FALSE になるとループが停止します。
+`For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が true に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が false になるとループが停止します。
 
 使用する条件は状況に応じて選べます:
 
-- `Until` 条件は各ループの終わりにテストされます。そのため、*Expression* が空あるいは null でないかぎり、ループは少なくとも1回は実行されます。
+- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - `While` 条件は各ループの始めにテストされます。そのため、評価の結果次第では、ループは一度も実行されないこともありえます。
 
 #### 例題

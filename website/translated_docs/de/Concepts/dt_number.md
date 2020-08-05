@@ -5,15 +5,16 @@ title: Numerisch (Zahl, Lange Ganzzahl, Ganzzahl)
 
 Numerisch ist der Oberbegriff für:
 
-- Datenfeld, Variable oder Ausdruck vom Typ Zahl. Der Typ Zahl umfasst den Bereich ±1,7e±308 mit 13 Stellen Genauigkeit. 
-- Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Lange Ganzzahl (4 Bytes) umfasst den Bereich -2 147 483 648 bis 2 147 483 647 (-2^31..(2^31)-1). 
+- Datenfeld, Variable oder Ausdruck vom Typ Zahl. Der Typ Zahl umfasst den Bereich ±1,7e±308 mit 13 Stellen Genauigkeit.
+- Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Lange Ganzzahl (4 Bytes) umfasst den Bereich -2 147 483 648 bis 2 147 483 647 (-2^31..(2^31)-1).
 - Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Ganzzahl (2 Bytes) umfasst den Bereich -32 768 bis 32 767 (2^15..(2^15)-1).
 
-**Hinweis:** Feldwerte vom Typ Ganzzahl werden in der 4D Programmiersprache automatisch in Lange Ganzzahl umgewandelt.
+**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
 
 Sie können numerische Datentypen untereinander zuweisen. 4D erledigt die Konvertierung und kürzt oder rundet bei Bedarf. Jedoch gibt die Konvertierung bei Werten außerhalb des entsprechenden Bereichs keinen gültigen Wert zurück. Sie können numerische Datentypen in Ausdrücken miteinander mischen.
 
-**Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache gilt der Begriff numerisch für alle Datentypen der Art Zahl, Ganzzahl und Lange Ganzzahl, wenn nichts anderes angegeben ist.
+**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+
 
 ## Zahlenformate
 
@@ -37,28 +38,27 @@ Negative Zahlen werden mit dem Minuszeichen (-) angegeben. Beispiel:
 
 ## Zahlenoperatoren
 
-| Operation               | Syntax          | Ergibt  | Ausdruck | Wert   |
-| ----------------------- | --------------- | ------- | -------- | ------ |
-| Addition                | Zahl + Zahl     | Zahl    | 2 + 3    | 5      |
-| Subtraktion             | Zahl - Zahl     | Zahl    | 3 – 2    | 1      |
-| Multiplikation          | Zahl * Zahl     | Zahl    | 5 * 2    | 10     |
-| Division                | Number / Number | Zahl    | 5 / 2    | 2.5    |
-| Ganzzahlige Division    | Zahl \ Zahl    | Zahl    | 5 \ 2   | 2      |
-| Modulo                  | Zahl % Zahl     | Zahl    | 5 % 2    | 1      |
-| Exponent                | Zahl ^ Zahl     | Zahl    | 2 ^ 3    | 8      |
-| Gleichheit              | Zahl = Zahl     | Boolean | 10 = 10  | Wahr   |
-|                         |                 |         | 10 = 11  | Falsch |
-| Ungleichheit            | Zahl # Zahl     | Boolean | 10 #11   | Wahr   |
-|                         |                 |         | 10 # 10  | Falsch |
-| Größer als              | Zahl > Zahl     | Boolean | 11 > 10  | Wahr   |
-|                         |                 |         | 10 > 11  | Falsch |
-| Kleiner als             | Zahl < Zahl     | Boolean | 10 < 11  | Wahr   |
-|                         |                 |         | 11 < 10  | Falsch |
-| Größer als oder gleich  | Zahl >= Zahl    | Boolean | 11 >= 10 | Wahr   |
-|                         |                 |         | 10 >= 11 | Falsch |
-| Kleiner als oder gleich | Zahl <= Number  | Boolean | 10 <= 11 | Wahr   |
-|                         |                 |         | 11 <= 10 | Falsch |
-
+| Operation               | Syntax           | Ergibt  | Ausdruck | Wert   |
+| ----------------------- | ---------------- | ------- | -------- | ------ |
+| Addition                | Zahl + Zahl      | Zahl    | 2 + 3    | 5      |
+| Subtraktion             | Zahl - Zahl      | Zahl    | 3 – 2    | 1      |
+| Multiplikation          | Zahl * Zahl      | Zahl    | 5 * 2    | 10     |
+| Division                | Number / Number  | Zahl    | 5 / 2    | 2.5    |
+| Ganzzahlige Division    | Zahl \ Zahl     | Zahl    | 5 \ 2   | 2      |
+| Modulo                  | Zahl % Zahl      | Zahl    | 5 % 2    | 1      |
+| Exponent                | Zahl ^ Zahl      | Zahl    | 2 ^ 3    | 8      |
+| Gleichheit              | Zahl = Zahl      | Boolean | 10 = 10  | Wahr   |
+|                         |                  |         | 10 = 11  | Falsch |
+| Ungleichheit            | Zahl # Zahl      | Boolean | 10 #11   | Wahr   |
+|                         |                  |         | 10 # 10  | Falsch |
+| Größer als              | Number > Number  | Boolean | 11 > 10  | Wahr   |
+|                         |                  |         | 10 > 11  | Falsch |
+| Kleiner als             | Number < Number  | Boolean | 10 < 11  | Wahr   |
+|                         |                  |         | 11 < 10  | Falsch |
+| Größer als oder gleich  | Number >= Number | Boolean | 11 >= 10 | Wahr   |
+|                         |                  |         | 10 >= 11 | Falsch |
+| Kleiner als oder gleich | Number <= Number | Boolean | 10 <= 11 | Wahr   |
+|                         |                  |         | 11 <= 10 | Falsch |
 
 Der Modulo Operator % dividiert die erste Zahl durch die zweite und übergibt den ganzzahligen Restwert. Hier sehen Sie ein paar Beispiele:
 
@@ -67,9 +67,8 @@ Der Modulo Operator % dividiert die erste Zahl durch die zweite und übergibt de
 - 10.5 % 2 ergibt 0, da der Restwert keine Ganzzahl ist.
 
 **WARNUNG:**
-
 - Der Modulo Operator % gibt signifikante Werte mit Zahlen aus dem Bereich Lange Ganzzahl (von - 2^31 bis + 2^31 - 1) zurück. Verwenden Sie bei Berechnungen des Restwerts mit Zahlen außerhalb dieses Bereich die Funktion `Mod`.
-- Der Operator für ganzzahlige Division \ gibt nur für Ganzzahlen signifikante Werte zurück. 
+- Der Operator für ganzzahlige Division \ gibt nur für Ganzzahlen signifikante Werte zurück.
 
 ### Rangfolge
 
@@ -90,6 +89,7 @@ Wollen Sie die Rangfolge von links nach rechts ändern, MÜSSEN Sie Klammern set
 ergibt 23, da der Ausdruck (4 * 5) aufgrund der Klammer zuerst berechnet wird. Zum Ergebnis 20 wird dann 3 hinzugezählt. Das ergibt als Endergebnis 23.
 
 Sie können Klammern auch innerhalb anderer Klammern setzen. Achten Sie darauf, dass eine geöffnete Klammer auch immer wieder geschlossen wird. Fehlende oder falsch gesetzte Klammern können ungültige Ausdrücke oder unerwartete Ergebnisse hervorrufen. Außerdem können Sie Ihre Anwendungen nur kompilieren, wenn die Klammern zusammenpassen. Bei fehlenden Klammern meldet 4D Compiler einen Syntaxfehler.
+
 
 ## Bitwise operators
 
@@ -114,72 +114,35 @@ An expression that uses a bitwise operator returns a Long Integer value, except 
 | Bit Clear              | ?-        | Long ?- Long        | Long (see note 2)    |
 | Bit Test               | ??        | Long ?? Long        | Boolean (see note 2) |
 
-
 #### Notes
 
 1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.
 2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.
 
+
+
 The following table lists the bitwise operators and their effects:
 
-| Operation   | Description                                                            |
-| ----------- | ---------------------------------------------------------------------- |
-| Bitwise AND | Each resulting bit is the logical AND of the bits in the two operands. |
+| Operation              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND            | Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                           |
+| Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
+| Bitwise OR (exclusive) | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
+| Left Bit Shift         | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0. <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                   |
+| Right Bit Shift        | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                      |
+| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
 
+### Beispiele
 
-<
-
-p>Here is the logical AND table:
-
-- 1 & 1 --> 1
-    - 0 & 1 --> 0
-        - 1 & 0 --> 0
-            - 0 & 0 --> 0</p> 
-                <
-                
-                p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.
-                
-                <
-                
-                p>Here is the logical OR table:
-                
-                - 1 &#124; 1 --> 1
-                    - 0 &#124; 1 --> 1
-                        - 1 &#124; 0 --> 1
-                            - 0 &#124; 0 --> 0</p> 
-                                <
-                                
-                                p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.
-                                
-                                <
-                                
-                                p>Here is the logical XOR table:
-                                
-                                - 1 \^&#124; 1 --> 0
-                                    - 0 \^&#124; 1 --> 1
-                                        - 1 \^&#124; 0 --> 1
-                                            - 0 \^&#124; 0 --> 0</p> 
-                                                <
-                                                
-                                                p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0.
-                                                
-                                                <
-                                                
-                                                p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.
-                                                
-                                                <
-                                                
-                                                p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.| |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.| |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.|
-                                                
-                                                ### Beispiele
-                                                
-                                                | Operation              | Beispiel                                   | Result     |
-                                                | ---------------------- | ------------------------------------------ | ---------- |
-                                                | Bitwise AND            | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
-                                                | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
-                                                | Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 0xFF0000FF |            |
-                                                | Left Bit Shift         | 0x0000FFFF << 8                            | 0x00FFFF00 |
-                                                | Right Bit Shift        | 0x0000FFFF >> 8                            | 0x000000FF |
-                                                | Bit Set                | 0x00000000 ?+ 16                           | 0x00010000 |
-                                                | Bit Clear              | 0x00010000 ?- 16                           | 0x00000000 |
-                                                | Bit Test               | 0x00010000 ?? 16                           | Wahr       |
+| Operation              | Beispiel                                    | Result     |
+| ---------------------- | ------------------------------------------- | ---------- |
+| Bitwise AND            | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
+| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
+| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
+| Left Bit Shift         | 0x0000FFFF << 8                             | 0x00FFFF00 |
+| Right Bit Shift        | 0x0000FFFF >> 8                             | 0x000000FF |
+| Bit Set                | 0x00000000 ?+ 16                            | 0x00010000 |
+| Bit Clear              | 0x00010000 ?- 16                            | 0x00000000 |
+| Bit Test               | 0x00010000 ?? 16                            | Wahr       |

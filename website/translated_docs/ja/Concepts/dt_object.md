@@ -1,5 +1,5 @@
 ---
-id: object
+id: オブジェクト
 title: Objects
 ---
 
@@ -8,7 +8,6 @@ title: Objects
 - プロパティ名は必ずテキストで表現されます。
 
 - プロパティ値は以下のどれかの型で表現されます:
-    
     - 数値 (実数、整数、等)
     - テキスト
     - null
@@ -17,26 +16,25 @@ title: Objects
     - 日付 (日付型あるいは ISO日付フォーマット文字列)
     - オブジェクト (オブジェクトは入れ子にすることができます)
     - ピクチャー (*)
-    - collection
+    - コレクション
 
 (*) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
-**警告:** 属性名は大文字と小文字を区別するという点に注意してください。
+**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-オブジェクト型の変数・フィールド・式を操作するには **オブジェクト (ランゲージ)** テーマのコマンドを使用するか、オブジェクト記法 ([オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) 参照)を用います。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 データベース内でオブジェクト記法が有効化されている場合 (以下参照)、4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
 - 4Dコード内。メソッド (メソッドエディター) に書いても、外部化(フォーミュラ、PROCESS 4D TAGS あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。
 - デバッガー及びランタイムエクスプローラーの式エリア内。
-- フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。 
+- フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。
 
 ## 初期化
 
 `New object` コマンドを使うなどして、オブジェクトはあらかじめ初期化しておく必要があります。初期化しない場合、プロパティ値の取得や変更はシンタックスエラーとなります。
 
-例: 
-
+例:
 ```4d
  C_OBJECT($obVar) // オブジェクト型の変数の作成
  $obVar:=New object // オブジェクトの初期化と変数への代入
@@ -49,6 +47,7 @@ title: Objects
 - `New object` コマンドを使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
 - `New shared object` コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。 詳細な情報については、[共有オブジェクトと共有コレクション](Concepts/shared.md) を参照ください。
 
+
 ## オブジェクト記法の使用
 
 オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。
@@ -57,18 +56,16 @@ title: Objects
 
 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- "ドット"記号を使用する方法: > object.propertyName
+- using a "dot" symbol: > object.propertyName
 
-例: 
-
+例:
 ```4d
      employee.name:="Smith"
 ```
 
-- 大カッコ内の文字列を使用する方法: > object["propertyName"]
+- using a string within square brackets: > object["propertyName"]
 
-例: 
-
+例:
 ```4d
      $vName:=employee["name"]
      // または:
@@ -78,14 +75,12 @@ title: Objects
 ```
 
 オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した字句を受け入れることができます:
-
 ```4d
  $vAge:=employee.children[2].age
 ```
-
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
 
-- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例: 
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). 例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -94,14 +89,13 @@ title: Objects
      $pop:=$aObjCountries{2}.population // オブジェクト配列
      $val:=$myCollection[3].subvalue // コレクション要素
 ```
-
-- オブジェクトを返す **4D コマンド** 例: 
+- **4D commands** that return objects. 例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- オブジェクトを返す **プロジェクトメソッド** 例: 
+- **Project methods** that return objects. 例:
 
 ```4d
       // MyMethod1
@@ -112,27 +106,24 @@ title: Objects
      $result:=MyMethod1.a //10
 ```
 
-- **コレクション** Example:
+- **Collections** Example:
 
 ```4d
      myColl.length // コレクションの長さ
 ```
 
 ### ポインター
-
-**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
 
 ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
 
 - オブジェクト記法によるアクセス:
-    
-    > pointerOnObject->propertyName
+> pointerOnObject->propertyName
 
 - 大カッコを使用する方法:
-    
-    > pointerOnObject->["propertyName"]
+> pointerOnObject->["propertyName"]
 
-例: 
+例:
 
 ```4d
  C_OBJECT(vObj)
@@ -145,7 +136,7 @@ title: Objects
 
 ### Null 値
 
-オブジェクト記法を使用する場合、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
+When using the object notation, the **null** value is supported though the **Null** command. このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
@@ -168,7 +159,7 @@ title: Objects
       // $val=0
 ```
 
-- 未定義のコレクションの **length** プロパティは 0 を返します:
+- Reading the **length** property of an undefined collection produces 0:
 
 ```4d
      C_COLLECTION($c) // 変数は作成されたが、コレクションは未定義     $size:=$c.length // $size = 0
@@ -196,13 +187,13 @@ title: Objects
      End case
 ```
 
-- 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます: 
+- 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
  - オブジェクト、コレクション、ポインター: Null
  - ピクチャー: 空のピクチャー
  - ブール: False
  - 文字列: ""
  - 数値: 0
- - 日付: "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
+ - 日付:  "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
  - 時間: 0 (ミリ秒単位)
  - 未定義、Null: 変化なし
 
@@ -234,8 +225,8 @@ title: Objects
 - テーブルフィールドをコレクションインデックスとして使用すること (例: a.b[[Table1]Id] ) は許可されていません。 この場合には媒介として変数を使用する必要があります。
 - 大カッコでくくった文字列を使用してオブジェクト属性を作成すると、ECMAスクリプトのルールを無視することができます。 たとえば、$o["My Att.name"] という属性はスペースを含みますが、4D において有効です。 しかしながらこの場合、この属性に対してドット記法を使用することは不可能です。
 
-## 例題
 
+## 例題
 オブジェクト記法を使用すると、オブジェクトを扱う際の 4Dコードを単純化することができます。 同時に、コマンドベースの記法も引き続き完全にサポートされています。
 
 - オブジェクトの読み書き (この例題ではオブジェクト記法とコマンド記法を比較します):
@@ -275,7 +266,6 @@ title: Objects
  $vCity:=$Emp.city // "Paris"
  $vPhone:=$Emp.phone.home // "0011223344"
 ```
-
 - 大カッコ [ ] を使用すると文字列を使ってプロパティにアクセスできます:
 
 ```4d

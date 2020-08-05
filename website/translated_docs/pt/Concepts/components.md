@@ -12,15 +12,17 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 - A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
 - You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
 
+
 ## Definitions
 
 The component management mechanisms in 4D require the implementation of the following terms and concepts:
 
 - **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. A matrix database forms a single component. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
 - **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases. 
+- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
 
 It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
+
 
 ### Protection of components: compilation
 
@@ -34,8 +36,8 @@ To protect the project methods of a component effectively, simply compile the ma
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
 - The other project methods of the matrix database will never appear.
 
-## Sharing of project methods
 
+## Sharing of project methods
 All the project methods of a matrix database are by definition included in the component (the database is the component), which means that they can be called and executed by the component.
 
 On the other hand, by default these project methods will not be visible, nor can they be called in the host database. In the matrix database, you must explicitly designate the methods that you want to share with the host database. These project methods can be called in the code of the host database (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
@@ -68,14 +70,15 @@ Examples using variables:
  $p:=component_method2(...)
 ```
 
+
 When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:
 
 - The `Get pointer` command will not return a pointer to a variable of the host database if it is called from a component and vice versa.
 
 - The component architecture allows the coexistence, within the same interpreted database, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled database). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host database.
-    
  - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
  - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
+
 - The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
 
 ```4d
@@ -84,9 +87,7 @@ When you use pointers to allow components and the host database to communicate, 
      If(vVarName1=vVarName2)
       //This test returns True even though the variables are different
 ```
-
 In this case, it is necessary to use the comparison of pointers:
-
 ```4d
      If(myptr1=myptr2) //This test returns False
 ```
@@ -127,6 +128,7 @@ Furthermore, specific measures have been specified for the `Structure file` and 
 
 The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
 
+
 ### Unusable commands
 
 The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
@@ -165,7 +167,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. 
+- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
 
 ## Use of tables and fields
 
@@ -255,7 +257,6 @@ Automatic mechanisms are operational: the XLIFF files found in the Resources fol
 In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
 
 ## On-line help for components
-
 A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
 
 - The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
