@@ -416,9 +416,9 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### JSON 文法
         
-        | 名       | データタイプ  | とりうる値       |
-        | ------- | ------- | ----------- |
-        | display | boolean | true, false |
+        | 名       | データタイプ | とりうる値       |
+        | ------- | ------ | ----------- |
+        | display | ブール    | true, false |
 
         
         #### 対象オブジェクト
@@ -439,9 +439,9 @@ Windows では System time short フォーマットと同じ     | 04:30:25 JST 
         
         #### JSON 文法
         
-        | 名          | データタイプ  | とりうる値       |
-        | ---------- | ------- | ----------- |
-        | threeState | boolean | true, false |
+        | 名          | データタイプ | とりうる値       |
+        | ---------- | ------ | ----------- |
+        | threeState | ブール    | true, false |
 
         
         #### 対象オブジェクト
