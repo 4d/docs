@@ -5,11 +5,11 @@ title: CryptoKey クラス
 
 ## 概要
 
-The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair.
+4D ランゲージの `CryptoKey` クラスは、非対称の暗号化キーペアをカプセル化します。
 
-This class is available from the `4D` class store.
+このクラスは `4D` クラスストアより提供されます。
 
-### `cryptoKey` object properties
+### `cryptoKey` オブジェクトプロパティ
 
 A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties (all are read-only):
 
