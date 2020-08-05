@@ -12,9 +12,10 @@ title: ラジオボタン
 ![](assets/en/FormObjects/radio1.png)
 
 ラジオボタンを選択するには二つの方法があります:
-
 - ラジオボタンをクリックする
-- ラジオボタンにフォーカスがあるときに **スペース** キーを押す
+- when it has the focus and the user presses the **Space bar** key.
+
+
 
 ## ラジオボタンの設定
 
@@ -25,10 +26,12 @@ title: ラジオボタン
 ![](assets/en/FormObjects/radio2.png)
 
 グループのなかから 1つのラジオボタンを選択すると、そのボタンには 1 が代入され、グループ内の他のすべてのボタンには 0 が代入されます。 一度に1つのラジオボタンしか選択できません。
-
-> ラジオボタンには [ブール型の式](properties_Object.md#変数あるいは式) を設定することができます。 この場合、グループ内で選択されたラジオボタンの変数には True が代入され、残りのラジオボタンの変数には False が代入されます。
+> ラジオボタンには [ブール型の式](properties_Object.md#変数あるいは式) を設定することができます。 この場合、グループ内で選択されたラジオボタンの変数には true が代入され、残りのラジオボタンの変数には false が代入されます。
 
 ラジオボタンオブジェクトに格納された値は (ブールフィールドの場合を除き) 自動保存されません。変数に格納されたラジオボタンの値はメソッドで管理しなければなりません。
+
+
+
 
 ## ボタンスタイル
 
@@ -36,21 +39,24 @@ title: ラジオボタン
 
 次の既定スタイルが提供されています:
 
+
 ### 通常
 
-通常スタイルのラジオボタンは、標準的なシステムボタンで (小さな目玉状の円とテキストを表示したもの)、ユーザークリックに応じてコードを実行します。
+The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
 ![](assets/en/FormObjects/radio_regular.png)
 
 通常スタイルのラジオボタンにマウスオーバーすると、"目玉" の色が変化します。
 
+
 ### フラット
 
-フラットスタイルのラジオボタンは、標準的なシステムボタンで (小さな目玉状の円とテキストを表示したもの)、ユーザークリックに応じてコードを実行します。
+The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
 ![](assets/en/FormObjects/radio_flat.png)
 
 フラットスタイルでは、装飾が最小限に抑えられています。 フラットボタンのグラフィック的な装飾は最小限であるため、印刷されるフォームでの使用に適しています。
+
 
 ### ツールバー
 
@@ -58,37 +64,43 @@ title: ラジオボタン
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ボタンがハイライト表示されます。
+ - *Windows* - the button is highlighted.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
-- *macOS* - ボタンはハイライト表示されません。
+ - *macOS* - the highlight of the button never appears.
+
+
 
 ### ベベル
 
 ベベルスタイルは [ツールバー](#ツールバー) スタイルと似た動作をしますが、薄いグレーの背景にグレーの枠が描画されます。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - ボタンがハイライト表示されます。
-    
-    ![](assets/en/FormObjects/radio_bevel.png)
+ - *Windows* - the button is highlighted.
 
-- *macOS* - ボタンはハイライト表示されません。
+  ![](assets/en/FormObjects/radio_bevel.png)
+
+ - *macOS* - the highlight of the button never appears.
+
 
 ### 角の丸いベベル
 
 角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。
 
-- Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
+ - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - 角が丸くなっています。 ![](assets/en/FormObjects/roundedBevel.png)
+ - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+
 
 ### OS Xグラデーション
 
 OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。
 
-- Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
+ - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - 2トーンのシステムボタンです。
+ - *macOS* - the button is displayed as a two-tone system button.
+
+
 
 ### OS Xテクスチャー
 
@@ -96,11 +108,13 @@ OS Xテクスチャースタイルは [ツールバー](#ツールバー) スタ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- *Windows* - ツールバースタイルのようなボタンに中央配置のラベルが付き、背景は常に表示されます。
+ - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
-- *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
-    
-    ![](assets/en/FormObjects/OSXTextured.png)
+ - *macOS* - a standard system button displaying a color change from light to dark gray. 高さは定義済みで、変更できません。
+
+  ![](assets/en/FormObjects/OSXTextured.png)
+
+
 
 ### Office XP
 
@@ -108,11 +122,13 @@ Office XPスタイルは [ベベル](#ベベル) ボタンような外観に、[
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- *Windows* - マウスオーバー時にのみ背景が表示されます。
-    
-    ![](assets/en/FormObjects/radio_xp.png)
+ - *Windows* - its background only appears when the mouse rolls over it.
 
-- *macOS* - 背景は常に表示されます。
+  ![](assets/en/FormObjects/radio_xp.png)
+
+ - *macOS* - its background is always displayed.
+
+
 
 ### 折りたたみ/展開
 
@@ -120,15 +136,19 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 
+
+
 ### 開示ボタン
 
 開示ボタンスタイルが適用されると、詳細情報の表示/非表示にするのに使われる標準的な開示ボタンとして描画されます。 値が 0 のときにはボタンの矢印が下向き、値が 1 のときは上向きになります。
 
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
+
 ### カスタム
 
 カスタムスタイルのラジオボタンは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます ([アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) や [マージン](properties_TextAndPicture.md#横方向マージン))。
+
 
 ## プロパティ一覧
 
