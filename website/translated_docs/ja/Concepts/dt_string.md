@@ -64,7 +64,7 @@ title: 文字列
 ## 文字列比較の詳細
 
 - 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
-- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `TRUE` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です:
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です:
 
 ```4d
 Character code("A")=Character code("a")
@@ -72,7 +72,7 @@ Character code("A")=Character code("a")
 // Character code("a") は 97
 ```
 
-- 文字列が比較される場合、アクセント等の発音区別符号は無視されます。 たとえば、日本語においては以下の式は `TRUE` を返します:
+- 文字列が比較される場合、アクセント等の発音区別符号は無視されます。 たとえば、日本語においては以下の式は `true` を返します:
 
 ```4d
      "あ"="ア"
@@ -84,7 +84,7 @@ Character code("A")=Character code("a")
 
 ### ワイルドカード記号 (@)
 
-4D ランゲージでは **@** をワイルドカード記号として使用します。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません。 たとえば、次の式は `TRUE` になります:
+4D ランゲージでは **@** をワイルドカード記号として使用します。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません。 たとえば、次の式は `true` になります:
 
 ```4d
 "abcdefghij"="abc@"
@@ -96,7 +96,7 @@ Character code("A")=Character code("a")
     "abc@"="abcdefghij"
 ```
 
-ワイルドカードは “0文字以上” を意味します。 以下の式はすべて `TRUE` です:
+ワイルドカードは “0文字以上” を意味します。 以下の式はすべて `true` です:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -119,7 +119,7 @@ Character code("A")=Character code("a")
      "abcd"<="abc@ef" // 有効な比較ではありません
 ```
 
-文字列の比較または検索において、@ をワイルドカードではなく一般の文字として扱いたい場合、`Character code (At sign)` 指示を使用します。 たとえば、文字列が @ 文字で終わっているかどうかを知りたいとします。 以下の式は ($vsValue が空でなければ) 常に `TRUE` です:
+文字列の比較または検索において、@ をワイルドカードではなく一般の文字として扱いたい場合、`Character code (At sign)` 指示を使用します。 たとえば、文字列が @ 文字で終わっているかどうかを知りたいとします。 以下の式は ($vsValue が空でなければ) 常に `true` です:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
@@ -138,11 +138,11 @@ Character code("A")=Character code("a")
 他の文字列比較と異なり、"%" 記号を使ったキーワードによる検索はテキスト中の単語を検索します: 単語は一つのまとまりとして個々に扱われます。 複数の単語や、音節など単語の一部を検索するような場合、**%** 演算子は常に `False` を返します。 区切り文字 (スペースや句読点など) に囲まれた文字列が単語として認識されます。 “Today's” のようにアポストロフィを含む単語は、通常それを含めた 1つの単語として扱われますが、特定の場合には無視されます (以下の注記を参照ください)。 数字も検索できます。小数点は区切り文字ではなく、数字の一部として扱われます。 ただし、通貨や温度などを表す記号は無視されます。
 
 ```4d
-     "Alpha Bravo Charlie"%"Bravo" // True
-     "Alpha Bravo Charlie"%"vo" // False
-     "Alpha Bravo Charlie"%"Alpha Bravo" // False
-     "Alpha,Bravo,Charlie"%"Alpha" // True
-     "Software and Computers"%"comput@" // True
+     "Alpha Bravo Charlie"%"Bravo" // true
+     "Alpha Bravo Charlie"%"vo" // false
+     "Alpha Bravo Charlie"%"Alpha Bravo" // false
+     "Alpha,Bravo,Charlie"%"Alpha" // true
+     "Software and Computers"%"comput@" // true
 ```
 
 > **注:** - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: <http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries> - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
