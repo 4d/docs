@@ -11,18 +11,18 @@ title: CryptoKey クラス
 
 ### `cryptoKey` オブジェクトプロパティ
 
-A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties (all are read-only):
+`cryptoKey` オブジェクトは [4D.CryptoKey.new](#4dcryptokeynew) メソッドによってインスタンス化されます。 また、次のプロパティを持ちます (すべて読み取り専用プロパティです):
 
-| プロパティ | 型       | 説明                                                                                                                       |
-| ----- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| type  | テキスト    | Name of the key type. For example: "ECDSA" or "RSA".                                                                     |
-| size  | integer | Defined only for RSA keys: the size of the key in bits. Typically 2048                                                   |
-| curve | テキスト    | Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1" |
+| プロパティ | 型    | 説明                                                              |
+| ----- | ---- | --------------------------------------------------------------- |
+| type  | テキスト | キータイプの名称。 例: "ECDSA" または "RSA"。                                 |
+| size  | 整数   | RSA キーのみ: キーのサイズ (ビット単位) 例: 2048                                |
+| curve | テキスト | ECDSA キーのみ: キーの楕円曲線名。 例: "prime256v1", "secp384r1", "secp521r1" |
 
 
 ### 例題
 
-The following example signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+たとえば ES256 JSON Web Token を作成するために新規 ECDSA キーペアを使ってメッセージの署名と検証をおこないます。
 
 ```4d
  // Generate a new ECDSA key pair
@@ -48,15 +48,15 @@ ASSERT($status.success)
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-| Parameter | プロパティ | 型       |    | 説明                                                                                                                             |
-| --------- | ----- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------ |
-| settings  |       | object  | -> | Settings to generate or load a key pair                                                                                        |
-|           | type  | テキスト    |    | Type of the key: "RSA", "ECDSA", or "PEM" (see below)                                                                          |
-|           | size  | integer |    | Size of RSA key in bits. 2048 by default                                                                                       |
-|           | curve | テキスト    |    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
-|           | pem   | テキスト    |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
-|           |       |         |    |                                                                                                                                |
-| keyPair   |       | object  | <- | Object encapsulating an encryption key pair                                                                                    |
+| Parameter | プロパティ | 型      |    | 説明                                                                                                                             |
+| --------- | ----- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------ |
+| settings  |       | object | -> | Settings to generate or load a key pair                                                                                        |
+|           | type  | テキスト   |    | Type of the key: "RSA", "ECDSA", or "PEM" (see below)                                                                          |
+|           | size  | 整数     |    | Size of RSA key in bits. 2048 by default                                                                                       |
+|           | curve | テキスト   |    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
+|           | pem   | テキスト   |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+|           |       |        |    |                                                                                                                                |
+| keyPair   |       | object | <- | Object encapsulating an encryption key pair                                                                                    |
 
 
 This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
