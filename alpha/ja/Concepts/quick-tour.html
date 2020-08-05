@@ -75,7 +75,7 @@
 <h2><a class="anchor" aria-hidden="true" id="値の代入"></a><a href="#値の代入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>値の代入</h2>
 <p>変数、フィールド、配列要素などを対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、変数にデータを代入すると言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドや配列要素に対してデータを代入する場合にも使います。</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">// MyNumber 変数に数値の3を代入します</span>
-[Products]Size:=<span class="hljs-variable">$MyNumber</span> <span class="hljs-comment">// [Products]Size フィールドに MyNumber 変数の値を代入します</span>
+[Products]Size:=<span class="hljs-variable">$MyNumber </span><span class="hljs-comment">// [Products]Size フィールドに MyNumber 変数の値を代入します</span>
 arrDays{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Tuesday"</span> <span class="hljs-comment">// arrDays 配列の第二要素に文字列 "Tuesday" を代入します</span>
 MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">// MyVar 変数に関数の結果 (数値の4) を代入します</span>
 <span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">// 日付リテラルを代入します</span>
@@ -85,10 +85,10 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 <p><strong>重要:</strong> 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。</p>
 <h2><a class="anchor" aria-hidden="true" id="変数"></a><a href="#変数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>変数</h2>
 <p>4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型指定の変数を作成するには <code>var</code> キーワードを使います。 たとえば、日付型の変数を作成するには、次のように書くことができます:</p>
-<pre><code class="hljs css language-4d">var MyDate : Date 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> MyDate : Date 
 </code></pre>
 <p><code>var</code> キーワードを使って、定義されているクラス型のオブジェクト変数を宣言することができます。例:</p>
-<pre><code class="hljs css language-4d">var myPerson : cs.Person 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> myPerson : cs.Person 
 <span class="hljs-comment">// Person ユーザークラスの変数</span>
 </code></pre>
 <p>推奨はされませんが、変数を使用することで宣言することもでき、必ずしも正式に宣言する必要はありません。 たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:</p>
@@ -178,9 +178,9 @@ myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">// コレ
 <span class="hljs-variable">$o</span>:=cs.myClass.<span class="hljs-function">new</span>() 
 </code></pre>
 <p><code>myClass</code> クラスメソッド内では、<em>methodName</em> クラスメンバーメソッドを宣言するのに <code>Function &lt;methodName&gt;</code> ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして <code>This</code> を使えます。</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// myClass.4dm ファイル内</span>
-Function hello
-  <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// myClass.4dm ファイル内</span><span class="hljs-keyword">
+Function</span> hello
+<span class="hljs-function">  C_TEXT</span>(<span class="hljs-variable">$0</span>)
   <span class="hljs-variable">$0</span>:=<span class="hljs-string">"Hello "</span>+<span class="hljs-literal">This</span>.who
 </code></pre>
 <p>クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに <code>()</code> 演算子を使います。</p>
@@ -190,18 +190,18 @@ Function hello
 <span class="hljs-comment">//$message: "Hello World"</span>
 </code></pre>
 <p><code>Class constructor</code> キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// Rectangle.4dm ファイル内</span>
-Class constructor
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Rectangle.4dm ファイル内</span><span class="hljs-keyword">
+Class constructor</span>
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
 <span class="hljs-literal">This</span>.height:=<span class="hljs-variable">$1</span>
-<span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2</span>  
+<span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2  </span>
 <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
 </code></pre>
 <p>クラスはほかのクラスから継承することもできます: <code>Class extends &lt;ClassName&gt;</code>。 また、<code>Super</code> コマンドを使って、スーパークラスを呼び出すことができます。 たとえば:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// Square.4dm ファイル内</span>
-Class extends Rectangle
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Square.4dm ファイル内</span><span class="hljs-keyword">
+Class extends</span> Rectangle<span class="hljs-keyword">
 
-Class constructor
+Class constructor</span>
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>)
 
   <span class="hljs-comment">// 親クラスのコンストラクターを呼び出します</span>

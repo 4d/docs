@@ -99,16 +99,16 @@
 </ul>
 <p>For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Look for a customer</span>
- <span class="hljs-function">QUERY BY EXAMPLE</span>([Customers])
+<span class="hljs-function"> QUERY BY EXAMPLE</span>([Customers])
   <span class="hljs-comment">// Select the input form</span>
- <span class="hljs-function">FORM SET INPUT</span>([Customers];<span class="hljs-string">"Data Entry"</span>)
+<span class="hljs-function"> FORM SET INPUT</span>([Customers];<span class="hljs-string">"Data Entry"</span>)
   <span class="hljs-comment">// Modify the customer's record</span>
- <span class="hljs-function">MODIFY RECORD</span>([Customers])
+<span class="hljs-function"> MODIFY RECORD</span>([Customers])
 </code></pre>
 <p>If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your custom database where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.</p>
 <p>If the previously described code was a method called <code>MODIFY CUSTOMER</code>, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:</p>
 <pre><code class="hljs css language-4d"> MODIFY CUSTOMER
- <span class="hljs-function">PRINT SELECTION</span>([Customers])
+<span class="hljs-function"> PRINT SELECTION</span>([Customers])
 </code></pre>
 <p>This capability simplifies your methods dramatically. In the example, you do not need to know how the <code>MODIFY CUSTOMER</code> method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.</p>
 <p>If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.</p>
@@ -188,11 +188,11 @@
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsName</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the name:"</span>;<span class="hljs-string">"John"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-variable">$vsName</span><span class="hljs-keyword">
        Repeat</span>
-          <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
+<span class="hljs-function">          QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
           <span class="hljs-variable">$vlQueryResult</span>:=<span class="hljs-function">Records in selection</span>([Friends and Relatives])<span class="hljs-keyword">
           If</span>(<span class="hljs-variable">$vlQueryResult</span>&gt;<span class="hljs-number">0</span>)
              <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]Name
@@ -200,7 +200,7 @@
           End if</span><span class="hljs-keyword">
        Until</span>(<span class="hljs-variable">$vlQueryResult</span>=<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">", does this for a living!"</span>
-       <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$vtTheWholeStory</span>)<span class="hljs-keyword">
+<span class="hljs-function">       ALERT</span>(<span class="hljs-variable">$vtTheWholeStory</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
@@ -209,19 +209,19 @@
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsName</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the name:"</span>;<span class="hljs-string">"John"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
-       <span class="hljs-function">ALERT</span>(<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-function">Genealogy of</span>(<span class="hljs-variable">$vsName</span>)+<span class="hljs-string">", does this for a living!"</span>)<span class="hljs-keyword">
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-function">Genealogy of</span>(<span class="hljs-variable">$vsName</span>)+<span class="hljs-string">", does this for a living!"</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <p>with the recursive function <code>Genealogy of</code> listed here:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">` Genealogy of project method</span>
-  <span class="hljs-comment">` Genealogy of ( String ) -&gt; Text</span>
-  <span class="hljs-comment">` Genealogy of ( Name ) -&gt; Part of sentence</span>
+<span class="hljs-function">  ` Genealogy of </span>( String ) -&gt; Text
+<span class="hljs-function">  ` Genealogy of </span>( Name ) -&gt; Part of sentence
 
  <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
- <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<span class="hljs-function"> QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
  If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
     <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" who is the child of "</span>+<span class="hljs-function">Genealogy of</span>([Friends and Relatives]Name)<span class="hljs-keyword">
  End if</span>

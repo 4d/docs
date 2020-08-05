@@ -117,10 +117,10 @@
 <span class="hljs-variable">$name</span>:=<span class="hljs-string">"Smith"</span>
 <span class="hljs-variable">$age</span>:=<span class="hljs-number">50</span>
 
-<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$name</span> <span class="hljs-comment">// テキストへのポインター</span>
+<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$name </span><span class="hljs-comment">// テキストへのポインター</span>
 <span class="hljs-variable">$p</span>-&gt;:=<span class="hljs-string">"Wesson"</span> <span class="hljs-comment">// テキストの代入</span>
 
-<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$age</span>  
+<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$age  </span>
 <span class="hljs-comment">// 数値へのポインターに変更</span>
 <span class="hljs-variable">$p</span>-&gt;:=<span class="hljs-number">55</span> <span class="hljs-comment">// 数値の代入</span>
 </code></pre>
@@ -140,7 +140,7 @@
 <span class="hljs-variable">$var3</span>:=<span class="hljs-literal">?10:02:24?</span>
 <span class="hljs-variable">$var4</span>:=<span class="hljs-literal">True</span>
 
-<span class="hljs-variable">$vLength</span>:=<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var1</span>)+<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var2</span>)+Calc_Length (-&gt;<span class="hljs-variable">$var3</span>)+<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var4</span>)
+<span class="hljs-variable">$vLength</span>:=<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var1</span>)+<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var2</span>)+<span class="hljs-function">Calc_Length </span>(-&gt;<span class="hljs-variable">$var3</span>)+<span class="hljs-function">Calc_Length</span>(-&gt;<span class="hljs-variable">$var4</span>)
 
 <span class="hljs-function">ALERT</span>(<span class="hljs-string">"長さの合計: "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vLength</span>))
 </code></pre>

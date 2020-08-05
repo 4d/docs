@@ -88,10 +88,10 @@
 <p>To declare a variable of any type with the <code>var</code> keyword, use the following syntax:</p>
 <p><code>var &lt;varName&gt;{, &lt;varName2&gt;,...}{ : &lt;varType&gt;}</code></p>
 <p>For example:</p>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myText</span> : Text  <span class="hljs-comment">//a text variable</span>
-var myDate1, myDate2 : Date  <span class="hljs-comment">//several date variables</span>
-var <span class="hljs-variable">$myFile</span> : <span class="hljs-number">4</span>D.File  <span class="hljs-comment">//a file class object variable</span>
-var <span class="hljs-variable">$myVar</span> <span class="hljs-comment">//a variant variable</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText </span>: Text  <span class="hljs-comment">//a text variable</span><span class="hljs-keyword">
+var</span> myDate1, myDate2 : Date  <span class="hljs-comment">//several date variables</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myFile </span>: 4D.File  <span class="hljs-comment">//a file class object variable</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myVar </span><span class="hljs-comment">//a variant variable</span>
 </code></pre>
 <p><code>varName</code> is the variable name, it must comply with the <a href="/docs/alpha/en/Concepts/identifiers.html">4D rules</a> about identifiers.<br>
 This syntax only supports <a href="#local-process-and-interprocess-variables">local and process variables</a> declarations, thus excluding <a href="#interprocess-variables">interprocess variables</a> and <a href="/docs/alpha/en/Concepts/arrays.html">arrays</a>.</p>
@@ -127,26 +127,26 @@ This syntax only supports <a href="#local-process-and-interprocess-variables">lo
 <ul>
 <li>To declare local and process basic variables:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myText</span>, myText, <span class="hljs-variable">$vt</span> : Text
-var myVar <span class="hljs-comment">//variant</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText</span>, myText, <span class="hljs-variable">$vt </span>: Text<span class="hljs-keyword">
+var</span> myVar <span class="hljs-comment">//variant</span><span class="hljs-keyword">
 
-var <span class="hljs-variable">$o</span> : Object    
-<span class="hljs-comment">//equivalent to:  </span>
-var <span class="hljs-variable">$o</span> : <span class="hljs-number">4</span>D.Object
+var</span> <span class="hljs-variable">$o </span>: Object    
+<span class="hljs-comment">//equivalent to:  </span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$o </span>: 4D.Object
 <span class="hljs-comment">//also equivalent to C_OBJECT($o)</span>
 </code></pre>
 <ul>
 <li>To declare object variables of 4D class:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myFolder</span> : <span class="hljs-number">4</span>D.Folder
-var <span class="hljs-variable">$myFile</span> : <span class="hljs-number">4</span>D.File
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myFolder </span>: 4D.Folder<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myFile </span>: 4D.File
 </code></pre>
 <ul>
 <li>To declare object variables of user class:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myClass</span> : cs.MyClass
-var <span class="hljs-variable">$dataclass</span> : cs.Employee
-var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myClass </span>: cs.MyClass<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$dataclass </span>: cs.Employee<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-a-c_-directive"></a><a href="#using-a-c_-directive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a C_ directive</h3>
 <blockquote>
@@ -154,15 +154,15 @@ var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
 </blockquote>
 <p>Directives from the &quot;Compiler&quot; theme commands allow you to declare variables of basic types.</p>
 <p>For example, if you want to define a text variable, you write:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_TEXT</span>(myText)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_TEXT</span>(myText)
 </code></pre>
 <p>The following are some basic variable declarations:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_BLOB</span>(vxMyBlob) <span class="hljs-comment">// The process variable vxMyBlob is declared as a variable of type BLOB</span>
- <span class="hljs-function">C_DATE</span>(<span class="hljs-variable">$vdCurDate</span>) <span class="hljs-comment">// The local variable $vdCurDate is declared as a variable of type Date</span>
- <span class="hljs-function">C_LONGINT</span>(vg1;vg2;vg3) <span class="hljs-comment">// The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  </span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$vObj</span>) <span class="hljs-comment">// The local variable $vObj is declared as a variable of type Object</span>
- <span class="hljs-function">C_COLLECTION</span>(<span class="hljs-variable">$vCol</span>) <span class="hljs-comment">// The local variable $vCol is declared as a variable of type Collection</span>
- <span class="hljs-function">ARRAY LONGINT</span>(alAnArray;<span class="hljs-number">10</span>) <span class="hljs-comment">//The process alAnArray variable is declared as a Longint array of 10 elements</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_BLOB</span>(vxMyBlob) <span class="hljs-comment">// The process variable vxMyBlob is declared as a variable of type BLOB</span>
+<span class="hljs-function"> C_DATE</span>(<span class="hljs-variable">$vdCurDate</span>) <span class="hljs-comment">// The local variable $vdCurDate is declared as a variable of type Date</span>
+<span class="hljs-function"> C_LONGINT</span>(vg1;vg2;vg3) <span class="hljs-comment">// The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  </span>
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$vObj</span>) <span class="hljs-comment">// The local variable $vObj is declared as a variable of type Object</span>
+<span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$vCol</span>) <span class="hljs-comment">// The local variable $vCol is declared as a variable of type Collection</span>
+<span class="hljs-function"> ARRAY LONGINT</span>(alAnArray;<span class="hljs-number">10</span>) <span class="hljs-comment">//The process alAnArray variable is declared as a Longint array of 10 elements</span>
 </code></pre>
 <p><strong>Note:</strong> Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to <a href="/docs/alpha/en/Concepts/arrays.html">Arrays</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="assigning-data"></a><a href="#assigning-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning Data</h2>
@@ -196,7 +196,7 @@ var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
 <p>Frequently, in a database, small pieces of information are needed from the user. The <code>Request</code> command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsID</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Please enter your ID:"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([People];[People]ID =<span class="hljs-variable">$vsID</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([People];[People]ID =<span class="hljs-variable">$vsID</span>)<span class="hljs-keyword">
  End if</span>
 </code></pre>
 <p>This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.</p>

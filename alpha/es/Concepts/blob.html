@@ -76,25 +76,25 @@
 <p>To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.</p>
 <p><strong>Examples:</strong></p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">` Declare a variable of type BLOB</span>
- <span class="hljs-function">C_BLOB</span>(anyBlobVar)
+<span class="hljs-function"> C_BLOB</span>(anyBlobVar)
   <span class="hljs-comment">` The BLOB is passed as parameter to a 4D command</span>
- <span class="hljs-function">SET BLOB SIZE</span>(anyBlobVar;<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>)
+<span class="hljs-function"> SET BLOB SIZE</span>(anyBlobVar;<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>)
   <span class="hljs-comment">` The BLOB is passed as parameter to an external routine</span>
  <span class="hljs-variable">$errCode</span>:=<span class="hljs-function">Do Something With This BLOB</span>(anyBlobVar)
   <span class="hljs-comment">` The BLOB is passed as a parameter to a method that returns a BLOB</span>
- <span class="hljs-function">C_BLOB</span>(retrieveBlob)
+<span class="hljs-function"> C_BLOB</span>(retrieveBlob)
  retrieveBlob:=<span class="hljs-function">Fill_Blob</span>(anyBlobVar)
   <span class="hljs-comment">` A pointer to the BLOB is passed as parameter to a user method</span>
- <span class="hljs-function">COMPUTE BLOB</span>(-&gt;anyBlobVar)
+<span class="hljs-function"> COMPUTE BLOB</span>(-&gt;anyBlobVar)
 </code></pre>
 <p><strong>Note for Plug-in developers:</strong> A BLOB parameter is declared as “&amp;O” (the letter “O”, not the digit “0”).</p>
 <h2><a class="anchor" aria-hidden="true" id="assignment-operator"></a><a href="#assignment-operator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assignment operator</h2>
 <p>You can assign BLOBs to each other.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">` Declare two variables of type BLOB</span>
- <span class="hljs-function">C_BLOB</span>(vBlobA;vBlobB)
+<span class="hljs-function"> C_BLOB</span>(vBlobA;vBlobB)
   <span class="hljs-comment">` Set the size of the first BLOB to 10K</span>
- <span class="hljs-function">SET BLOB SIZE</span>(vBlobA;<span class="hljs-number">10</span>*<span class="hljs-number">1024</span>)
+<span class="hljs-function"> SET BLOB SIZE</span>(vBlobA;<span class="hljs-number">10</span>*<span class="hljs-number">1024</span>)
   <span class="hljs-comment">` Assign the first BLOB to the second one</span>
  vBlobB:=vBlobA
 </code></pre>
@@ -102,9 +102,9 @@
 <h2><a class="anchor" aria-hidden="true" id="addressing-blob-contents"></a><a href="#addressing-blob-contents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addressing BLOB contents</h2>
 <p>You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">` Declare a variable of type BLOB</span>
- <span class="hljs-function">C_BLOB</span>(vBlob)
+<span class="hljs-function"> C_BLOB</span>(vBlob)
   <span class="hljs-comment">` Set the size of the BLOB to 256 bytes</span>
- <span class="hljs-function">SET BLOB SIZE</span>(vBlob;<span class="hljs-number">256</span>)
+<span class="hljs-function"> SET BLOB SIZE</span>(vBlob;<span class="hljs-number">256</span>)
   <span class="hljs-comment">` The loop below initializes the 256 bytes of the BLOB to zero</span><span class="hljs-keyword">
  For</span>(vByte;<span class="hljs-number">0</span>;<span class="hljs-function">BLOB size</span>(vBlob)<span class="hljs-number">-1</span>)
     vBlob{vByte}:=<span class="hljs-number">0</span><span class="hljs-keyword">

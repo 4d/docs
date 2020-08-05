@@ -73,7 +73,7 @@
 <h2><a class="anchor" aria-hidden="true" id="creating-arrays"></a><a href="#creating-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Arrays</h2>
 <p>You create an array with one of the array declaration commands from the &quot;Array&quot; theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the <a href="#two-dimensional-arrays">two dimensional arrays</a> section.</p>
 <p>The following line of code creates (declares) an Integer array of 10 elements:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">10</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">10</span>)
 </code></pre>
 <p>Then, the following code resizes that same array to 20 elements:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">20</span>)
@@ -83,14 +83,14 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="assigning-values-in-arrays"></a><a href="#assigning-values-in-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning values in arrays</h2>
 <p>You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">ARRAY TEXT</span>(atNames;<span class="hljs-number">5</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY TEXT</span>(atNames;<span class="hljs-number">5</span>)
  atNames{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Richard"</span>
  atNames{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Sarah"</span>
  atNames{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Sam"</span>
  atNames{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Jane"</span>
  atNames{<span class="hljs-number">5</span>}:=<span class="hljs-string">"John"</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-number">5</span>)
-    <span class="hljs-function">ALERT</span>(<span class="hljs-string">"The element #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" is equal to: "</span>+atNames{<span class="hljs-variable">$vlElem</span>})<span class="hljs-keyword">
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"The element #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" is equal to: "</span>+atNames{<span class="hljs-variable">$vlElem}</span>)<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (<code>For...End for</code>, <code>Repeat...Until</code> or <code>While...End while</code>), compact pieces of code can address all or part of the elements in an array.</p>
@@ -122,7 +122,7 @@
 <p>Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:</p>
 <pre><code class="hljs css language-4d">
 
- <span class="hljs-function">ARRAY TEXT</span>(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// Creates a text array composed of 100 rows of 50 columns</span>
+<span class="hljs-function"> ARRAY TEXT</span>(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// Creates a text array composed of 100 rows of 50 columns</span>
 </code></pre>
 <p>Two-dimensional arrays are essentially language objects; you can neither display nor print them.</p>
 <p>In the previous example:</p>
@@ -134,11 +134,11 @@
 <li><code>Size of array(atTopics{17})</code> returns 50, which the number of columns for the 17th row</li>
 </ul>
 <p>In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
   <span class="hljs-comment">// Create as many rows (empty and without columns) as there are tables</span>
  <span class="hljs-variable">$vlLastTable</span>:=Get last table number
- <span class="hljs-function">ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">//2D array with X rows and zero columns</span>
+<span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">//2D array with X rows and zero columns</span>
   <span class="hljs-comment">// For each table</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$vlLastTable</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Is table number valid</span>(<span class="hljs-variable">$vlTable</span>))
@@ -149,9 +149,9 @@
           If</span>(<span class="hljs-function">Is field number valid</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
              <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+<span class="hljs-number">1</span>
   <span class="hljs-comment">//Insert a column in a row of the table underway</span>
-             <span class="hljs-function">INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>};<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
+<span class="hljs-function">             INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}</span>;<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Assign the "cell" with the pointer</span>
-             <span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>}{<span class="hljs-variable">$vlColumnNumber</span>}:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
+             <span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}{</span><span class="hljs-variable">$vlColumnNumber}</span>:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        End for</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
@@ -159,14 +159,14 @@
 </code></pre>
 <p>Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Get the pointers to the fields for the table currently displayed at the screen:</span>
- <span class="hljs-function">COPY ARRAY</span>(◊apFields{<span class="hljs-function">Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
+<span class="hljs-function"> COPY ARRAY</span>(<span class="hljs-function">◊apFields{Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
   <span class="hljs-comment">// Initialize Boolean and Date fields</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>))<span class="hljs-keyword">
     Case of</span>
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is date)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=Current date
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is Boolean)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is date)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=Current date
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is Boolean)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
     End case</span><span class="hljs-keyword">
  End for</span>
 </code></pre>

@@ -78,8 +78,8 @@
 <p>サブルーチン (呼び出されるメソッド) 内で、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます。 ローカル変数の番号は、引数の順序を表わします。</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// DO SOMETHING メソッド</span>
   <span class="hljs-comment">// すべての引数がテキスト型とします</span>
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>;<span class="hljs-variable">$3</span>)
- <span class="hljs-function">ALERT</span>(<span class="hljs-string">"I received "</span>+<span class="hljs-variable">$1</span>+<span class="hljs-string">" and "</span>+<span class="hljs-variable">$2</span>+<span class="hljs-string">" and also "</span>+<span class="hljs-variable">$3</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>;<span class="hljs-variable">$3</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"I received "</span>+<span class="hljs-variable">$1</span>+<span class="hljs-string">" and "</span>+<span class="hljs-variable">$2</span>+<span class="hljs-string">" and also "</span>+<span class="hljs-variable">$3</span>)
   <span class="hljs-comment">// $1 には WithThis 引数が入ります</span>
   <span class="hljs-comment">// $2 には AndThat 引数が入ります</span>
   <span class="hljs-comment">// $3 には ThisWay 引数が入ります</span>
@@ -126,16 +126,16 @@
   <span class="hljs-comment">// OneMethodAmongOthers ( 実数 ; 日付 { ; 倍長整数 } )</span>
   <span class="hljs-comment">// OneMethodAmongOthers ( 数量 ; 日付 { ; 割合 } )</span>
 
- <span class="hljs-function">C_REAL</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// 1番目のパラメーターは実数型です</span>
- <span class="hljs-function">C_DATE</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">// 2番目のパラメーターは日付型です</span>
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$3</span>) <span class="hljs-comment">// 3番目のパラメーターは倍長整数型です</span>
+<span class="hljs-function"> C_REAL</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// 1番目のパラメーターは実数型です</span>
+<span class="hljs-function"> C_DATE</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">// 2番目のパラメーターは日付型です</span>
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$3</span>) <span class="hljs-comment">// 3番目のパラメーターは倍長整数型です</span>
 </code></pre>
 <p>次の例では <code>Capitalize</code> プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Capitalize プロジェクトメソッド</span>
   <span class="hljs-comment">// Capitalize ( Text ) -&gt; テキスト</span>
   <span class="hljs-comment">// Capitalize ( Source string ) -&gt; 大文字の文字列</span>
 
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>)
  <span class="hljs-variable">$0</span>:=<span class="hljs-function">Uppercase</span>(<span class="hljs-function">Substring</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>))+<span class="hljs-function">Lowercase</span>(<span class="hljs-function">Substring</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">2</span>))
 </code></pre>
 <p><code>New process</code> コマンドなどでプロセスメソッドを呼び出す場合にも、そのメソッドが引数を受け取るのであれば、それらは明示的に宣言されていなくてはなりません。 たとえば:</p>
@@ -153,7 +153,7 @@
 ...
 </code></pre>
 <p><strong>注:</strong> プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、&quot;Compiler&quot; で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_REAL</span>(OneMethodAmongOthers;<span class="hljs-variable">$1</span>) 
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_REAL</span>(OneMethodAmongOthers;<span class="hljs-variable">$1</span>) 
 </code></pre>
 <p>詳細については <a href="/docs/alpha/ja/Concepts/interpreted-compiled.html">インタープリターモードとコンパイルモード</a> を参照ください。</p>
 <p>パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは &quot;Compiler&quot; メソッドによる一括宣言をサポートしません)。</p>
@@ -167,7 +167,7 @@
 <li><p>トリガー トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。</p></li>
 <li><p><code>On Drag Over</code> フォームイベントを受け入れるオブジェクト <code>On Drag Over</code> フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 <strong>注:</strong> コンパイラーは $0 を初期化しません。 したがって、<code>On Drag Over</code> フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:</p></li>
 </ul>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$0</span>)<span class="hljs-keyword">
  If</span>(Form event=On Drag Over)
     <span class="hljs-variable">$0</span>:=<span class="hljs-number">0</span>
     ...<span class="hljs-keyword">
@@ -185,7 +185,7 @@
 
     <span class="hljs-comment">// DO_SOMETHING メソッド</span>
  <span class="hljs-variable">$1</span>:=<span class="hljs-function">Uppercase</span>(<span class="hljs-variable">$1</span>)
- <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$1</span>)
 </code></pre>
 <p><code>DO_SOMETHING</code> メソッドによって表示されたアラートボックスでは &quot;WILLIAMS&quot; と表示され、<code>MY_METHOD</code> メソッドによって表示されるアラートボックスでは &quot;williams&quot; と表示されます。 <code>DO_SOMETHING</code> メソッドは $1 の値をローカルな範囲で変更しましたが、これは <code>MY_METHOD</code> メソッドがサブルーチンに渡す引数として指定した [People]Last Name フィールドの値には影響しません。</p>
 <p>もし <code>DO_SOMETHING</code> メソッド内でフィールドの値を変更したいのであれば、2通りのやり方があります:</p>
@@ -193,12 +193,12 @@
 <li>サブルーチンに渡す式としてフィールドではなく、フィールドへのポインターを指定することができます。この場合、以下のようにコードを書きます:</li>
 </ol>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// MY_METHOD メソッド</span>
- <span class="hljs-function">DO_SOMETHING</span>(-&gt;[People]Name) <span class="hljs-comment">// [People]Name の値が "williams" だとします</span>
- <span class="hljs-function">ALERT</span>([People]Last Name)
+<span class="hljs-function"> DO_SOMETHING</span>(-&gt;[People]Name) <span class="hljs-comment">// [People]Name の値が "williams" だとします</span>
+<span class="hljs-function"> ALERT</span>([People]Last Name)
 
   <span class="hljs-comment">// DO_SOMETHING メソッド</span>
  <span class="hljs-variable">$1</span>-&gt;:=<span class="hljs-function">Uppercase</span>(<span class="hljs-variable">$1</span>-&gt;)
- <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$1</span>-&gt;)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$1</span>-&gt;)
 </code></pre>
 <p>この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、<code>DO_SOMETHING</code> メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 $1 引数によって <strong>参照</strong> される対象 (上記コード内での $1-&gt;) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに &quot;WILLIAMS&quot; と表示されます。</p>
 <ol start="2">
@@ -206,11 +206,11 @@
 </ol>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">// MY_METHOD メソッド</span>
  [People]Name:=<span class="hljs-function">DO_SOMETHING</span>([People]Name) <span class="hljs-comment">// もとの [People]Name の値が "williams" だとします</span>
- <span class="hljs-function">ALERT</span>([People]Name)
+<span class="hljs-function"> ALERT</span>([People]Name)
 
     <span class="hljs-comment">// DO_SOMETHING メソッド</span>
  <span class="hljs-variable">$0</span>:=<span class="hljs-function">Uppercase</span>(<span class="hljs-variable">$1</span>)
- <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$0</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$0</span>)
 </code></pre>
 <p>このようにサブルーチンの戻り値を使うことを &quot;関数を使う&quot; と言います。詳細については <a href="#functions">関数</a> の章を参照ください。</p>
 <h3><a class="anchor" aria-hidden="true" id="特殊ケース-オブジェクトやコレクションの場合"></a><a href="#特殊ケース-オブジェクトやコレクションの場合" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>特殊ケース: オブジェクトやコレクションの場合</h3>
@@ -218,16 +218,16 @@
 <p>したがって、<code>$1、$2...</code> には <em>値</em> ではなく <em>参照</em> が格納されます。 <code>$1、$2...</code> の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは <a href="/docs/alpha/ja/Concepts/pointer.html#メソッドの引数としてのポインター">ポインター</a> に対する原理と同じものですが、<code>$1、$2...</code> の使用にあたって参照を外す必要はありません。</p>
 <p>次の例では、<code>CreatePerson</code> メソッドはオブジェクトを作成したのち、それを引数として <code>ChangeAge</code> に渡します:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// CreatePerson メソッド</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$person</span>)
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$person</span>)
  <span class="hljs-variable">$person</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"Age"</span>;<span class="hljs-number">40</span>)
- <span class="hljs-function">ChangeAge</span>(<span class="hljs-variable">$person</span>)
- <span class="hljs-function">ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$person</span>.Age))  
+<span class="hljs-function"> ChangeAge</span>(<span class="hljs-variable">$person</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$person</span>.Age))  
 </code></pre>
 <p><code>ChangeAge</code> メソッドは受け取ったオブジェクトの Age 属性に 10を加えます:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$1</span>)
  <span class="hljs-variable">$1</span>.Age:=<span class="hljs-variable">$1</span>.Age+<span class="hljs-number">10</span>
- <span class="hljs-function">ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.Age))
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.Age))
 </code></pre>
 <p><code>CreatePerson</code> メソッドを実行すると、サブルーチンにおいても同じオブジェクト参照が扱われているため、両方のアラートボックスにおいて ”50” と表示されます。</p>
 <p><strong>4D Server:</strong> &quot;サーバー上で実行&quot; オプションが使用された場合など、同じマシン上で実行されないメソッド間で引数が渡される場合、参照渡しは利用できません。 このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。</p>
@@ -235,17 +235,17 @@
 <p>引数としてオブジェクトを渡すことによって <strong>名前付き引数</strong> を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。</p>
 <p>たとえば、<code>CreatePerson</code> メソッドを例にとると:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// CreatePerson メソッド</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$person</span>)
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$person</span>)
  <span class="hljs-variable">$person</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"Age"</span>;<span class="hljs-number">40</span>)
- <span class="hljs-function">ChangeAge</span>(<span class="hljs-variable">$person</span>)
- <span class="hljs-function">ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$person</span>.Age))  
+<span class="hljs-function"> ChangeAge</span>(<span class="hljs-variable">$person</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$person</span>.Age))  
 </code></pre>
 <p><code>ChangeAge</code> メソッドを次のように書けます:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
- <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span>  
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
+ <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span>
  <span class="hljs-variable">$para</span>.Age:=<span class="hljs-variable">$para</span>.Age+<span class="hljs-number">10</span>
- <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$para</span>.Name+<span class="hljs-string">" は "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" 歳です。"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$para</span>.Name+<span class="hljs-string">" は "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" 歳です。"</span>)
 </code></pre>
 <p>これは <a href="#任意パラメーター">任意パラメーター</a> を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:</p>
 <ul>
@@ -255,10 +255,10 @@
 </ul>
 <p>上述の <code>ChangeAge</code> メソッドの例では、Age およびName プロパティはどちらも必須であるため、引数オブジェクトに含まれていなければエラーが発生します。 これを避けるには、次のように記述することができます:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
- <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span>  
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
+ <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span>
  <span class="hljs-variable">$para</span>.Age:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-number">10</span>
- <span class="hljs-function">ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Name)+<span class="hljs-string">" は "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" 歳です。"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Name)+<span class="hljs-string">" は "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" 歳です。"</span>)
 </code></pre>
 <p>すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は &quot; is 10 years old&quot; となってしまうにせよ、いずれの引数も任意となります。</p>
 <p>名前付き引数を利用すると、アプリケーションの保守やリファクタリングが簡単かつ安全におこなえます。 さきほどの例で、加算する年数を場合に応じて変えたほうが適切であると、あとから気づいたとします。 メソッドのパラメーターとして、加算年数を追加しなくてはなりません。 この場合、次のように書けます:</p>
@@ -267,7 +267,7 @@
 
 <span class="hljs-comment">// ChangeAge メソッド</span>
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
-<span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span><span class="hljs-keyword">  
+<span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span><span class="hljs-keyword">
 If</span> (<span class="hljs-variable">$para</span>.toAdd=<span class="hljs-literal">Null</span>)
     <span class="hljs-variable">$para</span>.toAdd:=<span class="hljs-number">10</span><span class="hljs-keyword">
 End if</span>
@@ -291,15 +291,15 @@ End if</span>
 <span class="hljs-comment">// APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )</span>
 <span class="hljs-comment">// APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )</span>
 
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$3</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$3</span>)
 
- <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
  If</span>(Count parameters&gt;=<span class="hljs-number">3</span>)
-    <span class="hljs-function">WP SET TEXT</span>(<span class="hljs-variable">$3</span>;<span class="hljs-variable">$1</span>;wk append)<span class="hljs-keyword">
+<span class="hljs-function">    WP SET TEXT</span>(<span class="hljs-variable">$3</span>;<span class="hljs-variable">$1</span>;wk append)<span class="hljs-keyword">
  Else</span><span class="hljs-keyword">
     If</span>(Count parameters=<span class="hljs-number">2</span>)
-       <span class="hljs-function">TEXT TO DOCUMENT</span>(<span class="hljs-variable">$2</span>;<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<span class="hljs-function">       TEXT TO DOCUMENT</span>(<span class="hljs-variable">$2</span>;<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>&gt;
 </code></pre>
@@ -315,12 +315,12 @@ End if</span>
   <span class="hljs-comment">//SEND PACKETS ( 時間 ; テキスト { ; テキスト2... ; テキストN } )</span>
   <span class="hljs-comment">//SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )</span>
 
- <span class="hljs-function">C_TIME</span>(<span class="hljs-variable">$1</span>)
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$</span>{<span class="hljs-number">2</span>})
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$vlPacket</span>)<span class="hljs-keyword">
+<span class="hljs-function"> C_TIME</span>(<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">${2}</span>)
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlPacket</span>)<span class="hljs-keyword">
 
  For</span>(<span class="hljs-variable">$vlPacket</span>;<span class="hljs-number">2</span>;Count parameters)
-    <span class="hljs-function">SEND PACKET</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$</span>{<span class="hljs-variable">$vlPacket</span>})<span class="hljs-keyword">
+<span class="hljs-function">    SEND PACKET</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">${</span><span class="hljs-variable">$vlPacket}</span>)<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i}を <strong>ジェネリックパラメータ</strong> (generic parameter) と呼びます。</p>
@@ -333,7 +333,7 @@ End if</span>
 <p>以下は <code>MySum</code> 関数です:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$Sum</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">2</span>;Count parameters)
-    <span class="hljs-variable">$Sum</span>:=<span class="hljs-variable">$Sum</span>+<span class="hljs-variable">$</span>{<span class="hljs-variable">$i</span>}<span class="hljs-keyword">
+    <span class="hljs-variable">$Sum</span>:=<span class="hljs-variable">$Sum</span>+<span class="hljs-variable">${</span><span class="hljs-variable">$i}</span><span class="hljs-keyword">
  End for</span>
  <span class="hljs-variable">$0</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$Sum</span>;<span class="hljs-variable">$1</span>)
 </code></pre>
@@ -343,7 +343,7 @@ End if</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="ジェネリックパラメーターの宣言"></a><a href="#ジェネリックパラメーターの宣言" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ジェネリックパラメーターの宣言</h3>
 <p>他のローカル変数と同様、ジェネリックパラメーターはコンパイラーに指示する必要はありません。 ただし、曖昧になりそうな場合や最適化のために必要な場合は コンパイラ支持子に ${N} を渡す、以下のシンタックスを使用することができます (N は最初のジェネリックパラメーターの番号です):</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$</span>{<span class="hljs-number">4</span>})
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">${4}</span>)
 </code></pre>
 <p>このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。</p>
 <p><strong>注:</strong> 宣言に使用する数値は変数ではなく、定数でなくてはなりません。</p>

@@ -77,7 +77,7 @@
 <li><p>プロパティリストの<a href="/docs/alpha/ja/FormObjects/propertiesDataSource.html">データソース</a>テーマにおいて、選択リストの項目で &quot;&lt;Static List&gt;&quot; を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、配列へと自動的にロードされます。 オブジェクトに関連付けた変数名を使用して、この配列を参照することができます。</p></li>
 <li><p>オブジェクトが表示される前に、値を配列要素に代入するコードを実行します。 たとえば:</p></li>
 </ul>
-<pre><code class="hljs css language-4d">  <span class="hljs-function">ARRAY TEXT</span>(aCities;<span class="hljs-number">6</span>) 
+<pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(aCities;<span class="hljs-number">6</span>) 
   aCities{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Philadelphia"</span> 
   aCities{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Pittsburg"</span> 
   aCities{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Grand Blanc"</span> 
@@ -89,13 +89,13 @@
 <ul>
 <li>オブジェクトが表示される前に、<a href="https://doc.4d.com/4Dv18/4D/18/LIST-TO-ARRAY.301-4504606.ja.html">LIST TO ARRAY</a> コマンドを使ってリストの値を配列にロードします。 たとえば:</li>
 </ul>
-<pre><code class="hljs css language-4d">   <span class="hljs-function">LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)
+<pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)
 </code></pre>
 <p>この場合フォームのオブジェクトに関連付けた変数名は <em>aCities</em> でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。</p>
 <p>ユーザーがおこなった選択内容をフィールドに保存する必要があれば、レコードの登録後に代入命令を実行します。 たとえば、次のような Case文のコードを作成します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  Case of</span>
     :(Form event=On Load)
-       <span class="hljs-function">LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)<span class="hljs-keyword">
+<span class="hljs-function">       LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)<span class="hljs-keyword">
        If</span>(<span class="hljs-function">Record number</span>([People])&lt;<span class="hljs-number">0</span>) <span class="hljs-comment">// 新規レコードの場合</span>
           aCities:=<span class="hljs-number">3</span> <span class="hljs-comment">// デフォルトの値を表示します</span><span class="hljs-keyword">
        Else</span> <span class="hljs-comment">// 既存レコードの場合には、保存された値を表示します</span>
@@ -106,7 +106,7 @@
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
-       <span class="hljs-function">CLEAR VARIABLE</span>(aCities)<span class="hljs-keyword">
+<span class="hljs-function">       CLEAR VARIABLE</span>(aCities)<span class="hljs-keyword">
  End case</span>
 </code></pre>
 <p>プロパティリストのイベントテーマにおいて、作成した Case 文の中で使用する各イベントを選択して有効化ます。 配列には常に有限数の項目が納められます。 項目リストは動的であり、メソッドを用いて変更可能です。 配列の項目は変更・並び替え・追加することができます。</p>

@@ -86,8 +86,8 @@
 <h3><a class="anchor" aria-hidden="true" id="プロパティ検索とプロトタイプ"></a><a href="#プロパティ検索とプロトタイプ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プロパティ検索とプロトタイプ</h3>
 <p>4D のすべてのオブジェクトは、なんらかのクラスオブジェクトに内部的にリンクしています。 オブジェクト内にあるプロパティが見つからない場合、4D はそのクラスのプロトタイプオブジェクト内を検索します。見つからない場合、4D はそのクラスのスーパークラスのプロトタイプオブジェクト内を探します。これは、スーパークラスが存在しなくなるまで続きます。</p>
 <p>すべてのオブジェクトは、継承ツリーの頂点である &quot;Object&quot; クラスを継承します。</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Polygon</span>
-Class constructor
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Polygon</span><span class="hljs-keyword">
+Class constructor</span>
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
 <span class="hljs-literal">This</span>.area:=<span class="hljs-variable">$1</span>*<span class="hljs-variable">$2</span>
 
@@ -97,17 +97,17 @@ Class constructor
 
 <span class="hljs-variable">$instance</span>:=<span class="hljs-function">OB Instance of</span>(<span class="hljs-variable">$poly</span>;cs.Polygon)  
  <span class="hljs-comment">// true</span>
-<span class="hljs-variable">$instance</span>:=<span class="hljs-function">OB Instance of</span>(<span class="hljs-variable">$poly</span>;<span class="hljs-number">4</span>D.Object)
+<span class="hljs-variable">$instance</span>:=<span class="hljs-function">OB Instance of</span>(<span class="hljs-variable">$poly</span>;4D.Object)
  <span class="hljs-comment">// true </span>
 </code></pre>
 <p>オブジェクトのプロパティを列挙する際には、当該クラスのプロトタイプは列挙されません。 したがって、<code>For each</code> ステートメントや <code>JSON Stringify</code> コマンドは、クラスプロトタイプオブジェクトのプロパティを返しません。 クラスのプロトタイプオブジェクトプロパティは、内部的な隠れプロパティです。</p>
 <h3><a class="anchor" aria-hidden="true" id="クラス定義"></a><a href="#クラス定義" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>クラス定義</h3>
 <p>ユーザークラスファイルは、オブジェクトのひな形を定義します。<code>new()</code> クラスメンバーメソッドを呼び出すことで、このひな形に基づいたオブジェクトをインスタンス化することができます。 クラスファイル内では、専用の <a href="#クラスキーワード">クラスキーワード</a> や <a href="#クラスコマンド">クラスコマンド</a> を使用します。</p>
 <p>たとえば:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// クラス: Person.4dm</span>
-Class constructor
-  <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// 名前</span>
-  <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">// 名字</span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// クラス: Person.4dm</span><span class="hljs-keyword">
+Class constructor</span>
+<span class="hljs-function">  C_TEXT</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// 名前</span>
+<span class="hljs-function">  C_TEXT</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">// 名字</span>
   <span class="hljs-literal">This</span>.firstName:=<span class="hljs-variable">$1</span>
   <span class="hljs-literal">This</span>.lastName:=<span class="hljs-variable">$2</span>
 </code></pre>
@@ -207,12 +207,12 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <p><strong>Tip:</strong> アンダースコア (&quot;_&quot;) 文字でメンバーメソッド名を開始すると、そのメンバーメソッドは自動補完機能から除外されます。 たとえば、MyClase に <code>Function _myPrivateFunction</code> を宣言した場合、コードエディターにおいて <code>&quot;cs.MyClass &quot;</code> とタイプしても、このメンバーメソッドは候補として提示されません。</p>
 </blockquote>
 <p>クラスメソッド内でオブジェクトインスタンスを参照するには <code>This</code> を使います。 たとえば:</p>
-<pre><code class="hljs css language-4d">Function getFullName
-  <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
-  <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-function">Uppercase</span>(<span class="hljs-literal">This</span>.lastName)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span> getFullName
+<span class="hljs-function">  C_TEXT</span>(<span class="hljs-variable">$0</span>)
+  <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-function">Uppercase</span>(<span class="hljs-literal">This</span>.lastName)<span class="hljs-keyword">
 
-Function getAge
-  <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)
+Function</span> getAge
+<span class="hljs-function">  C_LONGINT</span>(<span class="hljs-variable">$0</span>)
   <span class="hljs-variable">$0</span>:=(Current date-<span class="hljs-literal">This</span>.birthdate)/<span class="hljs-number">365.25</span>
 </code></pre>
 <p>クラスメソッドの場合には、<code>Current method name</code> コマンドは次を返します: &quot;<em>&lt;ClassName&gt;.&lt;FunctionName&gt;</em>&quot; (例: &quot;MyClass.myMethod&quot;)。</p>
@@ -241,14 +241,14 @@ Function getAge
 <h4><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// クラス: Rectangle</span>
 Class Constructor
-    <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+<span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
     <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
     <span class="hljs-literal">This</span>.height:=<span class="hljs-variable">$1</span>
     <span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2</span>
 
-<span class="hljs-comment">// Function 定義</span>
-Function getArea
-    <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)
+<span class="hljs-comment">// Function 定義</span><span class="hljs-keyword">
+Function</span> getArea
+<span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$0</span>)
     <span class="hljs-variable">$0</span>:=(<span class="hljs-literal">This</span>.height)*(<span class="hljs-literal">This</span>.width)
 
 </code></pre>
@@ -299,21 +299,21 @@ Class extends &lt;ParentClass&gt;
 <h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><code>Polygon</code> クラスを継承した <code>Square</code> クラスを作成します。</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Square</span>
-  <span class="hljs-comment">// パス: Classes/Square.4dm </span>
+  <span class="hljs-comment">// パス: Classes/Square.4dm </span><span class="hljs-keyword">
 
- Class extends Polygon
+ Class extends</span> Polygon<span class="hljs-keyword">
 
- Class constructor
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>)
+ Class constructor</span>
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$1</span>)
 
   <span class="hljs-comment">// 親クラスのコンストラクターを呼び出します</span>
   <span class="hljs-comment">// 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します</span>
 <span class="hljs-function">Super</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$1</span>)
   <span class="hljs-comment">// 派生クラスにおいては、'This' を使用するより先に</span>
   <span class="hljs-comment">// Super を呼び出しておく必要があります</span>
- <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Square"</span>
+ <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Square"</span><span class="hljs-keyword">
 
-Function getArea
+Function</span> getArea
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)
 <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.height*<span class="hljs-literal">This</span>.width
 </code></pre>
@@ -339,9 +339,9 @@ Function getArea
 </ul></li>
 </ul>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// myClass コンストラクター</span>
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
- <span class="hljs-function">Super</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// テキスト型引数をスーパークラスコンストラクターに渡します</span>
- <span class="hljs-literal">This</span>.param:=<span class="hljs-variable">$2</span> <span class="hljs-comment">// 2番目の引数を使用します</span>
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+<span class="hljs-function"> Super</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">// テキスト型引数をスーパークラスコンストラクターに渡します</span>
+ <span class="hljs-literal">This</span>.param:=<span class="hljs-variable">$2 </span><span class="hljs-comment">// 2番目の引数を使用します</span>
 </code></pre>
 <ul>
 <li><a href="#Function">クラスメンバーメソッド</a> 内において、<code>Super</code> はスーパークラスのプロトタイプを指し、スーパークラス階層のメンバーメソッドを呼び出すために使用します。</li>
@@ -351,31 +351,31 @@ Function getArea
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <p>クラスコンストレクター内で <code>Super</code> を使う例です。 <code>Rectangle</code> と <code>Square</code> の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Rectangle</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Rectangle</span><span class="hljs-keyword">
 
- Class constructor
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+ Class constructor</span>
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
  <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
  <span class="hljs-literal">This</span>.height:=<span class="hljs-variable">$1</span>
- <span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2</span>
+ <span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2</span><span class="hljs-keyword">
 
- Function sayName
- <span class="hljs-function">ALERT</span>(<span class="hljs-string">"Hi, I am a "</span>+<span class="hljs-literal">This</span>.name+<span class="hljs-string">"."</span>)
+ Function</span> sayName
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"Hi, I am a "</span>+<span class="hljs-literal">This</span>.name+<span class="hljs-string">"."</span>)<span class="hljs-keyword">
 
- Function getArea
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)
+ Function</span> getArea
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$0</span>)
  <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.height*<span class="hljs-literal">This</span>.width
 </code></pre>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Square</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Square</span><span class="hljs-keyword">
 
- Class extends Rectangle
+ Class extends</span> Rectangle<span class="hljs-keyword">
 
- Class constructor
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$1</span>)
+ Class constructor</span>
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$1</span>)
 
   <span class="hljs-comment">// 親クラスのコンストラクターを呼び出します</span>
   <span class="hljs-comment">// 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します</span>
- <span class="hljs-function">Super</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> Super</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$1</span>)
 
   <span class="hljs-comment">// 派生クラスにおいては、'This' を使用するより先に</span>
   <span class="hljs-comment">// Super を呼び出しておく必要があります</span>
@@ -383,24 +383,24 @@ Function getArea
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-2-1"></a><a href="#例題-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <p>クラスメンバーメソッド内で <code>Super</code> を使う例です。 メンバーメソッドを持つ <code>Rectangle</code> クラスを作成します:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Rectangle</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Rectangle</span><span class="hljs-keyword">
 
- Function nbSides
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
+ Function</span> nbSides
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$0</span>)
  <span class="hljs-variable">$0</span>:=<span class="hljs-string">"I have 4 sides"</span>
 </code></pre>
 <p><code>Square</code> クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Square</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: Square</span><span class="hljs-keyword">
 
- Class extends Rectangle
+ Class extends</span> Rectangle<span class="hljs-keyword">
 
- Function description
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
+ Function</span> description
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$0</span>)
  <span class="hljs-variable">$0</span>:=Super.<span class="hljs-function">nbSides</span>()+<span class="hljs-string">" which are all equal"</span>
 </code></pre>
 <p>すると、プロジェクトメソッド内には次のように書けます:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$square</span>)
- <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$message</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$square</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$message</span>)
  <span class="hljs-variable">$square</span>:=cs.Square.<span class="hljs-function">new</span>()
  <span class="hljs-variable">$message</span>:=<span class="hljs-variable">$square</span>.<span class="hljs-function">description</span>() <span class="hljs-comment">// I have 4 sides which are all equal</span>
 </code></pre>
@@ -436,9 +436,9 @@ Class Constructor
 <p>コンストラクター内で <a href="#super">Super</a> キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず <code>This</code> よりも先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 <a href="#例題-1">こちらの例題</a> を参照ください。</p>
 </blockquote>
 <p>基本的に、<code>This</code> はメソッドの呼び出し元のオブジェクトを指します。</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: ob</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// クラス: ob</span><span class="hljs-keyword">
 
- Function f
+ Function</span> f
     <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.a+<span class="hljs-literal">This</span>.b
 </code></pre>
 <p>この場合、プロジェクトメソッドには次のように書けます:</p>

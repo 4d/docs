@@ -99,16 +99,16 @@
 </ul>
 <p>Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Recherche d'un client</span>
- <span class="hljs-function">QUERY BY EXAMPLE</span>([Clients])
+<span class="hljs-function"> QUERY BY EXAMPLE</span>([Clients])
   <span class="hljs-comment">// Sélection du formulaire entrée</span>
- <span class="hljs-function">FORM SET INPUT</span>([Clients];<span class="hljs-string">"Saisie de données"</span>)
+<span class="hljs-function"> FORM SET INPUT</span>([Clients];<span class="hljs-string">"Saisie de données"</span>)
   <span class="hljs-comment">// Modification de l'enregistrement du client</span>
- <span class="hljs-function">MODIFY RECORD</span>([Clients])
+<span class="hljs-function"> MODIFY RECORD</span>([Clients])
 </code></pre>
 <p>Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.</p>
 <p>Si le code ci-dessus était une méthode projet appelée <code>MODIFIER CLIENT</code>, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :</p>
 <pre><code class="hljs css language-4d"> MODIFY CUSTOMER
- <span class="hljs-function">PRINT SELECTION</span>([Clients])
+<span class="hljs-function"> PRINT SELECTION</span>([Clients])
 </code></pre>
 <p>Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode <code>MODIFIER CLIENT</code>, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.</p>
 <p>Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.</p>
@@ -187,20 +187,20 @@ PRINT CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé</span>
 <li>Vous pouvez procéder de la manière suivante :</li>
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsName</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)
- Si(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)<span class="hljs-keyword">
+<span class="hljs-function"> Si</span>(OK=<span class="hljs-number">1</span>)
+<span class="hljs-function">    QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Amis et parents])&gt;<span class="hljs-number">0</span>)
-       <span class="hljs-variable">$vtHistoireCompl</span>ète:=<span class="hljs-string">"Un de mes amis, "</span>+<span class="hljs-variable">$vsNom</span><span class="hljs-keyword">
+       <span class="hljs-variable">$vtHistoireComplète</span>:=<span class="hljs-string">"Un de mes amis, "</span>+<span class="hljs-variable">$vsNom</span><span class="hljs-keyword">
        Repeat</span>
-          <span class="hljs-function">QUERY</span>([Amis et parents];[Amis et parents]Enfant<span class="hljs-number">'</span>Nom=<span class="hljs-variable">$vsNom</span>)
+<span class="hljs-function">          QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$vsNom</span>)
           <span class="hljs-variable">$vlResultRecherche</span>:=<span class="hljs-function">Records in selection</span>([Amis et parents])<span class="hljs-keyword">
           If</span>(<span class="hljs-variable">$vlResultRecherche</span>&gt;<span class="hljs-number">0</span>)
-             <span class="hljs-variable">$vtHistoireCompl</span>ète:=<span class="hljs-variable">$vtHistoireCompl</span>ète+<span class="hljs-string">" qui est le rejeton de "</span>+[Amis et parents]Nom
+             <span class="hljs-variable">$vtHistoireComplète</span>:=<span class="hljs-variable">$vtHistoireComplète</span>+<span class="hljs-string">" qui est le rejeton de "</span>+[Amis et parents]Nom
              <span class="hljs-variable">$vsNom</span>:=[Amis et parents]Nom<span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        Until</span>(<span class="hljs-variable">$vlResultRecherche</span>=<span class="hljs-number">0</span>)
-       <span class="hljs-variable">$vtHistoireCompl</span>ète:=<span class="hljs-variable">$vtHistoireCompl</span>ète+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>
-       <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$vtHistoireCompl</span>ète)<span class="hljs-keyword">
+       <span class="hljs-variable">$vtHistoireComplète</span>:=<span class="hljs-variable">$vtHistoireComplète</span>+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-variable">$vtHistoireComplète</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
@@ -209,9 +209,9 @@ PRINT CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé</span>
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsNom</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Saisissez le nom :"</span>;<span class="hljs-string">"Pierre"</span>)<span class="hljs-keyword">
   If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([Amis et parents];[Amis et parents]Nom=<span class="hljs-variable">$vsNom</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Amis et parents])&gt;<span class="hljs-number">0</span>)
-       <span class="hljs-function">ALERT</span>(<span class="hljs-string">"Un de mes amis, "</span>+Géné<span class="hljs-function">alogie de</span>(<span class="hljs-variable">$vsNom</span>)+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>)<span class="hljs-keyword">
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Un de mes amis, "</span>+<span class="hljs-function">Généalogie de</span>(<span class="hljs-variable">$vsNom</span>)+<span class="hljs-string">", fait cela pour gagner sa vie !"</span>)<span class="hljs-keyword">
    End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
@@ -221,9 +221,9 @@ PRINT CHECK BOOK REPORT <span class="hljs-comment">// Imprimer un relevé</span>
   <span class="hljs-comment">// Généalogie de ( Nom ) -&gt; Partie de la phrase</span>
  
  <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
- <span class="hljs-function">QUERY</span>([Amis et parents];[Amis et parents]Enfant<span class="hljs-number">'</span>Nom=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<span class="hljs-function"> QUERY</span>([Amis et parents];[Amis et parents]Enfant'Nom=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
 If</span>(<span class="hljs-function">Enregistrements trouves</span>([Amis et parents])&gt;<span class="hljs-number">0</span>)
-    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" qui est le rejeton de "</span>+Géné<span class="hljs-function">alogie de</span>([Amis et parents]Nom)<span class="hljs-keyword">
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" qui est le rejeton de "</span>+<span class="hljs-function">Généalogie de</span>([Amis et parents]Nom)<span class="hljs-keyword">
 End if</span>
 </code></pre>
 <p>Vous notez que la méthode <code>Généalogie de</code> s'appelle elle-même.</p>

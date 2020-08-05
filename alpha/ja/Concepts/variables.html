@@ -88,10 +88,10 @@
 <p><code>var</code> キーワードを使って変数を宣言するには、次のシンタックスを用います:</p>
 <p><code>var &lt;varName&gt;{, &lt;varName2&gt;,...}{ : &lt;varType&gt;}</code></p>
 <p>たとえば:</p>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myText</span> : Text  <span class="hljs-comment">// テキスト変数</span>
-var myDate1, myDate2 : Date  <span class="hljs-comment">// 複数の日付変数</span>
-var <span class="hljs-variable">$myFile</span> : <span class="hljs-number">4</span>D.File  <span class="hljs-comment">// File クラスオブジェクト変数</span>
-var <span class="hljs-variable">$myVar</span> <span class="hljs-comment">// バリアント型変数</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText </span>: Text  <span class="hljs-comment">// テキスト変数</span><span class="hljs-keyword">
+var</span> myDate1, myDate2 : Date  <span class="hljs-comment">// 複数の日付変数</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myFile </span>: 4D.File  <span class="hljs-comment">// File クラスオブジェクト変数</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myVar </span><span class="hljs-comment">// バリアント型変数</span>
 </code></pre>
 <p><code>varName</code> に指定する変数名は 4Dの <a href="/docs/alpha/ja/Concepts/identifiers.html">識別子の命名規則</a> に従う必要があります。<br>
 このシンタックスは <a href="#ローカル変数とプロセス変数">ローカル変数とプロセス変数</a> の宣言のみサポートしています。<a href="#インタープロセス変数">インタープロセス変数</a> および <a href="/docs/alpha/ja/Concepts/arrays.html">配列</a> には使用できません。</p>
@@ -243,26 +243,26 @@ var <span class="hljs-variable">$myVar</span> <span class="hljs-comment">// バ�
 <ul>
 <li>基本のデータ型の、ローカル変数およびプロセス変数の宣言:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myText</span>, myText, <span class="hljs-variable">$vt</span> : Text
-var myVar <span class="hljs-comment">//variant</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myText</span>, myText, <span class="hljs-variable">$vt </span>: Text<span class="hljs-keyword">
+var</span> myVar <span class="hljs-comment">//variant</span><span class="hljs-keyword">
 
-var <span class="hljs-variable">$o</span> : Object    
-<span class="hljs-comment">// 次と同義です:</span>
-var <span class="hljs-variable">$o</span> : <span class="hljs-number">4</span>D.Object
+var</span> <span class="hljs-variable">$o </span>: Object    
+<span class="hljs-comment">// 次と同義です:</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$o </span>: 4D.Object
 <span class="hljs-comment">// C_OBJECT($o) とも同義です</span>
 </code></pre>
 <ul>
 <li>4Dクラス型のオブジェクト変数の宣言:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myFolder</span> : <span class="hljs-number">4</span>D.Folder
-var <span class="hljs-variable">$myFile</span> : <span class="hljs-number">4</span>D.File
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myFolder </span>: 4D.Folder<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$myFile </span>: 4D.File
 </code></pre>
 <ul>
 <li>ユーザークラス型のオブジェクト変数の宣言:</li>
 </ul>
-<pre><code class="hljs css language-4d">var <span class="hljs-variable">$myClass</span> : cs.MyClass
-var <span class="hljs-variable">$dataclass</span> : cs.Employee
-var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myClass </span>: cs.MyClass<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$dataclass </span>: cs.Employee<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="c_-指示子による宣言"></a><a href="#c_-指示子による宣言" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>C_ 指示子による宣言</h3>
 <blockquote>
@@ -270,15 +270,15 @@ var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
 </blockquote>
 <p>&quot;コンパイラー&quot; テーマコマンドの指示子を使って、基本のデータ型の変数を宣言することができます。</p>
 <p>たとえば、テキスト変数を宣言するには次のように書きます:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_TEXT</span>(myText)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_TEXT</span>(myText)
 </code></pre>
 <p>いくつかの基本的な変数宣言の例です:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_BLOB</span>(vxMyBlob) <span class="hljs-comment">// プロセス変数 vxMyBlob を BLOB型として宣言します</span>
- <span class="hljs-function">C_DATE</span>(<span class="hljs-variable">$vdCurDate</span>) <span class="hljs-comment">// ローカル変数 $vdCurDate を日付型として宣言します</span>
- <span class="hljs-function">C_LONGINT</span>(vg1;vg2;vg3) <span class="hljs-comment">// 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します</span>
- <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$vObj</span>) <span class="hljs-comment">// ローカル変数 $vObj をオブジェクト型として宣言します</span>
- <span class="hljs-function">C_COLLECTION</span>(<span class="hljs-variable">$vCol</span>) <span class="hljs-comment">// ローカル変数 $vCol をコレクション型として宣言します</span>
- <span class="hljs-function">ARRAY LONGINT</span>(alAnArray;<span class="hljs-number">10</span>) <span class="hljs-comment">// プロセス変数 alAnArray を 10個の倍長整数型要素を持つ配列として宣言します</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_BLOB</span>(vxMyBlob) <span class="hljs-comment">// プロセス変数 vxMyBlob を BLOB型として宣言します</span>
+<span class="hljs-function"> C_DATE</span>(<span class="hljs-variable">$vdCurDate</span>) <span class="hljs-comment">// ローカル変数 $vdCurDate を日付型として宣言します</span>
+<span class="hljs-function"> C_LONGINT</span>(vg1;vg2;vg3) <span class="hljs-comment">// 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します</span>
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$vObj</span>) <span class="hljs-comment">// ローカル変数 $vObj をオブジェクト型として宣言します</span>
+<span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$vCol</span>) <span class="hljs-comment">// ローカル変数 $vCol をコレクション型として宣言します</span>
+<span class="hljs-function"> ARRAY LONGINT</span>(alAnArray;<span class="hljs-number">10</span>) <span class="hljs-comment">// プロセス変数 alAnArray を 10個の倍長整数型要素を持つ配列として宣言します</span>
 </code></pre>
 <p><strong>注:</strong> 配列とは、変数の一種です。 配列とは、同じタイプの変数を番号付きで並べたものです。 詳細については <a href="/docs/alpha/ja/Concepts/arrays.html">配列</a> を参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="変数への代入"></a><a href="#変数への代入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>変数への代入</h2>
@@ -312,7 +312,7 @@ var <span class="hljs-variable">$entity</span> : cs.EmployeeEntity
 <p>データベースではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 <code>Request</code> コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長期間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsID</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"ID を入力してください:"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([People];[People]ID =<span class="hljs-variable">$vsID</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([People];[People]ID =<span class="hljs-variable">$vsID</span>)<span class="hljs-keyword">
  End if</span>
 </code></pre>
 <p>このメソッドは、ユーザーに ID を入力するように要求します。 ローカル変数 $vsID にレスポンスが代入され、ユーザーが入力した ID に基づいた検索がおこなわれます。 このメソッドが終了した時点で、$vsID ローカル変数はメモリから消去されます。 この変数は 1回のみ、このメソッド内でしか使われないため、これ以上維持する必要はありません。</p>

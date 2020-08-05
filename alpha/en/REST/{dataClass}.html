@@ -309,9 +309,9 @@
 <span class="hljs-function">FIRST RECORD</span>([Employee])<span class="hljs-keyword">
 While</span> (<span class="hljs-function">Not</span>(<span class="hljs-function">End selection</span>([Employee]))  
     [Employee]salary:=[Employee]salary * <span class="hljs-variable">$1</span>
-    <span class="hljs-function">SAVE RECORD</span>([Employee])
+<span class="hljs-function">    SAVE RECORD</span>([Employee])
     <span class="hljs-variable">$vCount</span>:=<span class="hljs-variable">$vCount</span>+<span class="hljs-number">1</span>
-    <span class="hljs-function">NEXT RECORD</span>([Employee])<span class="hljs-keyword">
+<span class="hljs-function">    NEXT RECORD</span>([Employee])<span class="hljs-keyword">
 End while</span> 
 <span class="hljs-function">UNLOAD RECORD</span>([Employee])
 <span class="hljs-variable">$0</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"updates"</span>;<span class="hljs-variable">$vCount</span>)

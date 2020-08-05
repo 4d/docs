@@ -102,16 +102,16 @@
 <p>Lokale, Prozess- und Interprozess Variablen werden nicht von Komponenten und Host Datenbanken gemeinsam genutzt. Die einzige Möglichkeit, aus der Host Datenbank auf Variablen von Komponenten zuzugreifen und umgekehrt, sind Zeiger.</p>
 <p>Beispiel mit Array:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//In the host database:</span>
-     <span class="hljs-function">ARRAY INTEGER</span>(MyArray;<span class="hljs-number">10</span>)
-     <span class="hljs-function">AMethod</span>(-&gt;MyArray)
+<span class="hljs-function">     ARRAY INTEGER</span>(MyArray;<span class="hljs-number">10</span>)
+<span class="hljs-function">     AMethod</span>(-&gt;MyArray)
 
 <span class="hljs-comment">//In the component, the AMethod project method contains:</span>
-     <span class="hljs-function">APPEND TO ARRAY</span>(<span class="hljs-variable">$1</span>-&gt;;<span class="hljs-number">2</span>)
+<span class="hljs-function">     APPEND TO ARRAY</span>(<span class="hljs-variable">$1</span>-&gt;;<span class="hljs-number">2</span>)
 </code></pre>
 <p>Beispiele mit Variablen:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_TEXT</span>(myvariable)
- <span class="hljs-function">component_method1</span>(-&gt;myvariable)
- <span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$p</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_TEXT</span>(myvariable)
+<span class="hljs-function"> component_method1</span>(-&gt;myvariable)
+<span class="hljs-function"> C_POINTER</span>(<span class="hljs-variable">$p</span>)
  <span class="hljs-variable">$p</span>:=<span class="hljs-function">component_method2</span>(...)
 </code></pre>
 <p>Über Zeiger können Komponenten und Host Datenbank miteinander kommunizieren. Dabei müssen Sie folgendes berücksichtigen:</p>
@@ -122,8 +122,8 @@
 <li><p>Definiert Komponente I die Variable <code>myIvar</code> variable, kann Komponente C über den Zeiger<code>-&gt;myIvar</code> nicht auf diese Variable zugreifen. Diese Syntax verursacht einen Ausführungsfehler.</p></li>
 <li><p>Wir raten davon ab, Zeiger bei Komponenten über den 4D Befehl <code>RESOLVE POINTER</code> miteinander zu vergleichen, da durch die Partitionierung von Variablen gleichnamige Variablen nebeneinander existieren können, die jedoch in einer Komponente ganz anderen Inhalt haben können als in der Host Datenbank bzw. einer anderen Komponenten. Auch der Variablentyp kann in beiden Kontexten unterschiedlich sein. Zeigen z. B. <code>myptr1</code> und <code>myptr2</code> jeweils auf eine Variable, kann der folgende Vergleich ein inkorrektes Ergebnis zurückgeben:</p></li>
 </ul>
-<pre><code class="hljs css language-4d">     <span class="hljs-function">RESOLVE POINTER</span>(myptr1;vVarName1;vtablenum1;vfieldnum1)
-     <span class="hljs-function">RESOLVE POINTER</span>(myptr2;vVarName2;vtablenum2;vfieldnum2)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function">     RESOLVE POINTER</span>(myptr1;vVarName1;vtablenum1;vfieldnum1)
+<span class="hljs-function">     RESOLVE POINTER</span>(myptr2;vVarName2;vtablenum2;vfieldnum2)<span class="hljs-keyword">
      If</span>(vVarName1=vVarName2)
       <span class="hljs-comment">//This test returns True even though the variables are different</span>
 </code></pre>
@@ -200,7 +200,7 @@
 <li>reads data from the external database.</li>
 </ul>
 <p>Creating the external database:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;MyDatabase</span>:=Get <span class="hljs-number">4</span>D folder+<span class="hljs-string">"\MyDB"</span> <span class="hljs-comment">// (Windows) stores the data in an authorized directory</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;MyDatabase</span>:=Get 4D folder+<span class="hljs-string">"\MyDB"</span> <span class="hljs-comment">// (Windows) stores the data in an authorized directory</span><span class="hljs-keyword">
  Begin SQL</span>
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
         USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
@@ -213,14 +213,14 @@
         sort_order INT32
         );
 
-        CREATE UNIQUE INDEX id_index ON KEEPIT (ID);
+<span class="hljs-function">        CREATE UNIQUE INDEX id_index ON KEEPIT </span>(ID);
 
         USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
 
  End SQL</span>
 </code></pre>
 <p>Writing in the external database:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2</span> <span class="hljs-comment">// retrieves data from the host database through pointers</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2 </span><span class="hljs-comment">// retrieves data from the host database through pointers</span>
  <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
  <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
  <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>
@@ -239,7 +239,7 @@
  End SQL</span>
 </code></pre>
 <p>Reading from an external database:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2</span> <span class="hljs-comment">// accesses data of the host database through pointers</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2 </span><span class="hljs-comment">// accesses data of the host database through pointers</span>
  <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
  <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
  <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>

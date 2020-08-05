@@ -73,7 +73,7 @@
 <h2><a class="anchor" aria-hidden="true" id="配列の作成"></a><a href="#配列の作成" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配列の作成</h2>
 <p>配列は、&quot;配列&quot; テーマの配列宣言コマンドのいずれかを使用して作成します。 配列宣言コマンドは、1次元または 2次元の配列の作成やサイズ変更をすることができます。 2次元配列の詳細については <a href="#二次元配列">二次元配列</a> を参照してください。</p>
 <p>次のコードは、10個の要素からなる整数配列を作成 (宣言) します:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">10</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">10</span>)
 </code></pre>
 <p>次のコードは、さきほど作成した配列を20要素にサイズ変更します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY INTEGER</span>(aiAnArray;<span class="hljs-number">20</span>)
@@ -83,14 +83,14 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="配列要素への値の代入"></a><a href="#配列要素への値の代入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配列要素への値の代入</h2>
 <p>配列中の要素は中カッコ ({…}) を使用して参照します。 中カッコの中には数字を入れて特定の要素を指定します。この数字を要素番号といいます。 次のコードは、5つの名前を atNames という配列に入れ、それらを警告ウィンドウに表示します:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">ARRAY TEXT</span>(atNames;<span class="hljs-number">5</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY TEXT</span>(atNames;<span class="hljs-number">5</span>)
  atNames{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Richard"</span>
  atNames{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Sarah"</span>
  atNames{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Sam"</span>
  atNames{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Jane"</span>
  atNames{<span class="hljs-number">5</span>}:=<span class="hljs-string">"John"</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-number">5</span>)
-    <span class="hljs-function">ALERT</span>(<span class="hljs-string">"要素番号 #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" の値は "</span>+atNames{<span class="hljs-variable">$vlElem</span>}+<span class="hljs-string">" です。"</span>)<span class="hljs-keyword">
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"要素番号 #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" の値は "</span>+atNames{<span class="hljs-variable">$vlElem}</span>+<span class="hljs-string">" です。"</span>)<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>atNames{$vlElem} というシンタックスに注目してください。 atNames{3} のように数値リテラルを使うだけでなく、数値変数によって配列の要素番号を指定することができます。 ループ構造による反復を使用すると (<code>For...End for</code>, <code>Repeat...Until</code> または <code>While...End while</code>)、短いコードで配列の全要素、または一部の要素を対象とした処理をおこなうことができます。</p>
@@ -120,7 +120,7 @@
 <p>(*) ひとつだけ例外があります。配列タイプのリストボックスでは、編集中の元の値を保持するため、内部的に配列の要素ゼロが使用されます。この特別なケースでは、開発者は 0番目の要素を利用できません。</p>
 <h2><a class="anchor" aria-hidden="true" id="二次元配列"></a><a href="#二次元配列" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>二次元配列</h2>
 <p>配列宣言コマンドはそれぞれ、1次元および 2次元の配列を作成、またはサイズ変更ができます。 例:</p>
-<pre><code class="hljs css language-4d">&lt;br /&gt;&lt;br /&gt; <span class="hljs-function">ARRAY TEXT</span>(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// 100行と 50列からなるテキスト配列を作成します</span>
+<pre><code class="hljs css language-4d">&lt;br /&gt;&lt;br /&gt;<span class="hljs-function"> ARRAY TEXT</span>(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// 100行と 50列からなるテキスト配列を作成します</span>
 </code></pre>
 <p>2次元配列は、本質的にはランゲージオブジェクトであり、表示や印刷することはできません。</p>
 <p>上のコードで作成した atTopics 配列について、次のことが言えます:</p>
@@ -132,11 +132,11 @@
 <li><code>Size of array(atTopics{17})</code> は、17行目の列数である50を返します。</li>
 </ul>
 <p>以下の例では、データベースの各テーブルの各フィールドへのポインターが 2次元配列に格納されます:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
- <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
+<span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
   <span class="hljs-comment">// テーブルと同じ数の空行 (つまり、列なし) を持つ配列作成します</span>
  <span class="hljs-variable">$vlLastTable</span>:=Get last table number
- <span class="hljs-function">ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">// X行 0列の 2D配列</span>
+<span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">// X行 0列の 2D配列</span>
   <span class="hljs-comment">// テーブル毎に</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$vlLastTable</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Is table number valid</span>(<span class="hljs-variable">$vlTable</span>))
@@ -147,9 +147,9 @@
           If</span>(<span class="hljs-function">Is field number valid</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
              <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+<span class="hljs-number">1</span>
   <span class="hljs-comment">// 当該テーブルの行にフィールドに対応する列を挿入していきます</span>
-             <span class="hljs-function">INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>};<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
+<span class="hljs-function">             INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}</span>;<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
   <span class="hljs-comment">// 作成した "セル" にポインターを割り当てます</span>
-             <span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>}{<span class="hljs-variable">$vlColumnNumber</span>}:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
+             <span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}{</span><span class="hljs-variable">$vlColumnNumber}</span>:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        End for</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
@@ -157,14 +157,14 @@
 </code></pre>
 <p>このように初期化された 2次元配列を使って、以下の方法で特定のテーブルが持つ全フィールドへのポインターを取得できます:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// 現在選択されているテーブルの、フィールドへのポインターを取得します:</span>
- <span class="hljs-function">COPY ARRAY</span>(◊apFields{<span class="hljs-function">Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
+<span class="hljs-function"> COPY ARRAY</span>(<span class="hljs-function">◊apFields{Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
   <span class="hljs-comment">// ブールと日付フィールドを初期化します</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>))<span class="hljs-keyword">
     Case of</span>
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is date)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=Current date
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is Boolean)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is date)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=Current date
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is Boolean)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
     End case</span><span class="hljs-keyword">
  End for</span>
 </code></pre>

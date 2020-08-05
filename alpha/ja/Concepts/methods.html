@@ -99,16 +99,16 @@
 </ul>
 <p>たとえば、顧客データベースがあるとします。 データベースをカスタマイズしていくうちに、顧客を検索してレコードを修正するという一連の作業を繰り返しおこなっていることに気づいたとします。 そのコーディングは以下のようになっています:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// 顧客を検索します</span>
- <span class="hljs-function">QUERY BY EXAMPLE</span>([Customers])
+<span class="hljs-function"> QUERY BY EXAMPLE</span>([Customers])
   <span class="hljs-comment">// 入力フォームを選択します</span>
- <span class="hljs-function">FORM SET INPUT</span>([Customers];<span class="hljs-string">"Data Entry"</span>)
+<span class="hljs-function"> FORM SET INPUT</span>([Customers];<span class="hljs-string">"Data Entry"</span>)
   <span class="hljs-comment">// 顧客レコードを修正します</span>
- <span class="hljs-function">MODIFY RECORD</span>([Customers])
+<span class="hljs-function"> MODIFY RECORD</span>([Customers])
 </code></pre>
 <p>サブルーチンを使用しなければ、顧客レコード修正のたびにコードを作成しなければなりません。 データベースの 10箇所で同じ処理が必要であれば、同じコーディングを 10回も書かねばなりません。 サブルーチンを使用すれば 1回コーディングするだけですみます。 これがコーディングの重複を減らすというサブルーチンの第一の利点です。</p>
 <p>先ほど説明したコードが <code>MODIFY CUSTOMER</code> と呼ばれるメソッドであるとすれば、他のメソッド内でそのメソッド名を使うことで実行できます。 たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:</p>
 <pre><code class="hljs css language-4d"> MODIFY CUSTOMER
- <span class="hljs-function">PRINT SELECTION</span>([Customers])
+<span class="hljs-function"> PRINT SELECTION</span>([Customers])
 </code></pre>
 <p>この機能はメソッドを劇的にに簡素化します。 さきほどの例で言えば、<code>MODIFY CUSTOMER</code> メソッドがどのように動作するかは知る必要がなく、何をおこなうかだけ知っていればよいのです。 これはメソッドをサブルーチン化することの2番目の理由、役割の明確化です。 このように、作成されたメソッドは 4Dランゲージを拡張します。</p>
 <p>このデータベースの例で顧客の検索方法を変える場合、10箇所ではなく、たった1つのメソッドを変更するだけですみます。 これがサブルーチンを使うもう一つの理由、改変の容易化です。</p>
@@ -188,11 +188,11 @@
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsName</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the name:"</span>;<span class="hljs-string">"John"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-variable">$vsName</span><span class="hljs-keyword">
        Repeat</span>
-          <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
+<span class="hljs-function">          QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
           <span class="hljs-variable">$vlQueryResult</span>:=<span class="hljs-function">Records in selection</span>([Friends and Relatives])<span class="hljs-keyword">
           If</span>(<span class="hljs-variable">$vlQueryResult</span>&gt;<span class="hljs-number">0</span>)
              <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]Name
@@ -200,7 +200,7 @@
           End if</span><span class="hljs-keyword">
        Until</span>(<span class="hljs-variable">$vlQueryResult</span>=<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">", does this for a living!"</span>
-       <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$vtTheWholeStory</span>)<span class="hljs-keyword">
+<span class="hljs-function">       ALERT</span>(<span class="hljs-variable">$vtTheWholeStory</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
@@ -209,19 +209,19 @@
 </ol>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsName</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the name:"</span>;<span class="hljs-string">"John"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
-    <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
+<span class="hljs-function">    QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
-       <span class="hljs-function">ALERT</span>(<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-function">Genealogy of</span>(<span class="hljs-variable">$vsName</span>)+<span class="hljs-string">", does this for a living!"</span>)<span class="hljs-keyword">
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-function">Genealogy of</span>(<span class="hljs-variable">$vsName</span>)+<span class="hljs-string">", does this for a living!"</span>)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <p>再帰関数 <code>Genealogy of</code> は以下の通りです:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">` Genealogy of プロジェクトメソッド</span>
-  <span class="hljs-comment">` Genealogy of ( String ) -&gt; Text</span>
-  <span class="hljs-comment">` Genealogy of ( Name ) -&gt; Part of sentence</span>
+<span class="hljs-function">  ` Genealogy of </span>( String ) -&gt; Text
+<span class="hljs-function">  ` Genealogy of </span>( Name ) -&gt; Part of sentence
 
  <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
- <span class="hljs-function">QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
+<span class="hljs-function"> QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
  If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
     <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$0</span>+<span class="hljs-string">" who is the child of "</span>+<span class="hljs-function">Genealogy of</span>([Friends and Relatives]Name)<span class="hljs-keyword">
  End if</span>
