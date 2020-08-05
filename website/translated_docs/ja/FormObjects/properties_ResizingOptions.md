@@ -50,7 +50,7 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| オプション | JSON value | Result                                                                                                                 |
+| オプション | JSON value | 戻り値                                                                                                                    |
 | ----- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Grow  | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
 | 移動    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
@@ -78,7 +78,7 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| オプション | JSON value | Result                                                                                                               |
+| オプション | JSON value | 戻り値                                                                                                                  |
 | ----- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Grow  | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | 移動    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
@@ -131,9 +131,9 @@ Designates if the size of the column can be modified by the user.
 
 #### JSON 文法
 
-| 名         | データタイプ  |      とりうる値      |
-|:--------- |:-------:|:---------------:|
-| resizable | boolean | "true", "false" |
+| 名         | データタイプ |      とりうる値      |
+|:--------- |:------:|:---------------:|
+| resizable |  ブール   | "true", "false" |
 
 
 #### 対象オブジェクト
