@@ -16,5 +16,6 @@ Also, the integrated backup module can take advantage of the .journal file ([dat
 > You can also implement alternative solutions for replicating and synchronizing data in order to maintain identical versions of databases for backup purposes. These solutions can be based on the following mechanisms and technologies:  
 > - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)  
 > - Synchronization using SQL - Synchronization using HTTP (/rest/url)
-> 
+
+
 > For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
