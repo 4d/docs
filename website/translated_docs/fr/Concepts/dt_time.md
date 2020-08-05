@@ -7,7 +7,7 @@ title: Heure
 - Les heures sont stockées dans un format de 24 heures.
 - Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
 
 ## Constantes littérales de type heure
 
@@ -25,33 +25,33 @@ Voici quelques exemples de constantes littérales de type heure :
 
 Une heure nulle s’écrit ?00:00:00?
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
+**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour saisir une heure nulle. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
 
 ## Opérateurs sur les heures
 
-| Opération           | Syntaxe        | Retourne | Expression              | Valeur     |
-| ------------------- | -------------- | -------- | ----------------------- | ---------- |
-| Addition            | Time + Time    | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction        | Time - Time    | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition            | Time + Number  | Nombre   | ?02:03:04? + 65         | 7449       |
-| Soustraction        | Time – Number  | Nombre   | ?02:03:04? – 65         | 7319       |
-| Multiplication      | Time * Number  | Nombre   | ?02:03:04? * 2          | 14768      |
-| Division            | Time / Number  | Nombre   | ?02:03:04? / 2          | 3692       |
-| Division entière    | Time \ Number | Nombre   | ?02:03:04? \ 2         | 3692       |
-| Modulo              | Time % Time    | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo              | Time % Number  | Nombre   | ?02:03:04? % 2          | 0          |
-| Egalité             | Time = Time    | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? = ?01:02:04? | Faux       |
-| Inégalité           | Time # Time    | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
-|                     |                |          | ?01:02:03? # ?01:02:03? | Faux       |
-| Supérieur à         | Time > Time    | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? > ?01:02:03? | Faux       |
-| Inférieur à         | Time < Time    | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
-|                     |                |          | ?01:02:03? < ?01:02:03? | Faux       |
-| Supérieur ou égal à | Time >= Time   | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? >=?01:02:04? | Faux       |
-| Inférieur ou égal à | Time <= Time   | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:04? <=?01:02:03? | Faux       |
+| Opération           | Syntaxe         | Retourne | Expression              | Valeur     |
+| ------------------- | --------------- | -------- | ----------------------- | ---------- |
+| Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? + 65         | 7449       |
+| Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? – 65         | 7319       |
+| Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? * 2          | 14768      |
+| Division            | Heure / Nombre  | Nombre   | ?02:03:04? / 2          | 3692       |
+| Division entière    | Heure \ Nombre | Nombre   | ?02:03:04? \ 2         | 3692       |
+| Modulo              | Heure % Heure   | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo              | Heure % Nombre  | Nombre   | ?02:03:04? % 2          | 0          |
+| Egalité             | Heure = Heure   | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? = ?01:02:04? | Faux       |
+| Inégalité           | Heure # Heure   | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? # ?01:02:03? | Faux       |
+| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? > ?01:02:03? | Faux       |
+| Inférieur à         | Heure < Heure   | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? < ?01:02:03? | Faux       |
+| Supérieur ou égal à | Heure >= Heure  | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? >=?01:02:04? | Faux       |
+| Inférieur ou égal à | Heure <= Heure  | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:04? <=?01:02:03? | Faux       |
 
 ### Exemple 1
 
@@ -78,8 +78,8 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 p.m.
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? and it is 1:30 a.m. the next morning
+$t1:=?23:00:00? // Il est 23 heures.
+  //On souhaite ajouter 2 heures 30
+ $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant
 ```
