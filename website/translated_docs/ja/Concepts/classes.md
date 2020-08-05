@@ -97,9 +97,9 @@ Class constructor($firstname : Text; $lastname : Text)
 
 #### cs -> classStore
 
-| Parameter  | 型      |    | 説明                                            |
+| 引数         | 型      |    | 説明                                            |
 | ---------- | ------ | -- | --------------------------------------------- |
-| classStore | object | <- | User class store for the project or component |
+| classStore | オブジェクト | <- | User class store for the project or component |
 
 
 The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
@@ -116,9 +116,9 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | 型      |    | 説明             |
+| 引数         | 型      |    | 説明             |
 | ---------- | ------ | -- | -------------- |
-| classStore | object | <- | 4D class store |
+| classStore | オブジェクト | <- | 4D class store |
 
 
 The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
@@ -152,9 +152,9 @@ Class オブジェクトは共有オブジェクトです。したがって、�
 
 #### cs.\<ClassName>.new() -> classObject
 
-| Parameter   | 型      |    | 説明                                    |
+| 引数          | 型      |    | 説明                                    |
 | ----------- | ------ | -- | ------------------------------------- |
-| classObject | object | <- | New object of the \<ClassName> class |
+| classObject | オブジェクト | <- | New object of the \<ClassName> class |
 
 
 The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
