@@ -40,7 +40,7 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | description | テキスト   | "On Clicked"                   |
 | objectName  | テキスト   | 4D View Pro area name          |
 | sheetName   | テキスト   | Name of the sheet of the event |
-| range       | object | Cell range                     |
+| range       | オブジェクト | Cell range                     |
 
 
 #### 例題
