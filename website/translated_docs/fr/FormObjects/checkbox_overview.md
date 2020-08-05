@@ -24,7 +24,7 @@ Une partie ou la totalité des cases à cocher contenues dans un formulaires peu
 
 ### Cases à cocher à trois états
 
-Les objets de type case à cocher de style [Classique](checkbox_overview.md#regular) et [A plat](checkbox_overview.md#flat) acceptent un troisième état. Ce troisième état représente un statut intermédiaire, généralement utilisé pour l’affichage. Il permet par exemple d’indiquer qu’une propriété est présente parmi une sélection d’objets mais pas dans chaque objet de la sélection.
+Check box objects with [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) [button style](propertiesTextAndPicture.md#button-style) accept a third state. Ce troisième état représente un statut intermédiaire, généralement utilisé pour l’affichage. Il permet par exemple d’indiquer qu’une propriété est présente parmi une sélection d’objets mais pas dans chaque objet de la sélection.
 
 ![](assets/en/FormObjects/checkbox_3states.png)
 
@@ -78,15 +78,15 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 ## Styles des boutons "Case à cocher"
 
-Les styles de bouton des cases à cocher contrôlent l'apparence générale d'une case à cocher ainsi que ses propriétés. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
+Check boxes use [button styles](propertiesTextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
 À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
-4D propose des cases à cocher avec les styles prédéfinis suivants :
+4D provides check boxes in the following predefined button styles:
 
 ### Classique
 
-Le style Classique de case à cocher correspond à un système de case à cocher standard (*i.e.*, un rectangle avec un titre descriptif) :
+The Regular check box button style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
@@ -107,7 +107,7 @@ Le style Classique de case à cocher correspond à un système de case à cocher
 
 ### A plat
 
-Le style A plat a un design minimaliste. Le graphisme du style A plat est particulièrement utile pour les formulaires à imprimer.
+The Flat check box button style is a minimalist appearance. Le graphisme du style A plat est particulièrement utile pour les formulaires à imprimer.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
@@ -125,11 +125,11 @@ Le style A plat a un design minimaliste. Le graphisme du style A plat est partic
                 }
     
 
-### Bouton barre outils
+### Toolbar Button
 
-Le style du bouton Barre outils est initialement destiné à être intégré dans une barre d'outils.
+The Toolbar Button check box button style is primarily intended for integration in a toolbar.
 
-Le style Barre outils possède un fond transparent et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+The Toolbar Button check box button style has a transparent background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Example with states unchecked / checked / highlighted:
 
@@ -152,9 +152,9 @@ Example with states unchecked / checked / highlighted:
 
 ### Bevel
 
-The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
+The Bevel check box button style combines the appearance of the [Regular](#regular) button style (*i.e.*, a rectangle with a descriptive title) with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-Le style Bevel possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+The Bevel button style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Example with states unchecked / checked / highlighted:
 
@@ -177,15 +177,15 @@ Example with states unchecked / checked / highlighted:
 
 ### Bevel arrondi
 
-Le style de case à cocher Bevel arrondi est presque identique au style [Bevel](#bevel), à l'exception des coins du bouton qui peuvent, selon le système d'exploitation, être arrondis. Comme pour le style Bevel, le style Bevel arrondi combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
+The Rounded Bevel check box button style is nearly identical to the [Bevel](#bevel) button style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-Le style Bevel arrondi possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+The Rounded Bevel button style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Exemple sous macOS :
 
 ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Sous Windows, le style Bevel arrondi est identique au style [Bevel](#bevel).
+> On Windows, the Rounded Bevel button style is identical to the [Bevel](#bevel) button style.
 
 #### Exemple JSON :
 
@@ -205,13 +205,13 @@ Exemple sous macOS :
 
 ### OS X Gradient
 
-Le style de case à cocher OS X Gradient est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, avoir deux tons. Comme pour le style Bevel, le style OS X Gradient combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
+The OS X Gradient check box button style is nearly identical to the [Bevel](#bevel) button style. As with the Bevel button style, the OS X Gradient button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+The OS X Gradient button style has a light gray background with a title and may be displayed as a two-tone system button on macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> Sous Windows, ce style est identique au style [Bevel](#bevel).
+> On Windows, this check box button style is identical to the [Bevel](#bevel) button style.
 
 #### Exemple JSON :
 
@@ -230,15 +230,15 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 ### OS X Texture
 
-Le style de case à cocher OS X Textured est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, être différente. Comme pour le style Bevel, le style OS X Textured combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
+The OS X Textured button style is similar to the [Bevel](#bevel) button style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel button style, the OS X Textured button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-Par défaut, le style OS X Textured apparaît comme :
+By default, the OS X Textured button style appears as:
 
 - *Windows* - a standard system button with a light blue background with a title in the center.
     
     ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
-- *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+- *macOS* - a standard system button. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
     
     ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -257,9 +257,9 @@ Par défaut, le style OS X Textured apparaît comme :
 
 ### Office XP
 
-Le style de case à cocher Office XP combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
+The Office XP button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
+The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
 
 - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Example with states unchecked / checked / highlighted:
     
@@ -287,9 +287,9 @@ Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont
 
 ### Contracter/Déployer
 
-Ce style de case à cocher peut être utilisé pour ajouter une icône standard contracter/déployer. Ces boutons sont utilisés nativement dans les listes hiérarchiques.
+This check box button style can be used to add a standard collapse/expand icon. These icons are used natively in hierarchical lists.
 
-- *Windows* - the button looks like a [+] or a [-]
+- *Windows* - the icon looks like a [+] or a [-]
     
     ![](assets/en/FormObjects/checkbox_collapse.png)
 
@@ -312,7 +312,7 @@ Ce style de case à cocher peut être utilisé pour ajouter une icône standard 
 
 ### Bouton disclosure
 
-Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît comme un bouton disclosure standard, généralement utilisé pour afficher/masquer des informations supplémentaires. Lorsqu'il est utilisé comme bouton radio, le symbole du bouton pointe vers le bas avec la valeur 0 et vers le haut avec la valeur 1.
+In macOS and Windows, a check box with the "Disclosure" button style appears as a standard disclosure button, usually used to show/hide additional information. Lorsqu'il est utilisé comme bouton radio, le symbole du bouton pointe vers le bas avec la valeur 0 et vers le haut avec la valeur 1.
 
 - *Sous Windows*
     
@@ -337,7 +337,7 @@ Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît c
 
 ### Personnalisé
 
-Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques:
+The Custom button style accepts a personalized background picture and allows managing specific properties:
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname)
 - [Icon Offset](properties_TextAndPicture.md#icon-offset)

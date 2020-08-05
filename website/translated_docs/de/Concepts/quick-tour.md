@@ -228,7 +228,7 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-Eine Klasse kann über `Class inherits <ClassName>` von einer anderen Klasse erben. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
+A class can extend another class by using `Class extends <ClassName>`. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
 
 ```4d
 //in the Square.4dm file

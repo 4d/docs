@@ -22,24 +22,24 @@ Drop-down list objects are initialized by loading a list of values into an array
 * Before the object is displayed, execute code that assigns values to the array elements. Beispiel:
 
 ```4d
-  ARRAY TEXT($aCities;6) 
-  $aCities{1}:="Philadelphia" 
-  $aCities{2}:="Pittsburg" 
-  $aCities{3}:="Grand Blanc" 
-  $aCities{4}:="Bad Axe" 
-  $aCities{5}:="Frostbite Falls" 
-  $aCities{6}:="Green Bay" 
+  ARRAY TEXT(aCities;6) 
+  aCities{1}:="Philadelphia" 
+  aCities{2}:="Pittsburg" 
+  aCities{3}:="Grand Blanc" 
+  aCities{4}:="Bad Axe" 
+  aCities{5}:="Frostbite Falls" 
+  aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+In this case, the name of the variable associated with the object in the form must be *aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
 * Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Beispiel:
 
 ```4d
-   LIST TO ARRAY("Cities";$aCities)
+   LIST TO ARRAY("Cities";aCities)
 ```
 
-In this case also, the name of the variable associated with the object in the form must be *$aCities*. This code would be run in place of the assignment statements shown above.
+In this case also, the name of the variable associated with the object in the form must be *aCities*. This code would be run in place of the assignment statements shown above.
 
 If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
 
