@@ -16,9 +16,9 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON 文法
 
-| 名     | データタイプ     | とりうる値                                                                    |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| 名     | データタイプ | とりうる値                                                                    |
+| ----- | ------ | ------------------------------------------------------------------------ |
+| pages | コレクション | Collection of pages (each page is an object, page 0 is the first element |
 
 
 * * *
@@ -103,9 +103,9 @@ Only project forms can be specified as published subforms.
 
 #### JSON 文法
 
-| 名      | データタイプ  | とりうる値       |
-| ------ | ------- | ----------- |
-| shared | boolean | true, false |
+| 名      | データタイプ | とりうる値       |
+| ------ | ------ | ----------- |
+| shared | ブール    | true, false |
 
 
 * * *
@@ -123,9 +123,9 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON 文法
 
-| 名                | データタイプ  | とりうる値       |
-| ---------------- | ------- | ----------- |
-| memorizeGeometry | boolean | true, false |
+| 名                | データタイプ | とりうる値       |
+| ---------------- | ------ | ----------- |
+| memorizeGeometry | ブール    | true, false |
 
 
 #### 参照
