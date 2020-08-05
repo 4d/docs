@@ -6,14 +6,15 @@ title: Restore
 4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
 
 - The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
-    
     - If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
     - If the cache contains operations, the data file is intact but it requires integrating the current log file.
     - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
+
 - The loss of database file(s). This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. To find out if a database was damaged following an incident, simply relaunch the database using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the database in the exact state it was in before the incident.
 
 > 4D can launch procedures automatically to recover databases following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Database Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
 > If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the database using the "rollback" function in the log file. This function is available on the [Rollback](MSC/rollback.md) page of the MSC.
+
 
 ## Manually restoring a backup (standard dialog)
 
@@ -29,13 +30,13 @@ To restore a database manually via a standard dialog box:
 ![](assets/en/Backup/backup07.png)
 
 You can also click on the **[...]** button to specify a different location.
-
 3. Click on the **Restore** button. 4D extracts all backup files from the specified location. If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)). 4.(Optional) Click **OK** to integrate the log file into the restored database. If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
-4. Click **OK**. The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
+5. Click **OK**. The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
 
 ## Manually restoring a backup (MSC)
 
 You can manually restore an archive of the current database using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
+
 
 ## Manually integrating the log
 
