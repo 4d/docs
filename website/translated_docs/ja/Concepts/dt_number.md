@@ -5,15 +5,16 @@ title: 数値 (実数、倍長整数、整数)
 
 数値とは、以下を示す総称です:
 
-- 実数のフィールド、変数、または式。 実数データタイプの範囲は、±1.7e±308 (有効数字13桁) です。 
-- 倍長整数のフィールド、変数、または式。 倍長整数 (4バイト整数) データタイプの範囲は、-2^31..(2^31)-1です。 
+- 実数のフィールド、変数、または式。 実数データタイプの範囲は、±1.7e±308 (有効数字13桁) です。
+- 倍長整数のフィールド、変数、または式。 倍長整数 (4バイト整数) データタイプの範囲は、-2^31..(2^31)-1です。
 - 整数のフィールド、変数、または式。 整数 (2バイト整数) データタイプの範囲は、-32,768..32,767 (2^15..(2^15)-1)です。
 
-**注:** 整数フィールドの値は、4D ランゲージで使用される際には自動的に倍長整数に変換されます。
+**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
 
 数値データタイプは、異なる数値データタイプに代入することができます。このとき、4Dが必要に応じて変換、切り捨て、丸め処理をおこないます。 ただし、値が範囲外の場合には、変換は正しい値を返しません。 数値データタイプは式の中に混在させて使用することができます。
 
-**注:** 4D ランゲージリファレンスでは、実際のデータタイプに関わらず、コマンド説明における実数、整数、倍長整数の引数はとくに明記されていない限り、数値と表記されています。
+**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+
 
 ## 数値リテラル
 
@@ -37,28 +38,27 @@ title: 数値 (実数、倍長整数、整数)
 
 ## 数値演算子
 
-| 演算子       | シンタックス       | 戻り値 | 式        | 結果    |
-| --------- | ------------ | --- | -------- | ----- |
-| 加算 (足し算)  | 数値 + 数値      | 数値  | 2 + 3    | 5     |
-| 減算 (引き算)  | 数値 - 数値      | 数値  | 3 – 2    | 1     |
-| 乗算 (かけ算)  | 数値 * 数値      | 数値  | 5 * 2    | 10    |
-| 除算 (割り算)  | 数値 / 数値      | 数値  | 5 / 2    | 2.5   |
-| 倍長整数を返す除算 | 数値 \ 数値     | 数値  | 5 \ 2   | 2     |
-| モジューロ     | 数値 % 数値      | 数値  | 5 % 2    | 1     |
-| 指数        | 数値 ^ 数値      | 数値  | 2 ^ 3    | 8     |
-| 等しい       | 数値 = 数値      | ブール | 10 = 10  | True  |
-|           |              |     | 10 = 11  | False |
-| 異なる       | 数値 # 数値      | ブール | 10 # 11  | True  |
-|           |              |     | 10 # 10  | False |
-| 大きい       | 数値 > 数値      | ブール | 11 > 10  | True  |
-|           |              |     | 10 > 11  | False |
-| 小さい       | 数値 < 数値      | ブール | 10 < 11  | True  |
-|           |              |     | 11 < 10  | False |
-| 以上        | 数値 >= 数値     | ブール | 11 >= 10 | True  |
-|           |              |     | 10 >= 11 | False |
-| 以下        | 数値 <= Number | ブール | 10 <= 11 | True  |
-|           |              |     | 11 <= 10 | False |
-
+| 演算子       | シンタックス           | 戻り値 | 式        | 結果    |
+| --------- | ---------------- | --- | -------- | ----- |
+| 加算 (足し算)  | 数値 + 数値          | 数値  | 2 + 3    | 5     |
+| 減算 (引き算)  | 数値 - 数値          | 数値  | 3 – 2    | 1     |
+| 乗算 (かけ算)  | 数値 * 数値          | 数値  | 5 * 2    | 10    |
+| 除算 (割り算)  | 数値 / 数値          | 数値  | 5 / 2    | 2.5   |
+| 倍長整数を返す除算 | 数値 \ 数値         | 数値  | 5 \ 2   | 2     |
+| モジューロ     | 数値 % 数値          | 数値  | 5 % 2    | 1     |
+| 指数        | 数値 ^ 数値          | 数値  | 2 ^ 3    | 8     |
+| 等しい       | 数値 = 数値          | ブール | 10 = 10  | True  |
+|           |                  |     | 10 = 11  | False |
+| 異なる       | 数値 # 数値          | ブール | 10 # 11  | True  |
+|           |                  |     | 10 # 10  | False |
+| 大きい       | Number > Number  | ブール | 11 > 10  | True  |
+|           |                  |     | 10 > 11  | False |
+| 小さい       | Number < Number  | ブール | 10 < 11  | True  |
+|           |                  |     | 11 < 10  | False |
+| 以上        | Number >= Number | ブール | 11 >= 10 | True  |
+|           |                  |     | 10 >= 11 | False |
+| 以下        | Number <= Number | ブール | 10 <= 11 | True  |
+|           |                  |     | 11 <= 10 | False |
 
 モジューロ演算子 % は最初の数値を 2番目の数値で除算し、その余りの整数を返します。 次に例を示します:
 
@@ -67,9 +67,8 @@ title: 数値 (実数、倍長整数、整数)
 - 10.5 % 2は、0を返します。余りが整数ではない (0.25) からです。
 
 **警告:**
-
 - モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 この範囲外の数値のモジューロ演算を実行するには、`Mod` コマンドを使用します。
-- 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。 
+- 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
 
 ### 優先順位
 
@@ -91,15 +90,16 @@ title: 数値 (実数、倍長整数、整数)
 
 カッコは、他のカッコの組の内側にネストすることができます。 式の評価が正しくおこなわれるように、必ず各左カッコに対応する右カッコを指定してください。 カッコの不足または誤用は、予測できない結果や、式の無効化につながります。 またコンパイルする場合は、左カッコと右カッコは同じ数でなければなりません。組になっていないカッコはシンタックスエラーとして検出されます。
 
+
 ## ビットワイズ演算子
 
-ビットワイズ演算子は、**倍長整数** 式や値に対して演算をおこないます。
+The bitwise operators operates on **Long Integer** expressions or values.
 
 > ビットワイズ演算子に整数値または実数値を渡すと、4Dは値を倍長整数値として評価してから、ビットワイズ演算子を使用した式を計算します。
 
 ビットワイズ演算子を使用する場合、倍長整数値を32ビットの配列と考える必要があります。 これらのビットには、右から左に0~31の番号が付けられます。
 
-それぞれのビットは0か1なので、倍長整数値は32のブール値を格納できる値と考えることもできます。 1に等しいビットは **true**、0に等しいビットは **false** を意味します。
+それぞれのビットは0か1なので、倍長整数値は32のブール値を格納できる値と考えることもできます。 A bit equal to 1 means **True** and a bit equal to 0 means **False**.
 
 ビットワイズ演算子を使用する式は倍長整数値を返します。Bit Test 演算子の場合、式は例外的にブール値を返します。 次の表にビットワイズ演算子とそのシンタックスを示します:
 
@@ -114,72 +114,35 @@ title: 数値 (実数、倍長整数、整数)
 | Bit Clear              | ?-        | Long ?- Long        | Long (注記2 参照)    |
 | Bit Test               | ??        | Long ?? Long        | Boolean (注記2 参照) |
 
-
 #### 注記
 
 1. `Left Bit Shift` および `Right Bit Shift` 演算では、2番目のオペランドは、結果値において1番目のオペランドのビットがシフトされるビット数を示します。 したがって、この2番目のオペランドは、0~31の間でなければなりません。 0ビットシフトするとその値がそのまま返されます。また、31ビットより多くシフトするとすべてのビットがなくなるので、0x00000000が返されます。 それ以外の値を2番目のオペランドとして渡した場合、結果は意味のない値になります。
 2. `Bit Set`、`Bit Clear`、`Bit Test` 演算では、2番目のオペランドは、作用の対象となるビット番号を示します。 したがって、この2番目のオペランドは0 ~ 31の間です。そうでない場合、式の結果は意味のないものになります。
 
+
+
 次の表は、ビットワイズ演算子とその効果を示します:
 
-| 演算子         | 説明                               |
-| ----------- | -------------------------------- |
-| Bitwise AND | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 |
+| 演算子                    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND            | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                                                                 |
+| Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
+| Bitwise OR (exclusive) | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
+| Left Bit Shift         | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. 左側のビットがなくなり、右側の新しいビットは0に設定されます。 <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                                                             |
+| Right Bit Shift        | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. 右側のビットがなくなり、左側の新しいビットは0に設定されます。<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                                                                |
+| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
 
+### 例題
 
-<
-
-下記は、論理ANDの真偽表です:
-
-- 1 & 1 --> 1
-    - 0 & 1 --> 0
-        - 1 & 0 --> 0
-            - 0 & 0 --> 0</p> 
-                <
-                
-                p>すなわち、両オペランドのビットが1の場合、結果ビットが1になり、その他の場合は結果ビットが0になります。| |Bitwise OR (inclusive)|それぞれの結果ビットは2つのオペランドのビットの論理ORです。
-                
-                <
-                
-                p>下記は、論理ORの真偽表です:
-                
-                - 1 &#124; 1 --> 1
-                    - 0 &#124; 1 --> 1
-                        - 1 &#124; 0 --> 1
-                            - 0 &#124; 0 --> 0</p> 
-                                <
-                                
-                                p>すなわち、いずれかのオペランドのビットが１の場合、結果ビットが1になり、その他の場合は結果ビットが0になります。| |Bitwise OR (exclusive)|それぞれの結果ビットは2つのオペランドのビットの排他的論理ORです。
-                                
-                                <
-                                
-                                p>下記は、排他的論理ORの真偽表です:
-                                
-                                - 1 \^&#124; 1 --> 0
-                                    - 0 \^&#124; 1 --> 1
-                                        - 1 \^&#124; 0 --> 1
-                                            - 0 \^&#124; 0 --> 0</p> 
-                                                <
-                                                
-                                                p>すなわち、オペランドのビットのいずれか一方だけが１の場合、結果ビットが１になり、その他の場合は結果ビットが0になります。| |Left Bit Shift|最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ左にシフトします。 左側のビットがなくなり、右側の新しいビットは0に設定されます。
-                                                
-                                                <
-                                                
-                                                p>**注記:** 正の数だけを考えると、Nビット左にシフトすることは、2^Nを掛けることと同じです。| |Right Bit Shift|最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ右にシフトします。 右側のビットがなくなり、左側の新しいビットは0に設定されます。
-                                                
-                                                <
-                                                
-                                                p>**注記:** 正の数だけを考えると、Nビット左にシフトすることは、2^Nで割ることと同じです。| |Bit Set|最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが1に設定されます。 他のビットはそのままです。| |Bit Clear|最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが0に設定されます。 他のビットはそのままです。| |Bit Test|最初のオペランドのうち、2番目のビットで示されたビットが1の場合、trueが返されます。 最初のオペランドのうち、2番目のビットで示されたビットが0の場合、Falseが返されます。|
-                                                
-                                                ### 例題
-                                                
-                                                | 演算子                    | 例題                                         | 戻り値        |
-                                                | ---------------------- | ------------------------------------------ | ---------- |
-                                                | Bitwise AND            | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
-                                                | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
-                                                | Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 0xFF0000FF |            |
-                                                | Left Bit Shift         | 0x0000FFFF << 8                            | 0x00FFFF00 |
-                                                | Right Bit Shift        | 0x0000FFFF >> 8                            | 0x000000FF |
-                                                | Bit Set                | 0x00000000 ?+ 16                           | 0x00010000 |
-                                                | Bit Clear              | 0x00010000 ?- 16                           | 0x00000000 |
-                                                | Bit Test               | 0x00010000 ?? 16                           | True       |
+| 演算子                    | 例題                                          | 戻り値        |
+| ---------------------- | ------------------------------------------- | ---------- |
+| Bitwise AND            | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
+| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
+| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
+| Left Bit Shift         | 0x0000FFFF << 8                             | 0x00FFFF00 |
+| Right Bit Shift        | 0x0000FFFF >> 8                             | 0x000000FF |
+| Bit Set                | 0x00000000 ?+ 16                            | 0x00010000 |
+| Bit Clear              | 0x00010000 ?- 16                            | 0x00000000 |
+| Bit Test               | 0x00010000 ?? 16                            | True       |
