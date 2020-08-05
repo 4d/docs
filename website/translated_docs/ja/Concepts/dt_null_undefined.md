@@ -5,7 +5,7 @@ title: Null と 未定義
 
 ## Null
 
-Null は **null** の値のみをとることのできる特殊なデータタイプです。 この値は、値を持たない式によって返されます。
+Null is a special data type with only one possible value: **null**. この値は、値を持たない式によって返されます。
 
 4D ランゲージやオブジェクトフィールド属性においては、`Null` 関数を使ってnull値を扱います。 この関数をつぎの式と組み合わせて使うことで、null値の設定や比較をおこなうことができます:
 
@@ -15,7 +15,7 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 
 ## 未定義
 
-未定義 (undefined) は、実際にはデータタイプではありません。 未定義は、まだ定義されていない変数を示します。 関数 (結果を返すプロジェクトメソッド) は、メソッド内で戻り値 ($0) に未定義式が代入されている場合、未定義値を返すことがあります。未定義式とは、未定義の変数を一つ以上使っている式のことです。 フィールドは、未定義にはできません (フィールドの場合、`Undefined` コマンドは常に False を返します)。 バリアント型変数は **undefined** がデフォルト値となっています。
+未定義 (undefined) は、実際にはデータタイプではありません。 未定義は、まだ定義されていない変数を示します。 関数 (結果を返すプロジェクトメソッド) は、メソッド内で戻り値 ($0) に未定義式が代入されている場合、未定義値を返すことがあります。未定義式とは、未定義の変数を一つ以上使っている式のことです。 フィールドは、未定義にはできません (フィールドの場合、`Undefined` コマンドは常に False を返します)。 A variant variable has **undefined** as default value.
 
 ## 例題
 
@@ -27,12 +27,12 @@ $vEmp:=New object
 $vEmp.name:="Smith"
 $vEmp.children:=Null
 
-$undefined:=Undefined($vEmp.name) // False
-$null:=($vEmp.name=Null) //False
+$undefined:=Undefined($vEmp.name) // false
+$null:=($vEmp.name=Null) //false
 
-$undefined:=Undefined($vEmp.children) // False
-$null:=($vEmp.children=Null) //True
+$undefined:=Undefined($vEmp.children) // false
+$null:=($vEmp.children=Null) //true
 
-$undefined:=Undefined($vEmp.parent) // True
-$null:=($vEmp.parent=Null) //True
+$undefined:=Undefined($vEmp.parent) // true
+$null:=($vEmp.parent=Null) //true
 ```
