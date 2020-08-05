@@ -11,6 +11,9 @@ The most common picture formats are supported of both platforms: .jpeg, .gif, .p
 
 > The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command (see also the [picture data type](Concepts/dt_picture.md) description).
 
+
+
+
 ### Unavailable picture format
 
 A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon:
@@ -22,6 +25,10 @@ The icon is automatically used wherever the picture is meant to be displayed:
 ![](assets/en/FormEditor/picNoFormat2.png)
 
 This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for example, for PDF pictures on Windows, or for PICT format pictures.
+
+
+
+
 
 ## Mouse Coordinates in a Picture
 
