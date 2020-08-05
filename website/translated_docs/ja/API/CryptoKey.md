@@ -162,9 +162,9 @@ ASSERT($status.success)
 
 検証で署名が合致した場合には、`success` プロパティが `true` に設定された `status` オブジェクトを返します。
 
-In case the signature couldn't be verified because it was not signed with the same `message`, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+`message`、キーまたはアルゴリズムが署名と合致しないなどの理由で認証が成功しなかった場合、返される `status` オブジェクトの `status.errors` プロパティにはエラーのコレクションが格納されます。
 
-The `cryptoKey` must contain a valid **public** key.
+`cryptoKey` は有効な **公開** 鍵を格納していなくてはなりません。
 
 ## cryptoKey.encrypt()
 
@@ -177,15 +177,15 @@ The `cryptoKey` must contain a valid **public** key.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| 引数      | プロパティ             | 型      |    | 説明                                                                                                                                                        |
-| ------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message |                   | テキスト   | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
-| options |                   | オブジェクト | -> | Encoding options                                                                                                                                          |
-|         | hash              | テキスト   |    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                                                                                   |
-|         | encodingEncrypted | テキスト   |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". デフォルト値: "Base64"                           |
-|         | encodingDecrypted | テキスト   |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
-|         |                   |        |    |                                                                                                                                                           |
-| result  |                   | テキスト   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
+| 引数      | プロパティ             | 型      |    | 説明                                                                                               |
+| ------- | ----------------- | ------ | -- | ------------------------------------------------------------------------------------------------ |
+| message |                   | テキスト   | -> | options.encodingDecrypted を使ってエンコードし暗号化するメッセージ文字列                                                |
+| options |                   | オブジェクト | -> | エンコーディングオプション                                                                                    |
+|         | hash              | テキスト   |    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                          |
+|         | encodingEncrypted | テキスト   |    | バイナリの暗号化されたメッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"           |
+|         | encodingDecrypted | テキスト   |    | `message` を暗号化するバイナリ形式に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
+|         |                   |        |    |                                                                                                  |
+| result  |                   | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ                                                |
 
 
 This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
@@ -209,7 +209,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | options |                   | オブジェクト | -> | Decoding options                                                                                                                             |
 |         | hash              | テキスト   |    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                                                                      |
 |         | encodingEncrypted | テキスト   |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". デフォルト値: "Base64" |
-|         | encodingDecrypted | テキスト   |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".  |
+|         | encodingDecrypted | テキスト   |    | Encoding used to convert the binary decrypted message into the result string. 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8"       |
 |         |                   |        |    |                                                                                                                                              |
 | status  |                   | オブジェクト | <- | Result                                                                                                                                       |
 |         | success           | ブール    |    | True if the message has been successfully decrypted                                                                                          |
