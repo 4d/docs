@@ -40,7 +40,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | プロパティ       | 型       | 説明                                |
 | ----------- | ------- | --------------------------------- |
-| range       | object  | Cell range                        |
+| range       | オブジェクト  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 
@@ -48,26 +48,26 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | プロパティ    | 型       | 説明                          |
 | -------- | ------- | --------------------------- |
-| range    | object  | Cell range                  |
+| range    | オブジェクト  | Cell range                  |
 | oldValue | variant | Value of cell before change |
 | newValue | variant | Value of cell after change  |
 
 
 #### action = DragDropBlock
 
-| プロパティ     | 型       | 説明                                                  |
-| --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
-| copy      | boolean | Specifies if the source range is copied or not      |
-| insert    | boolean | Specifies if the source range is inserted or not    |
+| プロパティ     | 型      | 説明                                                  |
+| --------- | ------ | --------------------------------------------------- |
+| fromRange | オブジェクト | Range of source cell range (being dragged)          |
+| toRange   | オブジェクト | Range of the destination cell range (drop location) |
+| copy      | ブール    | Specifies if the source range is copied or not      |
+| insert    | ブール    | Specifies if the source range is inserted or not    |
 
 
 #### action = DragFillBlock
 
 | プロパティ     | 型      | 説明                  |
 | --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
+| fillRange | オブジェクト | Range used for fill |
  autoFillType|longint|Value used for the fill.
 
 - 0: Cells are filled with all data (values, formatting, and formulas)
@@ -84,7 +84,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                         
                                         | プロパティ   | 型      | 説明                  |
                                         | ------- | ------ | ------------------- |
-                                        | range   | object | Cell range          |
+                                        | range   | オブジェクト | Cell range          |
                                         | formula | テキスト   | The formula entered |
 
                                         
@@ -111,7 +111,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                             </td>
                                             
                                             <td>
-                                              object
+                                              オブジェクト
                                             </td>
                                             
                                             <td>
@@ -143,7 +143,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
                                                             </td>
                                                             
                                                             <td>
-                                                              object
+                                                              オブジェクト
                                                             </td>
                                                             
                                                             <td>
