@@ -1,6 +1,6 @@
 ---
-id: file
-title: File Methods
+id: folder
+title: Folder Methods
 ---
 
 
@@ -88,7 +88,7 @@ You want to create an alias to a file in your database folder:
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
- $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
+ $aliasFile:=$myfolder.createAlias(File("/PACKAGE");"ReadMe")
 ```
 
 ### .delete( )
@@ -162,7 +162,7 @@ The moved `File` object.
 ```4d
 $DocFolder:=Folder(fk documents folder)
 $myFile:=$DocFolder.file("Current/Infos.txt")
-$myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
+$myfolder.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 
  
@@ -205,81 +205,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 
- 
-### .setContent( )
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-**.setContent** ( *content* ) 
-|Parameter|Type||Description|
-|---|---|---|---|
-|content|BLOB|->|New contents for the file|
-
-
-##### Description
-The `.setContent( )` method rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
-
-
-##### Example
-
-```4d
- $myFile:=Folder(fk documents folder).file("Archives/data.txt")
- $myFile.setContent([aTable]aBlobField)
-```
-
-
-
-
-
-
- 
-### .setText( )
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
-|Parameter|Type||Description|
-|---------|----|---|--------|
-|text|Text|->|Text to store in the file|
-|charSet|Text, Longint|->|Name or number of character set|
-|breakMode|Longint|->|Processing mode for line breaks|
-
-
-##### Description
-The `.setText( )` method writes *text* as the new contents of the file.
-
-If the file referenced in the `File` object does not exist on the disk, it is created by the method. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
-
-In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
-
-In *charSet*, pass the character set to be used for writing the contents. You can pass a string containing the standard character set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.  If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
-
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
-
-|Constant|Type|Value|Comment|
-|--------|----|-----|-------|
-|`Document unchanged`|Longint|0|No processing|
-|`Document with native format`|Longint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
-|`Document with CRLF`|Longint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|Longint|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|Longint|4|Line breaks are converted to Unix format: LF (line feed)|
-
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
-
-##### Example
-
-```4d
-$myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
-$myFile.setText("Hello world")
-```
 
 
 

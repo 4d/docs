@@ -17,14 +17,26 @@
       "API/document": {
         "title": "Document"
       },
+      "API/file_tech": {
+        "title": "File and Folder Methods/Properties"
+      },
       "API/file": {
-        "title": "File"
+        "title": "File Methods"
+      },
+      "API/fileClass": {
+        "title": "File Class"
       },
       "API/fileMethodsandPropertiesandProperties": {
         "title": "File and Folder Methods"
       },
       "API/fileProperties": {
         "title": "File and Folder Properties"
+      },
+      "API/folder": {
+        "title": "Folder Methods"
+      },
+      "API/folderClass": {
+        "title": "Folder Class"
       },
       "Backup/backup": {
         "title": "Backup"

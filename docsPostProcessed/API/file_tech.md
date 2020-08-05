@@ -1,13 +1,26 @@
 ---
-id: file
-title: File Methods
+id: file_tech
+title: File and Folder Methods/Properties
 ---
 
 
 ## Methods
 
+|Name|Description|
+|----|----|---|
+|[copyTo()](#copyto)|copies a `File` or `Foldder` object (source file/folder) into the specified *destinationFolder* |
+|[create()](#create)|creates a file on disk according to the properties of the file object |
+|[createAlias()](#createalias)|creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object |
+|[delete()](#delete)|deletes the file |
+|[getContent()](#getcontent)|returns a `BLOB` containing the entire content of a file|
+|[getIcon()](#geticon)|the icon of the file or folder|
+|[getText()](#gettext)|returns the contents of the file as text |
+|[moveTo()](#moveto)|moves or renames the `File` object into the specified *destinationFolder*|
+|[rename()](#rename)|renames the file with the name you passed in *newName* and returns the renamed `File` object|
+|[setContent()](#setcontent)|rewrites the entire content of the file using the data stored in the *content* BLOB|
+|[setText()](#settext)|writes *text* as the new contents of the file|
 
-<!-- REF file.create().Desc -->
+
 ### .create( )
 
 <details><summary>History</summary>
@@ -17,22 +30,18 @@ title: File Methods
 </details>
 
 
-<!--REF #file.create().Syntax -->
-**.create( )** -> boolean<!-- END REF -->
-
-<!--REF #file.create().Params -->
+**.create( )** -> boolean
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Boolean|<-|True if the file was created successfully, false otherwise|
-<!-- END REF -->
 
 
 
 #### Description
 
-The `.create( )` method <!-- REF #file.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+The `.create( )` method creates a file on disk according to the properties of the file object.
 
-If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE document.platformPath -->](#platformpath) or [<!-- INCLUDE document.path -->](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Returned value**
 
@@ -47,13 +56,11 @@ Creation of a preferences file in the database folder:
  C_BOOLEAN($created)
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
-<!-- END REF -->
 
 
 
 
 
-<!-- REF file.createAlias().Desc -->
 ### .createAlias( )
 
 <details><summary>History</summary>
@@ -62,21 +69,17 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-<!--REF #file.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> Result<!-- END REF -->
-
-<!--REF #file.createAlias().Params -->
+**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> Result
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|Object|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Longint|->|Type of the alias link|
 |Result|Object|<-|>Alias or shortcut file reference|
-<!-- END REF -->
 
 
 ##### Description
-The `.createAlias( )` method <!-- REF #file.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
+The `.createAlias( )` method creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -101,9 +104,7 @@ You want to create an alias to a file in your database folder:
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
-<!-- END REF -->
 
-<!-- REF file.delete().Desc -->
 ### .delete( )
 
 <details><summary>History</summary>
@@ -112,19 +113,15 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-<!--REF #file.delete().Syntax -->
-**.delete( )**<!-- END REF -->
+**.delete( )**
 
-
-<!-- REF #file.delete().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
 | |  ||Does not require any parameters|
-<!-- END REF -->
 
 
 ##### Description
-The `.delete( )` method <!-- REF #file.delete().Summary -->deletes the file<!-- END REF -->.
+The `.delete( )` method deletes the file.
 
 If the file is currently open, an error is generated.
 
@@ -143,11 +140,9 @@ You want to delete a specific file in the database folder:
     ALERT("User preference file deleted.")
  End if
 ``` 
-<!-- END REF -->
  
 
  
-<!-- REF file.moveTo().Desc -->
 ### .moveTo( )
 
 <details><summary>History</summary>
@@ -156,20 +151,16 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-<!--REF #file.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* { ; *newName*} )  -> Result<!-- END REF -->
-
-<!--REF #file.moveTo().Params -->
+**.moveTo**( *destinationFolder* { ; *newName*} )  -> Result
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|Object|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
 |Result|Object|<-|Moved file|
-<!-- END REF -->
 
 
 ##### Description
-The `.moveTo( )` method <!-- REF #file.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` method moves or renames the `File` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -187,10 +178,9 @@ $DocFolder:=Folder(fk documents folder)
 $myFile:=$DocFolder.file("Current/Infos.txt")
 $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
-<!-- END REF -->
 
  
-<!-- REF file.rename().Desc --> 
+ 
 ### .rename( )
 
 <details><summary>History</summary>
@@ -199,21 +189,17 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-<!--REF #file.rename().Syntax -->
-**.rename**( *newName* ) -> Result<!-- END REF -->
-
-<!--REF #file.rename().Params -->
+**.rename**( *newName* ) -> Result
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
 |Result|Object|<-|Renamed file|
-<!-- END REF -->
 
 
 
 ##### Description
 
-The `.rename( )` method <!-- REF #file.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename( )` method renames the file with the name you passed in *newName* and returns the renamed `File` object.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -230,11 +216,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
  $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)
 ```
-<!-- END REF -->
 
 
 
-<!-- REF file.setContent().Desc --> 
+ 
 ### .setContent( )
 
 <details><summary>History</summary>
@@ -243,18 +228,14 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
-<!--REF #file.setContent().Syntax -->
-**.setContent** ( *content* ) <!-- END REF -->
-
-<!--REF #file.setContent().Params -->
+**.setContent** ( *content* ) 
 |Parameter|Type||Description|
 |---|---|---|---|
 |content|BLOB|->|New contents for the file|
-<!-- END REF -->
 
 
 ##### Description
-The `.setContent( )` method <!-- REF #file.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+The `.setContent( )` method rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 
 ##### Example
@@ -263,14 +244,13 @@ The `.setContent( )` method <!-- REF #file.setContent().Summary -->rewrites the 
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
  $myFile.setContent([aTable]aBlobField)
 ```
-<!-- END REF -->
 
 
 
 
 
 
-<!-- REF file.setText().Desc --> 
+ 
 ### .setText( )
 
 <details><summary>History</summary>
@@ -279,21 +259,15 @@ The `.setContent( )` method <!-- REF #file.setContent().Summary -->rewrites the 
 |v17 R5|Added
 </details>
 
-<!--REF #file.setText().Syntax -->
-**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) <!-- END REF -->
-
-<!--REF #file.setText().Params -->
+**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
 |Parameter|Type||Description|
 |---------|----|---|--------|
 |text|Text|->|Text to store in the file|
 |charSet|Text, Longint|->|Name or number of character set|
-|breakMode|Longint|->|Processing mode for line breaks|<!-- END REF -->
-
-
-
+|breakMode|Longint|->|Processing mode for line breaks|
 
 ##### Description
-The `.setText( )` method <!-- REF #file.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+The `.setText( )` method writes *text* as the new contents of the file.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the method. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
@@ -319,7 +293,6 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
-<!-- END REF -->
 
 
 
