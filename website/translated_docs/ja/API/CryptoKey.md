@@ -59,15 +59,15 @@ ASSERT($status.success)
 | keyPair  |       | オブジェクト | <- | 暗号化キーペアをカプセル化したオブジェクト                                                                         |
 
 
-This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+このメソッドは、`settings` オブジェクト引数に基づいて暗号化キーペアをカプセル化するオブジェクトを新規作成します。 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
 
-Pass the type of key in the `type` property of the `settings` parameter:
+`settings` の `type` プロパティには、キーのタイプを指定します。
 
-- "RSA": generates an RSA key pair, using `settings.size` as size.
-- "ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as curve. Note that ECDSA keys cannot be used for encryption but only for signature.
-- "PEM": loads a key pair definition in PEM format, using `settings.pem`.
+- "RSA": `settings.size` に指定されたサイズを使って、RSA キーペアを生成します。
+- "ECDSA": `settings.curve` に指定された曲線を用いて、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) を使ったキーペアを生成します。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
+- "PEM": `settings.pem` を使って、PEM 形式のキーペアをロードします。
 
-The resulting `keyPair` object is a shared object and can therefore be used by multiple 4D processes simultaneously.
+戻り値の `keyPair` オブジェクトは共有オブジェクトのため、複数の 4D プロセスによって同時使用できます。
 
 ## cryptoKey.getPrivateKey()
 
