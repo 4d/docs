@@ -144,7 +144,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      object
+      オブジェクト
     </td>
     
     <td>
@@ -164,7 +164,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      object
+      オブジェクト
     </td>
     
     <td>
@@ -253,9 +253,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Parameter | 型      | 説明                                                       |
-| --------- | ------ | -------------------------------------------------------- |
-| $macro    | オブジェクト | Macro declaration object (in the `formMacros.json` file) |
+| 引数     | 型      | 説明                                                       |
+| ------ | ------ | -------------------------------------------------------- |
+| $macro | オブジェクト | Macro declaration object (in the `formMacros.json` file) |
 
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
@@ -292,10 +292,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| Parameter | 型      | 説明                                               |
-| --------- | ------ | ------------------------------------------------ |
-| $editor   | オブジェクト | Form properties                                  |
-| $result   | オブジェクト | Form properties modified by the macro (optional) |
+| 引数      | 型      | 説明                                               |
+| ------- | ------ | ------------------------------------------------ |
+| $editor | オブジェクト | Form properties                                  |
+| $result | オブジェクト | Form properties modified by the macro (optional) |
 
 
 The `onInvoke` function is automatically executed each time the macro is called.
@@ -381,7 +381,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | 型      | 説明                                       |
+| 引数           |                       | 型      | 説明                                       |
 | ------------ | --------------------- | ------ | ---------------------------------------- |
 | $editor      |                       | オブジェクト | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | オブジェクト | Object returned by [onInvoke](#oninvoke) |
