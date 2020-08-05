@@ -8,7 +8,7 @@ title: 引数
 
 メソッドにデータを渡す必要がしばしば発生します。 これは引数によって容易にできます。
 
-**引数** (または **パラメーター**) は、メソッドが処理に必要とするデータのことです。 *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
+**Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
 
 ```4d
 ALERT("Hello")
@@ -19,7 +19,6 @@ ALERT("Hello")
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-
 引数は、セミコロン (;) で区切ります。 引数の値は呼び出し時に評価されます。
 
 サブルーチン (呼び出されるメソッド) 内で、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます。 ローカル変数の番号は、引数の順序を表わします。
@@ -34,17 +33,18 @@ DO SOMETHING(WithThis;AndThat;ThisWay)
   // $3 には ThisWay 引数が入ります
 ```
 
-これらの引数 ($1, $2...) はサブルーチン内で 他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
+Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
+//pass the !05/05/10! SetCalendarDate を実行し
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
-**注:** よりよいコード実行のため、サブルーチンが受け取る引数 `$1`, `$2`... が正確に宣言されていることを確認してください ([パラメーターの宣言](#パラメーターの宣言) 参照)
+**Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+
 
 ### 引数としてサポートされている式
 
@@ -55,13 +55,14 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 テーブルや配列の式は [ポインターを介した参照として](Concepts/dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
+
 ## 関数
 
 メソッドからデータを返すこともできます。 値を返すメソッドを関数と呼びます。
 
 値を返す 4Dコマンドや 4Dプラグインコマンドも関数と呼びます。
 
-以下は、文字列のデータ長を返すビルトインの `Length` 関数を用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
+以下は、文字列のデータ長を返すビルトインの `Length` 関数を用いたステートメントです。 The statement puts the value returned by `Length` in a variable called *MyLength*. という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -82,9 +83,10 @@ $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 NewPhrase:=Uppercase4("This is good.")
 ```
 
-変数 *NewPhrase* には“THIS is good.” が格納されます。
+In this example, the variable *NewPhrase* gets “THIS is good.”
 
 戻り値 `$0` はサブルーチン内のローカル変数です。 したがって、サブルーチン内で通常のローカル変数のように使用できます。 たとえば、前述の `DO SOMETHING` メソッドの例において、`$0` は最初に大文字に変換した `$1` の値を割り当てられ、その後 `ALERT` コマンドの引数として使われました。 このように、サブルーチン内の他のローカル変数と同じように `$0` を使うことができます。 サブルーチン終了時に、その時点での `$0` の値を呼び出し元のメソッドに戻すのは 4Dがおこないます。
+
 
 ## パラメーターの宣言
 
@@ -133,12 +135,10 @@ C_OBJECT($3)
 ...
 ```
 
-**注:** プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、"Compiler" で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
-
+**Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
 ```4d
  C_REAL(OneMethodAmongOthers;$1)
 ```
-
 詳細については [インタープリターモードとコンパイルモード](Concepts/interpreted.md) を参照ください。
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
@@ -152,8 +152,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - トリガー トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
-- `On Drag Over` フォームイベントを受け入れるオブジェクト `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **注:** コンパイラーは $0 を初期化しません。 したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
-
+- `On Drag Over` フォームイベントを受け入れるオブジェクト `On Drag Over` フォームイベントの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーが型を決定します。 定義する場合は、オブジェクトメソッドの中でおこなう必要があります。 **Note:** The compiler does not initialize the $0 parameter. したがって、`On Drag Over` フォームイベントを使用したら、直ちに $0 を初期化しなければなりません。 たとえば:
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
@@ -168,7 +167,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## 引数の渡し方: 値か参照か
 
-引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をサブルーチンのローカル変数である $1, $2 ... に渡します ([引数について](#引数について) 参照)。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the $1, $2... local variables in the subroutine (see [Using parameters](#using-parameters)). これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
 
 ```4d
     // MY_METHOD メソッド
@@ -196,7 +195,7 @@ ALERT([People]Name)
  ALERT($1->)
 ```
 
-この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 $1 引数によって **参照** される対象 (上記コード内での $1-&gt;) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
+この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$1 はフィールドの値ではなく、フィールドへのポインターになっています。 The object **referenced** by $1 ($1-> in the code above) is the actual field. その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
 
 2. `DO_SOMETHING` メソッドに "何かさせる" 代わりに、値を返すようにメソッドを書き直すこともできます。 たとえば、以下のようにコードです:
 
@@ -210,13 +209,14 @@ ALERT([People]Name)
  ALERT($0)
 ```
 
-このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。詳細については [関数](#functions) の章を参照ください。
+This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Functions](#functions) paragraph.
+
 
 ### 特殊ケース: オブジェクトやコレクションの場合
 
-オブジェクトやコレクションのデータタイプは参照 (つまり、内部的な *ポインター*) を介した形でのみ扱われることに注意が必要です。
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
 
-したがって、`$1、$2...` には *値* ではなく *参照* が格納されます。 `$1、$2...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは [ポインター](Concepts/dt_pointer.md#メソッドの引数としてのポインター) に対する原理と同じものですが、`$1、$2...` の使用にあたって参照を外す必要はありません。
+Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. `$1、$2...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは [ポインター](Concepts/dt_pointer.md#メソッドの引数としてのポインター) に対する原理と同じものですが、`$1、$2...` の使用にあたって参照を外す必要はありません。
 
 次の例では、`CreatePerson` メソッドはオブジェクトを作成したのち、それを引数として `ChangeAge` に渡します:
 
@@ -239,11 +239,12 @@ ALERT([People]Name)
 
 `CreatePerson` メソッドを実行すると、サブルーチンにおいても同じオブジェクト参照が扱われているため、両方のアラートボックスにおいて ”50” と表示されます。
 
-**4D Server:** "サーバー上で実行" オプションが使用された場合など、同じマシン上で実行されないメソッド間で引数が渡される場合、参照渡しは利用できません。 このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。
+**4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。
+
 
 ## 名前付き引数
 
-引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
+Using objects as parameters allow you to handle **named parameters**. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
 たとえば、`CreatePerson` メソッドを例にとると:
 
@@ -254,7 +255,6 @@ ALERT([People]Name)
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
-
 `ChangeAge` メソッドを次のように書けます:
 
 ```4d
@@ -266,7 +266,6 @@ ALERT([People]Name)
 ```
 
 これは [任意パラメーター](#任意パラメーター) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
-
 - `Null` 値と比較することで、必要な引数がすべて提供されているかをチェックします
 - 引数の値をプリセットします
 - 渡されていない引数は空値として扱います
@@ -280,7 +279,6 @@ ALERT([People]Name)
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
-
 すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は " is 10 years old" となってしまうにせよ、いずれの引数も任意となります。
 
 名前付き引数を利用すると、アプリケーションの保守やリファクタリングが簡単かつ安全におこなえます。 さきほどの例で、加算する年数を場合に応じて変えたほうが適切であると、あとから気づいたとします。 メソッドのパラメーターとして、加算年数を追加しなくてはなりません。 この場合、次のように書けます:
@@ -298,15 +296,14 @@ End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
-
 このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
 
 名前付き引数を使うと、すべてのパラメーターを任意にすることができます。 上の例ではすべてのパラメーターが任意で、いずれを指定しても順序はありません。
 
+
 ## 任意パラメーター
 
-*4D ランゲージリファレンス* において、コマンドシンタックス中の { } 文字 (中括弧) はその引数が省略可能であることを示します。 たとえば、`ALERT (message{; okButtonTitle})` は *okButtonTitle* が省略できることを意味します。 この場合、次のような呼び出し方が可能です:
-
+In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. この場合、次のような呼び出し方が可能です:
 ```4d
 ALERT("Are you sure?";"Yes I am") // 2つの引数
 ALERT("Time is over") // 1つの引数
@@ -337,24 +334,24 @@ ALERT("Time is over") // 1つの引数
     End if
  End if>
 ```
-
 このプロジェクトメソッドをアプリケーションに追加したあとは、次のように呼び出すことができます:
 
-```4d
+```4d  
 APPEND TEXT(vtSomeText) // メッセージを表示します
 APPEND TEXT(vtSomeText;$path) // メッセージを表示して、 $path のドキュメントに書き出します
 APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea の4D Write Pro ドキュメントに追記します
 ```
 
+
 ## 引数の間接参照
 
-プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを **引数の間接参照** といいます。 同じ型の不定数の引数を受け取るメソッドの場合、`Count parameters` コマンドと組み合わせることで、これらの引数を `For...End for` ループと引数関節参照シンタックスで操作することができます。
+プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 This principle is called **parameter indirection**. 同じ型の不定数の引数を受け取るメソッドの場合、`Count parameters` コマンドと組み合わせることで、これらの引数を `For...End for` ループと引数関節参照シンタックスで操作することができます。
 
 次の例では `SEND PACKETS` プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
 
 ```4d
-  //SEND PACKETS プロジェクトメソッド
-  //SEND PACKETS ( 時間 ; テキスト { ; テキスト2... ; テキストN } )
+  //SEND PACKETS Project Method
+  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
 
  C_TIME($1)
@@ -366,9 +363,9 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
  End for
 ```
 
-引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i}を **ジェネリックパラメータ** (generic parameter) と呼びます。
+引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。 メソッド内で、間接参照は${$i}のように表示します。$iは数値変数です。 ${$i} is called a **generic parameter**.
 
-以下は間接参照の例です。引数の数値を合計した結果を、引数として渡された表示形式で返すような関数を考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。 
+以下は間接参照の例です。引数の数値を合計した結果を、引数として渡された表示形式で返すような関数を考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。
 
 この関数は、以下のようにして呼び出します:
 
@@ -380,7 +377,6 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 この場合、数値を合計し、指定した形式に編集された文字列 "182.70" が返されます。 関数の引数は正しい順序で渡す必要があります。最初に表示形式、次に数値です。
 
 以下は `MySum` 関数です:
-
 ```4d
  $Sum:=0
  For($i;2;Count parameters)
@@ -396,6 +392,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
  Result:=MySum("000";1;18;4;23;17)
 ```
 
+
 ### ジェネリックパラメーターの宣言
 
 他のローカル変数と同様、ジェネリックパラメーターはコンパイラーに指示する必要はありません。 ただし、曖昧になりそうな場合や最適化のために必要な場合は コンパイラ支持子に ${N} を渡す、以下のシンタックスを使用することができます (N は最初のジェネリックパラメーターの番号です):
@@ -406,4 +403,4 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 
 このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
 
-**注:** 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
+**Note:** The number in the declaration has to be a constant and not a variable.
