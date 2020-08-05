@@ -11,7 +11,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 - Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
 - Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Les points (".") et les crochets ("[ ]") sont interdits dans les noms de tables, champs, méthodes ou variables.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
 - Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.
 - Les noms réservés, c'est-à-dire les noms de commandes 4D (`Date`, `Time`, etc), les mots-clés (If, For, etc.) et les constantes.
@@ -19,14 +19,14 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
 - Les espaces sont interdits.
-- Periods (".") and brackets ("[ ]") are not allowed.
+- Les points (".") et les crochets ("[ ]") sont interdits.
 - Les noms sont sensibles à la casse.
 
 ### Règles supplémentaires pour SQL
 - Seuls les caractères _0123456789abcdefghijklmnopqrstuvwxyz sont acceptés
 - Les noms ne doivent pas comporter de mot-clé SQL (commande, attribut, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Note :** La zone "SQL" de l'inspecteur de l'éditeur de Structure signale automatiquement les caractères non autorisés dans un nom de table ou de champ.
 
 
 ## Tables
@@ -148,7 +148,7 @@ If(<>asMotsClés{1}="Stop")
 ```
 
 ### Eléments de tableaux à deux dimensions
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
+Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
 Voici quelques exemples :
 ```4d
@@ -178,7 +178,7 @@ monObjet.monAttribut:="10"
  $valeur:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
+**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulaires
 
@@ -200,13 +200,13 @@ Exemple :
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
+**Note :** Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
 
 ## Méthodes
 
 Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant son nom. Ce nom peut contenir jusqu’à 31 caractères.
 
-**Note:** A project method that does not return a result is also called a procedure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
+**Note :** Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
 
 Voici quelques exemples :
 ```4d
@@ -215,9 +215,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
-**Note:** When you call a method, you just type its name. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
+**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
 
 Voici quelques exemples :
 ```4d
@@ -284,7 +284,7 @@ Vous déclarez un ensemble process en passant simplement une expression de type 
 ### Ensembles clients
 Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
 
-**Note:** Sets are maintained on the Server machine. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
+**Note :** Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
 
 Voici quelques exemples :
 ```4d
@@ -368,10 +368,10 @@ Le tableau suivant résume les principes de nommage des identifiants dans les m�
 | Sélection temporaire              | 255           | "Employés de A à Z"            |
 | Sélection temporaire interprocess | <> + 255      | "<>Employés de Z à A"          |
 | Process local                     | $ + 255       | "$SuivreEvénements"            |
-| Process global                    | 255           | "*P_INVOICES_MODULE*"        |
+| Process global                    | 255           | "*P_MODULE_FACTURES*"        |
 | Sémaphore                         | 255           | "monsémaphore"                 |
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+**Note :** En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.
 
 ## Résoudre les conflits de noms
 
@@ -386,4 +386,4 @@ Veillez à utiliser des noms uniques pour les différents éléments de votre ba
 5. Constantes prédéfinies
 6. Variables.
 
-Par exemple, 4D dispose d’une fonction interne appelée `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.
+Par exemple, 4D dispose d’une fonction interne appelée `Date`. Si vous appelez *Date* une de vos méthodes, 4D considérera `Date` comme étant la fonction interne et non votre méthode. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.
