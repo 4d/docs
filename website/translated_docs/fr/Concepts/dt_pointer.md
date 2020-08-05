@@ -7,7 +7,7 @@ Les variables ou expressions de type Pointeur sont des références à d'autres 
 
 Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Pour appeler l’un d’entre eux, vous écrivez simplement son nom. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
-Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : «Allons faire un tour en voiture» au lieu de «Allons faire un tour en voiture avec la plaque d’immatriculation 123ABD» Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression «votre voiture» L'expression «voiture avec plaque d'immatriculation 123ABD» est comme le nom d'un objet, et l'utilisation de l'expression «votre voiture» revient à utiliser un pointeur pour référencer l'objet.
 
 La capacité de se référer à quelque chose sans connaître son identité exacte est très utile. Si votre ami s’achetait une nouvelle voiture, l’expression “ta voiture” serait toujours exacte — ce serait toujours une voiture et vous pourriez toujours aller quelque part avec. Les pointeurs fonctionnent de la même manière. Par exemple, un pointeur peut pointer à un moment donné vers un champ numérique appelé Age, et plus tard vers une variable numérique appelée Ancien âge. Dans les deux cas, le pointeur référence des données numériques pouvant être utilisée dans des calculs.
 
@@ -43,9 +43,9 @@ $MonPointeur est désormais une variable qui contient un pointeur vers $MaVar. $
 $MonPointeur->
 ```
 
-Dans ce cas, la chaîne “Bonjour” est retournée. The -> symbol, when it follows a pointer, references the object pointed to. On dit alors qu’on dépointe le pointeur.
+Dans ce cas, la chaîne “Bonjour” est retournée. Lorsque le symbole -> est placé derrière un pointeur, la valeur de l’objet vers lequel pointe le pointeur est récupérée. On dit alors qu’on dépointe le pointeur.
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Bonjour :
+Il est important de comprendre que vous pouvez utiliser un pointeur suivi du symbole -> partout où vous auriez pu utiliser l’objet pointé lui-même. Vous pouvez placer l’expression $MonPointeur-> partout où vous pourriez utiliser la variable originale $MaVar. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Bonjour :
 ```4d
 ALERTE($MonPointeur->)
 ```
@@ -54,7 +54,7 @@ Vous pouvez également utiliser $MonPointeur pour modifier la valeur de $MaVar. 
 ```4d
 $MonPointeur->:="Au revoir"
 ```
-If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :
+Si vous examinez les deux utilisations de l’expression $MonPointeur-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MaVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MaVar :
 
 ```4d
 ALERT($MonPointeur->)
@@ -125,9 +125,9 @@ Les pointeurs vers des variables locales permettent dans de nombreux cas d’éc
 ```
 Dans Méthode2, le débogueur affichera $1 de la façon suivante :
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------ |
-|    |                    |
+| $1 | ->$MaVar (Méthode1) |
+| -- | ------------------- |
+|    |                     |
 
 La valeur de $1 sera :
 
@@ -194,11 +194,11 @@ Cet exemple affiche une boîte de dialogue d’alerte contenant “Au revoir”.
 
 Voici la description de chaque ligne de l’exemple :
 
-- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Donc, dans ce cas, la valeur "Au revoir" est assignée à la $MaVar.
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MaVar.
+- $MaVar := "Bonjour" --> Cette ligne place simplement la chaîne "Bonjour" dans la variable $MaVar.
+- $PointeurUn := ->$MaVar --> $PointeurUn contient désormais un pointeur vers $MaVar.
+- $PointeurDeux :=->$PointeurUn --> $PointeurDeux (une nouvelle variable) contient un pointeur vers $PointeurUn, qui, elle, pointe vers $MaVar.
+- ($PointeurDeux->)-> := "Au revoir" --> $PointeurDeux-> référence le contenu de $PointeurUn, qui elle-même référence $MaVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Au revoir" est assignée à la $MaVar.
+- ALERT (($PointeurDeux->)->) --> C'est ici la même chose que précédemment : $PointeurDeux-> référence le contenu de $PointeurUn, qui elle-même référence $MaVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MaVar.
 
 La ligne suivante place la valeur "Bonjour" dans $MaVar :
 ```4d
@@ -210,4 +210,4 @@ La ligne suivante récupère "Bonjour" à partir de $MaVar et la place dans $Nou
 $NouvelleVar:=($PointeurDeux->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.

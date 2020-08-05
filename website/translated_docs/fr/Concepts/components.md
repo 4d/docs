@@ -17,9 +17,9 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Les mécanismes de gestion des composants dans 4D nécessitent la mise en oeuvre des concepts et de la terminologie suivants :
 
-- **Matrix Database**: 4D database used for developing the component. La base matrice est une base standard, sans attribut spécifique. Une base matrice constitue un seul composant. La base matrice est destinée à être copiée, compilée ou non, dans le dossier Components de l'application 4D ou de la base devant utiliser le composant (la base hôte).
-- **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
+- **Base matrice :** base de données 4D utilisée pour développer le composant. La base matrice est une base standard, sans attribut spécifique. Une base matrice constitue un seul composant. La base matrice est destinée à être copiée, compilée ou non, dans le dossier Components de l'application 4D ou de la base devant utiliser le composant (la base hôte).
+- **Base hôte :** base dans laquelle est installé et utilisé un composant.
+- **Composant :** base matrice, compilée ou non, copiée dans le dossier Components de l'application 4D ou de la base hôte et dont le contenu est utilisé dans les bases hôtes.
 
 Il est à noter qu’une base peut donc être à la fois “matrice” et “hôte”, c’est-à-dire qu’une base matrice peut elle-même utiliser un ou plusieurs composants. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
 
@@ -40,9 +40,9 @@ Pour protéger efficacement les méthodes projet d’un composant, il vous suffi
 ## Partage des méthodes projet
 Toutes les méthodes projet d’une base matrice sont par définition incluses dans le composant (la base est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.
 
-En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par la base hôte. Vous devez explicitement désigner dans la base matrice les méthodes que vous souhaitez partager avec la base hôte. Ces méthodes projet peuvent être appelées dans le code la base hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de la base hôte). These methods form **entry points** in the component.
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par la base hôte. Vous devez explicitement désigner dans la base matrice les méthodes que vous souhaitez partager avec la base hôte. Ces méthodes projet peuvent être appelées dans le code la base hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de la base hôte). Ces méthodes constituent les **points d’entrée** dans le composant.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre base hôte. Pour cela, vous devez explicitement désigner les méthodes projet de la base hôte que vous souhaitez rendre accessibles aux composants.
+**Note :** A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant à la base hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre base hôte. Pour cela, vous devez explicitement désigner les méthodes projet de la base hôte que vous souhaitez rendre accessibles aux composants.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
@@ -165,7 +165,7 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
+**Note :** Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
 - Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
 
@@ -254,7 +254,7 @@ Les composants peuvent utiliser des ressources. Conformément aux principes de g
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différentes bases de données : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis la base de données hôte.
 
 ## Aide en ligne des composants
 Un mécanisme spécifique a été mis en place afin de permettre aux développeurs d’ajouter des aides en ligne à leurs composants. Le principe est semblable à celui proposé pour les bases de données 4D :

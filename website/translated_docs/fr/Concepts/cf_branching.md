@@ -32,7 +32,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  End if
 ```
 
-L'expression n'est TRUE que si les deux méthodes sont TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. Dans ce cas, il est préférable d'utiliser une structure du type :
+L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```4d
  If(MethodA)
@@ -42,12 +42,12 @@ L'expression n'est TRUE que si les deux méthodes sont TRUE. However, even if _M
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
 ### Exemple
 
 ```4d
-  // Ask the user to enter a name
+  // Demander à l'utilisateur de saisir un nom
  $Find:=Request(Type a name)
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
@@ -56,7 +56,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  End if
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 
 ```4d
  If(Expression_booléenne)
@@ -126,13 +126,13 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
+    :(vResult=1) //Tester si le chiffre est 1
+       ALERT("One.") //Si le chiffre est 1, afficher une alerte
+    :(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
+    :(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
        ALERT("It was not one, two, or three.")
  End case
 ```
@@ -140,16 +140,16 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 A titre de comparaison, voici la version avec `If...Else...End if` de la même méthode :
 
 ```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") //Si le chiffre est 1, afficher une alerte
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
        End if
     End if
  End if
@@ -162,9 +162,9 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 ```4d
  Case of
     :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+       ... //déclaration(s)
+    :((vResult=1) & (vCondition#2)) //ce cas ne sera jamais détecté
+       ... //déclaration(s)
  End case
 ```
 
@@ -172,14 +172,14 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //ce cas sera détecté en premier
+       ... //déclaration(s)
     :(vResult=1)
-       ... //statement(s)
+       ... //déclaration(s)
  End case
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
+**Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 ```4d
  Case of
     :(Expression_booléenne)
