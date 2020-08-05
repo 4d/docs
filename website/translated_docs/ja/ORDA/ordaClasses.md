@@ -265,16 +265,16 @@ ORDA クラスファイルを作成するには、エクスプローラーで任
 
 ### クラスの編集
 
-To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window (like for any class):
+定義された ORDA クラスファイルを 4D メソッドエディターで開くには、ORDA クラス名を選択してエクスプローラーのオブションメニュー、またはコンテキストメニューの **編集...** を使用するか、ORDA クラス名をダブルクリックします (通常のクラスと同様):
 
 ![](assets/en/ORDA/classORDA4.png)
 
-For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
+ローカルデータストア (`ds`) に基づいた ORDA クラスの場合には、4D ストラクチャーウィンドウからも直接クラスコードにアクセスできます:
 
 ![](assets/en/ORDA/classORDA5.png)
 
 ### メソッドエディター
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+4D メソッドエディターにおいて、ORDA クラス型として定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
