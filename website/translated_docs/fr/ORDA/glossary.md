@@ -24,6 +24,18 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 
 Code for the user class function(s).
 
+## Class function
+
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
+
+These methods are also called **member functions**, or **member methods**.
+
+For example, the `query()` class function is a function of dataclasses. If you have stored a dataclass object in the `$myClass` variable, you can write:
+
+```code4d
+$myClass.query("name = smith")
+```
+
 ## Data model class
 
 Extended class available for a data model object.
@@ -38,9 +50,9 @@ Function of an ORDA data model class.
 
 ## Dataclass
 
-Une dataclass est un objet qui décrit les données. Les tables de la base de données fournies par le datastore sont gérées via des dataclasses. Chaque table de la base de données fournie par le datastore possède une dataclass correspondante et portant le même nom. Chaque champ de la table est un attribut de la dataclass.
+A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
 
-Une dataclass est reliée à un seul datastore.
+A dataclass is related to a single datastore.
 
 ## DataClass class
 
@@ -48,16 +60,16 @@ Class for specific dataclass objects, in which you can add custom functions.
 
 ## Datastore
 
-Un datastore est l'objet d'interface fourni par ORDA pour référencer une base de données et accéder à ses données. La base de données principale, retournée par la commande `ds`, est disponible en tant que datastore (le datastore principal).
+A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
-Un datastore fournit :
+A datastore provides:
 
 * une connexion à la base de données 4D
 * un ensemble de dataclasses pour travailler avec la base de données
 
-La base peut être une base locale 4D (le datastore principal), ou une base 4D Server exposée en ressource REST (un datastore distant).
+The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
-Un datastore ne référence qu'une seule base de données. Il est toutefois possible d'ouvrir plusieurs datastores pour accéder à plusieurs bases.
+A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
 
 ## DataStore class
 
@@ -67,59 +79,53 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Copie profonde
+## Deep copy
 
-Une copie profonde (deep copy) duplique un objet et toutes les références qu'il contient. Après une deep copy, une collection copiée contient des éléments dupliqués et donc de nouvelles références de tous les éléments originaux. Voir aussi Copie superficielle.
+A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
 ## ds
 
-`ds` est la commande de langage 4D qui retourne une référence d'objet du [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
+`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
 
 ## Entity
 
-Une entité est un objet qui correspond à un modèle de base de données. Une entité contient les mêmes attributs que la dataclass.
+An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
 
-Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. The purpose of the entity is to manage data (create, update, delete).
+An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
-Pour plus d'informations, voir le chapitre Entités.
+For more information, see Entities.
 
 ## Entity selection
 
-Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
+An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 
-Une sélection d'entités contient :
+An entity selection contains:
 
 * un ensemble de 0 à X références d'entités
 * une propriété length (toujours),
 * les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
-Une sélection d'entités peut également être vide.
+An entity selection can also be empty.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
 
 ## Lazy loading
 
-Commes les entités sont gérées comme des références, les données sont chargées uniquement lorsque cela est nécessaire, c'est-à-dire lorsqu'on y accède dans le code ou via des widgets d'interface. Ce principe d'optimisation est appelé lazy loading.
+Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
 
-## Datastore principal
+## Main datastore
 
-L'objet Datastore correspondant à la base 4D ouverte (autonome ou client/serveur). Le datastore principal est retourné par la commande ds.
+The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
 
 ## Méthode
 
-Les objets ORDA tels que les "datastores", "dataclasses", "entity selections" et "entities" définissent les classes d'objets. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
+See [class function](#class-function).
 
-Par exemple, la méthode `query()` est une "member function" de dataclass. Si vous avez stocké un objet dataclass dans la variable `$myClass`, vous pouvez écrire :
+## Mixed data type
 
-```code4d
-$myClass.query("name = smith")
-```
-
-## Type de données "Mixte"
-
-Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Par exemple :
+In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Par exemple :
 
 * number
 * Texte
@@ -130,15 +136,15 @@ Dans cette documentation, le type de données "Mixte" est utilisé pour désigne
 * collection
 * image(\*)
 
-*(*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
+*(*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
-## Verrouillage optimiste
+## Optimistic Lock
 
-En mode "verrouillage optimiste", les entités ne sont pas verrouillées explicitement avant d'être mises à jour. Chaque entité a un marqueur interne qui est automatiquement incrémenté chaque fois que l'entité est enregistrée sur le disque. Les méthodes entity.save( ) ou entity.drop( ) retourneront une erreur si le marqueur de l'entité chargée en mémoire et le marqueur de l'entité sur le disque ne correspondent pas, ou si l'entité a été supprimée. Le verrouillage optimiste est uniquement disponible dans l'implémentation ORDA. Voir aussi "verrouillage pessimiste".
+In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
 
-## Verrouillage pessimiste
+## Pessimistic Lock
 
-Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que l'on y accède, en utilisant la méthode entity.lock( ). Les autres process ne peuvent ni mettre à jour ni supprimer l'entité tant qu'elle n'est pas déverrouillée. Le langage 4D classique n'autorise que les verrouillages pessimistes. Voir "Verrouillage optimiste".
+A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
 ## Propriété
 

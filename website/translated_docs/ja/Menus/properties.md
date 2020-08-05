@@ -32,7 +32,7 @@ Control characters do not appear in the menu command labels. You should therefor
 | /+character | slash+character             | Add character as shortcut                                     |
 
 
-## Parameter
+## 引数
 
 You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
 

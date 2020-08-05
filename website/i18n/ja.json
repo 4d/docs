@@ -12,7 +12,7 @@
         "title": "4D ライセンスの管理"
       },
       "API/cryptoClass": {
-        "title": "CryptoKey Class"
+        "title": "CryptoKey クラス"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -708,10 +708,10 @@
     },
     "categories": {
       "Getting Started": "はじめに",
-      "Project Management": "Project Management",
+      "Project Management": "プロジェクト管理",
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
-      "Class API Reference": "Class API Reference",
+      "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
       "Administration": "データベース管理",
       "MSC": "MSC",
@@ -730,9 +730,9 @@
     "Installation|in index page Getting started": "インストール",
     "Starting 4D|in index page Getting started": "4D を始める",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
-    "Project Management|in index page Getting started": "Project Management",
-    "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
-    "Class API Reference|no description given": "Class API Reference",
+    "Project Management|in index page Getting started": "プロジェクト管理",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "オブジェクト・リレーショナル・データアクセス (ORDA)",
+    "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
@@ -747,9 +747,9 @@
     "Build Application|no description given": "アプリケーションビルド",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",
-    "Core Development|no description given": "Core Development",
+    "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
-    "Web applications|no description given": "Web applications",
+    "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
