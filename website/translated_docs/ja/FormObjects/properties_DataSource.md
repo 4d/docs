@@ -25,9 +25,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON 文法
 
-| 名                  | データタイプ  | とりうる値       |
-| ------------------ | ------- | ----------- |
-| automaticInsertion | boolean | true, false |
+| 名                  | データタイプ | とりうる値       |
+| ------------------ | ------ | ----------- |
+| automaticInsertion | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -141,9 +141,9 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON 文法
 
-| 名      | データタイプ     | とりうる値                                                            |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| 名      | データタイプ | とりうる値                                                            |
+| ------ | ------ | ---------------------------------------------------------------- |
+| values | コレクション | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 
 #### 対象オブジェクト

@@ -27,12 +27,12 @@ $vEmp:=New object
 $vEmp.name:="Smith"
 $vEmp.children:=Null
 
-$undefined:=Undefined($vEmp.name) // False
-$null:=($vEmp.name=Null) //False
+$undefined:=Undefined($vEmp.name) // false
+$null:=($vEmp.name=Null) //false
 
-$undefined:=Undefined($vEmp.children) // False
-$null:=($vEmp.children=Null) //True
+$undefined:=Undefined($vEmp.children) // false
+$null:=($vEmp.children=Null) //true
 
-$undefined:=Undefined($vEmp.parent) // True
-$null:=($vEmp.parent=Null) //True
+$undefined:=Undefined($vEmp.parent) // true
+$null:=($vEmp.parent=Null) //true
 ```

@@ -114,9 +114,9 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON 文法
 
-| 名                  | データタイプ  | とりうる値       |
-| ------------------ | ------- | ----------- |
-| hideExtraBlankRows | boolean | true, false |
+| 名                  | データタイプ | とりうる値       |
+| ------------------ | ------ | ----------- |
+| hideExtraBlankRows | ブール    | true, false |
 
 
 #### 対象オブジェクト

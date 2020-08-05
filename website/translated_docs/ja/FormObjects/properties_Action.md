@@ -72,9 +72,9 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### JSON 文法
 
-| 名                   | データタイプ  | とりうる値       |
-| ------------------- | ------- | ----------- |
-| continuousExecution | boolean | true, false |
+| 名                   | データタイプ | とりうる値       |
+| ------------------- | ------ | ----------- |
+| continuousExecution | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -120,9 +120,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### JSON 文法
 
-| 名           | データタイプ  | とりうる値       |
-| ----------- | ------- | ----------- |
-| movableRows | boolean | true, false |
+| 名           | データタイプ | とりうる値       |
+| ----------- | ------ | ----------- |
+| movableRows | ブール    | true, false |
 
 
 #### 対象オブジェクト
@@ -158,9 +158,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### JSON 文法
 
-| 名        | データタイプ  | とりうる値       |
-| -------- | ------- | ----------- |
-| sortable | boolean | true, false |
+| 名        | データタイプ | とりうる値       |
+| -------- | ------ | ----------- |
+| sortable | ブール    | true, false |
 
 
 #### 対象オブジェクト

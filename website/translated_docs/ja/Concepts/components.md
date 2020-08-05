@@ -82,7 +82,7 @@ title: コンポーネント
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
      RESOLVE POINTER(myptr2;vVarName2;vtablenum2;vfieldnum2)
      If(vVarName1=vVarName2)
-      // 変数が異なっているにもかかわらず、このテストはTrue を返します
+      // 変数が異なっているにもかかわらず、このテストはtrue を返します
 ```
 
 このような場合には、ポインターを比較しなければなりません:

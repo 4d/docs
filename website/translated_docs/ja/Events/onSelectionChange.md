@@ -22,8 +22,8 @@ The current selection of rows or columns is modified. In this context, the [even
 | description   | テキスト   | "On Selection Change"          |
 | objectName    | テキスト   | 4D View Pro area name          |
 | sheetName     | テキスト   | Name of the sheet of the event |
-| oldSelections | object | Cell range before change       |
-| newSelections | object | Cell range after change        |
+| oldSelections | オブジェクト | Cell range before change       |
+| newSelections | オブジェクト | Cell range after change        |
 
 
 #### 例題

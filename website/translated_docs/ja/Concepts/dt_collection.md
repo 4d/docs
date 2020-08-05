@@ -1,5 +1,5 @@
 ---
-id: collection
+id: コレクション
 title: コレクション
 ---
 
