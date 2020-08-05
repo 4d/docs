@@ -127,9 +127,9 @@ The specified form is displayed:
             
             #### JSON 文法
             
-            | 名                 | データタイプ  | とりうる値  |
-            | ----------------- | ------- | ------ |
-            | lockedColumnCount | integer | 最小値: 0 |
+            | 名                 | データタイプ | とりうる値  |
+            | ----------------- | ------ | ------ |
+            | lockedColumnCount | 整数     | 最小値: 0 |
 
             
             #### 対象オブジェクト
@@ -142,9 +142,9 @@ The specified form is displayed:
             
             #### JSON 文法
             
-            | 名                 | データタイプ  | とりうる値  |
-            | ----------------- | ------- | ------ |
-            | staticColumnCount | integer | 最小値: 0 |
+            | 名                 | データタイプ | とりうる値  |
+            | ----------------- | ------ | ------ |
+            | staticColumnCount | 整数     | 最小値: 0 |
 
             
             #### 対象オブジェクト
@@ -161,9 +161,9 @@ The specified form is displayed:
             
             #### JSON 文法
             
-            | 名           | データタイプ  | とりうる値  |
-            | ----------- | ------- | ------ |
-            | columnCount | integer | 最小値: 1 |
+            | 名           | データタイプ | とりうる値  |
+            | ----------- | ------ | ------ |
+            | columnCount | 整数     | 最小値: 1 |
 
             
             #### 対象オブジェクト
