@@ -538,4 +538,4 @@ userPrefs:=Get 4D folder(Active 4D Folder)
     `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](assets/en/Project/connect1.png)
 
 - **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする** ユーザーは **選択...** ボタンをクリックする事によってサーバー選択ウィンドウにアクセスできます。  
-    `ServerSelectionAllowed`: **True**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+    `ServerSelectionAllowed`: **true**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
