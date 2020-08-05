@@ -25,38 +25,38 @@ title: CryptoKey クラス
 たとえば ES256 JSON Web Token を作成するために新規 ECDSA キーペアを使ってメッセージの署名と検証をおこないます。
 
 ```4d
- // Generate a new ECDSA key pair
+ // 新規 ECDSA キーペアの生成
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
-  // Get signature as base64
+  // base64 形式で署名を取得
 $message:="hello world" 
 $signature:=$key.sign($message;New object("hash";"HASH256"))
 
-  // Verify signature
+  // 署名の検証
 $status:=$key.verify($message;$signature;New object("hash";"HASH256"))
 ASSERT($status.success)
 ```
 
 ## 4D.CryptoKey.new()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-| Parameter | プロパティ | 型      |    | 説明                                                                                                                             |
-| --------- | ----- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------ |
-| settings  |       | object | -> | Settings to generate or load a key pair                                                                                        |
-|           | type  | テキスト   |    | Type of the key: "RSA", "ECDSA", or "PEM" (see below)                                                                          |
-|           | size  | 整数     |    | Size of RSA key in bits. 2048 by default                                                                                       |
-|           | curve | テキスト   |    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
-|           | pem   | テキスト   |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
-|           |       |        |    |                                                                                                                                |
-| keyPair   |       | object | <- | Object encapsulating an encryption key pair                                                                                    |
+| 引数       | プロパティ | 型      |    | 説明                                                                                                                             |
+| -------- | ----- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------ |
+| settings |       | オブジェクト | -> | キーペアを生成・ロードするための設定                                                                                                             |
+|          | type  | テキスト   |    | キーのタイプ: "RSA", "ECDSA", "PEM" (後述参照)                                                                                           |
+|          | size  | 整数     |    | RSA キーのサイズ (ビット単位)。 デフォルト値: 2048                                                                                               |
+|          | curve | テキスト   |    | ECDSA 曲線名。 通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"                                  |
+|          | pem   | テキスト   |    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+|          |       |        |    |                                                                                                                                |
+| keyPair  |       | オブジェクト | <- | Object encapsulating an encryption key pair                                                                                    |
 
 
 This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -71,16 +71,16 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 
 ## cryptoKey.getPrivateKey()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
-| Parameter  | プロパティ | 型    |    | 説明                        |
+| 引数         | プロパティ | 型    |    | 説明                        |
 | ---------- | ----- | ---- | -- | ------------------------- |
 |            |       |      |    |                           |
 | privateKey |       | テキスト | <- | Private key in PEM format |
@@ -90,16 +90,16 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 
 ## cryptoKey.getPublicKey()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.getPublicKey() -> publicKey
 
-| Parameter | プロパティ | 型    |    | 説明                       |
+| 引数        | プロパティ | 型    |    | 説明                       |
 | --------- | ----- | ---- | -- | ------------------------ |
 |           |       |      |    |                          |
 | publicKey |       | テキスト | <- | Public key in PEM format |
@@ -109,19 +109,19 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 
 ## cryptoKey.sign()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.sign(message;options) -> signature
 
-| Parameter | プロパティ    | 型       |    | 説明                                                                                                                                                                      |
+| 引数        | プロパティ    | 型       |    | 説明                                                                                                                                                                      |
 | --------- | -------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |          | テキスト    | -> | Message string to sign                                                                                                                                                  |
-| options   |          | object  | -> | Signing options                                                                                                                                                         |
+| options   |          | オブジェクト  | -> | Signing options                                                                                                                                                         |
 |           | hash     | テキスト    |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
 |           | pss      | boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                      |
 |           | encoding | テキスト    |    | Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                          |
@@ -135,25 +135,25 @@ The `cryptoKey` must contain a valid **private** key.
 
 ## cryptoKey.verify()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.verify(message;signature;options) -> status
 
-| Parameter | プロパティ    | 型          |    | 説明                                                                                                                                                                      |
+| 引数        | プロパティ    | 型          |    | 説明                                                                                                                                                                      |
 | --------- | -------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |          | テキスト       | -> | Message string that was used to produce the signature                                                                                                                   |
 | signature |          | テキスト       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                              |
-| options   |          | object     | -> | Signing options                                                                                                                                                         |
+| options   |          | オブジェクト     | -> | Signing options                                                                                                                                                         |
 |           | hash     | テキスト       |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
 |           | pss      | boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                      |
 |           | encoding | テキスト       |    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                                 |
 |           |          |            |    |                                                                                                                                                                         |
-| status    |          | object     | <- | Result of the verification                                                                                                                                              |
+| status    |          | オブジェクト     | <- | Result of the verification                                                                                                                                              |
 |           | success  | boolean    |    | True if the signature matches the message                                                                                                                               |
 |           | errors   | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                             |
 
@@ -168,24 +168,24 @@ The `cryptoKey` must contain a valid **public** key.
 
 ## cryptoKey.encrypt()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| Parameter | プロパティ             | 型      |    | 説明                                                                                                                                                        |
-| --------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message   |                   | テキスト   | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
-| options   |                   | object | -> | Encoding options                                                                                                                                          |
-|           | hash              | テキスト   |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                                 |
-|           | encodingEncrypted | テキスト   |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
-|           | encodingDecrypted | テキスト   |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
-|           |                   |        |    |                                                                                                                                                           |
-| result    |                   | テキスト   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
+| 引数      | プロパティ             | 型      |    | 説明                                                                                                                                                        |
+| ------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message |                   | テキスト   | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
+| options |                   | オブジェクト | -> | Encoding options                                                                                                                                          |
+|         | hash              | テキスト   |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                                 |
+|         | encodingEncrypted | テキスト   |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
+|         | encodingDecrypted | テキスト   |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
+|         |                   |        |    |                                                                                                                                                           |
+| result  |                   | テキスト   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
 
 
 This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
@@ -194,27 +194,27 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 ## cryptoKey.decrypt()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R4 | 追加 |
 </details> 
 
 #### cryptoKey.decrypt(message;options) -> status
 
-| Parameter | プロパティ             | 型          |    | 説明                                                                                                                                               |
-| --------- | ----------------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| message   |                   | テキスト       | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                      |
-| options   |                   | object     | -> | Decoding options                                                                                                                                 |
-|           | hash              | テキスト       |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                        |
-|           | encodingEncrypted | テキスト       |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
-|           | encodingDecrypted | テキスト       |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
-|           |                   |            |    |                                                                                                                                                  |
-| status    |                   | object     | <- | Result                                                                                                                                           |
-|           | success           | boolean    |    | True if the message has been successfully decrypted                                                                                              |
-|           | result            | テキスト       |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
-|           | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |
+| 引数      | プロパティ             | 型          |    | 説明                                                                                                                                               |
+| ------- | ----------------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| message |                   | テキスト       | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                      |
+| options |                   | オブジェクト     | -> | Decoding options                                                                                                                                 |
+|         | hash              | テキスト       |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                        |
+|         | encodingEncrypted | テキスト       |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+|         | encodingDecrypted | テキスト       |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
+|         |                   |            |    |                                                                                                                                                  |
+| status  |                   | オブジェクト     | <- | Result                                                                                                                                           |
+|         | success           | boolean    |    | True if the message has been successfully decrypted                                                                                              |
+|         | result            | テキスト       |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
+|         | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |
 
 
 This method decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
