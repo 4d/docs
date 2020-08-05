@@ -10,10 +10,10 @@ La page Sauvegarde du CSM permet de visualiser les paramètres de sauvegarde de 
 
 Cette page est constituée des zones suivantes :
 
-- **Emplacement du fichier de sauvegarde** : affiche les informations relatives à l’emplacement du fichier de sauvegarde de la base. Elle indique également l’espace occupé et l’espace disponible sur le volume de sauvegarde.
-- **Informations sur la dernière sauvegarde** : fournit la date et l’heure de la dernière sauvegarde (automatique ou manuelle) réalisée sur la base.
-- **Contenu du fichier de sauvegarde** : liste les fichiers et dossiers inclus dans le fichier de sauvegarde.
+- **Backup File Destination**: displays information about the location of the database backup file. Elle indique également l’espace occupé et l’espace disponible sur le volume de sauvegarde.
+- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
+- **Contents of the backup file**: lists the files and folders included in the backup file.
 
-Le bouton **Sauvegarde** permet de lancer une sauvegarde manuelle.
+The **Backup** button is used to launch a manual backup.
 
-Cette page ne permet pas de modifier les paramètres de sauvegarde. Pour cela, vous devez cliquer sur le bouton **Propriétés de la base...**.
+Cette page ne permet pas de modifier les paramètres de sauvegarde. To do this, you must click on the **Database properties...** button.
