@@ -67,7 +67,7 @@ Dans tous les cas, le statut de la dernière sauvegarde (succès ou échec) est 
 
 - **Interruption par l’utilisateur** : le bouton **Arrêter** de la boîte de dialogue de progression de la sauvegarde permet aux utilisateurs d’interrompre la sauvegarde à tout instant. Dans ce cas, la copie des éléments est stoppée et l'erreur 1406 est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 - **Fichier joint introuvable** : lorsqu’un fichier joint est introuvable, 4D effectue une sauvegarde partielle (sauvegarde des fichiers de la base et des fichiers joints accessibles) et retourne une erreur.
-- **Sauvegarde impossible** (disque plein ou protégé en écriture, disque manquant, panne du disque, transaction non terminée, base non lancée au moment d’une sauvegarde automatique périodique, etc.) : s’il s’agit du premier échec, 4D effectuera ultérieurement une seconde tentative. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
+- **Sauvegarde impossible** (disque plein ou protégé en écriture, disque manquant, panne du disque, transaction non terminée, base non lancée au moment d’une sauvegarde automatique périodique, etc.) : s’il s’agit du premier échec, 4D effectuera ultérieurement une seconde tentative. Le délai d’attente entre les deux tentatives est défini dans la Page **Sauvegarde/Sauvegarde& et Restitution** des Propriétés de la base. Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 
 ## Journal de sauvegarde (Backup Journal)
 
@@ -79,20 +79,20 @@ Le journal de sauvegarde s'appelle "Backup Journal[001].txt" et se trouve dans l
 
 Dans certaines stratégies de sauvegarde (par exemple, dans le cas où de nombreuses pièces jointes sont sauvegardées), le journal de sauvegarde peut rapidement atteindre une taille importante. Deux mécanismes peuvent être utilisés pour gérer cette taille :
 
-- **Automatic backup**: Before each backup, the application examines the size of the current backup journal file. Si elle est supérieure à 10 Mo, le fichier courant est archivé et un nouveau fichier est créé avec le numéro [xxx] incrémenté, par exemple "Backup Journal[002] .txt”. Une fois le numéro de fichier 999 atteint, la numérotation reprend à 1 et les fichiers existants seront remplacés.
-- **Possibility of reducing the amount of information recorded**: To do this, simply modify the value of the `VerboseMode` key in the *Backup.4DSettings* file of the database. Par défaut, cette clé est définie sur True. Si vous définissez la valeur de cette clé sur False, seules les informations principales sont stockées dans le journal de sauvegarde : la date et l'heure du début de l'opération et les éventuelles erreurs générées. The XML keys concerning backup configuration are described in the *4D XML Keys Backup* manual.
+- **Sauvegarde automatique** : Avant chaque sauvegarde, l'application examine la taille du fichier backup journal courant. Si elle est supérieure à 10 Mo, le fichier courant est archivé et un nouveau fichier est créé avec le numéro [xxx] incrémenté, par exemple "Backup Journal[002] .txt”. Une fois le numéro de fichier 999 atteint, la numérotation reprend à 1 et les fichiers existants seront remplacés.
+- **Possibilité de réduire la quantité d'informations enregistrées** : Pour ce faire, il suffit de modifier la valeur de la clé `VerboseMode` dans le fichier *Backup.4DSettings* de la base. Par défaut, cette clé est définie sur True. Si vous définissez la valeur de cette clé sur False, seules les informations principales sont stockées dans le journal de sauvegarde : la date et l'heure du début de l'opération et les éventuelles erreurs générées. Les clés XML concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*.
 
 
 
 ## backupHistory.json
 
-All information regarding the latest backup and restore operations are stored in the database's **backupHistory.json** file. Ce dernier enregistre le chemin de chaque fichier sauvegardé (y compris les pièces jointes) ainsi que le numéro, la date, l'heure, la durée et le statut de chaque opération. Afin de limiter la taille du fichier, le nombre d'opérations enregistrées et le nombre de sauvegardes disponibles ("Keep only the last X backup files") définies dans les propriétés de sauvegarde est identique.
+Toutes les informations concernant les dernières opérations de sauvegarde et de restitution sont stockées dans le fichier **backupHistory.json** de la base. Ce dernier enregistre le chemin de chaque fichier sauvegardé (y compris les pièces jointes) ainsi que le numéro, la date, l'heure, la durée et le statut de chaque opération. Afin de limiter la taille du fichier, le nombre d'opérations enregistrées et le nombre de sauvegardes disponibles ("Keep only the last X backup files") définies dans les propriétés de sauvegarde est identique.
 
-The **backupHistory.json** file is created in the current backup destination folder. Vous pouvez obtenir le chemin de ce fichier à l'aide de la déclaration suivante :
+Le fichier **backupHistory.json** se situe dans le dossier de destination de sauvegarde courant. Vous pouvez obtenir le chemin de ce fichier à l'aide de la déclaration suivante :
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. Si vous recherchez un état lisible sur les opérations de sauvegarde, le journal de sauvegarde sera plus précis. 
+> **ATTENTION**  
+> La suppression ou le déplacement du fichier **backupHistory.json** entraînera la réinitialisation du prochain numéro de sauvegarde.
+> Le fichier **backupHistory.json** est formaté afin d'être utilisé par l'application 4D. Si vous recherchez un état lisible sur les opérations de sauvegarde, le journal de sauvegarde sera plus précis. 
