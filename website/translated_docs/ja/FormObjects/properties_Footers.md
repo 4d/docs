@@ -11,9 +11,9 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 #### JSON 文法
 
-| 名           | データタイプ  | とりうる値       |
-| ----------- | ------- | ----------- |
-| showFooters | boolean | true, false |
+| 名           | データタイプ | とりうる値       |
+| ----------- | ------ | ----------- |
+| showFooters | ブール    | true, false |
 
 
 #### 対象オブジェクト
