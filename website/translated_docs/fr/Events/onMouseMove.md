@@ -12,7 +12,7 @@ title: Sur survol
 
 This event is generated:
 
-- when the mouse cursor moves at least one pixel 
+- when the mouse cursor moves at least one pixel
 - OR when a modifier key (**Shift**, **Alt/Option**, **Shift Lock**) was pressed. This makes it possible to manage copy- or move-type drag-and-drop operations.
 
 If the event is checked for an object only, it is generated only when the cursor is within the graphic area of the object.
@@ -20,6 +20,7 @@ If the event is checked for an object only, it is generated only when the cursor
 The `On Mouse Move` event updates the *MouseX* and *MouseY* system variables.
 
 Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+
 
 ### Calling stack
 

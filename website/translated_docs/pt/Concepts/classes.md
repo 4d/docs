@@ -14,7 +14,7 @@ Once a user class is defined, you can **instantiate** objects of this class anyw
 
 For example, you could create a `Person` class with the following definition:
 
-```4d
+```4d  
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
@@ -23,10 +23,13 @@ Class constructor($firstname : Text; $lastname : Text)
 
 In a method, creating a "Person":
 
-    var $o : cs.Person //object of Person class
-    $o:=cs.Person.new("John";"Doe")
-    // $o:{firstName: "John"; lastName: "Doe" }
-    
+```
+var $o : cs.Person //object of Person class
+$o:=cs.Person.new("John";"Doe")
+// $o:{firstName: "John"; lastName: "Doe" }
+```
+
+
 
 ## Managing classes
 
@@ -36,16 +39,16 @@ A user class in 4D is defined by a specific method file (.4dm), stored in the `/
 
 When naming classes, you should keep in mind the following rules:
 
-- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
 - Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
+- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
-- Database folder 
-    + Project 
-        * Sources 
-            - Classes 
+- Database folder
+    + Project
+        * Sources
+            - Classes
                 + Polygon.4dm
 
 ### Deleting a class
@@ -53,7 +56,8 @@ For example, if you want to define a class named "Polygon", you need to create t
 To delete an existing class, you can:
 
 - on your disk, remove the .4dm class file from the "Classes" folder,
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+
 
 ### Using 4D interface
 
@@ -73,18 +77,18 @@ To create a new class, you can:
 
 - select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
 - select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page. 
+- select **New > Class...** from the contexual menu of the Explorer's Home page.
 
 #### Class code support
 
 In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
 
-- In the code editor: 
+- In the code editor:
     - a class cannot be run
-    - a class function is a code block 
+    - a class function is a code block
     - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
     - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format. 
+- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format.
 
 ## Class stores
 
@@ -93,6 +97,7 @@ Available classes are accessible from their class stores. Two class stores are a
 - `cs` for user class store
 - `4D` for built-in class store
 
+
 ### cs
 
 #### cs -> classStore
@@ -100,7 +105,6 @@ Available classes are accessible from their class stores. Two class stores are a
 | Parameter  | Type   |    | Description                                   |
 | ---------- | ------ | -- | --------------------------------------------- |
 | classStore | object | <- | User class store for the project or component |
-
 
 The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -120,7 +124,6 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
-
 The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
 
 #### Example
@@ -131,7 +134,10 @@ You want to create a new key in the `CryptoKey` class:
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
+
+
 ## Using classes in your code
+
 
 ### Class object
 
@@ -142,11 +148,12 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - `new()` method, allowing to instantiate class objects.
 
 In addition, a class object can reference:
-
 - a [`constructor`](#class-constructor) object (optional),
 - a `prototype` object, containing named [function](#function) objects (optional).
 
 A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+
+
 
 ### new() method
 
@@ -155,7 +162,6 @@ A class object is a shared object and can therefore be accessed from different 4
 | Parameter   | Type   |    | Description                           |
 | ----------- | ------ | -- | ------------------------------------- |
 | classObject | object | <- | New object of the \<ClassName> class |
-
 
 The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
 
@@ -173,7 +179,7 @@ $person:=cs.Person.new() //create the new instance
 
 Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
 
-```4d
+```4d  
 //Empty.4dm class file
 //Nothing
 ```
@@ -209,13 +215,16 @@ Class constructor($width : Integer; $height : Integer)
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
 
+
+
 ## Class keywords
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function <Name>` to define member methods of the objects. 
+- `Function <Name>` to define member methods of the objects.
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
+
 
 ### Function
 
@@ -240,7 +249,7 @@ Function computeArea($width : Integer; $height : Integer)->$area : Integer
 
 Within a class function, the `This` command is used as the object instance. For example:
 
-```4d
+```4d  
 Function setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -254,20 +263,22 @@ For a class function, the `Current method name` command returns: "*\<ClassName>.
 In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
-- use of a "Function" class member method: 
+- use of a "Function" class member method:
     - `apply()`
     - `call()`
 
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
+
+
+
 #### Parameters
 
 Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;).
 
-```4d
+```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-
 > If the type is not stated, the parameter will be defined as `Variant`.
 
 You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
@@ -282,7 +293,6 @@ You can also declare the return parameter only by adding `: type`, in which case
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-
 > The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
@@ -292,6 +302,8 @@ Function add($x : Integer)
   $value:=$x+$2
   $0:=String($value)
 ```
+
+
 
 #### Example
 
@@ -316,6 +328,8 @@ $rect:=cs.Rectangle.new()
 $area:=$rect.getArea(50;100) //5000
 ```
 
+
+
 ### Class constructor
 
 #### Syntax
@@ -331,6 +345,8 @@ A class constructor function, which can accept [parameters](#parameters), can be
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+
+
 
 #### Example:
 
@@ -349,6 +365,9 @@ $o:=cs.MyClass.new("HelloWorld")
 // $o = {"name":"HelloWorld"}
 ```
 
+
+
+
 ### Class extends \<ClassName>
 
 #### Syntax
@@ -365,7 +384,7 @@ Class extension must respect the following rules:
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
 - A user class cannot extend a user class from another database or component.
 - A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a"). 
+- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
@@ -397,6 +416,7 @@ Class constructor ($side : Integer)
 
 ### Super
 
+
 #### Super {( param{;...;paramN} )} {-> Object}
 
 | Parameter | Type   |    | Description                                    |
@@ -404,16 +424,14 @@ Class constructor ($side : Integer)
 | param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
 | Result    | object | <- | Object's parent                                |
 
-
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
 `Super` serves two different purposes:
 
 - inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
-    
-    - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid. 
+    - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
     - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
-    
+
     - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
 ```4d
@@ -511,7 +529,6 @@ $message:=$square.description() //I have 4 sides which are all equal
 | --------- | ------ | -- | -------------- |
 | Result    | object | <- | Current object |
 
-
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
@@ -543,6 +560,7 @@ $val:=$o.a //42
 
 > When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
 
+
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
 ```4d
@@ -560,18 +578,20 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+
 
 ## Class commands
 
 Several commands of the 4D language allows you to handle class features.
+
 
 ### OB Class
 
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter.
+
 
 ### OB Instance of
 

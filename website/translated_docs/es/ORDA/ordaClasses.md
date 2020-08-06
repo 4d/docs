@@ -30,7 +30,9 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - if the physical structure evolves, you simply to adapt function code and client applications will continue to call them transparently.
 
+
 ![](assets/en/ORDA/api.png)
+
 
 In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object.
 
@@ -49,27 +51,30 @@ All ORDA data model classes are exposed as properties of the **`cs`** class stor
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | `dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`                                                                                                                                                                                              |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
 
-
 > ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).
 
 In addition, object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an Entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
 
+
 ## Class Description
+
 
 > **Note**: Keep in mind that ORDA data model functions are always executed on the server. Thus, calling a function generates a request to the server.
 
+
 ### DataStore Class
+
 
 A 4D database exposes its own DataStore class in the `cs` class store.
 
-- **Extends**: 4D.DataStoreImplementation 
+- **Extends**: 4D.DataStoreImplementation
 - **Class name**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
 #### Example
 
-```4d
+```4d  
 // cs.DataStore class
 
 Class extends DataStoreImplementation
@@ -84,13 +89,17 @@ This function can then be called:
 $desc:=ds.getDesc() //"Database exposing..."
 ```
 
+
+
 ### DataClass Class
 
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
-- **Extends**: 4D.DataClass 
+- **Extends**: 4D.DataClass
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
 - **Example name**: cs.Employee
+
+
 
 #### Example
 
@@ -115,6 +124,7 @@ Then, you can get an entity selection of the "best" companies by executing:
     $best:=ds.Company.GetBestOnes()
 ```
 
+
 #### Example with a remote datastore
 
 The following *City* catalog is exposed in a remote datastore (partial view):
@@ -123,7 +133,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 The `City Class` provides an API:
 
-```4d
+```4d  
 // cs.City class
 
 Class extends DataClass
@@ -155,13 +165,15 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ```
 
+
 ### EntitySelection Class
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
-- **Extends**: 4D.EntitySelection 
+- **Extends**: 4D.EntitySelection
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
 - **Example name**: cs.EmployeeSelection
+
 
 #### Example
 
@@ -189,7 +201,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
-- **Extends**: 4D.Entity 
+- **Extends**: 4D.Entity
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
 - **Example name**: cs.CityEntity
 
@@ -229,20 +241,25 @@ End if
 When creating or editing data model classes, you must pay attention to the rules described below.
 
 - Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D table names must be compliant in order to avoid any conflict in the **cs** namespace. In particular:
-    
-    - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler). 
+    - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
     - Do not use a reserved name for a 4D table (e.g. "DataClass").
+
 - When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the parent class (case sensitive) name. For example, `Class extends EntitySelection` for an entity selection class.
 
 - You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - You cannot override a native ORDA class method from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
+
+
+
 ## Support in 4D projects
+
 
 ### Class files
 
 An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
+
 
 ### Creating classes
 
@@ -258,10 +275,12 @@ ORDA user classes have a different icon from regular classes. Empty classes are 
 
 To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
 
-    Class extends Entity
-    
+```
+Class extends Entity
+```
 
 Once a class is defined, its name is no longer dimmed in the Explorer.
+
 
 ### Editing classes
 
@@ -273,8 +292,10 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ![](assets/en/ORDA/classORDA5.png)
 
+
 ### Method editor
 
 In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
+

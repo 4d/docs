@@ -5,11 +5,13 @@ title: Installation
 
 Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
 
+
 ## Required configuration
 
 The [Product Download](https://us.4d.com/product-download) page on the 4D website provides information about the minimum macOS / Windows system requirements for your 4D series.
 
 Additional technical details are available on the 4D website's [Resources page](https://us.4d.com/resources/feature-release).
+
 
 ## Installation on disk
 
@@ -18,6 +20,7 @@ Additional technical details are available on the 4D website's [Resources page](
 1. Connect to the 4D website and go to the [Downloads](https://us.4d.com/product-download) page.
 
 2. Click on the download link for your 4D product and follow the on-screen instructions.
+
 
 ## Sign in
 
@@ -42,3 +45,4 @@ Expand the **Open or create project application** area and select the action you
 - **Create a new application project** - create a new, empty application project on your disk.
 
 Enjoy your 4D experience!
+

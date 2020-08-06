@@ -10,7 +10,8 @@ La création et l’installation des composants 4D s’effectuent directement de
 - Un composant est un simple fichier de structure (compilé ou non compilé) d’architecture standard ou sous forme de package (cf. paragraphe Extension .4dbase).
 - Pour installer un composant dans une base, il suffit de le copier dans le dossier “Components” de la base, placé à côté du fichier de structure ou à côté de l'application 4D exécutable.
 - Un composant peut appeler la plupart des éléments 4D : des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, des images issues de la bibliothèque, etc. Il ne peut pas appeler des méthodes base et des triggers.
-- Il n’est pas possible d’exploiter des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL. 
+- Il n’est pas possible d’exploiter des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
+
 
 ## Définitions
 
@@ -18,24 +19,25 @@ Les mécanismes de gestion des composants dans 4D nécessitent la mise en oeuvre
 
 - **Base matrice :** base de données 4D utilisée pour développer le composant. La base matrice est une base standard, sans attribut spécifique. Une base matrice constitue un seul composant. La base matrice est destinée à être copiée, compilée ou non, dans le dossier Components de l'application 4D ou de la base devant utiliser le composant (la base hôte).
 - **Base hôte :** base dans laquelle est installé et utilisé un composant.
-- **Composant :** base matrice, compilée ou non, copiée dans le dossier Components de l'application 4D ou de la base hôte et dont le contenu est utilisé dans les bases hôtes. 
+- **Composant :** base matrice, compilée ou non, copiée dans le dossier Components de l'application 4D ou de la base hôte et dont le contenu est utilisé dans les bases hôtes.
 
 Il est à noter qu’une base peut donc être à la fois “matrice” et “hôte”, c’est-à-dire qu’une base matrice peut elle-même utiliser un ou plusieurs composants. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
+
 
 ### Protection des composants : la compilation
 
 Par défaut, toutes les méthodes projet d’une base matrice installée comme composant sont virtuellement visibles depuis la base hôte. En particulier :
 
 - Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.
-- Les autres méthodes projet de la base matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur de la base hôte. 
+- Les autres méthodes projet de la base matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur de la base hôte.
 
 Pour protéger efficacement les méthodes projet d’un composant, il vous suffit simplement de compiler la base matrice et de la fournir sous forme de fichier .4dc (base compilée ne contenant pas le code interprété). Lorsqu’une base matrice compilée est installée comme composant :
 
 - Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes de la base hôte. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
-- Les autres méthodes projet de la base matrice n’apparaissent jamais. 
+- Les autres méthodes projet de la base matrice n’apparaissent jamais.
+
 
 ## Partage des méthodes projet
-
 Toutes les méthodes projet d’une base matrice sont par définition incluses dans le composant (la base est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.
 
 En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par la base hôte. Vous devez explicitement désigner dans la base matrice les méthodes que vous souhaitez partager avec la base hôte. Ces méthodes projet peuvent être appelées dans le code la base hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de la base hôte). Ces méthodes constituent les **points d’entrée** dans le composant.
@@ -68,14 +70,15 @@ Exemples utilisant des variables :
  $p:=component_method2(...)
 ```
 
+
 L’utilisation de pointeurs pour faire communiquer les composants et la base hôte nécessite de prendre en compte les spécificités suivantes :
 
 - La commande `Pointeur vers` ne retournera pas un pointeur vers une variable de la base hôte si elle est appelée depuis un composant et inversement.
 
 - L’architecture des composants autorise la coexistence, au sein d’une même base interprétée, de composants interprétés et compilés (à l’inverse, seuls des composants compilés peuvent être utilisés dans une base compilée). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans la même base hôte.
-    
  - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
- - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution. 
+ - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
+
 - La comparaison de pointeurs via la commande `RESOUDRE POINTEUR` est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différente dans un composant et la base hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```4d
@@ -84,9 +87,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
       If(vNomVar1=vNomVar2)
        //Ce test retourne Vrai alors que les variables sont différentes
 ```
-
 Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
-
 ```4d
      If(monptr1=monptr2) //Ce test retourne Faux
 ```
@@ -127,6 +128,7 @@ Par ailleurs, des dispositions spécifiques sont définies pour les commandes `S
 
 La commande `COMPONENT LIST` permet de connaître la liste des composants chargés par la base hôte.
 
+
 ### Commandes non utilisables
 
 Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cadre d’un composant car elles modifient le fichier de structure — ouvert en lecture. Leur exécution dans un composant provoque l’erreur -10511, “La commande NomCommande ne peut pas être appelée depuis un composant” :
@@ -160,12 +162,12 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 
 ## Utilisation de formulaires
 
-- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant. 
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans la base matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
 **Note :** Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
-- Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants. 
+- Vous pouvez publier des formulaires de composants comme sous-formulaires dans les bases hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
 
 ## Utilisation de tables et de champs
 
@@ -252,12 +254,11 @@ Les composants peuvent utiliser des ressources. Conformément aux principes de g
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans une base hôte contenant un ou plusieurs composant(s), chaque composant ainsi que la base hôte dispose de sa propre “chaîne de ressources”. Les ressources sont cloisonnées entre les différentes bases : il n’est pas possible d’accéder aux ressources du composant A depuis le composant B ou la base hôte.
+Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différentes bases de données : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis la base de données hôte.
 
 ## Aide en ligne des composants
-
 Un mécanisme spécifique a été mis en place afin de permettre aux développeurs d’ajouter des aides en ligne à leurs composants. Le principe est semblable à celui proposé pour les bases de données 4D :
 
 - L’aide du composant doit être fournie sous le forme d’un fichier suffixé .htm, .html ou (Windows uniquement) .chm,
 - Le fichier d’aide doit être placé à côté du fichier de structure du composant et porter le même nom que le fichier de structure,
-- L’aide est alors automatiquement chargée dans le menu Aide de l’application avec le libellé “Aide de...” suivi du nom du fichier d’aide.
+- L’aide est alors automatiquement chargée dans le menu Aide de l’application avec le libellé “Aide de...” suivi du nom du fichier d’aide. 

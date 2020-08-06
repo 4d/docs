@@ -19,8 +19,8 @@ title: CryptoKey クラス
 | size  | 整数   | RSA キーのみ: キーのサイズ (ビット単位) 例: 2048                                |
 | curve | テキスト | ECDSA キーのみ: キーの楕円曲線名。 例: "prime256v1", "secp384r1", "secp521r1" |
 
-
 ### 例題
+
 
 たとえば ES256 JSON Web Token (JWT) を作成するために新規 ECDSA キーペアを使ってメッセージの署名と検証をおこないます。
 
@@ -44,7 +44,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
@@ -58,7 +58,6 @@ ASSERT($status.success)
 |          |       |        |    |                                                                                               |
 | keyPair  |       | オブジェクト | <- | 暗号化キーペアをカプセル化したオブジェクト                                                                         |
 
-
 このメソッドは、`settings` オブジェクト引数に基づいて暗号化キーペアをカプセル化するオブジェクトを新規作成します。 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
 
 `settings` の `type` プロパティには、キーのタイプを指定します。
@@ -69,6 +68,7 @@ ASSERT($status.success)
 
 戻り値の `keyPair` オブジェクトは共有オブジェクトのため、複数の 4D プロセスによって同時使用できます。
 
+
 ## cryptoKey.getPrivateKey()
 
 <details><summary>履歴</summary>
@@ -76,7 +76,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
@@ -85,8 +85,8 @@ ASSERT($status.success)
 |            |       |      |    |            |
 | privateKey |       | テキスト | <- | PEM 形式の秘密鍵 |
 
-
 このメソッドは、`cryptoKey` オブジェクトの秘密鍵を PEM 形式で返します。無い場合はからの文字列を返します。
+
 
 ## cryptoKey.getPublicKey()
 
@@ -95,7 +95,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.getPublicKey() -> publicKey
 
@@ -104,8 +104,8 @@ ASSERT($status.success)
 |           |       |      |    |            |
 | publicKey |       | テキスト | <- | PEM 形式の公開鍵 |
 
-
 このメソッドは、`cryptoKey` オブジェクトの公開鍵を PEM 形式で返します。無い場合はからの文字列を返します。
+
 
 ## cryptoKey.sign()
 
@@ -114,7 +114,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.sign(message;options) -> signature
 
@@ -128,7 +128,6 @@ ASSERT($status.success)
 |           |          |        |    |                                                                                                                                 |
 | signature |          | テキスト   | <- | "encoding" オプションに応じて、Base64 あるいは Base64URL でエンコードされた署名。                                                                         |
 
-
 このメソッドは、`cryptoKey` オブジェクトキーおよび指定された `options` を使って、utf8 形式の `message` 文字列を署名します。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
 `cryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
@@ -140,7 +139,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.verify(message;signature;options) -> status
 
@@ -157,7 +156,6 @@ ASSERT($status.success)
 |           | success  | ブール    |    | 署名がメッセージと合致すれば true                                                                                                             |
 |           | errors   | コレクション |    | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。                                                                               |
 
-
 このメソッドは、`cryptoKey` オブジェクトキーおよび指定された `options` を使って、utf8 形式の `message` 文字列の署名を検証します。
 
 検証で署名が合致した場合には、`success` プロパティが `true` に設定された `status` オブジェクトを返します。
@@ -173,7 +171,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.encrypt(message;options) -> result
 
@@ -187,10 +185,11 @@ ASSERT($status.success)
 |         |                   |        |    |                                                                                                   |
 | result  |                   | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ                                                 |
 
-
 このメソッドは **公開** 鍵を使って `message` を暗号化します。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
+
+
 
 ## cryptoKey.decrypt()
 
@@ -199,7 +198,7 @@ ASSERT($status.success)
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details> 
+</details>
 
 #### cryptoKey.decrypt(message;options) -> status
 
@@ -216,7 +215,6 @@ ASSERT($status.success)
 |         | result            | テキスト   |    | options.encodingDecrypted を使って復号およびデコードされたメッセージ                                            |
 |         | errors            | コレクション |    | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。                                          |
 
-
 このメソッドは **秘密** 鍵を使って `message` を復号します。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
@@ -224,3 +222,4 @@ ASSERT($status.success)
 `message` の復号に成功した場合には、success プロパティが `true` に設定された `status` オブジェクトを返します。
 
 キーまたはアルゴリズムが合致しないなどの理由で `message` の復号に成功しなかった場合、返される `status` オブジェクトの `status.errors` プロパティにはエラーのコレクションが格納されます。
+

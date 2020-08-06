@@ -12,9 +12,10 @@ Usually, a radio button shows a small bullseye with text. However, radio buttons
 ![](assets/en/FormObjects/radio1.png)
 
 A radio button is selected:
-
 - when the user clicks on it
 - when it has the focus and the user presses the **Space bar** key.
+
+
 
 ## Configuring radio buttons
 
@@ -25,16 +26,19 @@ Radio buttons are controlled with methods. Like all buttons, a radio button is s
 ![](assets/en/FormObjects/radio2.png)
 
 Selecting one radio button in a group sets that button to 1 and all of the others in the group to 0. Only one radio button can be selected at a time.
-
 > You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
 
 The value contained in a radio button object is not saved automatically (except if it is the representation of a Boolean field); radio button values must be stored in their variables and managed with methods.
+
+
+
 
 ## Button Styles
 
 Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
 
 4D provides radio buttons in the following predefined styles:
+
 
 ### Regular
 
@@ -44,6 +48,7 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
+
 ### Flat
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
@@ -52,43 +57,50 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
+
 ### Toolbar
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
 By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is highlighted. 
+ - *Windows* - the button is highlighted.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
-- *macOS* - the highlight of the button never appears. 
+ - *macOS* - the highlight of the button never appears.
+
+
 
 ### Bevel
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - the button is highlighted.
-    
-    ![](assets/en/FormObjects/radio_bevel.png)
+ - *Windows* - the button is highlighted.
 
-- *macOS* - the highlight of the button never appears.
+  ![](assets/en/FormObjects/radio_bevel.png)
+
+ - *macOS* - the highlight of the button never appears.
+
 
 ### Rounded Bevel
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
 
-- *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+ - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+
 
 ### OS X Gradient
 
 The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
 
-- *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - the button is displayed as a two-tone system button.
+ - *macOS* - the button is displayed as a two-tone system button.
+
+
 
 ### OS X Textured
 
@@ -96,11 +108,13 @@ The OS X Textured radio button style is nearly identical to the [Toolbar](#toolb
 
 By default, the OS X Textured style appears as:
 
-- *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+ - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
-- *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
-    
-    ![](assets/en/FormObjects/OSXTextured.png)
+ - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+
+  ![](assets/en/FormObjects/OSXTextured.png)
+
+
 
 ### Office XP
 
@@ -108,11 +122,13 @@ The Office XP button style combines the appearance of the [Regular](#regular) st
 
 The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
-- *Windows* - its background only appears when the mouse rolls over it.
-    
-    ![](assets/en/FormObjects/radio_xp.png)
+ - *Windows* - its background only appears when the mouse rolls over it.
 
-- *macOS* - its background is always displayed.
+  ![](assets/en/FormObjects/radio_xp.png)
+
+ - *macOS* - its background is always displayed.
+
+
 
 ### Collapse / Expand
 
@@ -120,15 +136,19 @@ This button style can be used to add a standard collapse/expand icon. These butt
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 
+
+
 ### Disclosure Button
 
 The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. The button symbol points downwards with value 0 and upwards with value 1.
 
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
+
 ### Custom
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
+
 
 ## Supported properties
 

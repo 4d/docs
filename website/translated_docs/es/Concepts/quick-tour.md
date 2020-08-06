@@ -6,7 +6,7 @@ sidebar_label: A Quick Tour
 
 Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
 
-```4d
+```4d  
 ALERT("Hello, World!")
 ```
 
@@ -15,6 +15,7 @@ This code will display a platform-standard alert dialog box with the "Hello, Wor
 ![alt-text](assets/en/Concepts/helloworld.png)
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
+
 
 ## Assigning Values
 
@@ -48,6 +49,7 @@ var myPerson : cs.Person
 //variable of the Person user class
 ```
 
+
 Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
@@ -58,7 +60,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the *4D Language Reference* manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -88,7 +90,6 @@ PDF REMOVE PAGE(path;page)
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
-
 4D SVG is included in 4D.
 
 ## Constants
@@ -135,6 +136,7 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
+
 ## Data Types
 
 In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
@@ -149,7 +151,7 @@ There are cases in which you need to store data as one type and use it as anothe
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
@@ -175,10 +177,11 @@ $vAge:=employee.children[2].age
 
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
-    $f:=New object
-    $f.message:=New formula(ALERT("Hello world!"))
-    $f.message() //displays "Hello world!"
-    
+```
+$f:=New object
+$f.message:=New formula(ALERT("Hello world!"))
+$f.message() //displays "Hello world!"
+```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
@@ -194,14 +197,14 @@ The 4D language supports object classes. Add a `myClass.4dm` file in the Project
 
 To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
 
-```4d
+```4d  
 // in a 4D method
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
 
-```4d
+```4d  
 //in the myClass.4dm file
 Function hello
   C_TEXT($0)
@@ -219,7 +222,7 @@ $message:=$o.myClass.hello()
 
 Optionally, use the `Class constructor` keyword to declare properties of the object.
 
-```4d
+```4d  
 //in the Rectangle.4dm file
 Class constructor
 C_LONGINT($1;$2)
@@ -230,7 +233,7 @@ This.name:="Rectangle"
 
 A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. For example:
 
-```4d
+```4d  
 //in the Square.4dm file
 Class extends rectangle
 
@@ -244,8 +247,8 @@ Super($1;$1)
 This.name:="Square"
 ```
 
-## Operators
 
+## Operators
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
 | Operator | Operation      | Example            |
@@ -254,7 +257,6 @@ When you use the language, it is rare that you will simply want a piece of data.
 | –        | Subtraction    | 3 – 2 results in 1 |
 | *        | Multiplication | 2 * 3 results in 6 |
 | /        | Division       | 6 / 2 results in 3 |
-
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
@@ -281,8 +283,8 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 - Debugger where the value of expressions can be checked
 - Quick Report editor as a formula for a column
 
-### Expression types
 
+### Expression types
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
 | Expression               | Type               | Description                                                                                                                                                                     |
@@ -310,12 +312,11 @@ You refer to an expression by the data type it returns. There are several expres
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
 | $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
-
 ### Assignable vs non-assignable expressions
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
 
-```4d
+```4d  
 //$myVar variable is assignable, you can write:  
 $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageNumber is assignable, you can write:  
@@ -323,8 +324,8 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+
 
 ## Pointers
 

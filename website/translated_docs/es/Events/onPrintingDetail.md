@@ -15,3 +15,4 @@ The `On Printing Detail` event can only be used in the context of an **output fo
 The `Print form` command generates only one `On Printing Detail` event for the form method.
 
 > This event cannot be selected for project forms, it is only available with **table forms**.
+

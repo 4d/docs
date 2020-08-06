@@ -16,5 +16,6 @@ En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d�
 > Vous pouvez également mettre en place des solutions alternatives de réplication et de synchronisation des données permettant de maintenir des versions identiques des bases à des fins de sauvegarde. Ces solutions peuvent être basées sur les technologies et mécanismes suivants :  
 > - Mise en place d'un miroir logique avec 4D Server (utilise les mécanismes du module de sauvegarde intégré)  
 > - Synchronisation via le SQL - Synchronisation via le HTTP (/rest/url)
-> 
+
+
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.

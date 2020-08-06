@@ -9,10 +9,12 @@ title: 4D View Pro area
 
 Once you use 4D View Pro areas in your forms, you can import and export spreadsheets documents.
 
+
 ## Using 4D View Pro areas
 
 4D View Pro areas are documented in the [4D View Pro Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-View-Pro-Reference.100-4351323.en.html) manual.
 
+
 ## プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Show Formula Bar](properties_Appearance.md#show-formula-bar) - [Type](properties_Object.md#type) - [User Interface](properties_Appearance.md#user-interface) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Show Formula Bar](properties_Appearance.md#show-formula-bar) - [Type](properties_Object.md#type) - [User Interface](properties_Appearance.md#user-interface) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

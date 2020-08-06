@@ -5,12 +5,13 @@ title: Working with data
 
 In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
 
+
 ## Creating an entity
 
 There are two ways to create a new entity in a dataclass:
 
-* Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-* You can also create an entity using the `dataClass.new( )` method.
+*   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
+*   You can also create an entity using the `dataClass.new( )` method.
 
 Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
@@ -25,7 +26,6 @@ $myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
 $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
 $myEntity.save() //save the entity
 ```
-
 > An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
 
 ## Entities and references
@@ -85,13 +85,12 @@ And the method is:
 ```
 
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-
 > With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [Lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+
 
 ## Using entity attributes
 
 Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
-
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
 For example, to set a storage attribute:
@@ -101,7 +100,6 @@ For example, to set a storage attribute:
  $name:=entity.lastname //get the employee name, e.g. "Smith"
  entity.lastname:="Jones" //set the employee name
 ```
-
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
@@ -130,15 +128,14 @@ Each employee can be a manager and can have a manager. To get the manager of the
 
 In the ORDA architecture, relation attributes directly contain data related to entities:
 
-* An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-* A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+*   An N->1 type relation attribute (**relatedEntity** kind) contains an entity
+*   A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
 
 Let's look at the following (simplified) structure:
 
 ![](assets/en/Orda/entityAttributes3.png)
 
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-
 > In ORDA, the Automatic or Manual property of relations has no effect.
 
 To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Beispiel:
@@ -178,16 +175,15 @@ You can assign or modify the value of a "1" related entity attribute from the "N
 
 You can create an object of type entity selection as follows:
 
-* Querying the entities in a dataclass (see the `dataClass.query()` method);
-* Using the `dataClass.all( )` method to select all the entities in a dataclass;
-* Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
+*   Querying the entities in a dataclass (see the `dataClass.query()` method);
+*   Using the `dataClass.all( )` method to select all the entities in a dataclass;
+*   Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
 
-* Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
+*   Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
 
-* Using a relation attribute of type "related entities" (see below).
+*   Using a relation attribute of type "related entities" (see below).
 
 You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
-
 > An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
 
 ## Entity selections and attributes
@@ -217,6 +213,7 @@ myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
 
 The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
 
+
 ## Entity Locking
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
@@ -230,25 +227,20 @@ ORDA provides you with two entity locking modes:
 
 This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
 
-* All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-* Each entity has an internal locking stamp that is incremented each time it is saved.
-* When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification): 
-    * When the values match, the entity is saved and the internal stamp value is incremented.
-    * When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+*   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
+*   Each entity has an internal locking stamp that is incremented each time it is saved.
+*   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
+    *   When the values match, the entity is saved and the internal stamp value is incremented.
+    *   When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.  
-      
-    ![](assets/en/Orda/optimisticLock1.png)
+1. Two processes load the same entity.<br><br>![](assets/en/Orda/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.  
-      
-    ![](assets/en/Orda/optimisticLock2.png)
+2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/Orda/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.  
-      
-    ![](assets/en/Orda/optimisticLock3.png)
+3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/Orda/optimisticLock3.png)
+
 
 This can also be illustrated by the following code:
 
@@ -271,17 +263,18 @@ You can lock and unlock entities on demand when accessing data. When an entity i
 
 This feature is based upon two methods of the Entity class:
 
-* `entity.lock()`
-* `entity.unlock()`
+*   `entity.lock()`
+*   `entity.unlock()`
 
 For more information, please refer to the descriptions for these methods.
+
 
 ### Concurrent use of 4D classic locks and ORDA pessimistic locks
 
 Using both classic and ORDA commands to lock records is based upon the following principles:
 
-* A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-* A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+*   A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
+*   A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
 
 These principles are shown in the following diagram:
 
@@ -289,12 +282,10 @@ These principles are shown in the following diagram:
 
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
-* Example with a lock set by a classic command:  
-      
-    ![](assets/en/Orda/concurrent2.png)
-* Example with a lock set by an ORDA method:  
-      
-    ![](assets/en/Orda/concurrent3.png)
+*   Example with a lock set by a classic command:<br><br>![](assets/en/Orda/concurrent2.png)
+*   Example with a lock set by an ORDA method:<br><br>![](assets/en/Orda/concurrent3.png)
+
+
 
 ## Client/server optimization
 
@@ -302,20 +293,21 @@ These principles are shown in the following diagram:
 
 The following optimization mechanisms are implemented:
 
-* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
+*   When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
 
-* Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
+*   Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
 
-* An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
+*   An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
 
 The following methods automatically associate the optimization context of the source entity selection to the returned entity selection:
 
-* `entitySelection.and()`
-* `entitySelection.minus()`
-* `entitySelection.or()`
-* `entitySelection.orderBy()`
-* `entitySelection.slice()`
-* `entitySelection.drop()`
+*   `entitySelection.and()`
+*   `entitySelection.minus()`
+*   `entitySelection.or()`
+*   `entitySelection.orderBy()`
+*   `entitySelection.slice()`
+*   `entitySelection.drop()`
+
 
 **Beispiel**
 
@@ -330,13 +322,16 @@ Given the following code:
 
 Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in $sel after a learning phase.
 
+
+
 ### Using the context property
 
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 
 A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
-
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
+
+
 
 **Example with `dataClass.query( )` method:**
 
@@ -367,10 +362,10 @@ A specific "page mode" context is also provided when loading the current entity 
 
 Subsequent requests to server sent by entity browsing methods will also support this optimization. The following methods automatically associate the optimization context of the source entity to the returned entity:
 
-* `entity.next( )`
-* `entity.first( )`
-* `entity.last( )`
-* `entity.previous( )`
+*   `entity.next( )`
+*   `entity.first( )`
+*   `entity.last( )`
+*   `entity.previous( )`
 
 For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
 

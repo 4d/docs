@@ -30,7 +30,7 @@ ds.Company.city //returns the name of the city
 ```
 
 > In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
-> 
+
 > ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
 
 You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
@@ -45,10 +45,10 @@ ds.Company.hires //returns the list of employees
 
 But don't go too fast. Let's see now how to record data in ORDA dataclasses.
 
+
 ## Adding data
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
@@ -71,6 +71,13 @@ Right now, the entity only exists in memory. To store it in the data file, you n
 $status:=$entity.save()
 ```
 
+
+
+
+
+
+
+
 L'éditeur des utilisateurs se trouve dans la boîte à outils de 4D.
 
 ![](assets/en/Users/editor.png)
@@ -81,19 +88,19 @@ Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs
 
 Pour ajouter un utilisateur depuis la boite à outils :
 
-1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs. 
+1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D affiche la fenêtre d’édition des utilisateurs.
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
-2. Cliquez sur le bouton d’ajout ![](assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OU Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
+2. Cliquez sur le bouton d’ajout ![](assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
-> La commande **Dupliquer** permet de créer rapidement plusieurs utilisateurs ayant des caractéristiques communes.
+> The **Duplicate** command can be used to create several users having the same characteristics quickly.
 
 4D ajoute un nouvel utilisateur à la liste, nommé par défaut "Nouvel utilisateurN".
 
-3. Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir la base. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+3. Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir la base. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
-4. Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton **Modifier...** dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
+4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
 
 > Les utilisateurs peuvent modifier leur mot de passe à tout moment en fonction des options de la page Sécurité des propriétés de la base, ou à l'aide de la commande `CHANGE PASSWORD`.
 
@@ -103,15 +110,16 @@ L’appartenance des utilisateurs aux groupes peut également être définie par
 
 ### Supprimer un utilisateur
 
-Pour supprimer un utilisateur, sélectionnez-le puis cliquez sur le bouton de suppression ou utilisez la commande **Supprimer** du menu contextuel. ![](assets/en/Users/MinussNew.png)
+To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
 
 Les utilisateurs supprimés n'apparaissent plus dans la liste de l'éditeur d'utilisateurs. A noter que les numéros des utilisateurs supprimés peuvent être réattribués lors de la création de nouveaux comptes.
 
 ### Propriétés des utilisateurs
 
-- Le champ **Type d’utilisateur** : le champ Type d’utilisateur contient "Super_Utilisateur", "Administrateur", ou (pour tous les autres utilisateurs) "Utilisateur".
+- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
-- **Méthodes de démarrage** : Nom d'une méthode associée qui sera automatiquement associée lorsque l'utilisateur ouvre la base (facultatif). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.
+
 
 ## Éditeur de groupes
 
@@ -125,17 +133,18 @@ Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souha
 
 Pour créer un groupe :
 
-1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
 
-2. Cliquez sur le bouton ![](assets/en/Users/PlussNew.png) situé en-dessous de la liste des groupes.  
-    OU  
-    Faites un clic droit sur la liste de groupes et sélectionnez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
+2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
+   OR  
+   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
 
 4D ajoute un nouveau groupe à la liste, nommé par défaut "Nouveau groupe1".
 
-3. Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. Vous pouvez renommer un groupe à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+3. Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+
 
 ### Placer des utilisateurs ou des groupes dans des groupes
 
@@ -163,7 +172,8 @@ La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les 
 
 ![](assets/en/Users/plugins.png)
 
-Les lignes **4D Client Web Server** et **4D Client SOAP Server** permettent contrôler la possibilité de publication Web et SOAP (Web Services) de chaque 4D en mode distant. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.
+The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.
+
 
 ### Un schéma d’accès hiérarchique
 

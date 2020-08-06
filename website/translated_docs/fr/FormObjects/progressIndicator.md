@@ -29,6 +29,7 @@ Réciproquement, vous pouvez utiliser un indicateur pour contrôler la valeur d�
 
 La méthode affecte la valeur de l'indicateur au champ Salaire. Lorsque l’utilisateur modifie la valeur affichée par l'indicateur, la valeur du champ Salaire est modifiée.
 
+
 ## Le thermomètre par défaut
 
 ![](assets/en/FormObjects/indicator_progressBar.png)
@@ -40,15 +41,14 @@ Vous pouvez afficher une barre de progression horizontale ou verticale. Ce param
 Plusieurs options graphiques sont disponibles : valeurs minimales/maximales, graduations, paliers.
 
 ### Propriétés prises en charge
-
 [Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Display graduation](properties_Scale.md#display-graduation) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Italic](properties_Text.md#italic) - [Graduation step](properties_Scale.md#graduation-step) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Label Location](properties_Scale.md#label-location) - [Left](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+
 
 ## Barber shop
 
 ![](assets/en/FormObjects/indicator.gif)
 
 **Barber shop** is a variant of the default thermometer. Pour active cette variante, vous devez définir la propriété du [Barber shop](properties_Scale.md#barber-shop).
-
 > En code JSON, supprimez simplement la propriété "max" de l'objet thermomètre par défaut pour activer le barber shop.
 
 Le barber shop affiche une animation continue, telle que le [spinner](spinner.md). Les thermomètres “Barber shop” sont généralement utilisés pour indiquer à l’utilisateur que le programme est en train d’effectuer une opération longue. Lorsque le thermomètre est sélectionné, le thème ["Graduations"](properties_Scale.md) de la liste des propriétés est masqué.
@@ -58,11 +58,11 @@ A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l�
 * 1 (ou toute valeur différente de 0) = Démarrer l’animation,
 * 0 = Stopper l’animation.
 
-### Propriétés prises en charge
 
+### Propriétés prises en charge
 [Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Voir également
 
-- [règle](ruler.md) 
+## Voir également
+- [règle](ruler.md)
 - [stepper](stepper.md)

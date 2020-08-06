@@ -21,7 +21,6 @@ Une constante littérale de type chaîne est incluse entre des guillemets droits
 Une chaîne vide est spécifiée par la succession de deux guillemets ("").
 
 ### Séquences d’échappement
-
 Les séquences d’échappement suivantes peuvent être utilisées dans les chaînes :
 
 | Séquence d’échappement | Caractère remplacé          |
@@ -31,7 +30,6 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | \r                    | CR (Retour chariot)         |
 | \\\                 | \ (Barre oblique inversée) |
 | \\"                  | " (Guillemets)              |
-
 
 **Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
@@ -51,12 +49,11 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 |                     |                  |          | "abc" < "abc"           | Faux     |
 | Supérieur ou égal à | Chaîne >= Chaîne | Booléen  | "abd" >= "abc"          | Vrai     |
 |                     |                  |          | "abc" >= "abd"          | Faux     |
-| Inférieur ou égal à | Chaîne <= String | Booléen  | "abc" <= "abd"          | Vrai     |
+| Inférieur ou égal à | Chaîne <= Chaîne | Booléen  | "abc" <= "abd"          | Vrai     |
 |                     |                  |          | "abd" <= "abc"          | Faux     |
 | Contient mot-clé    | Chaîne % Chaîne  | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
 |                     |                  |          | "Alpha Bravo" % "ravo"  | Faux     |
 |                     | Image % Chaîne   | Booléen  | Expr_image % "Mer"      | True (*) |
-
 
 (*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
@@ -68,7 +65,6 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 ```4d
 Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 ```
-
 - Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
 
 ```4d
@@ -128,7 +124,6 @@ L'expression suivante sera correctement évaluée :
 ```4d
 (Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
 ```
-
 **Note :** Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.
 
 ### Mots-clés
@@ -142,11 +137,9 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Alpha,Bravo,Charlie"%"Alpha" // Retourne Vrai
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
-
 > **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
-
 Les symboles d'indice de chaîne sont les suivants : [[...]]
 
 Ces symboles sont utilisés pour désigner un caractère particulier dans une chaîne. Cette syntaxe vous permet de référencer un caractère dans un champ ou une variable de type Alpha ou Texte.
@@ -185,16 +178,18 @@ Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsa
 - Ne pas respecter cette condition en mode compilé (sans options) peut entraîner une "corruption" de la mémoire, si, par exemple, vous écrivez un caractère au-delà de la fin d'une chaîne ou d'un texte.
 - Ne pas respecter cette condition en mode compilé est signalé lorsque le contrôle d'exécution est activé. Si, par exemple, vous exécutez le code suivant :
 
-    //Ne pas faire ça !
-     vsAnyText:=""
-     vsAnyText[[1]]:="A"
-    
+```
+//Ne pas faire ça !
+ vsAnyText:=""
+ vsAnyText[[1]]:="A"
+```
 
 L'alerte suivante s'affichera en mode compilé :
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Exemple
+
 
 La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :
 

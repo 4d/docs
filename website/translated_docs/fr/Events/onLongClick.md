@@ -27,5 +27,4 @@ This event can be generated for the following button styles:
 This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
 
 ### Voir également
-
 [`Sur clic alternatif`](onAlternativeClick.md)

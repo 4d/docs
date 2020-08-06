@@ -10,7 +10,7 @@ Whenever any form is used for output, either for screen display or printing, the
 
 Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
 
-* * *
+---
 
 ## Form Break
 
@@ -20,15 +20,14 @@ The Break area is defined as the area between the Detail control line and the Br
 
 You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
 
+
 #### JSON Grammar
 
-| Name        | Datentyp                          | Possible Values                                                                             |
-| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.  
-Minimum value: 0 |
+| Name        | Datentyp                          | Possible Values                                                                                    |
+| ----------- | --------------------------------- | -------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br>Minimum value: 0 |
 
-
-* * *
+---
 
 ## Form Detail
 
@@ -42,18 +41,12 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 | ---------- | -------- | ---------------------------------- |
 | markerBody | integer  | Detail marker position. Minimum: 0 |
 
-
-* * *
+---
 
 ## Form Footer
 
 The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
-
-You make the Footer area smaller or larger.
-
-<
-
-p>
+You make the Footer area smaller or larger.<p>
 
 You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
 
@@ -64,22 +57,17 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 | markerFooter | integer  | minimum: 0      |
 
 
-* * *
+---
 
 ## Form Header
 
 The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
-
-You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
-
-<
-
-p>
+You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.<p>
 
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. The following active objects can be inserted:
 
 - Buttons, picture buttons,
-- Combo boxes, drop-down lists, picture pop-up menus,
+- Combo boxes, drop-down lists,  picture pop-up menus,
 - hierarchical lists, list boxes
 - Radio buttons, check boxes, 3D check boxes,
 - Progress indicators, rulers, steppers, spinners.
@@ -88,15 +76,17 @@ Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPL
 
 The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
+
+
 #### JSON Grammar
 
-| Name         | Datentyp                          | Possible Values                                                                               |
-| ------------ | --------------------------------- | --------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.  
-Minimum value: 0 |
+| Name         | Datentyp                          | Possible Values                                                                                      |
+| ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br>Minimum value: 0 |
 
 
-* * *
+
+---
 
 ## Additional areas
 
@@ -115,13 +105,14 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 | Label | Description | Prints after groups created by: |
 | ----- | ----------- | ------------------------------- |
 |       |             |                                 |
- Form Break 1|Break at level 1|First sorted field Form Break 2|Break at level 2|Second sorted field Form Break 3|Break at level 3|Third sorted field| 
+ Form Break 1|Break at level 1|First sorted field Form Break 2|Break at level 2|Second sorted field Form Break 3|Break at level 3|Third sorted field|
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
 | Label | Description | Prints after groups created by: |
 | ----- | ----------- | ------------------------------- |
 |       |             |                                 |
- Form Header 1|Header at level 1|First sorted field Form Header 2|Header at level 2|Second sorted field Form Header 3|Header at level 3|Third sorted field| 
+ Form Header 1|Header at level 1|First sorted field Form Header 2|Header at level 2|Second sorted field Form Header 3|Header at level 3|Third sorted field|
+
 
 If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. If you do not need anything printed in one of the Break areas, you can reduce its size to nothing by placing its marker on top of another control line. If you have more sort levels than Break areas, the last Break area will be repeated during printing.

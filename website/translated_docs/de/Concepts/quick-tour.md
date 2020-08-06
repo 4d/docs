@@ -6,7 +6,7 @@ sidebar_label: Schnelle Tour
 
 Mit der 4D Programmiersprache lässt sich die gängige Meldung "Hello, world!" auf dem Bildschirm auf verschiedenen Wegen erzeugen. Der einfachste Weg ist, eine Zeile in eine Projektmethode setzen:
 
-```4d
+```4d  
 ALERT("Hello, World!")
 ```
 
@@ -15,6 +15,7 @@ Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meld
 ![alt-text](assets/en/Concepts/helloworld.png)
 
 Sie können diesen Code auch einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
+
 
 ## Werte zuweisen
 
@@ -31,7 +32,7 @@ $myHour:=?08:12:55? //assigns a time literal
 
 Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er kombiniert nicht Ausdrücke zu einem neuen, sondern kopiert die Werte des Ausdrucks auf seiner rechten Seite in die Variable oder das Feld auf seiner linken Seite.
 
-**Wichtig:** Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
+**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
 
 ## Variablen
 
@@ -48,17 +49,18 @@ var myPerson : cs.Person
 //variable of the Person user class
 ```
 
+
 Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach über ihre Verwendung deklarieren; Sie müssen sie nicht unbedingt förmlich definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-Die Code-Zeile liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile deklariert die Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
 
 ## Befehle
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch *4D Programmiersprache* beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -88,7 +90,6 @@ PDF REMOVE PAGE(path;page)
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
-
 4D SVG ist in 4D enthalten.
 
 ## Konstanten
@@ -101,7 +102,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 ## Methoden
 
-4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
+4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
 Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. A statement performs an action, and may be simple or complex.
 
@@ -135,6 +136,7 @@ ALERT($myText) //"HELLO"
 $0:=Uppercase($1)
 ```
 
+
 ## Datentypen
 
 In der Programmiersprache werden die verschiedenen Arten von Daten zum Bearbeiten als Datentypen bezeichnet. Es gibt grundlegende Datentypen (String, numerisch, Datum, Zeit, Boolean, Bild, Zeiger, Arrays) und zusammengesetzte Datentypen (BLOBs, Objekte, Collections).
@@ -149,7 +151,7 @@ In manchen Fällen müssen Sie Daten als einen Typ speichern und als anderen Typ
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-Ist *Number* 17, dann erhält *[Products]Part Number* den String "17abc".
+If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 Die komplette Übersicht der Datentypen finden Sie im Abschnitt [Datentypen](Concepts/data-types.md).
 
@@ -175,10 +177,11 @@ $vAge:=employee.children[2].age
 
 Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftnamen Klammern () anfügen, um die Methode auszuführen:
 
-    $f:=New object
-    $f.message:=New formula(ALERT("Hello world!"))
-    $f.message() //displays "Hello world!"
-    
+```
+$f:=New object
+$f.message:=New formula(ALERT("Hello world!"))
+$f.message() //displays "Hello world!"
+```
 
 Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
@@ -192,16 +195,16 @@ myColl[3]  //access to 4th element of the collection
 
 Die 4D Programmiersprache unterstützt Objekt Klassen. Um eine Klasse mit Name "myClass" zu erstellen, fügen Sie im Ordner Project/Sources/Classes eines Projekts die Datei `myClass.4dm` hinzu.
 
-Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie die Benutzerklasse aus dem *Store der Klassen* auf (`cs`) und verwenden die Member Function `new()`. Sie können Parameter übergeben.
+To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. Sie können Parameter übergeben.
 
-```4d
+```4d  
 // in a 4D method
 $o:=cs.myClass.new() 
 ```
 
-In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
+In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
 
-```4d
+```4d  
 //in the myClass.4dm file
 Function hello
   C_TEXT($0)
@@ -219,7 +222,7 @@ $message:=$o.myClass.hello()
 
 Optional können Sie das Schlüsselwort `Class constructor` zum Deklarieren von Eigenschaften des Objekts verwenden.
 
-```4d
+```4d  
 //in the Rectangle.4dm file
 Class constructor
 C_LONGINT($1;$2)
@@ -230,7 +233,7 @@ This.name:="Rectangle"
 
 A class can extend another class by using `Class extends <ClassName>`. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
 
-```4d
+```4d  
 //in the Square.4dm file
 Class extends rectangle
 
@@ -244,8 +247,8 @@ Super($1;$1)
 This.name:="Square"
 ```
 
-## Operatoren
 
+## Operatoren
 In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil wollen. Es ist eher so, dass Sie etwas für oder mit diesen Daten durchführen wollen. Dafür verwenden Sie Operatoren. Operatoren führen in der Regel mit 2 Teilen von Daten eine Operation aus, die ein neues Datenteil ergeben. Sie kennen bereits viele Operatoren. Zum Beispiel verwendet 1 + 2 den Operator für Addition (oder Pluszeichen), um zwei Zahlen zusammenzählen. Das Ergebnis ist 3. Diese Übersicht zeigt die gängigen numerischen Operatoren:
 
 | Operator | Operation      | Beispiel       |
@@ -254,7 +257,6 @@ In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil woll
 | –        | Subtraktion    | 3 - 2 ergibt 1 |
 | *        | Multiplikation | 2 * 3 ergibt 6 |
 | /        | Division       | 6 / 2 ergibt 3 |
-
 
 Numerische Operatoren sind ein Typ der verfügbaren Operatoren. 4D unterstützt viele verschiedene Datentypen, wie Zahlen, Text, Datum und Bilder. So gibt es auch Operatoren, um Operationen mit den verschiedenen Datentypen auszuführen.
 
@@ -273,7 +275,7 @@ Ausdrücke werden gesetzt und geben einen Wert zurück. Tatsächlich verwenden S
 
 Ausdrücke setzen sich aus fast allen anderen Teilen der Programmiersprache zusammen: Befehle, Operatoren, Variablen, Felder, Objekteigenschaften und Elemente von Collections. Mit Ausdrücken erstellen Sie Anweisungen (Code-Zeilen), die sie dann zum Erstellen von Methoden verwenden. Die Programmiersprache verwendet Ausdrücke überall, wo sie einen Teil von Daten braucht.
 
-Ausdrücke sind selten eigenständig. Es gibt jedoch einige Stellen in 4D, wo sich ein Ausdruck allein verwenden lässt. Das gilt für:
+Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Das gilt für:
 
 - Formulareditor (Formel anwenden, Suche mit Formel, Sortiere nach Formel)
 - Befehl `EXECUTE FORMULA`
@@ -281,41 +283,40 @@ Ausdrücke sind selten eigenständig. Es gibt jedoch einige Stellen in 4D, wo si
 - Debugger, wo sich der Wert des Ausdrucks prüfen lässt
 - Schnellberichteditor als Formel für eine Spalte
 
-### Ausdruckstypen
 
+### Ausdruckstypen
 Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es gibt folgende Typen. Die folgende Übersicht zeigt Beispiele für die verschiedenen Ausdruckstypen.
 
-| Ausdruck                 | Typ                | Description                                                                                                                                                                        |
-| ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String             | Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.                                                                                                |
-| “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                            |
-| “Mr. ” + [People]Name    | String             | Zwei Strings werden zusammengefügt: der String "Mr. ” und der aktuelle Wert des Feldes Name in der Tabelle People. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück. |
-| Uppercase("smith")       | String             | Dieser Ausdruck verwendet den 4D Befehl `Uppercase`, um den String “smith” in Großbuchstaben umzuwandeln. Er gibt “SMITH” zurück.                                                  |
-| 4                        | Zahl               | Dies ist die numerische Konstante 4.                                                                                                                                               |
-| 4 * 2                    | Zahl               | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                        |
-| myButton                 | Zahl               | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.                     |
-| !1997-01-25!             | Datum              | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                            |
-| Current date+ 30         | Datum              | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.              |
-| ?8:05:30?                | Zeit               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                                   |
-| ?2:03:04? + ?1:02:03?    | Zeit               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                        |
-| Wahr                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                                   |
-| 10 # 20                  | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Zahlen. Das Nummernzeichen (#) bedeutet "ist ungleich zu". Da 10 "ungleich zu" 20 ist, gibt der Ausdruck TRUE zurück.               |
-| “ABC” = “XYZ”            | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Strings. Sie sind ungleich, also gibt der Ausdruck FALSE zurück.                                                                    |
-| My Picture + 50          | Bild               | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                          |
-| ->[People]Name           | Zeiger             | Dieser Ausdruck gibt einen Zeiger auf das Feld [People]Name zurück.                                                                                                                |
-| Table (1)                | Zeiger             | Dies ist ein Befehl, der einen Zeiger auf die erste Tabelle zurückgibt.                                                                                                            |
-| JSON Parse (MyString)    | Objekt             | Dies ist ein Befehl, der MyString als ein Objekt zurückgibt (bei geeignetem Format)                                                                                                |
-| JSON Parse (MyJSONArray) | Collection         | Dies ist ein Befehl, der MyJSONArray als eine Collection zurückgibt (bei geeignetem Format)                                                                                        |
-| Form.pageNumber          | Objekteigenschaft  | Eine Objekteigenschaft ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |
-| Col[5]                   | Collection Element | Ein Collection Element ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                      |
-| $entitySel[0]            | Entity             | Ein Element einer ORDA Entity-Selection ist ein Ausdruck vom Typ Entity. Diese Art Ausdruck ist **nicht-zuweisbar**                                                                |
-
+| Ausdruck                 | Typ                | Description                                                                                                                                                                  |
+| ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String             | Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.                                                                                          |
+| “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                      |
+| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück. |
+| Uppercase("smith")       | String             | Dieser Ausdruck verwendet den 4D Befehl `Uppercase`, um den String “smith” in Großbuchstaben umzuwandeln. Er gibt “SMITH” zurück.                                            |
+| 4                        | Zahl               | Dies ist die numerische Konstante 4.                                                                                                                                         |
+| 4 * 2                    | Zahl               | Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.                                                                                  |
+| myButton                 | Zahl               | Dies ist eine Variable, die einer Schaltfläche zugeordnet ist. Sie gibt den aktuellen Wert der Schaltfläche zurück: 1 wenn sie angeklickt wurde, 0 wenn nicht.               |
+| !1997-01-25!             | Datum              | Dies ist eine Datumskonstante für das Datum 1/25/97 (January 25, 1997).                                                                                                      |
+| Current date+ 30         | Datum              | Dies ist ein Datumsausdruck mit dem Befehl `Current date`, um das heutige Datum zu erhalten. Er fügt zum heutigen Datum 30 Tage hinzu und gibt das neue Datum zurück.        |
+| ?8:05:30?                | Zeit               | Dies ist eine Zeitkonstante, die 8 Stunden, 5 Minuten und 20 Sekunden darstellt.                                                                                             |
+| ?2:03:04? + ?1:02:03?    | Zeit               | Dieser Ausdruck fügt zwei Zeiten zusammen und gibt die Zeit 3:05:07 zurück.                                                                                                  |
+| Wahr                     | Boolean            | Dieser Befehl gibt den Boolean Wert TRUE zurück.                                                                                                                             |
+| 10 # 20                  | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Zahlen. Das Nummernzeichen (#) bedeutet "ist ungleich zu". Da 10 "ungleich zu" 20 ist, gibt der Ausdruck TRUE zurück.         |
+| “ABC” = “XYZ”            | Boolean            | Dies ist ein logischer Vergleich zwischen zwei Strings. Sie sind ungleich, also gibt der Ausdruck FALSE zurück.                                                              |
+| My Picture + 50          | Bild               | Dieser Ausdruck nimmt das Bild in My Picture, verschiebt es um 50 Pixel nach rechts und gibt das verschobene Bild zurück.                                                    |
+| ->[People]Name           | Zeiger             | Dieser Ausdruck gibt einen Zeiger auf das Feld [People]Name zurück.                                                                                                          |
+| Table (1)                | Zeiger             | Dies ist ein Befehl, der einen Zeiger auf die erste Tabelle zurückgibt.                                                                                                      |
+| JSON Parse (MyString)    | Objekt             | Dies ist ein Befehl, der MyString als ein Objekt zurückgibt (bei geeignetem Format)                                                                                          |
+| JSON Parse (MyJSONArray) | Collection         | Dies ist ein Befehl, der MyJSONArray als eine Collection zurückgibt (bei geeignetem Format)                                                                                  |
+| Form.pageNumber          | Objekteigenschaft  | Eine Objekteigenschaft ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                |
+| Col[5]                   | Collection Element | Ein Collection Element ist ein Ausdruck, der jeder unterstützte Typ sein kann                                                                                                |
+| $entitySel[0]            | Entity             | Ein Element einer ORDA Entity-Selection ist ein Ausdruck vom Typ Entity. This kind of expression is **non-assignable**                                                       |
 
 ### Zuweisbare und nicht-zuweisbare Ausdrücke
 
-Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String "Hello", oder eine Variable wie `$myButton`. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. Diese Ausdrücke sind in allen Fällen **nicht-zuweisbar**, d.h. Sie können ihnen keinen Wert zuweisen. In 4D können Ausdrücke **zuweisbar** sein. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:
+Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String "Hello", oder eine Variable wie `$myButton`. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:
 
-```4d
+```4d  
 //$myVar variable is assignable, you can write:  
 $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageNumber is assignable, you can write:  
@@ -323,14 +324,14 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-
 Im allgemeinen sind Ausdrücke mit Operator nicht-zuweisbar. Beispiel: `[Person]FirstName+" "+[Person]LastName` ist nicht zuweisbar.
+
 
 ## Zeiger
 
 Die 4D Programmiersprache bietet eine fortschrittliche Implementierung von Zeigern zum Schreiben von leistungsfähigem und modularem Code. Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und Array Elemente verweisen.
 
-Ein Zeiger wird mit dem Symbol "->" vor dem Elementnamen erstellt und durch das Symbol "->" nach dem Elementnamen wieder aufgelöst (dereferenziert).
+A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
 
 ```4d
 MyVar:="Hello"
@@ -364,16 +365,16 @@ For($vCounter;1;100) //Starting loop
 
 #### Ein- oder mehrzeilige Kommentare (/* */)
 
-Umklammern Sie den Inhalt mit `/*` ... `*/` Zeichen zum Erstellen von eingebundenen Kommentaren oder mehrzeiligen Kommentarblöcken. Beide Arten beginnen mit ` /*` und enden mit `*/`.
+Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
-- **Eingebundene Kommentare** können überall im Code eingefügt werden. Beispiel:
+- **Inline comments** can be inserted anywhere in the code. Beispiel:
 
 ```4d
 Für /* eingebundenen Kommentar */ ($vCounter;1;100)...
 End for
 ```
 
-- **Mehrzeilige Kommentarblöcke** können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
 
 ```4d
 For ($vCounter;1;100)

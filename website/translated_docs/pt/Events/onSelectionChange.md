@@ -12,8 +12,8 @@ title: On Selection Change
 
 This event can be generated in different contexts.
 
-### 4D View Pro
 
+### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 | Property      | Type    | Description                    |
@@ -24,7 +24,6 @@ The current selection of rows or columns is modified. In this context, the [even
 | sheetName     | text    | Name of the sheet of the event |
 | oldSelections | object  | Cell range before change       |
 | newSelections | object  | Cell range after change        |
-
 
 #### Example
 
@@ -39,14 +38,17 @@ The current selection of rows or columns is modified. In this context, the [even
 
 The current record or the current selection of rows is modified in a list form.
 
+
 ### Hierarchical list
 
 This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
+
 
 ### Input & 4D Write Pro
 
 The text selection or the position of the cursor in the area is modified following a click or a keystroke.
 
-### List box
 
+### List box
 This event is generated each time the current selection of rows or columns of the list box is modified.
+

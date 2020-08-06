@@ -20,8 +20,9 @@ Chaque requête REST est gérée via une session spécifique sur le serveur 4D.
 
 When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
 
-    WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
-    
+```
+WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
+```
 
 In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
 
@@ -83,3 +84,6 @@ $headerValues{1}:=$uuid
 COPY ARRAY($headerNames;$1->)
 COPY ARRAY($headerValues;$2->)
 ```
+
+
+

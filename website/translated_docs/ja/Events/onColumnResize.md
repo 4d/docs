@@ -29,7 +29,6 @@ This event is generated when the width of a column is modified by a user. On thi
 | range       | オブジェクト | Cell range of the columns whose widths have changed                 |
 | header      | ブール    | True if the row header column (first column) is resized, else false |
 
-
 #### 例題
 
 ```4d

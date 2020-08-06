@@ -21,7 +21,6 @@ This event is generated when the height of a row is modified by a user in a 4D V
 | range       | オブジェクト | Cell range of the rows whose heights have changed                |
 | header      | ブール    | True if the column header row (first row) is resized, else false |
 
-
 #### 例題
 
 ```4d

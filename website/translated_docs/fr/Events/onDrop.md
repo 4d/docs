@@ -14,6 +14,7 @@ The `On Drop` event is sent once to the destination object when the mouse pointe
 
 This event is not sent to the object if the drag was not accepted during the [`On Drag Over`](onDragOver.md) events. If you process the `On Drag Over` event for an object and reject a drag, the `On Drop` event does not occur. Thus, if during the `On Drag Over` event you have tested the data type compatibility between the source and destination objects and have accepted a possible drop, you do not need to re-test the data during the `On Drop`. You already know that the data is suitable for the destination object.
 
-#### Voir également
 
+
+#### Voir également
 [`Sur début survol`](onBeginDragOver.md)

@@ -7,7 +7,7 @@ title: Zeit
 - Zeiten werden im 24 Stundenformat angezeigt.
 - Ein Wert vom Typ Zeit kann wie eine Zahl behandelt werden. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
 
-**Hinweis:** Im Handbuch 4D Programmiersprache werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
+**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
 ## Zeitformate
 
@@ -25,7 +25,7 @@ Hier ein paar Beispiele:
 
 Eine Nullzeit wird als ?00:00:00? angegeben
 
-**Tipp:** Der Methodeneditor hat ein Tastaturkürzel für Nullzeit. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.
+**Tip:** The Method Editor includes a shortcut for entering a null time. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.
 
 ## Zeitoperatoren
 
@@ -44,15 +44,14 @@ Eine Nullzeit wird als ?00:00:00? angegeben
 |                         |              |         | ?01:02:03? = ?01:02:04? | Falsch     |
 | Ungleichheit            | Zeit # Zeit  | Boolean | ?01:02:03? # ?01:02:04? | Wahr       |
 |                         |              |         | ?01:02:03? # ?01:02:03? | Falsch     |
-| Größer als              | Zeit > Zeit  | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
+| Größer als              | Time > Time  | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:03? > ?01:02:03? | Falsch     |
-| Kleiner als             | Zeit < Zeit  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
+| Kleiner als             | Time < Time  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
 |                         |              |         | ?01:02:03? < ?01:02:03? | Falsch     |
-| Größer als oder gleich  | Zeit >= Zeit | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
+| Größer als oder gleich  | Time >= Time | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:03? >=?01:02:04? | Falsch     |
-| Kleiner als oder gleich | Zeit <= Time | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
+| Kleiner als oder gleich | Time <= Time | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:04? <=?01:02:03? | Falsch     |
-
 
 ### Beispiel 1
 
@@ -85,3 +84,4 @@ $t1:=?23:00:00? // It is 23:00 p.m.
 $t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
 ```
+
