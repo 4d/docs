@@ -5,7 +5,7 @@ title: '$filter'
 
 
  
-Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
 
 
 ## Description
@@ -18,7 +18,7 @@ Un filtre est composé des éléments suivants :
 
 **{attribut} {comparateur} {valeur}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=` est le **comparateur** et `john` est la **valeur**.
 
 ### Utiliser un filtre complexe
 
@@ -42,14 +42,14 @@ Pour plus d'informations sur la façon de rechercher des données dans 4D, repor
 > 
 > <li>Guillemets ('): \u0027 <li>Guillemets doubles ("): \u0022
 > 
-> For example, you can write the following when passing a value with a quote when using the *params* property:  
+> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 > 
 > Si vous passez la valeur directement, vous pouvez écrire ce qui suit :   `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Attribut
 
-If the attribute is in the same dataclass, you can just pass it directly (*e.g.*, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (*e.g.*, employer.name). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
+Si l'attribut se trouve dans la même dataclass, vous pouvez simplement le passer directement (par exemple, `firstName`). Cependant, si vous souhaitez lancer une requête dans une autre dataclass, vous devez inclure le nom de l'attribut relationnel et le nom d'attribut, c'est-à-dire le chemin d'accès (par exemple, employeur.nom). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
 
 Vous pouvez également rechercher des attributs de type Objet en utilisant la notation par points. Par exemple, si vous avez un attribut dont le nom est "objAttribute" avec la structure suivante :
 
