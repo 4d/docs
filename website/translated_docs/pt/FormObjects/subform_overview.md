@@ -7,16 +7,18 @@ title: Subform
 
 A subform is a form included in another form.
 
+
 ### Terminology
 
 In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
 
-* **Subform**: a form intended for inclusion in another form, itself called the parent form.
-* **Parent form**: a form containing one or more subform(s).
-* **Subform container**: an object included in the parent form, displaying an instance of the subform.
-* **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-* **List form**: instance of subform displayed as a list.
-* **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
+*   **Subform**: a form intended for inclusion in another form, itself called the parent form.
+*   **Parent form**: a form containing one or more subform(s).
+*   **Subform container**: an object included in the parent form, displaying an instance of the subform.
+*   **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
+*   **List form**: instance of subform displayed as a list.
+*   **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
+
 
 ## List subforms
 
@@ -29,6 +31,7 @@ Although list subforms are generally associated with Many tables, a subform inst
 You can also allow the user to enter data in the List form. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
 
 > 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
+
 
 ## Page subforms
 
@@ -49,7 +52,6 @@ Both objects (time variable and subform container) *have the same variable name*
 When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
 
 #### Updating subform contents
-
 Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
 
 In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
@@ -103,7 +105,6 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 ![](assets/en/FormObjects/subforms5.png)
 
 ### Advanced inter-form programming
-
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
 4D has implemented the following mechanisms to meet these needs:
@@ -112,8 +113,8 @@ Communication between the parent form and the instances of the subform may requi
 - Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
 - Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
 
-#### Object get pointer and Object get name commands
 
+#### Object get pointer and Object get name commands
 In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
 
 For example, the following statement:
@@ -133,7 +134,6 @@ The code of the event is unrestricted (for example, 20000 or -100). You can use 
 For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
 
 #### EXECUTE METHOD IN SUBFORM command
-
 The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
 
 This mechanism is illustrated in the following diagram:
@@ -143,9 +143,10 @@ This mechanism is illustrated in the following diagram:
 For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
 
 #### GOTO OBJECT command
-
 The `GOTO OBJECT` command looks for the destination object in the parent form even if it is executed from a subform.
+
+
 
 ## Supported Properties
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
