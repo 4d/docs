@@ -1,6 +1,6 @@
 ---
 id: cryptoClass
-title: CryptoKey Class
+title: CryptoKey 
 ---
 
 ## Overview
@@ -9,18 +9,8 @@ The `CryptoKey` class in the 4D language encapsulates an asymetric encryption ke
 
 This class is available from the `4D` class store.
 
-### `cryptoKey` object properties
 
-A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties (all are read-only):
-
-|Property|Type|Description|
-|---|---|---|
-|type|text|Name of the key type. For example: "ECDSA" or "RSA".|
-|size|integer|Defined only for RSA keys: the size of the key in bits. Typically 2048|
-|curve|text|Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1"|
-
-### Example
-
+**Example**
 
 The following example signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
 
@@ -37,17 +27,52 @@ $status:=$key.verify($message;$signature;New object("hash";"HASH256"))
 ASSERT($status.success)
 ```
 
-## 4D.CryptoKey.new()
+
+## Properties
+
+A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) function. It has the following properties (all are read-only):
+
+|Property|Type|Description|
+|----|----|-----------|
+|type|text|Name of the key type. For example: "ECDSA" or "RSA".|
+|size| integer|Defined only for RSA keys: the size of the key in bits. Typically 2048|
+|curve|text | Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1"|
+
+
+
+
+
+## Functions
+
+
+|Summary|
+|---|
+|[**4D.CryptoKey.new**( *settings* ) -> keyPair](#new-)|
+|creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition|
+|[**.getPrivateKey( )**  -> privateKey](#getprivatekey-)| 
+|returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available|
+|[**.getPublicKey**( ) -> publicKey](#getpublickey-) |
+|returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available |
+|[**.sign**( *message* ; *options*) -> signature](#sign-) |
+|signs the utf8 representation of a `message` string using the `cryptoKey` object keys and provided `options`. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed |
+|[**.verify**( *message* ; *signature* ; *options* ) -> status](#verify-)|
+|verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`|
+|[**.encrypt**( *message* ; *options* ) -> encrypted message](#encrypt-)|
+|encrypts the `message` parameter using the **public** key|
+|[**.decrypt**( *message* ; *options* ) -> status](#decrypt-)|
+|decrypts the `message` parameter using the **private** key|
+
+
+
+### .new( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### 4D.CryptoKey.new(settings) -> keyPair
-
+**4D.CryptoKey.new**( *settings* ) -> keyPair
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |settings||object|->|Settings to generate or load a key pair|  
@@ -58,66 +83,76 @@ ASSERT($status.success)
 ||||||
 |keyPair||object|<-|Object encapsulating an encryption key pair|
 
-This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
-Pass the type of key in the `type` property of the `settings` parameter:
+##### Description
+The `.new( )` function  creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
-- "RSA": generates an RSA key pair, using `settings.size` as size.
-- "ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as curve. Note that ECDSA keys cannot be used for encryption but only for signature.
-- "PEM": loads a key pair definition in PEM format, using `settings.pem`.
+Pass the type of key in the *type* property of the *settings* parameter:
 
-The resulting `keyPair` object is a shared object and can therefore be used by multiple 4D processes simultaneously.
+*	"RSA": generates an RSA key pair, using `settings.size` as size.
+*	"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as curve. Note that ECDSA keys cannot be used for encryption but only for signature.
+*	"PEM": loads a key pair definition in PEM format, using `settings.pem`.
 
 
-## cryptoKey.getPrivateKey()
+**Returned value**
+
+A `keyPair` object which is a shared object and can therefore be used by multiple 4D processes simultaneously.
+
+
+### .getPrivateKey( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.getPrivateKey() -> privateKey
-
+**.getPrivateKey( )**  -> privateKey
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 ||||||
 |privateKey||text|<-|Private key in PEM format|
 
-This method returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+##### Description
+The `.getPrivateKey( )` function  returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available. 
+
+**Returned value**
+
+A private key.
 
 
-## cryptoKey.getPublicKey()
+### .getPublicKey( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.getPublicKey() -> publicKey
-
+**.getPublicKey**( ) -> publicKey
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 ||||||
 |publicKey||text|<-|Public key in PEM format|
 
-This method returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+
+##### Description
+The `.getPublicKey( )` function returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+
+**Returned value**
+
+A public key.
 
 
-## cryptoKey.sign()
+### .sign( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.sign(message;options) -> signature
-
+**.sign**( *message* ; *options*) -> signature
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to sign|  
@@ -128,21 +163,26 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 ||||||
 |signature||text|<-|Resulting signature in Base64 or Base64URL representation, depending on "encoding" option|
 
-This method signs the utf8 representation of a `message` string using the `cryptoKey` object keys and provided `options`. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+
+##### Description
+The `.sign( )` function signs the utf8 representation of a `message` string using the `cryptoKey` object keys and provided `options`. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 The `cryptoKey` must contain a valid **private** key.
 
-## cryptoKey.verify()
+**Returned value**
+
+A signature.
+
+
+### .verify( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.verify(message;signature;options) -> status
-
+**.verify**( *message* ; *signature* ; *options* ) -> status
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string that was used to produce the signature|  
@@ -156,25 +196,31 @@ The `cryptoKey` must contain a valid **private** key.
 ||success|boolean||True if the signature matches the message|
 ||errors|collection||If `success` is `false`, may contain a collection of errors|
 
-This method verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`. 
 
-The method returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches). 
+##### Description
+The `.verify( )` function verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`.
+
+The function returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches). 
 
 In case the signature couldn't be verified because it was not signed with the same `message`, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
 The `cryptoKey` must contain a valid **public** key.
 
-## cryptoKey.encrypt()
+
+**Returned value**
+
+A status object.
+
+
+### .encrypt( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.encrypt(message;options) -> result
-
+**.encrypt**( *message* ; *options* ) -> encrypted message
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to be encoded using options.encodingDecrypted and encrypted.|  
@@ -185,23 +231,26 @@ The `cryptoKey` must contain a valid **public** key.
 ||||||
 |result||text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 
-This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
+
+##### Description
+The `.encrypt( )` function encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
+**Returned value**
+
+Encrypted message.
 
 
-## cryptoKey.decrypt()
+### .decrypt( )
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R4|Added
 </details>
 
-#### cryptoKey.decrypt(message;options) -> status
-
+**.decrypt**( *message* ; *options* ) -> status
 |Parameter|Property|Type||Description|
 |---|---|----|---|---|
 |message||text|->|Message string to be decoded using options.encodingEncrypted and decrypted.|  
@@ -215,11 +264,23 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 ||result|text||Message decrypted and decoded using the `options.encodingDecrypted`|
 ||errors|collection||If `success` is `false`, may contain a collection of errors|
 
-This method decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
+
+##### Description
+The `.decrypt( )` function decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-The method returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
+
+**Returned value**
+
+The function returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
 
 In case the `message` couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+
+
+
+
+
+
+
 

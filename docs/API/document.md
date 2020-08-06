@@ -20,18 +20,18 @@ title: Document Class
 |<!-- REF document.isAlias -->isAlias<!-- END REF -->|<!-- REF #document.isAlias.type -->Boolean<!-- END REF --> |<!-- REF #document.isAlias.Summary -->Returns **true** if the file is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.isFile -->isFile <!-- END REF -->|<!-- REF #document.isFile.type -->Boolean<!-- END REF --> |<!-- REF #document.isFile.Summary -->Always returns **true** for a file. This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.isFolder -->isFolder<!-- END REF -->|<!-- REF #document.isFolder.type -->Boolean<!-- END REF --> |<!-- REF #document.isFolder.Summary -->Always returns **false** for a file. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF document.isWritable -->isWritable<!-- END REF -->|<!-- REF #document.isWritable.type -->Boolean<!-- END REF --> |<!-- REF #document.isWritable.Summary -->Returns **true** if the file exists on disk and is writable. **Note**: The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. This property is **read-only**.<!-- END REF -->| 
+|<!-- REF document.isWritable -->isWritable<!-- END REF -->|<!-- REF #document.isWritable.type -->Boolean<!-- END REF --> |<!-- REF #document.isWritable.Summary --><ul><li>**File**: Returns **true** if the file exists on disk and is writable. **Note**: The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. This property is **read-only**.</li><li>**ZIP archive**: Always **false**.</li></ul><!-- END REF -->| 
 |<!-- REF document.modificationDate -->modificationDate<!-- END REF -->| <!-- REF #document.modificationDate.type -->Date<!-- END REF -->|<!-- REF #document.modificationDate.Summary --> Returns the date of the file's last modification. This property is **read-only**.<!-- END REF -->| 
 |<!-- REF document.modificationTime -->modificationTime<!-- END REF -->|<!-- REF #document.modificationTime.type -->Time<!-- END REF --> |<!-- REF #document.modificationTime.Summary -->Returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.name -->name<!-- END REF -->|<!-- REF #document.name.type -->Text<!-- END REF --> |<!-- REF #document.name.Summary --> Returns the name of the file, without extension (if any). This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.original -->original <!-- END REF -->|<!-- REF #document.original.type -->Object<!-- END REF --> |<!-- REF #document.original.Summary -->Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.parent -->parent<!-- END REF -->|<!-- REF #document.parent.type -->Object<!-- END REF --> |<!-- REF #document.parent.Summary -->Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.path -->path<!-- END REF -->|<!-- REF #document.path.type -->Text<!-- END REF --> |<!-- REF #document.path.Summary -->Returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.<!-- END REF -->|
+|<!-- REF document.path -->path<!-- END REF -->|<!-- REF #document.path.type -->Text<!-- END REF --> |<!-- REF #document.path.Summary --><ul><li>**File**: Returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul><!-- END REF -->|
 |<!-- REF document.platformPath -->platformPath<!-- END REF -->|<!-- REF #document.platformPath.type -->Text<!-- END REF -->  |<!-- REF #document.platformPath.Summary -->Returns the path of the file expressed with the current platform syntax. This property is **read-only**.<!-- END REF -->|
 |<!-- REF document.size -->size<!-- END REF -->|<!-- REF #document.size.type -->Number<!-- END REF -->  |<!-- REF #document.size.Summary -->Returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0. This property is **read-only**.<!-- END REF -->|
 <!-- END REF -->
 
-## Methods
+## Functions
 
 
 
@@ -45,26 +45,26 @@ title: Document Class
 </details>
 
 <!-- REF #document.copyTo().Syntax -->
-**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> Result<!-- END REF -->
+**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder | Object |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Longint|->|`fk overwrite` to replace existing elements|
-|Result|Object|<-|Copied file or folder|
+|destinationFolder | object |->|Destination folder|
+|newName|text|->|Name for the copy|
+|overwrite|longint|->|`fk overwrite` to replace existing elements|
+|Result|object|<-|Copied file or folder|
 <!-- END REF -->
 
 
 ##### Description
-The `.copyTo( )` method  <!-- REF #document.copyTo().Summary -->copies a `File` or `Folder` object (source file/folder) into the specified *destinationFolder* <!-- END REF -->.
+The `.copyTo( )` function  <!-- REF #document.copyTo().Summary -->copies a `File` object (source file/folder) into the specified *destinationFolder* <!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
-By default, the file or folder is copied with the name of the original file or folder. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
-If a file or folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 |Constant|Value|Comment|
 |---|---|---|
@@ -73,7 +73,7 @@ If a file or folder with the same name already exists in the *destinationFolder*
 
 **Returned value**
 
-The copied `File` or `Folder` object.
+The copied `File` object.
 
 ##### Example
 
@@ -85,14 +85,6 @@ $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
-
-```4d
-C_OBJECT($userImages;$copiedImages)
-$userImages:=Folder(fk documents folder+"/Pictures/")
-$copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
-```
- 
  <!-- END REF -->
 
 
@@ -107,7 +99,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )**  -> Result<!-- END REF -->
+**.getContent( )**  -> BLOB<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
 |Parameter|Type||Description|
@@ -117,7 +109,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 ##### Description
-The `.getContent( )` method  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+The `.getContent( )` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 **Returned value**
 
@@ -150,26 +142,26 @@ To save a document's contents in a `BLOB` field:
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* } ) -> Result<!-- END REF -->
+**.getIcon**( { *size* } ) -> picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|Longint|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|size|longint|->|Side length for the returned picture (pixels)|
+|Result|picture|<-|Icon|
 <!-- END REF -->
 
 
 ##### Description
-The `.getIcon( )` method returns <!-- REF #document.getIcon().Summary -->the icon of the file or folder<!-- END REF -->.
+The `.getIcon( )` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
-If the file or folder does not exist on disk, a default blank icon is returned.  
+If the file does not exist on disk, a default blank icon is returned.  
 
 **Returned value**
 
-File or folder icon [picture](../Concepts/picture.html).
+File icon [picture](../Concepts/picture.html).
 
 
 <!-- END REF -->
@@ -186,19 +178,19 @@ File or folder icon [picture](../Concepts/picture.html).
 </details>
 
 <!-- REF #document.getText().Syntax -->
-**.getText**( { *charSet* } { ; } { *breakMode*} ) -> Result<!-- END REF -->
+**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text<!-- END REF -->
 
 <!-- REF #document.getText().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|charSet |Text, Longint |-> |Name or number of character set|
-|breakMode|Longint |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|
+|charSet |text, longint |-> |Name or number of character set|
+|breakMode|longint |-> |Processing mode for line breaks|
+|Result |text  |<- |Text from the document|
 <!-- END REF -->
 
 
 ##### Description
-The `.getText( )` method <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+The `.getText( )` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
 In *charSet*, pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
 
@@ -230,10 +222,12 @@ Given the following text document (fields are separated by tabs):
 id name price vat
 3 thé 1.06€ 19.6
 2 café 1.05€ 19.6
-When you execute this code:
- ```
+```
 
- ```4d
+When you execute this code:
+ 
+
+```4d
  $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
  $txt:=$myFile.getText()
 ... you get:

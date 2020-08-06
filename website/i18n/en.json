@@ -11,20 +11,26 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
-      "API/cryptoClass": {
+      "API/cryptoKey": {
         "title": "CryptoKey Class"
       },
+      "API/cryptoClass": {
+        "title": "CryptoKey"
+      },
+      "API/directory": {
+        "title": "Directory Class"
+      },
       "API/document": {
-        "title": "Document"
+        "title": "Document Class"
       },
       "API/file_tech": {
         "title": "File and Folder Methods/Properties"
       },
       "API/file": {
-        "title": "File Methods"
+        "title": "File functions"
       },
       "API/fileClass": {
-        "title": "File Class"
+        "title": "File"
       },
       "API/fileMethodsandPropertiesandProperties": {
         "title": "File and Folder Methods"
@@ -33,10 +39,10 @@
         "title": "File and Folder Properties"
       },
       "API/folder": {
-        "title": "Folder Methods"
+        "title": "Folder Functions"
       },
       "API/folderClass": {
-        "title": "Folder Class"
+        "title": "Folder"
       },
       "Backup/backup": {
         "title": "Backup"
