@@ -20,9 +20,9 @@ title: Objects
 
 (*) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
+オブジェクト型の変数・フィールド・式を操作するには **オブジェクト (ランゲージ)** テーマのコマンドを使用するか、オブジェクト記法 ([オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) 参照)を用います。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 データベース内でオブジェクト記法が有効化されている場合 (以下参照)、4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
@@ -56,14 +56,14 @@ You manage Object type variables, fields or expressions using the commands avail
 
 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- using a "dot" symbol: > object.propertyName
+- "ドット"記号を使用する方法: > object.propertyName
 
 例:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- 大カッコ内の文字列を使用する方法: > object["propertyName"]
 
 例:
 ```4d
@@ -80,7 +80,7 @@ You manage Object type variables, fields or expressions using the commands avail
 ```
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). 例:
+- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -89,13 +89,13 @@ You manage Object type variables, fields or expressions using the commands avail
      $pop:=$aObjCountries{2}.population // オブジェクト配列
      $val:=$myCollection[3].subvalue // コレクション要素
 ```
-- **4D commands** that return objects. 例:
+- オブジェクトを返す **4D コマンド** 例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. 例:
+- オブジェクトを返す **プロジェクトメソッド** 例:
 
 ```4d
       // MyMethod1
@@ -106,14 +106,14 @@ You manage Object type variables, fields or expressions using the commands avail
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **コレクション** 例:
 
 ```4d
      myColl.length // コレクションの長さ
 ```
 
 ### ポインター
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
+**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
 
 ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
 
@@ -136,7 +136,7 @@ You manage Object type variables, fields or expressions using the commands avail
 
 ### Null 値
 
-When using the object notation, the **null** value is supported though the **Null** command. このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
+オブジェクト記法を使用する場合、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
@@ -159,7 +159,7 @@ When using the object notation, the **null** value is supported though the **Nul
       // $val=0
 ```
 
-- Reading the **length** property of an undefined collection produces 0:
+- 未定義のコレクションの **length** プロパティは 0 を返します:
 
 ```4d
      C_COLLECTION($c) // 変数は作成されたが、コレクションは未定義     $size:=$c.length // $size = 0

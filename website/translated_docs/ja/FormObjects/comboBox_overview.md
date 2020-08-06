@@ -11,7 +11,7 @@ title: コンボボックス
 
 コンボボックスの初期化方法は、ドロップダウンリストとまったく同じです 。 ユーザーがコンボボックスにテキストを入力すると、その値は配列の 0番目の要素に代入されます。 その他の点では、コンボボックスを入力エリアと同じように取り扱い、配列または選択リストを一連のデフォルト値として使用します。
 
-入力エリアへの入力内容は、入力エリアオブジェクトと同様に `On Data Change` イベントを使用して管理します。 For more information, refer to the description of the [Form event](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) command in the *4D Language Reference* manual.
+入力エリアへの入力内容は、入力エリアオブジェクトと同様に `On Data Change` イベントを使用して管理します。 詳細については、*4Dランゲージリファレンス* マニュアルの [Form event code](https://doc.4d.com/4Dv18/4D/18/Form-event-code.301-4505020.ja.html) コマンドの説明を参照ください。
 
 ## コンボボックスのオプション
 

@@ -31,7 +31,7 @@ title: BLOB
 // BLOB のポインターをメソッドに渡します
  COMPUTE BLOB(->anyBlobVar)
 ```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**プラグイン開発にあたっての注意:** BLOB 引数は “&O” (数字の0ではなく、アルファベットの"O") として宣言します。
 
 ## 代入
 

@@ -13,9 +13,9 @@ title: 文字列
 文字列リテラル定数は、次のように二重引用符 ("...") で囲んで表します。 文字列定数の例を次に示します:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"レコード追加"
+"レコードが見つかりません"
+"送り状"
 ```
 
 空の文字列は、2つの引用符の間に何も入れない状態 ("") で表します。
@@ -31,7 +31,7 @@ title: 文字列
 | \\\     | \ (バックスラッシュ) |
 | \\"      | " (引用符)       |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. 通常 4D はメソッドエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのメソッドエディターに記述する場合は "\\\\\" となる点に注意してください。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はメソッドエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのメソッドエディターに記述する場合は "\\\\\" となる点に注意してください。
 
 ## 文字列演算子
 
@@ -43,11 +43,11 @@ title: 文字列
 |          |                  |     | "abc" = "abd"           | False    |
 | 異なる      | 文字列 # 文字列        | ブール | "abc" # "abd"           | True     |
 |          |                  |     | "abc" # "abc"           | False    |
-| 大きい      | String > String  | ブール | "abd" > "abc"           | True     |
+| 大きい      | 文字列 > 文字列        | ブール | "abd" > "abc"           | True     |
 |          |                  |     | "abc" > "abc"           | False    |
-| 小さい      | String < String  | ブール | "abc" < "abd"           | True     |
+| 小さい      | 文字列 < 文字列        | ブール | "abc" < "abd"           | True     |
 |          |                  |     | "abc" < "abc"           | False    |
-| 以上       | String >= String | ブール | "abd" >= "abc"          | True     |
+| 以上       | 文字列 >= 文字列       | ブール | "abd" >= "abc"          | True     |
 |          |                  |     | "abc" >= "abd"          | False    |
 | 以下       | String <= String | ブール | "abc" <= "abd"          | True     |
 |          |                  |     | "abd" <= "abc"          | False    |
@@ -75,11 +75,11 @@ Character code("A")=Character code("a")
      "１"="1"
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**注:** 文字列比較にあたっては、**4D のデータファイルに定義された** 言語の特性が考慮されます。これは、システムの使用言語とは異なる場合がありえます。
 
 ### ワイルドカード記号 (@)
 
-The 4D language supports **@** as a wildcard character. ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません。 たとえば、次の式は `true` になります:
+4D ランゲージでは **@** をワイルドカード記号として使用します。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません。 たとえば、次の式は `true` になります:
 
 ```4d
 "abcdefghij"="abc@"
@@ -125,11 +125,11 @@ The 4D language supports **@** as a wildcard character. ワイルドカードは
 ```4d
 (Character code($vsValue[[Length($vsValue)]])=64)  
 ```
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**注:** ストラクチャー設定のデータベースページには、文字列に @ 記号が含まれているとき、それをどう解釈するかを指定するオプションが提供されています。
 
 ### キーワード
 
-他の文字列比較と異なり、"%" 記号を使ったキーワードによる検索はテキスト中の単語を検索します: 単語は一つのまとまりとして個々に扱われます。 The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). 区切り文字 (スペースや句読点など) に囲まれた文字列が単語として認識されます。 “Today's” のようにアポストロフィを含む単語は、通常それを含めた 1つの単語として扱われますが、特定の場合には無視されます (以下の注記を参照ください)。 数字も検索できます。小数点は区切り文字ではなく、数字の一部として扱われます。 ただし、通貨や温度などを表す記号は無視されます。
+他の文字列比較と異なり、"%" 記号を使ったキーワードによる検索はテキスト中の単語を検索します: 単語は一つのまとまりとして個々に扱われます。 複数の単語や、音節など単語の一部を検索するような場合、**%** 演算子は常に `false` を返します。 区切り文字 (スペースや句読点など) に囲まれた文字列が単語として認識されます。 “Today's” のようにアポストロフィを含む単語は、通常それを含めた 1つの単語として扱われますが、特定の場合には無視されます (以下の注記を参照ください)。 数字も検索できます。小数点は区切り文字ではなく、数字の一部として扱われます。 ただし、通貨や温度などを表す記号は無視されます。
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // true
@@ -138,7 +138,7 @@ The 4D language supports **@** as a wildcard character. ワイルドカードは
      "Alpha,Bravo,Charlie"%"Alpha" // true
      "Software and Computers"%"comput@" // true
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries) - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
+> **注:** - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries) - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
 
 ## 文字参照記号
 文字参照記号: [[...]]

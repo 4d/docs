@@ -25,9 +25,9 @@ title: オブジェクトライブラリ
 このウィンドウには次の主な機能があります:
 
 - Tips 付きプレビューエリア: 中央のエリアには各オブジェクトのプレビューが表示されます。 オブジェクトにマウスオーバーすると、オブジェクトに関する情報が Tips として表示されます。
-- You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
+- 表示オブジェクトは **カテゴリ** メニューを使って絞り込むことができます: ![](assets/en/FormEditor/library3.png)
 - ライブラリのオブジェクトをフォーム上で使うには:
-    - right-click on an object and select **Copy** in the contextual menu
+    - オブジェクト上で右クリックし、コンテキストメニューから **コピー** を選択してフォーム上で同様に **ペースト** するか、
     - ライブラリからオブジェクトをフォーム上にドラッグ＆ドロップします。 すると、フォームに当該オブジェクトが追加されます。
 
 設定済みオブジェクトライブラリは変更できません。 デフォルトオブジェクトを編集したり、設定済みオブジェクトやフォームのライブラリを独自に作るには、カスタムオブジェクトライブラリを作成します (後述参照)。
@@ -37,7 +37,7 @@ title: オブジェクトライブラリ
 
 ## カスタムオブジェクトライブラリの作成と使用
 
-4Dでカスタムオブジェクトライブラリを作成し、使用することができます。 A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects.
+4Dでカスタムオブジェクトライブラリを作成し、使用することができます。 カスタムオブジェクトライブラリとは、任意のオブジェクト (ボタン、テキスト、ピクチャー等) を格納する 4D プロジェクトです。 これらのオブジェクトは別のフォームやプロジェクトにて再利用することができます。
 
 オブジェクトはプロパティおよびオブジェクトメソッドとともに格納されます。 ライブラリはドラッグ＆ドロップや、コピー/ペースト操作で利用できます。
 
@@ -46,7 +46,7 @@ title: オブジェクトライブラリ
 
 ### オブジェクトライブラリの作成
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. 標準のファイル保存用のダイアログボックスが表示され、オブジェクトライブラリの名前と保存先を指定できます。
+オブジェクトライブラリを作成するには、**ファイル** メニューまたはツールバーから **新規 > オブジェクトライブラリ...** を選択します。 標準のファイル保存用のダイアログボックスが表示され、オブジェクトライブラリの名前と保存先を指定できます。
 
 ダイアログボックスを受け入れると、4D はディスク上に新しいオブジェクトライブラリを作成し、ウィンドウに表示します (デフォルトで空です)。
 
@@ -58,7 +58,7 @@ To create an object library, select **New>Object Library...** from the 4D **File
 
 一つのオブジェクトライブラリを複数のデータベースで同時に開くことはできませんが、 一つのデータベースで複数のライブラリを開くことは可能です。
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. 標準のファイルを開くダイアログボックスが表示され、オブジェクトライブラリを選択できます。 次のファイルタイプが選択できます:
+カスタムのオブジェクトライブラリを開くには、**ファイル** メニューまたはツールバーから **開く > オブジェクトライブラリ...** コマンドを選択します。 標準のファイルを開くダイアログボックスが表示され、オブジェクトライブラリを選択できます。 次のファイルタイプが選択できます:
 - **.4dproject**
 - **.4dz**
 
@@ -72,16 +72,16 @@ To open a custom object library, select **Open>Object Library...** command in th
 
 ドラッグ＆ドロップやコピー/ペースト操作で、オブジェクトをオブジェクトライブラリに配置できます。 オブジェクトは、フォームあるいは他のオブジェクトライブラリ ([標準のオブジェクトライブラリ](#標準のオブジェクトライブラリの使用) 含む) からコピーできます 。 元のオブジェクトとのリンクは保持されないため、オリジナルが編集されてもライブラリのオブジェクトには影響しません。
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> フォームからオブジェクトライブラリにドラッグ＆ドロップ操作をおこなうには、4D環境設定のフォームページにて **ドラッグ＆ドロップを開始** オプションを選択している必要があります。
 
 追加・削除・名称変更などの基本操作はコンテキストメニューあるいはウィンドウのオプションメニューから行えます:
 
 ![](assets/en/FormEditor/library5.png)
 
-- **Cut** or **Copy** to the pasteboard
-- **Paste** an object from the pasteboard
-- **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. ライブラリ内のオブジェクト名は一意のものでなくてはなりません。
+- ペーストボードへの **カット** または **コピー**
+- ペーストボードからオブジェクトを **ペースト**
+- **クリア** でライブラリからオブジェクトを削除
+- **名称変更** でダイアログが開き、オブジェクトの名前を変更することができます。 ライブラリ内のオブジェクト名は一意のものでなくてはなりません。
 
 
 オブジェクトライブラリには個々のオブジェクト (サブフォーム含む) やオブジェクトグループを格納できます。 それぞれのオブジェクトは1つのアイテムとしてグループ化されます:
