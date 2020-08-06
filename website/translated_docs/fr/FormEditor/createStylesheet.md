@@ -32,9 +32,9 @@ Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les f
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
-*   a *Selector* - A selector defines where to apply the style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
+*   un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
 
-*   a *Declaration* - The declaration defines the actual style to apply. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
+*   une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
 
 
 
@@ -49,7 +49,7 @@ Specify the object type, then in curly braces, declare the style(s) to apply.
 
 > The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
+Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -69,7 +69,7 @@ text, input {
 
 ### Nom d'objet
 
-Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
+Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -86,7 +86,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
 Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -118,7 +118,7 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
+Le caractère "*" correspond au **sélecteur universel** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
 
 Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -133,7 +133,7 @@ Dans l'exemple suivant, tous les objets auront un fond gris :
 
 ### Attributs spécifiques
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
+Les styles correspondent aux **sélecteurs d'attributs** et peuvent s'appliquer à tous les objets du formulaire avec un attribut spécifique.
 
 Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -196,7 +196,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
     - "class"
     - choiceList, excludedList, labels, list, requiredList (type liste)
 
-Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). For more information, see the **Dynamic Forms** page in the Design Reference.
+Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page **Formulaires dynamiques** dans le manuel du mode Développement.
 
 ### Mappage d'attributs
 
@@ -214,7 +214,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | textAlign      | text-align       |
 | textDecoration | text-decoration  |
 | verticalAlign  | vertical-align   |
-> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+> Les valeurs spécifiques à 4D (*ex :* "enfoncées") ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 
 ### Valeurs d'attributs spécifiques
@@ -295,7 +295,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
         ],
     ```
 
-> Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*e.g.*, "/RESOURCES", "/DATA")
+> Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 
 
@@ -308,12 +308,12 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.
 
-1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1.  Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
 
     ![](assets/en/FormEditor/stylesheets.png)
 
-2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2.  Choisissez le type de feuille de style que vous souhaitez créer et cliquez sur le bouton **Créer** ou **Editer** : ![](assets/en/FormEditor/createButton.png)
 
 3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.  
