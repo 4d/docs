@@ -5,6 +5,8 @@ node_modules
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 
+docsPostProcessed/
+
 website/build/
 website/yarn.lock
 website/node_modules
