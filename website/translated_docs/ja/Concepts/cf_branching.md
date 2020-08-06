@@ -16,7 +16,6 @@ title: 分岐構造
 ```
 
 `Else` 部分はオプションであり、省略して以下のように記述できます:
-
 ```4d
  If(Boolean_Expression)
     statement(s)
@@ -33,7 +32,7 @@ title: 分岐構造
  End if
 ```
 
-この場合、両方のメソッドが true である場合に限り、式は true になります。 しかしながら *MethodA* が FALSE あっても、4Dは*MethodB* も評価するため、これは時間の無駄になります。 この場合には、以下のような構造を使用するほうが賢明といえます:
+この場合、両方のメソッドが true である場合に限り、式は true になります。 しかしながら _MethodA_ が false であっても、4Dは_MethodB_ も評価するため、これは時間の無駄になります。 この場合には、以下のような構造を使用するほうが賢明といえます:
 
 ```4d
  If(MethodA)
@@ -43,7 +42,7 @@ title: 分岐構造
  End if
 ```
 
-上記の結果はほぼ同じで、*MethodB* は必要な場合にのみ評価されます。
+上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
 
 ### 例題
 
@@ -65,7 +64,6 @@ title: 分岐構造
     statement(s)
  End if
 ```
-
 または:
 
 ```4d
@@ -78,7 +76,6 @@ title: 分岐構造
 ## Case of...Else...End case
 
 `Case of...Else...End case` による制御フロー構造の正式な構文は以下のようになります:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -97,7 +94,6 @@ title: 分岐構造
 ```
 
 `Else` 部分はオプションであり、省略して以下のように記述できます:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -112,7 +108,6 @@ title: 分岐構造
        statement(s)
  End case
 ```
-
 `If...Else...End if` と同様に、`Case of...Else...End case` 構造も処理の選択肢をメソッドに与えます。 `If...Else...End` との違いは、`Case of...Else...End case` 構造が複数のブール式を評価し、その中から最初に true となるステートメントを実行することです。
 
 ブール式の前にはそれぞれコロン (`:`) を付けます。 コロンとブール式の組み合わせをケースと呼びます。 例えば以下の行はケースです:
@@ -167,9 +162,11 @@ title: 分岐構造
 ```4d
  Case of
     :(vResult=1)
-       ... //statement(s)
+       ...
+ // ステートメントなど
     :((vResult=1) & (vCondition#2)) // このケースが判定されることはありません
-       ... //statement(s)
+       ...
+ // ステートメントなど
  End case
 ```
 
@@ -178,16 +175,18 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 ```4d
  Case of
     :((vResult=1) & (vCondition#2)) // このケースが先に判定されます
-       ... //statement(s)
+       ...
+ // ステートメントなど
     :(vResult=1)
-       ... //statement(s)
+       ...
+ 
+// ステートメントなど
  End case
 ```
 
 さらに階層的なテストを実行したい場合、コードも階層化する必要があります。
 
 **Tip:** 分岐構造において、ケースに続くステートメントの記述は必須ではありません。 下のようなコードはどちらも有効です:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -202,7 +201,6 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 ```
 
 または:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -217,7 +215,6 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 ```
 
 または:
-
 ```4d
  Case of
     Else
