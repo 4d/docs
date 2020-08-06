@@ -28,7 +28,6 @@ This event is generated when the user doubl-clicks anywhere on a 4D View Pro doc
 | sheetName   | テキスト   | Name of the sheet of the event |
 | range       | オブジェクト | Cell range                     |
 
-
 #### 例題
 
 ```4d
