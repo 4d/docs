@@ -45,7 +45,6 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 Les collections doivent être initialisées à l'aide, par exemple, de la commande `Creer collection`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification d'un ou plusieurs élements de la collection.
 
 Exemple :
-
 ```4d
  C_COLLECTION($colVar) //création d'une variable 4D de type collection.
  $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
@@ -55,12 +54,12 @@ Exemple :
 
 Vous pouvez créer deux types de collections :
 
-- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process. 
-- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
+- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
 ## Méthodes de collection
 
-Les références de collections 4D bénéficient de méthodes spécifiques (souvent appelées *fonctions méthodes* ou *méthodes membres*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
+Les références de collections 4D bénéficient de méthodes spécifiques (souvent appelées *fonctions méthodes*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
 
 > {$result:=}myCollection.method( {params} )
 
@@ -80,12 +79,14 @@ Certaines méthodes retournent la collection d'origine après modification, de m
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
+
 ### paramètre cheminPropriété
 
-Plusieurs méthodes de collection admettent un *paramètre nommé cheminPropriété*. Ce paramètre peut contenir :
+
+Plusieurs méthodes de collection admettent un _paramètre nommé cheminPropriété_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
-- soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom". 
+- soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
 **Attention :** Lorsqu'un paramètre cheminPropriété est attendu, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin:
 
