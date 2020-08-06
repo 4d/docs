@@ -7,6 +7,10 @@ Si différentes personnes utilisent votre base de données, vous pouvez souhaite
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
+
+
+
+
 ## Définition des accès aux groupes
 
 Le système de gestion des accès de 4D est basé sur les notions d’utilisateurs et de groupes. Vous créez des noms d’utilisateurs et vous leur affectez un mot de passe, vous placez les utilisateurs dans des groupes, et vous assignez à chaque groupe les privilèges d’accès appropriés aux objets de la base.
@@ -17,15 +21,18 @@ L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et
 
 ![](assets/en/Users/Access1.png)
 
+
+
 ## Activer le contrôle des accès
 
-Le contrôle effectif des accès par mots de passe de 4D est activé par **l’affectation d’un mot de passe au Super_Utilisateur**.
+You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
 
-Tant que le Super_Utilisateur n’a pas de mot de passe, 4D permet à tout utilisateur d’accéder à toutes les parties de la base, même si vous avez défini des utilisateurs et des groupes (à l'ouverture de la base, aucune identification n'est requise). 
+Tant que le Super_Utilisateur n’a pas de mot de passe, 4D permet à tout utilisateur d’accéder à toutes les parties de la base, même si vous avez défini des utilisateurs et des groupes (à l'ouverture de la base, aucune identification n'est requise).
 
 Lorsqu’un mot de passe est affecté au Super_Utilisateur, tous les privilèges d’accès que vous avez affectés prennent effet. Pour pouvoir utiliser la base, les utilisateurs distants doivent alors saisir un mot de passe.
 
 Pour désactiver le système de restriction d’accès, il suffit de supprimer (mettre à blanc) le mot de passe du Super_Utilisateur.
+
 
 ## Utilisateurs et groupes dans l'architecture projet
 
@@ -39,6 +46,9 @@ Dans les bases projet (fichiers .4DProject ou .4dz), les utilisateurs et groupes
 | Contrôle d'accès une fois qu'un mot de passe a été affecté au Super_Utilisateur | non (tous les accès sont accordés au Super_Utilisateur) | oui       |
 
 
+
+
+
 ## Éditeur de boîte à outils
 
 Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils de 4D. Ces éditeurs peuvent être utilisés pour la création d'utilisateurs et de groupes, l'affectation de mots de passe aux utilisateurs, le placement d'utilisateurs dans des groupes, etc.
@@ -47,13 +57,16 @@ Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils 
 
 > L'éditeur d'utilisateurs et de groupes peut s'afficher à l'exécution à l'aide de la commande [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html). The whole users and groups configuration can also be edited during application execution using 4D language commands of the [Users and Groups](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.en.html) theme.
 
+
+
 ## Fichier directory.json
 
-Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans un fichier spécifique de la base nommé **directory.json**.
+Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
 
 Ce fichier peut être stocké dans les emplacements suivants :
 
-- dans le dossier de propriétés de la base utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans la base. 
-- dans le dossier de propriétés des données, c'est-à-dire dans le dossier "Settings" du dossier "Data". Si un fichier directory.json se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings de la base utilisateur. Cette fonctionnalité vous permet de définir des configurations Utilisateurs et Groupes personnalisées/locales. La configuration personnalisée ne sera pas affectée par des mises à niveau de la base. 
+- dans le dossier de propriétés de la base utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans la base.
+- dans le dossier de propriétés des données, c'est-à-dire dans le dossier "Settings" du dossier "Data". Si un fichier directory.json se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings de la base utilisateur. Cette fonctionnalité vous permet de définir des configurations Utilisateurs et Groupes personnalisées/locales. La configuration personnalisée ne sera pas affectée par des mises à niveau de la base.
 
 > Si la gestion des groupes et utilisateurs est inactive, le fichier directory.json n'est pas créé.
+
