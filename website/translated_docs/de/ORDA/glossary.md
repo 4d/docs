@@ -7,18 +7,20 @@ title: Glossary
 
 ![](assets/en/Orda/mainConcepts.png)
 
+
+
 ## Attribute
 
 An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
 
-* In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-* In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-
+*   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
+*   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
 > *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## AttributePath
 
 An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+
 
 ## Class code
 
@@ -35,6 +37,7 @@ For example, the `query()` class function is a function of dataclasses. If you h
 ```code4d
 $myClass.query("name = smith")
 ```
+
 
 ## Data model class
 
@@ -54,6 +57,7 @@ A dataclass is an object model that describes the data. Tables in the database p
 
 A dataclass is related to a single datastore.
 
+
 ## DataClass class
 
 Class for specific dataclass objects, in which you can add custom functions.
@@ -64,8 +68,8 @@ A datastore is the interface object provided by ORDA to reference a structure an
 
 A datastore provides:
 
-* a connection to the 4D database
-* a set of dataclasses to work with the database
+*   a connection to the 4D database
+*   a set of dataclasses to work with the database
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
@@ -74,6 +78,7 @@ A datastore references only a single database. It is, however, possible to open 
 ## DataStore class
 
 Class for datastore objects, in which you can add custom functions.
+
 
 ## DataStoreImplementation
 
@@ -101,15 +106,17 @@ An entity selection is an object. When querying the datastore, an entity selecti
 
 An entity selection contains:
 
-* a set of 0 to X entity references,
-* a length property (always),
-* queryPlan and queryPath properties (if asked while querying).
+*   a set of 0 to X entity references,
+*   a length property (always),
+*   queryPlan and queryPath properties (if asked while querying).
 
 An entity selection can also be empty.
+
 
 ## Generic class
 
 Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
+
 
 ## Lazy loading
 
@@ -127,16 +134,16 @@ See [class function](#class-function).
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Das gilt für:
 
-* number
-* Text
-* Null
-* boolean
-* date
-* object
-* collection
-* picture(\*)
+*   number
+*   Text
+*   Null
+*   boolean
+*   date
+*   object
+*   collection
+*   picture(\*)
 
-*(*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
+*(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
 ## Optimistic Lock
 
@@ -149,7 +156,6 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## Property
 
 See [Attribute](#attribute).
-
 > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## PropertyPath
@@ -168,8 +174,8 @@ These are dataclasses linked by relation attributes.
 
 Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
 
-* Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-* One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
+*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
 
 A dataclass can have recursive relation attributes.
 
