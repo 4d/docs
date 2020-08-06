@@ -130,7 +130,7 @@ Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, o
 
 Cette méthode signe la représentation utf8 d'une chaîne `message` à l'aide des clés d'objet `cryptoKey` et des `options` fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
-The `cryptoKey` must contain a valid **private** key.
+La `cryptoKey` doit contenir une clé **privée** valide.
 
 ## cryptoKey.verify()
 
@@ -162,7 +162,7 @@ La méthode renvoie un objet `status` avec la propriété `success` définie sur
 
 Si la signature n'a pas pu être vérifiée car elle n'a pas été signée avec le même `message`, la clé ou l'algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 
-The `cryptoKey` must contain a valid **public** key.
+La `cryptoKey` doit contenir une clé **publique** valide.
 
 ## cryptoKey.encrypt()
 
@@ -185,7 +185,7 @@ The `cryptoKey` must contain a valid **public** key.
 |            |                   |        |    |                                                                                                                                                                               |
 | result     |                   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
-This method encrypts the `message` parameter using the **public** key. L'algorithme utilisé dépend du type de clé.
+Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -215,7 +215,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 |            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
 |            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 
-This method decrypts the `message` parameter using the **private** key. L'algorithme utilisé dépend du type de clé.
+Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
