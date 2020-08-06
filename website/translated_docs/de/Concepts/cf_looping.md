@@ -395,8 +395,8 @@ Wird *end* weggelassen oder ist *end* größer als die Anzahl Elemente in *Expre
 
 Beispiel:
 - Eine Collection enthält 10 Elemente (nummeriert von 0 bis 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- begin=-4 > -> begin=-4+10=6 >-> der Durchlauf startet mit dem 6. Element (#5)
+- end=-2 > end=-2+10=8 > der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element.
 
 #### Beispiel
 
@@ -419,7 +419,7 @@ Sie können die Ausführung von `For each...End for each` durch Einfügen einer 
 
 Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
+- Die Bedingung `Until` wird am Ende jedes Durchlaufs getestet, d. h. wenn *Expression* nicht leer oder null ist, wird die Schleife mindestens einmal ausgeführt.
 - Die Bedingung `While` wird am Anfang jedes Durchlaufs getestet, d. h. je nach Ergebnis der Bedingung wird die Schleife u. U. gar nicht ausgeführt.
 
 #### Beispiel
