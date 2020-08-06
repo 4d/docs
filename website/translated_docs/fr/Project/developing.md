@@ -63,14 +63,14 @@ However, you need to pay attention to the following behavior differences compare
 
 When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
-Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
 
 4D Developer comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes: ![](assets/en/Project/projectReload.png)
     - **Yes**: discard editor changes and reload the modified version
-    - **No**: save changes and overwrite the other version
-    - **Cancel**: do not save
+    - **Non** : enregistrer les modifications et écraser l'autre version
+    - **Annuler** : ne pas enregistrer
 
 This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
