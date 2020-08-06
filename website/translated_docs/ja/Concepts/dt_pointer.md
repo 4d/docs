@@ -7,7 +7,7 @@ title: ポインター
 
 ポインターは、(プログラミングにおける) データを参照するための高度な方法を提供します。 4D ランゲージ使用時にテーブル・フィールド・変数・配列等にアクセスするには、単純に名前を用います。 ですが、名前を使用しないでデータを参照する、またはアクセスした方が便利な場合もあります。 ポインターを使うとこれが実現できます。
 
-ポインターの背景にある概念は、日常生活でもよく使われています。 対象物を正確に知らないまま、それを示すことがあります。 For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+ポインターの背景にある概念は、日常生活でもよく使われています。 対象物を正確に知らないまま、それを示すことがあります。 たとえば、友人に対して "登録番号123ABDの車に乗ろう" と言わずに "君の車に乗ろう" と言う場合です。 つまり、"登録番号123ABDの車" を "君の車" で示したわけです。 この場合、"登録番号123ABDの車" はオブジェクトの名前で、"君の車" はオブジェクトを参照するためのポインターと考えることができます。
 
 対象物を明示しないで参照できると、非常に便利です。 たとえば、友人が新しい車に買い替えても、同じく "君の車" と言うことができます。 ポインターも同じように機能します。 たとえば、同じポインターがある時は数値フィールド "Age" を参照し、別の時には数値変数 "Old Age" を参照することもできます。 いずれの場合にもポインターは数値データを参照しており、それは計算に使用することができます。
 
@@ -30,22 +30,22 @@ title: ポインター
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar は、文字列 "Hello" を含む変数です。 $MyVar に対するポインターを作成します:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. ここでは、$MyVar を参照するポインターを取得します。 このポインターは、代入演算子 (:=) で $MyPointer に対して割り当てられます。
+ポインター記号 (->) は、"･･･に対するポインターを求める" ことを意味します。 この記号は、"ダッシュ" (-) の後に "大なり" (>) を付けて構成されます。 ここでは、$MyVar を参照するポインターを取得します。 このポインターは、代入演算子 (:=) で $MyPointer に対して割り当てられます。
 
 $MyPointer は、$MyVar に対するポインターを格納する変数です。 $MyPointer は、"Hello" という $MyVar の値を含みませんが、その値を参照することはできます。 以下の式は $MyVar の値を返します:
 ```4d
 $MyPointer->
 ```
 
-前述の式は、"Hello" という文字列を返します。 The -> symbol, when it follows a pointer, references the object pointed to. これをデリファレンス (参照外し) と呼びます。
+前述の式は、"Hello" という文字列を返します。 ポインター記号 (->) をポインターの後につけると、参照先の値を取得することができます。 これをデリファレンス (参照外し) と呼びます。
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
+ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 つまり、変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。 たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
 ```4d
 ALERT($MyPointer->)
 ```
@@ -54,7 +54,7 @@ $MyPointer を使用して $MyVar の値を変更することもできます。 
 ```4d
 $MyPointer->:="Goodbye"
 ```
-If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
+この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
@@ -194,11 +194,11 @@ takeTwo(->[myTable]myField;->$MyVar)
 
 各行について見ていきましょう:
 
-- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. 結果として、文字列 "Goodbye" が $MyVar に代入されます。
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. 結果としてアラートボックスには $MyVar の内容が表示されます。
+- $MyVar:="Hello" --> この行は、変数 $MyVar に "Hello" という文字列を代入しています。
+- $PointerOne:=->$MyVar --> 変数 $PointerOne に、変数 $MyVar へのポインターを代入します。
+- $PointerTwo:=->$PointerOne --> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入します。
+- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
+- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果としてアラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 ```4d
@@ -210,4 +210,4 @@ takeTwo(->[myTable]myField;->$MyVar)
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**重要:** デリファレンスを複数おこなうには括弧が必要です。
