@@ -231,7 +231,7 @@ A status object.
 ||||||
 |result||text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 <!-- END REF -->
-
+ 
 
 ##### Description
 The `.encrypt( )` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the `message` parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -239,7 +239,7 @@ The `.encrypt( )` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 **Returned value**
-
+ 
 Encrypted message.
 <!-- END REF -->
 

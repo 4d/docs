@@ -8,7 +8,7 @@ title: CryptoKey
 The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair. 
 
 This class is available from the `4D` class store.
-
+ 
 
 **Example**
 
