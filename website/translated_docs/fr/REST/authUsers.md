@@ -24,7 +24,7 @@ When a first valid REST request is received, the server creates the session and 
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 ```
 
-In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
+Assurez-vous, dans les requêtes REST, que ce cookie est inclus dans **l'en-tête "Cookie"** afin de réutiliser la même session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
 
 ### Exemple
 
