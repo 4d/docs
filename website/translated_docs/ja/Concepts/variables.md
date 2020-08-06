@@ -3,7 +3,7 @@ id: variables
 title: 変数
 ---
 
-4D のデータは、根本的に異なっている 2つの方法で保持されます。 **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
 
 データベースを作成する際には、フィールドに名前とデータタイプを指定します。 同様に、変数にも名前と [データタイプ](Concepts/data-types.md) を指定します。
 
@@ -13,7 +13,7 @@ title: 変数
 
 変数を作成するには、"コンパイラー" または "配列" テーマのコマンドを使って変数を宣言します。
 
-**Note:**Arrays are a particular type of variables. 配列とは、同じタイプの変数を番号付きで並べたものです。 詳細については [配列](Concepts/arrays.md) を参照ください。
+**注:** 配列とは、変数の一種です。 配列とは、同じタイプの変数を番号付きで並べたものです。 詳細については [配列](Concepts/arrays.md) を参照ください。
 
 たとえば、テキスト変数を宣言するには次のように書きます:
 
@@ -21,7 +21,7 @@ title: 変数
  C_TEXT(myText)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. たとえば、今日の日付に30日を加えた日付を保持する変数が必要な場合、以下のように書くことができます:
+**注:** この方法は推奨されませんが、単純に使用することによって変数を作成することもできます。フィールドのように、正式にそれらを定義することは必須ではありません。 たとえば、今日の日付に30日を加えた日付を保持する変数が必要な場合、以下のように書くことができます:
 
 ```4d
  MyDate:=Current date+30 // MyDateを作成し、そこに30日後の日付が代入されます
@@ -47,7 +47,7 @@ title: 変数
 
 ## 変数への代入
 
-変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). 代入演算子はフィールドに対してデータを代入する場合にも使います。
+変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、**変数にデータを代入する**と言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドに対してデータを代入する場合にも使います。
 
 代入演算子は、変数を作成し、変数にデータを代入するために使用します。 作成する変数名を代入演算子の左側に書きます。 たとえば:
 
@@ -55,15 +55,15 @@ title: 変数
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. MyNumber が既に存在していれば、そこに数値 3が代入されます。
+は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
+これで、_[Products]Size_ の値は3になります。 この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
 
 配列要素にデータを代入するには中カッコ ({...}) を使用します:
 
@@ -73,11 +73,11 @@ atNames{1}:="Richard"
 
 ## ローカル、プロセス、およびインタープロセス変数
 
-You can create three types of variables: **local**, **process**, and **interprocess**. これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
+**ローカル**、**プロセス**、および **インタープロセス** という、3種類の変数の変数を作成することができます。 これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
 
 ### ローカル変数
 
-ローカル変数はその名のとおりメソッド内でローカルであり、変数が作成されたメソッドの範囲内でのみ使用可能で、その他のメソッドからはアクセスできません。 Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+ローカル変数はその名のとおりメソッド内でローカルであり、変数が作成されたメソッドの範囲内でのみ使用可能で、その他のメソッドからはアクセスできません。 メソッド内でローカルであるというのは、正式には「スコープがローカルである」といいます。 ローカル変数は、その使用範囲をメソッド内に限定するために用います。
 
 ローカル変数は、以下のような目的のために使用されます:
 
@@ -100,7 +100,7 @@ You can create three types of variables: **local**, **process**, and **interproc
 
 このメソッドは、ユーザーに ID を入力するように要求します。 ローカル変数 $vsID にレスポンスが代入され、ユーザーが入力した ID に基づいた検索がおこなわれます。 このメソッドが終了した時点で、$vsID ローカル変数はメモリから消去されます。 この変数は 1回のみ、このメソッド内でしか使われないため、これ以上維持する必要はありません。
 
-**Note:** Parameters $1, $2... passed to methods are local variables. 詳細については [パラメーター](Concepts/parameters.md) を参照ください。
+**注:** メソッドに渡される $1, $2...等の引数はローカル変数です。 詳細については [パラメーター](Concepts/parameters.md) を参照ください。
 
 ### プロセス変数
 
@@ -108,7 +108,7 @@ You can create three types of variables: **local**, **process**, and **interproc
 
 プロセス変数には名前に付ける接頭辞がありません。 プロセス変数の名前は、最大31文字までの長さで指定できます。
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
+インタープリターモードでは、変数は動的にメモリ上に作成・消去されます。 これに対してコンパイルモードでは、作成したすべてのプロセス (ユーザープロセス) で同じプロセス変数定義が共有されますが、変数のインスタンスはプロセス毎に異なるものとなります。 たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
 
 バージョン6より、`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできるようになりました。 これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
 
@@ -116,7 +116,7 @@ In interpreted mode, variables are maintained dynamically; they are created and 
 - プロセス間のドラッグ＆ドロップ処理
 - クライアント/サーバーにおいて、クライアントマシン上のプロセスとサーバーマシン上のストアドプロシージャー間の通信
 
-For more information, see the chapter **Processes** and the description of these commands.
+詳細については **プロセス** の章と、各コマンドの説明を参照ください。
 
 ### インタープロセス変数
 
