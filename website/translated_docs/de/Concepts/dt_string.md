@@ -13,15 +13,14 @@ String ist der Oberbegriff für:
 Ein Stringformat steht zwischen geraden doppelten Anführungszeichen ("..."). Hier ein paar Beispiele für Stringformate:
 
 ```4d
-"Datensätze hinzufügen"
-"Keine Datensätze gefunden."
-"Rechnung"
+"Add Records"
+"No records found."
+"Invoice"
 ```
 
 Ein leerer String wird mit Anführungszeichen ohne etwas dazwischen angegeben ("").
 
 ### Escape Sequenzen
-
 In Strings lassen sich folgende Escape Sequenzen verwenden:
 
 | Escape Sequenz | Ersetzte Zeichen                          |
@@ -32,8 +31,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 | \\\         | \ (Backslash - umgekehrter Schrägstrich) |
 | \\"          | " (Anführungszeichen)                     |
 
-
-**Hinweis:** Das Zeichen \ wird unter Windows auch als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").</p> 
+**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
 
 ## String Operatoren
 
@@ -57,18 +55,16 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 |                         |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
 |                         | Bild % String    | Boolean | Picture_expr % "Mer"    | Wahr (*) |
 
-
 (*) Wenn das Schlüsselwort "Mer" dem Bild zugeordnet ist, das im Bildausdruck (Datenfeld oder Variable) gespeichert ist.
 
 ## String Vergleiche
 
-- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach href="dt_string.md#keywords">Schlüsselwort</a>, siehe unten).
+- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach   href="dt_string.md#keywords">Schlüsselwort</a>, siehe unten).
 - Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
-
 - Bei String Vergleichen werden diakritische Zeichen, wie z. B. Akzente ignoriert, Umlaute, wie ä, ö, ü werden dagegen berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
@@ -78,11 +74,11 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // and so on
 ```
 
-**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist nicht immer dasselbe wie die Sprache, die für das System definiert wurde.
+**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
 
 ### Joker Zeichen (@)
 
-Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
+The 4D language supports **@** as a wildcard character. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
@@ -128,8 +124,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
-
-**Hinweis:**In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
+**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
 
 ### Keywords
 
@@ -142,11 +137,9 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-
 > **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
 ## Character Reference Symbols
-
 The character reference symbols: [[...]]
 
 These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
@@ -185,16 +178,18 @@ When you use the character reference symbols, you must address existing characte
 - Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
 - Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
 
-    //Very bad and nasty thing to do, boo!
-     vsAnyText:=""
-     vsAnyText[[1]]:="A"
-    
+```
+//Very bad and nasty thing to do, boo!
+ vsAnyText:=""
+ vsAnyText[[1]]:="A"
+```
 
 will trigger the Runtime Error shown here:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Beispiel
+
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 
