@@ -25,12 +25,13 @@ In the 4D Language, there are several categories of methods. The category depend
 
 > The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
+
 ## Calling Project Methods
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
 - Subroutine
-- Object formula 
+- Object formula
 - Menu method
 - Process method
 - Event or Error catching method
@@ -81,6 +82,7 @@ Using subroutines, you make your code modular. This simply means dividing your c
 ```
 
 Even for someone who doesn’t know the project, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+
 
 ### Object formulas
 
@@ -146,6 +148,8 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
+
+
 Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
 ```4d
@@ -153,19 +157,18 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
 
+
 ### Process Methods
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
 ### Event and Error catching Methods
-
 An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
@@ -180,7 +183,6 @@ Project methods can call themselves. For example:
 This is called recursion. The 4D language fully supports recursion.
 
 Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
-
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
