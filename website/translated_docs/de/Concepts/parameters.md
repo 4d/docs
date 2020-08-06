@@ -16,8 +16,9 @@ ALERT("Hello")
 
 Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
 
-    $area:=$o.getArea(50;100)
-    
+```
+$area:=$o.getArea(50;100)
+```
 
 Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
 
@@ -28,7 +29,10 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 The parameters are separated by semicolons (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
 
 - [named variables](#named-parameters-class-functions) (class functions only), or
-- [sequentially numbered variables](#sequential-parameters) (methods and class functions). 
+- [sequentially numbered variables](#sequential-parameters) (methods and class functions).
+
+
+
 
 ## Named parameters (class functions)
 
@@ -38,19 +42,18 @@ Inside called class functions, parameter values are assigned to local variables.
 
 For example, when you call a `getArea()` function with two parameters:
 
-    $area:=$o.getArea(50;100)
-    
+```
+$area:=$o.getArea(50;100)
+```
 
 In the class function code, the value of each parameter is copied into the corresponding declared parameter:
 
-```4d
+```4d    
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-
 > If the type is not defined, the parameter will be defined as `Variant`.
-> 
 > [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Both syntaxes can be mixed. Beispiel:
 > 
 > ```4d
@@ -66,6 +69,7 @@ With named parameters, you can use the same data types as those which are [suppo
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
+
 
 ## Sequential parameters
 
@@ -101,9 +105,13 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 
 **Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
 
+
+
 ### Input/Output variables
 
 Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+
+
 
 ### Supported data types
 
@@ -139,7 +147,6 @@ In the `ChangeAge` method you can write:
 ```
 
 This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
-
 - check if all expected parameters are provided by comparing them to the `Null` value, or
 - preset parameter values, or
 - use them as empty values.
@@ -153,7 +160,6 @@ In the `ChangeAge` method above, both Age and Name properties are mandatory and 
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-
 Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
 
 Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
@@ -171,10 +177,10 @@ End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-
 The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
 
 With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+
 
 ### Declaring variables for sequential parameters
 
@@ -212,12 +218,10 @@ C_OBJECT($3)
 ```
 
 > For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
-
-```4d
+```4d  
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-
 See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
 
 Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
@@ -229,10 +233,10 @@ Parameter declaration is also mandatory in the following contexts (these context
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
+
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
 - Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Beispiel:
-
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
@@ -243,7 +247,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-````
+```
 
 ### Parameter indirection
 
@@ -279,7 +283,6 @@ This function is called in the following manner:
 In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
 
 Here is the function, named `MySum`:
-
 ```4d
  $Sum:=0
  For($i;2;Count parameters)
@@ -295,15 +298,17 @@ This function can now be called in various ways:
  Result:=MySum("000";1;18;4;23;17)
 ```
 
+
 As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
 ```4d
  C_LONGINT(${4})
 ```
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
+This command means that starting with the fourth  parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
 
 > The number in the declaration has to be a constant and not a variable.
+
 
 ## Returning values
 
@@ -320,6 +325,7 @@ Like for [input parameters](#named-parameters-class-functions), return parameter
 - the named syntax (class functions only), or
 - the sequential syntax (methods and class functions).
 
+
 ### Named syntax (class functions)
 
 You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Beispiel:
@@ -335,9 +341,11 @@ Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
+
 ### Sequential syntax
 
 The value to be returned is automatically put into the local variable `$0`.
+
 
 For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 
@@ -362,6 +370,8 @@ ALERT($0)
 ```
 
 In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+
+
 
 ## Optional parameters
 
@@ -397,14 +407,16 @@ The following example displays a text message and can insert the text into a doc
     End if
  End if
 ```
-
 After this project method has been added to your application, you can write:
 
-```4d
+```4d  
 APPEND TEXT(vtSomeText) //Will only display the  message
 APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
+
+
+
 
 ## Values or references
 
@@ -452,6 +464,7 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
 
 This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
 
+
 ### Particular cases: objects and collections
 
 You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
@@ -480,3 +493,5 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
 When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
 
 **4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
+
+
