@@ -4,8 +4,8 @@ title: Tableaux
 ---
 
 Un **tableau** est une série ordonnée de **variables** de même type. Chaque variable est appelée un **élément** du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un [élément zéro](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu'il existe quelques différences spécifiques.
-
 > Généralement, il est recommandé d'utiliser des **collections** plutôt que des **tableaux**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section [Collection](Concepts/dt_collection.md).
+
 
 ## Créer des tableaux
 
@@ -18,13 +18,11 @@ Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 ```
 
 Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :
-
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Enfin, cette ligne de code redimensionne le même tableau à 0 élément :
-
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
@@ -44,14 +42,14 @@ Vous référencez les éléments d'un tableau en utilisant des accolades ({…} 
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-
 Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (`For...End for`, `Repeat...Until` or `While...End while`), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.
 
 **Important :** Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.
 
-### Affecter un tableau à un autre
 
+### Affecter un tableau à un autre
 Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction `COPY ARRAY`.
+
 
 ## Utiliser l'élément zéro d'un tableau
 
@@ -80,12 +78,15 @@ Voici un autre exemple : vous souhaitez initialiser un objet de formulaire avec 
 
 (*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
 
+
 ## Tableaux à deux dimensions
 
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
 ```4d
-<br /><br /> ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
+
+
+ ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
 Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.
@@ -173,7 +174,6 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Texte           | (1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2 |
 | Heure           | (1+nombre d'éléments) * 4                                               |
 | Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
-
 
 **Notes :**
 
