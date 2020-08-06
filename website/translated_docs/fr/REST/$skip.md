@@ -3,7 +3,7 @@ id: skip
 title: '$skip'
 ---
 
-Starts the entity defined by this number in the collection (*e.g.*, `$skip=10`)
+Démarre l'entité définie par ce numéro dans la collection (par exemple, `$skip=10`)
 
 
 ## Description
