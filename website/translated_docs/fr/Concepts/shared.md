@@ -4,26 +4,23 @@ title: Objets et collections partagés
 ---
 
 ## Aperçu
-
-**Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Comparés aux [Variables interprocess](Concepts/variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **Process 4D préemptifs** : il peuvent être passés en paramètres (par référence) aux commandes telles que `New process` ou `CALL WORKER`.
+**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
 
 Les objets partagés et les collections partagées peuvent être stockés dans des variables déclarées à l'aide des commandes standard `C_OBJECT` et `C_COLLECTION`, mais doivent être instanciées à l'aide de commandes spécifiques :
 
 - pour créer un objet partagé, utilisez la commande `New shared object`,
 - pour créer une collection partagée, utilisez la commande `New shared collection`.
 
-**Note :** Des objets partagés et des collections partagées peuvent être définis comme propriétés d'objets/éléments de collections standard (non partagés).
+**Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
-Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Utiliser...Fin utiliser**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Utiliser...Fin utiliser**.
+In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
 Un catalogue unique et global, retourné par la commande `Storage`, est disponible à tout moment et depuis tout process de la base et de ses composants.
 
 ## Utilisation des objets et collections partagés
-
 Une fois instanciés à l'aide des commandes `Creer objet partage` ou `Creer collection partagee`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.
 
 ### Modification
-
 Les modifications suivantes peuvent être effectuées sur les objets partagés et les collections partagées :
 
 - ajout ou suppression de propriétés d'objets,
@@ -40,36 +37,32 @@ End Use
 
 Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. `Use` verrouille les propriétés de l'objet/la collection pour les autres threads (process), alors que le `End use` utiliser final déverrouille tous les objets et collections. Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à `Use...End use` génère une erreur. Lorsqu'un process appelle `Use...End use` avec un objet/une collection partagé(e) qui est déjà "utilisé(e)" par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à `End use` (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures `Use...End use` doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.
 
-L'assignation d'objets/collections partagé(e) s à des propriétés ou éléments d'autres objets/collections partagé(e) s est autorisée et entraîne la création de **groupes partagés**. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :
+Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :
 
 - L'appel de `Use` avec un objet/une collection partagé(e) appartenant à un groupe provoquera le verrouillage des propriétés/éléments de tous les objets/collections du groupe.
 - Un objet ou une collection partagé(e) peut appartenir à un seul groupe partagé. Une erreur est générée si vous tentez d'assigner un objet ou une collection appartenant déjà à un groupe à un groupe différent.
-- Les objets/collections groupé(e) s ne peuvent plus être dégroupé(e) s. Une fois inclus dans un groupe partagé, un objet ou une collection partagé(e) est lié(e) définitivement au groupe pendant toute la durée de la session. Même si toutes les références de l'objet/la collection sont supprimé(e) s des objets/collections parent(e) s, ils resteront liés. 
+- Les objets/collections groupé(e) s ne peuvent plus être dégroupé(e) s. Une fois inclus dans un groupe partagé, un objet ou une collection partagé(e) est lié(e) définitivement au groupe pendant toute la durée de la session. Même si toutes les références de l'objet/la collection sont supprimé(e) s des objets/collections parent(e) s, ils resteront liés.
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
-**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.
+**Note:** Shared groups are managed through an internal property named *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.
 
 ### Lecture
-
 La lecture de propriétés ou d'éléments d'un objet ou d'une collection partagé(e) est possible sans appel de la structure `Use...End use`, même si l'objet ou la collection partagé(e) est "utilisé(e)" par un autre process.
 
 Cependant, lorsque plusieurs valeurs sont interdépendantes et doivent être lues simultanément, il est nécessaire d'encadrer l'accès en lecture par une structure `Use...End use` pour des raisons de cohérence.
 
 ### Duplication
-
 Appeler `OB Copier` avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.
 
 ### Storage
+**Storage** is a unique shared object, automatically available on each application and machine. Cet objet partagé est retourné par la commande `Storage`. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est retourné par la commande `Storage`. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard. 
-
-A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e) s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e) s connecté(e) s.
+A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e) s en tant que propriétés. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
 
 Pour plus d'informations, reportez-vous à la description de la commande `Storage`.
 
 ## Utiliser...Fin utiliser
-
 La syntaxe de la structure `Use...End use` est la suivante :
 
 ```4d
@@ -78,18 +71,19 @@ La syntaxe de la structure `Use...End use` est la suivante :
  End use
 ```
 
-La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Objet_partagé_ou_Collection_partagée* sous la protection d'un sémaphore interne. *Objet_partagé_ou_Collection_partagée* peut être tout objet partagé ou collection partagée valide.
+The `Use...End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
 
-Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **Process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Pour plus de détails sur les objets partagés et les collections partagées, reportez-vous à la page **Objets et collections partagés**. Encadrer les modifications sur les objets partagés et les collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
+Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. Ils peuvent être passés par référence en paramètre d'un process à un autre. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Encadrer les modifications sur les objets partagés et les collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
 
-- Une fois que la ligne **Use/Utiliser** est exécutée avec succès, toutes les propriétés/éléments de *Objet_partagé_ou_Collection_partagée* sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne `End use/Fin` utiliser correspondante soit éxécutée.
-- La séquence *d'instructions* peut alors effectuer toute modification dans les propriétés/éléments de Objet_partagé_ou_Collection_partagée sans risque d'accès concurrent.
-- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre *Objet_partagé_ou_Collection_partagée*, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).
-- Si un autre process tente d'accéder à une propriété de *Objet_partagé_ou_Collection_partagée* ou une propriété connectée alors qu'une séquence **Utiliser...Fin** utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée. 
-- La ligne **End use/Fin** utiliser déverrouille les propriétés de *Objet_partagé_ou_Collection_partagée* et tous les objets qui partagent le même locking identifier.
-- Plusieurs structures **Utiliser...Fin** utiliser peuvent être imbriquées dans le code 4D. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté. 
+- Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
+- The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
+- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
+- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
+- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
+- Several **Use...End use** structures can be nested in the 4D code. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté.
 
-**Note :** Si une fonction membre d'une collection modifie une collection partagée, un **Utiliser** interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.
+**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
+
 
 ## Exemple 1
 
@@ -97,16 +91,16 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //remplit le tableau avec les éléments à compter
+ ... //fill the array with items to count
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
  Use($inventory)
     $inventory.nbItems:=$nbItems
  End use
- 
-  //Créer process
-  For($i;1;$nbItems)
+
+  //Create processes
+ For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
   //$inventory object sent by reference
  End for
