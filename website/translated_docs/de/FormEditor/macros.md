@@ -9,11 +9,11 @@ The 4D Form editor supports macros. A macro is a set of instructions to perform 
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
-* Create and execute 4D code
-* Display dialogs
-* Select form objects
-* Add / delete / modify forms, form objects as well as their properties
-* Modify project files (update, delete)
+*   Create and execute 4D code
+*   Display dialogs
+*   Select form objects
+*   Add / delete / modify forms, form objects as well as their properties
+*   Modify project files (update, delete)
 
 Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
 
@@ -27,14 +27,15 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
 
-    {
-       "macros": {
-          "Add Hello World button": {
-           "class": "AddButton"
-         }
-       }
-    }
-    
+```
+{
+   "macros": {
+      "Add Hello World button": {
+       "class": "AddButton"
+     }
+   }
+}
+```
 
 2. Create a 4D class named `AddButton`.
 
@@ -69,6 +70,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 You can then call the macro: ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
 
+
 ## Calling macros in the Form editor
 
 When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
@@ -94,6 +96,8 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 ![](assets/en/FormEditor/macroStructure.png)
 
+
+
 ## Declaring macros
 
 The structure of the `formMacros.json` file is the following:
@@ -111,7 +115,7 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-<table>
+<table spaces-before="0" line-breaks-before="2">
   <tr>
     <th>
       Attribute
@@ -237,6 +241,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 > Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.
 
+
 ## Instantiating macros in 4D
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
@@ -245,9 +250,13 @@ The class name must match the name defined using the [class](#creating-macros) a
 
 Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 
+
+
+
 ## Macro Functions
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+
 
 ### Class constructor
 
@@ -257,12 +266,12 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 | --------- | ------ | -------------------------------------------------------- |
 | $macro    | Objekt | Macro declaration object (in the `formMacros.json` file) |
 
-
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
 The class constructor is called once during class instantiation, which occurs at application startup.
 
 Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+
 
 #### Beispiel
 
@@ -281,12 +290,13 @@ In the `formMacros.json` file:
 
 Sie schreiben:
 
-```code4d
+```code4d  
 // Class "AlignOnTarget"
 Class constructor($macro : Object)
     This.myParameter:=$macro.myParam //left
     ...
 ```
+
 
 ### onInvoke()
 
@@ -296,7 +306,6 @@ Class constructor($macro : Object)
 | --------- | ------ | ------------------------------------------------ |
 | $editor   | Objekt | Form properties                                  |
 | $result   | Objekt | Form properties modified by the macro (optional) |
-
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -318,7 +327,6 @@ Here are the properties of the `$editor` object:
 | $editor.formProperties    | Objekt     | Properties of the current form                                                    |
 | $editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
-
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
 | Property          | Typ        | Description                                                 |
@@ -329,6 +337,8 @@ Here are the properties that you can pass in the `$result` object if you want th
 | editor.groups     | Objekt     | group info, if groups are modified by the macro             |
 | editor.views      | Objekt     | view info, if views are modified by the macro               |
 | editor.activeView | String     | Active view name                                            |
+
+
 
 
 #### `method` attribute
@@ -342,7 +352,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 | Property | Typ | Description |
 | -------- | --- | ----------- |
 |          |     |             |
- source|String|method code| 
+ source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
@@ -353,6 +363,7 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 - if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
 - if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+
 
 #### Beispiel
 
@@ -377,6 +388,7 @@ Function onInvoke($editor : Object)->$result : Object
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
+
 ### onError()
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
@@ -389,7 +401,6 @@ Function onInvoke($editor : Object)->$result : Object
 |              | [].errCode            | Zahl       | Error code                               |
 |              | [].message            | Text       | Description of the error                 |
 |              | [].componentSignature | Text       | Internal component signature             |
-
 
 The `onError` function is executed when the macros processor encounters an error.
 
