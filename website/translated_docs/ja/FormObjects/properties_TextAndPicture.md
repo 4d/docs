@@ -3,8 +3,7 @@ id: propertiesTextAndPicture
 title: テキスト、ピクチャー
 ---
 
-* * *
-
+---
 ## 背景パス名
 
 オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
@@ -22,11 +21,14 @@ title: テキスト、ピクチャー
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
-* * *
 
+
+
+---
 ## ボタンスタイル
 
 ボタンの外観を設定します。 スタイルによっては、特定のオプションが利用できなくなることもあります。
+
 
 #### JSON 文法
 
@@ -39,8 +41,10 @@ title: テキスト、ピクチャー
 
 [ボタン](button_overview.md) - [ラジオボタン](radio_overview.md) - [チェックボックス](checkbox_overview.md)
 
-* * *
 
+
+
+---
 ## 横方向マージン
 
 ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
@@ -51,8 +55,6 @@ title: テキスト、ピクチャー
 | ------------ | --------------------------------------------------------- |
 | マージンなし       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
 | 13 ピクセルのマージン | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
-
-
 > このプロパティは [縦方向マージン](#縦方向マージン) プロパティとの組み合わせで機能します。
 
 #### JSON 文法
@@ -61,12 +63,14 @@ title: テキスト、ピクチャー
 | ------------- | ------ | ----------------------- |
 | customBorderX | number | "カスタム" スタイルで利用可。 最小値: 0 |
 
-
 #### 対象オブジェクト
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
-* * *
+
+
+
+---
 
 ## アイコンの場所
 
@@ -78,13 +82,15 @@ title: テキスト、ピクチャー
 | ------------- | ------ | ----------------------- |
 | iconPlacement | string | "none", "left", "right" |
 
-
 #### 対象オブジェクト
 
 [[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#list-box-headers)
 
-* * *
 
+
+
+
+---
 ## アイコンオフセット
 
 ボタンクリック時のオフセット値をピクセル単位で指定します。
@@ -97,13 +103,13 @@ title: テキスト、ピクチャー
 | ------------ | ------ | ------ |
 | customOffset | number | 最小値: 0 |
 
-
 #### 対象オブジェクト
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
-* * *
 
+
+---
 ## 状態の数
 
 このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
@@ -113,11 +119,11 @@ title: テキスト、ピクチャー
 ![](assets/en/property_numberOfStates.png)
 
 状態は次の順番で割り当てられます:
-
 1. ボタン未クリック / チェックボックス未選択 (変数値=0)
 2. ボタンクリック / チェックボックス選択 (変数値=1)
 3. ロールオーバー
 4. 無効
+
 
 #### JSON 文法
 
@@ -125,13 +131,15 @@ title: テキスト、ピクチャー
 | ---------- | ------ | ------ |
 | iconFrames | number | 最小値: 1 |
 
-
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
-* * *
 
+
+
+
+---
 ## ピクチャーパス名
 
 オブジェクトのアイコンに使用するピクチャーのパスを指定します。
@@ -146,13 +154,14 @@ title: テキスト、ピクチャー
 | ---- | ------- | ------------------------------- |
 | icon | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
-
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md)
 
-* * *
 
+
+
+---
 ## タイトル/ピクチャー位置
 
 このプロパティはアイコンに対するボタンタイトルの相対的な位置を指定します。 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。 デフォルトでは、ピクチャーの下部にタイトルが置かれます。
@@ -167,20 +176,20 @@ title: テキスト、ピクチャー
 | **下**     | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **中央合わせ** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
-
 #### JSON 文法
 
 | 名             | データタイプ | とりうる値                                      |
 | ------------- | ------ | ------------------------------------------ |
 | textPlacement | string | "left", "top", "right", "bottom", "center" |
 
-
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
-* * *
 
+
+
+---
 ## 縦方向マージン
 
 ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
@@ -195,13 +204,14 @@ title: テキスト、ピクチャー
 | ------------- | ------ | ----------------------- |
 | customBorderY | number | "カスタム" スタイルで利用可。 最小値: 0 |
 
-
 #### 対象オブジェクト
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
-* * *
 
+
+
+---
 ## ポップアップメニューあり
 
 このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。このシンボルは、ポップアップメニューが付属することを示します:
@@ -210,6 +220,7 @@ title: テキスト、ピクチャー
 
 このシンボルの外観と位置は、ボタンスタイルとプラットフォームによって変わります。
 
+
 ### リンクと分離
 
 ポップアップメニューシンボルをボタンに付加する際に、リンクと分離という2つのオプションから選択することができます:
@@ -217,54 +228,25 @@ title: テキスト、ピクチャー
 |                         リンク                          |                           分離                            |
 |:----------------------------------------------------:|:-------------------------------------------------------:|
 | ![](assets/en/FormObjects/property_popup_linked.png) | ![](assets/en/FormObjects/property_popup_separated.png) |
-
-
 > 実際に "分離" モードを利用できるかどうかは、ボタンスタイルとプラットフォームによって決まります。
 
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
-<li>
-  ポップアップメニューが <strong>分離</strong> している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。 <li>
-    ポップアップメニューが <strong>リンク</strong> している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。</p> <h3>
-      ポップアップメニューの管理
-    </h3>
-    <p>
-      "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや <a href="https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.ja.html">Dynamic pop up menu</a>、<a href="https://doc.4d.com/4Dv18/4D/18/Pop-up-menu.301-4504659.ja.html">Pop up menu</a> コマンドを使用してこれを処理します。
-    </p>
-    <h4>
-      JSON 文法
-    </h4>
-    <table>
-      <tr>
-        <th align="left">
-          名
-        </th>
-        
-        <th>
-          データタイプ
-        </th>
-        
-        <th>
-          とりうる値
-        </th>
-      </tr>
-      
-      <tr>
-        <td align="left">
-          popupPlacement
-        </td>
-        
-        <td>
-          string
-        </td>
-        
-        <td>
-          <li>
-            "none"<li>
-              "linked"<li>
-                "separated"</td> </tr> </tbody> </table> <h4>
-                  対象オブジェクト
-                </h4>
-                <p>
-                  <a href="button_overview.md#ツールバー">ツールバーボタン</a> - <a href="button_overview.md#ベベル">ベベルボタン</a> - <a href="button_overview.md#角の丸いベベル">角の丸いべべルボタン</a> - <a href="button_overview.md#OS-X-グラデーション">OS X グラデーションボタン</a> - <a href="button_overview.md#OS-X-テクスチャー">OS X テクスチャーボタン</a> - <a href="button_overview.md#office-XP">Office XP ボタン</a> - <a href="button_overview.md#サークル">サークルボタン</a> - <a href="button_overview.md#カスタム">カスタムボタン</a>
-                </p>
+<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button. <li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
+
+
+### ポップアップメニューの管理
+
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+
+
+#### JSON 文法
+
+| 名              | データタイプ | とりうる値                                                                                                |
+|:-------------- | ------ | ---------------------------------------------------------------------------------------------------- |
+| popupPlacement | string | <li>"none"<li>"linked"<li>"separated" |
+
+
+#### 対象オブジェクト
+
+[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#OS-X-グラデーション) - [OS X テクスチャーボタン](button_overview.md#OS-X-テクスチャー) - [Office XP ボタン](button_overview.md#office-XP) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)
