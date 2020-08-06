@@ -14,66 +14,72 @@ Forms can also contain other forms through the following features:
 - [subform objects](FormObjects/subform_overview.md)
 - [inherited forms](properties_FormProperties.md#inherited-forms)
 
+
 ## Creating forms
 
 You can add or modify 4D forms using the following elements:
 
-- **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window. 
+- **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
 - **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
 - **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Exemple :
 
-    {
-        "windowTitle": "Hello World",
-        "windowMinWidth": 220,
-        "windowMinHeight": 80,
-        "method": "HWexample",
-        "pages": [
-            null,
-            {
-                "objects": {
-                    "text": {
-                    "type": "text",
-                    "text": "Hello World!",
-                    "textAlign": "center",
-                    "left": 50,
-                    "top": 120,
-                    "width": 120,
-                    "height": 80
-                    },
-                    "image": {
-                    "type": "picture",
-                    "pictureFormat": "scaled",
-                    "picture": "/RESOURCES/Images/HW.png",
-                    "alignment":"center", 
-                    "left": 70,
-                    "top": 20, 
-                    "width":75, 
-                    "height":75        
-                    },
-                    "button": {
-                    "type": "button",
-                    "text": "OK",
-                    "action": "Cancel",
-                    "left": 60,
-                    "top": 160,
-                    "width": 100,
-                    "height": 20
-                    }
+```
+{
+    "windowTitle": "Hello World",
+    "windowMinWidth": 220,
+    "windowMinHeight": 80,
+    "method": "HWexample",
+    "pages": [
+        null,
+        {
+            "objects": {
+                "text": {
+                "type": "text",
+                "text": "Hello World!",
+                "textAlign": "center",
+                "left": 50,
+                "top": 120,
+                "width": 120,
+                "height": 80
+                },
+                "image": {
+                "type": "picture",
+                "pictureFormat": "scaled",
+                "picture": "/RESOURCES/Images/HW.png",
+                "alignment":"center", 
+                "left": 70,
+                "top": 20, 
+                "width":75, 
+                "height":75        
+                },
+                "button": {
+                "type": "button",
+                "text": "OK",
+                "action": "Cancel",
+                "left": 60,
+                "top": 160,
+                "width": 100,
+                "height": 20
                 }
             }
-        ]
-    }
-    
+        }
+    ]
+}
+```
+
+
 
 ## Project form and Table form
 
 There are two categories of forms:
 
-* **Project forms** - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
+*   **Project forms** - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
 
-* **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.
+
+*   **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.
 
 Typically, you select the form category when you create the form, but you can change it afterwards.
+
 
 ## Pages formulaire
 
@@ -95,9 +101,10 @@ There are no restrictions on the number of pages a form can have. The same field
 
 A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
 
+
 ## Formulaires hérités
 
-Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
+4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
@@ -105,10 +112,10 @@ Tous les formulaires (formulaires table et formulaires projet) peuvent être dé
 
 A l’exécution du formulaire, les objets sont chargés et combinés dans l’ordre suivant :
 
-1. Page zéro du formulaire hérité
-2. Page 1 du formulaire hérité
-3. Page zéro du formulaire ouvert
-4. Page courante du formulaire ouvert.
+1.  Page zéro du formulaire hérité
+2.  Page 1 du formulaire hérité
+3.  Page zéro du formulaire ouvert
+4.  Page courante du formulaire ouvert.
 
 Cet ordre détermine l’ordre de saisie des objets dans le formulaire.
 
@@ -118,11 +125,11 @@ Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en c
 
 Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
 
-Un formulaire peut hériter d'un formulaire projet, en définissant la propriété [Inherited Form Table](properties_FormProperties.md#inherited-form-table) sur **\<None>** dans la liste des propriétés (ou " " dans JSON).
+A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to **\<None>** in the Property List (or " " in JSON).
 
-Pour stopper l’héritage d’un formulaire, choisissez l’option **\<None>** dans la Liste des propriétés (ou " " dansJSON) pour la propriété [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
-
+To stop inheriting a form, select **\<None>** in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
+
 
 ## Propriétés prises en charge
 
