@@ -18,8 +18,8 @@ Une case à cocher affiche généralement du texte en face de la case. Ce texte 
 
 Une case à cocher peut être associée à une [variable ou expression](properties_Object.md#variable-or-expression) de type entier ou booléen.
 
-- **integer:** if the box is checked, the variable has the value 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
-- **boolean:** if the box is checked, the variable has the value `True`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`.
+- **entier :** si la case est cochée, la variable prend la valeur 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
+- **booléen :** si la case est cochée, la variable prend la valeur `Vrai`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`.
 
 Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Un groupe de cases à cocher permet à l'utilisateur de cocher plusieurs options.
 
@@ -81,13 +81,13 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 Les styles de bouton des cases à cocher contrôlent l'apparence générale d'une case à cocher ainsi que ses propriétés. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D propose des cases à cocher avec les styles prédéfinis suivants :
 
 ### Classique
 
-The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+Le style Classique de case à cocher correspond à un système de case à cocher standard (*i.e.*, un rectangle avec un titre descriptif) :
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
@@ -163,7 +163,7 @@ Example with states unchecked / checked / highlighted:
 
 ### Bevel
 
-The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
+La case à cochre Bevel combine l'apparence du style [Classique](#regular) (c'est-à-dire un rectangle avec un libellé descriptif) et [Barre d'outils](#toolbar).
 
 Le style Bevel possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
@@ -257,11 +257,11 @@ Le style de case à cocher OS X Textured est presque identique au style [Bevel](
 
 Par défaut, le style OS X Textured apparaît comme :
 
- - *Windows* - a standard system button with a light blue background with a title in the center.
+ - *Sous Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+ - *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -288,11 +288,11 @@ Le style de case à cocher Office XP combine l'apparence du style [Classique](#r
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Example with states unchecked / checked / highlighted:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - its background is always displayed. Example with states unchecked / checked:
+ - *Sous macOS* - son arrière-plan est toujours affiché. Example with states unchecked / checked:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -319,11 +319,11 @@ Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont
 
 Ce style de case à cocher peut être utilisé pour ajouter une icône standard contracter/déployer. Ces boutons sont utilisés nativement dans les listes hiérarchiques.
 
- - *Windows* - the button looks like a [+] or a [-]
+ - *Sous Windows* - le bouton est semblable à [+] ou à [-]
 
   ![](assets/en/FormObjects/checkbox_collapse.png)
 
- - *macOS* - it looks like a triangle pointing right or down.
+ - *Sous macOS* - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
