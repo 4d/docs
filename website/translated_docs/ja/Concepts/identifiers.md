@@ -11,7 +11,7 @@ title: 識別子の命名規則
 
 - 識別子の 1文字目は、半角アルファベット、アンダースコア ("_")、あるいはドル記号 ("$") で始めます。
 - その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- ピリオド (".") および大カッコ ("[ ]") は、テーブル・フィールド・メソッド・変数の名称に使用できません。
 - カンマ (,)・スラッシュ(/)・引用符(")・コロン(:) の使用は禁止されています。
 - 演算子として用いられる記号 ("*" や "+" など) の使用は禁止されています。
 - 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (If, For 等)、そして定数が含まれます。
@@ -19,14 +19,14 @@ title: 識別子の命名規則
 
 ### ORDA に適用される追加ルール
 - スペースは使えません。
-- Periods (".") and brackets ("[ ]") are not allowed.
+- ピリオド (".") および大カッコ ("[ ]") は使用できません。
 - 大文字・小文字は区別されます。
 
 ### SQL で処理する場合の追加ルール
 - 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。
 - 名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**注:** ストラクチャーエディターのインスペクター下部にある ”SQL” エリアには、テーブル名やフィールド名として許可されない文字があると警告が表示されます。
 
 
 ## テーブル
@@ -148,7 +148,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### 二次元配列の要素
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. 参照される要素は2組の中カッコ内の2つの数式で表されます。
+中カッコ ("{ }") を2回使用して、2次元配列の要素を参照します 。 参照される要素は2組の中カッコ内の2つの数式で表されます。
 
 例:
 ```4d
@@ -170,7 +170,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 ## オブジェクト属性
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
+オブジェクト記法が有効化されているとき、ドット (".") をオブジェクト名 (あるいは属性名) と属性名の間に置くことでオブジェクト属性 (オブジェクトプロパティとも呼びます) を指定します。 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
 
 例:
 ```4d
@@ -178,7 +178,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
+**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
 
 ## フォーム
 
@@ -200,13 +200,13 @@ DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
+**注:** フォームオブジェクト (ボタン、リストボックス、入力可能な変数など) と 4Dランゲージのオブジェクト型を混同しないようにしてください。 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
 
 ## プロジェクトメソッド
 
 プロジェクトメソッド (プロシージャーおよび関数) は名前によって表されます。 メソッド名は31文字以内で指定します。
 
-**Note:** A project method that does not return a result is also called a procedure. 結果を返すプロジェクトメソッドを関数と呼びます。
+**注:** 結果を返さないプロジェクトメソッドはプロシージャーとも呼ばれます。 結果を返すプロジェクトメソッドを関数と呼びます。
 
 例:
 ```4d
@@ -215,9 +215,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. メソッド名には大文字を使用しますが、メソッドが関数の場合には最初の文字だけを大文字にします。 このように命名することにより、数ヶ月後に保守のためデータベースを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
+**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 メソッド名には大文字を使用しますが、メソッドが関数の場合には最初の文字だけを大文字にします。 このように命名することにより、数ヶ月後に保守のためデータベースを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
 
-**Note:** When you call a method, you just type its name. しかし `ON EVENT CALL` など一部の 4Dのビルトインコマンドやプラグインコマンドにメソッド名を引数として渡す場合には文字列 (ダブルクォートで括る) として渡します。 例:
+**注:** メソッドを呼び出すには、そのメソッド名を入力します。 しかし `ON EVENT CALL` など一部の 4Dのビルトインコマンドやプラグインコマンドにメソッド名を引数として渡す場合には文字列 (ダブルクォートで括る) として渡します。 例:
 
 例:
 ```4d
@@ -284,7 +284,7 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ### クライアントセット
 クライアントセット名は、先頭にドル記号 ($) を指定します。 クライアントセット名は、ドル記号を除いて255文字以内で指定します。
 
-**Note:** Sets are maintained on the Server machine. 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 このような場合にクライアントセットを使用します。
+**注:** セットはサーバーマシン上で保守されます。 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 このような場合にクライアントセットを使用します。
 
 例:
 ```4d
@@ -371,7 +371,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 | グロ－バルプロセス        | 255      | "*P_INVOICES_MODULE*"    |
 | セマフォー            | 255      | "mysemaphore"              |
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+**注:** 非ローマ文字 (日本語など) が識別子に使用された場合、その最大長は短かくなることがあります。
 
 ## 名前が重複する場合
 
@@ -386,4 +386,4 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 5. 定義済み定数
 6. 変数
 
-たとえば、4Dには `Date` というビルトインコマンドがあります。 If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. つまり、そのメソッドの呼び出しはできないということです。 しかしながら、フィールドを "Date" と命名した場合には、4Dは `Date` コマンドの代わりにフィールドとしての使用を試みます。
+たとえば、4Dには `Date` というビルトインコマンドがあります。 メソッドに *Date* という名前を付けても、4Dはビルトインコマンドの `Date` として認識し、メソッドとしては認識しません。 つまり、そのメソッドの呼び出しはできないということです。 しかしながら、フィールドを "Date" と命名した場合には、4Dは `Date` コマンドの代わりにフィールドとしての使用を試みます。
