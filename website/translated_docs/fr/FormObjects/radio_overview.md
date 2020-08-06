@@ -64,11 +64,11 @@ Le style du bouton radio Barre d'outils est initialement destiné à être inté
 
 Par défaut, le style bouton Barre d'outils a un fond transparent avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted.
+ - *Sous Windows* - le contour du bouton apparaît.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 
 
@@ -76,11 +76,11 @@ Par défaut, le style bouton Barre d'outils a un fond transparent avec un libell
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted.
+ - *Sous Windows* - le contour du bouton apparaît.
 
   ![](assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 
 ### Bevel arrondi
@@ -89,7 +89,7 @@ Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel),
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+ - *Sous macOS* - les coins du bouton sont arrondis. ![](assets/en/FormObjects/roundedBevel.png)
 
 
 ### OS X Gradient
@@ -98,7 +98,7 @@ Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel),
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the button is displayed as a two-tone system button.
+ - *Sous macOs* - le bouton s'affiche comme un bouton à deux tons.
 
 
 
@@ -110,7 +110,7 @@ Par défaut, le style OS X Textured apparaît comme :
 
  - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+ - *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
   ![](assets/en/FormObjects/OSXTextured.png)
 
@@ -122,11 +122,11 @@ The Office XP button style combines the appearance of the [Regular](#regular) st
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole.
 
   ![](assets/en/FormObjects/radio_xp.png)
 
- - *macOS* - its background is always displayed.
+ - *Sous macOS* - son arrière-plan est toujours affiché.
 
 
 
