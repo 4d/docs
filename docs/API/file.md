@@ -33,7 +33,7 @@ title: File functions
 
 The `.create( )` function <!-- REF #file.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE document.platformPath -->](#platformpath) or [<!-- INCLUDE document.path -->](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Returned value**
 
@@ -62,10 +62,6 @@ Creation of a preferences file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
-
-<!--REF file.createAlias().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #file.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object<!-- END REF -->
@@ -118,8 +114,6 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-<!--REF file.delete().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 <!--REF #file.delete().Syntax -->
 **.delete( )**<!-- END REF -->
@@ -164,9 +158,6 @@ You want to delete a specific file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
-
-<!--REF file.moveTo().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #file.moveTo().Syntax -->
@@ -213,9 +204,6 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-<!--REF file.rename().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #file.rename().Syntax -->
 **.rename**( *newName* ) -> object<!-- END REF -->
@@ -260,9 +248,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
-<!--REF file.setContent().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #file.setContent().Syntax -->
 **.setContent** ( *content* ) <!-- END REF -->
@@ -299,9 +284,6 @@ The `.setContent( )` function <!-- REF #file.setContent().Summary -->rewrites th
 |---|---|
 |v17 R5|Added
 </details>
-
-<!--REF file.setText().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #file.setText().Syntax -->

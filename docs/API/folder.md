@@ -17,9 +17,6 @@ title: Folder Functions
 </details>
 
 
-<!--REF folder.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #folder.create().Syntax -->
 **.create( )** -> boolean<!-- END REF -->
@@ -36,7 +33,7 @@ title: Folder Functions
 
 The `.create( )` function <!-- REF #folder.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE directory.platformPath -->](#platformpath) or [<!-- INCLUDE directory.path -->](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Returned value**
 
@@ -81,9 +78,6 @@ End if
 |v17 R5|Added
 </details>
 
-
-<!--REF folder.createAlias().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.createAlias().Syntax -->
@@ -140,9 +134,6 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 </details>
 
 
-<!--REF folder.delete().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #folder.delete().Syntax -->
 **.delete**( { *option* } )<!-- END REF -->
@@ -153,6 +144,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |---|----|---|---|
 |option |longint|->|Folder deletion option|
 <!-- END REF -->
+
 
 
 ##### Description
@@ -191,10 +183,6 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |---|---|
 |v17 R5|Added
 </details>
-
-
-<!--REF folder.moveTo().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.moveTo().Syntax -->
@@ -241,13 +229,6 @@ C_OBJECT($tomove;$moved)
 |---|---|
 |v17 R5|Added
 </details>
-
-
-
-<!--REF folder.rename().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
-
 
 <!--REF #folder.rename().Syntax -->
 **.rename**( *newName* ) -> object<!-- END REF -->

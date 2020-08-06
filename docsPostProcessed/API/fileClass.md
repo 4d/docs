@@ -3,28 +3,10 @@ id: fileClass
 title: File 
 ---
 
-## Overview
-
-The `File` class provides properties and functions that allow you to create and manipulate `File` objects.
-
-### Files
 
 `File` objects are created with the [`File`](https://doc.4d.com/4Dv18R4/4D/18-R4/File.301-4982190.en.html) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`create( )`](#create-) function.
 
-### ZIP Archives
-
-The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `File`s compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
-
-*	Save disk space
-*	Store data on a removable media device
-*	Easily transfer files/folders via mediums which may have size limitations (e.g., email or inter/intranet systems)
-
-4D ZIP file archives are created and handled with the following 4D commands:
-
-*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
-*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
-
-**Example**
+### Example
 
 The following example creates a preferences file in the database folder:
 
@@ -33,63 +15,68 @@ C_BOOLEAN($created)
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+## Functions & Properties
 
-
-## Properties
-
-A `File` object contains the following properties and functions:
-
-|Property|Type|Description|
-|----|----|-----------|
-|creationDate|Date|Returns the creation date of the file. This property is **read-only**.|
-|creationTime| Time|Returns the creation time of the file (expressed as a number of seconds beginning at 00:00). This property is **read-only**.|
-|exists|Boolean | Returns **true** if the file exists on disk, and **false** otherwise. This property is **read-only**.|
-|extension|Text |Returns the extension of the file name. An extension always starts with ".". The property returns an empty string if the file name does not have an extension. This property is **read-only**.| 
-|fullName| Text|Returns the full name of the file, including its extension (if any). This property is **read-only**.|
-|hidden |Boolean |  Returns **true** if the file is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.|
-|isAlias|Boolean |Returns **true** if the file is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.|
-|isFile |Boolean |Always returns **true** for a file. This property is **read-only**.|
-|isFolder|Boolean |Always returns **false** for a file. This property is **read-only**.| 
-|isWritable|Boolean |<ul><li>**File**: Returns **true** if the file exists on disk and is writable. **Note**: The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. This property is **read-only**.</li><li>**ZIP archive**: Always **false**.</li></ul>| 
-|modificationDate| Date| Returns the date of the file's last modification. This property is **read-only**.| 
-|modificationTime|Time |Returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.|
-|name|Text | Returns the name of the file, without extension (if any). This property is **read-only**.|
-|original |Object |Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.|
-|parent|Object |Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.|
-|path|Text |<ul><li>**File**: Returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul>|
-|platformPath|Text  |Returns the path of the file expressed with the current platform syntax. This property is **read-only**.|
-|size|Number  |Returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0. This property is **read-only**.|
-
-
-
-## Functions 
-
-|Summary|
+||
 |---|
 |[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)|
 |copies a `File` object (source file/folder) into the specified *destinationFolder* |
 |[**.create( )** -> boolean ](#create-)| 
-|creates a file on disk according to the properties of the `File` object<p>**Not available for ZIP archives**|
+|creates a file on disk according to the properties of the `File` object|
 |[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-) |
-|creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object<p>**Not available for ZIP archives** |
+|creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object|
+|[**.creationDate** -> creation date](#creationdate)|
+|returns the creation date of the file|
+|[**.creationTime** -> creation time](#creationtime)|
+|returns the creation  time of the file|
 |[**.delete( )**](#delete-) |
-|deletes the file<p>**Not available for ZIP archives** |
+|deletes the file|
+|[**.exists** -> boolean](#exists)|
+|returns true if the file exists on disk|
+|[**.extension** -> file extension](#extension)|
+|returns the extension of the file name|
+|[**.fullName** -> full file name](#fullname)|
+|returns the full name of the file|
 |[**.getContent( )**  -> BLOB](#getcontent-)|
 |returns a `BLOB` containing the entire content of a file|
 |[**.getIcon**( { *size* } ) -> picture](#geticon-)|
 |the icon of the file|
 |[**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text](#gettext-)|
 |returns the contents of the file as text |
+|[**.hidden** -> boolean](#hidden)|
+|returns true if the file is set as "hidden" at the system level|
+|[**.isAlias** -> boolean](#isalias)|
+|returns true if the file is an alias, a shortcut, or a symbolic link|
+|[**.isFile** -> boolean](#isfile)|
+|always returns true for a file|
+|[**.isFolder** -> boolean](#ifFolder)|
+|always returns false for a file|
+|[**.isWritable** -> boolean](#iswritable)|
+|returns true if the file exists on disk and is writable|
+|[**.modificationDate** -> modification date](#modificationdate)|
+|returns the date of the file's last modification|
+|[**.modificationTime** -> modification date](#modificationtime)|
+|returns the time of the file's last modification|
 |[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)|
-|moves or renames the `File` object into the specified *destinationFolder*<p>**Not available for ZIP archives**|
+|moves or renames the `File` object into the specified *destinationFolder*|
+|[**.name** -> file name](#name)|
+|returns the name of the file|
+|[**.original** -> object](#original)|
+|returns the target element for an alias, a shortcut, or a symbolic link file|
+|[**.parent** -> object](#parent)|
+|returns the parent folder object of the file|
+|[**.path** -> text](#path)|
+|returns the POSIX path of the file|
+|[**.platformPath** -> text](#platformpath)|
+|returns the path of the file expressed with the current platform syntax|
 |[**.rename**( *newName* ) -> object](#rename-)|
-|renames the file with the name you passed in *newName* and returns the renamed `File` object<p>**Not available for ZIP archives**|
+|renames the file with the name you passed in *newName* and returns the renamed `File` object|
 |[**.setContent** ( *content* ) ](#setcontent-)|
-|rewrites the entire content of the file using the data stored in the *content* BLOB<p>**Not available for ZIP archives**|
+|rewrites the entire content of the file using the data stored in the *content* BLOB|
 |[**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) ](#settext-)|
-|writes *text* as the new contents of the file<p>**Not available for ZIP archives**|
-
-
+|writes *text* as the new contents of the file|
+|[**.size** -> file size](#size)|
+|returns the size of the file expressed in bytes|
 
 
 
@@ -185,8 +172,6 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
-
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -225,6 +210,48 @@ You want to create an alias to a file in your database folder:
 ```
 
 
+### .creationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationDate** -> creation date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Creation date|
+
+
+##### Description
+The `.creationDate` property  returns the creation date of the file.
+
+This property is **read-only**. 
+
+
+
+### .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationTime** -> creation time
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Creation time|
+
+
+##### Description
+The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
+
+
+
 ### .delete( )
 
 <details><summary>History</summary>
@@ -233,7 +260,7 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
+
 **.delete( )**
 
 |Parameter|Type||Description|
@@ -261,6 +288,69 @@ You want to delete a specific file in the database folder:
     ALERT("User preference file deleted.")
  End if
 ``` 
+
+
+### .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.exists** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file exists, false otherwise|
+
+
+##### Description
+The `.exists` property  returns true if the file exists on disk, and false otherwise.
+
+This property is **read-only**. 
+
+
+
+### .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.extension** -> file extension
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|File name extension (if any)|
+
+
+##### Description
+The `.extension` property  returns the extension of the file name. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+
+This property is **read-only**. 
+
+
+
+### .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.fullName** -> full file name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Full file name, including extension (if any)|
+
+
+##### Description
+The `.fullName` property returns the full name of the file, including its extension (if any).
+
+This property is **read-only**. 
+
 
 
 ### .getContent( )
@@ -395,6 +485,164 @@ When you execute this code:
 
 
 
+### .hidden
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.hidden** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the hidden system flag is set for the file, false otherwise|
+
+
+##### Description
+The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+### .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isAlias** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file is an alias, false otherwise|
+
+
+##### Description
+The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+### .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFile** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always true|
+
+
+##### Description
+The `.isFile` property always returns true for a file. 
+
+This property is **read-only**. 
+
+
+
+### .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFolder** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+
+
+##### Description
+The `.isFolder` property always returns false for a file. 
+
+This property is **read-only**. 
+
+
+
+### .isWritable
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isWritable** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file exists on disk and is writable, false otherwise|
+
+
+##### Description
+The `.isWritable` property returns true if the file exists on disk and is writable. 
+
+>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. 
+
+This property is **read-only**. 
+
+**Example**  
+
+```4d
+ $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
+ If($myFile.isWritable)
+    $myNewFile:=$myFile.setText("Added text")
+ End if
+```
+
+
+
+### .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationDate** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Modification date|
+
+
+##### Description
+The `.modificationDate` property returns the date of the file's last modification. 
+
+This property is **read-only**. 
+
+
+
+### .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationTime** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Modification time|
+
+
+##### Description
+The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+
+
 ### .moveTo( )
 
 <details><summary>History</summary>
@@ -403,7 +651,6 @@ When you execute this code:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
@@ -435,6 +682,116 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 
 
+### .name
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.name** -> file name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|File name without extension (if any)|
+
+
+##### Description
+The `.name` property returns the name of the file, without extension (if any). 
+
+This property is **read-only**. 
+
+
+
+### .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.original** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Target of the alias or symbolic link, otherwise same file object|
+
+
+##### Description
+The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
+
+*	a file object 
+*	a folder object 
+
+For non-alias files, the property returns the same file object as the file.
+
+This property is **read-only**. 
+
+
+
+### .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.parent** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Parent folder object for the file|
+
+
+##### Description
+The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+This property is **read-only**. 
+
+
+
+### .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.path** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|POSIX path (including filesystem if any)|
+
+
+##### Description
+The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
+
+
+
+### .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.platformPath** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Path expressed with the platform syntax|
+
+
+##### Description
+The `.platformPath` property returns the path of the file expressed with the current platform syntax.
+
+This property is **read-only**. 
+
+
+
  
 ### .rename( )
 
@@ -444,7 +801,6 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|
@@ -483,7 +839,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.setContent** ( *content* ) 
 |Parameter|Type||Description|
@@ -512,7 +867,6 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
 |Parameter|Type||Description|
@@ -550,6 +904,27 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
+
+
+### .size
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.size** -> file size
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|number|<-|Size of the file in bytes|
+
+
+##### Description
+The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
+
+This property is **read-only**. 
+
 
 
 

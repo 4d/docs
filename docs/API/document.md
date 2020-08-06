@@ -6,32 +6,540 @@ title: Document Class
 ## Description
 
 
-## Properties
+<!-- REF document.creationDate.Desc -->
+### .creationDate
 
-<!-- REF document.properties -->
-|Property|Type|Description|
-|----|----|-----------|
-|<!-- REF document.creationDate -->creationDate<!-- END REF -->|<!-- REF #document.creationDate.type -->Date<!-- END REF -->|<!-- REF #document.creationDate.Summary -->Returns the creation date of the file. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.creationTime -->creationTime<!-- END REF -->| <!-- REF #document.creationTime.type -->Time<!-- END REF -->|<!-- REF #document.creationTime.Summary -->Returns the creation time of the file (expressed as a number of seconds beginning at 00:00). This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.exists -->exists<!-- END REF -->|<!-- REF #document.exists.type -->Boolean<!-- END REF --> |<!-- REF #document.exists.Summary --> Returns **true** if the file exists on disk, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.extension -->extension<!-- END REF -->|<!-- REF #document.extension.type -->Text<!-- END REF --> |<!-- REF #document.extension.Summary -->Returns the extension of the file name. An extension always starts with ".". The property returns an empty string if the file name does not have an extension. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF document.fullName -->fullName<!-- END REF -->| <!-- REF #document.fullName.type -->Text<!-- END REF -->|<!-- REF #document.fullName.Summary -->Returns the full name of the file, including its extension (if any). This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.hidden -->hidden <!-- END REF -->|<!-- REF #document.hidden.type -->Boolean<!-- END REF --> |<!-- REF #document.hidden.Summary -->  Returns **true** if the file is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.isAlias -->isAlias<!-- END REF -->|<!-- REF #document.isAlias.type -->Boolean<!-- END REF --> |<!-- REF #document.isAlias.Summary -->Returns **true** if the file is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.isFile -->isFile <!-- END REF -->|<!-- REF #document.isFile.type -->Boolean<!-- END REF --> |<!-- REF #document.isFile.Summary -->Always returns **true** for a file. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.isFolder -->isFolder<!-- END REF -->|<!-- REF #document.isFolder.type -->Boolean<!-- END REF --> |<!-- REF #document.isFolder.Summary -->Always returns **false** for a file. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF document.isWritable -->isWritable<!-- END REF -->|<!-- REF #document.isWritable.type -->Boolean<!-- END REF --> |<!-- REF #document.isWritable.Summary --><ul><li>**File**: Returns **true** if the file exists on disk and is writable. **Note**: The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. This property is **read-only**.</li><li>**ZIP archive**: Always **false**.</li></ul><!-- END REF -->| 
-|<!-- REF document.modificationDate -->modificationDate<!-- END REF -->| <!-- REF #document.modificationDate.type -->Date<!-- END REF -->|<!-- REF #document.modificationDate.Summary --> Returns the date of the file's last modification. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF document.modificationTime -->modificationTime<!-- END REF -->|<!-- REF #document.modificationTime.type -->Time<!-- END REF --> |<!-- REF #document.modificationTime.Summary -->Returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.name -->name<!-- END REF -->|<!-- REF #document.name.type -->Text<!-- END REF --> |<!-- REF #document.name.Summary --> Returns the name of the file, without extension (if any). This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.original -->original <!-- END REF -->|<!-- REF #document.original.type -->Object<!-- END REF --> |<!-- REF #document.original.Summary -->Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.parent -->parent<!-- END REF -->|<!-- REF #document.parent.type -->Object<!-- END REF --> |<!-- REF #document.parent.Summary -->Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.path -->path<!-- END REF -->|<!-- REF #document.path.type -->Text<!-- END REF --> |<!-- REF #document.path.Summary --><ul><li>**File**: Returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul><!-- END REF -->|
-|<!-- REF document.platformPath -->platformPath<!-- END REF -->|<!-- REF #document.platformPath.type -->Text<!-- END REF -->  |<!-- REF #document.platformPath.Summary -->Returns the path of the file expressed with the current platform syntax. This property is **read-only**.<!-- END REF -->|
-|<!-- REF document.size -->size<!-- END REF -->|<!-- REF #document.size.type -->Number<!-- END REF -->  |<!-- REF #document.size.Summary -->Returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0. This property is **read-only**.<!-- END REF -->|
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.creationDate.Syntax -->
+**.creationDate** -> creation date<!-- END REF -->
+
+<!-- REF #document.creationDate.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Creation date|
 <!-- END REF -->
 
-## Functions
+
+##### Description
+The `.creationDate` property  <!-- REF #document.creationDate.Summary -->returns the creation date of the file<!-- END REF -->.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+ 
+ 
+ <!-- REF document.creationTime.Desc -->
+### .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.creationTime.Syntax -->
+**.creationTime** -> creation time<!-- END REF -->
+
+<!-- REF #document.creationTime.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Creation time|
+<!-- END REF -->
+
+
+##### Description
+The `.creationTime` property  <!-- REF #document.creationTime.Summary -->returns the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.exists.Desc -->
+### .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.exists.Syntax -->
+**.exists** -> boolean<!-- END REF -->
+
+<!-- REF #document.exists.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file exists, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.exists` property  <!-- REF #document.exists.Summary -->returns true if the file exists on disk<!-- END REF -->, and false otherwise.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+
+<!-- REF document.extension.Desc -->
+### .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.extension.Syntax -->
+**.extension** -> file extension<!-- END REF -->
+
+<!-- REF #document.extension.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|File name extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.extension` property  <!-- REF #document.extension.Summary -->returns the extension of the file name<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.fullName.Desc -->
+### .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.fullName.Syntax -->
+**.fullName** -> full file name<!-- END REF -->
+
+<!-- REF #document.fullName.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Full file name, including extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.fullName` property <!-- REF #document.fullName.Summary -->returns the full name of the file<!-- END REF -->, including its extension (if any).
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.hidden.Desc -->
+### .hidden
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.hidden.Syntax -->
+**.hidden** -> boolean<!-- END REF -->
+
+<!-- REF #document.hidden.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the hidden system flag is set for the file, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.hidden` property <!-- REF #document.hidden.Summary -->returns true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.isAlias.Desc -->
+### .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.isAlias.Syntax -->
+**.isAlias** -> boolean<!-- END REF -->
+
+<!-- REF #document.isAlias.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file is an alias, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.isAlias` property <!-- REF #document.isAlias.Summary -->returns true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF document.isFile.Desc -->
+### .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.isFile.Syntax -->
+**.isFile** -> boolean<!-- END REF -->
+
+<!-- REF #document.isFile.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always true|
+<!-- END REF -->
+
+
+##### Description
+The `.isFile` property <!-- REF #document.isFile.Summary -->always returns true for a file<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF document.isFolder.Desc -->
+### .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.isFolder.Syntax -->
+**.isFolder** -> boolean<!-- END REF -->
+
+<!-- REF #document.isFolder.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+<!-- END REF -->
+
+
+##### Description
+The `.isFolder` property <!-- REF #document.isFolder.Summary -->always returns false for a file<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.isWritable.Desc -->
+### .isWritable
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.isWritable.Syntax -->
+**.isWritable** -> boolean<!-- END REF -->
+
+<!-- REF #document.isWritable.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the file exists on disk and is writable, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.isWritable` property <!-- REF #document.isWritable.Summary -->returns true if the file exists on disk and is writable<!-- END REF -->. 
+
+>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. 
+
+This property is **read-only**. 
+
+**Example**  
+
+```4d
+ $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
+ If($myFile.isWritable)
+    $myNewFile:=$myFile.setText("Added text")
+ End if
+```
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.modificationDate.Desc -->
+### .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.modificationDate.Syntax -->
+**.modificationDate** -> modification date<!-- END REF -->
+
+<!-- REF #document.modificationDate.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Modification date|
+<!-- END REF -->
+
+
+##### Description
+The `.modificationDate` property <!-- REF #document.modificationDate.Summary -->returns the date of the file's last modification<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.modificationTime.Desc -->
+### .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.modificationTime.Syntax -->
+**.modificationTime** -> modification date<!-- END REF -->
+
+<!-- REF #document.modificationTime.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Modification time|
+<!-- END REF -->
+
+
+##### Description
+The `.modificationTime` property <!-- REF #document.modificationTime.Summary -->returns the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF document.name.Desc -->
+### .name
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.name.Syntax -->
+**.name** -> file name<!-- END REF -->
+
+<!-- REF #document.name.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|File name without extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.name` property <!-- REF #document.name.Summary -->returns the name of the file<!-- END REF -->, without extension (if any). 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+<!-- REF document.original.Desc -->
+### .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.original.Syntax -->
+**.original** -> object<!-- END REF -->
+
+<!-- REF #document.original.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Target of the alias or symbolic link, otherwise same file object|
+<!-- END REF -->
+
+
+##### Description
+The `.original` property <!-- REF #document.original.Summary -->returns the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
+
+*	a file object 
+*	a folder object 
+
+For non-alias files, the property returns the same file object as the file.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.parent.Desc -->
+### .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.parent.Syntax -->
+**.parent** -> object<!-- END REF -->
+
+<!-- REF #document.parent.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Parent folder object for the file|
+<!-- END REF -->
+
+
+##### Description
+The `.parent` property <!-- REF #document.parent.Summary -->returns the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.path.Desc -->
+### .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.path.Syntax -->
+**.path** -> text<!-- END REF -->
+
+<!-- REF #document.path.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|POSIX path (including filesystem if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.path` property <!-- REF #document.path.Summary -->returns the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF document.platformPath.Desc -->
+### .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.platformPath.Syntax -->
+**.platformPath** -> text<!-- END REF -->
+
+<!-- REF #document.platformPath.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Path expressed with the platform syntax|
+<!-- END REF -->
+
+
+##### Description
+The `.platformPath` property <!-- REF #document.platformPath.Summary -->returns the path of the file expressed with the current platform syntax<!-- END REF -->.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF document.size.Desc -->
+### .size
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #document.size.Syntax -->
+**.size** -> file size<!-- END REF -->
+
+<!-- REF #document.size.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|number|<-|Size of the file in bytes|
+<!-- END REF -->
+
+
+##### Description
+The `.size` property <!-- REF #document.size.Summary -->returns the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+
+
+
 
 
 

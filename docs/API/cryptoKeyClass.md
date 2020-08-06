@@ -28,7 +28,7 @@ ASSERT($status.success)
 ```
 
 
-## Properties
+## Object Properties
 
 A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) function. It has the following properties (all are read-only):
 

@@ -18,7 +18,7 @@
         "title": "CryptoKey"
       },
       "API/directory": {
-        "title": "Directory Class"
+        "title": "Class"
       },
       "API/document": {
         "title": "Document Class"
@@ -43,6 +43,9 @@
       },
       "API/folderClass": {
         "title": "Folder"
+      },
+      "API/zipClass": {
+        "title": "ZIP Archives"
       },
       "Backup/backup": {
         "title": "Backup"

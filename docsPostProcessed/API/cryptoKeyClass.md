@@ -8,7 +8,7 @@ title: CryptoKey
 The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair. 
 
 This class is available from the `4D` class store.
-
+ 
 
 **Example**
 
@@ -28,7 +28,7 @@ ASSERT($status.success)
 ```
 
 
-## Properties
+## Object Properties
 
 A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) function. It has the following properties (all are read-only):
 
@@ -230,7 +230,7 @@ A status object.
 ||encodingDecrypted|text||Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".|
 ||||||
 |result||text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
-
+ 
 
 ##### Description
 The `.encrypt( )` function encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
@@ -238,7 +238,7 @@ The `.encrypt( )` function encrypts the `message` parameter using the **public**
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 **Returned value**
-
+ 
 Encrypted message.
 
 

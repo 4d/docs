@@ -16,6 +16,7 @@ title: Folder Functions
 </details>
 
 
+
 **.create( )** -> boolean
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -70,7 +71,10 @@ End if
 |v17 R5|Added
 </details>
 
+
+
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|object|->|Destination folder for the alias or shortcut|
@@ -116,11 +120,14 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
+
+
 **.delete**( { *option* } )
 
 |Parameter|Type||Description|
 |---|----|---|---|
 |option |longint|->|Folder deletion option|
+
 
 
 ##### Description
@@ -157,6 +164,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |---|---|
 |v17 R5|Added
 </details>
+
 
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|

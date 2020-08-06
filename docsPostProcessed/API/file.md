@@ -54,8 +54,6 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
-
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -101,7 +99,7 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
+
 **.delete( )**
 
 |Parameter|Type||Description|
@@ -140,7 +138,6 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
@@ -181,7 +178,6 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|
@@ -221,7 +217,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.setContent** ( *content* ) 
 |Parameter|Type||Description|
@@ -254,7 +249,6 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 |v17 R5|Added
 </details>
 
-**Not available for ZIP archives**
 
 **.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
 |Parameter|Type||Description|

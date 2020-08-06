@@ -1,37 +1,509 @@
 ---
-id: directory
-title: Directory Class
+id: 
+title:  Class
 ---
 
 ## Description
 
 
-## Properties
+<!-- REF directory.creationDate.Desc -->
+### .creationDate
 
-<!-- REF directory.properties -->
-|Property|Type|Description|
-|----|----|-----------|
-|<!-- REF directory.creationDate -->creationDate<!-- END REF -->|<!-- REF #directory.creationDate.type -->Date<!-- END REF -->|<!-- REF #directory.creationDate.Summary --><ul><li>**Folder**: Returns the creation date of the folder. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul><!-- END REF -->|
-|<!-- REF directory.creationTime -->creationTime<!-- END REF -->| <!-- REF #directory.creationTime.type -->Time<!-- END REF -->|<!-- REF #directory.creationTime.Summary --><ul><li>**Folder**: Returns the creation time of the folder (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul><!-- END REF -->|
-|<!-- REF directory.exists -->exists<!-- END REF -->|<!-- REF #directory.exists.type -->Boolean<!-- END REF --> |<!-- REF #directory.exists.Summary --> Returns **true** if the folder exists on disk, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.extension -->extension<!-- END REF -->|<!-- REF #directory.extension.type -->Text<!-- END REF --> |<!-- REF #directory.extension.Summary -->Returns the extension of the folder name. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF directory.fullName -->fullName<!-- END REF -->| <!-- REF #directory.fullName.type -->Text<!-- END REF -->|<!-- REF #directory.fullName.Summary -->Returns the full name of the folder, including its extension (if any). This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.hidden -->hidden <!-- END REF -->|<!-- REF #directory.hidden.type -->Boolean<!-- END REF --> |<!-- REF #directory.hidden.Summary -->  Returns **true** if the folder is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.isAlias -->isAlias<!-- END REF -->|<!-- REF #directory.isAlias.type -->Boolean<!-- END REF --> |<!-- REF #directory.isAlias.Summary -->Returns **true** if the folder is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.isFile -->isFile <!-- END REF -->|<!-- REF #directory.isFile.type -->Boolean<!-- END REF --> |<!-- REF #directory.isFile.Summary -->Always returns **false** for a folder. This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.isFolder -->isFolder<!-- END REF -->|<!-- REF #directory.isFolder.type -->Boolean<!-- END REF --> |<!-- REF #directory.isFolder.Summary -->Always returns **true** for a folder. This property is **read-only**.<!-- END REF -->| 
-|<!-- REF directory.isPackage -->isPackage<!-- END REF -->|<!-- REF #directory.isPackage.type -->Boolean<!-- END REF --> |<!-- REF #directory.isPackage.Summary -->Always returns **true** for a package. This property is **read-only**.<!-- END REF -->|  
-|<!-- REF directory.modificationDate -->modificationDate<!-- END REF -->| <!-- REF #directory.modificationDate.type -->Date<!-- END REF -->|<!-- REF #directory.modificationDate.Summary --> <ul><li>**Folder**: Returns the date of the folder's last modification. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul><!-- END REF -->| 
-|<!-- REF directory.modificationTime -->modificationTime<!-- END REF -->|<!-- REF #directory.modificationTime.type -->Time<!-- END REF --> |<!-- REF #directory.modificationTime.Summary --><ul><li>**Folder**: Returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul><!-- END REF -->|
-|<!-- REF directory.name -->name<!-- END REF -->|<!-- REF #directory.name.type -->Text<!-- END REF --> |<!-- REF #directory.name.Summary --> Returns the name of the folder, without extension (if any). This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.original -->original <!-- END REF -->|<!-- REF #directory.original.type -->Object<!-- END REF --> |<!-- REF #directory.original.Summary -->Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.<!-- END REF -->|
-|<!-- REF directory.parent -->parent<!-- END REF -->|<!-- REF #directory.parent.type -->Object<!-- END REF --> |<!-- REF #directory.parent.Summary --><ul><li>**Folder**: Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.</li><li>**ZIP archive**: The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.</li></ul><!-- END REF -->|
-|<!-- REF directory.path -->path<!-- END REF -->|<!-- REF #directory.path.type -->Text<!-- END REF --> |<!-- REF #directory.path.Summary --><ul><li>**Folder**: Returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul><!-- END REF -->|
-|<!-- REF directory.platformPath -->platformPath<!-- END REF -->|<!-- REF #directory.platformPath.type -->Text<!-- END REF -->  |<!-- REF #directory.platformPath.Summary -->Returns the path of the folder expressed with the current platform syntax. This property is **read-only**.<!-- END REF -->|
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.creationDate.Syntax -->
+**.creationDate** -> creation date<!-- END REF -->
+
+<!-- REF #directory.creationDate.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Creation date|
+<!-- END REF -->
+
+
+##### Description
+The `.creationDate` property  <!-- REF #directory.creationDate.Summary -->returns the creation date of the folder<!-- END REF -->.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+ 
+ 
+ <!-- REF directory.creationTime.Desc -->
+### .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.creationTime.Syntax -->
+**.creationTime** -> creation time<!-- END REF -->
+
+<!-- REF #directory.creationTime.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Creation time|
+<!-- END REF -->
+
+
+##### Description
+The `.creationTime` property  <!-- REF #directory.creationTime.Summary -->returns the creation  time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
 
 <!-- END REF -->
 
-## Functions
+
+
+
+<!-- REF directory.exists.Desc -->
+### .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.exists.Syntax -->
+**.exists** -> boolean<!-- END REF -->
+
+<!-- REF #directory.exists.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder exists, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.exists` property  <!-- REF #directory.exists.Summary -->returns true if the folder exists on disk<!-- END REF -->, and false otherwise.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+
+<!-- REF directory.extension.Desc -->
+### .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.extension.Syntax -->
+**.extension** -> folder name extension<!-- END REF -->
+
+<!-- REF #directory.extension.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.extension` property  <!-- REF #directory.extension.Summary -->returns the extension of the folder name<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.fullName.Desc -->
+### .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.fullName.Syntax -->
+**.fullName** -> full folder name<!-- END REF -->
+
+<!-- REF #directory.fullName.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Full folder name, including extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder<!-- END REF -->, including its extension (if any).
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.hidden.Desc -->
+### .hidden
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.hidden.Syntax -->
+**.hidden** -> boolean<!-- END REF -->
+
+<!-- REF #directory.hidden.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the hidden system flag is set for the folder, false otherwise|
+<!-- END REF -->
+
+
+##### Description
+The `.hidden` property <!-- REF #directory.hidden.Summary -->returns true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.isAlias.Desc -->
+### .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.isAlias.Syntax -->
+**.isAlias** -> boolean<!-- END REF -->
+
+<!-- REF #directory.isAlias.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+<!-- END REF -->
+
+
+##### Description
+The `.isAlias` property <!-- REF #directory.isAlias.Summary -->always returns **false** for a `Folder` object<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF directory.isFile.Desc -->
+### .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.isFile.Syntax -->
+**.isFile** -> boolean<!-- END REF -->
+
+<!-- REF #directory.isFile.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+<!-- END REF -->
+
+
+##### Description
+The `.isFile` property <!-- REF #directory.isFile.Summary -->always returns **false** for a folder<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF directory.isFolder.Desc -->
+### .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.isFolder.Syntax -->
+**.isFolder** -> boolean<!-- END REF -->
+
+<!-- REF #directory.isFolder.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+<!-- END REF -->true
+
+
+##### Description
+The `.isFolder` property <!-- REF #directory.isFolder.Summary -->always returns **true** for a folder<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF directory.isPackage.Desc -->
+### .isPackage
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.isPackage.Syntax -->
+**.isWritable** -> boolean<!-- END REF -->
+
+<!-- REF #directory.isPackage.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder is a package on macOS (always false on Windows)|
+<!-- END REF -->
+
+
+##### Description
+The `.isPackage` property <!-- REF #directory.isPackage.Summary -->returns true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. Otherwise, it returns false.
+
+On Windows, `.isPackage` always returns **false**.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.modificationDate.Desc -->
+### .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.modificationDate.Syntax -->
+**.modificationDate** -> modification date<!-- END REF -->
+
+<!-- REF #directory.modificationDate.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Modification date|
+<!-- END REF -->
+
+
+##### Description
+The `.modificationDate` property <!-- REF #directory.modificationDate.Summary -->returns the date of the folder's last modification<!-- END REF -->. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.modificationTime.Desc -->
+### .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.modificationTime.Syntax -->
+**.modificationTime** -> modification date<!-- END REF -->
+
+<!-- REF #directory.modificationTime.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Modification time|
+<!-- END REF -->
+
+
+##### Description
+The `.modificationTime` property <!-- REF #directory.modificationTime.Summary -->returns the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF directory.name.Desc -->
+### .name
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.name.Syntax -->
+**.name** -> file name<!-- END REF -->
+
+<!-- REF #directory.name.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name without extension (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.name` property <!-- REF #directory.name.Summary -->returns the name of the folder<!-- END REF -->, without extension (if any). 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+<!-- REF directory.original.Desc -->
+### .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.original.Syntax -->
+**.original** -> object<!-- END REF -->
+
+<!-- REF #directory.original.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Same folder object|
+<!-- END REF -->
+
+
+##### Description
+The `.original` property <!-- REF #directory.original.Summary -->returns the same folder object as the folder<!-- END REF -->. 
+
+This property is **read-only**. 
+
+>This property is available on folders to allow generic code to process folders or files.
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.parent.Desc -->
+### .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.parent.Syntax -->
+**.parent** -> object<!-- END REF -->
+
+<!-- REF #directory.parent.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Parent folder object (if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.parent` property <!-- REF #directory.parent.Summary -->returns the parent folder object of the folder<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+If the folder does not have a parent (root), the null value is returned. 
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+<!-- REF directory.path.Desc -->
+### .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.path.Syntax -->
+**.path** -> text<!-- END REF -->
+
+<!-- REF #directory.path.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|POSIX path (including filesystem if any)|
+<!-- END REF -->
+
+
+##### Description
+The `.path` property <!-- REF #directory.path.Summary -->returns the POSIX path of the folder<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+<!-- REF directory.platformPath.Desc -->
+### .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+<!-- REF #directory.platformPath.Syntax -->
+**.platformPath** -> text<!-- END REF -->
+
+<!-- REF #directory.platformPath.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Path expressed with the platform syntax|
+<!-- END REF -->
+
+
+##### Description
+The `.platformPath` property <!-- REF #directory.platformPath.Summary -->returns the path of the folder expressed with the current platform syntax<!-- END REF -->.
+
+This property is **read-only**. 
+
+<!-- END REF -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,6 +637,7 @@ Collection of `File` objects.
 ##### Example 1
 
 You want to know if there are invisible files in the Database folder:
+
 
 ```4d
  C_COLLECTION($all;$noInvisible)

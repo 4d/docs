@@ -1,35 +1,408 @@
 ---
-id: directory
-title: Directory Class
+id: 
+title:  Class
 ---
 
 ## Description
 
 
-## Properties
+### .creationDate
 
-|Property|Type|Description|
-|----|----|-----------|
-|creationDate|Date|<ul><li>**Folder**: Returns the creation date of the folder. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul>|
-|creationTime| Time|<ul><li>**Folder**: Returns the creation time of the folder (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul>|
-|exists|Boolean | Returns **true** if the folder exists on disk, and **false** otherwise. This property is **read-only**.|
-|extension|Text |Returns the extension of the folder name. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension. This property is **read-only**.| 
-|fullName| Text|Returns the full name of the folder, including its extension (if any). This property is **read-only**.|
-|hidden |Boolean |  Returns **true** if the folder is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.|
-|isAlias|Boolean |Returns **true** if the folder is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.|
-|isFile |Boolean |Always returns **false** for a folder. This property is **read-only**.|
-|isFolder|Boolean |Always returns **true** for a folder. This property is **read-only**.| 
-|isPackage|Boolean |Always returns **true** for a package. This property is **read-only**.|  
-|modificationDate| Date| <ul><li>**Folder**: Returns the date of the folder's last modification. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul>| 
-|modificationTime|Time |<ul><li>**Folder**: Returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul>|
-|name|Text | Returns the name of the folder, without extension (if any). This property is **read-only**.|
-|original |Object |Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.|
-|parent|Object |<ul><li>**Folder**: Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.</li><li>**ZIP archive**: The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.</li></ul>|
-|path|Text |<ul><li>**Folder**: Returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul>|
-|platformPath|Text  |Returns the path of the folder expressed with the current platform syntax. This property is **read-only**.|
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationDate** -> creation date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Creation date|
 
 
-## Functions
+##### Description
+The `.creationDate` property  returns the creation date of the folder.
+
+This property is **read-only**. 
+
+ 
+ 
+ ### .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationTime** -> creation time
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Creation time|
+
+
+##### Description
+The `.creationTime` property  returns the creation  time of the folder (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
+
+
+
+
+
+### .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.exists** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder exists, false otherwise|
+
+
+##### Description
+The `.exists` property  returns true if the folder exists on disk, and false otherwise.
+
+This property is **read-only**. 
+
+
+
+
+
+
+### .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.extension** -> folder name extension
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name extension (if any)|
+
+
+##### Description
+The `.extension` property  returns the extension of the folder name. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+
+This property is **read-only**. 
+
+
+
+
+
+### .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.fullName** -> full folder name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Full folder name, including extension (if any)|
+
+
+##### Description
+The `.fullName` property returns the full name of the folder, including its extension (if any).
+
+This property is **read-only**. 
+
+
+
+
+
+### .hidden
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.hidden** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the hidden system flag is set for the folder, false otherwise|
+
+
+##### Description
+The `.hidden` property returns true if the folder is set as "hidden" at the system level, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+
+
+### .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isAlias** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+
+
+##### Description
+The `.isAlias` property always returns **false** for a `Folder` object. 
+
+This property is **read-only**. 
+
+
+
+
+### .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFile** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+
+
+##### Description
+The `.isFile` property always returns **false** for a folder. 
+
+This property is **read-only**. 
+
+
+
+
+### .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFolder** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+true
+
+
+##### Description
+The `.isFolder` property always returns **true** for a folder. 
+
+This property is **read-only**. 
+
+
+
+
+### .isPackage
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isWritable** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder is a package on macOS (always false on Windows)|
+
+
+##### Description
+The `.isPackage` property returns true if the folder is a package on macOS  (and exists on disk). Otherwise, it returns false.
+
+On Windows, `.isPackage` always returns **false**.
+
+This property is **read-only**. 
+
+
+
+
+
+### .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationDate** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Modification date|
+
+
+##### Description
+The `.modificationDate` property returns the date of the folder's last modification. 
+
+This property is **read-only**. 
+
+
+
+
+
+### .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationTime** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Modification time|
+
+
+##### Description
+The `.modificationTime` property returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+
+
+
+### .name
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.name** -> file name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name without extension (if any)|
+
+
+##### Description
+The `.name` property returns the name of the folder, without extension (if any). 
+
+This property is **read-only**. 
+
+
+
+### .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.original** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Same folder object|
+
+
+##### Description
+The `.original` property returns the same folder object as the folder. 
+
+This property is **read-only**. 
+
+>This property is available on folders to allow generic code to process folders or files.
+
+
+
+
+
+### .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.parent** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Parent folder object (if any)|
+
+
+##### Description
+The `.parent` property returns the parent folder object of the folder. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+If the folder does not have a parent (root), the null value is returned. 
+
+This property is **read-only**. 
+
+
+
+
+
+### .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.path** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|POSIX path (including filesystem if any)|
+
+
+##### Description
+The `.path` property returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
+
+
+
+
+### .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.platformPath** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Path expressed with the platform syntax|
+
+
+##### Description
+The `.platformPath` property returns the path of the folder expressed with the current platform syntax.
+
+This property is **read-only**. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,6 +519,7 @@ Collection of `File` objects.
 ##### Example 1
 
 You want to know if there are invisible files in the Database folder:
+
 
 ```4d
  C_COLLECTION($all;$noInvisible)

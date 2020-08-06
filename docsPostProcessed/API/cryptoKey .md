@@ -194,7 +194,7 @@ A status object.
 ||encodingDecrypted|text||Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".|
 ||||||
 |result||text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
-
+ 
 
 ##### Description
 The `.encrypt( )` function encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
@@ -202,7 +202,7 @@ The `.encrypt( )` function encrypts the `message` parameter using the **public**
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 **Returned value**
-
+ 
 Encrypted message.
 
 
