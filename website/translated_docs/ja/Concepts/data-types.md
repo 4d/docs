@@ -29,7 +29,7 @@ title: データタイプの概要
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
 
 ## デフォルト値
 
@@ -40,10 +40,10 @@ title: データタイプの概要
 - プロセス変数およびインタープロセス変数は常に "ゼロにする" に設定されます。つまり、型によって、"0"、空の文字列、空のBlob、Nilポインター、空の日付 (00-00-00)、ということです。
 - ローカル変数は以下の様に設定されます:
     - インタープリタモード: ゼロにする
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
+    - コンパイルモードにおいては、データベース設定の**ローカル変数初期化オプション**によって異なります:
         - "ゼロにする" が選択されている場合にはゼロになります。
         - "ランダム値にする" が選択されている場合には、数値と時間については0x72677267、ブールについては常に true、他のものについては "ゼロにする" の場合と同じです。
-        - "なし" が選択されている場合には、変数は初期化されず、メモリにある値が採用されます。それは、別の変数に以前使われた値かもしれません。 **Note:** 4D recommends to use "to zero".
+        - "なし" が選択されている場合には、変数は初期化されず、メモリにある値が採用されます。それは、別の変数に以前使われた値かもしれません。 **注:** 4D では "ゼロにする" の設定を推奨しています。
 
 以下の表はこれらのデフォルトの値をあらわしたものです:
 
@@ -81,4 +81,4 @@ title: データタイプの概要
 
 (2) 時間は数値として扱うことができます。
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**注:** この表に示すデータ変換の他に、演算子と他のコマンドを組み合せることで、より洗練されたデータ変換を実行することができます。
