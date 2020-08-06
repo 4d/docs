@@ -10,10 +10,10 @@ Die Seite Backup des MSC zeigt die Backup-Einstellungen für die Datenbank. Hier
 
 Diese Seite ist in drei Bereiche unterteilt:
 
-- **Backup Zielpfad**: Zeigt Informationen zum Speicherort der Backup-Datei der Datenbank an, sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
-- **Letztes Backup**: Zeigt Datum und Uhrzeit des zuletzt für die Datenbank ausgeführten Backup (automatisch oder manuell).
-- **Inhalt der Backup-Datei**: Zeigt die in der Backup-Datei enthaltenen Dateien und Ordner an.
+- **Backup File Destination**: displays information about the location of the database backup file. sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
+- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
+- **Contents of the backup file**: lists the files and folders included in the backup file.
 
-Mit der Schaltfläche **Backup** starten Sie ein manuelles Backup.
+The **Backup** button is used to launch a manual backup.
 
-Auf dieser Seite können Sie keine Backup-Parameter verändern. Dazu müssen Sie am unteren Rand auf die Schaltfläche **Datenbank-Eigenschaften** klicken.
+Auf dieser Seite können Sie keine Backup-Parameter verändern. To do this, you must click on the **Database properties...** button.
