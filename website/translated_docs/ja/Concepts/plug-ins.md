@@ -3,7 +3,7 @@ id: plug-ins
 title: プラグイン
 ---
 
-4Dアプリケーションの開発を進めていくと、最初は気付かなかった数多くの機能を発見することでしょう。 You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+4Dアプリケーションの開発を進めていくと、最初は気付かなかった数多くの機能を発見することでしょう。 それだけでなく、**プラグイン** を4D開発環境に追加することで、標準の4Dの機能を高めることもできます。
 
 ## プラグインの必要性
 
@@ -24,9 +24,9 @@ title: プラグイン
 
 プラグインには通常複数のルーチンが含まれています。 プラグインは外部エリアを操作でき、外部プロセスを実行できます。
 
-- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action.
-- An **external area** is a part of a form that can display almost everything and interact with the user when necessary.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. プロセスのコードはすべてプラグインに属しており、4D はプロセスに対してイベントを送受信するだけです。
+- **プラグインルーチン** とは、ネイティブ言語 (通常は C あるいは C++) で書かれたルーチンで、なんらかの処理を実行します。
+- **外部エリア** とはフォームの一部で、あらゆるものを表示することができ、必要に応じてユーザー操作を受け付けることができます。
+- **外部プロセス** とは、通常はループ形式で単独実行されるプロセスのことです。 プロセスのコードはすべてプラグインに属しており、4D はプロセスに対してイベントを送受信するだけです。
 
 ### 重要な注記
 
@@ -34,23 +34,23 @@ title: プラグイン
 
 ## プラグインの作り方
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+4D は GitHub 上に、4D Plugin API と the 4D Plugin Wizard を含んだオープンソースの [**プラグイン SDK**](https://github.com/4d/4D-Plugin-SDK) (英語) を提供しています:
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API の機能は、4D とプラグイン間の通信を管理します。
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. プラグインのロードや、プラグインとの通信に 4D が必要とするコードがツールによって提供されることで、デベロッパーはプラグインの根幹をなすコードに集中することができます。
+- [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API) は C で書かれており、プラグインの開発を助けるための機能を400以上追加します。 4D Plug-in API の機能は、4D とプラグイン間の通信を管理します。
+- [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) は、4D プラグインの開発を簡略化するために不可欠なツールです。 プラグインのロードや、プラグインとの通信に 4D が必要とするコードがツールによって提供されることで、デベロッパーはプラグインの根幹をなすコードに集中することができます。
 
 ## インストールの手順
 
 プラグインやコンポーネントは 4D環境の適切なフォルダーにコピーすることでインストールされます。
 
-Windows および macOS用の 4Dプラグインは、“PluginName.bundle” フォルダー (macOSではパッケージと呼ばれます) に格納されます。 このフォルダーの内部構造により、4D Server環境において、接続するクライアントのOSに応じたプラグインがロード/配信され、クライアント上で実行されます。 To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+Windows および macOS用の 4Dプラグインは、“PluginName.bundle” フォルダー (macOSではパッケージと呼ばれます) に格納されます。 このフォルダーの内部構造により、4D Server環境において、接続するクライアントのOSに応じたプラグインがロード/配信され、クライアント上で実行されます。 プラグインをインストールするには、この “PluginName.bundle” フォルダー (パッケージ) を**Plugins** フォルダーに配置します。
 
 Plugins フォルダーは 2つの異なる場所に配置できます:
 
 - 4D実行アプリケーションレベル:
   - Windows: .exeファイルと同階層
-  - Under macOS: at the first level of the Contents folder inside the application package.   
-    In this case, plug-ins are available in every database opened by this application.
+  - macOS: アプリケーションパッケージ内の Contentsフォルダーの直下。   
+    この場合、このアプリケーションで開かれるすべてのデータベースからプラグインを利用できます。
 - データベースストラクチャーファイルと同階層: この場合、プラグインは当該データベースでのみ利用可能です。
 
 場所の選択はプラグインをどのように使用するかによって決定します。
