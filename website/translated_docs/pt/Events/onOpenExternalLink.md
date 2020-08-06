@@ -14,6 +14,6 @@ This event is generated when the loading of a URL was blocked by the Web area an
 
 You can find out the blocked URL using the `WA Get last filtered URL` command.
 
-### See also
 
+### See also
 [`On URL Filtering`](onUrlFiltering.md)
