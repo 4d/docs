@@ -1,10 +1,10 @@
 ---
 id: folder
-title: Folder Methods
+title: Folder Functions
 ---
 
 
-## Methods
+## Functions
 
 
 <!-- REF folder.create().Desc -->
@@ -17,22 +17,26 @@ title: Folder Methods
 </details>
 
 
+<!--REF folder.create().Note -->
+**Not available for ZIP archives**<!-- END REF -->
+
+
 <!--REF #folder.create().Syntax -->
 **.create( )** -> boolean<!-- END REF -->
 
 <!--REF #folder.create().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
+|Result|boolean|<-|True if the folder was created successfully, false otherwise|
 <!-- END REF -->
 
 
 
 #### Description
 
-The `.create( )` method <!-- REF #folder.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+The `.create( )` function <!-- REF #folder.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE document.platformPath -->](#platformpath) or [<!-- INCLUDE document.path -->](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE directory.platformPath -->](#platformpath) or [<!-- INCLUDE directory.path -->](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Returned value**
 
@@ -77,25 +81,31 @@ End if
 |v17 R5|Added
 </details>
 
+
+<!--REF folder.createAlias().Note -->
+**Not available for ZIP archives**<!-- END REF -->
+
+
 <!--REF #folder.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> Result<!-- END REF -->
+**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object<!-- END REF -->
+
 
 <!--REF #folder.createAlias().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|Object|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Longint|->|Type of the alias link|
-|Result|Object|<-|>Alias or shortcut folder reference|
+|destinationFolder|object|->|Destination folder for the alias or shortcut|
+|aliasName|text|->|Name of the alias or shortcut|
+|aliasType|longint|->|Type of the alias link|
+|Result|object|<-|>Alias or shortcut folder reference|
 <!-- END REF -->
 
 
 ##### Description
-The `.createAlias( )` method <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
+The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-By default on macOS, the method creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
 |Constant|Value|Comment|
 |--------|-----|-------|
@@ -129,19 +139,24 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
+
+<!--REF folder.delete().Note -->
+**Not available for ZIP archives**<!-- END REF -->
+
+
 <!--REF #folder.delete().Syntax -->
-**.delete( )**<!-- END REF -->
+**.delete**( { *option* } )<!-- END REF -->
 
 
 <!-- REF #folder.delete().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|option |Longint|->|Folder deletion option|
+|option |longint|->|Folder deletion option|
 <!-- END REF -->
 
 
 ##### Description
-The `.delete( )` method <!-- REF #folder.delete().Summary -->deletes the folder<!-- END REF -->.
+The `.delete( )` function <!-- REF #folder.delete().Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
@@ -167,28 +182,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 <!-- END REF -->
  
  
-<!-- REF folder.file().Desc --> 
-### .file( )
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-<!--REF #folder.file().Syntax -->
-**.file**( *path* )  -> Result<!-- END REF -->
-
-
-
-
-
-
-
-
-
-
- 
 <!-- REF folder.moveTo().Desc -->
 ### .moveTo( )
 
@@ -198,36 +192,43 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |v17 R5|Added
 </details>
 
+
+<!--REF folder.moveTo().Note -->
+**Not available for ZIP archives**<!-- END REF -->
+
+
 <!--REF #folder.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* { ; *newName*} )  -> Result<!-- END REF -->
+**.moveTo**( *destinationFolder* { ; *newName*} )  -> object<!-- END REF -->
 
 <!--REF #folder.moveTo().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|Object|->|Destination folder|
-|newName|Text|->|Full name for the moved file|
-|Result|Object|<-|Moved file|
+|newName|text|->|Full name for the moved folder|
+|Result|object|<-|Moved folder|
 <!-- END REF -->
 
 
 ##### Description
-The `.moveTo( )` method <!-- REF #folder.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #folder.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
 **Returned object**
 
-The moved `File` object.
+The moved `Folder` object.
 
 ##### Example
 
+You want to move and rename a folder:
 
 ```4d
-$DocFolder:=Folder(fk documents folder)
-$myFile:=$DocFolder.file("Current/Infos.txt")
-$myfolder.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
+C_OBJECT($tomove;$moved)
+ $docs:=Folder(fk documents folder)
+ $tomove:=$docs.folder("Pictures")
+ $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
 <!-- END REF -->
 
@@ -241,36 +242,42 @@ $myfolder.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
+
+
+<!--REF folder.rename().Note -->
+**Not available for ZIP archives**<!-- END REF -->
+
+
+
 <!--REF #folder.rename().Syntax -->
-**.rename**( *newName* ) -> Result<!-- END REF -->
+**.rename**( *newName* ) -> object<!-- END REF -->
 
 <!--REF #folder.rename().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newName|Text|->|New full name for the file|
-|Result|Object|<-|Renamed file|
+|newName|text|->|New full name for the folder|
+|Result|object|<-|Renamed folder|
 <!-- END REF -->
 
 
 
 ##### Description
 
-The `.rename( )` method <!-- REF #folder.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename( )` function <!-- REF #folder.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Note that the method modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Returned object**
 
-The renamed `File` object.
+The renamed `Folder` object.
 
 ##### Example
-You want to rename "ReadMe.txt" in "ReadMe_new.txt":
+
 
 ```4d
- $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
- $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)
+ C_OBJECT($toRename)
+ $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
 <!-- END REF -->
 

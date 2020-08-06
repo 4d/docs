@@ -1,10 +1,10 @@
 ---
 id: file
-title: File Methods
+title: File functions
 ---
 
 
-## Methods
+## Functions
 
 
 ### .create( )
@@ -15,17 +15,16 @@ title: File Methods
 |v17 R5|Added
 </details>
 
+**Not available for ZIP archives**
 
-**.create( )** -> boolean
+**.create( )** -> boolean 
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if the file was created successfully, false otherwise|
-
-
+|Result|boolean|<-|True if the file was created successfully, false otherwise|
 
 #### Description
 
-The `.create( )` method creates a file on disk according to the properties of the file object.
+The `.create( )` function creates a file on disk according to the properties of the `File` object.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -55,21 +54,23 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> Result
+**Not available for ZIP archives**
+
+**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|Object|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Longint|->|Type of the alias link|
-|Result|Object|<-|>Alias or shortcut file reference|
+|destinationFolder|object|->|Destination folder for the alias or shortcut|
+|aliasName|text|->|Name of the alias or shortcut|
+|aliasType|longint|->|Type of the alias link|
+|Result|object|<-|>Alias or shortcut file reference|
 
 
 ##### Description
-The `.createAlias( )` method creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias( )` function creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-By default on macOS, the method creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
 |Constant|Value|Comment|
 |--------|-----|-------|
@@ -77,6 +78,7 @@ By default on macOS, the method creates a standard alias. You can also create a 
 |`fk symbolic link`|1|Symbolic link (macOS only)|
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+
 
 **Returned object**
 
@@ -99,6 +101,7 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
+**Not available for ZIP archives**
 **.delete( )**
 
 |Parameter|Type||Description|
@@ -107,11 +110,11 @@ You want to create an alias to a file in your database folder:
 
 
 ##### Description
-The `.delete( )` method deletes the file.
+The `.delete( )` function deletes the file.
 
 If the file is currently open, an error is generated.
 
-If the file does not exist on disk, the method does nothing (no error is generated).
+If the file does not exist on disk, the function does nothing (no error is generated).
 
 >**WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
@@ -137,20 +140,23 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-**.moveTo**( *destinationFolder* { ; *newName*} )  -> Result
+**Not available for ZIP archives**
+
+**.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|Object|->|Destination folder|
-|newName|Text|->|Full name for the moved file|
-|Result|Object|<-|Moved file|
+|destinationFolder|object|->|Destination folder|
+|newName|text|->|Full name for the moved file|
+|Result|object|<-|Moved file|
 
 
 ##### Description
-The `.moveTo( )` method moves or renames the `File` object into the specified *destinationFolder*.
+The `.moveTo( )` function moves or renames the `File` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+
 
 **Returned object**
 
@@ -175,21 +181,22 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-**.rename**( *newName* ) -> Result
+**Not available for ZIP archives**
+
+**.rename**( *newName* ) -> object
 |Parameter|Type||Description|
 |---|---|---|---|
-|newName|Text|->|New full name for the file|
-|Result|Object|<-|Renamed file|
-
-
+|newName|text|->|New full name for the file|
+|Result|object|<-|Renamed file|
 
 ##### Description
 
-The `.rename( )` method renames the file with the name you passed in *newName* and returns the renamed `File` object.
+The `.rename( )` function renames the file with the name you passed in *newName* and returns the renamed `File` object.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Note that the method modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+
 
 **Returned object**
 
@@ -214,6 +221,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v17 R5|Added
 </details>
 
+**Not available for ZIP archives**
+
 **.setContent** ( *content* ) 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -221,7 +230,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 ##### Description
-The `.setContent( )` method rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+The `.setContent( )` function rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 
 ##### Example
@@ -245,18 +254,19 @@ The `.setContent( )` method rewrites the entire content of the file using the da
 |v17 R5|Added
 </details>
 
+**Not available for ZIP archives**
+
 **.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
 |Parameter|Type||Description|
 |---------|----|---|--------|
-|text|Text|->|Text to store in the file|
-|charSet|Text, Longint|->|Name or number of character set|
-|breakMode|Longint|->|Processing mode for line breaks|
-
-
+|text|text|->|Text to store in the file|
+|charSet|text, longint|->|Name or number of character set|
+|breakMode|longint|->|Processing mode for line breaks|
 ##### Description
-The `.setText( )` method writes *text* as the new contents of the file.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the method. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
+The `.setText( )` function writes *text* as the new contents of the file.
+
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
@@ -273,6 +283,8 @@ In *breakMode*, you can pass a longint indicating the processing to apply to end
 |`Document with LF`|Longint|4|Line breaks are converted to Unix format: LF (line feed)|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+
+
 
 ##### Example
 
