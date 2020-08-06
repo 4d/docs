@@ -7,7 +7,7 @@ title: Aperçu
 
 ![](assets/en/Menus/menubar.png)
 
-A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). Lorsque l’utilisateur choisit une commande de menu ou de sous-menu, il appelle une méthode projet ou une action standard qui réalise une opération.
+Une **barre de menus** est un groupe de menus qui peuvent être affichés dans le même écran. Chaque **menu** d’une barre de menus peut posséder plusieurs commandes dont certaines peuvent faire appel à des sous-menus en cascade (on parle alors de sous-menus hiérarchiques). Lorsque l’utilisateur choisit une commande de menu ou de sous-menu, il appelle une méthode projet ou une action standard qui réalise une opération.
 
 Vous pouvez disposer de différentes barres de menus dans la même base de données. Par exemple, vous pouvez utiliser une barre de menus pour les opérations standard de votre base de données et une autre qui n’est active que pour la réalisation d’états. Une barre de menus peut contenir des commandes destinées à la saisie d’enregistrements. La barre de menus qui apparaît avec le formulaire de saisie peut contenir le même menu, mais ses commandes peuvent être désactivées car inutiles pour la saisie dans le formulaire.
 
@@ -25,7 +25,7 @@ Pour créer des menus et des barres de menus, vous pouvez utiliser soit :
 
 
 ## Éditeur de menus
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+L’éditeur de menus est accessible via le bouton **Menus** de la Boîte à outils.
 
 ![](assets/en/Menus/editor1.png)
 
