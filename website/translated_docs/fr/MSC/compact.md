@@ -10,9 +10,9 @@ Cette page permet d’accéder aux fonctions de compactage du fichier de donnée
 
 Le compactage d'un fichier répond à deux types de besoins :
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). En effet, lorsque vous supprimez des enregistrements, des formulaires, etc., l’emplacement qu’ils occupaient précédemment dans le fichier devient vacant. 4D réutilise ces emplacements vides lorsque c’est possible, mais la taille des données étant variable, les suppressions ou modifications successives génèrent inévitablement des espaces inutilisables pour le programme. Il en va de même lorsqu’une grande quantité de données vient d’être supprimée : les emplacements vides restent inaffectés dans le fichier. Le rapport entre la taille du fichier de données et l’espace réellement utilisé pour les données est le taux d’occupation des données. Un taux trop faible peut entraîner, outre un gaspillage de place, une dégradation des performances de la base. La fonction de compactage permet de réorganiser et d’optimiser le stockage des données afin de faire disparaître les “trous”. Les zones “Informations” résument les données relatives à la fragmentation des fichiers et suggèrent les opérations à effectuer. Les onglets de la page [Informations](information.md#data) du CSM indiquent la fragmentation courante des fichiers de la base.
+- **Réduction de taille et optimisation des fichiers** : les fichiers peuvent comporter des emplacements inutilisés (des “trous”). En effet, lorsque vous supprimez des enregistrements, des formulaires, etc., l’emplacement qu’ils occupaient précédemment dans le fichier devient vacant. 4D réutilise ces emplacements vides lorsque c’est possible, mais la taille des données étant variable, les suppressions ou modifications successives génèrent inévitablement des espaces inutilisables pour le programme. Il en va de même lorsqu’une grande quantité de données vient d’être supprimée : les emplacements vides restent inaffectés dans le fichier. Le rapport entre la taille du fichier de données et l’espace réellement utilisé pour les données est le taux d’occupation des données. Un taux trop faible peut entraîner, outre un gaspillage de place, une dégradation des performances de la base. La fonction de compactage permet de réorganiser et d’optimiser le stockage des données afin de faire disparaître les “trous”. Les zones “Informations” résument les données relatives à la fragmentation des fichiers et suggèrent les opérations à effectuer. Les onglets de la page [Informations](information.md#data) du CSM indiquent la fragmentation courante des fichiers de la base.
 
-- **Complete updating of data** by applying the current formatting set in the structure file. Ce principe est utile lorsque les données d'une même table ont été stockées dans différents formats, par exemple après un changement dans la structure de la base.
+- **Réenregistrement intégral des données** en appliquant le formatage courant défini dans le fichier de structure. Ce principe est utile lorsque les données d'une même table ont été stockées dans différents formats, par exemple après un changement dans la structure de la base.
 > Le compactage n’est disponible qu’en mode maintenance. Si vous tentez d’effectuer cette opération en mode standard, une boîte de dialogue d’alerte vous prévient que la base va être fermée puis relancée en mode maintenance. Il est possible de compacter un fichier de données non ouvert par la base de données (cf. paragraphe [Compacter les enregistrements et les index](#compact-records-and-indexes) ci-dessous).
 
 ## Le compactage standard
@@ -22,32 +22,32 @@ Pour démarrer directement le compactage du fichier de données ou de structure,
 ![](assets/en/MSC/MSC_compact.png)
 > Le compactage entraînant la duplication du fichier d’origine, le bouton est désactivé si la place sur le disque contenant le fichier est insuffisante.
 
-Cette opération défragmente le fichier principal ainsi que les éventuels fichiers d’index. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. Si vous effectuez plusieurs compactages, un nouveau dossier est créé à chaque fois. Il est nommé “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, etc. Vous pouvez modifier le dossier dans lequel les fichiers d’origine sont sauvegardés via le mode avancé.
+Cette opération défragmente le fichier principal ainsi que les éventuels fichiers d’index. 4D effectue une copie des fichiers d’origine et les place dans un dossier nommé **Replaced Files (Compacting)**, créé à côté du fichier d’origine. Si vous effectuez plusieurs compactages, un nouveau dossier est créé à chaque fois. Il est nommé “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, etc. Vous pouvez modifier le dossier dans lequel les fichiers d’origine sont sauvegardés via le mode avancé.
 
 A l’issue de l’opération, les fichiers défragmentés remplacent automatiquement les fichiers d’origine. La base de données est immédiatement opérationnelle sans aucune autre manipulation.
 > Lorsque la base est chiffrée, le compactage comprend le chiffrement et le déchiffrement et requiert ainsi la clé de chiffrement des données courante. Si aucune clé de chiffrement valide n'a encore été fournie, une boîte de dialogue s'affiche pour vous demander de saisir la phrase secrète ou la clé des données.
 
-**Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. Il est important de tenir compte de ce mécanisme (notamment sous macOS où les applications 4D apparaissent sous forme de packages) pour que l’application ne grossisse pas de façon excessive. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
+**Attention :** Chaque compactage entraîne la duplication du fichier d’origine et donc l’augmentation de la taille du dossier de l’application. Il est important de tenir compte de ce mécanisme (notamment sous macOS où les applications 4D apparaissent sous forme de packages) pour que l’application ne grossisse pas de façon excessive. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
 
 ## Voir le compte rendu
 
 Une fois le compactage terminé, 4D génère un fichier de compte-rendu dans le dossier Logs de la base. Ce fichier liste l’ensemble des opérations qui ont été menées. Il est créé au format xml et est nommé *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" où :
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *NomBase* est le nom du fichier de structure sans extension, par exemple "Factures",
+- *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
 
 
 ## Mode avancé
 
-The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
+La page Compactage comporte un bouton **Avancé**, permettant d’accéder à une page d’options pour le compactage des fichiers de données et de structure.
 
 ### Compacter les enregistrements et les index
 
-The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à compacter. Vous devez sélectionner un fichier de données compatible avec le fichier de structure ouvert. Une fois la boîte de dialogue validée, le chemin d’accès du fichier à compacter est indiqué dans la fenêtre.
+La zone **Compacter les enregistrements et les index** affiche le chemin d’accès du fichier de données courant ainsi qu’un bouton **[...]** permettant de désigner un autre fichier de données. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à compacter. Vous devez sélectionner un fichier de données compatible avec le fichier de structure ouvert. Une fois la boîte de dialogue validée, le chemin d’accès du fichier à compacter est indiqué dans la fenêtre.
 
-The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. Cette option permet notamment de compacter des fichiers volumineux en utilisant différents disques.
+Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant compactage. Cette option permet notamment de compacter des fichiers volumineux en utilisant différents disques.
 
 ### Forcer la mise à jour des enregistrements
 
