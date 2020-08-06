@@ -181,7 +181,7 @@ Der obige Code gelangt nicht bis zur zweiten Bedingung, da der Test "vResult=1" 
 
 Für hierarchisches Testen können Sie auch hierarchischen Code einsetzen.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
+**Tipp:** In spezifischen Fällen können Sie auch Abfragen ohne Befehlsfolge einrichten. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
 ```4d
  Case of
     :(Boolean_Expression)
