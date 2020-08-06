@@ -47,7 +47,7 @@ Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la 
 
 - **Fichier de données** : fichier de données de la base. When this option is checked, the following elements are automatically backed up at the same time as the data:
     - the current log file of the database (if it exists),
-    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*.
+    - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
 - **Fichier de structure** : fichiers et dossiers de la base. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up.
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*f
 - **Fichiers joints** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que la base. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
