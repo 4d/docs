@@ -3,7 +3,7 @@ id: blob
 title: BLOB
 ---
 
-- Un champ, une variable ou une expression de type BLOB (Binary Large OBjects) est une série contiguë d'octets qui peut être traitée comme un seul objet ou dont les octets peuvent être adressés individuellement. Un BLOB peut être vide (longueur nulle) ou contenir jusqu'à 2147483647 octets (2 Go). 
+- Un champ, une variable ou une expression de type BLOB (Binary Large OBjects) est une série contiguë d'octets qui peut être traitée comme un seul objet ou dont les octets peuvent être adressés individuellement. Un BLOB peut être vide (longueur nulle) ou contenir jusqu'à 2147483647 octets (2 Go).
 - Lorsque vous travaillez avec un BLOB, il est stocké entièrement en mémoire. Si vous travaillez avec une variable, le BLOB n'existe qu'en mémoire. Si vous travaillez avec un champ de type BLOB, il est chargé en mémoire à partir du disque, comme le reste de l'enregistrement auquel il appartient.
 - A l'instar des autres types de champs pouvant contenir une grande quantité de données (comme les champs de type Image), les champs de type BLOB ne sont pas dupliqués en mémoire lorsque vous modifiez un enregistrement. Par conséquent, les résultats renvoyés par `Ancien` et `Modifie` ne sont pas significatifs lorsque ces fonctions sont appliquées à des champs de type BLOB.
 
@@ -14,7 +14,6 @@ Les BLOBs dans 4D peuvent être passés comme paramètres aux commandes 4D ou au
 Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un pointeur vers le BLOB et passer le pointeur comme paramètre.
 
 **Voici quelques exemples :**
-
 ```4d
   // Déclarer une variable de type BLOB
  C_BLOB(touteVarBLOB)
@@ -28,7 +27,6 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
   // Un pointeur vers le BLOB est passé comme paramètre à une de vos méthodes
  COMPUTE BLOB(->touteVarBLOB)
 ```
-
 **Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
 
 ## Assignation
@@ -36,7 +34,6 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
 Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant.
 
 **Exemple :**
-
 ```4d
   // Déclarer deux variables de type BLOB
  C_BLOB(vBlobA;vBlobB)
@@ -51,7 +48,6 @@ En revanche, il n'existe pas d'opérateur pouvant être utilisé avec des BLOB.
 ## Adresser le contenu d'un BLOB
 
 Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accolades {...}. Dans un BLOB, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB. Exemple :
-
 ```4d
   // Déclarer une variable de type BLOB
  C_BLOB(vBlob)
@@ -62,5 +58,4 @@ Chaque octet d'un BLOB peut être adressé individuellement, à l'aide des accol
     vBlob{vOctet}:=0
  Fin de boucle
 ```
-
 Comme vous pouvez adresser individuellement tous les octets d'un BLOB, vous pouvez littéralement stocker tout ce que vous voulez dans une variable ou un champ de type BLOB.
