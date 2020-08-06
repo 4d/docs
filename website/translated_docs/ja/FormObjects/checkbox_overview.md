@@ -18,8 +18,8 @@ title: チェックボックス
 
 チェックボックスには整数型またはブール型の [変数あるいは式](properties_Object.md#変数あるいは式) を設定することができます。
 
-- **integer:** if the box is checked, the variable has the value 1. チェックボックスが選択されていない場合の値は 0 です。 チェックボックスが 3番目の状態 (後述参照) のとき、変数値は 2 になります。
-- **boolean:** if the box is checked, the variable has the value `True`. チェックボックスが選択されていない場合の値は `False` です。
+- **整数型:** チェックボックスが選択されると、変数の値は 1 になります。 チェックボックスが選択されていない場合の値は 0 です。 チェックボックスが 3番目の状態 (後述参照) のとき、変数値は 2 になります。
+- **ブール型:** チェックボックスが選択されると、変数の値は `true` になります。 チェックボックスが選択されていない場合の値は `False` です。
 
 フォーム上のすべてのチェックボックスは選択/未選択のいずれかの状態にすることができます。 チェックボックスのグループを使用すると、複数の候補を選択できるようになります。
 
@@ -81,13 +81,13 @@ true/false ステータスで表すことのできるアクション ("checkable
 
 チェックボックススタイルは、チェックボックスの外観を制御すると同時に、提供されるプロパティをも決定します。 チェックボックスには、あらかじめ定義されたスタイルを割り当てることができます。 これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. 違いは、関連づけられた変数の処理にあります。
+スタイルによって [提供されるプロパティ](#プロパティ一覧) は異なりますが、大多数のチェックボックスは *構造上* 同じです。 違いは、関連づけられた変数の処理にあります。
 
 次の既定スタイルが提供されています:
 
 ### 通常
 
-The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+通常スタイルのチェックボックスは、標準的なシステムチェックボックス (四角形にタイトルが付いたもの) です。
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
@@ -163,7 +163,7 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 ### ベベル
 
-The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
+ベベルスタイルはデフォルトでは、ベベルボタンのような外観 (四角にラベル) に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
 
 ベベルスタイルは、明るいグレーの背景にラベルが付いています。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
 
@@ -257,11 +257,11 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
- - *Windows* - a standard system button with a light blue background with a title in the center.
+ - *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. 高さは定義済みで、変更できません。
+ - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -288,11 +288,11 @@ Office XPスタイルはベベルボタンような外観に、チェックボ�
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - its background only appears when the mouse rolls over it. チェックなし / チェック / ハイライト状態の例です:
+ - *Windows* - マウスオーバー時にのみ背景が表示されます。 チェックなし / チェック / ハイライト状態の例です:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - its background is always displayed. チェックなし / チェック状態の例です:
+ - *macOS* - 背景は常に表示されます。 チェックなし / チェック状態の例です:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -319,11 +319,11 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 このチェックボックススタイルは標準の折りたたみ/展開アイコンを表示するのに使用します。 これらは階層リストで使用されます。
 
- - *Windows* - the button looks like a [+] or a [-]
+ - *Windows* - [+] または [-] のように表示されます。
 
   ![](assets/en/FormObjects/checkbox_collapse.png)
 
- - *macOS* - it looks like a triangle pointing right or down.
+ - *macOS* - 右や下を指す三角として表示されます。
 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
