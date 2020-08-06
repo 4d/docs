@@ -17,7 +17,7 @@ En exécution, les list box permettent d’afficher et de saisir des données so
 
 ![](assets/en/FormObjects/listbox_edit.png)
 
-Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sein d’une cellule de list box. To add a line break, press **Ctrl+Carriage return** on Windows or **Option+Carriage return** on macOS.
+Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sein d’une cellule de list box. Pour ajouter un retour à la ligne, appuyez sur les touches **Ctrl+Retour chariot** sous Windows, ou appuyez sur les touches **Option+Retour chariot** sous macOS.
 
 Booleans and pictures can be displayed in cells, as well as dates, times, or numbers. It is possible to sort column values by clicking on a header ([standard sort](#managing-sorts)). All columns are automatically synchronized.
 
