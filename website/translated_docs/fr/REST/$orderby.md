@@ -21,7 +21,7 @@ L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordr
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
-**Result**:
+**Résultat** :
 
 ```
 {
