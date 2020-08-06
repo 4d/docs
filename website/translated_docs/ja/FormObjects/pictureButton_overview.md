@@ -9,8 +9,8 @@ title: ピクチャーボタン
 
 ピクチャーボタンは、次の 2つの方法で使用します:
 
-* フォーム上のコマンドボタンとして。 In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
-  For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* フォーム上のコマンドボタンとして。 この場合、ピクチャーボタンには通常 4種類の状態があります (有効、無効、クリック、ロールオーバー)。      
+  たとえば、1行 4列からなるサムネールテーブルの場合、各サムネールはデフォルト、クリック、ロールオーバー、無効という状態に対応しています。
 
   | プロパティ         | JSON 名                 | 結果   |
   | ------------- | ---------------------- | ---- |
@@ -20,8 +20,8 @@ title: ピクチャーボタン
   | ロールオーバー効果     | switchWhenRollover     | true |
   | 無効時に最終フレームを使用 | useLastFrameAsDisabled | true |
 
-* 複数の選択項目の中からユーザーに選ばせるためのピクチャーボタンとして。 この場合、ピクチャーボタンをポップアップピクチャーメニューの代わりに使用することができます。 With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).   
-  Here is an example of a picture button. たとえば、カスタムアプリケーションのユーザーに、アプリケーションのインタフェース言語を選ばせたいものとします。 そこで下図のように、選択候補をピクチャーボタンとしてカスタムプロパティダイアログボックスに組み込みます:
+* 複数の選択項目の中からユーザーに選ばせるためのピクチャーボタンとして。 この場合、ピクチャーボタンをポップアップピクチャーメニューの代わりに使用することができます。 [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) ではすべての選択肢が (ポップアップメニューの項目として) 同時に表示されます。他方ピクチャーボタンは、選択候補を連続的に表示します (ボタンをクリックする度に変わります)。   
+  次に示すのは、ピクチャーボタンの例です。 たとえば、カスタムアプリケーションのユーザーに、アプリケーションのインタフェース言語を選ばせたいものとします。 そこで下図のように、選択候補をピクチャーボタンとしてカスタムプロパティダイアログボックスに組み込みます:
 
 ![](assets/en/FormObjects/button_pictureButton.png)
 
@@ -49,7 +49,7 @@ title: ピクチャーボタン
 
 ピクチャーボタンは、標準的な配置や見た目の設定以外にも、表示モードと動作モードを指定する専用プロパティを設定することができます。 これらのオプションは組み合わせて使用することができます。
 
-- By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. 系列中の最後のピクチャーに到達すると、もう一度クリックしてもピクチャーは変わりません。 つまりこの設定では、系列中の最初のピクチャーへ一巡して戻ることはありません。
+- デフォルト ([アニメーションオプション](properties_Animation.md) 未選択) の場合、ユーザーがクリックすると、系列中の次のピクチャーを表示します。**Shift** キーを押しながらクリックすると、系列中の前のピクチャーを表示します。 系列中の最後のピクチャーに到達すると、もう一度クリックしてもピクチャーは変わりません。 つまりこの設定では、系列中の最初のピクチャーへ一巡して戻ることはありません。
 
 次のモードを選択することができます:
 - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る)

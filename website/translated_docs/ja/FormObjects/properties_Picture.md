@@ -10,8 +10,8 @@ title: ピクチャー
 
 ピクチャーパスに指定できる場所は次の 2箇所です:
 
-- in the **Resources** folder of the project database. アプリケーション内の複数のフォームで画像を共有する場合に適切です。 この場合、パス名は "/RESOURCES/\<picture path\>" となります。
-- in an image folder (e.g. named **Images**) within the form folder. 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
+- プロジェクトデータベースの **Resources** フォルダー。 アプリケーション内の複数のフォームで画像を共有する場合に適切です。 この場合、パス名は "/RESOURCES/\<picture path\>" となります。
+- フォームフォルダー内の画像用フォルダー (たとえば、**Images** と名付けたフォルダー)。 特定のフォームでしか画像が使われない場合や、そのフォームの全体を複製してプロジェクト内、または別のプロジェクトに移動させたい場合に適切です。 この場合、パス名は "\<picture path\>" となり、フォームフォルダーを基準とした相対パスです。
 
 
 #### JSON 文法
@@ -34,7 +34,7 @@ title: ピクチャー
 
 `JSON 文法では: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+**スケーリング** を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -42,7 +42,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `JSON 文法では: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+**繰り返し** フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
@@ -54,10 +54,10 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 `JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 上下、および左右のはみ出し量は同じになります。
+**中央合わせ** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. ピクチャーは右と下にはみ出します。
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+**トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。
+> ピクチャーフォーマットが **トランケート (中央合わせしない)** の場合、入力エリアにスクロールバーを追加できます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 

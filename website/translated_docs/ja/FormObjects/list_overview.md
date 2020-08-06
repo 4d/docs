@@ -19,16 +19,16 @@ title: 階層リスト
 - 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
 - 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+ランタイムにおいては、4D ランゲージの [階層リスト](https://doc.4d.com/4Dv18/4D/18/Hierarchical-Lists.201-4504360.ja.html) コマンドを使って階層リストを管理しますが、その際には対象となるリストの *ListRef* 参照を用います。
 
 
 ## ListRef とオブジェクト名
 
-A hierarchical list is both a **language object** existing in memory and a **form object**.
+階層リストはメモリ上に存在する **ランゲージオブジェクト** であると同時に **フォームオブジェクト** でもあります。
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. この ID はリストを作成する `New list`、`Copy list`、`Load list`、`BLOB to list` から返されます。 ランゲージオブジェクトのインスタンスはひとつのみしかメモリ中に存在せず、このオブジェクトに対しておこなわれた変更は、これを使用しているすべての場所に即座に反映されます。
+**ランゲージオブジェクト** は倍長整数型のユニークな内部IDで参照されます (4D ランゲージリファレンスでは *ListRef* と表記)。 この ID はリストを作成する `New list`、`Copy list`、`Load list`、`BLOB to list` から返されます。 ランゲージオブジェクトのインスタンスはひとつのみしかメモリ中に存在せず、このオブジェクトに対しておこなわれた変更は、これを使用しているすべての場所に即座に反映されます。
 
-The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. 他のフォームオブジェクト同様、ランゲージ中でオブジェクトを指定するにはシンタックス (*;"ListName") を使用します。
+**フォームオブジェクト** はユニークである必要はありません。同じフォームや異なるフォーム上で同一の階層リストを使用することができます。 他のフォームオブジェクト同様、ランゲージ中でオブジェクトを指定するにはシンタックス (*;"ListName") を使用します。
 
 "ランゲージオブジェクト" としての階層リストと、"フォームオブジェクト" としての階層リストは、ListRef の値を格納した中間的な変数により接続されます。 たとえば、mylist [変数](properties_Object.md#変数あるいは式) をフォームオブジェクトに設定した場合には、次のように書けます:
 
@@ -51,7 +51,7 @@ mylist:=New list
 ```4d
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
-> ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. The command will take the current item of the *mylist1* object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.
+> *mylist1* フォームオブジェクトに関連付けられた階層リスト項目のフォントを変更します。 コマンドは *mylist1* オブジェクトの現在選択されている項目を対象としますが、変更はすべてのプロセスのすべてのリストに反映されます。
 
 ### @のサポート
 
@@ -98,7 +98,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ## プロパティコマンドの優先順位
 
-Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. これら 3つの方法すべてを使ってプロパティを設定した場合、以下の優先順位が適用されます:
+階層リストの特定のプロパティ (たとえば **入力可** 属性やカラーなど) は、3つの異なる方法で設定することができます: デザインモードのプロパティリスト、"オブジェクトプロパティ" テーマのコマンド、"階層リスト" テーマのコマンド。 これら 3つの方法すべてを使ってプロパティを設定した場合、以下の優先順位が適用されます:
 
 1. "階層リスト" テーマのコマンド
 2. 汎用のオブジェクトプロパティコマンド
@@ -112,12 +112,12 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 階層リストのコンテンツにアクセスするには、通常は位置または参照のいずれかを使用しておこないます。
 
 - 位置を使用する場合には、4D は画面上に表示されているリスト項目の位置に基づいて項目を特定します。 つまり、結果は階層項目が展開されているか折りたたまれているかにより異なります。 複数のフォームオブジェクトで同一のリストを使用している場合、オブジェクトごとに展開/折りたたみの状態が異なることに注意が必要です。
-- When you work by reference, 4D bases itself on the *itemRef* ID number of the list items. これにより、それぞれの項目を階層リスト中での位置や表示状態に関わらず特定できます。
+- 参照を使用する場合には、リスト項目の *itemRef* IDを参照します。 これにより、それぞれの項目を階層リスト中での位置や表示状態に関わらず特定できます。
 
 
 ### 項目参照番号を使用する (itemRef)
 
-Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. この値は開発者が使うためのもので、4D は番号を維持するだけです。
+階層リストのそれぞれの項目は倍長整数型の参照番号 (*itemRef*) を持ちます。 この値は開発者が使うためのもので、4D は番号を維持するだけです。
 
 > 警告: どの倍長整数値も参照として使用できますが、0だけは特別な意味を持ちます。 このテーマのほとんどのコマンドで、0は最後にリストに追加された項目を指定するのに使用されます。
 
@@ -125,14 +125,14 @@ Each item of a hierarchical list has a reference number (*itemRef*) of the Longi
 
 1. 項目をユニーク値で識別する必要がない場合 (初心者レベル)
 
-    - 最初の例として、アドレスブックで使用するタブシステムを構築するとします。 システムは選択されたタブの番号を返すので、それ以上の情報は必要ありません。 In this case, do not worry about item reference numbers: pass any value (except 0) in the *itemRef* parameter. なお、アドレスブックシステムの場合、デザインモードで A-Z のリストを定義することもできる点に留意してください。 また、プログラムを使えば、レコードがない文字を除いたリストを作成することもできます。
-    - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 このリストはセッション終了時に `SAVE LIST` や `LIST TO BLOB` コマンドで保存され、セッション開始時に `Load list` や `BLOB to list` コマンドで再度読み込まれます。 このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 重要なのは、`Selected list items` コマンドは選択項目の位置を返すため、選択された項目のみを扱うということです。 この位置情報を `GET LIST ITEM` コマンドに渡せば、項目テキストが取得できます。 Here again, you do not need to identify each item individually; you can pass any value (except 0) in the *itemRef* parameter.
+    - 最初の例として、アドレスブックで使用するタブシステムを構築するとします。 システムは選択されたタブの番号を返すので、それ以上の情報は必要ありません。 この場合、項目参照番号について心配する必要はありません。0以外の値を *itemRef* に渡します。 なお、アドレスブックシステムの場合、デザインモードで A-Z のリストを定義することもできる点に留意してください。 また、プログラムを使えば、レコードがない文字を除いたリストを作成することもできます。
+    - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 このリストはセッション終了時に `SAVE LIST` や `LIST TO BLOB` コマンドで保存され、セッション開始時に `Load list` や `BLOB to list` コマンドで再度読み込まれます。 このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 重要なのは、`Selected list items` コマンドは選択項目の位置を返すため、選択された項目のみを扱うということです。 この位置情報を `GET LIST ITEM` コマンドに渡せば、項目テキストが取得できます。 この例でも、個々の項目を識別する必要がないため、リスト構築の際は *itemRef* 引数に 0以外の任意の数値を渡すことができます。
 
-2. You need to partially identify the list items (intermediary level).  
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。
+2. 部分的にリスト項目を識別する必要がある場合 (中級者レベル)  
+   その項目を処理する際に必要となる情報をあらかじめ項目参照番号に格納することができます。この例は`APPEND TO LIST` コマンドの [例題](https://doc.4d.com/4Dv18/4D/18/APPEND-TO-LIST.301-4505733.ja.html#22281) で説明しています。 この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。
 
-3. You need to identify all the list items individually (advanced level).  
-   You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. これを実装する簡単な方法は独自のカウンターを使用することです。 Suppose that you create a *hlList* list using the `APPEND TO LIST` command. At this stage, you initialize a counter *vhlCounter* to 1. `APPEND TO LIST` や `INSERT IN LIST` を呼び出すたびに、このカウンターをインクリメントし `(vhlCounter:=vhlCounter+1)`、 カウンター値を項目参照番号に設定します。 項目を削除する場合でもカウンターをデクリメントしないことが重要です。つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
+3. すべての項目リストを個々に識別する必要がある場合 (上級レベル)  
+   リストの全レベルにおいて、個々の項目を識別する必要のある複雑な階層リスト管理プログラムを作成する必要があるとします。 これを実装する簡単な方法は独自のカウンターを使用することです。 `APPEND TO LIST` コマンドを使用して *hlList* リストを作成するとします。 ここで *vhlCounter* 変数を1に初期化します。 `APPEND TO LIST` や `INSERT IN LIST` を呼び出すたびに、このカウンターをインクリメントし `(vhlCounter:=vhlCounter+1)`、 カウンター値を項目参照番号に設定します。 項目を削除する場合でもカウンターをデクリメントしないことが重要です。つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 番号は倍長整数型なので、20億以上の項目をリストに追加したり挿入したりできます (もっとも、こんなにも多くのデータを扱うのであれば、リストではなくテーブルを使用したほうが良いですが)。
 
 > ビットワイズ演算子を使用して、項目参照番号に情報を格納することもできます。たとえば 2つの整数値、4バイト値、32個のブール値などです。
 
@@ -145,11 +145,11 @@ Each item of a hierarchical list has a reference number (*itemRef*) of the Longi
 
 ## 編集可能項目
 
-You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item.
+ユーザーが階層リストの項目を変更できるかどうかを管理することができます。階層リストの項目が修正可能である場合、**Alt+クリック** (Windows) または **Optionキー+クリック** (macOS) ショートカットを使用するか、または項目のテキスト上でロングクリックすると、編集できるようになります。
 
 - データソースに関わらず、階層リストフォームオブジェクト全体を [入力可](properties_Entry.md#入力可) プロパティで管理することができます。
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv18/4D/18/Setting-list-properties.300-4575487.ja.html) を参照してください。
+- また、リストエディターで作成したリストを用いて階層リストを生成する場合は、リストエディターの **編集可能項目** オプションを使用して、階層リストの項目の修正が可能かどうかを管理することができます。 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv18/4D/18/Setting-list-properties.300-4575487.ja.html) を参照してください。
 
 
 ## プロパティ一覧

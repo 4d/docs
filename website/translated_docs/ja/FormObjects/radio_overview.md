@@ -13,7 +13,7 @@ title: ラジオボタン
 
 ラジオボタンを選択するには二つの方法があります:
 - ラジオボタンをクリックする
-- when it has the focus and the user presses the **Space bar** key.
+- ラジオボタンにフォーカスがあるときに **スペース** キーを押す
 
 
 
@@ -42,7 +42,7 @@ title: ラジオボタン
 
 ### 通常
 
-The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+通常スタイルのラジオボタンは、標準的なシステムボタンで (小さな目玉状の円とテキストを表示したもの)、ユーザークリックに応じてコードを実行します。
 
 ![](assets/en/FormObjects/radio_regular.png)
 
@@ -51,7 +51,7 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 
 ### フラット
 
-The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
+フラットスタイルのラジオボタンは、標準的なシステムボタンで (小さな目玉状の円とテキストを表示したもの)、ユーザークリックに応じてコードを実行します。
 
 ![](assets/en/FormObjects/radio_flat.png)
 
@@ -87,7 +87,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
  - *macOS* - 角が丸くなっています。 ![](assets/en/FormObjects/roundedBevel.png)
 
@@ -96,7 +96,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
  - *macOS* - 2トーンのシステムボタンです。
 
@@ -108,7 +108,7 @@ OS Xテクスチャースタイルは [ツールバー](#ツールバー) スタ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
- - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+ - *Windows* - ツールバースタイルのようなボタンに中央配置のラベルが付き、背景は常に表示されます。
 
  - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 

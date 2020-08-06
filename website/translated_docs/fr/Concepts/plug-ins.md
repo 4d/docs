@@ -3,7 +3,7 @@ id: plug-ins
 title: Plug-ins
 ---
 
-En développant une application 4D, vous découvrirez de nombreuses fonctionnalités que vous n'aviez pas remarquées au début. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+En développant une application 4D, vous découvrirez de nombreuses fonctionnalités que vous n'aviez pas remarquées au début. Vous pouvez même étendre la version standard de 4D en ajoutant des **plug-ins** à votre environnement de développement 4D.
 
 ## Pourquoi un plugin ?
 
@@ -24,9 +24,9 @@ Habituellement, un plug-in fait des choses :
 
 Un plug-in contient généralement un ensemble de routines données au développeur 4D. Il peut gérer une zone externe et exécuter un processus externe.
 
-- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action.
-- An **external area** is a part of a form that can display almost everything and interact with the user when necessary.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
+- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action.
+- Une **zone externe** est une partie d'un formulaire pouvant presque tout afficher et interagir avec l'utilisateur si nécessaire.
+- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
 
 ### Note importante
 
@@ -34,23 +34,23 @@ Un plug-in peut être très simple, avec une seule routine effectuant une très 
 
 ## Comment créer un plug-in ?
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+Sur GitHub, 4D fournit un [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK) open source, contenant le plug-in API 4D et l'assistant de plug-in 4D :
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. Les fonctions du plug-in API de 4D gèrent toutes les interactions entre l'application 4D et votre plug-in.
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
+- le [**Plugin API de 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), écrit en C, ajoute plus de 400 fonctions qui vous aident à créer facilement vos propres plug-ins pour ajouter de nouvelles fonctionnalités à votre application 4D. Les fonctions du plug-in API de 4D gèrent toutes les interactions entre l'application 4D et votre plug-in.
+- [**L'assistant de plug-in 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) est un outil essentiel qui simplifie la tâche de développement des plug-ins 4D. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
 
 ## Comment installer un plug-in?
 
 L’installation des plug-ins et composants dans l’environnement 4D s’effectue par simple copie des fichiers des plug-ins ou des composants dans des dossiers appropriés.
 
-Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) contiennent à la fois les versions Windows et Mac Os des plug-ins 4D. Leur architecture interne spécifique permet notamment à 4D Server de charger la version adéquate en fonction de la plate-forme d’exécution du poste client. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) contiennent à la fois les versions Windows et Mac Os des plug-ins 4D. Leur architecture interne spécifique permet notamment à 4D Server de charger la version adéquate en fonction de la plate-forme d’exécution du poste client. Pour installer un plug-in dans votre environnement, il vous suffit de placer le dossier ou progiciel “NomPlugin.bundle” concerné dans le dossier **PlugIns** souhaité.
 
 Vous pouvez placer les dossiers PlugIns et Components à deux endroits :
 
 - Au niveau de l’application 4D exécutable, c'est-à-dire .:
   - Sous Windows : à côté du fichier .exe
-  - Under macOS: at the first level of the Contents folder inside the application package.   
-    In this case, plug-ins are available in every database opened by this application.
+  - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.   
+    Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application.
 - Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement.
 
 Le choix de l’emplacement dépend de votre mode d’utilisation du plug-in ou du composant.

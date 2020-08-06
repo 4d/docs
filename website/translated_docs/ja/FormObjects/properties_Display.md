@@ -71,17 +71,17 @@ title: 表示フォーマット
 | System date abbreviated *(1)*   | systemMedium | 2020/03/25                    |
 | System date long                | systemLong   | 2020年3月25日 水曜日                |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
+| Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
 | ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July.
+*(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
 
-*(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
+*(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
 > 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
 
 
@@ -119,10 +119,10 @@ title: 表示フォーマット
 (1) キャレット (^) は、ほとんどのフォントの数字と同じ幅を占めるスペースを生成します。
 
 
-たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
 
 
-ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
+ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
 > 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。
 
 各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
@@ -177,7 +177,7 @@ title: 表示フォーマット
 
 ### 科学的記数法
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. たとえば次のフォーマットを指定すると:
+科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:
 
     &3
 
@@ -271,7 +271,7 @@ If you want to display numbers in scientific notation, use the **ampersand** (&)
 
 `JSON 文法では: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+**スケーリング** を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -279,10 +279,10 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 上下、および左右のはみ出し量は同じになります。
+**トランケート (中央合わせ)** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. ピクチャーは右と下にはみ出します。
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+**トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。
+> ピクチャーフォーマットが **トランケート (中央合わせしない)** の場合、入力エリアにスクロールバーを追加できます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -290,11 +290,11 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 `JSON 文法では: "proportionalTopLeft" / "proportionalCenter"`
 
-When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
+**スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (中央合わせ・プロポーショナル)** オプションも同様ですが、ピクチャーはエリアの中央に配置されます。
 
 ピクチャーがエリアよりも小さい場合、サイズは変更されません。 ピクチャーがエリアよりも大きい場合、そのエリア内に全体が表示されるよう、比率を保ったままサイズが小さくなります。 比率が保たれるため、ピクチャーは歪むことなく表示されます。
 
-If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
+**中央合わせ** を選択した場合、画像はエリアの中央に配置されます:
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
@@ -303,7 +303,7 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 `JSON 文法では: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+**繰り返し** フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。
 
 ![](assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
@@ -365,15 +365,15 @@ When the area that contains a picture with the **Replicated** format is enlarged
 - [入力オブジェクト](input_overview.md) にテキストとして
 - [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-... you can select the text to display for each value:
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
+... 値の代わりに表示するテキストを指定することができます:
+- **テキスト (True時)** - 値が "true" の時に表示するテキスト
+- **テキスト (False時)** - 値が "false" の時に表示するテキスト
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                                                    |
-| ------------- | ------ | ------------------------------------------------------------------------ |
-| booleanFormat | string | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| 名             | データタイプ | とりうる値                                                       |
+| ------------- | ------ | ----------------------------------------------------------- |
+| booleanFormat | string | "\<*テキスト (true時)*\>;\<*テキスト (false時)*\>", 例: "済み;未処理" / |
 
 
 #### 対象オブジェクト
@@ -394,9 +394,9 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                                                                                                                           |
-| ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+| 名           | データタイプ | とりうる値                                                                                                                                   |
+| ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string | <li>**数値列**: "automatic" (デフォルト) または "checkbox"<li>**ブール列**: "checkbox" (デフォルト) または "popup" |
 
 #### 対象オブジェクト
 
@@ -440,14 +440,14 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 #### リストボックス列におけるスリーステートチェックボックス
 
-[式タイプ](properties_Object.md#式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 If chosen, the following values are displayed:
-*   0 = unchecked box,
-*   1 = checked box,
-*   2 (or any value >0) = semi-checked box (third state). データ入力時、この状態は2を返します。
-*   -1 = invisible check box,
-*   -2 = unchecked box, not enterable,
-*   -3 = checked box, not enterable,
-*   -4 = semi-checked box, not enterable
+[式タイプ](properties_Object.md#式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます:
+*   0 = チェックされていない
+*   1 = チェックされている
+*   2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。
+*   -1 = 非表示チェックボックス
+*   -2 = チェックされていない、入力不可
+*   -3 = チェックされている、入力不可
+*   -4 = セミチェックボックス、入力不可
 
 スリーステートチェックボックスの場合も、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
 
@@ -468,8 +468,8 @@ When the area that contains a picture with the **Replicated** format is enlarged
 ## タイトル
 
 タイトルは、リストボックス列のプロパティとして次の場合に提供されます:
-- the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-- the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+- [式タイプ](properties_Object.md#式タイプ) が **ブール** で [表示タイプ](properties_Display.md#表示タイプ) が "チェックボックス" の場合
+- [式タイプ](properties_Object.md#式タイプ) が **数値** (数値または整数) で [表示タイプ](properties_Display.md#表示タイプ) が "スリーステートチェックボックス" の場合
 
 これらの場合に、チェックボックスのタイトルをこのプロパティで設定できます。
 
@@ -579,7 +579,7 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 ![](assets/en/FormObjects/wordwrap3.png)
 
-リストボックスの場合、長すぎるテキストは切り落とされ、省略記号 (...) が表示されます。 In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+リストボックスの場合、長すぎるテキストは切り落とされ、省略記号 (...) が表示されます。 以下の例では、左の列ではワードラップのオプションがチェックされていて、右の列ではされていません:
 
 ![](assets/en/FormObjects/property_wordwrap1.png)
 

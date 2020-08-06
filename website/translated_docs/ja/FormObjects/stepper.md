@@ -16,8 +16,8 @@ title: ステッパー
 ステッパーには数値、時間、日付変数を割り当てることができます。
 
 * 時間型の値では最小、最大、[ステップ](properties_Scale.md#ステップ) プロパティは秒を表します。 たとえば、ステッパーを 8:00 から 18:00 まで 10分のステップで設定するには:
-    * [minimum](properties_Scale.md#minium) = 28 800 (8*60*60)
-    * [maximum](properties_Scale.md#maximum) = 64 800 (18*60*60)
+    * [最小](properties_Scale.md#最小) = 28,800 (8*60*60)
+    * [最大](properties_Scale.md#最大) = 64,800 (18*60*60)
     * [ステップ](properties_Scale.md#ステップ) = 600 (10*60)
 * 日付タイプの値では [ステップ](properties_Scale.md#ステップ) プロパティに入力された値が日数を表します。 最小と最大プロパティは無視されます。
 > ステッパーを時間や日付変数に対して動作させるためには、プロパティリストで型を設定するだけでなく、[C_TIME](https://doc.4d.com/4Dv18/4D/18/C-TIME.301-4505778.ja.html) または [C_DATE](https://doc.4d.com/4Dv18/4D/18/C-DATE.301-4505791.ja.html) コマンドで明示的に宣言する必要があります。
