@@ -3,18 +3,18 @@ id: interpreted-compiled
 title: インタープリターモードとコンパイル済みモード
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+4D アプリケーションは **インタープリター** または **コンパイル済み** モードで実行することができます:
 
 - インタープリターモードにおいて、コードは実行時に読み込まれてマシン語に翻訳されます。 コードはいつでも追加・変更することができ、アプリケーションは自動的に更新されます。
 - コンパイル済みモードにおいては、コンパイル時にすべてのコードが一括で読み込まれて翻訳されます。 コンパイル後のアプリケーションにはアセンブリレベルの指示のみが残され、コード編集はできません。
 
 コンパイルには以下のようなメリットがあります:
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. 論理的矛盾や構文的矛盾を検出します。
-- **Protection**: Once your database is compiled, you can delete the interpreted code. コンパイルされたデータベースは、故意的にも不注意からもストラクチャーやメソッドの表示・修正ができないこと以外は、オリジナルのデータベースと同じに動作します。
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **速度**: データベースの実行速度を3倍から1000倍速くします。
+- **コードチェック**: データベースアプリケーションコードの整合性をチェックし、 論理的矛盾や構文的矛盾を検出します。
+- **保護**: データベースをコンパイルすると、インタープリターコードを削除できます。 コンパイルされたデータベースは、故意的にも不注意からもストラクチャーやメソッドの表示・修正ができないこと以外は、オリジナルのデータベースと同じに動作します。
+- **ダブルクリックで起動するアプリケーション**: コンパイル後のデータベースは、独自のアイコンを持つスタンドアロンアプリケーション (.EXEファイル) に作り変えることもできます。
+- **プリエンプティブモードでの実行**: プリエンプティブプロセスとして実行できるのは、コンパイルされたコードに限られます。
 
 ## インタープリターコードとコンパイル済みコードの違い
 アプリケーションの動作は同じであっても、インタープリターモードとコンパイル済みモードにはいくつかの相違点があり、コンパイルされるコードを書くにあたってはこれらを意識しておく必要があります。 基本的に、4D のインタープリターはコンパイラーより柔軟です。
@@ -47,7 +47,7 @@ C_LONGINT(MyInt)
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+この例では、コンパイラー指示子が代入ステートメントより *先に* 解釈されれば、インタープリターでもコンパイル後でも `Myint` には同じ値 (3) が代入されます。
 
 4D のインタープリターは、コンパイラー指示子を使用して変数の型を定義します。 コード内でコンパイラー指示子が検出されると、インタープリターはそれに従って変数の型を定義します。 それ以降のステートメントで間違った値を代入しようとすると (たとえば、数値変数に文字を割り当てるなど)、代入はおこなわれず、エラーが生成されます。
 
