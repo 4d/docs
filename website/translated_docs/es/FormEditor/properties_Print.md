@@ -12,11 +12,15 @@ Allows defining specific print settings for the form. This feature is useful to 
 
 You can modify the following print settings:
 
-* Paper format 
-* Paper orientation 
-* Page scaling
+*   Paper format
+*   Paper orientation
+*   Page scaling
+
 
 > Available options depend on the system configuration.
+
+
+
 
 #### JSON Grammar
 
@@ -30,4 +34,12 @@ You can modify the following print settings:
 | scale       | number    | minimum: 0                                                                           |
 
 
-* * *
+---
+
+
+
+
+
+
+
+
