@@ -3,7 +3,7 @@ id: buttonOverview
 title: ボタン
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+ボタンとは、ユーザーのクリック操作に応じて実行されるアクション (*例* データベースタスクやインターフェース機能) を割り当てることのできるアクティブオブジェクトです。
 
 ![](assets/en/FormObjects/button_regular.png)
 
@@ -19,7 +19,7 @@ A button is an active object that can be assigned an action (*e.g.*, a database 
 
 標準アクションとして提供されていない動作をボタンに実行させたい場合には、標準アクションのフィールドは空欄にしておき、ボタンのアクションを指定するオブジェクトメソッドを書きます オブジェクトメソッドの作成や割り当て方法についての詳細は [オブジェクトメソッドを使用する](https://doc.4d.com/4Dv18/4D/18/Using-object-methods.300-4575722.ja.html) を参照ください。 通常は、イベントテーマで `On Clicked` イベントを有効にして、ボタンのクリック時にのみメソッドを実行します。 どのタイプのボタンにもメソッドを割り当てることができます。
 
-The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**.
+ボタンに関連付けられた変数 ([variable](properties_Object.md#変数あるいは式) 属性) は、デザインモードやアプリケーションモードでフォームが初めて開かれるときに自動で **0** に初期化されます。 ボタンをクリックすると、変数の値は **1** になります。
 
 > ボタンには標準アクションとメソッドの両方を割り当てることもできます。 この場合、標準アクションによってボタンが無効化されていなければ、標準アクションより先にメソッドが実行されます。
 
@@ -29,7 +29,7 @@ The [variable](properties_Object.md#variable-or-expression) associated with a bu
 
 ボタンスタイルは、ボタンの外観を制御すると同時に、提供されるプロパティをも決定します。 ボタンには、あらかじめ定義されたスタイルやポップアップメニューを割り当てることができます。 これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
 
-With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. 違いは、関連づけられた変数の処理にあります。
+スタイルによって [提供されるプロパティ](#プロパティ一覧) は異なりますが、大多数のボタンは *構造上* 同じです。 違いは、関連づけられた変数の処理にあります。
 
 次の既定スタイルが提供されています:
 
@@ -37,7 +37,7 @@ With the exception of the [available properties](#supported-properties), many bu
 
 ### 通常
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+通常スタイルのボタンは、標準的なシステムボタンで (長方形にラベルが付いたもの)、ユーザークリックに応じてコードを実行します。
 
 ![](assets/en/FormObjects/button_regular.png)
 
@@ -65,7 +65,7 @@ The Regular button style is a standard system button (*i.e.*, a rectangle with a
 
 ### フラット
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+フラットスタイルのボタンは、標準的なシステムボタンで (長方形にラベルが付いたもの)、ユーザークリックに応じてコードを実行します。
 
 ![](assets/en/FormObjects/button_flat.png)
 
@@ -97,11 +97,11 @@ The Flat button style is a standard system button (*i.e.*, a rectangle with a de
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用ていると、ボタンの右側中央に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
- - *macOS* - the highlight of the button never appears. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 #### JSON 例:
 
@@ -123,15 +123,15 @@ The Flat button style is a standard system button (*i.e.*, a rectangle with a de
 
 ### ベベル
 
-The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+ベベルスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
 ベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *Windows* - ボタンがハイライト表示されます。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_bevel.png)
 
- - *macOS* - the highlight of the button never appears. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 #### JSON 例:
 
@@ -157,11 +157,11 @@ The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.
 
 角の丸いベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is identical to the Bevel style. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
   ![](assets/en/FormObjects/button_roundedbevel.png)
 
- - *macOS* - the corners of the button are rounded. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *macOS* - 角が丸くなっています。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 #### JSON 例:
 
@@ -187,11 +187,11 @@ OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルと
 
 OS Xグラデーションボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is identical to the Bevel style. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
- - *macOS* - the button is displayed as a two-tone system button. "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
+ - *macOS* - 2トーンのシステムボタンです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 #### JSON 例:
 
@@ -216,11 +216,11 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
- - *Windows* - a standard system button with a light gray background with a label in the center. Vistaにおいては透明になる特別機能を持っています。
+ - *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
 
  ![](assets/en/FormObjects/button_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. 高さは定義済みで、変更できません。
+ - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
 #### JSON 例:
 
@@ -246,11 +246,11 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Windows* - マウスオーバー時にのみ背景が表示されます。
 
 ![](assets/en/FormObjects/button_officexp.png)
 
- - *macOS* - its background is always displayed.
+ - *macOS* - 背景は常に表示されます。
 
 #### JSON 例:
 
