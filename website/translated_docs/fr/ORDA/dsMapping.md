@@ -8,12 +8,12 @@ The ORDA technology is based upon an automatic mapping of an underlying 4D struc
 
 ## Datastore
 
-The datastore is the interface object to a database. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
+Un datastore est l'objet d'interface d'une base de données. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
 
 - The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed. The **Expose as REST resource** option must be selected at the 4D structure level for each table that you want to be exposed as dataclass in the datastore:
+Lorsqu'il est géré via le code, le datastore est un objet dont les propriétés sont toutes les [dataclasses](#dataclass) ayant été spécifiquement exposées. The **Expose as REST resource** option must be selected at the 4D structure level for each table that you want to be exposed as dataclass in the datastore:
 
 ![](assets/en/Orda/ExposeDataclass.png)
 
@@ -128,7 +128,7 @@ Keep in mind that these objects describe attributes, but do not give access to d
 
 ## Entity
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+An entity is the equivalent of a record. It is actually an object that references a record in the database. Une entité peut être vue comme une instance de la [dataclass](#dataclass), comme un enregistrement de la table correspondante à la dataclass. However, an entity also contains data correlated to the database related to the datastore.
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 

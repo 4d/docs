@@ -18,8 +18,8 @@ Une case à cocher affiche généralement du texte en face de la case. Ce texte 
 
 Une case à cocher peut être associée à une [variable ou expression](properties_Object.md#variable-or-expression) de type entier ou booléen.
 
-- **integer:** if the box is checked, the variable has the value 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
-- **boolean:** if the box is checked, the variable has the value `True`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`.
+- **entier :** si la case est cochée, la variable prend la valeur 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
+- **booléen :** si la case est cochée, la variable prend la valeur `Vrai`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`.
 
 Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Un groupe de cases à cocher permet à l'utilisateur de cocher plusieurs options.
 
@@ -81,7 +81,7 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 Check boxes use [button styles](propertiesTextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D provides check boxes in the following predefined button styles:
 
@@ -257,7 +257,7 @@ The OS X Textured button style is similar to the [Bevel](#bevel) button style bu
 
 By default, the OS X Textured button style appears as:
 
- - *Windows* - a standard system button with a light blue background with a title in the center.
+ - *Sous Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
@@ -288,11 +288,11 @@ The Office XP button style combines the appearance of the [Regular](#regular) bu
 
 The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
 
- - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Example with states unchecked / checked / highlighted:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - its background is always displayed. Example with states unchecked / checked:
+ - *Sous macOS* - son arrière-plan est toujours affiché. Example with states unchecked / checked:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -323,7 +323,7 @@ This check box button style can be used to add a standard collapse/expand icon. 
 
   ![](assets/en/FormObjects/checkbox_collapse.png)
 
- - *macOS* - it looks like a triangle pointing right or down.
+ - *Sous macOS* - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 

@@ -33,7 +33,7 @@ Ajoutez le [`$skip`]($skip.md) (pour définir avec quelle entité commencer) et 
 
 ## Creating and managing entity set
 
-An entity set (aka *entity selection*) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+Un ensemble d'entités (également appelé *entity set* ou <0>entity selection</0>) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
 Pour créer un entity set, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) afin que l'entité définie puisse être rapidement récupérée avec le même ID que précédemment, dans le cas où elle expireait ou serait supprimée du serveur.
 
@@ -58,7 +58,7 @@ Une nouvelle sélection d'entités est renvoyée; vous pouvez néanmoins créer 
 
 ## Calculating data
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
+En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le **nombre**, le **min**, le **max** ou la **somme** pour un attribut spécifique d'une dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
 
 Par exemple, pour obtenir le salaire le plus élevé :
 
@@ -83,7 +83,7 @@ with data in the body of the request: `["Paris"]`
 
 ## Selecting Attributes to get
 
-You can always define which attributes to return in the REST response after an initial request by passing their path in the request (*e.g.*, `Company(1)/name,revenues/`)
+Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
 Vous pouvez appliquer ce filtre comme suit :
 
@@ -95,7 +95,7 @@ Vous pouvez appliquer ce filtre comme suit :
 |                      | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
 | Entity selection     | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
-The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Des attributs de stockage ou des attributs relationnels peuvent être transmis.
+Les attributs doivent être délimités par une virgule, c'est-à-dire `/Employee/firstName,lastName,salary`. Des attributs de stockage ou des attributs relationnels peuvent être transmis.
 
 
 ### Exemples

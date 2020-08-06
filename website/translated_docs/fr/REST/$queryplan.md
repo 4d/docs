@@ -4,7 +4,7 @@ title: '$queryplan'
 ---
 
 
-Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
+Retourne la requête telle qu'elle a été passée au 4D Server (par exemple, `$queryplan=true`)
 
 ## Description
 $queryplan retourne le plan de la requête telle qu'il a été exécuté par 4D Server.

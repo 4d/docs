@@ -25,7 +25,7 @@ L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et
 
 ## Activer le contrôle des accès
 
-You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
+Le contrôle effectif des accès par mots de passe de 4D est activé par **l’affectation d’un mot de passe au Super_Utilisateur**.
 
 Tant que le Super_Utilisateur n’a pas de mot de passe, 4D permet à tout utilisateur d’accéder à toutes les parties de la base, même si vous avez défini des utilisateurs et des groupes (à l'ouverture de la base, aucune identification n'est requise).
 
@@ -61,7 +61,7 @@ Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils 
 
 ## Fichier directory.json
 
-Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
+Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans un fichier spécifique de la base nommé **directory.json**.
 
 Ce fichier peut être stocké dans les emplacements suivants :
 

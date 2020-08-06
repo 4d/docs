@@ -26,7 +26,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+Renvoie toutes les données (par défaut, les 100 premières entités) pour une dataclass spécifique (par exemple, `Société`)
 
 ### Description
 
@@ -144,11 +144,11 @@ Renvoie toutes les données d'une classe de datastore spécifique.
 
 ## {dataClass}({clé})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple, `Company (22) ou Company ("IT0911AB2200")`
 
 ### Description
 
-En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut définie comme clé primaire pour votre classe de datastore. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut définie comme clé primaire pour votre classe de datastore. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
 Pour plus d'informations sur les données retournées, reportez-vous à [{datastoreClass}](#datastoreclass).
 
@@ -197,7 +197,7 @@ Renvoie les données d'une entité dans laquelle la valeur de l'attribut est dé
 
 ### Description
 
-By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. La valeur est une valeur unique pour l'attribut, mais ce n'est pas la clé primaire.
+En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupérer toutes les informations publiques de cette entité. La valeur est une valeur unique pour l'attribut, mais ce n'est pas la clé primaire.
 
  `GET  /rest/Company:companyCode(Acme001)`
 

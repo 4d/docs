@@ -3,7 +3,7 @@ id: buttonOverview
 title: Bouton
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+Un bouton est un objet actif auquel une action peut être assignée (*ex :* une tâche de base de données ou une fonction d'interface) pour qu'elle soit réalisée lorsque l'utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_regular.png)
 
@@ -17,7 +17,7 @@ Les boutons avec des actions standard sont grisés le cas échéant lors de l'ex
 
 Si vous souhaitez qu'un bouton exécute une action qui n'est pas disponible en tant qu'action standard, laissez le champ d'action standard vide et écrivez une méthode objet pour spécifier l'action du bouton. Pour plus d'informations sur les méthodes d'objet et comment les créer et les associer, voir [Utilisation de méthodes objet](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
 
-The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**.
+La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 
 
 
@@ -29,7 +29,7 @@ The [variable](properties_Object.md#variable-or-expression) associated with a bu
 
 Les styles de bouton contrôlent l'apparence générale d'un bouton ainsi que ses propriétés. Il est possible d'appliquer différents styles prédéfinis aux boutons ou de leur associer des pop-up menus. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets bouton sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D propose des boutons dans les styles prédéfinis suivants :
 
@@ -37,7 +37,7 @@ With the exception of the [available properties](#supported-properties), many bu
 
 ### Classique
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+Le style de bouton Classique est un bouton système standard (c'est-à-dire un rectangle avec un libellé descriptif) qui exécute le code lorsqu'un utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_regular.png)
 
@@ -66,7 +66,7 @@ Seuls les styles Classique et A plat proposent la propriété [Bouton par défau
 
 ### A plat
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+Le style de bouton A plat est un bouton système standard (c'est-à-dire un rectangle avec un libellé descriptif) qui exécute le code lorsqu'un utilisateur clique dessus.
 
 ![](assets/en/FormObjects/button_flat.png)
 
@@ -98,11 +98,11 @@ Le style du bouton Barre d'outils est initialement destiné à être intégré d
 
 Par défaut, le style bouton Barre d'outils a un fond transparent avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Sous Windows* - le contour du bouton apparaît lorsqu’il dispose de la propriété “Avec pop-up menu”, et un triangle est affiché à droite et au centre du bouton.
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
- - *macOS* - the highlight of the button never appears. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
 
 #### Exemple JSON :
 
@@ -124,15 +124,15 @@ Par défaut, le style bouton Barre d'outils a un fond transparent avec un libell
 
 ### Bevel
 
-The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+Le bouton barre d'outils combine l'apparence du style [Classique](#regular) (c'est-à-dire un rectangle avec un libellé descriptif) et la propriété de pop-up menu du style [Barre d'outils](#toolbar).
 
 Par défaut, le style Bevel a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is highlighted. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
+ - *Sous Windows* - le contour du bouton apparaît. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
 
 ![](assets/en/FormObjects/button_bevel.png)
 
- - *macOS* - the highlight of the button never appears. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
+ - *Sous macOS* - le contour du bouton n’apparaît jamais. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
 
 #### Exemple JSON :
 
@@ -158,11 +158,11 @@ Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel),
 
 Par défaut, le style Bevel arrondi a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is identical to the Bevel style. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
+ - *Sous Windows* - le bouton est identique au style Bevel. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et au centre du bouton.
 
   ![](assets/en/FormObjects/button_roundedbevel.png)
 
- - *macOS* - the corners of the button are rounded. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
+ - *Sous macOS* - les coins du bouton sont arrondis. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
 
 #### Exemple JSON :
 
@@ -188,11 +188,11 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style.
 
 Par défaut, le style OS Gradient a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button.
+ - *Sous Windows* - le bouton est identique au style Bevel. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
- - *macOS* - the button is displayed as a two-tone system button. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
+ - *Sous macOs* - le bouton s'affiche comme un bouton à deux tons. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite et en bas du bouton.
 
 #### Exemple JSON :
 
@@ -217,11 +217,11 @@ The OS X Textured button style is nearly identical to the [Bevel](#bevel) style 
 
 Par défaut, le style OS X Textured apparaît comme :
 
- - *Windows* - a standard system button with a light gray background with a label in the center. Il a la particularité d'être transparent dans Vista.
+ - *Sous Windows* - un bouton système standard avec un fond gris clair et un libellé au centre. Il a la particularité d'être transparent dans Vista.
 
  ![](assets/en/FormObjects/button_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+ - *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
 #### Exemple JSON :
 
@@ -247,11 +247,11 @@ Le style de bouton Office XP combine l'apparence du style [Classique](#regular) 
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole.
 
 ![](assets/en/FormObjects/button_officexp.png)
 
- - *macOS* - its background is always displayed.
+ - *Sous macOS* - son arrière-plan est toujours affiché.
 
 #### Exemple JSON :
 

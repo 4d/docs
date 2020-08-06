@@ -32,7 +32,7 @@ Beachten Sie, dass der Boolean Ausdruck immer voll gewertet wird. Siehe hierzu f
  End if
 ```
 
-Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In diesem Fall ist folgende Struktur besser geeignet:
+Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn _MethodA_ FALSE zurückgibt, bewertet 4D weiter _MethodB_, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
 
 ```4d
  If(MethodA)
@@ -42,7 +42,7 @@ Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. However, even if _Meth
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+Das Ergebnis ist gleich, und _MethodB_ wird nur bei Bedarf bewertet.
 
 ### Beispiel
 
@@ -56,7 +56,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  End if 
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
+**Tipp:** In spezifischen Fällen können Sie auch Abfragen ohne Befehlsfolge einrichten. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
 
 ```4d
  If(Boolean_Expression)
@@ -181,7 +181,7 @@ Der obige Code gelangt nicht bis zur zweiten Bedingung, da der Test "vResult=1" 
 
 Für hierarchisches Testen können Sie auch hierarchischen Code einsetzen.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
+**Tipp:** In spezifischen Fällen können Sie auch Abfragen ohne Befehlsfolge einrichten. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
 ```4d
  Case of
     :(Boolean_Expression)

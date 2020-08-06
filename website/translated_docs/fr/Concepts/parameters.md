@@ -36,7 +36,7 @@ Les paramètres sont séparés par des points-virgules (;). Leur valeur est [év
 
 ## Paramètres nommés (fonctions de classe ou class functions)
 
-Dans les fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Dans les fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. Vous pouvez déclarer des paramètres de fonction de classe en utilisant un **nom de paramètre** avec un **type de paramètre**, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 > Cette syntaxe n'est pas prise en charge avec les méthodes. Voir [Paramètres séquentiels](#sequential-parameters).
 
@@ -73,7 +73,7 @@ Fonction saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Paramètres séquentiels
 
-You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. La numérotation des variables locales représente l’ordre des paramètres.
+Vous pouvez déclarer des paramètres de méthodes à l'aide de variables numérotées séquentiellement : **$1**, **$2**, **$3**, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
 > Cette syntaxe est prise en charge pour les méthodes et les fonctions de classe. Cependant, pour les fonctions de classe, il est recommandé d'utiliser la syntaxe des [paramètres nommés](#named-parameters-class-functions).
 
@@ -99,7 +99,7 @@ Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! comme paramètre de SetCalendarDate
+//passez la date du !05/05/20! comme paramètre de SetCalendarDate
 // dans le contexte d'un sous-formulaire
 ```
 
@@ -124,7 +124,7 @@ Les expressions de tables ou de tableaux peuvent être passées uniquement [comm
 
 ### Using objects properties as named parameters
 
-Using objects as parameters allow you to handle **named parameters**, even with methods. Ce style de programmation est simple, souple et facile à lire.
+L'utilisation d'objets en tant que paramètres vous permet de gérer des **paramètres nommés**, même sans méthodes. Ce style de programmation est simple, souple et facile à lire.
 
 Par exemple, si vous utilisez la méthode `CreatePerson` :
 
@@ -328,7 +328,7 @@ Like for [input parameters](#named-parameters-class-functions), return parameter
 
 ### Named syntax (class functions)
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Par exemple:
+Vous déclarez le paramètre de retour d'une fonction en ajoutant une flèche (->) et la définition du paramètre après la liste des paramètres d'entrée. Par exemple:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -420,7 +420,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 
 ## Valeurs ou références
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine/fonction de classe, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales dans la fonction de classe ou la sous-routine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine/fonction de classe, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD
@@ -462,7 +462,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine est appelée «utilisation d'une fonction». This is described in the [Returning values](#returning-values) paragraph.
+Cette deuxième technique de renvoi d'une valeur par une sous-routine est appelée «utilisation d'une fonction». Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
 
 
 ### Cas particuliers : objets et collections
