@@ -32,9 +32,9 @@ Pour simplifier l'exemple, nous allons utiliser une application 4D et un navigat
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Affichez la page **ressources Web / REST** de la boîte de dialogue des Propriétés de la base de données et [cochez l'option Exposer en tant que serveur REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. Dans le menu **Exécuter**, sélectionnez **Démarrer le serveur Web** (si nécessaire), puis sélectionnez **Tester le serveur Web**.
 
 4D affiche la page d'accueil par défaut du serveur Web 4D.
 
