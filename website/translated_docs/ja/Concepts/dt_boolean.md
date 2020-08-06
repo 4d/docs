@@ -7,7 +7,7 @@ title: ブール
 
 ## ブール関数
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. 詳細については、これらのコマンドの説明を参照ください。
+4Dにはブール演算に使用することのできる、ブール関数があります: `True`, `False`, `Not`。 詳細については、これらのコマンドの説明を参照ください。
 
 ### 例題
 
@@ -58,7 +58,7 @@ myBoolean:=(myButton=1)
 | False | True  | True               |
 | False | False | False              |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Tip:** 式1と式2の排他的結合子演算を実行する必要がある場合、次の評価式を使用します:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
