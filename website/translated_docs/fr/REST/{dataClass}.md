@@ -60,7 +60,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
 
  `GET  /rest/Company`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -164,7 +164,7 @@ La requête suivante retourne toutes les données publiques de la classe de data
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**Résultat** :
 
 ````
 {

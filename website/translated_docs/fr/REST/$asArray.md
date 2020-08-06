@@ -9,14 +9,14 @@ Retourne le résultat d'une requête sous forme de tableau (c'est-à-dire une co
 
 ## Description
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
+Si vous souhaitez obtenir la réponse sous forme de tableau, il vous suffit d'ajouter `$asArray` à votre requête REST (*ex :*, `$asArray=true`).
 
 ## Exemple
 Voici un exemple pour obtenir une réponse sous forme de tableau.
 
  `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
-**Response**:
+**Réponse** :
 
 ````
 [

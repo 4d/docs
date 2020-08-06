@@ -51,7 +51,7 @@ Retourne des informations sur les ensembles d'entités stockés couramment dans 
 
 `GET /rest/$info`
 
-**Result**:
+**Résultat** :
 
 ```
 {

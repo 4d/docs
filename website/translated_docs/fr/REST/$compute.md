@@ -3,7 +3,7 @@ id: compute
 title: '$compute'
 ---
 
-Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
+Calculez des attributs spécifiques (par exemple, `Employee/salary/?$compute=sum)` ou dans le cas d'un attribut Objet (par exemple, Employee/objectAtt.property1/?$compute=sum)
 
 
 ## Description
@@ -37,7 +37,7 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Numérique, 
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
 ````
 {
@@ -55,7 +55,7 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Chaîne, vou
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**Réponse** :
 
 ````
 {
@@ -71,7 +71,7 @@ Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**Réponse** :
 
 `235000`
 

@@ -16,7 +16,7 @@ Nous appelons la requête REST suivante dans une transaction.
 
  `POST  /rest/Employee?$method=update&$atomic=true`
 
-**POST data**:
+**Données POST** :
 
 ````
 [
