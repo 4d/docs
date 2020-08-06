@@ -14,7 +14,7 @@ Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife so
 
 Es ist üblich, den getesteten Wert im Boolean Ausdruck direkt vor Eintreten in die Schleife `While...End while` zu initialisieren. Den Wert initialisieren heißt, Sie setzen etwas Passendes, so dass der Boolean Ausdruck TRUE ist und `While...End while` die Schleife ausführt.
 
-Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. The following loop continues forever because _NeverStop_ is always TRUE:
+Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da _NeverStop_ immer wahr ist:
 ```4d
  NeverStop:=True
  While(NeverStop)
@@ -32,7 +32,7 @@ In solch einer Situation, also bei einer unkontrolliert ablaufenden Methode kön
  End while //The loop always ends with End while
 ```
 
-In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` gesetzt, bevor die Schleife startet. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Ansonsten wird die Systemvariable `OK` auf 0 gesetzt und die Schleife übersprungen. Sobald die Schleife läuft, sorgt der Befehl `ADD RECORD` dafür, dass sie weiterläuft, da er die Systemvariable `OK` auf 1 setzt, wenn der Benutzer den Datensatz sichert. Annulliert der Benutzer den letzten Datensatz,  d.h. er sichert ihn nicht, wird die Systemvariable `OK` auf 0 gesetzt und die Schleife stoppt.
+In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` gesetzt, bevor die Schleife startet. Klickt der Benutzer im Dialogfenster Bestätigen auf die Schaltfläche **OK**, wird die Systemvariable `OK` auf 1 gesetzt und die Schleife startet. Ansonsten wird die Systemvariable `OK` auf 0 gesetzt und die Schleife übersprungen. Sobald die Schleife läuft, sorgt der Befehl `ADD RECORD` dafür, dass sie weiterläuft, da er die Systemvariable `OK` auf 1 setzt, wenn der Benutzer den Datensatz sichert. Annulliert der Benutzer den letzten Datensatz,  d.h. er sichert ihn nicht, wird die Systemvariable `OK` auf 0 gesetzt und die Schleife stoppt.
 
 ## Repeat...Until
 
@@ -66,8 +66,8 @@ Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
-- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
+- *Counter_Variable* ist eine numerische Variable vom Typ Zahl oder Lange Ganzzahl. Sie wird von der Schleife `For...End for` auf den in *Start_Expression* festgelegten Wert initialisiert.
+- Die Zählervariable wird nach jedem Durchlaufen der Schleife um den optionalen Wert erhöht, der in *Increment_Expression* angegeben ist. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
 - When the counter variable passes the *End_Expression* value, the loop stops.
 
 **Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. Sind diese Ausdrücke Variablen, und ändern Sie eine dieser Variablen innerhalb der Schleife, hat das keine Auswirkung auf die Schleife.
