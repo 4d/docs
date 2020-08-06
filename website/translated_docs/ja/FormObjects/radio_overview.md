@@ -64,11 +64,11 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted.
+ - *Windows* - ボタンがハイライト表示されます。
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - ボタンはハイライト表示されません。
 
 
 
@@ -76,11 +76,11 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 ベベルスタイルは [ツールバー](#ツールバー) スタイルと似た動作をしますが、薄いグレーの背景にグレーの枠が描画されます。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted.
+ - *Windows* - ボタンがハイライト表示されます。
 
   ![](assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - ボタンはハイライト表示されません。
 
 
 ### 角の丸いベベル
@@ -89,7 +89,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+ - *macOS* - 角が丸くなっています。 ![](assets/en/FormObjects/roundedBevel.png)
 
 
 ### OS Xグラデーション
@@ -98,7 +98,7 @@ OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルと
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the button is displayed as a two-tone system button.
+ - *macOS* - 2トーンのシステムボタンです。
 
 
 
@@ -110,7 +110,7 @@ OS Xテクスチャースタイルは [ツールバー](#ツールバー) スタ
 
  - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. 高さは定義済みで、変更できません。
+ - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
   ![](assets/en/FormObjects/OSXTextured.png)
 
@@ -122,11 +122,11 @@ Office XPスタイルは [ベベル](#ベベル) ボタンような外観に、[
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Windows* - マウスオーバー時にのみ背景が表示されます。
 
   ![](assets/en/FormObjects/radio_xp.png)
 
- - *macOS* - its background is always displayed.
+ - *macOS* - 背景は常に表示されます。
 
 
 
