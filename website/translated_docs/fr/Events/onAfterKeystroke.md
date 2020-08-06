@@ -3,21 +3,17 @@ id: onAfterKeystroke
 title: Sue après frappe clavier
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                          |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **y compris** ce caractère. |
-
+| Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                        |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` returns the object's text **including** this character. |
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                         |
-| ------- | ------------------------------------- |
-| v18 R5  | - Support in non-enterable list boxes |
+| Version | Modifications                                                                                                    |
+| ------- | ---------------------------------------------------------------------------------------------------------------- |
+| v18 R5  | - Support in non-enterable list boxes<p>- The event is now triggered after IME validation |
+</details>
 
-
-<
-
-p>- The event is now triggered after IME validation </details>
 
 ## Description
 
@@ -37,7 +33,7 @@ p>- The event is now triggered after IME validation </details>
 > When an entry requires a sequence of keystrokes, the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke event`] events are generated only when the entry is fully validaded by the user. The `Keystroke` command returns the validated character. This case mainly occurs:
 > 
 > - when using "dead" keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. "ê" or ñ),
-> - when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated. 
+> - when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
 > 
 > ### Voir également
 > 
