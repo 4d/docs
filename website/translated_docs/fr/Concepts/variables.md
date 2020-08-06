@@ -3,7 +3,7 @@ id: variables
 title: Variables
 ---
 
-Fondamentalement, dans 4D, les données peuvent être stockées de deux manières. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Fondamentalement, dans 4D, les données peuvent être stockées de deux manières. **Les champs** stockent les données sur disque, de manière permanente ; **les variables** stockent les données en mémoire, de manière temporaire.
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
@@ -13,7 +13,7 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 
 Vous pouvez créer des variables en les déclarant à l'aide de l'une des commandes des thèmes "Tableaux" ou "Compilateur".
 
-**Note:**Arrays are a particular type of variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+**Note :**Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
 Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
@@ -21,7 +21,7 @@ Par exemple, si vous souhaitez définir une variable de type texte, il suffira d
  C_TEXT(monTexte)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
+**Note :**Vous pouvez également créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement comme vous le faites avec les champs. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```4d
  MaDate:=Current date+30 //MaDate est créée et prend la valeur de la date courante plus 30 jours
@@ -47,7 +47,7 @@ ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme
 
 ## Assigner des valeurs
 
-Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
+Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
 L’opérateur d’assignation est le premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
 
@@ -55,15 +55,15 @@ L’opérateur d’assignation est le premier moyen pour créer une variable et 
 MonNombre:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. Si MonNombre existait déjà, elle prend simplement la valeur 3.
+crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 
 ```4d
 [Produits]Taille:=MonNombre
 ```
 
-In this case, _[Products]Size_ would be equal to 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
+Dans ce cas, _[Produits]Taille_ vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
 
 Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :
 
@@ -73,11 +73,11 @@ atNoms{1}:="Richard"
 
 ## Variables locales, process et interprocess
 
-You can create three types of variables: **local**, **process**, and **interprocess**. La différence entre ces trois types de variables est leur portée, ou les objets pour lesquels elles sont disponibles.
+Vous pouvez créer trois types de variables : des variables **locales**, des variables **process** et des variables **interprocess**. La différence entre ces trois types de variables est leur portée, ou les objets pour lesquels elles sont disponibles.
 
 ### Variables locales
 
-Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Le fait d'être local à une méthode est formellement qualifié de «portée locale». Les variables locales sont utilisées pour restreindre une variable afin qu'elle ne fonctionne que dans la méthode.
 
 - Eviter des conflits de noms avec les autres variables
 - Utiliser temporairement des valeurs,
@@ -98,7 +98,7 @@ If(OK=1)
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
+**Note :** les paramètres $1, $2 etc. passés aux méthodes sont des variables locales. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
 
 ### Variables process
 
@@ -106,7 +106,7 @@ Une variable process est “visible” uniquement dans le process où elle a ét
 
 Le nom d’une variable process ne comporte aucun préfixe. Ce nom peut contenir jusqu’à 31 caractères.
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
+En mode interprété, les variables sont gérées dynamiquement; elles sont créées et effacées de la mémoire «à la volée». En mode compilé, tous les process que vous créez (process utilisateur) partagent la même définition de variables process, mais chaque process a une instance différente pour chaque variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
 
 Un process peut lire et écrire des variables process dans un autre process à l'aide des commandes `LIRE VARIABLE PROCESS` et `ECRIRE VARIABLE PROCESS`. Nous vous recommandons de n'utiliser ces commandes que dans le cadre des besoins décrits ci-dessous (qui sont les raisons pour lesquelles ces commandes ont été créées dans 4D) :
 
@@ -114,7 +114,7 @@ Un process peut lire et écrire des variables process dans un autre process à l
 - Gestion du glisser-déposer interprocess
 - En client/serveur, communication entre les process sur les postes clients et les procédures stockées exécutées sur le serveur
 
-For more information, see the chapter **Processes** and the description of these commands.
+Pour plus d'informations, reportez-vous à la section **Process** et à la description de ces commandes.
 
 ### Variables interprocess
 
