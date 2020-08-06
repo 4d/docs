@@ -3,7 +3,7 @@ id: querypath
 title: '$querypath'
 ---
    	
-Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
+Retourne la requête telle qu'elle a été exécutée par 4D Server (par exemple, `$querypath=true`)
 
 ## Description
 
@@ -30,7 +30,7 @@ Et si aucune entité n'a été trouvée, le chemin de la requête suivant sera r
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Réponse** :
 
 ```
 __queryPath: {
@@ -72,7 +72,7 @@ Si au moins une entité a été trouvée, le chemin de la requête suivant sera 
 
  `GET  /rest/$querypath`
 
-**Respose**:
+**Réponse** :
 
 ```
 "__queryPath": {
