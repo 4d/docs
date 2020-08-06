@@ -19,8 +19,8 @@ A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) 
 | size     | integer | Defined only for RSA keys: the size of the key in bits. Typically 2048                                                   |
 | curve    | text    | Defined only for ECDSA keys: the normalised curve name of the key. For example: "prime256v1", "secp384r1" or "secp521r1" |
 
-
 ### Example
+
 
 The following example signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
 
@@ -44,7 +44,7 @@ ASSERT($status.success)
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
@@ -58,7 +58,6 @@ ASSERT($status.success)
 |           |          |         |    |                                                                                                                                |
 | keyPair   |          | object  | <- | Object encapsulating an encryption key pair                                                                                    |
 
-
 This method creates a new object encapsulating an encryption key pair, based upon the `settings` object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 Pass the type of key in the `type` property of the `settings` parameter:
@@ -69,6 +68,7 @@ Pass the type of key in the `type` property of the `settings` parameter:
 
 The resulting `keyPair` object is a shared object and can therefore be used by multiple 4D processes simultaneously.
 
+
 ## cryptoKey.getPrivateKey()
 
 <details><summary>History</summary>
@@ -76,7 +76,7 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
@@ -85,8 +85,8 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 |            |          |      |    |                           |
 | privateKey |          | text | <- | Private key in PEM format |
 
-
 This method returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+
 
 ## cryptoKey.getPublicKey()
 
@@ -95,7 +95,7 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.getPublicKey() -> publicKey
 
@@ -104,8 +104,8 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 |           |          |      |    |                          |
 | publicKey |          | text | <- | Public key in PEM format |
 
-
 This method returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available.
+
 
 ## cryptoKey.sign()
 
@@ -114,7 +114,7 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.sign(message;options) -> signature
 
@@ -128,7 +128,6 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 |           |          |         |    |                                                                                                                                                                         |
 | signature |          | text    | <- | Resulting signature in Base64 or Base64URL representation, depending on "encoding" option                                                                               |
 
-
 This method signs the utf8 representation of a `message` string using the `cryptoKey` object keys and provided `options`. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 The `cryptoKey` must contain a valid **private** key.
@@ -140,7 +139,7 @@ The `cryptoKey` must contain a valid **private** key.
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.verify(message;signature;options) -> status
 
@@ -157,7 +156,6 @@ The `cryptoKey` must contain a valid **private** key.
 |           | success  | boolean    |    | True if the signature matches the message                                                                                                                               |
 |           | errors   | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                             |
 
-
 This method verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`.
 
 The method returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
@@ -173,7 +171,7 @@ The `cryptoKey` must contain a valid **public** key.
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.encrypt(message;options) -> result
 
@@ -187,10 +185,11 @@ The `cryptoKey` must contain a valid **public** key.
 |           |                   |        |    |                                                                                                                                                           |
 | result    |                   | text   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                                                                                       |
 
-
 This method encrypts the `message` parameter using the **public** key. The algorithm used depends on the type of the key.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+
+
 
 ## cryptoKey.decrypt()
 
@@ -199,7 +198,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | Version | Changes |
 | ------- | ------- |
 | v18 R4  | Added   |
-</details> 
+</details>
 
 #### cryptoKey.decrypt(message;options) -> status
 
@@ -216,7 +215,6 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 |           | result            | text       |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
 |           | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |
 
-
 This method decrypts the `message` parameter using the **private** key. The algorithm used depends on the type of the key.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
@@ -224,3 +222,4 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 The method returns a status object with `success` property set to `true` if the `message` could be successfully decrypted.
 
 In case the `message` couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+
