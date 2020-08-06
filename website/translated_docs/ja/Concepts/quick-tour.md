@@ -32,7 +32,7 @@ $myHour:=?08:12:55? // 時間リテラルを代入します
 
 代入演算 (:=) は必ず他の演算と区別しなければなりません。 代入演算子は、被演算子を組み合わせて新しい一つのものにするのではなく、演算子の右側の式の値を左側の変数やフィールドにコピーします。
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。
+**重要:** 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。
 
 ## 変数
 
@@ -48,11 +48,11 @@ C_DATE(MyDate) // MyDate 変数を日付型として宣言
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
+上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。 この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `C_XXX` によって宣言された変数はデータ型を変化させることはできません。 コンパイルモードにおいては、その作成方法にかかわらず、変数のデータ型は変更できません。
 
 ## コマンド
 
-4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
+4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に _4D ランゲージリファレンス_ に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -94,7 +94,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // ドキュメントを読み�
 
 ## メソッド
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。
+4D が提供するたくさんのビルトインコマンドを使って、独自の **プロジェクトメソッド** を組み立てることができます。 プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。
 
 メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。
 
@@ -143,7 +143,7 @@ $0:=Uppercase($1)
 [Products]Part_Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+数値変数 _Number_ の値が17であれば、_[Products]Part_Number_ に "17abc" という文字列が代入されます。
 
 データタイプについては [データタイプ](Concepts/data-types.md) の節で詳しく説明しています。
 
@@ -172,7 +172,7 @@ $vAge:=employee.children[2].age
 ```
 $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message() // "Hello world!" を表示します
 ```
 
 コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
@@ -210,7 +210,7 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 
 コマンド・演算子・変数・フィールド・オブジェクトプロパティ・コレクション要素等、複数のランゲージの要素を組み合わせて式は構成されます。 式により、ステートメント (メソッドの 1文や 1行) を構成します。 データが必要なとき、式が必要になります。
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. :
+式が単独で使われることはほとんどありませんが、 単独で使用できる場合がいくつかあります :
 
 - フォーミュラエディター (フォーミュラによるクエリや並べ替えなど)
 - `EXECUTE FORMULA` コマンド
@@ -226,7 +226,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 | --------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | "こんにちは"                     | 文字列         | これは文字列定数 "こんにちは" です。 文字列定数であることを表すために二重引用符が必要です。                                                                                            |
 | "みなさん" + "こんにちは"            | 文字列         | 2つの文字列 "みなさん" と "こんにちは" が + 演算子により結合され、 "みなさんこんにちは" を返します。                                                                                  |
-| “Mr. ” + [People]Name       | 文字列         | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. フィールドの値が "小林" の場合、"小林様" を返します。 |
+| [People]Name + "様"          | 文字列         | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. フィールドの値が "小林" の場合、"小林様" を返します。 |
 | Uppercase ("smith")         | 文字列         | この式は `Uppercase` コマンドを使用して、文字列 "smith" を英大文字に変換します。 そして "SMITH" を返します。                                                                      |
 | 4                           | 数値          | これは数値定数 4です。                                                                                                                                |
 | 4 * 2                       | 数値          | 2つの数値、4 と 2 の乗算です。乗算演算子の (*) を使用しています。 数値の 8を返します。                                                                                          |
