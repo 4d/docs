@@ -8,12 +8,13 @@ Die in 4D integrierte Sprache mit mehr als 1300 Befehlen macht 4D zu einem leist
 - Den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
 - Komplexe Berichte und Etiketten mit den Informationen aus der Datenbank erstellen und drucken,
 - mit anderen Geräten kommunizieren,
-- E-Mails senden, 
+- E-Mails senden,
 - Dokumente und Web Seiten verwalten,
 - Daten zwischen 4D Datenbanken und anderen Applikationen importieren und exportieren,
 - Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren.
 
 Die Flexibilität und Leistungsfähigkeit der 4D Programmiersprache macht sie zum idealen Werkzeug für Anwender und Entwickler auf unterschiedlichem Niveau, um eine ganze Reihe von Aufgaben im Informationsmanagement zu erfüllen. Anfänger können schnell Berechnungen durchführen. Erfahrene Benutzer ohne Programmierkenntnisse können ihre Datenbanken selbst anpassen. Erfahrene Entwickler können diese leistungsstarke Programmiersprache nutzen, um ihre Datenbanken mit anspruchsvollen Features und Funktionsweisen auszurüsten, einschließlich Dateiübertragung, Kommunikation und Überwachung. Entwickler mit Programmiererfahrung in anderen Sprachen können der 4D Sprache eigene Befehle hinzufügen.
+
 
 ## Was ist eine Sprache?
 
@@ -56,6 +57,6 @@ Die 4D Programmiersprache ist keine traditionelle Computersprache. Sie ist eine 
 
 Bei traditionellen Sprachen müssen Sie ausführlich planen. Natürlich zählt Planen zu den wichtigsten Schritten beim Entwickeln. Mit 4D können Sie die Sprache zu jeder Zeit und an beliebiger Stelle in Ihrer Datenbank einsetzen. Sie können z. B. einem Formular zuerst eine Methode hinzufügen, und später weitere dazunehmen. Wird Ihre Datenbank komplexer, können Sie eine über Menü gesteuerte Projektmethode anfügen. Sie können so viel oder so wenig von der Sprache einsetzen, wie Sie gerade benötigen. Sie müssen nicht – wie in vielen anderen Datenbanken – nach der Devise "Alles oder nichts" arbeiten.
 
-In traditionellen Sprachen sind Sie gezwungen, Formularobjekte in formalen syntaktischen Begriffen zu definieren und vorab zu deklarieren. In 4D legen Sie einfach ein Formularobjekt an, beispielsweise eine Schaltfläche und verwenden diese. 4D verwaltet das Objekt automatisch für Sie. Sie zeichnen Ihre Schaltfläche in einem Formular und geben ihr einen Namen. Klickt der Benutzer auf die Schaltfläche, ruft die Sprache automatisch die entsprechenden Methoden auf.
+In traditionellen Sprachen sind Sie gezwungen, Formularobjekte in formalen syntaktischen Begriffen zu definieren und vorab zu deklarieren. In 4D, you simply create an object, such as a button, and use it. 4D automatically manages the object for you. Sie zeichnen Ihre Schaltfläche in einem Formular und geben ihr einen Namen. Klickt der Benutzer auf die Schaltfläche, ruft die Sprache automatisch die entsprechenden Methoden auf.
 
 Traditionelle Sprachen sind oft starr und unflexibel, Befehle müssen in genau vorgeschriebener Form und Stil eingegeben werden. Die 4D Programmiersprache macht Schluss damit und Sie profitieren davon.
