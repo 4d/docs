@@ -4,7 +4,7 @@ title: '$timeout'
 ---
 
 
-Defines the number of seconds to save an entity set in 4D Server's cache (*e.g.*, `$timeout=1800`)
+Définit le nombre de secondes pour enregistrer un ensemble d'entités dans le cache de 4D Server (par exemple, `$timeout=1800`)
 
 ## Description
 
