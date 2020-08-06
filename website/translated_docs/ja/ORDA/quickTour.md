@@ -30,7 +30,7 @@ ds.Company.city //returns the name of the city
 ```
 
 > In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
-> 
+
 > ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
 
 You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
@@ -45,10 +45,10 @@ ds.Company.hires //returns the list of employees
 
 But don't go too fast. Let's see now how to record data in ORDA dataclasses.
 
+
 ## Adding data
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
@@ -71,6 +71,13 @@ Right now, the entity only exists in memory. To store it in the data file, you n
 $status:=$entity.save()
 ```
 
+
+
+
+
+
+
+
 The editor for users is located in the Toolbox of 4D.
 
 ![](assets/en/Users/editor.png)
@@ -81,7 +88,7 @@ You use the users editor to create user accounts, set their properties and assig
 
 To add a user from the Toolbox :
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor. 
+1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
@@ -113,6 +120,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.
 
+
 ## Groups editor
 
 The editor for groups is located in the Toolbox of 4D.
@@ -125,17 +133,18 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 To create a group:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
-    OR  
-    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+   OR  
+   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
 > The Duplicate command can be used to create several groups having the same characteristics quickly.
 
 4D adds a new group to the list, named "New groupX" by default.
 
 3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+
 
 ### Placing users or groups into groups
 
@@ -164,6 +173,7 @@ The “Plug-in” area on the Groups page of the tool box lists all the plug-ins
 ![](assets/en/Users/plugins.png)
 
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+
 
 ### An access hierarchy scheme
 
