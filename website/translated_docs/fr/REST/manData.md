@@ -137,7 +137,7 @@ Les requêtes suivantes retournent uniquement le prénom et le nom de la datasto
  `GET  /rest/People/firstName,lastName/`
 
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -177,7 +177,7 @@ Les requêtes suivantes retournent uniquement le prénom et le nom de la datasto
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -202,7 +202,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
  `GET  /rest/People(3)/firstName,lastName/`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -217,7 +217,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
  `GET  /rest/People(3)/`
 
-**Result**:
+**Résultat** :
 
 ````
 {
