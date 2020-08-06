@@ -10,4 +10,4 @@ title: Sur appel zone du plug in
 
 ## Description
 
-The event is generated when a plug-in requested its form area to execute the associated object method.
+The event is generated when a plug-in requested its form area to execute the associated object method. 
