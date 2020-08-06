@@ -5,12 +5,13 @@ title: Travailler avec des données
 
 Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
 
+
 ## Créer une entité
 
 Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-* Les entités étant des références à des enregistrements de base de données, vous pouvez créer des entités en créant des enregistrements en utilisant le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
-* Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
+*   Les entités étant des références à des enregistrements de base de données, vous pouvez créer des entités en créant des enregistrements en utilisant le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
+*   Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
 
 Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter à la banque de données, vous devez appeler la méthode `entity.save ()`.
 
@@ -25,7 +26,6 @@ $myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
 $myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
 $myEntity.save() //sauvegarder l'entité
 ```
-
 > Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
 
 ## Entités et références
@@ -85,13 +85,12 @@ Et la méthode est :
 ```
 
 Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
-
 > Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [chargement différé](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
+
 
 ## Utilisation des attributs d'entités
 
-Les attributs d'entité stockent les données et mappent les champs correspondants dans la table correspondante. Les attributs d'entité du type de stockage peuvent être définis ou obtenus sous forme de propriétés simples de l'objet entité, tandis que l'entité de type **relatedEntity** ou **relatedEntities** renverra une entité ou une sélection d'entité.
-
+Les attributs d'entité stockent les données et mappent les champs correspondants dans la table correspondante. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [Attributs de stockage et de relation](dsMapping.md#storage-and-relation-attributes).
 
 Par exemple, pour définir un attribut de stockage :
@@ -101,7 +100,6 @@ Par exemple, pour définir un attribut de stockage :
  $name:=entity.lastname //obtenir le nom de l'employé, par exemple "Dupont"
  entity.lastname:="Jones" //définir le nom de l'employé
 ```
-
 > Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
 
 L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
@@ -115,7 +113,7 @@ Vous pouvez accéder aux données via le ou les objets associé(s) :
  $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
-Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
+Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
 ![](assets/en/Orda/entityAttributes2.png)
 
@@ -130,15 +128,14 @@ Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le 
 
 Dans l'architecture ORDA, les attributs de relation contiennent directement des données liées aux entités :
 
-* Un attribut de relation de type N-> 1 (type **relatedEntity**) contient une entité
-* Un attribut de relation de type 1-> N (type **relatedEntities**) contient une sélection d'entité
+*   An N->1 type relation attribute (**relatedEntity** kind) contains an entity
+*   A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
 
 Regardons la structure (simplifiée) suivante :
 
 ![](assets/en/Orda/entityAttributes3.png)
 
 Dans cet exemple, une entité de la dataclass "Employee" contient un objet de type Entité dans l'attribut "employer" (ou une valeur nulle). Une entité de la dataclass "Company" contient un objet de type EntitySelection dans l'attribut "staff" (ou une valeur nulle).
-
 > Dans ORDA, la propriété Automatic ou Manual des relations ne produit aucun effet.
 
 Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company". Par exemple:
@@ -168,26 +165,25 @@ Cela signifie également que vous pouvez attribuer des clés primaires dans les 
 Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associée "1" à partir de la dataclass "N" directement via l'attribut associé. Par exemple, si vous souhaitez modifier l'attribut de nom d'une entité "Company" associée d'une entité "Employee", vous pouvez écrire :
 
 ```code4d
- $emp:=ds.Employee.get(2) // charger l'entité Employee avec la clé primaire 2
- $emp.employer.name:="4D, Inc." //modifier l'attribut "name" de nom de la société (Company) liée
- $emp.employer.save() //sauvegarde l'attribut associé
-  //l'entité associée est mise à jour
+ $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
+ $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
+ $emp.employer.save() //save the related attribute
+  //the related entity is updated
 ```
 
 ## Créer une sélection d'entité (entity selection)
 
 Vous pouvez créer un objet de type sélection d'entité comme suit :
 
-* Recherchez les entités d'une dataclass (voir la méthode `dataClass.query()`);
-* Utilisez la méthode `dataClass.all()` pour sélectionner toutes les entités d'une dataclass;
-* Utilisez la commande `Create entity selection` ou la méthode `dataClass.newSelection()` pour créer un objet de collection d'entités (entity collection) vide;
+*   Recherchez les entités d'une dataclass (voir la méthode `dataClass.query()`);
+*   Utilisez la méthode `dataClass.all()` pour sélectionner toutes les entités d'une dataclass;
+*   Utilisez la commande `Create entity selection` ou la méthode `dataClass.newSelection()` pour créer un objet de collection d'entités (entity collection) vide;
 
-* Utilisez l'une des diverses méthodes du thème **ORDA - EntitySelection** qui retourne une nouvelle sélection d'entité, telle que `entitySelection.or()`;
+*   Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
 
-* Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
+*   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
-
 > Une sélection d'entité n'est définie que dans le process où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une sélection d'entité dans une variable interprocess et l'utiliser dans un autre process.
 
 ## Sélections d'entités et attributs
@@ -201,7 +197,7 @@ Tous les attributs de stockage (texte, numérique, booléen, date) sont disponib
  localEmails:=locals.emailAddress // collection d'adresses e-mail (chaînes)
 ```
 
-Ce code retourne dans *localEmails* une collection d'adresses e-mail sous forme de chaînes.
+This code returns in *localEmails* a collection of email addresses as strings.
 
 ### Sélections d'entités et attributs de relation
 
@@ -217,9 +213,10 @@ myParts:=ds.Part.query("ID < 100") //Retourne les parties dont l'ID est inférie
 
 La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité, le résultat est toujours une autre sélection d'entité, même si une seule entité est retournée. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité et qu'aucune entité n'est retournée, le résultat est une sélection d'entité vide et non nulle.
 
+
 ## Verrouillage d'une entité
 
-Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre processus ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre processus ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est fixée au moment de la mise à jour.
+Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre processus ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre processus ne l'a pas modifié depuis sa lecture. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est fixée au moment de la mise à jour.
 
 ORDA vous propose deux modes de verrouillage d'entité :
 
@@ -230,25 +227,20 @@ ORDA vous propose deux modes de verrouillage d'entité :
 
 Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" qui est particulièrement adapté aux problématiques des applications web. Ce concept se caractérise par les principes de fonctionnement suivants :
 
-* Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
-* Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
-* Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) : 
-    * Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
-    * Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
+*   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
+*   Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
+*   Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) :
+    *   Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
+    *   Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
 
 Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Deux process chargent la même entité.  
-      
-    ![](assets/en/Orda/optimisticLock1.png)
+1. Deux process chargent la même entité.<br><br>![](assets/en/Orda/optimisticLock1.png)
 
-2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'ils correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.  
-      
-    ![](assets/en/Orda/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'ils correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br><br>![](assets/en/Orda/optimisticLock2.png)
 
-3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Etant donné que la valeur de marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.  
-      
-    ![](assets/en/Orda/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Etant donné que la valeur de marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br><br>![](assets/en/Orda/optimisticLock3.png)
+
 
 Cela peut également être illustré par le code suivant :
 
@@ -270,30 +262,29 @@ Vous pouvez verrouiller et déverrouiller des entités à la demande lorsque vou
 
 Cette fonctionnalité est basée sur deux méthodes de la classe Entity :
 
-* `entity.lock()`
-* `entity.unlock()`
+*   `entity.lock()`
+*   `entity.unlock()`
 
 Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
+
 
 ### Utilisation simultanée des verrouillages classiques 4D et des verrouillages pessimistes ORDA
 
 L'utilisation des commandes classiques et ORDA pour le verrouillage des enregistrements est basé sur les principes suivants :
 
-* Un verrouillage défini avec une commande 4D classique sur un enregistrement empêche ORDA de verrouiller l'entité correspondant à l'enregistrement.
-* Un verrouillage défini avec ORDA sur une entité empêche les commandes 4D classiques de verrouiller l'enregistrement correspondant à l'entité.
+*   Un verrouillage défini avec une commande 4D classique sur un enregistrement empêche ORDA de verrouiller l'entité correspondant à l'enregistrement.
+*   Un verrouillage défini avec ORDA sur une entité empêche les commandes 4D classiques de verrouiller l'enregistrement correspondant à l'entité.
 
 Ces principes sont illustrés dans le diagramme suivant :
 
 ![](assets/en/Orda/concurrent1.png)
 
-Les **verrouillages de transaction** s'appliquent également aux commandes classiques et aux commandes ORDA. Dans une application multiprocess ou multi-utilisateurs, un verrouillage défini dans une transaction sur un enregistrement par une commande classique aura pour effet d'empêcher tout autre process de verrouiller les entités liées à cet enregistrement (ou inversement), jusqu'à ce que la transaction soit validée ou annulée.
+**Transaction locks** also apply to both classic and ORDA commands. Dans une application multiprocess ou multi-utilisateurs, un verrouillage défini dans une transaction sur un enregistrement par une commande classique aura pour effet d'empêcher tout autre process de verrouiller les entités liées à cet enregistrement (ou inversement), jusqu'à ce que la transaction soit validée ou annulée.
 
-* Exemple avec un verrouillage défini par une commande classique :  
-      
-    ![](assets/en/Orda/concurrent2.png)
-* Exemple avec un verrouillage défini par une méthode ORDA :  
-      
-    ![](assets/en/Orda/concurrent3.png)
+*   Exemple avec un verrouillage défini par une commande classique :<br><br>![](assets/en/Orda/concurrent2.png)
+*   Exemple avec un verrouillage défini par une méthode ORDA :<br><br>![](assets/en/Orda/concurrent3.png)
+
+
 
 ## Optimisation client/serveur
 
@@ -301,20 +292,21 @@ Les **verrouillages de transaction** s'appliquent également aux commandes class
 
 Les mécanismes d'optimisation suivants sont mis en œuvre :
 
-* Lorsqu'un client demande une sélection d'entité au serveur, 4D "apprend" automatiquement attributs de la sélection d'entité sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est relié à la sélection d'entité et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite.
+*   Lorsqu'un client demande une sélection d'entité au serveur, 4D "apprend" automatiquement attributs de la sélection d'entité sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est relié à la sélection d'entité et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite.
 
-* Les requêtes ultérieures envoyées au serveur sur la même sélection d'entité réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une list box basée sur une sélection d'entités, la phase d'apprentissage a lieu durant l'affichage des premières lignes et l'affichage des lignes suivantes est fortement optimisé.
+*   Les requêtes ultérieures envoyées au serveur sur la même sélection d'entité réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une list box basée sur une sélection d'entités, la phase d'apprentissage a lieu durant l'affichage des premières lignes et l'affichage des lignes suivantes est fortement optimisé.
 
-* Un contexte d'optimisation existant peut être passé en tant que propriété à une autre sélection d'entité de la même dataclass, ce qui permet d'éviter la phase d'apprentissage et d'accélérer l'application (voir [Utilisation de la propriété context](#using-the-context-property) ci-dessous).
+*   Un contexte d'optimisation existant peut être passé en tant que propriété à une autre sélection d'entité de la même dataclass, ce qui permet d'éviter la phase d'apprentissage et d'accélérer l'application (voir [Utilisation de la propriété context](#using-the-context-property) ci-dessous).
 
 Les méthodes suivantes associent automatiquement le contexte d'optimisation de la sélection d'entité d'origine à la sélection d'entité retournée :
 
-* `entitySelection.and()`
-* `entitySelection.minus()`
-* `entitySelection.or()`
-* `entitySelection.orderBy()`
-* `entitySelection.slice()`
-* `entitySelection.drop()`
+*   `entitySelection.and()`
+*   `entitySelection.minus()`
+*   `entitySelection.or()`
+*   `entitySelection.orderBy()`
+*   `entitySelection.slice()`
+*   `entitySelection.drop()`
+
 
 **Exemple**
 
@@ -329,13 +321,16 @@ Considérons le code suivant :
 
 Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (prénom, nom, employeur, employeur.name) dans $sel après la phase d'apprentissage.
 
+
+
 ### Utilisation de la propriété context
 
-Vous pouvez tirer un meilleur parti de l'optimisation en utilisant la propriété **context**. Cette propriété référence un contexte d'optimisation "appris" pour une sélection d'entités. Elle peut être passée comme paramètre aux méthodes ORDA qui retournent de nouvelles sélections d'entités, afin que les sélections d'entités demandent directement au serveur les attributs utilisés, sans passer par la phase d'apprentissage.
+You can increase the benefits of the optimization by using the **context** property. Cette propriété référence un contexte d'optimisation "appris" pour une sélection d'entités. Elle peut être passée comme paramètre aux méthodes ORDA qui retournent de nouvelles sélections d'entités, afin que les sélections d'entités demandent directement au serveur les attributs utilisés, sans passer par la phase d'apprentissage.
 
-Une même propriété de contexte d'optimisation peut être passée à un nombre illimité de sélections d'entités de la même dataclass. Toutes les méthodes ORDA qui gèrent les sélections d'entités prennent en charge la propriété **context** (par exemple les méthodes `dataClass.query( )` ou `dataClass.all( )`). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
-
+Une même propriété de contexte d'optimisation peut être passée à un nombre illimité de sélections d'entités de la même dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 > Un mécanisme similaire est mis en place pour des entités qui sont chargées, afin que seuls les attributs utilisés soient demandés (voir la méthode `dataClass.get( )`).
+
+
 
 **Exemple avec la méthode `dataClass.query( )` :**
 
@@ -362,19 +357,19 @@ Une même propriété de contexte d'optimisation peut être passée à un nombre
 
 L'optimisation d'une sélection d'entités s'applique automatiquement aux listbox basées sur une sélection d'entités dans les configurations client/serveur, au moment d'afficher et de dérouler le contenu d'une listbox : seuls les attributs affichés dans la listbox sont demandés depuis le serveur.
 
-Un contexte spécifique nommé "mode page" est également proposé lorsque l'entité courante de la sélection est chargée à l'aide de l'expression **élément courant** de la listbox (voir [List box de type collection ou entity selection](FormObjects/listbox_overview.md#list-box-types)). Cette fonctionnalité vous permet de ne pas surcharger le contexte initial de la listbox dans ce cas précis, notamment si la "page" requiert des attributs supplémentaires. A noter que seule l'utilisation de l'expression **Élément courant** permettra de créer/utiliser le contexte de la page (l'accès via `entitySelection[index]` modifiera le contexte de la sélection d'entité).
+A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). Cette fonctionnalité vous permet de ne pas surcharger le contexte initial de la listbox dans ce cas précis, notamment si la "page" requiert des attributs supplémentaires. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
 
 Cette optimisation sera également prise en charge par les requêtes ultérieures envoyées au serveur via les méthodes de navigation des entités. Les méthodes suivantes associeront automatiquement le contexte d'optimisation de l'entité source à l'entité retournée :
 
-* `entity.next( )`
-* `entity.first( )`
-* `entity.last( )`
-* `entity.previous( )`
+*   `entity.next( )`
+*   `entity.first( )`
+*   `entity.last( )`
+*   `entity.previous( )`
 
 Par exemple, le code suivant charge l'entité sélectionnée et permet de naviguer dans la sélection d'entités. Les entités sont chargées dans un contexte séparé et le contexte initial de la listbox demeure inchangé :
 
 ```code4d
- $myEntity:=Form.currentElement //expression de l'élément courant
-  //... faire quelque chose
-$myEntity:=$myEntity.next() //charge la prochaine entité à l'aide du même contexte
+ $myEntity:=Form.currentElement //current item expression
+  //... do something
+ $myEntity:=$myEntity.next() //loads the next entity using the same context
 ```
