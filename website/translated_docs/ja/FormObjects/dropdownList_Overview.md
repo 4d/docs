@@ -31,7 +31,7 @@ macOS においては、ドロップダウンリストは "ポップアップメ
   $aCities{5}:="Frostbite Falls"
   $aCities{6}:="Green Bay"
 ```
-In this case, the name of the variable associated with the object in the form must be *$aCities*. このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
+この場合、フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
 *  オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4Dv18/4D/18/LIST-TO-ARRAY.301-4504606.ja.html) コマンドを使ってリストの値を配列にロードします。 たとえば:
 
@@ -39,7 +39,7 @@ In this case, the name of the variable associated with the object in the form mu
    LIST TO ARRAY("Cities";aCities)
 ```
 
- In this case also, the name of the variable associated with the object in the form must be *$aCities*. このコードは、前述した代入命令文の代わりに実行できます。
+ この場合フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。
 
 ユーザーがおこなった選択内容をフィールドに保存する必要があれば、レコードの登録後に代入命令を実行します。 たとえば、次のような Case文のコードを作成します:
 
