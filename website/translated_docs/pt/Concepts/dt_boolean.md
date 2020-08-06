@@ -31,15 +31,14 @@ myBoolean:=(myButton=1)
 
 4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
 
-| Operation | Syntax                 | Returns | Expression                  | Value |
-| --------- | ---------------------- | ------- | --------------------------- | ----- |
-| AND       | Boolean & Boolean      | Boolean | ("A" = "A") & (15 # 3)      | True  |
-|           |                        |         | ("A" = "B") & (15 # 3)      | False |
-|           |                        |         | ("A" = "B") & (15 = 3)      | False |
-| OR        | Boolean &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3) | True  |
-|           |                        |         | ("A" = "B") &#124; (15 # 3) | True  |
-|           |                        |         | ("A" = "B") &#124; (15 = 3) | False |
-
+| Operation | Syntax                  | Returns | Expression                   | Value |
+| --------- | ----------------------- | ------- | ---------------------------- | ----- |
+| AND       | Boolean & Boolean       | Boolean | ("A" = "A") & (15 # 3)       | True  |
+|           |                         |         | ("A" = "B") & (15 # 3)       | False |
+|           |                         |         | ("A" = "B") & (15 = 3)       | False |
+| OR        | Boolean  &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3)  | True  |
+|           |                         |         | ("A" = "B") &#124;  (15 # 3) | True  |
+|           |                         |         | ("A" = "B") &#124;  (15 = 3) | False |
 
 The following is the truth table for the AND logical operator:
 
@@ -50,7 +49,6 @@ The following is the truth table for the AND logical operator:
 | False | True  | False         |
 | False | False | False         |
 
-
 The following is the truth table for the OR logical operator:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
@@ -59,7 +57,6 @@ The following is the truth table for the OR logical operator:
 | True  | False | True               |
 | False | True  | True               |
 | False | False | False              |
-
 
 **Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
 
