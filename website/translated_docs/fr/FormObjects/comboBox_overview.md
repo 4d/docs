@@ -11,7 +11,7 @@ Une combo box est semblable à une [liste déroulante](dropdownList_Overview.md#
 
 Une combo box peut être initialisée de la même manière qu’une liste déroulante. Lorsque l’utilisateur saisit du texte dans la combo box, il est stocké dans l’élément 0 du tableau. En d’autres termes, vous devez considérer l’objet combo box comme une zone saisissable qui utilise un tableau ou une liste de choix en tant que liste de valeurs par défaut.
 
-Utilisez l’événement formulaire `Sur données modifiées` pour gérer les valeurs saisies, comme pour toute zone de saisie. For more information, refer to the description of the [Form event](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) command in the *4D Language Reference* manual.
+Utilisez l’événement formulaire `Sur données modifiées` pour gérer les valeurs saisies, comme pour toute zone de saisie. Pour plus d’informations, reportez-vous à la description de la commande [Form event](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) dans le *manuel Langage de 4D*.
 
 ## Options des combo box
 
