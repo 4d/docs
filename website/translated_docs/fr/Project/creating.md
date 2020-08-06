@@ -13,7 +13,7 @@ To create a new project:
 1. Launch 4D or 4D Server.
 2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OU<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**.<p> Ce nom sera utilisé :
+3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**.<p> Ce nom sera utilisé :
     - as the name of the entire project folder,
     - comme nom du fichier .4DProject au premier niveau du dossier "Project".
 

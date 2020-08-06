@@ -3,7 +3,7 @@ id: imageformat
 title: '$imageformat'
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
+Définit le format d'image à utiliser pour récupérer des images (par exemple, `$imageformat=png`)
 
 ## Description
 

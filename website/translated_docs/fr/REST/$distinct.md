@@ -4,7 +4,7 @@ title: '$distinct'
 ---
 
 
-Returns the distinct values for a specific attribute in a collection (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
+Retourne les différentes valeurs d'un attribut spécifique dans une collection (par exemple, `Company/name?$filter="name=a*"&$distinct=true`)
 
 
 ## Description
@@ -18,7 +18,7 @@ Dans l'exemple ci-dessous, nous souhaitons récupérer les différentes valeurs 
 
  `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Response**:
+**Réponse** :
 
 ````
 [

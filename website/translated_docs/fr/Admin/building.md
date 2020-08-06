@@ -8,11 +8,11 @@ title: Générer un package projet
 Le générateur d'applications vous permet de :
 
 *   Générer une base de données compilée, sans code interprété,
-*   Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
+*   Générer une application autonome exécutable, c'est-à-dire fusionnée avec 4D Volume Desktop, le moteur de base de données 4D,
 *   Générer différentes applications à partir de la même base de données compilée via un projet XML,
 *   Générer des applications client-serveur homogènes,
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
-*   Save your build settings for future use (*Save settings* button).
+*   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
 
 
 
@@ -23,7 +23,7 @@ Générer un package de projet peut être réalisée à l'aide de :
 - soit la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 - soit la[ fenêtre Générateur d'application](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+Pour afficher la boîte de dialogue du générateur d'application, sélectionnez **Développement** > **Générer l'application...** dans la barre de menus.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -39,7 +39,7 @@ La génération ne peut s'effectuer qu'une fois la base de données compilée. S
 
 Chaque paramètre de générateur d'application est stocké en tant que clé XML dans le fichier de l'application nommé "buildApp.4DSettings", situé dans le dossier Settings du projet.
 
-Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
+Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
 Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html).
 
@@ -63,9 +63,9 @@ La vérification de ce fichier peut vous aider à gagner du temps lors des proch
 
 ![](assets/en/Project/buidappstructureProj.png)
 
-Enter the name of the application in **Application Name**.
+Entrez le nom de l'application dans **Nom de l'application**.
 
-Specify the folder for the built application in **Destination Folder**. If the specified folder does not already exist, 4D will create a *Build* folder for you.
+Spécifiez le dossier de l'application générée dans le**Dossier de destination**. Si le dossier spécifié n'existe pas déjà, 4D vous créera un dossier *Build*.
 
 
 
@@ -80,7 +80,7 @@ Cet onglet vous permet de générer un fichier de structure compilé standard et
 
 Génère une base de données contenant uniquement du code compilé.
 
-This feature creates a *.4dz* file within a *Compiled Database* folder. Si vous avez nommé votre application «MyProject», 4D créera :
+Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database*. Si vous avez nommé votre application «MyProject», 4D créera :
 
 *\<destination\>/Compiled Database/\<nomdelabase>/\MyProject.4dz*
 
@@ -89,7 +89,7 @@ This feature creates a *.4dz* file within a *Compiled Database* folder. Si vous 
 
 #### Inclure les dossiers associés
 
-When you check this option, any folders related to the database are copied into the Build folder as *Components* and *Resources* folders. Pour plus d'informations sur ces dossiers, voir [Architecture de la base de données](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
+Lorsque vous cochez cette option, tous les dossiers liés à la base de données sont recopiés dans le dossier Build en tant que dossiers *Components* et *Resources*. Pour plus d'informations sur ces dossiers, voir [Architecture de la base de données](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
 
 
 ### Générer un composant

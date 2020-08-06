@@ -3,25 +3,25 @@ id: attributes
 title: '$attributes'
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+Permet de sélectionner les attributs relationnels à obtenir à partir de la dataclass (par exemple, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
 
 
 ## Description
 
 Lorsque vous avez des attributs relationnels dans une dataclass, utilisez `$attributes` pour définir le chemin des attributs dont vous souhaitez obtenir les valeurs pour l'entité ou les entités associées.
 
-You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
 
-- Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "*" est passée, tous les attributs disponibles sont extraits. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "*" est passée, tous les attributs disponibles sont extraits. Les attributs **d'entité relative** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs des **entités relatives** ne sont pas extraits.
 
-- If `$attributes` is specified for **related entity** attributes:
+- Si `$attributes` est spécifié pour les attributs **d'entité relative ** :
     - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
     - `$attributes=relatedEntity.*` : tous les attributs de l'entité relative sont retournés
     - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs de l'entité relative sont retournés.
 
 
-- If `$attributes` is specified for **related entities** attributes:
+- Si `$attributes` est spécifié pour les attributs **d'entités relatives** :
     - `$attributes=relatedEntities.*` : toutes les propriétés des entités relatives sont retournées
     - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités relatives sont retournés.
 
@@ -33,7 +33,7 @@ Si nous passons la requête REST suivante pour la classe de datastore Company (q
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Réponse** :
 
 ```
 {
@@ -80,7 +80,7 @@ Si nous passons la requête REST suivante pour la classe de datastore Employee (
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Réponse** :
 
 ```
 {

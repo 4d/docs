@@ -26,7 +26,7 @@ Supprime l'entité, collection d'entités ou sélection d'entité courante (cré
 
 ### Description
 
-Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. Vous pouvez définir la collection d'entités en utilisant, par exemple, [`$filter`]($filter.md) ou en en spécifiant une directement à l'aide de [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) (par exemple, /Employee(22)).
 
 Vous pouvez également supprimer les entités d'un ensemble d'entités en appelant [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
@@ -190,11 +190,11 @@ Met à jour et/ou crée une ou plusieurs entités
 
 ### Description
 
-`$method=update` allows you to update and/or create one or more entities in a single **POST**. If you update and/or create one entity, it is done in an object with each property an attribute with its value, *e.g.*, `{ lastName: "Smith" }`. If you update and/or create multiple entities, you must create a collection of objects.
+`$method=update` vous permet de mettre à jour et/ou de créer une ou plusieurs entités dans un seul **POST**. Si vous mettez à jour et/ou créez une entité, cela s'effectue dans un objet avec, pour chaque propriété, un attribut et sa valeur, par exemple `{lastName: "Smith"}`. If you update and/or create multiple entities, you must create a collection of objects.
 
 In any cases, you must set the **POST** data in the **body** of the request.
 
-Pour mettre à jour une entité, vous devez passer les paramètres `__KEY` et `__STAMP` dans l'objet avec tous les attributs modifiés. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your **POST**.
+Pour mettre à jour une entité, vous devez passer les paramètres `__KEY` et `__STAMP` dans l'objet avec tous les attributs modifiés. Si ces deux paramètres sont manquants, une entité sera ajoutée avec les valeurs de l'objet que vous envoyez dans le corps de votre **POST**.
 
 Triggers are executed immediately when saving the entity to the server. La réponse contient toutes les données telles qu'elles existent sur le serveur.
 
@@ -203,8 +203,8 @@ Vous pouvez également placer ces requêtes pour créer ou mettre à jour des en
 Si un problème survient lors de l'ajout ou de la modification d'une entité, une erreur vous sera retournée avec ces informations.
 > A noter pour les types d'attributs spécifiques :
 > 
-> * **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). Si vous avez sélectionné la propriété Date uniquement pour votre attribut Date, le fuseau horaire et l'heure (heure, minutes et secondes) seront supprimés. Dans ce cas, vous pouvez également envoyer la date au format qui vous est retourné dd!mm!yyyy (par exemple, 05!10!2013).
-> * **Booleans** are either true or false.
+> * **Les dates** doivent être exprimées au format JS : YYYY-MM-DDTHH:MM:SSZ (par exemple, "2010-10-05T23:00:00Z"). Si vous avez sélectionné la propriété Date uniquement pour votre attribut Date, le fuseau horaire et l'heure (heure, minutes et secondes) seront supprimés. Dans ce cas, vous pouvez également envoyer la date au format qui vous est retourné dd!mm!yyyy (par exemple, 05!10!2013).
+> * Les valeurs des **booléens** sont vrai ou faux.
 > * Les fichiers téléchargés à l'aide de `$upload` peuvent s'appliquer à un attribut de type Image ou BLOB en passant l'objet retourné au format suivant {"ID": "D507BC03E613487E9B4C2F6A0512FE50"}
 
 ### Exemple
