@@ -7,18 +7,20 @@ title: Glossaire
 
 ![](assets/en/Orda/mainConcepts.png)
 
+
+
 ## Attribut
 
 Un attribut est la plus petite cellule de stockage dans une base de données relationnelle (voir aussi [Attribut relationnel](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
 
-* Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
-* Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
-
-> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+*   Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
+*   Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
+> *Attributes* and *properties* are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
 Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [propertyPath](#propertyPath).
+
 
 ## Class code
 
@@ -35,6 +37,7 @@ For example, the `query()` class function is a function of dataclasses. If you h
 ```code4d
 $myClass.query("name = smith")
 ```
+
 
 ## Data model class
 
@@ -54,6 +57,7 @@ A dataclass is an object model that describes the data. Tables in the database p
 
 A dataclass is related to a single datastore.
 
+
 ## DataClass class
 
 Class for specific dataclass objects, in which you can add custom functions.
@@ -64,8 +68,8 @@ A datastore is the interface object provided by ORDA to reference a structure an
 
 A datastore provides:
 
-* une connexion à la base de données 4D
-* un ensemble de dataclasses pour travailler avec la base de données
+*   une connexion à la base de données 4D
+*   un ensemble de dataclasses pour travailler avec la base de données
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
@@ -74,6 +78,7 @@ A datastore references only a single database. It is, however, possible to open 
 ## DataStore class
 
 Class for datastore objects, in which you can add custom functions.
+
 
 ## DataStoreImplementation
 
@@ -101,15 +106,17 @@ An entity selection is an object. When querying the datastore, an entity selecti
 
 An entity selection contains:
 
-* un ensemble de 0 à X références d'entités
-* une propriété length (toujours),
-* les propriétés queryPlan et queryPath (si demandées lors de la requête).
+*   un ensemble de 0 à X références d'entités
+*   une propriété length (toujours),
+*   les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
 An entity selection can also be empty.
+
 
 ## Generic class
 
 Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
+
 
 ## Lazy loading
 
@@ -127,16 +134,16 @@ See [class function](#class-function).
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Par exemple :
 
-* number
-* Texte
-* null
-* boolean
-* date
-* object
-* collection
-* image(\*)
+*   number
+*   Texte
+*   null
+*   boolean
+*   date
+*   object
+*   collection
+*   image(\*)
 
-*(*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
+*(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
 ## Optimistic Lock
 
@@ -149,7 +156,6 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## Propriété
 
 See [Attribute](#attribute).
-
 > Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
@@ -168,8 +174,8 @@ These are dataclasses linked by relation attributes.
 
 Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
 
-* Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-* One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
+*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
 
 A dataclass can have recursive relation attributes.
 
