@@ -14,7 +14,7 @@ title: Sur après modification
 
 Cet événement peut être utilisé pour filtrer la saisie de données dans les objets saisissables au clavier au niveau le plus bas.
 
-Lorsqu'il est utilisé, cet événement est généré après chaque modification apportée au contenu d'un objet saisissable, quelle que soit l'action qui a provoqué la modification, c'est-à-dire :
+When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
 
 - Actions d'édition standard qui modifient le contenu comme les actions coller, couper, supprimer ou annuler;
 - Déposer une valeur (action similaire à coller);
@@ -33,7 +33,6 @@ The object returned by the `FORM Event` command contains:
 | sheetName   | Texte       | Name of the sheet of the event                                                                      |
 | action      | Texte       | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
@@ -42,7 +41,6 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
-
 
 #### action = valueChanged
 
@@ -68,107 +66,43 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | Propriété | Type   | Description         |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
- autoFillType|longint|Value used for the fill.
+ autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
 
-- 0: Cells are filled with all data (values, formatting, and formulas)
-    - 1: Cells are filled with automatically sequential data
-        - 2: Cells are filled with formatting only
-            - 3: Cells are filled with values but not formatting
-                - 4: Values are removed from the cells
-                    - 5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.
-                        - 0: The cells to the left are filled
-                            - 1: The cells to the right are filled
-                                - 2: The cells above are filled
-                                    - 3: The cells below are filled| 
-                                        #### action = formulaChanged
-                                        
-                                        | Propriété | Type   | Description         |
-                                        | --------- | ------ | ------------------- |
-                                        | range     | object | Cell range          |
-                                        | formula   | Texte  | The formula entered |
 
-                                        
-                                        #### action = clipboardPasted
-                                        
-                                        <table>
-                                          <tr>
-                                            <th>
-                                              Propriété
-                                            </th>
-                                            
-                                            <th>
-                                              Type
-                                            </th>
-                                            
-                                            <th>
-                                              Description
-                                            </th>
-                                          </tr>
-                                          
-                                          <tr>
-                                            <td>
-                                              range
-                                            </td>
-                                            
-                                            <td>
-                                              object
-                                            </td>
-                                            
-                                            <td>
-                                              Cell range
-                                            </td>
-                                          </tr>
-                                          
-                                          <tr>
-                                            <td>
-                                              pasteOption
-                                            </td>
-                                            
-                                            <td>
-                                              entier long
-                                            </td>
-                                            
-                                            <td>
-                                              Specifies what is pasted from the clipboard:
-                                              
-                                              <li>
-                                                0: Everything is pasted (values, formatting, and formulas)<li>
-                                                  1: Only values are pasted<li>
-                                                    2: Only the formatting is pasted<li>
-                                                      3: Only formulas are pasted<li>
-                                                        4: Values and formatting are pasted (not formulas)<li>
-                                                          5: Formulas and formatting are pasted (not values)</td> </tr> <tr>
-                                                            <td>
-                                                              pasteData
-                                                            </td>
-                                                            
-                                                            <td>
-                                                              object
-                                                            </td>
-                                                            
-                                                            <td>
-                                                              The data from the clipboard to be pasted
-                                                              
-                                                              <li>
-                                                                "text" (text): The text from the clipboard<li>
-                                                                  "html" (text): The HTML from the clipboard</td> </tr> </tbody> </table> <h4>
-                                                                    Exemple
-                                                                  </h4>
-                                                                  <p>
-                                                                    Here is an example handling an <code>On After Edit</code> event:
-                                                                  </p>
-                                                                  <pre><code class="4d"> If(FORM Event.code=On After Edit)
+#### action = formulaChanged
+
+| Propriété | Type   | Description         |
+| --------- | ------ | ------------------- |
+| range     | object | Cell range          |
+| formula   | Texte  | The formula entered |
+
+#### action = clipboardPasted
+
+| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object      | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| pasteOption | entier long | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |
+| pasteData   | object      | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
+
+
+#### Exemple
+
+Here is an example handling an `On After Edit` event:
+
+```4d
+ If(FORM Event.code=On After Edit)
     If(FORM Event.action="valueChanged")
        ALERT("WARNING: You are currently changing the value\  
        from "+String(FORM Event.oldValue)+\  
        " to "+String(FORM Event.newValue)+"!")
     End if
  End if
-</code></pre>
-                                                                  <p>
-                                                                    The above example could generate an event object like this:
-                                                                  </p>
-                                                                  <pre><code>{
+```
+
+The above example could generate an event object like this:
+
+```
+{
 
 "code":45;
 "description":"On After Edit";
@@ -179,4 +113,4 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 "oldValue":"The quick brown fox";
 "newValue":"jumped over the lazy dog";
 }
-</code></pre>
+```
