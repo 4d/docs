@@ -32,7 +32,7 @@ title: 分岐構造
  End if
 ```
 
-この場合、両方のメソッドが true である場合に限り、式は true になります。 However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. この場合には、以下のような構造を使用するほうが賢明といえます:
+この場合、両方のメソッドが true である場合に限り、式は true になります。 しかしながら _MethodA_ が false であっても、4Dは_MethodB_ も評価するため、これは時間の無駄になります。 この場合には、以下のような構造を使用するほうが賢明といえます:
 
 ```4d
  If(MethodA)
@@ -42,21 +42,21 @@ title: 分岐構造
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
 
 ### 例題
 
 ```4d
-  // Ask the user to enter a name
- $Find:=Request(Type a name)
+  // ユーザーに名前の入力を求めます
+ $Find:=Request("名前を入力してください")
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("You did not enter a name.")
+    ALERT("名前が入力されませんでした")
  End if
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. 下のようなコードはどちらも有効です:
+**Tip:** 一方の条件に実行ステートメントがない分岐処理を書くこともできます。 下のようなコードはどちらも有効です:
 
 ```4d
  If(Boolean_Expression)
@@ -126,30 +126,30 @@ The result is similar and _MethodB_ is evaluated only if necessary.
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
-       ALERT("It was not one, two, or three.")
+    :(vResult=1) // 数値が1の場合
+       ALERT("一です。") // 1のアラートボックスを表示します
+    :(vResult=2) // 数値が2の場合
+       ALERT("二です。") // 2のアラートボックスを表示します
+    :(vResult=3) // 数値が3の場合
+       ALERT("三です。") // 3のアラートボックスを表示します
+    Else // 数値が1,2,3のいずれでもない場合
+       ALERT("一、二、三のいずれでもありません。")
  End case
 ```
 
 比較するために、同じことを `If...Else...End if` 構文で記述すると以下のようになります。
 
 ```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) // 数値が1の場合
+    ALERT("一です。") // 1のアラートボックスを表示します
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) // 数値が2の場合
+       ALERT("二です。") // 2のアラートボックスを表示します
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
+       If(vResult=3) // 数値が3の場合
+          ALERT("三です。") // 3のアラートボックスを表示します
+       Else // 数値が1,2,3のいずれでもない場合
+          ALERT("一、二、三のいずれでもありません。")
        End if
     End if
  End if
@@ -162,9 +162,11 @@ The result is similar and _MethodB_ is evaluated only if necessary.
 ```4d
  Case of
     :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+       ...
+ // ステートメントなど
+    :((vResult=1) & (vCondition#2)) // このケースが判定されることはありません
+       ...
+ // ステートメントなど
  End case
 ```
 
@@ -172,16 +174,19 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) // このケースが先に判定されます
+       ...
+ // ステートメントなど
     :(vResult=1)
-       ... //statement(s)
+       ...
+ 
+// ステートメントなど
  End case
 ```
 
 さらに階層的なテストを実行したい場合、コードも階層化する必要があります。
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. 下のようなコードはどちらも有効です:
+**Tip:** 分岐構造において、ケースに続くステートメントの記述は必須ではありません。 下のようなコードはどちらも有効です:
 ```4d
  Case of
     :(Boolean_Expression)
