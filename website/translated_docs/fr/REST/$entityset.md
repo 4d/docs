@@ -18,7 +18,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 ## $entityset/{entitySetID}
 
-Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Récupère un ensemble d'entités existant (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 
 ### Description
