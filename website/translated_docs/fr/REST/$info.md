@@ -32,11 +32,11 @@ For each entity selection currently stored in 4D Server's cache, the following i
 
 For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 > 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> **IMPORTANT** Si votre projet est en **mode d'accès administrateur contrôlé**, vous devez d'abord vous connecter au projet en tant qu'utilisateur du groupe Admin.
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection *sessionInfo* :
 
 | Propriété  | Type   | Description                                                       |
 | ---------- | ------ | ----------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Retourne des informations sur les ensembles d'entités stockés couramment dans 
 
 `GET /rest/$info`
 
-**Result**:
+**Résultat** :
 
 ```
 {
