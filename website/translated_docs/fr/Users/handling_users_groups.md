@@ -92,17 +92,17 @@ Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souha
 
 Pour créer un groupe :
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
+1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
-   OR  
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+2. Cliquez sur le bouton ![](assets/en/Users/PlussNew.png) situé en-dessous de la liste des groupes.  
+   OU  
+   Faites un clic droit sur la liste de groupes et sélectionnez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
 
 4D ajoute un nouveau groupe à la liste, nommé par défaut "Nouveau groupe1".
 
-3. Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. Vous pouvez renommer un groupe à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 
 ### Placer des utilisateurs ou des groupes dans des groupes
@@ -131,7 +131,7 @@ La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les 
 
 ![](assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.
+Les lignes **4D Client Web Server** et **4D Client SOAP Server** permettent contrôler la possibilité de publication Web et SOAP (Web Services) de chaque 4D en mode distant. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.
 
 
 ### Un schéma d’accès hiérarchique
