@@ -3,7 +3,7 @@ id: savedorderby
 title: '$savedorderby'
 ---
 
-Saves the order by defined by `$orderby` when creating an entity set (*e.g.*, `$savedorderby="{orderby}"`)
+Enregistre le tri défini par `$orderby` lors de la création d'un ensemble d'entités (par exemple, `$savedorderby="{orderby}"`)
 
 ## Description
 
