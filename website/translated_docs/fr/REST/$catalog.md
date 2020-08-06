@@ -24,7 +24,7 @@ Retourne une liste de dataclass dans votre projet avec deux URI : une pour accé
 
 Lorsque vous appelez `$catalog`, une liste des dataclass est retournée avec deux URI pour chaque dataclass dans le datastore de votre projet.
 
-Seules les dataclass exposées apparaissent dans cette liste pour le datastore de votre projet. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Seules les dataclass exposées apparaissent dans cette liste pour le datastore de votre projet. Pour plus d'informations, reportez-vous à la section [**Exposition des tableaux et des champs**](configuration.md#exposing-tables-and-fields).
 
 Voici une description des propriétés retournées pour chaque dataclass dans le datastore de votre projet :
 
@@ -40,7 +40,7 @@ Voici une description des propriétés retournées pour chaque dataclass dans le
 
 `GET  /rest/$catalog`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -75,7 +75,7 @@ Pour plus d'informations sur ce qui est retourné pour chaque classe du datastor
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -201,36 +201,36 @@ Les informations que vous récupérez concernent :
 Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 
-| Propriété      | Type   | Description                                                                                        |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | Chaine | Nom de la dataclass                                                                                |
-| collectionName | Chaine | Name of an entity selection on the dataclass                                                       |
-| tableNumber    | Nombre | Table number in the 4D database                                                                    |
-| scope          | Chaine | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | Chaine | Un URI aux données de la dataclass                                                                 |
+| Propriété      | Type   | Description                                                                                                                  |
+| -------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| name           | Chaine | Nom de la dataclass                                                                                                          |
+| collectionName | Chaine | Name of an entity selection on the dataclass                                                                                 |
+| tableNumber    | Nombre | Table number in the 4D database                                                                                              |
+| scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont **l'étendue** (scope) est publique sont affichées) |
+| dataURI        | Chaine | Un URI aux données de la dataclass                                                                                           |
 
 
 ### Attribut(s)
 
 Voici les propriétés de chaque attribut exposé qui sont retournées :
 
-| Propriété   | Type    | Description                                                                                                                                                 |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | Chaine  | Le nom de l’attribut.                                                                                                                                       |
-| kind        | Chaine  | Attribute type (storage or relatedEntity).                                                                                                                  |
-| fieldPos    | Nombre  | Position of the field in the database table).                                                                                                               |
-| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                        |
-| indexed     | Chaine  | If any **Index Kind** was selected, this property will return true. Sinon, cette propriété n'apparaîtra pas.                                                |
-| type        | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                    |
-| path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                       |
-| foreignKey  | Chaine  | For a relatedEntity attribute, name of the related attribute.                                                                                               |
-| inverseName | Chaine  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                              |
+| Propriété   | Type    | Description                                                                                                                                                                      |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
+| kind        | Chaine  | Attribute type (storage or relatedEntity).                                                                                                                                       |
+| fieldPos    | Nombre  | Position of the field in the database table).                                                                                                                                    |
+| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
+| indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
+| type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
+| identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                                         |
+| path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
+| foreignKey  | Chaine  | For a relatedEntity attribute, name of the related attribute.                                                                                                                    |
+| inverseName | Chaine  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                                   |
 
 
 ### Clé primaire
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
+L'objet clé retourne le nom de l'attribut (**name**) défini comme **clé primaire** pour la classe du datastore.
 
 
 ### Exemple
@@ -238,7 +238,7 @@ Vous pouvez récupérer les informations concernant une classe de datastore spé
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Résultat** :
 
 ````
 {
