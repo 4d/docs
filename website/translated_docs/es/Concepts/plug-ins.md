@@ -18,16 +18,15 @@ The modular nature of the 4D environment allows the creation of basic applicatio
 A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
 
 Usually, a plug-in does things that:
-
 - 4D cannot do (ie, specific platform technology),
 - will be very hard to write just using 4D,
 - are only available as Plug-in Entrypoint
 
 A plug-in usually contains a set of routines given to the 4D Developer. It can handle an External Area and run an external process.
 
-- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action. 
+- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action.
 - An **external area** is a part of a form that can display almost everything and interact with the user when necessary.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. All process code belongs to the plug-in, 4D is simply present to receive/send events to the process. 
+- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. All process code belongs to the plug-in, 4D is simply present to receive/send events to the process.
 
 ### Important note
 
@@ -48,11 +47,11 @@ You install plug-ins in the 4D environment by copying their files into the appro
 
 You can put the PlugIns folder in two different places:
 
-- At the level of the 4D executable application, i.e.: 
+- At the level of the 4D executable application, i.e.:
   - Under Windows: next to the .exe file
-  - Under macOS: at the first level of the Contents folder inside the application package.  
-    In this case, plug-ins are available in every database opened by this application. 
-- At the same level as the database structure file. In this case, plug-ins are only available in this particular database. 
+  - Under macOS: at the first level of the Contents folder inside the application package.   
+    In this case, plug-ins are available in every database opened by this application.
+- At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
 
 The choice of location depends on how you want to use the plug-in.
 
