@@ -30,7 +30,7 @@ Et si aucune entité n'a été trouvée, le chemin de la requête suivant sera r
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Réponse** :
 
 ```
 __queryPath: {
