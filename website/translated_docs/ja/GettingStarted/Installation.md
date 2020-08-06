@@ -30,16 +30,16 @@ title: インストールとアクティベーション
 - リモートモードで利用される 4D (4D Serverへの接続)
 - インタープリターモードのデータベースを開く場合で、デザインモードへはアクセスしないローカルモードの4D
 
-**Important:** You must have an Internet connection and an e-mail account in order to activate your products.
+**重要:** 製品のアクティベーションには、インターネットへの接続および電子メールアカウントが必要です。
 
 ### 4D のアクティベーション
 
 1. 4D アプリケーションを起動します。
-2. Select the **License Manager...** command from the **Help** menu.
+2. **ヘルプ** メニューから **ライセンスマネージャー...** を選択します。
 
 ![](assets/en/getStart/helpMenu.png)
 
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). 次のアクティベーションモードの章を参照してください。
+**ライセンスマネージャー** ダイアログボックスが表示されます (デフォルトではオンラインアクティベーションのページが選択されています)。 次のアクティベーションモードの章を参照してください。
 
 > アクティベーションされていない 4D Developer Edition を使って、インタープリターモードのローカルデータベースを開く、または新規作成すると、自動アクティベーション機構が作動します。 ダイアログボックスが表示され、お使いの 4D が私たちのカスタマーデータベースに接続し、ライセンスをアクティベーションすることを知らせます (ご利用の 4Dアカウントのパスワードを入力する必要があります)。
 
@@ -52,7 +52,7 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 
 ## アクティベーションモード
 
-4D は 3つのアクティベーションモードを用意しています。 We recommend **Instant Activation**.
+4D は 3つのアクティベーションモードを用意しています。 推奨されるのは **オンラインアクティベーション** です。
 
 ### オンラインアクティベーション
 
@@ -71,28 +71,28 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 
 コンピューターからインターネットへのアクセスがないために [オンラインアクティベーション](#オンラインアクティベーション) が出来ない場合、以下の手順を踏んでオフラインアクティベーションへと進んで下さい。
 
-1. In the License Manager window, select the **Deferred Activation** tab.
-2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
+1. **ヘルプ** メニューから "ライセンスマネージャー" を開き、**オフラインアクティベーション** タブを選択します。
+2. ライセンス番号とメールアドレスを入力し、**ファイルを生成** をクリックして IDファイル (*reg.txt*) を作成します。
 
 ![](assets/en/getStart/activ3.png)
 
-3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
+3. 生成された *reg.txt* ファイルを USBドライブへと保存し、インターネット環境があるコンピューターへと移動させます。
 4. インターネット環境のあるマシンから、[https://store.4d.com/jp/activation.shtml](https://store.4d.com/jp/activation.shtml) にログインします。
-5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
+5. Web ページ上にて、**ファイルを選択...** ボタンをクリックし、手順3と4で生成した *reg.txt* ファイルを選択し、**Activate** ボタンをクリックします。
 6. シリアルファイルをダウンロードします。
 
 ![](assets/en/getStart/activ4.png)
 
-7. Save the *license4d* file(s) on a shared media and transfer them back to the 4D machine from step 1.
-8. Now back on the machine with 4D, still on the **Deferred Activation** page, click **Next**; then click the **Load...** button and select a *license4d* file from the shared media from step 7.
+7. *license4d* ファイルを、何らかの共有メディアに保存し、手順1で使用している4Dマシンへと移動させます。
+8. **"オフラインアクティベーション"** 画面のままになっている、4D をインストールしたマシン上にて、画面上の **次へ** をクリックし、次に **読み込み...** ボタンをクリックして、手順7の共有メディアにある *license4d* ファイルを選択します。
 
 ![](assets/en/getStart/activ5.png)
 
-With the license file loaded, click on **Next**.
+ライセンスファイルが読み込まれた状態で、**次へ** をクリックします。
 
 ![](assets/en/getStart/activ6.png)
 
-9. Click on the **Add N°** button to add another license. これらの手順を、手順6のライセンスがすべて追加されるまで繰り返します。
+9. 他のライセンスを追加するためには **番号追加** ボタンをクリックします。 これらの手順を、手順6のライセンスがすべて追加されるまで繰り返します。
 
 これで、お使いの4Dアプリケーションのアクティベーションが完了しました。
 
@@ -105,16 +105,16 @@ With the license file loaded, click on **Next**.
 
 アプリケーションの拡張ライセンスは、いつでも追加することができます。
 
-Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
+4D または 4D Server アプリケーションの **ヘルプ** メニューから **ライセンスマネージャー...** を選択し、**更新** ボタンをクリックしてください:
 
 ![](assets/en/getStart/licens1.png)
 
-This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). その際、4D アカウントとパスワードの入力が必要です。
+このボタンを押すと 4D カスタマーデータベースに接続し、利用中のライセンスに紐付いている新しい、あるいは更新されたライセンスの自動アクティベーションがおこなわれます (利用中のライセンスは "有効なライセンス" 一覧内で **太字** で表示されているものです)。 その際、4D アカウントとパスワードの入力が必要です。
 
-- If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
+- 4D Server に追加のエクスパンションを購入した場合、ライセンス番号は一切入力する必要がありません。**更新** ボタンをクリックすれば、すべて完了します。
 - 4D Server の初回アクティベーション時のみ、サーバーのライセンス番号を入力すれば、購入した他のエクスパンションもすべて自動的に有効化されます。
 
-You can use the **Refresh** button in the following contexts:
+**更新** ボタンは、以下のような場合に使用します:
 
 - 追加のエクスパンションを購入したとき、またはそれをアクティベートしたいとき。
 - パートナーなどの失効した有限ライセンスを更新するとき。
@@ -125,17 +125,17 @@ You can use the **Refresh** button in the following contexts:
 
 4D ストアでは、4D製品の注文、アップグレード、延長、管理等をおこなうことができます。 ストアは以下のアドレスからアクセス可能です: [https://store.4d.com/jp/](https://store.4d.com/jp/)
 
-Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
+既存アカウントで **ログイン** するか、または **新規アカウント** を作成し、画面上の指示に従ってください。<br /><br /> **注:** パスワードを忘れてしまった場合、"パスワードをお忘れの方" をクリックして下さい (ログイン画面右側のヘルプメニューにあります)。数分後に指定されたアドレスへ、パスワードリセット用の自動メールが送信されます。
 
 ### ライセンス管理
 
-After you log in, you can click on **License list** at the top right of the page:
+ログイン後、ページ右側のマイ・ライセンスメニューから **ライセンスの一覧** をクリックします:
 
 ![](assets/en/getStart/licens2.png)
 
 ここでは、ライセンスをプロジェクト単位でグループ化して管理することができます。
 
-Select the appropriate license from the list then click **Link to a project... >**:
+一覧から任意のライセンスを選択し、**プロジェクトにリンク... >** をクリックします:
 
 ![](assets/en/getStart/licens3.png)
 
@@ -165,7 +165,7 @@ Select the appropriate license from the list then click **Link to a project... >
 
 ## 連絡先
 
-For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
+お買い求めいただきました製品のインストールやアクティベーションに関するご質問はフォーディー・ジャパン社、またはお住まいの地域の代理店までお寄せください。
 
 日本にお住まいの方:
 
