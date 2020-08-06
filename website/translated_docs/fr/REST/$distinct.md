@@ -4,7 +4,8 @@ title: '$distinct'
 ---
 
 
-Retourne les différentes valeurs d'un attribut spécifique dans une collection (par exemple, `Company/name?$filter="name=a*"&$distinct=true`)
+Returns the distinct values for a specific attribute in a collection (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
+
 
 ## Description
 
@@ -13,14 +14,16 @@ Retourne les différentes valeurs d'un attribut spécifique dans une collection 
 Vous pouvez également utiliser `$skip` et `$top/$limit` si vous souhaitez parcourir la sélection avant qu'elle ne soit placée dans un tableau.
 
 ## Exemple
-
 Dans l'exemple ci-dessous, nous souhaitons récupérer les différentes valeurs d'un nom de société commençant par la lettre "a" :
 
-`GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
+ `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Réponse** :
+**Response**:
 
-    [
-        "Adobe",
-        "Apple"
-    ]
+````
+[
+    "Adobe",
+    "Apple"
+]
+````
+
