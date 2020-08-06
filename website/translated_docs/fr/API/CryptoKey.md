@@ -19,8 +19,8 @@ Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcrypto
 | size      | integer | Défini uniquement pour les clés RSA : la taille de la clé est exprimée en octets. Généralement 2048                                   |
 | curve     | Texte   | Définie uniquement pour les clés ECDSA : le nom de courbe normalisé de la clé. Par exemple : "prime256v1", "secp384r1" or "secp521r1" |
 
-
 ### Exemple
+
 
 L'exemple suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
 
@@ -44,7 +44,7 @@ ASSERT($status.success)
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
@@ -58,7 +58,6 @@ ASSERT($status.success)
 |            |           |         |    |                                                                                                                                |
 | keyPair    |           | object  | <- | Objet contenant une paire de clés de chiffrement                                                                               |
 
-
 Cette méthode crée un nouvel objet contenant une paire de clés de chiffrement, fondée sur le paramètre `settings`. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 Passez le type de clé dans la propriété `type` du paramètre `settings` :
@@ -69,6 +68,7 @@ Passez le type de clé dans la propriété `type` du paramètre `settings` :
 
 L'objet `keyPair` qui en résulte est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
 
+
 ## cryptoKey.getPrivateKey()
 
 <details><summary>Historique</summary>
@@ -76,7 +76,7 @@ L'objet `keyPair` qui en résulte est un objet partagé et peut être alors util
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
@@ -85,8 +85,8 @@ L'objet `keyPair` qui en résulte est un objet partagé et peut être alors util
 |            |           |       |    |                            |
 | privateKey |           | Texte | <- | Clé primaire au format PEM |
 
-
 Cette méthode retourne la clé privée de l'objet `cryptoKey` au format PEM, ou une chaine vide si aucune n'est disponible.
+
 
 ## cryptoKey.getPublicKey()
 
@@ -95,7 +95,7 @@ Cette méthode retourne la clé privée de l'objet `cryptoKey` au format PEM, ou
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.getPublicKey() -> publicKey
 
@@ -104,8 +104,8 @@ Cette méthode retourne la clé privée de l'objet `cryptoKey` au format PEM, ou
 |            |           |       |    |                            |
 | publicKey  |           | Texte | <- | Clé publique au format PEM |
 
-
 Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, ou une chaine vide si aucune n'est disponible.
+
 
 ## cryptoKey.sign()
 
@@ -114,7 +114,7 @@ Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, o
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.sign(message;options) -> signature
 
@@ -128,10 +128,9 @@ Cette méthode retourne la clé publique de l'objet `cryptoKey` au format PEM, o
 |            |           |         |    |                                                                                                                                                                                                                            |
 | signature  |           | Texte   | <- | Signature résultante en représentation Base64 ou Base64URL, selon l'option "encoding"                                                                                                                                      |
 
-
 Cette méthode signe la représentation utf8 d'une chaîne `message` à l'aide des clés d'objet `cryptoKey` et des `options` fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
-La `cryptoKey` doit contenir une clé **privée** valide.
+The `cryptoKey` must contain a valid **private** key.
 
 ## cryptoKey.verify()
 
@@ -140,7 +139,7 @@ La `cryptoKey` doit contenir une clé **privée** valide.
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.verify(message;signature;options) -> status
 
@@ -157,14 +156,13 @@ La `cryptoKey` doit contenir une clé **privée** valide.
 |            | success   | boolean    |    | True si la signature correspond au message                                                                                                                                                                                 |
 |            | errors    | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                                                                                |
 
-
 Cette méthode vérifie et compare la signature base64 par rapport à la représentation utf8 du `message` à l'aide des clés d'objet `cryptoKey` et des `options` fournies.
 
 La méthode renvoie un objet `status` avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (la signature est correspondante).
 
 Si la signature n'a pas pu être vérifiée car elle n'a pas été signée avec le même `message`, la clé ou l'algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 
-La `cryptoKey` doit contenir une clé **publique** valide.
+The `cryptoKey` must contain a valid **public** key.
 
 ## cryptoKey.encrypt()
 
@@ -173,7 +171,7 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.encrypt(message;options) -> result
 
@@ -187,10 +185,11 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 |            |                   |        |    |                                                                                                                                                                               |
 | result     |                   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
-
-Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
+This method encrypts the `message` parameter using the **public** key. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+
+
 
 ## cryptoKey.decrypt()
 
@@ -199,7 +198,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-</details> 
+</details>
 
 #### cryptoKey.decrypt(message;options) -> status
 
@@ -216,11 +215,11 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 |            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
 |            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 
-
-Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
+This method decrypts the `message` parameter using the **private** key. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 La méthode renvoie un objet "status" avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès.
 
 Si le `message` n'a pas pu être déchiffré car il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
+
