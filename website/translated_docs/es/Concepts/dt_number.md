@@ -5,8 +5,8 @@ title: Number (Real, Longint, Integer)
 
 Number is a generic term that stands for:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits). 
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1. 
+- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
+- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1.
 - Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
 
 **Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
@@ -14,6 +14,7 @@ Number is a generic term that stands for:
 You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
 
 **Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+
 
 ## Number literals
 
@@ -59,7 +60,6 @@ Negative numbers are specified with the minus sign (-). For example:
 | Less than or equal to    | Number <= Number | Boolean | 10 <= 11   | True  |
 |                          |                  |         | 11 <= 10   | False |
 
-
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
 - 10 % 2 returns 0 because 10 is evenly divided by 2.
@@ -67,9 +67,8 @@ The modulo operator % divides the first number by the second number and returns 
 - 10.5 % 2 returns 0 because the remainder is not a whole number.
 
 **WARNING:**
-
 - The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only. 
+- The longint division operator \ returns significant values with integer numbers only.
 
 ### Precedence
 
@@ -90,6 +89,7 @@ To override the left-to-right precedence, you MUST use parentheses. For example:
 returns 23 because the expression (4 * 5) is evaluated first, because of the parentheses. The result is 20, which is then added to 3 for the final result of 23.
 
 Parentheses can be nested inside other sets of parentheses. Be sure that each left parenthesis has a matching right parenthesis to ensure proper evaluation of expressions. Lack of, or incorrect use of parentheses can cause unexpected results or invalid expressions. Furthermore, if you intend to compile your applications, you must have matching parentheses—the compiler detects a missing parenthesis as a syntax error.
+
 
 ## Bitwise operators
 
@@ -114,72 +114,35 @@ An expression that uses a bitwise operator returns a Long Integer value, except 
 | Bit Clear              | ?-        | Long ?- Long        | Long (see note 2)    |
 | Bit Test               | ??        | Long ?? Long        | Boolean (see note 2) |
 
-
 #### Notes
 
 1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.
 2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.
 
+
+
 The following table lists the bitwise operators and their effects:
 
-| Operation   | Description                                                            |
-| ----------- | ---------------------------------------------------------------------- |
-| Bitwise AND | Each resulting bit is the logical AND of the bits in the two operands. |
+| Operation              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND            | Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                           |
+| Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
+| Bitwise OR (exclusive) | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
+| Left Bit Shift         | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0. <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                   |
+| Right Bit Shift        | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                      |
+| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
+| Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
 
+### Examples
 
-<
-
-p>Here is the logical AND table:
-
-- 1 & 1 --> 1
-    - 0 & 1 --> 0
-        - 1 & 0 --> 0
-            - 0 & 0 --> 0</p> 
-                <
-                
-                p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.
-                
-                <
-                
-                p>Here is the logical OR table:
-                
-                - 1 &#124; 1 --> 1
-                    - 0 &#124; 1 --> 1
-                        - 1 &#124; 0 --> 1
-                            - 0 &#124; 0 --> 0</p> 
-                                <
-                                
-                                p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.
-                                
-                                <
-                                
-                                p>Here is the logical XOR table:
-                                
-                                - 1 \^&#124; 1 --> 0
-                                    - 0 \^&#124; 1 --> 1
-                                        - 1 \^&#124; 0 --> 1
-                                            - 0 \^&#124; 0 --> 0</p> 
-                                                <
-                                                
-                                                p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0.
-                                                
-                                                <
-                                                
-                                                p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.
-                                                
-                                                <
-                                                
-                                                p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.| |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.| |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.|
-                                                
-                                                ### Examples
-                                                
-                                                | Operation              | Example                                    | Result     |
-                                                | ---------------------- | ------------------------------------------ | ---------- |
-                                                | Bitwise AND            | 0x0000FFFF & 0xFF00FF00                    | 0x0000FF00 |
-                                                | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00               | 0xFF00FFFF |
-                                                | Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 0xFF0000FF |            |
-                                                | Left Bit Shift         | 0x0000FFFF << 8                            | 0x00FFFF00 |
-                                                | Right Bit Shift        | 0x0000FFFF >> 8                            | 0x000000FF |
-                                                | Bit Set                | 0x00000000 ?+ 16                           | 0x00010000 |
-                                                | Bit Clear              | 0x00010000 ?- 16                           | 0x00000000 |
-                                                | Bit Test               | 0x00010000 ?? 16                           | True       |
+| Operation              | Example                                     | Result     |
+| ---------------------- | ------------------------------------------- | ---------- |
+| Bitwise AND            | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
+| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
+| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
+| Left Bit Shift         | 0x0000FFFF << 8                             | 0x00FFFF00 |
+| Right Bit Shift        | 0x0000FFFF >> 8                             | 0x000000FF |
+| Bit Set                | 0x00000000 ?+ 16                            | 0x00010000 |
+| Bit Clear              | 0x00010000 ?- 16                            | 0x00000000 |
+| Bit Test               | 0x00010000 ?? 16                            | True       |

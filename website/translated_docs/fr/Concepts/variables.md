@@ -54,15 +54,15 @@ L’opérateur d’assignation est le premier moyen pour créer une variable et 
 MonNombre:=3
 ```
 
-crée la variable *MonNombre* et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
+crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer *MonNombre* à droite de l’opérateur d’assignation :
+Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 
 ```4d
 [Produits]Taille:=MonNombre
 ```
 
-Dans ce cas, *[Produits]Taille* vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
+Dans ce cas, _[Produits]Taille_ vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
 
 Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :
 
@@ -76,9 +76,7 @@ Vous pouvez créer trois types de variables : des variables **locales**, des var
 
 ### Variables locales
 
-Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Pour une variable, être locale à une méthode signifie avoir une portée locale. Vous utilisez une variable locale lorsque vous souhaitez limiter son fonctionnement à la méthode, pour une des raisons suivantes :
-
-
+Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Le fait d'être local à une méthode est formellement qualifié de «portée locale». Les variables locales sont utilisées pour restreindre une variable afin qu'elle ne fonctionne que dans la méthode.
 
 - Eviter des conflits de noms avec les autres variables
 - Utiliser temporairement des valeurs,
@@ -88,7 +86,7 @@ Le nom d’une variable locale commence toujours par le signe dollar ($) et peut
 
 Lorsque vous développez une base comportant de nombreuses méthodes et variables, il arrive souvent que vous n’ayez besoin d’utiliser une variable que dans une méthode. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
 
-Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne. Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
+Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")
@@ -99,7 +97,7 @@ If(OK=1)
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
 
-**Note :** Paramètres $1, $2... passés à des méthodes sont des variables locales. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
+**Note :** les paramètres $1, $2 etc. passés aux méthodes sont des variables locales. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
 
 ### Variables process
 
@@ -107,7 +105,7 @@ Une variable process est “visible” uniquement dans le process où elle a ét
 
 Le nom d’une variable process ne comporte aucun préfixe. Ce nom peut contenir jusqu’à 31 caractères.
 
-En mode interprété, les variables sont gérées dynamiquement : elles sont créées en mémoire et effacées “à la volée”. En mode compilé, tous les process que vous créez (process utilisateurs) partagent la même définition des variables process, mais chaque process dispose de sa propre instance pour chaque variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
+En mode interprété, les variables sont gérées dynamiquement; elles sont créées et effacées de la mémoire «à la volée». En mode compilé, tous les process que vous créez (process utilisateur) partagent la même définition de variables process, mais chaque process a une instance différente pour chaque variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
 
 Un process peut lire et écrire des variables process dans un autre process à l'aide des commandes `LIRE VARIABLE PROCESS` et `ECRIRE VARIABLE PROCESS`. Nous vous recommandons de n'utiliser ces commandes que dans le cadre des besoins décrits ci-dessous (qui sont les raisons pour lesquelles ces commandes ont été créées dans 4D) :
 
@@ -126,3 +124,5 @@ Les variables interprocess sont visibles dans toute la base et sont disponibles 
 Le nom d’une variable interprocess débute toujours par le symbole (<>) — formé du symbole “inférieur à” suivi du symbole “supérieur à” — et peut comporter jusqu’à 31 caractères supplémentaires.
 
 En mode client/serveur, chaque poste (client et serveur) partage la même définition des variables interprocess, mais chacun utilise une instance différente d'une variable.
+
+

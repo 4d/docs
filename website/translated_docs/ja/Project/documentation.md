@@ -120,7 +120,7 @@ title: ドキュメンテーション
 <table>
   <tr>
     <th>
-      Line
+      線
     </th>
     
     <th>

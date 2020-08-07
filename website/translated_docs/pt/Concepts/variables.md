@@ -54,15 +54,15 @@ The assignment operator is the primary way to create a variable and to put data 
 MyNumber:=3
 ```
 
-creates the variable *MyNumber* and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
 
 You assign data to array elements by using curly braces ({...}):
 
@@ -126,3 +126,5 @@ Interprocess variables are available throughout the database and are shared acro
 The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+
+

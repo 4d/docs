@@ -3,10 +3,8 @@ id: propertiesHierarchy
 title: Hierarchy
 ---
 
-* * *
-
+---
 ## 階層リストボックス
-
 `Array type list boxes`
 
 このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、[*dataSource* プロパティの値が array であるときに](properties_Object.md#階層リストボックス)、この機能が利用可能になります。
@@ -15,12 +13,13 @@ title: Hierarchy
 
 See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
+
+
 #### JSON 文法
 
 | 名          | データタイプ       | とりうる値                                            |
 | ---------- | ------------ | ------------------------------------------------ |
 | datasource | string array | Collection of array names defining the hierarchy |
-
 
 #### 対象オブジェクト
 

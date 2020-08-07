@@ -3,21 +3,21 @@ id: onBeforeKeystroke
 title: Sue avant frappe clavier
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                   |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **without** this character. |
+| Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                      |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` returns the object's text **without** this character. |
 
 
 ## Description
 
-After the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) properties are selected for an object, you can detect and handle the keystrokes within the object, using the `Form event code` command that will return `On Before Keystroke` and then [`On After Keystroke event`](onAfterKeystroke.md) (for more information, please refer to the description of the `Get edited text` command).
+Après avoir sélectionné les propriétés d'événement `On Before Keystroke` et [`On After Keystroke`](onAfterKeystroke.md) pour un objet, vous pouvez détecter et gérer les frappes au sein de l'objet, en utilisant la commande `Form event` qui retournera `On Before Keystroke` puis [`On After Keystroke` ](onAfterKeystroke.md)(pour plus d'informations, veuillez vous reporter à la description de la commande `Get edited text`).
 
-These events are also activated by language commands that simulate a user action like `POST KEY`.
+Ces événements sont également activés par des commandes de langage qui simulent une action utilisateur telle que `POST KEY`.
 
-Keep in mind that user modifications that are not carried out using the keyboard (paste, drag-drop, etc.) are not taken into account. To process these events, you must use [`On After Edit`](onAfterEdit.md).
+Gardez à l'esprit que les modifications utilisateur qui ne sont pas effectuées à l'aide du clavier (coller, glisser-déposer, etc.) ne sont pas prises en compte. Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
 
-> The `On Before Keystroke` and `On After Keystroke` events are not generated when using an input method. An input method (or IME, Input Method Editor) is a program or a system component that can be used to enter complex characters or symbols (for example, Japanese or Chinese) using a Western keyboard.
+> Les événements `On Before Keystroke` et `On After Keystroke` ne sont pas générés lors de l'utilisation d'une méthode de saisie. Une méthode de saisie (ou IME, Input Method Editor) est un programme ou un composant système qui peut être utilisé pour saisir des caractères ou des symboles complexes (par exemple, du japonais ou du chinois) à l'aide d'un clavier occidental.
 
-### See also
+### Voir également
 
 [On After Keystroke](onAfterKeystroke.md).

@@ -27,7 +27,7 @@ Each web server (host database or component) can be used in its own separate con
 
 This feature allows you to develop independant components and features that come with their own web interfaces.
 
-## Instantiating a web server object
+## Instancier un objet serveur web
 
 The web server object of the host database (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created database:
 
@@ -61,35 +61,35 @@ webServer:=WEB Server(Web server host database)
 webServer:=WEB Server(Web server receiving request)  
 ```
 
-## Web server methods
+## Méthodes du serveur web
 
-A web server object contains the following member methods:
+Un objet serveur Web contient les méthodes membres suivantes :
 
-| Méthode   | Paramètres        | Return value    | Description           |
-| --------- | ----------------- | --------------- | --------------------- |
-| `start()` | settings (object) | status (object) | Starts the web server |
-| `stop()`  | -                 | -               | Stops the web server  |
+| Méthode   | Paramètres       | Valeur retournée | Description            |
+| --------- | ---------------- | ---------------- | ---------------------- |
+| `start()` | settings (objet) | status (object)  | Démarre le serveur web |
+| `stop()`  | -                | -                | Stoppe le serveur web  |
 
 
-To start and stop a web server, just call the `start()` and `stop()` member methods of the web server object:
+Pour démarrer et arrêter un serveur Web, il suffit d'appeler les méthodes membres `start()` et `stop()` de l'objet serveur Web :
 
 ```4d
 C_OBJECT($status)
-    //to start a web server with default settings
+    //pour démarrer un serveur web avec les paramètres par défaut
 $status:=webServer.start()
-    //to start the web server with custom settings  
-    //$settings object contains web server properties
+    //pour démarrer un serveur web avec des paramètres personnalisés   
+    //objet $settings contenant des propriétés du serveur web
 webServer.start($settings)
 
-    //to stop the web server
+    //pour stopper le serveur web
 $status:=webServer.stop()
 ```
 
-## Web server properties
+## Propriétés du serveur web
 
-A web server object contains the following properties.
+Un objet serveur Web contient les propriétés suivantes.
 
-Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: 
+Jeu de caractères devant être utilisé par 4D Web Server pour communiquer avec les navigateurs connectés à la base. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: 
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -223,7 +223,7 @@ Character set that the 4D Web Server should use to communicate with browsers con
     
     <
     
-    p>If modified, the server must be restarted to use the new value.| |*name*|text|Name of the web server database| |*openSSLVersion*|text|Version of the OpenSSL library used| |*perfectForwardSecrecy*|boolean|PFS availability on the server| |rootFolder|text|Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.| |sessionCookieDomain|text|"domain" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.| |sessionCookieName|text|Name of the cookie used for storing the session ID.
+    p>If modified, the server must be restarted to use the new value.| |*name*|text|Name of the web server database| |*openSSLVersion*|text|Version of the OpenSSL library used| |*perfectForwardSecrecy*|boolean|PFS availability on the server| |rootFolder|text|Path of web server root folder. Format POSIX du chemin d'accès complet à l'aide de filesystem. When using this property in the `settings` parameter, it can be a `Folder` object.| |sessionCookieDomain|text|"domain" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.| |sessionCookieName|text|Name of the cookie used for storing the session ID.
     
     <
     
@@ -251,11 +251,11 @@ Character set that the 4D Web Server should use to communicate with browsers con
     
     > *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the `start()` method.
     
-    ## Scope of the 4D Web commands
+    ## Portée des commandes 4D Web
     
     The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
     
-    | Command                         | Scope                                |
+    | Commande                        | Portée                               |
     | ------------------------------- | ------------------------------------ |
     | `SET DATABASE PARAMETER`        | Host database web server             |
     | `WEB CLOSE SESSION`             | Web server that received the request |

@@ -490,7 +490,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation et activation"
       },
       "Menus/bars": {
         "title": "Barres de menus"
@@ -694,7 +694,7 @@
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation and activation|in index page Getting started": "Installation et activation",
     "Language Concepts|in index page Getting started": "Concepts du langage",
     "Project databases|in index page Getting started": "Bases projets",
     "Forms|no description given": "Formulaires",

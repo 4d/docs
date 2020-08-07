@@ -60,7 +60,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      true, false (default)
+      true, false (デフォルト)
     </td>
   </tr>
   
@@ -418,7 +418,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </td>
     
     <td>
-      "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)
+      "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (他の値と組み合わせることができます)
     </td>
   </tr>
   

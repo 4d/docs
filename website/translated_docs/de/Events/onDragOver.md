@@ -13,7 +13,7 @@ title: On Drag Over
 The `On Drag Over` event is repeatedly sent to the destination object when the mouse pointer is moved over the object. In response to this event, you usually:
 
 - Get the data and signatures found in the pasteboard (via the `GET PASTEBOARD DATA` command).
-- Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
+-  Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
 
 To **accept** the drag, the destination object method must return 0 (zero), so you write `$0:=0`. To **reject** the drag, the object method must return -1 (minus one), so you write `$0:=-1`. During an `On Drag Over` event, 4D treats the object method as a function. If no result is returned, 4D assumes that the drag is accepted.
 
@@ -25,6 +25,6 @@ The `On Drag Over` event is the means by which you control the first phase of a 
 
 The code handling an `On Drag Over` event should be short and execute quickly, because that event is sent repeatedly to the current destination object, due to the movements of the mouse.
 
-#### See also
 
+#### See also
 [`On Begin Drag Over`](onBeginDragOver.md)

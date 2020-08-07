@@ -10,37 +10,39 @@ Eine 4D Komponente besteht aus einer Reihe von 4D Methoden und Formularen mit ei
 - Eine Komponente besteht aus einer gängigen Strukturdatei (kompiliert oder nicht) mit der Standardarchitektur oder in Form eines Pakets (siehe .4dbase Extension).
 - Um eine Komponente in einer Anwendung zu installieren, genügt es, diese in den Ordner "Components" der Anwendung zu kopieren, der neben der Strukturdatei oder dem ausführbaren 4D Programm liegt.
 - Eine Komponente kann die meisten der 4D Elemente aufrufen: Projektmethoden, Projektformulare, Menüleisten, Auswahllisten, Bilder aus der Objektbibliothiek, usw. Sie kann keine Datenbankmethoden und Trigger aufrufen.
-- In 4D Komponenten können Sie weder Standardtabellen noch Datendateien verwenden. Eine Komponente kann jedoch Tabellen, Felder und Datendateien über Operationen externer Anwendungen erstellen bzw. verwenden. Dies sind separate 4D Anwendungen, in denen Sie mit SQL Befehlen arbeiten. 
+- In 4D Komponenten können Sie weder Standardtabellen noch Datendateien verwenden. Eine Komponente kann jedoch Tabellen, Felder und Datendateien über Operationen externer Anwendungen erstellen bzw. verwenden. Dies sind separate 4D Anwendungen, in denen Sie mit SQL Befehlen arbeiten.
+
 
 ## Definitionen
 
 Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bedeutung:
 
-- **Matrix Datenbank**: 4D Datenbank zum Entwickeln der Komponente. Die Matrix Datenbank ist eine Standarddatenbank ohne spezifische Attribute. Sie dient zum Erstellen einer einzelnen Komponente. Die Matrix Datenbank wird kompiliert oder unkompiliert in den Ordner "Components" der Datenbank kopiert, welche die Komponente verwendet. Das ist die Host Datenbank.
-- Host Datenbank: Datenbank, in der eine Komponente installiert und verwendet wird.
-- **Komponente**: Matrix Datenbank, kompiliert oder nicht, die in den Ordner "Components" der 4D Anwendung oder der Host Datenbank kopiert wird und deren Inhalt in der Host Datenbank verwendet wird. 
+- **Matrix Database**: 4D database used for developing the component. Die Matrix Datenbank ist eine Standarddatenbank ohne spezifische Attribute. Sie dient zum Erstellen einer einzelnen Komponente. Die Matrix Datenbank wird kompiliert oder unkompiliert in den Ordner "Components" der Datenbank kopiert, welche die Komponente verwendet. Das ist die Host Datenbank.
+- **Host Database**: Database in which a component is installed and used.
+- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
 
 Beachten Sie, dass eine Datenbank sowohl vom Typ “matrix” als auch “host” sein kann, d.h. eine Matrix Datenbank kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
+
 
 ### Komponenten durch Kompilieren schützen
 
 Standardmäßig sind alle Projektmethoden einer Matrix Datenbank, die als Komponente installiert ist, potentiell von der Host Datenbank aus sichtbar. Das bedeutet im einzelnen:
 
 - Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden der Host Datenbank aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
-- Andere Projektmethoden der Matrix Datenbank erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger der Host Datenbank sichtbar. 
+- Andere Projektmethoden der Matrix Datenbank erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger der Host Datenbank sichtbar.
 
 Um Projektmethoden einer Komponente effektiv zu schützen, müssen Sie lediglich die Matrix Datenbank kompilieren und in Form einer .4dc Datei (kompilierte Datenbank, die keinen interpretierten Code enthält) zur Verfügung stellen. Wird eine kompilierte Matrix Datenbank dann als Komponente installiert, gilt folgendes:
 
 - Die gemeinsam genutzten Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden der Host Datenbank aufrufen. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
-- Die anderen Projektmethoden der Matrix Datenbank erscheinen nie. 
+- Die anderen Projektmethoden der Matrix Datenbank erscheinen nie.
+
 
 ## Projektmethoden gemeinsam nutzen
-
 Per Definition werden alle Projektmethoden in die Komponente integriert (die Datenbank ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in der Host Datenbank auch nicht aufrufen. In der Matrix Datenbank müssen Sie die Methoden, die Sie mit der Host Datenbank teilen wollen, explizit freigeben. Diese Projektmethoden sind dann im Explorer auf der Seite Methoden sichtbar und lassen sich im Code der Host Datenbank aufrufen. Sie lassen sich jedoch im Methodeneditor der Host Datenbank nicht verändern. Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
+Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in der Host Datenbank auch nicht aufrufen. In der Matrix Datenbank müssen Sie die Methoden, die Sie mit der Host Datenbank teilen wollen, explizit freigeben. Diese Projektmethoden sind dann im Explorer auf der Seite Methoden sichtbar und lassen sich im Code der Host Datenbank aufrufen. Sie lassen sich jedoch im Methodeneditor der Host Datenbank nicht verändern. These methods form **entry points** in the component.
 
-**Hinweis:** Aus Sicherheitsgründen kann die Komponente standardmäßig keine Projektmethoden ausführen, die zur Host Datenbank gehören. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihrer Host Datenbank zugreifen kann. Dazu müssen Sie die Projektmethode explizit der Host Datenbank zuweisen, die Sie für die Komponente zugänglich machen wollen.
+**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihrer Host Datenbank zugreifen kann. Dazu müssen Sie die Projektmethode explizit der Host Datenbank zuweisen, die Sie für die Komponente zugänglich machen wollen.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
@@ -68,14 +70,15 @@ Beispiele mit Variablen:
  $p:=component_method2(...)
 ```
 
+
 Über Zeiger können Komponenten und Host Datenbank miteinander kommunizieren. Dabei müssen Sie folgendes berücksichtigen:
 
 - Die 4D Funktion `Get pointer` gibt keinen Zeiger auf eine Variable der Host Datenbank zurück, wenn sie von einer Komponenten aus aufgerufen wird und umgekehrt.
 
 - Die Architektur für Komponenten lässt zu, dass dieselbe interpretierte Datenbank sowohl interpretierte als auch kompilierte Komponenten enthalten kann. In einer kompilierten Datenbank können dagegen nur kompilierte Komponenten verwendet werden. Für diesen Fall gilt folgende Regelung für Zeiger: Der Interpreter kann einen im kompilierten Modus erstellten Zeiger auflösen. Er kann jedoch im kompilierten Modus keinen Zeiger auflösen, der im interpretierten Modus erstellt wurde. Dieses Prinzip wollen wir an folgendem Beispiel erläutern: Wir gehen von den beiden Komponenten C (kompiliert) und I (interpretiert) aus, die in derselben Host Datenbank installiert sind.
-    
- - Definiert Komponente C die Variable `myCvar`, kann Komponente I über den Zeiger `->myCvar` auf diese Variable zugreifen.
- - Definiert Komponente I die Variable `myIvar` variable, kann Komponente C über den Zeiger` ->myIvar` nicht auf diese Variable zugreifen. Diese Syntax verursacht einen Ausführungsfehler. 
+ - Definiert Komponente C die Variable `myCvar`,  kann Komponente I über den Zeiger `->myCvar` auf diese Variable zugreifen.
+ - Definiert Komponente I die Variable `myIvar` variable, kann Komponente C über den Zeiger` ->myIvar` nicht auf diese Variable zugreifen. Diese Syntax verursacht einen Ausführungsfehler.
+
 - Wir raten davon ab, Zeiger bei Komponenten über den 4D Befehl `RESOLVE POINTER` miteinander zu vergleichen, da durch die Partitionierung von Variablen gleichnamige Variablen nebeneinander existieren können, die jedoch in einer Komponente ganz anderen Inhalt haben können als in der Host Datenbank bzw. einer anderen Komponenten. Auch der Variablentyp kann in beiden Kontexten unterschiedlich sein. Zeigen z. B. `myptr1` und `myptr2` jeweils auf eine Variable, kann der folgende Vergleich ein inkorrektes Ergebnis zurückgeben:
 
 ```4d
@@ -84,9 +87,7 @@ Beispiele mit Variablen:
      If(vVarName1=vVarName2)
       //This test returns True even though the variables are different
 ```
-
 In diesem Fall müssen Sie die Zeiger miteinander vergleichen:
-
 ```4d
      If(myptr1=myptr2) //This test returns False
 ```
@@ -127,6 +128,7 @@ Darüberhinaus wurden spezifische Maßnahmen für die 4D Funktionen `Structure f
 
 Über den Befehl `COMPONENT LIST` erhalten Sie die Liste der Komponenten, die von der Host Datenbank geladen werden.
 
+
 ### Nicht verwendbare Befehle
 
 Die folgenden Befehle eignen sich nicht zur Verwendung in einer Komponenten, da sie die Strukturdatei verändern — die im Nur-Lesen Modus geöffnet ist. Bei Ausführen in einer Komponente wird der Fehler -10511 generiert: "Der Befehl "{command_name}" kann von einer Komponente nicht aufgerufen werden".
@@ -160,12 +162,12 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 ## Use of forms
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix database can be used by the component. 
+- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix database can be used by the component.
 - A component can call table forms of the host database. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. 
+- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
 
 ## Use of tables and fields
 
@@ -255,9 +257,8 @@ Automatic mechanisms are operational: the XLIFF files found in the Resources fol
 In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
 
 ## On-line help for components
-
 A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
 
 - The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
 - The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file.
+- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file. 

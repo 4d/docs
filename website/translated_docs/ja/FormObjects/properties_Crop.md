@@ -1,38 +1,47 @@
 ---
 id: propertiesCrop
-title: Crop
+title: 行列数
 ---
 
-* * *
+---
+## 列
 
-## Columns
-
-Sets the number of columns in a thumbnail table.
-
-#### JSON 文法
-
-| 名           | データタイプ  | とりうる値  |
-|:----------- |:-------:| ------ |
-| columnCount | integer | 最小値: 1 |
-
-
-#### 対象オブジェクト
-
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
-
-* * *
-
-## Rows
-
-Sets the number of rows in a thumbnail table.
+サムネールテーブルを構成する行数を指定します。
 
 #### JSON 文法
 
-| 名        | データタイプ  | とりうる値  |
-|:-------- |:-------:| ------ |
-| rowCount | integer | 最小値: 1 |
-
+| 名           | データタイプ | とりうる値  |
+|:----------- |:------:| ------ |
+| columnCount |   整数   | 最小値: 1 |
 
 #### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
+
+
+
+
+---
+## 行
+
+サムネールテーブルを構成する列数を指定します。
+
+#### JSON 文法
+
+| 名        | データタイプ | とりうる値  |
+|:-------- |:------:| ------ |
+| rowCount |   整数   | 最小値: 1 |
+
+#### 対象オブジェクト
+
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
+
+
+
+
+
+
+
+
+
+
